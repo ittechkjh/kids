@@ -1,0 +1,16 @@
+name = "kidsinfra-api-gateway"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+# Cloudflare KV 바인딩 설정 (배포 시 wrangler kv:namespace create KIDS_INFRA_KV 실행 후 ID 입력)
+# [[kv_namespaces]]
+# binding = "KIDS_INFRA_KV"
+# id = "YOUR_KV_NAMESPACE_ID"
+
+[vars]
+ENVIRONMENT = "production"
+
+# 민감 API 키는 wrangler secret put 명령으로 등록하세요:
+# npx wrangler secret put DATA_GO_KR_API_KEY
+# npx wrangler secret put DATA4LIBRARY_API_KEY
+# npx wrangler secret put CHILDCARE_API_KEY
