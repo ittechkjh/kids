@@ -331,8 +331,44 @@
           </div>
 
           <!-- 지역행사 필터 컨트롤 바 -->
-          <div class="community-card p-4 space-y-3">
-            <!-- 1차: 카테고리 칩 -->
+          <div class="community-card p-4 space-y-3.5">
+            <!-- 전국 17개 시도 원클릭 지역 선택 바 -->
+            <div class="space-y-2 p-3 bg-amber-50/50 rounded-2xl border border-amber-200/60">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+                  <span class="text-xs font-black text-slate-800">🗺️ 전국 17개 시·도 원클릭 지역 필터</span>
+                </div>
+                <span class="text-[10px] text-slate-400 font-bold">클릭 시 해당 지역 행사만 즉시 표시</span>
+              </div>
+
+              <!-- 권역 그룹 탭 -->
+              <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="festivals-region-group-tabs">
+                <button onclick="app.setFestivalsRegionGroup('all')" data-grp="all" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-amber-500 text-white font-black whitespace-nowrap shadow-sm">
+                  전국 전체
+                </button>
+                <button onclick="app.setFestivalsRegionGroup('capital')" data-grp="capital" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  수도권 (서울·경기·인천)
+                </button>
+                <button onclick="app.setFestivalsRegionGroup('yeongnam')" data-grp="yeongnam" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  영남권 (부산·대구·울산·경상)
+                </button>
+                <button onclick="app.setFestivalsRegionGroup('honam')" data-grp="honam" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  호남권 (광주·전라)
+                </button>
+                <button onclick="app.setFestivalsRegionGroup('chungcheong')" data-grp="chungcheong" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  충청·대전·세종
+                </button>
+                <button onclick="app.setFestivalsRegionGroup('gangwon_jeju')" data-grp="gangwon_jeju" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  강원 · 제주
+                </button>
+              </div>
+
+              <!-- 17개 시도 퀵 칩스 (실시간 개수 뱃지) -->
+              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5" id="festivals-region-chips"></div>
+            </div>
+
+            <!-- 1차: 행사 카테고리 칩 -->
             <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="festivals-category-chips">
               <button onclick="app.setFestivalsCategory('all')" data-cat="all" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
                 전체 (20)
@@ -524,8 +560,44 @@
           </div>
 
           <!-- 대회 일정 필터 컨트롤 바 -->
-          <div class="community-card p-4 space-y-3">
-            <!-- 1차: 카테고리 칩 -->
+          <div class="community-card p-4 space-y-3.5">
+            <!-- 전국 17개 시도 원클릭 지역 선택 바 -->
+            <div class="space-y-2 p-3 bg-indigo-50/50 rounded-2xl border border-indigo-200/60">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-1.5">
+                  <span class="w-2.5 h-2.5 rounded-full bg-indigo-600 animate-pulse"></span>
+                  <span class="text-xs font-black text-slate-800">🗺️ 전국 17개 시·도 원클릭 대회 지역 필터</span>
+                </div>
+                <span class="text-[10px] text-slate-400 font-bold">클릭 시 해당 지역 대회만 즉시 표시</span>
+              </div>
+
+              <!-- 권역 그룹 탭 -->
+              <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="contests-region-group-tabs">
+                <button onclick="app.setContestsRegionGroup('all')" data-grp="all" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-black whitespace-nowrap shadow-sm">
+                  전국 전체
+                </button>
+                <button onclick="app.setContestsRegionGroup('capital')" data-grp="capital" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  수도권 (서울·경기·인천)
+                </button>
+                <button onclick="app.setContestsRegionGroup('yeongnam')" data-grp="yeongnam" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  영남권 (부산·대구·울산·경상)
+                </button>
+                <button onclick="app.setContestsRegionGroup('honam')" data-grp="honam" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  호남권 (광주·전라)
+                </button>
+                <button onclick="app.setContestsRegionGroup('chungcheong')" data-grp="chungcheong" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  충청·대전·세종
+                </button>
+                <button onclick="app.setContestsRegionGroup('gangwon_jeju')" data-grp="gangwon_jeju" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
+                  강원 · 제주
+                </button>
+              </div>
+
+              <!-- 17개 시도 퀵 칩스 (실시간 개수 뱃지) -->
+              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5" id="contests-region-chips"></div>
+            </div>
+
+            <!-- 1차: 대회 카테고리 칩 -->
             <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="contests-category-chips">
               <button onclick="app.setContestsCategory('all')" data-cat="all" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
                 전체 (18)

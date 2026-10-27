@@ -1,22 +1,49 @@
 # -*- coding: utf-8 -*-
 """
-전국 지역행사 & 전국 대회 일정 데이터베이스 생성기 (전국 17개 시도 총망라)
-게시판 분리 지원:
-1. festivals: 전국 지역행사 (노는거, 볼거리 위주: 지역축제, 가족 마라톤/걷기, 공원생태, 빛축제 등)
-2. contests: 대회 일정 (공부 위주: 사생대회, 백일장, 독서토론, 독서골든벨, 창의발명, 코딩/로봇, 수학 등)
+전국 지역행사 & 전국 대회 일정 데이터베이스 생성 및 한국관광공사 TourAPI 4.0 연동 모듈
+- 17개 시도 전체 완벽 지원: 서울, 경기, 인천, 강원, 대전, 세종, 충북, 충남, 부산, 대구, 울산, 경남, 경북, 광주, 전북, 전남, 제주
+- 게시판 2개 분리:
+  1. festivals (전국 지역행사 & 볼거리: 축제, 가족 마라톤, 공원생태, 빛축제)
+  2. contests (전국 대회일정: 사생대회, 백일장, 독서토론·골든벨, 창의발명, 코딩, 수학)
+- TOUR_API_KEY 환경변수 지원 (공공데이터포털 연동)
 """
+import os
 import json
 import datetime
-import os
+import urllib.request
+import urllib.parse
 
-events_list = [
+# 17개 시도 매핑 딕셔너리
+AREA_CODE_MAP = {
+    "1": ("seoul", "서울특별시"),
+    "2": ("incheon", "인천광역시"),
+    "3": ("daejeon", "대전광역시"),
+    "4": ("daegu", "대구광역시"),
+    "5": ("gwangju", "광주광역시"),
+    "6": ("busan", "부산광역시"),
+    "7": ("ulsan", "울산광역시"),
+    "8": ("sejong", "세종특별자치시"),
+    "31": ("gyeonggi", "경기도"),
+    "32": ("gangwon", "강원특별자치도"),
+    "33": ("chungbuk", "충청북도"),
+    "34": ("chungnam", "충청남도"),
+    "35": ("jeonbuk", "전북특별자치도"),
+    "36": ("jeonnam", "전라남도"),
+    "37": ("gyeongbuk", "경상북도"),
+    "38": ("gyeongnam", "경상남도"),
+    "39": ("jeju", "제주특별자치도")
+}
+
+# 17개 시도별 풍성한 고품질 데이터베이스 (API 키 입력 전에도 즉시 전국 17개 시도별로 탐색 가능)
+CURATED_EVENTS = [
     # =========================================================================
-    # [1] 전국 지역행사 (노는거, 볼거리: 축제, 가족 마라톤/걷기, 야외 공원, 빛축제)
+    # [1] 전국 지역행사 & 볼거리 (festivals) - 17개 시도 총망라
     # =========================================================================
+    # --- 서울특별시 ---
     {
         "id": "fest-seoul-01",
         "boardType": "festivals",
-        "title": "2026 제12회 서울 한강 가을빛 가족 마라톤 & 키즈런",
+        "title": "2026 서울 한강 가을빛 가족 마라톤 & 키즈런",
         "category": "sports_marathon",
         "categoryName": "주말 가족 마라톤",
         "badge": "🏃 가족 마라톤",
@@ -31,7 +58,6 @@ events_list = [
         "applyStartDate": "2026-10-10",
         "applyEndDate": "2026-11-05",
         "status": "applying",
-        "dday": "D-9",
         "targetAudience": "유모차 동반 가족, 유소년(3km 키즈런), 성인(5km/10km 펀런)",
         "fee": "가족 참가(3인) 45,000원 (메달·기념 티셔츠·완주 간식팩 제공)",
         "url": "https://www.hangangrun.com",
@@ -57,7 +83,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-19",
         "status": "ongoing",
-        "dday": "진행중",
         "targetAudience": "4세~초등 저학년 동반 가족",
         "fee": "무료 (숲해설 사전 예약제)",
         "url": "https://parks.seoul.go.kr",
@@ -83,7 +108,6 @@ events_list = [
         "applyStartDate": "2026-10-01",
         "applyEndDate": "2026-11-29",
         "status": "applying",
-        "dday": "D-10",
         "targetAudience": "전 연령 가족 누구나 (유모차 진입 경사로 완비)",
         "fee": "무료 관람 (소원등 띄우기 체험 현장 구매)",
         "url": "https://www.seoullantern.com",
@@ -91,6 +115,8 @@ events_list = [
         "description": "청계천 물길 위에 펼쳐지는 수백 점의 화려한 한지 등불 조형물과 아이들이 좋아하는 캐릭터 등불, 야경 포토존이 펼쳐집니다.",
         "tags": ["빛초롱축제", "청계천", "가을야경", "가족나들이"]
     },
+
+    # --- 경기도 ---
     {
         "id": "fest-gg-01",
         "boardType": "festivals",
@@ -103,13 +129,12 @@ events_list = [
         "sourceLabel": "경기데이터드림 연동",
         "region": "gyeonggi",
         "regionName": "경기도",
-        "location": "경기도 수원시 영통구 광교호수공원 원천호수 어반레비 광장",
+        "location": "경기도 수원시 영통구 광교호수공원 어반레비 광장",
         "startDate": "2026-11-21",
         "endDate": "2026-11-21",
         "applyStartDate": "2026-10-18",
         "applyEndDate": "2026-11-12",
         "status": "applying",
-        "dday": "D-16",
         "targetAudience": "가족(유아, 초등, 부모 전원)",
         "fee": "무료 (친환경 텀블러 및 배낭 기념품 증정)",
         "url": "https://www.gg.go.kr",
@@ -135,7 +160,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-07",
         "status": "applying",
-        "dday": "D-10",
         "targetAudience": "유아, 어린이 및 책을 사랑하는 가족",
         "fee": "무료 입장 (일부 작가 북토크 사전예약)",
         "url": "https://www.pajubookcity.org",
@@ -161,7 +185,6 @@ events_list = [
         "applyStartDate": "2026-10-01",
         "applyEndDate": "2026-11-15",
         "status": "ongoing",
-        "dday": "진행중",
         "targetAudience": "전 연령 가족 누구나",
         "fee": "무료 (미디어아트쇼 상시 상영)",
         "url": "https://www.swcf.or.kr",
@@ -169,10 +192,12 @@ events_list = [
         "description": "세계문화유산 수원화성 성벽을 캔버스 삼아 펼쳐지는 초대형 인터랙티브 미디어아트쇼와 가을밤 성곽길 산책 프로그램입니다.",
         "tags": ["수원화성", "미디어아트", "성곽야경", "가족산책"]
     },
+
+    # --- 인천광역시 ---
     {
         "id": "fest-incheon-01",
         "boardType": "festivals",
-        "title": "2026 송도국제도시 센트럴파크 해변 가족 걷기 페스티벌",
+        "title": "2026 송도 센트럴파크 해변 가족 걷기 페스티벌",
         "category": "sports_marathon",
         "categoryName": "해변 가족 걷기",
         "badge": "🏃 가족 걷기",
@@ -187,7 +212,6 @@ events_list = [
         "applyStartDate": "2026-10-12",
         "applyEndDate": "2026-11-03",
         "status": "applying",
-        "dday": "D-7",
         "targetAudience": "영유아 동반 가족 및 초등학생",
         "fee": "1인당 10,000원 (스포츠 타월 및 간식팩 제공)",
         "url": "https://www.songdowalk.or.kr",
@@ -195,6 +219,33 @@ events_list = [
         "description": "송도 센트럴파크 수로와 해질녘 노을을 바라보며 가족과 함께 걷는 5km 코스입니다. 페이스페인팅과 마임 공연이 함께합니다.",
         "tags": ["송도센트럴파크", "가족걷기", "수로보트", "인천나들이"]
     },
+    {
+        "id": "fest-incheon-02",
+        "boardType": "festivals",
+        "title": "2026 인천 개항장 문화유산 야행 & 근대 골목 탐험",
+        "category": "festival_culture",
+        "categoryName": "역사문화 야행",
+        "badge": "🎪 역사야행",
+        "organizer": "인천광역시 중구청 · 문화재청",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "incheon",
+        "regionName": "인천광역시",
+        "location": "인천광역시 중구 신포로27번길 80 개항장 문화지구 일원",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-06",
+        "status": "applying",
+        "targetAudience": "초등 동반 가족 및 청소년",
+        "fee": "무료 (근대 의상 대여 별도)",
+        "url": "https://www.culturenight.co.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1519751138087-5bf79df62d5b?w=800&auto=format&fit=crop&q=80",
+        "description": "근대 건축물에 비추는 미디어 파사드와 스탬프 투어, 아이들과 함께 걷는 근대 골목 야경 탐방 축제입니다.",
+        "tags": ["개항장야행", "인천차이나타운", "근대역사", "야간축제"]
+    },
+
+    # --- 강원특별자치도 ---
     {
         "id": "fest-gangwon-01",
         "boardType": "festivals",
@@ -213,7 +264,6 @@ events_list = [
         "applyStartDate": "2026-10-01",
         "applyEndDate": "2026-11-08",
         "status": "applying",
-        "dday": "D-9",
         "targetAudience": "가족 단위 관광객 (어린이 디저트·주스 클래스)",
         "fee": "무료 입장 (시음 및 체험 무료)",
         "url": "https://www.coffeefestival.net",
@@ -239,13 +289,91 @@ events_list = [
         "applyStartDate": "2026-10-20",
         "applyEndDate": "2026-11-09",
         "status": "applying",
-        "dday": "D-13",
         "targetAudience": "어린이 동반 가족 및 일반 시민",
         "fee": "무료 (완보증서 및 춘천사랑상품권 지급)",
         "url": "https://www.bomne.co.kr",
         "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80",
         "description": "의암호 물레길 수변 데크를 따라 펼쳐지는 붉은 단풍길 6km 가족 걷기 행사입니다. 스카이워크 무료입장 혜택이 주어집니다.",
         "tags": ["춘천봄내길", "의암호", "단풍트레킹", "가족걷기"]
+    },
+
+    # --- 대전광역시 & 세종특별자치시 ---
+    {
+        "id": "fest-daejeon-01",
+        "boardType": "festivals",
+        "title": "2026 대전 유성국화축제 & 유림공원 가을 음악회",
+        "category": "nature_park",
+        "categoryName": "꽃·공원 축제",
+        "badge": "🌿 국화축제",
+        "organizer": "대전광역시 유성구청",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "daejeon",
+        "regionName": "대전광역시",
+        "location": "대전광역시 유성구 어은로 27 유림공원 및 갑천변",
+        "startDate": "2026-10-18",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-01",
+        "applyEndDate": "2026-11-08",
+        "status": "applying",
+        "targetAudience": "온 가족 누구나",
+        "fee": "무료",
+        "url": "https://www.yuseong.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&auto=format&fit=crop&q=80",
+        "description": "수천만 송이 국화 조형물과 동물 토피어리, 버스킹 공연과 야간 경관 조명이 어우러진 대전 대표 가을 축제입니다.",
+        "tags": ["유성국화축제", "유림공원", "대전나들이", "꽃축제"]
+    },
+    {
+        "id": "fest-sejong-01",
+        "boardType": "festivals",
+        "title": "2026 세종호수공원 가을 가족 연날리기 & 피크닉 페스타",
+        "category": "nature_park",
+        "categoryName": "가족 피크닉",
+        "badge": "🌿 공원피크닉",
+        "organizer": "세종특별자치시 · 세종시설관리공단",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "sejong",
+        "regionName": "세종특별자치시",
+        "location": "세종특별자치시 연기면 세종호수공원 중앙광장",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-06",
+        "status": "applying",
+        "targetAudience": "유아 및 초등 동반 가족",
+        "fee": "무료 (전통 방패연 만들기 무료 체험)",
+        "url": "https://www.sejong.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop&q=80",
+        "description": "국내 최대 인공호수공원에서 가을바람을 타고 대형 창작연을 날리고 잔디밭 피크닉을 즐기는 힐링 축제입니다.",
+        "tags": ["세종호수공원", "연날리기", "세종가볼만한곳", "가족소풍"]
+    },
+
+    # --- 충청북도 & 충청남도 ---
+    {
+        "id": "fest-chungbuk-01",
+        "boardType": "festivals",
+        "title": "2026 청주 직지 어린이 활자 인쇄 & 기록문화 체험전",
+        "category": "festival_culture",
+        "categoryName": "문화재 역사체험",
+        "badge": "🎪 역사체험",
+        "organizer": "청주고인쇄박물관 · 충청북도",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "chungbuk",
+        "regionName": "충청북도",
+        "location": "충청북도 청주시 흥덕구 직지로 713 고인쇄박물관 광장",
+        "startDate": "2026-11-13",
+        "endDate": "2026-11-15",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-12",
+        "status": "applying",
+        "targetAudience": "초등학생 및 유아 동반 가족",
+        "fee": "무료 (한지인쇄 체험 무료 키트 배부)",
+        "url": "https://jikjiworld.cheongju.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
+        "description": "유네스코 세계기록유산 직지의 가치를 체험하는 축제. 금속활자 주조 시연과 옛날 책 만들기 등 흥미진진한 체험형 볼거리 축제입니다.",
+        "tags": ["청주고인쇄박물관", "직지축제", "기록문화", "어린이체험"]
     },
     {
         "id": "fest-chungnam-01",
@@ -257,7 +385,7 @@ events_list = [
         "organizer": "독립기념관 · 충청남도",
         "sourceType": "tour_api",
         "sourceLabel": "한국관광공사 TourAPI",
-        "region": "chungcheong",
+        "region": "chungnam",
         "regionName": "충청남도",
         "location": "충청남도 천안시 동남구 목천읍 삼방로 95 독립기념관 단풍나무숲길",
         "startDate": "2026-11-07",
@@ -265,7 +393,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-06",
         "status": "applying",
-        "dday": "D-11",
         "targetAudience": "유아 및 초중등 동반 가족",
         "fee": "무료",
         "url": "https://i815.or.kr",
@@ -273,84 +400,8 @@ events_list = [
         "description": "독립기념관 3.2km 단풍나무숲길을 걸으며 역사 퀴즈도 풀고 태극기 만들기 체험을 함께하는 힐링 걷기 축제입니다.",
         "tags": ["독립기념관", "단풍나무숲길", "가족걷기", "천안가볼만한곳"]
     },
-    {
-        "id": "fest-chungbuk-01",
-        "boardType": "festivals",
-        "title": "2026 청주 직지 어린이 활자 인쇄 & 기록문화 체험전",
-        "category": "festival_culture",
-        "categoryName": "문화재 역사체험",
-        "badge": "🎪 역사체험",
-        "organizer": "청주고인쇄박물관 · 충청북도",
-        "sourceType": "tour_api",
-        "sourceLabel": "한국관광공사 TourAPI",
-        "region": "chungcheong",
-        "regionName": "충청북도",
-        "location": "충청북도 청주시 흥덕구 직지로 713 고인쇄박물관 광장",
-        "startDate": "2026-11-13",
-        "endDate": "2026-11-15",
-        "applyStartDate": "2026-10-20",
-        "applyEndDate": "2026-11-12",
-        "status": "applying",
-        "dday": "D-16",
-        "targetAudience": "초등학생 및 유아 동반 가족",
-        "fee": "무료 (한지인쇄 체험 무료 키트 배부)",
-        "url": "https://jikjiworld.cheongju.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
-        "description": "유네스코 세계기록유산 직지의 가치를 체험하는 축제. 금속활자 주조 시연과 옛날 책 만들기 등 흥미진진한 체험형 볼거리 축제입니다.",
-        "tags": ["청주고인쇄박물관", "직지축제", "기록문화", "어린이체험"]
-    },
-    {
-        "id": "fest-jeonnam-01",
-        "boardType": "festivals",
-        "title": "2026 순천만 갈대축제 & 흑두루미 탐조 생태체험",
-        "category": "nature_park",
-        "categoryName": "자연·생태 축제",
-        "badge": "🌿 자연생태",
-        "organizer": "순천시 · 순천만보전네트워크",
-        "sourceType": "tour_api",
-        "sourceLabel": "한국관광공사 TourAPI",
-        "region": "jeolla",
-        "regionName": "전라남도",
-        "location": "전라남도 순천시 순천만길 513-25 순천만습지 잔디광장",
-        "startDate": "2026-11-01",
-        "endDate": "2026-11-04",
-        "applyStartDate": "2026-10-10",
-        "applyEndDate": "2026-11-03",
-        "status": "applying",
-        "dday": "D-5",
-        "targetAudience": "가족 단위 여행객",
-        "fee": "입장료 성인 8,000원 / 어린이 4,000원",
-        "url": "https://scbay.suncheon.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
-        "description": "황금빛 160만 평 갈대밭과 천연기념물 흑두루미를 관찰하는 생태 탐조 축제. 갈대 빗자루 만들기 등 친환경 체험이 가득합니다.",
-        "tags": ["순천만습지", "갈대축제", "흑두루미", "생태체험"]
-    },
-    {
-        "id": "fest-jeonnam-02",
-        "boardType": "festivals",
-        "title": "2026 여수 밤바다 낭만 불꽃 페스티벌 & 키즈 마켓",
-        "category": "festival_light",
-        "categoryName": "불꽃·야경 축제",
-        "badge": "✨ 불꽃축제",
-        "organizer": "여수시 · 여수밤바다불꽃축제추진위원회",
-        "sourceType": "tour_api",
-        "sourceLabel": "한국관광공사 TourAPI",
-        "region": "jeolla",
-        "regionName": "전라남도",
-        "location": "전라남도 여수시 이순신광장로 73 이순신광장 및 종포해양공원",
-        "startDate": "2026-11-07",
-        "endDate": "2026-11-07",
-        "applyStartDate": "2026-10-01",
-        "applyEndDate": "2026-11-07",
-        "status": "applying",
-        "dday": "D-11",
-        "targetAudience": "온 가족 누구나",
-        "fee": "무료",
-        "url": "https://www.yeosu.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?w=800&auto=format&fit=crop&q=80",
-        "description": "여수 밤바다를 배경으로 펼쳐지는 초대형 해상 멀티미디어 불꽃쇼와 어린이 버스킹, 핸드메이드 키즈 플리마켓이 운영됩니다.",
-        "tags": ["여수밤바다", "불꽃축제", "이순신광장", "가족여행"]
-    },
+
+    # --- 부산광역시 & 대구광역시 & 울산광역시 ---
     {
         "id": "fest-busan-01",
         "boardType": "festivals",
@@ -369,7 +420,6 @@ events_list = [
         "applyStartDate": "2026-10-05",
         "applyEndDate": "2026-11-06",
         "status": "applying",
-        "dday": "D-11",
         "targetAudience": "전국 가족 관광객 (백사장 무료 관람존)",
         "fee": "백사장 일반존 무료",
         "url": "https://www.bfo.or.kr",
@@ -395,39 +445,12 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-08",
         "status": "applying",
-        "dday": "D-12",
         "targetAudience": "5세 이상 자녀를 둔 가족 (3km / 5km)",
         "fee": "가족당 20,000원 (바다 모래놀이 세트 증정)",
         "url": "https://www.saha.go.kr",
         "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
         "description": "다대포의 환상적인 일몰을 바라보며 백사장을 달리는 키즈 마라톤과 모래조각 만들기 가족 축제입니다.",
         "tags": ["다대포", "키즈런", "일몰마라톤", "부산가볼만한곳"]
-    },
-    {
-        "id": "fest-ulsan-01",
-        "boardType": "festivals",
-        "title": "2026 울산 태화강국가정원 백리대숲 가족 걷기대회",
-        "category": "sports_marathon",
-        "categoryName": "국가정원 가족 걷기",
-        "badge": "🏃 가족 걷기",
-        "organizer": "울산광역시 · 태화강생태관광협의회",
-        "sourceType": "special_contest",
-        "sourceLabel": "공식 걷기협회 연동",
-        "region": "busan",
-        "regionName": "울산광역시",
-        "location": "울산광역시 중구 태화강국가정원길 154 만남의 광장",
-        "startDate": "2026-11-15",
-        "endDate": "2026-11-15",
-        "applyStartDate": "2026-10-22",
-        "applyEndDate": "2026-11-10",
-        "status": "applying",
-        "dday": "D-14",
-        "targetAudience": "시민 및 유아동반 가족",
-        "fee": "무료 (대나무 피리 만들기 무료 참여)",
-        "url": "https://www.ulsan.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80",
-        "description": "국가정원 십리대숲의 울창한 대나무 숲길 5km를 온 가족이 함께 걷는 힐링 프로그램입니다. 은하수길 조명쇼가 야간에 이어집니다.",
-        "tags": ["태화강국가정원", "십리대숲", "울산가볼만한곳", "가족걷기"]
     },
     {
         "id": "fest-daegu-01",
@@ -439,7 +462,7 @@ events_list = [
         "organizer": "이월드 · 대구광역시관광협회",
         "sourceType": "tour_api",
         "sourceLabel": "한국관광공사 TourAPI",
-        "region": "busan",
+        "region": "daegu",
         "regionName": "대구광역시",
         "location": "대구광역시 달서구 두류공원로 200 이월드 및 83타워 광장",
         "startDate": "2026-10-25",
@@ -447,7 +470,6 @@ events_list = [
         "applyStartDate": "2026-10-01",
         "applyEndDate": "2026-11-30",
         "status": "ongoing",
-        "dday": "진행중",
         "targetAudience": "유아 및 초등학생 가족",
         "fee": "입장권 별도 (키즈 할인 프로모션)",
         "url": "https://www.eworld.kr",
@@ -455,6 +477,33 @@ events_list = [
         "description": "수천만 개의 화려한 LED 조명과 캐릭터 로드가 어우러진 대구 대표 야경 테마파크 축제입니다.",
         "tags": ["대구이월드", "별빛축제", "놀이공원", "야경나들이"]
     },
+    {
+        "id": "fest-ulsan-01",
+        "boardType": "festivals",
+        "title": "2026 울산 태화강국가정원 백리대숲 가족 걷기대회",
+        "category": "sports_marathon",
+        "categoryName": "국가정원 가족 걷기",
+        "badge": "🏃 가족 걷기",
+        "organizer": "울산광역시 · 태화강생태관광협의회",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 걷기협회 연동",
+        "region": "ulsan",
+        "regionName": "울산광역시",
+        "location": "울산광역시 중구 태화강국가정원길 154 만남의 광장",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "applyStartDate": "2026-10-22",
+        "applyEndDate": "2026-11-10",
+        "status": "applying",
+        "targetAudience": "시민 및 유아동반 가족",
+        "fee": "무료 (대나무 피리 만들기 무료 참여)",
+        "url": "https://www.ulsan.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&auto=format&fit=crop&q=80",
+        "description": "국가정원 십리대숲의 울창한 대나무 숲길 5km를 온 가족이 함께 걷는 힐링 프로그램입니다. 은하수길 조명쇼가 야간에 이어집니다.",
+        "tags": ["태화강국가정원", "십리대숲", "울산가볼만한곳", "가족걷기"]
+    },
+
+    # --- 경상북도 & 경상남도 ---
     {
         "id": "fest-gyeongbuk-01",
         "boardType": "festivals",
@@ -465,7 +514,7 @@ events_list = [
         "organizer": "경주시 · 경북문화관광공사",
         "sourceType": "tour_api",
         "sourceLabel": "한국관광공사 TourAPI",
-        "region": "gyeongsang",
+        "region": "gyeongbuk",
         "regionName": "경상북도",
         "location": "경상북도 경주시 보문로 424-33 보문관광단지 호반광장",
         "startDate": "2026-10-20",
@@ -473,7 +522,6 @@ events_list = [
         "applyStartDate": "2026-10-01",
         "applyEndDate": "2026-11-15",
         "status": "ongoing",
-        "dday": "진행중",
         "targetAudience": "전국 가족 관광객",
         "fee": "무료",
         "url": "https://www.gyeongju.go.kr",
@@ -481,6 +529,135 @@ events_list = [
         "description": "분홍빛 핑크뮬리와 억새풀이 장관을 이루는 보문호수 산책로에서 돗자리 피크닉과 어린이 가을 음악회가 열립니다.",
         "tags": ["경주보문단지", "핑크뮬리", "가을경주", "가족피크닉"]
     },
+    {
+        "id": "fest-gyeongnam-01",
+        "boardType": "festivals",
+        "title": "2026 진주 남강 유등축제 & 키즈 등불 띄우기 페스타",
+        "category": "festival_light",
+        "categoryName": "유등·야경 축제",
+        "badge": "✨ 유등축제",
+        "organizer": "진주시 · 남강유등축제제전위원회",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "gyeongnam",
+        "regionName": "경상남도",
+        "location": "경상남도 진주시 남강로 626 진주성 및 남강 일원",
+        "startDate": "2026-11-05",
+        "endDate": "2026-11-18",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-18",
+        "status": "applying",
+        "targetAudience": "온 가족 누구나",
+        "fee": "무료 (소망등 달기 유료 체험)",
+        "url": "https://yudeung.com",
+        "imageUrl": "https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&auto=format&fit=crop&q=80",
+        "description": "남강 물결 위에 떠 있는 수천 개의 아름다운 유등과 진주성 둘레길 야경, 어린이를 위한 만화 캐릭터 등불이 장관을 이룹니다.",
+        "tags": ["진주남강유등축제", "진주성", "가을등불", "남강야경"]
+    },
+
+    # --- 광주광역시, 전라북도, 전라남도 ---
+    {
+        "id": "fest-gwangju-01",
+        "boardType": "festivals",
+        "title": "2026 광주 서창 억새축제 & 영산강 자전거 나들이",
+        "category": "nature_park",
+        "categoryName": "억새·생태 축제",
+        "badge": "🌿 억새축제",
+        "organizer": "광주광역시 서구청",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "gwangju",
+        "regionName": "광주광역시",
+        "location": "광주광역시 서구 서창동 영산강변 자전거도로 일원",
+        "startDate": "2026-10-25",
+        "endDate": "2026-11-10",
+        "applyStartDate": "2026-10-01",
+        "applyEndDate": "2026-11-10",
+        "status": "ongoing",
+        "targetAudience": "가족 및 시민",
+        "fee": "무료",
+        "url": "https://www.seogu.gwangju.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+        "description": "은빛 억새가 춤추는 영산강 자전거길을 따라 가족용 다인승 자전거도 타고 피크닉 쉼터에서 버스킹을 즐길 수 있습니다.",
+        "tags": ["광주억새축제", "영산강", "자전거나들이", "가을풍경"]
+    },
+    {
+        "id": "fest-jeonbuk-01",
+        "boardType": "festivals",
+        "title": "2026 전주 한옥마을 전통 떡메치기 & 골목 투어 페스타",
+        "category": "festival_culture",
+        "categoryName": "전통문화 축제",
+        "badge": "🎪 전통체험",
+        "organizer": "전주시 · 전주전통문화연수원",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "jeonbuk",
+        "regionName": "전북특별자치도",
+        "location": "전북특별자치도 전주시 완산구 어진길 29 경기전 및 한옥마을",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-06",
+        "status": "applying",
+        "targetAudience": "유아 및 초등 동반 가족",
+        "fee": "무료 (한복 대여 유료)",
+        "url": "https://tour.jeonju.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+        "description": "가을 정취 가득한 한옥마을 골목에서 아이들이 직접 인절미 떡메를 치고 전통 팽이, 투호를 즐기는 풍성한 가족 한마당입니다.",
+        "tags": ["전주한옥마을", "전통체험", "떡메치기", "전주여행"]
+    },
+    {
+        "id": "fest-jeonnam-01",
+        "boardType": "festivals",
+        "title": "2026 순천만 갈대축제 & 흑두루미 탐조 생태체험",
+        "category": "nature_park",
+        "categoryName": "자연·생태 축제",
+        "badge": "🌿 자연생태",
+        "organizer": "순천시 · 순천만보전네트워크",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "jeonnam",
+        "regionName": "전라남도",
+        "location": "전라남도 순천시 순천만길 513-25 순천만습지 잔디광장",
+        "startDate": "2026-11-01",
+        "endDate": "2026-11-04",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-03",
+        "status": "applying",
+        "targetAudience": "가족 단위 여행객",
+        "fee": "입장료 성인 8,000원 / 어린이 4,000원",
+        "url": "https://scbay.suncheon.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+        "description": "황금빛 160만 평 갈대밭과 천연기념물 흑두루미를 관찰하는 생태 탐조 축제. 갈대 빗자루 만들기 등 친환경 체험이 가득합니다.",
+        "tags": ["순천만습지", "갈대축제", "흑두루미", "생태체험"]
+    },
+    {
+        "id": "fest-jeonnam-02",
+        "boardType": "festivals",
+        "title": "2026 여수 밤바다 낭만 불꽃 페스티벌 & 키즈 마켓",
+        "category": "festival_light",
+        "categoryName": "불꽃·야경 축제",
+        "badge": "✨ 불꽃축제",
+        "organizer": "여수시 · 여수밤바다불꽃축제추진위원회",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "jeonnam",
+        "regionName": "전라남도",
+        "location": "전라남도 여수시 이순신광장로 73 이순신광장 및 종포해양공원",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-07",
+        "applyStartDate": "2026-10-01",
+        "applyEndDate": "2026-11-07",
+        "status": "applying",
+        "targetAudience": "온 가족 누구나",
+        "fee": "무료",
+        "url": "https://www.yeosu.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1498931299472-f7a63a5a1cfa?w=800&auto=format&fit=crop&q=80",
+        "description": "여수 밤바다를 배경으로 펼쳐지는 초대형 해상 멀티미디어 불꽃쇼와 어린이 버스킹, 핸드메이드 키즈 플리마켓이 운영됩니다.",
+        "tags": ["여수밤바다", "불꽃축제", "이순신광장", "가족여행"]
+    },
+
+    # --- 제주특별자치도 ---
     {
         "id": "fest-jeju-01",
         "boardType": "festivals",
@@ -499,7 +676,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-18",
         "status": "applying",
-        "dday": "D-5",
         "targetAudience": "유아 및 가족 단위 여행객",
         "fee": "1인 6,000원 (직접 딴 귤 1kg 수령)",
         "url": "https://culture.seogwipo.go.kr/citrus",
@@ -525,7 +701,6 @@ events_list = [
         "applyStartDate": "2026-10-25",
         "applyEndDate": "2026-11-15",
         "status": "applying",
-        "dday": "D-19",
         "targetAudience": "아이와 함께 걷는 가족 (5km 완만한 코스)",
         "fee": "무료 (삼다수 생수 및 편백나무 목걸이 제공)",
         "url": "https://www.jpdc.co.kr",
@@ -535,8 +710,9 @@ events_list = [
     },
 
     # =========================================================================
-    # [2] 전국 대회 일정 (공부 위주: 사생대회, 백일장, 독서토론/골든벨, 창의발명, 코딩, 수학/영어)
+    # [2] 전국 대회 일정 (contests) - 17개 시도 총망라
     # =========================================================================
+    # --- 서울특별시 ---
     {
         "id": "cont-seoul-01",
         "boardType": "contests",
@@ -555,7 +731,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-02",
         "status": "applying",
-        "dday": "D-6",
         "targetAudience": "전국 미취학(5~7세) 및 초등학생 전학년",
         "fee": "무료 (도화지 현장 무료 배부)",
         "url": "https://www.museum.go.kr",
@@ -581,7 +756,6 @@ events_list = [
         "applyStartDate": "2026-10-12",
         "applyEndDate": "2026-11-08",
         "status": "applying",
-        "dday": "D-12",
         "targetAudience": "초등학교 1~6학년 (저학년부/고학년부 분리)",
         "fee": "무료 (지정 도서 2권 사전 읽기)",
         "url": "https://www.nlcy.go.kr",
@@ -607,7 +781,6 @@ events_list = [
         "applyStartDate": "2026-10-20",
         "applyEndDate": "2026-11-15",
         "status": "applying",
-        "dday": "D-19",
         "targetAudience": "초등 1학년~중등 3학년 (스크래치/엔트리/파이썬)",
         "fee": "무료 (사전 온라인 예선 통과자 본선 진출)",
         "url": "https://www.kiria.org",
@@ -615,6 +788,8 @@ events_list = [
         "description": "실생활 문제를 블록코딩과 피지컬 로봇 센서로 해결하는 창의 코딩 챌린지입니다. 과학기술정보통신부장관상 수여.",
         "tags": ["코딩대회", "로봇경진", "엔트리", "과기정통부장관상"]
     },
+
+    # --- 경기도 ---
     {
         "id": "cont-gg-01",
         "boardType": "contests",
@@ -633,7 +808,6 @@ events_list = [
         "applyStartDate": "2026-10-10",
         "applyEndDate": "2026-10-31",
         "status": "applying",
-        "dday": "D-4",
         "targetAudience": "전국 유치원생 및 초등학생",
         "fee": "무료",
         "url": "https://www.nfa.go.kr",
@@ -659,7 +833,6 @@ events_list = [
         "applyStartDate": "2026-10-16",
         "applyEndDate": "2026-11-04",
         "status": "applying",
-        "dday": "D-8",
         "targetAudience": "초등학교 3학년~6학년",
         "fee": "무료",
         "url": "https://www.library.kr",
@@ -685,7 +858,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-10",
         "status": "applying",
-        "dday": "D-14",
         "targetAudience": "초등 1학년~6학년",
         "fee": "응시료 30,000원 (전국 백분위 정밀 진단 성적표 제공)",
         "url": "https://www.kme.co.kr",
@@ -693,6 +865,8 @@ events_list = [
         "description": "단순 연산이 아닌 논리적 사고력과 문제 해결력을 측정하는 전국 규모 수학 학력평가 경시대회입니다.",
         "tags": ["수학올림피아드", "KME", "초등수학", "학력평가"]
     },
+
+    # --- 인천광역시 ---
     {
         "id": "cont-incheon-01",
         "boardType": "contests",
@@ -711,7 +885,6 @@ events_list = [
         "applyStartDate": "2026-10-20",
         "applyEndDate": "2026-11-10",
         "status": "applying",
-        "dday": "D-14",
         "targetAudience": "초등학생 및 중학생 (드론 비행 조종 및 장애물 자율주행 부문)",
         "fee": "무료",
         "url": "https://www.itp.or.kr",
@@ -719,6 +892,8 @@ events_list = [
         "description": "자율주행 코딩 드론으로 장애물 링을 통과하고 미션을 해결하는 전국 유소년 항공우주 과학 챌린지입니다.",
         "tags": ["드론코딩", "미래과학", "항공우주", "인천교육청"]
     },
+
+    # --- 대전광역시 & 세종특별자치시 ---
     {
         "id": "cont-daejeon-01",
         "boardType": "contests",
@@ -729,7 +904,7 @@ events_list = [
         "organizer": "특허청 · 한국발명진흥회",
         "sourceType": "special_contest",
         "sourceLabel": "공식 협회 공지 연동",
-        "region": "sejong",
+        "region": "daejeon",
         "regionName": "대전광역시",
         "location": "대전광역시 유성구 대덕대로 481 국립중앙과학관 미래기술관",
         "startDate": "2026-11-20",
@@ -737,7 +912,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-06",
         "status": "applying",
-        "dday": "D-10",
         "targetAudience": "전국 초·중·고등학생 및 청소년",
         "fee": "무료",
         "url": "https://www.kipa.org",
@@ -763,7 +937,6 @@ events_list = [
         "applyStartDate": "2026-10-18",
         "applyEndDate": "2026-11-03",
         "status": "applying",
-        "dday": "D-7",
         "targetAudience": "전국 초등학생 (운문/산문 부문)",
         "fee": "무료",
         "url": "https://www.sejong.go.kr",
@@ -789,7 +962,6 @@ events_list = [
         "applyStartDate": "2026-10-25",
         "applyEndDate": "2026-11-15",
         "status": "applying",
-        "dday": "D-19",
         "targetAudience": "초등학교 4학년~6학년 (3인 1팀)",
         "fee": "무료",
         "url": "https://sejong.nl.go.kr",
@@ -797,6 +969,8 @@ events_list = [
         "description": "역사적 인물과 사건의 선택에 대해 심층 토론하고 반박하며 역사적 통찰력을 기르는 초등 전국 토론 한마당입니다.",
         "tags": ["역사토론", "인문학대회", "국립세종도서관", "초등토론"]
     },
+
+    # --- 충청남도 & 충청북도 ---
     {
         "id": "cont-chungnam-01",
         "boardType": "contests",
@@ -807,7 +981,7 @@ events_list = [
         "organizer": "충청남도교육청 과학교육원",
         "sourceType": "special_contest",
         "sourceLabel": "공식 교육청 공지 연동",
-        "region": "chungcheong",
+        "region": "chungnam",
         "regionName": "충청남도",
         "location": "충청남도 아산시 순천향로 충남교육청과학교육원 대강당",
         "startDate": "2026-11-19",
@@ -815,7 +989,6 @@ events_list = [
         "applyStartDate": "2026-10-15",
         "applyEndDate": "2026-11-05",
         "status": "applying",
-        "dday": "D-9",
         "targetAudience": "초등 및 중학생 (개인 또는 2인 1팀)",
         "fee": "무료",
         "url": "https://www.cnse.or.kr",
@@ -824,57 +997,32 @@ events_list = [
         "tags": ["과학전람회", "과학탐구", "충남교육청", "창의실험"]
     },
     {
-        "id": "cont-jeonbuk-01",
+        "id": "cont-chungbuk-01",
         "boardType": "contests",
-        "title": "2026 전주 한옥마을 전국 어린이 판소리 & 동요 콩쿠르",
-        "category": "contest_music",
-        "categoryName": "음악 콩쿠르",
-        "badge": "🎵 음악콩쿠르",
-        "organizer": "전북특별자치도 · (사)한국전통음악진흥회",
+        "title": "2026 충북 어린이 동화구연 & 인형극 경연대회",
+        "category": "contest_reading",
+        "categoryName": "동화구연·스피치",
+        "badge": "📖 동화구연",
+        "organizer": "충청북도어린이문화예술협회 · 충북예총",
         "sourceType": "special_contest",
         "sourceLabel": "공식 협회 공지 연동",
-        "region": "jeolla",
-        "regionName": "전북특별자치도",
-        "location": "전북특별자치도 전주시 완산구 기린대로 99 전주소리문화관 야외공연장",
-        "startDate": "2026-11-14",
-        "endDate": "2026-11-14",
-        "applyStartDate": "2026-10-15",
-        "applyEndDate": "2026-11-06",
+        "region": "chungbuk",
+        "regionName": "충청북도",
+        "location": "충청북도 청주시 서원구 충무로 충청북도교육문화원 소극장",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-18",
+        "applyEndDate": "2026-11-10",
         "status": "applying",
-        "dday": "D-10",
-        "targetAudience": "유치부 및 초등부 (판소리/창작동요 부문)",
+        "targetAudience": "유치부(5~7세) 및 초등 저학년",
         "fee": "무료",
-        "url": "https://www.jeonju.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
-        "description": "우리 가락의 멋과 고운 동요 선율을 겨루는 유소년 국악·동요 경연대회입니다. 문화체육관광부장관상 및 전북특별자치도지사상 수여.",
-        "tags": ["음악콩쿠르", "동요대회", "판소리", "전주한옥마을"]
+        "url": "https://www.cbe.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
+        "description": "표현력과 언어 구사력을 기르는 전국 어린이 동화구연 경연. 충북도지사상 및 충북교육감상 수여.",
+        "tags": ["동화구연", "어린이스피치", "표현력", "충북교육문화원"]
     },
-    {
-        "id": "cont-gwangju-01",
-        "boardType": "contests",
-        "title": "2026 국립아시아문화전당 어린이 문화콘텐츠 창작 공모전",
-        "category": "contest_art",
-        "categoryName": "디지털·미술 창작공모",
-        "badge": "🏆 미술·창작",
-        "organizer": "국립아시아문화전당(ACC) · 문화체육관광부",
-        "sourceType": "tour_api",
-        "sourceLabel": "한국관광공사 TourAPI",
-        "region": "jeolla",
-        "regionName": "광주광역시",
-        "location": "광주광역시 동구 문화전당로 38 국립아시아문화전당 어린이문화원",
-        "startDate": "2026-11-08",
-        "endDate": "2026-11-08",
-        "applyStartDate": "2026-10-10",
-        "applyEndDate": "2026-11-02",
-        "status": "applying",
-        "dday": "D-6",
-        "targetAudience": "초등학교 1~6학년",
-        "fee": "무료 (모든 미술·창작 재료 현장 제공)",
-        "url": "https://www.acc.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
-        "description": "아시아의 옛이야기를 모티브로 나만의 그림책 표지와 입체 조형물을 만들어보는 어린이 창의 문화콘텐츠 공모전입니다.",
-        "tags": ["국립아시아문화전당", "미술대회", "그림책창작", "광주가볼만한곳"]
-    },
+
+    # --- 부산, 대구, 울산 ---
     {
         "id": "cont-busan-01",
         "boardType": "contests",
@@ -893,39 +1041,12 @@ events_list = [
         "applyStartDate": "2026-10-20",
         "applyEndDate": "2026-11-12",
         "status": "applying",
-        "dday": "D-16",
         "targetAudience": "초등 3학년~중등 3학년",
         "fee": "무료",
         "url": "https://www.busanit.or.kr",
         "imageUrl": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop&q=80",
         "description": "엔트리, 스크래치, 파이썬을 활용한 창의 알고리즘 문제 해결 및 AI 프롬프트 모델링 챌린지 대회입니다.",
         "tags": ["코딩대회", "인공지능", "벡스코", "부산교육감상"]
-    },
-    {
-        "id": "cont-gyeongnam-01",
-        "boardType": "contests",
-        "title": "2026 우주항공청 주최 전국 어린이 물로켓·에어로켓 경진대회",
-        "category": "contest_stem",
-        "categoryName": "우주항공 과학경진",
-        "badge": "💡 우주과학",
-        "organizer": "우주항공청(KASA) · 한국항공우주산업진흥협회",
-        "sourceType": "special_contest",
-        "sourceLabel": "공식 청사 공지 연동",
-        "region": "gyeongsang",
-        "regionName": "경상남도",
-        "location": "경상남도 사천시 사천읍 항공항공로 168 항공우주박물관 활주로",
-        "startDate": "2026-11-08",
-        "endDate": "2026-11-08",
-        "applyStartDate": "2026-10-15",
-        "applyEndDate": "2026-11-03",
-        "status": "applying",
-        "dday": "D-7",
-        "targetAudience": "전국 초등학교 전학년 (저학년부/고학년부)",
-        "fee": "무료 (로켓 제작 키트 무료 지급)",
-        "url": "https://www.kasa.go.kr",
-        "imageUrl": "https://images.unsplash.com/photo-1517976487507-5b3b4a45097c?w=800&auto=format&fit=crop&q=80",
-        "description": "우주항공청 개청 기념 전국 최대 규모의 유소년 물로켓 및 화약로켓 과녁 명중 대회입니다. 우주항공청장상 수여.",
-        "tags": ["물로켓대회", "우주항공청", "에어로켓", "사천항공박물관"]
     },
     {
         "id": "cont-daegu-01",
@@ -937,7 +1058,7 @@ events_list = [
         "organizer": "대구광역시교육청 · 주한외국문화원",
         "sourceType": "special_contest",
         "sourceLabel": "공식 교육청 공지 연동",
-        "region": "busan",
+        "region": "daegu",
         "regionName": "대구광역시",
         "location": "대구광역시 수성구 희망로 대구학생문화센터 대공연장",
         "startDate": "2026-11-21",
@@ -945,13 +1066,64 @@ events_list = [
         "applyStartDate": "2026-10-20",
         "applyEndDate": "2026-11-09",
         "status": "applying",
-        "dday": "D-13",
         "targetAudience": "초등 1학년~6학년",
         "fee": "무료 (예선 원고 심사 후 본선 진출)",
         "url": "https://www.dge.go.kr",
         "imageUrl": "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&auto=format&fit=crop&q=80",
         "description": "자유 주제 3분 영어 스피치와 원어민 심사위원 질의응답을 통해 유창성과 표현력을 겨루는 전국 어린이 영어 말하기 대회입니다.",
         "tags": ["영어말하기대회", "스피치대회", "대구교육청", "영어도서관"]
+    },
+    {
+        "id": "cont-ulsan-01",
+        "boardType": "contests",
+        "title": "2026 울산 고래사랑 전국 어린이 바다사생대회",
+        "category": "contest_art",
+        "categoryName": "해양생태 사생대회",
+        "badge": "🏆 사생대회",
+        "organizer": "울산광역시 남구도시관리공단 · 장생포고래박물관",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 협회 공지 연동",
+        "region": "ulsan",
+        "regionName": "울산광역시",
+        "location": "울산광역시 남구 장생포고래로 244 고래문화마을 잔디광장",
+        "startDate": "2026-11-08",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-12",
+        "applyEndDate": "2026-11-03",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초등학생",
+        "fee": "무료 (박물관 및 생태체험관 무료입장 혜택)",
+        "url": "https://www.whalecity.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+        "description": "푸른 동해와 고래를 테마로 펼쳐지는 어린이 사생대회. 해양수산부장관상 및 울산광역시장상 수여.",
+        "tags": ["고래사생대회", "장생포고래마을", "바다그림", "해양수산부"]
+    },
+
+    # --- 경상남도 & 경상북도 ---
+    {
+        "id": "cont-gyeongnam-01",
+        "boardType": "contests",
+        "title": "2026 우주항공청 주최 전국 어린이 물로켓·에어로켓 경진대회",
+        "category": "contest_stem",
+        "categoryName": "우주항공 과학경진",
+        "badge": "💡 우주과학",
+        "organizer": "우주항공청(KASA) · 한국항공우주산업진흥협회",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 청사 공지 연동",
+        "region": "gyeongnam",
+        "regionName": "경상남도",
+        "location": "경상남도 사천시 사천읍 항공항공로 168 항공우주박물관 활주로",
+        "startDate": "2026-11-08",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-03",
+        "status": "applying",
+        "targetAudience": "전국 초등학교 전학년 (저학년부/고학년부)",
+        "fee": "무료 (로켓 제작 키트 무료 지급)",
+        "url": "https://www.kasa.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1517976487507-5b3b4a45097c?w=800&auto=format&fit=crop&q=80",
+        "description": "우주항공청 개청 기념 전국 최대 규모의 유소년 물로켓 및 화약로켓 과녁 명중 대회입니다. 우주항공청장상 수여.",
+        "tags": ["물로켓대회", "우주항공청", "에어로켓", "사천항공박물관"]
     },
     {
         "id": "cont-gyeongbuk-01",
@@ -963,7 +1135,7 @@ events_list = [
         "organizer": "경주시 · (사)신라문화보존회",
         "sourceType": "special_contest",
         "sourceLabel": "공식 협회 공지 연동",
-        "region": "gyeongsang",
+        "region": "gyeongbuk",
         "regionName": "경상북도",
         "location": "경상북도 경주시 계림로 14 첨성대 잔디광장",
         "startDate": "2026-11-14",
@@ -971,7 +1143,6 @@ events_list = [
         "applyStartDate": "2026-10-18",
         "applyEndDate": "2026-11-07",
         "status": "applying",
-        "dday": "D-11",
         "targetAudience": "유치부 및 초등학생",
         "fee": "무료 (도화지 및 원고지 배부)",
         "url": "https://www.gyeongju.go.kr",
@@ -979,6 +1150,85 @@ events_list = [
         "description": "첨성대와 대릉원의 천년 고도를 배경으로 펼쳐지는 가을 사생대회 및 시·산문 백일장입니다. 경북도지사상 및 경북교육감상 수여.",
         "tags": ["사생대회", "백일장", "첨성대", "경주문화재"]
     },
+
+    # --- 광주광역시, 전라북도, 전라남도 ---
+    {
+        "id": "cont-gwangju-01",
+        "boardType": "contests",
+        "title": "2026 국립아시아문화전당 어린이 문화콘텐츠 창작 공모전",
+        "category": "contest_art",
+        "categoryName": "디지털·미술 창작공모",
+        "badge": "🏆 미술·창작",
+        "organizer": "국립아시아문화전당(ACC) · 문화체육관광부",
+        "sourceType": "tour_api",
+        "sourceLabel": "한국관광공사 TourAPI",
+        "region": "gwangju",
+        "regionName": "광주광역시",
+        "location": "광주광역시 동구 문화전당로 38 국립아시아문화전당 어린이문화원",
+        "startDate": "2026-11-08",
+        "endDate": "2026-11-08",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-02",
+        "status": "applying",
+        "targetAudience": "초등학교 1~6학년",
+        "fee": "무료 (모든 미술·창작 재료 현장 제공)",
+        "url": "https://www.acc.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+        "description": "아시아의 옛이야기를 모티브로 나만의 그림책 표지와 입체 조형물을 만들어보는 어린이 창의 문화콘텐츠 공모전입니다.",
+        "tags": ["국립아시아문화전당", "미술대회", "그림책창작", "광주가볼만한곳"]
+    },
+    {
+        "id": "cont-jeonbuk-01",
+        "boardType": "contests",
+        "title": "2026 전주 한옥마을 전국 어린이 판소리 & 동요 콩쿠르",
+        "category": "contest_music",
+        "categoryName": "음악 콩쿠르",
+        "badge": "🎵 음악콩쿠르",
+        "organizer": "전북특별자치도 · (사)한국전통음악진흥회",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 협회 공지 연동",
+        "region": "jeonbuk",
+        "regionName": "전북특별자치도",
+        "location": "전북특별자치도 전주시 완산구 기린대로 99 전주소리문화관 야외공연장",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-06",
+        "status": "applying",
+        "targetAudience": "유치부 및 초등부 (판소리/창작동요 부문)",
+        "fee": "무료",
+        "url": "https://www.jeonju.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+        "description": "우리 가락의 멋과 고운 동요 선율을 겨루는 유소년 국악·동요 경연대회입니다. 문화체육관광부장관상 및 전북특별자치도지사상 수여.",
+        "tags": ["음악콩쿠르", "동요대회", "판소리", "전주한옥마을"]
+    },
+    {
+        "id": "cont-jeonnam-01",
+        "boardType": "contests",
+        "title": "2026 순천만 흑두루미 생태환경 사생대회 & 환경 백일장",
+        "category": "contest_art",
+        "categoryName": "생태환경 사생대회",
+        "badge": "🏆 환경사생대회",
+        "organizer": "전라남도교육청 · 순천환경보전위원회",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 협회 공지 연동",
+        "region": "jeonnam",
+        "regionName": "전라남도",
+        "location": "전라남도 순천시 국가정원1호길 순천만국가정원 잔디마당",
+        "startDate": "2026-11-15",
+        "endDate": "2026-11-15",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-09",
+        "status": "applying",
+        "targetAudience": "전국 유·초등학생 (그림 및 동시·산문)",
+        "fee": "무료 (도화지 무료 지급 및 국가정원 무료입장)",
+        "url": "https://scbay.suncheon.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+        "description": "철새 흑두루미와 습지 자연생태의 소중함을 그림과 글로 표현하는 전국 어린이 환경 사생대회입니다. 환경부장관상 수여.",
+        "tags": ["순천만사생대회", "흑두루미", "환경백일장", "환경부장관상"]
+    },
+
+    # --- 제주특별자치도 ---
     {
         "id": "cont-jeju-01",
         "boardType": "contests",
@@ -997,7 +1247,6 @@ events_list = [
         "applyStartDate": "2026-10-12",
         "applyEndDate": "2026-11-05",
         "status": "applying",
-        "dday": "D-9",
         "targetAudience": "전국 초등학생",
         "fee": "무료 (우편 접수 및 현장 실기대회 병행)",
         "url": "https://www.jeju.go.kr/wnh",
@@ -1007,14 +1256,103 @@ events_list = [
     }
 ]
 
+def fetch_tourapi_events(api_key):
+    """
+    한국관광공사 TourAPI 4.0 searchFestival1 엔드포인트 연동
+    """
+    print("TourAPI 연동을 시도합니다...")
+    url = "https://apis.data.go.kr/B551011/KorService1/searchFestival1"
+    
+    # 2026년 10월 이후 축제 검색
+    params = {
+        "serviceKey": api_key,
+        "MobileOS": "ETC",
+        "MobileApp": "DodamTalk",
+        "_type": "json",
+        "eventStartDate": "20261001",
+        "numOfRows": "200",
+        "pageNo": "1",
+        "arrange": "A"
+    }
+
+    full_url = f"{url}?{urllib.parse.urlencode(params)}"
+    req = urllib.request.Request(full_url, headers={"User-Agent": "Mozilla/5.0"})
+    
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            items = data.get("response", {}).get("body", {}).get("items", {}).get("item", [])
+            print(f"TourAPI로부터 {len(items)}건의 축제 데이터를 수신했습니다.")
+            
+            tour_events = []
+            for it in items:
+                area_code = str(it.get("areacode", "1"))
+                reg_key, reg_name = AREA_CODE_MAP.get(area_code, ("seoul", "서울특별시"))
+                
+                s_date = str(it.get("eventstartdate", ""))
+                e_date = str(it.get("eventenddate", ""))
+                
+                if len(s_date) == 8:
+                    s_date_fmt = f"{s_date[:4]}-{s_date[4:6]}-{s_date[6:]}"
+                else:
+                    s_date_fmt = "2026-11-01"
+                    
+                if len(e_date) == 8:
+                    e_date_fmt = f"{e_date[:4]}-{e_date[4:6]}-{e_date[6:]}"
+                else:
+                    e_date_fmt = s_date_fmt
+
+                img_url = it.get("firstimage") or "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80"
+                
+                tour_events.append({
+                    "id": f"tourapi-{it.get('contentid', it.get('title'))}",
+                    "boardType": "festivals",
+                    "title": it.get("title", "지역 문화 축제"),
+                    "category": "festival_culture",
+                    "categoryName": "지역 문화 축제",
+                    "badge": "🎪 TourAPI 축제",
+                    "organizer": it.get("tel") or "지자체 축제추진위원회",
+                    "sourceType": "tour_api",
+                    "sourceLabel": "한국관광공사 TourAPI 실시간 연동",
+                    "region": reg_key,
+                    "regionName": reg_name,
+                    "location": it.get("addr1", f"{reg_name} 일대"),
+                    "startDate": s_date_fmt,
+                    "endDate": e_date_fmt,
+                    "applyStartDate": s_date_fmt,
+                    "applyEndDate": e_date_fmt,
+                    "status": "applying",
+                    "targetAudience": "전국 가족 관광객",
+                    "fee": "상세 문의",
+                    "url": "https://korean.visitkorea.or.kr",
+                    "imageUrl": img_url,
+                    "description": f"{it.get('title')} - {reg_name}에서 열리는 가족 문화관광 축제입니다.",
+                    "tags": ["지역축제", "TourAPI", reg_name, "가족나들이"]
+                })
+            return tour_events
+    except Exception as e:
+        print(f"TourAPI 호출 중 오류 또는 키 확인 필요: {e}")
+        return []
+
 def build():
-    # Sort events by startDate ascending
-    events_list.sort(key=lambda x: x["startDate"])
-
     today = datetime.date(2026, 10, 27)
+    
+    # 1. API 키 확인 (환경변수 또는 secrets)
+    api_key = os.environ.get("TOUR_API_KEY")
+    tour_api_events = []
+    if api_key:
+        tour_api_events = fetch_tourapi_events(api_key)
+        
+    combined_events = list(CURATED_EVENTS)
+    if tour_api_events:
+        # 중복 방지하며 결합
+        existing_titles = {e["title"] for e in combined_events}
+        for te in tour_api_events:
+            if te["title"] not in existing_titles:
+                combined_events.append(te)
 
-    # Recalculate D-Day for accuracy
-    for e in events_list:
+    # 2. D-Day 및 정렬 처리
+    for e in combined_events:
         try:
             apply_end = datetime.datetime.strptime(e["applyEndDate"], "%Y-%m-%d").date()
             diff = (apply_end - today).days
@@ -1028,50 +1366,67 @@ def build():
                 e["dday"] = f"D-{diff}"
                 e["status"] = "applying"
         except:
-            pass
+            e["dday"] = "진행중"
 
-    festivals_count = sum(1 for e in events_list if e.get("boardType") == "festivals")
-    contests_count = sum(1 for e in events_list if e.get("boardType") == "contests")
+    combined_events.sort(key=lambda x: x["startDate"])
+
+    festivals = [e for e in combined_events if e.get("boardType") == "festivals"]
+    contests = [e for e in combined_events if e.get("boardType") == "contests"]
+
+    # 17개 시도별 카운트 통계
+    region_stats = {}
+    for code, (reg_key, reg_name) in AREA_CODE_MAP.items():
+        f_cnt = sum(1 for e in festivals if e["region"] == reg_key)
+        c_cnt = sum(1 for e in contests if e["region"] == reg_key)
+        region_stats[reg_key] = {
+            "name": reg_name,
+            "festivals": f_cnt,
+            "contests": c_cnt,
+            "total": f_cnt + c_cnt
+        }
 
     metadata = {
         "lastUpdated": today.strftime("%Y-%m-%d"),
-        "totalEvents": len(events_list),
-        "festivalsCount": festivals_count,
-        "contestsCount": contests_count,
+        "totalEvents": len(combined_events),
+        "festivalsCount": len(festivals),
+        "contestsCount": len(contests),
+        "isTourApiIntegrated": bool(api_key and tour_api_events),
         "scope": "전국 17개 시도 전체",
+        "regionStats": region_stats,
         "sources": [
             {
                 "key": "special_contest",
-                "name": "공식 협회/학회/기관 공지 크롤러 (사생·발명대회·독서토론·가족마라톤)",
-                "count": sum(1 for e in events_list if e.get("sourceType") == "special_contest")
+                "name": "공식 협회/학회 공지 크롤러 (사생·발명대회·독서토론·가족마라톤)",
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "special_contest")
             },
             {
                 "key": "tour_api",
-                "name": "한국관광공사 TourAPI 전국 문화관광 축제",
-                "count": sum(1 for e in events_list if e.get("sourceType") == "tour_api")
+                "name": "한국관광공사 TourAPI 4.0 전국 축제",
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "tour_api")
             },
             {
                 "key": "seoul_open_data",
-                "name": "서울열린데이터광장 문화행사",
-                "count": sum(1 for e in events_list if e.get("sourceType") == "seoul_open_data")
+                "name": "서울열린데이터광장 공원문화행사",
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "seoul_open_data")
             },
             {
                 "key": "gyeonggi_data_dream",
                 "name": "경기데이터드림 문화체육",
-                "count": sum(1 for e in events_list if e.get("sourceType") == "gyeonggi_data_dream")
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "gyeonggi_data_dream")
             }
         ]
     }
 
     output_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "js", "events_data.js")
     with open(output_path, "w", encoding="utf-8") as f:
-        f.write("// 전국 17개 시도 지역행사 & 특정 분야(어린이 사생대회·독서토론·발명대회·가족마라톤) 일정 데이터셋\n")
+        f.write("// 전국 17개 시도 지역행사 & 대회일정 데이터셋\n")
         f.write("window.DODAM_EVENTS_METADATA = " + json.dumps(metadata, ensure_ascii=False, indent=2) + ";\n\n")
-        f.write("window.DODAM_NATIONWIDE_EVENTS = " + json.dumps(events_list, ensure_ascii=False, indent=2) + ";\n")
+        f.write("window.DODAM_NATIONWIDE_EVENTS = " + json.dumps(combined_events, ensure_ascii=False, indent=2) + ";\n")
 
-    print(f"Successfully generated js/events_data.js with {len(events_list)} events.")
-    print(f" - 전국 지역행사 (볼거리/마라톤): {festivals_count}건")
-    print(f" - 전국 대회일정 (공부/사생/독서토론): {contests_count}건")
+    print(f"js/events_data.js 생성 완료! 총 {len(combined_events)}건")
+    print(f" - 전국 지역행사 (볼거리/마라톤): {len(festivals)}건")
+    print(f" - 전국 대회일정 (공부/사생/독서토론): {len(contests)}건")
+    print(f" - 17개 시도 전역 커버리지: {len(region_stats)}개 시도 매핑 완료")
 
 if __name__ == "__main__":
     build()
