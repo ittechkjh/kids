@@ -72,13 +72,34 @@
           <!-- 동네 필터 -->
           <div class="relative">
             <select id="global-region-select" onchange="app.onChangeRegion(this.value)" class="appearance-none bg-stone-100 hover:bg-stone-200/70 text-slate-800 font-bold text-xs rounded-xl pl-3 pr-8 py-2.5 border border-stone-200 focus:outline-none focus:ring-2 focus:ring-rose-400 cursor-pointer">
-              <option value="all">📍 동네: 전국 전체</option>
-              <option value="pangyo">📍 분당·판교·위례</option>
-              <option value="songpa">📍 강남·서초·송파</option>
-              <option value="dongtan">📍 동탄·수원·광교</option>
-              <option value="mapo">📍 마포·목동·용산</option>
-              <option value="sejong">📍 세종·대전·충청</option>
-              <option value="incheon">📍 인천·김포·일산</option>
+              <option value="all">📍 지역: 전국 전체</option>
+              <optgroup label="수도권">
+                <option value="seoul">📍 서울특별시</option>
+                <option value="gyeonggi">📍 경기도 (판교/수원/동탄/일산)</option>
+                <option value="incheon">📍 인천광역시 (송도/청라/영종)</option>
+              </optgroup>
+              <optgroup label="충청·대전·세종">
+                <option value="daejeon">📍 대전광역시</option>
+                <option value="sejong">📍 세종특별자치시</option>
+                <option value="chungnam">📍 충청남도 (천안/아산/당진)</option>
+                <option value="chungbuk">📍 충청북도 (청주/충주/제천)</option>
+              </optgroup>
+              <optgroup label="호남·광주">
+                <option value="gwangju">📍 광주광역시</option>
+                <option value="jeonbuk">📍 전북특별자치도 (전주/군산/익산)</option>
+                <option value="jeonnam">📍 전라남도 (여수/순천/목포/담양)</option>
+              </optgroup>
+              <optgroup label="영남·부산·대구·울산">
+                <option value="busan">📍 부산광역시 (해운대/기장/서면)</option>
+                <option value="daegu">📍 대구광역시 (수성구/달서구)</option>
+                <option value="ulsan">📍 울산광역시 (삼산/언양)</option>
+                <option value="gyeongbuk">📍 경상북도 (경주/포항/안동)</option>
+                <option value="gyeongnam">📍 경상남도 (창원/김해/진주/거제)</option>
+              </optgroup>
+              <optgroup label="강원·제주">
+                <option value="gangwon">📍 강원특별자치도 (강릉/춘천/속초)</option>
+                <option value="jeju">📍 제주특별자치도 (제주시/서귀포/애월)</option>
+              </optgroup>
             </select>
             <i class="fa-solid fa-chevron-down text-[10px] text-slate-500 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
           </div>
@@ -421,26 +442,70 @@
 
           <!-- 지역 & 음식 카테고리 & 편의시설 필터 -->
           <div class="community-card p-4 space-y-3">
+            <!-- 전국 주요 권역 빠른 선택 퀵 바 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 border-b border-stone-100">
+              <span class="text-[11px] font-black text-rose-500 whitespace-nowrap"><i class="fa-solid fa-map-location-dot mr-1"></i>빠른 지역:</span>
+              <button onclick="app.setQuickFoodRegion('all')" data-region="all" class="food-quick-pill px-2.5 py-1 rounded-xl bg-slate-900 text-white text-[11px] font-bold shrink-0 shadow-sm">전국 전체</button>
+              <button onclick="app.setQuickFoodRegion('seoul')" data-region="seoul" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">서울</button>
+              <button onclick="app.setQuickFoodRegion('gyeonggi')" data-region="gyeonggi" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">경기</button>
+              <button onclick="app.setQuickFoodRegion('incheon')" data-region="incheon" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">인천</button>
+              <button onclick="app.setQuickFoodRegion('gangwon')" data-region="gangwon" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">강원</button>
+              <button onclick="app.setQuickFoodRegion('daejeon')" data-region="daejeon" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">대전</button>
+              <button onclick="app.setQuickFoodRegion('sejong')" data-region="sejong" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">세종</button>
+              <button onclick="app.setQuickFoodRegion('chungnam')" data-region="chungnam" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">충남</button>
+              <button onclick="app.setQuickFoodRegion('chungbuk')" data-region="chungbuk" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">충북</button>
+              <button onclick="app.setQuickFoodRegion('gwangju')" data-region="gwangju" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">광주</button>
+              <button onclick="app.setQuickFoodRegion('jeonbuk')" data-region="jeonbuk" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">전북</button>
+              <button onclick="app.setQuickFoodRegion('jeonnam')" data-region="jeonnam" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">전남</button>
+              <button onclick="app.setQuickFoodRegion('daegu')" data-region="daegu" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">대구</button>
+              <button onclick="app.setQuickFoodRegion('gyeongbuk')" data-region="gyeongbuk" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">경북</button>
+              <button onclick="app.setQuickFoodRegion('busan')" data-region="busan" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">부산</button>
+              <button onclick="app.setQuickFoodRegion('ulsan')" data-region="ulsan" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">울산</button>
+              <button onclick="app.setQuickFoodRegion('gyeongnam')" data-region="gyeongnam" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">경남</button>
+              <button onclick="app.setQuickFoodRegion('jeju')" data-region="jeju" class="food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0">제주</button>
+            </div>
+
             <div class="flex flex-wrap items-center justify-between gap-2">
               <div class="flex items-center gap-2 flex-wrap">
                 <span class="text-xs font-extrabold text-slate-500"><i class="fa-solid fa-filter text-rose-500 mr-1"></i>필터</span>
                 <select id="food-region-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
-                  <option value="all">📍 지역: 전국 전체</option>
-                  <option value="pangyo">📍 분당·판교</option>
-                  <option value="songpa">📍 강남·서초·송파</option>
-                  <option value="dongtan">📍 동탄·수원·광교</option>
-                  <option value="mapo">📍 마포·목동·여의도</option>
-                  <option value="sejong">📍 세종·대전·충청</option>
-                  <option value="incheon">📍 인천·송도·일산</option>
-                  <option value="busan">📍 부산·대구·영남</option>
-                  <option value="jeju">📍 제주·강원·나들이</option>
+                  <option value="all">📍 지역: 전국 전체 (178곳)</option>
+                  <optgroup label="수도권">
+                    <option value="seoul">📍 서울특별시 (16곳)</option>
+                    <option value="gyeonggi">📍 경기도 (판교/수원/동탄/일산 24곳)</option>
+                    <option value="incheon">📍 인천광역시 (송도/청라/영종 10곳)</option>
+                  </optgroup>
+                  <optgroup label="충청·대전·세종">
+                    <option value="daejeon">📍 대전광역시 (8곳)</option>
+                    <option value="sejong">📍 세종특별자치시 (8곳)</option>
+                    <option value="chungnam">📍 충청남도 (천안/아산/당진 8곳)</option>
+                    <option value="chungbuk">📍 충청북도 (청주/충주/제천 8곳)</option>
+                  </optgroup>
+                  <optgroup label="호남·광주">
+                    <option value="gwangju">📍 광주광역시 (8곳)</option>
+                    <option value="jeonbuk">📍 전북특별자치도 (전주/군산/익산 8곳)</option>
+                    <option value="jeonnam">📍 전라남도 (여수/순천/목포/담양 10곳)</option>
+                  </optgroup>
+                  <optgroup label="영남·부산·대구·울산">
+                    <option value="busan">📍 부산광역시 (해운대/기장/서면 14곳)</option>
+                    <option value="daegu">📍 대구광역시 (수성구/달서구 8곳)</option>
+                    <option value="ulsan">📍 울산광역시 (언양/삼산 6곳)</option>
+                    <option value="gyeongbuk">📍 경상북도 (경주/포항/안동 10곳)</option>
+                    <option value="gyeongnam">📍 경상남도 (창원/김해/진주/거제 10곳)</option>
+                  </optgroup>
+                  <optgroup label="강원·제주">
+                    <option value="gangwon">📍 강원특별자치도 (강릉/춘천/속초 10곳)</option>
+                    <option value="jeju">📍 제주특별자치도 (제주시/서귀포 12곳)</option>
+                  </optgroup>
                 </select>
 
                 <select id="food-category-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
                   <option value="all">🍴 음식 종류: 전체</option>
-                  <option value="korean">한식 · 숯불구이/한정식</option>
-                  <option value="western">양식 · 파스타/스테이크</option>
-                  <option value="brunch">브런치 · 대형 베이커리</option>
+                  <option value="korean">한식 · 숯불구이/한정식/국수</option>
+                  <option value="western">양식 · 파스타/스테이크/피자</option>
+                  <option value="brunch">브런치 · 대형 베이커리카페</option>
+                  <option value="chinese">중식 · 딤섬/탕수육/훠궈</option>
+                  <option value="japanese">일식 · 돈까스/초밥/샤브</option>
                 </select>
 
                 <select id="food-sort-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
@@ -452,8 +517,18 @@
                 </select>
               </div>
 
-              <div class="text-xs font-bold text-slate-500">
-                추출 맛집: <strong id="food-count-badge" class="text-rose-600 font-black">0</strong>곳
+              <div class="flex items-center gap-2">
+                <button
+                  onclick="app.locateUserAndFindRestaurants()"
+                  class="px-2.5 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-black flex items-center gap-1.5 transition border border-rose-200 shadow-sm"
+                  title="현재 내 스마트폰/PC GPS 위치 기준 가까운 맛집 찾기"
+                >
+                  <i class="fa-solid fa-location-crosshairs text-rose-500 animate-spin-slow"></i>
+                  <span>내 주변 찾기 (GPS)</span>
+                </button>
+                <div class="text-xs font-bold text-slate-500">
+                  추출 맛집: <strong id="food-count-badge" class="text-rose-600 font-black">0</strong>곳
+                </div>
               </div>
             </div>
 
@@ -798,14 +873,23 @@
           <div>
             <label class="block font-bold text-slate-700 mb-1">지역 *</label>
             <select id="rest-form-region" class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold">
-              <option value="pangyo">분당·판교</option>
-              <option value="songpa">강남·서초·송파</option>
-              <option value="dongtan">동탄·수원·광교</option>
-              <option value="mapo">마포·목동·여의도</option>
-              <option value="sejong">세종·대전·충청</option>
-              <option value="incheon">인천·송도·일산</option>
-              <option value="busan">부산·대구·영남</option>
-              <option value="jeju">제주·강원·나들이</option>
+              <option value="seoul">서울특별시</option>
+              <option value="gyeonggi">경기도</option>
+              <option value="incheon">인천광역시</option>
+              <option value="gangwon">강원특별자치도</option>
+              <option value="daejeon">대전광역시</option>
+              <option value="sejong">세종특별자치시</option>
+              <option value="chungnam">충청남도</option>
+              <option value="chungbuk">충청북도</option>
+              <option value="gwangju">광주광역시</option>
+              <option value="jeonbuk">전북특별자치도</option>
+              <option value="jeonnam">전라남도</option>
+              <option value="daegu">대구광역시</option>
+              <option value="gyeongbuk">경상북도</option>
+              <option value="busan">부산광역시</option>
+              <option value="ulsan">울산광역시</option>
+              <option value="gyeongnam">경상남도</option>
+              <option value="jeju">제주특별자치도</option>
             </select>
           </div>
           <div>
@@ -814,6 +898,8 @@
               <option value="korean">한식 · 숯불구이/한정식</option>
               <option value="western">양식 · 파스타/스테이크</option>
               <option value="brunch">브런치 · 대형 베이커리</option>
+              <option value="chinese">중식 · 딤섬/중화요리</option>
+              <option value="japanese">일식 · 돈까스/초밥/샤브</option>
             </select>
           </div>
         </div>

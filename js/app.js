@@ -21,6 +21,8 @@ class DodamCommunityApp {
     this.foodMap = null;
     this.foodMarkersLayer = null;
     this.foodMarkersMap = {};
+    this.userLocation = null;
+    this.userBeaconMarker = null;
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
@@ -272,6 +274,7 @@ class DodamCommunityApp {
     if (foodRegionFilter) {
       foodRegionFilter.value = regionId;
     }
+    this.updateQuickPillState(regionId);
     this.renderFeed();
     this.renderClubsSection();
     this.renderFoodView();
@@ -1289,6 +1292,97 @@ class DodamCommunityApp {
     this.updateFoodMapMarkers();
   }
 
+  getDistanceKm(lat1, lon1, lat2, lon2) {
+    const R = 6371;
+    const dLat = (lat2 - lat1) * Math.PI / 180;
+    const dLon = (lon2 - lon1) * Math.PI / 180;
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return Math.round(R * c * 10) / 10;
+  }
+
+  setQuickFoodRegion(regionId) {
+    const regFilter = document.getElementById('food-region-filter');
+    if (regFilter) {
+      regFilter.value = regionId;
+    }
+    const globalSelect = document.getElementById('global-region-select');
+    if (globalSelect && globalSelect.querySelector(`option[value="${regionId}"]`)) {
+      globalSelect.value = regionId;
+    }
+    this.updateQuickPillState(regionId);
+    this.onFoodFilterChange();
+  }
+
+  updateQuickPillState(regionId) {
+    document.querySelectorAll('.food-quick-pill').forEach((btn) => {
+      const isMatch = btn.getAttribute('data-region') === regionId;
+      if (isMatch) {
+        btn.className = 'food-quick-pill px-2.5 py-1 rounded-xl bg-slate-900 text-white text-[11px] font-bold shrink-0 shadow-sm';
+      } else {
+        btn.className = 'food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0 transition';
+      }
+    });
+  }
+
+  locateUserAndFindRestaurants() {
+    if (!navigator.geolocation) {
+      this.showToast('사용 중인 브라우저가 위치 정보(GPS)를 지원하지 않습니다.');
+      return;
+    }
+
+    this.showToast('📍 현재 위치(GPS)를 수신 중입니다...');
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        const { latitude, longitude } = pos.coords;
+        this.userLocation = { lat: latitude, lng: longitude };
+
+        if (this.currentView !== 'food') {
+          this.switchMainView('food');
+        }
+        this.initFoodMap();
+
+        if (this.foodMap) {
+          if (this.userBeaconMarker) {
+            this.foodMap.removeLayer(this.userBeaconMarker);
+          }
+          const userIcon = L.divIcon({
+            className: 'user-location-marker',
+            html: '<div class="relative flex items-center justify-center w-7 h-7"><div class="absolute w-7 h-7 rounded-full bg-blue-500/40 animate-ping"></div><div class="w-4 h-4 rounded-full bg-blue-600 border-2 border-white shadow-md flex items-center justify-center text-white text-[8px] font-black"><i class="fa-solid fa-location-dot"></i></div></div>',
+            iconAnchor: [14, 14]
+          });
+          this.userBeaconMarker = L.marker([latitude, longitude], { icon: userIcon }).addTo(this.foodMap);
+          this.userBeaconMarker.bindPopup('<strong class="text-xs">📍 현재 나의 위치</strong>').openPopup();
+        }
+
+        const sortFilter = document.getElementById('food-sort-filter');
+        if (sortFilter) {
+          if (!sortFilter.querySelector("option[value='distance']")) {
+            const opt = document.createElement('option');
+            opt.value = 'distance';
+            opt.textContent = '📍 내 위치에서 가까운순';
+            sortFilter.prepend(opt);
+          }
+          sortFilter.value = 'distance';
+        }
+
+        const regFilter = document.getElementById('food-region-filter');
+        if (regFilter) regFilter.value = 'all';
+        this.updateQuickPillState('all');
+
+        this.renderFoodView();
+        this.updateFoodMapMarkers();
+        this.showToast('📍 현재 위치 기준 가장 가까운 맛집 순으로 정렬되었습니다!');
+      },
+      (err) => {
+        this.showToast('위치 권한이 차단되었거나 위치를 찾을 수 없습니다. 지역 필터를 이용해 주세요.');
+      },
+      { enableHighAccuracy: true, timeout: 8000 }
+    );
+  }
+
   getFilteredRestaurants() {
     const regionVal = document.getElementById('food-region-filter')?.value || 'all';
     const categoryVal = document.getElementById('food-category-filter')?.value || 'all';
@@ -1302,10 +1396,24 @@ class DodamCommunityApp {
     const searchKeyword = (document.getElementById('food-portal-query')?.value || '').trim().toLowerCase();
 
     let list = (this.data.restaurants || []).filter((r) => {
-      if (regionVal !== 'all' && r.region !== regionVal) return false;
+      // Region filter
+      if (regionVal !== 'all') {
+        if (regionVal === 'pangyo') {
+          if (!(r.region === 'gyeonggi' && (r.district?.includes('판교') || r.district?.includes('분당')))) return false;
+        } else if (regionVal === 'songpa') {
+          if (!(r.region === 'seoul' && (r.district?.includes('송파') || r.district?.includes('강남')))) return false;
+        } else if (regionVal === 'dongtan') {
+          if (!(r.region === 'gyeonggi' && r.district?.includes('동탄'))) return false;
+        } else if (regionVal === 'mapo') {
+          if (!(r.region === 'seoul' && (r.district?.includes('마포') || r.district?.includes('용산') || r.district?.includes('영등포')))) return false;
+        } else {
+          if (r.region !== regionVal) return false;
+        }
+      }
+
       if (categoryVal !== 'all' && r.category !== categoryVal) return false;
       if (needChair && !r.amenities.some((a) => a.includes('아기의자'))) return false;
-      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸'))) return false;
+      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸') || a.includes('키즈존'))) return false;
       if (needRoom && !r.amenities.some((a) => a.includes('룸'))) return false;
       if (needParking && !r.amenities.some((a) => a.includes('주차'))) return false;
       if (needStroller && !r.amenities.some((a) => a.includes('유모차'))) return false;
@@ -1314,6 +1422,7 @@ class DodamCommunityApp {
         const textToSearch = [
           r.name,
           r.address,
+          r.district || '',
           r.categoryName,
           r.regionName,
           r.representativeMenu,
@@ -1326,7 +1435,16 @@ class DodamCommunityApp {
       return true;
     });
 
-    if (sortVal === 'naver') {
+    // Distance calculation
+    if (this.userLocation) {
+      list.forEach((r) => {
+        r.distanceKm = this.getDistanceKm(this.userLocation.lat, this.userLocation.lng, r.lat, r.lng);
+      });
+    }
+
+    if (sortVal === 'distance' && this.userLocation) {
+      list.sort((a, b) => (a.distanceKm ?? 99999) - (b.distanceKm ?? 99999));
+    } else if (sortVal === 'naver') {
       list.sort((a, b) => b.sources.naver.rating - a.sources.naver.rating);
     } else if (sortVal === 'kakao') {
       list.sort((a, b) => b.sources.kakao.rating - a.sources.kakao.rating);
@@ -1494,11 +1612,15 @@ class DodamCommunityApp {
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 text-rose-600 border border-rose-200">
-                  📍 ${r.regionName}
+                  📍 ${r.regionName} ${r.district ? `· ${r.district}` : ''}
                 </span>
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
                   ${r.categoryName}
                 </span>
+                ${r.distanceKm !== undefined ? `
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
+                  <i class="fa-solid fa-person-walking text-[9px]"></i>${r.distanceKm}km
+                </span>` : ''}
               </div>
               <h3 class="text-base font-black text-slate-900 mt-1">${r.name}</h3>
               <p class="text-xs text-slate-500 mt-0.5">
@@ -1670,30 +1792,50 @@ class DodamCommunityApp {
     if (document.getElementById('rf-stroller')?.checked) amenities.push('유모차 진입 수월');
 
     const regionNames = {
-      pangyo: '분당·판교',
-      songpa: '강남·서초·송파',
-      dongtan: '동탄·수원·광교',
-      mapo: '마포·목동·여의도',
-      sejong: '세종·대전·충청',
-      incheon: '인천·송도·일산',
-      busan: '부산·대구·영남',
-      jeju: '제주·강원·나들이'
+      seoul: '서울특별시',
+      gyeonggi: '경기도',
+      incheon: '인천광역시',
+      gangwon: '강원특별자치도',
+      daejeon: '대전광역시',
+      sejong: '세종특별자치시',
+      chungnam: '충청남도',
+      chungbuk: '충청북도',
+      gwangju: '광주광역시',
+      jeonbuk: '전북특별자치도',
+      jeonnam: '전라남도',
+      daegu: '대구광역시',
+      gyeongbuk: '경상북도',
+      busan: '부산광역시',
+      ulsan: '울산광역시',
+      gyeongnam: '경상남도',
+      jeju: '제주특별자치도'
     };
 
     const categoryNames = {
       korean: '한식 · 숯불구이/한정식',
       western: '양식 · 파스타/스테이크',
-      brunch: '브런치 · 대형 베이커리'
+      brunch: '브런치 · 대형 베이커리',
+      chinese: '중식 · 딤섬/중화요리',
+      japanese: '일식 · 돈까스/초밥/샤브'
     };
 
     const baseCoords = {
-      pangyo: [37.3824, 127.1428],
-      songpa: [37.5085, 127.1264],
-      dongtan: [37.2005, 127.0985],
-      mapo: [37.5218, 126.9242],
-      sejong: [36.4852, 127.2535],
-      incheon: [37.3915, 126.6578],
+      seoul: [37.5665, 126.9780],
+      gyeonggi: [37.4138, 127.5183],
+      incheon: [37.4563, 126.7052],
+      gangwon: [37.8228, 128.1555],
+      daejeon: [36.3504, 127.3845],
+      sejong: [36.4800, 127.2890],
+      chungnam: [36.5184, 126.8000],
+      chungbuk: [36.6357, 127.4917],
+      gwangju: [35.1595, 126.8526],
+      jeonbuk: [35.8242, 127.1480],
+      jeonnam: [34.8160, 126.4630],
+      daegu: [35.8714, 128.6014],
+      gyeongbuk: [36.5760, 128.5056],
       busan: [35.1796, 129.0756],
+      ulsan: [35.5384, 129.3114],
+      gyeongnam: [35.2383, 128.6924],
       jeju: [33.4996, 126.5312]
     };
     const center = baseCoords[region] || [37.5, 127.0];
