@@ -23,18 +23,19 @@ jobs:
         with:
           python-version: '3.11'
 
-      - name: 일일 안전 분할 크롤러 실행
+      - name: 일일 안전 분할 맛집 크롤러 및 전국 행사·대회 데이터 수집기 실행
         run: |
           python scripts/safe_crawler.py
+          python scripts/build_events_data.py
 
       - name: 변경 데이터 자동 커밋 및 배포
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add js/restaurants_data.js
+          git add js/restaurants_data.js js/events_data.js
           if git diff --staged --quiet; then
             echo "갱신할 변경사항이 없습니다."
           else
-            git commit -m "chore(crawler): 일일 맛집 데이터 자동 수집 및 갱신 [skip ci]"
+            git commit -m "chore(crawler): 일일 맛집 & 전국 대회·행사 데이터 자동 수집 및 갱신 [skip ci]"
             git push origin main
           fi

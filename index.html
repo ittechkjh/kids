@@ -134,33 +134,21 @@
         </div>
       </div>
 
-      <!-- 5대 핵심 커뮤니티 탭 네비게이션 -->
-      <nav class="flex items-center gap-1.5 mt-3 pt-2.5 border-t border-stone-100 overflow-x-auto no-scrollbar">
-        <button data-view="feed" onclick="app.switchMainView('feed')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm">
-          <i class="fa-solid fa-comments"></i>
-          <span>💬 실시간 육아 라운지</span>
+      <!-- 3대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사·대회 / 맛집맵 -->
+      <nav class="flex items-center gap-2 mt-3 pt-2.5 border-t border-stone-100 overflow-x-auto no-scrollbar">
+        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm">
+          <i class="fa-solid fa-clipboard-list"></i>
+          <span>💬 도담 육아 게시판</span>
         </button>
-        <button data-view="cohort" onclick="app.switchMainView('cohort')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
-          <i class="fa-solid fa-baby"></i>
-          <span>👶 개월수·출생연도 동기방</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">인기</span>
-        </button>
-        <button data-view="clubs" onclick="app.switchMainView('clubs')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
-          <i class="fa-solid fa-people-group text-amber-500"></i>
-          <span>🤝 우리동네 공동육아·품앗이</span>
-        </button>
-        <button data-view="market" onclick="app.switchMainView('market')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
-          <i class="fa-solid fa-gift text-emerald-500"></i>
-          <span>🎁 육아템 나눔장터 & 랭킹</span>
-        </button>
-        <button data-view="tools" onclick="app.switchMainView('tools')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
-          <i class="fa-solid fa-stethoscope text-indigo-500"></i>
-          <span>🩺 성장 백분위 & 해열제 계산기</span>
+        <button data-view="events" onclick="app.switchMainView('events')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+          <i class="fa-solid fa-calendar-star text-amber-500"></i>
+          <span>🎪 전국 지역행사 & 대회 일정</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-amber-100 text-amber-700 font-black">대회·축제</span>
         </button>
         <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
-          <span>🍽️ 네이버·카카오·구글 맛집 맵</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">NEW</span>
+          <span>🍽️ 전국 안심 맛집 맵</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">5,000곳</span>
         </button>
       </nav>
     </div>
@@ -209,172 +197,256 @@
            ========================================== -->
       <div class="lg:col-span-6 space-y-5">
 
-        <!-- VIEW 1: 실시간 육아 라운지 (피드 + 투표 + 글쓰기) -->
-        <section id="view-feed" class="view-section space-y-5">
-          <!-- 상단 빠른 글쓰기 프롬프트 박스 -->
-          <div onclick="app.openWritePostModal()" class="community-card p-4 cursor-pointer hover:border-rose-300 flex items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm shrink-0">
-                <i class="fa-solid fa-face-smile-wink"></i>
+        <!-- VIEW 1: 도담 육아 게시판 (실시간 라운지 -> 본격 커뮤니티 게시판 개편) -->
+        <section id="view-board" class="view-section space-y-5">
+          <!-- 상단 게시판 헤더 및 빠른 글쓰기 바 -->
+          <div class="community-card p-5 bg-gradient-to-r from-rose-50/80 via-white to-amber-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-rose-100">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white font-extrabold text-[11px]">자유 소통</span>
+                <h2 class="text-lg font-black text-slate-900">💬 도담 육아 커뮤니티 게시판</h2>
               </div>
-              <div class="text-xs text-slate-400 font-medium">
-                수면교육, 이유식, 어린이집 적응, 남편 속풀이까지 편하게 물어보세요!
-              </div>
+              <p class="text-xs text-slate-500 font-medium mt-1">
+                출산·영아, 유아·초등 발달, 육아 꿀팁, 고민상담까지 엄마·아빠들과 함께 나누는 열린 게시판
+              </p>
             </div>
-            <span class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-600 font-extrabold text-xs shrink-0">글쓰기 ✏️</span>
+            <button
+              onclick="app.openWritePostModal()"
+              class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl coral-badge-gradient text-white font-black text-xs shadow-md shadow-rose-500/20 hover:opacity-95 transition shrink-0"
+            >
+              <i class="fa-solid fa-pen-to-square"></i>
+              <span>새 글 쓰기</span>
+            </button>
           </div>
 
-          <!-- 모바일용 가로 스크롤 카테고리 칩 -->
-          <div id="mobile-category-chips" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar lg:hidden pb-1"></div>
+          <!-- 게시판 카테고리 탭 칩스 (가로 스크롤) -->
+          <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="board-category-chips"></div>
 
-          <!-- 실시간 육아 밸런스 투표 카드 -->
+          <!-- 실시간 육아 밸런스 투표 카드 (게시판 상단 하이라이트) -->
           <div id="active-poll-card" class="community-card p-5 bg-gradient-to-br from-white via-white to-rose-50/40"></div>
 
-          <!-- 피드 정렬 & 필터 헤더 -->
+          <!-- 게시판 검색 & 정렬 헤더 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-1">
+            <div class="flex items-center gap-2">
+              <h3 id="current-board-title" class="text-sm font-black text-slate-900">전체 게시글</h3>
+              <span id="current-board-count" class="text-xs font-bold text-rose-500"></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <!-- 게시판 내 검색창 -->
+              <div class="relative">
+                <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3 top-1/2 -translate-y-1/2"></i>
+                <input
+                  id="board-search-input"
+                  type="text"
+                  placeholder="제목, 내용, 태그 검색..."
+                  oninput="app.onBoardSearch(this.value)"
+                  class="pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 w-44"
+                />
+              </div>
+              <!-- 정렬 버튼 그룹 -->
+              <div class="flex items-center gap-1 bg-white border border-stone-200 rounded-xl p-1 text-xs">
+                <button onclick="app.setBoardSort('latest')" data-sort="latest" class="board-sort-btn px-2.5 py-1 rounded-lg font-extrabold bg-slate-900 text-white">최신순</button>
+                <button onclick="app.setBoardSort('popular')" data-sort="popular" class="board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">공감순</button>
+                <button onclick="app.setBoardSort('comments')" data-sort="comments" class="board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">댓글순</button>
+                <button onclick="app.setBoardSort('views')" data-sort="views" class="board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">조회순</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 게시글 목록 (테이블 / 카드 하이브리드 리스트) -->
+          <div id="board-posts-list" class="space-y-3"></div>
+        </section>
+
+        <!-- VIEW 2: 전국 지역행사 & 특정 분야(어린이 사생대회·발명대회·주말 가족마라톤) 일정 게시판 -->
+        <section id="view-events" class="view-section hidden space-y-5">
+          <!-- 상단 배너 & 차별화 포인트 소개 -->
+          <div class="community-card p-5 bg-gradient-to-r from-amber-50/80 via-white to-rose-50/70 border border-amber-200/80 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold text-[11px] shadow-sm">
+                    전국 17개 시도 전역
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-700 text-[10px] font-bold">
+                    <i class="fa-solid fa-arrows-rotate text-emerald-500 mr-1"></i>매일 자동 크롤링 업데이트
+                  </span>
+                  <h2 class="text-lg font-black text-slate-900">🎪 전국 지역행사 & 대회 일정</h2>
+                </div>
+                <p class="text-xs text-slate-600 font-medium mt-1.5 leading-relaxed">
+                  <strong>기본 베이스:</strong> 한국관광공사 TourAPI · 서울열린데이터광장 · 경기데이터드림 API 공공 축제 연동<br/>
+                  <strong class="text-rose-600">차별화 포인트:</strong> 주말 가족 마라톤, 어린이 사생대회·백일장, 창의·과학·발명대회, 유소년 독서골든벨 등 흩어져 있는 협회 공식 공지를 크롤러로 직접 모았습니다.
+                </p>
+              </div>
+
+              <!-- 뷰 모드 전환 버튼 (리스트 뷰 vs 달력 뷰) -->
+              <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200 self-start sm:self-center shrink-0">
+                <button
+                  id="btn-events-list-mode"
+                  onclick="app.setEventsViewMode('list')"
+                  class="px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5"
+                >
+                  <i class="fa-solid fa-list-ul text-rose-500"></i>
+                  <span>게시판 리스트</span>
+                </button>
+                <button
+                  id="btn-events-calendar-mode"
+                  onclick="app.setEventsViewMode('calendar')"
+                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5"
+                >
+                  <i class="fa-solid fa-calendar-days text-amber-500"></i>
+                  <span>월간 달력 (캘린더)</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 데이터 소스 통계 뱃지 -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-[11px] font-bold text-slate-600">
+              <span class="text-slate-400">데이터 출처:</span>
+              <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
+                🏆 협회·공식 사이트 크롤링 (사생·발명·마라톤) <strong>13건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/60">
+                🎪 한국관광공사 TourAPI <strong>8건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                🏛️ 서울·경기 공공데이터 <strong>3건</strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- 대회 & 행사 필터 컨트롤 바 -->
+          <div class="community-card p-4 space-y-3">
+            <!-- 1차: 특정 분야 대회 & 축제 카테고리 칩 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="events-category-chips">
+              <button onclick="app.setEventCategory('all')" data-cat="all" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
+                전체 (24)
+              </button>
+              <button onclick="app.setEventCategory('contest_marathon')" data-cat="contest_marathon" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🏃 주말 가족 마라톤·걷기 (6)
+              </button>
+              <button onclick="app.setEventCategory('contest_art')" data-cat="contest_art" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🏆 어린이 사생·백일장 (3)
+              </button>
+              <button onclick="app.setEventCategory('contest_invention')" data-cat="contest_invention" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                💡 창의·과학·발명대회 (3)
+              </button>
+              <button onclick="app.setEventCategory('contest_sports')" data-cat="contest_sports" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                ⚽ 취미·스포츠·골든벨 (3)
+              </button>
+              <button onclick="app.setEventCategory('festival_culture')" data-cat="festival_culture" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🎪 지역 문화 축제 (6)
+              </button>
+              <button onclick="app.setEventCategory('festival_nature')" data-cat="festival_nature" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🌿 생태·공원 페스티벌 (3)
+              </button>
+            </div>
+
+            <!-- 2차: 지역 선택 + 접수 상태 + 검색창 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
+              <!-- 권역 선택 (전국 17개 시도) -->
+              <div class="sm:col-span-4">
+                <select id="event-filter-region" onchange="app.onEventsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                  <option value="all">🌐 전국 17개 시도 전체</option>
+                  <option value="seoul">📍 서울특별시</option>
+                  <option value="gyeonggi">📍 경기도</option>
+                  <option value="incheon">📍 인천광역시</option>
+                  <option value="gangwon">📍 강원특별자치도</option>
+                  <option value="chungcheong">📍 충청도 (충북/충남)</option>
+                  <option value="sejong">📍 세종특별자치시 · 대전</option>
+                  <option value="jeolla">📍 전라도 (전북/전남/광주)</option>
+                  <option value="gyeongsang">📍 경상도 (경북/경남)</option>
+                  <option value="busan">📍 부산·대구·울산광역시</option>
+                  <option value="jeju">📍 제주특별자치도</option>
+                </select>
+              </div>
+
+              <!-- 접수 상태 선택 -->
+              <div class="sm:col-span-3">
+                <select id="event-filter-status" onchange="app.onEventsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                  <option value="all">상태 전체</option>
+                  <option value="applying">🟢 지금 접수중 (D-Day)</option>
+                  <option value="ongoing">🟡 행사 진행중</option>
+                  <option value="closed">⚪ 접수마감</option>
+                </select>
+              </div>
+
+              <!-- 대회/행사 키워드 검색 -->
+              <div class="sm:col-span-5 relative">
+                <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input
+                  id="event-filter-search"
+                  type="text"
+                  placeholder="대회명, 마라톤, 사생대회, 코딩 등 검색..."
+                  oninput="app.onEventsFilterChange()"
+                  class="w-full pl-9 pr-3 py-2 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 월간 인터랙티브 달력 (캘린더 뷰 컨테이너) -->
+          <div id="events-calendar-container" class="hidden community-card p-5 space-y-4">
+            <!-- 달력 상단 네비게이션 -->
+            <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+              <div class="flex items-center gap-3">
+                <h3 id="calendar-month-title" class="text-base font-black text-slate-900">2026년 11월</h3>
+                <span class="text-xs text-slate-400 font-bold">날짜를 클릭하면 해당 일자의 대회가 아래에 필터링됩니다</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="app.prevCalendarMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                  <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="app.goTodayCalendar()" class="px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-bold transition">
+                  오늘
+                </button>
+                <button onclick="app.nextCalendarMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                  <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- 요일 헤더 -->
+            <div class="grid grid-cols-7 gap-1 text-center text-xs font-black">
+              <div class="text-rose-500 py-1">일</div>
+              <div class="text-slate-600 py-1">월</div>
+              <div class="text-slate-600 py-1">화</div>
+              <div class="text-slate-600 py-1">수</div>
+              <div class="text-slate-600 py-1">목</div>
+              <div class="text-slate-600 py-1">금</div>
+              <div class="text-blue-500 py-1">토</div>
+            </div>
+
+            <!-- 달력 날짜 그리드 -->
+            <div id="calendar-grid" class="grid grid-cols-7 gap-1"></div>
+
+            <!-- 선택된 날짜 필터 해제 바 (필터 활성화 시 표시) -->
+            <div id="calendar-day-selected-bar" class="hidden flex items-center justify-between bg-amber-50 border border-amber-200 rounded-xl px-3.5 py-2 text-xs">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-calendar-check text-amber-600"></i>
+                <span id="calendar-selected-date-text" class="font-extrabold text-amber-900">2026-11-07 일정 필터 적용 중</span>
+              </div>
+              <button onclick="app.clearCalendarDayFilter()" class="text-amber-800 hover:text-amber-950 font-black text-xs underline">
+                전체 날짜 보기
+              </button>
+            </div>
+          </div>
+
+          <!-- 이벤트 목록 헤더 & 카운트 -->
           <div class="flex items-center justify-between px-1">
             <div class="flex items-center gap-2">
-              <h2 id="current-feed-title" class="text-base font-black text-slate-900">전체 육아 피드</h2>
-              <span id="current-feed-count" class="text-xs font-bold text-rose-500"></span>
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-flag-checkered text-rose-500"></i>
+                <span id="events-list-title">전국 대회 & 행사 일정 목록</span>
+              </h3>
+              <span class="text-xs font-bold text-slate-500">
+                총 <strong id="events-count-badge" class="text-rose-600 font-black">24</strong>개
+              </span>
             </div>
-            <div class="flex items-center gap-1 bg-white border border-stone-200 rounded-xl p-1 text-xs">
-              <button onclick="app.setFeedSort('latest')" data-sort="latest" class="feed-sort-btn px-2.5 py-1 rounded-lg font-extrabold bg-slate-900 text-white">최신순</button>
-              <button onclick="app.setFeedSort('popular')" data-sort="popular" class="feed-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">공감순</button>
-              <button onclick="app.setFeedSort('comments')" data-sort="comments" class="feed-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">댓글순</button>
-            </div>
+            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 공식 사이트 직접 링크 제공</span>
           </div>
 
-          <!-- 게시글 리스트 -->
-          <div id="community-feed-list" class="space-y-4"></div>
-        </section>
-
-        <!-- VIEW 2: 개월수·출생연도 동기방 (조리원 동기 & 발달 체크) -->
-        <section id="view-cohort" class="view-section hidden space-y-5">
-          <div class="warm-hero-gradient rounded-3xl p-5 border border-rose-200/70 space-y-3">
-            <div class="flex items-center justify-between flex-wrap gap-2">
-              <div>
-                <span class="px-2.5 py-0.5 rounded-full bg-rose-500 text-white text-[11px] font-extrabold">온라인 조리원 동기 모임</span>
-                <h2 class="text-lg font-black text-slate-900 mt-1">👶 우리 아기 개월수·출생연도별 동기방</h2>
-                <p class="text-xs text-slate-600">딱 지금 시기에 겪는 원더윅스, 이유식, 어린이집 적응 고민을 같은 월령 부모님들과 실시간으로 나눠보세요.</p>
-              </div>
-            </div>
-            <!-- 동기방 선택 탭 버튼 -->
-            <div id="cohort-room-tabs" class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1"></div>
-          </div>
-
-          <!-- 선택된 동기방 상세 (발달 체크리스트 + 필수템 + 실시간 수다톡) -->
-          <div id="cohort-room-content" class="space-y-4"></div>
-        </section>
-
-        <!-- VIEW 3: 우리동네 공동육아 & 품앗이 소모임 -->
-        <section id="view-clubs" class="view-section hidden space-y-5">
-          <div class="community-card p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 bg-gradient-to-r from-amber-50/80 via-white to-rose-50/60">
-            <div>
-              <span class="px-2.5 py-0.5 rounded-full bg-amber-500 text-white text-[11px] font-extrabold">이웃 육아 동지 찾기</span>
-              <h2 class="text-lg font-black text-slate-900 mt-1">🤝 우리 동네 공동육아 · 산책 · 등하원 품앗이</h2>
-              <p class="text-xs text-slate-600">혼자 하면 힘든 육아, 동네 엄마·아빠들과 함께 유모차 산책부터 주말 숲체험까지 함께해요.</p>
-            </div>
-            <button onclick="app.openCreateClubModal()" class="shrink-0 px-4 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-600 text-white text-xs font-extrabold shadow-sm transition">
-              + 새 소모임 만들기
-            </button>
-          </div>
-
-          <div id="clubs-list-container" class="space-y-3.5"></div>
-        </section>
-
-        <!-- VIEW 4: 육아템 무료나눔·당근장터 & 내돈내산 국민육아템 랭킹 -->
-        <section id="view-market" class="view-section hidden space-y-5">
-          <div class="community-card p-5 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div>
-              <span class="px-2.5 py-0.5 rounded-full bg-emerald-500 text-white text-[11px] font-extrabold">기운 받아가세요 & 솔직리뷰</span>
-              <h2 class="text-lg font-black text-slate-900 mt-1">🎁 동네 육아템 나눔장터 & 국민육아템 랭킹</h2>
-              <p class="text-xs text-slate-600">금방 작아지는 아기용품은 이웃과 나누고, 광고 없는 내돈내산 육아템 평점을 확인하세요.</p>
-            </div>
-            <button onclick="app.openCreateMarketModal()" class="shrink-0 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold shadow-sm transition">
-              + 나눔/장터 글 올리기
-            </button>
-          </div>
-
-          <!-- 마켓 서브탭 -->
-          <div class="flex items-center gap-2">
-            <button onclick="app.setMarketFilter('all')" data-mkt="all" class="mkt-tab-btn px-3.5 py-2 rounded-xl text-xs font-extrabold bg-slate-900 text-white">전체 장터</button>
-            <button onclick="app.setMarketFilter('free')" data-mkt="free" class="mkt-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white border border-stone-200 text-slate-700">💝 무료나눔만 보기</button>
-            <button onclick="app.setMarketFilter('ranking')" data-mkt="ranking" class="mkt-tab-btn px-3.5 py-2 rounded-xl text-xs font-bold bg-white border border-stone-200 text-slate-700">🏆 내돈내산 국민육아템 랭킹</button>
-          </div>
-
-          <div id="market-content-container" class="space-y-3.5"></div>
-        </section>
-
-        <!-- VIEW 5: 소아 성장 백분위 계산기 & 야간 해열제 정량 계산기 -->
-        <section id="view-tools" class="view-section hidden space-y-5">
-          <!-- 1. 질병관리청 기준 우리 아이 키·몸무게 성장 백분위 계산기 -->
-          <div class="community-card p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <span class="px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-700 text-[11px] font-extrabold">질병관리청 성장도표 기준</span>
-                <h2 class="text-lg font-black text-slate-900 mt-1">📏 우리 아기 키·몸무게 성장 백분위 계산기</h2>
-                <p class="text-xs text-slate-500">또래 아기 100명 중 우리 아이의 키와 몸무게가 상위 몇 번째인지 즉시 확인해 보세요.</p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-200/80">
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">성별</label>
-                <select id="growth-gender" onchange="app.calculateGrowthPercentile()" class="w-full text-xs font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2">
-                  <option value="m">남아 (왕자님)</option>
-                  <option value="f">여아 (공주님)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">개월수 선택</label>
-                <select id="growth-months" onchange="app.calculateGrowthPercentile()" class="w-full text-xs font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2">
-                  <option value="3">생후 3개월</option>
-                  <option value="6">생후 6개월</option>
-                  <option value="9">생후 9개월</option>
-                  <option value="12" selected>생후 12개월 (돌)</option>
-                  <option value="18">생후 18개월</option>
-                  <option value="24">생후 24개월 (두돌)</option>
-                  <option value="36">생후 36개월 (3세)</option>
-                  <option value="48">생후 48개월 (4세)</option>
-                  <option value="60">생후 60개월 (5세)</option>
-                  <option value="72">생후 72개월 (6세)</option>
-                </select>
-              </div>
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">현재 키 (cm)</label>
-                <input id="growth-height" type="number" step="0.1" value="76.8" oninput="app.calculateGrowthPercentile()" class="w-full text-xs font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2" />
-              </div>
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">현재 몸무게 (kg)</label>
-                <input id="growth-weight" type="number" step="0.1" value="10.1" oninput="app.calculateGrowthPercentile()" class="w-full text-xs font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2" />
-              </div>
-            </div>
-
-            <div id="growth-result-box" class="space-y-3"></div>
-          </div>
-
-          <!-- 2. 야간 고열 해열제 1회 정량 & 교차복용 계산기 -->
-          <div class="community-card p-6 space-y-4">
-            <div class="flex items-center justify-between">
-              <div>
-                <span class="px-2.5 py-0.5 rounded-full bg-rose-100 text-rose-700 text-[11px] font-extrabold">새벽 열감기 응급 도우미</span>
-                <h2 class="text-lg font-black text-slate-900 mt-1">🌡️ 아이 체중별 해열제 1회 복용량 & 교차복용 계산기</h2>
-                <p class="text-xs text-slate-500">아세트아미노펜(챔프빨강·타이레놀)과 이부프로펜/덱시부프로펜(챔프파랑·맥시부펜) 정량을 계산합니다.</p>
-              </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-3 bg-stone-50 p-4 rounded-2xl border border-stone-200/80">
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">아이 체중 (kg)</label>
-                <input id="fever-weight-kg" type="number" step="0.5" min="3" max="45" value="11.5" oninput="app.calculateFeverDose()" class="w-full text-sm font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2" />
-              </div>
-              <div>
-                <label class="block text-[11px] font-bold text-slate-600 mb-1">현재 체온 (℃)</label>
-                <input id="fever-temp-c" type="number" step="0.1" min="36.0" max="42.0" value="38.9" oninput="app.calculateFeverDose()" class="w-full text-sm font-extrabold bg-white border border-stone-300 rounded-xl px-3 py-2 text-rose-600" />
-              </div>
-            </div>
-
-            <div id="fever-dose-result" class="space-y-2.5 text-xs"></div>
-          </div>
+          <!-- 이벤트 카드 목록 (리스트 뷰) -->
+          <div id="events-list-container" class="space-y-4"></div>
         </section>
 
         <!-- VIEW 6: 네이버·카카오·구글 맛집 맵 & 바로가기 링크 (신규 추가) -->
@@ -651,8 +723,9 @@
           <p class="text-xs text-indigo-200 leading-relaxed">
             밤에 갑자기 강아지 짖는 듯한 '컹컹' 기침 소리가 나면 급성 후두염(크루프)일 수 있어요. 당황하지 말고 욕실에 따뜻한 수증기를 틀어 15분간 호흡을 도와주세요.
           </p>
-          <button onclick="app.switchMainView('tools')" class="w-full py-2 rounded-xl bg-white/15 hover:bg-white/25 text-white font-bold text-xs transition">
-            해열제 정량 계산기 열기 →
+          <button onclick="app.switchMainView('events')" class="w-full py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
+            <i class="fa-solid fa-trophy text-slate-900"></i>
+            <span>🏆 이번 주말 가족 대회 & 축제 일정 보기 →</span>
           </button>
         </div>
       </aside>
@@ -772,95 +845,152 @@
   </div>
 
   <!-- ==========================================
-       MODAL 3: 공동육아 소모임 개설 모달
+       MODAL: 게시글 상세 및 댓글 모달
        ========================================== -->
-  <div id="create-club-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-200 space-y-4">
-      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
-        <h3 class="text-base font-black text-slate-900">🤝 우리 동네 공동육아·품앗이 모임 만들기</h3>
-        <button onclick="document.getElementById('create-club-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+  <div id="post-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[90vh] flex flex-col p-6 shadow-2xl border border-stone-200">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0">
+        <span id="post-detail-category-badge" class="px-2.5 py-1 rounded-full text-xs font-extrabold"></span>
+        <button onclick="app.closePostDetailModal()" class="text-slate-400 hover:text-slate-600 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
-      <form onsubmit="app.submitNewClub(event)" class="space-y-3 text-xs">
+      <div class="overflow-y-auto space-y-4 py-4 flex-1 pr-1">
         <div>
-          <label class="block font-bold text-slate-700 mb-1">모임 이름</label>
-          <input id="club-form-title" type="text" required placeholder="예: 판교 호수공원 평일 오전 유모차 산책 모임" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
-        </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">권역</label>
-            <input id="club-form-region" type="text" required placeholder="예: 분당·판교" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">대상 자녀 연령</label>
-            <input id="club-form-age" type="text" required placeholder="예: 6~18개월 영아" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+          <h2 id="post-detail-title" class="text-lg font-black text-slate-900 leading-snug"></h2>
+          <div class="flex items-center gap-2.5 text-xs text-slate-400 mt-2 font-medium">
+            <span id="post-detail-author" class="font-bold text-slate-700"></span>
+            <span id="post-detail-author-badge" class="px-1.5 py-0.5 rounded bg-stone-100 text-slate-600 font-semibold text-[10px]"></span>
+            <span id="post-detail-region" class="px-1.5 py-0.5 rounded bg-rose-50 text-rose-600 font-semibold text-[10px]"></span>
+            <span id="post-detail-date"></span>
+            <span>· 조회 <span id="post-detail-views">0</span></span>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">모임 일정</label>
-            <input id="club-form-schedule" type="text" required placeholder="예: 매주 수요일 11:00" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">모집 정원 (명)</label>
-            <input id="club-form-max" type="number" min="2" max="20" value="6" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
-          </div>
+
+        <div id="post-detail-content" class="text-sm text-slate-800 leading-relaxed whitespace-pre-line py-2 border-y border-stone-100"></div>
+
+        <div id="post-detail-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
+
+        <div class="flex items-center justify-center gap-3 pt-2">
+          <button id="post-detail-like-btn" onclick="app.reactToPostModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-rose-200 bg-rose-50 text-rose-600 font-black text-xs hover:bg-rose-100 transition">
+            <i class="fa-regular fa-heart"></i>
+            <span>공감해요</span>
+            <span id="post-detail-likes-count">0</span>
+          </button>
+          <button id="post-detail-scrap-btn" onclick="app.toggleScrapModal()" class="flex items-center gap-1.5 px-4 py-2 rounded-xl border border-stone-200 bg-stone-50 text-slate-700 font-black text-xs hover:bg-stone-100 transition">
+            <i class="fa-regular fa-bookmark"></i>
+            <span>스크랩</span>
+          </button>
         </div>
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">모임 소개</label>
-          <textarea id="club-form-desc" rows="3" required placeholder="어떤 활동을 함께 할지 소개해주세요!" class="w-full border border-stone-300 rounded-xl p-3"></textarea>
+
+        <!-- 댓글 목록 -->
+        <div class="space-y-3 pt-4 border-t border-stone-100">
+          <h4 class="text-xs font-black text-slate-800 flex items-center gap-1.5">
+            <i class="fa-solid fa-comments text-rose-500"></i>
+            <span>댓글 (<span id="post-detail-comments-count">0</span>)</span>
+          </h4>
+          <div id="post-detail-comments-list" class="space-y-2.5"></div>
         </div>
-        <div class="flex justify-end gap-2 pt-2">
-          <button type="submit" class="px-5 py-2 rounded-xl bg-amber-500 text-white font-extrabold">소모임 개설하기</button>
-        </div>
+      </div>
+
+      <!-- 댓글 입력 폼 -->
+      <form onsubmit="app.submitBoardComment(event)" class="pt-3 border-t border-stone-100 flex items-center gap-2 shrink-0">
+        <input
+          id="post-comment-input"
+          type="text"
+          required
+          placeholder="따뜻한 응원이나 경험을 공유해주세요..."
+          class="flex-1 border border-stone-300 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-rose-400"
+        />
+        <button type="submit" class="px-4 py-2 rounded-xl coral-badge-gradient text-white font-black text-xs shrink-0 hover:opacity-95">
+          등록
+        </button>
       </form>
     </div>
   </div>
 
   <!-- ==========================================
-       MODAL 4: 육아템 나눔·장터 등록 모달
+       MODAL: 행사 & 대회 상세 모달
        ========================================== -->
-  <div id="create-market-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-200 space-y-4">
-      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
-        <h3 class="text-base font-black text-slate-900">🎁 육아템 무료나눔 / 장터 글 등록</h3>
-        <button onclick="document.getElementById('create-market-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+  <div id="event-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full max-h-[90vh] flex flex-col p-6 shadow-2xl border border-stone-200">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0">
+        <div class="flex items-center gap-2">
+          <span id="evt-modal-badge" class="px-2.5 py-1 rounded-full text-xs font-black bg-rose-500 text-white"></span>
+          <span id="evt-modal-source" class="px-2 py-0.5 rounded-lg text-[10px] font-bold bg-stone-100 text-slate-600"></span>
+        </div>
+        <button onclick="app.closeEventDetailModal()" class="text-slate-400 hover:text-slate-600 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
-      <form onsubmit="app.submitNewMarketItem(event)" class="space-y-3 text-xs">
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">구분</label>
-            <select id="mkt-form-type" class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold">
-              <option value="free">💝 무료나눔</option>
-              <option value="sale">🥕 중고 쿨거래</option>
-            </select>
+
+      <div class="overflow-y-auto space-y-4 py-4 flex-1 pr-1">
+        <div class="space-y-2">
+          <div class="flex items-center gap-2">
+            <span id="evt-modal-dday" class="px-2 py-0.5 rounded-full text-[11px] font-black bg-emerald-500 text-white"></span>
+            <span id="evt-modal-region" class="text-xs font-bold text-slate-500"></span>
           </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">거래 동네</label>
-            <input id="mkt-form-region" type="text" required placeholder="예: 송파·가락동" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+          <h2 id="evt-modal-title" class="text-lg font-black text-slate-900 leading-snug"></h2>
+        </div>
+
+        <div class="overflow-hidden rounded-2xl max-h-48 border border-stone-100">
+          <img id="evt-modal-img" src="" alt="행사 포스터" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- 행사 핵심 정보 요약 테이블 -->
+        <div class="p-3.5 bg-stone-50 rounded-2xl space-y-2 text-xs">
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">📅 행사 일시:</span>
+            <span id="evt-modal-date" class="font-bold text-slate-900"></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">📝 접수 기간:</span>
+            <span id="evt-modal-apply" class="font-bold text-rose-600"></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">📍 장소/위치:</span>
+            <span id="evt-modal-location" class="font-bold text-slate-800"></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">🎯 참가 대상:</span>
+            <span id="evt-modal-target" class="font-bold text-slate-800"></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">💰 참가 비용:</span>
+            <span id="evt-modal-fee" class="font-bold text-slate-800"></span>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="w-20 font-bold text-slate-400 shrink-0">🏛️ 주최/주관:</span>
+            <span id="evt-modal-organizer" class="font-bold text-slate-800"></span>
           </div>
         </div>
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">물품 제목</label>
-          <input id="mkt-form-title" type="text" required placeholder="예: 아기체육관 + 역류방지쿠션 깨끗한 상태 나눔해요" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
+
+        <!-- 상세 소개 -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-black text-slate-800">📋 행사 및 대회 상세 안내</h4>
+          <p id="evt-modal-desc" class="text-xs text-slate-700 leading-relaxed whitespace-pre-line"></p>
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">가격 (나눔 시 '무료나눔')</label>
-            <input id="mkt-form-price" type="text" required value="무료나눔" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
-          </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">상태</label>
-            <input id="mkt-form-cond" type="text" required value="A급 (소독 완료)" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
-          </div>
-        </div>
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">상세 설명</label>
-          <textarea id="mkt-form-desc" rows="3" required placeholder="사용 기간, 컨디션, 문고리 거래 가능 여부 등을 적어주세요." class="w-full border border-stone-300 rounded-xl p-3"></textarea>
-        </div>
-        <div class="flex justify-end gap-2 pt-2">
-          <button type="submit" class="px-5 py-2 rounded-xl bg-emerald-600 text-white font-extrabold">장터에 등록하기</button>
-        </div>
-      </form>
+
+        <!-- 태그 -->
+        <div id="evt-modal-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
+      </div>
+
+      <!-- 모달 하단 버튼 바 -->
+      <div class="pt-3 border-t border-stone-100 flex items-center justify-between gap-3 shrink-0">
+        <button onclick="app.closeEventDetailModal()" class="px-4 py-2.5 rounded-xl border border-stone-200 text-xs font-bold text-slate-600 hover:bg-stone-50">
+          닫기
+        </button>
+        <a
+          id="evt-modal-link"
+          href="#"
+          target="_blank"
+          rel="noopener"
+          class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-95 text-white font-black text-xs text-center shadow-md flex items-center justify-center gap-2"
+        >
+          <span>🔗 주최 협회/공식 접수처 바로가기</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -1001,6 +1131,7 @@
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2 pointer-events-none"></div>
 
   <!-- Scripts -->
+  <script src="js/events_data.js"></script>
   <script src="js/restaurants_data.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
