@@ -9,9 +9,9 @@ window.DODAM_EVENTS_METADATA = {
   "regionStats": {
     "seoul": {
       "name": "서울특별시",
-      "festivals": 63,
+      "festivals": 62,
       "contests": 3,
-      "total": 66
+      "total": 65
     },
     "incheon": {
       "name": "인천광역시",
@@ -33,15 +33,15 @@ window.DODAM_EVENTS_METADATA = {
     },
     "gwangju": {
       "name": "광주광역시",
-      "festivals": 23,
+      "festivals": 22,
       "contests": 1,
-      "total": 24
+      "total": 23
     },
     "busan": {
       "name": "부산광역시",
-      "festivals": 16,
+      "festivals": 15,
       "contests": 1,
-      "total": 17
+      "total": 16
     },
     "ulsan": {
       "name": "울산광역시",
@@ -51,21 +51,21 @@ window.DODAM_EVENTS_METADATA = {
     },
     "sejong": {
       "name": "세종특별자치시",
-      "festivals": 2,
+      "festivals": 3,
       "contests": 2,
-      "total": 4
+      "total": 5
     },
     "gyeonggi": {
       "name": "경기도",
-      "festivals": 53,
+      "festivals": 55,
       "contests": 3,
-      "total": 56
+      "total": 58
     },
     "gangwon": {
       "name": "강원특별자치도",
-      "festivals": 20,
+      "festivals": 19,
       "contests": 0,
-      "total": 20
+      "total": 19
     },
     "chungbuk": {
       "name": "충청북도",
@@ -81,9 +81,9 @@ window.DODAM_EVENTS_METADATA = {
     },
     "jeonbuk": {
       "name": "전북특별자치도",
-      "festivals": 24,
+      "festivals": 23,
       "contests": 1,
-      "total": 25
+      "total": 24
     },
     "jeonnam": {
       "name": "전라남도",
@@ -93,15 +93,15 @@ window.DODAM_EVENTS_METADATA = {
     },
     "gyeongbuk": {
       "name": "경상북도",
-      "festivals": 30,
+      "festivals": 29,
       "contests": 1,
-      "total": 31
+      "total": 30
     },
     "gyeongnam": {
       "name": "경상남도",
-      "festivals": 18,
+      "festivals": 21,
       "contests": 1,
-      "total": 19
+      "total": 22
     },
     "jeju": {
       "name": "제주특별자치도",
@@ -1128,6 +1128,68 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "tourapi-2999418",
+    "boardType": "festivals",
+    "title": "2026 평화누리 피크닉 페스티벌",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "031-956-8333",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 파주시 문산읍 임진각로 148-40",
+    "startDate": "2026-09-18",
+    "endDate": "2026-09-20",
+    "applyStartDate": "2026-09-18",
+    "applyEndDate": "2026-09-20",
+    "status": "closed",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2999418",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4102264_image2_1.jpg",
+    "description": "2026 평화누리 피크닉 페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경기도",
+      "가족나들이"
+    ],
+    "dday": "접수마감"
+  },
+  {
+    "id": "tourapi-2616316",
+    "boardType": "festivals",
+    "title": "수원재즈페스티벌",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "070-4945-9580",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 수원시 영통구 광교호수로 165 (하동)",
+    "startDate": "2026-09-18",
+    "endDate": "2026-09-19",
+    "applyStartDate": "2026-09-18",
+    "applyEndDate": "2026-09-19",
+    "status": "closed",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2616316",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4105583_image2_1.png",
+    "description": "수원재즈페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경기도",
+      "가족나들이"
+    ],
+    "dday": "접수마감"
+  },
+  {
     "id": "tourapi-4115268",
     "boardType": "festivals",
     "title": "쿼드, 연극의 질문들：〈옥상 밭 고추는 왜〉",
@@ -1433,6 +1495,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "지역축제",
       "공공데이터",
       "울산광역시",
+      "가족나들이"
+    ],
+    "dday": "접수마감"
+  },
+  {
+    "id": "tourapi-4108758",
+    "boardType": "festivals",
+    "title": "2026 세븐브릿지 투어",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "051-713-5000",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "부산광역시 해운대구 APEC로 55 (우동)",
+    "startDate": "2026-09-20",
+    "endDate": "2026-09-20",
+    "applyStartDate": "2026-09-20",
+    "applyEndDate": "2026-09-20",
+    "status": "closed",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4108758",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4109032_image2_1.jpg",
+    "description": "2026 세븐브릿지 투어 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "대구광역시",
       "가족나들이"
     ],
     "dday": "접수마감"
@@ -3918,6 +4011,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "tourapi-4120802",
+    "boardType": "festivals",
+    "title": "양재천을 품은 양재도서관 「물길 따라 그림책 여행」",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "02-3486-4043",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 서초구 양재천로 33 (양재동) 서초구립양재도서관 앞 양재오솔숲도서관",
+    "startDate": "2026-10-10",
+    "endDate": "2026-11-08",
+    "applyStartDate": "2026-10-10",
+    "applyEndDate": "2026-11-08",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4120802",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4120813_image2_1.jpg",
+    "description": "양재천을 품은 양재도서관 「물길 따라 그림책 여행」 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "서울특별시",
+      "가족나들이"
+    ],
+    "dday": "D-12"
+  },
+  {
     "id": "tourapi-4127747",
     "boardType": "festivals",
     "title": "장항 1931 밤의 기행",
@@ -4071,37 +4195,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-4120802",
-    "boardType": "festivals",
-    "title": "양재천을 품은 양재도서관 「물길 따라 그림책 여행」",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "02-3486-4043",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 서초구 양재천로 33 (양재동) 서초구립양재도서관 앞 양재오솔숲도서관",
-    "startDate": "2026-10-10",
-    "endDate": "2026-11-08",
-    "applyStartDate": "2026-10-10",
-    "applyEndDate": "2026-11-08",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4120802",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4120813_image2_1.jpg",
-    "description": "양재천을 품은 양재도서관 「물길 따라 그림책 여행」 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "서울특별시",
-      "가족나들이"
-    ],
-    "dday": "D-12"
   },
   {
     "id": "tourapi-3560787",
@@ -4383,6 +4476,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "tourapi-553263",
+    "boardType": "festivals",
+    "title": "울산고래축제",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "052-270-9324",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 남구 장생포고래로 244 (매암동)",
+    "startDate": "2026-10-15",
+    "endDate": "2026-10-18",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-10-18",
+    "status": "closed",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=553263",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3572398_image2_1.jpg",
+    "description": "울산고래축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "울산광역시",
+      "가족나들이"
+    ],
+    "dday": "접수마감"
+  },
+  {
     "id": "tourapi-638241",
     "boardType": "festivals",
     "title": "순창장류축제",
@@ -4443,37 +4567,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "TourAPI"
     ],
     "dday": "D-19"
-  },
-  {
-    "id": "tourapi-553263",
-    "boardType": "festivals",
-    "title": "울산고래축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "052-270-9324",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 남구 장생포고래로 244 (매암동)",
-    "startDate": "2026-10-15",
-    "endDate": "2026-10-18",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-10-18",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=553263",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3572398_image2_1.jpg",
-    "description": "울산고래축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "울산광역시",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
   },
   {
     "id": "tourapi-293084",
@@ -6429,6 +6522,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "tourapi-1147035",
+    "boardType": "festivals",
+    "title": "여주오곡나루축제",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "031-881-9693",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 여주시 천송동 290-3",
+    "startDate": "2026-10-23",
+    "endDate": "2026-10-25",
+    "applyStartDate": "2026-10-23",
+    "applyEndDate": "2026-10-25",
+    "status": "closed",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1147035",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4104747_image2_1.jpg",
+    "description": "여주오곡나루축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경기도",
+      "가족나들이"
+    ],
+    "dday": "접수마감"
+  },
+  {
     "id": "tourapi-4134915",
     "boardType": "festivals",
     "title": "성남테크아트페스티벌",
@@ -6455,37 +6579,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "지역축제",
       "공공데이터",
       "경기도",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-3386679",
-    "boardType": "festivals",
-    "title": "원주만두축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "033-760-9862",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 원주시 평원동 54 중앙동 전통시장 및 원주천, 문화의거리 일원",
-    "startDate": "2026-10-23",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-23",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3386679",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/4127316_image2_1.jpg",
-    "description": "원주만두축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "강원특별자치도",
       "가족나들이"
     ],
     "dday": "접수마감"
@@ -6610,37 +6703,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "지역축제",
       "공공데이터",
       "광주광역시",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-2484237",
-    "boardType": "festivals",
-    "title": "라라라 페스티벌",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "051-519-4422",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 금정구 장전온천천로 48 (장전동)",
-    "startDate": "2026-10-23",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-23",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2484237",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4110494_image2_1.jpg",
-    "description": "라라라 페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "부산광역시",
       "가족나들이"
     ],
     "dday": "접수마감"
@@ -6854,37 +6916,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2591661",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4105782_image2_1.jpg",
     "description": "연천율무축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경기도",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-1147035",
-    "boardType": "festivals",
-    "title": "여주오곡나루축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "031-881-9693",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 여주시 천송동 290-3",
-    "startDate": "2026-10-23",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-23",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1147035",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4104747_image2_1.jpg",
-    "description": "여주오곡나루축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
       "지역축제",
       "공공데이터",
@@ -7137,37 +7168,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "지역축제",
       "공공데이터",
       "광주광역시",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-1472205",
-    "boardType": "festivals",
-    "title": "도심 속 바다축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "02-820-9403",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 동작구 노들로 688 (노량진동) 노량진 수산시장 축구장 일대",
-    "startDate": "2026-10-24",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-24",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1472205",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3555917_image2_1.jpg",
-    "description": "도심 속 바다축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "서울특별시",
       "가족나들이"
     ],
     "dday": "접수마감"
@@ -8010,37 +8010,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "tourapi-3349589",
-    "boardType": "festivals",
-    "title": "김제 자원순환 새로보미 축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "063-540-3543",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 김제시 도작로 220-23 (검산동) 김제시민문화체육공원잔디광장",
-    "startDate": "2026-10-30",
-    "endDate": "2026-10-31",
-    "applyStartDate": "2026-10-30",
-    "applyEndDate": "2026-10-31",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3349589",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4129344_image2_1.png",
-    "description": "김제 자원순환 새로보미 축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "전북특별자치도",
-      "가족나들이"
-    ],
-    "dday": "D-4"
-  },
-  {
     "id": "tourapi-3537267",
     "boardType": "festivals",
     "title": "백년나이트 야시장 「26년 10월 : WICKED」",
@@ -8101,68 +8070,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-5"
-  },
-  {
-    "id": "tourapi-1937428",
-    "boardType": "festivals",
-    "title": "예천활축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "054-650-6045",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경북 예천군 예천읍 남본리 310-1 예천 한천체육공원",
-    "startDate": "2026-10-30",
-    "endDate": "2026-11-01",
-    "applyStartDate": "2026-10-30",
-    "applyEndDate": "2026-11-01",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1937428",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/4122667_image2_1.jpg",
-    "description": "예천활축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경상북도",
-      "가족나들이"
-    ],
-    "dday": "D-5"
-  },
-  {
-    "id": "tourapi-2039752",
-    "boardType": "festivals",
-    "title": "월출산 국화축제",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "061-470-2259",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "전남광주통합특별시 영암군 영암읍 기찬랜드로 19-10",
-    "startDate": "2026-10-30",
-    "endDate": "2026-11-15",
-    "applyStartDate": "2026-10-30",
-    "applyEndDate": "2026-11-15",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2039752",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4121450_image2_1.jpg",
-    "description": "월출산 국화축제 - 한국관광공사 및 광주광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "광주광역시",
-      "가족나들이"
-    ],
-    "dday": "D-19"
   },
   {
     "id": "tourapi-1399532",
@@ -8413,37 +8320,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "tourapi-4126037",
-    "boardType": "festivals",
-    "title": "제3회 2026 부산 무형유산 아트페어",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "070-4659-0618",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "부산광역시 해운대구 수영강변대로 120 (우동)",
-    "startDate": "2026-10-31",
-    "endDate": "2026-11-08",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-11-08",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4126037",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4126049_image2_1.jpg",
-    "description": "제3회 2026 부산 무형유산 아트페어 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "대구광역시",
-      "가족나들이"
-    ],
-    "dday": "D-12"
-  },
-  {
     "id": "tourapi-4116358",
     "boardType": "festivals",
     "title": "밀양 매운맛 축제",
@@ -8537,37 +8413,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "tourapi-2992829",
-    "boardType": "festivals",
-    "title": "피아크와 함께하는 2026 키스포츠페스티벌 부산",
-    "category": "festival_culture",
-    "categoryName": "지역 문화 축제",
-    "badge": "🎪 TourAPI 축제",
-    "organizer": "1811-6420",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 영도구 해양로195번길 180 (동삼동)",
-    "startDate": "2026-10-31",
-    "endDate": "2026-11-01",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-11-01",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2992829",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4113111_image2_1.jpg",
-    "description": "피아크와 함께하는 2026 키스포츠페스티벌 부산 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "부산광역시",
-      "가족나들이"
-    ],
-    "dday": "D-5"
-  },
-  {
     "id": "fest-jeonnam-01",
     "boardType": "festivals",
     "title": "2026 순천만 갈대축제 & 흑두루미 탐조 생태체험",
@@ -8659,6 +8504,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-8"
+  },
+  {
+    "id": "tourapi-1738695",
+    "boardType": "festivals",
+    "title": "2026 진주국제농식품박람회 농업체험관",
+    "category": "park_eco",
+    "categoryName": "공원 생태체험",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "055-263-9637",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 진주시 동진로 415 (충무공동)",
+    "startDate": "2026-11-04",
+    "endDate": "2026-11-08",
+    "applyStartDate": "2026-11-04",
+    "applyEndDate": "2026-11-08",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1738695",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4136379_image2_1.jpg",
+    "description": "2026 진주국제농식품박람회 농업체험관 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "생태체험",
+      "자연학습",
+      "경상남도",
+      "TourAPI"
+    ],
+    "dday": "D-12"
   },
   {
     "id": "tourapi-921212",
@@ -8876,6 +8752,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가을나들이"
     ],
     "dday": "D-11"
+  },
+  {
+    "id": "tourapi-3400809",
+    "boardType": "festivals",
+    "title": "어부장터X포트빌리지 통영",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "070-4680-1718",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 통영시 도남동 650-3",
+    "startDate": "2026-11-06",
+    "endDate": "2026-11-08",
+    "applyStartDate": "2026-11-06",
+    "applyEndDate": "2026-11-08",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3400809",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4107915_image2_1.JPG",
+    "description": "어부장터X포트빌리지 통영 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경상남도",
+      "가족나들이"
+    ],
+    "dday": "D-12"
   },
   {
     "id": "tourapi-3563389",
@@ -9279,6 +9186,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "세종시장상"
     ],
     "dday": "D-7"
+  },
+  {
+    "id": "tourapi-235076",
+    "boardType": "festivals",
+    "title": "부산불꽃축제",
+    "category": "festival_night",
+    "categoryName": "야경 & 빛축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "051-713-5000",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 수영구 광안해변로 219 (광안동)",
+    "startDate": "2026-11-07",
+    "endDate": "2026-11-07",
+    "applyStartDate": "2026-11-07",
+    "applyEndDate": "2026-11-07",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=235076",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4107992_image2_1.jpg",
+    "description": "부산불꽃축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "야경축제",
+      "포토존",
+      "부산광역시",
+      "TourAPI"
+    ],
+    "dday": "D-11"
   },
   {
     "id": "tourapi-4063702",
@@ -9837,6 +9775,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전주한옥마을"
     ],
     "dday": "D-10"
+  },
+  {
+    "id": "tourapi-4137577",
+    "boardType": "festivals",
+    "title": "2026 국민건강 리부트 마음건강 걷기대회",
+    "category": "sports_marathon",
+    "categoryName": "주말 가족 마라톤",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "044-251-7113",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 중앙공원로 60 (세종동)",
+    "startDate": "2026-11-14",
+    "endDate": "2026-11-14",
+    "applyStartDate": "2026-11-14",
+    "applyEndDate": "2026-11-14",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4137577",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4137578_image2_1.jpg",
+    "description": "2026 국민건강 리부트 마음건강 걷기대회 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "가족마라톤",
+      "건강",
+      "세종특별자치시",
+      "TourAPI"
+    ],
+    "dday": "D-18"
   },
   {
     "id": "tourapi-4115096",
@@ -10550,6 +10519,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영어도서관"
     ],
     "dday": "D-13"
+  },
+  {
+    "id": "tourapi-3470738",
+    "boardType": "festivals",
+    "title": "2026 런트립 남해! FALL & FUN",
+    "category": "festival_culture",
+    "categoryName": "지역 문화 축제",
+    "badge": "🎪 TourAPI 축제",
+    "organizer": "051-740-4116",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 남해군 삼동면 독일로 182",
+    "startDate": "2026-11-21",
+    "endDate": "2026-11-21",
+    "applyStartDate": "2026-11-21",
+    "applyEndDate": "2026-11-21",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3470738",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4136448_image2_1.png",
+    "description": "2026 런트립 남해! FALL & FUN - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경상남도",
+      "가족나들이"
+    ],
+    "dday": "D-25"
   },
   {
     "id": "tourapi-2410727",
