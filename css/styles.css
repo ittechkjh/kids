@@ -164,3 +164,66 @@ body {
   margin: 12px 14px !important;
   line-height: 1.45 !important;
 }
+
+/* Leaflet MarkerCluster 커스텀 디자인 (수천개 핀 깔끔한 묶음) */
+.marker-cluster-small {
+  background-color: rgba(244, 63, 94, 0.22) !important;
+  border-radius: 9999px !important;
+}
+.marker-cluster-small div {
+  background: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 11px !important;
+  box-shadow: 0 4px 10px rgba(244, 63, 94, 0.4) !important;
+  border: 2px solid #ffffff !important;
+}
+
+.marker-cluster-medium {
+  background-color: rgba(219, 39, 119, 0.22) !important;
+  border-radius: 9999px !important;
+}
+.marker-cluster-medium div {
+  background: linear-gradient(135deg, #db2777 0%, #f43f5e 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 12px !important;
+  box-shadow: 0 4px 12px rgba(219, 39, 119, 0.4) !important;
+  border: 2px solid #ffffff !important;
+}
+
+.marker-cluster-large {
+  background-color: rgba(79, 70, 229, 0.22) !important;
+  border-radius: 9999px !important;
+}
+.marker-cluster-large div {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  font-size: 13px !important;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.45) !important;
+  border: 2px solid #ffffff !important;
+}
+
+/* 개별 맛집 콤팩트 핀 */
+.food-compact-pin {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  background: #f43f5e;
+  color: #ffffff;
+  padding: 3px 7px;
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+  font-size: 10px;
+  font-weight: 900;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.food-compact-pin:hover {
+  transform: scale(1.15) translateY(-2px);
+  background: #e11d48;
+  z-index: 1000 !important;
+}
