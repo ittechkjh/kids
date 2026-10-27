@@ -1299,6 +1299,7 @@ class DodamCommunityApp {
     const needRoom = document.getElementById('amenity-room')?.checked ?? false;
     const needParking = document.getElementById('amenity-parking')?.checked ?? false;
     const needStroller = document.getElementById('amenity-stroller')?.checked ?? false;
+    const searchKeyword = (document.getElementById('food-portal-query')?.value || '').trim().toLowerCase();
 
     let list = (this.data.restaurants || []).filter((r) => {
       if (regionVal !== 'all' && r.region !== regionVal) return false;
@@ -1308,6 +1309,20 @@ class DodamCommunityApp {
       if (needRoom && !r.amenities.some((a) => a.includes('룸'))) return false;
       if (needParking && !r.amenities.some((a) => a.includes('주차'))) return false;
       if (needStroller && !r.amenities.some((a) => a.includes('유모차'))) return false;
+
+      if (searchKeyword) {
+        const textToSearch = [
+          r.name,
+          r.address,
+          r.categoryName,
+          r.regionName,
+          r.representativeMenu,
+          r.reviewSummary,
+          r.amenities.join(' ')
+        ].join(' ').toLowerCase();
+        if (!textToSearch.includes(searchKeyword)) return false;
+      }
+
       return true;
     });
 
@@ -1660,7 +1675,9 @@ class DodamCommunityApp {
       dongtan: '동탄·수원·광교',
       mapo: '마포·목동·여의도',
       sejong: '세종·대전·충청',
-      incheon: '인천·송도·일산'
+      incheon: '인천·송도·일산',
+      busan: '부산·대구·영남',
+      jeju: '제주·강원·나들이'
     };
 
     const categoryNames = {
@@ -1675,7 +1692,9 @@ class DodamCommunityApp {
       dongtan: [37.2005, 127.0985],
       mapo: [37.5218, 126.9242],
       sejong: [36.4852, 127.2535],
-      incheon: [37.3915, 126.6578]
+      incheon: [37.3915, 126.6578],
+      busan: [35.1796, 129.0756],
+      jeju: [33.4996, 126.5312]
     };
     const center = baseCoords[region] || [37.5, 127.0];
     const offsetLat = (Math.random() - 0.5) * 0.02;
@@ -1746,7 +1765,14 @@ class DodamCommunityApp {
       if (raw) {
         const parsed = JSON.parse(raw);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          this.data.restaurants = parsed;
+          const map = new Map((this.data.restaurants || []).map((r) => [r.id, r]));
+          // Custom newly-registered restaurants (id starting with rest- and not in base data)
+          parsed.forEach((item) => {
+            if (!map.has(item.id)) {
+              map.set(item.id, item);
+            }
+          });
+          this.data.restaurants = Array.from(map.values());
         }
       }
     } catch {}

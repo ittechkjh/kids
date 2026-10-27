@@ -385,7 +385,8 @@
                 <input
                   id="food-portal-query"
                   type="text"
-                  placeholder="예: 판교 아기의자 맛집, 강남역 가족외식, 동탄 놀이방 식당..."
+                  oninput="app.onFoodFilterChange()"
+                  placeholder="식당명, 지역(판교, 송파, 제주...), 메뉴(갈비, 파스타...), 편의시설 실시간 검색"
                   class="flex-1 text-xs bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-400"
                 />
                 <div class="flex items-center gap-1.5 shrink-0">
@@ -431,6 +432,8 @@
                   <option value="mapo">📍 마포·목동·여의도</option>
                   <option value="sejong">📍 세종·대전·충청</option>
                   <option value="incheon">📍 인천·송도·일산</option>
+                  <option value="busan">📍 부산·대구·영남</option>
+                  <option value="jeju">📍 제주·강원·나들이</option>
                 </select>
 
                 <select id="food-category-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
@@ -801,6 +804,8 @@
               <option value="mapo">마포·목동·여의도</option>
               <option value="sejong">세종·대전·충청</option>
               <option value="incheon">인천·송도·일산</option>
+              <option value="busan">부산·대구·영남</option>
+              <option value="jeju">제주·강원·나들이</option>
             </select>
           </div>
           <div>

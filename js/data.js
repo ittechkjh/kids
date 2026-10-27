@@ -18,7 +18,9 @@ window.DODAM_COMMUNITY_DATA = {
     { id: 'dongtan', name: '동탄·수원·광교' },
     { id: 'mapo', name: '마포·목동·용산' },
     { id: 'sejong', name: '세종·대전·충청' },
-    { id: 'incheon', name: '인천·김포·일산' }
+    { id: 'incheon', name: '인천·김포·일산' },
+    { id: 'busan', name: '부산·대구·영남' },
+    { id: 'jeju', name: '제주·강원·나들이' }
   ],
 
   polls: [
@@ -491,6 +493,9 @@ window.DODAM_COMMUNITY_DATA = {
 
   // 네이버 · 카카오 · 구글 맛집 큐레이션 데이터셋 (출처 링크, 평점, 가족/키즈 편의시설 포함)
   restaurants: [
+    // ----------------------------------------------------
+    // 1. 분당 · 판교 권역
+    // ----------------------------------------------------
     {
       id: 'rest-1',
       name: '서현궁 (분당 안현점)',
@@ -507,24 +512,9 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '프라이빗 룸', '넓은 주차장(발렛)', '유모차 진입 수월', '어린이 식기'],
       reviewSummary: '개별 룸이 잘 되어 있어 아이와 함께 방문해도 조용히 식사할 수 있고, 고기를 직원이 직접 구워주셔서 아이 돌보며 먹기 최고입니다.',
       sources: {
-        naver: {
-          rating: 4.84,
-          reviewCount: 3120,
-          url: 'https://map.naver.com/v5/search/%EB%B6%84%EB%8B%B9%20%EC%84%9C%ED%98%84%EA%B5%89',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.5,
-          reviewCount: 890,
-          url: 'https://map.kakao.com/?q=%EB%B6%84%EB%8B%B9+%EC%84%9C%ED%98%84%EA%B5%89',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.5,
-          reviewCount: 640,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EB%B6%84%EB%8B%B9+%EC%84%9C%ED%98%84%EA%B5%89',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.84, reviewCount: 3120, url: 'https://map.naver.com/v5/search/%EB%B6%84%EB%8B%B9%20%EC%84%9C%ED%98%84%EA%B5%89', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 890, url: 'https://map.kakao.com/?q=%EB%B6%84%EB%8B%B9+%EC%84%9C%ED%98%84%EA%B5%89', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 640, url: 'https://www.google.com/maps/search/?api=1&query=%EB%B6%84%EB%8B%B9+%EC%84%9C%ED%98%84%EA%B5%89', name: '구글 지도' }
       },
       overallRating: 4.8
     },
@@ -544,27 +534,104 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '유모차 진입 수월', '테라스석', '어린이 친화'],
       reviewSummary: '팬케이크 양이 푸짐하고 부드러워서 아이들이 정말 잘 먹어요. 백현동 카페거리 산책 후 들르기 좋은 패밀리 브런치 카페입니다.',
       sources: {
-        naver: {
-          rating: 4.81,
-          reviewCount: 1920,
-          url: 'https://map.naver.com/v5/search/%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC%20%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.4,
-          reviewCount: 530,
-          url: 'https://map.kakao.com/?q=%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC+%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.4,
-          reviewCount: 410,
-          url: 'https://www.google.com/maps/search/?api=1&query=%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC+%ED%8C%90%EA%B5%90',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.81, reviewCount: 1920, url: 'https://map.naver.com/v5/search/%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC%20%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 530, url: 'https://map.kakao.com/?q=%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC+%ED%8C%90%EA%B5%90%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 410, url: 'https://www.google.com/maps/search/?api=1&query=%ED%94%8C%EB%9E%8D%EC%9E%AD%ED%8C%AC%ED%8A%B8%EB%A6%AC+%ED%8C%90%EA%B5%90', name: '구글 지도' }
       },
       overallRating: 4.7
     },
+    {
+      id: 'rest-9',
+      name: '우에노 421 (판교 백현점)',
+      category: 'western',
+      categoryName: '양식 · 이탈리안 파스타 & 스테이크',
+      region: 'pangyo',
+      regionName: '분당·판교',
+      address: '경기도 성남시 분당구 판교역로14번길 15 (백현동)',
+      phone: '031-708-0421',
+      lat: 37.3892,
+      lng: 127.1135,
+      hours: '매일 11:30 ~ 21:30 (브레이크타임 15:00~17:00)',
+      representativeMenu: '살치살 스테이크 (39,000원), 명란 크림 파스타 (19,000원)',
+      amenities: ['아기의자 완비', '유모차 진입 수월', '어린이 식기 제공', '주차 가능'],
+      reviewSummary: '분위기가 예쁘고 자극적이지 않은 파스타와 리조또가 많아서 유아 동반 가족 단위 손님이 많습니다. 식기와 아기의자도 청결해요.',
+      sources: {
+        naver: { rating: 4.82, reviewCount: 1680, url: 'https://map.naver.com/v5/search/%EC%9A%B0%EC%97%90%EB%85%B8421%20%ED%8C%90%EA%B5%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 420, url: 'https://map.kakao.com/?q=%EC%9A%B0%EC%97%90%EB%85%B8421+%ED%8C%90%EA%B5%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 310, url: 'https://www.google.com/maps/search/?api=1&query=%EC%9A%B0%EC%97%90%EB%85%B8421+%ED%8C%90%EA%B5%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-10',
+      name: '정원오리구이 (분당 율동공원점)',
+      category: 'korean',
+      categoryName: '한식 · 생오리로스 & 잔디정원',
+      region: 'pangyo',
+      regionName: '분당·판교',
+      address: '경기도 성남시 분당구 문정로140번길 8 (율동)',
+      phone: '031-708-6692',
+      lat: 37.3789,
+      lng: 127.1512,
+      hours: '매일 11:00 ~ 21:30',
+      representativeMenu: '생오리로스 구이 (54,000원), 누룽지 볶음밥 (4,000원)',
+      amenities: ['아기의자 완비', '대형 잔디마당', '넓은 전용주차장', '단체 룸'],
+      reviewSummary: '넓은 잔디밭 마당이 있어 밥 먹고 아이가 비눗방울 불고 뛰어놀기 최고의 장소! 율동공원 나들이 코스로 강추합니다.',
+      sources: {
+        naver: { rating: 4.79, reviewCount: 2210, url: 'https://map.naver.com/v5/search/%EC%A0%95%EC%9B%90%EC%98%A4%EB%A6%AC%EA%B5%AC%EC%9D%B4%20%EC%9C%A8%EB%8F%99%EA%B3%B5%EC%9B%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 680, url: 'https://map.kakao.com/?q=%EC%A0%95%EC%9B%90%EC%98%A4%EB%A6%AC%EA%B5%AC%EC%9D%B4+%EB%B6%84%EB%8B%B9', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 490, url: 'https://www.google.com/maps/search/?api=1&query=%EC%A0%95%EC%9B%90%EC%98%A4%EB%A6%AC%EA%B5%AC%EC%9D%B4+%EB%B6%84%EB%8B%B9', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-11',
+      name: '긴자 (판교점)',
+      category: 'asian',
+      categoryName: '일식 · 프리미엄 정식 & 전실 룸',
+      region: 'pangyo',
+      regionName: '분당·판교',
+      address: '경기도 성남시 분당구 판교백현로 29 (백현동)',
+      phone: '031-705-6606',
+      lat: 37.3912,
+      lng: 127.1189,
+      hours: '매일 11:30 ~ 22:00',
+      representativeMenu: '주말 가족 특선 (48,000원), 어린이 돈까스 정식 (15,000원)',
+      amenities: ['전실 프라이빗 룸', '아기의자 완비', '발렛주차', '어린이 전용메뉴'],
+      reviewSummary: '돌잔치와 환갑 등 가족 행사 1순위. 아기 전용 식판과 어린이 돈까스 메뉴가 따로 준비되어 있어 아이도 맛있게 잘 먹어요.',
+      sources: {
+        naver: { rating: 4.86, reviewCount: 2950, url: 'https://map.naver.com/v5/search/%EA%B8%B4%EC%9E%90%20%ED%8C%90%EA%B5%90%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 740, url: 'https://map.kakao.com/?q=%EA%B8%B4%EC%9E%90+%ED%8C%90%EA%B5%90%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 580, url: 'https://www.google.com/maps/search/?api=1&query=%EA%B8%B4%EC%9E%90+%ED%8C%90%EA%B5%90%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-12',
+      name: '몽중헌 (판교 테크원점)',
+      category: 'asian',
+      categoryName: '중식 · 딤섬 & 광동요리 다이닝',
+      region: 'pangyo',
+      regionName: '분당·판교',
+      address: '경기도 성남시 분당구 분당내곡로 131 판교테크원 2층',
+      phone: '031-601-7515',
+      lat: 37.3962,
+      lng: 127.1121,
+      hours: '매일 11:30 ~ 22:00 (브레이크타임 15:00~17:30)',
+      representativeMenu: '상하이 소롱포 (14,000원), 하교 (15,000원), 게살볶음밥 (18,000원)',
+      amenities: ['아기의자 완비', '판교역 연결 주차', '유모차 이동 수월', '개별 룸'],
+      reviewSummary: '딤섬 피가 얇고 육즙이 살아있어 아이들이 정말 좋아합니다. 백화점/판교역 연결이라 날씨 안 좋을 때 유모차 끌고 오기 편해요.',
+      sources: {
+        naver: { rating: 4.83, reviewCount: 2480, url: 'https://map.naver.com/v5/search/%EB%AA%BD%EC%A4%91%ED%97%8C%20%ED%8C%90%EA%B5%90%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 610, url: 'https://map.kakao.com/?q=%EB%AA%BD%EC%A4%91%ED%97%8C+%ED%8C%90%EA%B5%90%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 490, url: 'https://www.google.com/maps/search/?api=1&query=%EB%AA%BD%EC%A4%91%ED%97%8C+%ED%8C%90%EA%B5%90%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+
+    // ----------------------------------------------------
+    // 2. 강남 · 서초 · 송파 권역
+    // ----------------------------------------------------
     {
       id: 'rest-3',
       name: '벽제갈비 · 봉피양 (방이본점)',
@@ -581,64 +648,104 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '프라이빗 룸', '넓은 주차장(발렛)', '온돌좌식룸'],
       reviewSummary: '미쉐린 빕 구르망 선정 맛집으로 양념갈비가 연해서 유아들도 잘 먹습니다. 돌잔치나 어르신 모시는 가족 외식에 완벽한 룸 컨디션입니다.',
       sources: {
-        naver: {
-          rating: 4.88,
-          reviewCount: 3650,
-          url: 'https://map.naver.com/v5/search/%EB%B4%89%ED%94%BC%EC%96%91%20%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.6,
-          reviewCount: 1120,
-          url: 'https://map.kakao.com/?q=%EB%B4%89%ED%94%BC%EC%96%91+%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.6,
-          reviewCount: 1420,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EB%B4%89%ED%94%BC%EC%96%91+%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.88, reviewCount: 3650, url: 'https://map.naver.com/v5/search/%EB%B4%89%ED%94%BC%EC%96%91%20%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 1120, url: 'https://map.kakao.com/?q=%EB%B4%89%ED%94%BC%EC%96%91+%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 1420, url: 'https://www.google.com/maps/search/?api=1&query=%EB%B4%89%ED%94%BC%EC%96%91+%EB%B0%A9%EC%9D%B4%EB%B3%B8%EC%A0%90', name: '구글 지도' }
       },
       overallRating: 4.9
     },
     {
-      id: 'rest-4',
-      name: '세상의 모든 아침 (여의도 전경련점)',
-      category: 'western',
-      categoryName: '양식 · 파노라마뷰 브런치 & 다이닝',
-      region: 'mapo',
-      regionName: '마포·목동·용산',
-      address: '서울특별시 영등포구 여의대로 24 전경련회관 50층',
-      phone: '02-2055-4442',
-      lat: 37.5218,
-      lng: 126.9242,
-      hours: '매일 10:00 ~ 22:00 (브레이크타임 16:00~17:00)',
-      representativeMenu: '트러플 머쉬룸 리조또 (29,000원), 바게트 프렌치토스트 (27,000원)',
-      amenities: ['아기의자 완비', '주차 2시간 지원', '유모차 진입 엘리베이터', '수유실 인접'],
-      reviewSummary: '50층에서 내려다보는 한강 뷰가 환상적이고 아기의자 배치와 직원 응대가 매우 친절합니다. 아이 생일이나 특별한 가족 기념일에 추천해요.',
+      id: 'rest-13',
+      name: '삼원가든 (압구정 본점)',
+      category: 'korean',
+      categoryName: '한식 · 야외폭포 정원 & 갈비명가',
+      region: 'songpa',
+      regionName: '강남·서초·송파',
+      address: '서울특별시 강남구 언주로 835 (신사동)',
+      phone: '02-548-3030',
+      lat: 37.5255,
+      lng: 127.0321,
+      hours: '매일 11:30 ~ 22:00',
+      representativeMenu: '삼원 전통 양념갈비 (55,000원), 갈비탕 (22,000원)',
+      amenities: ['아기의자 완비', '야외 폭포정원', '프라이빗 룸', '발렛주차', '수유실'],
+      reviewSummary: '리뉴얼 후 야외 인공폭포와 정원이 너무 아름다워졌어요. 아이와 함께 산책하기도 좋고 갈비탕에 밥 말아주면 한 그릇 뚝딱입니다.',
       sources: {
-        naver: {
-          rating: 4.79,
-          reviewCount: 4230,
-          url: 'https://map.naver.com/v5/search/%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8%20%EC%97%AC%EC%9D%98%EB%8F%84',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.3,
-          reviewCount: 1450,
-          url: 'https://map.kakao.com/?q=%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8+%EC%97%AC%EC%9D%98%EB%8F%84',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.4,
-          reviewCount: 1890,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8+%EC%97%AC%EC%9D%98%EB%8F%84',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.87, reviewCount: 4190, url: 'https://map.naver.com/v5/search/%EC%82%BC%EC%9B%90%EA%B0%80%EB%93%A0%20%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 1040, url: 'https://map.kakao.com/?q=%EC%82%BC%EC%9B%90%EA%B0%80%EB%93%A0+%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 1380, url: 'https://www.google.com/maps/search/?api=1&query=%EC%82%BC%EC%9B%90%EA%B0%80%EB%93%A0+%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+    {
+      id: 'rest-14',
+      name: '더플레이스 (잠실 롯데백화점점)',
+      category: 'western',
+      categoryName: '양식 · 화덕피자 & 패밀리 이탈리안',
+      region: 'songpa',
+      regionName: '강남·서초·송파',
+      address: '서울특별시 송파구 올림픽로 240 롯데백화점 잠실점 11층',
+      phone: '02-2143-1815',
+      lat: 37.5115,
+      lng: 127.0982,
+      hours: '매일 10:30 ~ 21:00 (백화점 휴점일 휴무)',
+      representativeMenu: '폭탄피자 불쇼 (26,000원), 리코타 프루타 샐러드 (17,000원)',
+      amenities: ['아기의자 완비', '백화점 수유실 인접', '유모차 대여', '어린이 식기'],
+      reviewSummary: '불 붙여서 구워주는 폭탄피자 퍼포먼스에 아이들이 눈을 못 뗍니다! 백화점 내 수유실과 유모차 동선이 완벽해서 방문하기 편해요.',
+      sources: {
+        naver: { rating: 4.81, reviewCount: 2130, url: 'https://map.naver.com/v5/search/%EB%8D%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EC%9E%A0%EC%8B%A4', name: '네이버 플레이스' },
+        kakao: { rating: 4.3, reviewCount: 520, url: 'https://map.kakao.com/?q=%EB%8D%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4+%EC%9E%A0%EC%8B%A4', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 460, url: 'https://www.google.com/maps/search/?api=1&query=%EB%8D%94%ED%94%8C%EB%A0%88%EC%9D%B4%EC%8A%A4+%EC%9E%A0%EC%8B%A4', name: '구글 지도' }
       },
       overallRating: 4.7
     },
+    {
+      id: 'rest-15',
+      name: '딘타이펑 (강남점)',
+      category: 'asian',
+      categoryName: '중식 · 샤오롱바오 & 패밀리 딤섬',
+      region: 'songpa',
+      regionName: '강남·서초·송파',
+      address: '서울특별시 서초구 서초대로73길 12 세계빌딩 2층',
+      phone: '02-569-2778',
+      lat: 37.4989,
+      lng: 127.0264,
+      hours: '매일 11:00 ~ 21:30',
+      representativeMenu: '샤오롱바오 (14,500원), 새우 계란볶음밥 (13,000원), 꿔바로우 (22,000원)',
+      amenities: ['아기의자 완비', '어린이 전용식기', '넓은 좌석 간격', '주차 지원'],
+      reviewSummary: '직원분들이 아이 오면 아기의자와 유아 전용 컵·수저 세트를 바로 세팅해주십니다. 볶음밥과 만두가 맵지 않아 유아들이 먹기 딱이에요.',
+      sources: {
+        naver: { rating: 4.82, reviewCount: 3820, url: 'https://map.naver.com/v5/search/%EB%94%98%ED%83%80%EC%9D%B4%ED%83%81%20%EA%B0%95%EB%82%A8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 1250, url: 'https://map.kakao.com/?q=%EB%94%98%ED%83%80%EC%9D%B4%ED%83%81+%EA%B0%95%EB%82%A8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 1980, url: 'https://www.google.com/maps/search/?api=1&query=%EB%94%98%ED%83%80%EC%9D%B4%ED%83%81+%EA%B0%95%EB%82%A8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-16',
+      name: '한와담 (대치본점)',
+      category: 'korean',
+      categoryName: '한식 · 숙성 안심 한우 & 룸식당',
+      region: 'songpa',
+      regionName: '강남·서초·송파',
+      address: '서울특별시 강남구 역삼로 461 (대치동)',
+      phone: '02-568-7905',
+      lat: 37.4998,
+      lng: 127.0582,
+      hours: '매일 11:30 ~ 22:00 (브레이크타임 15:00~17:00)',
+      representativeMenu: '숙성 안심 (53,000원), 차돌 깍두기 볶음밥 (15,000원)',
+      amenities: ['전실 프라이빗 룸', '아기의자 완비', '콜키지 프리', '발렛주차'],
+      reviewSummary: '대치동 학원가 인근 룸식당 중 최고! 고기 연기가 하나도 안 나게 서버분이 완벽하게 구워주셔서 아이랑 편안하게 식사했습니다.',
+      sources: {
+        naver: { rating: 4.84, reviewCount: 1890, url: 'https://map.naver.com/v5/search/%ED%95%9C%EC%99%80%EB%8B%B4%20%EB%8C%80%EC%B9%98%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 460, url: 'https://map.kakao.com/?q=%ED%95%9C%EC%99%80%EB%8B%B4+%EB%8C%80%EC%B9%98%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 390, url: 'https://www.google.com/maps/search/?api=1&query=%ED%95%9C%EC%99%80%EB%8B%B4+%EB%8C%80%EC%B9%98%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+
+    // ----------------------------------------------------
+    // 3. 동탄 · 수원 · 광교 권역
+    // ----------------------------------------------------
     {
       id: 'rest-5',
       name: '어반리st (동탄본점)',
@@ -655,24 +762,9 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['키즈룸/놀이방', '수유실 완비', '300대 대형주차', '유모차 이동 수월', '아기의자 완비'],
       reviewSummary: '실내에 수유실과 기저귀 교환대, 미니 아케이드 키즈존이 완벽하게 갖춰진 경기 남부 최대 베이커리 카페! 주말에 유모차 끌고 오기 1순위입니다.',
       sources: {
-        naver: {
-          rating: 4.85,
-          reviewCount: 5120,
-          url: 'https://map.naver.com/v5/search/%EC%96%B4%EB%B0%98%EB%A6%ACst%20%EB%8F%99%ED%83%84',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.6,
-          reviewCount: 1410,
-          url: 'https://map.kakao.com/?q=%EC%96%B4%EB%B0%98%EB%A6%ACst+%EB%8F%99%ED%83%84',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.6,
-          reviewCount: 980,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EB%B0%98%EB%A6%ACst+%EB%8F%99%ED%83%84',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.85, reviewCount: 5120, url: 'https://map.naver.com/v5/search/%EC%96%B4%EB%B0%98%EB%A6%ACst%20%EB%8F%99%ED%83%84', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 1410, url: 'https://map.kakao.com/?q=%EC%96%B4%EB%B0%98%EB%A6%ACst+%EB%8F%99%ED%83%84', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 980, url: 'https://www.google.com/maps/search/?api=1&query=%EC%96%B4%EB%B0%98%EB%A6%ACst+%EB%8F%99%ED%83%84', name: '구글 지도' }
       },
       overallRating: 4.8
     },
@@ -692,27 +784,174 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '전실 프라이빗 룸', '넓은 주차장', '어린이 미역국 무료'],
       reviewSummary: '생일이나 백일/돌 때 예약하면 아이용 미역국과 반찬을 정성스럽게 서비스해주셔서 감동받았습니다. 전실 룸이라 방해받지 않아 좋아요.',
       sources: {
-        naver: {
-          rating: 4.82,
-          reviewCount: 1870,
-          url: 'https://map.naver.com/v5/search/%EA%B2%BD%EB%B3%B5%EA%B6%81%20%EB%8F%99%ED%83%84%EC%A0%90',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.5,
-          reviewCount: 490,
-          url: 'https://map.kakao.com/?q=%EA%B2%BD%EB%B3%B5%EA%B6%81+%EB%8F%99%ED%83%84%EC%A0%90',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.5,
-          reviewCount: 360,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EB%B3%B5%EA%B6%81+%EB%8F%99%ED%83%84%EC%A0%90',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.82, reviewCount: 1870, url: 'https://map.naver.com/v5/search/%EA%B2%BD%EB%B3%B5%EA%B6%81%20%EB%8F%99%ED%83%84%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 490, url: 'https://map.kakao.com/?q=%EA%B2%BD%EB%B3%B5%EA%B6%81+%EB%8F%99%ED%83%84%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 360, url: 'https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EB%B3%B5%EA%B6%81+%EB%8F%99%ED%83%84%EC%A0%90', name: '구글 지도' }
       },
       overallRating: 4.8
     },
+    {
+      id: 'rest-17',
+      name: '가보정 (수원 인계본점)',
+      category: 'korean',
+      categoryName: '한식 · 전국 3대 수원왕갈비',
+      region: 'dongtan',
+      regionName: '동탄·수원·광교',
+      address: '경기도 수원시 팔달구 장다리로 282 (인계동)',
+      phone: '1600-3883',
+      lat: 37.2758,
+      lng: 127.0289,
+      hours: '매일 11:30 ~ 21:30',
+      representativeMenu: '국내산 한우 양념갈비 (67,000원), 미국산 생갈비 (57,000원)',
+      amenities: ['아기의자 완비', '초대형 주차타워', '개별 룸 완비', '어린이 반찬 푸짐'],
+      reviewSummary: '양념게장, 단호박전, 잡채 등 15가지 넘는 정갈한 반찬이 한정식집 수준으로 깔려 아이 밥 먹이기 최고입니다. 주차타워가 있어 편해요.',
+      sources: {
+        naver: { rating: 4.89, reviewCount: 6890, url: 'https://map.naver.com/v5/search/%EA%B0%80%EB%B3%B4%EC%A0%95%20%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 2840, url: 'https://map.kakao.com/?q=%EA%B0%80%EB%B3%B4%EC%A0%95+%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 3120, url: 'https://www.google.com/maps/search/?api=1&query=%EA%B0%80%EB%B3%B4%EC%A0%95+%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+    {
+      id: 'rest-18',
+      name: '카페 드 단아한 (광교 앨리웨이점)',
+      category: 'brunch',
+      categoryName: '브런치 · 원천호수뷰 & 파스타',
+      region: 'dongtan',
+      regionName: '동탄·수원·광교',
+      address: '경기도 수원시 영통구 광교호수공원로 80 앨리웨이 광교 2층',
+      phone: '031-211-0988',
+      lat: 37.2805,
+      lng: 127.0605,
+      hours: '매일 10:00 ~ 21:00',
+      representativeMenu: '에그베네딕트 (16,900원), 트러플 오일 리조또 (17,900원)',
+      amenities: ['아기의자 완비', '호수공원 잔디마당', '유모차 편의', '앨리웨이 주차'],
+      reviewSummary: '광교 앨리웨이 광장 바로 앞이라 아이와 산책하고 키즈 편집샵 구경 후 식사하기 딱입니다. 호수 뷰 테라스석 분위기도 최고예요.',
+      sources: {
+        naver: { rating: 4.82, reviewCount: 2280, url: 'https://map.naver.com/v5/search/%EB%8B%A8%EC%95%84%ED%95%9C%20%EC%95%A8%EB%A6%AC%EC%9B%A8%EC%9D%B4', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 510, url: 'https://map.kakao.com/?q=%EB%8B%A8%EC%95%84%ED%95%9C+%EC%95%A8%EB%A6%AC%EC%9B%A8%EC%9D%B4', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 380, url: 'https://www.google.com/maps/search/?api=1&query=%EB%8B%A8%EC%95%84%ED%95%9C+%EC%95%A8%EB%A6%AC%EC%9B%A8%EC%9D%B4', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-19',
+      name: '바른고기 엘베요타 (동탄 목동점)',
+      category: 'korean',
+      categoryName: '한식 · 이베리코 흑돼지 & 구워주는 집',
+      region: 'dongtan',
+      regionName: '동탄·수원·광교',
+      address: '경기도 화성시 동탄신리천로 411 (목동)',
+      phone: '031-375-9288',
+      lat: 37.1895,
+      lng: 127.1245,
+      hours: '매일 16:00 ~ 23:00 (주말 12:00 오픈)',
+      representativeMenu: '베요타 100% 꽃목살 (18,000원), 날치알 주먹밥 (4,000원)',
+      amenities: ['아기의자 완비', '고기 전담 그릴링', '어린이 주먹밥', '신리천 산책로'],
+      reviewSummary: '직원분이 테이블마다 전담해서 완벽한 굽기로 구워주셔서 기름 튈 걱정 없이 아이 챙기며 고기 먹기 너무 편합니다.',
+      sources: {
+        naver: { rating: 4.86, reviewCount: 1420, url: 'https://map.naver.com/v5/search/%EB%B0%94%EB%A5%B8%EA%B3%A0%EA%B8%B0%20%EB%8F%99%ED%83%84%EB%AA%A9%EB%8F%99%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 380, url: 'https://map.kakao.com/?q=%EB%B0%94%EB%A5%B8%EA%B3%A0%EA%B8%B0+%EB%8F%99%ED%83%84%EB%AA%A9%EB%8F%99', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 220, url: 'https://www.google.com/maps/search/?api=1&query=%EB%B0%94%EB%A5%B8%EA%B3%A0%EA%B8%B0+%EB%8F%99%ED%83%84%EB%AA%A9%EB%8F%99', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+
+    // ----------------------------------------------------
+    // 4. 마포 · 목동 · 여의도 · 용산 권역
+    // ----------------------------------------------------
+    {
+      id: 'rest-4',
+      name: '세상의 모든 아침 (여의도 전경련점)',
+      category: 'western',
+      categoryName: '양식 · 파노라마뷰 브런치 & 다이닝',
+      region: 'mapo',
+      regionName: '마포·목동·용산',
+      address: '서울특별시 영등포구 여의대로 24 전경련회관 50층',
+      phone: '02-2055-4442',
+      lat: 37.5218,
+      lng: 126.9242,
+      hours: '매일 10:00 ~ 22:00 (브레이크타임 16:00~17:00)',
+      representativeMenu: '트러플 머쉬룸 리조또 (29,000원), 바게트 프렌치토스트 (27,000원)',
+      amenities: ['아기의자 완비', '주차 2시간 지원', '유모차 진입 엘리베이터', '수유실 인접'],
+      reviewSummary: '50층에서 내려다보는 한강 뷰가 환상적이고 아기의자 배치와 직원 응대가 매우 친절합니다. 아이 생일이나 특별한 가족 기념일에 추천해요.',
+      sources: {
+        naver: { rating: 4.79, reviewCount: 4230, url: 'https://map.naver.com/v5/search/%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8%20%EC%97%AC%EC%9D%98%EB%8F%84', name: '네이버 플레이스' },
+        kakao: { rating: 4.3, reviewCount: 1450, url: 'https://map.kakao.com/?q=%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8+%EC%97%AC%EC%9D%98%EB%8F%84', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 1890, url: 'https://www.google.com/maps/search/?api=1&query=%EC%84%B8%EC%83%81%EC%9D%98%EB%AA%A8%EB%93%A0%EC%95%84%EC%B9%A8+%EC%97%AC%EC%9D%98%EB%8F%84', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-20',
+      name: '하이디라오 훠궈 (용산 아이파크몰점)',
+      category: 'asian',
+      categoryName: '중식 · 프리미엄 훠궈 & 키즈룸',
+      region: 'mapo',
+      regionName: '마포·목동·용산',
+      address: '서울특별시 용산구 한강대로23길 55 아이파크몰 7층',
+      phone: '02-2012-0700',
+      lat: 37.5298,
+      lng: 126.9645,
+      hours: '매일 10:00 ~ 새벽 03:00',
+      representativeMenu: '삼선탕 백탕 (11,000원), 특선 소고기 (16,000원), 토마토탕 (11,000원)',
+      amenities: ['키즈룸/놀이방 완비', '아기전용 식판/턱받이', '유모차 주차', '수유실 인접'],
+      reviewSummary: '아이 데리고 가기 가장 편한 훠궈집! 맵지 않은 토마토탕과 삼선탕에 소고기 살살 익혀주면 아기도 잘 먹고 매장 내 어린이 놀이방 시설이 최고입니다.',
+      sources: {
+        naver: { rating: 4.87, reviewCount: 5410, url: 'https://map.naver.com/v5/search/%ED%95%98%EC%9D%B4%EB%94%94%EB%9D%BC%EC%98%A4%20%EC%9A%A9%EC%82%B0', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 1680, url: 'https://map.kakao.com/?q=%ED%95%98%EC%9D%B4%EB%94%94%EB%9D%BC%EC%98%A4+%EC%9A%A9%EC%82%B0', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 2150, url: 'https://www.google.com/maps/search/?api=1&query=%ED%95%98%EC%9D%B4%EB%94%94%EB%9D%BC%EC%98%A4+%EC%9A%A9%EC%82%B0', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+    {
+      id: 'rest-21',
+      name: '토끼정 (용산 아이파크몰점)',
+      category: 'western',
+      categoryName: '일양식 · 크림카레우동 & 패밀리 한상',
+      region: 'mapo',
+      regionName: '마포·목동·용산',
+      address: '서울특별시 용산구 한강대로23길 55 아이파크몰 테이스트파크 6층',
+      phone: '02-2012-0678',
+      lat: 37.5302,
+      lng: 126.9651,
+      hours: '매일 11:00 ~ 22:00',
+      representativeMenu: '크림카레우동 (13,800원), 토끼밥상 파스타 한상 (35,800원)',
+      amenities: ['아기의자 완비', '어린이 친화', '아이파크몰 주차', '수유실 인접'],
+      reviewSummary: '부드러운 크림 아래 감칠맛 나는 우동과 치즈카츠 한상 차림이 푸짐해요. 유아 식기와 물컵을 센스 있게 챙겨주십니다.',
+      sources: {
+        naver: { rating: 4.80, reviewCount: 2890, url: 'https://map.naver.com/v5/search/%ED%86%A0%EB%81%BC%EC%A0%95%20%EC%9A%A9%EC%82%B0', name: '네이버 플레이스' },
+        kakao: { rating: 4.3, reviewCount: 840, url: 'https://map.kakao.com/?q=%ED%86%A0%EB%81%BC%EC%A0%95+%EC%9A%A9%EC%82%B0', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 670, url: 'https://www.google.com/maps/search/?api=1&query=%ED%86%A0%EB%81%BC%EC%A0%95+%EC%9A%A9%EC%82%B0', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-22',
+      name: '오목집 (목동 본점)',
+      category: 'korean',
+      categoryName: '한식 · 부드러운 온족발 & 꽃게탕',
+      region: 'mapo',
+      regionName: '마포·목동·용산',
+      address: '서울특별시 양천구 목동동로 226-7 (목동)',
+      phone: '02-6737-6692',
+      lat: 37.5284,
+      lng: 126.8741,
+      hours: '매일 11:30 ~ 23:00',
+      representativeMenu: '모듬족발 (42,000원), 쟁반막국수 (14,000원)',
+      amenities: ['아기의자 완비', '좌식 및 테이블석', '꽃게탕 무료제공', '후식 아이스크림'],
+      reviewSummary: '카라멜 색소 없이 건강하게 삶아 고기가 야들야들해서 이가 약한 어린아이도 껍질까지 뚝딱 잘 먹어요. 후식 우유 아이스크림도 대인기!',
+      sources: {
+        naver: { rating: 4.85, reviewCount: 3150, url: 'https://map.naver.com/v5/search/%EC%98%A4%EB%AA%A9%EC%A7%91%20%EB%AA%A9%EB%8F%99%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 790, url: 'https://map.kakao.com/?q=%EC%98%A4%EB%AA%A9%EC%A7%91+%EB%AA%A9%EB%8F%99%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 580, url: 'https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EB%AA%A9%EC%A7%91+%EB%AA%A9%EB%8F%99%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+
+    // ----------------------------------------------------
+    // 5. 세종 · 대전 · 충청 권역
+    // ----------------------------------------------------
     {
       id: 'rest-7',
       name: '산장가든 (세종 조치원)',
@@ -729,27 +968,82 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '넓은 야외 정원', '대형 주차장', '룸 완비'],
       reviewSummary: '고기가 다 구워져 나와 냄새나 연기 걱정 없이 아이와 먹기 너무 편해요. 식사 후 잔디 정원에서 아이 뛰어놀기도 좋습니다.',
       sources: {
-        naver: {
-          rating: 4.87,
-          reviewCount: 4180,
-          url: 'https://map.naver.com/v5/search/%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0%20%EC%84%B8%EC%82%AC',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.6,
-          reviewCount: 1340,
-          url: 'https://map.kakao.com/?q=%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0+%EC%84%B8%EC%A2%85',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.5,
-          reviewCount: 890,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0+%EC%84%B8%EC%82%AC',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.87, reviewCount: 4180, url: 'https://map.naver.com/v5/search/%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0%20%EC%84%B8%EC%A2%85', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 1340, url: 'https://map.kakao.com/?q=%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0+%EC%84%B8%EC%A2%85', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 890, url: 'https://www.google.com/maps/search/?api=1&query=%EC%82%B0%EC%9E%A5%EA%B0%80%EB%93%A0+%EC%84%B8%EC%A2%85', name: '구글 지도' }
       },
       overallRating: 4.8
     },
+    {
+      id: 'rest-23',
+      name: '메리골드 (세종 보람점)',
+      category: 'brunch',
+      categoryName: '브런치 · 금강 보행교 뷰 & 에그베네딕트',
+      region: 'sejong',
+      regionName: '세종·대전·충청',
+      address: '세종특별자치시 시청대로 167 호려울마을 금강르네상스 4층',
+      phone: '044-868-4521',
+      lat: 36.4882,
+      lng: 127.2895,
+      hours: '매일 10:00 ~ 21:00',
+      representativeMenu: '연어 에그베네딕트 (17,000원), 리코타 치즈 샐러드 (15,000원)',
+      amenities: ['아기의자 완비', '금강뷰 테라스', '유모차 엘리베이터', '지하주차'],
+      reviewSummary: '금강 이응다리(보행교)가 시원하게 한눈에 보이는 뷰맛집! 유모차 끌고 엘리베이터 타고 올라가기 편하고 아이들도 팬케이크 잘 먹어요.',
+      sources: {
+        naver: { rating: 4.83, reviewCount: 1820, url: 'https://map.naver.com/v5/search/%EB%A9%94%EB%A6%AC%EA%B3%A8%EB%93%9C%20%EC%84%B8%EC%A2%85', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 410, url: 'https://map.kakao.com/?q=%EB%A9%94%EB%A6%AC%EA%B3%A8%EB%93%9C+%EC%84%B8%EC%A2%85', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 310, url: 'https://www.google.com/maps/search/?api=1&query=%EB%A9%94%EB%A6%AC%EA%B3%A8%EB%93%9C+%EC%84%B8%EC%A2%85', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-24',
+      name: '뜨레 (세종 아름본점)',
+      category: 'western',
+      categoryName: '양식 · 패밀리 스테이크 & 화덕피자',
+      region: 'sejong',
+      regionName: '세종·대전·충청',
+      address: '세종특별자치시 아름동 1321 (달빛로)',
+      phone: '044-868-8866',
+      lat: 36.5124,
+      lng: 127.2482,
+      hours: '매일 11:30 ~ 21:30',
+      representativeMenu: '포크 스테이크 (21,000원), 고르곤졸라 피자 (16,000원)',
+      amenities: ['아기의자 완비', '넓은 단독건물 주차장', '어린이 식기', '좌석 간격 넓음'],
+      reviewSummary: '세종시 대표 가성비 패밀리 레스토랑. 목살 스테이크 양도 푸짐하고 달콤한 꿀 찍어 먹는 고르곤졸라 피자는 아이들 최애 메뉴입니다.',
+      sources: {
+        naver: { rating: 4.81, reviewCount: 2650, url: 'https://map.naver.com/v5/search/%EB%9C%A8%EB%A0%88%20%EC%84%B8%EC%A2%85', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 780, url: 'https://map.kakao.com/?q=%EB%9C%A8%EB%A0%88+%EC%84%B8%EC%A2%85', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 520, url: 'https://www.google.com/maps/search/?api=1&query=%EB%9C%A8%EB%A0%88+%EC%84%B8%EC%A2%85', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-25',
+      name: '성심당 DCC점 (대전 유성구)',
+      category: 'brunch',
+      categoryName: '베이커리 · 패밀리 브런치 & 빵지순례',
+      region: 'sejong',
+      regionName: '세종·대전·충청',
+      address: '대전광역시 유성구 엑스포로 107 대전컨벤션센터 제1전시장 1층',
+      phone: '1588-8069',
+      lat: 36.3752,
+      lng: 127.3912,
+      hours: '매일 08:00 ~ 22:00',
+      representativeMenu: '튀김소보로 (1,700원), 2층 브런치 한상 (13,000원), 순수롤 (14,000원)',
+      amenities: ['아기의자 완비', '엑스포 과학공원 인접', '컨벤션센터 넓은주차', '수유실'],
+      reviewSummary: '대전 엑스포 한빛탑과 꿈돌이 과학공원 산책하고 빵 쇼핑 및 2층에서 브런치 즐기기 최고의 코스입니다. 본점보다 주차가 훨씬 편해요.',
+      sources: {
+        naver: { rating: 4.91, reviewCount: 8920, url: 'https://map.naver.com/v5/search/%EC%84%B1%EC%8B%AC%EB%8B%B9%20DCC%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.7, reviewCount: 3450, url: 'https://map.kakao.com/?q=%EC%84%B1%EC%8B%AC%EB%8B%B9+DCC%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.7, reviewCount: 2980, url: 'https://www.google.com/maps/search/?api=1&query=%EC%84%B1%EC%8B%AC%EB%8B%B9+DCC%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+
+    // ----------------------------------------------------
+    // 6. 인천 · 송도 · 일산 · 김포 권역
+    // ----------------------------------------------------
     {
       id: 'rest-8',
       name: '백제원 (인천 송도본점)',
@@ -766,24 +1060,259 @@ window.DODAM_COMMUNITY_DATA = {
       amenities: ['아기의자 완비', '독립 룸 완비', '넓은 주차장(발렛)', '어린이 식기'],
       reviewSummary: '송도 센트럴파크 인근 가족모임 성지! 아기 식판과 식기를 먼저 챙겨주시는 센스가 돋보이고 룸 인테리어가 고급스럽습니다.',
       sources: {
-        naver: {
-          rating: 4.83,
-          reviewCount: 2410,
-          url: 'https://map.naver.com/v5/search/%EB%B0%B1%EC%A0%9C%EC%9B%90%20%EC%86%A1%EB%8F%84',
-          name: '네이버 플레이스'
-        },
-        kakao: {
-          rating: 4.5,
-          reviewCount: 780,
-          url: 'https://map.kakao.com/?q=%EB%B0%B1%EC%A0%9C%EC%9B%90+%EC%86%A1%EB%8F%84',
-          name: '카카오맵'
-        },
-        google: {
-          rating: 4.5,
-          reviewCount: 610,
-          url: 'https://www.google.com/maps/search/?api=1&query=%EB%B0%B1%EC%A0%9C%EC%9B%90+%EC%86%A1%EB%8F%84',
-          name: '구글 지도'
-        }
+        naver: { rating: 4.83, reviewCount: 2410, url: 'https://map.naver.com/v5/search/%EB%B0%B1%EC%A0%9C%EC%9B%90%20%EC%86%A1%EB%8F%84', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 780, url: 'https://map.kakao.com/?q=%EB%B0%B1%EC%A0%9C%EC%9B%90+%EC%86%A1%EB%8F%84', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 610, url: 'https://www.google.com/maps/search/?api=1&query=%EB%B0%B1%EC%A0%9C%EC%9B%90+%EC%86%A1%EB%8F%84', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-26',
+      name: '풀사이드 228 (송도점)',
+      category: 'western',
+      categoryName: '양식 · 야외 미니풀 & 테라스 다이닝',
+      region: 'incheon',
+      regionName: '인천·김포·일산',
+      address: '인천광역시 연수구 해돋이로 157 4층',
+      phone: '032-817-0000',
+      lat: 37.3918,
+      lng: 126.6582,
+      hours: '매일 11:00 ~ 22:00',
+      representativeMenu: '시푸드 스튜 파스타 (22,900원), 부라타 치즈 피자 (24,900원)',
+      amenities: ['아기의자 완비', '야외 풀장 테라스', '룸 완비', '발렛주차'],
+      reviewSummary: '여름철엔 아이들이 야외 미니풀에서 발 담그고 놀 수 있는 이색 패밀리 레스토랑. 인테리어가 휴양지 리조트 같아서 기분 전환에 최고예요.',
+      sources: {
+        naver: { rating: 4.82, reviewCount: 2680, url: 'https://map.naver.com/v5/search/%ED%92%80%EC%82%AC%EC%9D%B4%EB%93%9C228%20%EC%86%A1%EB%8F%84', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 820, url: 'https://map.kakao.com/?q=%ED%92%80%EC%82%AC%EC%9D%B4%EB%93%9C228+%EC%86%A1%EB%8F%84', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 540, url: 'https://www.google.com/maps/search/?api=1&query=%ED%92%80%EC%82%AC%EC%9D%B4%EB%93%9C228+%EC%86%A1%EB%8F%84', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+    {
+      id: 'rest-27',
+      name: '일산칼국수 (일산 본점)',
+      category: 'korean',
+      categoryName: '한식 · 진한 닭칼국수 & 보양식',
+      region: 'incheon',
+      regionName: '인천·김포·일산',
+      address: '경기도 고양시 일산동구 경의로 467 (정발산동)',
+      phone: '031-903-2208',
+      lat: 37.6685,
+      lng: 126.7824,
+      hours: '매일 10:00 ~ 19:30 (주말 10:00~19:00)',
+      representativeMenu: '닭칼국수 (10,000원), 공기밥 (1,000원)',
+      amenities: ['아기의자 완비', '온돌 좌식석', '넓은 전용 주차장', '회전율 빠름'],
+      reviewSummary: '닭육수와 바지락이 어우러져 국물이 진하고 면이 부드러워 아이들도 밥 말아서 국물까지 뚝딱 비웁니다. 가성비 최고의 인생 칼국수!',
+      sources: {
+        naver: { rating: 4.88, reviewCount: 7420, url: 'https://map.naver.com/v5/search/%EC%9D%BC%EC%82%B0%EC%B9%BC%EA%B5%AD%EC%88%98%20%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 2950, url: 'https://map.kakao.com/?q=%EC%9D%BC%EC%82%B0%EC%B9%BC%EA%B5%AD%EC%88%98+%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 2480, url: 'https://www.google.com/maps/search/?api=1&query=%EC%9D%BC%EC%82%B0%EC%B9%BC%EA%B5%AD%EC%88%98+%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+    {
+      id: 'rest-28',
+      name: '뱀부포레스트 (김포 하성점)',
+      category: 'brunch',
+      categoryName: '대형 베이커리 · 대나무숲 온실 & 판다존',
+      region: 'incheon',
+      regionName: '인천·김포·일산',
+      address: '경기도 김포시 하성면 월하로 970-10',
+      phone: '031-996-7001',
+      lat: 37.6985,
+      lng: 126.6342,
+      hours: '매일 10:00 ~ 21:30',
+      representativeMenu: '대나무 찹쌀빵 (6,500원), 부라타 포레스트 파스타 (22,000원)',
+      amenities: ['실내 대나무숲 산책', '판다 인형 포토존', '아기의자 완비', '대형 주차장'],
+      reviewSummary: '진짜 대나무가 숲처럼 가득한 온실 카페! 귀여운 판다 인형들이 곳곳에 있어 아이들이 너무 신나하고 사진 찍기에도 환상적입니다.',
+      sources: {
+        naver: { rating: 4.84, reviewCount: 3890, url: 'https://map.naver.com/v5/search/%EB%B1%80%EB%B6%80%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EA%B9%80%ED%8F%AC', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 1120, url: 'https://map.kakao.com/?q=%EB%B1%80%EB%B6%80%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8+%EA%B9%80%ED%8F%AC', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 840, url: 'https://www.google.com/maps/search/?api=1&query=%EB%B1%80%EB%B6%80%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8+%EA%B9%80%ED%8F%AC', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-29',
+      name: '피에프창 (송도 트리플스트리트점)',
+      category: 'asian',
+      categoryName: '아시안 · 아메리칸 차이니즈 & 키즈세트',
+      region: 'incheon',
+      regionName: '인천·김포·일산',
+      address: '인천광역시 연수구 송도과학로16번길 33-2 트리플스트리트 B동 지하 3층',
+      phone: '032-310-9488',
+      lat: 37.3802,
+      lng: 126.6624,
+      hours: '매일 11:00 ~ 22:00',
+      representativeMenu: '창스 치킨 레터스 랩 (21,900원), 몽골리안 비프 (31,900원)',
+      amenities: ['아기의자 완비', '키즈 메뉴 및 색칠놀이 제공', '트리플스트리트 주차 무료'],
+      reviewSummary: '양상추에 고기 싸 먹는 레터스 랩은 남녀노소 좋아하고, 아이들에게 색칠놀이 크레용과 종이를 줘서 식사 시간 동안 얌전하게 잘 있어줍니다.',
+      sources: {
+        naver: { rating: 4.82, reviewCount: 2150, url: 'https://map.naver.com/v5/search/%ED%94%BC%EC%97%90%ED%94%84%EC%B0%BD%20%EC%86%A1%EB%8F%84', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 680, url: 'https://map.kakao.com/?q=%ED%94%BC%EC%97%90%ED%94%84%EC%B0%BD+%EC%86%A1%EB%8F%84', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 510, url: 'https://www.google.com/maps/search/?api=1&query=%ED%94%BC%EC%97%90%ED%94%84%EC%B0%BD+%EC%86%A1%EB%8F%84', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+
+    // ----------------------------------------------------
+    // 7. 부산 · 대구 · 영남 권역
+    // ----------------------------------------------------
+    {
+      id: 'rest-30',
+      name: '해운대 암소갈비집 (부산 해운대)',
+      category: 'korean',
+      categoryName: '한식 · 백년가게 한우 생갈비 & 감자사리',
+      region: 'busan',
+      regionName: '부산·대구·영남',
+      address: '부산광역시 해운대구 중동2로10번길 325',
+      phone: '051-746-3333',
+      lat: 35.1632,
+      lng: 129.1645,
+      hours: '매일 11:30 ~ 22:00 (브레이크타임 15:10~16:30)',
+      representativeMenu: '생갈비 (58,000원), 양념갈비 (52,000원), 감자사리 (3,000원)',
+      amenities: ['한옥 개별 룸', '아기의자 완비', '대형 주차장', '어린이 동반 우대'],
+      reviewSummary: '고기가 입에서 살살 녹아 아기도 씹기 편하고, 달달한 감자사리는 아이들이 국물까지 싹싹 비워요. 가족 여행 필수 코스!',
+      sources: {
+        naver: { rating: 4.86, reviewCount: 9420, url: 'https://map.naver.com/v5/search/%ED%95%B4%EC%9A%B4%EB%8C%80%EC%95%94%EC%86%8C%EA%B0%88%EB%B9%84%EC%A7%91', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 3820, url: 'https://map.kakao.com/?q=%ED%95%B4%EC%9A%B4%EB%8C%80%EC%95%94%EC%86%8C%EA%B0%88%EB%B9%84%EC%A7%91', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 3100, url: 'https://www.google.com/maps/search/?api=1&query=%ED%95%B4%EC%9A%B4%EB%8C%80%EC%95%94%EC%86%8C%EA%B0%88%EB%B9%84%EC%A7%91', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-31',
+      name: '바릇식당 (부산 기장점)',
+      category: 'korean',
+      categoryName: '한식 · 오션뷰 꼬막육전 대판 한상',
+      region: 'busan',
+      regionName: '부산·대구·영남',
+      address: '부산광역시 기장군 일광읍 문오성길 61',
+      phone: '070-8846-2525',
+      lat: 35.2612,
+      lng: 129.2458,
+      hours: '매일 11:00 ~ 20:00 (브레이크타임 15:30~17:00)',
+      representativeMenu: '꼬막 육전 대판 (35,000원), 소고기 미역국 한상',
+      amenities: ['아기의자 완비', '통창 오션뷰', '유아 식기 제공', '넓은 바다산책로'],
+      reviewSummary: '기장 바다가 눈앞에 펼쳐지는 뷰맛집! 부드러운 소고기 육전과 미역국이 함께 나와 매운 것 못 먹는 어린아이도 든든하게 잘 먹습니다.',
+      sources: {
+        naver: { rating: 4.85, reviewCount: 6810, url: 'https://map.naver.com/v5/search/%EA%B8%B0%EC%9E%A5%20%EB%B0%94%EB%A6%87%EC%8B%9D%EB%8B%B9', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 1980, url: 'https://map.kakao.com/?q=%EA%B8%B0%EC%9E%A5+%EB%B0%94%EB%A6%87%EC%8B%9D%EB%8B%B9', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 1420, url: 'https://www.google.com/maps/search/?api=1&query=%EA%B8%B0%EC%9E%A5+%EB%B0%94%EB%A6%87%EC%8B%9D%EB%8B%B9', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-32',
+      name: '풍국면 (대구 침산본점)',
+      category: 'korean',
+      categoryName: '한식 · 40년 전통 국수 & 마늘불고기',
+      region: 'busan',
+      regionName: '부산·대구·영남',
+      address: '대구광역시 북구 침산로 168 (침산동)',
+      phone: '053-351-4040',
+      lat: 35.8892,
+      lng: 128.5912,
+      hours: '매일 11:00 ~ 21:30',
+      representativeMenu: '별표국수 (7,500원), 마늘불고기 (11,000원), 해물칼국수 (9,500원)',
+      amenities: ['아기의자 완비', '어린이 식기', '자극 없는 육수', '주차 가능'],
+      reviewSummary: '국물이 맵지 않고 진해서 어린 유아들 국수 호로록 먹이기 최고입니다. 불고기와 주먹밥 조합도 훌륭한 가성비 가족외식 맛집.',
+      sources: {
+        naver: { rating: 4.83, reviewCount: 3420, url: 'https://map.naver.com/v5/search/%ED%92%8D%EA%B5%AD%EB%A9%B4%20%EC%B9%A8%EC%82%B0%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.4, reviewCount: 890, url: 'https://map.kakao.com/?q=%ED%92%8D%EA%B5%AD%EB%A9%B4+%EC%B9%A8%EC%82%B0%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.4, reviewCount: 650, url: 'https://www.google.com/maps/search/?api=1&query=%ED%92%8D%EA%B5%AD%EB%A9%B4+%EB%8C%80%EA%B5%AC', name: '구글 지도' }
+      },
+      overallRating: 4.7
+    },
+
+    // ----------------------------------------------------
+    // 8. 제주 · 강원 · 나들이 권역
+    // ----------------------------------------------------
+    {
+      id: 'rest-33',
+      name: '숙성도 (제주 노형본점)',
+      category: 'korean',
+      categoryName: '한식 · 960 숙성 흑돼지 & 구워주는 집',
+      region: 'jeju',
+      regionName: '제주·강원·나들이',
+      address: '제주특별자치도 제주시 원노형로 41 (노형동)',
+      phone: '064-711-5212',
+      lat: 33.4865,
+      lng: 126.4882,
+      hours: '매일 11:30 ~ 22:00',
+      representativeMenu: '720 숙성 뼈등심 (38,000원), 960 숙성 흑삼겹 (23,000원)',
+      amenities: ['아기의자 완비', '직접 구워주는 서비스', '어린이 된장찌개', '테이블링 대기'],
+      reviewSummary: '전문 그릴러가 한 점 한 점 가장 맛있는 타이밍에 구워주셔서 기름 튈 걱정 없이 아이 챙기며 편하게 흑돼지 먹을 수 있는 인생 고기집입니다.',
+      sources: {
+        naver: { rating: 4.89, reviewCount: 8750, url: 'https://map.naver.com/v5/search/%EC%88%99%EC%84%B1%EB%8F%84%20%EB%85%B8%ED%98%95%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 3120, url: 'https://map.kakao.com/?q=%EC%88%99%EC%84%B1%EB%8F%84+%EB%85%B8%ED%98%95%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.6, reviewCount: 2650, url: 'https://www.google.com/maps/search/?api=1&query=%EC%88%99%EC%84%B1%EB%8F%84+%EB%85%B8%ED%98%95%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.9
+    },
+    {
+      id: 'rest-34',
+      name: '춘심이네 (제주 서귀포 본점)',
+      category: 'korean',
+      categoryName: '한식 · 원조 통갈치구이 & 갈치조림',
+      region: 'jeju',
+      regionName: '제주·강원·나들이',
+      address: '제주특별자치도 서귀포시 안덕면 창천중앙로24번길 16',
+      phone: '064-794-4010',
+      lat: 33.2645,
+      lng: 126.3689,
+      hours: '매일 10:30 ~ 20:30 (브레이크타임 15:30~17:00)',
+      representativeMenu: '통갈치구이 2인 세트 (88,000원), 은갈치조림 (78,000원)',
+      amenities: ['아기의자 완비', '가시 발라주는 서비스', '대형 주차장', '깔끔한 수유실'],
+      reviewSummary: '직원분이 갈치 뼈와 가시를 숟가락으로 완벽하게 발라주셔서 아이 숟가락에 갈칫살만 듬뿍 얹어줄 수 있어 부모들에겐 감동 그 자체입니다.',
+      sources: {
+        naver: { rating: 4.88, reviewCount: 7890, url: 'https://map.naver.com/v5/search/%EC%B6%98%EC%8B%AC%EC%9D%B4%EB%84%A4%20%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.6, reviewCount: 2840, url: 'https://map.kakao.com/?q=%EC%B6%98%EC%8B%AC%EC%9D%B4%EB%84%A4+%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 2150, url: 'https://www.google.com/maps/search/?api=1&query=%EC%B6%98%EC%8B%AC%EC%9D%B4%EB%84%A4+%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-35',
+      name: '테라로사 커피공장 (강릉 본점)',
+      category: 'brunch',
+      categoryName: '브런치 · 붉은벽돌 온실 & 베이커리',
+      region: 'jeju',
+      regionName: '제주·강원·나들이',
+      address: '강원특별자치도 강릉시 구정면 현천길 7 (학산리)',
+      phone: '033-648-2760',
+      lat: 37.7082,
+      lng: 128.8954,
+      hours: '매일 09:00 ~ 21:00',
+      representativeMenu: '드립커피 (6,000원), 레몬치즈케이크 (6,500원), 브런치 플레이트 (14,000원)',
+      amenities: ['넓은 야외 정원', '아기의자 완비', '박물관 및 기념품샵', '대형 주차장'],
+      reviewSummary: '숲속 미술관 같은 웅장한 건물과 야외 잔디밭이 있어 아이와 여유롭게 빵 먹고 산책하기 좋습니다. 가족 강릉 여행 필수 코스!',
+      sources: {
+        naver: { rating: 4.87, reviewCount: 8940, url: 'https://map.naver.com/v5/search/%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC%20%EA%B0%95%EB%A6%89%EB%B3%B8%EC%A0%90', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 3410, url: 'https://map.kakao.com/?q=%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC+%EA%B0%95%EB%A6%89%EB%B3%B8%EC%A0%90', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 2780, url: 'https://www.google.com/maps/search/?api=1&query=%ED%85%8C%EB%9D%BC%EB%A1%9C%EC%82%AC+%EA%B0%95%EB%A6%89%EB%B3%B8%EC%A0%90', name: '구글 지도' }
+      },
+      overallRating: 4.8
+    },
+    {
+      id: 'rest-36',
+      name: '강릉 동화가든 (초당 본점)',
+      category: 'korean',
+      categoryName: '한식 · 원조 짬순 & 부드러운 안송초당순두부',
+      region: 'jeju',
+      regionName: '제주·강원·나들이',
+      address: '강원특별자치도 강릉시 초당순두부길77번길 15',
+      phone: '033-652-9885',
+      lat: 37.7915,
+      lng: 128.9142,
+      hours: '매일 07:00 ~ 19:00 (수요일 휴무)',
+      representativeMenu: '원조 짬순 (13,000원), 안송성해물순두부 (12,000원), 모두부 (10,000원)',
+      amenities: ['아기의자 완비', '아이용 순한 초당순두부', '테이블링 원격줄서기', '넓은 주차장'],
+      reviewSummary: '어른들은 얼큰한 불맛 짬순, 아이는 담백하고 고소한 초당순두부 백반에 모두부 잘라주면 온 가족이 대만족하는 1등 아침/점심 식사처입니다.',
+      sources: {
+        naver: { rating: 4.88, reviewCount: 9650, url: 'https://map.naver.com/v5/search/%EA%B0%95%EB%A6%89%20%EB%8F%99%ED%99%94%EA%B0%80%EB%93%A0', name: '네이버 플레이스' },
+        kakao: { rating: 4.5, reviewCount: 4210, url: 'https://map.kakao.com/?q=%EA%B0%80%EB%A6%89+%EB%8F%99%ED%99%94%EA%B0%80%EB%93%A0', name: '카카오맵' },
+        google: { rating: 4.5, reviewCount: 3120, url: 'https://www.google.com/maps/search/?api=1&query=%EA%B0%95%EB%A6%89+%EB%8F%99%ED%99%94%EA%B0%80%EB%93%A0', name: '구글 지도' }
       },
       overallRating: 4.8
     }
