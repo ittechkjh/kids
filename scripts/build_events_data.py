@@ -1256,100 +1256,173 @@ CURATED_EVENTS = [
     }
 ]
 
+DEFAULT_TOUR_API_KEY = "G7N6elMlYOmqsOnctk%2B0X1Dpyz1ajBFF82gcH8Sl%2FgRDD5Jb4gangmAU2KZgmWSerzjtZqEQLlAxay4dFH3IPw%3D%3D"
+
+def determine_region(it):
+    addr = it.get("addr1") or ""
+    if "서울" in addr: return "seoul", "서울특별시"
+    if "경기" in addr: return "gyeonggi", "경기도"
+    if "인천" in addr: return "incheon", "인천광역시"
+    if "강원" in addr: return "gangwon", "강원특별자치도"
+    if "대전" in addr: return "daejeon", "대전광역시"
+    if "세종" in addr: return "sejong", "세종특별자치시"
+    if "충남" in addr or "충청남도" in addr: return "chungnam", "충청남도"
+    if "충북" in addr or "충청북도" in addr: return "chungbuk", "충청북도"
+    if "광주" in addr: return "gwangju", "광주광역시"
+    if "전북" in addr or "전라북도" in addr: return "jeonbuk", "전북특별자치도"
+    if "전남" in addr or "전라남도" in addr: return "jeonnam", "전라남도"
+    if "대구" in addr: return "daegu", "대구광역시"
+    if "경북" in addr or "경상북도" in addr: return "gyeongbuk", "경상북도"
+    if "부산" in addr: return "busan", "부산광역시"
+    if "울산" in addr: return "ulsan", "울산광역시"
+    if "경남" in addr or "경상남도" in addr: return "gyeongnam", "경상남도"
+    if "제주" in addr: return "jeju", "제주특별자치도"
+
+    ld = str(it.get("lDongRegnCd", ""))
+    ld_map = {
+        "11": ("seoul", "서울특별시"),
+        "26": ("busan", "부산광역시"),
+        "27": ("daegu", "대구광역시"),
+        "28": ("incheon", "인천광역시"),
+        "29": ("gwangju", "광주광역시"),
+        "30": ("daejeon", "대전광역시"),
+        "31": ("ulsan", "울산광역시"),
+        "36": ("sejong", "세종특별자치시"),
+        "41": ("gyeonggi", "경기도"),
+        "42": ("gangwon", "강원특별자치도"),
+        "51": ("gangwon", "강원특별자치도"),
+        "43": ("chungbuk", "충청북도"),
+        "44": ("chungnam", "충청남도"),
+        "45": ("jeonbuk", "전북특별자치도"),
+        "52": ("jeonbuk", "전북특별자치도"),
+        "46": ("jeonnam", "전라남도"),
+        "47": ("gyeongbuk", "경상북도"),
+        "48": ("gyeongnam", "경상남도"),
+        "50": ("jeju", "제주특별자치도")
+    }
+    if ld in ld_map:
+        return ld_map[ld]
+
+    ac = str(it.get("areacode", ""))
+    if ac in AREA_CODE_MAP:
+        return AREA_CODE_MAP[ac]
+
+    return "seoul", "서울특별시"
+
 def fetch_tourapi_events(api_key):
     """
-    한국관광공사 TourAPI 4.0 searchFestival1 엔드포인트 연동
+    한국관광공사 TourAPI 4.0 searchFestival2 엔드포인트 연동
     """
-    print("TourAPI 연동을 시도합니다...")
-    url = "https://apis.data.go.kr/B551011/KorService1/searchFestival1"
-    
-    # 2026년 10월 이후 축제 검색
-    params = {
-        "serviceKey": api_key,
-        "MobileOS": "ETC",
-        "MobileApp": "DodamTalk",
-        "_type": "json",
-        "eventStartDate": "20261001",
-        "numOfRows": "200",
-        "pageNo": "1",
-        "arrange": "A"
-    }
+    print("TourAPI KorService2 실시간 데이터 연동을 시도합니다...")
+    url = "https://apis.data.go.kr/B551011/KorService2/searchFestival2"
 
-    full_url = f"{url}?{urllib.parse.urlencode(params)}"
+    import ssl
+    ctx = ssl._create_unverified_context()
+
+    # 쿼리 파라미터 구성 (최신 수정/등록순 300건)
+    full_url = f"{url}?serviceKey={api_key}&MobileOS=ETC&MobileApp=DodamTalk&_type=json&eventStartDate=20240101&numOfRows=300&pageNo=1&arrange=C"
     req = urllib.request.Request(full_url, headers={"User-Agent": "Mozilla/5.0"})
-    
+
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
+        with urllib.request.urlopen(req, context=ctx, timeout=15) as resp:
             data = json.loads(resp.read().decode("utf-8"))
             items = data.get("response", {}).get("body", {}).get("items", {}).get("item", [])
-            print(f"TourAPI로부터 {len(items)}건의 축제 데이터를 수신했습니다.")
-            
+            print(f"TourAPI로부터 {len(items)}건의 실제 전국 축제 데이터를 정상 수신했습니다.")
+
             tour_events = []
             for it in items:
-                area_code = str(it.get("areacode", "1"))
-                reg_key, reg_name = AREA_CODE_MAP.get(area_code, ("seoul", "서울특별시"))
-                
+                reg_key, reg_name = determine_region(it)
+
                 s_date = str(it.get("eventstartdate", ""))
                 e_date = str(it.get("eventenddate", ""))
-                
+
                 if len(s_date) == 8:
                     s_date_fmt = f"{s_date[:4]}-{s_date[4:6]}-{s_date[6:]}"
                 else:
                     s_date_fmt = "2026-11-01"
-                    
+
                 if len(e_date) == 8:
                     e_date_fmt = f"{e_date[:4]}-{e_date[4:6]}-{e_date[6:]}"
                 else:
                     e_date_fmt = s_date_fmt
 
-                img_url = it.get("firstimage") or "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80"
-                
+                title = it.get("title", "지역 문화 축제").strip()
+
+                # 카테고리 판별
+                if any(w in title for w in ["마라톤", "러닝", "달리기", "걷기", "트레킹"]):
+                    cat = "sports_marathon"
+                    cat_name = "주말 가족 마라톤"
+                    tag_list = ["가족마라톤", "건강", reg_name, "TourAPI"]
+                elif any(w in title for w in ["야경", "빛", "불꽃", "루미나리에", "별빛", "야간"]):
+                    cat = "festival_night"
+                    cat_name = "야경 & 빛축제"
+                    tag_list = ["야경축제", "포토존", reg_name, "TourAPI"]
+                elif any(w in title for w in ["생태", "체험", "숲", "자연", "환경", "동물", "식물"]):
+                    cat = "park_eco"
+                    cat_name = "공원 생태체험"
+                    tag_list = ["생태체험", "자연학습", reg_name, "TourAPI"]
+                else:
+                    cat = "festival_culture"
+                    cat_name = "지역 문화 축제"
+                    tag_list = ["지역축제", "공공데이터", reg_name, "가족나들이"]
+
+                cid = it.get("contentid")
+                page_url = f"https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid={cid}" if cid else "https://korean.visitkorea.or.kr"
+                img_url = it.get("firstimage") or it.get("firstimage2") or "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80"
+
+                loc = it.get("addr1") or f"{reg_name} 일원"
+                if it.get("addr2"):
+                    loc = f"{loc} {it.get('addr2')}".strip()
+
                 tour_events.append({
-                    "id": f"tourapi-{it.get('contentid', it.get('title'))}",
+                    "id": f"tourapi-{cid or hash(title)}",
                     "boardType": "festivals",
-                    "title": it.get("title", "지역 문화 축제"),
-                    "category": "festival_culture",
-                    "categoryName": "지역 문화 축제",
+                    "title": title,
+                    "category": cat,
+                    "categoryName": cat_name,
                     "badge": "🎪 TourAPI 축제",
-                    "organizer": it.get("tel") or "지자체 축제추진위원회",
+                    "organizer": it.get("tel") or f"{reg_name} 지자체 / 주최기관",
                     "sourceType": "tour_api",
-                    "sourceLabel": "한국관광공사 TourAPI 실시간 연동",
+                    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
                     "region": reg_key,
                     "regionName": reg_name,
-                    "location": it.get("addr1", f"{reg_name} 일대"),
+                    "location": loc,
                     "startDate": s_date_fmt,
                     "endDate": e_date_fmt,
                     "applyStartDate": s_date_fmt,
                     "applyEndDate": e_date_fmt,
                     "status": "applying",
-                    "targetAudience": "전국 가족 관광객",
-                    "fee": "상세 문의",
-                    "url": "https://korean.visitkorea.or.kr",
+                    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+                    "fee": "상세 문의 (현장 안내)",
+                    "url": page_url,
                     "imageUrl": img_url,
-                    "description": f"{it.get('title')} - {reg_name}에서 열리는 가족 문화관광 축제입니다.",
-                    "tags": ["지역축제", "TourAPI", reg_name, "가족나들이"]
+                    "description": f"{title} - 한국관광공사 및 {reg_name} 지자체 공식 등록 축제/행사입니다.",
+                    "tags": tag_list
                 })
             return tour_events
     except Exception as e:
-        print(f"TourAPI 호출 중 오류 또는 키 확인 필요: {e}")
+        print(f"TourAPI 호출 중 오류: {e}")
         return []
 
 def build():
     today = datetime.date(2026, 10, 27)
-    
-    # 1. API 키 확인 (환경변수 또는 secrets)
-    api_key = os.environ.get("TOUR_API_KEY")
+
+    # 1. API 키 확인 (환경변수 없으면 발급받은 기본 인증키 자동 사용)
+    api_key = os.environ.get("TOUR_API_KEY", DEFAULT_TOUR_API_KEY)
     tour_api_events = []
     if api_key:
         tour_api_events = fetch_tourapi_events(api_key)
-        
+
     combined_events = list(CURATED_EVENTS)
     if tour_api_events:
-        # 중복 방지하며 결합
-        existing_titles = {e["title"] for e in combined_events}
+        existing_titles = {e["title"].strip() for e in combined_events}
+        added_cnt = 0
         for te in tour_api_events:
             if te["title"] not in existing_titles:
                 combined_events.append(te)
+                existing_titles.add(te["title"])
+                added_cnt += 1
+        print(f"TourAPI 축제 {added_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
     # 2. D-Day 및 정렬 처리
     for e in combined_events:

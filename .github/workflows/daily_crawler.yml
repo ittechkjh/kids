@@ -24,6 +24,8 @@ jobs:
           python-version: '3.11'
 
       - name: 일일 안전 분할 맛집 크롤러 및 전국 행사·대회 데이터 수집기 실행
+        env:
+          TOUR_API_KEY: ${{ secrets.TOUR_API_KEY || 'G7N6elMlYOmqsOnctk%2B0X1Dpyz1ajBFF82gcH8Sl%2FgRDD5Jb4gangmAU2KZgmWSerzjtZqEQLlAxay4dFH3IPw%3D%3D' }}
         run: |
           python scripts/safe_crawler.py
           python scripts/build_events_data.py
