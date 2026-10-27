@@ -1,12 +1,16 @@
 // 도담톡 (DodamTalk) - 전국 육아 커뮤니티 플랫폼 컨트롤러
-// 3대 핵심 기둥: 1) 도담 육아 게시판, 2) 전국 지역행사 & 특정 분야(사생/발명/가족마라톤) 대회 일정, 3) 5,000곳 안심 맛집 맵
+// 4대 핵심 기둥:
+// 1) 💬 도담 육아 게시판
+// 2) 🎪 전국 지역행사 (노는거, 볼거리 위주: 지역축제, 가족 마라톤, 빛축제, 공원생태)
+// 3) 🏆 전국 대회일정 (공부 위주: 사생대회, 백일장, 독서토론·골든벨, 창의발명, 코딩, 수학)
+// 4) 🍽️ 전국 안심 맛집 맵 (5,000곳 포털 평점 & 바로가기)
 
 class DodamCommunityApp {
   constructor() {
     this.data = window.DODAM_COMMUNITY_DATA || { categories: [], regions: [], polls: [], posts: [] };
 
     // 1. Navigation & Board State
-    this.currentView = 'board'; // 'board' | 'events' | 'food'
+    this.currentView = 'board'; // 'board' | 'festivals' | 'contests' | 'food'
     this.currentCategory = 'all';
     this.currentRegion = 'all';
     this.boardSearchKeyword = '';
@@ -14,26 +18,40 @@ class DodamCommunityApp {
     this.activePollIndex = 0;
     this.activePostDetailId = null;
 
-    // 2. Events & Competitions State (전국 지역행사 & 사생/발명/가족마라톤 대회)
-    this.eventsData = window.DODAM_NATIONWIDE_EVENTS || [];
+    // 2. Nationwide Events Data
+    this.allEvents = window.DODAM_NATIONWIDE_EVENTS || [];
     this.eventsMetadata = window.DODAM_EVENTS_METADATA || {};
-    this.eventsViewMode = 'list'; // 'list' | 'calendar'
-    this.currentEventCategory = 'all';
-    this.currentEventRegion = 'all';
-    this.currentEventStatus = 'all';
-    this.eventSearchKeyword = '';
-    this.calendarYear = 2026;
-    this.calendarMonth = 11; // 1-based, November 2026 as per dataset
-    this.selectedCalendarDate = null;
+
+    // 3. Festivals State (전국 지역행사 & 볼거리)
+    this.festivalsViewMode = 'list'; // 'list' | 'calendar'
+    this.festivalsCategory = 'all';
+    this.festivalsRegion = 'all';
+    this.festivalsStatus = 'all';
+    this.festivalsSearchKeyword = '';
+    this.festivalsCalendarYear = 2026;
+    this.festivalsCalendarMonth = 11;
+    this.selectedFestivalsDate = null;
+
+    // 4. Contests State (전국 대회일정: 공부/사생/독서토론)
+    this.contestsViewMode = 'list'; // 'list' | 'calendar'
+    this.contestsCategory = 'all';
+    this.contestsRegion = 'all';
+    this.contestsStatus = 'all';
+    this.contestsSearchKeyword = '';
+    this.contestsCalendarYear = 2026;
+    this.contestsCalendarMonth = 11;
+    this.selectedContestsDate = null;
+
+    // Active detail modal
     this.activeEventDetailId = null;
 
-    // 3. Storage Keys
+    // Storage Keys
     this.profileKey = 'dodam_profile_v1';
     this.scrapsKey = 'dodam_scraps_v1';
     this.customPostsKey = 'dodam_custom_posts_v1';
     this.customRestaurantsKey = 'dodam_custom_restaurants_v1';
 
-    // 4. Food Map State
+    // Food Map State
     this.foodMap = null;
     this.foodMarkersLayer = null;
     this.foodMarkersMap = {};
@@ -54,7 +72,8 @@ class DodamCommunityApp {
     this.renderBoardCategories();
     this.renderActivePoll();
     this.renderBoardView();
-    this.renderEventsView();
+    this.renderFestivalsView();
+    this.renderContestsView();
     this.renderSidebarWidgets();
     this.renderFoodView();
     this.updateScrapBadge();
@@ -161,10 +180,11 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 2. 메인 뷰 전환 (게시판 / 행사·대회 / 맛집맵)
+  // 2. 메인 뷰 전환 (게시판 / 지역행사 / 대회일정 / 맛집맵)
   // ==========================================
   switchMainView(viewId) {
     if (viewId === 'feed') viewId = 'board';
+    if (viewId === 'events') viewId = 'festivals';
     this.currentView = viewId;
 
     document.querySelectorAll('.view-section').forEach((sec) => sec.classList.add('hidden'));
@@ -174,16 +194,21 @@ class DodamCommunityApp {
     document.querySelectorAll('.nav-view-btn').forEach((btn) => {
       const active = btn.getAttribute('data-view') === viewId;
       btn.className = active
-        ? 'nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm'
-        : 'nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100';
+        ? 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm'
+        : 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100';
     });
 
     this.renderBoardCategories();
 
-    if (viewId === 'events') {
-      this.renderEventsView();
-      if (this.eventsViewMode === 'calendar') {
-        this.renderEventsCalendar();
+    if (viewId === 'festivals') {
+      this.renderFestivalsView();
+      if (this.festivalsViewMode === 'calendar') {
+        this.renderFestivalsCalendar();
+      }
+    } else if (viewId === 'contests') {
+      this.renderContestsView();
+      if (this.contestsViewMode === 'calendar') {
+        this.renderContestsCalendar();
       }
     } else if (viewId === 'food') {
       setTimeout(() => {
@@ -228,25 +253,41 @@ class DodamCommunityApp {
         })
         .join('');
 
-      const eventsQuickLink = `
+      const quickLinks = `
         <div class="pt-2 mt-2 border-t border-stone-100 space-y-1">
           <button
-            onclick="app.switchMainView('events')"
-            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-extrabold transition ${
-              this.currentView === 'events'
+            onclick="app.switchMainView('festivals')"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-extrabold transition ${
+              this.currentView === 'festivals'
                 ? 'bg-amber-500 text-white shadow-sm'
                 : 'bg-amber-50 text-amber-900 border border-amber-200/80 hover:bg-amber-100'
             }"
           >
             <span class="flex items-center gap-2">
-              <i class="fa-solid fa-trophy ${this.currentView === 'events' ? 'text-white' : 'text-amber-500'}"></i>
-              <span>전국 행사 & 대회 일정</span>
+              <i class="fa-solid fa-person-running ${this.currentView === 'festivals' ? 'text-white' : 'text-amber-500'}"></i>
+              <span>전국 지역행사 (볼거리·축제)</span>
             </span>
-            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'events' ? 'bg-white text-amber-600' : 'bg-amber-500 text-white'} text-[9px] font-black">24건</span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'festivals' ? 'bg-white text-amber-600' : 'bg-amber-500 text-white'} text-[9px] font-black">20건</span>
           </button>
+
+          <button
+            onclick="app.switchMainView('contests')"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-extrabold transition ${
+              this.currentView === 'contests'
+                ? 'bg-indigo-600 text-white shadow-sm'
+                : 'bg-indigo-50 text-indigo-900 border border-indigo-200/80 hover:bg-indigo-100'
+            }"
+          >
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-graduation-cap ${this.currentView === 'contests' ? 'text-white' : 'text-indigo-600'}"></i>
+              <span>전국 대회일정 (사생·독서)</span>
+            </span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'contests' ? 'bg-white text-indigo-600' : 'bg-indigo-600 text-white'} text-[9px] font-black">18건</span>
+          </button>
+
           <button
             onclick="app.switchMainView('food')"
-            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-extrabold transition ${
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-extrabold transition ${
               this.currentView === 'food'
                 ? 'bg-rose-500 text-white shadow-sm'
                 : 'bg-rose-50 text-rose-900 border border-rose-200/80 hover:bg-rose-100'
@@ -261,7 +302,7 @@ class DodamCommunityApp {
         </div>
       `;
 
-      sideEl.innerHTML = catButtons + eventsQuickLink;
+      sideEl.innerHTML = catButtons + quickLinks;
     }
 
     if (chipEl) {
@@ -491,7 +532,6 @@ class DodamCommunityApp {
     document.getElementById('post-detail-views').textContent = post.views;
     document.getElementById('post-detail-content').textContent = post.content;
 
-    // Tags
     const tagsEl = document.getElementById('post-detail-tags');
     if (tagsEl) {
       tagsEl.innerHTML = (post.tags || [])
@@ -499,12 +539,10 @@ class DodamCommunityApp {
         .join('');
     }
 
-    // Likes & Scraps
     const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
     document.getElementById('post-detail-likes-count').textContent = totalLikes;
 
     this.renderPostDetailComments(post);
-
     modal.classList.remove('hidden');
   }
 
@@ -581,7 +619,6 @@ class DodamCommunityApp {
     this.showToast('댓글이 등록되었습니다!');
   }
 
-  // 빠른 글쓰기 모달
   openWritePostModal() {
     document.getElementById('write-post-modal').classList.remove('hidden');
   }
@@ -643,9 +680,6 @@ class DodamCommunityApp {
     } catch {}
   }
 
-  // ==========================================
-  // 4. 실시간 육아 밸런스 투표 위젯
-  // ==========================================
   renderActivePoll() {
     const container = document.getElementById('active-poll-card');
     if (!container) return;
@@ -712,139 +746,128 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 5. 전국 지역행사 & 특정 분야 대회 일정 컨트롤러
+  // 5. 전국 지역행사 & 볼거리 컨트롤러 (view-festivals)
+  //    (노는거, 볼거리 위주: 지역축제, 가족 마라톤, 빛축제, 공원생태)
   // ==========================================
-  setEventsViewMode(mode) {
-    this.eventsViewMode = mode;
-    const listContainer = document.getElementById('events-list-container');
-    const calContainer = document.getElementById('events-calendar-container');
-    const btnList = document.getElementById('btn-events-list-mode');
-    const btnCal = document.getElementById('btn-events-calendar-mode');
+  setFestivalsViewMode(mode) {
+    this.festivalsViewMode = mode;
+    const listContainer = document.getElementById('festivals-list-container');
+    const calContainer = document.getElementById('festivals-calendar-container');
+    const btnList = document.getElementById('btn-festivals-list-mode');
+    const btnCal = document.getElementById('btn-festivals-calendar-mode');
 
     if (mode === 'calendar') {
       if (calContainer) calContainer.classList.remove('hidden');
-      if (btnCal) {
-        btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
-      }
-      if (btnList) {
-        btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
-      }
-      this.renderEventsCalendar();
+      if (btnCal) btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
+      if (btnList) btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
+      this.renderFestivalsCalendar();
     } else {
       if (calContainer) calContainer.classList.add('hidden');
-      if (btnList) {
-        btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
-      }
-      if (btnCal) {
-        btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
-      }
+      if (btnList) btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
+      if (btnCal) btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
     }
-
-    this.renderEventsView();
+    this.renderFestivalsView();
   }
 
-  setEventCategory(cat) {
-    this.currentEventCategory = cat;
-    document.querySelectorAll('.event-cat-chip').forEach((chip) => {
+  setFestivalsCategory(cat) {
+    this.festivalsCategory = cat;
+    document.querySelectorAll('.fest-cat-chip').forEach((chip) => {
       const active = chip.getAttribute('data-cat') === cat;
       chip.className = active
-        ? 'event-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
-        : 'event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200';
+        ? 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
+        : 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200';
     });
-    this.renderEventsView();
-    if (this.eventsViewMode === 'calendar') this.renderEventsCalendar();
+    this.renderFestivalsView();
+    if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
   }
 
-  onEventsFilterChange() {
-    const regEl = document.getElementById('event-filter-region');
-    const statEl = document.getElementById('event-filter-status');
-    const searchEl = document.getElementById('event-filter-search');
+  onFestivalsFilterChange() {
+    const regEl = document.getElementById('festival-filter-region');
+    const statEl = document.getElementById('festival-filter-status');
+    const searchEl = document.getElementById('festival-filter-search');
 
-    if (regEl) this.currentEventRegion = regEl.value;
-    if (statEl) this.currentEventStatus = statEl.value;
-    if (searchEl) this.eventSearchKeyword = searchEl.value.trim().toLowerCase();
+    if (regEl) this.festivalsRegion = regEl.value;
+    if (statEl) this.festivalsStatus = statEl.value;
+    if (searchEl) this.festivalsSearchKeyword = searchEl.value.trim().toLowerCase();
 
-    this.renderEventsView();
-    if (this.eventsViewMode === 'calendar') this.renderEventsCalendar();
+    this.renderFestivalsView();
+    if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
   }
 
-  prevCalendarMonth() {
-    this.calendarMonth -= 1;
-    if (this.calendarMonth < 1) {
-      this.calendarMonth = 12;
-      this.calendarYear -= 1;
+  prevFestivalsMonth() {
+    this.festivalsCalendarMonth -= 1;
+    if (this.festivalsCalendarMonth < 1) {
+      this.festivalsCalendarMonth = 12;
+      this.festivalsCalendarYear -= 1;
     }
-    this.renderEventsCalendar();
+    this.renderFestivalsCalendar();
   }
 
-  nextCalendarMonth() {
-    this.calendarMonth += 1;
-    if (this.calendarMonth > 12) {
-      this.calendarMonth = 1;
-      this.calendarYear += 1;
+  nextFestivalsMonth() {
+    this.festivalsCalendarMonth += 1;
+    if (this.festivalsCalendarMonth > 12) {
+      this.festivalsCalendarMonth = 1;
+      this.festivalsCalendarYear += 1;
     }
-    this.renderEventsCalendar();
+    this.renderFestivalsCalendar();
   }
 
-  goTodayCalendar() {
-    this.calendarYear = 2026;
-    this.calendarMonth = 11;
-    this.selectedCalendarDate = null;
-    const bar = document.getElementById('calendar-day-selected-bar');
+  goTodayFestivals() {
+    this.festivalsCalendarYear = 2026;
+    this.festivalsCalendarMonth = 11;
+    this.selectedFestivalsDate = null;
+    const bar = document.getElementById('festivals-calendar-day-selected-bar');
     if (bar) bar.classList.add('hidden');
-    this.renderEventsCalendar();
-    this.renderEventsView();
+    this.renderFestivalsCalendar();
+    this.renderFestivalsView();
   }
 
-  selectCalendarDate(dateStr) {
-    this.selectedCalendarDate = dateStr;
-    const bar = document.getElementById('calendar-day-selected-bar');
-    const barText = document.getElementById('calendar-selected-date-text');
+  selectFestivalsDate(dateStr) {
+    this.selectedFestivalsDate = dateStr;
+    const bar = document.getElementById('festivals-calendar-day-selected-bar');
+    const barText = document.getElementById('festivals-calendar-selected-date-text');
     if (bar && barText) {
-      barText.textContent = `${dateStr} 일정 필터 적용 중`;
+      barText.textContent = `${dateStr} 행사 필터 적용 중`;
       bar.classList.remove('hidden');
     }
-    this.renderEventsCalendar();
-    this.renderEventsView();
+    this.renderFestivalsCalendar();
+    this.renderFestivalsView();
   }
 
-  clearCalendarDayFilter() {
-    this.selectedCalendarDate = null;
-    const bar = document.getElementById('calendar-day-selected-bar');
+  clearFestivalsDayFilter() {
+    this.selectedFestivalsDate = null;
+    const bar = document.getElementById('festivals-calendar-day-selected-bar');
     if (bar) bar.classList.add('hidden');
-    this.renderEventsCalendar();
-    this.renderEventsView();
+    this.renderFestivalsCalendar();
+    this.renderFestivalsView();
   }
 
-  renderEventsCalendar() {
-    const grid = document.getElementById('calendar-grid');
-    const title = document.getElementById('calendar-month-title');
+  renderFestivalsCalendar() {
+    const grid = document.getElementById('festivals-calendar-grid');
+    const title = document.getElementById('festivals-calendar-month-title');
     if (!grid) return;
 
-    if (title) {
-      title.textContent = `${this.calendarYear}년 ${this.calendarMonth}월`;
-    }
+    if (title) title.textContent = `${this.festivalsCalendarYear}년 ${this.festivalsCalendarMonth}월`;
 
-    const firstDay = new Date(this.calendarYear, this.calendarMonth - 1, 1).getDay();
-    const totalDays = new Date(this.calendarYear, this.calendarMonth, 0).getDate();
-    const prevMonthTotalDays = new Date(this.calendarYear, this.calendarMonth - 1, 0).getDate();
+    const firstDay = new Date(this.festivalsCalendarYear, this.festivalsCalendarMonth - 1, 1).getDay();
+    const totalDays = new Date(this.festivalsCalendarYear, this.festivalsCalendarMonth, 0).getDate();
+    const prevMonthTotalDays = new Date(this.festivalsCalendarYear, this.festivalsCalendarMonth - 1, 0).getDate();
 
     let cellsHtml = '';
-
-    // Leading empty days
     for (let i = firstDay - 1; i >= 0; i--) {
       const d = prevMonthTotalDays - i;
       cellsHtml += `<div class="min-h-[72px] sm:min-h-[88px] p-1.5 rounded-xl bg-stone-50/50 text-slate-300 text-xs font-bold border border-stone-100/60">${d}</div>`;
     }
 
-    // Days of current month
+    const festivalEvents = (this.allEvents || []).filter((e) => e.boardType === 'festivals');
+
     for (let d = 1; d <= totalDays; d++) {
-      const dayStr = `${this.calendarYear}-${String(this.calendarMonth).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
-      const isSelected = this.selectedCalendarDate === dayStr;
+      const dayStr = `${this.festivalsCalendarYear}-${String(this.festivalsCalendarMonth).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+      const isSelected = this.selectedFestivalsDate === dayStr;
       const isSunday = (firstDay + d - 1) % 7 === 0;
       const isSaturday = (firstDay + d - 1) % 7 === 6;
 
-      const dayEvents = (this.eventsData || []).filter((evt) => {
+      const dayEvents = festivalEvents.filter((evt) => {
         const inEventRange = evt.startDate && evt.endDate && dayStr >= evt.startDate && dayStr <= evt.endDate;
         const inApplyRange = evt.applyStartDate && evt.applyEndDate && dayStr >= evt.applyStartDate && dayStr <= evt.applyEndDate;
         return inEventRange || inApplyRange;
@@ -858,9 +881,8 @@ class DodamCommunityApp {
           .slice(0, 2)
           .map((evt) => {
             let badgeBg = 'bg-amber-100 text-amber-800 border-amber-200';
-            if (evt.category === 'contest_art') badgeBg = 'bg-rose-100 text-rose-800 border-rose-200';
-            if (evt.category === 'contest_marathon') badgeBg = 'bg-emerald-100 text-emerald-800 border-emerald-200';
-            if (evt.category === 'contest_invention') badgeBg = 'bg-sky-100 text-sky-800 border-sky-200';
+            if (evt.category === 'sports_marathon') badgeBg = 'bg-emerald-100 text-emerald-800 border-emerald-200';
+            if (evt.category === 'festival_light') badgeBg = 'bg-indigo-100 text-indigo-800 border-indigo-200';
             return `<div class="truncate text-[9px] sm:text-[10px] px-1 py-0.5 rounded border ${badgeBg} font-black mt-0.5" title="${evt.title}">${evt.title}</div>`;
           })
           .join('');
@@ -871,7 +893,7 @@ class DodamCommunityApp {
 
       cellsHtml += `
         <div
-          onclick="app.selectCalendarDate('${dayStr}')"
+          onclick="app.selectFestivalsDate('${dayStr}')"
           class="min-h-[72px] sm:min-h-[88px] p-1.5 rounded-xl border cursor-pointer transition flex flex-col justify-between ${
             isSelected
               ? 'bg-amber-100/70 border-amber-400 ring-2 ring-amber-300'
@@ -882,7 +904,7 @@ class DodamCommunityApp {
         >
           <div class="flex items-center justify-between">
             <span class="text-xs font-black ${dayColor}">${d}</span>
-            ${dayEvents.length > 0 ? `<span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span>` : ''}
+            ${dayEvents.length > 0 ? `<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>` : ''}
           </div>
           <div class="overflow-hidden flex-1">${eventBadgesHtml}</div>
         </div>
@@ -892,40 +914,37 @@ class DodamCommunityApp {
     grid.innerHTML = cellsHtml;
   }
 
-  renderEventsView() {
-    const listEl = document.getElementById('events-list-container');
-    const countBadge = document.getElementById('events-count-badge');
+  renderFestivalsView() {
+    const listEl = document.getElementById('festivals-list-container');
+    const countBadge = document.getElementById('festivals-count-badge');
     if (!listEl) return;
 
-    let filtered = (this.eventsData || []).filter((evt) => {
-      // 1. Category Filter
-      if (this.currentEventCategory !== 'all' && evt.category !== this.currentEventCategory) {
-        return false;
+    let filtered = (this.allEvents || []).filter((evt) => {
+      if (evt.boardType !== 'festivals') return false;
+
+      if (this.festivalsCategory !== 'all' && evt.category !== this.festivalsCategory) return false;
+
+      if (this.festivalsRegion !== 'all') {
+        if (this.festivalsRegion === 'gyeonggi' && !['gyeonggi', 'incheon'].includes(evt.region)) return false;
+        else if (this.festivalsRegion === 'chungcheong' && !['chungcheong', 'sejong'].includes(evt.region)) return false;
+        else if (this.festivalsRegion === 'busan' && !['busan', 'daegu', 'gyeongsang'].includes(evt.region)) return false;
+        else if (this.festivalsRegion !== 'gyeonggi' && this.festivalsRegion !== 'chungcheong' && this.festivalsRegion !== 'busan' && evt.region !== this.festivalsRegion) return false;
       }
-      // 2. Region Filter
-      if (this.currentEventRegion !== 'all') {
-        if (this.currentEventRegion === 'gyeonggi' && !['gyeonggi', 'incheon'].includes(evt.region)) return false;
-        else if (this.currentEventRegion === 'chungcheong' && !['chungcheong', 'sejong'].includes(evt.region)) return false;
-        else if (this.currentEventRegion === 'busan' && !['busan', 'daegu', 'gyeongsang'].includes(evt.region)) return false;
-        else if (this.currentEventRegion !== 'gyeonggi' && this.currentEventRegion !== 'chungcheong' && this.currentEventRegion !== 'busan' && evt.region !== this.currentEventRegion) return false;
-      }
-      // 3. Status Filter
-      if (this.currentEventStatus !== 'all' && evt.status !== this.currentEventStatus) {
-        return false;
-      }
-      // 4. Keyword Search
-      if (this.eventSearchKeyword) {
-        const titleMatch = evt.title.toLowerCase().includes(this.eventSearchKeyword);
-        const orgMatch = evt.organizer.toLowerCase().includes(this.eventSearchKeyword);
-        const locMatch = evt.location.toLowerCase().includes(this.eventSearchKeyword);
-        const descMatch = (evt.description || '').toLowerCase().includes(this.eventSearchKeyword);
-        const tagMatch = (evt.tags || []).some((t) => t.toLowerCase().includes(this.eventSearchKeyword));
+
+      if (this.festivalsStatus !== 'all' && evt.status !== this.festivalsStatus) return false;
+
+      if (this.festivalsSearchKeyword) {
+        const titleMatch = evt.title.toLowerCase().includes(this.festivalsSearchKeyword);
+        const orgMatch = evt.organizer.toLowerCase().includes(this.festivalsSearchKeyword);
+        const locMatch = evt.location.toLowerCase().includes(this.festivalsSearchKeyword);
+        const descMatch = (evt.description || '').toLowerCase().includes(this.festivalsSearchKeyword);
+        const tagMatch = (evt.tags || []).some((t) => t.toLowerCase().includes(this.festivalsSearchKeyword));
         if (!titleMatch && !orgMatch && !locMatch && !descMatch && !tagMatch) return false;
       }
-      // 5. Selected Calendar Date Filter
-      if (this.selectedCalendarDate) {
-        const inEventRange = evt.startDate && evt.endDate && this.selectedCalendarDate >= evt.startDate && this.selectedCalendarDate <= evt.endDate;
-        const inApplyRange = evt.applyStartDate && evt.applyEndDate && this.selectedCalendarDate >= evt.applyStartDate && this.selectedCalendarDate <= evt.applyEndDate;
+
+      if (this.selectedFestivalsDate) {
+        const inEventRange = evt.startDate && evt.endDate && this.selectedFestivalsDate >= evt.startDate && this.selectedFestivalsDate <= evt.endDate;
+        const inApplyRange = evt.applyStartDate && evt.applyEndDate && this.selectedFestivalsDate >= evt.applyStartDate && this.selectedFestivalsDate <= evt.applyEndDate;
         if (!inEventRange && !inApplyRange) return false;
       }
       return true;
@@ -937,9 +956,9 @@ class DodamCommunityApp {
       listEl.innerHTML = `
         <div class="community-card p-10 text-center space-y-2">
           <div class="text-2xl">🎪</div>
-          <div class="text-sm font-extrabold text-slate-700">검색 조건에 맞는 대회나 행사가 없습니다.</div>
-          <p class="text-xs text-slate-400">필터를 초기화하거나 다른 검색어로 찾아보세요.</p>
-          <button onclick="app.setEventCategory('all'); app.clearCalendarDayFilter();" class="mt-2 px-4 py-2 rounded-xl bg-amber-500 text-white text-xs font-bold">
+          <div class="text-sm font-extrabold text-slate-700">해당 조건에 맞는 지역행사나 볼거리가 없습니다.</div>
+          <p class="text-xs text-slate-400">필터를 초기화하거나 다른 지역을 선택해보세요.</p>
+          <button onclick="app.setFestivalsCategory('all'); app.clearFestivalsDayFilter();" class="mt-2 px-4 py-2 rounded-xl bg-amber-500 text-white text-xs font-bold">
             필터 초기화
           </button>
         </div>
@@ -947,124 +966,356 @@ class DodamCommunityApp {
       return;
     }
 
-    listEl.innerHTML = filtered
-      .map((evt) => {
-        let statusBadge = '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black">접수중</span>';
-        if (evt.status === 'ongoing') {
-          statusBadge = '<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-black">진행중</span>';
-        } else if (evt.status === 'closed') {
-          statusBadge = '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-500 text-[10px] font-bold">마감</span>';
-        }
-
-        const isContest = evt.sourceType === 'special_contest';
-
-        return `
-          <div class="community-card p-5 space-y-3.5 hover:border-amber-300 hover:shadow-md transition">
-            <!-- 상단 뱃지 라인 -->
-            <div class="flex items-center justify-between gap-2 flex-wrap">
-              <div class="flex items-center gap-1.5 flex-wrap">
-                <span class="px-2.5 py-1 rounded-xl text-xs font-black ${
-                  evt.category === 'contest_marathon'
-                    ? 'bg-emerald-500 text-white'
-                    : evt.category === 'contest_art'
-                    ? 'bg-rose-500 text-white'
-                    : evt.category === 'contest_invention'
-                    ? 'bg-sky-600 text-white'
-                    : 'bg-amber-500 text-white'
-                }">
-                  ${evt.badge}
-                </span>
-
-                <span class="px-2 py-0.5 rounded-lg text-[10px] font-extrabold ${
-                  isContest ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-stone-100 text-slate-600'
-                }">
-                  ${isContest ? '<i class="fa-solid fa-star text-rose-500 mr-1"></i>협회 공식 공지' : '<i class="fa-solid fa-landmark mr-1"></i>공공데이터'}
-                </span>
-
-                <span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-700 text-[10px] font-bold">
-                  📍 ${evt.regionName}
-                </span>
-              </div>
-
-              <div class="flex items-center gap-2">
-                <span class="px-2.5 py-1 rounded-xl text-xs font-black ${
-                  evt.dday === '접수마감' ? 'bg-stone-100 text-slate-400' : 'bg-rose-50 text-rose-600 border border-rose-200'
-                }">
-                  ${evt.dday}
-                </span>
-                ${statusBadge}
-              </div>
-            </div>
-
-            <!-- 제목 및 설명 -->
-            <div class="space-y-1.5">
-              <h3 onclick="app.openEventDetailModal('${evt.id}')" class="text-base font-black text-slate-900 leading-snug cursor-pointer hover:text-rose-600 transition">
-                ${evt.title}
-              </h3>
-              <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${evt.description}</p>
-            </div>
-
-            <!-- 행사 주요 스펙 박스 -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-stone-50 rounded-2xl p-3 border border-stone-200/60">
-              <div class="space-y-1">
-                <div class="flex items-center gap-2 text-slate-600">
-                  <i class="fa-regular fa-calendar-check text-rose-500 w-4 text-center"></i>
-                  <span><strong>행사일:</strong> ${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}</span>
-                </div>
-                <div class="flex items-center gap-2 text-slate-600">
-                  <i class="fa-solid fa-pen-nib text-amber-500 w-4 text-center"></i>
-                  <span><strong>접수:</strong> ${evt.applyStartDate} ~ ${evt.applyEndDate}</span>
-                </div>
-              </div>
-              <div class="space-y-1">
-                <div class="flex items-center gap-2 text-slate-600">
-                  <i class="fa-solid fa-children text-indigo-500 w-4 text-center"></i>
-                  <span class="truncate"><strong>대상:</strong> ${evt.targetAudience}</span>
-                </div>
-                <div class="flex items-center gap-2 text-slate-600">
-                  <i class="fa-solid fa-ticket text-emerald-500 w-4 text-center"></i>
-                  <span><strong>비용:</strong> ${evt.fee}</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- 장소 및 주최 정보 & 액션 버튼 -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-stone-100 text-xs">
-              <div class="space-y-0.5 text-slate-500">
-                <div class="flex items-center gap-1.5 font-bold text-slate-700">
-                  <i class="fa-solid fa-location-dot text-rose-500"></i>
-                  <span class="truncate max-w-xs sm:max-w-sm">${evt.location}</span>
-                </div>
-                <div class="text-[11px] text-slate-400">주최: ${evt.organizer}</div>
-              </div>
-
-              <div class="flex items-center gap-2 shrink-0">
-                <button
-                  onclick="app.openEventDetailModal('${evt.id}')"
-                  class="px-3 py-2 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 text-slate-700 font-extrabold text-xs transition flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-circle-info text-slate-400"></i>
-                  <span>상세보기</span>
-                </button>
-                <a
-                  href="${evt.url}"
-                  target="_blank"
-                  rel="noopener"
-                  class="px-3.5 py-2 rounded-xl coral-badge-gradient hover:opacity-95 text-white font-black text-xs shadow-sm flex items-center gap-1.5 transition"
-                >
-                  <span>공식 신청 바로가기</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        `;
-      })
-      .join('');
+    listEl.innerHTML = filtered.map((evt) => this.renderEventCardHtml(evt, 'amber')).join('');
   }
 
+  // ==========================================
+  // 6. 전국 대회일정 컨트롤러 (view-contests)
+  //    (공부 위주: 사생대회, 백일장, 독서토론/골든벨, 창의발명, 코딩, 수학)
+  // ==========================================
+  setContestsViewMode(mode) {
+    this.contestsViewMode = mode;
+    const listContainer = document.getElementById('contests-list-container');
+    const calContainer = document.getElementById('contests-calendar-container');
+    const btnList = document.getElementById('btn-contests-list-mode');
+    const btnCal = document.getElementById('btn-contests-calendar-mode');
+
+    if (mode === 'calendar') {
+      if (calContainer) calContainer.classList.remove('hidden');
+      if (btnCal) btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
+      if (btnList) btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
+      this.renderContestsCalendar();
+    } else {
+      if (calContainer) calContainer.classList.add('hidden');
+      if (btnList) btnList.className = 'px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5';
+      if (btnCal) btnCal.className = 'px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5';
+    }
+    this.renderContestsView();
+  }
+
+  setContestsCategory(cat) {
+    this.contestsCategory = cat;
+    document.querySelectorAll('.cont-cat-chip').forEach((chip) => {
+      const active = chip.getAttribute('data-cat') === cat;
+      chip.className = active
+        ? 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
+        : 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200';
+    });
+    this.renderContestsView();
+    if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
+  }
+
+  onContestsFilterChange() {
+    const regEl = document.getElementById('contest-filter-region');
+    const statEl = document.getElementById('contest-filter-status');
+    const searchEl = document.getElementById('contest-filter-search');
+
+    if (regEl) this.contestsRegion = regEl.value;
+    if (statEl) this.contestsStatus = statEl.value;
+    if (searchEl) this.contestsSearchKeyword = searchEl.value.trim().toLowerCase();
+
+    this.renderContestsView();
+    if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
+  }
+
+  prevContestsMonth() {
+    this.contestsCalendarMonth -= 1;
+    if (this.contestsCalendarMonth < 1) {
+      this.contestsCalendarMonth = 12;
+      this.contestsCalendarYear -= 1;
+    }
+    this.renderContestsCalendar();
+  }
+
+  nextContestsMonth() {
+    this.contestsCalendarMonth += 1;
+    if (this.contestsCalendarMonth > 12) {
+      this.contestsCalendarMonth = 1;
+      this.contestsCalendarYear += 1;
+    }
+    this.renderContestsCalendar();
+  }
+
+  goTodayContests() {
+    this.contestsCalendarYear = 2026;
+    this.contestsCalendarMonth = 11;
+    this.selectedContestsDate = null;
+    const bar = document.getElementById('contests-calendar-day-selected-bar');
+    if (bar) bar.classList.add('hidden');
+    this.renderContestsCalendar();
+    this.renderContestsView();
+  }
+
+  selectContestsDate(dateStr) {
+    this.selectedContestsDate = dateStr;
+    const bar = document.getElementById('contests-calendar-day-selected-bar');
+    const barText = document.getElementById('contests-calendar-selected-date-text');
+    if (bar && barText) {
+      barText.textContent = `${dateStr} 대회 일정 필터 적용 중`;
+      bar.classList.remove('hidden');
+    }
+    this.renderContestsCalendar();
+    this.renderContestsView();
+  }
+
+  clearContestsDayFilter() {
+    this.selectedContestsDate = null;
+    const bar = document.getElementById('contests-calendar-day-selected-bar');
+    if (bar) bar.classList.add('hidden');
+    this.renderContestsCalendar();
+    this.renderContestsView();
+  }
+
+  renderContestsCalendar() {
+    const grid = document.getElementById('contests-calendar-grid');
+    const title = document.getElementById('contests-calendar-month-title');
+    if (!grid) return;
+
+    if (title) title.textContent = `${this.contestsCalendarYear}년 ${this.contestsCalendarMonth}월`;
+
+    const firstDay = new Date(this.contestsCalendarYear, this.contestsCalendarMonth - 1, 1).getDay();
+    const totalDays = new Date(this.contestsCalendarYear, this.contestsCalendarMonth, 0).getDate();
+    const prevMonthTotalDays = new Date(this.contestsCalendarYear, this.contestsCalendarMonth - 1, 0).getDate();
+
+    let cellsHtml = '';
+    for (let i = firstDay - 1; i >= 0; i--) {
+      const d = prevMonthTotalDays - i;
+      cellsHtml += `<div class="min-h-[72px] sm:min-h-[88px] p-1.5 rounded-xl bg-stone-50/50 text-slate-300 text-xs font-bold border border-stone-100/60">${d}</div>`;
+    }
+
+    const contestEvents = (this.allEvents || []).filter((e) => e.boardType === 'contests');
+
+    for (let d = 1; d <= totalDays; d++) {
+      const dayStr = `${this.contestsCalendarYear}-${String(this.contestsCalendarMonth).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+      const isSelected = this.selectedContestsDate === dayStr;
+      const isSunday = (firstDay + d - 1) % 7 === 0;
+      const isSaturday = (firstDay + d - 1) % 7 === 6;
+
+      const dayEvents = contestEvents.filter((evt) => {
+        const inEventRange = evt.startDate && evt.endDate && dayStr >= evt.startDate && dayStr <= evt.endDate;
+        const inApplyRange = evt.applyStartDate && evt.applyEndDate && dayStr >= evt.applyStartDate && dayStr <= evt.applyEndDate;
+        return inEventRange || inApplyRange;
+      });
+
+      const dayColor = isSunday ? 'text-rose-600' : isSaturday ? 'text-blue-600' : 'text-slate-800';
+
+      let eventBadgesHtml = '';
+      if (dayEvents.length > 0) {
+        eventBadgesHtml = dayEvents
+          .slice(0, 2)
+          .map((evt) => {
+            let badgeBg = 'bg-indigo-100 text-indigo-800 border-indigo-200';
+            if (evt.category === 'contest_art') badgeBg = 'bg-rose-100 text-rose-800 border-rose-200';
+            if (evt.category === 'contest_reading') badgeBg = 'bg-amber-100 text-amber-800 border-amber-200';
+            if (evt.category === 'contest_stem') badgeBg = 'bg-sky-100 text-sky-800 border-sky-200';
+            return `<div class="truncate text-[9px] sm:text-[10px] px-1 py-0.5 rounded border ${badgeBg} font-black mt-0.5" title="${evt.title}">${evt.title}</div>`;
+          })
+          .join('');
+        if (dayEvents.length > 2) {
+          eventBadgesHtml += `<div class="text-[9px] text-slate-400 font-bold mt-0.5">+${dayEvents.length - 2}개 더보기</div>`;
+        }
+      }
+
+      cellsHtml += `
+        <div
+          onclick="app.selectContestsDate('${dayStr}')"
+          class="min-h-[72px] sm:min-h-[88px] p-1.5 rounded-xl border cursor-pointer transition flex flex-col justify-between ${
+            isSelected
+              ? 'bg-indigo-100/70 border-indigo-400 ring-2 ring-indigo-300'
+              : dayEvents.length > 0
+              ? 'bg-white border-indigo-200 hover:border-indigo-400 hover:shadow-sm'
+              : 'bg-white border-stone-200 hover:bg-stone-50'
+          }"
+        >
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-black ${dayColor}">${d}</span>
+            ${dayEvents.length > 0 ? `<span class="w-1.5 h-1.5 rounded-full bg-indigo-600"></span>` : ''}
+          </div>
+          <div class="overflow-hidden flex-1">${eventBadgesHtml}</div>
+        </div>
+      `;
+    }
+
+    grid.innerHTML = cellsHtml;
+  }
+
+  renderContestsView() {
+    const listEl = document.getElementById('contests-list-container');
+    const countBadge = document.getElementById('contests-count-badge');
+    if (!listEl) return;
+
+    let filtered = (this.allEvents || []).filter((evt) => {
+      if (evt.boardType !== 'contests') return false;
+
+      if (this.contestsCategory !== 'all' && evt.category !== this.contestsCategory) return false;
+
+      if (this.contestsRegion !== 'all') {
+        if (this.contestsRegion === 'gyeonggi' && !['gyeonggi', 'incheon'].includes(evt.region)) return false;
+        else if (this.contestsRegion === 'chungcheong' && !['chungcheong', 'sejong'].includes(evt.region)) return false;
+        else if (this.contestsRegion === 'busan' && !['busan', 'daegu', 'gyeongsang'].includes(evt.region)) return false;
+        else if (this.contestsRegion !== 'gyeonggi' && this.contestsRegion !== 'chungcheong' && this.contestsRegion !== 'busan' && evt.region !== this.contestsRegion) return false;
+      }
+
+      if (this.contestsStatus !== 'all' && evt.status !== this.contestsStatus) return false;
+
+      if (this.contestsSearchKeyword) {
+        const titleMatch = evt.title.toLowerCase().includes(this.contestsSearchKeyword);
+        const orgMatch = evt.organizer.toLowerCase().includes(this.contestsSearchKeyword);
+        const locMatch = evt.location.toLowerCase().includes(this.contestsSearchKeyword);
+        const descMatch = (evt.description || '').toLowerCase().includes(this.contestsSearchKeyword);
+        const tagMatch = (evt.tags || []).some((t) => t.toLowerCase().includes(this.contestsSearchKeyword));
+        if (!titleMatch && !orgMatch && !locMatch && !descMatch && !tagMatch) return false;
+      }
+
+      if (this.selectedContestsDate) {
+        const inEventRange = evt.startDate && evt.endDate && this.selectedContestsDate >= evt.startDate && this.selectedContestsDate <= evt.endDate;
+        const inApplyRange = evt.applyStartDate && evt.applyEndDate && this.selectedContestsDate >= evt.applyStartDate && this.selectedContestsDate <= evt.applyEndDate;
+        if (!inEventRange && !inApplyRange) return false;
+      }
+      return true;
+    });
+
+    if (countBadge) countBadge.textContent = filtered.length;
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = `
+        <div class="community-card p-10 text-center space-y-2">
+          <div class="text-2xl">🏆</div>
+          <div class="text-sm font-extrabold text-slate-700">해당 조건에 맞는 대회 일정이 없습니다.</div>
+          <p class="text-xs text-slate-400">필터를 초기화하거나 다른 종목(사생대회, 독서토론 등)을 선택해보세요.</p>
+          <button onclick="app.setContestsCategory('all'); app.clearContestsDayFilter();" class="mt-2 px-4 py-2 rounded-xl bg-indigo-600 text-white text-xs font-bold">
+            필터 초기화
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    listEl.innerHTML = filtered.map((evt) => this.renderEventCardHtml(evt, 'indigo')).join('');
+  }
+
+  // 공통 이벤트 카드 렌더러
+  renderEventCardHtml(evt, themeColor) {
+    let statusBadge = '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black">접수중</span>';
+    if (evt.status === 'ongoing') {
+      statusBadge = '<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-black">진행중</span>';
+    } else if (evt.status === 'closed') {
+      statusBadge = '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-500 text-[10px] font-bold">마감</span>';
+    }
+
+    const isContest = evt.sourceType === 'special_contest';
+    const isContestBoard = evt.boardType === 'contests';
+
+    let badgeClass = 'bg-amber-500 text-white';
+    if (evt.category === 'sports_marathon') badgeClass = 'bg-emerald-500 text-white';
+    else if (evt.category === 'contest_art') badgeClass = 'bg-rose-500 text-white';
+    else if (evt.category === 'contest_reading') badgeClass = 'bg-amber-600 text-white';
+    else if (evt.category === 'contest_stem') badgeClass = 'bg-sky-600 text-white';
+    else if (evt.category === 'contest_math') badgeClass = 'bg-indigo-600 text-white';
+
+    const cardHoverBorder = isContestBoard ? 'hover:border-indigo-300' : 'hover:border-amber-300';
+    const ctaGradient = isContestBoard
+      ? 'bg-gradient-to-r from-indigo-600 to-sky-600'
+      : 'coral-badge-gradient';
+
+    return `
+      <div class="community-card p-5 space-y-3.5 ${cardHoverBorder} hover:shadow-md transition">
+        <!-- 상단 뱃지 라인 -->
+        <div class="flex items-center justify-between gap-2 flex-wrap">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="px-2.5 py-1 rounded-xl text-xs font-black ${badgeClass}">
+              ${evt.badge}
+            </span>
+
+            <span class="px-2 py-0.5 rounded-lg text-[10px] font-extrabold ${
+              isContest ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-stone-100 text-slate-600'
+            }">
+              ${isContest ? '<i class="fa-solid fa-star text-rose-500 mr-1"></i>협회 공식 공지' : '<i class="fa-solid fa-landmark mr-1"></i>공공데이터'}
+            </span>
+
+            <span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-700 text-[10px] font-bold">
+              📍 ${evt.regionName}
+            </span>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-xl text-xs font-black ${
+              evt.dday === '접수마감' ? 'bg-stone-100 text-slate-400' : 'bg-rose-50 text-rose-600 border border-rose-200'
+            }">
+              ${evt.dday}
+            </span>
+            ${statusBadge}
+          </div>
+        </div>
+
+        <!-- 제목 및 설명 -->
+        <div class="space-y-1.5">
+          <h3 onclick="app.openEventDetailModal('${evt.id}')" class="text-base font-black text-slate-900 leading-snug cursor-pointer hover:text-rose-600 transition">
+            ${evt.title}
+          </h3>
+          <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${evt.description}</p>
+        </div>
+
+        <!-- 행사/대회 주요 스펙 박스 -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-stone-50 rounded-2xl p-3 border border-stone-200/60">
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 text-slate-600">
+              <i class="fa-regular fa-calendar-check text-rose-500 w-4 text-center"></i>
+              <span><strong>일정:</strong> ${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-600">
+              <i class="fa-solid fa-pen-nib text-amber-500 w-4 text-center"></i>
+              <span><strong>접수:</strong> ${evt.applyStartDate} ~ ${evt.applyEndDate}</span>
+            </div>
+          </div>
+          <div class="space-y-1">
+            <div class="flex items-center gap-2 text-slate-600">
+              <i class="fa-solid fa-children text-indigo-500 w-4 text-center"></i>
+              <span class="truncate"><strong>대상:</strong> ${evt.targetAudience}</span>
+            </div>
+            <div class="flex items-center gap-2 text-slate-600">
+              <i class="fa-solid fa-ticket text-emerald-500 w-4 text-center"></i>
+              <span><strong>비용:</strong> ${evt.fee}</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 장소 및 주최 정보 & 액션 버튼 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-stone-100 text-xs">
+          <div class="space-y-0.5 text-slate-500">
+            <div class="flex items-center gap-1.5 font-bold text-slate-700">
+              <i class="fa-solid fa-location-dot text-rose-500"></i>
+              <span class="truncate max-w-xs sm:max-w-sm">${evt.location}</span>
+            </div>
+            <div class="text-[11px] text-slate-400">주최: ${evt.organizer}</div>
+          </div>
+
+          <div class="flex items-center gap-2 shrink-0">
+            <button
+              onclick="app.openEventDetailModal('${evt.id}')"
+              class="px-3 py-2 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 text-slate-700 font-extrabold text-xs transition flex items-center gap-1.5"
+            >
+              <i class="fa-solid fa-circle-info text-slate-400"></i>
+              <span>상세보기</span>
+            </button>
+            <a
+              href="${evt.url}"
+              target="_blank"
+              rel="noopener"
+              class="px-3.5 py-2 rounded-xl ${ctaGradient} hover:opacity-95 text-white font-black text-xs shadow-sm flex items-center gap-1.5 transition"
+            >
+              <span>공식 신청 바로가기</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // 모달 제어 (지역행사 & 대회일정 공용)
   openEventDetailModal(eventId) {
-    const evt = (this.eventsData || []).find((e) => e.id === eventId);
+    const evt = (this.allEvents || []).find((e) => e.id === eventId);
     if (!evt) return;
     this.activeEventDetailId = eventId;
 
@@ -1108,7 +1359,7 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 6. 우측 사이드바 위젯 렌더러
+  // 7. 우측 사이드바 위젯 렌더러
   // ==========================================
   renderSidebarWidgets() {
     const hotListEl = document.getElementById('sidebar-hot-posts');
@@ -1166,7 +1417,7 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 7. 스크랩북 & 토스트 알림 관리
+  // 8. 스크랩북 & 토스트 알림 관리
   // ==========================================
   loadScraps() {
     try {

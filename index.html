@@ -134,18 +134,23 @@
         </div>
       </div>
 
-      <!-- 3대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사·대회 / 맛집맵 -->
+      <!-- 4대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사(볼거리·마라톤) / 대회일정(공부·사생·독서토론) / 맛집맵 -->
       <nav class="flex items-center gap-2 mt-3 pt-2.5 border-t border-stone-100 overflow-x-auto no-scrollbar">
-        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm">
+        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm">
           <i class="fa-solid fa-clipboard-list"></i>
           <span>💬 도담 육아 게시판</span>
         </button>
-        <button data-view="events" onclick="app.switchMainView('events')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
-          <i class="fa-solid fa-calendar-star text-amber-500"></i>
-          <span>🎪 전국 지역행사 & 대회 일정</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-amber-100 text-amber-700 font-black">대회·축제</span>
+        <button data-view="festivals" onclick="app.switchMainView('festivals')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+          <i class="fa-solid fa-person-running text-amber-500"></i>
+          <span>🎪 전국 지역행사 & 볼거리</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-amber-100 text-amber-700 font-black">축제·마라톤</span>
         </button>
-        <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+        <button data-view="contests" onclick="app.switchMainView('contests')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+          <i class="fa-solid fa-graduation-cap text-indigo-500"></i>
+          <span>🏆 전국 대회일정 (공부·역량)</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-indigo-100 text-indigo-700 font-black">사생·독서토론</span>
+        </button>
+        <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
           <span>🍽️ 전국 안심 맛집 맵</span>
           <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">5,000곳</span>
@@ -257,9 +262,9 @@
           <div id="board-posts-list" class="space-y-3"></div>
         </section>
 
-        <!-- VIEW 2: 전국 지역행사 & 특정 분야(어린이 사생대회·발명대회·주말 가족마라톤) 일정 게시판 -->
-        <section id="view-events" class="view-section hidden space-y-5">
-          <!-- 상단 배너 & 차별화 포인트 소개 -->
+        <!-- VIEW 2: 전국 지역행사 & 볼거리 (노는거, 볼거리: 지역축제, 가족 마라톤/걷기, 공원생태, 빛축제) -->
+        <section id="view-festivals" class="view-section hidden space-y-5">
+          <!-- 상단 배너 -->
           <div class="community-card p-5 bg-gradient-to-r from-amber-50/80 via-white to-rose-50/70 border border-amber-200/80 space-y-3">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
@@ -268,84 +273,88 @@
                     전국 17개 시도 전역
                   </span>
                   <span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-700 text-[10px] font-bold">
-                    <i class="fa-solid fa-arrows-rotate text-emerald-500 mr-1"></i>매일 자동 크롤링 업데이트
+                    <i class="fa-solid fa-person-running text-amber-500 mr-1"></i>노는거 · 볼거리 위주
                   </span>
-                  <h2 class="text-lg font-black text-slate-900">🎪 전국 지역행사 & 대회 일정</h2>
+                  <h2 class="text-lg font-black text-slate-900">🎪 전국 지역행사 & 볼거리 일정</h2>
                 </div>
                 <p class="text-xs text-slate-600 font-medium mt-1.5 leading-relaxed">
-                  <strong>기본 베이스:</strong> 한국관광공사 TourAPI · 서울열린데이터광장 · 경기데이터드림 API 공공 축제 연동<br/>
-                  <strong class="text-rose-600">차별화 포인트:</strong> 주말 가족 마라톤, 어린이 사생대회·백일장, 창의·과학·발명대회, 유소년 독서골든벨 등 흩어져 있는 협회 공식 공지를 크롤러로 직접 모았습니다.
+                  주말에 아이와 어디 갈까? <strong>한국관광공사 TourAPI · 서울·경기 공공 축제 + 주말 가족 마라톤/걷기대회</strong>를 모아 달력에 채웠습니다.
                 </p>
               </div>
 
-              <!-- 뷰 모드 전환 버튼 (리스트 뷰 vs 달력 뷰) -->
-              <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200 self-start sm:self-center shrink-0">
+              <!-- 뷰 모드 전환 버튼 & 대회일정 바로가기 링크 -->
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
                 <button
-                  id="btn-events-list-mode"
-                  onclick="app.setEventsViewMode('list')"
-                  class="px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5"
+                  onclick="app.switchMainView('contests')"
+                  class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-black border border-indigo-200 transition flex items-center gap-1.5"
                 >
-                  <i class="fa-solid fa-list-ul text-rose-500"></i>
-                  <span>게시판 리스트</span>
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>공부·사생·독서토론 대회일정 →</span>
                 </button>
-                <button
-                  id="btn-events-calendar-mode"
-                  onclick="app.setEventsViewMode('calendar')"
-                  class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-calendar-days text-amber-500"></i>
-                  <span>월간 달력 (캘린더)</span>
-                </button>
+                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200">
+                  <button
+                    id="btn-festivals-list-mode"
+                    onclick="app.setFestivalsViewMode('list')"
+                    class="px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5"
+                  >
+                    <i class="fa-solid fa-list-ul text-rose-500"></i>
+                    <span>리스트</span>
+                  </button>
+                  <button
+                    id="btn-festivals-calendar-mode"
+                    onclick="app.setFestivalsViewMode('calendar')"
+                    class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5"
+                  >
+                    <i class="fa-solid fa-calendar-days text-amber-500"></i>
+                    <span>달력</span>
+                  </button>
+                </div>
               </div>
             </div>
 
             <!-- 데이터 소스 통계 뱃지 -->
             <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-[11px] font-bold text-slate-600">
-              <span class="text-slate-400">데이터 출처:</span>
-              <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
-                🏆 협회·공식 사이트 크롤링 (사생·발명·마라톤) <strong>13건</strong>
+              <span class="text-slate-400">행사 구성:</span>
+              <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                🏃 주말 가족 마라톤·걷기 <strong>7건</strong>
               </span>
               <span class="px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/60">
-                🎪 한국관광공사 TourAPI <strong>8건</strong>
+                🎪 지역 문화 축제 <strong>5건</strong>
               </span>
-              <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                🏛️ 서울·경기 공공데이터 <strong>3건</strong>
+              <span class="px-2 py-0.5 rounded-lg bg-amber-50 text-amber-700 border border-amber-200/60">
+                ✨ 야경·빛·불꽃 축제 <strong>4건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
+                🌿 공원 생태 & 수확체험 <strong>4건</strong>
               </span>
             </div>
           </div>
 
-          <!-- 대회 & 행사 필터 컨트롤 바 -->
+          <!-- 지역행사 필터 컨트롤 바 -->
           <div class="community-card p-4 space-y-3">
-            <!-- 1차: 특정 분야 대회 & 축제 카테고리 칩 -->
-            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="events-category-chips">
-              <button onclick="app.setEventCategory('all')" data-cat="all" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
-                전체 (24)
+            <!-- 1차: 카테고리 칩 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="festivals-category-chips">
+              <button onclick="app.setFestivalsCategory('all')" data-cat="all" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
+                전체 (20)
               </button>
-              <button onclick="app.setEventCategory('contest_marathon')" data-cat="contest_marathon" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                🏃 주말 가족 마라톤·걷기 (6)
+              <button onclick="app.setFestivalsCategory('sports_marathon')" data-cat="sports_marathon" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🏃 주말 가족 마라톤·걷기 (7)
               </button>
-              <button onclick="app.setEventCategory('contest_art')" data-cat="contest_art" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                🏆 어린이 사생·백일장 (3)
+              <button onclick="app.setFestivalsCategory('festival_culture')" data-cat="festival_culture" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🎪 지역 문화 축제 (5)
               </button>
-              <button onclick="app.setEventCategory('contest_invention')" data-cat="contest_invention" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                💡 창의·과학·발명대회 (3)
+              <button onclick="app.setFestivalsCategory('festival_light')" data-cat="festival_light" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                ✨ 야경·빛·불꽃 축제 (4)
               </button>
-              <button onclick="app.setEventCategory('contest_sports')" data-cat="contest_sports" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                ⚽ 취미·스포츠·골든벨 (3)
-              </button>
-              <button onclick="app.setEventCategory('festival_culture')" data-cat="festival_culture" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                🎪 지역 문화 축제 (6)
-              </button>
-              <button onclick="app.setEventCategory('festival_nature')" data-cat="festival_nature" class="event-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
-                🌿 생태·공원 페스티벌 (3)
+              <button onclick="app.setFestivalsCategory('nature_park')" data-cat="nature_park" class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🌿 공원 생태 & 수확체험 (4)
               </button>
             </div>
 
-            <!-- 2차: 지역 선택 + 접수 상태 + 검색창 -->
+            <!-- 2차: 지역 + 접수상태 + 검색창 -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
-              <!-- 권역 선택 (전국 17개 시도) -->
               <div class="sm:col-span-4">
-                <select id="event-filter-region" onchange="app.onEventsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                <select id="festival-filter-region" onchange="app.onFestivalsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
                   <option value="all">🌐 전국 17개 시도 전체</option>
                   <option value="seoul">📍 서울특별시</option>
                   <option value="gyeonggi">📍 경기도</option>
@@ -360,9 +369,8 @@
                 </select>
               </div>
 
-              <!-- 접수 상태 선택 -->
               <div class="sm:col-span-3">
-                <select id="event-filter-status" onchange="app.onEventsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                <select id="festival-filter-status" onchange="app.onFestivalsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400">
                   <option value="all">상태 전체</option>
                   <option value="applying">🟢 지금 접수중 (D-Day)</option>
                   <option value="ongoing">🟡 행사 진행중</option>
@@ -370,42 +378,39 @@
                 </select>
               </div>
 
-              <!-- 대회/행사 키워드 검색 -->
               <div class="sm:col-span-5 relative">
                 <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
                 <input
-                  id="event-filter-search"
+                  id="festival-filter-search"
                   type="text"
-                  placeholder="대회명, 마라톤, 사생대회, 코딩 등 검색..."
-                  oninput="app.onEventsFilterChange()"
+                  placeholder="행사명, 마라톤, 불꽃축제, 공원 검색..."
+                  oninput="app.onFestivalsFilterChange()"
                   class="w-full pl-9 pr-3 py-2 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-amber-400"
                 />
               </div>
             </div>
           </div>
 
-          <!-- 월간 인터랙티브 달력 (캘린더 뷰 컨테이너) -->
-          <div id="events-calendar-container" class="hidden community-card p-5 space-y-4">
-            <!-- 달력 상단 네비게이션 -->
+          <!-- 월간 인터랙티브 달력 (지역행사 캘린더 뷰) -->
+          <div id="festivals-calendar-container" class="hidden community-card p-5 space-y-4">
             <div class="flex items-center justify-between border-b border-stone-100 pb-3">
               <div class="flex items-center gap-3">
-                <h3 id="calendar-month-title" class="text-base font-black text-slate-900">2026년 11월</h3>
-                <span class="text-xs text-slate-400 font-bold">날짜를 클릭하면 해당 일자의 대회가 아래에 필터링됩니다</span>
+                <h3 id="festivals-calendar-month-title" class="text-base font-black text-slate-900">2026년 11월</h3>
+                <span class="text-xs text-slate-400 font-bold">날짜를 클릭하면 해당 일자의 지역행사가 아래에 필터링됩니다</span>
               </div>
               <div class="flex items-center gap-1.5">
-                <button onclick="app.prevCalendarMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                <button onclick="app.prevFestivalsMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
                   <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
-                <button onclick="app.goTodayCalendar()" class="px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-bold transition">
+                <button onclick="app.goTodayFestivals()" class="px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-bold transition">
                   오늘
                 </button>
-                <button onclick="app.nextCalendarMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                <button onclick="app.nextFestivalsMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
                   <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
               </div>
             </div>
 
-            <!-- 요일 헤더 -->
             <div class="grid grid-cols-7 gap-1 text-center text-xs font-black">
               <div class="text-rose-500 py-1">일</div>
               <div class="text-slate-600 py-1">월</div>
@@ -416,16 +421,14 @@
               <div class="text-blue-500 py-1">토</div>
             </div>
 
-            <!-- 달력 날짜 그리드 -->
-            <div id="calendar-grid" class="grid grid-cols-7 gap-1"></div>
+            <div id="festivals-calendar-grid" class="grid grid-cols-7 gap-1"></div>
 
-            <!-- 선택된 날짜 필터 해제 바 (필터 활성화 시 표시) -->
-            <div id="calendar-day-selected-bar" class="hidden flex items-center justify-between bg-amber-50 border border-amber-200 rounded-xl px-3.5 py-2 text-xs">
+            <div id="festivals-calendar-day-selected-bar" class="hidden flex items-center justify-between bg-amber-50 border border-amber-200 rounded-xl px-3.5 py-2 text-xs">
               <div class="flex items-center gap-2">
                 <i class="fa-solid fa-calendar-check text-amber-600"></i>
-                <span id="calendar-selected-date-text" class="font-extrabold text-amber-900">2026-11-07 일정 필터 적용 중</span>
+                <span id="festivals-calendar-selected-date-text" class="font-extrabold text-amber-900">일정 필터 적용 중</span>
               </div>
-              <button onclick="app.clearCalendarDayFilter()" class="text-amber-800 hover:text-amber-950 font-black text-xs underline">
+              <button onclick="app.clearFestivalsDayFilter()" class="text-amber-800 hover:text-amber-950 font-black text-xs underline">
                 전체 날짜 보기
               </button>
             </div>
@@ -435,18 +438,214 @@
           <div class="flex items-center justify-between px-1">
             <div class="flex items-center gap-2">
               <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
-                <i class="fa-solid fa-flag-checkered text-rose-500"></i>
-                <span id="events-list-title">전국 대회 & 행사 일정 목록</span>
+                <i class="fa-solid fa-flag-checkered text-amber-500"></i>
+                <span>전국 지역행사 & 볼거리 목록</span>
               </h3>
               <span class="text-xs font-bold text-slate-500">
-                총 <strong id="events-count-badge" class="text-rose-600 font-black">24</strong>개
+                총 <strong id="festivals-count-badge" class="text-amber-600 font-black">20</strong>개
               </span>
             </div>
-            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 공식 사이트 직접 링크 제공</span>
+            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 및 공공포털 공식 사이트 직접 링크</span>
           </div>
 
           <!-- 이벤트 카드 목록 (리스트 뷰) -->
-          <div id="events-list-container" class="space-y-4"></div>
+          <div id="festivals-list-container" class="space-y-4"></div>
+        </section>
+
+        <!-- VIEW 3: 전국 대회일정 (공부 위주: 사생대회, 백일장, 독서토론/골든벨, 창의발명, 코딩, 수학/영어) -->
+        <section id="view-contests" class="view-section hidden space-y-5">
+          <!-- 상단 배너 -->
+          <div class="community-card p-5 bg-gradient-to-r from-indigo-50/80 via-white to-sky-50/70 border border-indigo-200/80 space-y-3">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-600 to-sky-600 text-white font-extrabold text-[11px] shadow-sm">
+                    전국 초·중등 및 유소년
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-700 text-[10px] font-bold">
+                    <i class="fa-solid fa-graduation-cap text-indigo-500 mr-1"></i>공부 · 역량 · 성취감 위주
+                  </span>
+                  <h2 class="text-lg font-black text-slate-900">🏆 전국 어린이·청소년 대회 일정</h2>
+                </div>
+                <p class="text-xs text-slate-600 font-medium mt-1.5 leading-relaxed">
+                  우리아이 잠재력과 성취감 쑥쑥! <strong>사생대회 · 백일장 · 독서토론 & 골든벨 · 창의발명 · 코딩/로봇 경진대회</strong> 협회 공식 공지를 실시간 수집했습니다.
+                </p>
+              </div>
+
+              <!-- 뷰 모드 전환 버튼 & 지역행사 바로가기 링크 -->
+              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
+                <button
+                  onclick="app.switchMainView('festivals')"
+                  class="px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-black border border-amber-200 transition flex items-center gap-1.5"
+                >
+                  <i class="fa-solid fa-person-running text-amber-500"></i>
+                  <span>볼거리·축제·마라톤 일정 →</span>
+                </button>
+                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200">
+                  <button
+                    id="btn-contests-list-mode"
+                    onclick="app.setContestsViewMode('list')"
+                    class="px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5"
+                  >
+                    <i class="fa-solid fa-list-ul text-indigo-600"></i>
+                    <span>리스트</span>
+                  </button>
+                  <button
+                    id="btn-contests-calendar-mode"
+                    onclick="app.setContestsViewMode('calendar')"
+                    class="px-3.5 py-1.5 rounded-xl text-xs font-bold transition text-slate-500 hover:text-slate-800 flex items-center gap-1.5"
+                  >
+                    <i class="fa-solid fa-calendar-days text-indigo-500"></i>
+                    <span>달력</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- 데이터 소스 통계 뱃지 -->
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-[11px] font-bold text-slate-600">
+              <span class="text-slate-400">대회 분야:</span>
+              <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
+                🏆 사생대회·미술 <strong>6건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200/60">
+                📖 독서토론·독서골든벨 <strong>4건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/60">
+                💡 창의·과학·발명 <strong>4건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200/60">
+                💻 SW·코딩·로봇 <strong>2건</strong>
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                📐 수학·외국어·음악 <strong>2건</strong>
+              </span>
+            </div>
+          </div>
+
+          <!-- 대회 일정 필터 컨트롤 바 -->
+          <div class="community-card p-4 space-y-3">
+            <!-- 1차: 카테고리 칩 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="contests-category-chips">
+              <button onclick="app.setContestsCategory('all')" data-cat="all" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white">
+                전체 (18)
+              </button>
+              <button onclick="app.setContestsCategory('contest_art')" data-cat="contest_art" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🏆 사생대회·미술 (6)
+              </button>
+              <button onclick="app.setContestsCategory('contest_reading')" data-cat="contest_reading" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                📖 독서토론·골든벨 (4)
+              </button>
+              <button onclick="app.setContestsCategory('contest_stem')" data-cat="contest_stem" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                💡 창의·과학·발명 (4)
+              </button>
+              <button onclick="app.setContestsCategory('contest_math')" data-cat="contest_math" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                📐 창의수학·올림피아드 (1)
+              </button>
+              <button onclick="app.setContestsCategory('contest_music')" data-cat="contest_music" class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200">
+                🎵 음악 콩쿠르 (1)
+              </button>
+            </div>
+
+            <!-- 2차: 지역 + 접수상태 + 검색창 -->
+            <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
+              <div class="sm:col-span-4">
+                <select id="contest-filter-region" onchange="app.onContestsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                  <option value="all">🌐 전국 17개 시도 전체</option>
+                  <option value="seoul">📍 서울특별시</option>
+                  <option value="gyeonggi">📍 경기도</option>
+                  <option value="incheon">📍 인천광역시</option>
+                  <option value="gangwon">📍 강원특별자치도</option>
+                  <option value="chungcheong">📍 충청도 (충북/충남)</option>
+                  <option value="sejong">📍 세종특별자치시 · 대전</option>
+                  <option value="jeolla">📍 전라도 (전북/전남/광주)</option>
+                  <option value="gyeongsang">📍 경상도 (경북/경남)</option>
+                  <option value="busan">📍 부산·대구·울산광역시</option>
+                  <option value="jeju">📍 제주특별자치도</option>
+                </select>
+              </div>
+
+              <div class="sm:col-span-3">
+                <select id="contest-filter-status" onchange="app.onContestsFilterChange()" class="w-full border border-stone-200 rounded-xl px-3 py-2 text-xs font-bold bg-stone-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                  <option value="all">상태 전체</option>
+                  <option value="applying">🟢 지금 접수중 (D-Day)</option>
+                  <option value="ongoing">🟡 행사 진행중</option>
+                  <option value="closed">⚪ 접수마감</option>
+                </select>
+              </div>
+
+              <div class="sm:col-span-5 relative">
+                <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+                <input
+                  id="contest-filter-search"
+                  type="text"
+                  placeholder="대회명, 사생대회, 독서토론, 코딩 검색..."
+                  oninput="app.onContestsFilterChange()"
+                  class="w-full pl-9 pr-3 py-2 text-xs bg-stone-50 border border-stone-200 rounded-xl focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- 월간 인터랙티브 달력 (대회일정 캘린더 뷰) -->
+          <div id="contests-calendar-container" class="hidden community-card p-5 space-y-4">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+              <div class="flex items-center gap-3">
+                <h3 id="contests-calendar-month-title" class="text-base font-black text-slate-900">2026년 11월</h3>
+                <span class="text-xs text-slate-400 font-bold">날짜를 클릭하면 해당 일자의 대회가 아래에 필터링됩니다</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button onclick="app.prevContestsMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                  <i class="fa-solid fa-chevron-left text-xs"></i>
+                </button>
+                <button onclick="app.goTodayContests()" class="px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-bold transition">
+                  오늘
+                </button>
+                <button onclick="app.nextContestsMonth()" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 flex items-center justify-center transition">
+                  <i class="fa-solid fa-chevron-right text-xs"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-7 gap-1 text-center text-xs font-black">
+              <div class="text-rose-500 py-1">일</div>
+              <div class="text-slate-600 py-1">월</div>
+              <div class="text-slate-600 py-1">화</div>
+              <div class="text-slate-600 py-1">수</div>
+              <div class="text-slate-600 py-1">목</div>
+              <div class="text-slate-600 py-1">금</div>
+              <div class="text-blue-500 py-1">토</div>
+            </div>
+
+            <div id="contests-calendar-grid" class="grid grid-cols-7 gap-1"></div>
+
+            <div id="contests-calendar-day-selected-bar" class="hidden flex items-center justify-between bg-indigo-50 border border-indigo-200 rounded-xl px-3.5 py-2 text-xs">
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-calendar-check text-indigo-600"></i>
+                <span id="contests-calendar-selected-date-text" class="font-extrabold text-indigo-900">대회 일정 필터 적용 중</span>
+              </div>
+              <button onclick="app.clearContestsDayFilter()" class="text-indigo-800 hover:text-indigo-950 font-black text-xs underline">
+                전체 날짜 보기
+              </button>
+            </div>
+          </div>
+
+          <!-- 대회 목록 헤더 & 카운트 -->
+          <div class="flex items-center justify-between px-1">
+            <div class="flex items-center gap-2">
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
+                <span>전국 어린이·청소년 대회 목록</span>
+              </h3>
+              <span class="text-xs font-bold text-slate-500">
+                총 <strong id="contests-count-badge" class="text-indigo-600 font-black">18</strong>개
+              </span>
+            </div>
+            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 및 기관 공식 접수처 직접 링크</span>
+          </div>
+
+          <!-- 대회 카드 목록 (리스트 뷰) -->
+          <div id="contests-list-container" class="space-y-4"></div>
         </section>
 
         <!-- VIEW 6: 네이버·카카오·구글 맛집 맵 & 바로가기 링크 (신규 추가) -->
@@ -723,10 +922,16 @@
           <p class="text-xs text-indigo-200 leading-relaxed">
             밤에 갑자기 강아지 짖는 듯한 '컹컹' 기침 소리가 나면 급성 후두염(크루프)일 수 있어요. 당황하지 말고 욕실에 따뜻한 수증기를 틀어 15분간 호흡을 도와주세요.
           </p>
-          <button onclick="app.switchMainView('events')" class="w-full py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs transition flex items-center justify-center gap-1.5 shadow-sm">
-            <i class="fa-solid fa-trophy text-slate-900"></i>
-            <span>🏆 이번 주말 가족 대회 & 축제 일정 보기 →</span>
-          </button>
+          <div class="grid grid-cols-2 gap-1.5 pt-1">
+            <button onclick="app.switchMainView('festivals')" class="py-2.5 px-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[11px] transition flex items-center justify-center gap-1 shadow-sm">
+              <i class="fa-solid fa-person-running text-slate-900"></i>
+              <span>🎪 지역행사·마라톤</span>
+            </button>
+            <button onclick="app.switchMainView('contests')" class="py-2.5 px-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-[11px] transition flex items-center justify-center gap-1 shadow-sm">
+              <i class="fa-solid fa-graduation-cap text-amber-300"></i>
+              <span>🏆 사생·독서토론</span>
+            </button>
+          </div>
         </div>
       </aside>
 
