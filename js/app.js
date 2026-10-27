@@ -1694,6 +1694,22 @@ class DodamCommunityApp {
     const loadMoreContainer = document.getElementById('food-load-more-container');
     if (!listEl) return;
 
+    // 하이브리드 수집 통계 위젯 업데이트
+    const meta = window.DODAM_CRAWL_METADATA || {
+      lastUpdated: '2026-10-27',
+      todayCount: 182,
+      totalCount: 354,
+      targetCount: 5802
+    };
+    const statDate = document.getElementById('crawl-stat-date');
+    const statToday = document.getElementById('crawl-stat-today');
+    const statTotal = document.getElementById('crawl-stat-total');
+    const statTarget = document.getElementById('crawl-stat-target');
+    if (statDate) statDate.textContent = meta.lastUpdated;
+    if (statToday) statToday.textContent = (meta.todayCount || 0).toLocaleString();
+    if (statTotal) statTotal.textContent = (meta.totalCount || 0).toLocaleString();
+    if (statTarget) statTarget.textContent = (meta.targetCount || 5802).toLocaleString();
+
     const filtered = this.getFilteredRestaurants();
     if (badgeEl) badgeEl.textContent = filtered.length.toLocaleString();
 
@@ -1731,6 +1747,13 @@ class DodamCommunityApp {
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
                   ${r.categoryName}
                 </span>
+                ${r.isCrawled ? `
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check text-emerald-500"></i>실데이터 검증
+                </span>` : `
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-stone-100 text-stone-500 border border-stone-200">
+                  통계추정치 (순차수집)
+                </span>`}
                 ${r.distanceKm !== undefined ? `
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
                   <i class="fa-solid fa-person-walking text-[9px]"></i>${r.distanceKm}km

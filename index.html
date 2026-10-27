@@ -381,7 +381,7 @@
         <section id="view-food" class="view-section hidden space-y-5">
           <!-- 상단 배너 & 실시간 포털 맛집 검색기 -->
           <div class="community-card p-5 space-y-4 bg-gradient-to-br from-rose-50/70 via-white to-amber-50/60">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
               <div>
                 <div class="flex items-center gap-2">
                   <span class="px-2.5 py-0.5 rounded-full bg-rose-500 text-white text-[11px] font-extrabold">3대 포털 맛집 추출 & 큐레이션</span>
@@ -390,10 +390,34 @@
                 <h2 class="text-lg font-black text-slate-900 mt-1">🍽️ 네이버 · 카카오 · 구글 맛집 지도 & 평점 뷰어</h2>
                 <p class="text-xs text-slate-600">네이버 플레이스, 카카오맵, 구글 지도의 실제 평점·리뷰를 비교하고 아기의자, 놀이방, 주차 등 가족/키즈 편의시설을 지도에서 확인하세요.</p>
               </div>
-              <button onclick="app.openCreateRestaurantModal()" class="shrink-0 px-4 py-2.5 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm transition flex items-center gap-1.5">
-                <i class="fa-solid fa-plus"></i>
-                <span>내 단골 맛집 등록</span>
-              </button>
+
+              <!-- 우측 상단: 크롤링 업데이트 현황 통계 위젯 & 단골 맛집 등록 버튼 -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shrink-0">
+                <div class="bg-white/95 backdrop-blur border border-rose-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span>하이브리드 수집 현황</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
+                      업데이트: <span id="crawl-stat-date">2026.10.27</span>
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <span>오늘 수집: <strong id="crawl-stat-today" class="font-black text-rose-600">182</strong>곳</span>
+                    <span class="text-slate-300">|</span>
+                    <span>누적 검증: <strong id="crawl-stat-total" class="font-black text-slate-900">354</strong> / <span id="crawl-stat-target">5,802</span>곳</span>
+                  </div>
+                </div>
+
+                <button onclick="app.openCreateRestaurantModal()" class="shrink-0 px-4 py-2.5 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm transition flex items-center justify-center gap-1.5">
+                  <i class="fa-solid fa-plus"></i>
+                  <span>내 단골 맛집 등록</span>
+                </button>
+              </div>
             </div>
 
             <!-- 네이버/카카오/구글 실시간 맛집 즉시 추출 검색바 -->
