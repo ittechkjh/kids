@@ -1708,7 +1708,8 @@ class DodamCommunityApp {
     if (statDate) statDate.textContent = meta.lastUpdated;
     if (statToday) statToday.textContent = (meta.todayCount || 187).toLocaleString();
     if (statTotal) statTotal.textContent = (meta.totalCount || 390).toLocaleString();
-    if (statTarget) statTarget.textContent = (meta.targetCount || 5000).toLocaleString();
+    const totalRestaurantsCount = window.DODAM_NATIONWIDE_RESTAURANTS ? window.DODAM_NATIONWIDE_RESTAURANTS.length : (meta.targetCount || 5000);
+    if (statTarget) statTarget.textContent = totalRestaurantsCount.toLocaleString();
 
     const filtered = this.getFilteredRestaurants();
     if (badgeEl) badgeEl.textContent = filtered.length.toLocaleString();
