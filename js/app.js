@@ -1311,7 +1311,8 @@ class DodamCommunityApp {
     if (r.sources && r.sources.naver && r.sources.kakao && r.sources.google) {
       return r.sources;
     }
-    const query = encodeURIComponent(`${r.name} ${r.district || ''}`);
+    const cleanName = (r.name || '').replace(/\s*\([^)]*\)/g, '').trim();
+    const query = encodeURIComponent(cleanName);
     const baseRating = Number(r.overallRating) || 4.5;
     const totalReviews = Number(r.reviewCount) || 5200;
 
