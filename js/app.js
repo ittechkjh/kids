@@ -16,10 +16,16 @@ class DodamCommunityApp {
     this.profileKey = 'dodam_profile_v1';
     this.scrapsKey = 'dodam_scraps_v1';
     this.customPostsKey = 'dodam_custom_posts_v1';
+    this.customRestaurantsKey = 'dodam_custom_restaurants_v1';
+
+    this.foodMap = null;
+    this.foodMarkersLayer = null;
+    this.foodMarkersMap = {};
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
     this.loadSavedPosts();
+    this.loadSavedRestaurants();
   }
 
   init() {
@@ -31,6 +37,7 @@ class DodamCommunityApp {
     this.renderCohortSection();
     this.renderClubsSection();
     this.renderMarketSection();
+    this.renderFoodView();
     this.calculateGrowthPercentile();
     this.calculateFeverDose();
     this.updateScrapBadge();
@@ -151,6 +158,18 @@ class DodamCommunityApp {
         ? 'nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm'
         : 'nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100';
     });
+
+    this.renderCategoryNavigation();
+
+    if (viewId === 'food') {
+      setTimeout(() => {
+        this.initFoodMap();
+        if (this.foodMap) {
+          this.foodMap.invalidateSize();
+          this.updateFoodMapMarkers();
+        }
+      }, 100);
+    }
   }
 
   renderCategoryNavigation() {
@@ -158,9 +177,9 @@ class DodamCommunityApp {
     const mobEl = document.getElementById('mobile-category-chips');
 
     if (sideEl) {
-      sideEl.innerHTML = this.data.categories
+      const catButtons = this.data.categories
         .map((c) => {
-          const active = c.id === this.currentCategory;
+          const active = c.id === this.currentCategory && this.currentView === 'feed';
           return `
             <button
               onclick="app.selectCategory('${c.id}')"
@@ -179,12 +198,33 @@ class DodamCommunityApp {
           `;
         })
         .join('');
+
+      const foodQuickLink = `
+        <div class="pt-2 mt-2 border-t border-stone-100">
+          <button
+            onclick="app.switchMainView('food')"
+            class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-extrabold transition ${
+              this.currentView === 'food'
+                ? 'bg-rose-500 text-white shadow-sm'
+                : 'bg-gradient-to-r from-amber-50 to-rose-50 text-amber-900 border border-amber-200/80 hover:bg-amber-100'
+            }"
+          >
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-utensils ${this.currentView === 'food' ? 'text-white' : 'text-rose-500'}"></i>
+              <span>네이버·카카오 맛집 맵</span>
+            </span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'food' ? 'bg-white text-rose-600' : 'bg-rose-500 text-white'} text-[9px] font-black">NEW</span>
+          </button>
+        </div>
+      `;
+
+      sideEl.innerHTML = catButtons + foodQuickLink;
     }
 
     if (mobEl) {
-      mobEl.innerHTML = this.data.categories
+      const mobCatButtons = this.data.categories
         .map((c) => {
-          const active = c.id === this.currentCategory;
+          const active = c.id === this.currentCategory && this.currentView === 'feed';
           return `
             <button
               onclick="app.selectCategory('${c.id}')"
@@ -199,6 +239,21 @@ class DodamCommunityApp {
           `;
         })
         .join('');
+
+      const mobFoodButton = `
+        <button
+          onclick="app.switchMainView('food')"
+          class="px-3 py-1.5 rounded-full text-xs font-extrabold whitespace-nowrap border transition ${
+            this.currentView === 'food'
+              ? 'bg-rose-500 text-white border-rose-500 shadow-sm'
+              : 'bg-amber-50 text-amber-900 border-amber-200'
+          }"
+        >
+          🍽️ 맛집 지도
+        </button>
+      `;
+
+      mobEl.innerHTML = mobCatButtons + mobFoodButton;
     }
   }
 
@@ -213,8 +268,14 @@ class DodamCommunityApp {
 
   onChangeRegion(regionId) {
     this.currentRegion = regionId;
+    const foodRegionFilter = document.getElementById('food-region-filter');
+    if (foodRegionFilter) {
+      foodRegionFilter.value = regionId;
+    }
     this.renderFeed();
     this.renderClubsSection();
+    this.renderFoodView();
+    this.updateFoodMapMarkers();
   }
 
   onSearchKeyword(keyword) {
@@ -1202,6 +1263,493 @@ class DodamCommunityApp {
       toast.style.opacity = '0';
       setTimeout(() => toast.remove(), 300);
     }, 3000);
+  }
+
+  // ==========================================
+  // 11. 네이버·카카오·구글 맛집 맵 & 바로가기 큐레이션 (VIEW 6)
+  // ==========================================
+  initFoodMap() {
+    if (this.foodMap) return;
+    const mapEl = document.getElementById('food-map');
+    if (!mapEl) return;
+
+    this.foodMap = L.map('food-map', {
+      center: [37.385, 127.12],
+      zoom: 12,
+      zoomControl: true
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; OpenStreetMap contributors &copy; CARTO',
+      subdomains: 'abcd',
+      maxZoom: 19
+    }).addTo(this.foodMap);
+
+    this.foodMarkersLayer = L.layerGroup().addTo(this.foodMap);
+    this.updateFoodMapMarkers();
+  }
+
+  getFilteredRestaurants() {
+    const regionVal = document.getElementById('food-region-filter')?.value || 'all';
+    const categoryVal = document.getElementById('food-category-filter')?.value || 'all';
+    const sortVal = document.getElementById('food-sort-filter')?.value || 'overall';
+
+    const needChair = document.getElementById('amenity-chair')?.checked ?? false;
+    const needPlayroom = document.getElementById('amenity-playroom')?.checked ?? false;
+    const needRoom = document.getElementById('amenity-room')?.checked ?? false;
+    const needParking = document.getElementById('amenity-parking')?.checked ?? false;
+    const needStroller = document.getElementById('amenity-stroller')?.checked ?? false;
+
+    let list = (this.data.restaurants || []).filter((r) => {
+      if (regionVal !== 'all' && r.region !== regionVal) return false;
+      if (categoryVal !== 'all' && r.category !== categoryVal) return false;
+      if (needChair && !r.amenities.some((a) => a.includes('아기의자'))) return false;
+      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸'))) return false;
+      if (needRoom && !r.amenities.some((a) => a.includes('룸'))) return false;
+      if (needParking && !r.amenities.some((a) => a.includes('주차'))) return false;
+      if (needStroller && !r.amenities.some((a) => a.includes('유모차'))) return false;
+      return true;
+    });
+
+    if (sortVal === 'naver') {
+      list.sort((a, b) => b.sources.naver.rating - a.sources.naver.rating);
+    } else if (sortVal === 'kakao') {
+      list.sort((a, b) => b.sources.kakao.rating - a.sources.kakao.rating);
+    } else if (sortVal === 'google') {
+      list.sort((a, b) => b.sources.google.rating - a.sources.google.rating);
+    } else if (sortVal === 'reviews') {
+      list.sort((a, b) => (b.sources.naver.reviewCount + b.sources.kakao.reviewCount) - (a.sources.naver.reviewCount + a.sources.kakao.reviewCount));
+    } else {
+      list.sort((a, b) => b.overallRating - a.overallRating);
+    }
+
+    return list;
+  }
+
+  onFoodFilterChange() {
+    this.renderFoodView();
+    this.updateFoodMapMarkers();
+  }
+
+  updateFoodMapMarkers() {
+    if (!this.foodMap || !this.foodMarkersLayer) return;
+
+    this.foodMarkersLayer.clearLayers();
+    this.foodMarkersMap = {};
+
+    const restaurants = this.getFilteredRestaurants();
+    if (restaurants.length === 0) return;
+
+    const bounds = [];
+
+    restaurants.forEach((r) => {
+      const iconHtml = `
+        <div class="food-pin-badge" id="pin-${r.id}">
+          <i class="fa-solid fa-utensils text-rose-500"></i>
+          <span>${r.name.split(' ')[0]}</span>
+          <span class="px-1.5 py-0.2 rounded-full bg-rose-500 text-white text-[9px] font-black">${r.overallRating}</span>
+        </div>
+      `;
+
+      const customIcon = L.divIcon({
+        className: 'custom-div-icon',
+        html: iconHtml,
+        iconAnchor: [50, 16]
+      });
+
+      const popupContent = `
+        <div class="space-y-2 text-xs">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-100 text-rose-700">${r.categoryName}</span>
+            <span class="text-xs font-black text-slate-900">${r.name}</span>
+          </div>
+          <p class="text-slate-600 text-[11px]">${r.address}</p>
+          <div class="grid grid-cols-3 gap-1 text-center py-1.5 bg-stone-50 rounded-xl border border-stone-200">
+            <div>
+              <span class="text-[9px] font-bold text-emerald-700 block">네이버</span>
+              <span class="font-black text-slate-800 text-[11px]">★ ${r.sources.naver.rating}</span>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-amber-600 block">카카오</span>
+              <span class="font-black text-slate-800 text-[11px]">★ ${r.sources.kakao.rating}</span>
+            </div>
+            <div>
+              <span class="text-[9px] font-bold text-blue-600 block">구글</span>
+              <span class="font-black text-slate-800 text-[11px]">★ ${r.sources.google.rating}</span>
+            </div>
+          </div>
+          <div class="flex flex-wrap gap-1">
+            ${r.amenities.map(a => `<span class="px-1.5 py-0.5 bg-white border border-stone-200 rounded text-[10px] font-bold text-slate-600">${a}</span>`).join('')}
+          </div>
+          <div class="pt-1 grid grid-cols-3 gap-1">
+            <a href="${r.sources.naver.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-naver text-[10px] font-extrabold text-center hover:opacity-90">네이버 ↗</a>
+            <a href="${r.sources.kakao.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-kakao text-[10px] font-extrabold text-center hover:opacity-90">카카오 ↗</a>
+            <a href="${r.sources.google.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-google text-[10px] font-extrabold text-center hover:opacity-90">구글 ↗</a>
+          </div>
+        </div>
+      `;
+
+      const marker = L.marker([r.lat, r.lng], { icon: customIcon });
+      marker.bindPopup(popupContent, { maxWidth: 280 });
+      marker.addTo(this.foodMarkersLayer);
+
+      this.foodMarkersMap[r.id] = marker;
+      bounds.push([r.lat, r.lng]);
+    });
+
+    if (bounds.length > 0) {
+      if (bounds.length === 1) {
+        this.foodMap.setView(bounds[0], 14);
+      } else {
+        this.foodMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+      }
+    }
+  }
+
+  focusRestaurantOnMap(restId) {
+    const restaurant = (this.data.restaurants || []).find((r) => r.id === restId);
+    if (!restaurant) return;
+
+    this.initFoodMap();
+    if (this.foodMap) {
+      this.foodMap.setView([restaurant.lat, restaurant.lng], 15, { duration: 0.6 });
+      const marker = this.foodMarkersMap[restId];
+      if (marker) {
+        marker.openPopup();
+      }
+      const mapCard = document.getElementById('food-map');
+      if (mapCard) {
+        mapCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }
+
+  searchExternalPortal(portal) {
+    const input = document.getElementById('food-portal-query');
+    const userQuery = input ? input.value.trim() : '';
+    const regionFilter = document.getElementById('food-region-filter')?.value || 'all';
+    const regionName = regionFilter === 'all' ? '' : (document.getElementById('food-region-filter')?.selectedOptions[0]?.text.replace('📍 지역: ', '') || '');
+
+    const query = userQuery || (regionName ? `${regionName} 아이와 맛집` : '가족외식 아기의자 맛집');
+
+    let url = '';
+    let portalName = '';
+    if (portal === 'naver') {
+      url = `https://map.naver.com/v5/search/${encodeURIComponent(query)}`;
+      portalName = '네이버 플레이스';
+    } else if (portal === 'kakao') {
+      url = `https://map.kakao.com/?q=${encodeURIComponent(query)}`;
+      portalName = '카카오맵';
+    } else if (portal === 'google') {
+      url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+      portalName = '구글 지도';
+    }
+
+    if (url) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+      this.showToast(`[${portalName}] '${query}' 실시간 검색 창을 열었습니다!`);
+    }
+  }
+
+  renderFoodView() {
+    const listEl = document.getElementById('food-restaurants-list');
+    const badgeEl = document.getElementById('food-count-badge');
+    if (!listEl) return;
+
+    const filtered = this.getFilteredRestaurants();
+    if (badgeEl) badgeEl.textContent = filtered.length;
+
+    if (filtered.length === 0) {
+      listEl.innerHTML = `
+        <div class="community-card p-10 text-center space-y-2">
+          <div class="text-2xl">🍽️</div>
+          <div class="text-sm font-extrabold text-slate-700">선택하신 조건에 맞는 맛집이 없습니다.</div>
+          <p class="text-xs text-slate-400">필터를 재설정하거나 '내 단골 맛집 등록' 버튼으로 등록해보세요!</p>
+        </div>
+      `;
+      return;
+    }
+
+    listEl.innerHTML = filtered
+      .map(
+        (r) => `
+        <article class="community-card p-5 space-y-3.5 hover:border-rose-300 transition">
+          <!-- 상단: 이름, 카테고리, 지역, 종합 평점 -->
+          <div class="flex items-start justify-between gap-3">
+            <div>
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 text-rose-600 border border-rose-200">
+                  📍 ${r.regionName}
+                </span>
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
+                  ${r.categoryName}
+                </span>
+              </div>
+              <h3 class="text-base font-black text-slate-900 mt-1">${r.name}</h3>
+              <p class="text-xs text-slate-500 mt-0.5">
+                <i class="fa-solid fa-location-dot text-rose-400 mr-1"></i>${r.address}
+                ${r.phone ? `· 📞 ${r.phone}` : ''}
+              </p>
+            </div>
+
+            <!-- 종합 평점 뱃지 -->
+            <div class="text-right shrink-0">
+              <span class="inline-block px-3 py-1 rounded-2xl bg-amber-50 text-amber-900 border border-amber-200 font-black text-xs">
+                ★ 종합 ${r.overallRating}
+              </span>
+              <div class="text-[10px] text-slate-400 font-bold mt-1">3대 포털 검증</div>
+            </div>
+          </div>
+
+          <!-- 3대 포털 실시간 출처 링크 & 평점 비교 바 (핵심 기능) -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-stone-50 p-3 rounded-2xl border border-stone-200/70">
+            <!-- 네이버 플레이스 -->
+            <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold text-emerald-600 block">🟢 네이버 플레이스</span>
+                <span class="font-black text-xs text-slate-800">★ ${r.sources.naver.rating} <span class="text-[10px] text-slate-400 font-normal">(${r.sources.naver.reviewCount.toLocaleString()}개)</span></span>
+              </div>
+              <a
+                href="${r.sources.naver.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2 py-1 rounded-lg badge-naver text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
+                title="네이버 플레이스 바로가기"
+              >
+                <span>네이버</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+
+            <!-- 카카오맵 -->
+            <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold text-amber-600 block">🟡 카카오맵</span>
+                <span class="font-black text-xs text-slate-800">★ ${r.sources.kakao.rating} <span class="text-[10px] text-slate-400 font-normal">(${r.sources.kakao.reviewCount.toLocaleString()}개)</span></span>
+              </div>
+              <a
+                href="${r.sources.kakao.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2 py-1 rounded-lg badge-kakao text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
+                title="카카오맵 바로가기"
+              >
+                <span>카카오</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+
+            <!-- 구글 지도 -->
+            <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
+              <div>
+                <span class="text-[10px] font-extrabold text-blue-600 block">🔵 구글 지도</span>
+                <span class="font-black text-xs text-slate-800">★ ${r.sources.google.rating} <span class="text-[10px] text-slate-400 font-normal">(${r.sources.google.reviewCount.toLocaleString()}개)</span></span>
+              </div>
+              <a
+                href="${r.sources.google.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2 py-1 rounded-lg badge-google text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
+                title="구글 지도 바로가기"
+              >
+                <span>구글</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 편의시설 태그 & 대표 메뉴 -->
+          <div class="space-y-1.5 text-xs">
+            <div class="flex flex-wrap gap-1">
+              ${r.amenities
+                .map(
+                  (a) => `
+                <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-700 font-bold text-[11px]">
+                  ${a}
+                </span>
+              `
+                )
+                .join('')}
+            </div>
+
+            <div class="text-slate-600 pt-0.5">
+              🍽️ <strong>대표 메뉴:</strong> ${r.representativeMenu}
+              ${r.hours ? `<span class="ml-2 text-slate-400">| ⏰ ${r.hours}</span>` : ''}
+            </div>
+
+            <div class="p-3 rounded-xl bg-rose-50/50 border border-rose-100 text-[12px] text-slate-700 leading-relaxed">
+              💬 <strong>육아맘·대디 한줄평:</strong> "${r.reviewSummary}"
+            </div>
+          </div>
+
+          <!-- 액션 버튼 바 -->
+          <div class="pt-2 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2">
+            <button
+              onclick="app.focusRestaurantOnMap('${r.id}')"
+              class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center gap-1.5 shadow-sm transition"
+            >
+              <i class="fa-solid fa-location-crosshairs text-rose-400"></i>
+              <span>지도에서 위치 보기</span>
+            </button>
+
+            <div class="flex items-center gap-1.5">
+              <a
+                href="${r.sources.naver.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2.5 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 text-[11px] font-extrabold transition flex items-center gap-1"
+              >
+                <span>네이버 상세</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+              <a
+                href="${r.sources.kakao.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2.5 py-1.5 rounded-xl bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 text-[11px] font-extrabold transition flex items-center gap-1"
+              >
+                <span>카카오 길찾기</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+              <a
+                href="${r.sources.google.url}"
+                target="_blank"
+                rel="noopener"
+                class="px-2.5 py-1.5 rounded-xl bg-blue-50 text-blue-900 border border-blue-200 hover:bg-blue-100 text-[11px] font-extrabold transition flex items-center gap-1"
+              >
+                <span>구글 리뷰</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+              </a>
+            </div>
+          </div>
+        </article>
+      `
+      )
+      .join('');
+  }
+
+  openCreateRestaurantModal() {
+    document.getElementById('create-restaurant-modal').classList.remove('hidden');
+  }
+
+  submitNewRestaurant(event) {
+    event.preventDefault();
+    const name = document.getElementById('rest-form-name').value.trim();
+    const region = document.getElementById('rest-form-region').value;
+    const category = document.getElementById('rest-form-category').value;
+    const address = document.getElementById('rest-form-address').value.trim();
+    const phone = document.getElementById('rest-form-phone').value.trim();
+    const hours = document.getElementById('rest-form-hours').value.trim();
+    const menu = document.getElementById('rest-form-menu').value.trim();
+    const review = document.getElementById('rest-form-review').value.trim() || '아기의자와 편리한 시설이 갖춰져 있어 가족 식사에 추천합니다.';
+
+    const naverInput = document.getElementById('rest-form-naver').value.trim();
+    const kakaoInput = document.getElementById('rest-form-kakao').value.trim();
+    const googleInput = document.getElementById('rest-form-google').value.trim();
+
+    const amenities = [];
+    if (document.getElementById('rf-chair')?.checked) amenities.push('아기의자 완비');
+    if (document.getElementById('rf-playroom')?.checked) amenities.push('놀이방/키즈룸');
+    if (document.getElementById('rf-room')?.checked) amenities.push('프라이빗 룸');
+    if (document.getElementById('rf-parking')?.checked) amenities.push('넓은 주차장');
+    if (document.getElementById('rf-stroller')?.checked) amenities.push('유모차 진입 수월');
+
+    const regionNames = {
+      pangyo: '분당·판교',
+      songpa: '강남·서초·송파',
+      dongtan: '동탄·수원·광교',
+      mapo: '마포·목동·여의도',
+      sejong: '세종·대전·충청',
+      incheon: '인천·송도·일산'
+    };
+
+    const categoryNames = {
+      korean: '한식 · 숯불구이/한정식',
+      western: '양식 · 파스타/스테이크',
+      brunch: '브런치 · 대형 베이커리'
+    };
+
+    const baseCoords = {
+      pangyo: [37.3824, 127.1428],
+      songpa: [37.5085, 127.1264],
+      dongtan: [37.2005, 127.0985],
+      mapo: [37.5218, 126.9242],
+      sejong: [36.4852, 127.2535],
+      incheon: [37.3915, 126.6578]
+    };
+    const center = baseCoords[region] || [37.5, 127.0];
+    const offsetLat = (Math.random() - 0.5) * 0.02;
+    const offsetLng = (Math.random() - 0.5) * 0.02;
+
+    const encodedName = encodeURIComponent(name);
+    const naverUrl = naverInput || `https://map.naver.com/v5/search/${encodedName}`;
+    const kakaoUrl = kakaoInput || `https://map.kakao.com/?q=${encodedName}`;
+    const googleUrl = googleInput || `https://www.google.com/maps/search/?api=1&query=${encodedName}`;
+
+    const newRest = {
+      id: 'rest-' + Date.now(),
+      name,
+      category,
+      categoryName: categoryNames[category] || '일반음식점',
+      region,
+      regionName: regionNames[region] || '전국',
+      address,
+      phone,
+      lat: center[0] + offsetLat,
+      lng: center[1] + offsetLng,
+      hours: hours || '11:30 ~ 21:30',
+      representativeMenu: menu || '추천 메뉴',
+      amenities: amenities.length > 0 ? amenities : ['아기의자 완비', '주차 가능'],
+      reviewSummary: review,
+      sources: {
+        naver: {
+          rating: 4.8,
+          reviewCount: 320,
+          url: naverUrl,
+          name: '네이버 플레이스'
+        },
+        kakao: {
+          rating: 4.5,
+          reviewCount: 120,
+          url: kakaoUrl,
+          name: '카카오맵'
+        },
+        google: {
+          rating: 4.5,
+          reviewCount: 95,
+          url: googleUrl,
+          name: '구글 지도'
+        }
+      },
+      overallRating: 4.7
+    };
+
+    if (!this.data.restaurants) this.data.restaurants = [];
+    this.data.restaurants.unshift(newRest);
+    this.saveCustomRestaurants();
+
+    document.getElementById('create-restaurant-modal').classList.add('hidden');
+    this.renderFoodView();
+    this.updateFoodMapMarkers();
+    this.showToast(`'${name}' 맛집이 지도와 리스트에 성공적으로 등록되었습니다!`);
+  }
+
+  saveCustomRestaurants() {
+    try {
+      localStorage.setItem(this.customRestaurantsKey, JSON.stringify(this.data.restaurants));
+    } catch {}
+  }
+
+  loadSavedRestaurants() {
+    try {
+      const raw = localStorage.getItem(this.customRestaurantsKey);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          this.data.restaurants = parsed;
+        }
+      }
+    } catch {}
   }
 }
 

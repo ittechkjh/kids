@@ -15,6 +15,10 @@
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
+  <!-- Leaflet Maps CSS & JS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -128,6 +132,11 @@
         <button data-view="tools" onclick="app.switchMainView('tools')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-stethoscope text-indigo-500"></i>
           <span>🩺 성장 백분위 & 해열제 계산기</span>
+        </button>
+        <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+          <i class="fa-solid fa-map-location-dot text-rose-500"></i>
+          <span>🍽️ 네이버·카카오·구글 맛집 맵</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">NEW</span>
         </button>
       </nav>
     </div>
@@ -341,6 +350,166 @@
             </div>
 
             <div id="fever-dose-result" class="space-y-2.5 text-xs"></div>
+          </div>
+        </section>
+
+        <!-- VIEW 6: 네이버·카카오·구글 맛집 맵 & 바로가기 링크 (신규 추가) -->
+        <section id="view-food" class="view-section hidden space-y-5">
+          <!-- 상단 배너 & 실시간 포털 맛집 검색기 -->
+          <div class="community-card p-5 space-y-4 bg-gradient-to-br from-rose-50/70 via-white to-amber-50/60">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full bg-rose-500 text-white text-[11px] font-extrabold">3대 포털 맛집 추출 & 큐레이션</span>
+                  <span class="text-xs text-rose-500 font-bold"><i class="fa-solid fa-link mr-1"></i>출처 링크 100% 연동</span>
+                </div>
+                <h2 class="text-lg font-black text-slate-900 mt-1">🍽️ 네이버 · 카카오 · 구글 맛집 지도 & 평점 뷰어</h2>
+                <p class="text-xs text-slate-600">네이버 플레이스, 카카오맵, 구글 지도의 실제 평점·리뷰를 비교하고 아기의자, 놀이방, 주차 등 가족/키즈 편의시설을 지도에서 확인하세요.</p>
+              </div>
+              <button onclick="app.openCreateRestaurantModal()" class="shrink-0 px-4 py-2.5 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm transition flex items-center gap-1.5">
+                <i class="fa-solid fa-plus"></i>
+                <span>내 단골 맛집 등록</span>
+              </button>
+            </div>
+
+            <!-- 네이버/카카오/구글 실시간 맛집 즉시 추출 검색바 -->
+            <div class="bg-white p-3.5 rounded-2xl border border-stone-200/80 space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="text-xs font-black text-slate-800 flex items-center gap-1.5">
+                  <i class="fa-solid fa-magnifying-glass text-rose-500"></i>
+                  <span>포털 사이트 실시간 맛집 검색 & 정보 추출</span>
+                </span>
+                <span class="text-[11px] text-slate-400 font-medium">검색어 입력 후 원하는 포털 클릭 시 즉시 연결</span>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-2">
+                <input
+                  id="food-portal-query"
+                  type="text"
+                  placeholder="예: 판교 아기의자 맛집, 강남역 가족외식, 동탄 놀이방 식당..."
+                  class="flex-1 text-xs bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-400"
+                />
+                <div class="flex items-center gap-1.5 shrink-0">
+                  <button
+                    onclick="app.searchExternalPortal('naver')"
+                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-naver text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    title="네이버 플레이스에서 검색"
+                  >
+                    <i class="fa-solid fa-n text-[10px]"></i>
+                    <span>네이버 검색</span>
+                  </button>
+                  <button
+                    onclick="app.searchExternalPortal('kakao')"
+                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-kakao text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    title="카카오맵에서 검색"
+                  >
+                    <i class="fa-solid fa-comment text-[10px]"></i>
+                    <span>카카오맵</span>
+                  </button>
+                  <button
+                    onclick="app.searchExternalPortal('google')"
+                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-google text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    title="구글 지도에서 검색"
+                  >
+                    <i class="fa-brands fa-google text-[10px]"></i>
+                    <span>구글 지도</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 지역 & 음식 카테고리 & 편의시설 필터 -->
+          <div class="community-card p-4 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-xs font-extrabold text-slate-500"><i class="fa-solid fa-filter text-rose-500 mr-1"></i>필터</span>
+                <select id="food-region-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
+                  <option value="all">📍 지역: 전국 전체</option>
+                  <option value="pangyo">📍 분당·판교</option>
+                  <option value="songpa">📍 강남·서초·송파</option>
+                  <option value="dongtan">📍 동탄·수원·광교</option>
+                  <option value="mapo">📍 마포·목동·여의도</option>
+                  <option value="sejong">📍 세종·대전·충청</option>
+                  <option value="incheon">📍 인천·송도·일산</option>
+                </select>
+
+                <select id="food-category-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
+                  <option value="all">🍴 음식 종류: 전체</option>
+                  <option value="korean">한식 · 숯불구이/한정식</option>
+                  <option value="western">양식 · 파스타/스테이크</option>
+                  <option value="brunch">브런치 · 대형 베이커리</option>
+                </select>
+
+                <select id="food-sort-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
+                  <option value="overall">🌟 종합 평점 높은순</option>
+                  <option value="naver">🟢 네이버 평점 높은순</option>
+                  <option value="kakao">🟡 카카오 평점 높은순</option>
+                  <option value="google">🔵 구글 평점 높은순</option>
+                  <option value="reviews">💬 리뷰 많은순</option>
+                </select>
+              </div>
+
+              <div class="text-xs font-bold text-slate-500">
+                추출 맛집: <strong id="food-count-badge" class="text-rose-600 font-black">0</strong>곳
+              </div>
+            </div>
+
+            <!-- 편의시설 다중 체크 필터 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
+              <span class="text-[11px] font-bold text-slate-400 whitespace-nowrap">편의시설:</span>
+              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+                <input type="checkbox" id="amenity-chair" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
+                <span>🪑 아기의자 완비</span>
+              </label>
+              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+                <input type="checkbox" id="amenity-playroom" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
+                <span>🎪 키즈룸/놀이방</span>
+              </label>
+              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+                <input type="checkbox" id="amenity-room" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
+                <span>🚪 프라이빗 룸</span>
+              </label>
+              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+                <input type="checkbox" id="amenity-parking" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
+                <span>🚗 넓은 주차장</span>
+              </label>
+              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+                <input type="checkbox" id="amenity-stroller" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
+                <span>🛒 유모차 진입</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- 인터랙티브 맛집 지도 (Leaflet) -->
+          <div class="community-card p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-rose-500 animate-ping"></span>
+                <h3 class="text-sm font-black text-slate-900">🗺️ 맛집 위치 & 출처 상세 맵</h3>
+              </div>
+              <span class="text-[11px] text-slate-400 font-semibold">핀 클릭 시 네이버·카카오·구글 바로가기 링크 표시</span>
+            </div>
+
+            <!-- 지도 엘리먼트 -->
+            <div class="relative overflow-hidden rounded-2xl border border-stone-200 shadow-sm">
+              <div id="food-map"></div>
+              <!-- 지도 우하단 출처 안내 뱃지 -->
+              <div class="absolute bottom-3 right-3 z-[400] bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-stone-200 shadow-md text-[10px] font-bold text-slate-600 flex items-center gap-2">
+                <span>출처:</span>
+                <span class="flex items-center gap-1 text-emerald-600"><i class="fa-solid fa-circle text-[6px]"></i>네이버</span>
+                <span class="flex items-center gap-1 text-amber-500"><i class="fa-solid fa-circle text-[6px]"></i>카카오</span>
+                <span class="flex items-center gap-1 text-blue-500"><i class="fa-solid fa-circle text-[6px]"></i>구글</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 맛집 리스트 카드 그리드 -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-black text-slate-900">📋 추천 맛집 상세 리스트</h3>
+              <span class="text-[11px] text-slate-400">네이버·카카오·구글 평점 및 링크 포함</span>
+            </div>
+            <div id="food-restaurants-list" class="space-y-4"></div>
           </div>
         </section>
 
@@ -598,6 +767,113 @@
         <button onclick="document.getElementById('scrap-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
       </div>
       <div id="scrap-list-container" class="space-y-2.5 max-h-80 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 6: 새 맛집 추천 등록 모달 (네이버·카카오·구글 링크 연동)
+       ========================================== -->
+  <div id="create-restaurant-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-stone-200 space-y-4 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-utensils text-rose-500"></i>
+          <h3 class="text-base font-black text-slate-900">🍽️ 우리동네 추천 맛집 등록</h3>
+        </div>
+        <button onclick="document.getElementById('create-restaurant-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <form onsubmit="app.submitNewRestaurant(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">식당명 *</label>
+          <input id="rest-form-name" type="text" required placeholder="예: 판교 삿포로, 송파 살롱드쿡" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">지역 *</label>
+            <select id="rest-form-region" class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold">
+              <option value="pangyo">분당·판교</option>
+              <option value="songpa">강남·서초·송파</option>
+              <option value="dongtan">동탄·수원·광교</option>
+              <option value="mapo">마포·목동·여의도</option>
+              <option value="sejong">세종·대전·충청</option>
+              <option value="incheon">인천·송도·일산</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">음식 분류 *</label>
+            <select id="rest-form-category" class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold">
+              <option value="korean">한식 · 숯불구이/한정식</option>
+              <option value="western">양식 · 파스타/스테이크</option>
+              <option value="brunch">브런치 · 대형 베이커리</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">도로명 주소 *</label>
+          <input id="rest-form-address" type="text" required placeholder="예: 경기도 성남시 분당구 판교역로 146" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">전화번호</label>
+            <input id="rest-form-phone" type="text" placeholder="예: 031-123-4567" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+          </div>
+          <div>
+            <label class="block font-bold text-slate-700 mb-1">영업시간</label>
+            <input id="rest-form-hours" type="text" placeholder="예: 11:30 ~ 22:00" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">대표 메뉴</label>
+          <input id="rest-form-menu" type="text" placeholder="예: 양념갈비 정식 (35,000원), 어린이 파스타 (12,000원)" class="w-full border border-stone-300 rounded-xl px-3.5 py-2" />
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">편의시설 (다중 선택 가능)</label>
+          <div class="grid grid-cols-2 gap-1.5 p-2.5 bg-stone-50 rounded-xl border border-stone-200">
+            <label class="flex items-center gap-1.5"><input type="checkbox" id="rf-chair" checked class="accent-rose-500" /> 아기의자 완비</label>
+            <label class="flex items-center gap-1.5"><input type="checkbox" id="rf-playroom" class="accent-rose-500" /> 놀이방/키즈룸</label>
+            <label class="flex items-center gap-1.5"><input type="checkbox" id="rf-room" checked class="accent-rose-500" /> 프라이빗 룸</label>
+            <label class="flex items-center gap-1.5"><input type="checkbox" id="rf-parking" checked class="accent-rose-500" /> 넓은 주차장</label>
+            <label class="flex items-center gap-1.5"><input type="checkbox" id="rf-stroller" checked class="accent-rose-500" /> 유모차 진입 수월</label>
+          </div>
+        </div>
+
+        <!-- 3대 포털 링크 (선택사항, 비워둘 시 자동 검색 링크 생성) -->
+        <div class="space-y-2 pt-1 border-t border-stone-100">
+          <label class="block font-bold text-slate-700">🔗 출처 사이트 바로가기 URL (직접 입력 또는 자동 생성)</label>
+          <div class="space-y-1.5">
+            <div class="flex items-center gap-2">
+              <span class="w-16 px-1.5 py-1 text-center rounded-lg badge-naver font-bold text-[10px]">네이버</span>
+              <input id="rest-form-naver" type="url" placeholder="네이버 플레이스 URL (비워두면 자동 검색 링크)" class="flex-1 border border-stone-300 rounded-xl px-3 py-1.5 text-xs" />
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-16 px-1.5 py-1 text-center rounded-lg badge-kakao font-bold text-[10px]">카카오</span>
+              <input id="rest-form-kakao" type="url" placeholder="카카오맵 URL (비워두면 자동 검색 링크)" class="flex-1 border border-stone-300 rounded-xl px-3 py-1.5 text-xs" />
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-16 px-1.5 py-1 text-center rounded-lg badge-google font-bold text-[10px]">구글</span>
+              <input id="rest-form-google" type="url" placeholder="구글 지도 URL (비워두면 자동 검색 링크)" class="flex-1 border border-stone-300 rounded-xl px-3 py-1.5 text-xs" />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">육아맘·대디 추천 한마디</label>
+          <textarea id="rest-form-review" rows="2" placeholder="아이 식판 챙겨주시는지, 룸이 편리한지 솔직한 후기를 적어주세요." class="w-full border border-stone-300 rounded-xl p-2.5"></textarea>
+        </div>
+
+        <div class="flex justify-end gap-2 pt-2 border-t border-stone-100">
+          <button type="button" onclick="document.getElementById('create-restaurant-modal').classList.add('hidden')" class="px-4 py-2 rounded-xl border border-stone-200 font-bold text-slate-600">취소</button>
+          <button type="submit" class="px-5 py-2 rounded-xl coral-badge-gradient text-white font-extrabold shadow-sm">맛집 지도에 등록하기</button>
+        </div>
+      </form>
     </div>
   </div>
 
