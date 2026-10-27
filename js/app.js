@@ -1308,11 +1308,35 @@ class DodamCommunityApp {
   }
 
   getRestaurantSources(r) {
-    if (r.sources && r.sources.naver && r.sources.kakao && r.sources.google) {
-      return r.sources;
-    }
-    const cleanName = (r.name || '').replace(/\s*\([^)]*\)/g, '').trim();
+    const rawName = r.name || '';
+    const cleanName = rawName
+      .replace(/\s*\([^)]*\)/g, '')
+      .replace(/\s*\/.*$/, '')
+      .trim();
     const query = encodeURIComponent(cleanName);
+
+    if (r.sources && r.sources.naver && r.sources.kakao && r.sources.google) {
+      const currentNaver = r.sources.naver.url || '';
+      const updatedNaver = currentNaver
+        .replace('/v5/search/', '/p/search/')
+        .replace(/%20%28.*%29/g, '');
+
+      return {
+        naver: {
+          ...r.sources.naver,
+          url: updatedNaver || `https://map.naver.com/p/search/${query}`
+        },
+        kakao: {
+          ...r.sources.kakao,
+          url: r.sources.kakao.url || `https://map.kakao.com/?q=${query}`
+        },
+        google: {
+          ...r.sources.google,
+          url: r.sources.google.url || `https://www.google.com/maps/search/?api=1&query=${query}`
+        }
+      };
+    }
+
     const baseRating = Number(r.overallRating) || 4.5;
     const totalReviews = Number(r.reviewCount) || 5200;
 
@@ -1328,7 +1352,7 @@ class DodamCommunityApp {
       naver: {
         rating: Number(naverRate),
         reviewCount: naverRev,
-        url: `https://map.naver.com/v5/search/${query}`,
+        url: `https://map.naver.com/p/search/${query}`,
         name: '네이버 플레이스'
       },
       kakao: {
@@ -1648,7 +1672,7 @@ class DodamCommunityApp {
     let url = '';
     let portalName = '';
     if (portal === 'naver') {
-      url = `https://map.naver.com/v5/search/${encodeURIComponent(query)}`;
+      url = `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
       portalName = '네이버 플레이스';
     } else if (portal === 'kakao') {
       url = `https://map.kakao.com/?q=${encodeURIComponent(query)}`;
@@ -1962,7 +1986,7 @@ class DodamCommunityApp {
     const offsetLng = (Math.random() - 0.5) * 0.02;
 
     const encodedName = encodeURIComponent(name);
-    const naverUrl = naverInput || `https://map.naver.com/v5/search/${encodedName}`;
+    const naverUrl = naverInput || `https://map.naver.com/p/search/${encodedName}`;
     const kakaoUrl = kakaoInput || `https://map.kakao.com/?q=${encodedName}`;
     const googleUrl = googleInput || `https://www.google.com/maps/search/?api=1&query=${encodedName}`;
 
