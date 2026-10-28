@@ -2193,44 +2193,63 @@ CONTEST_KEYWORDS = [
     "발명대회", "로봇대회", "올림피아드", "동요대회", "스피치대회", "콩쿠르", "웅변대회", "창작대회"
 ]
 
-def classify_board_item(title, default_board="festivals"):
+def classify_festival_category(title, loc="", desc=""):
     """
-    행사 제목을 분석하여 사생·백일장·코딩·발명·독서토론 등 대회 성격인 경우
-    자동으로 contests(전국대회 일정) 게시판으로 스마트 재분류
+    지역행사 & 볼거리를 10개 세부 카테고리로 고정밀 세분화
     """
+    t = f"{title} {loc} {desc}"
+    if any(k in t for k in ["마라톤", "달리기", "걷기대회", "키즈런", "걷기", "트레킹", "플로깅", "런트립"]):
+        return "sports_marathon", "가족마라톤·걷기", "🏃 가족마라톤"
+    if any(k in t for k in ["빛", "야경", "불꽃", "루미나리에", "등불", "드론쇼", "미디어아트", "야행", "별빛", "라이트", "일루미네이션"]):
+        return "festival_light", "빛·야경·드론쇼", "✨ 빛·야경축제"
+    if any(k in t for k in ["농장", "수확", "사과", "딸기", "감귤", "고구마", "갯벌", "밤", "포도", "감자", "농촌", "목장", "양떼", "낙농"]):
+        return "farm_harvest", "수확·농촌체험", "🍎 수확·농촌체험"
+    if any(k in t for k in ["과학관", "박물관", "미술관", "전시", "아쿠아리움", "천문대", "기념관", "체험관", "비엔날레", "엑스포", "수족관", "어린이박물관"]):
+        return "expo_science", "박물관·과학·전시", "🏛️ 박물관·과학·전시"
+    if any(k in t for k in ["국화", "단풍", "억새", "핑크뮬리", "꽃", "갈대", "가을", "봄", "장미", "연꽃", "매화", "벚꽃", "유채", "수국", "눈꽃"]):
+        return "festival_season", "꽃·단풍·계절축제", "🌸 계절·꽃축제"
+    if any(k in t for k in ["음식", "먹거리", "푸드", "김밥", "김치", "비빔밥", "빵", "수산물", "한우", "어부장터", "미식", "막걸리", "인삼", "송어", "빙어", "굴", "대게"]):
+        return "festival_food", "미식·먹거리축제", "🍱 미식·먹거리"
+    if any(k in t for k in ["전통", "역사", "한옥", "민속", "고궁", "유교", "성곽", "산성", "도자기", "한지", "문화재", "왕", "선비", "향교", "서원"]):
+        return "festival_tradition", "전통·역사문화", "🎎 전통·역사문화"
+    if any(k in t for k in ["공연", "뮤지컬", "인형극", "마술", "연극", "오케스트라", "버스킹", "영화제", "재즈", "오페라", "서커스"]):
+        return "festival_performance", "공연·음악·인형극", "🎭 공연·인형극"
+    if any(k in t for k in ["공원", "숲", "생태", "자연", "수목원", "휴양림", "습지", "호수", "둘레길", "올레길", "화원"]):
+        return "park_eco", "숲·공원 생태체험", "🌿 숲·공원 생태체험"
+    return "festival_culture", "지역 종합축제", "🎪 지역 종합축제"
+
+def classify_contest_category(title, org="", desc=""):
+    """
+    전국 대회일정을 10개 세부 카테고리로 고정밀 세분화
+    """
+    t = f"{title} {org} {desc}"
+    if any(k in t for k in ["로봇", "피지컬", "아두이노", "마이크로비트", "메이커", "물로켓", "에어로켓"]):
+        return "contest_robot", "로봇·메이커올림피아드", "🤖 로봇·메이커"
+    if any(k in t for k in ["코딩", "해커톤", "SW", "알고리즘", "소프트웨어", "게임", "개발", "앱", "엔트리", "스크래치", "파이썬"]):
+        return "contest_coding", "AI·코딩·SW대회", "💻 AI·코딩대회"
+    if any(k in t for k in ["영어", "스피치", "말하기", "영어토론"]):
+        return "contest_english", "영어·스피치대회", "🗣️ 영어스피치"
+    if any(k in t for k in ["수학", "퍼즐", "올림피아드", "수리탐구"]):
+        return "contest_math", "창의수학·올림피아드", "📐 창의수학"
+    if any(k in t for k in ["동요", "음악", "콩쿠르", "성악", "판소리", "합창", "피아노", "관현악"]):
+        return "contest_music", "동요·음악경연", "🎵 동요·음악경연"
+    if any(k in t for k in ["독서", "토론", "골든벨", "도서관", "인성토론", "독서감상문"]):
+        return "contest_reading", "독서토론·골든벨", "📖 독서토론·골든벨"
+    if any(k in t for k in ["백일장", "글짓기", "동시", "산문", "수필", "문학", "시나리오", "독후감", "문학상"]):
+        return "contest_writing", "전국 백일장·글짓기", "📚 전국 백일장"
+    if any(k in t for k in ["발명", "과학", "전람회", "탐구", "우주", "실험", "창의발명"]):
+        return "contest_stem", "과학탐구·창의발명", "💡 과학·창의발명"
+    if any(k in t for k in ["사생", "미술", "그림", "그리기", "포스터", "디자인", "캐릭터", "웹툰", "일러스트", "만화", "공예"]):
+        return "contest_art", "사생대회·미술공모", "🎨 사생·미술공모"
+    return "contest_general", "종합 아이디어공모", "🏆 종합공모전"
+
+def classify_board_item(title, loc="", desc="", default_board="festivals"):
     for kw in CONTEST_KEYWORDS:
         if kw in title:
-            if any(k in title for k in ["사생", "미술", "그림", "그리기", "포스터", "디자인", "캐릭터", "웹툰"]):
-                cat = "contest_art"
-                cat_name = "사생·미술공모전"
-                badge = "🎨 사생/미술공모"
-            elif any(k in title for k in ["백일장", "글짓기", "동시", "산문", "수필", "문학", "독후감"]):
-                cat = "contest_writing"
-                cat_name = "전국 백일장"
-                badge = "📚 전국 백일장"
-            elif any(k in title for k in ["코딩", "해커톤", "SW", "알고리즘", "소프트웨어", "프로그래밍", "앱"]):
-                cat = "contest_coding"
-                cat_name = "코딩·SW경진대회"
-                badge = "💻 코딩대회"
-            elif any(k in title for k in ["발명", "과학", "로봇", "드론", "올림피아드", "우주", "탐구"]):
-                cat = "contest_stem"
-                cat_name = "과학·발명대회"
-                badge = "💡 창의발명"
-            elif any(k in title for k in ["독서", "토론", "골든벨", "스피치", "영어"]):
-                cat = "contest_reading"
-                cat_name = "독서·토론대회"
-                badge = "📖 독서토론"
-            elif any(k in title for k in ["동요", "음악", "콩쿠르", "판소리", "국악"]):
-                cat = "contest_music"
-                cat_name = "동요·음악경연"
-                badge = "🎵 음악콩쿠르"
-            else:
-                cat = "contest_general"
-                cat_name = "전국 경연대회"
-                badge = "🏆 전국대회"
+            cat, cat_name, badge = classify_contest_category(title, loc, desc)
             return "contests", cat, cat_name, badge
-            
-    return default_board, None, None, None
+    f_cat, f_name, f_badge = classify_festival_category(title, loc, desc)
+    return default_board, f_cat, f_name, f_badge
 
 # =============================================================================
 # [Method 1] 공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 자동 수집기
@@ -2397,8 +2416,19 @@ def build():
                 added_wevity_cnt += 1
         print(f"공모전 전문 플랫폼(위비티) 전국대회 {added_wevity_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
-    # 2. D-Day 및 정렬 처리
+    # 2. 고정밀 10대 세부 카테고리 적용 및 D-Day 정렬 처리
     for e in combined_events:
+        if e.get("boardType") == "contests":
+            c_cat, c_name, c_badge = classify_contest_category(e["title"], e.get("organizer", ""), e.get("description", ""))
+            e["category"] = c_cat
+            e["categoryName"] = c_name
+            e["badge"] = c_badge
+        else:
+            f_cat, f_name, f_badge = classify_festival_category(e["title"], e.get("location", ""), e.get("description", ""))
+            e["category"] = f_cat
+            e["categoryName"] = f_name
+            e["badge"] = f_badge
+
         try:
             apply_end = datetime.datetime.strptime(e["applyEndDate"], "%Y-%m-%d").date()
             diff = (apply_end - today).days

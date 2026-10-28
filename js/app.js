@@ -35,6 +35,34 @@ const REGION_GROUPS = {
   gangwon_jeju: ['gangwon', 'jeju']
 };
 
+const FESTIVALS_CATEGORIES = [
+  { id: 'all', name: '전체', icon: '🌐' },
+  { id: 'festival_culture', name: '지역 종합축제', icon: '🎪' },
+  { id: 'expo_science', name: '박물관·과학·전시', icon: '🏛️' },
+  { id: 'festival_season', name: '꽃·단풍·계절축제', icon: '🌸' },
+  { id: 'park_eco', name: '숲·공원 생태체험', icon: '🌿' },
+  { id: 'festival_light', name: '빛·야경·드론쇼', icon: '✨' },
+  { id: 'festival_performance', name: '공연·음악·인형극', icon: '🎭' },
+  { id: 'festival_tradition', name: '전통·역사문화', icon: '🎎' },
+  { id: 'festival_food', name: '미식·먹거리축제', icon: '🍱' },
+  { id: 'farm_harvest', name: '수확·농촌체험', icon: '🍎' },
+  { id: 'sports_marathon', name: '가족마라톤·걷기', icon: '🏃' }
+];
+
+const CONTESTS_CATEGORIES = [
+  { id: 'all', name: '전체', icon: '🌐' },
+  { id: 'contest_art', name: '사생대회·미술공모', icon: '🎨' },
+  { id: 'contest_coding', name: 'AI·코딩·SW대회', icon: '💻' },
+  { id: 'contest_writing', name: '전국 백일장·글짓기', icon: '📚' },
+  { id: 'contest_stem', name: '과학탐구·창의발명', icon: '💡' },
+  { id: 'contest_music', name: '동요·음악경연', icon: '🎵' },
+  { id: 'contest_reading', name: '독서토론·골든벨', icon: '📖' },
+  { id: 'contest_robot', name: '로봇·메이커올림피아드', icon: '🤖' },
+  { id: 'contest_english', name: '영어·스피치대회', icon: '🗣️' },
+  { id: 'contest_math', name: '창의수학·올림피아드', icon: '📐' },
+  { id: 'contest_general', name: '종합 아이디어공모', icon: '🏆' }
+];
+
 class DodamCommunityApp {
   constructor() {
     this.data = window.DODAM_COMMUNITY_DATA || { categories: [], regions: [], polls: [], posts: [] };
@@ -109,9 +137,11 @@ class DodamCommunityApp {
 
     // 지역행사 & 대회일정 지역 선택기 및 뷰 초기화
     this.renderFestivalsRegionChips();
+    this.renderFestivalsCategoryChips();
     this.renderFestivalsView();
 
     this.renderContestsRegionChips();
+    this.renderContestsCategoryChips();
     this.renderContestsView();
 
     this.renderSidebarWidgets();
@@ -242,12 +272,14 @@ class DodamCommunityApp {
 
     if (viewId === 'festivals') {
       this.renderFestivalsRegionChips();
+      this.renderFestivalsCategoryChips();
       this.renderFestivalsView();
       if (this.festivalsViewMode === 'calendar') {
         this.renderFestivalsCalendar();
       }
     } else if (viewId === 'contests') {
       this.renderContestsRegionChips();
+      this.renderContestsCategoryChips();
       this.renderContestsView();
       if (this.contestsViewMode === 'calendar') {
         this.renderContestsCalendar();
@@ -845,6 +877,7 @@ class DodamCommunityApp {
     }
 
     this.renderFestivalsRegionChips();
+    this.renderFestivalsCategoryChips();
     this.renderFestivalsView();
     if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
   }
@@ -855,6 +888,7 @@ class DodamCommunityApp {
     if (sel) sel.value = regId;
 
     this.renderFestivalsRegionChips();
+    this.renderFestivalsCategoryChips();
     this.renderFestivalsView();
     if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
   }
@@ -879,14 +913,43 @@ class DodamCommunityApp {
     this.renderFestivalsView();
   }
 
+  renderFestivalsCategoryChips() {
+    const container = document.getElementById('festivals-category-chips');
+    if (!container) return;
+
+    let festivals = (this.allEvents || []).filter((e) => e.boardType === 'festivals');
+    if (this.festivalsRegion !== 'all') {
+      festivals = festivals.filter((e) => e.region === this.festivalsRegion);
+    }
+
+    container.innerHTML = FESTIVALS_CATEGORIES.map((c) => {
+      const count = c.id === 'all'
+        ? festivals.length
+        : festivals.filter((e) => e.category === c.id).length;
+      const isActive = this.festivalsCategory === c.id;
+
+      return `
+        <button
+          onclick="app.setFestivalsCategory('${c.id}')"
+          data-cat="${c.id}"
+          class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap transition flex items-center gap-1.5 border ${
+            isActive
+              ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
+              : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold'
+          }"
+        >
+          <span>${c.icon} ${c.name}</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
+            isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
+          }">${count}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
   setFestivalsCategory(cat) {
     this.festivalsCategory = cat;
-    document.querySelectorAll('.fest-cat-chip').forEach((chip) => {
-      const active = chip.getAttribute('data-cat') === cat;
-      chip.className = active
-        ? 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
-        : 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-white border border-slate-200 text-slate-700 hover:bg-slate-50';
-    });
+    this.renderFestivalsCategoryChips();
     this.renderFestivalsView();
     if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
   }
@@ -1151,6 +1214,7 @@ class DodamCommunityApp {
     }
 
     this.renderContestsRegionChips();
+    this.renderContestsCategoryChips();
     this.renderContestsView();
     if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
   }
@@ -1161,6 +1225,7 @@ class DodamCommunityApp {
     if (sel) sel.value = regId;
 
     this.renderContestsRegionChips();
+    this.renderContestsCategoryChips();
     this.renderContestsView();
     if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
   }
@@ -1185,14 +1250,43 @@ class DodamCommunityApp {
     this.renderContestsView();
   }
 
+  renderContestsCategoryChips() {
+    const container = document.getElementById('contests-category-chips');
+    if (!container) return;
+
+    let contests = (this.allEvents || []).filter((e) => e.boardType === 'contests');
+    if (this.contestsRegion !== 'all') {
+      contests = contests.filter((e) => e.region === this.contestsRegion);
+    }
+
+    container.innerHTML = CONTESTS_CATEGORIES.map((c) => {
+      const count = c.id === 'all'
+        ? contests.length
+        : contests.filter((e) => e.category === c.id).length;
+      const isActive = this.contestsCategory === c.id;
+
+      return `
+        <button
+          onclick="app.setContestsCategory('${c.id}')"
+          data-cat="${c.id}"
+          class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap transition flex items-center gap-1.5 border ${
+            isActive
+              ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
+              : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold'
+          }"
+        >
+          <span>${c.icon} ${c.name}</span>
+          <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
+            isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
+          }">${count}</span>
+        </button>
+      `;
+    }).join('');
+  }
+
   setContestsCategory(cat) {
     this.contestsCategory = cat;
-    document.querySelectorAll('.cont-cat-chip').forEach((chip) => {
-      const active = chip.getAttribute('data-cat') === cat;
-      chip.className = active
-        ? 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
-        : 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-white border border-slate-200 text-slate-700 hover:bg-slate-50';
-    });
+    this.renderContestsCategoryChips();
     this.renderContestsView();
     if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
   }
@@ -2592,8 +2686,10 @@ class DodamCommunityApp {
     this.allEvents = [newEvt, ...(this.allEvents || [])];
 
     this.renderFestivalsRegionChips();
+    this.renderFestivalsCategoryChips();
     this.renderFestivalsView();
     this.renderContestsRegionChips();
+    this.renderContestsCategoryChips();
     this.renderContestsView();
 
     this.closeWriteEventModal();
