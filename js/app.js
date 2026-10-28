@@ -96,6 +96,8 @@ class DodamCommunityApp {
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
     this.loadSavedPosts();
+    this.customEventsKey = 'dodam_custom_events';
+    this.loadSavedEvents();
     this.loadSavedRestaurants();
   }
 
@@ -2475,6 +2477,108 @@ class DodamCommunityApp {
       const customOnly = (this.data.restaurants || []).filter(r => r.id && r.id.startsWith('rest-user-'));
       localStorage.setItem(this.customRestaurantsKey, JSON.stringify(customOnly));
     } catch {}
+  }
+
+
+  loadSavedEvents() {
+    try {
+      const raw = localStorage.getItem(this.customEventsKey);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          const userEvents = parsed.filter(e => e && e.id && e.id.startsWith('user-event-'));
+          this.allEvents = [...userEvents, ...(this.allEvents || [])];
+        }
+      }
+    } catch {}
+  }
+
+  openWriteEventModal(defaultBoardType = 'festivals') {
+    const modal = document.getElementById('write-event-modal');
+    if (!modal) return;
+    const typeSelect = document.getElementById('event-form-board-type');
+    if (typeSelect) typeSelect.value = defaultBoardType;
+    modal.classList.remove('hidden');
+  }
+
+  closeWriteEventModal() {
+    const modal = document.getElementById('write-event-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  submitNewEvent(e) {
+    e.preventDefault();
+    const boardType = document.getElementById('event-form-board-type').value;
+    const title = document.getElementById('event-form-title').value.trim();
+    const region = document.getElementById('event-form-region').value;
+    const category = document.getElementById('event-form-category').value;
+    const startDate = document.getElementById('event-form-start-date').value;
+    const endDate = document.getElementById('event-form-end-date').value || startDate;
+    const location = document.getElementById('event-form-location').value.trim();
+    const organizer = document.getElementById('event-form-organizer').value.trim() || '직접 등록';
+    const fee = document.getElementById('event-form-fee').value.trim() || '무료';
+    const targetAudience = document.getElementById('event-form-target').value.trim() || '전체 가족 / 어린이';
+    const url = document.getElementById('event-form-url').value.trim() || '#';
+    const description = document.getElementById('event-form-desc').value.trim() || `${title} 일정입니다.`;
+
+    if (!title || !startDate) {
+      alert('행사/대회명과 시작일을 입력해주세요.');
+      return;
+    }
+
+    const regMap = {
+      seoul: '서울특별시', gyeonggi: '경기도', incheon: '인천광역시', gangwon: '강원특별자치도',
+      daejeon: '대전광역시', sejong: '세종특별자치시', chungnam: '충청남도', chungbuk: '충청북도',
+      gwangju: '광주광역시', jeonbuk: '전북특별자치도', jeonnam: '전라남도', daegu: '대구광역시',
+      gyeongbuk: '경상북도', busan: '부산광역시', ulsan: '울산광역시', gyeongnam: '경상남도', jeju: '제주특별자치도'
+    };
+
+    const regName = regMap[region] || '전국';
+
+    const newEvt = {
+      id: `user-event-${Date.now()}`,
+      boardType: boardType,
+      title: title,
+      category: category,
+      badge: boardType === 'festivals' ? '🎪 추천 축제' : '🏆 추천 대회',
+      organizer: organizer,
+      sourceType: 'user_registered',
+      sourceLabel: '사용자 직접 등록',
+      region: region,
+      regionName: regName,
+      location: location || `${regName} 일원`,
+      startDate: startDate,
+      endDate: endDate,
+      applyStartDate: startDate,
+      applyEndDate: endDate,
+      status: 'applying',
+      dday: '진행중',
+      targetAudience: targetAudience,
+      fee: fee,
+      url: url,
+      imageUrl: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80',
+      description: description,
+      tags: ['직접등록', regName, boardType === 'festivals' ? '지역축제' : '대회일정']
+    };
+
+    try {
+      let saved = [];
+      const raw = localStorage.getItem(this.customEventsKey);
+      if (raw) saved = JSON.parse(raw);
+      if (!Array.isArray(saved)) saved = [];
+      saved.unshift(newEvt);
+      localStorage.setItem(this.customEventsKey, JSON.stringify(saved));
+    } catch {}
+
+    this.allEvents = [newEvt, ...(this.allEvents || [])];
+
+    this.renderFestivalsRegionChips();
+    this.renderFestivalsView();
+    this.renderContestsRegionChips();
+    this.renderContestsView();
+
+    this.closeWriteEventModal();
+    alert(`"${title}" 일정이 정상적으로 등록되었습니다!`);
   }
 
   loadSavedRestaurants() {
