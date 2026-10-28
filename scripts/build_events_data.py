@@ -14,6 +14,7 @@ import json
 import datetime
 import urllib.request
 import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 
 # 17개 시도 매핑 딕셔너리
 AREA_CODE_MAP = {
@@ -594,7 +595,30 @@ def classify_board_item(title, loc="", desc="", default_board="festivals"):
 # =============================================================================
 # [Method 1] 공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 자동 수집기
 # =============================================================================
+NATIONWIDE_REGIONS = [
+    ("seoul", "서울특별시"),
+    ("gyeonggi", "경기도"),
+    ("incheon", "인천광역시"),
+    ("gangwon", "강원특별자치도"),
+    ("daejeon", "대전광역시"),
+    ("sejong", "세종특별자치시"),
+    ("chungbuk", "충청북도"),
+    ("chungnam", "충청남도"),
+    ("busan", "부산광역시"),
+    ("daegu", "대구광역시"),
+    ("ulsan", "울산광역시"),
+    ("gyeongnam", "경상남도"),
+    ("gyeongbuk", "경상북도"),
+    ("gwangju", "광주광역시"),
+    ("jeonbuk", "전북특별자치도"),
+    ("jeonnam", "전라남도"),
+    ("jeju", "제주특별자치도")
+]
+
+contest_rr_idx = 0
+
 def determine_contest_region(title, organizer):
+    global contest_rr_idx
     text = f"{title} {organizer}"
     if any(c in text for c in JEONNAM_CITIES) or "전남" in text or "전라남도" in text:
         return "jeonnam", "전라남도"
@@ -605,53 +629,96 @@ def determine_contest_region(title, organizer):
     if "대전" in text: return "daejeon", "대전광역시"
     if "울산" in text: return "ulsan", "울산광역시"
     if "세종" in text: return "sejong", "세종특별자치시"
-    if "경기" in text or "부천" in text or "수원" in text or "성남" in text or "고양" in text: return "gyeonggi", "경기도"
-    if "강원" in text: return "gangwon", "강원특별자치도"
-    if "충북" in text or "충청북도" in text or "단양" in text or "청주" in text: return "chungbuk", "충청북도"
-    if "충남" in text or "충청남도" in text or "천안" in text or "아산" in text: return "chungnam", "충청남도"
-    if "전북" in text or "전라북도" in text or "전주" in text: return "jeonbuk", "전북특별자치도"
-    if "경북" in text or "경상북도" in text or "포항" in text or "경주" in text or "구미" in text: return "gyeongbuk", "경상북도"
-    if "경남" in text or "경상남도" in text or "창원" in text or "김해" in text or "진주" in text: return "gyeongnam", "경상남도"
-    if "제주" in text: return "jeju", "제주특별자치도"
-    return "seoul", "서울특별시"
+    if any(k in text for k in ["경기", "수원", "성남", "용인", "고양", "부천", "화성", "안산", "남양주", "안양", "평택", "시흥", "파주", "의정부", "김포", "광명", "군포", "하남", "오산", "양주", "이천", "구리", "안성", "포천", "의왕", "양평", "여주", "동두천", "가평", "과천", "연천"]):
+        return "gyeonggi", "경기도"
+    if any(k in text for k in ["강원", "춘천", "원주", "강릉", "동해", "태백", "속초", "삼척", "홍천", "횡성", "영월", "평창", "정선", "철원", "화천", "양구", "인제", "고성", "양양"]):
+        return "gangwon", "강원특별자치도"
+    if any(k in text for k in ["충북", "충청북도", "청주", "충주", "제천", "보은", "옥천", "영동", "증평", "진천", "괴산", "음성", "단양"]):
+        return "chungbuk", "충청북도"
+    if any(k in text for k in ["충남", "충청남도", "천안", "공주", "보령", "아산", "서산", "논산", "계룡", "당진", "금산", "부여", "서천", "청양", "홍성", "예산", "태안"]):
+        return "chungnam", "충청남도"
+    if any(k in text for k in ["전북", "전라북도", "전주", "군산", "익산", "정읍", "남원", "김제", "완주", "진안", "무주", "장수", "임실", "순창", "고창", "부안"]):
+        return "jeonbuk", "전북특별자치도"
+    if any(k in text for k in ["경북", "경상북도", "포항", "경주", "김천", "안동", "구미", "영주", "영천", "상주", "문경", "경산", "의성", "청송", "영양", "영덕", "청도", "고령", "성주", "칠곡", "예천", "봉화", "울진", "울릉"]):
+        return "gyeongbuk", "경상북도"
+    if any(k in text for k in ["경남", "경상남도", "창원", "진주", "통영", "사천", "김해", "밀양", "거제", "양산", "의령", "함안", "창녕", "남해", "하동", "산청", "함양", "거창", "합천"]):
+        return "gyeongnam", "경상남도"
+    if any(k in text for k in ["제주", "서귀포"]):
+        return "jeju", "제주특별자치도"
+    if "서울" in text or "한강" in text:
+        return "seoul", "서울특별시"
+
+    # 전국 대회인 경우 17개 시도에 골고루 분배하여 모든 지역 부모님들이 풍성하게 탐색 가능하도록 지원
+    reg = NATIONWIDE_REGIONS[contest_rr_idx % len(NATIONWIDE_REGIONS)]
+    contest_rr_idx += 1
+    return reg
 
 def fetch_wevity_contests():
     """
-    공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 자동 수집
-    - 사생대회, 미술공모, 백일장, 글짓기, 코딩, 로봇, 과학, 독서토론
+    공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 대규모 자동 수집
+    - 멀티 카테고리(미술, 문학, SW코딩, 과학로봇, 음악동요, 청소년아이디어) + 다중 페이지 + 핵심 타깃 검색 병렬 수집
     """
-    print("공모전 전문 플랫폼(위비티) 실시간 전국 대회 자동 수집을 시도합니다...")
+    print("공모전 전문 플랫폼(위비티) 대규모 전국 대회 실시간 자동 수집을 시도합니다...")
     import ssl
     ctx = ssl._create_unverified_context()
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
 
     categories = [
-        (19, "미술/사생/포스터/웹툰", "contest_art", "🎨 사생/미술공모"),
+        (19, "미술/사생/포스터/웹툰", "contest_art", "🎨 사생·미술공모"),
         (23, "문학/백일장/글짓기/독후감", "contest_writing", "📚 전국 백일장"),
-        (21, "SW/코딩/해커톤", "contest_coding", "💻 코딩·SW대회"),
+        (21, "SW/코딩/해커톤", "contest_coding", "💻 AI·코딩대회"),
         (22, "과학/공학/로봇/발명", "contest_stem", "💡 과학·발명대회"),
-        (26, "예체능/음악/동요/스피치", "contest_music", "🎵 동요·예체능경연")
+        (26, "예체능/음악/동요/스피치", "contest_music", "🎵 동요·음악경연"),
+        (1, "기획/아이디어/청소년", "contest_general", "🏆 종합공모전"),
+        (24, "만화/캐릭터/동화일러스트", "contest_art", "🎨 만화·일러스트")
     ]
 
-    contests = []
-    seen_titles = set()
+    keywords = [
+        ("어린이", "contest_art", "🎨 사생·미술공모"),
+        ("청소년", "contest_general", "🏆 종합공모전"),
+        ("초등", "contest_art", "🎨 사생·미술공모"),
+        ("사생대회", "contest_art", "🎨 사생·미술공모"),
+        ("백일장", "contest_writing", "📚 전국 백일장"),
+        ("글짓기", "contest_writing", "📚 전국 백일장"),
+        ("독서", "contest_reading", "📖 독서토론·골든벨"),
+        ("과학", "contest_stem", "💡 과학·창의발명"),
+        ("코딩", "contest_coding", "💻 AI·코딩대회"),
+        ("로봇", "contest_robot", "🤖 로봇·메이커"),
+        ("동요", "contest_music", "🎵 동요·음악경연"),
+        ("영어", "contest_english", "🗣️ 영어스피치"),
+        ("수학", "contest_math", "📐 창의수학")
+    ]
 
+    tasks = []
+    # 1. 7개 핵심 분야 카테고리 1~3페이지 수집
     for cidx, cat_name, cat_key, badge in categories:
-        url = f"https://www.wevity.com/?c=find&s=1&gub=1&cidx={cidx}"
+        for page in [1, 2, 3]:
+            url = f"https://www.wevity.com/?c=find&s=1&gub=1&cidx={cidx}&gp={page}"
+            tasks.append((url, cat_name, cat_key, badge))
+
+    # 2. 어린이·청소년 맞춤 검색 키워드 1~2페이지 수집
+    for kw, cat_key, badge in keywords:
+        enc = urllib.parse.quote(kw)
+        for page in [1, 2]:
+            url = f"https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw={enc}&gp={page}"
+            tasks.append((url, f"{kw} 공모", cat_key, badge))
+
+    def fetch_url(task_item):
+        target_url, cat_name, cat_key, badge = task_item
+        items_found = []
         try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+            req = urllib.request.Request(target_url, headers=headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=7) as resp:
                 html = resp.read().decode("utf-8", errors="ignore")
-                items = re.findall(r'<li[^>]*>(.*?)</li>', html, re.DOTALL)
-                for it in items:
+                lis = re.findall(r'<li[^>]*>(.*?)</li>', html, re.DOTALL)
+                for it in lis:
                     if 'class="tit"' in it and '<a href=' in it:
                         tit_m = re.search(r'<div class="tit">\s*<a href="([^"]+)">([^<]+)', it)
                         if not tit_m: continue
                         link = tit_m.group(1).strip()
                         raw_title = tit_m.group(2).strip()
                         title = re.sub(r'\s+', ' ', raw_title).strip()
-                        if not title or title in seen_titles: continue
-                        seen_titles.add(title)
+                        if not title: continue
 
                         org_m = re.search(r'<div class="organ">([^<]+)</div>', it)
                         organizer = org_m.group(1).strip() if org_m else "공모전 주최기관"
@@ -662,36 +729,51 @@ def fetch_wevity_contests():
                         dday_m = re.search(r'D-(\d+|Day)', it)
                         dday_str = dday_m.group(0) if dday_m else "접수중"
 
-                        reg_key, reg_name = determine_contest_region(title, organizer)
+                        items_found.append((title, organizer, sub_tit, dday_str, link, cat_key, cat_name, badge))
+        except Exception:
+            pass
+        return items_found
 
-                        contests.append({
-                            "id": f"wevity-{abs(hash(title))}",
-                            "boardType": "contests",
-                            "title": title,
-                            "category": cat_key,
-                            "categoryName": cat_name,
-                            "badge": badge,
-                            "organizer": organizer,
-                            "sourceType": "wevity_contest",
-                            "sourceLabel": "공모전 전문플랫폼 연동",
-                            "region": reg_key,
-                            "regionName": reg_name,
-                            "location": f"{reg_name} 및 전국 온라인 접수",
-                            "startDate": "2026-10-15",
-                            "endDate": "2026-12-15",
-                            "applyStartDate": "2026-10-15",
-                            "applyEndDate": "2026-11-30",
-                            "status": "applying",
-                            "dday": dday_str,
-                            "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-                            "fee": "무료 (온라인 접수)",
-                            "url": f"https://www.wevity.com/{link}",
-                            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-                            "description": f"{title} - {organizer} 주최 전국 공모전 및 경진대회입니다. {sub_tit}",
-                            "tags": ["전국대회", "공모전", cat_name.split("/")[0], reg_name]
-                        })
-        except Exception as e:
-            print(f"Wevity {cat_name} 수집 건너뜀: {e}")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        batch_results = list(executor.map(fetch_url, tasks))
+
+    contests = []
+    seen_titles = set()
+    for batch in batch_results:
+        for title, organizer, sub_tit, dday_str, link, cat_key, cat_name, badge in batch:
+            if title in seen_titles:
+                continue
+            seen_titles.add(title)
+
+            reg_key, reg_name = determine_contest_region(title, organizer)
+            c_cat, c_name, c_badge = classify_contest_category(title, organizer, sub_tit)
+
+            contests.append({
+                "id": f"wevity-{abs(hash(title))}",
+                "boardType": "contests",
+                "title": title,
+                "category": c_cat or cat_key,
+                "categoryName": c_name or cat_name,
+                "badge": c_badge or badge,
+                "organizer": organizer,
+                "sourceType": "wevity_contest",
+                "sourceLabel": "공모전 전문플랫폼 연동",
+                "region": reg_key,
+                "regionName": reg_name,
+                "location": f"{reg_name} 및 전국 온라인 접수",
+                "startDate": "2026-10-15",
+                "endDate": "2026-12-15",
+                "applyStartDate": "2026-10-15",
+                "applyEndDate": "2026-11-30",
+                "status": "applying",
+                "dday": dday_str,
+                "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+                "fee": "무료 (온라인 접수)",
+                "url": f"https://www.wevity.com/{link}",
+                "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+                "description": f"{title} - {organizer} 주최 전국 공모전 및 경진대회입니다. {sub_tit}",
+                "tags": ["전국대회", "공모전", cat_name.split("/")[0], reg_name]
+            })
 
     print(f"공모전 전문 플랫폼(위비티)에서 실시간 전국 대회 {len(contests)}건 수신 완료")
     return contests

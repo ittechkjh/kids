@@ -148,7 +148,7 @@
         <button data-view="contests" onclick="app.switchMainView('contests')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-graduation-cap text-indigo-500"></i>
           <span>🏆 전국 대회일정 (공부·역량)</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">사생·독서토론</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-indigo-100 text-indigo-700 font-black">390+건</span>
         </button>
         <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
@@ -484,21 +484,27 @@
 
             <!-- 데이터 소스 통계 뱃지 -->
             <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-[11px] font-bold text-slate-600">
-              <span class="text-slate-400">대회 분야:</span>
+              <span class="text-slate-400">대회 현황:</span>
+              <span class="px-2.5 py-0.5 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200/80 font-black">
+                🏆 실시간 전국대회 일정 <strong id="contests-total-badge" class="text-indigo-800">393건</strong> 수집 완료
+              </span>
               <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
-                🏆 사생대회·미술 <strong>6건</strong>
+                🎨 사생·미술공모
               </span>
               <span class="px-2 py-0.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200/60">
-                📖 독서토론·독서골든벨 <strong>4건</strong>
+                📚 전국 백일장·글짓기
+              </span>
+              <span class="px-2 py-0.5 rounded-lg bg-purple-50 text-purple-700 border border-purple-200/60">
+                📖 독서토론·골든벨
               </span>
               <span class="px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/60">
-                💡 창의·과학·발명 <strong>4건</strong>
+                💡 과학탐구·창의발명
               </span>
-              <span class="px-2 py-0.5 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200/60">
-                💻 SW·코딩·로봇 <strong>2건</strong>
+              <span class="px-2 py-0.5 rounded-lg bg-blue-50 text-blue-700 border border-blue-200/60">
+                💻 AI·코딩·SW
               </span>
               <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                📐 수학·외국어·음악 <strong>2건</strong>
+                🤖 로봇·메이커
               </span>
             </div>
           </div>
