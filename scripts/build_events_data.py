@@ -292,6 +292,8 @@ def fetch_tourapi_events(api_key):
                         title = it.get("title", "").strip()
                         if not title or title in seen_titles:
                             continue
+                        if any(bad in title for bad in ["키즈카페", "키즈파크", "스포츠파크", "플레이파크", "점핑파크", "키즈런스포츠", "슬라임카페"]):
+                            continue
                         seen_titles.add(title)
 
                         reg_key, reg_name = determine_region(it)
@@ -597,7 +599,7 @@ def classify_festival_category(title, loc="", desc=""):
     지역행사 & 볼거리를 10개 세부 카테고리로 고정밀 세분화
     """
     t = f"{title} {loc} {desc}"
-    if any(k in t for k in ["마라톤", "달리기", "걷기대회", "키즈런", "걷기", "트레킹", "플로깅", "런트립"]):
+    if any(k in t for k in ["마라톤", "달리기", "걷기대회", "걷기", "트레킹", "플로깅", "런트립"]):
         return "sports_marathon", "가족마라톤·걷기", "🏃 가족마라톤"
     if any(k in t for k in ["빛", "야경", "불꽃", "루미나리에", "등불", "드론쇼", "미디어아트", "야행", "별빛", "라이트", "일루미네이션"]):
         return "festival_light", "빛·야경·드론쇼", "✨ 빛·야경축제"
