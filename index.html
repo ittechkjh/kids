@@ -150,25 +150,22 @@
       </div>
 
       <!-- 4대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사(볼거리·마라톤) / 대회일정(공부·사생·독서토론) / 맛집맵 -->
-      <nav class="flex items-center gap-2 mt-3 pt-2.5 border-t border-stone-100 overflow-x-auto no-scrollbar">
-        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm">
-          <i class="fa-solid fa-clipboard-list"></i>
+      <nav class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mt-3 pt-2.5 border-t border-stone-100">
+        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition bg-slate-900 text-white shadow-sm text-center">
+          <i class="fa-solid fa-clipboard-list text-rose-400"></i>
           <span>💬 도담 육아 게시판</span>
         </button>
-        <button data-view="festivals" onclick="app.switchMainView('festivals')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+        <button data-view="festivals" onclick="app.switchMainView('festivals')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-person-running text-amber-500"></i>
-          <span>🎪 전국 지역행사 & 볼거리</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">축제·마라톤</span>
+          <span>🎪 지역행사 & 축제</span>
         </button>
-        <button data-view="contests" onclick="app.switchMainView('contests')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+        <button data-view="contests" onclick="app.switchMainView('contests')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-graduation-cap text-indigo-500"></i>
-          <span>🏆 전국 대회일정 (공부·역량)</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-indigo-100 text-indigo-700 font-black">1,000+건</span>
+          <span>🏆 전국 대회일정</span>
         </button>
-        <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
+        <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
-          <span>🍽️ 전국 안심 맛집 맵</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">5,000곳</span>
+          <span>🍽️ 전국 안심 맛집맵</span>
         </button>
       </nav>
     </div>
@@ -317,34 +314,34 @@
                 <span class="text-[10px] text-slate-400 font-bold">클릭 시 해당 지역 행사만 즉시 표시</span>
               </div>
 
-              <!-- 권역 그룹 탭 -->
-              <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="festivals-region-group-tabs">
+              <!-- 권역 그룹 탭 (모바일 자동 줄바꿈) -->
+              <div class="flex flex-wrap items-center gap-1 text-xs font-bold pb-1" id="festivals-region-group-tabs">
                 <button onclick="app.setFestivalsRegionGroup('all')" data-grp="all" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm">
                   전국 전체
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('capital')" data-grp="capital" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  수도권 (서울·경기·인천)
+                  수도권
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('yeongnam')" data-grp="yeongnam" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  영남권 (부산·대구·울산·경상)
+                  영남권
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('honam')" data-grp="honam" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  호남권 (광주·전라)
+                  호남권
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('chungcheong')" data-grp="chungcheong" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  충청·대전·세종
+                  충청권
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('gangwon_jeju')" data-grp="gangwon_jeju" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  강원 · 제주
+                  강원·제주
                 </button>
               </div>
 
-              <!-- 17개 시도 퀵 칩스 (실시간 개수 뱃지) -->
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5" id="festivals-region-chips"></div>
+              <!-- 17개 시도 퀵 칩스 (한눈에 보는 모바일 4열 컴팩트 그리드 - 옆으로 밀지 않고 한눈에 파악) -->
+              <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-9 gap-1.5 pt-1" id="festivals-region-chips"></div>
             </div>
 
-            <!-- 1차: 행사 카테고리 칩 -->
-            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="festivals-category-chips"></div>
+            <!-- 1차: 행사 카테고리 칩 (모바일 자동 줄바꿈) -->
+            <div class="flex flex-wrap items-center gap-1.5 pb-1" id="festivals-category-chips"></div>
 
             <!-- 2차: 지역 + 접수상태 + 검색창 -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
@@ -441,17 +438,16 @@
               </span>
             </div>
 
-            <!-- 행사 정렬 버튼 탭 -->
-            <div class="flex items-center gap-1.5 text-xs font-bold">
-              <span class="text-slate-400 text-[11px]">정렬:</span>
-              <button onclick="app.setFestivalsSort('closing')" id="btn-fest-sort-closing" class="px-2.5 py-1 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition">
-                ⏳ 마감임박순
+            <!-- 행사 정렬 버튼 탭 (모바일 3열 꽉 찬 세그먼트 버튼) -->
+            <div class="grid grid-cols-3 sm:flex items-center gap-1 text-xs font-bold w-full sm:w-auto">
+              <button onclick="app.setFestivalsSort('closing')" id="btn-fest-sort-closing" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition text-center text-[11px] sm:text-xs">
+                ⏳ 마감순
               </button>
-              <button onclick="app.setFestivalsSort('latest')" id="btn-fest-sort-latest" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                🆕 최신등록순
+              <button onclick="app.setFestivalsSort('latest')" id="btn-fest-sort-latest" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs">
+                🆕 최신순
               </button>
-              <button onclick="app.setFestivalsSort('startDate')" id="btn-fest-sort-startDate" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                📅 행사일정순
+              <button onclick="app.setFestivalsSort('startDate')" id="btn-fest-sort-startDate" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs">
+                📅 일정순
               </button>
             </div>
           </div>
@@ -552,34 +548,34 @@
                 <span class="text-[10px] text-slate-400 font-bold">클릭 시 해당 지역 대회만 즉시 표시</span>
               </div>
 
-              <!-- 권역 그룹 탭 -->
-              <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="contests-region-group-tabs">
+              <!-- 권역 그룹 탭 (모바일 자동 줄바꿈) -->
+              <div class="flex flex-wrap items-center gap-1 text-xs font-bold pb-1" id="contests-region-group-tabs">
                 <button onclick="app.setContestsRegionGroup('all')" data-grp="all" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm">
                   전국 전체
                 </button>
                 <button onclick="app.setContestsRegionGroup('capital')" data-grp="capital" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  수도권 (서울·경기·인천)
+                  수도권
                 </button>
                 <button onclick="app.setContestsRegionGroup('yeongnam')" data-grp="yeongnam" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  영남권 (부산·대구·울산·경상)
+                  영남권
                 </button>
                 <button onclick="app.setContestsRegionGroup('honam')" data-grp="honam" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  호남권 (광주·전라)
+                  호남권
                 </button>
                 <button onclick="app.setContestsRegionGroup('chungcheong')" data-grp="chungcheong" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  충청·대전·세종
+                  충청권
                 </button>
                 <button onclick="app.setContestsRegionGroup('gangwon_jeju')" data-grp="gangwon_jeju" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
-                  강원 · 제주
+                  강원·제주
                 </button>
               </div>
 
-              <!-- 17개 시도 퀵 칩스 (실시간 개수 뱃지) -->
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-0.5" id="contests-region-chips"></div>
+              <!-- 17개 시도 퀵 칩스 (한눈에 보는 모바일 4열 컴팩트 그리드 - 옆으로 밀지 않고 한눈에 파악) -->
+              <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-9 gap-1.5 pt-1" id="contests-region-chips"></div>
             </div>
 
-            <!-- 1차: 대회 카테고리 칩 -->
-            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1" id="contests-category-chips"></div>
+            <!-- 1차: 대회 카테고리 칩 (모바일 자동 줄바꿈) -->
+            <div class="flex flex-wrap items-center gap-1.5 pb-1" id="contests-category-chips"></div>
 
             <!-- 2차: 지역 + 접수상태 + 검색창 -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
@@ -676,17 +672,16 @@
               </span>
             </div>
 
-            <!-- 대회 정렬 버튼 탭 -->
-            <div class="flex items-center gap-1.5 text-xs font-bold">
-              <span class="text-slate-400 text-[11px]">정렬:</span>
-              <button onclick="app.setContestsSort('closing')" id="btn-cont-sort-closing" class="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition">
-                ⏳ 마감임박순
+            <!-- 대회 정렬 버튼 탭 (모바일 3열 꽉 찬 세그먼트 버튼) -->
+            <div class="grid grid-cols-3 sm:flex items-center gap-1 text-xs font-bold w-full sm:w-auto">
+              <button onclick="app.setContestsSort('closing')" id="btn-cont-sort-closing" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition text-center text-[11px] sm:text-xs">
+                ⏳ 마감순
               </button>
-              <button onclick="app.setContestsSort('latest')" id="btn-cont-sort-latest" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                🆕 최신등록순
+              <button onclick="app.setContestsSort('latest')" id="btn-cont-sort-latest" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs">
+                🆕 최신순
               </button>
-              <button onclick="app.setContestsSort('startDate')" id="btn-cont-sort-startDate" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
-                📅 대회일정순
+              <button onclick="app.setContestsSort('startDate')" id="btn-cont-sort-startDate" class="w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs">
+                📅 일정순
               </button>
             </div>
           </div>

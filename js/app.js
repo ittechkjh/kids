@@ -957,18 +957,19 @@ class DodamCommunityApp {
           : festivals.filter((e) => e.region === r.id).length;
         const isActive = this.festivalsRegion === r.id;
 
+        const activeClass = isActive
+          ? 'bg-amber-500 text-white border-amber-500 font-black shadow-sm ring-2 ring-amber-300/70'
+          : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold';
+
         return `
           <button
             onclick="app.selectFestivalsRegion('${r.id}')"
-            class="px-2.5 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center gap-1 border ${
-              isActive
-                ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
-                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-            }"
+            class="w-full py-1.5 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
+            title="${r.name} (${count}개)"
           >
-            <span>${r.name}</span>
-            <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
-              isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
+            <span class="truncate">${r.name === '전국 전체' ? '전국' : r.name}</span>
+            <span class="text-[10px] px-1 py-0.2 rounded-full ${
+              isActive ? 'bg-white/25 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>
           </button>
         `;
@@ -1286,9 +1287,9 @@ class DodamCommunityApp {
       const btn = document.getElementById(`btn-fest-sort-${st}`);
       if (!btn) return;
       if (st === this.festivalsSort) {
-        btn.className = 'px-2.5 py-1 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition';
+        btn.className = 'w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition text-center text-[11px] sm:text-xs';
       } else {
-        btn.className = 'px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+        btn.className = 'w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs';
       }
     });
 
@@ -1350,18 +1351,19 @@ class DodamCommunityApp {
           : contests.filter((e) => e.region === r.id).length;
         const isActive = this.contestsRegion === r.id;
 
+        const activeClass = isActive
+          ? 'bg-indigo-600 text-white border-indigo-600 font-black shadow-sm ring-2 ring-indigo-300/70'
+          : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold';
+
         return `
           <button
             onclick="app.selectContestsRegion('${r.id}')"
-            class="px-2.5 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center gap-1 border ${
-              isActive
-                ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
-                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
-            }"
+            class="w-full py-1.5 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
+            title="${r.name} (${count}개)"
           >
-            <span>${r.name}</span>
-            <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
-              isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
+            <span class="truncate">${r.name === '전국 전체' ? '전국' : r.name}</span>
+            <span class="text-[10px] px-1 py-0.2 rounded-full ${
+              isActive ? 'bg-white/25 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>
           </button>
         `;
@@ -1679,9 +1681,9 @@ class DodamCommunityApp {
       const btn = document.getElementById(`btn-cont-sort-${st}`);
       if (!btn) return;
       if (st === this.contestsSort) {
-        btn.className = 'px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition';
+        btn.className = 'w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition text-center text-[11px] sm:text-xs';
       } else {
-        btn.className = 'px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+        btn.className = 'w-full sm:w-auto px-2.5 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition text-center text-[11px] sm:text-xs';
       }
     });
 
@@ -1807,12 +1809,12 @@ class DodamCommunityApp {
           </div>
         </div>
 
-        <!-- 본문: 썸네일 + 제목 + 주최/일정 -->
-        <div class="flex gap-3 items-start">
+        <!-- 본문: 썸네일 + 제목 + 주최/일정 (모바일 컴팩트 크기) -->
+        <div class="flex gap-2.5 sm:gap-3 items-start">
           <img
             src="${imgUrl}"
             alt="${evt.title}"
-            class="w-20 h-20 rounded-xl object-cover shrink-0 border border-slate-100 shadow-inner bg-slate-50 group-hover:scale-105 transition"
+            class="w-16 h-16 sm:w-20 sm:h-20 rounded-xl object-cover shrink-0 border border-slate-100 shadow-inner bg-slate-50 group-hover:scale-105 transition"
             onerror="this.src='${defaultImg}'"
           />
           <div class="flex-1 min-w-0 space-y-1">
