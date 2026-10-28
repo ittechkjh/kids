@@ -1845,6 +1845,70 @@ class DodamCommunityApp {
     `;
   }
 
+  // 모달 제어 (지역행사 & 대회일정 공용)
+  openEventDetailModal(eventId) {
+    const evt = (this.allEvents || []).find((e) => e.id === eventId);
+    if (!evt) return;
+    this.activeEventDetailId = eventId;
+
+    const modal = document.getElementById('event-detail-modal');
+    if (!modal) return;
+
+    document.getElementById('evt-modal-badge').textContent = evt.badge;
+    document.getElementById('evt-modal-source').textContent = evt.sourceLabel;
+    document.getElementById('evt-modal-dday').textContent = evt.dday;
+    document.getElementById('evt-modal-region').textContent = `📍 ${evt.regionName}`;
+    document.getElementById('evt-modal-title').textContent = evt.title;
+    document.getElementById('evt-modal-img').src = evt.imageUrl;
+
+    document.getElementById('evt-modal-date').textContent = `${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}`;
+    document.getElementById('evt-modal-apply').textContent = `${evt.applyStartDate} ~ ${evt.applyEndDate}`;
+    document.getElementById('evt-modal-location').textContent = evt.location;
+    document.getElementById('evt-modal-target').textContent = evt.targetAudience;
+    document.getElementById('evt-modal-fee').textContent = evt.fee;
+    document.getElementById('evt-modal-organizer').textContent = evt.organizer;
+    document.getElementById('evt-modal-desc').textContent = evt.description;
+
+    const tagsEl = document.getElementById('evt-modal-tags');
+    if (tagsEl) {
+      tagsEl.innerHTML = (evt.tags || [])
+        .map((t) => `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-xs font-semibold">#${t}</span>`)
+        .join('');
+    }
+
+    const resolvedUrl = this.getEventUrl(evt);
+    const linkEl = document.getElementById('evt-modal-link');
+    if (linkEl) {
+      linkEl.href = resolvedUrl;
+    }
+
+    const naverEl = document.getElementById('evt-modal-naver-link');
+    if (naverEl) {
+      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
+      naverEl.href = `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
+    }
+
+    modal.classList.remove('hidden');
+  }
+
+  getEventUrl(evt) {
+    if (!evt || !evt.url) {
+      return `https://search.naver.com/search.naver?query=${encodeURIComponent(evt?.title || '지역행사')}`;
+    }
+    // 대한민국 구석구석 과거 URL 파라미터(fes_detail.do, ms_detail.do) 비정상 접근 404 원천 차단
+    if (evt.url.includes('fes_detail.do') || evt.url.includes('ms_detail.do')) {
+      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
+      return `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
+    }
+    return evt.url;
+  }
+
+  closeEventDetailModal() {
+    this.activeEventDetailId = null;
+    const modal = document.getElementById('event-detail-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
   renderSidebarWidgets() {
     const hotListEl = document.getElementById('sidebar-hot-posts');
     if (hotListEl) {
