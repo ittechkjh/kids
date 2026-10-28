@@ -137,6 +137,12 @@ class DodamCommunityApp {
     this.calcChildrenCount = 2;
     this.calcYoungestAge = '0';
     this.calcRegion = 'all';
+    // 6. Schools & Admissions State (학교 정보 & 입시 순위)
+    this.schoolLevel = 'all';
+    this.schoolRegion = 'all';
+    this.schoolType = 'all';
+    this.schoolSearchKeyword = '';
+    this.expandedSchoolIds = new Set();
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
@@ -161,17 +167,18 @@ class DodamCommunityApp {
     this.renderSidebarWidgets();
     this.renderFoodView();
     this.initPolicyView();
+    this.initSchoolView();
     this.updateScrapBadge();
     this.renderUpdateBadges();
     this.initFirebaseSync();
     // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
     const initHash = (window.location.hash || '').replace('#', '');
-    if (['board', 'festivals', 'contests', 'food', 'policy'].includes(initHash)) {
+    if (['board', 'festivals', 'contests', 'food', 'policy', 'school'].includes(initHash)) {
       this.switchMainView(initHash);
     }
     window.addEventListener('hashchange', () => {
       const h = (window.location.hash || '').replace('#', '');
-      if (['board', 'festivals', 'contests', 'food', 'policy'].includes(h)) {
+      if (['board', 'festivals', 'contests', 'food', 'policy', 'school'].includes(h)) {
         this.switchMainView(h);
       }
     });
@@ -216,6 +223,16 @@ class DodamCommunityApp {
     if (pStatTotal) {
       const pCount = window.DODAM_POLICIES_DATA?.policies?.length || 20;
       pStatTotal.textContent = pCount.toLocaleString();
+    }
+
+    const sStatDate = document.getElementById('school-stat-date');
+    if (sStatDate) sStatDate.textContent = formatted;
+    const sStatToday = document.getElementById('school-stat-today');
+    if (sStatToday) sStatToday.textContent = '24';
+    const sStatTotal = document.getElementById('school-stat-total');
+    if (sStatTotal) {
+      const sCount = (window.DODAM_SCHOOLS_DATA?.schools?.length || 18) + (window.DODAM_SCHOOLS_DATA?.districts?.length || 7) + (window.DODAM_SCHOOLS_DATA?.admissions?.length || 4);
+      sStatTotal.textContent = sCount.toLocaleString();
     }
   }
 
@@ -373,12 +390,10 @@ class DodamCommunityApp {
     if (target) target.classList.remove('hidden');
 
     document.querySelectorAll('.nav-view-btn').forEach((btn) => {
-      const isPolicy = btn.getAttribute('data-view') === 'policy';
-      const colSpan = isPolicy ? ' col-span-2 sm:col-span-1' : '';
       const active = btn.getAttribute('data-view') === viewId;
       btn.className = active
-        ? 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm text-center' + colSpan
-        : 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-stone-100 text-center' + colSpan;
+        ? 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm text-center'
+        : 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-stone-100 text-center';
     });
 
     this.renderBoardCategories();
@@ -407,6 +422,8 @@ class DodamCommunityApp {
       }, 100);
     } else if (viewId === 'policy') {
       this.initPolicyView();
+    } else if (viewId === 'school') {
+      this.initSchoolView();
     }
   }
 
@@ -501,6 +518,21 @@ class DodamCommunityApp {
               <span>육아 정책·지원금 모아보기</span>
             </span>
             <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'policy' ? 'bg-white text-emerald-600' : 'bg-emerald-600 text-white'} text-[9px] font-black">2026</span>
+          </button>
+
+          <button
+            onclick="app.switchMainView('school')"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-extrabold transition ${
+              this.currentView === 'school'
+                ? 'bg-sky-600 text-white shadow-sm'
+                : 'bg-sky-50 text-sky-900 border border-sky-200/80 hover:bg-sky-100'
+            }"
+          >
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-school ${this.currentView === 'school' ? 'text-white' : 'text-sky-600'}"></i>
+              <span>전국 학교정보 & 입시순위</span>
+            </span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'school' ? 'bg-white text-sky-600' : 'bg-sky-600 text-white'} text-[9px] font-black">랭킹</span>
           </button>
 </div>
       `;
@@ -3193,6 +3225,374 @@ class DodamCommunityApp {
       this.expandedFaqIndexes.add(idx);
     }
     this.renderPolicyFaqs();
+  }
+
+  // ==========================================
+  // 8. 전국 학교 정보 & 지역별 학군·입시 순위 컨트롤러
+  // ==========================================
+  initSchoolView() {
+    this.renderSchoolLevelChips();
+    this.renderSchoolList();
+    this.renderSchoolDistricts();
+    this.renderSchoolAdmissions();
+  }
+
+  renderSchoolLevelChips() {
+    const container = document.getElementById('school-level-chips');
+    if (!container) return;
+    const levels = window.DODAM_SCHOOLS_DATA?.levels || [];
+    container.innerHTML = levels
+      .map((lvl) => {
+        const active = this.schoolLevel === lvl.id;
+        return `
+          <button
+            type="button"
+            onclick="app.selectSchoolLevel('${lvl.id}')"
+            class="px-3 py-1.5 rounded-xl font-extrabold whitespace-nowrap transition flex items-center gap-1.5 text-xs ${
+              active
+                ? 'bg-slate-900 text-white shadow-sm'
+                : 'bg-stone-100 text-slate-600 hover:bg-stone-200'
+            }"
+          >
+            <i class="fa-solid ${lvl.icon} ${active ? 'text-sky-400' : 'text-slate-400'}"></i>
+            <span>${lvl.name}</span>
+          </button>
+        `;
+      })
+      .join('');
+  }
+
+  selectSchoolLevel(levelId) {
+    this.schoolLevel = levelId;
+    this.renderSchoolLevelChips();
+
+    const listSec = document.getElementById('school-list-section');
+    const filterBar = document.getElementById('school-filter-bar');
+    const distSec = document.getElementById('school-districts-section');
+    const admSec = document.getElementById('school-admissions-section');
+
+    if (levelId === 'districts') {
+      if (listSec) listSec.classList.add('hidden');
+      if (filterBar) filterBar.classList.add('hidden');
+      if (distSec) distSec.classList.remove('hidden');
+      if (admSec) admSec.classList.add('hidden');
+      distSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else if (levelId === 'admissions') {
+      if (listSec) listSec.classList.add('hidden');
+      if (filterBar) filterBar.classList.add('hidden');
+      if (distSec) distSec.classList.add('hidden');
+      if (admSec) admSec.classList.remove('hidden');
+      admSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      if (listSec) listSec.classList.remove('hidden');
+      if (filterBar) filterBar.classList.remove('hidden');
+      if (distSec) distSec.classList.toggle('hidden', levelId !== 'all');
+      if (admSec) admSec.classList.toggle('hidden', levelId !== 'all');
+      this.renderSchoolList();
+    }
+  }
+
+  setSchoolRegionFilter(reg) {
+    this.schoolRegion = reg;
+    this.renderSchoolList();
+  }
+
+  setSchoolTypeFilter(type) {
+    this.schoolType = type;
+    this.renderSchoolList();
+  }
+
+  onSchoolSearch(kw) {
+    this.schoolSearchKeyword = (kw || '').trim().toLowerCase();
+    const clearBtn = document.getElementById('school-search-clear');
+    if (clearBtn) {
+      clearBtn.classList.toggle('hidden', !this.schoolSearchKeyword);
+    }
+    this.renderSchoolList();
+  }
+
+  clearSchoolSearch() {
+    this.schoolSearchKeyword = '';
+    const input = document.getElementById('school-search-input');
+    if (input) input.value = '';
+    const clearBtn = document.getElementById('school-search-clear');
+    if (clearBtn) clearBtn.classList.add('hidden');
+    this.renderSchoolList();
+  }
+
+  filterSchools() {
+    const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
+    return schools.filter((s) => {
+      // Level filter
+      if (this.schoolLevel !== 'all' && this.schoolLevel !== 'districts' && this.schoolLevel !== 'admissions') {
+        if (s.level !== this.schoolLevel) return false;
+      }
+      // Region filter
+      if (this.schoolRegion !== 'all') {
+        if (s.region !== 'all' && s.region !== this.schoolRegion) return false;
+      }
+      // Type filter
+      if (this.schoolType !== 'all') {
+        if (!s.typeBadge.includes(this.schoolType) && !s.type.includes(this.schoolType)) return false;
+      }
+      // Search keyword filter
+      if (this.schoolSearchKeyword) {
+        const kw = this.schoolSearchKeyword;
+        const text = (
+          s.name +
+          ' ' +
+          s.type +
+          ' ' +
+          s.regionName +
+          ' ' +
+          s.rankHighlight +
+          ' ' +
+          (s.statPrimary || '') +
+          ' ' +
+          (s.statSecondary || '') +
+          ' ' +
+          (s.features || []).join(' ') +
+          ' ' +
+          (s.details || []).join(' ')
+        ).toLowerCase();
+        if (!text.includes(kw)) return false;
+      }
+      return true;
+    });
+  }
+
+  renderSchoolList() {
+    const grid = document.getElementById('school-cards-grid');
+    const badge = document.getElementById('school-filtered-count-badge');
+    if (!grid) return;
+
+    const filtered = this.filterSchools();
+    if (badge) {
+      badge.textContent = `검색 결과 ${filtered.length}곳`;
+    }
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="col-span-1 md:col-span-2 text-center py-12 bg-white rounded-2xl border border-dashed border-slate-200">
+          <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-school-circle-xmark"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-700">선택하신 조건에 일치하는 학교 정보가 없습니다.</p>
+          <p class="text-xs text-slate-400 mt-1">검색어를 변경하시거나 지역/유형 필터를 '전체'로 설정해 보세요.</p>
+          <button
+            onclick="app.clearSchoolSearch(); app.selectSchoolLevel('all'); document.getElementById('school-region-filter').value='all'; document.getElementById('school-type-filter').value='all'; app.setSchoolRegionFilter('all'); app.setSchoolTypeFilter('all');"
+            class="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white font-black text-xs hover:bg-slate-800 transition"
+          >
+            전체 필터 초기화
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = filtered
+      .map((s) => {
+        const isExpanded = this.expandedSchoolIds.has(s.id);
+
+        const levelBadge = {
+          high: { label: '고등학교', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
+          middle: { label: '중학교', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+          elementary: { label: '초등학교', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
+          kindergarten: { label: '유치원', bg: 'bg-pink-50 text-pink-700 border-pink-200' }
+        }[s.level] || { label: '학교', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
+
+        return `
+          <article class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs hover:shadow-sm transition flex flex-col justify-between">
+            <div class="space-y-3">
+              <!-- 상단 뱃지 라인 -->
+              <div class="flex items-center justify-between gap-2 flex-wrap">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-full font-black text-[10px] border ${levelBadge.bg}">
+                    ${levelBadge.label}
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-slate-900 text-white shadow-2xs">
+                    ${s.typeBadge}
+                  </span>
+                  <span class="px-2 py-0.5 rounded-full font-bold text-[10px] bg-slate-100 text-slate-600 border border-slate-200">
+                    <i class="fa-solid fa-location-dot mr-1 text-slate-400"></i>${s.regionName}
+                  </span>
+                </div>
+                <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-rose-50 text-rose-600 border border-rose-200">
+                  <i class="fa-solid fa-trophy mr-1"></i>${s.rankHighlight}
+                </span>
+              </div>
+
+              <!-- 학교명 및 한줄 요약 -->
+              <div>
+                <h4 class="text-sm font-black text-slate-900 hover:text-sky-700 transition cursor-pointer flex items-center justify-between" onclick="app.toggleSchoolDetail('${s.id}')">
+                  <span>${s.name}</span>
+                  <span class="text-[11px] font-bold text-slate-400 font-normal">${s.type}</span>
+                </h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                  ${s.summary}
+                </p>
+              </div>
+
+              <!-- 핵심 실적 지표 박스 -->
+              <div class="p-3 rounded-xl bg-gradient-to-r from-sky-50 via-indigo-50/50 to-white border border-sky-100 space-y-1">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-bold text-[11px]">🏆 핵심 진학 실적</span>
+                  <strong class="font-black text-indigo-700">${s.statPrimary}</strong>
+                </div>
+                <div class="flex items-center justify-between text-xs">
+                  <span class="text-slate-500 font-bold text-[11px]">📊 학업 성취·지표</span>
+                  <span class="font-extrabold text-slate-800 text-[11px]">${s.statSecondary}</span>
+                </div>
+              </div>
+
+              <!-- 주요 특징 태그 -->
+              <div class="flex flex-wrap items-center gap-1">
+                ${(s.features || [])
+                  .map(
+                    (f) => `
+                  <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 text-[10px] font-bold">
+                    #${f}
+                  </span>
+                `
+                  )
+                  .join('')}
+              </div>
+
+              <!-- 아코디언 상세 정보 -->
+              <div id="school-detail-${s.id}" class="${isExpanded ? '' : 'hidden'} pt-2 border-t border-slate-100 space-y-2.5 text-xs text-slate-700">
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 space-y-2">
+                  <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-info text-sky-600"></i>
+                    <span>상세 입시 요강 & 학군 분석</span>
+                  </div>
+                  <ul class="space-y-1 text-[11px] text-slate-600 pl-1">
+                    ${(s.details || []).map((d) => `<li class="flex items-start gap-1.5"><span class="text-sky-500 font-bold">•</span><span>${d}</span></li>`).join('')}
+                  </ul>
+                  ${
+                    s.tuition
+                      ? `<div class="text-[11px] text-slate-600 pt-1 border-t border-slate-200/60"><strong class="text-slate-800">💰 학비·원비:</strong> ${s.tuition}</div>`
+                      : ''
+                  }
+                  <div class="text-[11px] text-slate-600"><strong class="text-slate-800">📝 선발 전형:</strong> ${s.admissionType}</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 카드 하단 액션 버튼 -->
+            <div class="flex items-center justify-between gap-2 pt-3 mt-3 border-t border-slate-100">
+              <button
+                type="button"
+                onclick="app.toggleSchoolDetail('${s.id}')"
+                class="text-xs font-extrabold text-slate-600 hover:text-slate-900 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-slate-100"
+              >
+                <span>${isExpanded ? '상세 접기' : '상세 요강'}</span>
+                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
+              </button>
+
+              <div class="flex items-center gap-1.5">
+                <a
+                  href="${s.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition"
+                >
+                  <span>학교알리미</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
+                </a>
+                <a
+                  href="${s.linkUrl}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-black text-xs shadow-2xs transition"
+                >
+                  <span>홈페이지</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        `;
+      })
+      .join('');
+  }
+
+  toggleSchoolDetail(schoolId) {
+    if (this.expandedSchoolIds.has(schoolId)) {
+      this.expandedSchoolIds.delete(schoolId);
+    } else {
+      this.expandedSchoolIds.add(schoolId);
+    }
+    this.renderSchoolList();
+  }
+
+  renderSchoolDistricts() {
+    const container = document.getElementById('school-districts-grid');
+    if (!container) return;
+    const districts = window.DODAM_SCHOOLS_DATA?.districts || [];
+    container.innerHTML = districts
+      .map(
+        (d) => `
+        <div class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-rose-50 text-rose-600 border border-rose-200">
+                  ${d.tag}
+                </span>
+                <span class="text-xs text-slate-400 font-bold">${d.regionName}</span>
+              </div>
+              <h4 class="text-sm font-black text-slate-900 mt-1">${d.name}</h4>
+            </div>
+          </div>
+
+          <p class="text-xs text-slate-700 leading-relaxed">${d.analysis}</p>
+
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 text-xs">
+            <div class="text-[11px] text-slate-600"><strong class="text-slate-900">📍 핵심 학원가:</strong> ${d.hotSpots}</div>
+            <div class="text-[11px] text-slate-600"><strong class="text-slate-900">🎓 초·중·고 테크트리:</strong> ${d.feederLine}</div>
+            <div class="text-[11px] text-emerald-700 font-bold pt-1 border-t border-slate-200/60"><i class="fa-solid fa-lightbulb mr-1"></i>진입 팁: ${d.tips}</div>
+          </div>
+        </div>
+      `
+      )
+      .join('');
+  }
+
+  renderSchoolAdmissions() {
+    const container = document.getElementById('school-admissions-grid');
+    if (!container) return;
+    const admissions = window.DODAM_SCHOOLS_DATA?.admissions || [];
+    container.innerHTML = admissions
+      .map(
+        (a) => `
+        <div class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs space-y-3">
+          <div class="flex items-center justify-between gap-2">
+            <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-blue-50 text-blue-700 border border-blue-200">
+              ${a.category}
+            </span>
+            <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-slate-900 text-white">
+              ${a.badge}
+            </span>
+          </div>
+
+          <div>
+            <h4 class="text-sm font-black text-slate-900">${a.title}</h4>
+            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${a.summary}</p>
+          </div>
+
+          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 text-xs">
+            <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
+              <i class="fa-solid fa-check-circle text-blue-600"></i>
+              <span>핵심 대비 포인트</span>
+            </div>
+            <ul class="space-y-1 text-[11px] text-slate-600 pl-1">
+              ${(a.points || []).map((pt) => `<li class="flex items-start gap-1.5"><span class="text-blue-500 font-bold">•</span><span>${pt}</span></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      `
+      )
+      .join('');
   }
 }
 

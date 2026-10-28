@@ -138,7 +138,7 @@
       </div>
 
       <!-- 4대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사(볼거리·마라톤) / 대회일정(공부·사생·독서토론) / 맛집맵 -->
-      <nav class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5 mt-3 pt-2.5 border-t border-stone-100">
+      <nav class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-1.5 mt-3 pt-2.5 border-t border-stone-100">
         <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition bg-slate-900 text-white shadow-sm text-center">
           <i class="fa-solid fa-clipboard-list text-rose-400"></i>
           <span>💬 도담 육아 게시판</span>
@@ -155,9 +155,13 @@
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
           <span>🍽️ 전국 안심 맛집맵</span>
         </button>
-        <button data-view="policy" onclick="app.switchMainView('policy')" class="nav-view-btn col-span-2 sm:col-span-1 flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
+        <button data-view="policy" onclick="app.switchMainView('policy')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-hand-holding-dollar text-emerald-500"></i>
           <span>💰 육아 정책·지원금</span>
+        </button>
+        <button data-view="school" onclick="app.switchMainView('school')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
+          <i class="fa-solid fa-school text-sky-500"></i>
+          <span>🏫 학교정보 & 입시순위</span>
         </button>
       </nav>
     </div>
@@ -1176,6 +1180,183 @@
             </div>
           </div>
         </section>
+  
+        <!-- VIEW 8: 유치원·초·중·고 학교 정보 & 지역별 학군·입시 순위 (신규 추가) -->
+        <section id="view-school" class="view-section hidden space-y-5">
+          <!-- 상단 배너 & 실시간 학교·입시 현황 -->
+          <div class="community-card p-5 space-y-4 bg-gradient-to-br from-sky-50/80 via-white to-indigo-50/60 border border-sky-100">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[11px] font-extrabold">2024~2026 대한민국 학교·학군·입시 공시 연동</span>
+                  <span class="text-xs text-sky-700 font-bold"><i class="fa-solid fa-graduation-cap mr-1"></i>유치원부터 고입·대입까지 원스톱</span>
+                </div>
+                <h2 class="text-lg font-black text-slate-900 mt-1">🏫 전국 유치원·초·중·고 학교 정보 & 지역별 학군·입시 순위</h2>
+                <p class="text-xs text-slate-600">특목고·자사고 진학률 중학교 순위, 서울대·의대 합격 고교 랭킹, 대한민국 7대 명문 학군지 심층 분석, 2028 대입 개편안 완벽 가이드를 확인하세요.</p>
+              </div>
+
+              <!-- 우측 통계 위젯 -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shrink-0">
+                <div class="bg-white/95 backdrop-blur border border-sky-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                      </span>
+                      <span>학교알리미 공시 연동</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-sky-50 text-sky-700 border border-sky-200 rounded-md">
+                      업데이트: <span id="school-stat-date" class="last-updated-text">2026.10.28</span>
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <span>오늘 검증: <strong id="school-stat-today" class="font-black text-sky-600">24</strong>건</span>
+                    <span class="text-slate-300">|</span>
+                    <span>누적 학교·학군: <strong id="school-stat-total" class="font-black text-slate-900">32</strong>건</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4대 입시 핵심 하이라이트 그리드 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-indigo-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-indigo-300 transition" onclick="app.selectSchoolLevel('high')">
+                <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-sm shrink-0">🏛️</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">고교 서울대·의대 랭킹</div>
+                  <div class="text-xs font-black text-slate-900 truncate">외대부고·상산고·단대부고</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-emerald-300 transition" onclick="app.selectSchoolLevel('middle')">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-sm shrink-0">📚</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">중학 특목·자사고 순위</div>
+                  <div class="text-xs font-black text-slate-900 truncate">대청중·목운중·내정중</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-amber-300 transition" onclick="app.selectSchoolLevel('elementary')">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-black text-sm shrink-0">🎒</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">명문 사립·공립초등</div>
+                  <div class="text-xs font-black text-slate-900 truncate">영훈·계성초 & 대치·목동</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-rose-300 transition" onclick="app.selectSchoolLevel('admissions')">
+                <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-black text-sm shrink-0">🎯</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">2028 대입 개편안</div>
+                  <div class="text-xs font-black text-slate-900 truncate">내신 5등급제 & 수능통합</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 학교 단계별 탭 (Level Chips) -->
+          <div class="community-card p-3 bg-white border border-slate-200">
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs" id="school-level-chips">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 검색 및 필터링 컨트롤 바 -->
+          <div class="community-card p-4 space-y-3 bg-white border border-slate-200" id="school-filter-bar">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input
+                  type="text"
+                  id="school-search-input"
+                  oninput="app.onSchoolSearch(this.value)"
+                  placeholder="학교명, 지역(구·동), 학군, 키워드 검색 (예: 외대부고, 대청중, 목운초, 게이트, 대치동, 의대)"
+                  class="w-full pl-8 pr-8 py-2 rounded-xl text-xs font-medium border border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                />
+                <button
+                  id="school-search-clear"
+                  onclick="app.clearSchoolSearch()"
+                  class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                >
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+
+              <!-- 지역 필터 -->
+              <select
+                id="school-region-filter"
+                onchange="app.setSchoolRegionFilter(this.value)"
+                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
+              >
+                <option value="all">전체 지역 (전국)</option>
+                <option value="seoul">서울특별시 (강남·목동·노원)</option>
+                <option value="gyeonggi">경기도 (분당·일산·평촌·용인)</option>
+                <option value="daegu">대구광역시 (수성구 범어동)</option>
+                <option value="busan">부산광역시 (해운대 센텀)</option>
+                <option value="jeonbuk">전북특별자치도 (전주 상산고 등)</option>
+              </select>
+
+              <!-- 학교 유형 필터 -->
+              <select
+                id="school-type-filter"
+                onchange="app.setSchoolTypeFilter(this.value)"
+                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
+              >
+                <option value="all">전체 학교 유형</option>
+                <option value="자사고">전국·광역 자사고</option>
+                <option value="특목고">특목고 (외고·국제고·과고)</option>
+                <option value="영재학교">영재학교</option>
+                <option value="명문일반고">명문 일반고</option>
+                <option value="명문중학">공립 명문중학교</option>
+                <option value="사립초">사립 초등학교</option>
+                <option value="영유">영어유치원 (어학원 유치부)</option>
+                <option value="국공립">국공립 병설·단설</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- 1. 학교 목록 섹션 -->
+          <div id="school-list-section" class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                <span>📋 전국 학교 정보 & 순위 리스트</span>
+                <span id="school-filtered-count-badge" class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 text-[11px] font-extrabold">전체</span>
+              </h3>
+              <span class="text-[11px] text-slate-400">카드를 누르면 상세 입시 요강과 학군 연계가 펼쳐집니다.</span>
+            </div>
+
+            <!-- 카드 그리드 -->
+            <div id="school-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 2. 전국 7대 명문 학군지 심층 분석 섹션 -->
+          <div id="school-districts-section" class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-map-location-dot text-rose-500"></i>
+                <span>대한민국 7대 명문 학군지 심층 분석 & 초·중·고 테크트리</span>
+              </h3>
+              <span class="text-[11px] text-slate-400">대치·목동·중계·분당·평촌·수성·해운대</span>
+            </div>
+            <div id="school-districts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 3. 2028 대입 & 고입 입시 가이드 섹션 -->
+          <div id="school-admissions-section" class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                <i class="fa-solid fa-bullseye text-blue-500"></i>
+                <span>2028 대입 개편안 핵심 가이드 & 학교별 전형 팁</span>
+              </h3>
+              <span class="text-[11px] text-slate-400">내신 5등급제·수능통합 대비</span>
+            </div>
+            <div id="school-admissions-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
   </main>
 
   <!-- 푸터 -->
@@ -1477,6 +1658,7 @@
   <script src="js/events_data.js"></script>
   <script src="js/restaurants_data.js"></script>
   <script src="js/policies_data.js"></script>
+  <script src="js/schools_data.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   
