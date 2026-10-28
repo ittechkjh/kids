@@ -1167,20 +1167,33 @@
       </div>
 
       <!-- 모달 하단 버튼 바 -->
-      <div class="pt-3 border-t border-stone-100 flex items-center justify-between gap-3 shrink-0">
+      <div class="pt-3 border-t border-stone-100 flex flex-wrap items-center justify-between gap-2.5 shrink-0">
         <button onclick="app.closeEventDetailModal()" class="px-4 py-2.5 rounded-xl border border-stone-200 text-xs font-bold text-slate-600 hover:bg-stone-50">
           닫기
         </button>
-        <a
-          id="evt-modal-link"
-          href="#"
-          target="_blank"
-          rel="noopener"
-          class="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-95 text-white font-black text-xs text-center shadow-md flex items-center justify-center gap-2"
-        >
-          <span>🔗 주최 협회/공식 접수처 바로가기</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
-        </a>
+        <div class="flex items-center gap-2 flex-1 justify-end">
+          <a
+            id="evt-modal-naver-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="px-3.5 py-2.5 rounded-xl border border-emerald-300 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 font-extrabold text-xs text-center flex items-center justify-center gap-1.5 transition shadow-sm"
+          >
+            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+            <span>네이버 최신정보/예약</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+          </a>
+          <a
+            id="evt-modal-link"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            class="px-4 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-rose-500 hover:opacity-95 text-white font-black text-xs text-center shadow-md flex items-center justify-center gap-2"
+          >
+            <span>🔗 공식 접수/안내처 바로가기</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[11px]"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>

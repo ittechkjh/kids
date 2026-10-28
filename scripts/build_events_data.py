@@ -1841,7 +1841,8 @@ def fetch_tourapi_events(api_key):
                         tag_list = ["지역축제", "공공데이터", reg_name, "가족나들이"]
 
                     cid = it.get("contentid")
-                    page_url = f"https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid={cid}" if cid else "https://korean.visitkorea.or.kr"
+                    clean_t = title.replace("[", "").replace("]", " ").strip()
+                    page_url = f"https://search.naver.com/search.naver?query={urllib.parse.quote(clean_t)}"
                     img_url = it.get("firstimage") or it.get("firstimage2") or "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80"
 
                     loc = it.get("addr1") or f"{reg_name} 일원"
@@ -1898,7 +1899,8 @@ def fetch_tourapi_events(api_key):
 
                     reg_key, reg_name = determine_region(it)
                     cid = it.get("contentid")
-                    page_url = f"https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid={cid}" if cid else "https://korean.visitkorea.or.kr"
+                    clean_t = f"{reg_name} {title}".replace("[", "").replace("]", " ").strip()
+                    page_url = f"https://search.naver.com/search.naver?query={urllib.parse.quote(clean_t)}"
                     img_url = it.get("firstimage") or it.get("firstimage2") or "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80"
                     loc = it.get("addr1") or f"{reg_name} 일원"
 

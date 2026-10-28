@@ -1495,7 +1495,7 @@ class DodamCommunityApp {
               <span>상세보기</span>
             </button>
             <a
-              href="${evt.url}"
+              href="${this.getEventUrl(evt)}"
               target="_blank"
               rel="noopener"
               class="px-3.5 py-2 rounded-xl ${ctaGradient} hover:opacity-95 text-white font-black text-xs shadow-sm flex items-center gap-1.5 transition"
@@ -1540,12 +1540,31 @@ class DodamCommunityApp {
         .join('');
     }
 
+    const resolvedUrl = this.getEventUrl(evt);
     const linkEl = document.getElementById('evt-modal-link');
     if (linkEl) {
-      linkEl.href = evt.url;
+      linkEl.href = resolvedUrl;
+    }
+
+    const naverEl = document.getElementById('evt-modal-naver-link');
+    if (naverEl) {
+      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
+      naverEl.href = `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
     }
 
     modal.classList.remove('hidden');
+  }
+
+  getEventUrl(evt) {
+    if (!evt || !evt.url) {
+      return `https://search.naver.com/search.naver?query=${encodeURIComponent(evt?.title || '지역행사')}`;
+    }
+    // 대한민국 구석구석 과거 URL 파라미터(fes_detail.do, ms_detail.do) 비정상 접근 404 원천 차단
+    if (evt.url.includes('fes_detail.do') || evt.url.includes('ms_detail.do')) {
+      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
+      return `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
+    }
+    return evt.url;
   }
 
   closeEventDetailModal() {

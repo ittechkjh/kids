@@ -143,7 +143,7 @@ window.DODAM_EVENTS_METADATA = {
 
 window.DODAM_NATIONWIDE_EVENTS = [
   {
-    "id": "gg-fest-5889454020959848751",
+    "id": "gg-fest-8287441178005518753",
     "boardType": "festivals",
     "title": "제1회 상록수문화제",
     "category": "festival_culture",
@@ -174,7 +174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6209907712530479511",
+    "id": "gg-fest-3941319296345961047",
     "boardType": "festivals",
     "title": "2014 안양 아줌마축제",
     "category": "festival_culture",
@@ -205,7 +205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6152699178387185547",
+    "id": "gg-fest-5351096250210915787",
     "boardType": "festivals",
     "title": "2014 안양시민축제",
     "category": "festival_culture",
@@ -236,7 +236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4069999511074658111",
+    "id": "gg-fest-3351226568559093162",
     "boardType": "festivals",
     "title": "제2회 상록수문화제",
     "category": "festival_culture",
@@ -267,7 +267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1189126503054429165",
+    "id": "gg-fest-1668721155667562716",
     "boardType": "festivals",
     "title": "제15회 구리한강 유채꽃 축제",
     "category": "park_eco",
@@ -298,7 +298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8541101774152187599",
+    "id": "gg-fest-2893668199595826734",
     "boardType": "festivals",
     "title": "2015 안양 아줌마축제",
     "category": "festival_culture",
@@ -329,7 +329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-466268237478603106",
+    "id": "gg-fest-9104916572838621788",
     "boardType": "festivals",
     "title": "제3회 상록수문화제",
     "category": "festival_culture",
@@ -360,7 +360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6095325277027923414",
+    "id": "gg-fest-2634317394458505325",
     "boardType": "festivals",
     "title": "2015 안양 시민축제",
     "category": "festival_culture",
@@ -391,7 +391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-912092664868805645",
+    "id": "gg-fest-749064454017982590",
     "boardType": "festivals",
     "title": "제15회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -422,7 +422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-740482030520868598",
+    "id": "gg-fest-4448346675750824056",
     "boardType": "festivals",
     "title": "제16회 구리한강 유채꽃 축제",
     "category": "park_eco",
@@ -453,7 +453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4949510930606738446",
+    "id": "gg-fest-6781059105372409798",
     "boardType": "festivals",
     "title": "2016 안양 아줌마축제",
     "category": "festival_culture",
@@ -484,7 +484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8779921336240351603",
+    "id": "gg-fest-1521055455091198457",
     "boardType": "festivals",
     "title": "여르미오페스티벌",
     "category": "festival_culture",
@@ -515,7 +515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1443099667738962740",
+    "id": "gg-fest-3677828899149955546",
     "boardType": "festivals",
     "title": "2016 광복기념음악회",
     "category": "festival_culture",
@@ -546,7 +546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-533726746730742703",
+    "id": "gg-fest-5052279743246041639",
     "boardType": "festivals",
     "title": "제4회 상록수문화제",
     "category": "festival_culture",
@@ -577,7 +577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7623521429885098954",
+    "id": "gg-fest-1751069336379720883",
     "boardType": "festivals",
     "title": "제16회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -608,7 +608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1662676327167761137",
+    "id": "gg-fest-876619114380216323",
     "boardType": "festivals",
     "title": "2016 안양 시민축제",
     "category": "festival_culture",
@@ -639,7 +639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5110932085631638306",
+    "id": "gg-fest-9216609683894515620",
     "boardType": "festivals",
     "title": "2016 제5회 안양공공예술프로젝트",
     "category": "festival_culture",
@@ -670,7 +670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3538390680555449667",
+    "id": "gg-fest-7213986569219022659",
     "boardType": "festivals",
     "title": "2017 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -701,7 +701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3941562877128210536",
+    "id": "gg-fest-2734140652329881553",
     "boardType": "festivals",
     "title": "제17회 구리 유채꽃 축제",
     "category": "park_eco",
@@ -732,7 +732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5025146122279463682",
+    "id": "gg-fest-2829157526270347982",
     "boardType": "festivals",
     "title": "2017 안양 아줌마축제",
     "category": "festival_culture",
@@ -763,7 +763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2593822961877211427",
+    "id": "gg-fest-7906633365399959196",
     "boardType": "festivals",
     "title": "2017 광복기념음악회",
     "category": "festival_culture",
@@ -794,7 +794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8348530818616153910",
+    "id": "gg-fest-3623088430791496454",
     "boardType": "festivals",
     "title": "2017 안양 시민축제",
     "category": "festival_culture",
@@ -825,7 +825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6544179443422171466",
+    "id": "gg-fest-669927262546002162",
     "boardType": "festivals",
     "title": "제5회 상록수문화제",
     "category": "festival_culture",
@@ -856,7 +856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7691070964435147569",
+    "id": "gg-fest-3277169013222735743",
     "boardType": "festivals",
     "title": "제17회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -887,7 +887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6555016066538518649",
+    "id": "gg-fest-213048672519375474",
     "boardType": "festivals",
     "title": "2018 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -918,7 +918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1149018373882070825",
+    "id": "gg-fest-9153277768137991487",
     "boardType": "festivals",
     "title": "제18회 구리 유채꽃 축제",
     "category": "park_eco",
@@ -949,7 +949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1924379139646713674",
+    "id": "gg-fest-659832043734558404",
     "boardType": "festivals",
     "title": "2018 안양여성축제",
     "category": "festival_culture",
@@ -980,7 +980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5525498149814165464",
+    "id": "gg-fest-7883647092875637254",
     "boardType": "festivals",
     "title": "2018 광복기념음악회",
     "category": "festival_culture",
@@ -1011,7 +1011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5160777004155632911",
+    "id": "gg-fest-7151766718746133163",
     "boardType": "festivals",
     "title": "2018 안양 시민축제",
     "category": "festival_culture",
@@ -1042,7 +1042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2279677404470878594",
+    "id": "gg-fest-5100867507156704937",
     "boardType": "festivals",
     "title": "제6회 상록수문화제",
     "category": "festival_culture",
@@ -1073,7 +1073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3026961427937961980",
+    "id": "gg-fest-7681993882324151181",
     "boardType": "festivals",
     "title": "제18회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -1104,7 +1104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5320594477489603314",
+    "id": "gg-fest-4994159111496301935",
     "boardType": "festivals",
     "title": "2019 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -1135,7 +1135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6866126458853127022",
+    "id": "gg-fest-3730131770237956782",
     "boardType": "festivals",
     "title": "제19회 구리 유채꽃 축제",
     "category": "park_eco",
@@ -1166,7 +1166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5258964750304594894",
+    "id": "gg-fest-2192118067217751808",
     "boardType": "festivals",
     "title": "2019 안양여성축제",
     "category": "festival_culture",
@@ -1197,7 +1197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6973925619655960149",
+    "id": "gg-fest-2654897522657041819",
     "boardType": "festivals",
     "title": "2019 광복기념음악회",
     "category": "festival_culture",
@@ -1228,7 +1228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4829928960027103955",
+    "id": "gg-fest-6131639968504418256",
     "boardType": "festivals",
     "title": "2019 안양 시민축제",
     "category": "festival_culture",
@@ -1259,7 +1259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8083274043889749809",
+    "id": "gg-fest-7784595754989896140",
     "boardType": "festivals",
     "title": "제19회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -1290,7 +1290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7749339419628888963",
+    "id": "gg-fest-5120225402686200838",
     "boardType": "festivals",
     "title": "제7회 상록수문화제",
     "category": "festival_culture",
@@ -1321,7 +1321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4052902888381691549",
+    "id": "gg-fest-5174219532459549594",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1352,7 +1352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4544843558189930074",
+    "id": "gg-fest-1138764103021754476",
     "boardType": "festivals",
     "title": "제8회 상록수문화제",
     "category": "festival_culture",
@@ -1383,7 +1383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7193562636434822731",
+    "id": "gg-fest-4683145284604705195",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1414,7 +1414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9020990190788250847",
+    "id": "gg-fest-2678150324325507312",
     "boardType": "festivals",
     "title": "제9회 상록수문화제",
     "category": "festival_culture",
@@ -1464,7 +1464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3481597",
+    "url": "https://search.naver.com/search.naver?query=%ED%8E%98%EC%9D%B8%ED%84%B0%EC%A6%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4060301_image2_1.png",
     "description": "페인터즈 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -1476,7 +1476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-7540010441628130437",
+    "id": "gg-fest-8665535779255077120",
     "boardType": "festivals",
     "title": "제24회 양평단월고로쇠축제",
     "category": "festival_culture",
@@ -1507,7 +1507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3897903168165812524",
+    "id": "gg-fest-1134436562541067773",
     "boardType": "festivals",
     "title": "제20회 양평산수유한우축제",
     "category": "festival_culture",
@@ -1538,7 +1538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1684445898786357373",
+    "id": "gg-fest-3320820037012377783",
     "boardType": "festivals",
     "title": "2023 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -1569,7 +1569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1678154028970036826",
+    "id": "gg-fest-334451840224049390",
     "boardType": "festivals",
     "title": "제13회 양평 용문산 산나물축제",
     "category": "festival_culture",
@@ -1600,7 +1600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8958309848026227887",
+    "id": "gg-fest-6123292312767856915",
     "boardType": "festivals",
     "title": "2023 구리 유채꽃 한강예술제",
     "category": "park_eco",
@@ -1631,7 +1631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5606951047665847331",
+    "id": "gg-fest-2930401823896390355",
     "boardType": "festivals",
     "title": "2023 광복78주년 광복기념음악회",
     "category": "festival_culture",
@@ -1662,7 +1662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4037623227961448821",
+    "id": "gg-fest-1950906778168269437",
     "boardType": "festivals",
     "title": "2023 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "festival_culture",
@@ -1693,7 +1693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5998123012089678427",
+    "id": "gg-fest-7997239494119457143",
     "boardType": "festivals",
     "title": "제10회 상록수문화제",
     "category": "festival_culture",
@@ -1724,7 +1724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4014014484282597546",
+    "id": "gg-fest-7230124334073149548",
     "boardType": "festivals",
     "title": "제4회 양평부추축제",
     "category": "festival_culture",
@@ -1755,7 +1755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1726649323726303370",
+    "id": "gg-fest-1757269061596419647",
     "boardType": "festivals",
     "title": "2023 구리 코스모스 한강예술제",
     "category": "festival_culture",
@@ -1786,7 +1786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-587257188972992835",
+    "id": "gg-fest-8498405261536684962",
     "boardType": "festivals",
     "title": "제19회 포천백운계곡 동장군 축제",
     "category": "festival_culture",
@@ -1817,7 +1817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5137293460280995873",
+    "id": "gg-fest-6976727963683786689",
     "boardType": "festivals",
     "title": "2024 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -1848,7 +1848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8059129617110284461",
+    "id": "gg-fest-3416275884383113123",
     "boardType": "festivals",
     "title": "2024 구리 유채꽃 축제",
     "category": "park_eco",
@@ -1879,7 +1879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2934932214795008456",
+    "id": "gg-fest-3689095870428368509",
     "boardType": "festivals",
     "title": "2024 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "festival_culture",
@@ -1910,7 +1910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3743465988121900847",
+    "id": "gg-fest-7276778641118780366",
     "boardType": "festivals",
     "title": "2024 구리 코스모스 축제",
     "category": "festival_culture",
@@ -1941,7 +1941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8335626190427761693",
+    "id": "gg-fest-7995054421522795144",
     "boardType": "festivals",
     "title": "제27회 포천 산정호수 명성산 억새꽃 축제",
     "category": "park_eco",
@@ -1972,7 +1972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4916702956306558503",
+    "id": "gg-fest-4353378941159115881",
     "boardType": "festivals",
     "title": "제11회 상록수문화제",
     "category": "festival_culture",
@@ -2003,7 +2003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-512226341417421300",
+    "id": "gg-fest-3842085717489249977",
     "boardType": "festivals",
     "title": "2024 제2회 안양일번가 넘버원 페스티벌",
     "category": "festival_culture",
@@ -2034,7 +2034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2848752929295765276",
+    "id": "gg-fest-5170598018062615337",
     "boardType": "festivals",
     "title": "제20회 포천백운계곡 동장군 축제",
     "category": "festival_culture",
@@ -2084,7 +2084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140682",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B2%9C%20%EB%A7%88%EB%9F%89%EC%A7%84%ED%95%AD%20%ED%95%B4%EB%84%98%EC%9D%B4%20%ED%95%B4%EB%8F%8B%EC%9D%B4%20%ED%96%89%EC%82%AC",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/55/2581455_image2_1.png",
     "description": "서천 마량진항 해넘이 해돋이 행사 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -2096,7 +2096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6427771534814938611",
+    "id": "gg-fest-1535191640324496173",
     "boardType": "festivals",
     "title": "광명등문화축제",
     "category": "festival_culture",
@@ -2127,7 +2127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8360240322567208036",
+    "id": "gg-fest-6177712976344811913",
     "boardType": "festivals",
     "title": "2025 안양충훈벚꽃축제",
     "category": "park_eco",
@@ -2158,7 +2158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8818077791396445345",
+    "id": "gg-fest-1565649525881267703",
     "boardType": "festivals",
     "title": "안산 벚꽃놀이터",
     "category": "park_eco",
@@ -2189,7 +2189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-454561736375437456",
+    "id": "gg-fest-3750178850308987355",
     "boardType": "festivals",
     "title": "2025 포천 한탄강 가든페스타",
     "category": "festival_culture",
@@ -2220,7 +2220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8149849716124224303",
+    "id": "gg-fest-8567160247203471712",
     "boardType": "festivals",
     "title": "2025 구리 유채꽃 축제",
     "category": "park_eco",
@@ -2251,7 +2251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5068260552718069278",
+    "id": "gg-fest-2291072647612846798",
     "boardType": "festivals",
     "title": "제33회 오리문화제",
     "category": "festival_culture",
@@ -2282,7 +2282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3815420160359579532",
+    "id": "gg-fest-5287335531301712528",
     "boardType": "festivals",
     "title": "의정부음악극축제",
     "category": "festival_culture",
@@ -2313,7 +2313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3775237224908208717",
+    "id": "gg-fest-3022438863651259422",
     "boardType": "festivals",
     "title": "제37회 고양행주문화제",
     "category": "festival_culture",
@@ -2344,7 +2344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4237782569723722671",
+    "id": "gg-fest-5744321405181443549",
     "boardType": "festivals",
     "title": "오(oh)장미빛축제",
     "category": "festival_night",
@@ -2394,7 +2394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3443073",
+    "url": "https://search.naver.com/search.naver?query=%ED%93%A8%EC%B2%98%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%20%28Future%20Ground%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4024089_image2_1.jpg",
     "description": "퓨처그라운드 (Future Ground) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -2406,7 +2406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2471418273782233426",
+    "id": "gg-fest-5336600656972735194",
     "boardType": "festivals",
     "title": "2025 제8회 양주 회암사지 왕실 축제",
     "category": "festival_culture",
@@ -2437,7 +2437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3845867231439047814",
+    "id": "gg-fest-1299196491511515851",
     "boardType": "festivals",
     "title": "동두천락페스티벌",
     "category": "festival_culture",
@@ -2468,7 +2468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3440262765384393047",
+    "id": "gg-fest-6546448080766983014",
     "boardType": "festivals",
     "title": "남한산성문화제",
     "category": "festival_culture",
@@ -2499,7 +2499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7197210754529994330",
+    "id": "gg-fest-3988218570498740415",
     "boardType": "festivals",
     "title": "구름산예술제",
     "category": "festival_culture",
@@ -2530,7 +2530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6451938100849667137",
+    "id": "gg-fest-2963103128790408936",
     "boardType": "festivals",
     "title": "2025 구리 코스모스 축제",
     "category": "festival_culture",
@@ -2561,7 +2561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-490471896009370903",
+    "id": "gg-fest-1229506259191282381",
     "boardType": "festivals",
     "title": "2025년 제7회 양주 천만송이 천일홍 축제",
     "category": "festival_culture",
@@ -2592,7 +2592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3501562694241548909",
+    "id": "gg-fest-3577620448811968889",
     "boardType": "festivals",
     "title": "2025 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "festival_culture",
@@ -2623,7 +2623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2230137752880079243",
+    "id": "gg-fest-656942153250403973",
     "boardType": "festivals",
     "title": "2025 고양호수예술축제",
     "category": "festival_culture",
@@ -2654,7 +2654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2420122168576070691",
+    "id": "gg-fest-4890628059147595011",
     "boardType": "festivals",
     "title": "회룡문화제",
     "category": "festival_culture",
@@ -2685,7 +2685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6471672412255346005",
+    "id": "gg-fest-3233788913087064754",
     "boardType": "festivals",
     "title": "제12회 상록수문화제",
     "category": "festival_culture",
@@ -2716,7 +2716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8649630894328235390",
+    "id": "gg-fest-2771925510346370825",
     "boardType": "festivals",
     "title": "의왕백운호수축제",
     "category": "festival_culture",
@@ -2766,7 +2766,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3012095",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EB%9D%BC%EC%9D%B4%ED%8A%B8%20%ED%95%9C%EA%B0%95%20%EB%B9%9B%EC%84%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/17/3579117_image2_1.jpg",
     "description": "서울라이트 한강 빛섬축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -2778,7 +2778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3024146311284852754",
+    "id": "gg-fest-9084870214541892333",
     "boardType": "festivals",
     "title": "동두천시 자원봉사 축제",
     "category": "festival_culture",
@@ -2809,7 +2809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2866384750885385621",
+    "id": "gg-fest-8275358966482891952",
     "boardType": "festivals",
     "title": "2025 페스티벌 광명",
     "category": "festival_culture",
@@ -2840,7 +2840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9108314827697357464",
+    "id": "gg-fest-7228920527483857032",
     "boardType": "festivals",
     "title": "천사데이기념행사",
     "category": "festival_culture",
@@ -2890,7 +2890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2405329",
+    "url": "https://search.naver.com/search.naver?query=%EC%A2%85%EB%A1%9CK%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/64/3563664_image2_1.jpg",
     "description": "종로K축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -2902,7 +2902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7174567119391161845",
+    "id": "gg-fest-5774243838644059488",
     "boardType": "festivals",
     "title": "2025 제3회 안양일번가 넘버원 페스티벌",
     "category": "festival_culture",
@@ -2933,7 +2933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-181088348900801525",
+    "id": "gg-fest-1763878140299714666",
     "boardType": "festivals",
     "title": "제22회 자라섬 재즈페스티벌",
     "category": "festival_culture",
@@ -2964,7 +2964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4166794191040699413",
+    "id": "gg-fest-5927982889237733179",
     "boardType": "festivals",
     "title": "2025 구리 빛 축제",
     "category": "festival_night",
@@ -2995,7 +2995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1024635690845231004",
+    "id": "gg-fest-171090566999784066",
     "boardType": "festivals",
     "title": "왕방산 국제MTB대회",
     "category": "festival_culture",
@@ -3045,7 +3045,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3012429",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%A8%EB%8F%84%EC%98%81%ED%99%94%EC%A0%9C%20%EC%8B%9C%EC%A6%8C2%20%EA%B4%91%EC%96%91",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/59/3536359_image2_1.jpg",
     "description": "남도영화제 시즌2 광양 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3076,7 +3076,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3375262",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%82%A8%20%EC%84%B8%EA%B3%84%20%EA%B9%80%EB%B0%A5%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/3553016_image2_1.JPG",
     "description": "전남 세계 김밥 페스티벌 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3088,7 +3088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5138397250369749726",
+    "id": "gg-fest-222546042491196803",
     "boardType": "festivals",
     "title": "광명동굴빛축제",
     "category": "festival_night",
@@ -3119,7 +3119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5561853110997036711",
+    "id": "gg-fest-8973841221017237385",
     "boardType": "festivals",
     "title": "동두천 청소년 별자리과학 축제",
     "category": "festival_culture",
@@ -3169,7 +3169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2873042",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%B2%9C%20%EC%82%AC%EA%B3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/55/3561055_image2_1.jpg",
     "description": "홍천 사과축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3181,7 +3181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7998106799291329166",
+    "id": "gg-fest-1679529410637891092",
     "boardType": "festivals",
     "title": "도심재생 야간축제",
     "category": "festival_culture",
@@ -3231,7 +3231,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3559571",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%A4%91%EA%B5%AC%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/63/3559563_image2_1.jpg",
     "description": "부산중구반려동물축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3262,7 +3262,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3460731",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%EC%97%AC%EC%84%B1%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/26/3460726_image2_1.jpg",
     "description": "광주여성영화제 - 한국관광공사 및 광주광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3293,7 +3293,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1855589",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C19%ED%9A%8C%20%EC%A0%84%EB%B6%81%EC%B2%AD%EC%86%8C%EB%85%84%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/64/3563364_image2_1.jpg",
     "description": "제19회 전북청소년영화제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3324,7 +3324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3553639",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%AA%85%EC%BB%A4%ED%94%BC%EC%82%B0%EC%B1%85",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/3553609_image2_1.jpg",
     "description": "동명커피산책 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3355,7 +3355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2856063",
+    "url": "https://search.naver.com/search.naver?query=2025%20%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/01/3553701_image2_1.jpg",
     "description": "2025 인천공항 스카이페스티벌 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3386,7 +3386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3557782",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%9C%ED%95%AD%EC%9E%A5%20%EB%8C%95%EB%8C%95%20%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/81/3557781_image2_1.png",
     "description": "개항장 댕댕 도서관 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3417,7 +3417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3395188",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B0%BD%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EB%96%A1%EB%B3%B6%EC%9D%B4%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/39/3515039_image2_1.jpg",
     "description": "순창 코리아 떡볶이 페스타 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3448,7 +3448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=629742",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C46%ED%9A%8C%20%EC%84%9C%EC%9A%B8%EB%AC%B4%EC%9A%A9%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/87/3567087_image2_1.jpg",
     "description": "제46회 서울무용제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3479,7 +3479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3432658",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%ED%8F%89%20%EA%B2%A8%EC%9A%B8%EB%B9%9B%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4010710_image2_1.JPG",
     "description": "함평 겨울빛축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3510,7 +3510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2048902",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%B4%EC%9A%B4%EB%8C%80%20%EB%B9%9B%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/12/3576412_image2_1.jpg",
     "description": "해운대 빛축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3541,7 +3541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3569496",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%B4%EA%B7%B8%EB%9E%91%EA%BB%98%20%EB%82%98%EB%88%84%EB%9E%91%EA%BB%98",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/95/3569495_image2_1.jpg",
     "description": "담그랑께 나누랑께 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3572,7 +3572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2778088",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%80%EC%95%85%EB%B3%84%EB%B9%9B%EC%82%B0%EC%B1%85",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/88/3580588_image2_1.jpg",
     "description": "관악별빛산책 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3603,7 +3603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3396705",
+    "url": "https://search.naver.com/search.naver?query=2025%20%EC%9A%B8%EC%82%B0%EB%AC%B8%ED%99%94%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/38/3567838_image2_1.jpg",
     "description": "2025 울산문화박람회 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3634,7 +3634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3578130",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EC%9D%98%20%EB%B0%A4%2C%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%A7%88%EC%BC%93",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/65/3578165_image2_1.jpg",
     "description": "울산의 밤, 크리스마스 마켓 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3665,7 +3665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3576410",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EB%B3%B5%EB%A1%9C%20%EA%B2%A8%EC%9A%B8%EB%B9%9B%20%ED%8A%B8%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/05/3576405_image2_1.JPG",
     "description": "광복로 겨울빛 트리축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3696,7 +3696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2930662",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%95%88%20%EC%84%A4%28%E9%9B%AA%29%EC%88%AD%EC%96%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/47/3575947_image2_1.jpg",
     "description": "부안 설(雪)숭어 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3727,7 +3727,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2915307",
+    "url": "https://search.naver.com/search.naver?query=2025%20%EC%9C%A0%EC%84%B1%EC%98%A8%EC%B2%9C%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/43/3574143_image2_1.jpg",
     "description": "2025 유성온천 크리스마스 축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3758,7 +3758,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1762432",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%ED%8F%89%EB%B9%99%EC%86%A1%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/93/3108393_image2_1.jpg",
     "description": "양평빙송어축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3789,7 +3789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3566596",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%BF%EB%84%A4%EC%9D%B4%EB%B2%84%EC%8A%A4%20%EC%84%B8%EA%B3%84%20%EB%86%80%EC%9D%B4%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%20%27%EB%86%80%EC%9E%90GO%21%20%EC%A7%80%EA%B5%AC%EB%A1%9C%21%27",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/61/3567661_image2_1.jpg",
     "description": "굿네이버스 세계 놀이 페스티벌 '놀자GO! 지구로!' - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3820,7 +3820,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3345610",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EC%95%84%EB%8F%99%EB%8F%84%EC%84%9C%EC%A0%84",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/25/3536625_image2_1.jpg",
     "description": "부산국제아동도서전 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3851,7 +3851,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1095732",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EB%B9%9B%EC%B4%88%EB%A1%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/3563320_image2_1.jpg",
     "description": "서울빛초롱축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3882,7 +3882,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3035607",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%ED%99%94%EB%AC%B8%20%EB%A7%88%EC%BC%93",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/03/3573403_image2_1.png",
     "description": "광화문 마켓 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3913,7 +3913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3073454",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EB%9D%BC%EC%9D%B4%ED%8A%B8%20%EA%B4%91%ED%99%94%EB%AC%B8",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/04/3581704_image2_1.jpg",
     "description": "서울라이트 광화문 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3944,7 +3944,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1139979",
+    "url": "https://search.naver.com/search.naver?query=%EB%85%BC%EC%82%B0%EC%96%91%EC%B4%8C%EA%B3%B6%EA%B0%90%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/87/3574987_image2_1.JPG",
     "description": "논산양촌곶감축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -3975,7 +3975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2785797",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%A8%EC%9A%B8%2C%20%EC%B2%AD%EA%B3%84%EC%B2%9C%EC%9D%98%20%EB%B9%9B",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/36/3567636_image2_1.jpg",
     "description": "겨울, 청계천의 빛 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4006,7 +4006,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3439947",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%82%A8%20%EB%AF%B8%EB%94%94%EC%96%B4%20%EC%9C%88%ED%84%B0%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/54/3579654_image2_1.jpg",
     "description": "강남 미디어 윈터페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4037,7 +4037,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3069470",
+    "url": "https://search.naver.com/search.naver?query=2025%20%EB%A1%9C%EB%A7%A8%ED%8B%B1%20%ED%95%9C%EA%B0%95%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%A7%88%EC%BC%93",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/34/3578234_image2_1.jpg",
     "description": "2025 로맨틱 한강 크리스마스 마켓 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4068,7 +4068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3434800",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A8%EC%B2%9C%EC%B2%9C%20%EB%B9%9B%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/72/3574272_image2_1.jpg",
     "description": "온천천 빛 축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4099,7 +4099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2802702",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%B2%9C%EB%B0%B1%EC%9A%B4%EA%B3%84%EA%B3%A1%20%EB%8F%99%EC%9E%A5%EA%B5%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/21/3580521_image2_1.jpg",
     "description": "포천백운계곡 동장군축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4130,7 +4130,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2802077",
+    "url": "https://search.naver.com/search.naver?query=2025%20%EA%B3%BC%ED%95%99%EC%98%81%EC%9E%AC%EA%B5%90%EC%9C%A1%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/28/3572728_image2_1.jpg",
     "description": "2025 과학영재교육 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4142,7 +4142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8847201364904407954",
+    "id": "gg-fest-4170418832939379287",
     "boardType": "festivals",
     "title": "2025 동두천무형문화대축제",
     "category": "festival_culture",
@@ -4192,7 +4192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2933428",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%20%EC%84%B1%EB%82%A8%EB%8F%99%20%EB%88%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/64/3586264_image2_1.jpg",
     "description": "울산 성남동 눈꽃축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4223,7 +4223,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3067459",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%B2%9C%EA%B2%A8%EC%9A%B8%EB%B0%94%EB%8B%A4%EC%82%AC%EB%9E%91%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/44/3583844_image2_1.jpg",
     "description": "대천겨울바다사랑축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4254,7 +4254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2641128",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%84%B1%EB%B9%9B%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/12/3578312_image2_1.JPG",
     "description": "수성빛예술제 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4285,7 +4285,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3581975",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A4%ED%94%88%20%ED%8F%AC%ED%8A%B8%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%3A%20%EB%B6%88%EB%A9%8D%20%28Open%20Port%20Christmas%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/3581913_image2_1.png",
     "description": "오픈 포트 크리스마스 : 불멍 (Open Port Christmas) - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4347,7 +4347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3049823",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%A8%EC%9A%B8%EC%97%94%20%EC%96%91%ED%8F%89%2C%20%EB%B6%88%EB%B9%9B%3A%EC%95%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/3588926_image2_1.png",
     "description": "겨울엔 양평, 불빛:애 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4378,7 +4378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2642299",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%EC%A0%9C%EC%95%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/73/3589873_image2_1.jpg",
     "description": "전주제야축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4409,7 +4409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141375",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%A3%BC%20%EA%B0%84%EC%A0%88%EA%B3%B6%20%ED%95%B4%EB%A7%9E%EC%9D%B4",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/79/3588879_image2_1.jpg",
     "description": "울주 간절곶 해맞이 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4440,7 +4440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=674023",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%91%EC%98%A4%EB%85%84%20%ED%95%B4%EB%A7%9E%EC%9D%B4%20%ED%96%89%EC%82%AC",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/40/3588540_image2_1.jpg",
     "description": "병오년 해맞이 행사 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4471,7 +4471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2702333",
+    "url": "https://search.naver.com/search.naver?query=%EC%B9%B4%EC%9A%B4%ED%8A%B8%EB%8B%A4%EC%9A%B4%20%EB%B6%80%EC%82%B0",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/64/3579164_image2_1.png",
     "description": "카운트다운 부산 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4502,7 +4502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3473295",
+    "url": "https://search.naver.com/search.naver?query=DDP%20%EA%B1%B4%EC%B6%95%ED%88%AC%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4046009_image2_1.png",
     "description": "DDP 건축투어 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4533,7 +4533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2786391",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%95%88%EB%A6%AC%20M%28Marvelous%29%20%EB%93%9C%EB%A1%A0%20%EB%9D%BC%EC%9D%B4%ED%8A%B8%EC%87%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3518612_image2_1.jpeg",
     "description": "광안리 M(Marvelous) 드론 라이트쇼 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4564,7 +4564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1506389",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%90%EC%95%85%EC%82%B0%20%ED%95%B4%EB%A7%9E%EC%9D%B4%20%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3589017_image2_1.jpg",
     "description": "감악산 해맞이 행사 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4595,7 +4595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4060434",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EC%95%85%EA%B3%B5%EC%97%B0%20%EC%A7%84%EC%97%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4060435_image2_1.jpg",
     "description": "국악공연 진연 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4626,7 +4626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=292961",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%20%EC%99%95%EA%B6%81%EC%88%98%EB%AC%B8%EC%9E%A5%20%EA%B5%90%EB%8C%80%EC%9D%98%EC%8B%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4039379_image2_1.jpg",
     "description": "서울 왕궁수문장 교대의식 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4657,7 +4657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2809535",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%A8%EC%82%B0%EB%B4%89%EC%88%98%EC%9D%98%EC%8B%9D%20%EB%93%B1%20%EC%A0%84%ED%86%B5%EB%AC%B8%ED%99%94%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4001657_image2_1.jpg",
     "description": "남산봉수의식 등 전통문화행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4688,7 +4688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3107059",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%88%AD%EB%A1%80%EB%AC%B8%20%ED%8C%8C%EC%88%98%EC%9D%98%EC%8B%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4001599_image2_1.jpg",
     "description": "2026 숭례문 파수의식 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4762,7 +4762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-7054471034538551989",
+    "id": "gg-fest-5253736144832050481",
     "boardType": "festivals",
     "title": "2026년 판교마당바위 해맞이축제",
     "category": "festival_culture",
@@ -4812,7 +4812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2433596",
+    "url": "https://search.naver.com/search.naver?query=%EC%99%95%EA%B0%80%EC%9D%98%20%EC%82%B0%EC%B1%85",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4029576_image2_1.jpg",
     "description": "왕가의 산책 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4843,7 +4843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=386053",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%89%EC%B0%BD%EC%86%A1%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4002581_image2_1.jpg",
     "description": "평창송어축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4874,7 +4874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3075387",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%96%91%EA%BD%81%EA%BD%81%EA%B2%A8%EC%9A%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/3588433_image2_1.jpg",
     "description": "영양꽁꽁겨울축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4905,7 +4905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1769697",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%B2%9C%EA%B0%95%20%EA%BD%81%EA%BD%81%EC%B6%95%EC%A0%9C",
     "imageUrl": "http://tong.visitkorea.or.kr/cms/resource/12/3580712_image2_1.JPG",
     "description": "홍천강 꽁꽁축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4917,7 +4917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1554855040633545677",
+    "id": "gg-fest-3595997462488442977",
     "boardType": "festivals",
     "title": "의왕왕송호수 겨울축제(날짜미정)",
     "category": "festival_culture",
@@ -4967,7 +4967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1882134",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%A0%EC%9B%90%20%ED%95%9C%ED%83%84%EA%B0%95%20%EC%96%BC%EC%9D%8C%ED%8A%B8%EB%A0%88%ED%82%B9%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4016918_image2_1.jpg",
     "description": "철원 한탄강 얼음트레킹 축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -4998,7 +4998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1765272",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%84%B1%20%EB%8F%99%EB%A7%89%EA%B3%A8%20%EB%B9%99%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/3590201_image2_1.jpg",
     "description": "안성 동막골 빙어축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5029,7 +5029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=409187",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%EB%82%A8%EB%8B%B9%ED%95%AD%20%EC%83%88%EC%A1%B0%EA%B0%9C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/3469769_image2_1.JPG",
     "description": "홍성남당항 새조개축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5060,7 +5060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4020878",
+    "url": "https://search.naver.com/search.naver?query=%EC%BF%A0%ED%82%A4%EB%9F%B0%20%3A%20%ED%82%B9%EB%8D%A4%20%EC%95%84%ED%8A%B8%20%EC%BD%9C%EB%9D%BC%EB%B3%B4%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%ED%8A%B9%EB%B3%84%EC%A0%84%20-%20%EC%9C%84%EB%8C%80%ED%95%9C%20%EC%99%95%EA%B5%AD%EC%9D%98%20%EC%9C%A0%EC%82%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4020877_image2_1.jpg",
     "description": "쿠키런 : 킹덤 아트 콜라보 프로젝트 특별전 - 위대한 왕국의 유산 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5091,7 +5091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2362516",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%EC%95%88%EA%B3%B6%EA%B0%90%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4001272_image2_1.jpg",
     "description": "함안곶감축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5122,7 +5122,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4001390",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%A8%EC%96%91%20%EA%B2%A8%EC%9A%B8%EB%86%80%EC%9D%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4001315_image2_1.jpg",
     "description": "단양 겨울놀이 축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5153,7 +5153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4001518",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%95%88%20%EA%B2%A8%EC%9A%B8%20%EC%88%AD%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4001500_image2_1.png",
     "description": "무안 겨울 숭어축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5184,7 +5184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=650690",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%8F%99%EA%B3%B6%EA%B0%90%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4039544_image2_1.JPG",
     "description": "영동곶감축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5308,7 +5308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=391883",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B4%80%EB%A0%B9%EB%88%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3588789_image2_1.JPG",
     "description": "대관령눈꽃축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5401,7 +5401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1892201",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%A7%84%EB%8C%80%EA%B2%8C%EC%99%80%20%EB%B6%89%EC%9D%80%EB%8C%80%EA%B2%8C%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4012128_image2_1.jpg",
     "description": "울진대게와 붉은대게 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5432,7 +5432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=292950",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%8B%B8%EC%9B%80%EB%86%80%EC%9D%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4020848_image2_1.JPG",
     "description": "고싸움놀이축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5463,7 +5463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4025523",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EC%84%A0%EB%A9%94%EB%B0%80%EC%A0%84%EB%B3%91%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4025536_image2_1.jpg",
     "description": "정선메밀전병축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5494,7 +5494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3482014",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%B2%9C%EB%B9%A8%EA%B0%84%EC%98%A4%EB%8E%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/3482003_image2_1.jpg",
     "description": "제천빨간오뎅축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5525,7 +5525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1895366",
+    "url": "https://search.naver.com/search.naver?query=1919%20%EC%84%9C%EB%8C%80%EB%AC%B8%2C%20%EA%B7%B8%EB%82%A0%EC%9D%98%20%ED%95%A8%EC%84%B1",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4013399_image2_1.jpg",
     "description": "1919 서대문, 그날의 함성 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5556,7 +5556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3472311",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%96%91%20%EB%82%99%EC%82%B0%ED%95%B4%EB%B3%80%20%EB%8B%AC%EB%B9%9B%20%EB%AA%A8%EB%8B%A5%EB%B6%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/4009716_image2_1.png",
     "description": "양양 낙산해변 달빛 모닥불축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5587,7 +5587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4067214",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%AC%20%EB%B0%A9%EB%AC%B8%EC%9D%98%20%ED%95%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4067313_image2_1.jpg",
     "description": "2026 섬 방문의 해 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5618,7 +5618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3479057",
+    "url": "https://search.naver.com/search.naver?query=%EC%99%84%EC%A3%BC%EC%82%BC%EB%A1%80%EB%94%B8%EA%B8%B0%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4011513_image2_1.jpg",
     "description": "완주삼례딸기대축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5649,7 +5649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=667418",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%EB%93%A4%EB%B6%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4061015_image2_1.jpg",
     "description": "제주들불축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5773,7 +5773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113265",
+    "url": "https://search.naver.com/search.naver?query=APAP%20%EC%9E%91%ED%92%88%ED%88%AC%EC%96%B4%20%28%EC%95%88%EC%96%91%EA%B3%B5%EA%B3%B5%EC%98%88%EC%88%A0%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4054469_image2_1.jpg",
     "description": "APAP 작품투어 (안양공공예술프로젝트) - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5804,7 +5804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3488655",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AC%B8%ED%99%94%EA%B0%80%20%EC%9E%88%EB%8A%94%20%EB%82%A0%20%EC%B2%AD%EC%B6%98%EB%A7%88%EC%9D%B4%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4039885_image2_1.jpg",
     "description": "2026 문화가 있는 날 청춘마이크 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5835,7 +5835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3488421",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%AD%EB%A6%BD%EA%B7%B9%EC%9E%A5%20%EC%8F%99%EC%8F%99%EB%93%A4%EC%9D%B4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4127750_image2_1.jpg",
     "description": "2026 국립극장 쏙쏙들이페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5866,7 +5866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506398",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%A1%80%EC%82%B0%EC%88%98%EC%9C%A0%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4020643_image2_1.jpg",
     "description": "구례산수유꽃축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5897,7 +5897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4013337",
+    "url": "https://search.naver.com/search.naver?query=%ED%81%B4%EB%A6%AC%ED%8D%BC%20%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EA%B8%B0%ED%95%AD%EC%A7%80%20%ED%96%89%EC%82%AC%20%ED%8F%AC%ED%8A%B8%EC%9C%84%ED%81%AC%28PORT%20WEEK%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/4029567_image2_1.png",
     "description": "클리퍼 레이스 기항지 행사 포트위크(PORT WEEK) - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5928,7 +5928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4062064",
+    "url": "https://search.naver.com/search.naver?query=%EC%89%BC%ED%91%9C%EF%BC%9A%EB%B9%84%EC%9A%B0%EA%B3%A0%2C%20%EB%A8%B8%EB%AC%B4%EB%A5%B4%EA%B3%A0%2C%20%EC%B1%84%EC%9A%B0%EB%8A%94",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4062226_image2_1.jpg",
     "description": "쉼표：비우고, 머무르고, 채우는 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5959,7 +5959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141641",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B2%9C%20%EB%8F%99%EB%B0%B1%EA%BD%83%20%EC%A3%BC%EA%BE%B8%EB%AF%B8%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4013603_image2_1.jpg",
     "description": "서천 동백꽃 주꾸미 축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -5990,7 +5990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=968157",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%B0%EC%88%98%EC%9C%A0%EB%A7%88%EC%9D%84%EA%BD%83%EB%A7%9E%EC%9D%B4%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/3482060_image2_1.jpg",
     "description": "산수유마을꽃맞이행사 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6021,7 +6021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=525292",
+    "url": "https://search.naver.com/search.naver?query=%EB%85%BC%EC%82%B0%EB%94%B8%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4016924_image2_1.JPG",
     "description": "논산딸기축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6052,7 +6052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=523079",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%ED%95%B4%EA%B5%B0%ED%95%AD%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4020672_image2_1.JPG",
     "description": "진해군항제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6083,7 +6083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2667017",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EB%A0%B9%20%EB%8C%80%EA%B0%80%EC%95%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4057817_image2_1.jpg",
     "description": "고령 대가야축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6114,7 +6114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4041281",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%AC%EC%83%81%20%EA%B0%80%EB%A1%9C%EA%B3%B5%EC%9B%90%20%EB%B2%9A%EA%BD%83%EC%95%BC%EC%9E%A5%28%E9%87%8E/%E5%A4%9C%29%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4041614_image2_1.jpg",
     "description": "사상 가로공원 벚꽃야장(野/夜) 페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6145,7 +6145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4033475",
+    "url": "https://search.naver.com/search.naver?query=DMZ%EC%84%B8%EA%B3%84%EB%AC%B8%ED%95%99%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "DMZ세계문학페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6176,7 +6176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3110031",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%A1%80300%EB%A6%AC%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4053522_image2_1.jpg",
     "description": "구례300리 벚꽃축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6207,7 +6207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3496655",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9D%B8%EC%B2%9C%EA%B0%9C%ED%95%AD%EC%9E%A5%20%ED%8E%98%EC%8A%A4%ED%83%80%20-%201901%20%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%A1%9C%EB%93%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4039000_image2_1.png",
     "description": "2026 인천개항장 페스타 - 1901 라이브로드 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6238,7 +6238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3485678",
+    "url": "https://search.naver.com/search.naver?query=%EC%83%88%EB%B4%84%EB%A7%9E%EC%9D%B4%20%EC%97%B0%EC%88%98%ED%95%9C%EB%A7%88%EC%9D%8C%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4040777_image2_1.jpg",
     "description": "새봄맞이 연수한마음 축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6269,7 +6269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3512510",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%AC%B8%ED%99%94%EC%82%AC%EA%B3%84%20%22%EB%B4%84%22%20%EA%B2%BD%EA%B8%B0%20%EC%83%81%EC%83%81%ED%95%B4%20%EB%B4%84%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4039669_image2_1.jpg",
     "description": "경기도 문화사계 \"봄\" 경기 상상해 봄 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6300,7 +6300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3483210",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%B0%EC%82%B0%20%EC%9D%80%ED%8C%8C%EB%B2%9A%EA%BD%83%EC%95%BC%EC%8B%9C%EC%9E%A5",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 군산 은파벚꽃야시장 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6331,7 +6331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=921281",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9C%A0%EC%B1%84%EA%BD%83%20%EA%B5%AD%EC%A0%9C%EA%B1%B7%EA%B8%B0%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4039194_image2_1.jpg",
     "description": "서귀포 유채꽃 국제걷기대회 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6362,7 +6362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2540520",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%9E%AC%EC%B2%9C%20%EB%B2%9A%EA%BD%83%20%EB%93%B1%28%E7%87%88%29%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4054157_image2_1.jpg",
     "description": "양재천 벚꽃 등(燈) 축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6393,7 +6393,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4039258",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C20%ED%9A%8C%20%ED%95%9C%EA%B5%AD%ED%9B%84%EA%B3%84%EB%86%8D%EC%97%85%EA%B2%BD%EC%98%81%EC%9D%B8%20%EC%A0%84%EA%B5%AD%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4039257_image2_1.jpg",
     "description": "제20회 한국후계농업경영인 전국대회 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6424,7 +6424,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3492276",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AC%B8%ED%99%94%EA%B0%80%20%EC%9E%88%EB%8A%94%20%EB%82%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4055582_image2_1.png",
     "description": "2026 문화가 있는 날 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6455,7 +6455,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=999659",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%B2%AD%EC%82%B0%EB%8F%84%EC%8A%AC%EB%A1%9C%EA%B1%B7%EA%B8%B0%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4040007_image2_1.jpg",
     "description": "2026 청산도슬로걷기 축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6486,7 +6486,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3109677",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EB%8F%99%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4054480_image2_1.jpg",
     "description": "안동벚꽃축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6517,7 +6517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3489505",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%B4%EC%96%91%EB%A0%88%EC%A0%80%EA%B4%80%EA%B4%91%20%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4002358_image2_1.jpg",
     "description": "2026 해양레저관광 박람회 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6529,7 +6529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3068099758429636174",
+    "id": "gg-fest-7652182658939637854",
     "boardType": "festivals",
     "title": "제20회 수진공원 벌터산한마당축제",
     "category": "festival_culture",
@@ -6579,7 +6579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=969709",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A5%EC%B2%9C%EB%AC%98%EB%AA%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4033391_image2_1.jpg",
     "description": "옥천묘목축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6610,7 +6610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2620577",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EA%B5%AD%EC%A0%9C%EB%B6%88%EA%B5%90%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4013403_image2_1.jpg",
     "description": "2026 서울국제불교박람회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6641,7 +6641,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3483727",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EB%8C%80%EB%AC%B8%20%EB%B4%84%EB%B9%9B%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/3489263_image2_1.JPG",
     "description": "서대문 봄빛축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6672,7 +6672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3492561",
+    "url": "https://search.naver.com/search.naver?query=%EB%A7%8C%EC%84%9D%EA%B1%B0%20%EC%83%88%EB%B9%9B%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4066328_image2_1.jpg",
     "description": "만석거 새빛축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6703,7 +6703,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2953096",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%EC%A0%9C%20%EA%BD%83%EB%B9%9B%EB%93%9C%EB%A6%AC%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4041269_image2_1.jpg",
     "description": "김제 꽃빛드리 축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6734,7 +6734,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2485128",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%A3%BC%20%EB%8C%80%EB%A6%89%EC%9B%90%EB%8F%8C%EB%8B%B4%EA%B8%B8%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4059511_image2_1.jpg",
     "description": "경주 대릉원돌담길 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6765,7 +6765,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3107440",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EB%B8%8C%EC%82%B4%EB%A1%B1%20%3A%20%EC%82%B4%EB%A1%B1%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4055559_image2_1.jpg",
     "description": "무브살롱 : 살롱그라운드 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6796,7 +6796,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4054884",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%EC%9E%90%ED%98%B8%EC%88%98%20%EB%B2%9A%EA%BD%83%EB%A7%88%EC%8B%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4054885_image2_1.jpg",
     "description": "장자호수 벚꽃마실 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6827,7 +6827,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=525755",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%93%B1%ED%8F%AC%20%EC%97%AC%EC%9D%98%EB%8F%84%20%EB%B4%84%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4041207_image2_1.jpg",
     "description": "영등포 여의도 봄꽃축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6858,7 +6858,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2536122",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%84%9C%20%EB%82%99%EB%8F%99%EA%B0%9530%EB%A6%AC%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4046477_image2_1.JPG",
     "description": "강서 낙동강30리 벚꽃축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6889,7 +6889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4054465",
+    "url": "https://search.naver.com/search.naver?query=%EB%85%B8%EB%93%A4%20%EB%AF%B8%EB%A6%AC%EB%B4%84%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4054464_image2_1.jpg",
     "description": "노들 미리봄 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6920,7 +6920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3359409",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%A3%A1%EB%A7%88%EC%9D%84%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4054241_image2_1.png",
     "description": "구룡마을 벚꽃축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6951,7 +6951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3377038",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%AD%EC%A0%9C%EC%84%A0%EB%AA%85%EC%83%81%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4054090_image2_1.jpg",
     "description": "2026 국제선명상대회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -6982,7 +6982,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3109655",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%B4%EC%9D%80%20%EB%B2%9A%EA%BD%83%EA%B8%B8%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4040507_image2_1.JPG",
     "description": "보은 벚꽃길 축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7013,7 +7013,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1592898",
+    "url": "https://search.naver.com/search.naver?query=%EC%86%A1%ED%8C%8C%EA%B5%AC%20%ED%98%B8%EC%88%98%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4051420_image2_1.jpg",
     "description": "송파구 호수벚꽃축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7044,7 +7044,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4046353",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%B0%EC%A0%9C%EA%B3%A0%EB%B6%84%ED%8C%90%ED%83%80%EC%A7%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4046355_image2_1.jpg",
     "description": "연제고분판타지축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7075,7 +7075,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=527727",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B4%EC%B2%9C%EB%B0%B1%EC%82%AC%20%EC%82%B0%EC%88%98%EC%9C%A0%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/3485142_image2_1.jpg",
     "description": "이천백사 산수유꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7106,7 +7106,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=525445",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%95%94%EC%99%95%EC%9D%B8%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/4121745_image2_1.jpg",
     "description": "영암왕인문화축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7137,7 +7137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2987489",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B3%A0%ED%9D%A5%20%EB%85%B9%EB%8F%99%ED%95%AD%20%EB%93%9C%EB%A1%A0%EC%87%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4054497_image2_1.jpg",
     "description": "2026 고흥 녹동항 드론쇼 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7168,7 +7168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140736",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EB%8B%AC%EC%82%B0%20%EB%B4%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4041276_image2_1.jpg",
     "description": "유달산 봄축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7199,7 +7199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2865136",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%9D%BC%EC%98%A8%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4067301_image2_1.jpg",
     "description": "2026 라온페스타 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7230,7 +7230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3478890",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B8%88%EB%82%A8%EB%A1%9C%20%EC%B0%A8%20%EC%97%86%EB%8A%94%20%EA%B1%B0%EB%A6%AC%20%E2%80%98%EA%B1%B7%EC%9E%90%EC%9E%89%E2%80%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4040737_image2_1.jpg",
     "description": "2026 금남로 차 없는 거리 ‘걷자잉’ - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7261,7 +7261,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=695592",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%20%EA%B2%BD%ED%8F%AC%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4041323_image2_1.jpg",
     "description": "강릉 경포벚꽃축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7292,7 +7292,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1592837",
+    "url": "https://search.naver.com/search.naver?query=%ED%8A%B8%EB%A1%9C%ED%8A%B8%EC%B6%95%EC%A0%9CX%EB%B4%84%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4057062_image2_1.JPG",
     "description": "트로트축제X봄꽃축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7323,7 +7323,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=293030",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%84%B1%20%EB%82%A8%EC%82%AC%EB%8B%B9%EB%B0%94%EC%9A%B0%EB%8D%95%EC%9D%B4%20%ED%92%8D%EB%AC%BC%EB%8B%A8%20%EC%83%81%EC%84%A4%20%EA%B3%B5%EC%97%B0%20%E2%80%98%EA%B3%B0%EB%B1%85%EC%9D%B4%ED%85%84%EB%8B%A4%E2%80%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4039532_image2_1.jpg",
     "description": "안성 남사당바우덕이 풍물단 상설 공연 ‘곰뱅이텄다’ - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7354,7 +7354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142186",
+    "url": "https://search.naver.com/search.naver?query=%EC%83%9D%EA%B1%B0%EC%A7%84%EC%B2%9C%20%EB%86%8D%EB%8B%A4%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4053626_image2_1.JPG",
     "description": "생거진천 농다리축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7385,7 +7385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2952960",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%98%EC%A0%95%EB%B6%80%20%ED%98%B8%EC%9B%90%20%EB%B2%9A%EA%BD%83%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4046274_image2_1.jpg",
     "description": "의정부 호원 벚꽃 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7416,7 +7416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3483016",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%84%9C%EB%B4%84%EB%B9%9B%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4055175_image2_1.jpg",
     "description": "강서봄빛페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7447,7 +7447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141736",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EA%B7%80%ED%8F%AC%EC%9C%A0%EC%B1%84%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4039191_image2_1.jpg",
     "description": "서귀포유채꽃축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7478,7 +7478,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3482354",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A8%EC%B2%B4%EC%98%A4%EB%A6%84%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4054577_image2_1.png",
     "description": "골체오름 벚꽃축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7509,7 +7509,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141647",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%B2%9C%20%EC%B2%AD%ED%92%8D%ED%98%B8%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4054122_image2_1.jpg",
     "description": "제천 청풍호 벚꽃축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7540,7 +7540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3110082",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%BC%EA%B8%88%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4053635_image2_1.jpg",
     "description": "물금벚꽃축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7571,7 +7571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3484079",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%96%91%20%EB%82%A8%EB%8C%80%EC%B2%9C%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4046005_image2_1.jpg",
     "description": "양양 남대천 벚꽃축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7602,7 +7602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4046410",
+    "url": "https://search.naver.com/search.naver?query=%EA%BD%83%ED%94%BC%EB%8A%94%20%EB%82%A8%ED%95%B4%20%EB%82%A8%ED%95%B4%EA%B0%80%EB%B4%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4046425_image2_1.jpg",
     "description": "꽃피는 남해 남해가봄 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7614,7 +7614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-108337282614890079",
+    "id": "gg-fest-8016940925659779215",
     "boardType": "festivals",
     "title": "이천체험문화축제",
     "category": "park_eco",
@@ -7664,7 +7664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2615461",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EB%B3%B5%EA%B6%81%20%EC%83%9D%EA%B3%BC%EB%B0%A9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4055163_image2_1.jpg",
     "description": "경복궁 생과방 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7695,7 +7695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1252849",
+    "url": "https://search.naver.com/search.naver?query=%EC%B0%BD%EB%85%95%EB%82%99%EB%8F%99%EA%B0%95%EC%9C%A0%EC%B1%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4053657_image2_1.jpg",
     "description": "창녕낙동강유채축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7726,7 +7726,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1907888",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C22%ED%9A%8C%20%EB%B6%80%EC%82%B0%EB%8F%84%EC%8B%9C%EB%86%8D%EC%97%85%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4041162_image2_1.jpg",
     "description": "제22회 부산도시농업박람회 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7757,7 +7757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113469",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%B4%EB%B0%B0%EC%84%AC%20%EC%9C%A0%EC%B1%84%EA%BD%83%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4039966_image2_1.jpg",
     "description": "보배섬 유채꽃 축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7788,7 +7788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4056086",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EC%A3%BC%EB%94%B8%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4056097_image2_1.jpg",
     "description": "진주딸기축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7819,7 +7819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3482515",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%B0%EC%B2%AD%EB%86%8D%ED%8A%B9%EC%82%B0%EB%AC%BC%EB%8C%80%EC%A0%9C%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3482498_image2_1.jpg",
     "description": "산청농특산물대제전 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7850,7 +7850,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3093268",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8F%84%EC%84%9C%EA%B4%80%EC%9D%98%20%EB%82%A0%20%C2%B7%20%EB%8F%84%EC%84%9C%EA%B4%80%EC%A3%BC%EA%B0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4054535_image2_1.png",
     "description": "2026 도서관의 날 · 도서관주간 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7881,7 +7881,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2828328",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EC%8A%A4%ED%94%84%EB%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4025160_image2_1.jpg",
     "description": "서울스프링페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7912,7 +7912,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2541370",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%AC%EC%A3%BC%ED%9D%A5%EC%B2%9C%EB%82%A8%ED%95%9C%EA%B0%95%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4041193_image2_1.jpg",
     "description": "여주흥천남한강 벚꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7943,7 +7943,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1800991",
+    "url": "https://search.naver.com/search.naver?query=4%C2%B719%ED%98%81%EB%AA%85%EA%B5%AD%EB%AF%BC%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4046242_image2_1.jpg",
     "description": "4·19혁명국민문화제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -7974,7 +7974,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3485660",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%90%EC%9C%A0%EA%B3%B5%EC%9B%90%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4040599_image2_1.jpg",
     "description": "자유공원 벚꽃축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8005,7 +8005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2484272",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%90%EB%8D%B4%EB%B2%9A%EA%BD%83%EA%B8%B8%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4066458_image2_1.jpg",
     "description": "에덴벚꽃길 벚꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8036,7 +8036,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3480383",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%ED%8F%AC%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4066285_image2_1.jpg",
     "description": "김포 벚꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8067,7 +8067,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2842412",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%ED%96%89%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4055703_image2_1.jpg",
     "description": "동행축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8098,7 +8098,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3486026",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%9E%91%ED%98%B8%20%EB%B2%9A%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/4041387_image2_1.jpg",
     "description": "영랑호 벚꽃축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8129,7 +8129,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3497454",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%98%EC%A0%95%EB%B6%80%EC%A7%80%20%EC%83%81%EC%84%A4%20%EC%A0%84%ED%86%B5%EB%AC%B8%ED%99%94%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4056513_image2_1.jpg",
     "description": "의정부지 상설 전통문화행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8160,7 +8160,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2740921",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%9C%20with%20%EB%B6%80%EC%82%B0%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4038942_image2_1.jpg",
     "description": "2026 대한민국 과학축제 with 부산과학축전 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8191,7 +8191,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2950952",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%88%EC%82%B0%20%EB%B3%B4%EA%B3%A1%EC%82%B0%EA%B3%A8%20%EC%82%B0%EB%B2%9A%EA%BD%83%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4040711_image2_1.jpg",
     "description": "금산 보곡산골 산벚꽃 축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8222,7 +8222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3512205",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EA%B7%80%ED%8F%AC%20%EC%9B%90%EB%8F%84%EC%8B%AC%20%EB%AC%B8%ED%99%94%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4044417_image2_1.jpg",
     "description": "2026 서귀포 원도심 문화페스티벌 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8234,7 +8234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-6236103534854824680",
+    "id": "gg-fest-8204372569567232252",
     "boardType": "festivals",
     "title": "2026 김포 벚꽃축제",
     "category": "park_eco",
@@ -8284,7 +8284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4053719",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%20%EB%B6%88%EC%95%94%EC%82%B0%20%EC%B2%A0%EC%AD%89%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4053729_image2_1.jpg",
     "description": "서울 불암산 철쭉제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8315,7 +8315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1291408",
+    "url": "https://search.naver.com/search.naver?query=%EC%B0%BD%EB%8D%95%EA%B6%81%20%EB%8B%AC%EB%B9%9B%EA%B8%B0%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4044350_image2_1.jpg",
     "description": "창덕궁 달빛기행 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8346,7 +8346,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3486674",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%A7%84%20%EC%A0%84%EB%9D%BC%EB%B3%91%EC%98%81%EC%84%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4050362_image2_1.png",
     "description": "강진 전라병영성축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8377,7 +8377,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4054430",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%94%EC%88%9C%20%EB%B4%84%EA%BD%83%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4054443_image2_1.jpg",
     "description": "화순 봄꽃 축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8408,7 +8408,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506909",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EB%8F%84%EC%8B%A0%EB%B9%84%EC%9D%98%EB%B0%94%EB%8B%B7%EA%B8%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4008566_image2_1.jpg",
     "description": "진도신비의바닷길축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8439,7 +8439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4056794",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C6%ED%9A%8C%20%EB%B6%80%EC%82%B0%20%EB%B4%84%EA%BD%83%20%EC%A0%84%EC%8B%9C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4056890_image2_1.png",
     "description": "제6회 부산 봄꽃 전시회 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8470,7 +8470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141918",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EC%82%AC%EC%9D%B4%EC%96%B8%EC%8A%A4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4053926_image2_1.jpg",
     "description": "대전사이언스페스티벌 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8501,7 +8501,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2508126",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%A3%BC%20%ED%9A%8C%EC%95%94%EC%82%AC%EC%A7%80%20%EC%99%95%EC%8B%A4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4055695_image2_1.jpg",
     "description": "양주 회암사지 왕실축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8532,7 +8532,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2849025",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%B8%EA%B3%84%EC%9C%A0%EC%82%B0%20%EB%82%A8%ED%95%9C%EC%82%B0%EC%84%B1%20%ED%99%9C%EC%9A%A9%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 세계유산 남한산성 활용프로그램 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8544,7 +8544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2038453510600440239",
+    "id": "gg-fest-6569236654675787307",
     "boardType": "festivals",
     "title": "하남뮤직페스티벌",
     "category": "festival_culture",
@@ -8594,7 +8594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=511801",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%B0%BD%EC%B2%AD%EB%B3%B4%EB%A6%AC%EB%B0%AD%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/04/4072004_image2_1.jpg",
     "description": "고창청보리밭 축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8625,7 +8625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2547013",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84%20%EC%A0%84%ED%86%B5%EC%97%B0%ED%9D%AC%20%ED%8D%BC%EB%A0%88%EC%9D%B4%EB%93%9C-%EB%85%B8%EC%83%81%EB%86%80%EC%9D%B4%EC%95%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4067258_image2_1.JPG",
     "description": "전주한옥마을 전통연희 퍼레이드-노상놀이야 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8656,7 +8656,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4058556",
+    "url": "https://search.naver.com/search.naver?query=%EC%BB%AC%EC%B2%98%EB%9D%BC%EC%9A%B4%EC%A7%80%20%EA%B2%BD%EA%B8%B0%2C%20%EC%9E%A5%28%E5%A0%B4%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4058721_image2_1.png",
     "description": "컬처라운지 경기, 장(場) - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8687,7 +8687,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113152",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B3%BC%ED%95%99%EA%B4%80%20%EB%86%80%EB%8B%A4%EB%B3%B4%EB%8B%88%20%EA%B3%BC%ED%95%99%21",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4056806_image2_1.jpg",
     "description": "인천어린이과학관 놀다보니 과학! - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8718,7 +8718,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1803449",
+    "url": "https://search.naver.com/search.naver?query=%EB%B9%84%EC%8A%AC%EC%82%B0%20%EC%B0%B8%EA%BD%83%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4056788_image2_1.jpg",
     "description": "비슬산 참꽃문화제 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8749,7 +8749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3484594",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%A0%EB%86%8D%EB%8C%80%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/4053916_image2_1.JPG",
     "description": "선농대제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8780,7 +8780,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2594815",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EC%88%9C%EC%99%95%ED%9B%84%20%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/4054945_image2_1.jpg",
     "description": "정순왕후 문화제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8792,7 +8792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7694561518445093275",
+    "id": "gg-fest-1777808023040635960",
     "boardType": "festivals",
     "title": "군포철쭉축제",
     "category": "festival_culture",
@@ -8842,7 +8842,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3111722",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%EC%97%AD%EC%82%AC%ED%83%90%EB%B0%A9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4058449_image2_1.png",
     "description": "한강역사탐방 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8873,7 +8873,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2953055",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%B1%85%20%EC%9D%BD%EB%8A%94%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%BA%A0%ED%8E%98%EC%9D%B8%20%EC%84%A0%ED%8F%AC%EC%8B%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/4064467_image2_1.jpg",
     "description": "2026 책 읽는 대한민국 캠페인 선포식 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8904,7 +8904,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2755521",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%80%EC%96%91%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4044413_image2_1.jpg",
     "description": "밀양 국가유산야행 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8935,7 +8935,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2608888",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4053670_image2_1.jpg",
     "description": "광주 국가유산야행 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8966,7 +8966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=720815",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EB%82%A8%EB%8C%80%20%EB%B4%84%EA%BD%83%EC%B6%95%EC%A0%9C%20%EC%98%81%EC%B6%98%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4061113_image2_1.JPG",
     "description": "청남대 봄꽃축제 영춘제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -8997,7 +8997,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507598",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%ED%8F%89%EB%82%98%EB%B9%84%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4041669_image2_1.JPG",
     "description": "함평나비대축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9028,7 +9028,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=292835",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%A8%EC%A2%85%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4004221_image2_1.jpg",
     "description": "단종문화제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9059,7 +9059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=629718",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%EC%99%95%EC%8B%A4%EB%8F%84%EC%9E%90%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/3481720_image2_1.jpg",
     "description": "광주왕실도자페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9090,7 +9090,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=292977",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%B0%EC%9E%A5%EB%A9%B8%EC%B9%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4059220_image2_1.jpg",
     "description": "기장멸치축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9121,7 +9121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2982690",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%9C%EB%B0%B1%20%EC%B2%9C%EC%83%81%EC%9D%98%20%EC%82%B0%EB%82%98%EB%AC%BC%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4058907_image2_1.jpg",
     "description": "태백 천상의 산나물 축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9152,7 +9152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4058499",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%8B%A4%EA%B2%BD%EC%97%AD%EC%82%AC%EB%AE%A4%EC%A7%80%EC%BB%AC%20%EC%9D%98%EA%B8%B0%EB%85%BC%EA%B0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4058709_image2_1.jpeg",
     "description": "2026 실경역사뮤지컬 의기논개 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9183,7 +9183,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3108284",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B0%EB%8F%84%20%EC%86%8C%EB%9D%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4057814_image2_1.jpg",
     "description": "우도 소라축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9214,7 +9214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4057755",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%95%84%EC%8B%9C%EC%95%84%20%EC%9D%B4%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4057827_image2_1.png",
     "description": "2026 아시아 이스포츠 대회 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9245,7 +9245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=527710",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B4%EC%B2%9C%EB%8F%84%EC%9E%90%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4004509_image2_1.jpg",
     "description": "이천도자기축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9276,7 +9276,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2952027",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%9C%20in%20%EA%B2%BD%EA%B8%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4044363_image2_1.png",
     "description": "2026 대한민국 과학축제 in 경기 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9307,7 +9307,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2766000",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%98%EC%98%A4%EB%9D%BC%EC%87%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4059609_image2_1.png",
     "description": "나오라쇼 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9338,7 +9338,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3487939",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%84%9C%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EB%8F%99%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4059956_image2_1.jpg",
     "description": "강서어린이 동화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9369,7 +9369,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1574707",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A4%EB%B4%89%EA%B8%B8%20%ED%8F%89%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4039458_image2_1.jpg",
     "description": "윤봉길 평화축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9400,7 +9400,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4058391",
+    "url": "https://search.naver.com/search.naver?query=%ED%9A%8C%EB%A3%A1%ED%8F%AC%20%EB%B4%84%EB%82%98%EB%93%A4%EC%9D%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4058393_image2_1.jpg",
     "description": "회룡포 봄나들이 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9431,7 +9431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3112269",
+    "url": "https://search.naver.com/search.naver?query=%EB%91%90%EB%A6%85%20%EC%82%B0%EB%82%98%EB%AC%BC%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4058690_image2_1.jpg",
     "description": "두릅 산나물 축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9462,7 +9462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2818837",
+    "url": "https://search.naver.com/search.naver?query=%EC%A2%85%EB%AC%98%20%EB%AC%98%ED%98%84%EB%A1%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4057835_image2_1.jpg",
     "description": "종묘 묘현례 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9493,7 +9493,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4054203",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B4%EC%88%9C%EC%8B%A0%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4054208_image2_1.png",
     "description": "이순신 축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9524,7 +9524,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2434545",
+    "url": "https://search.naver.com/search.naver?query=%EC%83%88%EC%97%B0%EA%B5%90%20%EC%A3%BC%EB%A7%90%20%EB%AC%B8%ED%99%94%EA%B3%B5%EC%97%B0%20%27%EA%B8%88%ED%86%A0%EA%B8%88%ED%86%A0%20%EC%83%88%EC%97%B0%EC%87%BC%27",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4051822_image2_1.png",
     "description": "새연교 주말 문화공연 '금토금토 새연쇼' - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9555,7 +9555,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2949644",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%8A%A4%ED%94%84%EB%A7%81%EC%9B%8C%ED%81%AC%EC%84%9C%EC%9A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4040522_image2_1.png",
     "description": "2026 스프링워크서울 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9586,7 +9586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506647",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%84%EC%82%B0%20%EC%84%B1%EC%9B%85%20%EC%9D%B4%EC%88%9C%EC%8B%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4090489_image2_1.jpg",
     "description": "아산 성웅 이순신축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9617,7 +9617,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4062805",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EB%B6%81%20%EA%B4%B4%EC%82%B0%20%EC%9A%B0%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%8B%9C%EF%BC%9A%EB%B3%84%EB%B3%84%ED%83%90%EC%82%AC%EB%8C%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4063007_image2_1.jpg",
     "description": "충북 괴산 우주특별시：별별탐사대 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9648,7 +9648,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506473",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%98%ED%96%A5%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4013558_image2_1.JPG",
     "description": "춘향제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9679,7 +9679,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2597638",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%B2%9C%20%EC%82%B0%EB%82%98%EB%AC%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/3301599_image2_1.jpg",
     "description": "홍천 산나물축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9710,7 +9710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2657619",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%99%94%EC%84%B1%ED%96%89%EA%B6%81%20%EC%95%BC%EA%B0%84%EA%B0%9C%EC%9E%A5",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4081263_image2_1.jpg",
     "description": "2026 화성행궁 야간개장 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9741,7 +9741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=553299",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%B4%EC%84%B1%EB%8B%A4%ED%96%A5%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4058829_image2_1.JPG",
     "description": "보성다향대축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9772,7 +9772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=553315",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%AC%EC%88%98%EA%B1%B0%EB%B6%81%EC%84%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4060110_image2_1.jpg",
     "description": "여수거북선축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9803,7 +9803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506480",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%B4%EC%96%91%20%EB%8C%80%EB%82%98%EB%AC%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4041244_image2_1.jpg",
     "description": "담양 대나무축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9834,7 +9834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=513326",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%82%B0%EA%B5%AD%EC%A0%9C%EA%B1%B0%EB%A6%AC%EA%B7%B9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/4056198_image2_1.png",
     "description": "안산국제거리극축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9865,7 +9865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1241762",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B2%9C%20%EC%9E%90%EC%97%B0%EC%82%B0%20%EA%B4%91%EC%96%B4%20%EB%8F%84%EB%AF%B8%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/3486247_image2_1.jpg",
     "description": "서천 자연산 광어 도미 축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9896,7 +9896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506295",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%EA%B2%BD%EC%B0%BB%EC%82%AC%EB%B0%9C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4054278_image2_1.jpg",
     "description": "문경찻사발축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9927,7 +9927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507383",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%98%EB%8F%99%EC%95%BC%EC%83%9D%EC%B0%A8%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4059313_image2_1.jpg",
     "description": "하동야생차문화축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9958,7 +9958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4061420",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%BC%EC%B2%9C%EC%9E%AC%EC%A6%88%ED%94%BC%ED%81%AC%EB%8B%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4061427_image2_1.jpg",
     "description": "과천재즈피크닉 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -9989,7 +9989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3114868",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EB%B4%89%EC%83%88%EB%A7%8C%EA%B8%88%EB%B3%B4%EB%A6%AC%EB%B0%AD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4058407_image2_1.jpeg",
     "description": "진봉새만금보리밭축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10020,7 +10020,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1553601",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%97%B0%EB%93%B1%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4054831_image2_1.jpg",
     "description": "부산연등회 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10051,7 +10051,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3489178",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%98%EC%A0%84%EB%B0%94%EC%A7%80%EB%9D%BD%20%EC%98%A4%EA%B0%90%EC%B2%B4%ED%97%98%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4059329_image2_1.jpg",
     "description": "하전바지락 오감체험 페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10082,7 +10082,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4060101",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EC%95%84%EC%8B%9C%EC%95%84%EB%AC%B8%ED%99%94%EB%8F%84%EC%8B%9C%20%EC%95%88%EB%8F%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4060107_image2_1.png",
     "description": "동아시아문화도시 안동 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10113,7 +10113,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2720203",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EA%B1%B0%EB%A6%AC%EA%B3%B5%EC%97%B0%20%EA%B5%AC%EC%84%9D%EA%B5%AC%EC%84%9D%EB%9D%BC%EC%9D%B4%EB%B8%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4060474_image2_1.png",
     "description": "2026 서울거리공연 구석구석라이브 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10144,7 +10144,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2974166",
+    "url": "https://search.naver.com/search.naver?query=%EC%B0%A8%EC%A0%84%EC%9E%A5%EA%B5%B0%20%EB%85%B8%EA%B5%AD%EA%B3%B5%EC%A3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4059966_image2_1.jpg",
     "description": "차전장군 노국공주축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10175,7 +10175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2984556",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%84%EC%8B%A4N%ED%8E%AB%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4054001_image2_1.JPG",
     "description": "임실N펫스타 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10206,7 +10206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3116066",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%EC%95%BC%EA%B2%BD%ED%88%AC%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4060146_image2_1.jpg",
     "description": "한강야경투어 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10237,7 +10237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2865122",
+    "url": "https://search.naver.com/search.naver?query=%ED%98%84%EC%B6%A9%EC%82%AC%20%EB%8B%AC%EB%B9%9B%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/3380141_image2_1.jpg",
     "description": "현충사 달빛야행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10268,7 +10268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2714144",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%EC%95%88%EC%84%B8%EA%B3%84%EC%88%98%EB%B0%95%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4058472_image2_1.jpg",
     "description": "함안세계수박축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10299,7 +10299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506774",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EC%98%B9%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4057389_image2_1.jpg",
     "description": "울산옹기축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10330,7 +10330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113790",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%EC%95%88%EA%B5%B0%EB%AF%BC%EC%9D%98%20%EB%82%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4055176_image2_1.jpg",
     "description": "함안군민의 날 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10342,7 +10342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7020682469655248488",
+    "id": "gg-fest-2072184884239070721",
     "boardType": "festivals",
     "title": "여주도자기축제",
     "category": "park_eco",
@@ -10392,7 +10392,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3310483",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%80%EC%A1%B1%20%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C%20%ED%86%A1%ED%86%A1",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/4096496_image2_1.jpg",
     "description": "가족 예술축제 [톡톡] - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10423,7 +10423,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2968672",
+    "url": "https://search.naver.com/search.naver?query=DDP%20%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EB%94%94%EC%9E%90%EC%9D%B8%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4060932_image2_1.jpg",
     "description": "DDP 어린이 디자인 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10454,7 +10454,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4058798",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EB%8F%84%EC%9E%90%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4058807_image2_1.jpg",
     "description": "어린이 도자축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10485,7 +10485,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1591019",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%ED%9D%A5%EC%9A%B0%EC%A3%BC%ED%95%AD%EA%B3%B5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/3495714_image2_1.jpg",
     "description": "고흥우주항공축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10516,7 +10516,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3488961",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%88%EB%A1%9C%EC%B4%88%20%EC%9B%90%EC%A0%95%EB%8C%80%2C%20%EB%B6%88%EB%A1%9C%EC%B4%88%EB%A5%BC%20%EC%B0%BE%EC%95%84%EB%9D%BC%21",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4058355_image2_1.jpg",
     "description": "불로초 원정대, 불로초를 찾아라! - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10547,7 +10547,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3489255",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%B4%EB%A0%B9%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%20%EA%B8%B0%EB%85%90%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4061460_image2_1.jpg",
     "description": "보령 어린이날 기념행사 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10578,7 +10578,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3114696",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%B6%81%EA%B5%AC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%20%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "강북구 어린이날 대축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10609,7 +10609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=727285",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%B6%98%EC%96%91%EA%B5%AC%20%EA%B3%B0%EC%B7%A8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4053986_image2_1.jpg",
     "description": "청춘양구 곰취축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10640,7 +10640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=534220",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%B0%EC%B2%9C%EA%B5%AC%EC%84%9D%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/3115324_image2_1.jpg",
     "description": "연천구석기축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10671,7 +10671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3115750",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%84%A0%EB%B9%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4055805_image2_1.JPG",
     "description": "어린이선비축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10683,7 +10683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-236125873971157342",
+    "id": "gg-fest-6994293956446686594",
     "boardType": "festivals",
     "title": "제41회 부천복사골예술제",
     "category": "festival_culture",
@@ -10733,7 +10733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141759",
+    "url": "https://search.naver.com/search.naver?query=%EC%A2%85%EB%AC%98%EB%8C%80%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4057758_image2_1.jpg",
     "description": "종묘대제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10764,7 +10764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2545174",
+    "url": "https://search.naver.com/search.naver?query=2026%EC%A0%8A%EC%9D%80%EC%95%88%EB%AC%B4%EC%9E%90%EC%B0%BD%EC%9E%91%EA%B3%B5%EC%97%B0",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026젊은안무자창작공연 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10795,7 +10795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4060866",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C104%ED%9A%8C%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%20%EA%B8%B0%EB%85%90%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4061391_image2_1.png",
     "description": "제104회 어린이날 기념행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10826,7 +10826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2816502",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EC%84%9C%EC%BB%A4%EC%8A%A4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4055623_image2_1.png",
     "description": "서울서커스페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10857,7 +10857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2986679",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%80%EC%A1%B1%EC%9D%98%20%EB%8B%AC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4061184_image2_1.jpg",
     "description": "가족의 달 어린이 축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10888,7 +10888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2978145",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%83%9D%EB%AC%BC%EC%82%AC%EB%9E%91%20%EC%96%B4%EB%A6%B0%EC%9D%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4060154_image2_1.jpg",
     "description": "2026 생물사랑 어린이 축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10919,7 +10919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1004281",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%98%EC%99%95%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%B2%A0%EB%8F%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4060041_image2_1.jpg",
     "description": "의왕어린이철도축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10950,7 +10950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1633367",
+    "url": "https://search.naver.com/search.naver?query=%EC%9B%90%EC%A3%BC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%20%ED%81%B0%EC%9E%94%EC%B9%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4061386_image2_1.jpg",
     "description": "원주 어린이날 큰잔치 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -10981,7 +10981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3114685",
+    "url": "https://search.naver.com/search.naver?query=%EA%BC%AC%EB%A7%88%EB%86%8D%EB%B6%80%EC%9D%98%20%EC%BB%AC%EB%9F%AC%20%ED%8C%9C%20%EB%8C%80%EB%AA%A8%ED%97%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4060070_image2_1.jpg",
     "description": "꼬마농부의 컬러 팜 대모험 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11012,7 +11012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3489432",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%82%A0%20%EB%8F%84%EC%84%9C%EA%B4%80%20%ED%81%B0%20%EC%9E%94%EC%B9%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4059932_image2_1.jpg",
     "description": "어린이날 도서관 큰 잔치 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11043,7 +11043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1806117",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B3%BC%ED%95%99%EA%B4%80%20%EA%B3%BC%ED%95%99%EC%9C%BC%EB%A1%9C%20%EC%9E%90%EB%9D%BC%EB%8A%94%20%EC%96%B4%EB%A6%B0%EC%9D%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4057214_image2_1.jpg",
     "description": "인천어린이과학관 과학으로 자라는 어린이 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11055,7 +11055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5222355714084487947",
+    "id": "gg-fest-9203749862060366324",
     "boardType": "festivals",
     "title": "성남 어린이날 행사",
     "category": "festival_culture",
@@ -11105,7 +11105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2598331",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%ED%99%94%EA%B0%80%20%ED%9D%90%EB%A5%B4%EB%8A%94%20%EC%84%9C%EC%9A%B8%EA%B4%91%EC%9E%A5",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4059668_image2_1.jpg",
     "description": "문화가 흐르는 서울광장 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11136,7 +11136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=715421",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%80%EC%96%91%EC%95%84%EB%A6%AC%EB%9E%91%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4073885_image2_1.JPG",
     "description": "밀양아리랑대축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11167,7 +11167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506516",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EC%95%BD%EB%A0%B9%EC%8B%9C%ED%95%9C%EB%B0%A9%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4059449_image2_1.jpg",
     "description": "대구약령시한방문화축제 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11198,7 +11198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=538458",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EC%87%A0%EB%B6%80%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4074000_image2_1.jpg",
     "description": "울산쇠부리축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11229,7 +11229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113671",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EA%B5%AD%EB%B9%B5%EC%A7%80%EC%9E%90%EB%9E%91",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4070248_image2_1.jpg",
     "description": "전국빵지자랑 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11260,7 +11260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1634216",
+    "url": "https://search.naver.com/search.naver?query=%EB%91%90%EC%9C%84%EB%B4%89%20%EC%B2%A0%EC%AD%89%EC%B6%95%EC%A0%9C%26%EC%82%B0%EB%A7%A5%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4060629_image2_1.jpeg",
     "description": "두위봉 철쭉축제&산맥페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11291,7 +11291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1270240",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EC%84%B1%EC%98%A8%EC%B2%9C%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4059997_image2_1.jpg",
     "description": "유성온천문화축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11322,7 +11322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2490376",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%B8%EC%9E%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4061535_image2_1.jpg",
     "description": "겸재문화예술제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11353,7 +11353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2774275",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AA%A9%ED%8F%AC%ED%95%B4%EC%83%81W%EC%87%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/4055545_image2_1.jpg",
     "description": "2026 목포해상W쇼 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11384,7 +11384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2738786",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EC%84%B8%EA%B3%84%EB%8F%84%EC%8B%9C%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4070713_image2_1.JPG",
     "description": "서울세계도시문화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11415,7 +11415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3303393",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%20%EB%B0%80%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4054930_image2_1.jpg",
     "description": "부산 밀 페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11446,7 +11446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1954396",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EA%B3%84%EC%9D%B8%20%EC%96%B4%EC%9A%B8%EB%A6%BC%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4062825_image2_1.jpg",
     "description": "세계인 어울림 축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11477,7 +11477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2961451",
+    "url": "https://search.naver.com/search.naver?query=%ED%8C%8C%EC%A3%BC%EC%8A%88%ED%95%84%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4057279_image2_1.jpg",
     "description": "파주슈필 2026 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11508,7 +11508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141865",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C25%ED%9A%8C%20%EC%9D%98%EC%A0%95%EB%B6%80%EC%9D%8C%EC%95%85%EA%B7%B9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4061433_image2_1.jpg",
     "description": "제25회 의정부음악극축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11520,7 +11520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1158686000965826387",
+    "id": "gg-fest-6684001366622929111",
     "boardType": "festivals",
     "title": "제16회 화성시 가족사랑축제",
     "category": "festival_culture",
@@ -11551,7 +11551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2632455666444389643",
+    "id": "gg-fest-2813358208626207037",
     "boardType": "festivals",
     "title": "지구촌 어울림 축제",
     "category": "festival_culture",
@@ -11601,7 +11601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3495688",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B7%80%EC%96%B4%EA%B7%80%EC%B4%8C%20%EC%96%B4%EC%B4%8C%EA%B4%80%EA%B4%91%20%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4062121_image2_1.jpg",
     "description": "2026 귀어귀촌 어촌관광 한마당 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11632,7 +11632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2818501",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C132%EC%A3%BC%EB%85%84%20%EB%8F%99%ED%95%99%EB%86%8D%EB%AF%BC%ED%98%81%EB%AA%85%20%EA%B8%B0%EB%85%90%EC%8B%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4058750_image2_1.jpg",
     "description": "제132주년 동학농민혁명 기념식 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11663,7 +11663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2560317",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9A%B0%EB%A6%AC%20%EC%9E%84%EC%82%B0%EB%AC%BC%20%EC%88%B2%ED%91%B8%EB%93%9C%20%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4062743_image2_1.png",
     "description": "2026 우리 임산물 숲푸드 대축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11694,7 +11694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2601364",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EB%9D%BC%EA%B0%84%20%EC%8B%9C%EC%8B%9D%EA%B3%B5%EA%B0%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4060327_image2_1.jpg",
     "description": "수라간 시식공감 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11725,7 +11725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2816651",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EC%A3%BC%EC%B0%B8%EC%99%B8%26%EC%83%9D%EB%AA%85%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4081713_image2_1.JPG",
     "description": "성주참외&생명문화축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11737,7 +11737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-464376761000176583",
+    "id": "gg-fest-3912461232583040625",
     "boardType": "festivals",
     "title": "식품안전의 날 행사",
     "category": "festival_culture",
@@ -11787,7 +11787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3016781",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%9C%EB%85%84%EB%82%98%EC%A3%BC%EB%AA%A9%EC%9D%8D%EC%84%B1%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4062843_image2_1.jpg",
     "description": "천년나주목읍성문화축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11818,7 +11818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2374957",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%EB%AF%B8%EA%BD%83%20%ED%95%84%28Feel%29%20%EB%AC%B4%EB%A0%B5",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4057520_image2_1.JPG",
     "description": "장미꽃 필(Feel) 무렵 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11849,7 +11849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2841074",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EC%98%81%EB%8F%84%EC%BB%A4%ED%94%BC%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/4060873_image2_1.jpg",
     "description": "글로벌 영도커피페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11880,7 +11880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=566822",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%B4%EC%9A%B4%EB%8C%80%20%EB%AA%A8%EB%9E%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4025555_image2_1.jpg",
     "description": "해운대 모래축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11911,7 +11911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4056597",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C629%EB%8F%8C%20%EC%84%B8%EC%A2%85%EB%8C%80%EC%99%95%20%EB%82%98%EC%8B%A0%20%EB%82%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4058657_image2_1.jpg",
     "description": "제629돌 세종대왕 나신 날 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11942,7 +11942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4064297",
+    "url": "https://search.naver.com/search.naver?query=%EA%BD%83%EB%A9%8D%2B%EB%AC%BC%EB%A9%8D%2C%20%EC%B1%85%EC%9E%90%EB%A6%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4064299_image2_1.jpg",
     "description": "꽃멍+물멍, 책자리 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -11973,7 +11973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3300114",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EC%A2%85%EB%82%99%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4039829_image2_1.jpg",
     "description": "세종낙화축제 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12004,7 +12004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=577335",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%EC%97%B0%EA%B7%B9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4059463_image2_1.jpg",
     "description": "수원연극축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12035,7 +12035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1717921",
+    "url": "https://search.naver.com/search.naver?query=D.FESTA%20%EA%B1%B0%EB%A6%AC%EA%B3%B5%EC%97%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4064407_image2_1.jpg",
     "description": "D.FESTA 거리공연축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12066,7 +12066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3116057",
+    "url": "https://search.naver.com/search.naver?query=%EC%A4%91%EC%95%99%EC%95%84%EC%8B%9C%EC%95%84%20%EB%B4%84%EB%A7%9E%EC%9D%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4062170_image2_1.jpg",
     "description": "중앙아시아 봄맞이축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12097,7 +12097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3115722",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%91%EB%8B%B9%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4061800_image2_1.JPG",
     "description": "작당페스타 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12128,7 +12128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4060006",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C12%ED%9A%8C%20%ED%95%98%EB%8A%98%EC%88%B2%EA%B8%B8%20%EA%B1%B7%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4061397_image2_1.jpg",
     "description": "제12회 하늘숲길 걷기축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12140,7 +12140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8770188945842589702",
+    "id": "gg-fest-2933557638415367266",
     "boardType": "festivals",
     "title": "화성시 연등 음악 축제",
     "category": "festival_culture",
@@ -12190,7 +12190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2602974",
+    "url": "https://search.naver.com/search.naver?query=%EC%9B%90%EC%A3%BC%EC%9A%A9%EC%88%98%EA%B3%A8%EA%BD%83%EC%96%91%EA%B7%80%EB%B9%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4084289_image2_1.jpg",
     "description": "원주용수골꽃양귀비축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12221,7 +12221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1253973",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EB%8C%80%EA%B3%B5%EC%9B%90%20%EC%9E%A5%EB%AF%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4058683_image2_1.jpg",
     "description": "울산대공원 장미축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12252,7 +12252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1624017",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A1%EC%84%B1%EC%84%B8%EA%B3%84%EC%9E%A5%EB%AF%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/4055496_image2_1.jpg",
     "description": "곡성세계장미축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12283,7 +12283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3097834",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C14%ED%9A%8C%20%EB%94%94%EC%95%84%EC%8A%A4%ED%8F%AC%EB%9D%BC%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4060130_image2_1.png",
     "description": "제14회 디아스포라영화제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12314,7 +12314,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4065912",
+    "url": "https://search.naver.com/search.naver?query=%EB%B9%B5%ED%84%B0%EC%A7%80%EB%8A%94%20%EA%B0%95%EB%A6%89%20%EB%B9%B5%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4065915_image2_1.jpg",
     "description": "빵터지는 강릉 빵 페스타 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12345,7 +12345,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3110383",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%B4%EC%82%B0%EB%B9%A8%EA%B0%84%EB%A7%9B%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4048733_image2_1.jpg",
     "description": "괴산빨간맛페스티벌 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12376,7 +12376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141251",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%88%EC%82%AC%EC%B0%B8%EC%99%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4066531_image2_1.jpg",
     "description": "금사참외축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12407,7 +12407,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=557329",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%A8%EC%96%91%20%EC%86%8C%EB%B0%B1%EC%82%B0%20%EC%B2%A0%EC%AD%89%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4055897_image2_1.JPG",
     "description": "단양 소백산 철쭉제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12438,7 +12438,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4058500",
+    "url": "https://search.naver.com/search.naver?query=ING%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4059422_image2_1.jpg",
     "description": "ING 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12469,7 +12469,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1811380",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%94%EC%84%B1%20%EB%B1%83%EB%86%80%EC%9D%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4058202_image2_1.jpg",
     "description": "화성 뱃놀이 축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12481,7 +12481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1999324601215968804",
+    "id": "gg-fest-676987699358578398",
     "boardType": "festivals",
     "title": "제15회 화성 뱃놀이 축제",
     "category": "festival_culture",
@@ -12512,7 +12512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7570572760652260526",
+    "id": "gg-fest-3783882530891903795",
     "boardType": "festivals",
     "title": "화성뱃놀이축제",
     "category": "festival_culture",
@@ -12562,7 +12562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1632810",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%A3%BC%20%EC%86%8C%EB%B0%B1%EC%82%B0%20%EC%B2%A0%EC%AD%89%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4010210_image2_1.jpg",
     "description": "영주 소백산 철쭉제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12593,7 +12593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4064543",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C23%ED%9A%8C%20%ED%95%9C%EA%B0%95%EC%82%AC%EB%9E%91%20%EA%B7%B8%EB%A6%BC%EA%B7%B8%EB%A6%AC%EA%B8%B0%20%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4064550_image2_1.jpg",
     "description": "제23회 한강사랑 그림그리기 대회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12624,7 +12624,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2818494",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B0%80%EC%A1%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4063563_image2_1.jpg",
     "description": "부산가족축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12655,7 +12655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1834279",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%98%EC%98%81%20%EB%B9%9B%EB%82%98%EB%8A%94%20%EC%84%9C%EA%B7%80%ED%8F%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4066025_image2_1.jpg",
     "description": "2026 하영 빛나는 서귀포 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12686,7 +12686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506942",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%98%EC%B2%9C%EB%A7%88%EC%9E%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4024377_image2_1.JPG",
     "description": "춘천마임축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12717,7 +12717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1804113",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C22%ED%9A%8C%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%B2%AD%EC%86%8C%EB%85%84%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4058491_image2_1.png",
     "description": "제22회 대한민국청소년박람회 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12748,7 +12748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4059424",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%84%EC%8B%A4N%EC%9E%A5%EB%AF%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4059426_image2_1.JPG",
     "description": "임실N장미축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12779,7 +12779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2823481",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%84%EC%82%B0%EC%99%B8%EC%95%94%EB%A7%88%EC%9D%84%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4062790_image2_1.jpg",
     "description": "아산외암마을야행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12810,7 +12810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=749800",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%ED%95%AD%ED%95%AD%20%EC%88%98%EC%82%B0%EB%AC%BC%20%EA%BC%B4%EA%B0%91%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/3479886_image2_1.jpg",
     "description": "장항항 수산물 꼴갑축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12841,7 +12841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1810345",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%82%B0%20%EC%84%B1%ED%98%B8%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4063193_image2_1.png",
     "description": "안산 성호문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12872,7 +12872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4065251",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%A3%BC%EC%8B%9C%20%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EB%AC%B8%ED%99%94%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4065291_image2_1.jpg",
     "description": "청주시 반려동물 문화행사 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12903,7 +12903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4082595",
+    "url": "https://search.naver.com/search.naver?query=%ED%8C%94%EC%83%89%EC%B0%AC%EB%9E%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4082670_image2_1.png",
     "description": "팔색찬란 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12934,7 +12934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1835137",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%B0%BD%EA%B0%AF%EB%B2%8C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4066762_image2_1.jpg",
     "description": "고창갯벌축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12965,7 +12965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3114311",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C3%ED%9A%8C%20%EC%89%AC%EC%97%84%EC%89%AC%EC%97%84%20%ED%95%9C%EA%B0%95%203%EC%A2%85%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4059027_image2_1.png",
     "description": "제3회 쉬엄쉬엄 한강 3종 축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -12996,7 +12996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3386681",
+    "url": "https://search.naver.com/search.naver?query=%EA%B7%BC%EB%8C%80%EC%97%AD%EC%82%AC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4070830_image2_1.jpg",
     "description": "근대역사문화축전 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13027,7 +13027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2001015",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%B6%81%EC%84%B8%EA%B3%84%EC%9D%8C%EC%8B%9D%EC%B6%95%EC%A0%9C%20%EB%88%84%EB%A6%AC%EB%A7%88%EC%8B%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4056263_image2_1.jpg",
     "description": "성북세계음식축제 누리마실 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13058,7 +13058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4063951",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%98%EA%B0%80%EC%9A%B4%EC%B6%95%EC%A0%9C%20%28%EB%B0%98%EB%A0%A4%EA%B2%AC%EA%B3%BC%20%EA%B0%80%EC%B9%98%EC%9E%88%EA%B2%8C%20%EC%9A%B4%EB%8F%99%ED%95%98%EB%8A%94%20%EC%B6%95%EC%A0%9C%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4064359_image2_1.jpg",
     "description": "반가운축제 (반려견과 가치있게 운동하는 축제) - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13089,7 +13089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2371631",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C30%ED%9A%8C%20%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B4%80%EA%B4%91%EB%A7%88%EB%9D%BC%ED%86%A4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4041141_image2_1.jpg",
     "description": "제30회 제주국제관광마라톤축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13120,7 +13120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2818857",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EA%B8%B0%EB%86%8D%EB%8D%B0%EC%9D%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4063059_image2_1.jpg",
     "description": "유기농데이 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13151,7 +13151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141731",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%8C%EC%84%B1%ED%92%88%EB%B0%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4039855_image2_1.JPG",
     "description": "음성품바축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13182,7 +13182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1118680",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EC%99%80%EC%9D%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4080859_image2_1.jpg",
     "description": "대한민국와인축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13213,7 +13213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141578",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%A8%ED%95%B4%20%EB%A7%88%EB%8A%98%ED%95%9C%EC%9A%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4071963_image2_1.jpg",
     "description": "남해 마늘한우축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13244,7 +13244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2807078",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EB%B6%88%EA%B5%90%EB%AC%B8%ED%99%94%EC%97%91%EC%8A%A4%ED%8F%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4066726_image2_1.jpg",
     "description": "2026 대한민국불교문화엑스포 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13275,7 +13275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507480",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EC%82%B0%EB%AA%A8%EC%8B%9C%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4044300_image2_1.jpg",
     "description": "한산모시문화제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13306,7 +13306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4070513",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%98%EB%94%A7%EB%B6%88%EC%9D%B4%20%EA%B3%A4%EC%B6%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4070517_image2_1.jpg",
     "description": "반딧불이 곤충축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13337,7 +13337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506545",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%95%88%EB%A6%AC%EC%96%B4%EB%B0%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4066810_image2_1.JPG",
     "description": "광안리어방축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13368,7 +13368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2495286",
+    "url": "https://search.naver.com/search.naver?query=%EC%8B%A4%ED%96%A5%EB%AF%BC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4069081_image2_1.jpg",
     "description": "실향민문화축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13399,7 +13399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2488259",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%80%EB%8F%84%20%EB%8C%80%EB%AC%B8%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4070022_image2_1.jpg",
     "description": "저도 대문어축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13430,7 +13430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2853719",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%B0%EC%82%B0%20%EC%88%98%EC%A0%9C%EB%A7%A5%EC%A3%BC%26%EB%B8%94%EB%A3%A8%EC%8A%A4%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4062851_image2_1.jpg",
     "description": "군산 수제맥주&블루스 페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13461,7 +13461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1327778",
+    "url": "https://search.naver.com/search.naver?query=%EA%B1%B0%EC%A0%9C%20%EC%98%A5%ED%8F%AC%EB%8C%80%EC%B2%A9%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4066648_image2_1.jpg",
     "description": "거제 옥포대첩 축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13492,7 +13492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3489648",
+    "url": "https://search.naver.com/search.naver?query=%ED%9A%A1%EC%84%B1%ED%98%B8%EC%88%98%EA%B8%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4063806_image2_1.jpg",
     "description": "횡성호수길축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13523,7 +13523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4069856",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B4%88%20%ED%81%B4%EB%9E%98%EC%8B%9D%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4069862_image2_1.jpg",
     "description": "서초 클래식 테마파크 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13554,7 +13554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2812160",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%BA%A0%ED%95%91%EC%9A%94%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4062075_image2_1.jpg",
     "description": "2026 캠핑요리축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13585,7 +13585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3300182",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%ED%8F%89%EB%B0%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4066290_image2_1.jpg",
     "description": "양평밀축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13616,7 +13616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2988364",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EA%B5%AC%20%EB%AC%B4%EB%93%B1%EC%82%B0%EC%9D%B8%EB%AC%B8%EC%B6%95%EC%A0%9C%20%EB%AC%B4%EB%93%B1%EC%83%9D%EA%B0%81",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4059435_image2_1.jpg",
     "description": "동구 무등산인문축제 [무등생각] - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13647,7 +13647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4070242",
+    "url": "https://search.naver.com/search.naver?query=%EB%A5%B4%EB%AC%B4%ED%86%B5%20%EC%82%B0%EC%B1%85%ED%9A%8C%20in%20%EC%88%9C%EC%B2%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4070355_image2_1.jpg",
     "description": "르무통 산책회 in 순천 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13678,7 +13678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3305155",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EC%A2%85%EB%8B%A8%EC%98%A4%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4066962_image2_1.jpg",
     "description": "세종단오제 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13709,7 +13709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1248817",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%EC%A0%9C%20%EB%AA%A8%EC%95%85%EC%82%B0%20%EB%AE%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4066709_image2_1.jpg",
     "description": "김제 모악산 뮤직페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13740,7 +13740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=530450",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%ED%96%89%EC%A3%BC%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4057034_image2_1.jpg",
     "description": "고양행주문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13771,7 +13771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4070216",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%20%EC%95%84%ED%8A%B8%ED%8E%98%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4070348_image2_1.jpg",
     "description": "2026 글로벌 크리에이터 아트페어 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13802,7 +13802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4065756",
+    "url": "https://search.naver.com/search.naver?query=2026%20N%EC%84%9C%EC%9A%B8%ED%83%80%EC%9B%8C%20%EA%B8%80%EB%A1%9C%EB%B2%8C%20%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9B%8C%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/4065953_image2_1.png",
     "description": "2026 N서울타워 글로벌 나이트워크 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13833,7 +13833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3498398",
+    "url": "https://search.naver.com/search.naver?query=2026%EB%85%84%20%EA%B0%95%EC%A0%9C%EB%8F%99%EC%9B%90%20%ED%9D%AC%EC%83%9D%EC%9E%90%EB%A5%BC%20%EA%B8%B0%EB%A6%AC%EB%8A%94%20%EC%9C%A0%EC%A1%B1%C2%B7%EC%8B%9C%EB%AF%BC%20%EC%96%B4%EC%9A%B8%EB%A6%BC%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4069880_image2_1.jpg",
     "description": "2026년 강제동원 희생자를 기리는 유족·시민 어울림행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13864,7 +13864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3486730",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%AF%B8%20%EA%B9%80%EB%B0%A5%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4058642_image2_1.jpg",
     "description": "경기미 김밥페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13895,7 +13895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4069159",
+    "url": "https://search.naver.com/search.naver?query=stay%20night%2C%20%EB%B3%84%EB%B9%9B%EB%94%B0%EB%9D%BC%20%EA%B1%B7%EB%8A%94%20%EC%98%81%EB%8D%95%EC%9D%98%20%EB%B0%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4069202_image2_1.jpg",
     "description": "stay night, 별빛따라 걷는 영덕의 밤 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13926,7 +13926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1817328",
+    "url": "https://search.naver.com/search.naver?query=%EC%B0%BD%EB%A6%BD%2065%EC%A3%BC%EB%85%84%20%EA%B8%B0%EB%85%90%20%ED%95%9C%EA%B5%AD%EA%B2%BD%EC%A0%9C%EC%9D%B8%ED%98%91%ED%9A%8C%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%202026%20%EC%84%9C%EC%9A%B8%EC%8B%9C%ED%96%A5%20%EA%B0%95%EB%B3%80%EC%9D%8C%EC%95%85%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4069183_image2_1.jpg",
     "description": "창립 65주년 기념 한국경제인협회와 함께하는 2026 서울시향 강변음악회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13957,7 +13957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3304231",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EB%A6%89%EB%B3%84%EC%9C%A0%EC%B2%9C%EC%A7%80%20%EB%9D%BC%EB%B2%A4%EB%8D%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/4067740_image2_1.JPG",
     "description": "무릉별유천지 라벤더축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -13988,7 +13988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2870717",
+    "url": "https://search.naver.com/search.naver?query=%EC%A6%9D%ED%8F%89%EC%9E%A5%EB%9C%B0%EB%93%A4%EB%85%B8%EB%9E%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4066700_image2_1.jpg",
     "description": "증평장뜰들노래축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14019,7 +14019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=531391",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%EB%8B%A8%EC%98%A4%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4057376_image2_1.JPG",
     "description": "강릉단오제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14050,7 +14050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4071535",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%86%8D%EC%B4%8C%EC%97%AC%ED%96%89%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%20%28%EC%A0%9C14%ED%9A%8C%20%EB%8F%84%EB%86%8D%EA%B5%90%EB%A5%98%EC%9D%98%20%EB%82%A0%20%EA%B8%B0%EB%85%90%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/4071619_image2_1.jpg",
     "description": "2026 농촌여행 페스티벌 (제14회 도농교류의 날 기념) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14081,7 +14081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3491755",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EC%8B%9D%ED%92%88%EC%9C%A0%ED%86%B5%EB%8C%80%EC%A0%84%28K%ED%91%B8%EB%93%9C%EC%87%BC%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4058663_image2_1.jpg",
     "description": "2026 서울식품유통대전(K푸드쇼) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14112,7 +14112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3494070",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A7%84%EC%A3%BC%20%EC%A0%95%EC%9B%90%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4071433_image2_1.jpg",
     "description": "2026 진주 정원박람회 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14143,7 +14143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2661307",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EC%A0%9C%ED%95%B4%EC%96%91%EC%98%81%ED%99%94%EC%A0%9C%20%28KIOFF%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4057984_image2_1.png",
     "description": "국제해양영화제 (KIOFF) - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14174,7 +14174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1007868",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%ED%95%AD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4058670_image2_1.jpg",
     "description": "부산항축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14205,7 +14205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3334712",
+    "url": "https://search.naver.com/search.naver?query=%ED%9A%A1%EC%84%B1%EC%8D%B8%EB%A8%B8%EB%82%98%EC%9E%87%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4081112_image2_1.jpg",
     "description": "횡성썸머나잇페스타 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14236,7 +14236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2611559",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%ED%8F%AC%EC%95%84%EB%9D%BC%EB%A7%88%EB%A6%B0%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4063746_image2_1.jpg",
     "description": "김포아라마린페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14267,7 +14267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4069908",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%98%EC%B2%9C%20%EB%AF%B8%EB%8B%88%20%EC%88%A0%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4069913_image2_1.jpg",
     "description": "춘천 미니 술페스타 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14298,7 +14298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3104107",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%9C%ED%99%94%EA%B0%95%EB%A7%88%EB%91%90%ED%9D%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/4067387_image2_1.jpg",
     "description": "태화강마두희축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14329,7 +14329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141963",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C20%ED%9A%8C%20%EB%8C%80%EA%B5%AC%EA%B5%AD%EC%A0%9C%EB%AE%A4%EC%A7%80%EC%BB%AC%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4075151_image2_1.jpg",
     "description": "제20회 대구국제뮤지컬페스티벌 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14360,7 +14360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113022",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B3%B5%EC%98%88%EC%A3%BC%EA%B0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4071410_image2_1.jpg",
     "description": "2026 공예주간 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14391,7 +14391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3114721",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%95%9C%EC%9A%B0%EB%8D%B0%EC%9D%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4073378_image2_1.JPG",
     "description": "강원한우데이 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14422,7 +14422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2616325",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EA%B5%AD%EC%95%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4061947_image2_1.jpg",
     "description": "서울국악축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14434,7 +14434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-872806164777203079",
+    "id": "gg-fest-2272858624714644150",
     "boardType": "festivals",
     "title": "2026 김포 아라마린페스티벌",
     "category": "festival_culture",
@@ -14484,7 +14484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4074598",
+    "url": "https://search.naver.com/search.naver?query=%EC%B4%88%EC%95%88%EC%82%B0%20%EC%88%98%EA%B5%AD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4074600_image2_1.jpg",
     "description": "초안산 수국축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14515,7 +14515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2381291",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%82%B0%EC%9B%85%EC%83%81%ED%9A%8C%EC%95%BC%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/4077553_image2_1.jpg",
     "description": "양산웅상회야제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14546,7 +14546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2952109",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9A%A9%EA%B3%A8%20%EB%8C%84%EC%8A%A4%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/4067473_image2_1.jpg",
     "description": "2026 용골 댄스 페스타 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14577,7 +14577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3495437",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AC%B8%ED%99%94%EA%B0%80%20%EC%9E%88%EB%8A%94%EB%82%A0%20%20-%20%EB%AC%B8%ED%99%94%EB%B0%B0%EB%8B%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4080593_image2_1.jpg",
     "description": "2026 문화가 있는날  - 문화배달 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14608,7 +14608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3488940",
+    "url": "https://search.naver.com/search.naver?query=MyK%20FESTA%28%EB%A7%88%EC%9D%B4%EC%BC%80%EC%9D%B4%20%ED%8E%98%EC%8A%A4%ED%83%80%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4063217_image2_1.jpg",
     "description": "MyK FESTA(마이케이 페스타) - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14639,7 +14639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2550263",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EB%AF%B8%EC%9B%90%20%EC%97%B0%EA%BD%83%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4078876_image2_1.JPG",
     "description": "세미원 연꽃문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14670,7 +14670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4102351",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EB%8B%A4%EB%AF%B8%EB%A1%9C%EA%B7%80%EB%95%8C%EB%B0%95%EB%AC%BC%EA%B4%80%20%EA%B8%B0%ED%9A%8D%EC%A0%84%EC%8B%9C%20%27%EB%AA%85%ED%99%94%EC%99%80%20%ED%8B%B0%ED%83%80%EC%9E%84%28Teatime%29%20%3A%20%EB%B9%9B%EA%B3%BC%20%EC%83%89%EC%B1%84%EB%A1%9C%20%EB%A7%88%EC%8B%9C%EB%8A%94%20%EC%B0%A8%20%ED%95%9C%20%EC%9E%94%EC%9D%98%20%EC%97%AC%EC%9C%A0%27",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4102354_image2_1.jpg",
     "description": "안다미로귀때박물관 기획전시 '명화와 티타임(Teatime) : 빛과 색채로 마시는 차 한 잔의 여유' - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14701,7 +14701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3304617",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%A7%84%EC%88%98%EA%B5%AD%EA%B8%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4071228_image2_1.jpg",
     "description": "강진수국길축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14732,7 +14732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1302214",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%95%88%20%EC%97%B0%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4071390_image2_1.JPG",
     "description": "무안 연꽃축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14763,7 +14763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2719122",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%ED%91%B8%EB%93%9C%ED%95%84%EB%A6%84%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4065290_image2_1.jpg",
     "description": "2026 부산푸드필름페스타 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14794,7 +14794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1032770",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EB%A7%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4064420_image2_1.jpg",
     "description": "부산국제매직페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14825,7 +14825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3497502",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%82%B0%EC%B9%B4%ED%8E%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4064110_image2_1.jpg",
     "description": "경산카페축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14856,7 +14856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3495841",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%B2%EC%9C%BC%EB%A1%9C%20%EC%98%A4%EB%9D%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4074666_image2_1.jpg",
     "description": "숲으로 오라 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14868,7 +14868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7309689055288195427",
+    "id": "gg-fest-535455332809646268",
     "boardType": "festivals",
     "title": "6월 마토예술제",
     "category": "festival_culture",
@@ -14918,7 +14918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1801011",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EC%B9%98%EB%A7%A5%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4071284_image2_1.jpg",
     "description": "대구치맥페스티벌 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14949,7 +14949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1829696",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%84%EC%8B%9C%EC%95%84%ED%94%84%20%28ASYAAF%20100%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4057349_image2_1.jpg",
     "description": "아시아프 (ASYAAF 100) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -14980,7 +14980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=574047",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%97%AC%EC%84%9C%EB%8F%99%EC%97%B0%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4095668_image2_1.jpg",
     "description": "부여서동연꽃축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15011,7 +15011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2607445",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%EB%B9%84%EC%B9%98%EB%B9%84%EC%96%B4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4078330_image2_1.jpg",
     "description": "강릉비치비어페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15042,7 +15042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3501428",
+    "url": "https://search.naver.com/search.naver?query=2026%20WSL%20%EC%8B%9C%ED%9D%A5%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EC%98%A4%ED%94%88%20%EA%B5%AD%EC%A0%9C%20%EC%84%9C%ED%95%91%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4067310_image2_1.jpg",
     "description": "2026 WSL 시흥 코리아 오픈 국제 서핑대회 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15073,7 +15073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2375382",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EC%95%9E%EC%82%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4077015_image2_1.JPG",
     "description": "대구앞산축제 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15104,7 +15104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3499540",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%ED%8F%89%EC%88%98%EB%B0%95%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4067566_image2_1.jpg",
     "description": "양평수박축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15135,7 +15135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4076709",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%EA%B5%AC%EC%A0%84%202026%20%EC%97%AC%EB%A6%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4076726_image2_1.png",
     "description": "문구전 2026 여름 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15166,7 +15166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3035057",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%ED%8C%94%EC%9D%BC%20%EB%8C%95%EB%8C%95%EC%9D%B4%20%EB%8C%80%EC%9E%94%EC%B9%98%EF%BC%81",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4063736_image2_1.jpg",
     "description": "구팔일 댕댕이 대잔치！ - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15197,7 +15197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1951053",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0119%EC%95%88%EC%A0%84%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4082690_image2_1.jpg",
     "description": "울산119안전문화축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15228,7 +15228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2719507",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%88%EC%82%B0%EC%82%BC%EA%B3%84%ED%83%95%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4064242_image2_1.jpg",
     "description": "금산삼계탕축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15259,7 +15259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4080156",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%EB%B8%8C%EB%9E%9C%EB%93%9C%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/4080287_image2_1.jpg",
     "description": "2026 부산브랜드페스타 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15290,7 +15290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1824778",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C18%ED%9A%8C%20%ED%86%B5%EC%98%81%EC%97%B0%EA%B7%B9%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4070082_image2_1.jpg",
     "description": "제18회 통영연극예술축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15321,7 +15321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3302702",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%ED%8E%AB%EC%BA%89%EC%8A%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4065648_image2_1.jpg",
     "description": "대한민국 펫캉스 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15352,7 +15352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2826964",
+    "url": "https://search.naver.com/search.naver?query=%EA%B7%B8%EB%A3%A8%EB%B8%8C%20%EC%9D%B8%20%EA%B4%80%EC%95%85",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4071342_image2_1.jpg",
     "description": "그루브 인 관악 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15383,7 +15383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3487396",
+    "url": "https://search.naver.com/search.naver?query=%EC%B9%A0%EA%B3%A1%20%EA%BF%80%EB%A7%A5%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4061206_image2_1.jpg",
     "description": "칠곡 꿀맥 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15414,7 +15414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2387785",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84%EC%BD%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4080135_image2_1.jpg",
     "description": "2026 보드게임콘 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15445,7 +15445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1825520",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EA%B8%B0%EC%9D%B8%ED%98%95%EA%B7%B9%EC%A0%9C%20in%20%EC%88%98%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4076547_image2_1.jpg",
     "description": "2026 경기인형극제 in 수원 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15476,7 +15476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142228",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%9C%EB%B0%B1%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4108389_image2_1.jpg",
     "description": "태백 해바라기축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15507,7 +15507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140833",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%B2%9C%20%EC%B0%B0%EC%98%A5%EC%88%98%EC%88%98%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4108014_image2_1.jpg",
     "description": "홍천 찰옥수수 축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15538,7 +15538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4094595",
+    "url": "https://search.naver.com/search.naver?query=%EC%BB%A8%ED%85%9C%ED%8F%AC%EB%9F%AC%EB%A6%AC%20%EC%95%84%ED%8B%B0%EC%8A%A4%ED%8A%B8%20%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20%E3%80%8A%EC%9D%B4%EC%99%84%20-%20%EB%82%98%EB%8A%94%20%EC%93%B4%EB%8B%A4%E3%80%8B",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4094783_image2_1.png",
     "description": "컨템포러리 아티스트 프로젝트 《이완 - 나는 쓴다》 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15569,7 +15569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4088257",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%83%9D%EB%8F%85%EC%84%9CX%EC%9D%B8%EC%83%9D%EC%84%9C%EC%A0%90%20%EB%B6%81%ED%8E%98%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4088274_image2_1.jpg",
     "description": "인생독서X인생서점 북페어 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15600,7 +15600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2989580",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%EC%88%98%20%EC%BF%A8%EB%B0%B8%EB%A6%AC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4073812_image2_1.jpg",
     "description": "장수 쿨밸리 페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15631,7 +15631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4086427",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%98%EC%B2%9C%20%EC%8D%B8%EB%A8%B8%EC%9B%8C%ED%84%B0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4086431_image2_1.jpg",
     "description": "춘천 썸머워터 페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15662,7 +15662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3495394",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%85%EB%A6%BD%EC%B6%9C%ED%8C%90%20%EB%B6%81%ED%8E%98%EC%96%B4%20%EC%A0%84%EC%A3%BC%EC%B1%85%EC%BE%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4076355_image2_1.png",
     "description": "독립출판 북페어 전주책쾌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15693,7 +15693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=606549",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C24%ED%9A%8C%20%EB%8F%99%EA%B0%95%EA%B5%AD%EC%A0%9C%EC%82%AC%EC%A7%84%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4075256_image2_1.jpg",
     "description": "제24회 동강국제사진제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15724,7 +15724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4079965",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C%20%EB%8B%AC%EC%84%B1%EC%9B%8C%ED%84%B0%EC%8A%A4%ED%94%8C%EB%9E%98%EC%8B%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4079966_image2_1.jpg",
     "description": "청년축제 달성워터스플래시 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15755,7 +15755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3352452",
+    "url": "https://search.naver.com/search.naver?query=%EC%BD%94%EB%AF%B9%EC%9B%94%EB%93%9C%20SUMMER%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4076738_image2_1.png",
     "description": "코믹월드 SUMMER 2026 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15786,7 +15786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3509884",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EC%8D%B8%EB%A8%B8%EB%B9%84%EC%B9%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4107193_image2_1.jpg",
     "description": "서울썸머비치 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15817,7 +15817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4055637",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EA%B3%84%EC%9C%A0%EC%82%B0%EC%9C%84%EC%9B%90%ED%9A%8C%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EA%B4%80%28K-Heritage%20House%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4055726_image2_1.jpeg",
     "description": "세계유산위원회 대한민국관(K-Heritage House) - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15848,7 +15848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=580049",
+    "url": "https://search.naver.com/search.naver?query=2026%EB%85%84%20%EC%A0%9C26%ED%9A%8C%20%EB%B0%80%EC%96%91%EA%B3%B5%EC%97%B0%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4088768_image2_1.png",
     "description": "2026년 제26회 밀양공연예술축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15879,7 +15879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2543724",
+    "url": "https://search.naver.com/search.naver?query=%EB%AA%85%EC%A3%BC%EC%9D%B8%ED%98%95%EA%B7%B9%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4078843_image2_1.jpg",
     "description": "명주인형극제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15910,7 +15910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3318880",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C8%ED%9A%8C%20%EB%86%8D%EC%B4%8C%EC%9C%B5%EB%B3%B5%ED%95%A9%EC%82%B0%EC%97%85%20%EC%A0%9C%EC%A3%BC%EA%B5%AD%EC%A0%9C%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4066710_image2_1.jpg",
     "description": "제8회 농촌융복합산업 제주국제박람회 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15941,7 +15941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=590921",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%8F%89%EC%B0%BD%EB%8C%80%EA%B4%80%EB%A0%B9%EC%9D%8C%EC%95%85%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4080008_image2_1.jpg",
     "description": "2026 평창대관령음악제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -15972,7 +15972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4077756",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C48%EC%B0%A8%20%EC%9C%A0%EB%84%A4%EC%8A%A4%EC%BD%94%20%EC%84%B8%EA%B3%84%EC%9C%A0%EC%82%B0%EC%9C%84%EC%9B%90%ED%9A%8C%20%ED%8A%B9%EB%B3%84%EA%B3%B5%EC%97%B0%20%EC%82%B0%ED%99%94%EB%B9%84%20%3A%20HEXAGRAM%2022",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4077757_image2_1.jpg",
     "description": "제48차 유네스코 세계유산위원회 특별공연 산화비 : HEXAGRAM 22 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16003,7 +16003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4102649",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%AC%EC%9C%A0%EA%B8%B0%ED%9A%8D%EC%A0%84%20%E3%80%8A%EC%95%88%EC%8B%9D%EC%9D%98%20%EA%B2%B0%20Texture%20of%20Rest%E3%80%8B",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4103020_image2_1.jpg",
     "description": "섬유기획전 《안식의 결 Texture of Rest》 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16034,7 +16034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2486085",
+    "url": "https://search.naver.com/search.naver?query=%ED%94%BC%EB%9E%80%EC%88%98%EB%8F%84%EB%B6%80%EC%82%B0%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4080818_image2_1.jpg",
     "description": "피란수도부산 국가유산야행 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16065,7 +16065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506534",
+    "url": "https://search.naver.com/search.naver?query=%EB%B3%B4%EB%A0%B9%EB%A8%B8%EB%93%9C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/3534979_image2_1.jpg",
     "description": "보령머드축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16096,7 +16096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1831344",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%89%EC%B0%BD%EB%8D%94%EC%9C%84%EC%82%AC%EB%83%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4061523_image2_1.JPG",
     "description": "평창더위사냥축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16127,7 +16127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2523149",
+    "url": "https://search.naver.com/search.naver?query=K-%ED%95%B8%EB%93%9C%EB%A9%94%EC%9D%B4%EB%93%9C%ED%8E%98%EC%96%B4%20%EB%B6%80%EC%82%B0%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4059066_image2_1.jpg",
     "description": "K-핸드메이드페어 부산 2026 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16158,7 +16158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2704473",
+    "url": "https://search.naver.com/search.naver?query=K-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%ED%8E%98%EC%96%B4%20%EB%B6%80%EC%82%B0%202026",
     "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "K-일러스트레이션페어 부산 2026 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16189,7 +16189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=589170",
+    "url": "https://search.naver.com/search.naver?query=%EA%B1%B0%EC%A0%9C%EC%97%AC%EB%A6%84%ED%95%B4%EC%96%91%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4082962_image2_1.jpg",
     "description": "거제여름해양축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16220,7 +16220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3507102",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%20%EB%8F%99%EA%B5%AC%20%EC%97%AC%EB%A6%84%EC%B6%95%EC%A0%9C%20%EB%91%90%EB%91%90%EC%8D%B8%EB%8F%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/4085498_image2_1.jpg",
     "description": "대구 동구 여름축제 두두썸동 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16251,7 +16251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2499947",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%B6%81%EB%AC%B8%ED%99%94%EB%B0%94%EC%BA%89%EC%8A%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4087988_image2_1.JPG",
     "description": "성북문화바캉스 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16282,7 +16282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142064",
+    "url": "https://search.naver.com/search.naver?query=%EB%B4%89%ED%99%94%EC%9D%80%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4080830_image2_1.JPG",
     "description": "봉화은어축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16313,7 +16313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=767114",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EB%82%A8%EC%A7%84%20%EC%9E%A5%ED%9D%A5%20%EB%AC%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4071277_image2_1.jpg",
     "description": "정남진 장흥 물축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16344,7 +16344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2993769",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EB%8F%99%20%EC%88%98%28%E6%B0%B4%29%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4080294_image2_1.jpg",
     "description": "안동 수(水)페스타 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16375,7 +16375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4088149",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%9C%EC%BD%94%EB%8B%88%20%EB%AE%A4%EC%A7%81%EC%87%BC%20%EC%95%A4%20%EC%8A%A4%ED%8A%B8%EB%A6%BF%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4088150_image2_1.jpg",
     "description": "발코니 뮤직쇼 앤 스트릿 페스타 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16406,7 +16406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2372235",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%86%A0%EC%9A%94%EC%83%81%EC%84%A4%EB%AC%B4%EB%8C%80%20%ED%94%84%EB%9F%AC%ED%8F%AC%EC%A6%88%20%EB%B0%8F%20%EC%82%AC%EC%B2%9C%20%EB%9D%BD%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4084478_image2_1.jpg",
     "description": "2026 토요상설무대 프러포즈 및 사천 락 페스티벌 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16437,7 +16437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4081268",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%99%8D%EC%B2%9C%20e%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4081270_image2_1.jpg",
     "description": "2026 홍천 e스포츠 페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16449,7 +16449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5433904533001553346",
+    "id": "gg-fest-1683275628470891963",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;전국밴드경연대회",
     "category": "contest_general",
@@ -16499,7 +16499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4089090",
+    "url": "https://search.naver.com/search.naver?query=%E3%80%88%EB%8F%84%EA%B8%B0%E9%99%B6%E5%99%A8%2C%20%EC%9A%B0%EB%A6%AC%EB%A5%BC%20%EB%8B%B4%EC%9D%80%20%EC%A7%88%EA%B7%B8%EB%A6%87%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4089092_image2_1.jpg",
     "description": "〈도기陶器, 우리를 담은 질그릇〉 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16530,7 +16530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4090201",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%80%EB%93%A0%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%EB%A7%88%EC%BC%93",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4090202_image2_1.jpg",
     "description": "가든 나이트 마켓 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16561,7 +16561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2019366",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%B4%EC%96%91%EB%A0%88%EC%A0%80%EC%B6%95%EC%A0%9C%2C%20%ED%82%A4%EB%A7%88%EC%9C%84%ED%81%AC%28KIMA%20WEEK%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4093665_image2_1.JPG",
     "description": "해양레저축제, 키마위크(KIMA WEEK) - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16592,7 +16592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2394558",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%ED%8F%AC%20%EC%8D%B8%EB%A8%B8%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4091115_image2_1.jpg",
     "description": "경포 썸머 페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16623,7 +16623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2992167",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%A3%BC%20%EC%8B%9C%EC%9B%90%EB%82%98%EC%9E%87%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4084230_image2_1.jpg",
     "description": "영주 시원나잇페스타 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16654,7 +16654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=561027",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%ED%8E%9C%ED%83%80%ED%8F%AC%ED%8A%B8%20%EB%9D%BD%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4070165_image2_1.jpg",
     "description": "인천펜타포트 락 페스티벌 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16685,7 +16685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1340294",
+    "url": "https://search.naver.com/search.naver?query=%EA%B1%B0%EB%AC%B8%EB%8F%84%EB%B0%B1%EB%8F%84%20%EC%9D%80%EB%B9%9B%EB%B0%94%EB%8B%A4%EC%B2%B4%ED%97%98%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4089520_image2_1.jpg",
     "description": "거문도백도 은빛바다체험행사 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16716,7 +16716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2611034",
+    "url": "https://search.naver.com/search.naver?query=%EC%86%8D%EC%B4%88%20%EC%8D%B8%EB%A8%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4087277_image2_1.jpg",
     "description": "속초 썸머페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16747,7 +16747,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3498395",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%82%98%EC%9D%B4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%8A%A4%20%EC%9D%B8%20%EB%B6%80%EC%82%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4065341_image2_1.jpg",
     "description": "2026 나이트레이스 인 부산 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16778,7 +16778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1825508",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%BC%EA%B8%B8%ED%8F%AC%20%EC%9A%B0%EB%9F%AD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4093724_image2_1.JPG",
     "description": "삼길포 우럭축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16809,7 +16809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3509748",
+    "url": "https://search.naver.com/search.naver?query=EX%20HORROR%20%EC%8B%9C%EC%A6%8C%206%20%3A%20%EC%8B%A0%EB%9D%BCX%EC%A2%80%EB%B9%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4090217_image2_1.jpg",
     "description": "EX HORROR 시즌 6 : 신라X좀비 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16840,7 +16840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3514951",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%83%80%20%ED%8E%98%EC%8A%A4%2012",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4084525_image2_1.jpg",
     "description": "일러스타 페스 12 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16871,7 +16871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2497537",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%9C%EA%B0%95%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9B%8C%ED%81%AC42K%20with%20%ED%86%A0%EB%A0%88%ED%83%80%21",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4071363_image2_1.jpg",
     "description": "2026 한강나이트워크42K with 토레타! - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16902,7 +16902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2539802",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%B2%9C%EA%B0%95%20%EB%B3%84%EB%B9%9B%EC%9D%8C%EC%95%85%20%EB%A7%A5%EC%A3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/4108045_image2_1.jpg",
     "description": "홍천강 별빛음악 맥주축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16933,7 +16933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2557842",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%20%EA%B0%80%EB%A7%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4086143_image2_1.jpg",
     "description": "전주 가맥축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16964,7 +16964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4091116",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B0%EB%A6%AC%EB%8F%99%EB%84%A4%20%EB%AC%B8%ED%99%94%EC%95%84%EC%A7%80%ED%8A%B8%20%3A%20LH%EC%A3%BC%ED%83%9D%EC%A0%84%EC%8B%9C%EA%B4%80%20%EB%B3%B5%ED%95%A9%EB%AC%B8%ED%99%94%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4091125_image2_1.jpg",
     "description": "우리동네 문화아지트 : LH주택전시관 복합문화행사 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -16995,7 +16995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142193",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%94%84%EB%A6%B0%EC%A7%80%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C2026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4087022_image2_1.jpg",
     "description": "서울프린지페스티벌2026 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17026,7 +17026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2644679",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EB%B6%88%EA%B5%90%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4077792_image2_1.jpg",
     "description": "2026 부산국제불교박람회 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17057,7 +17057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4070865",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%80%EC%96%91%20%EC%88%98%ED%8D%BC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4107135_image2_1.JPG",
     "description": "밀양 수퍼 페스티벌 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17088,7 +17088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142080",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EB%B0%94%EB%8B%A4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/4085840_image2_1.jpg",
     "description": "부산바다축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17119,7 +17119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2989846",
+    "url": "https://search.naver.com/search.naver?query=%EC%86%A1%EB%8F%84%ED%95%B4%EB%B3%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4089470_image2_1.JPG",
     "description": "송도해변축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17150,7 +17150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3517184",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%20%EB%8B%A4%EB%A6%AC%EB%B0%91%20%EC%98%81%ED%99%94%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4095469_image2_1.jpg",
     "description": "한강 다리밑 영화관 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17181,7 +17181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507454",
+    "url": "https://search.naver.com/search.naver?query=%ED%86%B5%EC%98%81%ED%95%9C%EC%82%B0%EB%8C%80%EC%B2%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4041308_image2_1.jpg",
     "description": "통영한산대첩축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17212,7 +17212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3333059",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8%20%EC%A7%84%EC%A3%BC%EC%84%B1",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4109790_image2_1.jpg",
     "description": "국가유산 미디어아트 진주성 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17243,7 +17243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4093783",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4093802_image2_1.JPG",
     "description": "홍성 국가유산야행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17274,7 +17274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2541883",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/3317777_image2_1.jpg",
     "description": "강릉 국가유산야행 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17305,7 +17305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1916616",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4095814_image2_1.jpg",
     "description": "수원 국가유산야행 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17336,7 +17336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4098571",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%80%EC%95%BC%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC%20%EB%B9%9B%20%EC%B6%95%EC%A0%9C%20%EB%B9%9B%EC%9D%84%20%ED%96%A5%ED%95%9C%20%ED%95%AD%ED%95%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4098577_image2_1.png",
     "description": "가야테마파크 빛 축제 빛을 향한 항해 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17367,7 +17367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4098134",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EC%84%B1%EC%98%A8%EB%82%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4098430_image2_1.jpg",
     "description": "유성온날 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17398,7 +17398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4097098",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%90%ED%83%84%EB%A1%9C%EB%93%9C%20%EC%97%AC%ED%96%89%EA%B0%80%EC%B1%A0%20%ED%8C%9D%EC%97%85%EC%8A%A4%ED%86%A0%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/4097216_image2_1.jpg",
     "description": "감탄로드 여행가챠 팝업스토어 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17429,7 +17429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1684261",
+    "url": "https://search.naver.com/search.naver?query=%EB%91%94%EB%82%B4%EA%B3%A0%EB%9E%AD%EC%A7%80%ED%86%A0%EB%A7%88%ED%86%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4094217_image2_1.jpg",
     "description": "둔내고랭지토마토축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17460,7 +17460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1539730",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9D%B4%EB%9F%B4%EB%95%8C%EC%9D%B4%EB%9F%B0%EC%9D%8C%EC%95%85%20%ED%95%B4%EC%84%A4%EC%9D%B4%20%EC%9E%88%EB%8A%94%20%EC%B2%AD%EC%86%8C%EB%85%84%EC%9D%8C%EC%95%85%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/4090187_image2_1.jpg",
     "description": "2026 이럴때이런음악 해설이 있는 청소년음악회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17491,7 +17491,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3383748",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C4%ED%9A%8C%20%EB%8B%A4%EB%8C%80%ED%8F%AC%20%EC%84%A0%EC%85%8B%20%EC%98%81%ED%99%94%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4089821_image2_1.jpg",
     "description": "제4회 다대포 선셋 영화 축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17522,7 +17522,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2736033",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%9D%B8%EB%94%94%EC%BB%A4%EB%84%A5%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4087155_image2_1.jpg",
     "description": "부산인디커넥트페스티벌 2026 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17553,7 +17553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4098916",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%AC%EA%B8%B0%EC%A0%80%EA%B8%B0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%20in%20%EC%B2%A0%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4098920_image2_1.jpg",
     "description": "여기저기 페스티벌 in 철원 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17584,7 +17584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4087207",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EC%A3%BC%20e%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4087291_image2_1.jpg",
     "description": "2026 경주 e스포츠 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17615,7 +17615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1068150",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%AC%EC%B2%9C%EC%8B%9C%20%EC%82%BC%EC%B2%9C%ED%8F%AC%ED%95%AD%20%EC%9E%90%EC%97%B0%EC%82%B0%20%EC%A0%84%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3513728_image2_1.jpg",
     "description": "사천시 삼천포항 자연산 전어축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17646,7 +17646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3351451",
+    "url": "https://search.naver.com/search.naver?query=K-%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%ED%8E%98%EC%96%B4%20%EB%A7%88%EA%B3%A1%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4059475_image2_1.jpg",
     "description": "K-일러스트레이션페어 마곡 2026 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17677,7 +17677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1840830",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C14%ED%9A%8C%20%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EC%BD%94%EB%AF%B8%EB%94%94%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4093324_image2_1.jpg",
     "description": "제14회 부산국제코미디페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17708,7 +17708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4097059",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%ED%95%AD%EC%B9%98%EB%A7%A5%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4097060_image2_1.png",
     "description": "포항치맥페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17739,7 +17739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141268",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B2%9C%20%ED%99%8D%EC%9B%90%ED%95%AD%20%EC%9E%90%EC%97%B0%EC%82%B0%20%EC%A0%84%EC%96%B4%20%EA%BD%83%EA%B2%8C%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/2828778_image2_1.jpg",
     "description": "서천 홍원항 자연산 전어 꽃게 축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17770,7 +17770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1939183",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A4%EA%B0%90%EB%A7%8C%EC%A1%B1%20%EB%AC%B8%EA%B2%BD%EC%83%88%EC%9E%AC%EB%A7%A8%EB%B0%9C%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4078831_image2_1.jpg",
     "description": "오감만족 문경새재맨발페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17801,7 +17801,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106883",
+    "url": "https://search.naver.com/search.naver?query=COSMOS%20BIGBANG%2020TH%20ANNIVERSARY%20MEDIA%20EXHIBITION",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4106894_image2_1.jpg",
     "description": "COSMOS BIGBANG 20TH ANNIVERSARY MEDIA EXHIBITION - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17832,7 +17832,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3399432",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A0%9C5%ED%9A%8C%20%EC%A0%9C%EC%A3%BC%EB%B9%84%EC%97%94%EB%82%A0%EB%A0%88%20%ED%97%88%EB%81%84%EA%B3%A1%20%EB%AA%A8%EB%8B%A5%EC%B9%98%EA%B3%A1%20%EC%9D%B4%EC%95%BC%ED%99%8D%20%3A%20%EB%B3%80%EC%9A%A9%EC%9D%98%20%EA%B8%B0%EC%88%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4073777_image2_1.jpg",
     "description": "2026 제5회 제주비엔날레 허끄곡 모닥치곡 이야홍 : 변용의 기술 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17894,7 +17894,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2843892",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9B%90%EC%A3%BC%EC%98%A5%EC%83%81%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4103047_image2_1.jpg",
     "description": "2026 원주옥상영화제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17925,7 +17925,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1073801",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%96%91%EA%B3%A0%EC%B6%94%20H.O.T%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4095025_image2_1.png",
     "description": "영양고추 H.O.T 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17956,7 +17956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1018971",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%ED%86%A0%EC%A0%95%EC%A4%91%EC%95%99%20%EC%B2%AD%EC%B6%98%EC%96%91%EA%B5%AC%20%EB%B0%B0%EA%BC%BD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4095354_image2_1.jpg",
     "description": "국토정중앙 청춘양구 배꼽축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -17987,7 +17987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3351268",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EB%A7%A5%EC%A3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4090921_image2_1.jpg",
     "description": "동대문구 맥주축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18018,7 +18018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3346571",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EA%B2%BD%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/3519787_image2_1.JPG",
     "description": "강경 국가유산야행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18049,7 +18049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4103719",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%A7%84%EA%B5%AC%20%EC%A0%84%ED%8F%AC%EC%82%AC%EC%9E%87%EA%B8%B8%20%EB%A7%A5%EC%A3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4103732_image2_1.jpg",
     "description": "부산진구 전포사잇길 맥주축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18080,7 +18080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2833003",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EC%84%B1%EC%9E%AC%EC%A6%88%26%EB%A7%A5%EC%A3%BC%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4103049_image2_1.jpg",
     "description": "유성재즈&맥주페스타 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18111,7 +18111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3340192",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%20%EB%8C%80%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4096095_image2_1.jpg",
     "description": "2026 크리에이터 미디어 대전 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18142,7 +18142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3339982",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C7%ED%9A%8C%20%EA%B3%A0%EC%B0%BD%EB%86%8D%EC%95%85%20%EA%BD%83%EB%8C%80%EB%A6%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4095643_image2_1.jpg",
     "description": "제7회 고창농악 꽃대림축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18173,7 +18173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2853756",
+    "url": "https://search.naver.com/search.naver?query=%EC%83%9D%EC%83%9D%EC%9A%B0%EB%A6%AC%EC%9D%8C%EC%95%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4078805_image2_1.jpg",
     "description": "생생우리음악축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18204,7 +18204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2989981",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B4%88%EB%AE%A4%EC%A7%81%EC%95%A4%EC%95%84%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%28SMAF%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4124886_image2_1.jpg",
     "description": "서초뮤직앤아트페스티벌(SMAF) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18235,7 +18235,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4096371",
+    "url": "https://search.naver.com/search.naver?query=%ED%8A%B8%EB%A0%88%EC%A0%80%ED%97%8C%ED%84%B0%20in%20%EC%A7%84%EC%95%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4096408_image2_1.jpeg",
     "description": "트레저헌터 in 진안 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18266,7 +18266,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1953493",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%95%88%20%ED%99%A9%ED%86%A0%20%EA%B0%AF%EB%B2%8C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4095062_image2_1.JPG",
     "description": "무안 황토 갯벌축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18297,7 +18297,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4090802",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%95%88%EC%82%B0%20e%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4090807_image2_1.jpg",
     "description": "2026 안산 e스포츠 페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18328,7 +18328,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2991394",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%EB%82%98%EC%9D%B4%ED%8A%B8%EC%9B%8C%ED%81%AC42K%20with%20dsec",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4069137_image2_1.jpg",
     "description": "2026 부산나이트워크42K with dsec - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18359,7 +18359,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109448",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EB%AF%B8%EC%9B%90%20%EC%88%98%EB%A0%A8%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/52/4109452_image2_1.jpg",
     "description": "세미원 수련문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18390,7 +18390,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2748395",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%A8%EA%B5%AC%EC%B2%AD%EB%85%84%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4099083_image2_1.jpg",
     "description": "남구청년예술제 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18557,7 +18557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-7549895913616145737",
+    "id": "gg-fest-63197562821293169",
     "boardType": "festivals",
     "title": "2026 파크콘서트",
     "category": "festival_culture",
@@ -18607,7 +18607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2996478",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%B2%9C%EC%95%88%20K-%EC%BB%AC%EC%B2%98%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4020710_image2_1.jpg",
     "description": "2026 천안 K-컬처박람회 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18638,7 +18638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2648460",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EB%B3%B5%EA%B6%81%20%EB%B3%84%EB%B9%9B%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4100435_image2_1.jpg",
     "description": "경복궁 별빛야행 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18700,7 +18700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2640874",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EB%9D%BC%EC%9D%B4%ED%8A%B8%20DDP%20%EA%B0%80%EC%9D%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/4124771_image2_1.jpg",
     "description": "서울라이트 DDP 가을 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18731,7 +18731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506523",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%A3%BC%EB%B0%98%EB%94%A7%EB%B6%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/3520566_image2_1.JPG",
     "description": "무주반딧불축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18762,7 +18762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106106",
+    "url": "https://search.naver.com/search.naver?query=%EC%9B%90%EC%A3%BC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4106120_image2_1.jpg",
     "description": "원주 국가유산야행 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18793,7 +18793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3348418",
+    "url": "https://search.naver.com/search.naver?query=%EC%83%88%ED%99%9C%EC%9A%A9%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4098874_image2_1.jpg",
     "description": "새활용 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18824,7 +18824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2614763",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%B5%EC%A3%BC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4091769_image2_1.jpg",
     "description": "공주 국가유산야행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18855,7 +18855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3305165",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%81%EC%A7%80%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4083180_image2_1.JPG",
     "description": "직지문화축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18886,7 +18886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507635",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%89%EC%B0%BD%ED%9A%A8%EC%84%9D%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3523028_image2_1.jpg",
     "description": "평창효석문화제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18917,7 +18917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3343694",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C22%ED%9A%8C%20%EB%86%8D%EC%B4%8C%EC%9A%B0%EC%88%98%EB%A7%88%EB%8B%B9%EA%B7%B9%ED%81%B0%EC%9E%94%EC%B9%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4106138_image2_1.jpg",
     "description": "제22회 농촌우수마당극큰잔치 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18948,7 +18948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4104765",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C51%ED%9A%8C%20%EA%B0%95%EC%9B%90%EC%B6%95%EC%82%B0%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4104768_image2_1.jpg",
     "description": "제51회 강원축산경진대회 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -18979,7 +18979,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3486887",
+    "url": "https://search.naver.com/search.naver?query=%EC%99%9C%EA%B4%80%20%ED%99%80%EB%A6%AC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4092590_image2_1.jpg",
     "description": "왜관 홀리 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19010,7 +19010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3372317",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%B0%BD%EC%9E%91%20%EC%8B%A4%EA%B2%BD%EB%AE%A4%EC%A7%80%EC%BB%AC%20%E3%80%88%ED%99%94%EC%A0%81%EC%97%B0%20%EC%B2%9C%EB%85%84%EC%9D%98%20%EC%95%BD%EC%86%8D%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4099547_image2_1.jpg",
     "description": "2026 창작 실경뮤지컬 〈화적연 천년의 약속〉 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19041,7 +19041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4100347",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%ED%95%AD%2010%EB%AF%B8%28%E5%91%B3%29%20%EC%95%BC%EC%9E%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4100350_image2_1.jpg",
     "description": "포항 10미(味) 야장축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19072,7 +19072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140911",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%EB%82%A8%EB%8B%B9%ED%95%AD%20%EB%8C%80%ED%95%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4100472_image2_1.JPG",
     "description": "홍성남당항 대하축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19103,7 +19103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4099532",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B3%84%EB%B0%94%EB%8B%A4%EB%B6%80%EC%82%B0%20%E3%80%8C%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%BA%A0%ED%81%AC%EB%8B%89%E3%80%8D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4099541_image2_1.jpg",
     "description": "2026 별바다부산 「나이트 캠크닉」 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19134,7 +19134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4097339",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%94%EC%A6%98%20%EC%B2%AD%EB%85%84%2C%20%EC%9A%94%EC%A6%98%20%EB%AC%B8%ED%99%94",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4097492_image2_1.jpg",
     "description": "요즘 청년, 요즘 문화 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19146,7 +19146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1828557668821154490",
+    "id": "gg-fest-4565981638438172271",
     "boardType": "festivals",
     "title": "사회복지페스티벌",
     "category": "festival_culture",
@@ -19196,7 +19196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4110051",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%B2%EC%86%8D%EC%9D%98%20%EC%82%B0%EC%84%B1%EB%8F%84%EC%8B%9C%20-%20%EB%82%A8%ED%95%9C%EC%82%B0%EC%84%B1%20%EA%B0%80%EC%9D%84%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4110062_image2_1.jpg",
     "description": "숲속의 산성도시 - 남한산성 가을 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19227,7 +19227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3383832",
+    "url": "https://search.naver.com/search.naver?query=%EC%BC%80%EB%AF%B8%EC%8A%A4%ED%8A%B8%EB%A6%BF%20%EA%B0%95%EB%82%A8%EC%97%AD%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4108409_image2_1.JPG",
     "description": "케미스트릿 강남역 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19258,7 +19258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2843521",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%88%EC%82%B0%ED%99%A9%EC%83%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4094932_image2_1.png",
     "description": "예산황새축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19289,7 +19289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3115326",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A0%9C4%ED%9A%8C%20%EB%AC%B8%EA%B2%BD%ED%8A%B8%EB%A1%AF%EA%B0%80%EC%9A%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/4106219_image2_1.jpg",
     "description": "2026 제4회 문경트롯가요제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19320,7 +19320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=617992",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C16%ED%9A%8C%20%EA%B4%91%EC%A3%BC%EB%B9%84%EC%97%94%EB%82%A0%EB%A0%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4105666_image2_1.jpg",
     "description": "제16회 광주비엔날레 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19351,7 +19351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2560161",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%97%AC%EB%A1%9C%EB%A9%94%EC%9D%B4%EC%BB%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4103837_image2_1.jpg",
     "description": "2026 헬로메이커 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19382,7 +19382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4056606",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EB%B0%B1%EB%A6%AC%EC%9D%98%20%EC%A7%91%2C%20%EC%98%A4%EB%8A%98%EC%9D%84%20%EB%B9%84%EC%B6%94%EB%8B%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4096372_image2_1.jpg",
     "description": "청백리의 집, 오늘을 비추다 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19394,7 +19394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "gg-fest-3458560566189174440",
+    "id": "gg-fest-6401271511653581935",
     "boardType": "festivals",
     "title": "2026년 파주포크페스티벌",
     "category": "festival_culture",
@@ -19425,7 +19425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5580252785029976894",
+    "id": "gg-fest-2386549479983962619",
     "boardType": "festivals",
     "title": "화성송산포도축제",
     "category": "festival_culture",
@@ -19475,7 +19475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2434313",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%B6%81%20%EC%B1%85%EB%AA%A8%EA%BC%AC%EC%A7%80%20%EB%B6%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4109856_image2_1.jpg",
     "description": "성북 책모꼬지 북페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19506,7 +19506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2756253",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8%20%EB%B6%80%EC%97%AC%20%EC%A0%95%EB%A6%BC%EC%82%AC%EC%A7%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/3563827_image2_1.jpg",
     "description": "국가유산 미디어아트 부여 정림사지 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19537,7 +19537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4095402",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EA%B0%80%EC%BD%98%EC%84%9C%ED%8A%B8%20%3A%20%EC%85%9C%EB%A1%9D%ED%99%88%EC%A6%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4095458_image2_1.jpg",
     "description": "2026 서가콘서트 : 셜록홈즈 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19568,7 +19568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4075091",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A0%84%EA%B5%AD%20%EC%9E%A5%EC%95%A0%ED%95%99%EC%83%9D%20e%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4075188_image2_1.jpg",
     "description": "2026 전국 장애학생 e페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19599,7 +19599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2756396",
+    "url": "https://search.naver.com/search.naver?query=%EB%8D%95%EC%88%98%EA%B6%81%20%EB%B0%A4%EC%9D%98%20%EC%84%9D%EC%A1%B0%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4102010_image2_1.jpg",
     "description": "덕수궁 밤의 석조전 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19630,7 +19630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4093222",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%AC%EB%AF%B8%20%EB%A1%9C%EC%BB%AC%ED%91%B8%EB%93%9C%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4097305_image2_1.jpg",
     "description": "2026 구미 로컬푸드 페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19661,7 +19661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=763974",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%EC%88%98%ED%95%9C%EC%9A%B0%EB%9E%91%EC%82%AC%EA%B3%BC%EB%9E%91%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4095779_image2_1.jpg",
     "description": "장수한우랑사과랑축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19692,7 +19692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2864606",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C5%ED%9A%8C%20%ED%98%B8%EB%9F%AC%20%ED%99%80%EB%A1%9C%EA%B7%B8%EB%9E%A8%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4103000_image2_1.jpg",
     "description": "제5회 호러 홀로그램 페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19723,7 +19723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=573459",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C38%ED%9A%8C%20%EC%B6%98%EC%B2%9C%EC%9D%B8%ED%98%95%EA%B7%B9%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4087113_image2_1.png",
     "description": "제38회 춘천인형극제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19735,7 +19735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3892021832912199752",
+    "id": "gg-fest-6647345295109833232",
     "boardType": "festivals",
     "title": "제18회 DMZ 국제다큐멘터리 영화제",
     "category": "festival_culture",
@@ -19785,7 +19785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4114329",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8%20%EC%B2%A0%EC%9B%90%20%EB%85%B8%EB%8F%99%EB%8B%B9%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4114332_image2_1.png",
     "description": "국가유산 미디어아트 철원 노동당사 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19816,7 +19816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2826119",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%98%EC%B2%9C%20%EC%88%A0%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4105509_image2_1.jpg",
     "description": "춘천 술 페스타 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19847,7 +19847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2755115",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%20%ED%91%B8%EB%93%9C%EC%95%A4%EB%B9%84%EC%96%B4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4104834_image2_1.jpg",
     "description": "고양 푸드앤비어페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19878,7 +19878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3354966",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%A9%EC%82%B0%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/4109419_image2_1.png",
     "description": "용산 국가유산야행 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19909,7 +19909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=607417",
+    "url": "https://search.naver.com/search.naver?query=%EB%AA%85%EB%9F%89%EB%8C%80%EC%B2%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/4100271_image2_1.JPG",
     "description": "명량대첩축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19940,7 +19940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1409287",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%BC%ED%86%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/3582264_image2_1.JPG",
     "description": "삼토 페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -19971,7 +19971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1071143",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%B0%BD%ED%8F%AC%20%EC%8B%A0%EB%B9%84%EC%9D%98%EB%B0%94%EB%8B%B7%EA%B8%B8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/4101273_image2_1.jpg",
     "description": "무창포 신비의바닷길축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20002,7 +20002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3499401",
+    "url": "https://search.naver.com/search.naver?query=GXG%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4108208_image2_1.png",
     "description": "GXG 2026 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20033,7 +20033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4104786",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%20%EC%A4%91%EA%B5%AC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4104788_image2_1.jpg",
     "description": "대전 중구 국가유산야행 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20064,7 +20064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106719",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8B%AC%EB%B9%9B%20%EC%9D%8C%EC%95%85%EA%B3%B5%EA%B0%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4106720_image2_1.png",
     "description": "2026 달빛 음악공감 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20095,7 +20095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3317667",
+    "url": "https://search.naver.com/search.naver?query=%EC%8B%A0%EC%B4%8C%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%8C%80%ED%95%99%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4105960_image2_1.jpg",
     "description": "신촌글로벌대학문화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20126,7 +20126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3333149",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EB%AA%85%EB%A7%88%EB%8B%B9%EA%B7%B9%EC%B6%95%EC%A0%9CX%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EB%A7%88%EB%8B%B9%EA%B7%B9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4104694_image2_1.jpg",
     "description": "광명마당극축제X대한민국마당극축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20157,7 +20157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2614762",
+    "url": "https://search.naver.com/search.naver?query=%EA%B1%B0%EC%A0%9C%EB%A7%A5%EC%A3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4097611_image2_1.jpg",
     "description": "거제맥주축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20188,7 +20188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4095228",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%82%A8%EB%8F%84%20K-%EA%B0%80%EB%93%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4095456_image2_1.jpg",
     "description": "2026 남도 K-가든 페스티벌 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20219,7 +20219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2392105",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8B%AC%EC%84%B1%20%EB%8C%80%EA%B5%AC%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0%EC%A0%9C%20%20Movement%3A%20Flow-Ringer-Flux",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4086009_image2_1.png",
     "description": "2026 달성 대구현대미술제  Movement: Flow-Ringer-Flux - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20250,7 +20250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1018469",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EA%B5%AD%EC%A0%9C%EC%9E%91%EA%B0%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4073769_image2_1.jpg",
     "description": "서울국제작가축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20281,7 +20281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3352029",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%B2%9C%20%ED%95%9C%ED%83%84%EA%B0%95%20%EA%B0%80%EB%93%A0%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4114547_image2_1.jpeg",
     "description": "포천 한탄강 가든페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20312,7 +20312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3099365",
+    "url": "https://search.naver.com/search.naver?query=Colorful%20Garden%20%EC%9E%90%EB%9D%BC%EC%84%AC%20%EA%BD%83%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4102849_image2_1.jpg",
     "description": "Colorful Garden 자라섬 꽃 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20343,7 +20343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4098740",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EB%B6%81%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4098743_image2_1.jpg",
     "description": "동대문구 북 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20374,7 +20374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3535742",
+    "url": "https://search.naver.com/search.naver?query=%EB%AF%B8%EC%B6%94%ED%99%80%EB%AF%B8%EB%94%94%EC%96%B4%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4107988_image2_1.png",
     "description": "미추홀미디어문화축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20405,7 +20405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3494053",
+    "url": "https://search.naver.com/search.naver?query=%ED%8C%8C%EC%A3%BC%20%EC%BC%80%EC%9D%B4%EC%BB%AC%EC%B2%98%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4105300_image2_1.jpg",
     "description": "파주 케이컬처페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20436,7 +20436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2505657",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EB%AC%B4%ED%98%95%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4104133_image2_1.jpg",
     "description": "서울무형문화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20467,7 +20467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4108250",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9B%90%EC%A3%BC%20%EB%8F%85%EC%84%9C%EB%8C%80%EC%A0%84%20%E3%80%88%EA%B1%B0%EB%A6%AC%EC%97%90%EC%84%9C%20%EB%A7%8C%EB%82%9C%20%EC%B1%85%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/4108253_image2_1.jpg",
     "description": "2026 원주 독서대전 〈거리에서 만난 책〉 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20498,7 +20498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3020552",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%80%EB%A1%9C%EC%BB%AC%20%EB%AC%B8%ED%99%94%20in%28%E4%BA%BA%29%20%EB%82%A8%EC%82%B0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4107169_image2_1.jpg",
     "description": "글로컬 문화 in(人) 남산 페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20529,7 +20529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1019773",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%EB%A0%88%EC%A0%80%ED%9E%90%EB%A7%81%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/3576401_image2_1.jpg",
     "description": "제주레저힐링축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20560,7 +20560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4103259",
+    "url": "https://search.naver.com/search.naver?query=2026%20DMZ%20PEACE%20FESTA",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4103260_image2_1.jpg",
     "description": "2026 DMZ PEACE FESTA - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20591,7 +20591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3303554",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%98%EC%9D%B8%EC%84%B1%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4102959_image2_1.JPG",
     "description": "처인성문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20603,7 +20603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8523962006834525640",
+    "id": "gg-fest-6444272834943502956",
     "boardType": "festivals",
     "title": "평택호 물빛축제",
     "category": "festival_night",
@@ -20634,7 +20634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6223596813407075187",
+    "id": "gg-fest-7970236355425806821",
     "boardType": "festivals",
     "title": "제13회 노을동요제",
     "category": "festival_culture",
@@ -20684,7 +20684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3528062",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C18%ED%9A%8C%20%EC%84%9C%EC%9A%B8%EA%B1%B4%EC%B6%95%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4103175_image2_1.png",
     "description": "제18회 서울건축문화제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20715,7 +20715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4110067",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C4%ED%9A%8C%20%EC%B9%A0%EA%B3%A1%20%ED%8A%B8%EB%9E%9C%EC%8A%A4%EB%AF%B8%EB%94%94%EC%96%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/94/4110194_image2_1.jpg",
     "description": "제4회 칠곡 트랜스미디어 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20746,7 +20746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1700219",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%ED%8F%89%EB%AA%A8%EC%95%85%EC%82%B0%20%EA%BD%83%EB%AC%B4%EB%A6%87%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4098306_image2_1.jpg",
     "description": "함평모악산 꽃무릇축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20777,7 +20777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4107768",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EB%A6%BD%ED%98%84%EB%8C%80%EB%AC%B4%EC%9A%A9%EB%8B%A8%20%E3%80%88%EC%9E%90%EB%A6%AC%EC%99%80%20%EC%A3%BC%EB%A6%84%3A%20%EC%98%81%EC%9B%94%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4107784_image2_1.jpg",
     "description": "국립현대무용단 〈자리와 주름: 영월〉 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20808,7 +20808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2556687",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%ED%95%99%EC%A3%BC%EA%B0%842026%20%E3%80%88%EA%B3%81%EB%88%88%EC%A7%88%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4081065_image2_1.jpg",
     "description": "문학주간2026 〈곁눈질〉 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20839,7 +20839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2699287",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%8C%EC%84%B1%EB%AA%85%EC%9E%91%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4078314_image2_1.jpg",
     "description": "음성명작페스티벌 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20870,7 +20870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4111594",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%93%B1%ED%8F%AC%20%EB%B6%81%ED%8E%98%EC%8A%A4%ED%83%80%20%EC%98%A4%EB%8A%98%EB%A7%8C%20%EB%B6%81%ED%81%B4%EB%9F%BD",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4111595_image2_1.jpg",
     "description": "영등포 북페스타 오늘만 북클럽 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20901,7 +20901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2861680",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C9%ED%9A%8C%20%EC%A0%84%EC%A3%BC%EA%B5%AD%EC%A0%9C%EB%8B%A8%ED%8E%B8%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4106254_image2_1.jpg",
     "description": "제9회 전주국제단편영화제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20932,7 +20932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3352431",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C8%ED%9A%8C%20%EB%8C%80%EC%A0%84%ED%8A%B9%EC%88%98%EC%98%81%EC%83%81%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4097369_image2_1.jpg",
     "description": "제8회 대전특수영상영화제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20963,7 +20963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2867141",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EB%B6%81%20K-%EC%8A%A4%ED%86%A0%EB%A6%AC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4093235_image2_1.jpg",
     "description": "2026 경북 K-스토리 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -20994,7 +20994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2728613",
+    "url": "https://search.naver.com/search.naver?query=%EA%B7%80%EB%AA%BD%20%EC%A0%9C%EC%A3%BC%EC%8B%A0%ED%99%94%EC%9B%94%EB%93%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4108744_image2_1.png",
     "description": "귀몽 제주신화월드 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21025,7 +21025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=589386",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%B2%9C%EA%B5%AD%EC%A0%9C%EB%A7%8C%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/3557475_image2_1.JPG",
     "description": "부천국제만화축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21056,7 +21056,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2614760",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%A3%BC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4117551_image2_1.jpg",
     "description": "경주 국가유산야행 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21087,7 +21087,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1250585",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EC%9E%90%EB%B9%84%EC%97%94%EB%82%A0%EB%A0%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4114099_image2_1.jpg",
     "description": "2026 경기도자비엔날레 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21118,7 +21118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1718060",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EC%95%88%ED%99%8D%EC%82%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4092075_image2_1.jpg",
     "description": "진안홍삼축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21149,7 +21149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2746930",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%90%EC%95%85%EC%82%B0%20%EA%BD%83%EB%B3%84%20%EC%97%AC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3539719_image2_1.jpg",
     "description": "감악산 꽃별 여행 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21180,7 +21180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2736064",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%EC%A0%9C%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4113493_image2_1.jpg",
     "description": "김제 국가유산야행 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21211,7 +21211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1390147",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%96%91%EC%B6%A4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4093188_image2_1.jpg",
     "description": "안양춤축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21242,7 +21242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2029491",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%BC%EC%B2%9C%EA%B3%B5%EC%97%B0%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4087181_image2_1.jpg",
     "description": "과천공연예술축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21273,7 +21273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2618976",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%C3%97%20%EC%A0%84%EC%A3%BC%EC%8B%9C%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/3547485_image2_1.JPG",
     "description": "전북특별자치도 × 전주시청년축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21304,7 +21304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142197",
+    "url": "https://search.naver.com/search.naver?query=%EC%8B%9C%ED%9D%A5%EA%B0%AF%EA%B3%A8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/3528809_image2_1.jpg",
     "description": "시흥갯골축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21335,7 +21335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2511228",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C14%ED%9A%8C%20%EC%9E%90%EB%AC%B8%EB%B0%96%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C%20Art%20Passages%EF%BC%9A%EC%98%88%EC%88%A0%EC%A0%81%20%EC%97%AC%EC%A0%95",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4110581_image2_1.jpg",
     "description": "제14회 자문밖문화축제 Art Passages：예술적 여정 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21366,7 +21366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1402009",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9B%90%EC%A3%BC%20%EB%8C%84%EC%8B%B1%EC%B9%B4%EB%8B%88%EB%B0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4110556_image2_1.jpg",
     "description": "2026 원주 댄싱카니발 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21397,7 +21397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2999418",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%8F%89%ED%99%94%EB%88%84%EB%A6%AC%20%ED%94%BC%ED%81%AC%EB%8B%89%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4102264_image2_1.jpg",
     "description": "2026 평화누리 피크닉 페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21428,7 +21428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2616316",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%EC%9E%AC%EC%A6%88%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4105583_image2_1.png",
     "description": "수원재즈페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21459,7 +21459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1100492",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%ED%98%B8%EC%88%98%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4081461_image2_1.jpg",
     "description": "고양호수예술축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21490,7 +21490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3544886",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EC%96%B4%ED%85%80%ED%8E%98%EC%8A%A4%ED%83%80%20%EA%B0%9C%EB%A7%89%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4096389_image2_1.jpg",
     "description": "서울어텀페스타 개막행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21521,7 +21521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2844254",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C8%ED%9A%8C%20%EA%B8%88%EC%B2%9C%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4108385_image2_1.png",
     "description": "제8회 금천과학축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21552,7 +21552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3485135",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%98%A4%EC%85%98%EB%B9%8C%EB%A6%AC%EC%A7%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4107654_image2_1.jpg",
     "description": "2026 오션빌리지 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21583,7 +21583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106729",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%EB%9E%98%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/4106740_image2_1.jpg",
     "description": "문래예술제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21614,7 +21614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2558735",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EA%B3%B5%EC%97%B0%EC%98%88%EC%88%A0%EC%A0%9C%28B.P.A.F%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4105565_image2_1.jpg",
     "description": "부산국제공연예술제(B.P.A.F) - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21645,7 +21645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2555932",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C11%ED%9A%8C%20%EC%9A%B8%EC%82%B0%EC%9A%B8%EC%A3%BC%EC%84%B8%EA%B3%84%EC%82%B0%EC%95%85%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4098397_image2_1.jpg",
     "description": "제11회 울산울주세계산악영화제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21676,7 +21676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140880",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C67%ED%9A%8C%20%ED%95%9C%EA%B5%AD%EB%AF%BC%EC%86%8D%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4090380_image2_1.jpg",
     "description": "제67회 한국민속예술제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21707,7 +21707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3524889",
+    "url": "https://search.naver.com/search.naver?query=GES2026%20%28%EA%B2%8C%EC%9E%84%20e%EC%8A%A4%ED%8F%AC%EC%B8%A0%20%EC%84%9C%EC%9A%B8%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4078758_image2_1.png",
     "description": "GES2026 (게임 e스포츠 서울) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21719,7 +21719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7295751463489957624",
+    "id": "gg-fest-4756368001265917347",
     "boardType": "festivals",
     "title": "제20회 시흥갯골축제",
     "category": "festival_culture",
@@ -21750,7 +21750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5634119599993503761",
+    "id": "gg-fest-5869779982966600421",
     "boardType": "festivals",
     "title": "2026 과천공연예술축제",
     "category": "festival_culture",
@@ -21781,7 +21781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6428112336667234678",
+    "id": "gg-fest-1869478361851333584",
     "boardType": "festivals",
     "title": "부천국제만화제",
     "category": "festival_culture",
@@ -21831,7 +21831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115268",
+    "url": "https://search.naver.com/search.naver?query=%EC%BF%BC%EB%93%9C%2C%20%EC%97%B0%EA%B7%B9%EC%9D%98%20%EC%A7%88%EB%AC%B8%EB%93%A4%EF%BC%9A%E3%80%88%EC%98%A5%EC%83%81%20%EB%B0%AD%20%EA%B3%A0%EC%B6%94%EB%8A%94%20%EC%99%9C%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4115303_image2_1.png",
     "description": "쿼드, 연극의 질문들：〈옥상 밭 고추는 왜〉 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21862,7 +21862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2751090",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%ED%99%94%EC%84%B1%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4076248_image2_1.jpg",
     "description": "수원화성 미디어아트 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21893,7 +21893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3359144",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%A9%EC%82%B0%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/52/4109952_image2_1.jpg",
     "description": "용산청년축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21924,7 +21924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3541003",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%82%A8%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4110411_image2_1.png",
     "description": "강남청년축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21955,7 +21955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=577899",
+    "url": "https://search.naver.com/search.naver?query=%EC%87%A0%EC%86%8C%EA%B9%8D%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4109625_image2_1.jpg",
     "description": "쇠소깍축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -21986,7 +21986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4110583",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C16%ED%9A%8C%20%EC%83%81%EC%A3%BC%EC%8B%9C%EB%AF%BC%20%EB%85%B9%EC%83%89%EC%9E%90%EC%A0%84%EA%B1%B0%20%EB%8C%80%ED%96%89%EC%A7%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4110970_image2_1.jpg",
     "description": "제16회 상주시민 녹색자전거 대행진 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22017,7 +22017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3493864",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%B0%EC%9E%A5%EA%B5%B0%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4093144_image2_1.jpg",
     "description": "기장군반려동물문화축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22048,7 +22048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3361182",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%A3%BC%20%EB%93%9C%EB%A1%A0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4106359_image2_1.png",
     "description": "울주 드론 페스티벌 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22079,7 +22079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3497353",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%EB%B0%94%EB%8B%A4%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4106907_image2_1.jpg",
     "description": "2026 부산바다도서관 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22110,7 +22110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109998",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9A%B8%EC%82%B0%EC%95%BC%EC%99%B8%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%86%8C%ED%92%8D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4109999_image2_1.jpg",
     "description": "2026 울산야외도서관 소풍 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22141,7 +22141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1389228",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%82%B0%20%EB%8C%80%EB%B6%80%ED%8F%AC%EB%8F%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4087941_image2_1.jpg",
     "description": "안산 대부포도축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22172,7 +22172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3000969",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%98%EB%82%A8%EC%9D%B4%EC%84%B1%EC%82%B0%EC%84%B1%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4109725_image2_1.jpeg",
     "description": "하남이성산성문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22203,7 +22203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2877219",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EB%A9%94%EC%9D%B4%EC%BB%A4%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4109662_image2_1.jpg",
     "description": "대구메이커페스타 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22234,7 +22234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109423",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C%20%EC%9C%A0%ED%94%8C%ED%8E%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/4109429_image2_1.JPG",
     "description": "청년축제 유플페 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22265,7 +22265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109305",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%AC%EB%B0%A4%EC%97%90%EC%B2%B4%EC%A1%B0%20%EB%B6%80%EC%82%B0%20%EC%B1%8C%EB%A6%B0%EC%A7%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4109324_image2_1.jpg",
     "description": "달밤에체조 부산 챌린지 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22296,7 +22296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3340159",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%B6%98%EB%8C%80%EB%A1%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/04/4109404_image2_1.jpg",
     "description": "청춘대로 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22327,7 +22327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2759788",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EB%A6%AC%ED%92%80%EB%AE%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4100646_image2_1.jpg",
     "description": "서리풀뮤직페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22358,7 +22358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4107073",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AC%B8%EA%B2%BD%20%EC%B9%9C%ED%99%98%EA%B2%BD%EC%BA%A0%ED%95%91%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4107075_image2_1.jpg",
     "description": "2026 문경 친환경캠핑 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22389,7 +22389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106842",
+    "url": "https://search.naver.com/search.naver?query=%EB%B9%84%EA%B7%B8%EB%A6%BC%ED%8C%8C%EC%9B%8C%EC%BD%94%EB%A6%AC%EC%95%84%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%202026%20%EC%84%9C%EC%9A%B8%EC%8B%9C%ED%96%A5%20%ED%8C%8C%ED%81%AC%20%EC%BD%98%EC%84%9C%ED%8A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4106844_image2_1.jpg",
     "description": "비그림파워코리아와 함께하는 2026 서울시향 파크 콘서트 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22420,7 +22420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3359644",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9D%EA%B3%84%EC%97%AD%20%EB%8B%AC%EB%B9%9B%EC%95%BC%EC%8B%9C%EC%9E%A5",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4105595_image2_1.jpg",
     "description": "석계역 달빛야시장 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22451,7 +22451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3538195",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EB%AA%85%EC%8B%9C%20%EC%B1%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4105534_image2_1.jpg",
     "description": "광명시 책축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22482,7 +22482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3355698",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%EC%88%98%EA%B3%84%20%EA%B1%B7%EA%B8%B0%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/4105196_image2_1.jpg",
     "description": "한강수계 걷기행사 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22513,7 +22513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3062300",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EC%A3%BC%20%ED%99%A9%EA%B8%88%EC%B9%B4%EB%8B%88%EB%B0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4104299_image2_1.jpg",
     "description": "2026 경주 황금카니발 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22544,7 +22544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=706180",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%EA%B1%B0%EB%A6%AC%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4103256_image2_1.png",
     "description": "서울거리예술축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22575,7 +22575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3372236",
+    "url": "https://search.naver.com/search.naver?query=%ED%8A%BC%ED%8A%BC%20%ED%8E%AB%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/04/4103204_image2_1.jpg",
     "description": "튼튼 펫 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22606,7 +22606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2829118",
+    "url": "https://search.naver.com/search.naver?query=%EC%8B%9C%EB%AF%BC%EC%B0%BD%EC%9E%91%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C%20%ED%95%99%EC%82%B0%EB%A7%88%EB%8B%B9%EA%B7%B9%EB%86%80%EB%9E%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4090107_image2_1.jpg",
     "description": "시민창작예술축제 학산마당극놀래 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22618,7 +22618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3254618718009688422",
+    "id": "gg-fest-7049109566049188712",
     "boardType": "festivals",
     "title": "하남이성산성문화축제",
     "category": "festival_culture",
@@ -22649,7 +22649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2157831246610486903",
+    "id": "gg-fest-1762199861384956748",
     "boardType": "festivals",
     "title": "제3회 도농 어울림 축제",
     "category": "festival_culture",
@@ -22699,7 +22699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4108758",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%B8%EB%B8%90%EB%B8%8C%EB%A6%BF%EC%A7%80%20%ED%88%AC%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4109032_image2_1.jpg",
     "description": "2026 세븐브릿지 투어 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22730,7 +22730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=141105",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EB%82%A8%EA%B3%A0%EC%84%B1%EA%B3%B5%EB%A3%A1%EC%84%B8%EA%B3%84%EC%97%91%EC%8A%A4%ED%8F%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/2828043_image2_1.jpg",
     "description": "경남고성공룡세계엑스포 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22761,7 +22761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=780198",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%98%EB%8F%99%20%EB%B6%81%EC%B2%9C%20%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4%20%EB%A9%94%EB%B0%80%EA%BD%83%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4113254_image2_1.jpg",
     "description": "하동 북천 코스모스 메밀꽃 축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22792,7 +22792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2737313",
+    "url": "https://search.naver.com/search.naver?query=2026%EC%84%AC%EC%A7%84%EA%B0%95%EA%B5%AD%EC%A0%9C%EC%8B%A4%ED%97%98%EC%98%88%EC%88%A0%EC%A0%9C%28SIEAF%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4109714_image2_1.png",
     "description": "2026섬진강국제실험예술제(SIEAF) - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22823,7 +22823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4123754",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%98%EB%A0%B9%EA%B8%B0%EA%B0%95%EB%A6%AC%EC%B9%98%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4123756_image2_1.jpg",
     "description": "의령기강리치꽃축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22854,7 +22854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2618014",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%A0%9C%EA%B0%80%EC%9D%84%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4109647_image2_1.jpg",
     "description": "인제가을꽃축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22885,7 +22885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506670",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EB%8F%99%EA%B5%AD%EC%A0%9C%ED%83%88%EC%B6%A4%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4025906_image2_1.JPG",
     "description": "안동국제탈춤페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22916,7 +22916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3536325",
+    "url": "https://search.naver.com/search.naver?query=EX%ED%8E%8C%ED%82%A8%EB%82%98%EC%9E%87%EF%BC%9A%ED%99%94%EB%8B%88%26%EC%9B%8C%EB%8B%88x%EC%8B%AD%EC%9D%B4%EC%A7%80%EC%8B%A0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/4110073_image2_1.jpg",
     "description": "EX펌킨나잇：화니&워니x십이지신 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -22947,7 +22947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2818138",
+    "url": "https://search.naver.com/search.naver?query=%EC%B0%BD%EA%B2%BD%EA%B6%81%20%EC%95%BC%EC%97%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4059849_image2_1.jpg",
     "description": "창경궁 야연 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23071,7 +23071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1328004",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%88%EC%B2%9C%20%EC%82%BC%EA%B0%95%EB%82%98%EB%A3%A8%20%EC%A3%BC%EB%A7%89%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4110525_image2_1.jpg",
     "description": "예천 삼강나루 주막축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23164,7 +23164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4080078",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EB%8F%84%EC%8B%9C%C2%B7%EC%A7%80%EC%97%AD%ED%98%81%EC%8B%A0%20%EC%82%B0%EC%97%85%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4080328_image2_1.jpg",
     "description": "2026 대한민국 도시·지역혁신 산업박람회 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23195,7 +23195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506895",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4085103_image2_1.jpg",
     "description": "정선아리랑제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23226,7 +23226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506935",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%9C%EC%95%88%ED%9D%A5%ED%83%80%EB%A0%B9%EC%B6%A4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4056635_image2_1.JPG",
     "description": "천안흥타령춤축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23257,7 +23257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=574285",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%EC%A0%9C%EC%A7%80%ED%8F%89%EC%84%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/3516354_image2_1.jpg",
     "description": "김제지평선축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23288,7 +23288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2992940",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%84%EB%A3%A1%E8%BB%8D%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4106751_image2_1.JPG",
     "description": "계룡軍문화축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23319,7 +23319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=229054",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%80%EC%83%81%EA%B5%B0%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4091903_image2_1.JPG",
     "description": "지상군페스티벌 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23350,7 +23350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1725993",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%EA%B0%80%EC%9D%84%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4110534_image2_1.JPG",
     "description": "고양가을꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23381,7 +23381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3006246",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EA%B3%B5%EC%97%B0%EC%98%88%EC%88%A0%EB%A7%88%EC%BC%93%28BPAM%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4109933_image2_1.jpg",
     "description": "2026 부산국제공연예술마켓(BPAM) - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -23412,7 +23412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=433042",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%9C%EA%B3%BC%EB%AC%B8%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B0%80%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4076895_image2_1.jpg",
     "description": "한과문화박물관 한가원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23443,7 +23443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1687304",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%84%B1%EB%A7%88%EB%A3%A8%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
     "description": "성마루미술관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23474,7 +23474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1622150",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EA%B1%B0%EC%A0%9C%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
     "description": "거제민속박물관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23505,7 +23505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1605877",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/3058026_image2_1.jpg",
     "description": "경기도어린이박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23536,7 +23536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1607138",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/3332613_image2_1.jpg",
     "description": "부산대학교 박물관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23567,7 +23567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1617908",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9D%B8%ED%95%98%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/3393302_image2_1.JPG",
     "description": "인하대학교 박물관 - 인천광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23598,7 +23598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130976",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B4%EC%8A%B9%EB%B3%B5%EA%B8%B0%EB%85%90%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3034019_image2_1.jpg",
     "description": "이승복기념관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23629,7 +23629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=699241",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B9%80%EB%8C%80%EC%A4%91%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/3393053_image2_1.JPG",
     "description": "김대중도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23660,7 +23660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130890",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%98%9B%ED%84%B0%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/3524002_image2_1.jpg",
     "description": "옛터민속박물관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23691,7 +23691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129859",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/3053503_image2_1.jpg",
     "description": "성남문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23722,7 +23722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2878135",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%AC%EC%B2%9C%20%EB%AC%B4%ED%98%95%EC%9C%A0%EC%82%B0%20%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4130528_image2_1.jpg",
     "description": "포천 무형유산 전수교육관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23753,7 +23753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129718",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3318476_image2_1.jpg",
     "description": "수원문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23784,7 +23784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130095",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%EB%AF%BC%ED%9A%8C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3475858_image2_1.JPG",
     "description": "수원시민회관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23815,7 +23815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1626209",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%99%8D%EC%B2%9C%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4129205_image2_1.jpg",
     "description": "홍천교육도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23846,7 +23846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130094",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%95%BC%EC%99%B8%EC%9D%8C%EC%95%85%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/3055307_image2_1.JPG",
     "description": "수원야외음악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23877,7 +23877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130487",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%9D%B8%ED%98%95%EA%B7%B9%EC%9E%A5%26%EC%9D%B8%ED%98%95%EA%B7%B9%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3561558_image2_1.jpg",
     "description": "춘천인형극장&인형극박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23908,7 +23908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130489",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/3055250_image2_1.JPG",
     "description": "경기아트센터 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23939,7 +23939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130504",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EC%99%84%EB%8F%84%EC%96%B4%EC%B4%8C%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/3381085_image2_1.JPG",
     "description": "완도어촌민속전시관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -23970,7 +23970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130508",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%84%9C%EC%82%B0%EC%8B%9C%EB%AC%B8%ED%99%94%ED%9A%8C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/3336916_image2_1.jpg",
     "description": "서산시문화회관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24001,7 +24001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130539",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%ED%8C%90%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/3375236_image2_1.JPG",
     "description": "고판화박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24032,7 +24032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129879",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%97%B0%EC%B2%9C%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/3476014_image2_1.JPG",
     "description": "연천문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24063,7 +24063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129870",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/3475975_image2_1.JPG",
     "description": "안성문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24094,7 +24094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129721",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EB%AF%BC%EC%86%8D%EA%B5%AD%EC%95%85%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/3358422_image2_1.JPG",
     "description": "국립민속국악원 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24125,7 +24125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130064",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%B1%EC%A0%95%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/3342540_image2_1.JPG",
     "description": "천안시 성정평생학습관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24156,7 +24156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130506",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%82%A8%EC%9B%90%ED%96%A5%ED%86%A0%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/3343915_image2_1.jpg",
     "description": "남원향토박물관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24187,7 +24187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129952",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3348578_image2_1.JPG",
     "description": "제천문화원 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24218,7 +24218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130546",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%AD%EC%95%85%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/3068530_image2_1.jpg",
     "description": "경기도국악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24249,7 +24249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130548",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%B6%A9%EC%A3%BC%EB%86%8D%EC%82%B0%EB%AC%BC%EA%B0%80%EA%B3%B5%EC%B2%B4%ED%97%98%EA%B5%90%EC%9C%A1%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3063710_image2_1.JPG",
     "description": "충주농산물가공체험교육관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24280,7 +24280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130549",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%20%EC%96%B4%EC%9A%B8%EB%A6%BC%EB%88%84%EB%A6%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3527710_image2_1.jpg",
     "description": "고양 어울림누리 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24311,7 +24311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130550",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%A7%80%EC%A7%88%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/3335732_image2_1.jpg",
     "description": "지질박물관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24342,7 +24342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130557",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%ED%98%B8%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/3072592_image2_1.jpg",
     "description": "성호박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24373,7 +24373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130556",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%82%B0%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%9D%98%EC%A0%84%EB%8B%B9",
     "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
     "description": "안산문화예술의전당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24404,7 +24404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130559",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EA%B5%AC%EB%A1%80%ED%96%A5%EC%A0%9C%EC%A4%84%ED%92%8D%EB%A5%98%EC%A0%84%EC%88%98%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/3587367_image2_1.jpg",
     "description": "구례향제줄풍류전수관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24435,7 +24435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130563",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%95%85%EB%81%9D%ED%95%B4%EC%96%91%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/3564386_image2_1.jpg",
     "description": "땅끝해양자연사박물관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24466,7 +24466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129889",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%EC%84%B1%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/3081077_image2_1.jpg",
     "description": "고성문화원 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24497,7 +24497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130582",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%8F%84%ED%99%94%ED%97%8C%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/3552745_image2_1.jpg",
     "description": "도화헌미술관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24528,7 +24528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130635",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%95%84%EB%9D%BC%EB%A6%AC%EC%98%A4%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EC%B2%9C%EC%95%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/52/3570452_image2_1.jpg",
     "description": "아라리오 갤러리 천안 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24559,7 +24559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130149",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EC%86%90%EC%96%91%EC%9B%90%EB%AA%A9%EC%82%AC%20%EC%88%9C%EA%B5%90%EA%B8%B0%EB%85%90%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3580978_image2_1.jpg",
     "description": "손양원목사 순교기념관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24590,7 +24590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130655",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%8B%A4%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/3335767_image2_1.jpg",
     "description": "다도박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24621,7 +24621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130662",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%AA%A8%ED%98%95%ED%95%AD%EA%B3%B5%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3381621_image2_1.JPG",
     "description": "모형항공기박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24652,7 +24652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130664",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EC%9B%90%EA%B2%BD%EC%B0%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/3382483_image2_1.JPG",
     "description": "강원경찰박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24683,7 +24683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130677",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%82%BC%EC%B2%99%20%EB%AF%BC%EB%AC%BC%EA%B3%A0%EA%B8%B0%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/3039999_image2_1.jpg",
     "description": "삼척 민물고기전시관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24714,7 +24714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130684",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%AC%EC%B2%9C%20%EB%B0%98%EC%9B%94%EC%95%84%ED%8A%B8%ED%99%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/3563254_image2_1.jpg",
     "description": "포천 반월아트홀 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24745,7 +24745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2772449",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20HAPPY700%20%ED%8F%89%EC%B0%BD%EC%8B%9C%EB%84%A4%EB%A7%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4129125_image2_1.jpg",
     "description": "HAPPY700 평창시네마 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24776,7 +24776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130711",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%8C%EC%84%9D%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3584770_image2_1.jpg",
     "description": "수원시립만석전시관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24807,7 +24807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129892",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%8F%89%EC%B0%BD%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4129141_image2_1.jpg",
     "description": "평창문화원 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24838,7 +24838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130710",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%9A%B0%EC%84%9D%ED%97%8C%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/3077130_image2_1.jpg",
     "description": "우석헌자연사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24869,7 +24869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1337616",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%83%9C%EB%B0%B1%20%EA%B3%A0%EC%83%9D%EB%8C%80%20%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4128205_image2_1.jpg",
     "description": "태백 고생대 자연사박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24900,7 +24900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130709",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%9C%ED%98%B8%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/3565444_image2_1.JPG",
     "description": "서호미술관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24931,7 +24931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130708",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B0%95%EB%AC%BC%EA%B4%80%20%EC%96%BC%EA%B5%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3527317_image2_1.jpg",
     "description": "박물관 얼굴 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24962,7 +24962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130717",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%86%8D%EA%B2%BD%EC%9C%A0%EB%AC%BC%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3540617_image2_1.jpg",
     "description": "농경유물전시관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -24993,7 +24993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130715",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%9C%EA%B5%AD%EA%B8%B0%EB%8F%85%EA%B5%90%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3068812_image2_1.jpg",
     "description": "한국기독교역사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25024,7 +25024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130714",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A1%B0%EA%B0%81%EA%B0%80%20%EB%B0%95%EC%8B%9C%EB%8F%99%20%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/3382265_image2_1.JPG",
     "description": "조각가 박시동 미술관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25055,7 +25055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130712",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%86%8D%EC%97%85%EA%B3%BC%ED%95%99%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/3364372_image2_1.JPG",
     "description": "농업과학관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25086,7 +25086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130704",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%AC%B8%EC%95%84%ED%8A%B8%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EB%AE%A4%EC%A7%80%EC%97%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3368678_image2_1.jpg",
     "description": "문아트그라운드 뮤지엄 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25117,7 +25117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2994661",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20U%2B%EC%9D%BC%EC%83%81%EB%B9%84%EC%9D%BC%EC%83%81%EC%9D%98%ED%8B%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/39/4136039_image2_1.jpg",
     "description": "U+일상비일상의틈 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25148,7 +25148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130724",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%97%AC%EC%84%B1%EC%83%9D%ED%99%9C%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/3563636_image2_1.jpg",
     "description": "여성생활사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25179,7 +25179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2629039",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EC%9D%98%EC%84%B1%EC%A1%B0%EB%AC%B8%EA%B5%AD%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4131886_image2_1.jpg",
     "description": "의성조문국박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25210,7 +25210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130726",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%98%EB%82%A8%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/3078540_image2_1.jpg",
     "description": "하남역사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25241,7 +25241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130727",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%86%8C%EC%96%91%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3475356_image2_1.jpg",
     "description": "소양도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25272,7 +25272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130728",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EC%82%B0%EB%A6%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3562176_image2_1.jpg",
     "description": "강원특별자치도산림박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25303,7 +25303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130729",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%82%A8%EC%82%B0%EB%8F%84%EC%84%9C%EA%B4%80%28%EC%B6%98%EC%B2%9C%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/3589390_image2_1.jpg",
     "description": "남산도서관(춘천) - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25334,7 +25334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130730",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%8F%99%EB%82%B4%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3475476_image2_1.jpg",
     "description": "동내도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25365,7 +25365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130734",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%EC%84%B1%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/3564543_image2_1.jpg",
     "description": "고성교육도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25396,7 +25396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130742",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A1%B0%EB%AA%85%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/3559497_image2_1.jpg",
     "description": "조명박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25427,7 +25427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130748",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%ED%95%9C%EA%B5%AD%EC%9E%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3057331_image2_1.jpg",
     "description": "한국잠사박물관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25458,7 +25458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130753",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%AA%A9%ED%8F%AC%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/3381468_image2_1.JPG",
     "description": "목포시립도서관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25489,7 +25489,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130755",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/3349042_image2_1.JPG",
     "description": "제천시립도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25520,7 +25520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130756",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EA%B8%B0%EC%A0%81%EC%9D%98%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/3349000_image2_1.JPG",
     "description": "제천기적의도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25551,7 +25551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130758",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3347573_image2_1.JPG",
     "description": "충주시립도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25582,7 +25582,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130757",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%20%EC%A0%84%EC%88%98%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/3584627_image2_1.jpg",
     "description": "정선아리랑 전수관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25613,7 +25613,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130760",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EC%A0%84%ED%95%9C%EB%B0%AD%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/3063023_image2_1.JPG",
     "description": "대전한밭도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25644,7 +25644,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130777",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%95%A9%EB%8D%95%EC%88%98%EB%A6%AC%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/3560511_image2_1.jpg",
     "description": "합덕수리민속박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25675,7 +25675,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130789",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A7%80%EC%A0%81%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3348619_image2_1.JPG",
     "description": "지적박물관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25706,7 +25706,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130804",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9C%A0%EC%84%B1%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/3585105_image2_1.jpg",
     "description": "유성도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25737,7 +25737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130802",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EC%A0%84%20%EA%B0%80%EC%88%98%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3033558_image2_1.JPG",
     "description": "대전 가수원도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25768,7 +25768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130813",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%88%98%EC%A0%95%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/3053835_image2_1.jpg",
     "description": "성남시 수정도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25799,7 +25799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130814",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3053810_image2_1.jpg",
     "description": "성남시 분당도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25830,7 +25830,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130817",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/3062529_image2_1.jpg",
     "description": "성남시 중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25861,7 +25861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130816",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%20%EC%98%81%ED%86%B5%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/3475884_image2_1.JPG",
     "description": "수원 영통도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25892,7 +25892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130815",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%A4%91%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/3053774_image2_1.jpg",
     "description": "성남시 중원도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25923,7 +25923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130819",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B6%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EC%8B%AC%EA%B3%A1%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/3565827_image2_1.JPG",
     "description": "부천시립심곡도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25954,7 +25954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130820",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B0%88%EB%A7%88%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3585076_image2_1.jpg",
     "description": "갈마도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -25985,7 +25985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130822",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B6%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%B6%81%EB%B6%80%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3335789_image2_1.JPG",
     "description": "부천시립북부도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26016,7 +26016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130826",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%8A%AC%EA%B8%B0%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3057856_image2_1.JPG",
     "description": "슬기샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26047,7 +26047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130825",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A7%80%ED%98%9C%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/3584735_image2_1.jpg",
     "description": "지혜샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26078,7 +26078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130830",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%EC%84%B1%EB%82%A8%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/3584771_image2_1.jpg",
     "description": "경기도교육청성남도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26109,7 +26109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130827",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B0%94%EB%A5%B8%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/3475897_image2_1.JPG",
     "description": "바른샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26140,7 +26140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130831",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/3475913_image2_1.JPG",
     "description": "경기도교육청중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26171,7 +26171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130833",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80%28%EC%9E%A5%EB%82%9C%EA%B0%90%EB%8F%84%EC%84%9C%EA%B4%80%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/2745899_image2_1.jpg",
     "description": "춘천시립도서관(장난감도서관) - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26202,7 +26202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130837",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%9C%EC%88%98%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3584731_image2_1.jpg",
     "description": "서수원도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26233,7 +26233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130707",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%B6%A9%ED%98%84%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3563410_image2_1.jpg",
     "description": "충현박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26264,7 +26264,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130680",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B8%EA%B3%84%EB%AF%BC%EC%86%8D%EC%95%85%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3382831_image2_1.JPG",
     "description": "세계민속악기박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26295,7 +26295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130703",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%B2%EC%82%AC%EB%9E%91%ED%99%8D%EB%B3%B4%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3333721_image2_1.jpg",
     "description": "숲사랑홍보관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26326,7 +26326,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3379703",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%ED%91%B8%ED%88%AC%EB%9D%BC%EC%84%9C%EC%9A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/4135453_image2_1.jpg",
     "description": "푸투라서울 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26357,7 +26357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130744",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EC%A7%80%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3543028_image2_1.jpg",
     "description": "국립지도박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26388,7 +26388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4135413",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B9%80%EC%B0%BD%EC%97%B4%20%ED%99%94%EA%B0%80%EC%9D%98%20%EC%A7%91",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4115431_image2_1.jpg",
     "description": "김창열 화가의 집 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26419,7 +26419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4135336",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EB%AC%B8%ED%99%94%EB%A1%9C74%EB%B2%88%EA%B8%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4131918_image2_1.jpg",
     "description": "안성문화로74번길 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26450,7 +26450,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4135260",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EB%AC%B8%ED%99%94%EC%B0%BD%EC%9E%91%ED%94%8C%EB%9E%AB%ED%8F%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4131893_image2_1.jpg",
     "description": "안성시 문화창작플랫폼 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26481,7 +26481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=4135253",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%8F%99%EB%B0%A9%EC%84%9C%EB%A6%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4131910_image2_1.jpg",
     "description": "동방서림 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26512,7 +26512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130845",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/3475806_image2_1.JPG",
     "description": "성남아트센터 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26543,7 +26543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2864368",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EA%B9%A8%EC%96%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EB%AF%BC%20%EB%AC%B8%ED%99%94%EC%B2%B4%ED%97%98%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4135201_image2_1.JPG",
     "description": "깨어있는시민 문화체험전시관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26574,7 +26574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=731520",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%96%91%EA%B5%AC%EC%A0%84%EC%9F%81%EA%B8%B0%EB%85%90%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4128054_image2_1.jpg",
     "description": "양구전쟁기념관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26605,7 +26605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=864987",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EC%84%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/3529296_image2_1.jpg",
     "description": "인천광역시 검단선사박물관 - 인천광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26636,7 +26636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130854",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%95%B4%EB%AF%B8%20%EC%B2%AD%EC%86%8C%EB%85%84%20%EB%AC%B8%ED%99%94%EC%9D%98%EC%A7%91",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/3337948_image2_1.jpg",
     "description": "해미 청소년 문화의집 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26667,7 +26667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130859",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%95%84%EB%9D%BC%EB%A6%AC%EC%9D%B8%ED%98%95%EC%9D%98%EC%A7%91",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3342331_image2_1.jpg",
     "description": "아라리인형의집 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26698,7 +26698,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130861",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EB%82%A8%EB%8F%84%EA%B5%AD%EC%95%85%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/3561383_image2_1.jpg",
     "description": "국립남도국악원 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26729,7 +26729,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130866",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%A7%80%EB%8B%B9%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3355689_image2_1.jpg",
     "description": "지당자연사박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26760,7 +26760,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130867",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3475956_image2_1.JPG",
     "description": "안성시 중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26791,7 +26791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130875",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EB%B0%B1%EC%A0%9C%EC%97%AD%EC%82%AC%EB%AC%B8%ED%99%94%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3568089_image2_1.jpg",
     "description": "백제역사문화관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26822,7 +26822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130876",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%99%88%EC%B8%A0%EC%99%80%20%EB%8B%A5%ED%84%B0%EB%A7%8C%20%EC%BB%A4%ED%94%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/3537220_image2_1.jpg",
     "description": "왈츠와 닥터만 커피박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26853,7 +26853,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=690984",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%B2%AD%EC%99%80%EB%8C%80%20%EC%82%AC%EB%9E%91%EC%B1%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/3310126_image2_1.jpg",
     "description": "청와대 사랑채 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26884,7 +26884,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2782527",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%B4%87%EC%9E%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/3511574_image2_1.jpg",
     "description": "봇재 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26915,7 +26915,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130899",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%AA%A9%ED%8F%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/3552800_image2_1.jpg",
     "description": "목포문화예술회관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26946,7 +26946,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129796",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%A0%9B%EC%B8%A0%EB%9F%B0%ED%8C%8C%ED%81%AC%20%EC%84%9C%EC%9A%B8%20%EB%A7%90%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4127022_image2_1.jpg",
     "description": "렛츠런파크 서울 말박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -26977,7 +26977,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1284446",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%B8%EC%82%B0%EB%8C%80%EA%B3%A1%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4128465_image2_1.jpg",
     "description": "울산대곡박물관 - 울산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27008,7 +27008,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=615547",
+    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%83%9C%EC%98%81%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/3338685_image2_1.jpg",
     "description": "태영민속박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27039,7 +27039,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=696841",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4%ED%95%98%EC%9A%B0%EC%8A%A4%20%ED%85%8C%EC%A7%80%EC%9B%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3034398_image2_1.jpg",
     "description": "테디베어하우스 테지움 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27070,7 +27070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2945183",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20MEG%EC%95%84%ED%8A%B8%ED%99%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4130472_image2_1.jpg",
     "description": "MEG아트홀 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27101,7 +27101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2720650",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%ED%94%BC%EC%95%84%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4130178_image2_1.jpg",
     "description": "피아크 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27132,7 +27132,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1950218",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%A7%84%EC%A3%BC%EC%B2%AD%EB%8F%99%EA%B8%B0%EB%AC%B8%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/3538929_image2_1.jpg",
     "description": "진주청동기문화박물관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27163,7 +27163,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2620588",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%A7%84%EC%A3%BC%EC%8B%9C%EB%A6%BD%EC%9D%B4%EC%84%B1%EC%9E%90%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/3540965_image2_1.jpg",
     "description": "진주시립이성자미술관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27194,7 +27194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2709995",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EC%A2%85%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EC%8B%9C%20%EB%8C%80%ED%86%B5%EB%A0%B9%EA%B8%B0%EB%A1%9D%EC%A0%84%EC%8B%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/3505143_image2_1.jpg",
     "description": "대통령기록전시관 - 세종특별자치시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27225,7 +27225,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130099",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EB%8C%80%EA%B0%80%EC%95%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/24/3516724_image2_1.jpg",
     "description": "대가야박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27256,7 +27256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130494",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B4%EC%A4%91%EC%84%AD%20%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/3533493_image2_1.jpg",
     "description": "이중섭 미술관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27287,7 +27287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130296",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B8%EC%A2%85%EA%B5%AD%EC%95%85%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4130461_image2_1.jpg",
     "description": "세종국악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27318,7 +27318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1939093",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%82%BC%EB%A7%A4%EB%B4%89%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/3383849_image2_1.jpg",
     "description": "삼매봉도서관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27349,7 +27349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2757468",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B8%B0%ED%9D%A5%EC%84%B1%EB%AE%A4%EC%A7%80%EC%97%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4130392_image2_1.jpg",
     "description": "기흥성뮤지엄 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27380,7 +27380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2836855",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%8F%AC%EB%8F%84%EB%AE%A4%EC%A7%80%EC%97%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4070579_image2_1.jpg",
     "description": "포도뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27411,7 +27411,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2616589",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EC%98%81%EC%96%B4%ED%8A%B9%EC%84%B1%ED%99%94%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4129692_image2_1.jpg",
     "description": "양천구 영어특성화도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27442,7 +27442,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=590415",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%90%EA%B7%A4%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/3411132_image2_1.jpg",
     "description": "감귤박물관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27473,7 +27473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2611626",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EA%B0%88%EC%82%B0%EB%8F%84%EC%84%9C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4129681_image2_1.jpg",
     "description": "양천구 갈산도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27504,7 +27504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2660802",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%98%A4%EC%84%A4%EB%A1%9D%20%ED%8B%B0%EB%AE%A4%EC%A7%80%EC%97%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/3497257_image2_1.jpg",
     "description": "오설록 티뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27535,7 +27535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130512",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%95%84%ED%8A%B8%EC%84%9C%EC%BB%A4%EC%8A%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/3034562_image2_1.jpg",
     "description": "제주아트서커스 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27566,7 +27566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2650449",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AC%BC%EB%A0%88%EC%B1%85%EB%B0%A9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4130585_image2_1.jpg",
     "description": "물레책방 - 대구광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27597,7 +27597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1856967",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EA%B5%AC%EB%AF%B8%EC%88%A0%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/4130596_image2_1.jpg",
     "description": "대구미술관 - 대구광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27628,7 +27628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1751182",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%B0%EB%A6%AC%EA%B8%88%EC%9C%B5%EC%95%84%ED%8A%B8%ED%99%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4129647_image2_1.jpg",
     "description": "우리금융아트홀 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27659,7 +27659,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3523679",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EA%B9%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/83/4080383_image2_1.jpg",
     "description": "김천시립박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27690,7 +27690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=3085174",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%AC%EB%A6%BC%ED%94%BD%EA%B3%B5%EC%9B%90%20%EC%98%AC%EB%A6%BC%ED%94%BD%ED%99%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4129641_image2_1.jpg",
     "description": "올림픽공원 올림픽홀 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27721,7 +27721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2717330",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9C%A0%EB%AF%BC%20%EC%95%84%EB%A5%B4%EB%88%84%EB%B3%B4%20%EB%AE%A4%EC%A7%80%EC%97%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/3548711_image2_1.jpg",
     "description": "유민 아르누보 뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27752,7 +27752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130363",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B4%88%EC%BD%9C%EB%A6%BF%20%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3548628_image2_1.jpg",
     "description": "초콜릿 박물관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27783,7 +27783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130382",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%82%AC%EC%83%81%EB%AC%B8%ED%99%94%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4130101_image2_1.jpg",
     "description": "사상문화원 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27814,7 +27814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=129816",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EC%97%AC%EC%9E%90%EB%8C%80%ED%95%99%EA%B5%90%20%EC%B0%A8%EB%B0%95%EB%AC%BC%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4130054_image2_1.jpg",
     "description": "부산여자대학교 차박물관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27845,7 +27845,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2676283",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EC%9A%B8%EC%A7%84%ED%95%B4%EC%96%91%EA%B3%BC%ED%95%99%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/59/4074459_image2_1.jpg",
     "description": "국립울진해양과학관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27876,7 +27876,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=2823059",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B0%95%ED%83%9C%EC%A4%80%EA%B8%B0%EB%85%90%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4130303_image2_1.jpg",
     "description": "박태준기념관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27907,7 +27907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1940880",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%94%EC%82%B0%EA%B9%80%EC%A0%95%ED%95%9C%EB%AC%B8%ED%95%99%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4129966_image2_1.jpg",
     "description": "요산김정한문학관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27938,7 +27938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130907",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%95%B4%EB%82%A8%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3564417_image2_1.jpg",
     "description": "해남문화예술회관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -27969,7 +27969,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130909",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%AC%B4%EC%A3%BC%EC%96%91%EC%88%98%ED%99%8D%EB%B3%B4%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3583570_image2_1.jpg",
     "description": "무주양수홍보관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -28000,7 +28000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=1911160",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/3548380_image2_1.jpg",
     "description": "헬로키티아일랜드 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -28031,7 +28031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "가족 / 어린이 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://korean.visitkorea.or.kr/detail/ms_detail.do?cotid=130524",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%B8%EC%82%B0%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/1587977_image2_1.jpg",
     "description": "울산문화예술회관 - 울산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
     "tags": [
@@ -28167,7 +28167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-4789570072124023638",
+    "id": "gg-fest-481873762091764051",
     "boardType": "festivals",
     "title": "제5회 정자동 놀터축제 및 작품발표회",
     "category": "festival_culture",
@@ -28198,7 +28198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-8559732396220211154",
+    "id": "gg-fest-1255123281351315389",
     "boardType": "festivals",
     "title": "2026 모두모여모란",
     "category": "festival_culture",
@@ -28229,7 +28229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-772287462495454318",
+    "id": "gg-fest-5283339755023320712",
     "boardType": "festivals",
     "title": "튼튼쑥쑥 걷기대회",
     "category": "sports_marathon",
@@ -28260,7 +28260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-6086270120694940039",
+    "id": "gg-fest-543997204617390273",
     "boardType": "festivals",
     "title": "식품제조 홍보 및 판매관",
     "category": "festival_culture",
@@ -28620,7 +28620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506600",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%B0%EC%B2%AD%ED%95%9C%EB%B0%A9%EC%95%BD%EC%B4%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4131236_image2_1.JPG",
     "description": "산청한방약초축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28651,7 +28651,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1846797",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%B0%EC%82%B0%EC%8B%9C%EA%B0%84%EC%97%AC%ED%96%89%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/3561448_image2_1.jpg",
     "description": "군산시간여행축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28682,7 +28682,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2969832",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%EA%B5%AD%EC%A0%9C%EA%B7%B8%EB%A6%BC%EC%B1%85%EB%8F%84%EC%84%9C%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4128388_image2_1.jpg",
     "description": "전주국제그림책도서전 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28713,7 +28713,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140799",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B5%AD%EC%A0%9C%EB%A1%9D%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4040606_image2_1.jpg",
     "description": "부산국제록페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28744,7 +28744,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506465",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%88%EC%82%B0%EC%84%B8%EA%B3%84%EC%9D%B8%EC%82%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/3524159_image2_1.JPG",
     "description": "금산세계인삼축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28775,7 +28775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1266642",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%ED%8F%89%ED%92%8D%EB%AC%BC%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4067377_image2_1.jpg",
     "description": "부평풍물대축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28806,7 +28806,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3372852",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%95%88%20%EA%B3%B0%EC%86%8C%EC%A0%93%EA%B0%88%26%EC%99%95%EC%83%88%EC%9A%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/4114616_image2_1.jpg",
     "description": "부안 곰소젓갈&왕새우축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28837,7 +28837,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3011948",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%9E%AC%EC%95%84%ED%8A%B8%EC%82%B4%EB%A1%B1",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4116957_image2_1.JPEG",
     "description": "양재아트살롱 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28868,7 +28868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506809",
+    "url": "https://search.naver.com/search.naver?query=%EC%86%8C%EB%9E%98%ED%8F%AC%EA%B5%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4074893_image2_1.jpg",
     "description": "소래포구축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28899,7 +28899,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2988303",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%B2%9C%ED%95%9C%EB%B0%A9%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4112880_image2_1.jpg",
     "description": "영천한방축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28930,7 +28930,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=981658",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%ED%9A%A8%EB%AC%B8%ED%99%94%EB%BF%8C%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4108275_image2_1.jpg",
     "description": "대전효문화뿌리축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28961,7 +28961,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506690",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%84%B1%EB%A7%9E%EC%B6%A4%20%EB%82%A8%EC%82%AC%EB%8B%B9%20%EB%B0%94%EC%9A%B0%EB%8D%95%EC%9D%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4091593_image2_1.jpg",
     "description": "안성맞춤 남사당 바우덕이축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -28992,7 +28992,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4114185",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B4%91%EC%A3%BC%EB%AF%B8%EC%8B%9D%EC%A3%BC%EA%B0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4114190_image2_1.jpg",
     "description": "2026 광주미식주간 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29023,7 +29023,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1718491",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%A4%EC%95%85%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4107758_image2_1.jpg",
     "description": "설악문화제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29054,7 +29054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4113086",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9B%90%EC%A3%BC%EC%8B%9C%20%EC%A4%91%EC%86%8C%EA%B8%B0%EC%97%85%20%EC%9A%B0%EC%88%98%EC%A0%9C%ED%92%88%20%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/88/4113088_image2_1.jpg",
     "description": "2026 원주시 중소기업 우수제품 박람회 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29085,7 +29085,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3546110",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%ED%95%9C%EC%98%A5%EC%9C%84%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4113269_image2_1.png",
     "description": "2026 서울한옥위크 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29116,7 +29116,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4113071",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%EA%B2%BD%20%EA%B0%80%EC%9D%80%EC%95%84%EC%9E%90%EA%B0%9C%20%EC%9E%A5%ED%84%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4113072_image2_1.jpg",
     "description": "문경 가은아자개 장터축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29190,7 +29190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-6705830342276132375",
+    "id": "gg-fest-3203613922380793501",
     "boardType": "festivals",
     "title": "안성맞춤 남사당바우덕이축제",
     "category": "festival_culture",
@@ -29221,7 +29221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3659040844985187148",
+    "id": "gg-fest-9088426130483024379",
     "boardType": "festivals",
     "title": "2026 헤이리 판 페스티벌",
     "category": "festival_culture",
@@ -29271,7 +29271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506926",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EC%A3%BC%EB%82%A8%EA%B0%95%EC%9C%A0%EB%93%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4082657_image2_1.png",
     "description": "진주남강유등축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29302,7 +29302,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506766",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EC%A3%BC%20%ED%92%8D%EA%B8%B0%EC%9D%B8%EC%82%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/3563955_image2_1.jpg",
     "description": "영주 풍기인삼축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29333,7 +29333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2560471",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%98%EC%84%B1%EC%8A%88%ED%8D%BC%ED%91%B8%EB%93%9C%EB%A7%88%EB%8A%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4119135_image2_1.jpg",
     "description": "의성슈퍼푸드마늘축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29364,7 +29364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1398149",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%BC%EB%9E%91%EC%84%B1%EC%97%AD%EC%82%AC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4112915_image2_1.jpg",
     "description": "삼랑성역사문화축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29395,7 +29395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=952988",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%B1%EC%A0%9C%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4106689_image2_1.png",
     "description": "백제문화제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29426,7 +29426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4117505",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8%20%EC%B2%AD%EC%A3%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4117506_image2_1.jpg",
     "description": "국가유산 미디어아트 청주 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29457,7 +29457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3545976",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%9C%EB%B0%B1%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4115564_image2_1.jpg",
     "description": "태백제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29488,7 +29488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3371765",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%A9%EC%9D%B8%EC%B2%AD%EB%85%84%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4109978_image2_1.jpg",
     "description": "용인청년페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29519,7 +29519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1846905",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8B%AC%EC%84%B1%20100%EB%8C%80%20%ED%94%BC%EC%95%84%EB%85%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4110512_image2_1.jpg",
     "description": "2026 달성 100대 피아노 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29550,7 +29550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2431706",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%A9%EC%9D%B8%EC%82%AC%EC%9D%B4%EB%B2%84%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4109880_image2_1.JPG",
     "description": "용인사이버과학축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29581,7 +29581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=737479",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%82%A8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4101843_image2_1.jpg",
     "description": "강남페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29612,7 +29612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3538633",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%BC%EC%B2%9C%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4109826_image2_1.jpg",
     "description": "과천청년축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29643,7 +29643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3008665",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%B2%9C%EC%8B%9C%20%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4115699_image2_1.jpg",
     "description": "포천시 청년축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29674,7 +29674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3530974",
+    "url": "https://search.naver.com/search.naver?query=%ED%98%B8%EB%B2%95%20%EC%BD%94%EC%8A%A4%EB%AA%A8%EC%8A%A4%20%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4114602_image2_1.jpg",
     "description": "호법 코스모스 꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29705,7 +29705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2858894",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EC%A3%BC%EA%B0%80%EC%95%BC%EC%82%B0%ED%99%A9%EA%B8%88%EB%93%A4%EB%85%98%EB%A9%94%EB%9A%9C%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4114244_image2_1.JPG",
     "description": "성주가야산황금들녘메뚜기축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29736,7 +29736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3019872",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%B6%98%EB%A7%88%EC%9D%B4%ED%81%AC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4113237_image2_1.jpg",
     "description": "청춘마이크 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29767,7 +29767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3514928",
+    "url": "https://search.naver.com/search.naver?query=%EC%BD%94%EB%A6%AC%EC%95%88%EB%93%9C%EB%A6%BC%20%ED%95%9C%EA%B0%95%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4113248_image2_1.png",
     "description": "코리안드림 한강대축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29798,7 +29798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4110074",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%99%95%EC%83%9D%EB%A1%9C%20%EB%B9%9B%EA%B1%B0%EB%A6%AC%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4110491_image2_1.jpg",
     "description": "2026 왕생로 빛거리 축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29829,7 +29829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3542294",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%84%EC%A3%BC%EC%9D%98%20%EC%88%98%ED%98%B8%EC%9E%90%EB%93%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4096279_image2_1.jpg",
     "description": "진주의 수호자들 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29860,7 +29860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2859297",
+    "url": "https://search.naver.com/search.naver?query=%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%20%EA%B4%91%EB%AA%85",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4109227_image2_1.jpg",
     "description": "페스티벌 광명 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29891,7 +29891,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3380650",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%8C%80%EB%AC%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4107408_image2_1.jpg",
     "description": "동대문페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -29934,7 +29934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-3841944860177153891",
+    "id": "gg-fest-3365798817071536190",
     "boardType": "festivals",
     "title": "정조효문화제 및 정조대왕능행차 공동재현",
     "category": "festival_culture",
@@ -29965,7 +29965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3956456126820387515",
+    "id": "gg-fest-3004330012379733467",
     "boardType": "festivals",
     "title": "용인시민의 날 연계 축제 행사",
     "category": "festival_culture",
@@ -29996,7 +29996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4884797066801163540",
+    "id": "gg-fest-3971816585351186019",
     "boardType": "festivals",
     "title": "2026 수원화성 미디어아트",
     "category": "festival_culture",
@@ -30046,7 +30046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2554814",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EC%A1%B0%EB%8C%80%EC%99%95%20%EB%8A%A5%ED%96%89%EC%B0%A8%20%EA%B3%B5%EB%8F%99%EC%9E%AC%ED%98%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4078459_image2_1.png",
     "description": "정조대왕 능행차 공동재현 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30077,7 +30077,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=914138",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%ED%99%94%EC%84%B1%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4060890_image2_1.jpg",
     "description": "수원화성문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30089,7 +30089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1046312542161679215",
+    "id": "gg-fest-3730677990521007442",
     "boardType": "festivals",
     "title": "2026 정조대왕 능행차 공동재현",
     "category": "festival_culture",
@@ -30120,7 +30120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6672900997800825631",
+    "id": "gg-fest-4053903014955400033",
     "boardType": "festivals",
     "title": "제63회 수원화성문화제",
     "category": "festival_culture",
@@ -30170,7 +30170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3011445",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%8B%B0%EB%B8%8CX%EC%84%B1%EC%88%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4101257_image2_1.jpg",
     "description": "2026 크리에이티브X성수 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30232,7 +30232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116722",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%84%EA%B4%91%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/4117714_image2_1.png",
     "description": "탄광문화축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30263,7 +30263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3009344",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%98%EC%A3%BC%EC%98%81%EC%82%B0%EA%B0%95%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4100044_image2_1.png",
     "description": "나주영산강축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30294,7 +30294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=692682",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%20%EC%B6%94%EC%96%B5%EC%9D%98%20%EC%B6%A9%EC%9E%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/3584471_image2_1.jpg",
     "description": "광주 추억의 충장축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30325,7 +30325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4112672",
+    "url": "https://search.naver.com/search.naver?query=2026%20D.FESTA%20%EC%86%8C%EA%B7%B9%EC%9E%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4115099_image2_1.jpg",
     "description": "2026 D.FESTA 소극장축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30356,7 +30356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1998564",
+    "url": "https://search.naver.com/search.naver?query=%EA%B6%81%EC%A4%91%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4108782_image2_1.jpg",
     "description": "궁중문화축전 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30387,7 +30387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2990881",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%EB%B2%84%EC%8A%A4%ED%82%B9%EC%9B%94%EB%93%9C%EC%BB%B5",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4076763_image2_1.jpg",
     "description": "광주버스킹월드컵 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30449,7 +30449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2986930",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B3%B5%EC%97%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4116554_image2_1.JPG",
     "description": "울산공업축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30480,7 +30480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2031318",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%84%EC%8B%A4N%EC%B9%98%EC%A6%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4115109_image2_1.jpg",
     "description": "임실N치즈축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30511,7 +30511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506838",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%ED%95%9C%EC%A7%80%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4112731_image2_1.jpg",
     "description": "전주한지문화축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30542,7 +30542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1322668",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A1%EC%84%B1%EC%8B%AC%EC%B2%AD%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4108468_image2_1.jpg",
     "description": "곡성심청어린이대축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30573,7 +30573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2855326",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B0%EB%A5%B5%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3536373_image2_1.jpg",
     "description": "우륵문화제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30604,7 +30604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2666388",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%84%EC%9D%B4%EA%B0%80%20%ED%96%89%EB%B3%B5%EC%9E%85%EB%8B%88%EB%8B%A4%20S9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4110963_image2_1.png",
     "description": "아이가 행복입니다 S9 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30616,7 +30616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1702003206538687258",
+    "id": "gg-fest-5241627153225219557",
     "boardType": "festivals",
     "title": "제18회 시민어울림한마당",
     "category": "festival_culture",
@@ -30666,7 +30666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3364857",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%B0%EC%82%B0%EC%A7%AC%EB%BD%95%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4107749_image2_1.jpg",
     "description": "군산짬뽕페스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30697,7 +30697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4114312",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%20%EB%B9%B5%EA%B5%BD%EB%8A%94%20%EB%A7%88%EC%9D%84%2C%20%EC%98%A4%EC%A3%BD",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4114313_image2_1.jpg",
     "description": "강릉 빵굽는 마을, 오죽 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30728,7 +30728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140752",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%82%B0%ED%95%B4%EB%AF%B8%EC%9D%8D%EC%84%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4113676_image2_1.jpg",
     "description": "서산해미읍성축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30759,7 +30759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3019716",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%9E%A5%EA%B2%BD%EA%B8%B0%EB%A1%9D%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4122749_image2_1.jpg",
     "description": "대장경기록문화축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30790,7 +30790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4117047",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%ED%8F%89%EB%B6%80%EC%B6%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4117136_image2_1.jpg",
     "description": "양평부추축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30821,7 +30821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3006019",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%A8%EC%95%88%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4120364_image2_1.JPG",
     "description": "함안 국가유산야행 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30852,7 +30852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2488086",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EC%95%84%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4117021_image2_1.jpg",
     "description": "대전 서구 아트페스티벌 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30883,7 +30883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4119230",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%ED%95%AD%20%EB%82%99%ED%99%94%EC%9D%98%20%EB%B0%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4119231_image2_1.jpg",
     "description": "포항 낙화의 밤 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30914,7 +30914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113045",
+    "url": "https://search.naver.com/search.naver?query=%ED%8C%8C%EC%A3%BC%ED%8E%98%EC%96%B4%20%EB%B6%81%EC%95%A4%EC%BB%AC%EC%B2%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4110424_image2_1.JPG",
     "description": "파주페어 북앤컬처 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30945,7 +30945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3540329",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B8%80%EB%82%A0%20%EB%AC%B8%ED%99%94%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4109191_image2_1.jpg",
     "description": "한글날 문화행사 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -30976,7 +30976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1849007",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EC%A2%85%ED%95%9C%EA%B8%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/3553216_image2_1.jpg",
     "description": "세종한글축제 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31007,7 +31007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116779",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%AF%B8%EB%94%94%EC%96%B4%EC%95%84%ED%8A%B8%20%EC%97%AC%EC%88%98%20%EC%A7%84%EB%82%A8%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4116784_image2_1.jpg",
     "description": "국가유산 미디어아트 여수 진남관 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31038,7 +31038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1373481",
+    "url": "https://search.naver.com/search.naver?query=%ED%9D%A5%EB%B6%80%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4114556_image2_1.jpg",
     "description": "흥부제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31069,7 +31069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2877244",
+    "url": "https://search.naver.com/search.naver?query=%EC%9B%B0%EC%BB%B4%ED%88%AC%EC%8B%A0%EA%B4%80%EB%8F%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4081503_image2_1.JPG",
     "description": "웰컴투신관동 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31100,7 +31100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2560824",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%EA%B4%91%EC%96%B4%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3541489_image2_1.jpg",
     "description": "제주광어대축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31131,7 +31131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4060158",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%20%EC%84%9C%EB%9E%98%EC%84%AC%20%ED%94%BC%ED%81%AC%EB%8B%89%20%EC%BD%98%EC%84%9C%ED%8A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4117199_image2_1.jpg",
     "description": "한강 서래섬 피크닉 콘서트 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31162,7 +31162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3370635",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%94%EC%88%9C%EC%A0%81%EB%B2%BD%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/4106489_image2_1.jpg",
     "description": "화순적벽문화축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31193,7 +31193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3369503",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B4%91%EC%A3%BC%EC%82%AC%EC%9A%B4%EB%93%9C%ED%8C%8C%ED%81%AC%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4115193_image2_1.jpg",
     "description": "2026 광주사운드파크페스티벌 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31224,7 +31224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4111666",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%9C%EC%95%88%20%EB%B6%81%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4111669_image2_1.jpg",
     "description": "천안 북 페스티벌 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31255,7 +31255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2989642",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C76%EC%A3%BC%EB%85%84%20K-%EB%B0%80%EB%A6%AC%ED%84%B0%EB%A6%AC%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%EF%BC%9A%EC%B6%98%EC%B2%9C%EB%8C%80%EC%B2%A9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4113213_image2_1.png",
     "description": "제76주년 K-밀리터리 페스티벌：춘천대첩 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31286,7 +31286,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109893",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%B4%EC%96%91%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4109897_image2_1.jpg",
     "description": "담양 국가유산야행 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31317,7 +31317,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4108258",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%9C%EA%B8%80%EB%AC%B8%ED%99%94%ED%8A%B9%EB%B3%84%EA%B8%B0%ED%9A%8D%EC%A0%84%20%E3%80%88%EC%84%B8%EC%A2%85%EA%B3%BC%20%EB%82%A8%EC%A4%80%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4108746_image2_1.jpg",
     "description": "2026 한글문화특별기획전 〈세종과 남준〉 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31348,7 +31348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4087092",
+    "url": "https://search.naver.com/search.naver?query=2026%20GHOST%28%EA%B2%BD%EA%B8%B0%20%ED%95%9C%EB%A5%98%20OST%29%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/4087098_image2_1.jpg",
     "description": "2026 GHOST(경기 한류 OST) 페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31379,7 +31379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2622679",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C8%ED%9A%8C%20%EC%98%88%EC%B2%9C%EA%B5%AD%EC%A0%9C%EC%8A%A4%EB%A7%88%ED%8A%B8%ED%8F%B0%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4059026_image2_1.jpeg",
     "description": "제8회 예천국제스마트폰영화제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31391,7 +31391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1183184342305071422",
+    "id": "gg-fest-3634446928342752165",
     "boardType": "festivals",
     "title": "제26회 복사골청소년예술제",
     "category": "festival_culture",
@@ -31422,7 +31422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9027239073423857534",
+    "id": "gg-fest-2450941610033088820",
     "boardType": "festivals",
     "title": "제3회 파주페어_북앤컬처",
     "category": "festival_culture",
@@ -31472,7 +31472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4120802",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%9E%AC%EC%B2%9C%EC%9D%84%20%ED%92%88%EC%9D%80%20%EC%96%91%EC%9E%AC%EB%8F%84%EC%84%9C%EA%B4%80%20%E3%80%8C%EB%AC%BC%EA%B8%B8%20%EB%94%B0%EB%9D%BC%20%EA%B7%B8%EB%A6%BC%EC%B1%85%20%EC%97%AC%ED%96%89%E3%80%8D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4120813_image2_1.jpg",
     "description": "양재천을 품은 양재도서관 「물길 따라 그림책 여행」 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31503,7 +31503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4127747",
+    "url": "https://search.naver.com/search.naver?query=%EC%9E%A5%ED%95%AD%201931%20%EB%B0%A4%EC%9D%98%20%EA%B8%B0%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4127759_image2_1.jpg",
     "description": "장항 1931 밤의 기행 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31534,7 +31534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1620571",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%9D%80%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4116102_image2_1.jpg",
     "description": "포은문화제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31565,7 +31565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2846034",
+    "url": "https://search.naver.com/search.naver?query=%EC%95%88%EC%96%91%EC%B2%AD%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4116882_image2_1.JPG",
     "description": "안양청년축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31596,7 +31596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4099101",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%88%EC%B7%A8%EB%AC%B4%EA%B7%80%EC%95%BC%EC%8B%9C%EC%9E%A5%20%EC%8B%9C%EC%A6%8C2",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4123922_image2_1.jpg",
     "description": "불취무귀야시장 시즌2 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31627,7 +31627,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2986583",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%20%EA%B3%A0%EC%82%B0%EB%A6%AC%20%EC%9C%A0%EC%A0%81%20%EC%84%A0%EC%82%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4120883_image2_1.jpg",
     "description": "제주 고산리 유적 선사축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31658,7 +31658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3560787",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%96%91%EA%B0%95%EC%84%AC%EC%98%88%EC%88%A0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4118030_image2_1.jpg",
     "description": "2026 양강섬예술축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31689,7 +31689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3544873",
+    "url": "https://search.naver.com/search.naver?query=%EC%9C%A0%EC%84%B1%EB%8F%85%EC%84%9C%EB%8C%80%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4109965_image2_1.jpg",
     "description": "유성독서대전 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31720,7 +31720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3001045",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%9C%EA%B0%95%20%EC%A2%85%EC%9D%B4%EB%B9%84%ED%96%89%EA%B8%B0%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4115157_image2_1.jpg",
     "description": "2026 한강 종이비행기 축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31751,7 +31751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3532372",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%20%EC%A4%91%EA%B5%AC%20%EB%B6%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4081183_image2_1.jpg",
     "description": "대전 중구 북페스티벌 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31782,7 +31782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2757751",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C6%ED%9A%8C%20%EC%A0%84%EC%A3%BC%EA%B1%B0%EB%A6%AC%EC%9D%B8%ED%98%95%EA%B7%B9%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4113843_image2_1.jpg",
     "description": "제6회 전주거리인형극제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31813,7 +31813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4113826",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A7%84%EC%95%88%EA%B3%A0%EC%9B%90%20%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/33/4113833_image2_1.jpg",
     "description": "2026 진안고원 포레스티벌 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31875,7 +31875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4099133",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%A1%9C%EC%BB%AC%20%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EC%97%B0%EB%82%A8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4115113_image2_1.jpg",
     "description": "2026 로컬 그라운드 연남 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31906,7 +31906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2987791",
+    "url": "https://search.naver.com/search.naver?query=2026%20DMZ%20OPEN%20Festival",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4116823_image2_1.jpg",
     "description": "2026 DMZ OPEN Festival - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31937,7 +31937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3011280",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EB%94%94%EC%9E%90%EC%9D%B8%EC%9C%84%ED%81%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4104213_image2_1.jpg",
     "description": "2026 서울디자인위크 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -31999,7 +31999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=553263",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B3%A0%EB%9E%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3572398_image2_1.jpg",
     "description": "울산고래축제 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32030,7 +32030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=638241",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B0%BD%EC%9E%A5%EB%A5%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4114144_image2_1.JPG",
     "description": "순창장류축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32061,7 +32061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2563387",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%A8%ED%92%8D%EB%82%98%EB%AC%B4%EC%88%B2%EA%B8%B8%20%ED%9E%90%EB%A7%81%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/4132358_image2_1.png",
     "description": "단풍나무숲길 힐링축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32092,7 +32092,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=293084",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%8F%99%EB%82%9C%EA%B3%84%EA%B5%AD%EC%95%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4058672_image2_1.jpg",
     "description": "영동난계국악축제 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32123,7 +32123,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3021908",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EB%B0%9C%EB%A0%88%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4121468_image2_1.jpg",
     "description": "2026 서울발레페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32154,7 +32154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2930716",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%20%EA%B5%AD%EC%88%98%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4115249_image2_1.jpg",
     "description": "강릉 국수 축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32185,7 +32185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1844150",
+    "url": "https://search.naver.com/search.naver?query=%EC%B9%A0%EA%B3%A1%EB%82%99%EB%8F%99%EA%B0%95%ED%8F%89%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4080666_image2_1.jpg",
     "description": "칠곡낙동강평화축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32216,7 +32216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3343831",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20AI%20%EC%BD%98%ED%85%90%EC%B8%A0%20%EC%96%B4%EC%9B%8C%EC%A6%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4111534_image2_1.png",
     "description": "2026 대한민국 AI 콘텐츠 어워즈 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32247,7 +32247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506544",
+    "url": "https://search.naver.com/search.naver?query=%EB%B4%89%ED%99%94%EC%86%A1%EC%9D%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/4108357_image2_1.JPG",
     "description": "봉화송이축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -32259,7 +32259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "wevity-5393733318984301826",
+    "id": "wevity-1030625528235297231",
     "boardType": "contests",
     "title": "제14회 한옥디자인 국제 공모전",
     "category": "contest_art",
@@ -32290,7 +32290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2323609391424251146",
+    "id": "wevity-5527765196352662123",
     "boardType": "contests",
     "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전",
     "category": "contest_art",
@@ -32321,7 +32321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1078202819715233614",
+    "id": "wevity-1249976134402147240",
     "boardType": "contests",
     "title": "드골2: 자유의 시대 포스터·굿즈 공모전",
     "category": "contest_art",
@@ -32352,7 +32352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-164653779360705653",
+    "id": "wevity-2454355310537084903",
     "boardType": "contests",
     "title": "2026 한국공항보안(주) AI 디지털 이미지 공모전",
     "category": "contest_art",
@@ -32383,7 +32383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3483929144868814659",
+    "id": "wevity-8292175714979540020",
     "boardType": "contests",
     "title": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전",
     "category": "contest_art",
@@ -32414,7 +32414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-680455186560221702",
+    "id": "wevity-3773684610563630054",
     "boardType": "contests",
     "title": "2026 부천시 웹툰융합 공모전",
     "category": "contest_art",
@@ -32445,7 +32445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1979875087084186703",
+    "id": "wevity-5985370391277207950",
     "boardType": "contests",
     "title": "2026년 부산항만공사 청소년 인권존중 포스터 공모전",
     "category": "contest_art",
@@ -32476,7 +32476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-168801965933050632",
+    "id": "wevity-6879541159111210813",
     "boardType": "contests",
     "title": "2026년 경상남도 어린이 불조심 포스터 공모전",
     "category": "contest_art",
@@ -32507,7 +32507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2466300382739041071",
+    "id": "wevity-2597404219659352703",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 기념우표 디자인 공모전",
     "category": "contest_art",
@@ -32538,7 +32538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6113374792264274989",
+    "id": "wevity-999060868409504569",
     "boardType": "contests",
     "title": "2026 국가유산형 드론콘텐츠 디자인 공모전",
     "category": "contest_art",
@@ -32569,7 +32569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4153232680430970724",
+    "id": "wevity-4803151625822839096",
     "boardType": "contests",
     "title": "2026 레진성인공모전",
     "category": "contest_art",
@@ -32600,7 +32600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6781558500531037423",
+    "id": "wevity-4879679816240116331",
     "boardType": "contests",
     "title": "2026년 서울특별시 어린이·청소년 시민발언대 청소년이 바꾸는 서울 인스타툰 공모전",
     "category": "contest_art",
@@ -32631,7 +32631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2286622524237629125",
+    "id": "wevity-5566279994169784527",
     "boardType": "contests",
     "title": "제 27회 청소년만화축제 만화작품 공모전",
     "category": "contest_art",
@@ -32662,7 +32662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7314687147391635999",
+    "id": "wevity-3373047459643373425",
     "boardType": "contests",
     "title": "2026 제23회 고양호수만화축제 청소년만화 공모전",
     "category": "contest_art",
@@ -32693,7 +32693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6316603932151645548",
+    "id": "wevity-2205859925050500084",
     "boardType": "contests",
     "title": "2026년 용산구시설관리공단 캐릭터 공모전",
     "category": "contest_art",
@@ -32724,7 +32724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4424196630789404572",
+    "id": "wevity-5007164555956139134",
     "boardType": "contests",
     "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급",
     "category": "contest_writing",
@@ -32755,7 +32755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3419176242059515365",
+    "id": "wevity-5167079090273596241",
     "boardType": "contests",
     "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!",
     "category": "contest_writing",
@@ -32786,7 +32786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8245639992438457864",
+    "id": "wevity-2817958314442062648",
     "boardType": "contests",
     "title": "제4회 현대문학x미래엔 청소년문학상 공모전",
     "category": "contest_writing",
@@ -32817,7 +32817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6154036978739210245",
+    "id": "wevity-6295837913374721463",
     "boardType": "contests",
     "title": "2026 충남 문화예술후원사업 문화CF 스타상 (청년예술부문) 공모",
     "category": "contest_writing",
@@ -32848,7 +32848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4957992011322913275",
+    "id": "wevity-2904767806684987462",
     "boardType": "contests",
     "title": "2026 국립한밭대학교 포토에세이 공모전",
     "category": "contest_writing",
@@ -32879,7 +32879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2374305341177399551",
+    "id": "wevity-4961128619989165964",
     "boardType": "contests",
     "title": "2027 국제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -32910,7 +32910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2491606940564493534",
+    "id": "wevity-3437248865583755978",
     "boardType": "contests",
     "title": "세계일보 2027 신춘문예 공모",
     "category": "contest_writing",
@@ -32941,7 +32941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3860377611024528768",
+    "id": "wevity-5365761697392528102",
     "boardType": "contests",
     "title": "2027년 현대경제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -32972,7 +32972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9131260754548984038",
+    "id": "wevity-7055612064150970866",
     "boardType": "contests",
     "title": "2027 광남일보 한국문학대상",
     "category": "contest_writing",
@@ -33003,7 +33003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4771259047480622050",
+    "id": "wevity-1393702708566756289",
     "boardType": "contests",
     "title": "2026 광명시 올해의 책 독후감 공모전",
     "category": "contest_writing",
@@ -33034,7 +33034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7624747122748905525",
+    "id": "wevity-7760926798501408461",
     "boardType": "contests",
     "title": "제26회 국립순천대학교 청소년 문예백일장",
     "category": "contest_writing",
@@ -33065,7 +33065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6906751388309481563",
+    "id": "wevity-6200786769728632254",
     "boardType": "contests",
     "title": "제39회 무등일보 신춘문예 공모",
     "category": "contest_writing",
@@ -33096,7 +33096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3135249845794788582",
+    "id": "wevity-4945580867508740397",
     "boardType": "contests",
     "title": "2026 부산 국제 한국디카시 공모전",
     "category": "contest_writing",
@@ -33127,7 +33127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5698925882356332039",
+    "id": "wevity-5755008648440073292",
     "boardType": "contests",
     "title": "제2회 연세국제창작공모전",
     "category": "contest_writing",
@@ -33158,7 +33158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7940394111814416250",
+    "id": "wevity-6075140246492405582",
     "boardType": "contests",
     "title": "6G 서비스 시나리오 공모전",
     "category": "contest_writing",
@@ -33189,7 +33189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4865202438848298762",
+    "id": "wevity-7127671544312182038",
     "boardType": "contests",
     "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)",
     "category": "contest_coding",
@@ -33220,7 +33220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5031794686385306197",
+    "id": "wevity-3980001204374644734",
     "boardType": "contests",
     "title": "2026 청도 바이브코딩 해커톤 with 해커그라운드",
     "category": "contest_coding",
@@ -33251,7 +33251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1394481590822606088",
+    "id": "wevity-4777319286402284785",
     "boardType": "contests",
     "title": "2026 충북글로벌게임센터 AI 게임 개발 공모전",
     "category": "contest_coding",
@@ -33282,7 +33282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3274486208897553290",
+    "id": "wevity-986772785175140234",
     "boardType": "contests",
     "title": "2026 제8회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -33313,7 +33313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6888743745577188717",
+    "id": "wevity-8819913518536346334",
     "boardType": "contests",
     "title": "2026 조달청 AI 게임·콘텐츠 공모전",
     "category": "contest_coding",
@@ -33344,7 +33344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7462924866702089781",
+    "id": "wevity-6130108593793376021",
     "boardType": "contests",
     "title": "쿵야 IP를 활용한 로블록스(Roblox) 게임 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -33375,7 +33375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-853465319460107222",
+    "id": "wevity-2277320387632019458",
     "boardType": "contests",
     "title": "제1회 한아전 게임 시나리오·그래픽 공모전",
     "category": "contest_coding",
@@ -33406,7 +33406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5259736837420356689",
+    "id": "wevity-3372929486540431145",
     "boardType": "contests",
     "title": "2026 대전 콘텐츠페어 이스포츠 대전 브롤스타즈 참가자 모집",
     "category": "contest_coding",
@@ -33437,7 +33437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1887208963226545646",
+    "id": "wevity-7956357832731532072",
     "boardType": "contests",
     "title": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회",
     "category": "contest_coding",
@@ -33468,7 +33468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3903271249731328858",
+    "id": "wevity-4997116144461128744",
     "boardType": "contests",
     "title": "제4회 경남 AI·SW 경진대회",
     "category": "contest_coding",
@@ -33499,7 +33499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8948998409600087055",
+    "id": "wevity-8008228967731093134",
     "boardType": "contests",
     "title": "2026 제5회 오픈소스 SW개발 경진대회",
     "category": "contest_coding",
@@ -33530,7 +33530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5988254599101007352",
+    "id": "wevity-2856365529140137411",
     "boardType": "contests",
     "title": "2026년 충청권 인디게임 공모전 인디유(indie·U)",
     "category": "contest_coding",
@@ -33561,7 +33561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2509892380433784311",
+    "id": "wevity-3954870670065698055",
     "boardType": "contests",
     "title": "2026 대학생 프로그래밍 경시대회",
     "category": "contest_coding",
@@ -33592,7 +33592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7109625531369001087",
+    "id": "wevity-4834170526972822903",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지",
     "category": "contest_coding",
@@ -33623,7 +33623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5754756519562294774",
+    "id": "wevity-4175740240378353273",
     "boardType": "contests",
     "title": "[무계로 세계로 블루마블] 리그 오브 레전드 무작위 총력전 : 아수라장 - 선수 모집",
     "category": "contest_coding",
@@ -33654,7 +33654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2816326742290917986",
+    "id": "wevity-5711131170232711395",
     "boardType": "contests",
     "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전",
     "category": "contest_stem",
@@ -33685,7 +33685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3293521357895635130",
+    "id": "wevity-8087054778352153065",
     "boardType": "contests",
     "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR",
     "category": "contest_stem",
@@ -33716,7 +33716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5068647372935390817",
+    "id": "wevity-4667733302783226909",
     "boardType": "contests",
     "title": "2026 DATA·AI 분석 경진대회",
     "category": "contest_stem",
@@ -33747,7 +33747,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6361763162643515597",
+    "id": "wevity-8837513199617953697",
     "boardType": "contests",
     "title": "한국공학한림원 공학의 가치 숏폼 콘테스트",
     "category": "contest_stem",
@@ -33778,7 +33778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6290960204004188819",
+    "id": "wevity-588063226961776878",
     "boardType": "contests",
     "title": "2026 로보틱스 작품공모전",
     "category": "contest_stem",
@@ -33809,7 +33809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6449508725145084299",
+    "id": "wevity-5151456202792574004",
     "boardType": "contests",
     "title": "우리 모두의 R&D 공모전",
     "category": "contest_stem",
@@ -33840,7 +33840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6344728772828348026",
+    "id": "wevity-1844674084884088822",
     "boardType": "contests",
     "title": "2026 양자내성암호 전환 경진대회·해커톤",
     "category": "contest_stem",
@@ -33871,7 +33871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8418887883347684781",
+    "id": "wevity-2238602034076568953",
     "boardType": "contests",
     "title": "2026 POSTECH OIBC 빅데이터 경진대회",
     "category": "contest_stem",
@@ -33902,7 +33902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6336678963924622218",
+    "id": "wevity-7163426686175023591",
     "boardType": "contests",
     "title": "제 4회 청소년과학오디션",
     "category": "contest_stem",
@@ -33933,7 +33933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-403623621525974087",
+    "id": "wevity-4962761024549623744",
     "boardType": "contests",
     "title": "2027 전국 대학생 자작 미래자동차 경진대회",
     "category": "contest_stem",
@@ -33964,7 +33964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3838033434114157344",
+    "id": "wevity-5009169294365463714",
     "boardType": "contests",
     "title": "2026 스페이스 해커톤",
     "category": "contest_stem",
@@ -33995,7 +33995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4717172476829986163",
+    "id": "wevity-6753658829915685458",
     "boardType": "contests",
     "title": "2026년 3d 디자인 공모전",
     "category": "contest_stem",
@@ -34026,7 +34026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4729070071095799613",
+    "id": "wevity-2484601751138464706",
     "boardType": "contests",
     "title": "제 4회 청소년 과학 오디션",
     "category": "contest_stem",
@@ -34057,7 +34057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1801294499376331625",
+    "id": "wevity-590922821871803353",
     "boardType": "contests",
     "title": "N.O.V.A. 2026 대화형 의료 진단 AI 에이전트 대회",
     "category": "contest_stem",
@@ -34088,7 +34088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3939921846006417134",
+    "id": "wevity-4775211904218748749",
     "boardType": "contests",
     "title": "선샤인 TIME TRAVEL 숏폼 영상 공모전",
     "category": "contest_music",
@@ -34119,7 +34119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3505194690090135905",
+    "id": "wevity-5097471737780506655",
     "boardType": "contests",
     "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전",
     "category": "contest_music",
@@ -34150,7 +34150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1971936699392566478",
+    "id": "wevity-1212934308015381927",
     "boardType": "contests",
     "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전)",
     "category": "contest_music",
@@ -34181,7 +34181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9153004046111658104",
+    "id": "wevity-1163551953511487474",
     "boardType": "contests",
     "title": "제7회 KMA 시니어모델선발대회",
     "category": "contest_music",
@@ -34212,7 +34212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5713646541598068924",
+    "id": "wevity-5065086470737665647",
     "boardType": "contests",
     "title": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모",
     "category": "contest_music",
@@ -34243,7 +34243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5316953065703217326",
+    "id": "wevity-7532172188931820033",
     "boardType": "contests",
     "title": "2026 강동문화재단 GAC Creative Bridge (아트 굿즈 창작지원 프로젝트)",
     "category": "contest_music",
@@ -34274,7 +34274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2233707151531652714",
+    "id": "wevity-7920089101698243888",
     "boardType": "contests",
     "title": "2026 순창 코리아 떡볶이 페스타 – 전국 떡볶이 플래시몹 경연대회 참가자 모집",
     "category": "contest_music",
@@ -34305,7 +34305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3955225877926363481",
+    "id": "wevity-9088843808192486569",
     "boardType": "contests",
     "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
     "category": "contest_music",
@@ -34355,7 +34355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=574014",
+    "url": "https://search.naver.com/search.naver?query=%EB%AA%A9%ED%8F%AC%ED%95%AD%EA%B5%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/3498990_image2_1.JPG",
     "description": "목포항구축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34386,7 +34386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=623666",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%B2%9C%20%EC%82%B0%EC%A0%95%ED%98%B8%EC%88%98%20%EB%AA%85%EC%84%B1%EC%82%B0%20%EC%96%B5%EC%83%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/3555383_image2_1.jpg",
     "description": "포천 산정호수 명성산 억새꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34417,7 +34417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=229048",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%9E%98%EC%9D%8D%EC%84%B1%EC%97%AD%EC%82%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4111278_image2_1.JPG",
     "description": "동래읍성역사축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34448,7 +34448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4127713",
+    "url": "https://search.naver.com/search.naver?query=%E3%80%8A%EC%86%8C%EC%9E%A5%ED%92%88%2C%20%EC%8B%9C%EB%8C%80%EC%9D%98%20%EC%9E%A5%EB%A9%B4%EB%93%A4%E3%80%8B",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4127718_image2_1.jpg",
     "description": "《소장품, 시대의 장면들》 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34479,7 +34479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2862358",
+    "url": "https://search.naver.com/search.naver?query=%EB%85%B8%EC%9B%90%EB%8B%AC%EB%B9%9B%EC%82%B0%EC%B1%85",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/3547735_image2_1.jpg",
     "description": "노원달빛산책 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34510,7 +34510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4126870",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EC%84%A0%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/4126871_image2_1.jpg",
     "description": "정선 국가유산야행 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34541,7 +34541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3377402",
+    "url": "https://search.naver.com/search.naver?query=%EB%93%9C%EB%A6%BC%ED%8C%8C%ED%81%AC%20%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4126822_image2_1.jpg",
     "description": "드림파크 국화축제 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34572,7 +34572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4122301",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EB%8F%BC%EC%A7%80%EA%B5%AD%EB%B0%A5%EB%8C%80%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4122302_image2_1.jpg",
     "description": "부산돼지국밥대전 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34603,7 +34603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2870929",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%B0%EC%B2%9C%20%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/4117543_image2_1.jpg",
     "description": "연천 국화축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34634,7 +34634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1275743",
+    "url": "https://search.naver.com/search.naver?query=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/4090456_image2_1.jpg",
     "description": "금정산성축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34665,7 +34665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3380662",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EA%B3%84%EB%AC%B8%ED%99%94%EC%9C%A0%EC%82%B0%20%ED%99%94%EC%88%9C%20%EA%B3%A0%EC%9D%B8%EB%8F%8C%20%EA%B0%80%EC%9D%84%EA%BD%83%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/3547597_image2_1.jpg",
     "description": "세계문화유산 화순 고인돌 가을꽃 축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34696,7 +34696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3551206",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EB%AA%85%EB%8F%99%EA%B5%B4%20%EB%B9%9B%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4121378_image2_1.png",
     "description": "광명동굴 빛 축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34727,7 +34727,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1307813",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%8F%99%EC%84%A0%EC%82%AC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4114675_image2_1.JPG",
     "description": "강동선사문화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34758,7 +34758,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3014969",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%AC%B8%ED%99%94%EC%9D%98%20%EB%8B%AC%20%EC%97%AC%EC%88%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/4119199_image2_1.jpg",
     "description": "2026 문화의 달 여수 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34789,7 +34789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2488793",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EB%8F%84%EC%8B%9C%EB%86%8D%EC%97%85%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/4119223_image2_1.png",
     "description": "2026 서울도시농업박람회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34820,7 +34820,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2759249",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%82%B0%20%EB%8C%80%EC%B6%94%EC%B6%95%EC%A0%9C%20%26%20%EB%86%8D%EC%82%B0%EB%AC%BC%20%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/3566324_image2_1.jpg",
     "description": "경산 대추축제 & 농산물 한마당 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34851,7 +34851,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3379778",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%80%EB%9D%BD%20%EC%98%A5%ED%86%A0%EB%B2%84%ED%8E%98%EC%8A%A4%ED%8A%B8",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3553073_image2_1.png",
     "description": "가락 옥토버페스트 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34882,7 +34882,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=142233",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%95%EB%8F%99%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4117049_image2_1.jpg",
     "description": "정동문화축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34913,7 +34913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2754710",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%82%B0%EB%A6%BC%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4116849_image2_1.jpg",
     "description": "2026 대한민국 산림박람회 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34944,7 +34944,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1719667",
+    "url": "https://search.naver.com/search.naver?query=%EB%82%99%EB%8F%99%EA%B0%95%20%EA%B5%AC%ED%8F%AC%EB%82%98%EB%A3%A8%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4115163_image2_1.jpg",
     "description": "낙동강 구포나루 축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -34975,7 +34975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2952759",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B0%EC%9D%B4%EC%B2%9C%EB%B3%80%20%ED%8E%98%EC%8A%A4%ED%83%80%202026%20%EC%9D%B4%EC%83%81%ED%95%9C%20%EB%82%98%EB%9D%BC%EC%9D%98%20%EC%9B%B0%EB%8B%88%EC%8A%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4115066_image2_1.png",
     "description": "우이천변 페스타 2026 이상한 나라의 웰니스 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35006,7 +35006,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2767541",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%9C%20with%20%EC%A0%84%EB%B6%81%EA%B3%BC%ED%95%99%EC%B6%95%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4109985_image2_1.jpg",
     "description": "2026 대한민국과학축제 with 전북과학축전 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35037,7 +35037,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3020205",
+    "url": "https://search.naver.com/search.naver?query=%ED%98%B8%EC%BA%A0%ED%94%84%20%EB%A6%AC%ED%84%B4%EC%A6%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4104222_image2_1.jpg",
     "description": "호캠프 리턴즈 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35068,7 +35068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3331805",
+    "url": "https://search.naver.com/search.naver?query=NS%ED%91%B8%EB%93%9C%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4096811_image2_1.jpg",
     "description": "NS푸드페스타 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35099,7 +35099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3544911",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EB%B4%89%EC%82%B0%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/4116440_image2_1.jpg",
     "description": "수봉산 페스티벌 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35130,7 +35130,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4128357",
+    "url": "https://search.naver.com/search.naver?query=205%20%EC%B9%A0%EA%B3%A1%20%EB%AC%B8%ED%99%94%EA%B1%B0%EB%A6%AC%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4128378_image2_1.jpg",
     "description": "205 칠곡 문화거리 페스타 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35161,7 +35161,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2770434",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%20%EB%B9%B5%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/4110945_image2_1.jpg",
     "description": "대전 빵 축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35192,7 +35192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3567099",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%20%EB%B0%B1%EB%B0%98%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/4126967_image2_1.JPG",
     "description": "홍성 백반 페스타 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35223,7 +35223,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3548867",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%20%EB%8F%99%EA%B5%AC%20%EC%96%B4%EC%9A%B8%EB%A6%BC%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/34/4122934_image2_1.jpg",
     "description": "대구 동구 어울림한마당 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35254,7 +35254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3017799",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%AF%B8%ED%91%B8%EB%93%9C%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4063648_image2_1.jpg",
     "description": "구미푸드페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35285,7 +35285,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4123034",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%8C%80%EB%AC%B8%EA%B5%AC%20%EC%B2%AD%EC%86%8C%EB%85%84%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/4123042_image2_1.jpg",
     "description": "동대문구 청소년 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35316,7 +35316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2618971",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%A1%9C%EC%B2%AD%EC%86%8C%EB%85%84%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/3562606_image2_1.jpg",
     "description": "구로청소년축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35347,7 +35347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3379752",
+    "url": "https://search.naver.com/search.naver?query=%EC%9B%90%EC%A3%BC%EB%86%8D%ED%98%91%20%EC%B9%98%EC%95%85%EC%82%B0%20%EA%B3%A0%EA%B5%AC%EB%A7%88%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4122226_image2_1.jpg",
     "description": "원주농협 치악산 고구마축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35378,7 +35378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=140930",
+    "url": "https://search.naver.com/search.naver?query=%ED%83%90%EB%9D%BC%EB%AC%B8%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4121436_image2_1.jpg",
     "description": "탐라문화제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35409,7 +35409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2833186",
+    "url": "https://search.naver.com/search.naver?query=MOIM%20International",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4104859_image2_1.jpg",
     "description": "MOIM International - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35440,7 +35440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3315407",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A0%9C3%EC%B0%A8%20%EC%A0%9C%EB%AC%BC%ED%8F%AC%EC%9B%A8%EC%9D%B4%EB%B8%8C%EB%A7%88%EC%BC%93",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4120465_image2_1.jpg",
     "description": "2026 제3차 제물포웨이브마켓 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35471,7 +35471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3373104",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%91%90%EA%B7%BC%EB%91%90%EA%B7%BC%20%EB%B3%84%EA%B8%B8%EB%A7%88%EC%BC%93",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4120438_image2_1.jpg",
     "description": "2026 두근두근 별길마켓 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35502,7 +35502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4118276",
+    "url": "https://search.naver.com/search.naver?query=%EB%AA%A8%EC%9D%B4%EB%9E%91%EA%BB%98%20%EA%B0%80%EB%B3%B4%EC%9E%A5%EA%BB%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4120351_image2_1.jpg",
     "description": "모이랑께 가보장께 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35533,7 +35533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3554702",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9B%90%EB%8F%84%EC%8B%AC%20%EC%95%BC%EA%B0%84%EC%97%AC%ED%96%89%20%E2%80%98%EC%84%AC%E5%A4%9C%EC%8B%9C%EC%A6%8C%E2%80%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4119747_image2_1.jpg",
     "description": "2026 원도심 야간여행 ‘섬夜시즌’ - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35564,7 +35564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2865258",
+    "url": "https://search.naver.com/search.naver?query=%EB%85%B8%EC%9B%90%20%EB%B6%81%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4117270_image2_1.jpg",
     "description": "노원 북 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35595,7 +35595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=635451",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%EA%B2%BD%EC%82%AC%EA%B3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4116815_image2_1.jpg",
     "description": "문경사과축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35626,7 +35626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2828431",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EA%B0%95%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4116961_image2_1.jpg",
     "description": "한강페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35657,7 +35657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116560",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%AC%BC%ED%96%89%EB%B3%B5%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4116564_image2_1.png",
     "description": "동물행복페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35688,7 +35688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3301281",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%AC%EC%84%B1%EA%B0%80%EC%A1%B1%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C%20YES%21%20%ED%82%A4%EC%A6%88%EC%A1%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4115690_image2_1.jpg",
     "description": "달성가족문화축제 YES! 키즈존 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35719,7 +35719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2952484",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B9%B5%EB%B9%B5%EB%8D%B0%EC%9D%B4%20%EC%B2%9C%EC%95%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4114397_image2_1.jpg",
     "description": "2026 빵빵데이 천안 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35750,7 +35750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4113301",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%A0%89%ED%82%A4%EC%9D%98%20%EC%88%98%EC%83%81%ED%95%9C%20%ED%94%BC%ED%81%AC%EB%8B%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4113384_image2_1.jpg",
     "description": "2026 렉키의 수상한 피크닉 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35781,7 +35781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3016265",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9C%A0%EB%8B%88%EC%B9%B4%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EA%B5%AD%EC%A0%9C%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/4110544_image2_1.jpg",
     "description": "2026 유니카 코리아 국제영화제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35812,7 +35812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2756476",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EA%B3%84%EC%9C%A0%EC%82%B0%20%EC%A1%B0%EC%84%A0%EC%99%95%EB%A6%89%EC%B6%95%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4106565_image2_1.jpg",
     "description": "세계유산 조선왕릉축전 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35843,7 +35843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3530139",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EB%93%9C%EB%A1%A0%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4096227_image2_1.jpg",
     "description": "2026 충청남도 드론 페스타 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35855,7 +35855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-547487363520826778",
+    "id": "gg-fest-2960517662226728418",
     "boardType": "festivals",
     "title": "2026 김포 라베니체축제",
     "category": "festival_culture",
@@ -35886,7 +35886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5487256873638098363",
+    "id": "gg-fest-1300675524176163065",
     "boardType": "festivals",
     "title": "제40회 정약용문화제",
     "category": "festival_culture",
@@ -35967,7 +35967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4124907",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%89%AC%EC%97%84%EC%89%AC%EC%97%84%EB%AA%A8%EB%8B%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4124908_image2_1.jpg",
     "description": "2026 쉬엄쉬엄모닝 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -35998,7 +35998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3468240",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EA%B4%80%EC%B0%B0%EC%82%AC%EC%9D%98%20%ED%83%84%EC%83%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4123062_image2_1.jpg",
     "description": "전라관찰사의 탄생 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36029,7 +36029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4117084",
+    "url": "https://search.naver.com/search.naver?query=2026%20HELLO%20DDC%20FESTIVAL",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4117085_image2_1.jpg",
     "description": "2026 HELLO DDC FESTIVAL - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36060,7 +36060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116994",
+    "url": "https://search.naver.com/search.naver?query=K-Drone%20Festival",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4116995_image2_1.png",
     "description": "K-Drone Festival - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36091,7 +36091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2740046",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%95%9C%EB%B3%B5%EB%AC%B8%ED%99%94%EC%A3%BC%EA%B0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4113682_image2_1.jpg",
     "description": "2026 한복문화주간 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36184,7 +36184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=825295",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EB%A6%89%EC%BB%A4%ED%94%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/3546224_image2_1.JPG",
     "description": "강릉커피축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36215,7 +36215,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4127746",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%82%A8%EC%82%B0%20%EC%95%BC%EA%B0%84%20%ED%8A%B8%EB%9E%98%ED%82%B9%20%E3%80%8C%EB%B0%98%EC%A7%9D%EB%B0%98%EC%A7%9D%20%EB%82%A8%EC%82%B0%EB%B0%A4%EA%B8%B8%E3%80%8D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4127748_image2_1.jpg",
     "description": "2026 남산 야간 트래킹 「반짝반짝 남산밤길」 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36246,7 +36246,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2558866",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%88%EC%82%B0%EC%9E%A5%ED%84%B0%20%EC%82%BC%EA%B5%AD%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4095359_image2_1.jpg",
     "description": "예산장터 삼국축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36277,7 +36277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1075049",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C17%ED%9A%8C%20%EA%B4%91%EC%A3%BC%EA%B5%AD%EC%A0%9C%EC%95%84%ED%8A%B8%ED%8E%98%EC%96%B4%20%E3%80%8A%EC%95%84%ED%8A%B8%EA%B4%91%EC%A3%BC%E3%80%8B",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/4105890_image2_1.jpg",
     "description": "제17회 광주국제아트페어 《아트광주》 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36308,7 +36308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1147035",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%AC%EC%A3%BC%EC%98%A4%EA%B3%A1%EB%82%98%EB%A3%A8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4104747_image2_1.jpg",
     "description": "여주오곡나루축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36339,7 +36339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4134915",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%82%A8%ED%85%8C%ED%81%AC%EC%95%84%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4134921_image2_1.jpg",
     "description": "성남테크아트페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36370,7 +36370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1325331",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B8%ED%99%94%EB%8B%A4%EC%96%91%EC%84%B1%EC%B6%95%EC%A0%9C%20MAMF%28%EB%A7%98%ED%94%84%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4125113_image2_1.JPG",
     "description": "문화다양성축제 MAMF(맘프) - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36401,7 +36401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=637276",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B5%EC%82%B0%EC%B2%9C%EB%A7%8C%EC%86%A1%EC%9D%B4%20%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4116309_image2_1.jpg",
     "description": "익산천만송이 국화축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36432,7 +36432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3377995",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%EC%B2%9C%EA%B9%80%EB%B0%A5%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4115095_image2_1.jpg",
     "description": "김천김밥축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36463,7 +36463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=604097",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%EC%A3%BC%EA%B9%80%EC%B9%98%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/3545732_image2_1.JPG",
     "description": "광주김치축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36494,7 +36494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4130916",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%A3%BC%20%EB%B0%98%EB%94%A7%EB%B6%88%20%EB%86%8D%EB%B6%80%EC%9E%A5%ED%84%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4130918_image2_1.jpg",
     "description": "무주 반딧불 농부장터 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36525,7 +36525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=638576",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B5%AD%ED%96%A5%EB%8C%80%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4114406_image2_1.JPG",
     "description": "대한민국 국향대전 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36556,7 +36556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506616",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EA%B7%80%ED%8F%AC%EC%B9%A0%EC%8B%AD%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/4039211_image2_1.jpg",
     "description": "서귀포칠십리축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36587,7 +36587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3381612",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EC%A3%BC%EB%A7%89%EA%B1%B8%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4128503_image2_1.jpg",
     "description": "전주막걸리축제 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36618,7 +36618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3015176",
+    "url": "https://search.naver.com/search.naver?query=UN%ED%8F%89%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4127776_image2_1.JPG",
     "description": "UN평화축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36649,7 +36649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4127769",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%95%9C%EB%8F%88%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4127851_image2_1.png",
     "description": "강원한돈페스타 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36680,7 +36680,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2591661",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%B0%EC%B2%9C%EC%9C%A8%EB%AC%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4105782_image2_1.jpg",
     "description": "연천율무축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36711,7 +36711,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4120452",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%82%A8%EC%82%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4120454_image2_1.jpg",
     "description": "2026 남산 나이트 페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36742,7 +36742,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3340301",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%83%84%EC%86%8C%EC%A4%91%EB%A6%BD%20%ED%9D%99%EC%82%B4%EB%A6%AC%EA%B8%B0%20%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4116966_image2_1.jpg",
     "description": "2026 탄소중립 흙살리기 박람회 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36773,7 +36773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4111479",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C3%ED%9A%8C%20%EC%B6%94%EB%8F%84%20%EC%84%AC%20%EC%98%81%ED%99%94%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/4111498_image2_1.png",
     "description": "제3회 추도 섬 영화제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36804,7 +36804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2872078",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%20%EC%98%81%ED%99%94%20%EC%A3%BC%EA%B0%84%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4096938_image2_1.jpg",
     "description": "인천 영화 주간 2026 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36835,7 +36835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4134805",
+    "url": "https://search.naver.com/search.naver?query=%EA%B4%91%ED%9D%AC%EB%A1%9C%EB%93%9C%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/4134806_image2_1.jpg",
     "description": "광희로드 페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36866,7 +36866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3382981",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%B4%88%EC%B1%85%EC%9E%88%EB%8A%94%EA%B1%B0%EB%A6%AC%2010%EC%9B%94%20%EB%B6%81%EC%BA%A0%ED%95%91",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4133131_image2_1.jpg",
     "description": "서초책있는거리 10월 북캠핑 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36897,7 +36897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4132933",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%98%EC%9B%90%ED%8A%B9%EB%A1%80%EC%8B%9C%20%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%ED%95%9C%EB%A7%88%EC%9D%8C%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4132936_image2_1.jpg",
     "description": "수원특례시 반려동물 한마음축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36928,7 +36928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3018924",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%84%EA%B3%A1%20%EB%A9%94%ED%83%80%EC%84%B8%EC%BF%BC%EC%9D%B4%EC%95%84%20%EB%A1%9C%EB%93%9C%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/3543062_image2_1.jpg",
     "description": "도곡 메타세쿼이아 로드 페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36959,7 +36959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=527789",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B2%9C%20%EB%82%99%EC%95%88%EC%9D%8D%EC%84%B1%20%EB%AF%BC%EC%86%8D%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/4124832_image2_1.jpg",
     "description": "순천 낙안읍성 민속문화축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -36990,7 +36990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3551000",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%97%90%EB%93%80%EC%9D%98%EC%99%95%20%EC%96%B4%EC%9A%B8%EB%A6%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4131037_image2_1.jpg",
     "description": "2026 에듀의왕 어울림축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37021,7 +37021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4130910",
+    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%20%EC%84%9C%EA%B5%AC%20%EC%B1%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4130912_image2_1.jpg",
     "description": "대전 서구 책축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37052,7 +37052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3368863",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%97%B0%EB%82%A8%EB%8F%99%20%EC%A3%BC%EB%AF%BC%ED%99%94%ED%95%A9%20%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4130083_image2_1.jpg",
     "description": "2026 연남동 주민화합 대축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37083,7 +37083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3390190",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8F%99%EC%9E%91%20%EB%AF%B8%EB%9E%98%EA%B3%BC%ED%95%99%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4129247_image2_1.jpg",
     "description": "2026 동작 미래과학페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37114,7 +37114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4128762",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9E%90%EC%9B%90%EC%88%9C%ED%99%98%20%EC%8B%9C%EB%AF%BC%ED%96%89%EC%82%AC%20%3A%20%EC%95%A8%EB%A6%AC%EC%8A%A4%EC%99%80%20%EB%96%A0%EB%82%98%EB%8A%94%20%EC%97%90%EC%BD%94%20%EC%9B%90%EB%8D%94%EB%9E%9C%EB%93%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4128765_image2_1.jpg",
     "description": "2026 자원순환 시민행사 : 앨리스와 떠나는 에코 원더랜드 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37145,7 +37145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3349628",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%EB%8F%85%EC%84%9C%EB%8C%80%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4120865_image2_1.jpg",
     "description": "제주독서대전 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37176,7 +37176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3547712",
+    "url": "https://search.naver.com/search.naver?query=%ED%95%9C%EB%AF%B8%EC%B9%9C%EC%84%A0%20%EB%AC%B8%ED%99%94%20%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/91/4118191_image2_1.jpg",
     "description": "한미친선 문화 한마당 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37207,7 +37207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3382929",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A7%80%EB%A6%AC%EC%82%B0%EA%B1%B7%EA%B8%B0%EC%B6%95%EC%A0%9C%20%E2%80%98%EC%A7%80%EB%A6%AC%EC%82%B0%EC%86%8C%ED%92%8D%E2%80%99",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4119718_image2_1.jpg",
     "description": "2026 지리산걷기축제 ‘지리산소풍’ - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37238,7 +37238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1748721",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%8F%AC%ED%95%AD%EC%8A%A4%ED%8B%B8%EC%95%84%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%20%282026PSAF%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4117502_image2_1.jpg",
     "description": "2026 포항스틸아트페스티벌 (2026PSAF) - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37269,7 +37269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115205",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%20%ED%8E%AB%EB%A6%BC%ED%94%BD",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4115207_image2_1.jpg",
     "description": "2026 서울 펫림픽 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37300,7 +37300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2857763",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%9C%EC%9A%B8%EB%AE%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4112713_image2_1.jpg",
     "description": "2026 서울뮤직페스티벌 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37331,7 +37331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3019085",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9D%B4%EC%B2%9C%ED%8E%AB%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4111607_image2_1.jpg",
     "description": "2026 이천펫축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37362,7 +37362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109218",
+    "url": "https://search.naver.com/search.naver?query=%E3%80%8C%EC%9D%B8%EA%B0%81%EC%82%AC%E3%80%8D%EC%99%80%20%ED%95%A8%EA%BB%98%ED%95%98%EB%8A%94%20%EC%A0%9C5%ED%9A%8C%20%EA%B5%B0%EC%9C%84%20%EC%82%BC%EA%B5%AD%EC%9C%A0%EC%82%AC%20%EC%A0%84%EA%B5%AD%20%EA%B0%80%EC%A1%B1%EA%B1%B7%EA%B8%B0%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/4109219_image2_1.jpg",
     "description": "「인각사」와 함께하는 제5회 군위 삼국유사 전국 가족걷기대회 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37405,7 +37405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-3236230738358917471",
+    "id": "gg-fest-4612690817530406006",
     "boardType": "festivals",
     "title": "반려동물 문화행사(페스티벌)",
     "category": "festival_culture",
@@ -37436,7 +37436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6545346529290070311",
+    "id": "gg-fest-3600081239738356112",
     "boardType": "festivals",
     "title": "2025 화성 학생동아리 축제",
     "category": "festival_culture",
@@ -37467,7 +37467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4403734949547516786",
+    "id": "gg-fest-6992786188039571366",
     "boardType": "festivals",
     "title": "2026 김포 선셋 페스타",
     "category": "festival_culture",
@@ -37498,7 +37498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2642056220146252693",
+    "id": "gg-fest-4982831822369567921",
     "boardType": "festivals",
     "title": "제21회 광릉숲축제",
     "category": "park_eco",
@@ -37529,7 +37529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8834607591268963611",
+    "id": "gg-fest-8302253312262087446",
     "boardType": "festivals",
     "title": "10월 마토예술제",
     "category": "festival_culture",
@@ -37672,7 +37672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3384023",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%91%EC%B2%9C%EA%B0%80%EC%A1%B1%20%EA%B1%B0%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4128374_image2_1.JPG",
     "description": "양천가족 거리축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37796,7 +37796,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3370452",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%88%98%EC%84%B1%EA%B5%AD%EC%A0%9C%EB%B9%84%EC%97%94%EB%82%A0%EB%A0%88",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4116875_image2_1.jpg",
     "description": "2026 수성국제비엔날레 - 한국관광공사 및 대구광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37889,7 +37889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4128786",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%84%B8%EA%B3%84%EC%84%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/87/4128787_image2_1.jpg",
     "description": "2026 세계섬축제 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37920,7 +37920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115269",
+    "url": "https://search.naver.com/search.naver?query=%EC%BF%BC%EB%93%9C%2C%20%EC%97%B0%EA%B7%B9%EC%9D%98%20%EC%A7%88%EB%AC%B8%EB%93%A4%EF%BC%9A%E3%80%88%ED%98%81%EB%AA%85%EC%9D%98%20%EC%B6%A4%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4115302_image2_1.png",
     "description": "쿼드, 연극의 질문들：〈혁명의 춤〉 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37951,7 +37951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4134331",
+    "url": "https://search.naver.com/search.naver?query=%EC%BD%94%EB%A6%AC%EC%95%84%20%EA%B7%B8%EB%9E%9C%EB%93%9C%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/52/4134352_image2_1.jpeg",
     "description": "코리아 그랜드 페스티벌 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -37982,7 +37982,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2874329",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%B0%94%EB%B9%84%ED%81%90%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4103630_image2_1.jpg",
     "description": "홍성글로벌바비큐페스티벌 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38013,7 +38013,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4106717",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C13%ED%9A%8C%2021%EC%84%B8%EA%B8%B0%20%EC%9D%B8%EB%AC%B8%EA%B0%80%EC%B9%98%ED%8F%AC%EB%9F%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4106718_image2_1.jpg",
     "description": "제13회 21세기 인문가치포럼 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38044,7 +38044,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4135564",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A0%9C6%ED%9A%8C%20%EC%A0%9C%EC%A3%BC%ED%99%98%EA%B2%BD%EA%B5%90%EC%9C%A1%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4135565_image2_1.jpg",
     "description": "2026 제6회 제주환경교육한마당 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38075,7 +38075,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3012116",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%97%AC%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/4124969_image2_1.jpg",
     "description": "부여국화축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38106,7 +38106,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3501104",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%82%A8%EB%8F%99%20%EC%BB%A4%ED%94%BC%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/4078274_image2_1.JPG",
     "description": "성남동 커피페스티벌 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38137,7 +38137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1080734",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%81%EB%8F%84%EB%8B%A4%EB%A6%AC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/55/4127455_image2_1.jpg",
     "description": "영도다리축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38168,7 +38168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1118296",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%B9%EC%A7%84%EA%B5%AD%ED%99%94%EC%A0%84%EC%8B%9C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4130047_image2_1.jpg",
     "description": "당진국화전시회 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38199,7 +38199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113995",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%E2%80%A7%EC%96%91%EC%A3%BC%E2%80%A7%EC%A7%80%EC%9E%91%EC%82%AC%20%EB%93%9C%EB%A1%A0%EB%B4%87%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4124654_image2_1.JPG",
     "description": "경기‧양주‧지작사 드론봇 페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38230,7 +38230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3537267",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%B1%EB%85%84%EB%82%98%EC%9D%B4%ED%8A%B8%20%EC%95%BC%EC%8B%9C%EC%9E%A5%20%E3%80%8C26%EB%85%84%2010%EC%9B%94%20%3A%20WICKED%E3%80%8D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/4127720_image2_1.jpg",
     "description": "백년나이트 야시장 「26년 10월 : WICKED」 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38261,7 +38261,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2559006",
+    "url": "https://search.naver.com/search.naver?query=%EB%AA%A9%ED%8F%AC%20%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%EC%95%BC%ED%96%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/4122717_image2_1.jpg",
     "description": "목포 국가유산야행 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38292,7 +38292,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1399532",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B3%A0%EB%93%B1%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4120983_image2_1.jpg",
     "description": "부산고등어축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38323,7 +38323,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3348362",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%B6%81%EA%B1%B0%EB%A6%AC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C%20%EB%8B%A4%EB%8B%A4%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4113337_image2_1.JPG",
     "description": "성북거리문화축제 다다페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38354,7 +38354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4134876",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%EB%8F%84%EC%8B%9C%EB%86%8D%EC%97%85%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/4134877_image2_1.png",
     "description": "고양도시농업축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38385,7 +38385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4134834",
+    "url": "https://search.naver.com/search.naver?query=%EC%A7%80%ED%8F%89%EC%A0%84%ED%86%B5%EB%B0%9C%ED%9A%A8%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4134835_image2_1.jpg",
     "description": "지평전통발효축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38416,7 +38416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4133567",
+    "url": "https://search.naver.com/search.naver?query=%EB%A9%94%EC%9D%B4%EC%BB%A4%20%ED%94%8C%EB%A0%88%EC%9D%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4133576_image2_1.png",
     "description": "메이커 플레이 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38447,7 +38447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2874909",
+    "url": "https://search.naver.com/search.naver?query=%EC%97%AC%EC%88%98%EB%B0%A4%EB%B0%94%EB%8B%A4%20%EB%B6%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4113380_image2_1.jpg",
     "description": "여수밤바다 불꽃축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38478,7 +38478,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2789700",
+    "url": "https://search.naver.com/search.naver?query=%EC%9A%B4%EC%A0%95%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90%20%EB%B6%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/3566581_image2_1.jpg",
     "description": "운정호수공원 불꽃축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38509,7 +38509,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3306590",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%B6%98%EB%A7%88%EC%9D%B4%ED%81%AC%20%EC%B6%A9%EC%B2%AD%EA%B6%8C%20%ED%8A%B9%EB%B3%84%EA%B3%B5%EC%97%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4130908_image2_1.png",
     "description": "청춘마이크 충청권 특별공연 - 한국관광공사 및 충청북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38540,7 +38540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116358",
+    "url": "https://search.naver.com/search.naver?query=%EB%B0%80%EC%96%91%20%EB%A7%A4%EC%9A%B4%EB%A7%9B%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4116359_image2_1.jpg",
     "description": "밀양 매운맛 축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38571,7 +38571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4121348",
+    "url": "https://search.naver.com/search.naver?query=%EB%8F%99%EB%91%90%EC%B2%9C%EC%8B%9C%20%EC%B1%85%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4121351_image2_1.JPG",
     "description": "동두천시 책문화축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38602,7 +38602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=637693",
+    "url": "https://search.naver.com/search.naver?query=%EB%A7%88%EC%82%B0%EA%B0%80%EA%B3%A0%ED%8C%8C%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4114954_image2_1.jpg",
     "description": "마산가고파국화축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38633,7 +38633,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1841539",
+    "url": "https://search.naver.com/search.naver?query=%EB%A7%88%ED%86%A0%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4108761_image2_1.jpg",
     "description": "마토예술제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -38769,7 +38769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-5728732456134781421",
+    "id": "gg-fest-696766083291871742",
     "boardType": "festivals",
     "title": "제3회 화성 루나 빛 축제",
     "category": "festival_night",
@@ -38800,7 +38800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-6133864062665221357",
+    "id": "gg-fest-1636103998335033125",
     "boardType": "festivals",
     "title": "2026 김포 해병대문화축제",
     "category": "festival_culture",
@@ -38831,7 +38831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-2380512121853979816",
+    "id": "gg-fest-3382312725746005470",
     "boardType": "festivals",
     "title": "평택 원평나루 억새축제",
     "category": "festival_culture",
@@ -38862,7 +38862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-1267480362538798548",
+    "id": "gg-fest-7690653580706387189",
     "boardType": "festivals",
     "title": "2026년 제8회 운정호수공원 불꽃축제",
     "category": "festival_night",
@@ -38893,7 +38893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-7610150683769719684",
+    "id": "gg-fest-6233799048304650175",
     "boardType": "festivals",
     "title": "2026년 가을걷이 한마당",
     "category": "festival_culture",
@@ -39048,7 +39048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "gg-fest-5089713194813634882",
+    "id": "gg-fest-2424880402435921887",
     "boardType": "festivals",
     "title": "우리가족 꼬마영웅 올림픽",
     "category": "festival_culture",
@@ -39098,7 +39098,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2622167",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B2%BD%EB%B6%81%EC%82%AC%EA%B3%BC%ED%99%8D%EB%B3%B4%ED%96%89%EC%82%AC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/4132112_image2_1.jpg",
     "description": "2026 경북사과홍보행사 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39222,7 +39222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1738695",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%A7%84%EC%A3%BC%EA%B5%AD%EC%A0%9C%EB%86%8D%EC%8B%9D%ED%92%88%EB%B0%95%EB%9E%8C%ED%9A%8C%20%EB%86%8D%EC%97%85%EC%B2%B4%ED%97%98%EA%B4%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4136379_image2_1.jpg",
     "description": "2026 진주국제농식품박람회 농업체험관 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39253,7 +39253,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=921212",
+    "url": "https://search.naver.com/search.naver?query=%EC%B2%AD%EC%86%A1%EC%82%AC%EA%B3%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4117301_image2_1.JPG",
     "description": "청송사과축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39284,7 +39284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4109730",
+    "url": "https://search.naver.com/search.naver?query=6.10%EB%A7%8C%EC%84%B8%EC%9A%B4%EB%8F%99%20100%EC%A3%BC%EB%85%84%20%EA%B8%B0%EB%85%90%20%EB%8F%85%EB%A6%BD%ED%8E%98%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4109731_image2_1.jpg",
     "description": "6.10만세운동 100주년 기념 독립페어 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39296,7 +39296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-4909612114039447209",
+    "id": "seoul-culture-7758419757007377550",
     "boardType": "festivals",
     "title": "[청계천박물관] 2026년 11월 초등1~3학년 학급단체 교육 [씽씽! 청계천 시간여행]",
     "category": "park_eco",
@@ -39327,7 +39327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-1630353718716226484",
+    "id": "seoul-culture-2212421790850934303",
     "boardType": "festivals",
     "title": "오려내고 기워낸 나만의 시",
     "category": "festival_culture",
@@ -39358,7 +39358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-7117714301709961448",
+    "id": "seoul-culture-8014509332255457867",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [국민연금공단과 함께하는 노후 준비 특강]",
     "category": "festival_culture",
@@ -39389,7 +39389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-6129041117521988366",
+    "id": "seoul-culture-6828072120649758121",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [신문으로 배우는 초등 경제교육]",
     "category": "festival_culture",
@@ -39420,7 +39420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-22"
   },
   {
-    "id": "seoul-culture-4577007946559299631",
+    "id": "seoul-culture-7061242655263209828",
     "boardType": "festivals",
     "title": "[동작문화재단] 2026 상도어울마당 아트홀 개관 3주년 기획 프로그램 [상도 놀이터]",
     "category": "festival_culture",
@@ -39594,7 +39594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2918621",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9A%B8%EC%82%B0%20%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4128848_image2_1.jpg",
     "description": "2026 울산 스타트업 페스타 - 한국관광공사 및 울산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39625,7 +39625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3552019",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B7%B0%ED%8B%B0%EC%8D%B8%20%EC%88%98%EC%9B%90",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4114586_image2_1.jpg",
     "description": "2026 뷰티썸 수원 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -39637,7 +39637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-6173374750353049187",
+    "id": "seoul-culture-2111935691483469596",
     "boardType": "festivals",
     "title": "[서울시립 서서울미술관] 2026 서서울미술관 뉴미디어 신진작가전 《탈피하지 못하는 뱀은》",
     "category": "festival_culture",
@@ -39668,7 +39668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-124"
   },
   {
-    "id": "seoul-culture-5436805775852634601",
+    "id": "seoul-culture-1011569089249868976",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [옛 밥상, 오늘의 삶을 차리다_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_culture",
@@ -39699,7 +39699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-4203839424546110143",
+    "id": "seoul-culture-1946970962193392852",
     "boardType": "festivals",
     "title": "명지대학교 영상애니메이션디자인전공 제 25회 졸업전시회 [PUZZLE]",
     "category": "festival_culture",
@@ -39730,7 +39730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-13"
   },
   {
-    "id": "seoul-culture-1055774088804560087",
+    "id": "seoul-culture-4618703234608794392",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [라보엠]",
     "category": "festival_culture",
@@ -39761,7 +39761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6199133172939370998",
+    "id": "seoul-culture-2064358175505110939",
     "boardType": "festivals",
     "title": "홍현기 개인전 [환기(換氣): 바람이 지나간 자리]",
     "category": "festival_culture",
@@ -39792,7 +39792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3435879866122572306",
+    "id": "seoul-culture-317259428926633000",
     "boardType": "festivals",
     "title": "[금천문화재단] 2026 어린이청소년극장네트워크 협력사업 [길 위의 아이]",
     "category": "park_eco",
@@ -39823,7 +39823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8588897453840553996",
+    "id": "seoul-culture-620299752691060346",
     "boardType": "festivals",
     "title": "예술, 마음으로 전하는 가장 특별한 선물",
     "category": "festival_culture",
@@ -39854,7 +39854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-2833418167171072565",
+    "id": "seoul-culture-2393136936852714468",
     "boardType": "festivals",
     "title": "송파구립합창단 37주년 정기연주회 [밤을 품어내는 아침처럼]",
     "category": "festival_culture",
@@ -39885,7 +39885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-5099755274715258549",
+    "id": "seoul-culture-166242335339601304",
     "boardType": "festivals",
     "title": "수림뉴웨이브 2026 - 이나연 [귀류 歸流]",
     "category": "festival_culture",
@@ -39916,7 +39916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-615776984935443797",
+    "id": "seoul-culture-2801138653962907183",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 노원문화예술회관",
     "category": "festival_culture",
@@ -39947,7 +39947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-2055414077239868768",
+    "id": "seoul-culture-1949950419309345544",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 『니체 초인 수업』 강용수 저자와의 만남",
     "category": "festival_culture",
@@ -40059,7 +40059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3400809",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%B4%EB%B6%80%EC%9E%A5%ED%84%B0X%ED%8F%AC%ED%8A%B8%EB%B9%8C%EB%A6%AC%EC%A7%80%20%ED%86%B5%EC%98%81",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/4107915_image2_1.JPG",
     "description": "어부장터X포트빌리지 통영 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40090,7 +40090,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3563389",
+    "url": "https://search.naver.com/search.naver?query=%EC%A3%BD%EB%B3%80%ED%95%AD%20%EC%88%98%EC%82%B0%EB%AC%BC%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4131426_image2_1.jpg",
     "description": "죽변항 수산물축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40121,7 +40121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=506470",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%ED%95%B4%EB%B6%84%EC%B2%AD%EB%8F%84%EC%9E%90%EA%B8%B0%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/3546549_image2_1.jpg",
     "description": "김해분청도자기축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40152,7 +40152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3021814",
+    "url": "https://search.naver.com/search.naver?query=2026%20%ED%9D%AC%EB%A7%9D%EB%93%9C%EB%A6%BC%20%ED%8C%90%EB%A7%A4%EC%A0%84",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/4130962_image2_1.jpg",
     "description": "2026 희망드림 판매전 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40183,7 +40183,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3028462",
+    "url": "https://search.naver.com/search.naver?query=%EA%B5%AC%EB%AF%B8%EB%9D%BC%EB%A9%B4%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4124759_image2_1.jpg",
     "description": "구미라면 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40214,7 +40214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4114621",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%A0%9C%EC%A3%BC%EC%A0%95%EC%9B%90%EB%AC%B8%ED%99%94%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4114835_image2_1.png",
     "description": "2026 대한민국 제주정원문화박람회 - 한국관광공사 및 제주특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40245,7 +40245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3492576",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%9D%BC%EB%9F%AC%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%ED%8E%98%EC%96%B4V.7",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/4093280_image2_1.jpg",
     "description": "부산일러스트레이션페어V.7 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40257,7 +40257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-128199699786479255",
+    "id": "seoul-culture-735119452288202913",
     "boardType": "festivals",
     "title": "국립무용단 [2026 안무가 프로젝트]",
     "category": "festival_culture",
@@ -40288,7 +40288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-911641386886668818",
+    "id": "seoul-culture-5625193854634379513",
     "boardType": "festivals",
     "title": "국제 프리스타일 축구 월드 챔피언쉽 [2026 KILL THAT BALL: SEOUL]",
     "category": "festival_culture",
@@ -40319,7 +40319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8915665290489209766",
+    "id": "seoul-culture-8842653466016538197",
     "boardType": "festivals",
     "title": "제18회 언리미티드 에디션 - 서울아트북페어 2026",
     "category": "festival_culture",
@@ -40350,7 +40350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3540077218257951111",
+    "id": "seoul-culture-9067028156329588998",
     "boardType": "festivals",
     "title": "[서울형 키즈카페 한성백제박물관점] 영유아 예술체험 프로그램 [동그라미 세모 네모]",
     "category": "park_eco",
@@ -40381,7 +40381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-7487421703619714263",
+    "id": "seoul-culture-2531740102944179752",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 양천문화회관",
     "category": "festival_culture",
@@ -40803,7 +40803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=235076",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EB%B6%88%EA%BD%83%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4107992_image2_1.jpg",
     "description": "부산불꽃축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40834,7 +40834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4063702",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%89%ED%99%94%EC%98%A8%EB%8B%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4133309_image2_1.png",
     "description": "평화온담 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40865,7 +40865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3401306",
+    "url": "https://search.naver.com/search.naver?query=%EA%B9%80%ED%8F%AC%20%ED%95%B4%EB%B3%91%EB%8C%80%20%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C%20in%20%EB%8C%80%EB%AA%85%ED%95%AD",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/4131171_image2_1.jpg",
     "description": "김포 해병대 문화축제 in 대명항 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40896,7 +40896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3399435",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%95%88%EC%84%B1%EB%A7%9E%EC%B6%A4%20%EC%83%81%EC%84%A4%EA%B3%B5%EC%97%B0%20%E2%80%9C%ED%86%A1%ED%86%A1%EB%8B%AC%EC%BD%A4%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%E2%80%9D",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4130950_image2_1.jpg",
     "description": "2026 안성맞춤 상설공연 “톡톡달콤 페스티벌” - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40927,7 +40927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3113222",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A8%20%EA%B0%80%EC%A1%B1%20%EC%B1%85%20%EC%9E%94%EC%B9%98",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/4128436_image2_1.jpg",
     "description": "온 가족 책 잔치 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40958,7 +40958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4127761",
+    "url": "https://search.naver.com/search.naver?query=%EB%A7%88%EC%82%B0%EC%95%BC%EC%99%B8%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%98%A4%EB%A1%AF%EC%9D%B4%20%EB%A7%88%EB%8F%84%EB%A1%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4127768_image2_1.png",
     "description": "마산야외도서관 [오롯이 마도로] - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -40989,7 +40989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4116982",
+    "url": "https://search.naver.com/search.naver?query=%EC%82%B0%EB%B6%81AI%EA%B9%80%EC%9E%A5%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/4116983_image2_1.jpg",
     "description": "산북AI김장문화축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -41001,7 +41001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8762528048783415623",
+    "id": "seoul-culture-4558944961983200544",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/영유아 [엄마 아빠, 책이랑 놀자!]",
     "category": "festival_culture",
@@ -41032,7 +41032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-8303333642774271714",
+    "id": "seoul-culture-840401970908373949",
     "boardType": "festivals",
     "title": "연극 [점프x컷]",
     "category": "festival_culture",
@@ -41063,7 +41063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6059694244624271475",
+    "id": "seoul-culture-374991623983073047",
     "boardType": "festivals",
     "title": "제2회 호호랑 친구들 - 수집가마켓",
     "category": "festival_culture",
@@ -41094,7 +41094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-368594115560289640",
+    "id": "seoul-culture-1729232745741112887",
     "boardType": "festivals",
     "title": "2026 코리아발레스타즈 [호두까기인형]",
     "category": "festival_culture",
@@ -41125,7 +41125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3303852287228074098",
+    "id": "seoul-culture-879432100383385840",
     "boardType": "festivals",
     "title": "제27회 은평구 청강정철호 국악제",
     "category": "festival_culture",
@@ -41156,7 +41156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-1723648228712773137",
+    "id": "seoul-culture-85233194637222155",
     "boardType": "festivals",
     "title": "[고려대학교] 2026 모두의 AI·AX 캠프(초·중·고 대상)",
     "category": "festival_culture",
@@ -41187,7 +41187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-7717023882772664769",
+    "id": "seoul-culture-7091479024509532835",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 은평 월간 다문화 미등록 [이주아동 이야기 은유 작가님과 함께하는 북토크]",
     "category": "festival_culture",
@@ -41218,7 +41218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-5162751540378553091",
+    "id": "seoul-culture-2411267559735158793",
     "boardType": "festivals",
     "title": "박희수의 정가 [설화(說花)] 말은 입김이 되어 눈꽃처럼 흩어진다",
     "category": "festival_culture",
@@ -41683,7 +41683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-6"
   },
   {
-    "id": "seoul-culture-144396149767333189",
+    "id": "seoul-culture-8160377011764961816",
     "boardType": "festivals",
     "title": "장우리 첼로 독주회",
     "category": "festival_culture",
@@ -41776,7 +41776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-8997024917726284978",
+    "id": "seoul-culture-8965742138257526550",
     "boardType": "festivals",
     "title": "2026 서울시민 생활음악 심포니 페스티벌 [음악으로 사람을 잇다]",
     "category": "festival_culture",
@@ -41807,7 +41807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-4166476083163738299",
+    "id": "seoul-culture-1904749377416911641",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 서울여자대학교",
     "category": "festival_culture",
@@ -41838,7 +41838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-4685544572996181949",
+    "id": "seoul-culture-2784701589774659104",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 마포 배리어프리 콘서트 [다른 음색, 하나의 울림] 유망 청년 예술가 초청 음악회",
     "category": "festival_culture",
@@ -41869,7 +41869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-5130981425982797566",
+    "id": "seoul-culture-8718954809396852401",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 클래식 with 대전시립교향악단",
     "category": "festival_culture",
@@ -41900,7 +41900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-9090404144638835059",
+    "id": "seoul-culture-4437034024838334835",
     "boardType": "festivals",
     "title": "[성동문화재단] 세계 영화 상영회 9회차 '이탈리아 영화' [비발디와 나]",
     "category": "festival_culture",
@@ -41931,7 +41931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-8054181758125738111",
+    "id": "seoul-culture-5121580095690155702",
     "boardType": "festivals",
     "title": "[강북문화재단] 마티네 콘서트 [From Italy to Spain]",
     "category": "festival_culture",
@@ -41962,7 +41962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-4056288634157561856",
+    "id": "seoul-culture-2571180121863175925",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Remembering Bud Powell]",
     "category": "festival_culture",
@@ -42012,7 +42012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2872215",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%ED%9D%A5%EC%9C%A0%EC%9E%90%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/4109413_image2_1.png",
     "description": "고흥유자축제 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42024,7 +42024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-8426751674541608358",
+    "id": "seoul-culture-276641548500745227",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/도서관초대석 (김영찬 작가) [가르치지 않을 용기]",
     "category": "festival_culture",
@@ -42055,7 +42055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-8415400947057540009",
+    "id": "seoul-culture-4439902789987589792",
     "boardType": "festivals",
     "title": "김대중의 망명일기와 기록물 특별전 '내면의 기록' 연계 강연 및 토크콘서트",
     "category": "festival_culture",
@@ -42086,7 +42086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-8962039342851769706",
+    "id": "seoul-culture-7613185705801031213",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 개관 11주년 기념 북토크 [사랑과 결함] 예소연 저자와의 만남",
     "category": "festival_culture",
@@ -42198,7 +42198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2769990",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%9A%B0%EB%A6%AC%EC%88%A0%20%EB%8C%80%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/38/4132038_image2_1.jpg",
     "description": "2026 대한민국 우리술 대축제 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42210,7 +42210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6412669145658350497",
+    "id": "seoul-culture-3773569224664276743",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 M 초이스 연극 [투신 Two Scenes]",
     "category": "festival_culture",
@@ -42241,7 +42241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-8888411828713954324",
+    "id": "seoul-culture-3299716909120333558",
     "boardType": "festivals",
     "title": "[세종문화회관] CHANGMO : MONOLITH",
     "category": "festival_culture",
@@ -42272,7 +42272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-2830436291996116357",
+    "id": "seoul-culture-4005396801383142180",
     "boardType": "festivals",
     "title": "hnei(이석희) 작곡발표회 [비누, 비노, 배누, 비눌, 비널 그리고 사분]",
     "category": "festival_culture",
@@ -42303,7 +42303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-5521626612836090685",
+    "id": "seoul-culture-7341058800093504265",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
     "category": "festival_culture",
@@ -42334,7 +42334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-3599569312534155704",
+    "id": "seoul-culture-5449934435477098636",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
     "category": "festival_culture",
@@ -42365,7 +42365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-1846396939467094508",
+    "id": "seoul-culture-2834891338866392733",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 SPO Day",
     "category": "festival_culture",
@@ -42396,7 +42396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-901770834609630153",
+    "id": "seoul-culture-1506221481933843372",
     "boardType": "festivals",
     "title": "[구로천왕도서관] 은유 작가와의 만남 [해방의 밤]",
     "category": "festival_culture",
@@ -42787,7 +42787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4137577",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%AD%EB%AF%BC%EA%B1%B4%EA%B0%95%20%EB%A6%AC%EB%B6%80%ED%8A%B8%20%EB%A7%88%EC%9D%8C%EA%B1%B4%EA%B0%95%20%EA%B1%B7%EA%B8%B0%EB%8C%80%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4137578_image2_1.jpg",
     "description": "2026 국민건강 리부트 마음건강 걷기대회 - 한국관광공사 및 세종특별자치시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42818,7 +42818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115096",
+    "url": "https://search.naver.com/search.naver?query=%EB%8B%AC%EB%A0%A4%EB%9D%BC%EB%B6%80%EC%82%B0%20%EB%9F%AC%EB%8B%9D%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/4133597_image2_1.jpg",
     "description": "달려라부산 러닝페스티벌 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42849,7 +42849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3545306",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%EC%B2%9C%ED%8E%AB%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4133507_image2_1.jpg",
     "description": "포천펫스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42880,7 +42880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2491545",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%ED%95%AD%20%ED%95%B4%EB%B3%91%EB%8C%80%EB%AC%B8%ED%99%94%20%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4120446_image2_1.jpg",
     "description": "포항 해병대문화 축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42911,7 +42911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115275",
+    "url": "https://search.naver.com/search.naver?query=%EC%BF%BC%EB%93%9C%2C%20%EC%97%B0%EA%B7%B9%EC%9D%98%20%EC%A7%88%EB%AC%B8%EB%93%A4%EF%BC%9A%E3%80%88%ED%99%94%EC%97%BC%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4115301_image2_1.png",
     "description": "쿼드, 연극의 질문들：〈화염〉 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -42923,7 +42923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-970862506762320211",
+    "id": "seoul-culture-1388755307860132821",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 화염",
     "category": "festival_culture",
@@ -42954,7 +42954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-5004427281877330095",
+    "id": "seoul-culture-7296056970756259508",
     "boardType": "contests",
     "title": "조선왕릉 톺아보기: 조선왕릉 골든벨",
     "category": "contest_reading",
@@ -42985,7 +42985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-7012237222276121702",
+    "id": "seoul-culture-6444228167281667408",
     "boardType": "festivals",
     "title": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
     "category": "festival_culture",
@@ -43016,7 +43016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-6193243567165933885",
+    "id": "seoul-culture-3541219107047409285",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이메이킹 해봄이웃집Maker [그림책으로 만나는 슈링클스 키캡 만들기]",
     "category": "park_eco",
@@ -43252,7 +43252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3016659",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EC%A2%85%ED%95%A9%EB%AF%BC%EC%86%8D%EC%98%88%EC%88%A0%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/4113275_image2_1.jpg",
     "description": "부산종합민속예술제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43283,7 +43283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115201",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%EC%A0%84%20%EC%84%B8%EA%B3%84%ED%83%9C%EC%96%91%EA%B4%91%EC%B4%9D%ED%9A%8C%20%EA%B0%9C%EC%B5%9C%20%EA%B8%B0%EB%85%90%20%EC%98%A8%EC%8B%9C%EB%AF%BC%EC%97%90%EB%84%88%EC%A7%80%EA%B1%B7%EA%B8%B0%ED%95%9C%EB%A7%88%EB%8B%B9",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/4115202_image2_1.jpg",
     "description": "2026 대전 세계태양광총회 개최 기념 온시민에너지걷기한마당 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43295,7 +43295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-9198642670127950127",
+    "id": "seoul-culture-3585309874347582105",
     "boardType": "festivals",
     "title": "라 리저브 : 케이티 조지, 루시 예기아자리안, 마리아 킴",
     "category": "festival_culture",
@@ -43357,7 +43357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-8752179880866669593",
+    "id": "seoul-culture-3774056879499964764",
     "boardType": "festivals",
     "title": "2026 서울국제예술포럼(SAFT)",
     "category": "festival_culture",
@@ -43388,7 +43388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-7887102418302281433",
+    "id": "seoul-culture-5570136126632889322",
     "boardType": "festivals",
     "title": "[3기] 서울아트책보고 북클럽 X 현대문학 : 네 번째 시간 『백조와 박쥐』 읽기 / 한이 소설가 · 편집자",
     "category": "festival_culture",
@@ -43419,7 +43419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-1648502394958167896",
+    "id": "seoul-culture-4216086411442030905",
     "boardType": "festivals",
     "title": "[서초문화재단] 고음악 오디세이 [음악의 언어_Rhetoric(수사학)]",
     "category": "festival_culture",
@@ -43531,7 +43531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3360113",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%8C%EC%9E%84%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/4135926_image2_1.png",
     "description": "게임문화축제 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43562,7 +43562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=588175",
+    "url": "https://search.naver.com/search.naver?query=%ED%8F%AC%ED%95%AD%EA%B5%AD%EC%A0%9C%EB%B6%88%EB%B9%9B%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/51/4130851_image2_1.jpg",
     "description": "포항국제불빛축제 - 한국관광공사 및 경상북도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43574,7 +43574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-8440280340133988109",
+    "id": "seoul-culture-2959653358056827069",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [트리플 빌 올 포 한스 판 마넨]",
     "category": "festival_culture",
@@ -43605,7 +43605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-3344390583000686973",
+    "id": "seoul-culture-5184162118959234194",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [찾아가는 서울국제노인영화제_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_culture",
@@ -43636,7 +43636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-23"
   },
   {
-    "id": "seoul-culture-4533785512457704622",
+    "id": "seoul-culture-4482149969600429127",
     "boardType": "festivals",
     "title": "[살롱클래식] 예 트리오 - Moonlight Across Time",
     "category": "festival_culture",
@@ -43717,7 +43717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2854855",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B4%80%EA%B4%91%EA%B8%B0%EB%85%90%ED%92%88%20%EB%B0%95%EB%9E%8C%ED%9A%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4135249_image2_1.jpg",
     "description": "2026 대한민국 관광기념품 박람회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43748,7 +43748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3301415",
+    "url": "https://search.naver.com/search.naver?query=%EB%AC%B4%EC%95%88%20YD%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/08/4131308_image2_1.JPG",
     "description": "무안 YD 페스티벌 - 한국관광공사 및 전라남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43779,7 +43779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=1129018",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9D%B8%EC%B2%9C%EA%B5%AD%EC%A0%9C%EB%94%94%EC%9E%90%EC%9D%B8%ED%8E%98%EC%96%B4%28INDEF%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/4118300_image2_1.jpg",
     "description": "2026 인천국제디자인페어(INDEF) - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43810,7 +43810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4101384",
+    "url": "https://search.naver.com/search.naver?query=20%EC%84%B8%EA%B8%B0%20%EC%82%AC%EC%A7%84%20%EA%B1%B0%EC%9E%A5%EC%A0%84%20-%20%EB%B9%9B%2C%20%EC%8B%9C%EA%B0%84%EC%9D%84%20%EB%A9%88%EC%B6%94%EB%8B%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4103061_image2_1.jpg",
     "description": "20세기 사진 거장전 - 빛, 시간을 멈추다 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -43822,7 +43822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-152"
   },
   {
-    "id": "seoul-culture-2089493488058330844",
+    "id": "seoul-culture-8941317999642234488",
     "boardType": "festivals",
     "title": "[성북문화재단] 브런치콘서트 [11시11분] - 비바 바르셀로나",
     "category": "festival_culture",
@@ -44213,7 +44213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3470738",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%9F%B0%ED%8A%B8%EB%A6%BD%20%EB%82%A8%ED%95%B4%21%20FALL%20%26%20FUN",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/4136448_image2_1.png",
     "description": "2026 런트립 남해! FALL & FUN - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44244,7 +44244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2410727",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%B3%B4%EB%93%9C%EA%B2%8C%EC%9E%84%ED%8E%98%EC%8A%A4%ED%83%80%28%EC%8B%9C%EC%A6%8C2%29",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/4118327_image2_1.png",
     "description": "2026 보드게임페스타(시즌2) - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44275,7 +44275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3368470",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%AF%B8%20%EB%94%94%EC%A0%80%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4106209_image2_1.jpg",
     "description": "경기미 디저트 페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44287,7 +44287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-7560223432564740642",
+    "id": "seoul-culture-6235413546290862275",
     "boardType": "festivals",
     "title": "[살롱클래식] 트리오 폰테스 - 낭만의 여정",
     "category": "festival_culture",
@@ -44318,7 +44318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-1360239951241337944",
+    "id": "seoul-culture-102465820844135347",
     "boardType": "festivals",
     "title": "[서울남산국악당] 불세출 [일상풍류방]",
     "category": "festival_culture",
@@ -44349,7 +44349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-8503995688945089303",
+    "id": "seoul-culture-4566382946512442079",
     "boardType": "festivals",
     "title": "[용산역사박물관] 월간청음회_11월 청음회",
     "category": "park_eco",
@@ -44380,7 +44380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-8308053792449175121",
+    "id": "seoul-culture-3038284633102498029",
     "boardType": "festivals",
     "title": "[서울시청] 반짝반짝 남산밤길",
     "category": "festival_culture",
@@ -44504,7 +44504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-2126134063516109231",
+    "id": "seoul-culture-6475044211135023574",
     "boardType": "festivals",
     "title": "[성동구립도서관] 11월 영어스토리텔링 수업",
     "category": "festival_culture",
@@ -44535,7 +44535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-7021537912933125301",
+    "id": "seoul-culture-4701028641674384811",
     "boardType": "festivals",
     "title": "디자인코리아 2026",
     "category": "festival_culture",
@@ -44566,7 +44566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-4616222360564267028",
+    "id": "seoul-culture-6138397973915797775",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Timeless Jazz]",
     "category": "festival_culture",
@@ -44597,7 +44597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-6440127634965568162",
+    "id": "seoul-culture-234892449675084078",
     "boardType": "festivals",
     "title": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃9]",
     "category": "festival_culture",
@@ -44647,7 +44647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3437916",
+    "url": "https://search.naver.com/search.naver?query=%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%B9%8C%EB%A6%AC%EC%A7%80%20%EB%B6%80%EC%82%B0%202026",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/4130849_image2_1.png",
     "description": "크리스마스 빌리지 부산 2026 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44678,7 +44678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2853386",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%8B%A8%EB%8B%A8%EB%8B%A8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/82/4124982_image2_1.jpg",
     "description": "2026 단단단페스티벌 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44690,7 +44690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-4482298670631397315",
+    "id": "seoul-culture-4311069985001608337",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 창작음악극 [가명]",
     "category": "park_eco",
@@ -44721,7 +44721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-30"
   },
   {
-    "id": "seoul-culture-9026794488532650114",
+    "id": "seoul-culture-7824094546807223763",
     "boardType": "festivals",
     "title": "DK x SDF 국제 컨퍼런스",
     "category": "festival_culture",
@@ -44771,7 +44771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3367339",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EC%9A%B0%EB%A6%AC%EC%8C%80%20%EC%9A%B0%EB%A6%AC%EC%88%A0%20K-%EB%9D%BC%EC%9D%B4%EC%8A%A4%ED%8E%98%EC%8A%A4%ED%83%80",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/60/4111660_image2_1.jpg",
     "description": "2026 우리쌀 우리술 K-라이스페스타 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -44783,7 +44783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-8356421205809908887",
+    "id": "seoul-culture-1413934470867128724",
     "boardType": "festivals",
     "title": "파인캐릭터 2026 (FineCharacter 2026)",
     "category": "festival_culture",
@@ -44814,7 +44814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "gg-fest-4596573531869325559",
+    "id": "gg-fest-9164132249851952270",
     "boardType": "festivals",
     "title": "제30회 파주장단콩축제",
     "category": "festival_culture",
@@ -45031,7 +45031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-3560332517431184253",
+    "id": "seoul-culture-8937237987999712511",
     "boardType": "festivals",
     "title": "[마포문화재단] 체홉 4대 장막 낭독극 [공놀이클럽의 사계절 체홉: 갈매기]",
     "category": "festival_culture",
@@ -45093,7 +45093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-3176153001528798925",
+    "id": "seoul-culture-5688573734687258199",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 심산영화관 [러브스토리]",
     "category": "festival_culture",
@@ -45143,7 +45143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3522322",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%A4%EC%8A%AC%EB%A1%9C%EC%9A%B0%20%EB%B9%88%ED%8B%B0%EC%A7%80%20%ED%81%AC%EB%A6%AC%EC%8A%A4%EB%A7%88%EC%8A%A4%20%EB%A7%88%EC%BC%93",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/24/4136124_image2_1.jpg",
     "description": "오슬로우 빈티지 크리스마스 마켓 - 한국관광공사 및 인천광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45155,7 +45155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-54"
   },
   {
-    "id": "seoul-culture-167733928529530232",
+    "id": "seoul-culture-811954285559648254",
     "boardType": "festivals",
     "title": "[강동문화재단] 리트플레이 [겨울나그네]",
     "category": "festival_culture",
@@ -45205,7 +45205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4108260",
+    "url": "https://search.naver.com/search.naver?query=2026%20HUG%20RUN%20%ED%97%88%EA%B7%B8%EB%9F%B0",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/4109170_image2_1.jpg",
     "description": "2026 HUG RUN 허그런 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45217,7 +45217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-3740375149465620206",
+    "id": "seoul-culture-7081339495619024415",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 고음악 시리즈 [바로크 노엘]",
     "category": "festival_culture",
@@ -45248,7 +45248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-8794288851524753840",
+    "id": "seoul-culture-8006830335187142733",
     "boardType": "festivals",
     "title": "아이와 함께 듣는 겨울의 클래식 동화 [비발디에서 디즈니까지]",
     "category": "festival_culture",
@@ -45298,7 +45298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4095478",
+    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EB%B8%8C%EB%A6%BF%EC%A7%80%EB%A7%88%EB%9D%BC%ED%86%A4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/64/4095564_image2_1.png",
     "description": "부산브릿지마라톤 - 한국관광공사 및 부산광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45329,7 +45329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=4115260",
+    "url": "https://search.naver.com/search.naver?query=%EC%BF%BC%EB%93%9C%2C%20%EC%97%B0%EA%B7%B9%EC%9D%98%20%EC%A7%88%EB%AC%B8%EB%93%A4%EF%BC%9A%E3%80%88%EC%84%9C%EC%95%88%ED%99%94%EC%B0%A8%E3%80%89",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4115261_image2_1.png",
     "description": "쿼드, 연극의 질문들：〈서안화차〉 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45341,7 +45341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-8587982731347364311",
+    "id": "seoul-culture-4808243226703761745",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 서안화차",
     "category": "festival_culture",
@@ -45372,7 +45372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-6551107169700329991",
+    "id": "seoul-culture-2580675734518415458",
     "boardType": "festivals",
     "title": "[서울시청] 서울광장 스케이트장",
     "category": "festival_culture",
@@ -45403,7 +45403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-105"
   },
   {
-    "id": "seoul-culture-5762453866937264534",
+    "id": "seoul-culture-8748468745624803871",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [바이올리니스트 김지선의 Dia:logue-graph]",
     "category": "festival_culture",
@@ -45434,7 +45434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-56"
   },
   {
-    "id": "seoul-culture-564585052322046331",
+    "id": "seoul-culture-7120676473509252188",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다-(서울)",
     "category": "festival_culture",
@@ -45484,7 +45484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=2630385",
+    "url": "https://search.naver.com/search.naver?query=2027%20%EC%BD%94%EB%A6%AC%EC%95%84%EA%B7%B8%EB%9E%9C%EB%93%9C%EC%84%B8%EC%9D%BC",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4113266_image2_1.jpg",
     "description": "2027 코리아그랜드세일 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45496,7 +45496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-109"
   },
   {
-    "id": "seoul-culture-4431247692026484280",
+    "id": "seoul-culture-1597563842433533334",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-크리스마스, 재즈를 만나다-(서울)",
     "category": "festival_culture",
@@ -45546,7 +45546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=507599",
+    "url": "https://search.naver.com/search.naver?query=%EC%96%BC%EC%9D%8C%EB%82%98%EB%9D%BC%ED%99%94%EC%B2%9C%20%EC%82%B0%EC%B2%9C%EC%96%B4%EC%B6%95%EC%A0%9C",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/4071246_image2_1.jpg",
     "description": "얼음나라화천 산천어축제 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
@@ -45577,7 +45577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://korean.visitkorea.or.kr/detail/fes_detail.do?cotid=3367405",
+    "url": "https://search.naver.com/search.naver?query=%EB%B9%84%EA%B1%B4%C2%B7%ED%95%A0%EB%9E%84%EB%B7%B0%ED%8B%B0%ED%8E%98%EC%96%B4",
     "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/4105707_image2_1.jpg",
     "description": "비건·할랄뷰티페어 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
