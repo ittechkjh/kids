@@ -10,12 +10,13 @@
  * * API 키가 비어있거나 기본값인 경우, 자동으로 로컬 시드 및 LocalStorage 캐시 모드로 안전하게 작동합니다.
  */
 window.FIREBASE_CONFIG = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyCBxlyDlmi1VfARWvrznSxT-2mXurEkdBE",
+  authDomain: "kids-912f5.firebaseapp.com",
+  projectId: "kids-912f5",
+  storageBucket: "kids-912f5.firebasestorage.app",
+  messagingSenderId: "1033753749126",
+  appId: "1:1033753749126:web:20d0b759ad94629b599307",
+  measurementId: "G-7KJ2DVGW87"
 };
 
 /**
