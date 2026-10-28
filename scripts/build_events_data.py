@@ -275,6 +275,64 @@ def fetch_tourapi_events(api_key):
     except Exception as e:
         print(f"TourAPI 문화체험시설 수집 오류: {e}")
 
+    # 3. searchKeyword2 (어린이, 청소년, 체험, 과학관, 박물관, 키즈, 사생, 백일장) 키워드 검색 수집 (공공데이터포털 연동)
+    kw_url_base = "http://apis.data.go.kr/B551011/KorService2/searchKeyword2"
+    target_kws = ["어린이", "청소년", "체험", "과학관", "박물관", "키즈", "사생대회", "백일장"]
+    kw_added = 0
+    for kw in target_kws:
+        enc_kw = urllib.parse.quote(kw)
+        url_kw = f"{kw_url_base}?serviceKey={api_key}&MobileOS=ETC&MobileApp=DodamTalk&_type=json&keyword={enc_kw}&numOfRows=50&pageNo=1&arrange=Q"
+        try:
+            req_kw = urllib.request.Request(url_kw, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req_kw, context=ctx, timeout=8) as resp:
+                data = json.loads(resp.read().decode("utf-8"))
+                items = data.get("response", {}).get("body", {}).get("items", {}).get("item", [])
+                if isinstance(items, list):
+                    for it in items:
+                        title = it.get("title", "").strip()
+                        if not title or title in seen_titles:
+                            continue
+                        seen_titles.add(title)
+
+                        reg_key, reg_name = determine_region(it)
+                        cid = it.get("contentid")
+                        clean_t = f"{reg_name} {title}".replace("[", "").replace("]", " ").strip()
+                        page_url = f"https://search.naver.com/search.naver?query={urllib.parse.quote(clean_t)}"
+                        img_url = it.get("firstimage") or it.get("firstimage2") or "https://images.unsplash.com/photo-1472653431158-6364773b2a56?w=800&auto=format&fit=crop&q=80"
+                        loc = it.get("addr1") or f"{reg_name} 일원"
+
+                        b_type, s_cat, s_name, s_badge = classify_board_item(title, default_board="festivals")
+
+                        tour_events.append({
+                            "id": f"tourapi-kw-{cid or abs(hash(title))}",
+                            "boardType": b_type,
+                            "title": title,
+                            "category": s_cat or "park_eco",
+                            "categoryName": s_name or "공원 생태체험",
+                            "badge": s_badge or f"🏛️ {kw} 체험",
+                            "organizer": it.get("tel") or f"{reg_name} {kw} 운영처",
+                            "sourceType": "tour_api",
+                            "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+                            "region": reg_key,
+                            "regionName": reg_name,
+                            "location": loc,
+                            "startDate": "2026-10-01",
+                            "endDate": "2026-12-31",
+                            "applyStartDate": "2026-10-01",
+                            "applyEndDate": "2026-12-31",
+                            "status": "applying",
+                            "targetAudience": "전국 어린이 / 가족 / 학생",
+                            "fee": "현장 문의 / 관람료 안내",
+                            "url": page_url,
+                            "imageUrl": img_url,
+                            "description": f"{title} - 한국관광공사 공식 등록 {kw} 관련 가족 체험·문화 시설입니다.",
+                            "tags": [kw, "TourAPI", reg_name, "공공데이터포털"]
+                        })
+                        kw_added += 1
+        except Exception as e:
+            pass
+    print(f"TourAPI로부터 키워드 검색(어린이/체험 등) {kw_added}건 추가 수집 완료")
+
     return tour_events
 
 DEFAULT_SEOUL_API_KEY = "6c424a69706b6a68323363476f4363"
