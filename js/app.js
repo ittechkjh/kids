@@ -153,7 +153,21 @@ class DodamCommunityApp {
     this.renderSidebarWidgets();
     this.renderFoodView();
     this.updateScrapBadge();
+    this.renderUpdateBadges();
     this.initFirebaseSync();
+  }
+
+  renderUpdateBadges() {
+    const rawDate = this.eventsMetadata?.lastUpdated || '2026-10-28';
+    const formatted = rawDate.replace(/-/g, '.');
+    const badge = document.getElementById('global-last-updated-badge');
+    if (badge) badge.textContent = formatted;
+    const mobBadge = document.getElementById('mobile-last-updated-badge');
+    if (mobBadge) mobBadge.textContent = formatted;
+
+    document.querySelectorAll('.last-updated-text').forEach((el) => {
+      el.textContent = formatted;
+    });
   }
 
   // ==========================================

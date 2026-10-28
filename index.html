@@ -61,6 +61,11 @@
 
           <!-- 모바일 액션 버튼 -->
           <div class="flex items-center gap-2 lg:hidden">
+            <div class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-slate-100 text-[10px] font-bold text-slate-600 border border-slate-200" title="최근 데이터 갱신일">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span>업데이트:</span>
+              <strong id="mobile-last-updated-badge" class="text-slate-900 font-extrabold last-updated-text">2026.10.28</strong>
+            </div>
             <button onclick="app.openWritePostModal()" class="px-3 py-2 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm">
               <i class="fa-solid fa-pen mr-1"></i>글쓰기
             </button>
@@ -131,6 +136,16 @@
             <i class="fa-solid fa-pen-to-square"></i>
             <span>커뮤니티 글쓰기</span>
           </button>
+
+          <!-- 우측 상단 데이터 업데이트 날짜 배지 -->
+          <div class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200/90 text-slate-700 text-xs font-bold shrink-0 shadow-sm" title="공공데이터포털(TourAPI), 지자체 오픈API 및 전국 대회 공고 최종 갱신">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <span class="text-slate-400 text-[11px] font-semibold">최근 업데이트:</span>
+            <strong id="global-last-updated-badge" class="text-slate-900 font-extrabold text-xs last-updated-text">2026.10.28</strong>
+          </div>
         </div>
       </div>
 

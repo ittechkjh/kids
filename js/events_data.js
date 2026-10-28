@@ -1,6 +1,6 @@
 // 전국 17개 시도 지역행사 & 대회일정 데이터셋
 window.DODAM_EVENTS_METADATA = {
-  "lastUpdated": "2026-10-27",
+  "lastUpdated": "2026-10-28",
   "totalEvents": 2867,
   "festivalsCount": 1829,
   "contestsCount": 1038,
