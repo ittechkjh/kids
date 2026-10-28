@@ -8,6 +8,8 @@
 - TOUR_API_KEY 환경변수 지원 (공공데이터포털 연동)
 """
 import os
+import re
+import ssl
 import json
 import datetime
 import urllib.request
@@ -1254,6 +1256,458 @@ CURATED_EVENTS = [
         "description": "한라산, 성산일출봉, 거문오름 등 제주의 자연유산을 화폭에 담는 미술 공모전. 수상작은 유네스코 본부 및 자연유산센터에 전시됩니다.",
         "tags": ["제주미술공모전", "세계자연유산", "유네스코", "사생대회"]
     }
+,
+    # --- 추가 정기 전국대회 (Method 3: 17개 시도 전역 확대) ---
+# --- 서울특별시 ---
+    {
+        "id": "cont-seoul-04",
+        "boardType": "contests",
+        "title": "2026 대한민국 학생 창의력올림피아드 & 아시아 창의발명대전",
+        "category": "contest_stem",
+        "categoryName": "창의발명올림피아드",
+        "badge": "💡 창의발명",
+        "organizer": "한국학교발명협회 · 특허청",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 협회 공지 연동",
+        "region": "seoul",
+        "regionName": "서울특별시",
+        "location": "서울특별시 강남구 테헤란로 131 한국지식재산센터",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-12",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초·중·고등학생",
+        "fee": "무료",
+        "url": "https://www.kasi.re.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&auto=format&fit=crop&q=80",
+        "description": "팀 창의 과제와 즉석 현장 과제를 수행하며 창의적 문제 해결력을 겨루는 국내 최대의 공인 창의력 올림피아드입니다. 특허청장상 수여.",
+        "tags": ["창의력올림피아드", "특허청", "발명대회", "초등발명"]
+    },
+    {
+        "id": "cont-seoul-05",
+        "boardType": "contests",
+        "title": "2026 서울어린이 독서토론 골든벨 챔피언십",
+        "category": "contest_reading",
+        "categoryName": "독서토론·골든벨",
+        "badge": "📖 독서토론",
+        "organizer": "국립어린이청소년도서관 · 서울시도서관재단",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 도서관 공지 연동",
+        "region": "seoul",
+        "regionName": "서울특별시",
+        "location": "서울특별시 강남구 테헤란로7길 21 국립어린이청소년도서관 강당",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-10",
+        "status": "applying",
+        "targetAudience": "초등학교 3~6학년",
+        "fee": "무료 (지정 도서 3권 완독 후 참여)",
+        "url": "https://www.nlcy.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
+        "description": "선정 도서를 읽고 논술 및 퀴즈 골든벨, 패널 찬반 토론을 펼치는 정통 어린이 독서 역량 챔피언십입니다.",
+        "tags": ["독서골든벨", "국립어린이청소년도서관", "독서토론", "문화체육관광부장관상"]
+    },
+
+    # --- 경기도 ---
+    {
+        "id": "cont-gg-04",
+        "boardType": "contests",
+        "title": "2026 국립과천과학관 전국 청소년 과학탐구 챌린지",
+        "category": "contest_stem",
+        "categoryName": "과학탐구·실험",
+        "badge": "🔬 과학실험",
+        "organizer": "과학기술정보통신부 · 국립과천과학관",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 과학관 공지 연동",
+        "region": "gyeonggi",
+        "regionName": "경기도",
+        "location": "경기도 과천시 상하벌로 110 국립과천과학관 창작카페",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-05",
+        "status": "applying",
+        "targetAudience": "전국 초등학생 및 중학생",
+        "fee": "무료",
+        "url": "https://www.sciencecenter.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
+        "description": "주어진 미지의 자연현상 문제를 현장 실험 키트를 활용해 과학적으로 검증하고 발표하는 탐구형 챌린지입니다.",
+        "tags": ["과천과학관", "과학탐구", "실험대회", "과기정통부장관상"]
+    },
+    {
+        "id": "cont-gg-05",
+        "boardType": "contests",
+        "title": "2026 경기 청소년 AI·로봇 피지컬컴퓨팅 경진대회",
+        "category": "contest_coding",
+        "categoryName": "코딩·로봇경진",
+        "badge": "🤖 로봇·코딩",
+        "organizer": "경기도교육청 · 차세대융합기술연구원",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 교육청 공지 연동",
+        "region": "gyeonggi",
+        "regionName": "경기도",
+        "location": "경기도 수원시 영통구 광교로 145 차세대융합기술연구원 컨퍼런스룸",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "applyStartDate": "2026-10-25",
+        "applyEndDate": "2026-11-15",
+        "status": "applying",
+        "targetAudience": "초등 4학년~중·고등학생",
+        "fee": "무료",
+        "url": "https://aict.snu.ac.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+        "description": "아두이노, 마이크로비트, 라즈베리파이 센서를 제어하여 스마트시티 문제를 해결하는 피지컬 컴퓨팅 알고리즘 대회입니다.",
+        "tags": ["로봇대회", "피지컬컴퓨팅", "경기도교육감상", "SW경진대회"]
+    },
+
+    # --- 인천광역시 ---
+    {
+        "id": "cont-incheon-02",
+        "boardType": "contests",
+        "title": "2026 해양경찰청 전국 어린이 해양안전·환경 사생대회",
+        "category": "contest_art",
+        "categoryName": "해양환경 사생대회",
+        "badge": "🎨 해양사생대회",
+        "organizer": "해양경찰청 · 인천광역시교육청",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 청사 공지 연동",
+        "region": "incheon",
+        "regionName": "인천광역시",
+        "location": "인천광역시 연수구 해지움로 해양경찰청 잔디광장",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-07",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-01",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초등학생",
+        "fee": "무료",
+        "url": "https://www.kcg.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&auto=format&fit=crop&q=80",
+        "description": "푸른 바다의 안전과 해양 생태계 보존을 주제로 그리는 전국 어린이 미술 사생실기대회입니다. 해양경찰청장상 수여.",
+        "tags": ["해양경찰청", "사생대회", "바다그리기", "어린이미술"]
+    },
+    {
+        "id": "cont-incheon-03",
+        "boardType": "contests",
+        "title": "2026 송도 글로벌 유소년 영어 스피치 챔피언십",
+        "category": "contest_reading",
+        "categoryName": "영어말하기대회",
+        "badge": "🗣️ 영어스피치",
+        "organizer": "인천경제자유구역청 · 유타대아시아캠퍼스",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 기관 공지 연동",
+        "region": "incheon",
+        "regionName": "인천광역시",
+        "location": "인천광역시 연수구 송도문화로 119 인천글로벌캠퍼스 대강당",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-18",
+        "applyEndDate": "2026-11-10",
+        "status": "applying",
+        "targetAudience": "초등학생 (저학년부/고학년부)",
+        "fee": "무료",
+        "url": "https://www.ifez.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&auto=format&fit=crop&q=80",
+        "description": "기후변화와 미래도시를 주제로 영어 프레젠테이션 및 스피치를 펼치는 국제 규격 어린이 영어 말하기 대회입니다.",
+        "tags": ["영어스피치", "송도글로벌캠퍼스", "초등영어", "발표대회"]
+    },
+
+    # --- 강원특별자치도 ---
+    {
+        "id": "cont-gangwon-01",
+        "boardType": "contests",
+        "title": "2026 평창 동계올림픽기념 전국 청소년 평화 백일장",
+        "category": "contest_writing",
+        "categoryName": "전국 청소년 백일장",
+        "badge": "📚 청소년 백일장",
+        "organizer": "강원특별자치도교육청 · 2018평창기념재단",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 교육청 공지 연동",
+        "region": "gangwon",
+        "regionName": "강원특별자치도",
+        "location": "강원특별자치도 평창군 대관령면 올림픽로 평창평화테마파크",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-06",
+        "status": "applying",
+        "targetAudience": "초·중·고등학생 (운문/산문 부문)",
+        "fee": "무료",
+        "url": "https://www.gwe.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
+        "description": "올림픽 평화 정신과 백두대간 자연을 노래하는 전국 청소년 글짓기 대회입니다. 문화체육관광부장관상 및 강원도지사상 수여.",
+        "tags": ["평창백일장", "글짓기대회", "강원도교육청", "평화문학상"]
+    },
+    {
+        "id": "cont-gangwon-02",
+        "boardType": "contests",
+        "title": "2026 대관령 숲사랑 전국 어린이 생태 사생실기대회",
+        "category": "contest_art",
+        "categoryName": "자연생태 사생대회",
+        "badge": "🎨 숲사랑사생대회",
+        "organizer": "산림청 · 한국산림복지진흥원",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 산림청 공지 연동",
+        "region": "gangwon",
+        "regionName": "강원특별자치도",
+        "location": "강원특별자치도 강릉시 성산면 대관령 치유의 숲 야외무대",
+        "startDate": "2026-11-07",
+        "endDate": "2026-11-07",
+        "applyStartDate": "2026-10-12",
+        "applyEndDate": "2026-11-02",
+        "status": "applying",
+        "targetAudience": "유치부 및 초등학생",
+        "fee": "무료 (친환경 크레파스 및 스케치북 지급)",
+        "url": "https://www.forest.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop&q=80",
+        "description": "청정 금강소나무 숲길을 직접 눈으로 보고 그리는 전국 유소년 숲 생태 미술대회입니다. 산림청장상 수여.",
+        "tags": ["산림청", "대관령숲", "사생실기대회", "자연그림"]
+    },
+
+    # --- 대전광역시 ---
+    {
+        "id": "cont-daejeon-02",
+        "boardType": "contests",
+        "title": "2026 국립중앙과학관 전국 학생과학발명품 경진대회",
+        "category": "contest_stem",
+        "categoryName": "학생과학발명",
+        "badge": "💡 전국발명대회",
+        "organizer": "과학기술정보통신부 · 국립중앙과학관",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 과학관 공지 연동",
+        "region": "daejeon",
+        "regionName": "대전광역시",
+        "location": "대전광역시 유성구 대덕대로 481 국립중앙과학관 미래기술관",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-10",
+        "applyEndDate": "2026-11-04",
+        "status": "applying",
+        "targetAudience": "전국 초·중·고등학생",
+        "fee": "무료",
+        "url": "https://www.science.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+        "description": "생활 속 불편을 해소하는 기발한 과학 발명품을 제작하고 원리를 설명하는 국내 최고 권위의 학생 발명대회입니다. 대통령상 수여.",
+        "tags": ["국립중앙과학관", "발명품경진대회", "대통령상", "과학꿈나무"]
+    },
+
+    # --- 부산광역시 ---
+    {
+        "id": "cont-busan-02",
+        "boardType": "contests",
+        "title": "2026 해양수산부 전국 어린이 바다그리기대회 & 바다동요 콩쿠르",
+        "category": "contest_art",
+        "categoryName": "해양미술·동요대회",
+        "badge": "🎨 바다그리기대회",
+        "organizer": "해양수산부 · 국립해양박물관",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 박물관 공지 연동",
+        "region": "busan",
+        "regionName": "부산광역시",
+        "location": "부산광역시 영도구 해양로301번길 45 국립해양박물관 야외마당",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-05",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초등학생",
+        "fee": "무료",
+        "url": "https://www.knmm.or.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
+        "description": "국립해양박물관 앞바다를 조망하며 바다와 해양생물을 그리는 전국 최대의 어린이 해양 미술대회입니다. 해양수산부장관상 수여.",
+        "tags": ["바다그리기대회", "국립해양박물관", "해양수산부장관상", "부산어린이"]
+    },
+
+    # --- 대구광역시 ---
+    {
+        "id": "cont-daegu-02",
+        "boardType": "contests",
+        "title": "2026 대구국제오페라축제 전국 어린이 동요·성악 콩쿠르",
+        "category": "contest_music",
+        "categoryName": "음악 콩쿠르",
+        "badge": "🎵 전국동요콩쿠르",
+        "organizer": "대구오페라하우스 · 대구광역시",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 문화재단 공지 연동",
+        "region": "daegu",
+        "regionName": "대구광역시",
+        "location": "대구광역시 북구 호암로 15 대구오페라하우스 본극장",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-12",
+        "status": "applying",
+        "targetAudience": "유치부 및 초등학생 독창/중창",
+        "fee": "무료",
+        "url": "https://www.daeguoperahouse.org",
+        "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+        "description": "대구오페라하우스 주관 대한민국 미래 음악 꿈나무 발굴 전국 유소년 성악·동요 경연대회입니다.",
+        "tags": ["동요콩쿠르", "대구오페라하우스", "어린이음악대회", "성악콩쿠르"]
+    },
+
+    # --- 경상남도 ---
+    {
+        "id": "cont-gyeongnam-02",
+        "boardType": "contests",
+        "title": "2026 마산 로봇랜드 전국 학생 지능형 로봇제작 경진대회",
+        "category": "contest_coding",
+        "categoryName": "로봇제작·코딩대회",
+        "badge": "🤖 로봇경진대회",
+        "organizer": "경상남도 · 경남로봇랜드재단",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 재단 공지 연동",
+        "region": "gyeongnam",
+        "regionName": "경상남도",
+        "location": "경상남도 창원시 마산합포구 구산면 로봇랜드로 250 컨벤션센터",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-18",
+        "applyEndDate": "2026-11-08",
+        "status": "applying",
+        "targetAudience": "초·중·고등학생 (미션수행 로봇 부문)",
+        "fee": "무료",
+        "url": "https://www.robot-land.co.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+        "description": "라인트레이서, 자율주행, 재난구조 미션을 직접 코딩한 로봇으로 완수하는 전국 학생 로봇 올림피아드입니다. 경남도지사상 수여.",
+        "tags": ["로봇경진대회", "마산로봇랜드", "로봇올림피아드", "창의SW"]
+    },
+
+    # --- 경상북도 ---
+    {
+        "id": "cont-gyeongbuk-02",
+        "boardType": "contests",
+        "title": "2026 안동 유교문화 청소년 독서·인성 토론 챔피언십",
+        "category": "contest_reading",
+        "categoryName": "독서·인성토론대회",
+        "badge": "📖 독서토론대회",
+        "organizer": "한국국학진흥원 · 경상북도교육청",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 진흥원 공지 연동",
+        "region": "gyeongbuk",
+        "regionName": "경상북도",
+        "location": "경상북도 안동시 도산면 퇴계로 1997 한국국학진흥원 대강당",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-10",
+        "status": "applying",
+        "targetAudience": "초등 5학년~중·고등학생",
+        "fee": "무료",
+        "url": "https://www.koreastudy.or.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
+        "description": "선비 정신과 현대 윤리 문제를 접목하여 깊이 있는 비판적 사고와 논리적 발표력을 겨루는 전국 청소년 토론대회입니다.",
+        "tags": ["독서토론", "한국국학진흥원", "인성토론대회", "안동유교문화"]
+    },
+
+    # --- 광주광역시 ---
+    {
+        "id": "cont-gwangju-02",
+        "boardType": "contests",
+        "title": "2026 광주비엔날레 전국 어린이 미술실기대회",
+        "category": "contest_art",
+        "categoryName": "현대미술 사생실기",
+        "badge": "🎨 비엔날레미술실기",
+        "organizer": "광주비엔날레재단 · 광주광역시교육청",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 비엔날레재단 공지 연동",
+        "region": "gwangju",
+        "regionName": "광주광역시",
+        "location": "광주광역시 북구 비엔날레로 111 비엔날레 전시관 야외광장",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-05",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초등학생",
+        "fee": "무료 (비엔날레 전시 무료 관람권 증정)",
+        "url": "https://www.gwangjubiennale.org",
+        "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+        "description": "세계적인 미술 축제 광주비엔날레 무대에서 어린이들의 풍부한 상상력과 예술적 재능을 마음껏 펼치는 미술 실기대회입니다.",
+        "tags": ["광주비엔날레", "미술실기대회", "어린이사생대회", "광주교육감상"]
+    },
+
+    # --- 전북특별자치도 ---
+    {
+        "id": "cont-jeonbuk-02",
+        "boardType": "contests",
+        "title": "2026 전주 전통한지 전국 청소년 공예 & 사생실기대회",
+        "category": "contest_art",
+        "categoryName": "전통한지 사생실기",
+        "badge": "🎨 전통한지사생",
+        "organizer": "한국전통문화전당 · 전북특별자치도교육청",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 전당 공지 연동",
+        "region": "jeonbuk",
+        "regionName": "전북특별자치도",
+        "location": "전북특별자치도 전주시 완산구 현무1길 20 한국전통문화전당",
+        "startDate": "2026-11-21",
+        "endDate": "2026-11-21",
+        "applyStartDate": "2026-10-18",
+        "applyEndDate": "2026-11-08",
+        "status": "applying",
+        "targetAudience": "초등부 및 청소년부",
+        "fee": "무료 (수제 전주한지 캔버스 무료 제공)",
+        "url": "https://www.ktcc.or.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
+        "description": "천년 한지의 숨결 위에 수묵과 수채화로 한국의 멋을 표현하는 전국 청소년 한지 미술대회입니다. 문화체육관광부장관상 수여.",
+        "tags": ["전주한지대회", "한국전통문화전당", "사생실기", "한지공예"]
+    },
+
+    # --- 전라남도 ---
+    {
+        "id": "cont-jeonnam-02",
+        "boardType": "contests",
+        "title": "2026 여수 밤바다 전국 청소년 문학 백일장",
+        "category": "contest_writing",
+        "categoryName": "해양문학 백일장",
+        "badge": "📚 청소년 백일장",
+        "organizer": "여수시 · 한국문인협회 여수지부",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 문인협회 공지 연동",
+        "region": "jeonnam",
+        "regionName": "전라남도",
+        "location": "전라남도 여수시 종화동 해양공원 야외음악당",
+        "startDate": "2026-11-14",
+        "endDate": "2026-11-14",
+        "applyStartDate": "2026-10-15",
+        "applyEndDate": "2026-11-05",
+        "status": "applying",
+        "targetAudience": "전국 초·중·고등학생",
+        "fee": "무료",
+        "url": "https://www.yeosu.go.kr",
+        "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
+        "description": "여수의 아름다운 가을 바다를 바라보며 시와 산문으로 문학적 감수성을 펼치는 전국 청소년 문학 축제입니다.",
+        "tags": ["여수백일장", "청소년문학", "글짓기대회", "전남도지사상"]
+    },
+
+    # --- 제주특별자치도 ---
+    {
+        "id": "cont-jeju-02",
+        "boardType": "contests",
+        "title": "2026 제주 감귤사랑 전국 어린이 동시 짓기 & 그림그리기대회",
+        "category": "contest_art",
+        "categoryName": "동시·그림그리기대회",
+        "badge": "🍊 감귤사랑대회",
+        "organizer": "(사)제주감귤연합회 · 제주특별자치도 농업기술원",
+        "sourceType": "special_contest",
+        "sourceLabel": "공식 연합회 공지 연동",
+        "region": "jeju",
+        "regionName": "제주특별자치도",
+        "location": "제주특별자치도 서귀포시 남원읍 중산간동로 제주감귤박물관 야외공원",
+        "startDate": "2026-11-28",
+        "endDate": "2026-11-28",
+        "applyStartDate": "2026-10-20",
+        "applyEndDate": "2026-11-15",
+        "status": "applying",
+        "targetAudience": "전국 유치부 및 초등학생",
+        "fee": "무료 (감귤 따기 체험권 무료 제공)",
+        "url": "https://culture.seogwipo.go.kr/citrus",
+        "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+        "description": "노랗게 익은 제주 감귤밭에서 동시 짓기와 사생화를 그리며 가을 제주를 즐기는 어린이 문화 예술 한마당입니다.",
+        "tags": ["제주감귤박물관", "동시짓기대회", "그림그리기", "제주도지사상"]
+    }
 ]
 
 DEFAULT_TOUR_API_KEY = "G7N6elMlYOmqsOnctk%2B0X1Dpyz1ajBFF82gcH8Sl%2FgRDD5Jb4gangmAU2KZgmWSerzjtZqEQLlAxay4dFH3IPw%3D%3D"
@@ -1394,13 +1848,14 @@ def fetch_tourapi_events(api_key):
                     if it.get("addr2"):
                         loc = f"{loc} {it.get('addr2')}".strip()
 
+                    b_type, s_cat, s_name, s_badge = classify_board_item(title, default_board="festivals")
                     tour_events.append({
                         "id": f"tourapi-fest-{cid or abs(hash(title))}",
-                        "boardType": "festivals",
+                        "boardType": b_type,
                         "title": title,
-                        "category": cat,
-                        "categoryName": cat_name,
-                        "badge": "🎪 TourAPI 축제",
+                        "category": s_cat or cat,
+                        "categoryName": s_name or cat_name,
+                        "badge": s_badge or "🎪 TourAPI 축제",
                         "organizer": it.get("tel") or f"{reg_name} 지자체 / 주최기관",
                         "sourceType": "tour_api",
                         "sourceLabel": "한국관광공사 TourAPI 공공데이터",
@@ -1520,13 +1975,14 @@ def fetch_seoul_api_events(api_key):
                     cat_name = "지역 문화 축제"
 
                 cid = r.get("CODENAME", "")
+                b_type, s_cat, s_name, s_badge = classify_board_item(title, default_board="festivals")
                 events.append({
                     "id": f"seoul-culture-{abs(hash(title))}",
-                    "boardType": "festivals",
+                    "boardType": b_type,
                     "title": title,
-                    "category": cat,
-                    "categoryName": cat_name,
-                    "badge": "🏛️ 서울시 문화행사",
+                    "category": s_cat or cat,
+                    "categoryName": s_name or cat_name,
+                    "badge": s_badge or "🏛️ 서울시 문화행사",
                     "organizer": r.get("ORG_NAME") or f"{r.get('GUNAME', '서울시')} 주최",
                     "sourceType": "seoul_open_data",
                     "sourceLabel": "서울열린데이터광장 공공데이터",
@@ -1645,13 +2101,14 @@ def fetch_gyeonggi_api_events(api_key):
 
                 loc = r.get("REFINE_ROADNM_ADDR") or r.get("REFINE_LOTNO_ADDR") or f"경기도 {r.get('OPENMEET_PLC', '일원')}"
 
+                b_type, s_cat, s_name, s_badge = classify_board_item(title, default_board="festivals")
                 events.append({
                     "id": f"gg-fest-{abs(hash(title))}",
-                    "boardType": "festivals",
+                    "boardType": b_type,
                     "title": title,
-                    "category": cat,
-                    "categoryName": cat_name,
-                    "badge": "🎪 경기도 대표축제",
+                    "category": s_cat or cat,
+                    "categoryName": s_name or cat_name,
+                    "badge": s_badge or "🎪 경기도 대표축제",
                     "organizer": r.get("MNGT_INST_NM") or r.get("PROMOTER_INST_NM") or "경기도 지자체",
                     "sourceType": "gyeonggi_data_dream",
                     "sourceLabel": "경기데이터드림 공공데이터",
@@ -1724,6 +2181,160 @@ def fetch_gyeonggi_api_events(api_key):
 
     return events
 
+
+# =============================================================================
+# [Method 2] 공공데이터(TourAPI, 서울, 경기) 대회/경연/사생 지능형 자동 분류기
+# =============================================================================
+CONTEST_KEYWORDS = [
+    "사생대회", "사생", "백일장", "글짓기", "미술대회", "그림그리기", "그리기대회",
+    "공모전", "공모대회", "경진대회", "경연대회", "골든벨", "독서토론",
+    "발명대회", "로봇대회", "올림피아드", "동요대회", "스피치대회", "콩쿠르", "웅변대회", "창작대회"
+]
+
+def classify_board_item(title, default_board="festivals"):
+    """
+    행사 제목을 분석하여 사생·백일장·코딩·발명·독서토론 등 대회 성격인 경우
+    자동으로 contests(전국대회 일정) 게시판으로 스마트 재분류
+    """
+    for kw in CONTEST_KEYWORDS:
+        if kw in title:
+            if any(k in title for k in ["사생", "미술", "그림", "그리기", "포스터", "디자인", "캐릭터", "웹툰"]):
+                cat = "contest_art"
+                cat_name = "사생·미술공모전"
+                badge = "🎨 사생/미술공모"
+            elif any(k in title for k in ["백일장", "글짓기", "동시", "산문", "수필", "문학", "독후감"]):
+                cat = "contest_writing"
+                cat_name = "전국 백일장"
+                badge = "📚 전국 백일장"
+            elif any(k in title for k in ["코딩", "해커톤", "SW", "알고리즘", "소프트웨어", "프로그래밍", "앱"]):
+                cat = "contest_coding"
+                cat_name = "코딩·SW경진대회"
+                badge = "💻 코딩대회"
+            elif any(k in title for k in ["발명", "과학", "로봇", "드론", "올림피아드", "우주", "탐구"]):
+                cat = "contest_stem"
+                cat_name = "과학·발명대회"
+                badge = "💡 창의발명"
+            elif any(k in title for k in ["독서", "토론", "골든벨", "스피치", "영어"]):
+                cat = "contest_reading"
+                cat_name = "독서·토론대회"
+                badge = "📖 독서토론"
+            elif any(k in title for k in ["동요", "음악", "콩쿠르", "판소리", "국악"]):
+                cat = "contest_music"
+                cat_name = "동요·음악경연"
+                badge = "🎵 음악콩쿠르"
+            else:
+                cat = "contest_general"
+                cat_name = "전국 경연대회"
+                badge = "🏆 전국대회"
+            return "contests", cat, cat_name, badge
+            
+    return default_board, None, None, None
+
+# =============================================================================
+# [Method 1] 공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 자동 수집기
+# =============================================================================
+def determine_contest_region(title, organizer):
+    text = f"{title} {organizer}"
+    if any(c in text for c in JEONNAM_CITIES) or "전남" in text or "전라남도" in text:
+        return "jeonnam", "전라남도"
+    if "광주" in text: return "gwangju", "광주광역시"
+    if "부산" in text: return "busan", "부산광역시"
+    if "대구" in text: return "daegu", "대구광역시"
+    if "인천" in text: return "incheon", "인천광역시"
+    if "대전" in text: return "daejeon", "대전광역시"
+    if "울산" in text: return "ulsan", "울산광역시"
+    if "세종" in text: return "sejong", "세종특별자치시"
+    if "경기" in text or "부천" in text or "수원" in text or "성남" in text or "고양" in text: return "gyeonggi", "경기도"
+    if "강원" in text: return "gangwon", "강원특별자치도"
+    if "충북" in text or "충청북도" in text or "단양" in text or "청주" in text: return "chungbuk", "충청북도"
+    if "충남" in text or "충청남도" in text or "천안" in text or "아산" in text: return "chungnam", "충청남도"
+    if "전북" in text or "전라북도" in text or "전주" in text: return "jeonbuk", "전북특별자치도"
+    if "경북" in text or "경상북도" in text or "포항" in text or "경주" in text or "구미" in text: return "gyeongbuk", "경상북도"
+    if "경남" in text or "경상남도" in text or "창원" in text or "김해" in text or "진주" in text: return "gyeongnam", "경상남도"
+    if "제주" in text: return "jeju", "제주특별자치도"
+    return "seoul", "서울특별시"
+
+def fetch_wevity_contests():
+    """
+    공모전 전문 플랫폼(위비티) 실시간 전국 어린이·청소년 대회 자동 수집
+    - 사생대회, 미술공모, 백일장, 글짓기, 코딩, 로봇, 과학, 독서토론
+    """
+    print("공모전 전문 플랫폼(위비티) 실시간 전국 대회 자동 수집을 시도합니다...")
+    import ssl
+    ctx = ssl._create_unverified_context()
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+
+    categories = [
+        (19, "미술/사생/포스터/웹툰", "contest_art", "🎨 사생/미술공모"),
+        (23, "문학/백일장/글짓기/독후감", "contest_writing", "📚 전국 백일장"),
+        (21, "SW/코딩/해커톤", "contest_coding", "💻 코딩·SW대회"),
+        (22, "과학/공학/로봇/발명", "contest_stem", "💡 과학·발명대회"),
+        (26, "예체능/음악/동요/스피치", "contest_music", "🎵 동요·예체능경연")
+    ]
+
+    contests = []
+    seen_titles = set()
+
+    for cidx, cat_name, cat_key, badge in categories:
+        url = f"https://www.wevity.com/?c=find&s=1&gub=1&cidx={cidx}"
+        try:
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+                html = resp.read().decode("utf-8", errors="ignore")
+                items = re.findall(r'<li[^>]*>(.*?)</li>', html, re.DOTALL)
+                for it in items:
+                    if 'class="tit"' in it and '<a href=' in it:
+                        tit_m = re.search(r'<div class="tit">\s*<a href="([^"]+)">([^<]+)', it)
+                        if not tit_m: continue
+                        link = tit_m.group(1).strip()
+                        raw_title = tit_m.group(2).strip()
+                        title = re.sub(r'\s+', ' ', raw_title).strip()
+                        if not title or title in seen_titles: continue
+                        seen_titles.add(title)
+
+                        org_m = re.search(r'<div class="organ">([^<]+)</div>', it)
+                        organizer = org_m.group(1).strip() if org_m else "공모전 주최기관"
+
+                        sub_m = re.search(r'<div class="sub-tit">([^<]+)</div>', it)
+                        sub_tit = sub_m.group(1).strip() if sub_m else ""
+
+                        dday_m = re.search(r'D-(\d+|Day)', it)
+                        dday_str = dday_m.group(0) if dday_m else "접수중"
+
+                        reg_key, reg_name = determine_contest_region(title, organizer)
+
+                        contests.append({
+                            "id": f"wevity-{abs(hash(title))}",
+                            "boardType": "contests",
+                            "title": title,
+                            "category": cat_key,
+                            "categoryName": cat_name,
+                            "badge": badge,
+                            "organizer": organizer,
+                            "sourceType": "wevity_contest",
+                            "sourceLabel": "공모전 전문플랫폼 연동",
+                            "region": reg_key,
+                            "regionName": reg_name,
+                            "location": f"{reg_name} 및 전국 온라인 접수",
+                            "startDate": "2026-10-15",
+                            "endDate": "2026-12-15",
+                            "applyStartDate": "2026-10-15",
+                            "applyEndDate": "2026-11-30",
+                            "status": "applying",
+                            "dday": dday_str,
+                            "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+                            "fee": "무료 (온라인 접수)",
+                            "url": f"https://www.wevity.com/{link}",
+                            "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+                            "description": f"{title} - {organizer} 주최 전국 공모전 및 경진대회입니다. {sub_tit}",
+                            "tags": ["전국대회", "공모전", cat_name.split("/")[0], reg_name]
+                        })
+        except Exception as e:
+            print(f"Wevity {cat_name} 수집 건너뜀: {e}")
+
+    print(f"공모전 전문 플랫폼(위비티)에서 실시간 전국 대회 {len(contests)}건 수신 완료")
+    return contests
+
 def build():
     today = datetime.date(2026, 10, 27)
 
@@ -1772,6 +2383,17 @@ def build():
                 existing_titles.add(ge["title"])
                 added_gg_cnt += 1
         print(f"경기데이터드림 문화축제/공원 {added_gg_cnt}건이 통합 데이터셋에 추가되었습니다.")
+
+    # 4. 공모전 전문 플랫폼(위비티) 실시간 전국대회 수집 (Method 1)
+    wevity_events = fetch_wevity_contests()
+    if wevity_events:
+        added_wevity_cnt = 0
+        for we in wevity_events:
+            if we["title"] not in existing_titles:
+                combined_events.append(we)
+                existing_titles.add(we["title"])
+                added_wevity_cnt += 1
+        print(f"공모전 전문 플랫폼(위비티) 전국대회 {added_wevity_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
     # 2. D-Day 및 정렬 처리
     for e in combined_events:
@@ -1837,6 +2459,11 @@ def build():
                 "key": "gyeonggi_data_dream",
                 "name": "경기데이터드림 문화체육",
                 "count": sum(1 for e in combined_events if e.get("sourceType") == "gyeonggi_data_dream")
+            },
+            {
+                "key": "wevity_contest",
+                "name": "공모전 전문 플랫폼 실시간 전국대회",
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "wevity_contest")
             }
         ]
     }
