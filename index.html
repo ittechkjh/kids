@@ -1259,8 +1259,93 @@
             </div>
           </div>
 
-          <!-- 검색 및 필터링 컨트롤 바 -->
+          <!-- 리치고(RichGo) 헤더 & 17개 시도 선택 알약 버튼 바 -->
+          <div class="community-card p-4 sm:p-5 bg-white border border-slate-200/90 shadow-2xs space-y-3" id="school-richgo-header-box">
+            <!-- Breadcrumb -->
+            <div id="school-breadcrumb" class="text-xs text-slate-400 font-bold flex items-center gap-1.5">
+              <span>학교 순위</span>
+              <i class="fa-solid fa-chevron-right text-[10px] text-slate-300"></i>
+              <span id="school-breadcrumb-current" class="text-slate-800 font-extrabold">전국 초등학교 순위</span>
+            </div>
+
+            <!-- Title & Subtitle -->
+            <div>
+              <h2 id="school-richgo-title" class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">전국 초등학교 순위 2026</h2>
+              <p id="school-richgo-subtitle" class="text-xs sm:text-sm text-slate-600 mt-1">1위는 서울잠원초등학교(서초구, 39.47%)입니다. 2위는 서울신구초등학교(강남구, 38.54%)입니다.</p>
+            </div>
+
+            <!-- 17개 시도 알약 (Pill) 버튼 바 -->
+            <div class="pt-2 border-t border-slate-100">
+              <div class="text-[11px] font-black text-slate-400 mb-2 flex items-center justify-between">
+                <span>📍 시도별 학교 순위 바로가기</span>
+                <span class="text-[10px] text-indigo-600 font-extrabold">17개 시도 공시</span>
+              </div>
+              <div id="school-sido-pills" class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 시군구별 순위 테이블 섹션 (리치고 스타일) -->
+          <div id="school-sigungu-section" class="community-card p-4 sm:p-5 bg-white border border-slate-200/90 shadow-2xs space-y-3">
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div>
+                <h3 id="school-sigungu-title" class="text-base font-black text-slate-900 flex items-center gap-2">
+                  <span>📊 서울 시군구별 초등학교 순위</span>
+                </h3>
+                <p id="school-sigungu-subtitle" class="text-xs text-slate-500 mt-0.5">시군구별 평균·중앙값 진학률과 1위 학교 공시</p>
+              </div>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  id="school-sigungu-toggle-btn"
+                  onclick="app.toggleSigunguTableExpand()"
+                  class="text-xs font-extrabold text-indigo-600 hover:text-indigo-800 px-2.5 py-1 rounded-lg bg-indigo-50 border border-indigo-100 transition"
+                >
+                  더보기
+                </button>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto -mx-4 sm:mx-0">
+              <div class="inline-block min-w-full align-middle px-4 sm:px-0" id="school-sigungu-table-wrap">
+                <!-- Rendered dynamically -->
+              </div>
+            </div>
+          </div>
+
+          <!-- 순위표 / 카드 뷰 전환 토글 & 검색/필터 바 -->
           <div class="community-card p-4 space-y-3 bg-white border border-slate-200" id="school-filter-bar">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-b border-slate-100 pb-3">
+              <div class="flex items-center gap-1 bg-slate-100 p-1 rounded-xl self-start">
+                <button
+                  type="button"
+                  id="school-view-mode-table"
+                  onclick="app.setSchoolViewMode('table')"
+                  class="px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 bg-white text-slate-900 shadow-2xs"
+                >
+                  <i class="fa-solid fa-table-list text-indigo-600"></i>
+                  <span>리치고 순위표</span>
+                </button>
+                <button
+                  type="button"
+                  id="school-view-mode-cards"
+                  onclick="app.setSchoolViewMode('cards')"
+                  class="px-3 py-1.5 rounded-lg text-xs font-extrabold transition flex items-center gap-1.5 text-slate-600 hover:text-slate-900"
+                >
+                  <i class="fa-solid fa-id-card"></i>
+                  <span>상세 분석 카드</span>
+                </button>
+              </div>
+
+              <div class="text-xs text-slate-500 font-bold flex items-center gap-1">
+                <span>학교를 클릭하면</span>
+                <span class="text-indigo-600 font-black">3단 비교차트·배정아파트·학원가</span>
+                <span>분석창이 열립니다.</span>
+              </div>
+            </div>
+
+            <!-- 검색 & 유형 셀렉트 -->
             <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
               <div class="relative flex-1">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
@@ -1268,8 +1353,8 @@
                   type="text"
                   id="school-search-input"
                   oninput="app.onSchoolSearch(this.value)"
-                  placeholder="학교명, 지역(구·동), 학군, 키워드 검색 (예: 외대부고, 대청중, 목운초, 게이트, 대치동, 의대)"
-                  class="w-full pl-8 pr-8 py-2 rounded-xl text-xs font-medium border border-slate-200 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500"
+                  placeholder="학교명, 지역(구·동), 학군, 키워드 검색 (예: 잠원초, 신구초, 반포, 대치, 의대, 외대부고)"
+                  class="w-full pl-8 pr-8 py-2 rounded-xl text-xs font-medium border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                 />
                 <button
                   id="school-search-clear"
@@ -1280,25 +1365,11 @@
                 </button>
               </div>
 
-              <!-- 지역 필터 -->
-              <select
-                id="school-region-filter"
-                onchange="app.setSchoolRegionFilter(this.value)"
-                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
-              >
-                <option value="all">전체 지역 (전국)</option>
-                <option value="seoul">서울특별시 (송파·강남·목동·노원)</option>
-                <option value="gyeonggi">경기도 (분당·일산·평촌·용인)</option>
-                <option value="daegu">대구광역시 (수성구 범어동)</option>
-                <option value="busan">부산광역시 (해운대 센텀)</option>
-                <option value="jeonbuk">전북특별자치도 (전주 상산고 등)</option>
-              </select>
-
               <!-- 학교 유형 필터 -->
               <select
                 id="school-type-filter"
                 onchange="app.setSchoolTypeFilter(this.value)"
-                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
+                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-indigo-500"
               >
                 <option value="all">전체 학교 유형</option>
                 <option value="공립">공립 학교</option>
@@ -1315,14 +1386,33 @@
           <div id="school-list-section" class="space-y-3">
             <div class="flex items-center justify-between px-1">
               <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
-                <span>📋 전국 학교 정보 & 순위 리스트</span>
-                <span id="school-filtered-count-badge" class="px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 text-[11px] font-extrabold">전체</span>
+                <span id="school-list-heading">📋 전국 초등학교 상위 순위 리스트</span>
+                <span id="school-filtered-count-badge" class="px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-[11px] font-extrabold">전체 5,000곳</span>
               </h3>
-              <span class="text-[11px] text-slate-400">카드를 누르면 상세 입시 요강과 학군 연계가 펼쳐집니다.</span>
+              <span class="text-[11px] text-slate-400">데이터 출처: 리치고(RichGo) & 학교알리미</span>
             </div>
 
-            <!-- 카드 그리드 -->
-            <div id="school-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+            <!-- A. 리치고 순위표 테이블 뷰 (Default) -->
+            <div id="school-table-container" class="community-card overflow-hidden bg-white border border-slate-200/90 shadow-2xs">
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs border-collapse">
+                  <thead>
+                    <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-500 font-extrabold text-[11px]">
+                      <th class="py-3 px-3 w-16 text-center">순위</th>
+                      <th class="py-3 px-4">학교</th>
+                      <th class="py-3 px-4">시군구·동</th>
+                      <th class="py-3 px-4 text-right" id="school-table-rate-header">가까운 중학교 과고·외고·자사고 진학률</th>
+                    </tr>
+                  </thead>
+                  <tbody id="school-table-body" class="divide-y divide-slate-100">
+                    <!-- Rendered dynamically -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- B. 카드 그리드 뷰 -->
+            <div id="school-cards-grid" class="hidden grid grid-cols-1 md:grid-cols-2 gap-3.5">
               <!-- Rendered dynamically -->
             </div>
 
@@ -1704,6 +1794,41 @@
       <div class="pt-2 border-t border-stone-100 flex justify-end">
         <button onclick="app.closeSchoolGradeModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs transition">
           확인
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 7: 리치고(RichGo) 학교 상세 심층 분석 모달
+       ========================================== -->
+  <div id="school-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150 max-h-[90vh] flex flex-col">
+      <!-- 모달 상단 헤더 -->
+      <div class="flex items-start justify-between border-b border-stone-100 pb-3 shrink-0">
+        <div id="school-modal-header" class="space-y-1">
+          <!-- Rendered dynamically -->
+        </div>
+        <button onclick="app.closeSchoolModal()" class="text-slate-400 hover:text-slate-600 transition p-1"><i class="fa-solid fa-xmark text-xl"></i></button>
+      </div>
+
+      <!-- 모달 서브탭 바 -->
+      <div class="flex items-center border-b border-slate-200 text-xs font-extrabold shrink-0" id="school-modal-subtabs">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- 모달 서브탭 본문 (스크롤 영역) -->
+      <div id="school-modal-body" class="overflow-y-auto flex-1 pr-1 space-y-3 text-xs">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- 모달 하단 푸터 바 -->
+      <div class="pt-3 border-t border-stone-100 flex items-center justify-between gap-2 shrink-0 text-xs">
+        <div id="school-modal-links" class="flex items-center gap-2">
+          <!-- Rendered dynamically -->
+        </div>
+        <button onclick="app.closeSchoolModal()" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-black text-xs transition">
+          닫기
         </button>
       </div>
     </div>

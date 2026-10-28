@@ -137,15 +137,20 @@ class DodamCommunityApp {
     this.calcChildrenCount = 2;
     this.calcYoungestAge = '0';
     this.calcRegion = 'all';
-    // 6. Schools & Admissions State (학교 정보 & 입시 순위)
-    this.schoolLevel = 'all';
+    // 6. Schools & Admissions State (리치고 학군 순위 & 입시 데이터)
+    this.schoolLevel = 'elementary';
+    this.schoolSido = 'all';
     this.schoolRegion = 'all';
     this.schoolType = 'all';
     this.schoolSearchKeyword = '';
+    this.schoolViewMode = 'table';
+    this.sigunguTableExpanded = false;
+    this.activeModalSchoolId = null;
+    this.modalSubTab = 'nearby';
     this.expandedSchoolIds = new Set();
     this.schoolCardSubTabs = {};
     this.schoolPage = 1;
-    this.schoolPageSize = 20;
+    this.schoolPageSize = 25;
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
@@ -3231,10 +3236,13 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 8. 전국 학교 정보 & 지역별 학군·입시 순위 컨트롤러
+  // 8. 전국 학교 정보 & 리치고(RichGo) 학군 순위 포털 컨트롤러
   // ==========================================
   initSchoolView() {
     this.renderSchoolLevelChips();
+    this.renderSchoolRichGoHeader();
+    this.renderSchoolSidoPills();
+    this.renderSchoolSigunguTable();
     this.renderSchoolList();
     this.renderSchoolDistricts();
     this.renderSchoolAdmissions();
@@ -3252,6 +3260,254 @@ class DodamCommunityApp {
     }
   }
 
+  renderSchoolRichGoHeader() {
+    const titleEl = document.getElementById('school-richgo-title');
+    const subtitleEl = document.getElementById('school-richgo-subtitle');
+    const breadcrumbCurrent = document.getElementById('school-breadcrumb-current');
+    if (!titleEl) return;
+
+    const levelNames = {
+      all: '전체 학교',
+      elementary: '초등학교',
+      middle: '중학교',
+      high: '고등학교'
+    };
+    const levelName = levelNames[this.schoolLevel] || '초등학교';
+
+    const sidos = window.DODAM_SCHOOLS_DATA?.sidos || [];
+    const activeSido = sidos.find((s) => s.id === this.schoolSido) || { name: '전국' };
+    const isNationwide = this.schoolSido === 'all';
+    const regionPrefix = isNationwide ? '전국' : activeSido.name;
+
+    if (breadcrumbCurrent) {
+      breadcrumbCurrent.textContent = `${regionPrefix} ${levelName} 순위`;
+    }
+
+    titleEl.textContent = `${regionPrefix} ${levelName} 순위 2026`;
+
+    // 서브타이틀: 리치고 실제 화면 문구 미러링
+    if (subtitleEl) {
+      if (isNationwide) {
+        if (this.schoolLevel === 'elementary') {
+          subtitleEl.textContent = '1위는 서울잠원초등학교(서초구, 39.47%)입니다. 2위는 서울신구초등학교(강남구, 38.54%)입니다.';
+        } else if (this.schoolLevel === 'middle') {
+          subtitleEl.textContent = '1위는 대청중학교(강남구, 29.80%)입니다. 2위는 목운중학교(양천구, 26.50%)입니다.';
+        } else if (this.schoolLevel === 'high') {
+          subtitleEl.textContent = '1위는 외대부고(용인, 서울대 66명)입니다. 2위는 상산고(전주, 의대 142명)입니다.';
+        } else {
+          subtitleEl.textContent = '전국 초·중·고 15,000개 학교 순위와 특목·자사고 진학률 및 대입 실적 공시입니다.';
+        }
+      } else if (this.schoolSido === 'seoul') {
+        subtitleEl.textContent = '1위는 서초구(22.99%)입니다. 2위는 강남구(19.26%)입니다.';
+      } else if (this.schoolSido === 'gyeonggi') {
+        subtitleEl.textContent = '1위는 과천시(15.78%)입니다. 2위는 용인시 수지구(7.42%)입니다.';
+      } else {
+        const sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
+        if (sigungus.length >= 2) {
+          subtitleEl.textContent = `1위는 ${sigungus[0].sigungu}(${sigungus[0].avg})입니다. 2위는 ${sigungus[1].sigungu}(${sigungus[1].avg})입니다.`;
+        } else if (sigungus.length === 1) {
+          subtitleEl.textContent = `1위는 ${sigungus[0].sigungu}(${sigungus[0].avg})입니다.`;
+        } else {
+          subtitleEl.textContent = `${activeSido.name} 지역 ${levelName} 순위 및 학군 분석 공시입니다.`;
+        }
+      }
+    }
+  }
+
+  renderSchoolSidoPills() {
+    const container = document.getElementById('school-sido-pills');
+    if (!container) return;
+    const sidos = window.DODAM_SCHOOLS_DATA?.sidos || [];
+    const levelNames = {
+      all: '학교',
+      elementary: '초등학교',
+      middle: '중학교',
+      high: '고등학교'
+    };
+    const lvl = levelNames[this.schoolLevel] || '초등학교';
+
+    container.innerHTML = sidos
+      .map((s) => {
+        const active = this.schoolSido === s.id;
+        const label = s.id === 'all' ? '전국' : `${s.name} ${lvl} 순위`;
+        return `
+          <button
+            type="button"
+            onclick="app.setSchoolSido('${s.id}')"
+            class="px-3 py-1.5 rounded-full text-xs font-black whitespace-nowrap transition border shrink-0 ${
+              active
+                ? 'bg-slate-900 text-white border-slate-900 shadow-sm ring-2 ring-indigo-500/20'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50'
+            }"
+          >
+            ${label}
+          </button>
+        `;
+      })
+      .join('');
+  }
+
+  setSchoolSido(sidoId) {
+    this.schoolSido = sidoId;
+    this.schoolPage = 1;
+    this.renderSchoolRichGoHeader();
+    this.renderSchoolSidoPills();
+    this.renderSchoolSigunguTable();
+    this.renderSchoolList();
+  }
+
+  renderSchoolSigunguTable() {
+    const section = document.getElementById('school-sigungu-section');
+    const tableWrap = document.getElementById('school-sigungu-table-wrap');
+    const titleEl = document.getElementById('school-sigungu-title');
+    const subtitleEl = document.getElementById('school-sigungu-subtitle');
+    const toggleBtn = document.getElementById('school-sigungu-toggle-btn');
+    if (!section || !tableWrap) return;
+
+    const sidos = window.DODAM_SCHOOLS_DATA?.sidos || [];
+    const activeSido = sidos.find((s) => s.id === this.schoolSido) || { name: '전국' };
+    const levelNames = {
+      all: '학교',
+      elementary: '초등학교',
+      middle: '중학교',
+      high: '고등학교'
+    };
+    const lvl = levelNames[this.schoolLevel] || '초등학교';
+
+    let sigungus = [];
+    if (this.schoolSido === 'all') {
+      sigungus = [
+        { rank: 1, sigungu: '서울 서초구', avg: '22.99%', median: '23.08%', count: '23곳', topSchool: '서울잠원초등학교 (39.47%)' },
+        { rank: 2, sigungu: '서울 강남구', avg: '19.26%', median: '18.57%', count: '33곳', topSchool: '서울신구초등학교 (38.54%)' },
+        { rank: 3, sigungu: '서울 성동구', avg: '16.50%', median: '17.50%', count: '21곳', topSchool: '서울응봉초등학교 (22.23%)' },
+        { rank: 4, sigungu: '경기 과천시', avg: '15.78%', median: '15.00%', count: '4곳', topSchool: '과천초등학교 (21.13%)' },
+        { rank: 5, sigungu: '서울 강북구', avg: '15.73%', median: '14.24%', count: '14곳', topSchool: '서울송천초등학교 (29.91%)' },
+        { rank: 6, sigungu: '대구 수성구', avg: '15.20%', median: '14.80%', count: '32곳', topSchool: '대구경동초등학교 (24.50%)' },
+        { rank: 7, sigungu: '서울 성북구', avg: '14.61%', median: '13.01%', count: '29곳', topSchool: '서울미아초등학교 (28.12%)' },
+        { rank: 8, sigungu: '경기 용인시 수지구', avg: '7.42%', median: '7.15%', count: '16곳', topSchool: '홍천초등학교 (15.00%)' },
+        { rank: 9, sigungu: '경기 안양시 동안구', avg: '7.39%', median: '7.50%', count: '21곳', topSchool: '안양민백초등학교 (17.24%)' },
+        { rank: 10, sigungu: '경기 포천시', avg: '6.46%', median: '3.92%', count: '30곳', topSchool: '왕방초등학교 (28.49%)' },
+        { rank: 11, sigungu: '경기 가평군', avg: '6.28%', median: '6.45%', count: '13곳', topSchool: '미원초등학교 (15.91%)' },
+        { rank: 12, sigungu: '경기 성남시 분당구', avg: '5.56%', median: '4.54%', count: '26곳', topSchool: '판교초등학교 (22.09%)' }
+      ];
+      if (titleEl) titleEl.textContent = `📊 전국 주요 시군구별 ${lvl} 순위`;
+      if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 평균 진학률 및 1위 학교 공시';
+    } else {
+      sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
+      if (titleEl) titleEl.textContent = `📊 ${activeSido.name} 시군구별 ${lvl} 순위`;
+      if (subtitleEl) subtitleEl.textContent = `${activeSido.name} 내 시군구별 평균·중앙값 진학률과 1위 학교 공시`;
+    }
+
+    if (sigungus.length === 0) {
+      section.classList.add('hidden');
+      return;
+    }
+    section.classList.remove('hidden');
+
+    const totalRows = sigungus.length;
+    const limit = this.sigunguTableExpanded ? totalRows : 10;
+    const displayList = sigungus.slice(0, limit);
+
+    if (toggleBtn) {
+      if (totalRows <= 10) {
+        toggleBtn.classList.add('hidden');
+      } else {
+        toggleBtn.classList.remove('hidden');
+        toggleBtn.textContent = this.sigunguTableExpanded ? '접기' : `더보기 (전체 ${totalRows}개)`;
+      }
+    }
+
+    tableWrap.innerHTML = `
+      <table class="w-full text-left text-xs border-collapse">
+        <thead>
+          <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-500 font-extrabold text-[11px]">
+            <th class="py-2.5 px-3 w-14 text-center">순위</th>
+            <th class="py-2.5 px-3">시군구</th>
+            <th class="py-2.5 px-3 text-right">평균</th>
+            <th class="py-2.5 px-3 text-right">중앙값</th>
+            <th class="py-2.5 px-3 text-right">학교 수</th>
+            <th class="py-2.5 px-4 text-right">1위 학교</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-slate-100">
+          ${displayList
+            .map((r) => {
+              const rankBadge =
+                r.rank === 1
+                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-slate-900 font-black text-[11px] shadow-2xs">1</span>'
+                  : r.rank === 2
+                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-300 text-slate-900 font-black text-[11px] shadow-2xs">2</span>'
+                  : r.rank === 3
+                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-600 text-white font-black text-[11px] shadow-2xs">3</span>'
+                  : `<span class="font-extrabold text-slate-500 text-[11px]">${r.rank}</span>`;
+              return `
+                <tr class="hover:bg-slate-50/80 transition cursor-pointer" onclick="app.onSigunguRowClick('${r.sigungu}')">
+                  <td class="py-2.5 px-3 text-center">${rankBadge}</td>
+                  <td class="py-2.5 px-3 font-black text-slate-900 hover:text-indigo-600 transition flex items-center gap-1">
+                    <span>${r.sigungu}</span>
+                    <i class="fa-solid fa-magnifying-glass text-[9px] text-slate-300"></i>
+                  </td>
+                  <td class="py-2.5 px-3 text-right font-extrabold text-indigo-700">${r.avg}</td>
+                  <td class="py-2.5 px-3 text-right font-bold text-slate-600">${r.median}</td>
+                  <td class="py-2.5 px-3 text-right text-slate-500 font-medium">${r.count}</td>
+                  <td class="py-2.5 px-4 text-right font-bold text-slate-800 text-[11px]">${r.topSchool}</td>
+                </tr>
+              `;
+            })
+            .join('')}
+        </tbody>
+      </table>
+    `;
+  }
+
+  toggleSigunguTableExpand() {
+    this.sigunguTableExpanded = !this.sigunguTableExpanded;
+    this.renderSchoolSigunguTable();
+  }
+
+  onSigunguRowClick(sigunguName) {
+    const cleanName = sigunguName.replace(/서울 |경기 |대구 |부산 |인천 |광주 |대전 |울산 /g, '').trim();
+    this.schoolSearchKeyword = cleanName;
+    const input = document.getElementById('school-search-input');
+    if (input) input.value = cleanName;
+    const clearBtn = document.getElementById('school-search-clear');
+    if (clearBtn) clearBtn.classList.remove('hidden');
+    this.schoolPage = 1;
+    this.renderSchoolList();
+    const listSec = document.getElementById('school-list-section');
+    if (listSec) listSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.showToast(`'${cleanName}' 학교 순위로 검색되었습니다.`);
+  }
+
+  setSchoolViewMode(mode) {
+    this.schoolViewMode = mode;
+    const btnTable = document.getElementById('school-view-mode-table');
+    const btnCards = document.getElementById('school-view-mode-cards');
+    const tableCont = document.getElementById('school-table-container');
+    const cardsCont = document.getElementById('school-cards-grid');
+
+    if (mode === 'table') {
+      if (btnTable) {
+        btnTable.className = 'px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 bg-white text-slate-900 shadow-2xs';
+      }
+      if (btnCards) {
+        btnCards.className = 'px-3 py-1.5 rounded-lg text-xs font-extrabold transition flex items-center gap-1.5 text-slate-600 hover:text-slate-900';
+      }
+      if (tableCont) tableCont.classList.remove('hidden');
+      if (cardsCont) cardsCont.classList.add('hidden');
+    } else {
+      if (btnTable) {
+        btnTable.className = 'px-3 py-1.5 rounded-lg text-xs font-extrabold transition flex items-center gap-1.5 text-slate-600 hover:text-slate-900';
+      }
+      if (btnCards) {
+        btnCards.className = 'px-3 py-1.5 rounded-lg text-xs font-black transition flex items-center gap-1.5 bg-white text-slate-900 shadow-2xs';
+      }
+      if (tableCont) tableCont.classList.add('hidden');
+      if (cardsCont) cardsCont.classList.remove('hidden');
+    }
+    this.renderSchoolList();
+  }
+
   renderSchoolLevelChips() {
     const container = document.getElementById('school-level-chips');
     if (!container) return;
@@ -3265,7 +3521,7 @@ class DodamCommunityApp {
             onclick="app.selectSchoolLevel('${lvl.id}')"
             class="px-3 py-1.5 rounded-xl font-extrabold whitespace-nowrap transition flex items-center gap-1.5 text-xs ${
               active
-                ? 'bg-slate-900 text-white shadow-sm'
+                ? 'bg-slate-900 text-white shadow-sm ring-2 ring-indigo-500/20'
                 : 'bg-stone-100 text-slate-600 hover:bg-stone-200'
             }"
           >
@@ -3281,27 +3537,38 @@ class DodamCommunityApp {
     this.schoolLevel = levelId;
     this.schoolPage = 1;
     this.renderSchoolLevelChips();
+    this.renderSchoolRichGoHeader();
+    this.renderSchoolSidoPills();
+    this.renderSchoolSigunguTable();
 
     const listSec = document.getElementById('school-list-section');
     const filterBar = document.getElementById('school-filter-bar');
+    const richgoHeader = document.getElementById('school-richgo-header-box');
+    const sigunguSec = document.getElementById('school-sigungu-section');
     const distSec = document.getElementById('school-districts-section');
     const admSec = document.getElementById('school-admissions-section');
 
     if (levelId === 'districts') {
       if (listSec) listSec.classList.add('hidden');
       if (filterBar) filterBar.classList.add('hidden');
+      if (richgoHeader) richgoHeader.classList.add('hidden');
+      if (sigunguSec) sigunguSec.classList.add('hidden');
       if (distSec) distSec.classList.remove('hidden');
       if (admSec) admSec.classList.add('hidden');
       distSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else if (levelId === 'admissions') {
       if (listSec) listSec.classList.add('hidden');
       if (filterBar) filterBar.classList.add('hidden');
+      if (richgoHeader) richgoHeader.classList.add('hidden');
+      if (sigunguSec) sigunguSec.classList.add('hidden');
       if (distSec) distSec.classList.add('hidden');
       if (admSec) admSec.classList.remove('hidden');
       admSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       if (listSec) listSec.classList.remove('hidden');
       if (filterBar) filterBar.classList.remove('hidden');
+      if (richgoHeader) richgoHeader.classList.remove('hidden');
+      if (sigunguSec) sigunguSec.classList.remove('hidden');
       if (distSec) distSec.classList.toggle('hidden', levelId !== 'all');
       if (admSec) admSec.classList.toggle('hidden', levelId !== 'all');
       this.renderSchoolList();
@@ -3347,11 +3614,15 @@ class DodamCommunityApp {
       if (this.schoolLevel !== 'all' && this.schoolLevel !== 'districts' && this.schoolLevel !== 'admissions') {
         if (s.level !== this.schoolLevel) return false;
       }
-      // 2. Region filter
+      // 2. Sido Pill filter (리치고 17개 시도 선택 알약 연동)
+      if (this.schoolSido !== 'all') {
+        if (s.region !== this.schoolSido) return false;
+      }
+      // 3. Region dropdown filter (보조)
       if (this.schoolRegion !== 'all') {
         if (s.region !== 'all' && s.region !== this.schoolRegion) return false;
       }
-      // 3. Type filter
+      // 4. Type filter
       if (this.schoolType !== 'all') {
         const pubPriv = s.publicPrivate || '';
         const features = (s.features || []).join(' ');
@@ -3367,7 +3638,7 @@ class DodamCommunityApp {
           (this.schoolType === '의대' && (features.includes('의대') || summary.includes('의대') || !!s.collegeResults?.medicalTotal));
         if (!isMatch) return false;
       }
-      // 4. Keyword search filter
+      // 5. Keyword search filter
       if (this.schoolSearchKeyword) {
         const kw = this.schoolSearchKeyword;
         const aptText = (s.apartments || []).map((a) => a.name + ' ' + (a.note || '')).join(' ');
@@ -3437,31 +3708,60 @@ class DodamCommunityApp {
 
   renderSchoolList() {
     const grid = document.getElementById('school-cards-grid');
+    const tableCont = document.getElementById('school-table-container');
+    const tbody = document.getElementById('school-table-body');
     const badge = document.getElementById('school-filtered-count-badge');
+    const listHeading = document.getElementById('school-list-heading');
     const paginationEl = document.getElementById('school-pagination-container');
-    if (!grid) return;
+    if (!grid && !tbody) return;
 
     const filtered = this.filterSchools();
     const totalCount = filtered.length;
 
+    const levelNames = {
+      all: '학교',
+      elementary: '초등학교',
+      middle: '중학교',
+      high: '고등학교'
+    };
+    const lvlName = levelNames[this.schoolLevel] || '학교';
+    const sidos = window.DODAM_SCHOOLS_DATA?.sidos || [];
+    const activeSido = sidos.find((s) => s.id === this.schoolSido) || { name: '전국' };
+    const regName = this.schoolSido === 'all' ? '전국' : activeSido.name;
+
+    if (listHeading) {
+      listHeading.textContent = `📋 ${regName} ${lvlName} 상위 순위 리스트`;
+    }
+
     if (totalCount === 0) {
       if (badge) badge.textContent = '검색 결과 0곳';
       if (paginationEl) paginationEl.innerHTML = '';
-      grid.innerHTML = `
-        <div class="col-span-1 md:col-span-2 text-center py-12 bg-white rounded-2xl border border-dashed border-slate-200">
-          <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xl mb-3">
-            <i class="fa-solid fa-school-circle-xmark"></i>
+      if (tbody) {
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="4" class="text-center py-12 text-slate-500 font-bold">
+              선택하신 지역/조건에 일치하는 학교 정보가 없습니다.
+            </td>
+          </tr>
+        `;
+      }
+      if (grid) {
+        grid.innerHTML = `
+          <div class="col-span-1 md:col-span-2 text-center py-12 bg-white rounded-2xl border border-dashed border-slate-200">
+            <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xl mb-3">
+              <i class="fa-solid fa-school-circle-xmark"></i>
+            </div>
+            <p class="text-sm font-bold text-slate-700">선택하신 조건에 일치하는 학교 정보가 없습니다.</p>
+            <p class="text-xs text-slate-400 mt-1">검색어를 변경하시거나 지역/유형 필터를 '전체'로 설정해 보세요.</p>
+            <button
+              onclick="app.clearSchoolSearch(); app.setSchoolSido('all'); document.getElementById('school-type-filter').value='all'; app.setSchoolTypeFilter('all');"
+              class="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white font-black text-xs hover:bg-slate-800 transition"
+            >
+              전체 필터 초기화
+            </button>
           </div>
-          <p class="text-sm font-bold text-slate-700">선택하신 조건에 일치하는 학교 정보가 없습니다.</p>
-          <p class="text-xs text-slate-400 mt-1">검색어를 변경하시거나 지역/유형 필터를 '전체'로 설정해 보세요.</p>
-          <button
-            onclick="app.clearSchoolSearch(); app.selectSchoolLevel('all'); document.getElementById('school-region-filter').value='all'; document.getElementById('school-type-filter').value='all'; app.setSchoolRegionFilter('all'); app.setSchoolTypeFilter('all');"
-            class="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white font-black text-xs hover:bg-slate-800 transition"
-          >
-            전체 필터 초기화
-          </button>
-        </div>
-      `;
+        `;
+      }
       return;
     }
 
@@ -3476,551 +3776,716 @@ class DodamCommunityApp {
       badge.textContent = `순위 ${totalCount.toLocaleString()}곳 중 ${(startIdx + 1).toLocaleString()}~${Math.min(startIdx + this.schoolPageSize, totalCount).toLocaleString()}위`;
     }
 
-    grid.innerHTML = pageSchools
-      .map((s) => {
-        const isExpanded = this.expandedSchoolIds.has(s.id);
-        const activeTab = this.schoolCardSubTabs[s.id] || 'nearby';
+    // 1. 리치고 순위표 테이블 뷰 렌더링
+    this.renderSchoolRankingTable(pageSchools, startIdx, totalCount);
 
-        const levelInfo = {
-          elementary: { label: '초등학교', icon: 'fa-school', color: 'text-amber-600', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
-          middle: { label: '중학교', icon: 'fa-book-open', color: 'text-emerald-600', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-          high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' }
-        }[s.level] || { label: '학교', icon: 'fa-school', color: 'text-slate-600', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
+    // 2. 리치고 상세 카드 그리드 뷰 렌더링
+    if (grid) {
+      grid.innerHTML = pageSchools
+        .map((s) => {
+          const isExpanded = this.expandedSchoolIds.has(s.id);
+          const activeTab = this.schoolCardSubTabs[s.id] || 'nearby';
 
-        const firstTabTitle = {
-          elementary: '주변중학교',
-          middle: '주변고교·진학',
-          high: '대입실적'
-        }[s.level] || '주변학교';
+          const levelInfo = {
+            elementary: { label: '초등학교', icon: 'fa-school', color: 'text-amber-600', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
+            middle: { label: '중학교', icon: 'fa-book-open', color: 'text-emerald-600', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+            high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' }
+          }[s.level] || { label: '학교', icon: 'fa-school', color: 'text-slate-600', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
 
-        // -----------------------------
-        // Sub-Tab 1: 주변 학교 / 진학 실적
-        // -----------------------------
-        let tabContent = '';
-        if (activeTab === 'nearby') {
-          if (s.level === 'elementary') {
-            const nearbyRows = (s.nearbyMiddle || [])
-              .map((m) => `
-                <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-indigo-50/30 transition border border-slate-100 text-xs">
-                  <div class="w-5/12 min-w-0 pr-1">
-                    <div class="font-black text-slate-800 truncate">${m.name}</div>
-                    <div class="text-[10px] text-slate-400 font-medium">${m.type}</div>
-                  </div>
-                  <div class="w-5/12 flex items-center justify-center gap-1 flex-wrap">
-                    ${(m.rates || [])
-                      .map((r) => {
-                        const badgeStyle = r.type.includes('자사')
-                          ? 'bg-indigo-100 text-indigo-700'
-                          : r.type.includes('과학')
-                          ? 'bg-emerald-100 text-emerald-700'
-                          : 'bg-amber-100 text-amber-700';
-                        return `<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-extrabold ${badgeStyle}">
-                          <strong class="font-black">${r.type[0]}</strong> ${r.type} ${r.percent}
-                        </span>`;
-                      })
-                      .join('')}
-                  </div>
-                  <div class="w-2/12 text-right">
-                    <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${m.grade}</span>
-                  </div>
-                </div>
-              `)
-              .join('');
+          const firstTabTitle = {
+            elementary: '주변중학교',
+            middle: '주변고교·진학',
+            high: '대입실적'
+          }[s.level] || '주변학교';
 
-            tabContent = `
-              <div class="space-y-2.5 pt-3">
-                <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
-                  <span class="w-5/12">주변중학교</span>
-                  <span class="w-5/12 text-center">특목·자사고 진학률</span>
-                  <span class="w-2/12 text-right">등급</span>
-                </div>
-                <div class="space-y-1.5">
-                  ${nearbyRows || '<p class="text-xs text-slate-400 py-3 text-center">주변 중학교 정보 준비 중입니다.</p>'}
-                </div>
-                <div class="pt-1.5">
-                  <button
-                    type="button"
-                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
-                    class="w-full py-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50/60 hover:bg-indigo-100 text-indigo-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
-                  >
-                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 초등학교 순위보기</span>
-                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                  </button>
-                </div>
-              </div>
-            `;
-          } else if (s.level === 'middle') {
-            const nearbyHighRows = (s.nearbyHigh || [])
-              .map((h) => `
-                <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-emerald-50/30 transition border border-slate-100 text-xs">
-                  <div class="w-5/12 min-w-0 pr-1">
-                    <div class="font-black text-slate-800 truncate">${h.name}</div>
-                    <div class="text-[10px] text-slate-400 font-medium">${h.type}</div>
-                  </div>
-                  <div class="w-5/12 text-center">
-                    <span class="inline-block px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-100 text-[10px] font-extrabold">
-                      ${h.rate || '상위 진학'}
+          const tabContent = this.generateSchoolSubTabContent(s, activeTab);
+
+          return `
+            <article class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs hover:shadow-sm transition flex flex-col justify-between">
+              <div class="space-y-2.5">
+                <!-- 카드 상단 -->
+                <div>
+                  <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                    <div class="flex items-center gap-1.5">
+                      <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
+                      <span class="font-bold text-slate-500">${s.publicPrivate}</span>
+                    </div>
+                    <span class="text-[11px] text-slate-400 font-medium">
+                      <i class="fa-solid fa-location-dot mr-1"></i>${s.districtName}
                     </span>
                   </div>
-                  <div class="w-2/12 text-right">
-                    <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${h.grade}</span>
-                  </div>
+                  <h3 class="text-base font-black text-slate-900 flex items-center justify-between cursor-pointer group" onclick="app.openSchoolModal('${s.id}')">
+                    <span class="group-hover:text-indigo-600 transition flex items-center gap-1.5">
+                      <span>${s.name}</span>
+                      <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-slate-300 group-hover:text-indigo-500"></i>
+                    </span>
+                    <span class="text-[11px] font-bold text-slate-400 font-normal">${s.regionName}</span>
+                  </h3>
                 </div>
-              `)
-              .join('');
 
-            tabContent = `
-              <div class="space-y-2.5 pt-3">
-                ${
-                  s.admissionRates
-                    ? `
-                  <div class="p-2.5 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-100 text-xs space-y-1">
-                    <div class="flex items-center justify-between font-black text-emerald-900 text-[11px]">
-                      <span>🏆 특목·자사고 합산 진학률</span>
-                      <strong class="text-emerald-700 font-black">${s.admissionRates.totalSpecial}</strong>
-                    </div>
-                    <div class="flex items-center gap-1.5 text-[10px] text-slate-600 flex-wrap pt-0.5">
-                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.privateHigh}</span>
-                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.scienceHigh}</span>
-                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.foreignHigh}</span>
-                    </div>
-                  </div>
-                `
-                    : ''
-                }
-                <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
-                  <span class="w-5/12">진학 고등학교</span>
-                  <span class="w-5/12 text-center">진학 규모</span>
-                  <span class="w-2/12 text-right">등급</span>
-                </div>
-                <div class="space-y-1.5">
-                  ${nearbyHighRows || '<p class="text-xs text-slate-400 py-3 text-center">진학 고등학교 정보 준비 중입니다.</p>'}
-                </div>
-                <div class="pt-1.5">
+                <!-- 리치고 시그니처 뱃지 바 -->
+                <div class="flex items-center gap-1.5 flex-wrap pt-0.5">
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-900 text-white shadow-2xs">
+                    #${s.rank ? s.rank.toLocaleString() + '위' : s.districtRank}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
+                    ${s.grade}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200">
+                    ${s.rankNation}
+                  </span>
+                  <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
+                    ${s.rankRegion}
+                  </span>
                   <button
                     type="button"
-                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
-                    class="w-full py-2.5 rounded-xl border border-emerald-200/80 bg-emerald-50/60 hover:bg-emerald-100 text-emerald-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
+                    onclick="app.openSchoolGradeModal()"
+                    class="text-[11px] font-bold text-slate-400 hover:text-indigo-600 flex items-center gap-1 transition ml-auto py-1"
                   >
-                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 중학교 순위보기</span>
-                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    <i class="fa-solid fa-circle-info text-[10px]"></i>
+                    <span>등급 기준 보기</span>
                   </button>
                 </div>
-              </div>
-            `;
-          } else {
-            // High school
-            tabContent = `
-              <div class="space-y-2.5 pt-3">
-                <div class="p-3 rounded-xl bg-gradient-to-br from-indigo-50/80 via-white to-sky-50/50 border border-indigo-100 text-xs space-y-2.5">
-                  <div class="flex items-center justify-between font-black text-indigo-950 text-xs">
-                    <span>🎓 2024~2025학년도 최상위 대입 합격 실적</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-600 text-white font-extrabold shadow-2xs">학교알리미 공시</span>
-                  </div>
-                  <div class="grid grid-cols-3 gap-2 text-center">
-                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
-                      <div class="text-[10px] text-slate-500 font-bold">서울대 합격</div>
-                      <div class="text-sm font-black text-indigo-600 mt-0.5">${s.collegeResults?.snuTotal || '18명'}</div>
-                    </div>
-                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
-                      <div class="text-[10px] text-slate-500 font-bold">의·치·한·약</div>
-                      <div class="text-sm font-black text-rose-600 mt-0.5">${s.collegeResults?.medicalTotal || '24명'}</div>
-                    </div>
-                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
-                      <div class="text-[10px] text-slate-500 font-bold">연세대·고려대</div>
-                      <div class="text-sm font-black text-slate-900 mt-0.5">${s.collegeResults?.skyTotal || '58명'}</div>
-                    </div>
-                  </div>
-                  ${
-                    s.collegeResults?.foreignTotal
-                      ? `
-                    <div class="text-[11px] text-indigo-800 font-semibold bg-white/80 p-2 rounded-lg border border-indigo-50">
-                      📌 <strong>특화 진학:</strong> ${s.collegeResults.foreignTotal}
-                    </div>
+
+                <!-- 한 줄 요약 -->
+                <p class="text-xs text-slate-600 leading-relaxed pt-0.5">
+                  ${s.summary}
+                </p>
+
+                <!-- 서브탭 네비게이션 바 -->
+                <div class="flex items-center border-b border-slate-200 text-xs font-bold pt-1">
+                  <button
+                    type="button"
+                    onclick="app.setSchoolCardTab('${s.id}', 'nearby')"
+                    class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                      activeTab === 'nearby'
+                        ? 'border-indigo-600 text-indigo-600 font-black'
+                        : 'border-transparent text-slate-500 hover:text-slate-800'
+                    }"
+                  >
+                    ${firstTabTitle}
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.setSchoolCardTab('${s.id}', 'info')"
+                    class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                      activeTab === 'info'
+                        ? 'border-indigo-600 text-indigo-600 font-black'
+                        : 'border-transparent text-slate-500 hover:text-slate-800'
+                    }"
+                  >
+                    기본정보
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.setSchoolCardTab('${s.id}', 'apartments')"
+                    class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                      activeTab === 'apartments'
+                        ? 'border-indigo-600 text-indigo-600 font-black'
+                        : 'border-transparent text-slate-500 hover:text-slate-800'
+                    }"
+                  >
+                    배정아파트
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.setSchoolCardTab('${s.id}', 'academies')"
+                    class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                      activeTab === 'academies'
+                        ? 'border-indigo-600 text-indigo-600 font-black'
+                        : 'border-transparent text-slate-500 hover:text-slate-800'
+                    }"
+                  >
+                    학원가
+                  </button>
+                </div>
+
+                <!-- 서브탭 바디 -->
+                <div class="min-h-[170px]">
+                  ${tabContent}
+                </div>
+
+                <!-- 특징 태그 리스트 -->
+                <div class="flex flex-wrap items-center gap-1 pt-1">
+                  ${(s.features || [])
+                    .map(
+                      (f) => `
+                    <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 text-[10px] font-bold">
+                      #${f}
+                    </span>
                   `
-                      : ''
-                  }
+                    )
+                    .join('')}
                 </div>
-                <div class="pt-1.5">
-                  <button
-                    type="button"
-                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
-                    class="w-full py-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50/60 hover:bg-indigo-100 text-indigo-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
+              </div>
+
+              <!-- 카드 하단 바로가기 버튼 바 -->
+              <div class="flex items-center justify-between gap-2 pt-3 mt-3 border-t border-slate-100">
+                <button
+                  type="button"
+                  onclick="app.openSchoolModal('${s.id}')"
+                  class="text-xs font-black text-indigo-600 hover:text-indigo-800 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-indigo-50"
+                >
+                  <i class="fa-solid fa-magnifying-glass-chart text-[11px]"></i>
+                  <span>상세 심층 분석창</span>
+                </button>
+
+                <div class="flex items-center gap-1.5">
+                  <a
+                    href="${s.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition shadow-2xs"
                   >
-                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 고등학교 순위보기</span>
-                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
-                  </button>
+                    <span>학교알리미</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
+                  </a>
+                  <a
+                    href="${s.linkUrl}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-black text-xs shadow-2xs transition"
+                  >
+                    <span>홈페이지</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+                  </a>
                 </div>
               </div>
-            `;
-          }
-        }
+            </article>
+          `;
+        })
+        .join('');
+    }
 
-        // -----------------------------
-        // Sub-Tab 2: 기본정보 (RichGo 3대 비교 바차트)
-        // -----------------------------
-        if (activeTab === 'info') {
-          const stats = s.stats || {};
-          const benchC = stats.benchClass || { school: 23, district: 22, nation: 20 };
-          const benchT = stats.benchTeacher || { school: 18, district: 16, nation: 14 };
+    // 페이지네이션 바 렌더링
+    if (paginationEl) {
+      paginationEl.innerHTML = this.renderSchoolPaginationHtml(totalCount, totalPages, startIdx);
+    }
+  }
 
-          const isElem = s.level === 'elementary';
-          const thirdTitle = isElem ? '고학년 비율' : '학업 성취도';
-          const thirdUnit = '%';
-          const bench3 = isElem
-            ? stats.benchSenior || { school: 51, district: 49, nation: 47 }
-            : stats.benchAchievement || { school: 92, district: 83, nation: 78 };
+  renderSchoolRankingTable(pageSchools, startIdx, totalCount) {
+    const tbody = document.getElementById('school-table-body');
+    const rateHeader = document.getElementById('school-table-rate-header');
+    if (!tbody) return;
 
-          const calcBarH = (val, maxVal) => {
-            const ratio = Math.min(1, Math.max(0.2, val / (maxVal || 1)));
-            return Math.round(ratio * 50) + 14;
-          };
+    if (rateHeader) {
+      if (this.schoolLevel === 'middle') {
+        rateHeader.textContent = '특목고·자사고 합산 진학률';
+      } else if (this.schoolLevel === 'high') {
+        rateHeader.textContent = '서울대·의약학 대입 합격 실적';
+      } else {
+        rateHeader.textContent = '가까운 중학교 과고·외고·자사고 진학률';
+      }
+    }
 
-          const cMax = Math.max(benchC.school, benchC.district, benchC.nation, 1);
-          const tMax = Math.max(benchT.school, benchT.district, benchT.nation, 1);
-          const sMax = Math.max(bench3.school, bench3.district, bench3.nation, 1);
+    tbody.innerHTML = pageSchools
+      .map((s) => {
+        const rank = s.rank || 1;
+        const rankBadge =
+          rank === 1
+            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-slate-900 font-black text-xs shadow-2xs">1</span>'
+            : rank === 2
+            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-300 text-slate-900 font-black text-xs shadow-2xs">2</span>'
+            : rank === 3
+            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-600 text-white font-black text-xs shadow-2xs">3</span>'
+            : `<span class="font-extrabold text-slate-500 text-xs">${rank.toLocaleString()}</span>`;
 
-          tabContent = `
-            <div class="space-y-3 pt-3">
-              <!-- 리치고 3대 비교 지표 바 차트 그리드 -->
-              <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-50/90 border border-slate-200/80">
-                <!-- 1. 학급당 학생수 -->
-                <div class="flex flex-col items-center justify-between text-center space-y-1">
-                  <div class="text-[10px] font-bold text-slate-500">학급당 학생 수</div>
-                  <div class="text-xs font-black text-slate-900">${benchC.school}명</div>
-                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-black text-indigo-600">${benchC.school}</span>
-                      <div style="height: ${calcBarH(benchC.school, cMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-500">${benchC.district}</span>
-                      <div style="height: ${calcBarH(benchC.district, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                      <span class="text-[9px] font-medium text-slate-500">구</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-400">${benchC.nation}</span>
-                      <div style="height: ${calcBarH(benchC.nation, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                      <span class="text-[9px] font-medium text-slate-400">전국</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 2. 교사당 학생수 -->
-                <div class="flex flex-col items-center justify-between text-center space-y-1 border-x border-slate-200 px-1">
-                  <div class="text-[10px] font-bold text-slate-500">교사당 학생 수</div>
-                  <div class="text-xs font-black text-slate-900">${benchT.school}명</div>
-                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-black text-indigo-600">${benchT.school}</span>
-                      <div style="height: ${calcBarH(benchT.school, tMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-500">${benchT.district}</span>
-                      <div style="height: ${calcBarH(benchT.district, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                      <span class="text-[9px] font-medium text-slate-500">구</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-400">${benchT.nation}</span>
-                      <div style="height: ${calcBarH(benchT.nation, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                      <span class="text-[9px] font-medium text-slate-400">전국</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- 3. 고학년 비율 또는 학업성취도 -->
-                <div class="flex flex-col items-center justify-between text-center space-y-1">
-                  <div class="text-[10px] font-bold text-slate-500">${thirdTitle}</div>
-                  <div class="text-xs font-black text-slate-900">${bench3.school}${thirdUnit}</div>
-                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-black text-indigo-600">${bench3.school}</span>
-                      <div style="height: ${calcBarH(bench3.school, sMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-500">${bench3.district}</span>
-                      <div style="height: ${calcBarH(bench3.district, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                      <span class="text-[9px] font-medium text-slate-500">구</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-0.5">
-                      <span class="text-[9px] font-bold text-slate-400">${bench3.nation}</span>
-                      <div style="height: ${calcBarH(bench3.nation, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                      <span class="text-[9px] font-medium text-slate-400">전국</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 학교 세부 기본 현황 리스트 -->
-              <div class="p-3 rounded-xl bg-white border border-slate-200 text-xs space-y-1.5">
-                <div class="flex items-center justify-between text-[11px]">
-                  <span class="font-bold text-slate-500">전체 학생 수:</span>
-                  <span class="font-black text-slate-800">${(stats.totalStudents || 0).toLocaleString()}명</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px]">
-                  <span class="font-bold text-slate-500">설립 연도 / 형태:</span>
-                  <span class="font-bold text-slate-700">${s.establishedYear || s.publicPrivate}</span>
-                </div>
-                <div class="flex items-center justify-between text-[11px]">
-                  <span class="font-bold text-slate-500">소재지 관할:</span>
-                  <span class="font-bold text-slate-700">${s.districtName}</span>
-                </div>
-              </div>
+        let rateDisplay = '';
+        if (s.level === 'elementary') {
+          const rateVal = s.rate || '30.00%';
+          rateDisplay = `
+            <div class="inline-flex items-center gap-1.5 justify-end">
+              <span class="font-black text-xs text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">${rateVal}</span>
             </div>
           `;
-        }
-
-        // -----------------------------
-        // Sub-Tab 3: 배정아파트
-        // -----------------------------
-        if (activeTab === 'apartments') {
-          const aptRows = (s.apartments || [])
-            .map(
-              (a) => `
-              <div class="p-2.5 rounded-xl bg-slate-50/90 hover:bg-indigo-50/40 transition border border-slate-100 flex items-center justify-between text-xs">
-                <div class="min-w-0 pr-2">
-                  <div class="font-black text-slate-900 truncate flex items-center gap-1.5">
-                    <i class="fa-solid fa-building text-indigo-500 text-[10px]"></i>
-                    <span>${a.name}</span>
-                  </div>
-                  <div class="text-[10px] text-slate-500 mt-0.5 pl-4">${a.note}</div>
-                </div>
-                <span class="px-2 py-1 rounded-lg bg-white border border-slate-200 font-black text-slate-700 text-[11px] shrink-0 shadow-2xs">
-                  ${a.households}
-                </span>
-              </div>
-            `
-            )
-            .join('');
-
-          tabContent = `
-            <div class="space-y-2 pt-3">
-              <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-500 px-1 pb-1">
-                <span class="flex items-center gap-1">
-                  <i class="fa-solid fa-map-pin text-indigo-500"></i>
-                  <span>배정 주요 아파트 단지 & 통학권</span>
-                </span>
-                <span class="text-[10px] text-slate-400">총 ${(s.apartments || []).length}개 단지 공시</span>
-              </div>
-              <div class="space-y-1.5">
-                ${aptRows || '<p class="text-xs text-slate-400 py-3 text-center">배정 아파트 단지 정보가 공시 준비 중입니다.</p>'}
-              </div>
+        } else if (s.level === 'middle') {
+          const rateVal = s.admissionRates?.totalSpecial || s.rate || '25.00%';
+          rateDisplay = `
+            <div class="inline-flex items-center gap-1.5 justify-end">
+              <span class="font-black text-xs text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">${rateVal}</span>
             </div>
           `;
-        }
-
-        // -----------------------------
-        // Sub-Tab 4: 학원가
-        // -----------------------------
-        if (activeTab === 'academies') {
-          const popularBadges = (s.academies?.popularFields || [])
-            .map(
-              (p) => `
-              <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-700 text-[10px] font-bold">
-                #${p}
-              </span>
-            `
-            )
-            .join('');
-
-          tabContent = `
-            <div class="space-y-2.5 pt-3 text-xs">
-              <div class="p-3 rounded-xl bg-gradient-to-r from-amber-50/70 via-orange-50/40 to-white border border-amber-100 space-y-2">
-                <div class="font-black text-amber-950 flex items-center gap-1.5">
-                  <i class="fa-solid fa-graduation-cap text-amber-600"></i>
-                  <span>인근 학원가 밀집도 및 셔틀 연계</span>
-                </div>
-                <div class="space-y-1.5 text-[11px]">
-                  <div class="flex items-start gap-1.5">
-                    <span class="font-extrabold text-slate-700 shrink-0">📍 주요 학원가:</span>
-                    <span class="text-slate-900 font-bold">${s.academies?.mainDistrict || '인근 학원가 밀집'}</span>
-                  </div>
-                  <div class="flex items-start gap-1.5">
-                    <span class="font-extrabold text-slate-700 shrink-0">🚌 대치동 접근성:</span>
-                    <span class="text-slate-900 font-bold">${s.academies?.distanceDaechi || '대치동 셔틀 운행'}</span>
-                  </div>
-                </div>
-              </div>
-              <div class="space-y-1">
-                <div class="text-[10px] font-extrabold text-slate-400 px-1">주요 인기 학원 및 선호 과목</div>
-                <div class="flex flex-wrap gap-1">
-                  ${popularBadges}
-                </div>
-              </div>
+        } else {
+          const snu = s.collegeResults?.snuTotal || '10명';
+          const med = s.collegeResults?.medicalTotal || '15명';
+          rateDisplay = `
+            <div class="inline-flex items-center gap-1.5 justify-end text-[11px]">
+              <span class="font-extrabold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded border border-indigo-100">서울대 ${snu}</span>
+              <span class="font-extrabold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-100">의대 ${med}</span>
             </div>
           `;
         }
 
         return `
-          <article class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs hover:shadow-sm transition flex flex-col justify-between">
-            <div class="space-y-2.5">
-              <!-- 카드 상단: 아이콘 + 설립연차 + 학교명 -->
-              <div>
-                <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
-                  <div class="flex items-center gap-1.5">
-                    <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
-                    <span class="font-bold text-slate-500">${s.publicPrivate}</span>
-                  </div>
-                  <span class="text-[11px] text-slate-400 font-medium">
-                    <i class="fa-solid fa-location-dot mr-1"></i>${s.districtName}
-                  </span>
-                </div>
-                <h3 class="text-base font-black text-slate-900 flex items-center justify-between">
+          <tr class="hover:bg-indigo-50/40 transition cursor-pointer group" onclick="app.openSchoolModal('${s.id}')">
+            <td class="py-3 px-3 text-center">${rankBadge}</td>
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-black text-slate-900 group-hover:text-indigo-600 text-xs transition flex items-center gap-1">
                   <span>${s.name}</span>
-                  <span class="text-[11px] font-bold text-slate-400 font-normal">${s.regionName}</span>
-                </h3>
-              </div>
-
-              <!-- 리치고 시그니처 뱃지 바 -->
-              <div class="flex items-center gap-1.5 flex-wrap pt-0.5">
-                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-900 text-white shadow-2xs">
-                  #${s.rank ? s.rank.toLocaleString() + '위' : s.districtRank}
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-300 group-hover:text-indigo-500 transition"></i>
                 </span>
-                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
-                  ${s.grade}
-                </span>
-                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200">
-                  ${s.rankNation}
-                </span>
-                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
-                  ${s.rankRegion}
-                </span>
-                <button
-                  type="button"
-                  onclick="app.openSchoolGradeModal()"
-                  class="text-[11px] font-bold text-slate-400 hover:text-indigo-600 flex items-center gap-1 transition ml-auto py-1"
-                >
-                  <i class="fa-solid fa-circle-info text-[10px]"></i>
-                  <span>등급 기준 보기</span>
-                </button>
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
+                <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
               </div>
+            </td>
+            <td class="py-3 px-4 text-xs font-bold text-slate-600 whitespace-nowrap">
+              <i class="fa-solid fa-location-dot text-[10px] text-slate-400 mr-1"></i>${s.districtName}
+            </td>
+            <td class="py-3 px-4 text-right whitespace-nowrap">
+              ${rateDisplay}
+            </td>
+          </tr>
+        `;
+      })
+      .join('');
+  }
 
-              <!-- 한 줄 요약 -->
-              <p class="text-xs text-slate-600 leading-relaxed pt-0.5">
-                ${s.summary}
-              </p>
-
-              <!-- 서브탭 네비게이션 바 -->
-              <div class="flex items-center border-b border-slate-200 text-xs font-bold pt-1">
-                <button
-                  type="button"
-                  onclick="app.setSchoolCardTab('${s.id}', 'nearby')"
-                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
-                    activeTab === 'nearby'
-                      ? 'border-indigo-600 text-indigo-600 font-black'
-                      : 'border-transparent text-slate-500 hover:text-slate-800'
-                  }"
-                >
-                  ${firstTabTitle}
-                </button>
-                <button
-                  type="button"
-                  onclick="app.setSchoolCardTab('${s.id}', 'info')"
-                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
-                    activeTab === 'info'
-                      ? 'border-indigo-600 text-indigo-600 font-black'
-                      : 'border-transparent text-slate-500 hover:text-slate-800'
-                  }"
-                >
-                  기본정보
-                </button>
-                <button
-                  type="button"
-                  onclick="app.setSchoolCardTab('${s.id}', 'apartments')"
-                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
-                    activeTab === 'apartments'
-                      ? 'border-indigo-600 text-indigo-600 font-black'
-                      : 'border-transparent text-slate-500 hover:text-slate-800'
-                  }"
-                >
-                  배정아파트
-                </button>
-                <button
-                  type="button"
-                  onclick="app.setSchoolCardTab('${s.id}', 'academies')"
-                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
-                    activeTab === 'academies'
-                      ? 'border-indigo-600 text-indigo-600 font-black'
-                      : 'border-transparent text-slate-500 hover:text-slate-800'
-                  }"
-                >
-                  학원가
-                </button>
+  generateSchoolSubTabContent(s, activeTab) {
+    if (activeTab === 'nearby') {
+      if (s.level === 'elementary') {
+        const nearbyRows = (s.nearbyMiddle || [])
+          .map((m) => `
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-indigo-50/30 transition border border-slate-100 text-xs">
+              <div class="w-5/12 min-w-0 pr-1">
+                <div class="font-black text-slate-800 truncate">${m.name}</div>
+                <div class="text-[10px] text-slate-400 font-medium">${m.type}</div>
               </div>
-
-              <!-- 서브탭 바디 -->
-              <div class="min-h-[170px]">
-                ${tabContent}
-              </div>
-
-              <!-- 특징 태그 리스트 -->
-              <div class="flex flex-wrap items-center gap-1 pt-1">
-                ${(s.features || [])
-                  .map(
-                    (f) => `
-                  <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 text-[10px] font-bold">
-                    #${f}
-                  </span>
-                `
-                  )
+              <div class="w-5/12 flex items-center justify-center gap-1 flex-wrap">
+                ${(m.rates || [])
+                  .map((r) => {
+                    const badgeStyle = r.type.includes('자사')
+                      ? 'bg-indigo-100 text-indigo-700'
+                      : r.type.includes('과학')
+                      ? 'bg-emerald-100 text-emerald-700'
+                      : 'bg-amber-100 text-amber-700';
+                    return `<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-extrabold ${badgeStyle}">
+                      <strong class="font-black">${r.type[0]}</strong> ${r.type} ${r.percent}
+                    </span>`;
+                  })
                   .join('')}
               </div>
+              <div class="w-2/12 text-right">
+                <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${m.grade}</span>
+              </div>
+            </div>
+          `)
+          .join('');
 
-              <!-- 아코디언 추가 정보 (선택적) -->
-              <div id="school-detail-${s.id}" class="${isExpanded ? '' : 'hidden'} pt-2 border-t border-slate-100 space-y-2 text-xs text-slate-700">
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 space-y-1.5">
-                  <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
-                    <i class="fa-solid fa-circle-info text-sky-600"></i>
-                    <span>상세 입시 분석 & 특징 노트</span>
-                  </div>
-                  <p class="text-[11px] text-slate-600 leading-relaxed">${s.summary}</p>
+        return `
+          <div class="space-y-2.5 pt-3">
+            <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
+              <span class="w-5/12">주변중학교</span>
+              <span class="w-5/12 text-center">특목·자사고 진학률</span>
+              <span class="w-2/12 text-right">등급</span>
+            </div>
+            <div class="space-y-1.5">
+              ${nearbyRows || '<p class="text-xs text-slate-400 py-3 text-center">주변 중학교 정보 준비 중입니다.</p>'}
+            </div>
+          </div>
+        `;
+      } else if (s.level === 'middle') {
+        const nearbyHighRows = (s.nearbyHigh || [])
+          .map((h) => `
+            <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-emerald-50/30 transition border border-slate-100 text-xs">
+              <div class="w-5/12 min-w-0 pr-1">
+                <div class="font-black text-slate-800 truncate">${h.name}</div>
+                <div class="text-[10px] text-slate-400 font-medium">${h.type}</div>
+              </div>
+              <div class="w-5/12 text-center">
+                <span class="inline-block px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-100 text-[10px] font-extrabold">
+                  ${h.rate || '상위 진학'}
+                </span>
+              </div>
+              <div class="w-2/12 text-right">
+                <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${h.grade}</span>
+              </div>
+            </div>
+          `)
+          .join('');
+
+        return `
+          <div class="space-y-2.5 pt-3">
+            ${
+              s.admissionRates
+                ? `
+              <div class="p-2.5 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-100 text-xs space-y-1">
+                <div class="flex items-center justify-between font-black text-emerald-900 text-[11px]">
+                  <span>🏆 특목·자사고 합산 진학률</span>
+                  <strong class="text-emerald-700 font-black">${s.admissionRates.totalSpecial}</strong>
+                </div>
+                <div class="flex items-center gap-1.5 text-[10px] text-slate-600 flex-wrap pt-0.5">
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.privateHigh}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.scienceHigh}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.foreignHigh}</span>
+                </div>
+              </div>
+            `
+                : ''
+            }
+            <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
+              <span class="w-5/12">진학 고등학교</span>
+              <span class="w-5/12 text-center">진학 규모</span>
+              <span class="w-2/12 text-right">등급</span>
+            </div>
+            <div class="space-y-1.5">
+              ${nearbyHighRows || '<p class="text-xs text-slate-400 py-3 text-center">진학 고등학교 정보 준비 중입니다.</p>'}
+            </div>
+          </div>
+        `;
+      } else {
+        return `
+          <div class="space-y-2.5 pt-3">
+            <div class="p-3 rounded-xl bg-gradient-to-br from-indigo-50/80 via-white to-sky-50/50 border border-indigo-100 text-xs space-y-2.5">
+              <div class="flex items-center justify-between font-black text-indigo-950 text-xs">
+                <span>🎓 2024~2025학년도 최상위 대입 합격 실적</span>
+                <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-600 text-white font-extrabold shadow-2xs">학교알리미 공시</span>
+              </div>
+              <div class="grid grid-cols-3 gap-2 text-center">
+                <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                  <div class="text-[10px] text-slate-500 font-bold">서울대 합격</div>
+                  <div class="text-sm font-black text-indigo-600 mt-0.5">${s.collegeResults?.snuTotal || '18명'}</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                  <div class="text-[10px] text-slate-500 font-bold">의·치·한·약</div>
+                  <div class="text-sm font-black text-rose-600 mt-0.5">${s.collegeResults?.medicalTotal || '24명'}</div>
+                </div>
+                <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                  <div class="text-[10px] text-slate-500 font-bold">연세대·고려대</div>
+                  <div class="text-sm font-black text-slate-900 mt-0.5">${s.collegeResults?.skyTotal || '58명'}</div>
+                </div>
+              </div>
+              ${
+                s.collegeResults?.foreignTotal
+                  ? `
+                <div class="text-[11px] text-indigo-800 font-semibold bg-white/80 p-2 rounded-lg border border-indigo-50">
+                  📌 <strong>특화 진학:</strong> ${s.collegeResults.foreignTotal}
+                </div>
+              `
+                  : ''
+              }
+            </div>
+          </div>
+        `;
+      }
+    }
+
+    if (activeTab === 'info') {
+      const stats = s.stats || {};
+      const benchC = stats.benchClass || { school: 23, district: 22, nation: 20 };
+      const benchT = stats.benchTeacher || { school: 18, district: 16, nation: 14 };
+
+      const isElem = s.level === 'elementary';
+      const thirdTitle = isElem ? '고학년 비율' : '학업 성취도';
+      const thirdUnit = '%';
+      const bench3 = isElem
+        ? stats.benchSenior || { school: 51, district: 49, nation: 47 }
+        : stats.benchAchievement || { school: 92, district: 83, nation: 78 };
+
+      const calcBarH = (val, maxVal) => {
+        const ratio = Math.min(1, Math.max(0.2, val / (maxVal || 1)));
+        return Math.round(ratio * 50) + 14;
+      };
+
+      const cMax = Math.max(benchC.school, benchC.district, benchC.nation, 1);
+      const tMax = Math.max(benchT.school, benchT.district, benchT.nation, 1);
+      const sMax = Math.max(bench3.school, bench3.district, bench3.nation, 1);
+
+      return `
+        <div class="space-y-3 pt-3">
+          <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-50/90 border border-slate-200/80">
+            <div class="flex flex-col items-center justify-between text-center space-y-1">
+              <div class="text-[10px] font-bold text-slate-500">학급당 학생 수</div>
+              <div class="text-xs font-black text-slate-900">${benchC.school}명</div>
+              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-black text-indigo-600">${benchC.school}</span>
+                  <div style="height: ${calcBarH(benchC.school, cMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-500">${benchC.district}</span>
+                  <div style="height: ${calcBarH(benchC.district, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                  <span class="text-[9px] font-medium text-slate-500">구</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-400">${benchC.nation}</span>
+                  <div style="height: ${calcBarH(benchC.nation, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                  <span class="text-[9px] font-medium text-slate-400">전국</span>
                 </div>
               </div>
             </div>
 
-            <!-- 카드 하단 바로가기 버튼 바 -->
-            <div class="flex items-center justify-between gap-2 pt-3 mt-3 border-t border-slate-100">
-              <button
-                type="button"
-                onclick="app.toggleSchoolDetail('${s.id}')"
-                class="text-xs font-extrabold text-slate-500 hover:text-slate-900 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-slate-100"
-              >
-                <span>${isExpanded ? '간략히' : '추가노트'}</span>
-                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
-              </button>
-
-              <div class="flex items-center gap-1.5">
-                <a
-                  href="${s.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition shadow-2xs"
-                >
-                  <span>학교알리미</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
-                </a>
-                <a
-                  href="${s.linkUrl}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-sky-600 text-white font-black text-xs shadow-2xs transition"
-                >
-                  <span>홈페이지</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </a>
+            <div class="flex flex-col items-center justify-between text-center space-y-1 border-x border-slate-200 px-1">
+              <div class="text-[10px] font-bold text-slate-500">교사당 학생 수</div>
+              <div class="text-xs font-black text-slate-900">${benchT.school}명</div>
+              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-black text-indigo-600">${benchT.school}</span>
+                  <div style="height: ${calcBarH(benchT.school, tMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-500">${benchT.district}</span>
+                  <div style="height: ${calcBarH(benchT.district, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                  <span class="text-[9px] font-medium text-slate-500">구</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-400">${benchT.nation}</span>
+                  <div style="height: ${calcBarH(benchT.nation, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                  <span class="text-[9px] font-medium text-slate-400">전국</span>
+                </div>
               </div>
             </div>
-          </article>
+
+            <div class="flex flex-col items-center justify-between text-center space-y-1">
+              <div class="text-[10px] font-bold text-slate-500">${thirdTitle}</div>
+              <div class="text-xs font-black text-slate-900">${bench3.school}${thirdUnit}</div>
+              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-black text-indigo-600">${bench3.school}</span>
+                  <div style="height: ${calcBarH(bench3.school, sMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-500">${bench3.district}</span>
+                  <div style="height: ${calcBarH(bench3.district, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                  <span class="text-[9px] font-medium text-slate-500">구</span>
+                </div>
+                <div class="flex flex-col items-center gap-0.5">
+                  <span class="text-[9px] font-bold text-slate-400">${bench3.nation}</span>
+                  <div style="height: ${calcBarH(bench3.nation, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                  <span class="text-[9px] font-medium text-slate-400">전국</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-3 rounded-xl bg-white border border-slate-200 text-xs space-y-1.5">
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-bold text-slate-500">전체 학생 수:</span>
+              <span class="font-black text-slate-800">${(stats.totalStudents || 0).toLocaleString()}명</span>
+            </div>
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-bold text-slate-500">설립 형태:</span>
+              <span class="font-bold text-slate-700">${s.publicPrivate}</span>
+            </div>
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-bold text-slate-500">소재지 관할:</span>
+              <span class="font-bold text-slate-700">${s.districtName}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    if (activeTab === 'apartments') {
+      const aptRows = (s.apartments || [])
+        .map(
+          (a) => `
+          <div class="p-2.5 rounded-xl bg-slate-50/90 hover:bg-indigo-50/40 transition border border-slate-100 flex items-center justify-between text-xs">
+            <div class="min-w-0 pr-2">
+              <div class="font-black text-slate-900 truncate flex items-center gap-1.5">
+                <i class="fa-solid fa-building text-indigo-500 text-[10px]"></i>
+                <span>${a.name}</span>
+              </div>
+              <div class="text-[10px] text-slate-500 mt-0.5 pl-4">${a.note}</div>
+            </div>
+            <span class="px-2 py-1 rounded-lg bg-white border border-slate-200 font-black text-slate-700 text-[11px] shrink-0 shadow-2xs">
+              ${a.households}
+            </span>
+          </div>
+        `
+        )
+        .join('');
+
+      return `
+        <div class="space-y-2 pt-3">
+          <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-500 px-1 pb-1">
+            <span class="flex items-center gap-1">
+              <i class="fa-solid fa-map-pin text-indigo-500"></i>
+              <span>배정 주요 아파트 단지 & 통학권</span>
+            </span>
+            <span class="text-[10px] text-slate-400">총 ${(s.apartments || []).length}개 단지 공시</span>
+          </div>
+          <div class="space-y-1.5">
+            ${aptRows || '<p class="text-xs text-slate-400 py-3 text-center">배정 아파트 단지 정보 준비 중입니다.</p>'}
+          </div>
+        </div>
+      `;
+    }
+
+    if (activeTab === 'academies') {
+      const popularBadges = (s.academies?.popularFields || [])
+        .map(
+          (p) => `
+          <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-700 text-[10px] font-bold">
+            #${p}
+          </span>
+        `
+        )
+        .join('');
+
+      return `
+        <div class="space-y-2.5 pt-3 text-xs">
+          <div class="p-3 rounded-xl bg-gradient-to-r from-amber-50/70 via-orange-50/40 to-white border border-amber-100 space-y-2">
+            <div class="font-black text-amber-950 flex items-center gap-1.5">
+              <i class="fa-solid fa-graduation-cap text-amber-600"></i>
+              <span>인근 학원가 밀집도 및 셔틀 연계</span>
+            </div>
+            <div class="space-y-1.5 text-[11px]">
+              <div class="flex items-start gap-1.5">
+                <span class="font-extrabold text-slate-700 shrink-0">📍 주요 학원가:</span>
+                <span class="text-slate-900 font-bold">${s.academies?.mainDistrict || '인근 학원가 밀집'}</span>
+              </div>
+              <div class="flex items-start gap-1.5">
+                <span class="font-extrabold text-slate-700 shrink-0">🚌 대치동 접근성:</span>
+                <span class="text-slate-900 font-bold">${s.academies?.distanceDaechi || '대치동 셔틀 운행'}</span>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-1">
+            <div class="text-[10px] font-extrabold text-slate-400 px-1">주요 인기 학원 및 선호 과목</div>
+            <div class="flex flex-wrap gap-1">
+              ${popularBadges}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    return '';
+  }
+
+  // ==========================================
+  // 리치고 학교 상세 심층 모달 컨트롤러
+  // ==========================================
+  openSchoolModal(schoolId) {
+    const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
+    const school = schools.find((s) => String(s.id) === String(schoolId));
+    if (!school) return;
+
+    this.activeModalSchoolId = schoolId;
+    this.modalSubTab = 'nearby';
+
+    const modal = document.getElementById('school-detail-modal');
+    if (!modal) return;
+
+    this.renderSchoolModalContent(school);
+    modal.classList.remove('hidden');
+  }
+
+  closeSchoolModal() {
+    const modal = document.getElementById('school-detail-modal');
+    if (modal) modal.classList.add('hidden');
+    this.activeModalSchoolId = null;
+  }
+
+  setModalSchoolTab(tabName) {
+    this.modalSubTab = tabName;
+    const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
+    const school = schools.find((s) => String(s.id) === String(this.activeModalSchoolId));
+    if (school) {
+      this.renderSchoolModalContent(school);
+    }
+  }
+
+  renderSchoolModalContent(school) {
+    const headerEl = document.getElementById('school-modal-header');
+    const subtabsEl = document.getElementById('school-modal-subtabs');
+    const bodyEl = document.getElementById('school-modal-body');
+    const linksEl = document.getElementById('school-modal-links');
+    if (!headerEl || !subtabsEl || !bodyEl) return;
+
+    const levelInfo = {
+      elementary: { label: '초등학교', icon: 'fa-school', color: 'text-amber-600' },
+      middle: { label: '중학교', icon: 'fa-book-open', color: 'text-emerald-600' },
+      high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600' }
+    }[school.level] || { label: '학교', icon: 'fa-school', color: 'text-slate-600' };
+
+    const firstTabTitle = {
+      elementary: '주변중학교',
+      middle: '주변고교·진학',
+      high: '대입실적'
+    }[school.level] || '주변학교';
+
+    // 1. 헤더 렌더링
+    headerEl.innerHTML = `
+      <div class="flex items-center gap-1.5 text-xs text-slate-400">
+        <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
+        <span class="font-bold text-slate-600">${school.publicPrivate} ${levelInfo.label}</span>
+        <span class="text-slate-300">·</span>
+        <span>${school.districtName}</span>
+      </div>
+      <h2 class="text-xl font-black text-slate-900 mt-1">${school.name}</h2>
+      <div class="flex items-center gap-1.5 flex-wrap pt-1">
+        <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-slate-900 text-white shadow-2xs">
+          전국 #${school.rank ? school.rank.toLocaleString() + '위' : school.districtRank}
+        </span>
+        <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
+          학군 ${school.grade}
+        </span>
+        <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200">
+          ${school.rankNation}
+        </span>
+        <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
+          ${school.rankRegion}
+        </span>
+      </div>
+      <p class="text-xs text-slate-600 mt-1 leading-relaxed">${school.summary}</p>
+    `;
+
+    // 2. 서브탭 바 렌더링
+    const tabs = [
+      { id: 'nearby', label: firstTabTitle },
+      { id: 'info', label: '기본정보 (3단 바차트)' },
+      { id: 'apartments', label: '배정아파트' },
+      { id: 'academies', label: '학원가' }
+    ];
+
+    subtabsEl.innerHTML = tabs
+      .map((t) => {
+        const active = this.modalSubTab === t.id;
+        return `
+          <button
+            type="button"
+            onclick="app.setModalSchoolTab('${t.id}')"
+            class="px-3 py-2.5 -mb-px border-b-2 transition ${
+              active
+                ? 'border-indigo-600 text-indigo-600 font-black'
+                : 'border-transparent text-slate-500 hover:text-slate-800'
+            }"
+          >
+            ${t.label}
+          </button>
         `;
       })
       .join('');
 
-    // 페이지네이션 바 렌더링
-    if (paginationEl) {
-      paginationEl.innerHTML = this.renderSchoolPaginationHtml(totalCount, totalPages, startIdx);
+    // 3. 서브탭 본문 렌더링
+    bodyEl.innerHTML = this.generateSchoolSubTabContent(school, this.modalSubTab);
+
+    // 4. 하단 외부 바로가기 링크 렌더링
+    if (linksEl) {
+      linksEl.innerHTML = `
+        <a
+          href="${school.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition shadow-2xs"
+        >
+          <span>학교알리미 공시</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
+        </a>
+        <a
+          href="${school.linkUrl}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-indigo-600 text-white font-black text-xs shadow-2xs transition"
+        >
+          <span>학교 공식 홈페이지</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
+      `;
     }
   }
 
