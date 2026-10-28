@@ -670,7 +670,10 @@ def fetch_wevity_contests():
         (22, "과학/공학/로봇/발명", "contest_stem", "💡 과학·발명대회"),
         (26, "예체능/음악/동요/스피치", "contest_music", "🎵 동요·음악경연"),
         (1, "기획/아이디어/청소년", "contest_general", "🏆 종합공모전"),
-        (24, "만화/캐릭터/동화일러스트", "contest_art", "🎨 만화·일러스트")
+        (24, "만화/캐릭터/동화일러스트", "contest_art", "🎨 만화·일러스트"),
+        (25, "영상/UCC/사진", "contest_general", "🎥 영상·사진공모"),
+        (27, "학술/논문/연구", "contest_stem", "📑 학술·탐구경연"),
+        (20, "디자인/공예", "contest_art", "🎨 디자인·공예")
     ]
 
     keywords = [
@@ -690,16 +693,16 @@ def fetch_wevity_contests():
     ]
 
     tasks = []
-    # 1. 7개 핵심 분야 카테고리 1~3페이지 수집
+    # 1. 10개 핵심 분야 카테고리 1~7페이지 심층 수집
     for cidx, cat_name, cat_key, badge in categories:
-        for page in [1, 2, 3]:
+        for page in range(1, 8):
             url = f"https://www.wevity.com/?c=find&s=1&gub=1&cidx={cidx}&gp={page}"
             tasks.append((url, cat_name, cat_key, badge))
 
-    # 2. 어린이·청소년 맞춤 검색 키워드 1~2페이지 수집
+    # 2. 어린이·청소년 맞춤 검색 키워드 1~3페이지 수집
     for kw, cat_key, badge in keywords:
         enc = urllib.parse.quote(kw)
-        for page in [1, 2]:
+        for page in [1, 2, 3]:
             url = f"https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw={enc}&gp={page}"
             tasks.append((url, f"{kw} 공모", cat_key, badge))
 
@@ -734,7 +737,7 @@ def fetch_wevity_contests():
             pass
         return items_found
 
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=15) as executor:
         batch_results = list(executor.map(fetch_url, tasks))
 
     contests = []
