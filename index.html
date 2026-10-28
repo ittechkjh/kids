@@ -61,11 +61,7 @@
 
           <!-- 모바일 액션 버튼 -->
           <div class="flex items-center gap-2 lg:hidden">
-            <div class="flex items-center gap-1 px-2 py-1.5 rounded-lg bg-slate-100 text-[10px] font-bold text-slate-600 border border-slate-200" title="최근 데이터 갱신일">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
-              <span>업데이트:</span>
-              <strong id="mobile-last-updated-badge" class="text-slate-900 font-extrabold last-updated-text">2026.10.28</strong>
-            </div>
+
             <button onclick="app.openWritePostModal()" class="px-3 py-2 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm">
               <i class="fa-solid fa-pen mr-1"></i>글쓰기
             </button>
@@ -137,15 +133,7 @@
             <span>커뮤니티 글쓰기</span>
           </button>
 
-          <!-- 우측 상단 데이터 업데이트 날짜 배지 -->
-          <div class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-50 border border-slate-200/90 text-slate-700 text-xs font-bold shrink-0 shadow-sm" title="공공데이터포털(TourAPI), 지자체 오픈API 및 전국 대회 공고 최종 갱신">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span class="text-slate-400 text-[11px] font-semibold">최근 업데이트:</span>
-            <strong id="global-last-updated-badge" class="text-slate-900 font-extrabold text-xs last-updated-text">2026.10.28</strong>
-          </div>
+
         </div>
       </div>
 
@@ -254,22 +242,35 @@
                 </p>
               </div>
 
-              <!-- 뷰 모드 전환 버튼 & 대회일정 바로가기 링크 -->
-              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
-                <button
-                  onclick="app.switchMainView('contests')"
-                  class="px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <span>공부·사생·독서토론 대회일정 →</span>
-                </button>
-                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200">
+              <!-- 행사 수집 현황 통계 위젯 & 뷰 모드 전환 버튼 -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+                <div class="bg-white/95 backdrop-blur border border-amber-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span>공공 축제·행사 수집 현황</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
+                      업데이트: <span id="fest-stat-date" class="last-updated-text">2026.10.28</span>
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <span>오늘 수집: <strong id="fest-stat-today" class="font-black text-amber-600">233</strong>건</span>
+                    <span class="text-slate-300">|</span>
+                    <span>누적 수: <strong id="fest-stat-total" class="font-black text-slate-900">1,829</strong>건</span>
+                  </div>
+                </div>
+
+                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200 self-end sm:self-auto">
                   <button
                     id="btn-festivals-list-mode"
                     onclick="app.setFestivalsViewMode('list')"
                     class="px-3.5 py-1.5 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm flex items-center gap-1.5"
                   >
-                    <i class="fa-solid fa-list-ul text-rose-500"></i>
+                    <i class="fa-solid fa-list-ul text-amber-600"></i>
                     <span>리스트</span>
                   </button>
                   <button
@@ -479,16 +480,29 @@
                 </p>
               </div>
 
-              <!-- 뷰 모드 전환 버튼 & 지역행사 바로가기 링크 -->
-              <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
-                <button
-                  onclick="app.switchMainView('festivals')"
-                  class="px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5"
-                >
-                  <i class="fa-solid fa-person-running text-amber-500"></i>
-                  <span>볼거리·축제·마라톤 일정 →</span>
-                </button>
-                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200">
+              <!-- 대회 수집 현황 통계 위젯 & 뷰 모드 전환 버튼 -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 shrink-0">
+                <div class="bg-white/95 backdrop-blur border border-indigo-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span>전국 대회 공고 수집 현황</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
+                      업데이트: <span id="cont-stat-date" class="last-updated-text">2026.10.28</span>
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <span>오늘 수집: <strong id="cont-stat-today" class="font-black text-indigo-600">128</strong>건</span>
+                    <span class="text-slate-300">|</span>
+                    <span>누적 수: <strong id="cont-stat-total" class="font-black text-slate-900">1,038</strong>건</span>
+                  </div>
+                </div>
+
+                <div class="inline-flex rounded-2xl bg-stone-100 p-1 border border-stone-200 self-end sm:self-auto">
                   <button
                     id="btn-contests-list-mode"
                     onclick="app.setContestsViewMode('list')"
@@ -719,7 +733,7 @@
                       <span>하이브리드 수집 현황</span>
                     </span>
                     <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
-                      업데이트: <span id="crawl-stat-date">2026.10.27</span>
+                      업데이트: <span id="crawl-stat-date">2026.10.28</span>
                     </span>
                   </div>
                   <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">

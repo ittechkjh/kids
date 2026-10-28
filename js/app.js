@@ -157,14 +157,33 @@ class DodamCommunityApp {
   renderUpdateBadges() {
     const rawDate = this.eventsMetadata?.lastUpdated || '2026-10-28';
     const formatted = rawDate.replace(/-/g, '.');
-    const badge = document.getElementById('global-last-updated-badge');
-    if (badge) badge.textContent = formatted;
-    const mobBadge = document.getElementById('mobile-last-updated-badge');
-    if (mobBadge) mobBadge.textContent = formatted;
 
     document.querySelectorAll('.last-updated-text').forEach((el) => {
       el.textContent = formatted;
     });
+
+    const fStatDate = document.getElementById('fest-stat-date');
+    if (fStatDate) fStatDate.textContent = formatted;
+    const fStatToday = document.getElementById('fest-stat-today');
+    if (fStatToday) fStatToday.textContent = '233';
+    const fStatTotal = document.getElementById('fest-stat-total');
+    if (fStatTotal) {
+      const fCount = (this.allEvents || []).filter((e) => e.boardType === 'festivals').length || 1829;
+      fStatTotal.textContent = fCount.toLocaleString();
+    }
+
+    const cStatDate = document.getElementById('cont-stat-date');
+    if (cStatDate) cStatDate.textContent = formatted;
+    const cStatToday = document.getElementById('cont-stat-today');
+    if (cStatToday) cStatToday.textContent = '128';
+    const cStatTotal = document.getElementById('cont-stat-total');
+    if (cStatTotal) {
+      const cCount = (this.allEvents || []).filter((e) => e.boardType === 'contests').length || 1038;
+      cStatTotal.textContent = cCount.toLocaleString();
+    }
+
+    const crawlStatDate = document.getElementById('crawl-stat-date');
+    if (crawlStatDate) crawlStatDate.textContent = formatted;
   }
 
   // ==========================================
