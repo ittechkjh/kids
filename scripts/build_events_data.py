@@ -1518,6 +1518,137 @@ def fetch_seoul_api_events(api_key):
 
     return events
 
+DEFAULT_GG_API_KEY = "adb521523a0b4de0925726149359947a"
+
+def fetch_gyeonggi_api_events(api_key):
+    """
+    경기데이터드림(data.gg.go.kr) OpenAPI 연동
+    - CultureFestival (경기도 문화축제 현황)
+    - CityPark (경기도 도시공원/문화공원/생태공원)
+    """
+    print("경기데이터드림 실시간 데이터 연동을 시도합니다...")
+    events = []
+
+    # 1. CultureFestival (경기도 문화축제 현황)
+    url1 = f"https://openapi.gg.go.kr/CultureFestival?KEY={api_key}&Type=json&pIndex=1&pSize=200"
+    try:
+        req = urllib.request.Request(url1, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            cf_data = data.get("CultureFestival", [])
+            rows = cf_data[1].get("row", []) if len(cf_data) > 1 else []
+            for r in rows:
+                title = r.get("FASTVL_NM", "").strip()
+                if not title: continue
+
+                s_raw = str(r.get("FASTVL_BEGIN_DE", ""))
+                e_raw = str(r.get("FASTVL_END_DE", ""))
+
+                if len(s_raw) == 8:
+                    s_date = f"{s_raw[:4]}-{s_raw[4:6]}-{s_raw[6:]}"
+                else:
+                    s_date = "2026-11-01"
+
+                if len(e_raw) == 8:
+                    e_date = f"{e_raw[:4]}-{e_raw[4:6]}-{e_raw[6:]}"
+                else:
+                    e_date = s_date
+
+                # 카테고리 판별
+                if any(k in title for k in ["마라톤", "걷기", "달리기"]):
+                    cat = "sports_marathon"
+                    cat_name = "주말 가족 마라톤"
+                elif any(k in title for k in ["빛", "야경", "불꽃", "루미나리에", "별빛"]):
+                    cat = "festival_night"
+                    cat_name = "야경 & 빛축제"
+                elif any(k in title for k in ["생태", "숲", "자연", "체험", "꽃", "수확", "도자기", "농업"]):
+                    cat = "park_eco"
+                    cat_name = "공원 생태체험"
+                else:
+                    cat = "festival_culture"
+                    cat_name = "지역 문화 축제"
+
+                loc = r.get("REFINE_ROADNM_ADDR") or r.get("REFINE_LOTNO_ADDR") or f"경기도 {r.get('OPENMEET_PLC', '일원')}"
+
+                events.append({
+                    "id": f"gg-fest-{abs(hash(title))}",
+                    "boardType": "festivals",
+                    "title": title,
+                    "category": cat,
+                    "categoryName": cat_name,
+                    "badge": "🎪 경기도 대표축제",
+                    "organizer": r.get("MNGT_INST_NM") or r.get("PROMOTER_INST_NM") or "경기도 지자체",
+                    "sourceType": "gyeonggi_data_dream",
+                    "sourceLabel": "경기데이터드림 공공데이터",
+                    "region": "gyeonggi",
+                    "regionName": "경기도",
+                    "location": loc.strip(),
+                    "startDate": s_date,
+                    "endDate": e_date,
+                    "applyStartDate": s_date,
+                    "applyEndDate": e_date,
+                    "status": "applying",
+                    "targetAudience": "전국 가족 관광객 / 경기도민",
+                    "fee": "무료 / 일부 체험 유료",
+                    "url": r.get("HMPG_ADDR") or "https://data.gg.go.kr",
+                    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
+                    "description": f"{title} - 경기도 및 지자체 주관 공식 문화관광 축제입니다. {r.get('FASTVL_CONT', '')}",
+                    "tags": ["경기데이터드림", "경기도축제", r.get("OPENMEET_PLC") or "경기도", "가족나들이"]
+                })
+            print(f"경기데이터드림 문화축제 {len(rows)}건 수신 완료")
+    except Exception as e:
+        print(f"경기 문화축제 조회 오류: {e}")
+
+    # 2. CityPark (경기도 문화공원 / 체육공원 / 생태공원 피크닉)
+    url2 = f"https://openapi.gg.go.kr/CityPark?KEY={api_key}&Type=json&pIndex=1&pSize=60"
+    try:
+        req = urllib.request.Request(url2, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=12) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            cp_data = data.get("CityPark", [])
+            rows = cp_data[1].get("row", []) if len(cp_data) > 1 else []
+            for r in rows:
+                p_div = r.get("PARK_DIV_NM", "")
+                if p_div not in ["문화공원", "체육공원", "수변공원", "생태공원"]:
+                    continue
+
+                p_name = r.get("PARK_NM", "").strip()
+                if not p_name: continue
+                title = f"[{r.get('SIGUN_NM', '경기도')}] {p_name} 주말 가족 피크닉·공원산책"
+
+                loc = r.get("REFINE_ROADNM_ADDR") or r.get("REFINE_LOTNO_ADDR") or f"경기도 {r.get('SIGUN_NM', '')} {p_name}"
+
+                events.append({
+                    "id": f"gg-park-{r.get('MANAGE_NO', abs(hash(title)))}",
+                    "boardType": "festivals",
+                    "title": title,
+                    "category": "park_eco",
+                    "categoryName": "공원 생태체험",
+                    "badge": f"🌿 {p_div}",
+                    "organizer": r.get("MANAGE_INST_NM") or f"경기도 {r.get('SIGUN_NM', '')}",
+                    "sourceType": "gyeonggi_data_dream",
+                    "sourceLabel": "경기데이터드림 공원정보",
+                    "region": "gyeonggi",
+                    "regionName": "경기도",
+                    "location": loc.strip(),
+                    "startDate": "2026-10-01",
+                    "endDate": "2026-11-30",
+                    "applyStartDate": "2026-10-01",
+                    "applyEndDate": "2026-11-30",
+                    "status": "applying",
+                    "targetAudience": "가족 나들이객 / 어린이",
+                    "fee": "무료 개방",
+                    "url": "https://data.gg.go.kr",
+                    "imageUrl": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?w=800&auto=format&fit=crop&q=80",
+                    "description": f"{p_name} ({p_div}) - 잔디마당, 산책로, 편의시설이 완비된 경기도 가족 나들이 추천 공원입니다.",
+                    "tags": ["경기데이터드림", p_div, r.get("SIGUN_NM") or "경기도", "주말피크닉"]
+                })
+            print(f"경기데이터드림 공원피크닉 {len(events)}건 수신 완료")
+    except Exception as e:
+        print(f"경기 공원정보 조회 오류: {e}")
+
+    return events
+
 def build():
     today = datetime.date(2026, 10, 27)
 
@@ -1552,6 +1683,20 @@ def build():
                 existing_titles.add(se["title"])
                 added_seoul_cnt += 1
         print(f"서울열린데이터광장 문화행사/공공예약 {added_seoul_cnt}건이 통합 데이터셋에 추가되었습니다.")
+
+    gg_api_key = os.environ.get("GG_API_KEY", DEFAULT_GG_API_KEY)
+    gg_api_events = []
+    if gg_api_key:
+        gg_api_events = fetch_gyeonggi_api_events(gg_api_key)
+
+    if gg_api_events:
+        added_gg_cnt = 0
+        for ge in gg_api_events:
+            if ge["title"] not in existing_titles:
+                combined_events.append(ge)
+                existing_titles.add(ge["title"])
+                added_gg_cnt += 1
+        print(f"경기데이터드림 문화축제/공원 {added_gg_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
     # 2. D-Day 및 정렬 처리
     for e in combined_events:
@@ -1594,6 +1739,7 @@ def build():
         "contestsCount": len(contests),
         "isTourApiIntegrated": bool(tour_api_key and tour_api_events),
         "isSeoulApiIntegrated": bool(seoul_api_key and seoul_api_events),
+        "isGyeonggiApiIntegrated": bool(gg_api_key and gg_api_events),
         "scope": "전국 17개 시도 전체",
         "regionStats": region_stats,
         "sources": [

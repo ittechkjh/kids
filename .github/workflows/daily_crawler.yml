@@ -27,6 +27,7 @@ jobs:
         env:
           TOUR_API_KEY: ${{ secrets.TOUR_API_KEY || 'G7N6elMlYOmqsOnctk%2B0X1Dpyz1ajBFF82gcH8Sl%2FgRDD5Jb4gangmAU2KZgmWSerzjtZqEQLlAxay4dFH3IPw%3D%3D' }}
           SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY || '6c424a69706b6a68323363476f4363' }}
+          GG_API_KEY: ${{ secrets.GG_API_KEY || 'adb521523a0b4de0925726149359947a' }}
         run: |
           python scripts/safe_crawler.py
           python scripts/build_events_data.py
