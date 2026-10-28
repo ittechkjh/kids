@@ -159,48 +159,8 @@
     </div>
   </header>
 
-  <!-- 메인 3단 그리드 레이아웃 -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-
-      <!-- ==========================================
-           좌측 사이드바 (3col): 내 아이 맞춤 프로필 & 출석체크 & 토픽 바로가기
-           ========================================== -->
-      <aside class="lg:col-span-3 space-y-5">
-        <!-- 내 아이 프로필 카드 -->
-        <div class="community-card p-5 space-y-4">
-          <div id="my-profile-widget"></div>
-          <div class="grid grid-cols-2 gap-2 pt-2 border-t border-stone-100">
-            <button onclick="app.checkInAttendance()" id="attendance-btn" class="py-2 px-3 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-200 text-xs font-extrabold transition flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-calendar-check text-amber-500"></i>
-              <span>오늘 출석체크</span>
-            </button>
-            <button onclick="app.openProfileModal()" class="py-2 px-3 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-bold transition flex items-center justify-center gap-1.5">
-              <i class="fa-solid fa-Sliders fa-gear"></i>
-              <span>아이정보 수정</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- 토픽 게시판 카테고리 메뉴 (데스크톱) -->
-        <div class="community-card p-4 hidden lg:block">
-          <div class="text-xs font-extrabold text-slate-400 px-2 mb-2 uppercase tracking-wider">토픽 라운지</div>
-          <div id="sidebar-category-list" class="space-y-1"></div>
-        </div>
-
-        <!-- 오늘의 육아 응원 명언 / 한줄 일기 -->
-        <div class="rounded-3xl p-5 bg-gradient-to-br from-rose-50 via-amber-50 to-indigo-50 border border-rose-200/60 space-y-2">
-          <span class="px-2 py-0.5 rounded-full bg-white text-rose-600 font-extrabold text-[10px] shadow-sm">💌 오늘의 육아 토닥임</span>
-          <p class="text-xs font-bold text-slate-800 leading-relaxed pt-1">
-            “오늘 하루도 아이 밥 먹이고, 안아주고, 재우느라 정말 애쓰셨어요. 완벽한 부모가 아니어도 아이에겐 이미 우주 최고인 엄마·아빠입니다.”
-          </p>
-        </div>
-      </aside>
-
-      <!-- ==========================================
-           중앙 메인 뷰 영역 (6col)
-           ========================================== -->
-      <div class="lg:col-span-6 space-y-5">
+  <!-- 메인 뷰 컨테이너 (사이드바 제거 및 와이드 레이아웃 적용) -->
+  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
 
         <!-- VIEW 1: 도담 육아 게시판 (실시간 라운지 -> 본격 커뮤니티 게시판 개편) -->
         <section id="view-board" class="view-section space-y-5">
@@ -962,52 +922,6 @@
             <div id="food-load-more-container" class="pt-2 text-center"></div>
           </div>
         </section>
-
-      </div>
-
-      <!-- ==========================================
-           우측 사이드바 (3col): 실시간 공감 베스트 TOP 5 & 인기 태그 & 전문가 Q&A
-           ========================================== -->
-      <aside class="lg:col-span-3 space-y-5">
-        <!-- 실시간 도담톡 인기글 TOP 5 -->
-        <div class="community-card p-5 space-y-3.5">
-          <div class="flex items-center justify-between">
-            <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
-              <i class="fa-solid fa-fire text-rose-500"></i>
-              <span>실시간 베스트 공감글</span>
-            </h3>
-            <span class="text-[10px] font-bold text-slate-400">LIVE</span>
-          </div>
-          <div id="sidebar-hot-posts" class="space-y-2.5"></div>
-        </div>
-
-        <!-- 지금 많이 찾는 육아 키워드 태그 -->
-        <div class="community-card p-5 space-y-3">
-          <h3 class="text-sm font-black text-slate-900">🏷️ 지금 핫한 육아 키워드</h3>
-          <div class="flex flex-wrap gap-1.5" id="sidebar-trending-tags"></div>
-        </div>
-
-        <!-- 이번 달 영유아 건강검진·예방접종 알림 팁 -->
-        <div class="community-card p-5 space-y-2.5 bg-indigo-950 text-white">
-          <span class="px-2 py-0.5 rounded bg-amber-400 text-slate-950 font-black text-[10px]">소아과 원장님 칼럼</span>
-          <h4 class="text-sm font-extrabold">환절기 영유아 중이염·크루프 주의보!</h4>
-          <p class="text-xs text-indigo-200 leading-relaxed">
-            밤에 갑자기 강아지 짖는 듯한 '컹컹' 기침 소리가 나면 급성 후두염(크루프)일 수 있어요. 당황하지 말고 욕실에 따뜻한 수증기를 틀어 15분간 호흡을 도와주세요.
-          </p>
-          <div class="grid grid-cols-2 gap-1.5 pt-1">
-            <button onclick="app.switchMainView('festivals')" class="py-2.5 px-2 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-[11px] transition flex items-center justify-center gap-1 shadow-sm">
-              <i class="fa-solid fa-person-running text-slate-900"></i>
-              <span>🎪 지역행사·마라톤</span>
-            </button>
-            <button onclick="app.switchMainView('contests')" class="py-2.5 px-2 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-[11px] transition flex items-center justify-center gap-1 shadow-sm">
-              <i class="fa-solid fa-graduation-cap text-amber-300"></i>
-              <span>🏆 사생·독서토론</span>
-            </button>
-          </div>
-        </div>
-      </aside>
-
-    </div>
   </main>
 
   <!-- 푸터 -->
