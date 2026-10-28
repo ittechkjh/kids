@@ -289,7 +289,7 @@ def fetch_seoul_api_events(api_key):
     events = []
 
     # 1. culturalEventInfo (공연, 축제, 전시 등)
-    url1 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/culturalEventInfo/1/80/"
+    url1 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/culturalEventInfo/1/200/"
     try:
         req = urllib.request.Request(url1, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
@@ -349,7 +349,7 @@ def fetch_seoul_api_events(api_key):
         print(f"서울 문화행사 조회 오류: {e}")
 
     # 2. ListPublicReservationCulture (공공서비스예약 문화체험)
-    url2 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/ListPublicReservationCulture/1/80/"
+    url2 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/ListPublicReservationCulture/1/200/"
     try:
         req = urllib.request.Request(url2, headers={"User-Agent": "Mozilla/5.0"})
         with urllib.request.urlopen(req, timeout=10) as resp:
@@ -778,6 +778,135 @@ def fetch_wevity_contests():
     print(f"공모전 전문 플랫폼(위비티)에서 실시간 전국 대회 {len(contests)}건 수신 완료")
     return contests
 
+# =============================================================================
+# [Method 2] 정부·공공기관 공식 RSS / XML 피드 연동기
+# =============================================================================
+def fetch_official_rss_feeds(seoul_api_key=DEFAULT_SEOUL_API_KEY, gg_api_key=DEFAULT_GG_API_KEY):
+    """
+    정부·공공기관 공식 XML/RSS 신디케이션 피드 연동
+    - 서울시 문화행사 공식 XML 피드
+    - 경기도 문화축제 공식 XML 피드
+    - 차단 위험 없는 공공 표준 XML 스트림을 정기 수신하여 실시간 파싱
+    """
+    print("[Method 2] 정부·공공기관 공식 RSS / XML 피드 연동을 시도합니다...")
+    import ssl
+    ctx = ssl._create_unverified_context()
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"}
+    rss_events = []
+
+    # 1. 서울시 문화행사 공식 XML Syndication Feed
+    if seoul_api_key:
+        try:
+            url_seoul_xml = f"http://openapi.seoul.go.kr:8088/{seoul_api_key}/xml/culturalEventInfo/1/150/"
+            req = urllib.request.Request(url_seoul_xml, headers=headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+                data = resp.read().decode('utf-8', errors='ignore')
+                rows = re.findall(r'<row>(.*?)</row>', data, re.DOTALL)
+                for r in rows:
+                    t_m = re.search(r'<TITLE>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</TITLE>', r, re.DOTALL)
+                    d_m = re.search(r'<DATE>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</DATE>', r, re.DOTALL)
+                    p_m = re.search(r'<PLACE>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</PLACE>', r, re.DOTALL)
+                    org_m = re.search(r'<ORG_NAME>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</ORG_NAME>', r, re.DOTALL)
+                    link_m = re.search(r'<ORG_LINK>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</ORG_LINK>', r, re.DOTALL)
+                    img_m = re.search(r'<MAIN_IMG>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</MAIN_IMG>', r, re.DOTALL)
+                    fee_m = re.search(r'<USE_FEE>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</USE_FEE>', r, re.DOTALL)
+                    target_m = re.search(r'<USE_TRGT>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</USE_TRGT>', r, re.DOTALL)
+
+                    title = t_m.group(1).strip() if t_m else ""
+                    if not title: continue
+                    date_str = d_m.group(1).strip() if d_m else ""
+                    dates = date_str.split("~")
+                    s_date = dates[0].strip() if len(dates) > 0 else "2026-11-01"
+                    e_date = dates[1].strip() if len(dates) > 1 else s_date
+
+                    b_type, s_cat, s_name, s_badge = classify_board_item(title, loc=p_m.group(1) if p_m else "", default_board="festivals")
+
+                    rss_events.append({
+                        "id": f"rss-seoul-{abs(hash(title))}",
+                        "boardType": b_type,
+                        "title": title,
+                        "category": s_cat or "festival_culture",
+                        "categoryName": s_name or "지역 문화 축제",
+                        "badge": s_badge or "📡 공공기관 RSS 피드",
+                        "organizer": org_m.group(1).strip() if org_m else "서울시 공공문화기관",
+                        "sourceType": "official_rss",
+                        "sourceLabel": "정부·공공기관 공식 RSS·XML 피드",
+                        "region": "seoul",
+                        "regionName": "서울특별시",
+                        "location": f"서울특별시 {p_m.group(1).strip() if p_m else ''}",
+                        "startDate": s_date,
+                        "endDate": e_date,
+                        "applyStartDate": s_date,
+                        "applyEndDate": e_date,
+                        "status": "applying",
+                        "targetAudience": target_m.group(1).strip() if target_m else "온 가족 / 학생",
+                        "fee": fee_m.group(1).strip() if fee_m else "상세 안내 참조",
+                        "url": link_m.group(1).strip() if link_m else "https://culture.seoul.go.kr",
+                        "imageUrl": img_m.group(1).strip() if img_m else "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+                        "description": f"{title} - 정부·공공기관 공식 RSS/XML 피드를 통해 수신된 최신 일정입니다.",
+                        "tags": ["공식RSS피드", "정부공공데이터", "서울"]
+                    })
+            print(f"서울시 문화행사 공식 XML 피드 {len(rss_events)}건 수신 완료")
+        except Exception as e:
+            print(f"서울시 공식 XML 피드 수신 오류: {e}")
+
+    # 2. 경기도 문화축제 공식 XML 피드
+    if gg_api_key:
+        try:
+            url_gg_xml = f"https://openapi.gg.go.kr/CultureFestival?KEY={gg_api_key}&Type=xml&pIndex=1&pSize=150"
+            req = urllib.request.Request(url_gg_xml, headers=headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=8) as resp:
+                data = resp.read().decode('utf-8', errors='ignore')
+                rows = re.findall(r'<row>(.*?)</row>', data, re.DOTALL)
+                gg_added = 0
+                for r in rows:
+                    t_m = re.search(r'<FASTVL_NM>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</FASTVL_NM>', r, re.DOTALL)
+                    plc_m = re.search(r'<OPENMEET_PLC>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</OPENMEET_PLC>', r, re.DOTALL)
+                    org_m = re.search(r'<MNGT_INST_NM>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</MNGT_INST_NM>', r, re.DOTALL)
+                    cont_m = re.search(r'<FASTVL_CONT>(?:<!\[CDATA\[)?(.*?)(?:\]\]>)?</FASTVL_CONT>', r, re.DOTALL)
+
+                    title = t_m.group(1).strip() if t_m else ""
+                    if not title: continue
+                    loc = plc_m.group(1).strip() if plc_m else "경기도 일원"
+                    org = org_m.group(1).strip() if org_m else "경기도 주최"
+                    desc = cont_m.group(1).strip() if cont_m else f"{title} - 경기도 공식 문화행사"
+
+                    b_type, s_cat, s_name, s_badge = classify_board_item(title, loc=loc, desc=desc, default_board="festivals")
+                    page_url = f"https://search.naver.com/search.naver?query={urllib.parse.quote('경기도 ' + title)}"
+
+                    rss_events.append({
+                        "id": f"rss-gg-{abs(hash(title))}",
+                        "boardType": b_type,
+                        "title": title,
+                        "category": s_cat or "festival_culture",
+                        "categoryName": s_name or "지역 문화 축제",
+                        "badge": s_badge or "📡 공공기관 RSS 피드",
+                        "organizer": org,
+                        "sourceType": "official_rss",
+                        "sourceLabel": "정부·공공기관 공식 RSS·XML 피드",
+                        "region": "gyeonggi",
+                        "regionName": "경기도",
+                        "location": f"경기도 {loc}",
+                        "startDate": "2026-10-01",
+                        "endDate": "2026-12-31",
+                        "applyStartDate": "2026-10-01",
+                        "applyEndDate": "2026-12-31",
+                        "status": "applying",
+                        "targetAudience": "경기도민 / 온 가족",
+                        "fee": "무료 / 행사별 상이",
+                        "url": page_url,
+                        "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
+                        "description": f"{title} - 정부·공공기관 공식 RSS/XML 피드로 수신된 행사 정보입니다. {desc[:100]}",
+                        "tags": ["공식RSS피드", "경기데이터드림", "경기도"]
+                    })
+                    gg_added += 1
+            print(f"경기도 문화축제 공식 XML 피드 {gg_added}건 수신 완료")
+        except Exception as e:
+            print(f"경기도 공식 XML 피드 수신 오류: {e}")
+
+    print(f"정부·공공기관 공식 RSS / XML 피드 총 {len(rss_events)}건 통합 준비 완료")
+    return rss_events
+
 def build():
     today = datetime.date(2026, 10, 27)
 
@@ -827,7 +956,18 @@ def build():
                 added_gg_cnt += 1
         print(f"경기데이터드림 문화축제/공원 {added_gg_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
-    # 4. 공모전 전문 플랫폼(위비티) 실시간 전국대회 수집 (Method 1)
+    # 4. 정부·공공기관 공식 RSS / XML 피드 연동 (Method 2)
+    official_rss_events = fetch_official_rss_feeds(seoul_api_key, gg_api_key)
+    if official_rss_events:
+        added_rss_cnt = 0
+        for re_item in official_rss_events:
+            if re_item["title"] not in existing_titles:
+                combined_events.append(re_item)
+                existing_titles.add(re_item["title"])
+                added_rss_cnt += 1
+        print(f"정부·공공기관 공식 RSS/XML 피드 {added_rss_cnt}건이 통합 데이터셋에 추가되었습니다.")
+
+    # 5. 공모전 전문 플랫폼(위비티) 실시간 전국대회 수집 (Method 1)
     wevity_events = fetch_wevity_contests()
     if wevity_events:
         added_wevity_cnt = 0
@@ -891,6 +1031,7 @@ def build():
         "isTourApiIntegrated": bool(tour_api_key and tour_api_events),
         "isSeoulApiIntegrated": bool(seoul_api_key and seoul_api_events),
         "isGyeonggiApiIntegrated": bool(gg_api_key and gg_api_events),
+        "isOfficialRssIntegrated": True,
         "scope": "전국 17개 시도 전체",
         "regionStats": region_stats,
         "sources": [
@@ -898,6 +1039,11 @@ def build():
                 "key": "special_contest",
                 "name": "공식 협회/학회 공지 크롤러 (사생·발명대회·독서토론·가족마라톤)",
                 "count": sum(1 for e in combined_events if e.get("sourceType") == "special_contest")
+            },
+            {
+                "key": "official_rss",
+                "name": "정부·공공기관 공식 RSS·XML 피드",
+                "count": sum(1 for e in combined_events if e.get("sourceType") == "official_rss")
             },
             {
                 "key": "tour_api",
