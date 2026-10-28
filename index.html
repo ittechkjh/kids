@@ -414,22 +414,38 @@
             </div>
           </div>
 
-          <!-- 이벤트 목록 헤더 & 카운트 -->
-          <div class="flex items-center justify-between px-1">
+          <!-- 이벤트 목록 헤더 & 정렬 바 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-1">
             <div class="flex items-center gap-2">
               <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
                 <i class="fa-solid fa-flag-checkered text-amber-500"></i>
                 <span>전국 지역행사 & 볼거리 목록</span>
               </h3>
               <span class="text-xs font-bold text-slate-500">
-                총 <strong id="festivals-count-badge" class="text-amber-600 font-black">20</strong>개
+                총 <strong id="festivals-count-badge" class="text-amber-600 font-black">0</strong>개
               </span>
             </div>
-            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 및 공공포털 공식 사이트 직접 링크</span>
+
+            <!-- 행사 정렬 버튼 탭 -->
+            <div class="flex items-center gap-1.5 text-xs font-bold">
+              <span class="text-slate-400 text-[11px]">정렬:</span>
+              <button onclick="app.setFestivalsSort('closing')" id="btn-fest-sort-closing" class="px-2.5 py-1 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition">
+                ⏳ 마감임박순
+              </button>
+              <button onclick="app.setFestivalsSort('latest')" id="btn-fest-sort-latest" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+                🆕 최신등록순
+              </button>
+              <button onclick="app.setFestivalsSort('startDate')" id="btn-fest-sort-startDate" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+                📅 행사일정순
+              </button>
+            </div>
           </div>
 
-          <!-- 이벤트 카드 목록 (리스트 뷰) -->
-          <div id="festivals-list-container" class="space-y-4"></div>
+          <!-- 이벤트 카드 목록 (2열 매거진 그리드 뷰) -->
+          <div id="festivals-list-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+          <!-- 페이징 컨트롤 바 -->
+          <div id="festivals-pagination" class="flex items-center justify-center gap-1.5 pt-4"></div>
         </section>
 
         <!-- VIEW 3: 전국 대회일정 (공부 위주: 사생대회, 백일장, 독서토론/골든벨, 창의발명, 코딩, 수학/영어) -->
@@ -633,22 +649,38 @@
             </div>
           </div>
 
-          <!-- 대회 목록 헤더 & 카운트 -->
-          <div class="flex items-center justify-between px-1">
+          <!-- 대회 목록 헤더 & 정렬 바 -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-1">
             <div class="flex items-center gap-2">
               <h3 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
                 <i class="fa-solid fa-graduation-cap text-indigo-600"></i>
                 <span>전국 어린이·청소년 대회 목록</span>
               </h3>
               <span class="text-xs font-bold text-slate-500">
-                총 <strong id="contests-count-badge" class="text-indigo-600 font-black">18</strong>개
+                총 <strong id="contests-count-badge" class="text-indigo-600 font-black">0</strong>개
               </span>
             </div>
-            <span class="text-[11px] text-slate-400 font-medium">※ 주최 협회 및 기관 공식 접수처 직접 링크</span>
+
+            <!-- 대회 정렬 버튼 탭 -->
+            <div class="flex items-center gap-1.5 text-xs font-bold">
+              <span class="text-slate-400 text-[11px]">정렬:</span>
+              <button onclick="app.setContestsSort('closing')" id="btn-cont-sort-closing" class="px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition">
+                ⏳ 마감임박순
+              </button>
+              <button onclick="app.setContestsSort('latest')" id="btn-cont-sort-latest" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+                🆕 최신등록순
+              </button>
+              <button onclick="app.setContestsSort('startDate')" id="btn-cont-sort-startDate" class="px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition">
+                📅 대회일정순
+              </button>
+            </div>
           </div>
 
-          <!-- 대회 카드 목록 (리스트 뷰) -->
-          <div id="contests-list-container" class="space-y-4"></div>
+          <!-- 대회 카드 목록 (2열 매거진 그리드 뷰) -->
+          <div id="contests-list-container" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+
+          <!-- 페이징 컨트롤 바 -->
+          <div id="contests-pagination" class="flex items-center justify-center gap-1.5 pt-4"></div>
         </section>
 
         <!-- VIEW 6: 네이버·카카오·구글 맛집 맵 & 바로가기 링크 (신규 추가) -->

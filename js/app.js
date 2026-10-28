@@ -90,6 +90,9 @@ class DodamCommunityApp {
     this.festivalsCalendarYear = 2026;
     this.festivalsCalendarMonth = 11;
     this.selectedFestivalsDate = null;
+    this.festivalsPage = 1;
+    this.festivalsPageSize = 12;
+    this.festivalsSort = 'closing'; // 'closing' | 'latest' | 'startDate'
 
     // 4. Contests State (전국 대회일정: 공부/사생/독서토론)
     this.contestsViewMode = 'list'; // 'list' | 'calendar'
@@ -101,6 +104,9 @@ class DodamCommunityApp {
     this.contestsCalendarYear = 2026;
     this.contestsCalendarMonth = 11;
     this.selectedContestsDate = null;
+    this.contestsPage = 1;
+    this.contestsPageSize = 12;
+    this.contestsSort = 'closing'; // 'closing' | 'latest' | 'startDate'
 
     // Active detail modal
     this.activeEventDetailId = null;
@@ -1191,9 +1197,23 @@ class DodamCommunityApp {
     grid.innerHTML = cellsHtml;
   }
 
+  setFestivalsSort(sortType) {
+    this.festivalsSort = sortType;
+    this.festivalsPage = 1;
+    this.renderFestivalsView();
+  }
+
+  setFestivalsPage(page) {
+    this.festivalsPage = page;
+    this.renderFestivalsView();
+    const el = document.getElementById('view-festivals');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   renderFestivalsView() {
     const listEl = document.getElementById('festivals-list-container');
     const countBadge = document.getElementById('festivals-count-badge');
+    const paginationEl = document.getElementById('festivals-pagination');
     if (!listEl) return;
 
     let filtered = (this.allEvents || []).filter((evt) => {
@@ -1232,11 +1252,35 @@ class DodamCommunityApp {
       return true;
     });
 
-    if (countBadge) countBadge.textContent = filtered.length;
+    if (countBadge) countBadge.textContent = filtered.length.toLocaleString();
+
+    // Sort
+    if (this.festivalsSort === 'closing') {
+      filtered.sort((a, b) => {
+        if (a.status === 'applying' && b.status !== 'applying') return -1;
+        if (a.status !== 'applying' && b.status === 'applying') return 1;
+        return (a.applyEndDate || '').localeCompare(b.applyEndDate || '');
+      });
+    } else if (this.festivalsSort === 'latest') {
+      filtered.sort((a, b) => (b.applyStartDate || '').localeCompare(a.applyStartDate || ''));
+    } else if (this.festivalsSort === 'startDate') {
+      filtered.sort((a, b) => (a.startDate || '').localeCompare(b.startDate || ''));
+    }
+
+    // Update sort buttons active state
+    ['closing', 'latest', 'startDate'].forEach((st) => {
+      const btn = document.getElementById(`btn-fest-sort-${st}`);
+      if (!btn) return;
+      if (st === this.festivalsSort) {
+        btn.className = 'px-2.5 py-1 rounded-lg bg-amber-500 text-white font-extrabold shadow-sm transition';
+      } else {
+        btn.className = 'px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+      }
+    });
 
     if (filtered.length === 0) {
       listEl.innerHTML = `
-        <div class="community-card p-10 text-center space-y-2">
+        <div class="col-span-full community-card p-10 text-center space-y-2">
           <div class="text-2xl">🎪</div>
           <div class="text-sm font-extrabold text-slate-700">해당 지역·조건에 맞는 지역행사나 볼거리가 없습니다.</div>
           <p class="text-xs text-slate-400">다른 지역을 선택하거나 '전국 전체'로 확인해보세요.</p>
@@ -1245,10 +1289,27 @@ class DodamCommunityApp {
           </button>
         </div>
       `;
+      if (paginationEl) paginationEl.innerHTML = '';
       return;
     }
 
-    listEl.innerHTML = filtered.map((evt) => this.renderEventCardHtml(evt, 'amber')).join('');
+    // Pagination slice
+    const totalPages = Math.ceil(filtered.length / this.festivalsPageSize);
+    if (this.festivalsPage > totalPages) this.festivalsPage = 1;
+    const startIdx = (this.festivalsPage - 1) * this.festivalsPageSize;
+    const pageItems = filtered.slice(startIdx, startIdx + this.festivalsPageSize);
+
+    listEl.innerHTML = pageItems.map((evt) => this.renderEventCardHtml(evt, 'amber')).join('');
+
+    if (paginationEl) {
+      paginationEl.innerHTML = this.renderPaginationHtml(
+        filtered.length,
+        this.festivalsPage,
+        this.festivalsPageSize,
+        'setFestivalsPage',
+        'amber'
+      );
+    }
   }
 
   // ==========================================
@@ -1529,9 +1590,23 @@ class DodamCommunityApp {
     grid.innerHTML = cellsHtml;
   }
 
+  setContestsSort(sortType) {
+    this.contestsSort = sortType;
+    this.contestsPage = 1;
+    this.renderContestsView();
+  }
+
+  setContestsPage(page) {
+    this.contestsPage = page;
+    this.renderContestsView();
+    const el = document.getElementById('view-contests');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   renderContestsView() {
     const listEl = document.getElementById('contests-list-container');
     const countBadge = document.getElementById('contests-count-badge');
+    const paginationEl = document.getElementById('contests-pagination');
     if (!listEl) return;
 
     let filtered = (this.allEvents || []).filter((evt) => {
@@ -1570,11 +1645,35 @@ class DodamCommunityApp {
       return true;
     });
 
-    if (countBadge) countBadge.textContent = filtered.length;
+    if (countBadge) countBadge.textContent = filtered.length.toLocaleString();
+
+    // Sort
+    if (this.contestsSort === 'closing') {
+      filtered.sort((a, b) => {
+        if (a.status === 'applying' && b.status !== 'applying') return -1;
+        if (a.status !== 'applying' && b.status === 'applying') return 1;
+        return (a.applyEndDate || '').localeCompare(b.applyEndDate || '');
+      });
+    } else if (this.contestsSort === 'latest') {
+      filtered.sort((a, b) => (b.applyStartDate || '').localeCompare(a.applyStartDate || ''));
+    } else if (this.contestsSort === 'startDate') {
+      filtered.sort((a, b) => (a.startDate || '').localeCompare(b.startDate || ''));
+    }
+
+    // Update sort buttons active state
+    ['closing', 'latest', 'startDate'].forEach((st) => {
+      const btn = document.getElementById(`btn-cont-sort-${st}`);
+      if (!btn) return;
+      if (st === this.contestsSort) {
+        btn.className = 'px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-extrabold shadow-sm transition';
+      } else {
+        btn.className = 'px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition';
+      }
+    });
 
     if (filtered.length === 0) {
       listEl.innerHTML = `
-        <div class="community-card p-10 text-center space-y-2">
+        <div class="col-span-full community-card p-10 text-center space-y-2">
           <div class="text-2xl">🏆</div>
           <div class="text-sm font-extrabold text-slate-700">해당 지역·조건에 맞는 대회 일정이 없습니다.</div>
           <p class="text-xs text-slate-400">다른 지역을 선택하거나 '전국 전체'로 확인해보세요.</p>
@@ -1583,116 +1682,162 @@ class DodamCommunityApp {
           </button>
         </div>
       `;
+      if (paginationEl) paginationEl.innerHTML = '';
       return;
     }
 
-    listEl.innerHTML = filtered.map((evt) => this.renderEventCardHtml(evt, 'indigo')).join('');
+    // Pagination slice
+    const totalPages = Math.ceil(filtered.length / this.contestsPageSize);
+    if (this.contestsPage > totalPages) this.contestsPage = 1;
+    const startIdx = (this.contestsPage - 1) * this.contestsPageSize;
+    const pageItems = filtered.slice(startIdx, startIdx + this.contestsPageSize);
+
+    listEl.innerHTML = pageItems.map((evt) => this.renderEventCardHtml(evt, 'indigo')).join('');
+
+    if (paginationEl) {
+      paginationEl.innerHTML = this.renderPaginationHtml(
+        filtered.length,
+        this.contestsPage,
+        this.contestsPageSize,
+        'setContestsPage',
+        'indigo'
+      );
+    }
+  }
+
+  renderPaginationHtml(totalCount, currentPage, pageSize, setPageMethodName, themeColor = 'indigo') {
+    const totalPages = Math.ceil(totalCount / pageSize);
+    if (totalPages <= 1) return '';
+
+    let html = `<div class="flex items-center gap-1.5 flex-wrap justify-center text-xs font-bold py-3">`;
+
+    // First button
+    if (currentPage > 1) {
+      html += `<button onclick="app.${setPageMethodName}(1)" class="w-8 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition flex items-center justify-center" title="처음"><i class="fa-solid fa-angles-left text-[10px]"></i></button>`;
+      html += `<button onclick="app.${setPageMethodName}(${currentPage - 1})" class="px-2.5 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 transition flex items-center justify-center gap-1"><i class="fa-solid fa-chevron-left text-[10px]"></i><span>이전</span></button>`;
+    } else {
+      html += `<button disabled class="w-8 h-8 rounded-xl border border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center"><i class="fa-solid fa-angles-left text-[10px]"></i></button>`;
+      html += `<button disabled class="px-2.5 h-8 rounded-xl border border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center gap-1"><i class="fa-solid fa-chevron-left text-[10px]"></i><span>이전</span></button>`;
+    }
+
+    const startPage = Math.max(1, currentPage - 2);
+    const endPage = Math.min(totalPages, startPage + 4);
+
+    const activeBg = themeColor === 'amber' ? 'bg-amber-500 text-white' : 'bg-indigo-600 text-white';
+
+    for (let p = startPage; p <= endPage; p++) {
+      if (p === currentPage) {
+        html += `<button class="w-8 h-8 rounded-xl ${activeBg} font-black shadow-sm flex items-center justify-center">${p}</button>`;
+      } else {
+        html += `<button onclick="app.${setPageMethodName}(${p})" class="w-8 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 transition flex items-center justify-center">${p}</button>`;
+      }
+    }
+
+    // Next button
+    if (currentPage < totalPages) {
+      html += `<button onclick="app.${setPageMethodName}(${currentPage + 1})" class="px-2.5 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 transition flex items-center justify-center gap-1"><span>다음</span><i class="fa-solid fa-chevron-right text-[10px]"></i></button>`;
+      html += `<button onclick="app.${setPageMethodName}(${totalPages})" class="w-8 h-8 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-600 transition flex items-center justify-center" title="맨끝"><i class="fa-solid fa-angles-right text-[10px]"></i></button>`;
+    } else {
+      html += `<button disabled class="px-2.5 h-8 rounded-xl border border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center gap-1"><span>다음</span><i class="fa-solid fa-chevron-right text-[10px]"></i></button>`;
+      html += `<button disabled class="w-8 h-8 rounded-xl border border-slate-100 bg-slate-50 text-slate-300 cursor-not-allowed flex items-center justify-center"><i class="fa-solid fa-angles-right text-[10px]"></i></button>`;
+    }
+
+    html += `<span class="ml-2 text-[11px] text-slate-400 font-medium">(${currentPage} / ${totalPages} 페이지)</span>`;
+    html += `</div>`;
+    return html;
   }
 
   // 공통 이벤트 카드 렌더러
   renderEventCardHtml(evt, themeColor) {
-    let statusBadge = '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black">접수중</span>';
-    if (evt.status === 'ongoing') {
-      statusBadge = '<span class="px-2 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-black">진행중</span>';
-    } else if (evt.status === 'closed') {
-      statusBadge = '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-500 text-[10px] font-bold">마감</span>';
+    const isContest = evt.boardType === 'contests';
+    const activeColor = isContest ? 'indigo' : 'amber';
+    const defaultImg = isContest
+      ? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&auto=format&fit=crop&q=80'
+      : 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=300&auto=format&fit=crop&q=80';
+    const imgUrl = evt.imageUrl || defaultImg;
+
+    let ddayBadge = '';
+    if (evt.dday === '접수마감') {
+      ddayBadge = '<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-400 text-[11px] font-bold">마감</span>';
+    } else if (evt.dday && evt.dday.startsWith('D-')) {
+      const num = parseInt(evt.dday.replace('D-', ''), 10);
+      const isUrgent = !isNaN(num) && num <= 7;
+      const bgClass = isUrgent
+        ? 'bg-rose-500 text-white animate-pulse shadow-sm'
+        : 'bg-rose-50 text-rose-600 border border-rose-200';
+      ddayBadge = `<span class="px-2.5 py-0.5 rounded-lg ${bgClass} text-[11px] font-black">${evt.dday}</span>`;
+    } else {
+      ddayBadge = `<span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-black">${evt.dday || '진행중'}</span>`;
     }
 
-    const isContest = evt.sourceType === 'special_contest';
-    const isContestBoard = evt.boardType === 'contests';
-
-    const badgeClass = 'bg-slate-900 text-white font-extrabold text-[11px] rounded-lg px-2.5 py-1 shadow-sm';
-    const cardHoverBorder = 'hover:border-slate-300';
-    const ctaGradient = 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm';
+    const sourceLabel = evt.sourceLabel || (isContest ? '공모전 공식' : '한국관광공사');
+    const directUrl = this.getEventUrl(evt);
 
     return `
-      <div class="community-card p-5 space-y-3.5 ${cardHoverBorder} hover:shadow-md transition">
+      <div class="bg-white rounded-2xl border border-slate-200/90 hover:border-${activeColor}-400 p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between space-y-3 group">
         <!-- 상단 뱃지 라인 -->
-        <div class="flex items-center justify-between gap-2 flex-wrap">
+        <div class="flex items-center justify-between gap-1.5 flex-wrap">
           <div class="flex items-center gap-1.5 flex-wrap">
-            <span class="px-2.5 py-1 rounded-xl text-xs font-black ${badgeClass}">
-              ${evt.badge}
+            <span class="px-2 py-0.5 rounded-lg text-xs font-black bg-slate-900 text-white">
+              ${evt.badge || (isContest ? '🏆 전국대회' : '🎪 지역축제')}
             </span>
-
-            <span class="px-2 py-0.5 rounded-lg text-[10px] font-extrabold ${
-              isContest ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-stone-100 text-slate-600'
-            }">
-              ${isContest ? '<i class="fa-solid fa-star text-rose-500 mr-1"></i>협회 공식 공지' : '<i class="fa-solid fa-landmark mr-1"></i>공공데이터'}
-            </span>
-
-            <span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-700 text-[10px] font-bold">
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
               📍 ${evt.regionName}
             </span>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 rounded-xl text-xs font-black ${
-              evt.dday === '접수마감' ? 'bg-stone-100 text-slate-400' : 'bg-rose-50 text-rose-600 border border-rose-200'
-            }">
-              ${evt.dday}
+            <span class="px-1.5 py-0.5 rounded-md text-[10px] text-slate-400 font-medium border border-slate-200">
+              ${sourceLabel}
             </span>
-            ${statusBadge}
+          </div>
+          <div>
+            ${ddayBadge}
           </div>
         </div>
 
-        <!-- 제목 및 설명 -->
-        <div class="space-y-1.5">
-          <h3 onclick="app.openEventDetailModal('${evt.id}')" class="text-base font-black text-slate-900 leading-snug cursor-pointer hover:text-rose-600 transition">
-            ${evt.title}
-          </h3>
-          <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${evt.description}</p>
-        </div>
-
-        <!-- 행사/대회 주요 스펙 박스 -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-slate-50/80 rounded-xl p-3 border border-slate-200/80">
-          <div class="space-y-1">
-            <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-regular fa-calendar-check text-slate-600 w-4 text-center"></i>
-              <span><strong>일정:</strong> ${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}</span>
+        <!-- 본문: 썸네일 + 제목 + 주최/일정 -->
+        <div class="flex gap-3 items-start">
+          <img
+            src="${imgUrl}"
+            alt="${evt.title}"
+            class="w-20 h-20 rounded-xl object-cover shrink-0 border border-slate-100 shadow-inner bg-slate-50 group-hover:scale-105 transition"
+            onerror="this.src='${defaultImg}'"
+          />
+          <div class="flex-1 min-w-0 space-y-1">
+            <h4
+              onclick="app.openEventDetailModal('${evt.id}')"
+              class="text-sm font-black text-slate-900 leading-snug line-clamp-2 hover:text-${activeColor}-600 cursor-pointer transition"
+              title="${evt.title}"
+            >
+              ${evt.title}
+            </h4>
+            <div class="text-[11px] text-slate-500 truncate">
+              <i class="fa-solid fa-building-columns text-slate-400 mr-1"></i>${evt.organizer || '주최기관 공식 안내'}
             </div>
-            <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-pen-nib text-slate-600 w-4 text-center"></i>
-              <span><strong>접수:</strong> ${evt.applyStartDate} ~ ${evt.applyEndDate}</span>
-            </div>
-          </div>
-          <div class="space-y-1">
-            <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-children text-slate-600 w-4 text-center"></i>
-              <span class="truncate"><strong>대상:</strong> ${evt.targetAudience}</span>
-            </div>
-            <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-ticket text-slate-600 w-4 text-center"></i>
-              <span><strong>비용:</strong> ${evt.fee}</span>
+            <div class="text-[11px] font-bold text-slate-700">
+              <i class="fa-regular fa-calendar-check text-${activeColor}-500 mr-1"></i>접수: <span class="text-${activeColor}-700 font-black">${evt.applyStartDate} ~ ${evt.applyEndDate}</span>
             </div>
           </div>
         </div>
 
-        <!-- 장소 및 주최 정보 & 액션 버튼 -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-stone-100 text-xs">
-          <div class="space-y-0.5 text-slate-500">
-            <div class="flex items-center gap-1.5 font-bold text-slate-700">
-              <i class="fa-solid fa-location-dot text-slate-700"></i>
-              <span class="truncate max-w-xs sm:max-w-sm">${evt.location}</span>
-            </div>
-            <div class="text-[11px] text-slate-400">주최: ${evt.organizer}</div>
+        <!-- 하단: 대상 + 바로가기 버튼 -->
+        <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs">
+          <div class="text-[11px] text-slate-500 truncate max-w-[140px] sm:max-w-[200px]" title="${evt.targetAudience}">
+            <i class="fa-solid fa-children text-slate-400 mr-1"></i>${evt.targetAudience || '전국 유·초·중·고'}
           </div>
-
-          <div class="flex items-center gap-2 shrink-0">
+          <div class="flex items-center gap-1.5 shrink-0">
             <button
               onclick="app.openEventDetailModal('${evt.id}')"
-              class="px-3 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-extrabold text-xs transition flex items-center gap-1.5"
+              class="px-2.5 py-1.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 font-bold text-[11px] transition"
             >
-              <i class="fa-solid fa-circle-info text-slate-400"></i>
-              <span>상세보기</span>
+              상세보기
             </button>
             <a
-              href="${this.getEventUrl(evt)}"
+              href="${directUrl}"
               target="_blank"
               rel="noopener"
-              class="px-3.5 py-2 rounded-xl ${ctaGradient} hover:opacity-95 text-white font-black text-xs shadow-sm flex items-center gap-1.5 transition"
+              class="px-3 py-1.5 rounded-xl bg-${activeColor}-600 hover:bg-${activeColor}-700 text-white font-black text-[11px] shadow-sm flex items-center gap-1 transition"
             >
-              <span>공식 신청 바로가기</span>
-              <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              <span>공식 신청</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
             </a>
           </div>
         </div>
@@ -1700,73 +1845,6 @@ class DodamCommunityApp {
     `;
   }
 
-  // 모달 제어 (지역행사 & 대회일정 공용)
-  openEventDetailModal(eventId) {
-    const evt = (this.allEvents || []).find((e) => e.id === eventId);
-    if (!evt) return;
-    this.activeEventDetailId = eventId;
-
-    const modal = document.getElementById('event-detail-modal');
-    if (!modal) return;
-
-    document.getElementById('evt-modal-badge').textContent = evt.badge;
-    document.getElementById('evt-modal-source').textContent = evt.sourceLabel;
-    document.getElementById('evt-modal-dday').textContent = evt.dday;
-    document.getElementById('evt-modal-region').textContent = `📍 ${evt.regionName}`;
-    document.getElementById('evt-modal-title').textContent = evt.title;
-    document.getElementById('evt-modal-img').src = evt.imageUrl;
-
-    document.getElementById('evt-modal-date').textContent = `${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}`;
-    document.getElementById('evt-modal-apply').textContent = `${evt.applyStartDate} ~ ${evt.applyEndDate}`;
-    document.getElementById('evt-modal-location').textContent = evt.location;
-    document.getElementById('evt-modal-target').textContent = evt.targetAudience;
-    document.getElementById('evt-modal-fee').textContent = evt.fee;
-    document.getElementById('evt-modal-organizer').textContent = evt.organizer;
-    document.getElementById('evt-modal-desc').textContent = evt.description;
-
-    const tagsEl = document.getElementById('evt-modal-tags');
-    if (tagsEl) {
-      tagsEl.innerHTML = (evt.tags || [])
-        .map((t) => `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-xs font-semibold">#${t}</span>`)
-        .join('');
-    }
-
-    const resolvedUrl = this.getEventUrl(evt);
-    const linkEl = document.getElementById('evt-modal-link');
-    if (linkEl) {
-      linkEl.href = resolvedUrl;
-    }
-
-    const naverEl = document.getElementById('evt-modal-naver-link');
-    if (naverEl) {
-      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
-      naverEl.href = `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
-    }
-
-    modal.classList.remove('hidden');
-  }
-
-  getEventUrl(evt) {
-    if (!evt || !evt.url) {
-      return `https://search.naver.com/search.naver?query=${encodeURIComponent(evt?.title || '지역행사')}`;
-    }
-    // 대한민국 구석구석 과거 URL 파라미터(fes_detail.do, ms_detail.do) 비정상 접근 404 원천 차단
-    if (evt.url.includes('fes_detail.do') || evt.url.includes('ms_detail.do')) {
-      const cleanTitle = (evt.title || '').replace(/\[.*?\]/g, '').trim();
-      return `https://search.naver.com/search.naver?query=${encodeURIComponent(cleanTitle)}`;
-    }
-    return evt.url;
-  }
-
-  closeEventDetailModal() {
-    this.activeEventDetailId = null;
-    const modal = document.getElementById('event-detail-modal');
-    if (modal) modal.classList.add('hidden');
-  }
-
-  // ==========================================
-  // 7. 우측 사이드바 위젯 렌더러
-  // ==========================================
   renderSidebarWidgets() {
     const hotListEl = document.getElementById('sidebar-hot-posts');
     if (hotListEl) {
