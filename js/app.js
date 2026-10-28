@@ -144,6 +144,8 @@ class DodamCommunityApp {
     this.schoolSearchKeyword = '';
     this.expandedSchoolIds = new Set();
     this.schoolCardSubTabs = {};
+    this.schoolPage = 1;
+    this.schoolPageSize = 20;
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
@@ -3237,14 +3239,14 @@ class DodamCommunityApp {
     this.renderSchoolDistricts();
     this.renderSchoolAdmissions();
 
-    // 통계 위젯 숫자 실시간 반영
+    // 통계 위젯 숫자 실시간 반영 (15,000개 순위 DB)
     const totalCountEl = document.getElementById('school-stat-total');
     const todayCountEl = document.getElementById('school-stat-today');
     const dateEl = document.getElementById('school-stat-date');
     const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
     const districts = window.DODAM_SCHOOLS_DATA?.districts || [];
-    if (totalCountEl) totalCountEl.textContent = schools.length + districts.length;
-    if (todayCountEl) todayCountEl.textContent = schools.length;
+    if (totalCountEl) totalCountEl.textContent = (schools.length + districts.length).toLocaleString();
+    if (todayCountEl) todayCountEl.textContent = schools.length.toLocaleString();
     if (dateEl && window.DODAM_SCHOOLS_DATA?.updatedAt) {
       dateEl.textContent = window.DODAM_SCHOOLS_DATA.updatedAt.replace(/-/g, '.');
     }
@@ -3277,6 +3279,7 @@ class DodamCommunityApp {
 
   selectSchoolLevel(levelId) {
     this.schoolLevel = levelId;
+    this.schoolPage = 1;
     this.renderSchoolLevelChips();
 
     const listSec = document.getElementById('school-list-section');
@@ -3307,16 +3310,19 @@ class DodamCommunityApp {
 
   setSchoolRegionFilter(reg) {
     this.schoolRegion = reg;
+    this.schoolPage = 1;
     this.renderSchoolList();
   }
 
   setSchoolTypeFilter(type) {
     this.schoolType = type;
+    this.schoolPage = 1;
     this.renderSchoolList();
   }
 
   onSchoolSearch(kw) {
     this.schoolSearchKeyword = (kw || '').trim().toLowerCase();
+    this.schoolPage = 1;
     const clearBtn = document.getElementById('school-search-clear');
     if (clearBtn) {
       clearBtn.classList.toggle('hidden', !this.schoolSearchKeyword);
@@ -3326,6 +3332,7 @@ class DodamCommunityApp {
 
   clearSchoolSearch() {
     this.schoolSearchKeyword = '';
+    this.schoolPage = 1;
     const input = document.getElementById('school-search-input');
     if (input) input.value = '';
     const clearBtn = document.getElementById('school-search-clear');
@@ -3431,14 +3438,15 @@ class DodamCommunityApp {
   renderSchoolList() {
     const grid = document.getElementById('school-cards-grid');
     const badge = document.getElementById('school-filtered-count-badge');
+    const paginationEl = document.getElementById('school-pagination-container');
     if (!grid) return;
 
     const filtered = this.filterSchools();
-    if (badge) {
-      badge.textContent = `검색 결과 ${filtered.length}곳`;
-    }
+    const totalCount = filtered.length;
 
-    if (filtered.length === 0) {
+    if (totalCount === 0) {
+      if (badge) badge.textContent = '검색 결과 0곳';
+      if (paginationEl) paginationEl.innerHTML = '';
       grid.innerHTML = `
         <div class="col-span-1 md:col-span-2 text-center py-12 bg-white rounded-2xl border border-dashed border-slate-200">
           <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xl mb-3">
@@ -3457,7 +3465,18 @@ class DodamCommunityApp {
       return;
     }
 
-    grid.innerHTML = filtered
+    const totalPages = Math.ceil(totalCount / this.schoolPageSize) || 1;
+    if (this.schoolPage > totalPages) this.schoolPage = 1;
+    if (this.schoolPage < 1) this.schoolPage = 1;
+
+    const startIdx = (this.schoolPage - 1) * this.schoolPageSize;
+    const pageSchools = filtered.slice(startIdx, startIdx + this.schoolPageSize);
+
+    if (badge) {
+      badge.textContent = `순위 ${totalCount.toLocaleString()}곳 중 ${(startIdx + 1).toLocaleString()}~${Math.min(startIdx + this.schoolPageSize, totalCount).toLocaleString()}위`;
+    }
+
+    grid.innerHTML = pageSchools
       .map((s) => {
         const isExpanded = this.expandedSchoolIds.has(s.id);
         const activeTab = this.schoolCardSubTabs[s.id] || 'nearby';
@@ -3465,15 +3484,13 @@ class DodamCommunityApp {
         const levelInfo = {
           elementary: { label: '초등학교', icon: 'fa-school', color: 'text-amber-600', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
           middle: { label: '중학교', icon: 'fa-book-open', color: 'text-emerald-600', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-          high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
-          kindergarten: { label: '유치원', icon: 'fa-shapes', color: 'text-pink-600', bg: 'bg-pink-50 text-pink-700 border-pink-200' }
+          high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' }
         }[s.level] || { label: '학교', icon: 'fa-school', color: 'text-slate-600', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
 
         const firstTabTitle = {
           elementary: '주변중학교',
           middle: '주변고교·진학',
-          high: '대입실적',
-          kindergarten: '연계초등·과정'
+          high: '대입실적'
         }[s.level] || '주변학교';
 
         // -----------------------------
@@ -3523,10 +3540,10 @@ class DodamCommunityApp {
                 <div class="pt-1.5">
                   <button
                     type="button"
-                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '송파구'}')"
+                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
                     class="w-full py-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50/60 hover:bg-indigo-100 text-indigo-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
                   >
-                    <span>${s.districtName?.split(' ')[1] || '송파구'} 초등학교 순위보기</span>
+                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 초등학교 순위보기</span>
                     <i class="fa-solid fa-chevron-right text-[10px]"></i>
                   </button>
                 </div>
@@ -3591,7 +3608,8 @@ class DodamCommunityApp {
                 </div>
               </div>
             `;
-          } else if (s.level === 'high') {
+          } else {
+            // High school
             tabContent = `
               <div class="space-y-2.5 pt-3">
                 <div class="p-3 rounded-xl bg-gradient-to-br from-indigo-50/80 via-white to-sky-50/50 border border-indigo-100 text-xs space-y-2.5">
@@ -3635,20 +3653,6 @@ class DodamCommunityApp {
                 </div>
               </div>
             `;
-          } else {
-            tabContent = `
-              <div class="space-y-2.5 pt-3">
-                <div class="p-3 rounded-xl bg-pink-50/70 border border-pink-100 text-xs space-y-2">
-                  <div class="font-black text-pink-950 flex items-center justify-between">
-                    <span>🧸 연계 초등학교 및 진학 루트</span>
-                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-pink-500 text-white font-extrabold">유아 교육</span>
-                  </div>
-                  <p class="text-[11px] text-slate-700 leading-relaxed">${s.summary}</p>
-                  ${s.tuition ? `<div class="text-[11px] font-bold text-slate-800 pt-1 border-t border-pink-100">💰 <strong>원비/학비:</strong> ${s.tuition}</div>` : ''}
-                  ${s.admissionType ? `<div class="text-[11px] font-bold text-slate-800">📝 <strong>선발 전형:</strong> ${s.admissionType}</div>` : ''}
-                </div>
-              </div>
-            `;
           }
         }
 
@@ -3660,10 +3664,10 @@ class DodamCommunityApp {
           const benchC = stats.benchClass || { school: 23, district: 22, nation: 20 };
           const benchT = stats.benchTeacher || { school: 18, district: 16, nation: 14 };
 
-          const isElemOrKin = s.level === 'elementary' || s.level === 'kindergarten';
-          const thirdTitle = isElemOrKin ? '고학년 비율' : '학업 성취도';
+          const isElem = s.level === 'elementary';
+          const thirdTitle = isElem ? '고학년 비율' : '학업 성취도';
           const thirdUnit = '%';
-          const bench3 = isElemOrKin
+          const bench3 = isElem
             ? stats.benchSenior || { school: 51, district: 49, nation: 47 }
             : stats.benchAchievement || { school: 92, district: 83, nation: 78 };
 
@@ -3872,6 +3876,9 @@ class DodamCommunityApp {
 
               <!-- 리치고 시그니처 뱃지 바 -->
               <div class="flex items-center gap-1.5 flex-wrap pt-0.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-900 text-white shadow-2xs">
+                  #${s.rank ? s.rank.toLocaleString() + '위' : s.districtRank}
+                </span>
                 <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
                   ${s.grade}
                 </span>
@@ -4010,6 +4017,124 @@ class DodamCommunityApp {
         `;
       })
       .join('');
+
+    // 페이지네이션 바 렌더링
+    if (paginationEl) {
+      paginationEl.innerHTML = this.renderSchoolPaginationHtml(totalCount, totalPages, startIdx);
+    }
+  }
+
+  renderSchoolPaginationHtml(totalCount, totalPages, startIdx) {
+    if (totalCount <= this.schoolPageSize && this.schoolPage === 1) {
+      return '';
+    }
+
+    const maxVisibleButtons = 5;
+    let startPage = Math.max(1, this.schoolPage - 2);
+    let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
+    if (endPage - startPage < maxVisibleButtons - 1) {
+      startPage = Math.max(1, endPage - maxVisibleButtons + 1);
+    }
+
+    const pageButtons = [];
+    if (startPage > 1) {
+      pageButtons.push(`
+        <button onclick="app.setSchoolPage(1)" class="w-8 h-8 rounded-xl border border-slate-200 text-xs font-bold hover:bg-slate-50 text-slate-700 transition">1</button>
+      `);
+      if (startPage > 2) {
+        pageButtons.push(`<span class="px-1 text-slate-300 text-xs">...</span>`);
+      }
+    }
+
+    for (let p = startPage; p <= endPage; p++) {
+      const isCurrent = p === this.schoolPage;
+      pageButtons.push(`
+        <button
+          onclick="app.setSchoolPage(${p})"
+          class="w-8 h-8 rounded-xl text-xs font-black transition ${
+            isCurrent
+              ? 'bg-indigo-600 text-white shadow-2xs'
+              : 'border border-slate-200 hover:bg-slate-50 text-slate-700'
+          }"
+        >${p}</button>
+      `);
+    }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) {
+        pageButtons.push(`<span class="px-1 text-slate-300 text-xs">...</span>`);
+      }
+      pageButtons.push(`
+        <button onclick="app.setSchoolPage(${totalPages})" class="px-2.5 h-8 rounded-xl border border-slate-200 text-xs font-bold hover:bg-slate-50 text-slate-700 transition">${totalPages}</button>
+      `);
+    }
+
+    const hasMore = startIdx + this.schoolPageSize < totalCount;
+
+    return `
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 bg-white rounded-2xl border border-slate-200 shadow-2xs">
+        <div class="text-xs text-slate-500 font-bold text-center sm:text-left">
+          전체 <strong class="text-slate-900 font-black">${totalCount.toLocaleString()}</strong>개 순위 중 
+          <span class="text-indigo-600 font-black">${(startIdx + 1).toLocaleString()} ~ ${Math.min(startIdx + this.schoolPageSize, totalCount).toLocaleString()}위</span> 
+          (페이지 <strong class="text-slate-900">${this.schoolPage}</strong> / ${totalPages})
+        </div>
+
+        <div class="flex items-center gap-1.5 flex-wrap justify-center">
+          <button
+            onclick="app.setSchoolPage(${this.schoolPage - 1})"
+            ${this.schoolPage <= 1 ? 'disabled' : ''}
+            class="px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-bold transition flex items-center gap-1 ${
+              this.schoolPage <= 1
+                ? 'opacity-40 cursor-not-allowed text-slate-400 bg-slate-50'
+                : 'hover:bg-slate-50 text-slate-700'
+            }"
+          >
+            <i class="fa-solid fa-chevron-left text-[10px]"></i>
+            <span>이전</span>
+          </button>
+
+          ${pageButtons.join('')}
+
+          <button
+            onclick="app.setSchoolPage(${this.schoolPage + 1})"
+            ${this.schoolPage >= totalPages ? 'disabled' : ''}
+            class="px-3 py-1.5 rounded-xl border border-slate-200 text-xs font-bold transition flex items-center gap-1 ${
+              this.schoolPage >= totalPages
+                ? 'opacity-40 cursor-not-allowed text-slate-400 bg-slate-50'
+                : 'hover:bg-slate-50 text-slate-700'
+            }"
+          >
+            <span>다음</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </button>
+
+          ${
+            hasMore
+              ? `
+            <button
+              onclick="app.loadMoreSchools()"
+              class="ml-1 sm:ml-2 px-3.5 py-1.5 rounded-xl bg-indigo-50 border border-indigo-200 hover:bg-indigo-100 text-indigo-700 font-black text-xs transition flex items-center gap-1 shadow-2xs"
+            >
+              <span>+20개 더보기</span>
+            </button>
+          `
+              : ''
+          }
+        </div>
+      </div>
+    `;
+  }
+
+  setSchoolPage(page) {
+    this.schoolPage = Math.max(1, page);
+    this.renderSchoolList();
+    const section = document.getElementById('school-list-section');
+    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  loadMoreSchools() {
+    this.schoolPageSize += 20;
+    this.renderSchoolList();
   }
 
   toggleSchoolDetail(schoolId) {

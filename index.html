@@ -1181,7 +1181,7 @@
           </div>
         </section>
   
-        <!-- VIEW 8: 유치원·초·중·고 학교 정보 & 지역별 학군·입시 순위 (신규 추가) -->
+        <!-- VIEW 8: 초·중·고 학교 정보 & 지역별 학군·입시 순위 (5,000위 순위 DB) -->
         <section id="view-school" class="view-section hidden space-y-5">
           <!-- 상단 배너 & 실시간 학교·입시 현황 -->
           <div class="community-card p-5 space-y-4 bg-gradient-to-br from-sky-50/80 via-white to-indigo-50/60 border border-sky-100">
@@ -1189,10 +1189,10 @@
               <div>
                 <div class="flex items-center gap-2 flex-wrap">
                   <span class="px-2.5 py-0.5 rounded-full bg-sky-600 text-white text-[11px] font-extrabold">2024~2026 대한민국 학교·학군·입시 공시 연동</span>
-                  <span class="text-xs text-sky-700 font-bold"><i class="fa-solid fa-graduation-cap mr-1"></i>유치원부터 고입·대입까지 원스톱</span>
+                  <span class="text-xs text-sky-700 font-bold"><i class="fa-solid fa-graduation-cap mr-1"></i>초·중·고 전국 5,000위 순위 & 입시 분석</span>
                 </div>
-                <h2 class="text-lg font-black text-slate-900 mt-1">🏫 전국 유치원·초·중·고 학교 정보 & 지역별 학군·입시 순위</h2>
-                <p class="text-xs text-slate-600">특목고·자사고 진학률 중학교 순위, 서울대·의대 합격 고교 랭킹, 대한민국 7대 명문 학군지 심층 분석, 2028 대입 개편안 완벽 가이드를 확인하세요.</p>
+                <h2 class="text-lg font-black text-slate-900 mt-1">🏫 전국 초·중·고등학교 5,000위 순위 & 학군 분석</h2>
+                <p class="text-xs text-slate-600">초·중·고 각 5,000개 순위 데이터베이스, 특목고·자사고 진학률, 서울대·의대 합격 랭킹, 대한민국 7대 명문 학군지 심층 분석을 확인하세요.</p>
               </div>
 
               <!-- 우측 통계 위젯 -->
@@ -1323,6 +1323,11 @@
 
             <!-- 카드 그리드 -->
             <div id="school-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- 페이지네이션 & 더보기 컨트롤러 -->
+            <div id="school-pagination-container" class="pt-3">
               <!-- Rendered dynamically -->
             </div>
           </div>
