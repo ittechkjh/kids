@@ -1,9 +1,9 @@
 // 전국 17개 시도 지역행사 & 대회일정 데이터셋
 window.DODAM_EVENTS_METADATA = {
-  "lastUpdated": "2026-10-28",
-  "totalEvents": 2865,
-  "festivalsCount": 1827,
-  "contestsCount": 1038,
+  "lastUpdated": "2026-10-27",
+  "totalEvents": 2841,
+  "festivalsCount": 1823,
+  "contestsCount": 1018,
   "isTourApiIntegrated": true,
   "isSeoulApiIntegrated": true,
   "isGyeonggiApiIntegrated": true,
@@ -12,27 +12,27 @@ window.DODAM_EVENTS_METADATA = {
   "regionStats": {
     "seoul": {
       "name": "서울특별시",
-      "festivals": 617,
-      "contests": 85,
-      "total": 702
+      "festivals": 615,
+      "contests": 82,
+      "total": 697
     },
     "incheon": {
       "name": "인천광역시",
-      "festivals": 42,
-      "contests": 47,
+      "festivals": 43,
+      "contests": 46,
       "total": 89
     },
     "daejeon": {
       "name": "대전광역시",
       "festivals": 28,
-      "contests": 65,
-      "total": 93
+      "contests": 63,
+      "total": 91
     },
     "daegu": {
       "name": "대구광역시",
       "festivals": 27,
-      "contests": 51,
-      "total": 78
+      "contests": 50,
+      "total": 77
     },
     "gwangju": {
       "name": "광주광역시",
@@ -42,75 +42,75 @@ window.DODAM_EVENTS_METADATA = {
     },
     "busan": {
       "name": "부산광역시",
-      "festivals": 84,
-      "contests": 79,
-      "total": 163
+      "festivals": 82,
+      "contests": 77,
+      "total": 159
     },
     "ulsan": {
       "name": "울산광역시",
-      "festivals": 26,
+      "festivals": 25,
       "contests": 39,
-      "total": 65
+      "total": 64
     },
     "sejong": {
       "name": "세종특별자치시",
       "festivals": 11,
-      "contests": 41,
-      "total": 52
+      "contests": 40,
+      "total": 51
     },
     "gyeonggi": {
       "name": "경기도",
-      "festivals": 387,
-      "contests": 122,
-      "total": 509
+      "festivals": 388,
+      "contests": 116,
+      "total": 504
     },
     "gangwon": {
       "name": "강원특별자치도",
       "festivals": 117,
-      "contests": 61,
-      "total": 178
+      "contests": 60,
+      "total": 177
     },
     "chungbuk": {
       "name": "충청북도",
-      "festivals": 43,
-      "contests": 49,
-      "total": 92
+      "festivals": 42,
+      "contests": 48,
+      "total": 90
     },
     "chungnam": {
       "name": "충청남도",
       "festivals": 70,
-      "contests": 62,
-      "total": 132
+      "contests": 61,
+      "total": 131
     },
     "jeonbuk": {
       "name": "전북특별자치도",
-      "festivals": 63,
+      "festivals": 62,
       "contests": 54,
-      "total": 117
+      "total": 116
     },
     "jeonnam": {
       "name": "전라남도",
-      "festivals": 100,
-      "contests": 57,
-      "total": 157
+      "festivals": 99,
+      "contests": 56,
+      "total": 155
     },
     "gyeongbuk": {
       "name": "경상북도",
-      "festivals": 83,
-      "contests": 65,
-      "total": 148
+      "festivals": 84,
+      "contests": 66,
+      "total": 150
     },
     "gyeongnam": {
       "name": "경상남도",
-      "festivals": 84,
+      "festivals": 83,
       "contests": 69,
-      "total": 153
+      "total": 152
     },
     "jeju": {
       "name": "제주특별자치도",
       "festivals": 44,
-      "contests": 52,
-      "total": 96
+      "contests": 51,
+      "total": 95
     }
   },
   "sources": [
@@ -127,7 +127,7 @@ window.DODAM_EVENTS_METADATA = {
     {
       "key": "tour_api",
       "name": "한국관광공사 TourAPI 4.0 전국 축제",
-      "count": 1275
+      "count": 1269
     },
     {
       "key": "seoul_open_data",
@@ -142,14 +142,14 @@ window.DODAM_EVENTS_METADATA = {
     {
       "key": "wevity_contest",
       "name": "공모전 전문 플랫폼 실시간 전국대회",
-      "count": 994
+      "count": 974
     }
   ]
 };
 
 window.DODAM_NATIONWIDE_EVENTS = [
   {
-    "id": "gg-fest-5243481346381101662",
+    "id": "gg-fest-2144103987101062998",
     "boardType": "festivals",
     "title": "제1회 상록수문화제",
     "category": "festival_culture",
@@ -180,7 +180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8551154657434100467",
+    "id": "gg-fest-9115636089374044624",
     "boardType": "festivals",
     "title": "2014 안양 아줌마축제",
     "category": "festival_performance",
@@ -211,7 +211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4657021252738622527",
+    "id": "gg-fest-5656929026274902960",
     "boardType": "festivals",
     "title": "2014 안양시민축제",
     "category": "expo_science",
@@ -242,7 +242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3279114783106676383",
+    "id": "gg-fest-2413176831694359774",
     "boardType": "festivals",
     "title": "제2회 상록수문화제",
     "category": "festival_culture",
@@ -273,7 +273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6206137649806653478",
+    "id": "gg-fest-2532766755396259175",
     "boardType": "festivals",
     "title": "제15회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -304,7 +304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9208808029079002738",
+    "id": "gg-fest-5854912602394374882",
     "boardType": "festivals",
     "title": "2015 안양 아줌마축제",
     "category": "festival_performance",
@@ -335,7 +335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3821978017143302798",
+    "id": "gg-fest-6166556880786697936",
     "boardType": "festivals",
     "title": "제3회 상록수문화제",
     "category": "festival_culture",
@@ -366,7 +366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2564261043736714389",
+    "id": "gg-fest-8407964438679211498",
     "boardType": "festivals",
     "title": "2015 안양 시민축제",
     "category": "expo_science",
@@ -397,7 +397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8613740661904993900",
+    "id": "gg-fest-2064547237841116798",
     "boardType": "festivals",
     "title": "제15회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -428,7 +428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2953422266775982139",
+    "id": "gg-fest-3988340164386444972",
     "boardType": "festivals",
     "title": "제16회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -459,7 +459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5569607571665988920",
+    "id": "gg-fest-3648091985878135095",
     "boardType": "festivals",
     "title": "2016 안양 아줌마축제",
     "category": "festival_food",
@@ -521,7 +521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6269006027102421391",
+    "id": "gg-fest-8340584039259624243",
     "boardType": "festivals",
     "title": "여르미오페스티벌",
     "category": "festival_performance",
@@ -552,7 +552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4617386293471948235",
+    "id": "gg-fest-5018249450833468772",
     "boardType": "festivals",
     "title": "2016 광복기념음악회",
     "category": "festival_performance",
@@ -583,7 +583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5527899549413401838",
+    "id": "gg-fest-3950777617824519262",
     "boardType": "festivals",
     "title": "제4회 상록수문화제",
     "category": "festival_culture",
@@ -614,7 +614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7801212602516109051",
+    "id": "gg-fest-132039880986410223",
     "boardType": "festivals",
     "title": "제16회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -645,7 +645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6013722381672418736",
+    "id": "gg-fest-6041414503427784954",
     "boardType": "festivals",
     "title": "2016 안양 시민축제",
     "category": "expo_science",
@@ -676,7 +676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7200945759646040404",
+    "id": "gg-fest-1929800616094640548",
     "boardType": "festivals",
     "title": "2016 제5회 안양공공예술프로젝트",
     "category": "expo_science",
@@ -707,7 +707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3258798546556934448",
+    "id": "gg-fest-2944600525105300460",
     "boardType": "festivals",
     "title": "2017 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -738,7 +738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7350683057253901834",
+    "id": "gg-fest-3586621098963862163",
     "boardType": "festivals",
     "title": "제17회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -769,7 +769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6251155354600193829",
+    "id": "gg-fest-7947345355567935056",
     "boardType": "festivals",
     "title": "2017 안양 아줌마축제",
     "category": "festival_performance",
@@ -800,7 +800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6238238518742471003",
+    "id": "gg-fest-2420078723250728356",
     "boardType": "festivals",
     "title": "2017 광복기념음악회",
     "category": "festival_performance",
@@ -831,7 +831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3175902361197680555",
+    "id": "gg-fest-499161779072953919",
     "boardType": "festivals",
     "title": "2017 안양 시민축제",
     "category": "expo_science",
@@ -862,7 +862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1327827670411679323",
+    "id": "gg-fest-1317344298644559397",
     "boardType": "festivals",
     "title": "제5회 상록수문화제",
     "category": "festival_culture",
@@ -893,7 +893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6665892840932848515",
+    "id": "gg-fest-3348606420310959360",
     "boardType": "festivals",
     "title": "제17회 구리 코스모스 축제",
     "category": "festival_season",
@@ -924,7 +924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4298970540842543417",
+    "id": "gg-fest-130672171977849871",
     "boardType": "festivals",
     "title": "2018 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -955,7 +955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2594907180028428787",
+    "id": "gg-fest-6143228735146562856",
     "boardType": "festivals",
     "title": "제18회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -986,7 +986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6039940469428089756",
+    "id": "gg-fest-7416829397745373750",
     "boardType": "festivals",
     "title": "2018 안양여성축제",
     "category": "festival_performance",
@@ -1017,7 +1017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4334744228210115242",
+    "id": "gg-fest-8549716266629573323",
     "boardType": "festivals",
     "title": "2018 광복기념음악회",
     "category": "festival_performance",
@@ -1048,7 +1048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5508047135338778436",
+    "id": "gg-fest-4616007846170901634",
     "boardType": "festivals",
     "title": "2018 안양 시민축제",
     "category": "expo_science",
@@ -1079,7 +1079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6201252097146312483",
+    "id": "gg-fest-4789210822545507751",
     "boardType": "festivals",
     "title": "제6회 상록수문화제",
     "category": "festival_culture",
@@ -1110,7 +1110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5081276244215796754",
+    "id": "gg-fest-8245562447306137790",
     "boardType": "festivals",
     "title": "제18회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1141,7 +1141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3552873323085317335",
+    "id": "gg-fest-7420798572602218826",
     "boardType": "festivals",
     "title": "2019 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -1172,7 +1172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5315844509612048839",
+    "id": "gg-fest-2465122295511163179",
     "boardType": "festivals",
     "title": "제19회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -1203,7 +1203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6638367729034470383",
+    "id": "gg-fest-8612219033893312276",
     "boardType": "festivals",
     "title": "2019 안양여성축제",
     "category": "festival_performance",
@@ -1234,7 +1234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3510872227552464800",
+    "id": "gg-fest-3467298964851599637",
     "boardType": "festivals",
     "title": "2019 광복기념음악회",
     "category": "festival_performance",
@@ -1265,7 +1265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8796849284224446929",
+    "id": "gg-fest-8219216186805043984",
     "boardType": "festivals",
     "title": "2019 안양 시민축제",
     "category": "expo_science",
@@ -1296,7 +1296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4250017327624141523",
+    "id": "gg-fest-1133172021921379126",
     "boardType": "festivals",
     "title": "제19회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1327,7 +1327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4416258999183234158",
+    "id": "gg-fest-2058983129954325701",
     "boardType": "festivals",
     "title": "제7회 상록수문화제",
     "category": "expo_science",
@@ -1358,7 +1358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-290020947051742155",
+    "id": "gg-fest-3675328681821277828",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1389,7 +1389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6743147899851996969",
+    "id": "gg-fest-2341780739368360011",
     "boardType": "festivals",
     "title": "제8회 상록수문화제",
     "category": "festival_performance",
@@ -1420,7 +1420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4067182371451832248",
+    "id": "gg-fest-4702002876164054005",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1451,7 +1451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8980214744384323733",
+    "id": "gg-fest-1181106584876491864",
     "boardType": "festivals",
     "title": "제9회 상록수문화제",
     "category": "expo_science",
@@ -1513,7 +1513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-9174795115015669437",
+    "id": "gg-fest-7268600073825982943",
     "boardType": "festivals",
     "title": "제24회 양평단월고로쇠축제",
     "category": "festival_culture",
@@ -1544,7 +1544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1465767362705542218",
+    "id": "gg-fest-1060259849122886061",
     "boardType": "festivals",
     "title": "제20회 양평산수유한우축제",
     "category": "festival_season",
@@ -1575,7 +1575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5123376334176113754",
+    "id": "gg-fest-6121732956411542502",
     "boardType": "festivals",
     "title": "2023 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1606,7 +1606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1143903975791911985",
+    "id": "gg-fest-7613310399164457309",
     "boardType": "festivals",
     "title": "제13회 양평 용문산 산나물축제",
     "category": "festival_performance",
@@ -1637,7 +1637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4410341266665246791",
+    "id": "gg-fest-7420538684233139333",
     "boardType": "festivals",
     "title": "2023 구리 유채꽃 한강예술제",
     "category": "festival_season",
@@ -1668,7 +1668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4028329095876204897",
+    "id": "gg-fest-4064482522793222178",
     "boardType": "festivals",
     "title": "2023 광복78주년 광복기념음악회",
     "category": "festival_performance",
@@ -1699,7 +1699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-850226312669971174",
+    "id": "gg-fest-6159738928468104307",
     "boardType": "festivals",
     "title": "2023 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -1730,7 +1730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7025652648568712830",
+    "id": "gg-fest-1231768010187414725",
     "boardType": "festivals",
     "title": "제10회 상록수문화제",
     "category": "expo_science",
@@ -1761,7 +1761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3837499935283329551",
+    "id": "gg-fest-323816442899421499",
     "boardType": "festivals",
     "title": "제4회 양평부추축제",
     "category": "festival_food",
@@ -1792,7 +1792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6705438307663044312",
+    "id": "gg-fest-5149093622078408297",
     "boardType": "festivals",
     "title": "2023 구리 코스모스 한강예술제",
     "category": "festival_season",
@@ -1823,7 +1823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1082890375944163047",
+    "id": "gg-fest-7629813953227644615",
     "boardType": "festivals",
     "title": "제19회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -1854,7 +1854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7372765019340859427",
+    "id": "gg-fest-576569463405208149",
     "boardType": "festivals",
     "title": "2024 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1885,7 +1885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3431327521156216750",
+    "id": "gg-fest-6210672354005442670",
     "boardType": "festivals",
     "title": "2024 구리 유채꽃 축제",
     "category": "festival_season",
@@ -1916,7 +1916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3308195996329822260",
+    "id": "gg-fest-4566962107090515917",
     "boardType": "festivals",
     "title": "2024 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -1947,7 +1947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8979091853891685033",
+    "id": "gg-fest-790034361164841065",
     "boardType": "festivals",
     "title": "2024 구리 코스모스 축제",
     "category": "festival_season",
@@ -1978,7 +1978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3476677303748037691",
+    "id": "gg-fest-1210547931614827759",
     "boardType": "festivals",
     "title": "제27회 포천 산정호수 명성산 억새꽃 축제",
     "category": "festival_season",
@@ -2009,7 +2009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5431176542549900888",
+    "id": "gg-fest-7606285198996435431",
     "boardType": "festivals",
     "title": "제11회 상록수문화제",
     "category": "festival_performance",
@@ -2040,7 +2040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-250484275046875984",
+    "id": "gg-fest-4290251624224385889",
     "boardType": "festivals",
     "title": "2024 제2회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -2071,7 +2071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6803899032917466493",
+    "id": "gg-fest-1049585657509321010",
     "boardType": "festivals",
     "title": "제20회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -2164,7 +2164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-6006765059401063467",
+    "id": "gg-fest-711365446785555436",
     "boardType": "festivals",
     "title": "광명등문화축제",
     "category": "expo_science",
@@ -2195,7 +2195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6983616950983335140",
+    "id": "gg-fest-4106863530799492102",
     "boardType": "festivals",
     "title": "2025 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -2226,7 +2226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-542407929585105102",
+    "id": "gg-fest-8146870770279935315",
     "boardType": "festivals",
     "title": "안산 벚꽃놀이터",
     "category": "festival_season",
@@ -2257,7 +2257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1059109980412422129",
+    "id": "gg-fest-1229206109669983070",
     "boardType": "festivals",
     "title": "2025 포천 한탄강 가든페스타",
     "category": "festival_season",
@@ -2288,7 +2288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5482608366035375429",
+    "id": "gg-fest-6959466423785397202",
     "boardType": "festivals",
     "title": "2025 구리 유채꽃 축제",
     "category": "festival_season",
@@ -2319,7 +2319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7409126741819906326",
+    "id": "gg-fest-7452701923973168427",
     "boardType": "festivals",
     "title": "제33회 오리문화제",
     "category": "festival_performance",
@@ -2350,7 +2350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5964494674180120718",
+    "id": "gg-fest-1348481708878202280",
     "boardType": "festivals",
     "title": "의정부음악극축제",
     "category": "park_eco",
@@ -2381,7 +2381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-147948094678479267",
+    "id": "gg-fest-3973670661375190702",
     "boardType": "festivals",
     "title": "제37회 고양행주문화제",
     "category": "festival_light",
@@ -2412,7 +2412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1789175545806811805",
+    "id": "gg-fest-923594734392467675",
     "boardType": "festivals",
     "title": "오(oh)장미빛축제",
     "category": "festival_light",
@@ -2474,7 +2474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3097471241742069182",
+    "id": "gg-fest-476787158039732136",
     "boardType": "festivals",
     "title": "2025 제8회 양주 회암사지 왕실 축제",
     "category": "festival_tradition",
@@ -2505,7 +2505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4632164408167765331",
+    "id": "gg-fest-3225828708901436029",
     "boardType": "festivals",
     "title": "동두천락페스티벌",
     "category": "festival_performance",
@@ -2536,7 +2536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5949898874153281210",
+    "id": "gg-fest-461733330324061928",
     "boardType": "festivals",
     "title": "남한산성문화제",
     "category": "festival_tradition",
@@ -2567,7 +2567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5964532585937160815",
+    "id": "gg-fest-5351197937600376568",
     "boardType": "festivals",
     "title": "구름산예술제",
     "category": "expo_science",
@@ -2629,7 +2629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-3562668352952653390",
+    "id": "gg-fest-3138188111333922566",
     "boardType": "festivals",
     "title": "2025 구리 코스모스 축제",
     "category": "festival_season",
@@ -2660,7 +2660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4066122087555043062",
+    "id": "gg-fest-8466020921273583696",
     "boardType": "festivals",
     "title": "2025년 제7회 양주 천만송이 천일홍 축제",
     "category": "festival_season",
@@ -2691,7 +2691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9098032562249374728",
+    "id": "gg-fest-2752286517915534904",
     "boardType": "festivals",
     "title": "2025 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -2722,7 +2722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2905436354598307386",
+    "id": "gg-fest-2235420089400779865",
     "boardType": "festivals",
     "title": "2025 고양호수예술축제",
     "category": "festival_performance",
@@ -2753,7 +2753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-38507426451020912",
+    "id": "gg-fest-5912900018475583361",
     "boardType": "festivals",
     "title": "회룡문화제",
     "category": "festival_culture",
@@ -2784,7 +2784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9109094052375116479",
+    "id": "gg-fest-5625354603558290646",
     "boardType": "festivals",
     "title": "제12회 상록수문화제",
     "category": "expo_science",
@@ -2815,7 +2815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2674868339743786907",
+    "id": "gg-fest-6315481000578472499",
     "boardType": "festivals",
     "title": "의왕백운호수축제",
     "category": "festival_tradition",
@@ -2877,7 +2877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4260960740617729140",
+    "id": "gg-fest-5873867949468223218",
     "boardType": "festivals",
     "title": "동두천시 자원봉사 축제",
     "category": "festival_culture",
@@ -2908,7 +2908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-951397921083617373",
+    "id": "gg-fest-8182400376843303854",
     "boardType": "festivals",
     "title": "2025 페스티벌 광명",
     "category": "festival_performance",
@@ -2939,7 +2939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5454895721181933212",
+    "id": "gg-fest-8244027951085306008",
     "boardType": "festivals",
     "title": "천사데이기념행사",
     "category": "sports_marathon",
@@ -3001,7 +3001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8598521280351720520",
+    "id": "gg-fest-7208154725113094409",
     "boardType": "festivals",
     "title": "2025 제3회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -3032,7 +3032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6391579800035497340",
+    "id": "gg-fest-3772911888246233871",
     "boardType": "festivals",
     "title": "제22회 자라섬 재즈페스티벌",
     "category": "festival_performance",
@@ -3063,7 +3063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2802536136540120676",
+    "id": "gg-fest-3859500208744291029",
     "boardType": "festivals",
     "title": "2025 구리 빛 축제",
     "category": "festival_light",
@@ -3094,7 +3094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7613777897018025207",
+    "id": "gg-fest-6652774871951808320",
     "boardType": "festivals",
     "title": "왕방산 국제MTB대회",
     "category": "festival_tradition",
@@ -3187,7 +3187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6389659623813571756",
+    "id": "gg-fest-2081644088468719713",
     "boardType": "festivals",
     "title": "광명동굴빛축제",
     "category": "festival_light",
@@ -3218,7 +3218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8334371814306793362",
+    "id": "gg-fest-429055668602374695",
     "boardType": "festivals",
     "title": "동두천 청소년 별자리과학 축제",
     "category": "festival_culture",
@@ -3280,7 +3280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5310693579979644075",
+    "id": "gg-fest-7900604947311808431",
     "boardType": "festivals",
     "title": "도심재생 야간축제",
     "category": "festival_culture",
@@ -3492,37 +3492,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "지역축제",
       "공공데이터",
       "인천광역시",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
-    "id": "tourapi-fest-3395188",
-    "boardType": "festivals",
-    "title": "순창 코리아 떡볶이 페스타",
-    "category": "festival_tradition",
-    "categoryName": "전통·역사문화",
-    "badge": "🎎 전통·역사문화",
-    "organizer": "063-653-1827",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 순창군 순창읍 장류로 55 순창발효테마파크 및 전통고추장민속마을 일원",
-    "startDate": "2025-11-15",
-    "endDate": "2025-11-16",
-    "applyStartDate": "2025-11-15",
-    "applyEndDate": "2025-11-16",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B0%BD%20%EC%BD%94%EB%A6%AC%EC%95%84%20%EB%96%A1%EB%B3%B6%EC%9D%B4%20%ED%8E%98%EC%8A%A4%ED%83%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/39/3515039_image2_1.jpg",
-    "description": "순창 코리아 떡볶이 페스타 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "전북특별자치도",
       "가족나들이"
     ],
     "dday": "접수마감"
@@ -4241,7 +4210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8818467633089833529",
+    "id": "gg-fest-1540330211053788540",
     "boardType": "festivals",
     "title": "2025 동두천무형문화대축제",
     "category": "festival_performance",
@@ -4892,7 +4861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-2835728894568628560",
+    "id": "gg-fest-6262063531857973755",
     "boardType": "festivals",
     "title": "2026년 판교마당바위 해맞이축제",
     "category": "park_eco",
@@ -5109,7 +5078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1484218921339129071",
+    "id": "gg-fest-4676874510054573574",
     "boardType": "festivals",
     "title": "의왕왕송호수 겨울축제(날짜미정)",
     "category": "festival_tradition",
@@ -7031,7 +7000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-36"
   },
   {
-    "id": "gg-fest-4598691452411028966",
+    "id": "gg-fest-7465641623248769757",
     "boardType": "festivals",
     "title": "제20회 수진공원 벌터산한마당축제",
     "category": "expo_science",
@@ -8178,7 +8147,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1863098005523379281",
+    "id": "gg-fest-7324065127615442274",
     "boardType": "festivals",
     "title": "이천체험문화축제",
     "category": "festival_food",
@@ -8860,7 +8829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-3725433696537965957",
+    "id": "gg-fest-8811406906777251156",
     "boardType": "festivals",
     "title": "2026 김포 벚꽃축제",
     "category": "festival_season",
@@ -9170,7 +9139,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1560318345598866577",
+    "id": "gg-fest-8459637988803480095",
     "boardType": "festivals",
     "title": "하남뮤직페스티벌",
     "category": "festival_performance",
@@ -9418,7 +9387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5224400650828572487",
+    "id": "gg-fest-5658813361809732402",
     "boardType": "festivals",
     "title": "군포철쭉축제",
     "category": "expo_science",
@@ -11030,7 +10999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2136076623240513654",
+    "id": "gg-fest-1600509077435028990",
     "boardType": "festivals",
     "title": "여주도자기축제",
     "category": "expo_science",
@@ -11371,7 +11340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7871355227096663375",
+    "id": "gg-fest-3300482204876916032",
     "boardType": "festivals",
     "title": "제41회 부천복사골예술제",
     "category": "expo_science",
@@ -11743,7 +11712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1309363903490012547",
+    "id": "gg-fest-4035809827272656255",
     "boardType": "festivals",
     "title": "성남 어린이날 행사",
     "category": "festival_performance",
@@ -12208,7 +12177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2210040608091920338",
+    "id": "gg-fest-4944097285979786882",
     "boardType": "festivals",
     "title": "제16회 화성시 가족사랑축제",
     "category": "festival_culture",
@@ -12239,7 +12208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7570738482008397011",
+    "id": "gg-fest-3817133326380112068",
     "boardType": "festivals",
     "title": "지구촌 어울림 축제",
     "category": "festival_food",
@@ -12425,7 +12394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1964264480591929843",
+    "id": "gg-fest-1358209915141511819",
     "boardType": "festivals",
     "title": "식품안전의 날 행사",
     "category": "festival_culture",
@@ -12828,7 +12797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2092004623462955460",
+    "id": "gg-fest-2368991989342125273",
     "boardType": "festivals",
     "title": "화성시 연등 음악 축제",
     "category": "festival_culture",
@@ -13169,7 +13138,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1659137130287383692",
+    "id": "gg-fest-7110160775862820644",
     "boardType": "festivals",
     "title": "제15회 화성 뱃놀이 축제",
     "category": "festival_performance",
@@ -13200,7 +13169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3592157064163995323",
+    "id": "gg-fest-3890723228010984286",
     "boardType": "festivals",
     "title": "화성뱃놀이축제",
     "category": "festival_culture",
@@ -15339,7 +15308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3845740832197561530",
+    "id": "gg-fest-4850871561306569179",
     "boardType": "festivals",
     "title": "2026 김포 아라마린페스티벌",
     "category": "festival_culture",
@@ -15804,7 +15773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5295948129033289287",
+    "id": "gg-fest-5360233503913218625",
     "boardType": "festivals",
     "title": "6월 마토예술제",
     "category": "festival_performance",
@@ -17447,7 +17416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7896562643649878378",
+    "id": "gg-fest-7650064548562036696",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;전국밴드경연대회",
     "category": "contest_general",
@@ -19741,7 +19710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "gg-fest-2140215354131603354",
+    "id": "gg-fest-6272610484512512591",
     "boardType": "festivals",
     "title": "2026 파크콘서트",
     "category": "festival_performance",
@@ -20392,7 +20361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-514957863086983903",
+    "id": "gg-fest-437478981183169853",
     "boardType": "festivals",
     "title": "사회복지페스티벌",
     "category": "festival_culture",
@@ -20640,7 +20609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "gg-fest-1292945857412169678",
+    "id": "gg-fest-5478803561772778656",
     "boardType": "festivals",
     "title": "2026년 파주포크페스티벌",
     "category": "festival_performance",
@@ -20671,7 +20640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5106262171283467999",
+    "id": "gg-fest-6176326791409698468",
     "boardType": "festivals",
     "title": "화성송산포도축제",
     "category": "farm_harvest",
@@ -20981,7 +20950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3591381703315101151",
+    "id": "gg-fest-630704650761460114",
     "boardType": "festivals",
     "title": "제18회 DMZ 국제다큐멘터리 영화제",
     "category": "festival_performance",
@@ -21849,7 +21818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5204210190271376103",
+    "id": "gg-fest-8078028860569345766",
     "boardType": "festivals",
     "title": "평택호 물빛축제",
     "category": "festival_light",
@@ -21880,7 +21849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1058753151382018653",
+    "id": "gg-fest-369721511453938551",
     "boardType": "festivals",
     "title": "제13회 노을동요제",
     "category": "festival_performance",
@@ -23120,7 +23089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-1327482403810346491",
+    "id": "gg-fest-2311783715991170607",
     "boardType": "festivals",
     "title": "제20회 시흥갯골축제",
     "category": "festival_performance",
@@ -23151,7 +23120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3001410922432015177",
+    "id": "gg-fest-596588846442775362",
     "boardType": "festivals",
     "title": "2026 과천공연예술축제",
     "category": "festival_performance",
@@ -23182,7 +23151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7941019453079508419",
+    "id": "gg-fest-6137190882213137181",
     "boardType": "festivals",
     "title": "부천국제만화제",
     "category": "festival_culture",
@@ -24019,7 +23988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-388618368251470106",
+    "id": "gg-fest-218855379439005425",
     "boardType": "festivals",
     "title": "하남이성산성문화축제",
     "category": "festival_food",
@@ -24050,7 +24019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1123365646812628311",
+    "id": "gg-fest-7371580527100646249",
     "boardType": "festivals",
     "title": "제3회 도농 어울림 축제",
     "category": "festival_culture",
@@ -25071,6 +25040,192 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "접수마감"
+  },
+  {
+    "id": "tourapi-cul-3481687",
+    "boardType": "festivals",
+    "title": "[강원특별자치도] KOICA 월드프렌즈빌리지 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "강원특별자치도 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 영월군 주천면 다래골길 53",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20KOICA%20%EC%9B%94%EB%93%9C%ED%94%84%EB%A0%8C%EC%A6%88%EB%B9%8C%EB%A6%AC%EC%A7%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4138910_image2_1.jpg",
+    "description": "KOICA 월드프렌즈빌리지 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "강원특별자치도",
+      "TourAPI"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-cul-130928",
+    "boardType": "festivals",
+    "title": "[경기도] 명지대학교 박물관 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "경기도 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 용인시 처인구 명지로 116 (남동)",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%AA%85%EC%A7%80%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/3068646_image2_1.jpg",
+    "description": "명지대학교 박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "경기도",
+      "TourAPI"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-cul-2049478",
+    "boardType": "festivals",
+    "title": "[경상북도] 한국대중음악박물관 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "경상북도 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 경주시 엑스포로 9",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%ED%95%9C%EA%B5%AD%EB%8C%80%EC%A4%91%EC%9D%8C%EC%95%85%EB%B0%95%EB%AC%BC%EA%B4%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4135478_image2_1.jpg",
+    "description": "한국대중음악박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "경상북도",
+      "TourAPI"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-cul-2591873",
+    "boardType": "festivals",
+    "title": "[서울특별시] 고척 스카이돔 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "서울특별시 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 구로구 경인로 430 (고척동)",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B3%A0%EC%B2%99%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%8F%94",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/3082829_image2_1.jpg",
+    "description": "고척 스카이돔 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "서울특별시",
+      "TourAPI"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-cul-2592013",
+    "boardType": "festivals",
+    "title": "[강원특별자치도] 강릉커피박물관 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "강원특별자치도 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 강릉시 왕산면 왕산로 2171-19",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EB%A6%89%EC%BB%A4%ED%94%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3332919_image2_1.jpg",
+    "description": "강릉커피박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "강원특별자치도",
+      "TourAPI"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-cul-2601703",
+    "boardType": "festivals",
+    "title": "[인천광역시] 중구생활사전시관 가족 문화체험",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "인천광역시 문화시설",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 문화관광데이터",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 제물포구 신포로23번길 97 (중앙동1가)",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "가족 / 어린이 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%A4%91%EA%B5%AC%EC%83%9D%ED%99%9C%EC%82%AC%EC%A0%84%EC%8B%9C%EA%B4%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/3039462_image2_1.JPG",
+    "description": "중구생활사전시관 - 인천광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
+    "tags": [
+      "문화체험",
+      "박물관",
+      "인천광역시",
+      "TourAPI"
+    ],
+    "dday": "D-65"
   },
   {
     "id": "tourapi-cul-433042",
@@ -29537,192 +29692,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "tourapi-cul-2823059",
-    "boardType": "festivals",
-    "title": "[부산광역시] 박태준기념관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 기장군 임랑해안길 1 박태준기념관",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B0%95%ED%83%9C%EC%A4%80%EA%B8%B0%EB%85%90%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4130303_image2_1.jpg",
-    "description": "박태준기념관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1940880",
-    "boardType": "festivals",
-    "title": "[부산광역시] 요산김정한문학관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 금정구 팔송로 60-6 (남산동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%94%EC%82%B0%EA%B9%80%EC%A0%95%ED%95%9C%EB%AC%B8%ED%95%99%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4129966_image2_1.jpg",
-    "description": "요산김정한문학관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130907",
-    "boardType": "festivals",
-    "title": "[전라남도] 해남문화예술회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 해남군 해남읍 군청길 4",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%95%B4%EB%82%A8%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3564417_image2_1.jpg",
-    "description": "해남문화예술회관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130909",
-    "boardType": "festivals",
-    "title": "[전북특별자치도] 무주양수홍보관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전북특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 무주군 적상면 괴목로 788",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%AC%B4%EC%A3%BC%EC%96%91%EC%88%98%ED%99%8D%EB%B3%B4%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3583570_image2_1.jpg",
-    "description": "무주양수홍보관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전북특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1911160",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 헬로키티아일랜드 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 안덕면 한창로 340",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/3548380_image2_1.jpg",
-    "description": "헬로키티아일랜드 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130524",
-    "boardType": "festivals",
-    "title": "[울산광역시] 울산문화예술회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "울산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 남구 번영로 200",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%B8%EC%82%B0%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/1587977_image2_1.jpg",
-    "description": "울산문화예술회관 - 울산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "울산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
     "id": "tourapi-kw-2742316",
     "boardType": "festivals",
     "title": "수원어린이교통공원",
@@ -32420,6 +32389,99 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
+    "id": "tourapi-kw-3075859",
+    "boardType": "festivals",
+    "title": "꽃재체험농원",
+    "category": "festival_season",
+    "categoryName": "꽃·단풍·계절축제",
+    "badge": "🌸 계절·꽃축제",
+    "organizer": "경기도 체험 운영처",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 파주시 조리읍 수레길 68",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "전국 어린이 / 가족 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%BD%83%EC%9E%AC%EC%B2%B4%ED%97%98%EB%86%8D%EC%9B%90",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/63/4130563_image2_1.jpg",
+    "description": "꽃재체험농원 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
+    "tags": [
+      "체험",
+      "TourAPI",
+      "경기도",
+      "공공데이터포털"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-kw-128326",
+    "boardType": "festivals",
+    "title": "신풍리체험휴양마을",
+    "category": "festival_culture",
+    "categoryName": "지역 종합축제",
+    "badge": "🎪 지역 종합축제",
+    "organizer": "제주특별자치도 체험 운영처",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 서귀포시 성산읍 신풍하동로 39",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "전국 어린이 / 가족 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%8B%A0%ED%92%8D%EB%A6%AC%EC%B2%B4%ED%97%98%ED%9C%B4%EC%96%91%EB%A7%88%EC%9D%84",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/3401530_image2_1.jpg",
+    "description": "신풍리체험휴양마을 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
+    "tags": [
+      "체험",
+      "TourAPI",
+      "제주특별자치도",
+      "공공데이터포털"
+    ],
+    "dday": "D-65"
+  },
+  {
+    "id": "tourapi-kw-2817814",
+    "boardType": "festivals",
+    "title": "볼락 밤낚시 체험",
+    "category": "farm_harvest",
+    "categoryName": "수확·농촌체험",
+    "badge": "🍎 수확·농촌체험",
+    "organizer": "경상남도 체험 운영처",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 남해군 동부대로960번길 14-13",
+    "startDate": "2026-10-01",
+    "endDate": "2026-12-31",
+    "applyStartDate": "2026-10-01",
+    "applyEndDate": "2026-12-31",
+    "status": "applying",
+    "targetAudience": "전국 어린이 / 가족 / 학생",
+    "fee": "현장 문의 / 관람료 안내",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EB%B3%BC%EB%9D%BD%20%EB%B0%A4%EB%82%9A%EC%8B%9C%20%EC%B2%B4%ED%97%98",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4067666_image2_1.jpg",
+    "description": "볼락 밤낚시 체험 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
+    "tags": [
+      "체험",
+      "TourAPI",
+      "경상남도",
+      "공공데이터포털"
+    ],
+    "dday": "D-65"
+  },
+  {
     "id": "tourapi-kw-128437",
     "boardType": "festivals",
     "title": "교촌농촌체험학교",
@@ -33784,18 +33846,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "tourapi-kw-2817814",
+    "id": "tourapi-kw-2469139",
     "boardType": "festivals",
-    "title": "볼락 밤낚시 체험",
-    "category": "farm_harvest",
-    "categoryName": "수확·농촌체험",
-    "badge": "🍎 수확·농촌체험",
-    "organizer": "경상남도 체험 운영처",
+    "title": "영주 콩세계과학관",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "경상북도 과학관 운영처",
     "sourceType": "tour_api",
     "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 남해군 동부대로960번길 14-13",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 영주시 부석면 영부로 23",
     "startDate": "2026-10-01",
     "endDate": "2026-12-31",
     "applyStartDate": "2026-10-01",
@@ -33803,75 +33865,13 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 어린이 / 가족 / 학생",
     "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EB%B3%BC%EB%9D%BD%20%EB%B0%A4%EB%82%9A%EC%8B%9C%20%EC%B2%B4%ED%97%98",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4067666_image2_1.jpg",
-    "description": "볼락 밤낚시 체험 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
+    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EC%98%81%EC%A3%BC%20%EC%BD%A9%EC%84%B8%EA%B3%84%EA%B3%BC%ED%95%99%EA%B4%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3548173_image2_1.JPG",
+    "description": "영주 콩세계과학관 - 한국관광공사 공식 등록 과학관 관련 가족 체험·문화 시설입니다.",
     "tags": [
-      "체험",
+      "과학관",
       "TourAPI",
-      "경상남도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-2736733",
-    "boardType": "festivals",
-    "title": "공주시 안전체험공원",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "충청남도 체험 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 공주시 월미동길 219 (월미동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EA%B3%B5%EC%A3%BC%EC%8B%9C%20%EC%95%88%EC%A0%84%EC%B2%B4%ED%97%98%EA%B3%B5%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/2737215_image2_1.jpg",
-    "description": "공주시 안전체험공원 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "체험",
-      "TourAPI",
-      "충청남도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-2998006",
-    "boardType": "festivals",
-    "title": "평창군 스카이 타워 체험시설",
-    "category": "festival_culture",
-    "categoryName": "지역 종합축제",
-    "badge": "🎪 지역 종합축제",
-    "organizer": "강원특별자치도 체험 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 평창군 대관령면 스포츠파크길 160",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%8F%89%EC%B0%BD%EA%B5%B0%20%EC%8A%A4%EC%B9%B4%EC%9D%B4%20%ED%83%80%EC%9B%8C%20%EC%B2%B4%ED%97%98%EC%8B%9C%EC%84%A4",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/69/2997969_image2_1.jpg",
-    "description": "평창군 스카이 타워 체험시설 - 한국관광공사 공식 등록 체험 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "체험",
-      "TourAPI",
-      "강원특별자치도",
+      "경상북도",
       "공공데이터포털"
     ],
     "dday": "D-65"
@@ -33903,37 +33903,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "과학관",
       "TourAPI",
       "충청북도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-2469139",
-    "boardType": "festivals",
-    "title": "영주 콩세계과학관",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상북도 과학관 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 영주시 부석면 영부로 23",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EC%98%81%EC%A3%BC%20%EC%BD%A9%EC%84%B8%EA%B3%84%EA%B3%BC%ED%95%99%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3548173_image2_1.JPG",
-    "description": "영주 콩세계과학관 - 한국관광공사 공식 등록 과학관 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "과학관",
-      "TourAPI",
-      "경상북도",
       "공공데이터포털"
     ],
     "dday": "D-65"
@@ -35329,99 +35298,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "박물관",
       "TourAPI",
       "강원특별자치도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-130081",
-    "boardType": "festivals",
-    "title": "충주박물관",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 박물관 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 충주시 중앙탑면 중앙탑길 112-28",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%B6%A9%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/46/3560546_image2_1.JPG",
-    "description": "충주박물관 - 한국관광공사 공식 등록 박물관 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "박물관",
-      "TourAPI",
-      "충청북도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-130309",
-    "boardType": "festivals",
-    "title": "조선민화박물관",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 박물관 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 영월군 김삿갓면 김삿갓로 432-10",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A1%B0%EC%84%A0%EB%AF%BC%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/3336986_image2_1.jpg",
-    "description": "조선민화박물관 - 한국관광공사 공식 등록 박물관 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "박물관",
-      "TourAPI",
-      "강원특별자치도",
-      "공공데이터포털"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-kw-130420",
-    "boardType": "festivals",
-    "title": "한밭교육박물관",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 박물관 운영처",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 동구 우암로 96 (삼성동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "전국 어린이 / 가족 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%ED%95%9C%EB%B0%AD%EA%B5%90%EC%9C%A1%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3560876_image2_1.jpg",
-    "description": "한밭교육박물관 - 한국관광공사 공식 등록 박물관 관련 가족 체험·문화 시설입니다.",
-    "tags": [
-      "박물관",
-      "TourAPI",
-      "대전광역시",
       "공공데이터포털"
     ],
     "dday": "D-65"
@@ -37380,7 +37256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-2791585167855673424",
+    "id": "gg-fest-4704025418292561935",
     "boardType": "festivals",
     "title": "제5회 정자동 놀터축제 및 작품발표회",
     "category": "expo_science",
@@ -37411,7 +37287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-8881479720709823435",
+    "id": "gg-fest-886003279623457188",
     "boardType": "festivals",
     "title": "2026 모두모여모란",
     "category": "festival_performance",
@@ -37442,7 +37318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-5330050700544898994",
+    "id": "gg-fest-8763504008323222143",
     "boardType": "festivals",
     "title": "튼튼쑥쑥 걷기대회",
     "category": "sports_marathon",
@@ -37473,7 +37349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-2478213266240810002",
+    "id": "gg-fest-3807062674336277861",
     "boardType": "festivals",
     "title": "식품제조 홍보 및 판매관",
     "category": "festival_culture",
@@ -37814,7 +37690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "rss-gg-6339129444109250479",
+    "id": "rss-gg-1960733039917489430",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;amp;lt;우선멈춤&amp;amp;gt;",
     "category": "park_eco",
@@ -37844,7 +37720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "rss-gg-4578839075091309932",
+    "id": "rss-gg-6703876978193981508",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;amp;lt;우선멈춤&amp;amp;gt;",
     "category": "park_eco",
@@ -37874,7 +37750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "rss-gg-7195618854228847584",
+    "id": "rss-gg-3665665822100073897",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;amp;전국밴드경연대회",
     "category": "contest_general",
@@ -38555,7 +38431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-8602865429664374758",
+    "id": "gg-fest-5674317639338775031",
     "boardType": "festivals",
     "title": "안성맞춤 남사당바우덕이축제",
     "category": "festival_culture",
@@ -38586,7 +38462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-183114488839458402",
+    "id": "gg-fest-810975468802463291",
     "boardType": "festivals",
     "title": "2026 헤이리 판 페스티벌",
     "category": "expo_science",
@@ -39299,7 +39175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-3041415144131641965",
+    "id": "gg-fest-3031268974304228592",
     "boardType": "festivals",
     "title": "정조효문화제 및 정조대왕능행차 공동재현",
     "category": "festival_tradition",
@@ -39330,7 +39206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2052333212528340372",
+    "id": "gg-fest-248061878051612794",
     "boardType": "festivals",
     "title": "용인시민의 날 연계 축제 행사",
     "category": "festival_culture",
@@ -39361,7 +39237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-957683209877489098",
+    "id": "gg-fest-4837847017806457146",
     "boardType": "festivals",
     "title": "2026 수원화성 미디어아트",
     "category": "festival_light",
@@ -39454,7 +39330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8342158237158874406",
+    "id": "gg-fest-7804890771768898428",
     "boardType": "festivals",
     "title": "2026 정조대왕 능행차 공동재현",
     "category": "festival_tradition",
@@ -39485,7 +39361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3500229872894832695",
+    "id": "gg-fest-9017215842843831128",
     "boardType": "festivals",
     "title": "제63회 수원화성문화제",
     "category": "festival_tradition",
@@ -40043,7 +39919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "gg-fest-2767399913158539222",
+    "id": "gg-fest-2056817430322210102",
     "boardType": "festivals",
     "title": "제18회 시민어울림한마당",
     "category": "festival_culture",
@@ -40818,7 +40694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-639560948700630188",
+    "id": "gg-fest-5353503275233139945",
     "boardType": "festivals",
     "title": "제26회 복사골청소년예술제",
     "category": "festival_culture",
@@ -40849,7 +40725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6705254062512125738",
+    "id": "gg-fest-4516406418733836855",
     "boardType": "festivals",
     "title": "제3회 파주페어_북앤컬처",
     "category": "expo_science",
@@ -41779,7 +41655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-23"
   },
   {
-    "id": "wevity-5640488669351859796",
+    "id": "wevity-4496139356543106843",
     "boardType": "contests",
     "title": "제14회 한옥디자인 국제 공모전",
     "category": "contest_music",
@@ -41810,7 +41686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6212565575067353512",
+    "id": "wevity-8239507910970166913",
     "boardType": "contests",
     "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전",
     "category": "contest_music",
@@ -41841,7 +41717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6663464872768265821",
+    "id": "wevity-8205556504048505337",
     "boardType": "contests",
     "title": "2026 부산 지역어 알리기 한 장 만화 공모전",
     "category": "contest_art",
@@ -41872,7 +41748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2414757101278137377",
+    "id": "wevity-6076754957666616622",
     "boardType": "contests",
     "title": "2026 아름다운 우리말 달력 만들기 공모전",
     "category": "contest_art",
@@ -41903,7 +41779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8856057582324893391",
+    "id": "wevity-7000082551434282076",
     "boardType": "contests",
     "title": "서울미래인재재단 대표 캐릭터 공모전 (서울의 미래, 새로운 얼굴)",
     "category": "contest_art",
@@ -41934,7 +41810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4499744022350859671",
+    "id": "wevity-4915267844450582804",
     "boardType": "contests",
     "title": "드골2: 자유의 시대 포스터·굿즈 공모전",
     "category": "contest_art",
@@ -41965,7 +41841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-711593868321279642",
+    "id": "wevity-4823378275113898912",
     "boardType": "contests",
     "title": "2026 한국공항보안(주) AI 디지털 이미지 공모전",
     "category": "contest_art",
@@ -41996,7 +41872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-35230472314501290",
+    "id": "wevity-3236395265054676676",
     "boardType": "contests",
     "title": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전",
     "category": "contest_stem",
@@ -42027,7 +41903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7645220330914602231",
+    "id": "wevity-8434425490204745048",
     "boardType": "contests",
     "title": "2026 부천시 웹툰융합 공모전",
     "category": "contest_art",
@@ -42058,7 +41934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1183547944013213014",
+    "id": "wevity-1295276017822968755",
     "boardType": "contests",
     "title": "2026년 부산항만공사 청소년 인권존중 포스터 공모전",
     "category": "contest_art",
@@ -42089,7 +41965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9183892422204646926",
+    "id": "wevity-871121287862086056",
     "boardType": "contests",
     "title": "2026년 경상남도 어린이 불조심 포스터 공모전",
     "category": "contest_art",
@@ -42120,7 +41996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4452412020434144562",
+    "id": "wevity-7787885161309071561",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 기념우표 디자인 공모전",
     "category": "contest_art",
@@ -42151,7 +42027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3290753803564757746",
+    "id": "wevity-2531525790368213277",
     "boardType": "contests",
     "title": "2026 국가유산형 드론콘텐츠 디자인 공모전",
     "category": "contest_art",
@@ -42182,7 +42058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-19653012534463459",
+    "id": "wevity-7712704005367802903",
     "boardType": "contests",
     "title": "2026 레진성인공모전",
     "category": "contest_art",
@@ -42213,7 +42089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3988412895399263486",
+    "id": "wevity-2813171934832185363",
     "boardType": "contests",
     "title": "2026년 서울특별시 어린이·청소년 시민발언대 청소년이 바꾸는 서울 인스타툰 공모전",
     "category": "contest_art",
@@ -42244,7 +42120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2245650660139217489",
+    "id": "wevity-837906077961341490",
     "boardType": "contests",
     "title": "제 27회 청소년만화축제 만화작품 공모전",
     "category": "contest_art",
@@ -42275,7 +42151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4573051429190786959",
+    "id": "wevity-4654179037510720150",
     "boardType": "contests",
     "title": "2026 제23회 고양호수만화축제 청소년만화 공모전",
     "category": "contest_art",
@@ -42306,7 +42182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1255218540819909883",
+    "id": "wevity-1708468674579751513",
     "boardType": "contests",
     "title": "2026년 용산구시설관리공단 캐릭터 공모전",
     "category": "contest_art",
@@ -42337,7 +42213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8992497659062210019",
+    "id": "wevity-2715224253525090579",
     "boardType": "contests",
     "title": "청주페이 카드 디자인 공모전",
     "category": "contest_art",
@@ -42368,7 +42244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5622531569069450198",
+    "id": "wevity-5084426488457501287",
     "boardType": "contests",
     "title": "2026 4TH 메타툰 여성향 성인 단편 노블코믹스 작화 모집 공모전",
     "category": "contest_art",
@@ -42399,7 +42275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-402167379367680088",
+    "id": "wevity-223530041861354462",
     "boardType": "contests",
     "title": "2026 대한민국 국제 어린이 미술 대회",
     "category": "contest_art",
@@ -42430,7 +42306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8058853378213885212",
+    "id": "wevity-7065532645085302407",
     "boardType": "contests",
     "title": "CREPET AWARDS 2026 반려용품 디자인 공모전",
     "category": "contest_art",
@@ -42461,7 +42337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-457686186319523271",
+    "id": "wevity-6893620586842291782",
     "boardType": "contests",
     "title": "2026 팬트리픽 마스코트 일러스트 공모전",
     "category": "contest_art",
@@ -42492,7 +42368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1801575406390433570",
+    "id": "wevity-2826659342065768434",
     "boardType": "contests",
     "title": "제2회 K-슈즈 메이킹 챌린지",
     "category": "contest_art",
@@ -42523,7 +42399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6682625152511841844",
+    "id": "wevity-8677264025391498765",
     "boardType": "contests",
     "title": "2026년 초등학생 달빛어린이병원 그림 공모전",
     "category": "contest_art",
@@ -42554,7 +42430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8316313776152848935",
+    "id": "wevity-4712855826401790268",
     "boardType": "contests",
     "title": "부산의 수돗물 순수365 홍보디자인 공모전",
     "category": "contest_art",
@@ -42585,7 +42461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1549353204733107365",
+    "id": "wevity-5518174532998445652",
     "boardType": "contests",
     "title": "2027 국악누리 표지 그림 공모전",
     "category": "contest_art",
@@ -42616,7 +42492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6410285665219353314",
+    "id": "wevity-1754663994867938118",
     "boardType": "contests",
     "title": "디자인 잇 어워드 챌린지 2026",
     "category": "contest_art",
@@ -42647,7 +42523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5713003280517577563",
+    "id": "wevity-1053745611954901885",
     "boardType": "contests",
     "title": "제20회 월간 아이러브캐릭터 캐릭터 공모전",
     "category": "contest_art",
@@ -42678,7 +42554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6085343591256103696",
+    "id": "wevity-9201890820983957305",
     "boardType": "contests",
     "title": "제6회 플라이하이 AI 패션 디자인 고교 콘테스트",
     "category": "contest_coding",
@@ -42709,7 +42585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7235191668073947056",
+    "id": "wevity-574230122637526017",
     "boardType": "contests",
     "title": "2026년 제41회 디자인 & 일러스트레이션 국제공모전",
     "category": "contest_art",
@@ -42740,7 +42616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1146611956480732397",
+    "id": "wevity-9111420039463254285",
     "boardType": "contests",
     "title": "제17회 현대 주얼리 디자인 공모전",
     "category": "contest_art",
@@ -42771,7 +42647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4268343484236640438",
+    "id": "wevity-1405829703535927874",
     "boardType": "contests",
     "title": "2026 의정부시 Sign-Up 간판 디자인 공모전",
     "category": "contest_art",
@@ -42802,7 +42678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4539604796203092382",
+    "id": "wevity-238483847158475861",
     "boardType": "contests",
     "title": "붉은 동백의 순간 MOMENTO 와인라벨 아트웍 공모전 (참가비 있음)",
     "category": "contest_art",
@@ -42833,7 +42709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4490793529843237100",
+    "id": "wevity-3020263841867803993",
     "boardType": "contests",
     "title": "2026 제7회 한국드로잉 공모대전",
     "category": "contest_art",
@@ -42864,7 +42740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-678938612627212796",
+    "id": "wevity-5282853275346338137",
     "boardType": "contests",
     "title": "세계중요농업유산 등재 광양섬진강재첩 공동브랜드 디자인 공모전",
     "category": "contest_art",
@@ -42895,7 +42771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8057549878168512484",
+    "id": "wevity-5198418118379449867",
     "boardType": "contests",
     "title": "에너지산업 수도 울진 BI 디자인 대국민 공모전",
     "category": "contest_art",
@@ -42926,7 +42802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2801301202719942263",
+    "id": "wevity-2960596764586171988",
     "boardType": "contests",
     "title": "부산 동구 북항 상어 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -42957,7 +42833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-324022823119881008",
+    "id": "wevity-1745745463705760605",
     "boardType": "contests",
     "title": "2028 세계디자인수도 부산 파빌리온 디자인 국제공모전",
     "category": "contest_art",
@@ -42988,7 +42864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6345573668523501733",
+    "id": "wevity-6534878973280769816",
     "boardType": "contests",
     "title": "2026 제6회 필(必)환경 캠페인 공모전",
     "category": "contest_art",
@@ -43019,7 +42895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-805822318258010232",
+    "id": "wevity-7278509227624732996",
     "boardType": "contests",
     "title": "전남광주 업고 튀어",
     "category": "contest_art",
@@ -43050,7 +42926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4517973480942329353",
+    "id": "wevity-8790424028999733663",
     "boardType": "contests",
     "title": "전국우주항공경진대회-AI 활용 우주 SF 웹툰 대회",
     "category": "contest_stem",
@@ -43081,7 +42957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1236758137571868782",
+    "id": "wevity-1286480007326680571",
     "boardType": "contests",
     "title": "[디자인-부산2026] 디자인 해커톤 1기 공개모집",
     "category": "contest_coding",
@@ -43112,7 +42988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1302884716918183264",
+    "id": "wevity-8372935100721123194",
     "boardType": "contests",
     "title": "[동두천양주교육지원청] 동양 RAS PICK 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -43143,7 +43019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7541020692985274540",
+    "id": "wevity-7122474440359406734",
     "boardType": "contests",
     "title": "피란수도 부산유산 BI공모전",
     "category": "contest_art",
@@ -43174,7 +43050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5493949503259837986",
+    "id": "wevity-5831548688943148236",
     "boardType": "contests",
     "title": "제6회 필(必)환경 캠페인 공모전",
     "category": "contest_art",
@@ -43205,7 +43081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7855208092546923019",
+    "id": "wevity-413176008603788592",
     "boardType": "contests",
     "title": "경상남도교육청 동부학생안전체험원 심벌마크(BI) 공모전",
     "category": "contest_art",
@@ -43236,7 +43112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5099717953064056035",
+    "id": "wevity-4957860068109144441",
     "boardType": "contests",
     "title": "제7회 당진시 지방세 홍보 포스터 공모전",
     "category": "contest_art",
@@ -43267,7 +43143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4915201058808544761",
+    "id": "wevity-3030813540706199420",
     "boardType": "contests",
     "title": "제6회 원주DB 프로농구단 시티유니폼 디자인 공모전",
     "category": "contest_art",
@@ -43298,7 +43174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9153169684956231383",
+    "id": "wevity-6252347134104303997",
     "boardType": "contests",
     "title": "무안군 굿즈 디자인 경진대회",
     "category": "contest_art",
@@ -43329,7 +43205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9004790066329261952",
+    "id": "wevity-3077131128487011287",
     "boardType": "contests",
     "title": "제39회 빙그레 어린이 그림 잔치",
     "category": "contest_art",
@@ -43360,7 +43236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8068282282112209792",
+    "id": "wevity-4789092090371602887",
     "boardType": "contests",
     "title": "유원커버(U1 COVER) 유원대학교 2027학년도 정시모집요강 표지디자인 공모전",
     "category": "contest_art",
@@ -43391,7 +43267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5681817691947116836",
+    "id": "wevity-9070835710778095233",
     "boardType": "contests",
     "title": "2026 하남시안전체험장 신규 로고 공모전",
     "category": "contest_art",
@@ -43422,7 +43298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4067655407279493379",
+    "id": "wevity-2050376873850245703",
     "boardType": "contests",
     "title": "제3회 게임문화 그림일기 및 광고 포스터 공모전",
     "category": "contest_coding",
@@ -43453,7 +43329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3396994665201322228",
+    "id": "wevity-632229808802682578",
     "boardType": "contests",
     "title": "The Pattern 2026 콘테스트 : 오픈소스 패션 모델링 어워드",
     "category": "contest_music",
@@ -43484,7 +43360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2539926730309044550",
+    "id": "wevity-3534196194073857427",
     "boardType": "contests",
     "title": "부천을 굿즈하다 관광기념품 공모전",
     "category": "contest_art",
@@ -43515,7 +43391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1183109678511043637",
+    "id": "wevity-8431644649565213949",
     "boardType": "contests",
     "title": "2026 K-디자인콘서트 공모전",
     "category": "contest_art",
@@ -43546,7 +43422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-699038991395955900",
+    "id": "wevity-7769478250489196019",
     "boardType": "contests",
     "title": "2027 우체국 연하카드·연하엽서 디자인 공모전",
     "category": "contest_art",
@@ -43577,7 +43453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7459149613696148135",
+    "id": "wevity-1642972832314105716",
     "boardType": "contests",
     "title": "서대문장애인종합복지관 개관 28주년 기념 마스코트 공모전",
     "category": "contest_art",
@@ -43608,7 +43484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4840148109769485466",
+    "id": "wevity-539364694531908027",
     "boardType": "contests",
     "title": "관악구 청소년과 함께하는 흡연예방 스토리 포스터 공모전",
     "category": "contest_art",
@@ -43639,7 +43515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5862924928590932215",
+    "id": "wevity-8235802492224445518",
     "boardType": "contests",
     "title": "2026년 정신건강의 날 기념 정신건강 캐릭터 공모전",
     "category": "contest_art",
@@ -43670,7 +43546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1973230522257669450",
+    "id": "wevity-5323629297766364572",
     "boardType": "contests",
     "title": "2026 제12회 동편제국악축제 포스터 디자인 공모전",
     "category": "contest_art",
@@ -43701,7 +43577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2058724336300422751",
+    "id": "wevity-5667953335022476018",
     "boardType": "contests",
     "title": "2026년 국립공원 재난안전 콘텐츠 대국민 공모전",
     "category": "contest_art",
@@ -43732,7 +43608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4576124151708906681",
+    "id": "wevity-3290599244560828144",
     "boardType": "contests",
     "title": "제14회 대한민국 어린이제품 디자인 공모전",
     "category": "contest_art",
@@ -43763,7 +43639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-628857003662123056",
+    "id": "wevity-8459833148408580376",
     "boardType": "contests",
     "title": "2026 제12회 한국 AI 신발 디자인 공모전",
     "category": "contest_art",
@@ -43794,7 +43670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5599173056627743106",
+    "id": "wevity-1965518467186550442",
     "boardType": "contests",
     "title": "2026 서대문구청소년상담복지센터 캐릭터 공모전",
     "category": "contest_art",
@@ -43825,7 +43701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2483585462677394930",
+    "id": "wevity-7770323057197723088",
     "boardType": "contests",
     "title": "2026 광명업사이클아트센터 업사이클 브릭아트 공모전",
     "category": "contest_art",
@@ -43856,7 +43732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2915285068753489060",
+    "id": "wevity-3157197456606736965",
     "boardType": "contests",
     "title": "2026 경남 3D 웹툰배경 활용 단편웹툰 공모전",
     "category": "contest_art",
@@ -43887,7 +43763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4218135236060970722",
+    "id": "wevity-3321225186264882907",
     "boardType": "contests",
     "title": "기관 캐릭터 활용 안전·재난 포스터 공모전",
     "category": "contest_art",
@@ -43918,7 +43794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7145312776142924837",
+    "id": "wevity-4253035620752096438",
     "boardType": "contests",
     "title": "제1회 평창군 청소년 예방 그림 공모전",
     "category": "contest_art",
@@ -43949,7 +43825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7980651105208279967",
+    "id": "wevity-5228843658422334388",
     "boardType": "contests",
     "title": "2026년 부산교통공사 AI 이미지 공모전",
     "category": "contest_art",
@@ -43980,7 +43856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1167545287497024594",
+    "id": "wevity-6919200650719889712",
     "boardType": "contests",
     "title": "2026년 장애인식개선 캠페인 우리, 함께 걷는 풍경 일러스트 공모전",
     "category": "contest_art",
@@ -44011,7 +43887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8270558653878720006",
+    "id": "wevity-2369726782140435410",
     "boardType": "contests",
     "title": "통영시 청년센터 캐릭터 공모전",
     "category": "contest_art",
@@ -44042,7 +43918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-887481639250416029",
+    "id": "wevity-4557351438803605160",
     "boardType": "contests",
     "title": "2026년 대전광역시 어린이 교통안전 그림공모전",
     "category": "contest_art",
@@ -44073,7 +43949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8434939255953410366",
+    "id": "wevity-8547976011374488718",
     "boardType": "contests",
     "title": "2026년 서울시 어린이 소방안전 포스터 공모전",
     "category": "contest_art",
@@ -44104,7 +43980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4619767570611300152",
+    "id": "wevity-4434222896984430392",
     "boardType": "contests",
     "title": "빠나나AI 캐릭터 챌린지",
     "category": "contest_art",
@@ -44135,7 +44011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4050891439512564041",
+    "id": "wevity-1044883649488480814",
     "boardType": "contests",
     "title": "2026년 중독예방 포스터 공모전",
     "category": "contest_art",
@@ -44166,7 +44042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6227922728308084034",
+    "id": "wevity-4196917184200062865",
     "boardType": "contests",
     "title": "pixiv 한국 학생 일러스트 공모전 2026",
     "category": "contest_art",
@@ -44197,7 +44073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5493252935749095456",
+    "id": "wevity-3996690072732420384",
     "boardType": "contests",
     "title": "2026 IDAWARD 제14회 대구인쇄출판 디자인공모전",
     "category": "contest_art",
@@ -44228,7 +44104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6976783860492611616",
+    "id": "wevity-6937665161480027683",
     "boardType": "contests",
     "title": "2026 인제대학교•(재)김해FC All-City Campus 웹툰•캐릭터 공모전",
     "category": "contest_art",
@@ -44259,7 +44135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-534531027364615442",
+    "id": "wevity-7529552592593674364",
     "boardType": "contests",
     "title": "제17회 서울인쇄대상",
     "category": "contest_art",
@@ -44290,7 +44166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6527179964878973727",
+    "id": "wevity-4322252218532823719",
     "boardType": "contests",
     "title": "제3회 대현도서관 웹툰 공모전",
     "category": "contest_reading",
@@ -44321,7 +44197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2836695989060953750",
+    "id": "wevity-3850603957213345877",
     "boardType": "contests",
     "title": "2026 부천문화재단 청렴시민커뮤니케이터 청렴포스터 공모전",
     "category": "contest_art",
@@ -44352,7 +44228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2865527601867576912",
+    "id": "wevity-4340111995279479557",
     "boardType": "contests",
     "title": "제17회 한국패션디자인학회 공모전 (기간연장)",
     "category": "contest_art",
@@ -44383,7 +44259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5025255466619639456",
+    "id": "wevity-8299096780368476943",
     "boardType": "contests",
     "title": "[대통령직속 빛의 위원회] 빛의 혁명 상징 디자인 공모전",
     "category": "contest_music",
@@ -44414,7 +44290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3470254366261293390",
+    "id": "wevity-3575009328567688495",
     "boardType": "contests",
     "title": "민선 9기 완도군 브랜드 디자인 공모전",
     "category": "contest_art",
@@ -44445,7 +44321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3242921768984633585",
+    "id": "wevity-4669237900340198760",
     "boardType": "contests",
     "title": "2026년 제9회 대전 세계태양광총회 AI로 그리는 미래에너지 공모전",
     "category": "contest_art",
@@ -44476,7 +44352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5327433108158108573",
+    "id": "wevity-6352947065725479859",
     "boardType": "contests",
     "title": "[기획예산처 복권위원회] 2026 복권기금 그림 공모전",
     "category": "contest_art",
@@ -44507,7 +44383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8240419464208465175",
+    "id": "wevity-7886746807031214573",
     "boardType": "contests",
     "title": "WDC BUSAN 2028 프로그램 연계 시민 참여 디자인 아이디어 공모전",
     "category": "contest_art",
@@ -44538,7 +44414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5339635143109752668",
+    "id": "wevity-2747731662695959339",
     "boardType": "contests",
     "title": "제8회 오티콘챌린지 공모전",
     "category": "contest_art",
@@ -44569,7 +44445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1014238563606388557",
+    "id": "wevity-7643035217654528026",
     "boardType": "contests",
     "title": "전국민 AI 경진대회 캐릭터 공모전 (알고의 친구를 찾습니다)",
     "category": "contest_art",
@@ -44600,7 +44476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-481682388968475198",
+    "id": "wevity-2231241645881317224",
     "boardType": "contests",
     "title": "낙동강유역환경청 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -44631,7 +44507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2893063246421971138",
+    "id": "wevity-7459240256463924847",
     "boardType": "contests",
     "title": "제9회 D-TECH 공모전 - 장애인을 위한 기술·디자인 공모전",
     "category": "contest_art",
@@ -44662,7 +44538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1166120273792833638",
+    "id": "wevity-8564852857373176248",
     "boardType": "contests",
     "title": "[비애티튜드 매거진] 제2회 비애티튜드 인스타툰 공모",
     "category": "contest_art",
@@ -44693,7 +44569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5637937451484574512",
+    "id": "wevity-5817597735091955226",
     "boardType": "contests",
     "title": "아산 성웅 이순신축제 BI 디자인 공모전",
     "category": "contest_writing",
@@ -44724,7 +44600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3173134555598585315",
+    "id": "wevity-7909622214255921021",
     "boardType": "contests",
     "title": "2026 경주시 경주다움 디자인(북천 폐철교 리뉴얼) 공모전",
     "category": "contest_art",
@@ -44755,7 +44631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2051482354360887706",
+    "id": "wevity-5808415145840004628",
     "boardType": "contests",
     "title": "2026년 대구콘텐츠코리아랩 캐릭터 글로벌 진입 프로젝트 참가자 모집 공고",
     "category": "contest_art",
@@ -44786,7 +44662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2481594754369705242",
+    "id": "wevity-6299424475910526696",
     "boardType": "contests",
     "title": "시립일시청소년쉼터(이동형,동남) 2026 작은별 캐릭터 공모전",
     "category": "contest_art",
@@ -44817,7 +44693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2655836319972432089",
+    "id": "wevity-3944209651595275635",
     "boardType": "contests",
     "title": "한국산림재난안전기술공단 대표 캐릭터 공모전",
     "category": "contest_art",
@@ -44848,7 +44724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8628829853137035415",
+    "id": "wevity-5910991478448951891",
     "boardType": "contests",
     "title": "2026년 거창군 관광 브랜드 디자인 공모전",
     "category": "contest_art",
@@ -44879,7 +44755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6951597231362542092",
+    "id": "wevity-1413004662956826210",
     "boardType": "contests",
     "title": "모든 인간은 죽는다 개정판 표지 디자인 공모",
     "category": "contest_art",
@@ -44910,7 +44786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-834888189154864731",
+    "id": "wevity-5791919211304069777",
     "boardType": "contests",
     "title": "2026년 강원특별자치도민 심폐소생술·응급처치 디자인 공모전",
     "category": "contest_art",
@@ -44941,7 +44817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4321886519039762102",
+    "id": "wevity-8375443486132502425",
     "boardType": "contests",
     "title": "2026년 초등학교 교과서·지도서 표지 그림 공모전",
     "category": "contest_art",
@@ -44972,7 +44848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-833274526441808644",
+    "id": "wevity-4723161805996020834",
     "boardType": "contests",
     "title": "2026년 제3회 해운대 환경 4컷 웹툰 공모전",
     "category": "contest_art",
@@ -45003,7 +44879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-909680816763567152",
+    "id": "wevity-7985557242097562811",
     "boardType": "contests",
     "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급",
     "category": "contest_music",
@@ -45034,7 +44910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7710205167562422424",
+    "id": "wevity-4224811978189925478",
     "boardType": "contests",
     "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!",
     "category": "contest_music",
@@ -45065,7 +44941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6691999157679951520",
+    "id": "wevity-7073914210570053862",
     "boardType": "contests",
     "title": "제4회 현대문학x미래엔 청소년문학상 공모전",
     "category": "contest_music",
@@ -45096,7 +44972,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8799674382927099083",
+    "id": "wevity-1328720681998702787",
+    "boardType": "contests",
+    "title": "2027 매일신춘문예 공모",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "매일신문사",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111917",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2027 매일신춘문예 공모 - 매일신문사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "전라남도"
+    ]
+  },
+  {
+    "id": "wevity-8105084891082692872",
     "boardType": "contests",
     "title": "2026 충남 문화예술후원사업 문화CF 스타상 (청년예술부문) 공모",
     "category": "contest_writing",
@@ -45127,7 +45034,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8835589154777676427",
+    "id": "wevity-5521802839994089281",
+    "boardType": "contests",
+    "title": "2026 제1회 창원 마산국화축제 홍보 현장 디카시백일장",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "창신대학교",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111909",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026 제1회 창원 마산국화축제 홍보 현장 디카시백일장 - 창신대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "경상남도"
+    ]
+  },
+  {
+    "id": "wevity-6417931298333562790",
     "boardType": "contests",
     "title": "2026 국립한밭대학교 포토에세이 공모전",
     "category": "contest_writing",
@@ -45136,9 +45074,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국립한밭대학교",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45154,11 +45092,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-7318315838953077434",
+    "id": "wevity-9173441939199098153",
     "boardType": "contests",
     "title": "2027 국제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45167,9 +45105,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국제신문",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45185,11 +45123,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-4115490593504067475",
+    "id": "wevity-7763519271341594553",
     "boardType": "contests",
     "title": "세계일보 2027 신춘문예 공모",
     "category": "contest_writing",
@@ -45198,9 +45136,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "세계일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45216,11 +45154,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-386542284462712297",
+    "id": "wevity-5255798030796497309",
     "boardType": "contests",
     "title": "2027년 현대경제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45229,9 +45167,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "현대경제신문",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45247,11 +45185,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-2726739115637836757",
+    "id": "wevity-2041319031290751655",
     "boardType": "contests",
     "title": "2027 광남일보 한국문학대상",
     "category": "contest_writing",
@@ -45260,9 +45198,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "광남일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45278,11 +45216,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-644742693321183607",
+    "id": "wevity-775127303709962266",
     "boardType": "contests",
     "title": "2026 광명시 올해의 책 독후감 공모전",
     "category": "contest_reading",
@@ -45313,7 +45251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7041367422214903299",
+    "id": "wevity-6377321506290043559",
     "boardType": "contests",
     "title": "제26회 국립순천대학교 청소년 문예백일장",
     "category": "contest_writing",
@@ -45344,7 +45282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5883026207751668190",
+    "id": "wevity-3816457967043618247",
     "boardType": "contests",
     "title": "제39회 무등일보 신춘문예 공모",
     "category": "contest_writing",
@@ -45353,9 +45291,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "무등일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45371,11 +45309,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-3536750715739365259",
+    "id": "wevity-2415354775415459420",
     "boardType": "contests",
     "title": "2026 부산 국제 한국디카시 공모전",
     "category": "contest_writing",
@@ -45406,44 +45344,13 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5900286830112561904",
+    "id": "wevity-4812208788296350984",
     "boardType": "contests",
     "title": "제2회 연세국제창작공모전",
     "category": "contest_writing",
     "categoryName": "전국 백일장·글짓기",
     "badge": "📚 전국 백일장",
     "organizer": "연세대학교, 연세노벨위크 조직위원회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111781",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제2회 연세국제창작공모전 - 연세대학교, 연세노벨위크 조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-2270251275555148831",
-    "boardType": "contests",
-    "title": "6G 서비스 시나리오 공모전",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "과학기술정보통신부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
     "region": "sejong",
@@ -45457,9 +45364,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111775",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111781",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "6G 서비스 시나리오 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "description": "제2회 연세국제창작공모전 - 연세대학교, 연세노벨위크 조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
       "공모전",
@@ -45468,7 +45375,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7489796709445291452",
+    "id": "wevity-1067997842850286954",
+    "boardType": "contests",
+    "title": "6G 서비스 시나리오 공모전",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "과학기술정보통신부",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111775",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "6G 서비스 시나리오 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "충청북도"
+    ]
+  },
+  {
+    "id": "wevity-1877738918988556782",
     "boardType": "contests",
     "title": "제1회 우리학교 청소년 문학상 공모",
     "category": "contest_writing",
@@ -45477,9 +45415,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "우리학교",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45495,11 +45433,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-4231054805034152586",
+    "id": "wevity-4605401697322135121",
     "boardType": "contests",
     "title": "제1회 웨이노벨 웹소설 공모전 FIRST STORY CHALLENGE 2026",
     "category": "contest_writing",
@@ -45508,9 +45446,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "웨이노벨",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45526,11 +45464,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-3192813791827388943",
+    "id": "wevity-3012012614848777239",
     "boardType": "contests",
     "title": "제1회 꿈꾸미닷컴 꿈 수필 공모전",
     "category": "contest_writing",
@@ -45539,9 +45477,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "꿈꾸미닷컴",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45557,11 +45495,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-3960244316243173754",
+    "id": "wevity-4112245982920605472",
     "boardType": "contests",
     "title": "실상문학 신인문학상 작품 모집",
     "category": "contest_writing",
@@ -45592,7 +45530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8073277226933681825",
+    "id": "wevity-4311294311885088334",
     "boardType": "contests",
     "title": "2026 함안복합문학관 디카시 공모전",
     "category": "contest_writing",
@@ -45623,38 +45561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7811514367895441174",
-    "boardType": "contests",
-    "title": "2026년 겨울편 서울꿈새김판 문안 공모전",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "서울특별시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111631",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 겨울편 서울꿈새김판 문안 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-3133170116211038799",
+    "id": "wevity-1723565713074635972",
     "boardType": "contests",
     "title": "2027 불교신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45663,9 +45570,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "불교신문",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45681,11 +45588,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-2700925362311185002",
+    "id": "wevity-452950662252948598",
     "boardType": "contests",
     "title": "포스텍 2027 SF 어워드",
     "category": "contest_writing",
@@ -45694,9 +45601,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "소통과공론연구소",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45712,11 +45619,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-3573972504409438610",
+    "id": "wevity-8875625055564802119",
     "boardType": "contests",
     "title": "제2회 블루카이트 창작 글쓰기 대회 (참가비 있음)",
     "category": "contest_writing",
@@ -45725,9 +45632,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "블루카이트 출판사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45743,11 +45650,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-9214086699292766767",
+    "id": "wevity-3646916928109453629",
     "boardType": "contests",
     "title": "2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전",
     "category": "contest_writing",
@@ -45778,7 +45685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-165688163664447956",
+    "id": "wevity-2034905390065149511",
     "boardType": "contests",
     "title": "제5회 전국 고교생 웹소설 공모전",
     "category": "contest_writing",
@@ -45809,7 +45716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2616436595379931680",
+    "id": "wevity-4514565715825067922",
     "boardType": "contests",
     "title": "2027 제3회 소원문학상",
     "category": "contest_writing",
@@ -45818,9 +45725,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)소원나무",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45836,11 +45743,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-8260888263272964643",
+    "id": "wevity-8299808162330061439",
     "boardType": "contests",
     "title": "2027 오펜 공모전 (스토리텔러)",
     "category": "contest_writing",
@@ -45849,9 +45756,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)씨제이이엔엠",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45867,11 +45774,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-3196943376386258336",
+    "id": "wevity-7623726793744498921",
     "boardType": "contests",
     "title": "서울SEOUL디카시 공모대전",
     "category": "contest_writing",
@@ -45902,7 +45809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7997892123608601724",
+    "id": "wevity-2704803798404891536",
     "boardType": "contests",
     "title": "오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전)",
     "category": "contest_writing",
@@ -45922,7 +45829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111472",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111472",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전) - 영천시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
@@ -45933,7 +45840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3578396998372713922",
+    "id": "wevity-6573618526942670345",
     "boardType": "contests",
     "title": "제28회 문학축제 한양의시선(舊 시이어짓기대회)",
     "category": "contest_writing",
@@ -45942,9 +45849,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한양대학교 ERICA",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45960,11 +45867,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-8583007218575403399",
+    "id": "wevity-8363531711647343802",
     "boardType": "contests",
     "title": "제2회 AI전자그림책 공모전 - AI 이야기 숲",
     "category": "contest_reading",
@@ -45973,9 +45880,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국독서문화재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -45991,11 +45898,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-8237992599800465747",
+    "id": "wevity-1295681943196377625",
     "boardType": "contests",
     "title": "제18회 포항소재 문학작품 공모전",
     "category": "contest_writing",
@@ -46026,7 +45933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3690001542181106777",
+    "id": "wevity-3387677031111937513",
     "boardType": "contests",
     "title": "[광주 신세계안과] 제47회 빛창공모전 겨울편 공모",
     "category": "contest_writing",
@@ -46057,7 +45964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7640130793297677655",
+    "id": "wevity-3695810907259880345",
     "boardType": "contests",
     "title": "제36회 시장경제칼럼 공모전",
     "category": "contest_writing",
@@ -46066,9 +45973,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "자유기업원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46084,11 +45991,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-7452021941209264093",
+    "id": "wevity-1349339216920748158",
     "boardType": "contests",
     "title": "2027년 경남도민신문 신춘문예 공모",
     "category": "contest_writing",
@@ -46119,7 +46026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1644830340681590265",
+    "id": "wevity-1271179869919950048",
     "boardType": "contests",
     "title": "2027 영주신문 제4회 신춘문예 및 학생(학교밖청소년) 백일장 응모",
     "category": "contest_writing",
@@ -46150,7 +46057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1781180442838511653",
+    "id": "wevity-701319333679597181",
     "boardType": "contests",
     "title": "제5회 중부광역신문 신춘문예",
     "category": "contest_writing",
@@ -46181,7 +46088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3850270999412098267",
+    "id": "wevity-755900041716233448",
     "boardType": "contests",
     "title": "제9회 박상륭상 응모원고 모집",
     "category": "contest_writing",
@@ -46190,9 +46097,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "박상륭상 운영회의",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46208,11 +46115,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-8389848231145770560",
+    "id": "wevity-8953325105095095864",
     "boardType": "contests",
     "title": "제17회 천강문학상 작품 공모",
     "category": "contest_writing",
@@ -46243,7 +46150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7912815480940085839",
+    "id": "wevity-5695628286356712749",
     "boardType": "contests",
     "title": "2026 제3회 리아북스 그림책 공모전",
     "category": "contest_writing",
@@ -46252,9 +46159,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "리아북스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46270,11 +46177,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-3127521544316653919",
+    "id": "wevity-7876161613922483262",
     "boardType": "contests",
     "title": "농민신문 제31회 신춘문예 작품 공모",
     "category": "contest_writing",
@@ -46283,9 +46190,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "농민신문",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46301,11 +46208,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-7364687010636860888",
+    "id": "wevity-6204829479865279551",
     "boardType": "contests",
     "title": "2027년 시산맥 신춘문예 공모",
     "category": "contest_writing",
@@ -46314,9 +46221,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "시산맥",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46332,11 +46239,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-8093630052512920351",
+    "id": "wevity-7127223450702828453",
     "boardType": "contests",
     "title": "직장인 사연 공모전 (제2회 쉐어잇 빡춘문예)",
     "category": "contest_writing",
@@ -46345,9 +46252,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "쉐어잇",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46363,11 +46270,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-3518977850312971777",
+    "id": "wevity-1518059105947990597",
     "boardType": "contests",
     "title": "제31회 사랑의 편지쓰기 공모",
     "category": "contest_writing",
@@ -46387,7 +46294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111147",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111147",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "제31회 사랑의 편지쓰기 공모 - 바르게살기운동 세종시협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
@@ -46398,7 +46305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7124082266224528132",
+    "id": "wevity-2644887254059534247",
     "boardType": "contests",
     "title": "제25회 사계절문학상 공모",
     "category": "contest_writing",
@@ -46407,9 +46314,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "사계절출판사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46425,11 +46332,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-1129786594949349340",
+    "id": "wevity-3816231580965219765",
     "boardType": "contests",
     "title": "2026년 제32회 제주신인문학상 공모",
     "category": "contest_writing",
@@ -46460,38 +46367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6660468109007755409",
-    "boardType": "contests",
-    "title": "2026 부산 해양문학 공모전",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "한국해양진흥공사, 부산일보",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110901",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 부산 해양문학 공모전 - 한국해양진흥공사, 부산일보 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
-      "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-6101255427317098207",
+    "id": "wevity-93901648324770715",
     "boardType": "contests",
     "title": "제5회 책읽는곰 어린이책 공모전",
     "category": "contest_writing",
@@ -46500,9 +46376,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "책읽는곰",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46518,11 +46394,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-6004324133573645773",
+    "id": "wevity-1711370684493762187",
     "boardType": "contests",
     "title": "제28회 의정부전국문학공모전",
     "category": "contest_writing",
@@ -46553,7 +46429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2791339536886366166",
+    "id": "wevity-4380021688063407527",
     "boardType": "contests",
     "title": "[엔리즈×네이버 시리즈] 2026 엔리즈 고등학생 대학생 웹소설 공모전",
     "category": "contest_writing",
@@ -46562,9 +46438,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "엔리즈",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46580,11 +46456,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-7408437647050860246",
+    "id": "wevity-1498969864996625249",
     "boardType": "contests",
     "title": "2026 밀리로드 출간 공모전 시즌 4",
     "category": "contest_writing",
@@ -46593,9 +46469,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "밀리의서재",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46611,11 +46487,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-2198308190537083719",
+    "id": "wevity-506693401763505230",
     "boardType": "contests",
     "title": "2026 노벨피아 우주최강 웹소설 공모전",
     "category": "contest_writing",
@@ -46624,9 +46500,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "주) 메타크래프트",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46642,11 +46518,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-1022386677727865931",
+    "id": "wevity-4287009063608328032",
     "boardType": "contests",
     "title": "2026 전국 민촌백일장",
     "category": "contest_writing",
@@ -46677,7 +46553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2463761044951901804",
+    "id": "wevity-1900457577782706918",
     "boardType": "contests",
     "title": "2026 SF스토리 공모전",
     "category": "contest_writing",
@@ -46686,9 +46562,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "동아사이언스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46704,11 +46580,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-7633383436133099854",
+    "id": "wevity-8822266322236054650",
     "boardType": "contests",
     "title": "제25회 대산대학문학상 공모",
     "category": "contest_writing",
@@ -46717,9 +46593,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "대산문화재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46735,11 +46611,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-8422511744629531680",
+    "id": "wevity-8507149398568522536",
     "boardType": "contests",
     "title": "교보교육재단 2026년 제10회 책갈피 독서편지 공모전",
     "category": "contest_reading",
@@ -46748,9 +46624,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "교보교육재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46766,11 +46642,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-4831539239245810773",
+    "id": "wevity-4697682028322838172",
     "boardType": "contests",
     "title": "2026년 제33회 김유정기억하기 전국문예작품공모",
     "category": "contest_writing",
@@ -46779,9 +46655,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "김유정기념사업회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46797,11 +46673,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-4879303089491347358",
+    "id": "wevity-8889458052153179508",
     "boardType": "contests",
     "title": "2026년 정읍시 한 권의 책 전국 독후감 공모전",
     "category": "contest_writing",
@@ -46832,7 +46708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8972935780377525529",
+    "id": "wevity-6518781251598831490",
     "boardType": "contests",
     "title": "제5회 통영 동피랑문학상 공모",
     "category": "contest_writing",
@@ -46863,7 +46739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1557827128188913666",
+    "id": "wevity-6312380165749066917",
     "boardType": "contests",
     "title": "알라딘 디스커버 프로젝트 - 그만둔 이야기 공모전",
     "category": "contest_writing",
@@ -46872,9 +46748,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "알라딘커뮤니케이션",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46890,11 +46766,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-326532922848758772",
+    "id": "wevity-7817273630100998035",
     "boardType": "contests",
     "title": "제2회 구몬학습 창작 문학 공모전 with 현대자동차그룹",
     "category": "contest_writing",
@@ -46903,9 +46779,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)교원구몬",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -46921,11 +46797,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-1725423136768373350",
+    "id": "wevity-885375944155372290",
     "boardType": "contests",
     "title": "[전북시조시인협회] 2026년 젊은 시조 작가상 공모",
     "category": "contest_writing",
@@ -46956,7 +46832,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5469821652968314175",
+    "id": "wevity-2017528974964346736",
     "boardType": "contests",
     "title": "2026년 제1회 히말라야 문예대전 작품 공모",
     "category": "contest_writing",
@@ -46987,7 +46863,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2994290320126126462",
+    "id": "wevity-4946748291139761462",
     "boardType": "contests",
     "title": "제15회 제주4·3평화문학상 공모",
     "category": "contest_writing",
@@ -47018,7 +46894,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8828770222969449759",
+    "id": "wevity-3920285950736886995",
     "boardType": "contests",
     "title": "2027 창비 청소년 문학상 공모",
     "category": "contest_writing",
@@ -47027,9 +46903,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "창비",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47045,11 +46921,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-1886212373641187152",
+    "id": "wevity-932094052999488502",
     "boardType": "contests",
     "title": "2026년 제9회 아산문학상 전국공모 및 제4회 아산향토문학상 공모",
     "category": "contest_writing",
@@ -47080,7 +46956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5283722139340815281",
+    "id": "wevity-563159657067718172",
     "boardType": "contests",
     "title": "어린이동산 제36회 중편 동화 공모전",
     "category": "contest_writing",
@@ -47089,9 +46965,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "농민신문사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47107,11 +46983,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-6644464362153429518",
+    "id": "wevity-886214612870855639",
     "boardType": "contests",
     "title": "제5회 이민호문학상 공모",
     "category": "contest_writing",
@@ -47120,9 +46996,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "이민호문학상 운영위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47138,11 +47014,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-6407592344341411820",
+    "id": "wevity-8060943122718247552",
     "boardType": "contests",
     "title": "제1회 자갈치문학상 공모",
     "category": "contest_writing",
@@ -47151,9 +47027,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "자갈치문학상운영위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47169,11 +47045,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-8260965390435248007",
+    "id": "wevity-6940376294615294208",
     "boardType": "contests",
     "title": "제 2회 창비교육 동화 공모전 이야기친구상",
     "category": "contest_writing",
@@ -47182,9 +47058,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "창비교육",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47200,11 +47076,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-4862458425464801690",
+    "id": "wevity-354018419454332185",
     "boardType": "contests",
     "title": "제1회 해냄 청소년 인문 사회 도서 공모전",
     "category": "contest_writing",
@@ -47213,9 +47089,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)해냄에듀",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47231,11 +47107,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-8161344987311609522",
+    "id": "wevity-3107841735606017915",
     "boardType": "contests",
     "title": "제02회 문예지 시울 원고 공모전",
     "category": "contest_writing",
@@ -47244,9 +47120,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "문화출판 더하다",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47262,44 +47138,13 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "세종특별자치시"
-    ]
-  },
-  {
-    "id": "wevity-4646176636715304261",
-    "boardType": "contests",
-    "title": "푸른 가이아를 위한 단편소설 공모전",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "도서출판 득수",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107061",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "푸른 가이아를 위한 단편소설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
       "충청북도"
     ]
   },
   {
-    "id": "wevity-7609714939135752175",
+    "id": "wevity-1889755264782171332",
     "boardType": "contests",
-    "title": "소소한설 공모전",
+    "title": "푸른 가이아를 위한 단편소설 공모전",
     "category": "contest_writing",
     "categoryName": "전국 백일장·글짓기",
     "badge": "📚 전국 백일장",
@@ -47317,9 +47162,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107059",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107061",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "소소한설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "description": "푸른 가이아를 위한 단편소설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
       "공모전",
@@ -47328,7 +47173,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2718116927923769081",
+    "id": "wevity-6863692724173924968",
+    "boardType": "contests",
+    "title": "소소한설 공모전",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "도서출판 득수",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107059",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "소소한설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "부산광역시"
+    ]
+  },
+  {
+    "id": "wevity-3698509279654209885",
     "boardType": "contests",
     "title": "제2회 외황강 문학상 공모전",
     "category": "contest_writing",
@@ -47359,40 +47235,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8549549516257562287",
+    "id": "wevity-5898450970543883592",
     "boardType": "contests",
     "title": "제15회 문학동네 동시 문학상 공모전",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "문학동네",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104443",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제15회 문학동네 동시 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
-      "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-6904796786295415396",
-    "boardType": "contests",
-    "title": "제4회 문학동네 초승달 문학상 공모전",
     "category": "contest_writing",
     "categoryName": "전국 백일장·글짓기",
     "badge": "📚 전국 백일장",
@@ -47410,9 +47255,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104440",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104443",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제4회 문학동네 초승달 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "description": "제15회 문학동네 동시 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
       "공모전",
@@ -47421,9 +47266,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4839902910284019165",
+    "id": "wevity-8236347967951255062",
     "boardType": "contests",
-    "title": "제28회 문학동네 어린이 문학상 공모전",
+    "title": "제4회 문학동네 초승달 문학상 공모전",
     "category": "contest_writing",
     "categoryName": "전국 백일장·글짓기",
     "badge": "📚 전국 백일장",
@@ -47441,9 +47286,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104436",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104440",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제28회 문학동네 어린이 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "description": "제4회 문학동네 초승달 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
       "공모전",
@@ -47452,7 +47297,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-516243029308311558",
+    "id": "wevity-3819412108080760437",
+    "boardType": "contests",
+    "title": "제28회 문학동네 어린이 문학상 공모전",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "문학동네",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104436",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "제28회 문학동네 어린이 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "경상남도"
+    ]
+  },
+  {
+    "id": "wevity-6918455023656590835",
     "boardType": "contests",
     "title": "제4회 춘천 한 문장 봄내글판 전국 공모전",
     "category": "contest_writing",
@@ -47483,7 +47359,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2309135289083309399",
+    "id": "wevity-8890709912556962783",
+    "boardType": "contests",
+    "title": "2026년 겨울편 서울꿈새김판 문안 공모전",
+    "category": "contest_writing",
+    "categoryName": "전국 백일장·글짓기",
+    "badge": "📚 전국 백일장",
+    "organizer": "서울특별시",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111631",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026년 겨울편 서울꿈새김판 문안 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "문학",
+      "서울특별시"
+    ]
+  },
+  {
+    "id": "wevity-2957295946181343081",
     "boardType": "contests",
     "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중",
     "category": "contest_music",
@@ -47492,9 +47399,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "작필(作筆)",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47510,11 +47417,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-3679347443566453328",
+    "id": "wevity-7688386033180901293",
     "boardType": "contests",
     "title": "2026년 나라사랑 글짓기 대회",
     "category": "contest_writing",
@@ -47545,7 +47452,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4571198393070272919",
+    "id": "wevity-6683937498154744451",
     "boardType": "contests",
     "title": "제15회 구상한강백일장",
     "category": "contest_writing",
@@ -47576,7 +47483,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8869312869179658257",
+    "id": "wevity-7479356701429749564",
     "boardType": "contests",
     "title": "제2회 강남구 세계청소년 백일장",
     "category": "contest_writing",
@@ -47585,9 +47492,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "강남구",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47603,11 +47510,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-5682536837312268504",
+    "id": "wevity-3006979437212048438",
     "boardType": "contests",
     "title": "제30회 우암문화제 우암전국백일장대회 참가자 모집",
     "category": "contest_writing",
@@ -47638,7 +47545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1487771386390070177",
+    "id": "wevity-2738489648180191984",
     "boardType": "contests",
     "title": "제4회 만추문예",
     "category": "contest_writing",
@@ -47647,9 +47554,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "매일경제신문, 교보문고",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47665,11 +47572,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-6871839047570669947",
+    "id": "wevity-4083203917606274693",
     "boardType": "contests",
     "title": "제65회 율곡제 백일장",
     "category": "contest_writing",
@@ -47678,9 +47585,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "율곡제전위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47696,11 +47603,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-191083640756013458",
+    "id": "wevity-5068330444173419458",
     "boardType": "contests",
     "title": "제31회 전국안양시낭송대회 예선 참가자 모집",
     "category": "contest_writing",
@@ -47731,7 +47638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5955159306663921085",
+    "id": "wevity-7432780822774201917",
     "boardType": "contests",
     "title": "제18회 가람시조문학신인상 공모",
     "category": "contest_writing",
@@ -47762,7 +47669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1835648757716808856",
+    "id": "wevity-6365376655663584413",
     "boardType": "contests",
     "title": "함께 읽어요 2026 경남의 책 독후감 공모전",
     "category": "contest_reading",
@@ -47793,7 +47700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4573873719565025487",
+    "id": "wevity-8383753260660530895",
     "boardType": "contests",
     "title": "[강동숲속도서관] 청소년 글쓰기 공모전",
     "category": "contest_reading",
@@ -47802,9 +47709,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "강동숲속도서관",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47820,11 +47727,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-4245430693004851714",
+    "id": "wevity-4081172754042375373",
     "boardType": "contests",
     "title": "제1회 송강문학 전국 시(詩) 공모전",
     "category": "contest_writing",
@@ -47855,7 +47762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2866503858207671579",
+    "id": "wevity-2342042336494520080",
     "boardType": "contests",
     "title": "제580회 한글날 기념 시애틀한국교육원 공모전",
     "category": "contest_writing",
@@ -47864,9 +47771,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "시애틀한국교육원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47882,11 +47789,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-4757772382846366322",
+    "id": "wevity-3991769474858065007",
     "boardType": "contests",
     "title": "제7회 사계절어린이문학상 공모",
     "category": "contest_writing",
@@ -47895,9 +47802,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "사계절출판사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -47913,11 +47820,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-7226844792627553570",
+    "id": "wevity-3193512365576740206",
     "boardType": "contests",
     "title": "2026년 제29회 김삿갓문화제 전국 일반백일장",
     "category": "contest_writing",
@@ -47948,7 +47855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3940754460363252511",
+    "id": "wevity-5000531261523621252",
     "boardType": "contests",
     "title": "2026 제6회생육신 추모 함안 전국디카시공모전",
     "category": "contest_writing",
@@ -47979,7 +47886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3674205577927898182",
+    "id": "wevity-8799329525231794034",
     "boardType": "contests",
     "title": "2026년 제16회 미추홀구문예대상 공모전",
     "category": "contest_writing",
@@ -47988,9 +47895,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "미추홀노인복지관",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -48006,11 +47913,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-7320029945939647719",
+    "id": "wevity-3691624616992146803",
     "boardType": "contests",
     "title": "제 14 회 신동문청소년문학상",
     "category": "contest_writing",
@@ -48019,9 +47926,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "시 전문 계간지 『딩아돌하』",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -48037,11 +47944,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-8637948797591293452",
+    "id": "wevity-4480080703845370382",
     "boardType": "contests",
     "title": "제25회 원광김용문학상",
     "category": "contest_writing",
@@ -48050,9 +47957,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "원광대학교 신문방송사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -48068,11 +47975,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-1433304944403817191",
+    "id": "wevity-724609074712481171",
     "boardType": "contests",
     "title": "제52회 영천문화예술제 2026 영천시 전국 백일장",
     "category": "contest_writing",
@@ -48103,7 +48010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3648283735898584641",
+    "id": "wevity-3641847541426861520",
     "boardType": "contests",
     "title": "제4회 전국 어린이 글짓기 대회(새만금)",
     "category": "contest_writing",
@@ -48112,9 +48019,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국립새만금간척박물관",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -48130,11 +48037,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-8346978567160635159",
+    "id": "wevity-2183298402014522334",
     "boardType": "contests",
     "title": "코리아 하이쿠 월드 유스 페스티벌 2026",
     "category": "contest_writing",
@@ -48143,9 +48050,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국하이쿠연맹",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -48161,11 +48068,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "문학",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-2987786717064792568",
+    "id": "wevity-9018794334432625862",
     "boardType": "contests",
     "title": "2026 성남탄천문학 신인상 공모",
     "category": "contest_writing",
@@ -48196,38 +48103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1092158825467083200",
-    "boardType": "contests",
-    "title": "제44회 마로니에여성백일장",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "한국문화예술위원회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110904",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제44회 마로니에여성백일장 - 한국문화예술위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "문학",
-      "충청북도"
-    ]
-  },
-  {
-    "id": "wevity-7459782598838043717",
+    "id": "wevity-1049693259454196480",
     "boardType": "contests",
     "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)",
     "category": "contest_coding",
@@ -48258,7 +48134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5398295105685806779",
+    "id": "wevity-4238603394032550667",
     "boardType": "contests",
     "title": "2026 청도 바이브코딩 해커톤 with 해커그라운드",
     "category": "contest_coding",
@@ -48289,7 +48165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4976735077799702946",
+    "id": "wevity-3868606596301488758",
     "boardType": "contests",
     "title": "2026 충북글로벌게임센터 AI 게임 개발 공모전",
     "category": "contest_coding",
@@ -48320,7 +48196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-885643095320106565",
+    "id": "wevity-5521358616135902976",
     "boardType": "contests",
     "title": "2026 제8회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -48351,7 +48227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6909156034910769400",
+    "id": "wevity-5961595944017715085",
     "boardType": "contests",
     "title": "2026 조달청 AI 게임·콘텐츠 공모전",
     "category": "contest_coding",
@@ -48382,7 +48258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5317023715572347797",
+    "id": "wevity-6000014834013259751",
     "boardType": "contests",
     "title": "쿵야 IP를 활용한 로블록스(Roblox) 게임 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -48413,7 +48289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5668472508430718176",
+    "id": "wevity-641331326478505883",
     "boardType": "contests",
     "title": "제1회 한아전 게임 시나리오·그래픽 공모전",
     "category": "contest_coding",
@@ -48444,7 +48320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-799554729406755748",
+    "id": "wevity-3665150277501368514",
     "boardType": "contests",
     "title": "2026 대전 콘텐츠페어 이스포츠 대전 브롤스타즈 참가자 모집",
     "category": "contest_coding",
@@ -48475,7 +48351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8071269739740885990",
+    "id": "wevity-4542986119643451201",
     "boardType": "contests",
     "title": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회",
     "category": "contest_coding",
@@ -48506,7 +48382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6064127106004636568",
+    "id": "wevity-1135949660875225649",
     "boardType": "contests",
     "title": "제4회 경남 AI·SW 경진대회",
     "category": "contest_coding",
@@ -48537,7 +48413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5381475463666800160",
+    "id": "wevity-3580924110296055486",
     "boardType": "contests",
     "title": "2026 제5회 오픈소스 SW개발 경진대회",
     "category": "contest_coding",
@@ -48568,7 +48444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3423823087604744767",
+    "id": "wevity-4398258826916024409",
     "boardType": "contests",
     "title": "2026년 충청권 인디게임 공모전 인디유(indie·U)",
     "category": "contest_coding",
@@ -48599,7 +48475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-274773423938001734",
+    "id": "wevity-578039856650986719",
     "boardType": "contests",
     "title": "2026 대학생 프로그래밍 경시대회",
     "category": "contest_coding",
@@ -48630,7 +48506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5621798197011641265",
+    "id": "wevity-385530200228998226",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지",
     "category": "contest_coding",
@@ -48661,7 +48537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4852785855059415146",
+    "id": "wevity-4583252803260891427",
     "boardType": "contests",
     "title": "[무계로 세계로 블루마블] 리그 오브 레전드 무작위 총력전 : 아수라장 - 선수 모집",
     "category": "contest_coding",
@@ -48692,7 +48568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6218663005171292645",
+    "id": "wevity-7013176870982613573",
     "boardType": "contests",
     "title": "[무료] [CJ올리브네트웍스] AI 서비스 기획자 교육 과정 참여자 모집 (L.L.M. 아카데미)",
     "category": "contest_coding",
@@ -48723,7 +48599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-742791833056649975",
+    "id": "wevity-7991667037512361101",
     "boardType": "contests",
     "title": "2026년 제6회 K-인공지능(AI) 제조데이터 분석 경진대회",
     "category": "contest_coding",
@@ -48754,7 +48630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-231294787805435694",
+    "id": "wevity-5754261580090729867",
     "boardType": "contests",
     "title": "[ZEP School] 메타버스 교과 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -48785,7 +48661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3205382296176467859",
+    "id": "wevity-6409136581758403953",
     "boardType": "contests",
     "title": "제6회 경북 대학생 e스포츠 대회",
     "category": "contest_coding",
@@ -48816,7 +48692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7373423043682185849",
+    "id": "wevity-2749727718029340507",
     "boardType": "contests",
     "title": "제5회 세명컴퓨터고 중학생 SW 아이디어 공모전",
     "category": "contest_coding",
@@ -48847,7 +48723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4591862468084765445",
+    "id": "wevity-1164654183959981784",
     "boardType": "contests",
     "title": "오픈AI 게임 빌더스 서울",
     "category": "contest_coding",
@@ -48878,7 +48754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7784198134595220868",
+    "id": "wevity-1566877769487605609",
     "boardType": "contests",
     "title": "제5회 2026 대한민국 고등학생 AI·SW 개발 공모전",
     "category": "contest_coding",
@@ -48909,7 +48785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1208177784533409028",
+    "id": "wevity-5338136839838743671",
     "boardType": "contests",
     "title": "제17회 LH 국토기술대전",
     "category": "contest_coding",
@@ -48940,7 +48816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8679690924335262714",
+    "id": "wevity-4562977464738253332",
     "boardType": "contests",
     "title": "2026년 국립서울현충원 제6회 나라사랑 보드게임 대회",
     "category": "contest_coding",
@@ -48971,7 +48847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4749635903353851848",
+    "id": "wevity-6730105486939741107",
     "boardType": "contests",
     "title": "2026 서든어택 무기 스킨 아이디어 공모전",
     "category": "contest_coding",
@@ -49002,7 +48878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1269254826218463764",
+    "id": "wevity-4927095871666820390",
     "boardType": "contests",
     "title": "[KB국민은행] 제 8회 KB A.I Challenge",
     "category": "contest_coding",
@@ -49033,7 +48909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3377962392104521243",
+    "id": "wevity-6409308290241940120",
     "boardType": "contests",
     "title": "제5회 게임제너레이션 게임비평공모전",
     "category": "contest_coding",
@@ -49064,7 +48940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6953133544616909491",
+    "id": "wevity-2916603969225227510",
     "boardType": "contests",
     "title": "제19회 경상북도 아마추어 e스포츠 대회 참가 모집",
     "category": "contest_coding",
@@ -49095,7 +48971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-584251385460909114",
+    "id": "wevity-6324389186252630397",
     "boardType": "contests",
     "title": "화성상공회의소 2026 컴활 2급 경시대회",
     "category": "contest_coding",
@@ -49126,7 +49002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7796861061576492501",
+    "id": "wevity-875476968578259845",
     "boardType": "contests",
     "title": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술)",
     "category": "contest_coding",
@@ -49157,7 +49033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1639747367856255774",
+    "id": "wevity-5118633115866131429",
     "boardType": "contests",
     "title": "2026년 제4회 전북 청년 AI·빅데이터 경진대회",
     "category": "contest_coding",
@@ -49188,7 +49064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3315375435712427829",
+    "id": "wevity-4127510743626403785",
     "boardType": "contests",
     "title": "2026 큐챔스 CUBE CHAMPIONS LEAGUE",
     "category": "contest_coding",
@@ -49219,7 +49095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6703509399751897883",
+    "id": "wevity-4671475669249606221",
     "boardType": "contests",
     "title": "2026년 임업통계 활용 경진대회",
     "category": "contest_coding",
@@ -49250,7 +49126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-453196178512708337",
+    "id": "wevity-9211823283210336130",
     "boardType": "contests",
     "title": "제4회 대한민국 청년 인재양성 프로젝트 참가자 모집",
     "category": "contest_coding",
@@ -49281,7 +49157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-967237646500067971",
+    "id": "wevity-470435032552167514",
     "boardType": "contests",
     "title": "2026 강원 콘텐츠 페스타 - 강원 중·고교 e-스포츠 대항전",
     "category": "contest_coding",
@@ -49312,7 +49188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7119972886677905011",
+    "id": "wevity-186117111007847362",
     "boardType": "contests",
     "title": "[SCPC2026] 제12회 삼성전자 대학생 프로그래밍 챌린지 (내용 수정)",
     "category": "contest_coding",
@@ -49343,7 +49219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7434669855184804495",
+    "id": "wevity-8814803869716551566",
     "boardType": "contests",
     "title": "2026 동남권 정보보호 사이버공방전 (SECTOR) 참가자 모집",
     "category": "contest_coding",
@@ -49374,7 +49250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2997551042017932663",
+    "id": "wevity-5269104051762284326",
     "boardType": "contests",
     "title": "2026 글로벌 인디 게임제작 경진대회(GIGDC2026)",
     "category": "contest_coding",
@@ -49405,7 +49281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1742312547115341102",
+    "id": "wevity-57795706112201238",
     "boardType": "contests",
     "title": "2026 GNGC GAME JAM",
     "category": "contest_coding",
@@ -49436,7 +49312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-313122559306728548",
+    "id": "wevity-8434728723468436294",
     "boardType": "contests",
     "title": "제 1회 일상뒤집기 ai 어플 개발 공모전",
     "category": "contest_coding",
@@ -49467,7 +49343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2784177485828359079",
+    "id": "wevity-4312601230136362386",
     "boardType": "contests",
     "title": "[넥슨] 메이플스토리 글로벌 개발 콘테스트 (MapleStory Global Creator Challenge)",
     "category": "contest_coding",
@@ -49498,7 +49374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7862005912722327149",
+    "id": "wevity-7363117842209737032",
     "boardType": "contests",
     "title": "넥슨 영 프로그래머스 컵 (NEXON Young Programmers Cup)",
     "category": "contest_coding",
@@ -49529,7 +49405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5674515194365569603",
+    "id": "wevity-6143104655302034323",
     "boardType": "contests",
     "title": "2026 인천 e스포츠 챌린지 (리그 오브 레전드, 발로란트, 이터널 리턴, FC 온라인, 브롤스타즈)",
     "category": "contest_coding",
@@ -49560,7 +49436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5390868413703434212",
+    "id": "wevity-5480567878501112296",
     "boardType": "contests",
     "title": "서울 디자인 AI 영상 공모전",
     "category": "contest_coding",
@@ -49591,7 +49467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7373380594178644867",
+    "id": "wevity-1452226336035283327",
     "boardType": "contests",
     "title": "2026 전국 청소년 AI에이전트 코딩 경진대회 (참가비 있음)",
     "category": "contest_coding",
@@ -49622,7 +49498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2832355318871355790",
+    "id": "wevity-100643700966304122",
     "boardType": "contests",
     "title": "스마일게이트멤버십 인디게임 부문 18기 모집",
     "category": "contest_coding",
@@ -49653,7 +49529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7285198367635575318",
+    "id": "wevity-6840498659781011499",
     "boardType": "contests",
     "title": "[국립아시아문화전당] 2026 ACC 민주·인권·평화 영상(+AI) 콘텐츠 공모전",
     "category": "contest_coding",
@@ -49684,7 +49560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7987333113136750255",
+    "id": "wevity-1681942711665009073",
     "boardType": "contests",
     "title": "2026 부산광역시 공공데이터•AI 활용 창업경진대회",
     "category": "contest_coding",
@@ -49715,7 +49591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2304181021150872326",
+    "id": "wevity-5584989977065738325",
     "boardType": "contests",
     "title": "2026 SW미래채움 고교 AI·SW 챌린지 대회",
     "category": "contest_coding",
@@ -49746,7 +49622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3569493299101023207",
+    "id": "wevity-5522522814780895627",
     "boardType": "contests",
     "title": "2026년 AI·가상융합(XR) 서비스 개발자 경진대회",
     "category": "contest_coding",
@@ -49777,7 +49653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4731486009559250549",
+    "id": "wevity-7459885145568881278",
     "boardType": "contests",
     "title": "2026년 제4회 AI프로그래밍(무인이동체제어) 민간기능경기대회",
     "category": "contest_coding",
@@ -49808,7 +49684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-558926924696104609",
+    "id": "wevity-2918773426869880850",
     "boardType": "contests",
     "title": "2026 우주항공·제조 산업 현장 AI 적용 아이디어 공모전",
     "category": "contest_coding",
@@ -49839,7 +49715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4641882940180229477",
+    "id": "wevity-8383369581858822378",
     "boardType": "contests",
     "title": "2026 제조AI 경진대회",
     "category": "contest_coding",
@@ -49870,7 +49746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7619014004898652557",
+    "id": "wevity-4955809440696137196",
     "boardType": "contests",
     "title": "제24회 임베디드SW경진대회",
     "category": "contest_coding",
@@ -49901,7 +49777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6148045724333237953",
+    "id": "wevity-1486584257370592778",
     "boardType": "contests",
     "title": "제4회 문화체육관광 인공지능·데이터 활용 공모전",
     "category": "contest_coding",
@@ -49932,7 +49808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4320227025224081332",
+    "id": "wevity-1797516949311862315",
     "boardType": "contests",
     "title": "[넥슨] 메이플스토리 해커톤, 2026 메커톤",
     "category": "contest_coding",
@@ -49963,7 +49839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2798700994158582536",
+    "id": "wevity-3233327648149229760",
     "boardType": "contests",
     "title": "2026 현대오토에버 배리어프리 앱 개발 콘테스트 공모전",
     "category": "contest_coding",
@@ -49994,7 +49870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4865618771636215888",
+    "id": "wevity-3042814396320150",
     "boardType": "contests",
     "title": "2026년 전주MBC K-하이테크 플랫폼 제2회 가상현실 공간 창작 공모전",
     "category": "contest_coding",
@@ -50025,7 +49901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-704633328731585203",
+    "id": "wevity-1746421644694096191",
     "boardType": "contests",
     "title": "제 1회 서울 플레이업 AI 게임 챌린지",
     "category": "contest_coding",
@@ -50056,7 +49932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4788196750307361087",
+    "id": "wevity-8020557257326852853",
     "boardType": "contests",
     "title": "크래프톤 X 넵튠 글로벌 캐주얼 게임 공모전",
     "category": "contest_coding",
@@ -50087,7 +49963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7743784129482237744",
+    "id": "wevity-2250455381460213228",
     "boardType": "contests",
     "title": "제16회 e-ICON 세계대회 참가자 모집",
     "category": "contest_coding",
@@ -50118,7 +49994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6675577298726778479",
+    "id": "wevity-1578925409350625271",
     "boardType": "contests",
     "title": "대한민국 대표 인디게임 축제 2026 인디크래프트 출품작 모집",
     "category": "contest_coding",
@@ -50149,7 +50025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8448822005771926524",
+    "id": "wevity-984931851341398923",
     "boardType": "contests",
     "title": "[LoL/리그오브레전드] 제2회 국제 아마추어 E-스포츠 대회 (인제대 총장배) 참가자 모집",
     "category": "contest_coding",
@@ -50180,7 +50056,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4248325976316312252",
+    "id": "wevity-3103945507524683448",
     "boardType": "contests",
     "title": "유니티 스튜디오 챌린지",
     "category": "contest_coding",
@@ -50211,7 +50087,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6800541967754943927",
+    "id": "wevity-678125712379074571",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 2026 글로벌 피우다프로젝트 (SW개발 경진대회)",
     "category": "contest_coding",
@@ -50242,7 +50118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7902763033288610794",
+    "id": "wevity-2464341282093360250",
     "boardType": "contests",
     "title": "2026. 독립운동GO! 모바일게임 제작 기획단 모집",
     "category": "contest_coding",
@@ -50273,7 +50149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7944636957385086170",
+    "id": "wevity-20960021451592779",
     "boardType": "contests",
     "title": "제2회 올담 데이터 활용 해커톤 모집",
     "category": "contest_coding",
@@ -50304,7 +50180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7278911718925936749",
+    "id": "wevity-1243942852337003388",
     "boardType": "contests",
     "title": "Verse8 × YGG Play | Casual Degen Game Hackathon",
     "category": "contest_coding",
@@ -50335,7 +50211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9195625783169589972",
+    "id": "wevity-4555487278495680726",
     "boardType": "contests",
     "title": "2026 스마일게이트 인디게임 창작 공모전 (IndieGo)",
     "category": "contest_coding",
@@ -50366,7 +50242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8484472267659612284",
+    "id": "wevity-7242135522577261018",
     "boardType": "contests",
     "title": "​[하나금융그룹] 하나 청년 금융인재 양성 프로젝트 참가자 모집",
     "category": "contest_coding",
@@ -50397,7 +50273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3068331908879109663",
+    "id": "wevity-8544793874467174810",
     "boardType": "contests",
     "title": "2026 생활 속 목재이용 국민참여 공모전 (목재 공감(共感) 키트)",
     "category": "contest_coding",
@@ -50428,7 +50304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5465024734474999756",
+    "id": "wevity-7674505116128896514",
     "boardType": "contests",
     "title": "파주슈필 2026 어린이 보드게임 작가 모집",
     "category": "contest_coding",
@@ -50459,7 +50335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5646415963331507339",
+    "id": "wevity-8718719307869962804",
     "boardType": "contests",
     "title": "퀄컴 AI 이노베이터 프로그램 (QAIPI) 2026-APAC",
     "category": "contest_coding",
@@ -50490,7 +50366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4165023682939809363",
+    "id": "wevity-2348940036748450707",
     "boardType": "contests",
     "title": "2026 충남글로벌게임센터 인디게임파크 인큐베이팅 사업 인디게임팀 모집",
     "category": "contest_coding",
@@ -50521,7 +50397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2698855517035049137",
+    "id": "wevity-5286904001103411165",
     "boardType": "contests",
     "title": "2026년 제4회 IT 코딩 발명 아이디어 및 에세이 경진대회",
     "category": "contest_coding",
@@ -50552,7 +50428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2545544942227024997",
+    "id": "wevity-3491683530761427600",
     "boardType": "contests",
     "title": "제2회 히트 게임즈 보드게임 공모전",
     "category": "contest_coding",
@@ -50583,7 +50459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-411547282983328475",
+    "id": "wevity-7578779639614564905",
     "boardType": "contests",
     "title": "2026 제6회 청소년 IT경시대회",
     "category": "contest_coding",
@@ -50614,7 +50490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7093512431228934037",
+    "id": "wevity-1837806543041544974",
     "boardType": "contests",
     "title": "제1회 메가스터디 게임 개발 공모전",
     "category": "contest_coding",
@@ -50645,7 +50521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8707670953090584199",
+    "id": "wevity-8321801580753523032",
     "boardType": "contests",
     "title": "제3회 잼S 메이커스 코딩 페스티발",
     "category": "contest_robot",
@@ -50676,7 +50552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6306032661363554231",
+    "id": "wevity-8938977588840978817",
     "boardType": "contests",
     "title": "AI 에이전트 서비스 개발 공모전 참가자 모집",
     "category": "contest_coding",
@@ -50707,7 +50583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1834373839578903880",
+    "id": "wevity-154479295013788987",
     "boardType": "contests",
     "title": "카카오 PlayMCP 개발 공모전 (MCP Player 10)",
     "category": "contest_coding",
@@ -50738,7 +50614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8632977930997811934",
+    "id": "wevity-5269267397008385090",
     "boardType": "contests",
     "title": "[CONX x 컴투스홀딩스] 놈 아레나 : 글로벌 게임 개발 공모전",
     "category": "contest_coding",
@@ -50769,7 +50645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6978225530945758386",
+    "id": "wevity-676744342779762639",
     "boardType": "contests",
     "title": "BIPAxVerse8 AI 게임 창작 콘테스트",
     "category": "contest_coding",
@@ -50800,7 +50676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-274899634975584664",
+    "id": "wevity-4644318298795532997",
     "boardType": "contests",
     "title": "SEMO 챌린지",
     "category": "contest_coding",
@@ -50831,7 +50707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4605426952500060727",
+    "id": "wevity-3042407742212783319",
     "boardType": "contests",
     "title": "2025 제천시장배 전국 e스포츠 대회 (리그 오브 레전드, 발로란트, 이터널 리턴)",
     "category": "contest_coding",
@@ -50862,7 +50738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7281542398471762077",
+    "id": "wevity-7825574815241068585",
     "boardType": "contests",
     "title": "춘천MBC 2025 강원도내 직장인 FC온라인 대회",
     "category": "contest_coding",
@@ -50893,7 +50769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1969418455469683213",
+    "id": "wevity-5129999607058651488",
     "boardType": "contests",
     "title": "제 2회 NC AI VARCO Vocie 활용 게임 제작 공모전",
     "category": "contest_coding",
@@ -50924,7 +50800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1585712534767153987",
+    "id": "wevity-808584442263837478",
     "boardType": "contests",
     "title": "2025 화성특례시장배 전국 E스포츠 대회 (리그 오브 레전드, FC 온라인)",
     "category": "contest_coding",
@@ -50955,7 +50831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3885541149698891062",
+    "id": "wevity-4750257820503755024",
     "boardType": "contests",
     "title": "[울산정보산업진흥원] 2025년 울산 게임 기획 공모전",
     "category": "contest_coding",
@@ -50986,7 +50862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1537799255029299623",
+    "id": "wevity-1467093562144509063",
     "boardType": "contests",
     "title": "[Supercent] AI Creator Challenge",
     "category": "contest_coding",
@@ -51017,7 +50893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4953652072190549527",
+    "id": "wevity-3332989381866421366",
     "boardType": "contests",
     "title": "코리아 인디게임 쇼케이스 인디게임 서포터즈 모집",
     "category": "contest_coding",
@@ -51048,7 +50924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6653387165743503770",
+    "id": "wevity-5017054643791491872",
     "boardType": "contests",
     "title": "엔카닷컴 2025 AI 개발/기획 공모전",
     "category": "contest_coding",
@@ -51079,7 +50955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8545655563482507086",
+    "id": "wevity-8060918547831765680",
     "boardType": "contests",
     "title": "2025 이스포츠 대학리그 결선진출전",
     "category": "contest_coding",
@@ -51110,7 +50986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1494446495886988496",
+    "id": "wevity-2981907322112311342",
     "boardType": "contests",
     "title": "루키 게임 콘테스트",
     "category": "contest_coding",
@@ -51141,7 +51017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-259902137475635688",
+    "id": "wevity-7091771673822534629",
     "boardType": "contests",
     "title": "2025 강원콘텐츠페스타 - 강원고교 e스포츠 발로란트 대항전",
     "category": "contest_coding",
@@ -51172,7 +51048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2283636196650260892",
+    "id": "wevity-5235848710496265425",
     "boardType": "contests",
     "title": "부산광역시장배 2025 브레나 베스트 플레이어 직장부 최강자전",
     "category": "contest_coding",
@@ -51203,7 +51079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1565029815172878805",
+    "id": "wevity-8692635564068036367",
     "boardType": "contests",
     "title": "제7회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -51234,7 +51110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7494089394483299814",
+    "id": "wevity-6032383925779252378",
     "boardType": "contests",
     "title": "2025 일상을 바꿀 생성형 AI 및 대화형 GPT 기술 활용 공모전",
     "category": "contest_coding",
@@ -51265,7 +51141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1190623766057039319",
+    "id": "wevity-4734890764580364131",
     "boardType": "contests",
     "title": "2025 관악 e스포츠 페스티벌 - 발로란트",
     "category": "contest_coding",
@@ -51296,7 +51172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7657812233436697565",
+    "id": "wevity-9094949481026574311",
     "boardType": "contests",
     "title": "2025 관악 e스포츠 페스티벌 - 리그 오브 레전드",
     "category": "contest_coding",
@@ -51327,7 +51203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2029181782640870451",
+    "id": "wevity-115552212028264690",
     "boardType": "contests",
     "title": "제2회 컴투스 글로벌 게임개발 공모전 컴:온 2025",
     "category": "contest_coding",
@@ -51358,7 +51234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2501025685122790334",
+    "id": "wevity-3228276151491417208",
     "boardType": "contests",
     "title": "2025 국제 이스포츠 아이디어 공모전",
     "category": "contest_coding",
@@ -51389,7 +51265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6553534764257201886",
+    "id": "wevity-6707388959621502924",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 제2회 미래융합 인재 발굴 소프트웨어 챌린지",
     "category": "contest_coding",
@@ -51420,7 +51296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1808427018402920963",
+    "id": "wevity-8727172319456994061",
     "boardType": "contests",
     "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전",
     "category": "contest_music",
@@ -51451,7 +51327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1498416844823975734",
+    "id": "wevity-8939546515554325648",
     "boardType": "contests",
     "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR",
     "category": "contest_music",
@@ -51482,7 +51358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2412209477032171762",
+    "id": "wevity-5665078716931933558",
     "boardType": "contests",
     "title": "2026 DATA·AI 분석 경진대회",
     "category": "contest_stem",
@@ -51513,7 +51389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5489458193746210307",
+    "id": "wevity-8288959114692527776",
     "boardType": "contests",
     "title": "한국공학한림원 공학의 가치 숏폼 콘테스트",
     "category": "contest_stem",
@@ -51544,7 +51420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1971744462253659667",
+    "id": "wevity-3151856967604681343",
     "boardType": "contests",
     "title": "2026 로보틱스 작품공모전",
     "category": "contest_stem",
@@ -51575,7 +51451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-173599243819110125",
+    "id": "wevity-7342834268161097784",
     "boardType": "contests",
     "title": "우리 모두의 R&D 공모전",
     "category": "contest_stem",
@@ -51606,7 +51482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7334582084294966579",
+    "id": "wevity-4606388081825720279",
     "boardType": "contests",
     "title": "2026 양자내성암호 전환 경진대회·해커톤",
     "category": "contest_coding",
@@ -51637,7 +51513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4055732827144816332",
+    "id": "wevity-3917212190168236779",
     "boardType": "contests",
     "title": "2026 POSTECH OIBC 빅데이터 경진대회",
     "category": "contest_stem",
@@ -51668,7 +51544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-118234230753484833",
+    "id": "wevity-4876671083917472648",
     "boardType": "contests",
     "title": "제 4회 청소년과학오디션",
     "category": "contest_stem",
@@ -51699,38 +51575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9115281766863264467",
-    "boardType": "contests",
-    "title": "2027 전국 대학생 자작 미래자동차 경진대회",
-    "category": "contest_stem",
-    "categoryName": "과학탐구·창의발명",
-    "badge": "💡 과학·창의발명",
-    "organizer": "영남대학교",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111192",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2027 전국 대학생 자작 미래자동차 경진대회 - 영남대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "과학",
-      "대구광역시"
-    ]
-  },
-  {
-    "id": "wevity-8366532237139527342",
+    "id": "wevity-4050247275410081937",
     "boardType": "contests",
     "title": "2026 스페이스 해커톤",
     "category": "contest_coding",
@@ -51739,9 +51584,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "우주항공청",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -51757,11 +51602,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "과학",
-      "울산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-2341797175224294779",
+    "id": "wevity-4430909364698491240",
     "boardType": "contests",
     "title": "2026년 3d 디자인 공모전",
     "category": "contest_stem",
@@ -51770,9 +51615,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국생산성본부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -51788,11 +51633,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "과학",
-      "경상남도"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-6723750105296044064",
+    "id": "wevity-5359253217639118497",
     "boardType": "contests",
     "title": "제 4회 청소년 과학 오디션",
     "category": "contest_stem",
@@ -51801,9 +51646,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "사단법인 과학의전당",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -51819,11 +51664,42 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "과학",
+      "경상남도"
+    ]
+  },
+  {
+    "id": "wevity-1215164155018465919",
+    "boardType": "contests",
+    "title": "2027 전국 대학생 자작 미래자동차 경진대회",
+    "category": "contest_stem",
+    "categoryName": "과학탐구·창의발명",
+    "badge": "💡 과학·창의발명",
+    "organizer": "영남대학교",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111192",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2027 전국 대학생 자작 미래자동차 경진대회 - 영남대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "과학",
       "경상북도"
     ]
   },
   {
-    "id": "wevity-3682955717905048497",
+    "id": "wevity-5540864099797584943",
     "boardType": "contests",
     "title": "N.O.V.A. 2026 대화형 의료 진단 AI 에이전트 대회",
     "category": "contest_stem",
@@ -51854,7 +51730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3313031015978439218",
+    "id": "wevity-8285888916704049892",
     "boardType": "contests",
     "title": "[SK에코플랜트] 2026년 ConTech Meet-up Day",
     "category": "contest_stem",
@@ -51885,7 +51761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6549248063322644186",
+    "id": "wevity-2545597986643777093",
     "boardType": "contests",
     "title": "청소년 로봇대회 제2회 유스올림피아드",
     "category": "contest_robot",
@@ -51916,7 +51792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5736973651268230050",
+    "id": "wevity-6604866485749245736",
     "boardType": "contests",
     "title": "2026 수성구 로보틱스컵 대회",
     "category": "contest_stem",
@@ -51947,7 +51823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2126910175064501118",
+    "id": "wevity-6300775728178694647",
     "boardType": "contests",
     "title": "2026 충남권역 모빌리티 자율주행 경진대회",
     "category": "contest_stem",
@@ -51978,7 +51854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9187313427574497349",
+    "id": "wevity-3759160352646079436",
     "boardType": "contests",
     "title": "[2026년 J-STEM Challenge] 전북 청소년 미래공학 경진대회",
     "category": "contest_stem",
@@ -52009,7 +51885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8864185044264064173",
+    "id": "wevity-2448015961528928096",
     "boardType": "contests",
     "title": "2026 연암대학교 스마트원예 전공 경진대회 (전국 고등학생)",
     "category": "contest_music",
@@ -52040,7 +51916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5034550196280065694",
+    "id": "wevity-8453496908347456878",
     "boardType": "contests",
     "title": "2026 전북지역 중·고등학교여학생 공학탐구 경진대회",
     "category": "contest_stem",
@@ -52071,7 +51947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-327665954647785992",
+    "id": "wevity-2253563555002766325",
     "boardType": "contests",
     "title": "International ICT Innovative Services Awards 2026",
     "category": "contest_stem",
@@ -52102,7 +51978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3570672468110396322",
+    "id": "wevity-6629091921149663274",
     "boardType": "contests",
     "title": "2026년 지능형 과학실 ON 연계 공동탐구 전국대회",
     "category": "contest_stem",
@@ -52133,7 +52009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6845850008012163004",
+    "id": "wevity-8506085912386076851",
     "boardType": "contests",
     "title": "[NST] 대한민국 AI Native R&D를 함께 만드는 NAIS AI 해커톤",
     "category": "contest_coding",
@@ -52164,7 +52040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2109230168250457038",
+    "id": "wevity-6021835487114797085",
     "boardType": "contests",
     "title": "2026 전국 중학생 바이오안전성·바이오산업 탐구력 캠프",
     "category": "contest_stem",
@@ -52195,7 +52071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5155597524641512283",
+    "id": "wevity-1877571924887080388",
     "boardType": "contests",
     "title": "제8회 안양시 학생 창의과학 경진대회",
     "category": "contest_stem",
@@ -52226,7 +52102,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3020834170230970207",
+    "id": "wevity-7004223263169857274",
     "boardType": "contests",
     "title": "2026 KOMIPO 혁신 50대 과제 대국민 아이디어 공모",
     "category": "contest_stem",
@@ -52257,7 +52133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7695363300777322356",
+    "id": "wevity-4631269580600975985",
     "boardType": "contests",
     "title": "[삼성E&A, 삼성물산 건설부문, 삼성중공업] 2026 콘테크 공모전",
     "category": "contest_stem",
@@ -52288,7 +52164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5975227414973424306",
+    "id": "wevity-5214834435141257487",
     "boardType": "contests",
     "title": "2026년 고양특례시 빅데이터 공모전",
     "category": "contest_stem",
@@ -52319,7 +52195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3328900328376305846",
+    "id": "wevity-3399466727630769779",
     "boardType": "contests",
     "title": "2026 COSS 차세대반도체 Microcontroller(MCU) 응용경진대회",
     "category": "contest_stem",
@@ -52350,7 +52226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8709185852177240741",
+    "id": "wevity-1209638101021057899",
     "boardType": "contests",
     "title": "2026 제5회 청소년 메이커 경진대회",
     "category": "contest_robot",
@@ -52381,7 +52257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4631330084750077965",
+    "id": "wevity-5519833841804461907",
     "boardType": "contests",
     "title": "제7회 국립재활원 보조기기 해커톤 참가자 모집",
     "category": "contest_coding",
@@ -52412,7 +52288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8875469377694971227",
+    "id": "wevity-8552949447750978007",
     "boardType": "contests",
     "title": "2026년 보훈 공공데이터·AI 활용 아이디어 공모전",
     "category": "contest_stem",
@@ -52443,7 +52319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3248512560800601082",
+    "id": "wevity-7772227174384954850",
     "boardType": "contests",
     "title": "제7회 초소형(큐브) 위성 경연대회",
     "category": "contest_stem",
@@ -52474,7 +52350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3356909111391617458",
+    "id": "wevity-3562652583887412765",
     "boardType": "contests",
     "title": "2026년 미래여성경제인육성사업 창업아이디어 멘토링•IP권리화 프로그램 참가자 모집",
     "category": "contest_stem",
@@ -52505,7 +52381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1263820940575382429",
+    "id": "wevity-6262339596046954575",
     "boardType": "contests",
     "title": "2026 호남IS해커톤",
     "category": "contest_coding",
@@ -52536,7 +52412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3426870961372730037",
+    "id": "wevity-6404039948405138604",
     "boardType": "contests",
     "title": "2026 스마트농업 AI 경진대회",
     "category": "contest_stem",
@@ -52567,7 +52443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8892325487950406231",
+    "id": "wevity-8480926356237718072",
     "boardType": "contests",
     "title": "2026년 전국 고교생 기술대회",
     "category": "contest_stem",
@@ -52598,7 +52474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5211489250273223876",
+    "id": "wevity-3600802364956912974",
     "boardType": "contests",
     "title": "2026년 국민체육진흥공단 공공데이터 활용 경진대회",
     "category": "contest_stem",
@@ -52629,7 +52505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5318426464719414075",
+    "id": "wevity-5851904112006620599",
     "boardType": "contests",
     "title": "[과학대회] 제13회 전국 무한상상 과학탐구 서바이벌 대전",
     "category": "contest_stem",
@@ -52660,7 +52536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6436972134129448841",
+    "id": "wevity-4022952769774494228",
     "boardType": "contests",
     "title": "기상·기후 AI 해커톤 경진대회",
     "category": "contest_coding",
@@ -52691,7 +52567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5035221170577771112",
+    "id": "wevity-103829679009297841",
     "boardType": "contests",
     "title": "AI·네트워크 응용분야 아이디어 공모 K-디지털 챌린지 : 넷 챌린지 캠프 시즌13",
     "category": "contest_stem",
@@ -52722,7 +52598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5656551128095379471",
+    "id": "wevity-3398866359707864895",
     "boardType": "contests",
     "title": "2026 가명정보 활용 경진대회",
     "category": "contest_stem",
@@ -52753,7 +52629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2174538298757660361",
+    "id": "wevity-5155044111178981836",
     "boardType": "contests",
     "title": "2026 룬샷 경진대회 난제 해결방안 제안서 공모",
     "category": "contest_stem",
@@ -52784,7 +52660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1303063368931561392",
+    "id": "wevity-8160224216639657703",
     "boardType": "contests",
     "title": "제4회 방사선 기술 활용 창의ㆍ융합 아이디어 경진대회",
     "category": "contest_stem",
@@ -52815,7 +52691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6748583638292442578",
+    "id": "wevity-162645551081336248",
     "boardType": "contests",
     "title": "Y-MAS Project 오프라인 경진대회",
     "category": "contest_stem",
@@ -52846,7 +52722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3803966058921443854",
+    "id": "wevity-5894935873401037021",
     "boardType": "contests",
     "title": "2026 한국수력원자력 기업이미지 공모전",
     "category": "contest_music",
@@ -52877,7 +52753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2076238740827979518",
+    "id": "wevity-2957341827351005870",
     "boardType": "contests",
     "title": "2026 한국수력원자력 유튜브 짧은영상 공모전",
     "category": "contest_music",
@@ -52908,7 +52784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4167542552617635647",
+    "id": "wevity-4036378990231441646",
     "boardType": "contests",
     "title": "2026 데이터+AI 크리에이터 캠프",
     "category": "contest_stem",
@@ -52939,7 +52815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8793255388655417341",
+    "id": "wevity-2496757069766718261",
     "boardType": "contests",
     "title": "제4회 업사이클링 해양과학 메이커톤 발명대회",
     "category": "contest_robot",
@@ -52970,7 +52846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-55640233593915418",
+    "id": "wevity-6293398188448569614",
     "boardType": "contests",
     "title": "2026 제10회 DfAM 경진대회",
     "category": "contest_stem",
@@ -53001,7 +52877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7440412884851405794",
+    "id": "wevity-1669321066746623392",
     "boardType": "contests",
     "title": "SK이노베이션 AI 임팩트 솔루션 공모전",
     "category": "contest_stem",
@@ -53032,7 +52908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5401930086422523683",
+    "id": "wevity-7051680379790212462",
     "boardType": "contests",
     "title": "2026년 제9회 프로토타입모델링(항공드론제작) 민간기능경기대회",
     "category": "contest_stem",
@@ -53063,7 +52939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3877078165848324834",
+    "id": "wevity-747279870252042658",
     "boardType": "contests",
     "title": "2026 DRB Space Challenge",
     "category": "contest_stem",
@@ -53094,7 +52970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1885648036318964199",
+    "id": "wevity-8494239415943123093",
     "boardType": "contests",
     "title": "Ansys Simulation Challenge 2026 참가자 모집",
     "category": "contest_stem",
@@ -53125,7 +53001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7915347916952598539",
+    "id": "wevity-3360892100797528665",
     "boardType": "contests",
     "title": "2026 대학생 논문경진대회 장애의 재해석 공모전",
     "category": "contest_writing",
@@ -53156,7 +53032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1357916586928451172",
+    "id": "wevity-1563096995809238013",
     "boardType": "contests",
     "title": "2026 제2회 스마트양식 도전해(海) AI 경진대회",
     "category": "contest_stem",
@@ -53187,7 +53063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8108959488548576723",
+    "id": "wevity-1181553638564479837",
     "boardType": "contests",
     "title": "2026 날씨 빅데이터 콘테스트",
     "category": "contest_stem",
@@ -53218,7 +53094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7621649950102800593",
+    "id": "wevity-5624100901901638930",
     "boardType": "contests",
     "title": "2026 전국 대학생 UAM 올림피아드 공모전",
     "category": "contest_math",
@@ -53249,7 +53125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1396613561325051838",
+    "id": "wevity-6448198937477308722",
     "boardType": "contests",
     "title": "2026년 청소년 우주과학 경진대회 HIS Youth 참가자 모집",
     "category": "contest_stem",
@@ -53280,7 +53156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1043733755811170720",
+    "id": "wevity-680123867034228350",
     "boardType": "contests",
     "title": "제1회 튜닝 아이디어 경진대회",
     "category": "contest_stem",
@@ -53311,7 +53187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4397733514999708335",
+    "id": "wevity-2213322031780992006",
     "boardType": "contests",
     "title": "[HD건설기계] 퓨처 건설기계 챌린지 - 2026 대학생 공모전",
     "category": "contest_stem",
@@ -53342,7 +53218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4364420972809339802",
+    "id": "wevity-947026210342099766",
     "boardType": "contests",
     "title": "2026년 캠퍼스 특허 유니버시아드 대회",
     "category": "contest_stem",
@@ -53373,7 +53249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8275120718729701094",
+    "id": "wevity-9084771760757095148",
     "boardType": "contests",
     "title": "대전사이언스 페스티벌 흑백과학자2",
     "category": "contest_stem",
@@ -53404,7 +53280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3359971290069548592",
+    "id": "wevity-5554719315258415269",
     "boardType": "contests",
     "title": "[국가데이터처] 2026년 국가데이터 활용대회",
     "category": "contest_stem",
@@ -53435,7 +53311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4457140302596548843",
+    "id": "wevity-1402271723046717545",
     "boardType": "contests",
     "title": "2026 전국기능경기대회 대국민 과제 공모전",
     "category": "contest_stem",
@@ -53466,7 +53342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1084415112054496979",
+    "id": "wevity-1883963897525152091",
     "boardType": "contests",
     "title": "2026년 인공지능 루키 대회",
     "category": "contest_stem",
@@ -53497,7 +53373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8967932172195178454",
+    "id": "wevity-2791571335176278378",
     "boardType": "contests",
     "title": "인공지능 챔피언 대회",
     "category": "contest_stem",
@@ -53528,7 +53404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-343577188052209304",
+    "id": "wevity-8591047761679093719",
     "boardType": "contests",
     "title": "2026년도 제31회 경기도 건축문화상 공모전 (계획작품 부문 / 사용승인 건축물 부문)",
     "category": "contest_music",
@@ -53559,7 +53435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3690757965682251029",
+    "id": "wevity-1922012870204982523",
     "boardType": "contests",
     "title": "대학생 나노기술 공모전 나노영챌린지(Nano Young Challenge) 2026",
     "category": "contest_stem",
@@ -53590,7 +53466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8447036567866165759",
+    "id": "wevity-6431617057587652190",
     "boardType": "contests",
     "title": "[국립중앙과학관] AI Hack Camp 2026 참가자 모집",
     "category": "contest_stem",
@@ -53621,7 +53497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2598488533464527174",
+    "id": "wevity-685615837417407525",
     "boardType": "contests",
     "title": "2026 Esri Map Contest",
     "category": "contest_stem",
@@ -53652,7 +53528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8313991482952186086",
+    "id": "wevity-4931913389877346696",
     "boardType": "contests",
     "title": "제13회 산업안전보건 조사자료 논문 경진대회",
     "category": "contest_stem",
@@ -53683,7 +53559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8529442490786363015",
+    "id": "wevity-5863363001612155569",
     "boardType": "contests",
     "title": "2026년 제13회 광융합 기술사업화 아이디어 및 제품디자인 공모전",
     "category": "contest_stem",
@@ -53714,7 +53590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-334257538406555011",
+    "id": "wevity-4299752111956703264",
     "boardType": "contests",
     "title": "제7기 과기정통부 LMO SAFETY 기자단 모집",
     "category": "contest_stem",
@@ -53745,7 +53621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1787498811639567535",
+    "id": "wevity-5883394594525805459",
     "boardType": "contests",
     "title": "제43회 《문명 그 화려한 역설》 69개의 표지비밀 풀기 프로젝트 공모 (1억고료 문학상 수상작)",
     "category": "contest_writing",
@@ -53776,7 +53652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5690845148113348560",
+    "id": "wevity-6352450992304072447",
     "boardType": "contests",
     "title": "2026 대한민국 드론 공방전 대회",
     "category": "contest_stem",
@@ -53807,7 +53683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2453479037624958839",
+    "id": "wevity-4691814124832658171",
     "boardType": "contests",
     "title": "[산업통상부] 2026 엔지니어링산업 경진대회",
     "category": "contest_stem",
@@ -53838,7 +53714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7006059550987461161",
+    "id": "wevity-6989531908147213745",
     "boardType": "contests",
     "title": "제15회 에너지·환경 탐구대회",
     "category": "contest_stem",
@@ -53869,7 +53745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2786359581689614001",
+    "id": "wevity-6295764965759331262",
     "boardType": "contests",
     "title": "2026 대한토목학회 Civil Talks - 미래 토목인이 들려주는 새로운 상상",
     "category": "contest_stem",
@@ -53900,7 +53776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7448734652089605871",
+    "id": "wevity-734776750780991569",
     "boardType": "contests",
     "title": "2026 대한토목학회 토목구조물 모형 경진대회",
     "category": "contest_stem",
@@ -53931,7 +53807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2151148380783311618",
+    "id": "wevity-4291711772912427521",
     "boardType": "contests",
     "title": "대웅그룹 이노베어 공모전 5기 모집",
     "category": "contest_stem",
@@ -53962,7 +53838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6313463499341877313",
+    "id": "wevity-2789091969431419271",
     "boardType": "contests",
     "title": "2026년 제1회 물리대회",
     "category": "contest_stem",
@@ -53993,7 +53869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1870558232891329122",
+    "id": "wevity-4805103051528550186",
     "boardType": "contests",
     "title": "K-문샷 프로젝트 대국민 공모전",
     "category": "contest_stem",
@@ -54024,7 +53900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-90556746865904705",
+    "id": "wevity-158689325260603841",
     "boardType": "contests",
     "title": "제주·AWS 글로벌 챌린지 해커톤",
     "category": "contest_coding",
@@ -54055,7 +53931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-396109667157161667",
+    "id": "wevity-4047418872859084304",
     "boardType": "contests",
     "title": "2026 포스텍 SF 어워드 (SF 단편소설 공모전)",
     "category": "contest_writing",
@@ -54086,7 +53962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-340770690115565587",
+    "id": "wevity-9018586517603753877",
     "boardType": "contests",
     "title": "2026 지역 창업 솔버톤 대회 참가자 모집",
     "category": "contest_stem",
@@ -54117,7 +53993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4783643301930012897",
+    "id": "wevity-5557571630179087836",
     "boardType": "contests",
     "title": "나노팹데이터플랫폼 서비스 아이디어 도출 경진대회",
     "category": "contest_stem",
@@ -54148,7 +54024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3313137280679617944",
+    "id": "wevity-7319647967903740615",
     "boardType": "contests",
     "title": "선샤인 TIME TRAVEL 숏폼 영상 공모전",
     "category": "contest_music",
@@ -54179,7 +54055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8218468798827026446",
+    "id": "wevity-744265581905213149",
     "boardType": "contests",
     "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전",
     "category": "contest_music",
@@ -54210,7 +54086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6468482949003576731",
+    "id": "wevity-3016300279272689299",
     "boardType": "contests",
     "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전)",
     "category": "contest_music",
@@ -54241,7 +54117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4979439409509490355",
+    "id": "wevity-8720897686892239986",
     "boardType": "contests",
     "title": "제7회 KMA 시니어모델선발대회",
     "category": "contest_music",
@@ -54272,7 +54148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5820290300384015633",
+    "id": "wevity-1291694117335600460",
     "boardType": "contests",
     "title": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모",
     "category": "contest_music",
@@ -54303,7 +54179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4995203484573942284",
+    "id": "wevity-1174076613273676283",
     "boardType": "contests",
     "title": "2026 강동문화재단 GAC Creative Bridge (아트 굿즈 창작지원 프로젝트)",
     "category": "contest_music",
@@ -54334,7 +54210,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9107395759455513657",
+    "id": "wevity-7451618288934640544",
+    "boardType": "contests",
+    "title": "모두의 KISA 공모 - KISA에게 바란다 모두의 KISA",
+    "category": "contest_music",
+    "categoryName": "동요·음악경연",
+    "badge": "🎵 동요·음악경연",
+    "organizer": "한국인터넷진흥원",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111918",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "모두의 KISA 공모 - KISA에게 바란다 모두의 KISA - 한국인터넷진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "예체능",
+      "세종특별자치시"
+    ]
+  },
+  {
+    "id": "wevity-1678944186653710356",
     "boardType": "contests",
     "title": "2026 순창 코리아 떡볶이 페스타 – 전국 떡볶이 플래시몹 경연대회 참가자 모집",
     "category": "contest_music",
@@ -54365,18 +54272,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1466119126416382105",
+    "id": "wevity-2536234289197633063",
     "boardType": "contests",
-    "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
+    "title": "제 4회 산업기술 R&D 어린이 그림 그리기 공모전",
     "category": "contest_music",
     "categoryName": "동요·음악경연",
     "badge": "🎵 동요·음악경연",
-    "organizer": "여성신문 / (사)여성문화네트워크",
+    "organizer": "산업통상부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54385,18 +54292,80 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111880",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111907",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "제 4회 산업기술 R&D 어린이 그림 그리기 공모전 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "예체능",
+      "충청북도"
+    ]
+  },
+  {
+    "id": "wevity-158856465510329744",
+    "boardType": "contests",
+    "title": "제57회 경상북도 산업디자인 전람회",
+    "category": "contest_music",
+    "categoryName": "동요·음악경연",
+    "badge": "🎵 동요·음악경연",
+    "organizer": "경상북도",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111890",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "제57회 경상북도 산업디자인 전람회 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "예체능",
+      "경상북도"
+    ]
+  },
+  {
+    "id": "wevity-6557913489182956572",
+    "boardType": "contests",
+    "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
+    "category": "contest_music",
+    "categoryName": "동요·음악경연",
+    "badge": "🎵 동요·음악경연",
+    "organizer": "여성신문 / (사)여성문화네트워크",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111880",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS - 여성신문 / (사)여성문화네트워크 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
       "공모전",
       "예체능",
-      "세종특별자치시"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-8404367015498291209",
+    "id": "wevity-5324174698861614548",
     "boardType": "contests",
     "title": "2026 모두의 노동 손그림 공모전",
     "category": "contest_music",
@@ -54427,7 +54396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4138759207706333240",
+    "id": "wevity-6404526862414206416",
     "boardType": "contests",
     "title": "2026 서울시여성가족재단 다목적라운지 전시 작품 공모",
     "category": "contest_music",
@@ -54458,38 +54427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3469471584787212398",
-    "boardType": "contests",
-    "title": "2026 주얼리 예술제 참가자 모집",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "대구패션주얼리특구상인회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111858",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 주얼리 예술제 참가자 모집 - 대구패션주얼리특구상인회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "예체능",
-      "대구광역시"
-    ]
-  },
-  {
-    "id": "wevity-649346906378975444",
+    "id": "wevity-495002265302184377",
     "boardType": "contests",
     "title": "2026년 전남자치경찰 홍보 콘텐츠 공모전",
     "category": "contest_music",
@@ -54520,7 +54458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4149475648277936165",
+    "id": "wevity-8631276958997355397",
     "boardType": "contests",
     "title": "제1회 중앙일보 어린이 미술대회",
     "category": "contest_music",
@@ -54529,9 +54467,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "중앙일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54547,11 +54485,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청북도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-1411096619408511965",
+    "id": "wevity-2906414440413038847",
     "boardType": "contests",
     "title": "2026년 희귀질환 극복수기·사진 공모전",
     "category": "contest_music",
@@ -54560,9 +54498,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "질병관리청",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54578,11 +54516,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청남도"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-3992542559734567154",
+    "id": "wevity-3117635654085068670",
     "boardType": "contests",
     "title": "제2회 손상예방의날 기념 경북권 손상 예방 포스터 공모전",
     "category": "contest_music",
@@ -54613,7 +54551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8652075821659866226",
+    "id": "wevity-3888982644750713929",
     "boardType": "contests",
     "title": "우리집 아침밥 레시피 SNS 공모전",
     "category": "contest_music",
@@ -54622,9 +54560,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "농림축산식품부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54640,11 +54578,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "부산광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-5781000249975584551",
+    "id": "wevity-7839216571568814846",
     "boardType": "contests",
     "title": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 스포츠 경연대회 참가자 모집",
     "category": "contest_music",
@@ -54653,9 +54591,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국민체육진흥공단 스포츠가치센터",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54671,11 +54609,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "대구광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-789154089187865696",
+    "id": "wevity-6445549658686664947",
     "boardType": "contests",
     "title": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 예술 경연대회 참가자 모집",
     "category": "contest_music",
@@ -54684,9 +54622,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국민체육진흥공단 스포츠가치센터",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54702,11 +54640,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "울산광역시"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-7599767141290676961",
+    "id": "wevity-493510286206877162",
     "boardType": "contests",
     "title": "[곽재선문화재단x할리스 제5회 아트공모전] 몽실 아트공모전",
     "category": "contest_music",
@@ -54715,9 +54653,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "곽재선문화재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54733,11 +54671,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상남도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-8011649885115595142",
+    "id": "wevity-5830498816534740838",
     "boardType": "contests",
     "title": "제10회 동아뮤지컬콩쿠르",
     "category": "contest_music",
@@ -54746,9 +54684,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "동아일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54764,11 +54702,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상북도"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-7811319685349085861",
+    "id": "wevity-4151497349650763323",
     "boardType": "contests",
     "title": "2026 이스타항공 기내식 레시피 공모전",
     "category": "contest_music",
@@ -54777,9 +54715,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "이스타항공",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54795,11 +54733,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "광주광역시"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-7969447641765431903",
+    "id": "wevity-8143859194458000748",
     "boardType": "contests",
     "title": "[서천군지속가능발전협의회] 2026 내가 꿈꾸는 서천의 미래 K-SDGs 포스터 공모전",
     "category": "contest_music",
@@ -54819,7 +54757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111817",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111817",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "[서천군지속가능발전협의회] 2026 내가 꿈꾸는 서천의 미래 K-SDGs 포스터 공모전 - 서천군지속가능발전협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
@@ -54830,7 +54768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4863785450866639781",
+    "id": "wevity-2241800637030967684",
     "boardType": "contests",
     "title": "제1회 스크린인쇄어워즈",
     "category": "contest_music",
@@ -54839,9 +54777,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)한국스크린인쇄공업협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54850,18 +54788,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111816",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111816",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 스크린인쇄어워즈 - (사)한국스크린인쇄공업협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
       "공모전",
       "예체능",
-      "전북특별자치도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-4225944642177519534",
+    "id": "wevity-1187746519717723628",
     "boardType": "contests",
     "title": "[산사람 x AI-Kive] 진짜 오타쿠 AI MV 챌린지",
     "category": "contest_music",
@@ -54870,9 +54808,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)과나(산사람)",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -54888,11 +54826,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "전라남도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-3726455345448476779",
+    "id": "wevity-4203931903446248576",
     "boardType": "contests",
     "title": "광안리 M 드론라이트쇼 너의 꿈을 그려봐 그림 공모전",
     "category": "contest_music",
@@ -54923,7 +54861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6737978255065231707",
+    "id": "wevity-2061749331809995916",
     "boardType": "contests",
     "title": "플랫폼 미묘(mimio) 인천아트쇼2026 참여 작가 공모",
     "category": "contest_music",
@@ -54954,7 +54892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5538834082670489593",
+    "id": "wevity-6808664603557406112",
     "boardType": "contests",
     "title": "2026 경북 영양군 밤하늘 사진·음원 공모전",
     "category": "contest_music",
@@ -54985,7 +54923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5391937302277253255",
+    "id": "wevity-3539998837269894251",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 학생 홍보콘텐츠 공모전",
     "category": "contest_music",
@@ -55016,7 +54954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4763357653970955039",
+    "id": "wevity-8222535561459528312",
     "boardType": "contests",
     "title": "﻿[2026서울한국춤페스티벌] 춤을 그리는 젊은이들 청년 안무가 작품 공모전",
     "category": "contest_music",
@@ -55047,7 +54985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1311419472392491343",
+    "id": "wevity-8295477576751291718",
     "boardType": "contests",
     "title": "2026 고립·은둔청년 인식개선 공모전",
     "category": "contest_music",
@@ -55078,7 +55016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1544176853580327060",
+    "id": "wevity-3347443354554451807",
     "boardType": "contests",
     "title": "2026 광주비엔날레 미디어파사드 신진 미디어아트 공모전",
     "category": "contest_music",
@@ -55109,7 +55047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7841685237073544036",
+    "id": "wevity-7758418611237618441",
     "boardType": "contests",
     "title": "경상남도교통문화연수원 2026 어린이 교통안전 포스터 공모전",
     "category": "contest_music",
@@ -55140,7 +55078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6082063169647223242",
+    "id": "wevity-2676953829342964304",
     "boardType": "contests",
     "title": "2026년 제3회 소무의도 그림 그리기 대회",
     "category": "contest_music",
@@ -55171,38 +55109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6600738136319665322",
-    "boardType": "contests",
-    "title": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "다시랩",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111633",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳 - 다시랩 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "예체능",
-      "제주특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-1940454737824184123",
+    "id": "wevity-7689174577780133393",
     "boardType": "contests",
     "title": "2026 우리과일 요리경연대회",
     "category": "contest_music",
@@ -55211,9 +55118,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "농림축산식품부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55229,11 +55136,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-4129140706984343773",
+    "id": "wevity-2775209784207889846",
     "boardType": "contests",
     "title": "2026 제주 다문화 미래세대 SDGs 드림챌린지",
     "category": "contest_coding",
@@ -55264,7 +55171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8214938951774127728",
+    "id": "wevity-7078583801350527677",
     "boardType": "contests",
     "title": "2026년 양산시 인구정책 콘텐츠 공모전",
     "category": "contest_music",
@@ -55295,7 +55202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1352527683881116041",
+    "id": "wevity-3799852132708176276",
     "boardType": "contests",
     "title": "2026 울산시립미술관 미디어 스크린 시민 공모 프로젝트",
     "category": "contest_music",
@@ -55315,7 +55222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111596",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111596",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "2026 울산시립미술관 미디어 스크린 시민 공모 프로젝트 - 울산시립미술관 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
@@ -55326,7 +55233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6298949028059362548",
+    "id": "wevity-8620869809757147452",
     "boardType": "contests",
     "title": "2026년 제2회 AMT AI 작곡대회",
     "category": "contest_music",
@@ -55335,9 +55242,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "프롬프트뱅크",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55353,11 +55260,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-1321159547905222516",
+    "id": "wevity-6228385645204681274",
     "boardType": "contests",
     "title": "[서울특별시] 2026 서울라이트 광화문 미디어파사드 작품 공모전",
     "category": "contest_music",
@@ -55388,7 +55295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5521174294111197209",
+    "id": "wevity-7429011301039411353",
     "boardType": "contests",
     "title": "2026 제14회 계란요리경연대회 & 제2회 알&닭 펫푸드경연대회",
     "category": "contest_music",
@@ -55397,9 +55304,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "계란자조금관리위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55415,11 +55322,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-4264737232964981747",
+    "id": "wevity-3390073628838567157",
     "boardType": "contests",
     "title": "2026년 장애인 권리증진 콘텐츠 공모전",
     "category": "contest_music",
@@ -55450,7 +55357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2980269786851878107",
+    "id": "wevity-1250179586682721235",
     "boardType": "contests",
     "title": "제1회 KEA FOUNDATION 신진작가 공모",
     "category": "contest_music",
@@ -55459,9 +55366,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "KEA FOUNDATION",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55477,11 +55384,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-4486162078381293457",
+    "id": "wevity-4921314577498324557",
     "boardType": "contests",
     "title": "제11회 한아전 웹툰·일러스트·포스터·영상 공모전",
     "category": "contest_music",
@@ -55490,9 +55397,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국IT전문학교",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55508,11 +55415,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-3936818672396631948",
+    "id": "wevity-9030458828282670164",
     "boardType": "contests",
     "title": "[MORE VISION] Chord Banditz - Open Call: BAND MEMBERS (모어비전 밴드 오디션)",
     "category": "contest_music",
@@ -55521,9 +55428,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)모어비전",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55539,11 +55446,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-2650962277489957530",
+    "id": "wevity-2834649987843381368",
     "boardType": "contests",
     "title": "2026 태권도 의류형 굿즈 · 체험형 굿즈 아이디어 공모전",
     "category": "contest_music",
@@ -55574,7 +55481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-879815821107155622",
+    "id": "wevity-4574217689097740679",
     "boardType": "contests",
     "title": "2026 서울로미디어캔버스 네이처 프로젝트전 2차 공모",
     "category": "contest_music",
@@ -55605,7 +55512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6070499213244091386",
+    "id": "wevity-8984785266691660188",
     "boardType": "contests",
     "title": "2026 대한민국 청목캘리그라피 공모전 (참가비 있음)",
     "category": "contest_music",
@@ -55614,9 +55521,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)한국청목캘리그라피예술협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55632,11 +55539,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-2683693520457108793",
+    "id": "wevity-1963717012571785489",
     "boardType": "contests",
     "title": "김해시 캐릭터·슬로건 공모전",
     "category": "contest_music",
@@ -55667,7 +55574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1874238442685846704",
+    "id": "wevity-49091730766522272",
     "boardType": "contests",
     "title": "을숙도 대지·생태예술 국제공모",
     "category": "contest_music",
@@ -55698,7 +55605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6978410841069986055",
+    "id": "wevity-3804843160433080205",
     "boardType": "contests",
     "title": "제5회 전국 민화도슨팅 콘테스트",
     "category": "contest_music",
@@ -55729,7 +55636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-501566800547491042",
+    "id": "wevity-1554272540559677381",
     "boardType": "contests",
     "title": "2026 아주국제미술대전",
     "category": "contest_music",
@@ -55760,38 +55667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6953678730340379895",
-    "boardType": "contests",
-    "title": "제29회 한뫼 이윤재선생 추모 전국 한글사랑 글짓기·그리기 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "김해시, 경남동부보훈지청",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=110959",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제29회 한뫼 이윤재선생 추모 전국 한글사랑 글짓기·그리기 공모전 - 김해시, 경남동부보훈지청 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "예체능",
-      "경상남도"
-    ]
-  },
-  {
-    "id": "wevity-5292885716589008062",
+    "id": "wevity-6033091496632581707",
     "boardType": "contests",
     "title": "2026 무브챌린지 대회 온라인 예선 및 오프라인 파이널",
     "category": "contest_music",
@@ -55800,9 +55676,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "재단법인 데상트스포츠재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55818,11 +55694,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-8152436866466446917",
+    "id": "wevity-3562871127209266758",
     "boardType": "contests",
     "title": "제12회 대한민국모던아트대상전",
     "category": "contest_music",
@@ -55831,9 +55707,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국청소년미술협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55849,11 +55725,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-6501227537211130477",
+    "id": "wevity-7715143016345181732",
     "boardType": "contests",
     "title": "제3회 국가지식정보 통합플랫폼 활용 우수사례 공모전",
     "category": "contest_music",
@@ -55862,9 +55738,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "과학기술정보통신부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55880,11 +55756,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-595246174636473568",
+    "id": "wevity-6191825650696209727",
     "boardType": "contests",
     "title": "2026년 부산광역시 인권공모전",
     "category": "contest_music",
@@ -55915,7 +55791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2855346023203467128",
+    "id": "wevity-6184128457310058943",
     "boardType": "contests",
     "title": "2026 어린이조선일보 글로벌 미술대회&루브르 박물관 전시대회",
     "category": "contest_music",
@@ -55924,9 +55800,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "어린이조선일보,에듀조선,조선일보 뉴지엄",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55942,11 +55818,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-2050539557893832620",
+    "id": "wevity-8538707373240794895",
     "boardType": "contests",
     "title": "제7회 승가원 장애바로알기 콘텐츠 공모전",
     "category": "contest_music",
@@ -55955,9 +55831,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "승가원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -55973,11 +55849,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-6780985024048818735",
+    "id": "wevity-6452625398325875623",
     "boardType": "contests",
     "title": "2026 뇌전증 인식개선 공모전",
     "category": "contest_music",
@@ -55986,9 +55862,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국뇌전증협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56004,11 +55880,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-1335444469738136624",
+    "id": "wevity-6988650153358252023",
     "boardType": "contests",
     "title": "제3회 긍정의 힘 마라톤",
     "category": "contest_music",
@@ -56017,9 +55893,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)한국유튜브방송협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56035,11 +55911,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-130050220352012738",
+    "id": "wevity-4422293237263110781",
     "boardType": "contests",
     "title": "2026 코리아시즌 레이스",
     "category": "contest_music",
@@ -56048,9 +55924,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)한국경비원협회중앙회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56066,11 +55942,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-383261847150047771",
+    "id": "wevity-3284678057424959010",
     "boardType": "contests",
     "title": "Meta와 함께하는 AI 페스티벌 – AI로 그려낸 가족 이야기",
     "category": "contest_music",
@@ -56079,9 +55955,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "디지털리터러시협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56097,11 +55973,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-3213904738884967000",
+    "id": "wevity-3210173214915886895",
     "boardType": "contests",
     "title": "2027 제6회 BIKAF IN 루브르 미술 공모전 & 루브르 국제전시회",
     "category": "contest_music",
@@ -56110,9 +55986,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "비카프",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56128,11 +56004,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-7031526871900744883",
+    "id": "wevity-1782704211888752671",
     "boardType": "contests",
     "title": "2026 MPED X KORUS 국제 아트앤디자인 공모전",
     "category": "contest_music",
@@ -56141,9 +56017,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "MPED X KORUS",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56159,11 +56035,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-26344473666197230",
+    "id": "wevity-7279602320304483635",
     "boardType": "contests",
     "title": "2026년 품바재생예술체험촌 새활용·리폼 콘테스트",
     "category": "contest_music",
@@ -56194,7 +56070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7547653832025216569",
+    "id": "wevity-7543597134041244665",
     "boardType": "contests",
     "title": "2026 하남 미사 호수 에너지런",
     "category": "contest_music",
@@ -56225,7 +56101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1936946585319229663",
+    "id": "wevity-897623962866826403",
     "boardType": "contests",
     "title": "몽드아트어워드",
     "category": "contest_music",
@@ -56234,9 +56110,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "주식회사 몽드",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56252,11 +56128,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-7249738537614220903",
+    "id": "wevity-6783765041080989957",
     "boardType": "contests",
     "title": "[국제공모전] IN:SENSE Design Award 2027 (참가비 있음)",
     "category": "contest_music",
@@ -56265,9 +56141,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국제감각디자인협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56283,11 +56159,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-8423144744307258378",
+    "id": "wevity-2688660065712193523",
     "boardType": "contests",
     "title": "2027 청주국제공예공모전",
     "category": "contest_music",
@@ -56318,38 +56194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2018164047879050408",
-    "boardType": "contests",
-    "title": "[KGTA] 제15회 국제 주얼리 아트 콘테스트",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "사단법인 한국보석협회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=109303",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "[KGTA] 제15회 국제 주얼리 아트 콘테스트 - 사단법인 한국보석협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "예체능",
-      "강원특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-1725056726314639027",
+    "id": "wevity-7528977603289453696",
     "boardType": "contests",
     "title": "2026 제4회 충청남도 드론 영상 및 사진 공모전",
     "category": "contest_music",
@@ -56380,7 +56225,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1234048229522883171",
+    "id": "wevity-7998427498270409707",
+    "boardType": "contests",
+    "title": "2026 주얼리 예술제 참가자 모집",
+    "category": "contest_music",
+    "categoryName": "동요·음악경연",
+    "badge": "🎵 동요·음악경연",
+    "organizer": "대구패션주얼리특구상인회",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111858",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026 주얼리 예술제 참가자 모집 - 대구패션주얼리특구상인회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "예체능",
+      "대구광역시"
+    ]
+  },
+  {
+    "id": "wevity-2880950192152009164",
     "boardType": "contests",
     "title": "2026 별빛미술관 신진작가 공모전시 참여작가 모집",
     "category": "contest_music",
@@ -56411,7 +56287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2433823501179994762",
+    "id": "wevity-5643473016086508916",
     "boardType": "contests",
     "title": "2026 영암 월출산 달빛뮤직페스티벌 달빛가요제 참가자 모집",
     "category": "contest_music",
@@ -56442,7 +56318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1025135617784752335",
+    "id": "wevity-1581093798005803320",
     "boardType": "contests",
     "title": "[통영시] 고양이섬 조각공모전",
     "category": "contest_music",
@@ -56473,7 +56349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9218734175892205858",
+    "id": "wevity-4295915849661417123",
     "boardType": "contests",
     "title": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 Awards",
     "category": "contest_music",
@@ -56504,7 +56380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4957894730626293678",
+    "id": "wevity-6991543056664368519",
     "boardType": "contests",
     "title": "2026년 세종사이버대 한국어학과 한글날 기념 공모전 (AI를 활용한 한국어 교육용 노래 만들기)",
     "category": "contest_music",
@@ -56535,7 +56411,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8240217406901416699",
+    "id": "wevity-2230377362503670430",
+    "boardType": "contests",
+    "title": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳",
+    "category": "contest_music",
+    "categoryName": "동요·음악경연",
+    "badge": "🎵 동요·음악경연",
+    "organizer": "다시랩",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111633",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳 - 다시랩 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "예체능",
+      "세종특별자치시"
+    ]
+  },
+  {
+    "id": "wevity-1149708423509473843",
     "boardType": "contests",
     "title": "2026 영등포 어린이 미술대전",
     "category": "contest_music",
@@ -56566,7 +56473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6290318717183159917",
+    "id": "wevity-5812287541855997299",
     "boardType": "contests",
     "title": "2026 연연지회 청소년 문화 경연대회 참가자 모집",
     "category": "contest_music",
@@ -56575,9 +56482,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "삼각산 도선사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56593,11 +56500,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-510301095371648135",
+    "id": "wevity-7658979865636830307",
     "boardType": "contests",
     "title": "2026 우리 임산물 숲푸드 콘텐츠 공모전",
     "category": "contest_music",
@@ -56606,9 +56513,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국임업진흥원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56624,11 +56531,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-4010898853183220188",
+    "id": "wevity-3544192976981059146",
     "boardType": "contests",
     "title": "용인어린이상상의숲 상상 아트마켓 참여 예술가 공모",
     "category": "contest_music",
@@ -56659,7 +56566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5975027653406321509",
+    "id": "wevity-4806083870988091571",
     "boardType": "contests",
     "title": "전국 한미 버거 콘테스트 송탄의 버거 맛을 찾아라 참가자 모집",
     "category": "contest_music",
@@ -56679,7 +56586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111519",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111519",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "전국 한미 버거 콘테스트 송탄의 버거 맛을 찾아라 참가자 모집 - 평택시국제교류재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
@@ -56690,7 +56597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-950857379719896507",
+    "id": "wevity-957157622981906805",
     "boardType": "contests",
     "title": "2026 화성 루나빛축제 어린이 드론 그림 공모전",
     "category": "contest_music",
@@ -56721,7 +56628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1709689122939187963",
+    "id": "wevity-4029900158817151375",
     "boardType": "contests",
     "title": "4.16생명안전비엔날레 생명안전 그림그리기 대회",
     "category": "contest_music",
@@ -56730,9 +56637,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "4.16재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56748,11 +56655,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-8945324217521226334",
+    "id": "wevity-7840500249365688981",
     "boardType": "contests",
     "title": "롯데몰 벨리타운 청량리 - AI 뮤직 공모전",
     "category": "contest_music",
@@ -56761,9 +56668,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "롯데백화점",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56779,11 +56686,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-8730949713847573597",
+    "id": "wevity-7278508495369346031",
     "boardType": "contests",
     "title": "제 2회 롯데몰 동부산점 어린이 미술대회",
     "category": "contest_music",
@@ -56814,7 +56721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-800698919953308115",
+    "id": "wevity-1174875729541554474",
     "boardType": "contests",
     "title": "2026 효성과 함께하는 제4회 올해의 작가상 공모",
     "category": "contest_music",
@@ -56845,7 +56752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1969737016149188951",
+    "id": "wevity-405866641704091806",
     "boardType": "contests",
     "title": "2026 벨리곰 SPIN-OFF 디자인 공모전 (내용 및 일정 수정)",
     "category": "contest_music",
@@ -56854,9 +56761,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "롯데홈쇼핑",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56872,11 +56779,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-5705646641391651636",
+    "id": "wevity-6540074126290052751",
     "boardType": "contests",
     "title": "제30회 우암문화제 우암전통예술경연대회",
     "category": "contest_music",
@@ -56907,7 +56814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-752366778822899057",
+    "id": "wevity-7849852946392319161",
     "boardType": "contests",
     "title": "제29회 우리은행 미술대회 (우리 아트콘)",
     "category": "contest_music",
@@ -56916,9 +56823,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "우리은행",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56934,11 +56841,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-3442226454294840833",
+    "id": "wevity-1618572722241087779",
     "boardType": "contests",
     "title": "TU Enter-Music Festa 중·고교(청소년) 시네마틱 뮤직비디오(M/V) 제작 공모전",
     "category": "contest_music",
@@ -56947,9 +56854,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "동명대학교 엔터테인먼트뮤직학과",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -56965,11 +56872,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-8662776319120547665",
+    "id": "wevity-4274820180029153908",
     "boardType": "contests",
     "title": "제4회 전국공모 양산미술대전",
     "category": "contest_music",
@@ -57000,7 +56907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6196157802404615189",
+    "id": "wevity-9171087928361009578",
     "boardType": "contests",
     "title": "제40회 충남 산업디자인 대전 디자이너 모집",
     "category": "contest_music",
@@ -57031,7 +56938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2437059447780852112",
+    "id": "wevity-3230050861429955431",
     "boardType": "contests",
     "title": "2026 stART 코레일유통 미디어아트 청년작가 공모전",
     "category": "contest_music",
@@ -57040,9 +56947,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "코레일유통",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -57058,11 +56965,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-4642106370359923678",
+    "id": "wevity-2766906341827351463",
     "boardType": "contests",
     "title": "모두의 보스 온라인 가요제",
     "category": "contest_music",
@@ -57071,9 +56978,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "모두의 보스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -57089,11 +56996,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "예체능",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-6732183202289112767",
+    "id": "wevity-3835110012963217744",
     "boardType": "contests",
     "title": "제11회 3대3 길거리농구대회",
     "category": "contest_music",
@@ -57124,38 +57031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6047217150145491622",
-    "boardType": "contests",
-    "title": "제8회 전국 대학생 육우요리대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "농림축산식품부, 육우자조금관리위원회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111327",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제8회 전국 대학생 육우요리대회 - 농림축산식품부, 육우자조금관리위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "예체능",
-      "전북특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-1134957079251837452",
+    "id": "wevity-8071342267348059596",
     "boardType": "contests",
     "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전",
     "category": "contest_general",
@@ -57186,7 +57062,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1703717807184993581",
+    "id": "wevity-4146999212075813041",
     "boardType": "contests",
     "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집",
     "category": "contest_general",
@@ -57217,7 +57093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3347814806211038031",
+    "id": "wevity-906660470040779935",
     "boardType": "contests",
     "title": "2026 AI 활용 전국 대학생 창업 해커톤 참가자 모집",
     "category": "contest_coding",
@@ -57248,7 +57124,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9138832707836884478",
+    "id": "wevity-2404901015947679397",
     "boardType": "contests",
     "title": "2026 해양 창업아이디어 공모전 Spark-up 1876",
     "category": "contest_general",
@@ -57279,7 +57155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8876934408242119569",
+    "id": "wevity-1203796415779215424",
     "boardType": "contests",
     "title": "2026 부여 솔버톤 - 지역문제해결 아이디어 발굴 참가자 모집",
     "category": "contest_general",
@@ -57310,7 +57186,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2056368892790955352",
+    "id": "wevity-7062726144153132909",
     "boardType": "contests",
     "title": "국가생명윤리정책원 2026년 ESG 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -57341,7 +57217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3798045132472823466",
+    "id": "wevity-1079460988592561311",
     "boardType": "contests",
     "title": "제1회 배경데이터 활용 콘텐츠개발 아이디어 공모전",
     "category": "contest_coding",
@@ -57372,7 +57248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6112915262287355477",
+    "id": "wevity-8819134393371885922",
     "boardType": "contests",
     "title": "2026년 서울중구시설관리공단 ESG혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57403,7 +57279,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5514326333799362244",
+    "id": "wevity-9145791917559541834",
     "boardType": "contests",
     "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전",
     "category": "contest_general",
@@ -57434,7 +57310,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5993019809374928430",
+    "id": "wevity-3781708584279929182",
     "boardType": "contests",
     "title": "제6회 인천공항 여행 공모전 (내가 만드는 한국여행)",
     "category": "contest_general",
@@ -57465,7 +57341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8354899461052688199",
+    "id": "wevity-2589644676629773409",
     "boardType": "contests",
     "title": "2026년 체육관련 규제개선 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -57496,7 +57372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-299887255096685487",
+    "id": "wevity-7717979874898534146",
     "boardType": "contests",
     "title": "[해양수산과학기술진흥원] 2026년도 KIMST ESG경영·혁신 아이디어 공모전",
     "category": "contest_stem",
@@ -57527,7 +57403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5325225701805370366",
+    "id": "wevity-5604188117680047848",
     "boardType": "contests",
     "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
     "category": "contest_general",
@@ -57558,7 +57434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-495146010847160262",
+    "id": "wevity-1564184209199989686",
     "boardType": "contests",
     "title": "텐퍼센트커피 커스텀 레시피 콘테스트",
     "category": "contest_general",
@@ -57589,7 +57465,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4703717353268828463",
+    "id": "wevity-259255699600920128",
     "boardType": "contests",
     "title": "2026 NIA 탄소중립 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57620,7 +57496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2362921933433713879",
+    "id": "wevity-2778386252497159291",
     "boardType": "contests",
     "title": "2026 경북 로컬 관광자원 혁신 콘텐츠 공모전",
     "category": "contest_general",
@@ -57651,7 +57527,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8042815736743220184",
+    "id": "wevity-543583937673395450",
     "boardType": "contests",
     "title": "보령시 웰니스 정책 제안 공모전",
     "category": "contest_general",
@@ -57682,7 +57558,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4599515758616595194",
+    "id": "wevity-6099812706271216024",
     "boardType": "contests",
     "title": "[노사발전재단] 취약노동자 지원 네트워크 이름짓기 공모전",
     "category": "contest_general",
@@ -57713,7 +57589,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4435897424484907549",
+    "id": "wevity-7744401874646056288",
     "boardType": "contests",
     "title": "[강릉시] 시민의 생각으로 여는 민선9기 강릉 2026년 시민 아이디어 공모전",
     "category": "contest_general",
@@ -57744,7 +57620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5519646570366128667",
+    "id": "wevity-5520667721815797329",
     "boardType": "contests",
     "title": "2026 세종 청년의 내일 일자리 아이디어 공모전",
     "category": "contest_general",
@@ -57775,7 +57651,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-180835602107365441",
+    "id": "wevity-4021302528543580746",
     "boardType": "contests",
     "title": "2026년 한국정책분석평가학회 대학생 정책아이디어공모전",
     "category": "contest_general",
@@ -57806,7 +57682,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1730882141607541853",
+    "id": "wevity-6605297554277396176",
     "boardType": "contests",
     "title": "초량천~산복도로 스토리텔링 공모전",
     "category": "contest_general",
@@ -57837,7 +57713,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3700259730707722980",
+    "id": "wevity-5185834381552566889",
     "boardType": "contests",
     "title": "[한국주택금융공사] 2026년도 HF 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57868,7 +57744,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8473238263171408392",
+    "id": "wevity-1496568532186191111",
     "boardType": "contests",
     "title": "2026 부산관광 아이디어 공모전",
     "category": "contest_general",
@@ -57899,7 +57775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1750177832385743088",
+    "id": "wevity-3752903203655358379",
     "boardType": "contests",
     "title": "2026 종로구 아이디어 공모전",
     "category": "contest_general",
@@ -57930,7 +57806,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1734758062971737456",
+    "id": "wevity-5534232156559061970",
     "boardType": "contests",
     "title": "2026년 함안지방공사 ESG·혁신 경영 아이디어 공모전",
     "category": "contest_general",
@@ -57961,7 +57837,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2998151361296596884",
+    "id": "wevity-3597922867364321093",
     "boardType": "contests",
     "title": "천안 관광코스 공모전",
     "category": "contest_general",
@@ -57992,7 +57868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7438195264360793599",
+    "id": "wevity-4124660570158719208",
     "boardType": "contests",
     "title": "2026년 한국산림복지진흥원 지식재산 아이디어 경진대회",
     "category": "contest_general",
@@ -58023,7 +57899,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3740877210369421313",
+    "id": "wevity-7419789177199992612",
     "boardType": "contests",
     "title": "2026년 영도구 정책제안 공모전",
     "category": "contest_general",
@@ -58054,7 +57930,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-847305194624980178",
+    "id": "wevity-5217756213497957624",
     "boardType": "contests",
     "title": "[국토안전관리원] 위험현장 사고조사를 위한 첨단기술 활용 아이디어 공모전",
     "category": "contest_general",
@@ -58085,7 +57961,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5879517704114737449",
+    "id": "wevity-5364955636212736259",
     "boardType": "contests",
     "title": "[한국도로공사] AI 활용 아이디어 공모전",
     "category": "contest_general",
@@ -58116,7 +57992,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3855340862426719112",
+    "id": "wevity-5637264258123287377",
     "boardType": "contests",
     "title": "2026년 함께학교 정책제안 공모전",
     "category": "contest_general",
@@ -58147,7 +58023,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5147943425571201666",
+    "id": "wevity-3073562489919544854",
     "boardType": "contests",
     "title": "2026년 청년정책 공모전",
     "category": "contest_general",
@@ -58178,7 +58054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-167847079453354334",
+    "id": "wevity-7366223937227738622",
     "boardType": "contests",
     "title": "2026 양천구 아이디어 공모전",
     "category": "contest_general",
@@ -58209,7 +58085,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4680337293395948021",
+    "id": "wevity-6257971029614863127",
     "boardType": "contests",
     "title": "한미일 미래협력 아이디어 챌린지 공모전",
     "category": "contest_general",
@@ -58240,7 +58116,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3030602573332817063",
+    "id": "wevity-5885653500903052994",
     "boardType": "contests",
     "title": "2027년도 새만금 정책연구과제 아이디어 공모",
     "category": "contest_coding",
@@ -58271,7 +58147,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7044892780129620752",
+    "id": "wevity-4804264419561395596",
     "boardType": "contests",
     "title": "2026 충남 로컬메이드 제품개발 공모전",
     "category": "contest_coding",
@@ -58302,7 +58178,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6215229629898050033",
+    "id": "wevity-1365575332198562843",
     "boardType": "contests",
     "title": "[의성군] AI활용 서비스 개선 공모제안 경진대회",
     "category": "contest_general",
@@ -58333,7 +58209,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6990507129342363324",
+    "id": "wevity-7216013330726706360",
     "boardType": "contests",
     "title": "2026년 신규 MICE 행사 아이디어 공모전",
     "category": "contest_general",
@@ -58364,7 +58240,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3317047029460758065",
+    "id": "wevity-3908682538844047411",
     "boardType": "contests",
     "title": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전",
     "category": "contest_general",
@@ -58395,7 +58271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8437846658347121221",
+    "id": "wevity-3941451939854033707",
     "boardType": "contests",
     "title": "[대전광역시 사회혁신센터] 시민생활·관계 개선 아이디어 공모전",
     "category": "contest_general",
@@ -58426,7 +58302,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8983895342971582149",
+    "id": "wevity-470740884339351049",
     "boardType": "contests",
     "title": "2026 글로컬 부산관광 트래블톤 공모전",
     "category": "contest_general",
@@ -58457,7 +58333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2238816795746543866",
+    "id": "wevity-5389846664635515973",
     "boardType": "contests",
     "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
     "category": "contest_stem",
@@ -58488,7 +58364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-263969903596694198",
+    "id": "wevity-8055583337378192218",
     "boardType": "contests",
     "title": "2026년 경산시 시정발전 아이디어 공모전",
     "category": "contest_general",
@@ -58519,7 +58395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8200276659166867490",
+    "id": "wevity-3891714993294177204",
     "boardType": "contests",
     "title": "2026 충남이라 누리는 정책체험·생활수기 공모전",
     "category": "contest_general",
@@ -58550,7 +58426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4254541104547774954",
+    "id": "wevity-704190349355151923",
     "boardType": "contests",
     "title": "[한국장애인고용공단] 2026 KEAD 기업 규제개선 아이디어 공모전",
     "category": "contest_general",
@@ -58581,7 +58457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7730692961026175643",
+    "id": "wevity-8713457362432166318",
     "boardType": "contests",
     "title": "도심 쓰레기 처방전 공모전",
     "category": "contest_general",
@@ -58612,7 +58488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6351691775003692359",
+    "id": "wevity-1592969625710162262",
     "boardType": "contests",
     "title": "[무주군] 신규사업 발굴 군민 아이디어 공모전",
     "category": "contest_general",
@@ -58643,7 +58519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1665579035737529176",
+    "id": "wevity-6253530399874196528",
     "boardType": "contests",
     "title": "전국대학생 FTA 활용 비즈니스 경진대회",
     "category": "contest_general",
@@ -58674,7 +58550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2682362960575871778",
+    "id": "wevity-7510803364385706648",
     "boardType": "contests",
     "title": "특별한 강원 우리의 변화 공모전",
     "category": "contest_general",
@@ -58705,7 +58581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2087012441210361686",
+    "id": "wevity-7381634476718842653",
     "boardType": "contests",
     "title": "인천광역시 일자리사업 시민제안 공모전",
     "category": "contest_general",
@@ -58736,7 +58612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3468863104298053891",
+    "id": "wevity-465825594757823071",
     "boardType": "contests",
     "title": "2026년 시흥시 규제혁신 아이디어 공모",
     "category": "contest_general",
@@ -58767,7 +58643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6761980279233542452",
+    "id": "wevity-8091340816385945981",
     "boardType": "contests",
     "title": "[감사원] 2026년 국민제안 감사 아이디어 공모",
     "category": "contest_general",
@@ -58798,7 +58674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1907677654643898483",
+    "id": "wevity-6849870400630540057",
     "boardType": "contests",
     "title": "[행정안전부] 제7차 열린정부 실행계획 국민제안공모",
     "category": "contest_general",
@@ -58829,7 +58705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3796858103661372881",
+    "id": "wevity-189374908739365969",
     "boardType": "contests",
     "title": "2026년 인천광역시의회 정책아이디어 공모전",
     "category": "contest_general",
@@ -58860,7 +58736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3688851221992455415",
+    "id": "wevity-8873384509375517527",
     "boardType": "contests",
     "title": "2026년 제천시 AI 활용 데이터 분석 아이디어 공모전",
     "category": "contest_general",
@@ -58891,7 +58767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1512964615197888657",
+    "id": "wevity-1245877241056188715",
     "boardType": "contests",
     "title": "2026 모바일신분증 아이디어 공모전",
     "category": "contest_general",
@@ -58922,7 +58798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1552699470483230286",
+    "id": "wevity-7056202534554045210",
     "boardType": "contests",
     "title": "제 3회 AI·디지털 융합 교육 콘텐츠 개발 경진대회 참가자 모집",
     "category": "contest_coding",
@@ -58953,7 +58829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-432162516738198973",
+    "id": "wevity-5261137429586844918",
     "boardType": "contests",
     "title": "2026년 청소년 에너지 에듀 페스타 공모 대회 (내용 수정)",
     "category": "contest_general",
@@ -58984,7 +58860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3775623777138831260",
+    "id": "wevity-2465469469248486991",
     "boardType": "contests",
     "title": "[군산시] 2026년 시민 정책 제안 공모전",
     "category": "contest_general",
@@ -59015,7 +58891,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6762515788519704819",
+    "id": "wevity-1340297419075868789",
     "boardType": "contests",
     "title": "[의정부도시공사] AI 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -59046,7 +58922,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7450946443488809658",
+    "id": "wevity-5188849081701466926",
     "boardType": "contests",
     "title": "[청주시] 2026 하반기 시민 테마아이디어 공모전",
     "category": "contest_general",
@@ -59077,7 +58953,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4404854979807637539",
+    "id": "wevity-6340067840981587371",
     "boardType": "contests",
     "title": "제2회 성남시 창의도시계획 공모전",
     "category": "contest_general",
@@ -59108,7 +58984,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1393000387275953585",
+    "id": "wevity-11167466626782989",
     "boardType": "contests",
     "title": "여수 낭만의 길에 서다 여행 코스 공모전",
     "category": "contest_general",
@@ -59139,7 +59015,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2648326845943075928",
+    "id": "wevity-852049205512040172",
     "boardType": "contests",
     "title": "2026 해운·항만·물류 AX 아이디어 공모전",
     "category": "contest_general",
@@ -59170,7 +59046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-29584141941107276",
+    "id": "wevity-7452237263546279700",
     "boardType": "contests",
     "title": "상주시 대표축제 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -59201,7 +59077,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7599085385974765096",
+    "id": "wevity-8998093563722810747",
     "boardType": "contests",
     "title": "제1회 소방정책 아이디어 발굴 경진대회",
     "category": "contest_general",
@@ -59232,7 +59108,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4604803469477239325",
+    "id": "wevity-7066999083552379125",
     "boardType": "contests",
     "title": "제5회 기아 PBV 아이디어 공모전",
     "category": "contest_general",
@@ -59263,7 +59139,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8197908560744673469",
+    "id": "wevity-5102534173071139842",
     "boardType": "contests",
     "title": "[한국남동발전] 대국민 체감형 서비스 개선 아이디어 제안",
     "category": "contest_general",
@@ -59294,7 +59170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8419102508310702175",
+    "id": "wevity-4173292162684834095",
     "boardType": "contests",
     "title": "제1회 (사)한국부동산금융투자포럼 대학생 아이디어 공모대회",
     "category": "contest_general",
@@ -59325,7 +59201,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2360838489128474967",
+    "id": "wevity-8110161404367607206",
     "boardType": "contests",
     "title": "2026년 안산시 시민 아이디어 공모전",
     "category": "contest_general",
@@ -59356,7 +59232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3207402491241944967",
+    "id": "wevity-6693016826381340198",
     "boardType": "contests",
     "title": "도민과 함께 만드는 경남교육 비전 공모전",
     "category": "contest_general",
@@ -59387,7 +59263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6648457092531866685",
+    "id": "wevity-7218816383894297294",
     "boardType": "contests",
     "title": "2026 초·중·고 AI 디지털콘텐츠 경진대회",
     "category": "contest_general",
@@ -59418,7 +59294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6453020964540825466",
+    "id": "wevity-8937149642746667467",
     "boardType": "contests",
     "title": "2026년 동작구 정책 아이디어 공모전",
     "category": "contest_general",
@@ -59449,7 +59325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2416085501011862573",
+    "id": "wevity-1730618851024265045",
     "boardType": "contests",
     "title": "2026년 익산시 시정발전 아이디어 공모전",
     "category": "contest_general",
@@ -59480,7 +59356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5937512397175702766",
+    "id": "wevity-910176636309362410",
     "boardType": "contests",
     "title": "2026 KSMS 추계 인천국제공항공사 대학생 아이디어 경진대회",
     "category": "contest_general",
@@ -59511,7 +59387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4165152133419813904",
+    "id": "wevity-1689579587694274801",
     "boardType": "contests",
     "title": "2026년 새로한난 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -59542,7 +59418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2694920133976383587",
+    "id": "wevity-5602633152652158255",
     "boardType": "contests",
     "title": "2026년 파주시정 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -59573,7 +59449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4423706796083780496",
+    "id": "wevity-5224374940795977118",
     "boardType": "contests",
     "title": "2026년 성남시 탄소중립 아이디어 공모전",
     "category": "contest_general",
@@ -59604,7 +59480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2865336068127270122",
+    "id": "wevity-1531270611731524077",
     "boardType": "contests",
     "title": "2026 K-MEDI AI 혁신 아이디어 챌린지 공모전",
     "category": "contest_general",
@@ -59635,7 +59511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2006782584781688188",
+    "id": "wevity-3190513484558817008",
     "boardType": "contests",
     "title": "문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모",
     "category": "contest_general",
@@ -59666,7 +59542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8192229360756261487",
+    "id": "wevity-6074862960089998024",
     "boardType": "contests",
     "title": "2026년 K-푸드테크 해커톤 대회",
     "category": "contest_coding",
@@ -59697,7 +59573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8032604020167428627",
+    "id": "wevity-1091012131677400755",
     "boardType": "contests",
     "title": "해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전",
     "category": "contest_general",
@@ -59728,7 +59604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8670348336387661818",
+    "id": "wevity-2359339265840452021",
     "boardType": "contests",
     "title": "2026년 제4회 안성시 시정발전 제안공모전",
     "category": "contest_general",
@@ -59759,7 +59635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3305957329029449239",
+    "id": "wevity-2601352425155454725",
     "boardType": "contests",
     "title": "[기후에너지환경부] 제13회 대학생 물환경 정책·기술 공모전",
     "category": "contest_general",
@@ -59790,7 +59666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8391832245972005326",
+    "id": "wevity-131143341268094551",
     "boardType": "contests",
     "title": "통합 라디오 애플리케이션 대국민 아이디어 공모",
     "category": "contest_general",
@@ -59821,7 +59697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7441488108122762858",
+    "id": "wevity-6746548196102232477",
     "boardType": "contests",
     "title": "2026년 강북구 청소년 사회적경제 아이디어 공모전",
     "category": "contest_general",
@@ -59852,7 +59728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2858995877613715509",
+    "id": "wevity-4126234172482314646",
     "boardType": "contests",
     "title": "[국가철도공단] 철도산업 규제ㆍ애로 개선제안 공모",
     "category": "contest_general",
@@ -59883,7 +59759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1560194519512446897",
+    "id": "wevity-2009596959682878096",
     "boardType": "contests",
     "title": "2026년 강서구 아이디어 공모전",
     "category": "contest_general",
@@ -59914,7 +59790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-943370086609986642",
+    "id": "wevity-5253622661863337687",
     "boardType": "contests",
     "title": "제1회 지역 현안 해결 솔루션 챌린지",
     "category": "contest_stem",
@@ -59945,7 +59821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7407946285938620445",
+    "id": "wevity-4374585022696238273",
     "boardType": "contests",
     "title": "강원경찰청 도민과 함께 만드는 교통안전시설 개선 아이디어 공모전",
     "category": "contest_general",
@@ -59976,7 +59852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4536039115319599402",
+    "id": "wevity-1554548936915963804",
     "boardType": "contests",
     "title": "[포천도시공사] 2026년 주민참여예산제 아이디어 공모전",
     "category": "contest_general",
@@ -60007,7 +59883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7253837979100970809",
+    "id": "wevity-6533006241319168150",
     "boardType": "contests",
     "title": "태백시시설관리공단 2026 혁신아이디어 공모전",
     "category": "contest_general",
@@ -60038,7 +59914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6142617377532065852",
+    "id": "wevity-6836877751685897492",
     "boardType": "contests",
     "title": "2026 수영 로컬 콘텐츠 개발 경진대회 (공모전)",
     "category": "contest_coding",
@@ -60069,7 +59945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-235456957634521924",
+    "id": "wevity-7210260149121975404",
     "boardType": "contests",
     "title": "2026년 남양주시 다산 정약용 콘텐츠 아이디어 공모전",
     "category": "contest_general",
@@ -60100,7 +59976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1720959688434090256",
+    "id": "wevity-8116091946215720069",
     "boardType": "contests",
     "title": "2026년 경상북도 정책제안 공모전",
     "category": "contest_general",
@@ -60131,7 +60007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3889376503199087568",
+    "id": "wevity-51454341782262566",
     "boardType": "contests",
     "title": "2026 대구 관광 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -60162,7 +60038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-112694087080175139",
+    "id": "wevity-1650744676270516926",
     "boardType": "contests",
     "title": "스파크업 : 모두의 에너지 (에너지 창업 경연대회)",
     "category": "contest_music",
@@ -60193,7 +60069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2277493095078426266",
+    "id": "wevity-8082865329079540572",
     "boardType": "contests",
     "title": "2026 (다시, 다리다) 유휴공간 활성화 아이디어 공모전",
     "category": "contest_general",
@@ -60224,7 +60100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4356064603374139219",
+    "id": "wevity-8181072747063920505",
     "boardType": "contests",
     "title": "양천구 건축공간디자인상 공모",
     "category": "contest_art",
@@ -60255,7 +60131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5614858779322729941",
+    "id": "wevity-851748720502180422",
     "boardType": "contests",
     "title": "제5회 LH가든(수원당수) 주민참여정원 아이디어공모",
     "category": "contest_general",
@@ -60286,7 +60162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4524149732591048201",
+    "id": "wevity-680070913013793402",
     "boardType": "contests",
     "title": "제5회 LH가든(수원당수) 학생참여정원 아이디어공모",
     "category": "contest_general",
@@ -60317,7 +60193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8829525233703298607",
+    "id": "wevity-5734579099559331483",
     "boardType": "contests",
     "title": "용산국제업무지구 AI 스마트도시 아이디어 공모",
     "category": "contest_general",
@@ -60348,7 +60224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4439623905710636376",
+    "id": "wevity-73973800831278067",
     "boardType": "contests",
     "title": "제21회 2026년 한국공간디자인 전국공모전",
     "category": "contest_art",
@@ -60379,7 +60255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8244316486778450518",
+    "id": "wevity-637354637895342322",
     "boardType": "contests",
     "title": "2026 제43회 골든스케일디자인어워드",
     "category": "contest_art",
@@ -60410,7 +60286,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8721774774539980895",
+    "id": "wevity-4483908015825510479",
     "boardType": "contests",
     "title": "2026 대한건축사협회 대학(원)생 모듈러건축 공모전",
     "category": "contest_general",
@@ -60441,7 +60317,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5443774639759861014",
+    "id": "wevity-4250192071971906393",
     "boardType": "contests",
     "title": "제2회 양평군 건축문화상",
     "category": "contest_general",
@@ -60472,7 +60348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8033651405825998209",
+    "id": "wevity-889305470029981952",
     "boardType": "contests",
     "title": "2026년 고양시 좋은 간판 공모전",
     "category": "contest_general",
@@ -60503,7 +60379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-711660635433772790",
+    "id": "wevity-1957138998288786647",
     "boardType": "contests",
     "title": "2026 제1회 KIBE 융합디자인 공모전",
     "category": "contest_art",
@@ -60534,7 +60410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9105385365577713274",
+    "id": "wevity-9111038639533778841",
     "boardType": "contests",
     "title": "제2회 직스캐드 AX 경진대회 - 설계 및 영상 공모전 (건축, 인테리어, 제조, 영상, CAD)",
     "category": "contest_general",
@@ -60565,7 +60441,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2107530791609916195",
+    "id": "wevity-9142628151325631424",
     "boardType": "contests",
     "title": "2026 에어-비트 시티 건축디자인 공모전",
     "category": "contest_art",
@@ -60596,38 +60472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3052800344306504287",
-    "boardType": "contests",
-    "title": "2026 제62회 경기건축대전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "사단법인 한국건축가협회 경기건축가회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=109613",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 제62회 경기건축대전 - 사단법인 한국건축가협회 경기건축가회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "만화",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-6675961359658670760",
+    "id": "wevity-4642858660712286861",
     "boardType": "contests",
     "title": "2026년 도시정책 시민계획단 및 청소년계획단 모집",
     "category": "contest_general",
@@ -60647,7 +60492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=111464",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111464",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 도시정책 시민계획단 및 청소년계획단 모집 - 수원시 도시계획과 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
@@ -60658,7 +60503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-565816466692525224",
+    "id": "wevity-6824952845330945525",
     "boardType": "contests",
     "title": "2026 시민참여 건축콘텐츠 전 사진, 영상 공모전",
     "category": "contest_general",
@@ -60689,7 +60534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-475164975926296988",
+    "id": "wevity-8962682669897275784",
     "boardType": "contests",
     "title": "2026 제주국제건축문화제 건축문화대상 건축사진 공모전",
     "category": "contest_general",
@@ -60720,7 +60565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6329323519758808156",
+    "id": "wevity-1182871641729233012",
     "boardType": "contests",
     "title": "2026년 제24회 김해 건축대상제 작품공모",
     "category": "contest_general",
@@ -60751,7 +60596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-156572655829136156",
+    "id": "wevity-5819400655242182970",
     "boardType": "contests",
     "title": "혹한기(겨울철) 현장근로자 안전사고 예방에 대한 슬로건 공모전",
     "category": "contest_general",
@@ -60782,7 +60627,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4694082488670389842",
+    "id": "wevity-6833685481202724172",
     "boardType": "contests",
     "title": "NEXT SPACE DESIGN AWARD 2026",
     "category": "contest_general",
@@ -60813,7 +60658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7770635904051439089",
+    "id": "wevity-3101060290518065092",
     "boardType": "contests",
     "title": "2026년 제2회 건축 동아리(개인) 공모전",
     "category": "contest_general",
@@ -60844,7 +60689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4532433856608212178",
+    "id": "wevity-6331595433528131676",
     "boardType": "contests",
     "title": "2026 LOWCA 건축 아이디어 공모전",
     "category": "contest_general",
@@ -60875,7 +60720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3761554173705905454",
+    "id": "wevity-1172402412448206285",
     "boardType": "contests",
     "title": "제6회 그린리모델링 챌린지 대학생 해커톤",
     "category": "contest_coding",
@@ -60906,7 +60751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5399472822866571965",
+    "id": "wevity-7172463207602097601",
     "boardType": "contests",
     "title": "2026 남도K-가든 페스티벌 시민참여정원 공모",
     "category": "contest_general",
@@ -60937,7 +60782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8620791047068982680",
+    "id": "wevity-716383122776443699",
     "boardType": "contests",
     "title": "화명 야이수영장 국제 디자인 경쟁공모",
     "category": "contest_art",
@@ -60968,7 +60813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6576619105323868888",
+    "id": "wevity-313632869528708034",
     "boardType": "contests",
     "title": "제3회 제주 그린스팟 혼디해요 공모전",
     "category": "contest_general",
@@ -60999,7 +60844,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5701847978080991569",
+    "id": "wevity-121773998330497528",
     "boardType": "contests",
     "title": "2026 영산강 가족정원 페스티벌 시민 참여정원 공모",
     "category": "contest_general",
@@ -61030,7 +60875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2743075556315995305",
+    "id": "wevity-6902175343127523331",
     "boardType": "contests",
     "title": "국토안전관리원 2026년 국토안전 AI 콘텐츠 공모전",
     "category": "contest_general",
@@ -61061,7 +60906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9036310121998911865",
+    "id": "wevity-4479358320730324110",
     "boardType": "contests",
     "title": "2026 강남구 아름다운 감성경관 공모전",
     "category": "contest_general",
@@ -61081,7 +60926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109963",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=109963",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "2026 강남구 아름다운 감성경관 공모전 - 강남구 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
@@ -61092,7 +60937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5141457879260510971",
+    "id": "wevity-9047928673713623634",
     "boardType": "contests",
     "title": "2026년 부산 가든쇼 큰손바닥정원 공모전",
     "category": "contest_general",
@@ -61123,7 +60968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3398182493427776263",
+    "id": "wevity-5633588679372405122",
     "boardType": "contests",
     "title": "2026 대한민국 국토대전",
     "category": "contest_general",
@@ -61154,7 +60999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5392622792588623611",
+    "id": "wevity-977398749948185355",
     "boardType": "contests",
     "title": "2026 제9회 세종건축문화제 대학생 공모전",
     "category": "contest_general",
@@ -61185,7 +61030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2427360005472399475",
+    "id": "wevity-4235305192482199688",
     "boardType": "contests",
     "title": "2026 수성 건축·조경 시각작품 국제 공모전",
     "category": "contest_general",
@@ -61216,7 +61061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3600021368123024694",
+    "id": "wevity-7799256256277524963",
     "boardType": "contests",
     "title": "제2회 AI HOME 인테리어 디자인 컨테스트",
     "category": "contest_art",
@@ -61247,7 +61092,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6468127317972424623",
+    "id": "wevity-2245715311276264969",
+    "boardType": "contests",
+    "title": "2026 제62회 경기건축대전",
+    "category": "contest_general",
+    "categoryName": "종합 아이디어공모",
+    "badge": "🏆 종합공모전",
+    "organizer": "사단법인 한국건축가협회 경기건축가회",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109613",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026 제62회 경기건축대전 - 사단법인 한국건축가협회 경기건축가회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "만화",
+      "대전광역시"
+    ]
+  },
+  {
+    "id": "wevity-6857965834473514323",
     "boardType": "contests",
     "title": "2026년 아산시 브랜드 자산활용 관·학 협력 공공디자인 공모전 참여대학 모집",
     "category": "contest_art",
@@ -61278,7 +61154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2926308779923305873",
+    "id": "wevity-372544368674566052",
     "boardType": "contests",
     "title": "2026년 KICOX 산단안전 제도개선 공모전",
     "category": "contest_general",
@@ -61309,7 +61185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3551467969224119968",
+    "id": "wevity-5791372407556529291",
     "boardType": "contests",
     "title": "2026 서귀포시 아름다운 간판상 공모전",
     "category": "contest_general",
@@ -61340,7 +61216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-36773088049481024",
+    "id": "wevity-7298990326573994671",
     "boardType": "contests",
     "title": "제15회 서울시 좋은빛상 공모전",
     "category": "contest_general",
@@ -61371,7 +61247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6035056446539396346",
+    "id": "wevity-6467386293659856648",
     "boardType": "contests",
     "title": "2026 동아시아문화도시 안동 정원문화교류전 시민 참여정원 작품 공모전",
     "category": "contest_writing",
@@ -61402,7 +61278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6397412642229870433",
+    "id": "wevity-2057144738842260912",
     "boardType": "contests",
     "title": "2026 SH 스마트 건설기술 경진대회",
     "category": "contest_coding",
@@ -61433,7 +61309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3735934767903404957",
+    "id": "wevity-8809739203546340804",
     "boardType": "contests",
     "title": "서울출입국･외국인청 신축청사 건축물 미술작품 제작 및 설치 공모",
     "category": "contest_art",
@@ -61464,7 +61340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4401232186583615877",
+    "id": "wevity-9061942419635178110",
     "boardType": "contests",
     "title": "LH미래 : 도시공원 학생공모전",
     "category": "contest_general",
@@ -61495,7 +61371,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-834431386863489580",
+    "id": "wevity-633548418715124016",
     "boardType": "contests",
     "title": "2026 제2회 서울한옥 미래상(Future of Seoul Hanok) 디자인 아이디어 공모",
     "category": "contest_art",
@@ -61526,7 +61402,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4364096036948268855",
+    "id": "wevity-1405969606868096721",
     "boardType": "contests",
     "title": "LH 케이블타워 CT 디자인 아이디어 공모",
     "category": "contest_art",
@@ -61557,7 +61433,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4579789488235700173",
+    "id": "wevity-6276901323434337045",
     "boardType": "contests",
     "title": "제38회 대한민국 실내건축대전",
     "category": "contest_general",
@@ -61588,7 +61464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7568596773811369403",
+    "id": "wevity-7722801231097861284",
     "boardType": "contests",
     "title": "2026 한국도로공사 정원디자인 공모전",
     "category": "contest_art",
@@ -61619,7 +61495,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8802564184157151185",
+    "id": "wevity-413371848275672390",
     "boardType": "contests",
     "title": "제7회 좋은데이 미술대전",
     "category": "contest_music",
@@ -61650,7 +61526,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3664209400955421402",
+    "id": "wevity-2413828407890599203",
     "boardType": "contests",
     "title": "2026 대한민국 영월 정원산업박람회 학생참여정원 작품 공모",
     "category": "contest_general",
@@ -61681,7 +61557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1111723182850580060",
+    "id": "wevity-4997200034200030480",
     "boardType": "contests",
     "title": "2026년 제2회 전주시 도시재생 공간디자인 공모전",
     "category": "contest_art",
@@ -61712,7 +61588,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6148241731584059594",
+    "id": "wevity-3386392285673510754",
     "boardType": "contests",
     "title": "2026 경기도 도시재생 경진대회",
     "category": "contest_general",
@@ -61743,7 +61619,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1929957623455188092",
+    "id": "wevity-5756219446344696738",
     "boardType": "contests",
     "title": "제11회 우리동네 좋은집 찾기 공모전",
     "category": "contest_general",
@@ -61774,7 +61650,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3540375331831330587",
+    "id": "wevity-8924986873780637021",
     "boardType": "contests",
     "title": "2026년 제18회 충남 공공디자인 공모전",
     "category": "contest_art",
@@ -61805,7 +61681,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7281754430671925820",
+    "id": "wevity-3996638496269655174",
     "boardType": "contests",
     "title": "제10회 진주시 도시·공공디자인 작품공모전",
     "category": "contest_art",
@@ -61836,7 +61712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3873055500308493812",
+    "id": "wevity-4883001549823117037",
     "boardType": "contests",
     "title": "제8회 시흥시 도시·건축드로잉 공모전",
     "category": "contest_general",
@@ -61867,7 +61743,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1455580305179396088",
+    "id": "wevity-6235963393657823425",
     "boardType": "contests",
     "title": "2026년 제20회 빛공해 공모전",
     "category": "contest_general",
@@ -61898,7 +61774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5568830699668324149",
+    "id": "wevity-5979633692079350553",
     "boardType": "contests",
     "title": "2026 제11회 전국대학생 CM 시공 · 경진대회",
     "category": "contest_general",
@@ -61929,7 +61805,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5679878091344839307",
+    "id": "wevity-1399536275021221343",
     "boardType": "contests",
     "title": "2026 울산조선해양축제 - 기발한 배 콘테스트 (참가비 있음)",
     "category": "contest_general",
@@ -61960,7 +61836,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3177041315108018463",
+    "id": "wevity-2495506004905841240",
     "boardType": "contests",
     "title": "2026 호반그룹×서울창업허브 오픈이노베이션_[2026 호반혁신기술공모전]",
     "category": "contest_general",
@@ -61991,7 +61867,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-201424019421223338",
+    "id": "wevity-1231807063939467286",
     "boardType": "contests",
     "title": "2026 HiKR MEDIA ART(하이커 미디어 아트) 공모전",
     "category": "contest_music",
@@ -62022,7 +61898,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3013202462995724061",
+    "id": "wevity-1106327709171049710",
     "boardType": "contests",
     "title": "BIGFIELDS STUDENTS PRIZE 2026 (참가비 있음)",
     "category": "contest_general",
@@ -62053,7 +61929,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1650737850683568140",
+    "id": "wevity-1641203381971343141",
     "boardType": "contests",
     "title": "2026 구조물 내진설계 경진대회",
     "category": "contest_general",
@@ -62084,7 +61960,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6382749982771946149",
+    "id": "wevity-7298475712299302564",
     "boardType": "contests",
     "title": "제7회 계룡장학재단 건축 아이디어 공모전",
     "category": "contest_music",
@@ -62115,7 +61991,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6471868005038984390",
+    "id": "wevity-6814981752762198188",
     "boardType": "contests",
     "title": "2026 경기정원문화박람회 작가정원 작품공모",
     "category": "contest_general",
@@ -62146,7 +62022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1330075685960965000",
+    "id": "wevity-1661687821357541348",
     "boardType": "contests",
     "title": "2026 경기정원문화박람회 상상정원 작품공모",
     "category": "contest_general",
@@ -62177,7 +62053,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8156446187361288477",
+    "id": "wevity-4780734943708452455",
     "boardType": "contests",
     "title": "2026 충남 건축문화제 대학생 설계공모전",
     "category": "contest_general",
@@ -62208,7 +62084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3606825652268177949",
+    "id": "wevity-7985674845028475313",
     "boardType": "contests",
     "title": "제11회 전라남도 친환경·범용디자인 공모전",
     "category": "contest_art",
@@ -62239,7 +62115,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5455791173502221774",
+    "id": "wevity-2001773734793962639",
     "boardType": "contests",
     "title": "2026년 제23회 김해시 도시경관디자인 작품공모전",
     "category": "contest_art",
@@ -62270,7 +62146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5968145428342098330",
+    "id": "wevity-7218662388369894283",
     "boardType": "contests",
     "title": "2026년 함께 디자인하는 미래학교 공간 공모전",
     "category": "contest_art",
@@ -62301,7 +62177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1937487853679005422",
+    "id": "wevity-8435085411500740669",
     "boardType": "contests",
     "title": "2026 제44회 서울특별시 건축상 공모",
     "category": "contest_general",
@@ -62332,7 +62208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1334318943534183022",
+    "id": "wevity-7039006080355084646",
     "boardType": "contests",
     "title": "2026년 화성특례시 민간정원 공모전",
     "category": "contest_general",
@@ -62363,7 +62239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-677764847427559449",
+    "id": "wevity-6595277006919335168",
     "boardType": "contests",
     "title": "2026 광주_아시아국제건축공모전",
     "category": "contest_general",
@@ -62394,7 +62270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4395003014018834481",
+    "id": "wevity-3787394897864783362",
     "boardType": "contests",
     "title": "2026 안양시 건축문화상 작품 공모(아름다운 건축물 부문/계획작품 부문)",
     "category": "contest_general",
@@ -62425,7 +62301,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7587479824150566694",
+    "id": "wevity-8094205998737821918",
     "boardType": "contests",
     "title": "2026 IPARK 기술제안 공모전",
     "category": "contest_coding",
@@ -62456,7 +62332,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1889921539044795407",
+    "id": "wevity-4084123755509421827",
     "boardType": "contests",
     "title": "제16회 제주 공공디자인 공모전",
     "category": "contest_art",
@@ -62487,7 +62363,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-259572490737716193",
+    "id": "wevity-3839195997930865502",
     "boardType": "contests",
     "title": "2026년 스마트건설 얼라이언스 기술실증 지원사업 공고 안내",
     "category": "contest_general",
@@ -62518,7 +62394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7240365529056323477",
+    "id": "wevity-396041669331951715",
     "boardType": "contests",
     "title": "제7회 해양경찰 함정설계 공모전",
     "category": "contest_general",
@@ -62549,7 +62425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5880493464065316045",
+    "id": "wevity-5257865780793319012",
     "boardType": "contests",
     "title": "2026 강원건축문화제 학생작품 전국 공모",
     "category": "contest_general",
@@ -62580,7 +62456,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3039308966604098671",
+    "id": "wevity-8349870963434221719",
     "boardType": "contests",
     "title": "제5회 우덕미래건축가상 공모전",
     "category": "contest_general",
@@ -62611,7 +62487,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1688415307719285646",
+    "id": "wevity-7143713708318321066",
     "boardType": "contests",
     "title": "제18회 대한민국 도시숲 설계공모대전",
     "category": "contest_general",
@@ -62642,7 +62518,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1288284732208867304",
+    "id": "wevity-306505402817644675",
     "boardType": "contests",
     "title": "2026년 근현대건축 문화유산 활성화 공모전",
     "category": "contest_general",
@@ -62673,7 +62549,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-605064738040667445",
+    "id": "wevity-5562524566534478086",
     "boardType": "contests",
     "title": "2026 한국리모델링건축대전",
     "category": "contest_general",
@@ -62704,7 +62580,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5206549377691186057",
+    "id": "wevity-4024104683907668779",
     "boardType": "contests",
     "title": "2026 대구 도시디자인 공모전",
     "category": "contest_art",
@@ -62735,7 +62611,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7463119164449872348",
+    "id": "wevity-6243958186364337854",
     "boardType": "contests",
     "title": "제2회 국산목재이용기술 대상(大賞) 공모",
     "category": "contest_general",
@@ -62766,7 +62642,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5989418594996320721",
+    "id": "wevity-6784737981253459372",
     "boardType": "contests",
     "title": "2026 진주 정원박람회 시민참여정원 작품 공모",
     "category": "contest_general",
@@ -62797,7 +62673,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5147028996926715996",
+    "id": "wevity-225074518656207406",
     "boardType": "contests",
     "title": "2026 제6회 청주 파빌리온 아이디어 공모전",
     "category": "contest_general",
@@ -62828,7 +62704,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1356413431190941780",
+    "id": "wevity-8114486528673063676",
     "boardType": "contests",
     "title": "2026년 경기도 공공디자인 공모전",
     "category": "contest_art",
@@ -62859,7 +62735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-253282155345844403",
+    "id": "wevity-5594257337228681370",
     "boardType": "contests",
     "title": "2026 제24회 대한민국목조건축대전 공모전",
     "category": "contest_general",
@@ -62890,7 +62766,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5905514912609886221",
+    "id": "wevity-2135632171477128959",
     "boardType": "contests",
     "title": "제23회 2026 인천건축학생공모전",
     "category": "contest_general",
@@ -62921,7 +62797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4410141868205728798",
+    "id": "wevity-1412995932199027330",
     "boardType": "contests",
     "title": "제18회 대학생 공작기계 창의 아이디어 공모전",
     "category": "contest_general",
@@ -62952,7 +62828,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8197354520973761162",
+    "id": "wevity-4180231503158557081",
     "boardType": "contests",
     "title": "[공모전] 중간주택의 탐색-아파트단지와 다세대주택 사이",
     "category": "contest_general",
@@ -62983,7 +62859,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1419338405554743353",
+    "id": "wevity-8466382347597590390",
     "boardType": "contests",
     "title": "제3회 대구광역시 동구 공공디자인 공모전",
     "category": "contest_art",
@@ -63014,7 +62890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3579867418628555443",
+    "id": "wevity-1816965711764950515",
     "boardType": "contests",
     "title": "2026 다육 가드닝 전국대회 참가자 모집",
     "category": "contest_general",
@@ -63045,7 +62921,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7638929602640426126",
+    "id": "wevity-2794574481320836624",
     "boardType": "contests",
     "title": "2026년 제13회 유닛로드시스템 창의성 공모전",
     "category": "contest_general",
@@ -63076,7 +62952,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-149250929594668378",
+    "id": "wevity-2742700378224992394",
     "boardType": "contests",
     "title": "제7회 서울식물원 식재설계(Planting Design) 공모전",
     "category": "contest_general",
@@ -63107,7 +62983,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2183896747986397677",
+    "id": "wevity-7739825181570739800",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 제5회 서울대공원 학생정원 작품공모",
     "category": "contest_general",
@@ -63138,7 +63014,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5319806169977391762",
+    "id": "wevity-4792842907349475066",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 제5회 서울대공원 시민정원 작품공모",
     "category": "contest_general",
@@ -63169,7 +63045,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6768830823320663285",
+    "id": "wevity-2598527902251630923",
     "boardType": "contests",
     "title": "제2회 꿈을 짓다! 건축 아이디어 공모전",
     "category": "contest_music",
@@ -63200,7 +63076,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4675505980909609598",
+    "id": "wevity-5941356815162348620",
     "boardType": "contests",
     "title": "한국해외인프라도시개발지원공사(KIND) 뉴 슬로건 공모전",
     "category": "contest_coding",
@@ -63231,7 +63107,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7564275149540497741",
+    "id": "wevity-8272270299317227859",
     "boardType": "contests",
     "title": "2027 KSPO 스포츠가치센터 슬로건 공모전",
     "category": "contest_general",
@@ -63262,7 +63138,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-256339354711366867",
+    "id": "wevity-3934248502045820229",
     "boardType": "contests",
     "title": "한국노동연구원 캐릭터 네이밍 공모전",
     "category": "contest_art",
@@ -63293,7 +63169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8742193920680448936",
+    "id": "wevity-6938516617801610566",
     "boardType": "contests",
     "title": "2026년 한전KDN 슬로건 공모전",
     "category": "contest_general",
@@ -63324,7 +63200,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7704604428929424230",
+    "id": "wevity-8752053609854919889",
     "boardType": "contests",
     "title": "경남교육의 가치를 담은 브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63355,7 +63231,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2361320686789402220",
+    "id": "wevity-265063344500125195",
     "boardType": "contests",
     "title": "제21회 건설사업관리(CM) 표어 온라인 공모전",
     "category": "contest_general",
@@ -63386,7 +63262,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6948026151096296900",
+    "id": "wevity-1979575461250463865",
     "boardType": "contests",
     "title": "2026년 전북 경력단절예방 실천 한 줄 공모전",
     "category": "contest_general",
@@ -63417,7 +63293,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5603787810553360049",
+    "id": "wevity-3596224565486115850",
     "boardType": "contests",
     "title": "맑은물에 두유 네이밍 공모전",
     "category": "contest_general",
@@ -63448,7 +63324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3659217459884875684",
+    "id": "wevity-2450108714481969663",
     "boardType": "contests",
     "title": "(가칭) 트래디라운지 명칭 추가(연장) 공모",
     "category": "contest_general",
@@ -63479,7 +63355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5572108863860353552",
+    "id": "wevity-8799804893222576134",
     "boardType": "contests",
     "title": "소상공인의 날 기념 N행시 대학생 공모전",
     "category": "contest_general",
@@ -63510,7 +63386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3504585278766617825",
+    "id": "wevity-3907070400643457277",
     "boardType": "contests",
     "title": "강릉시 청년센터 명칭 공모",
     "category": "contest_general",
@@ -63541,7 +63417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4134739830632037382",
+    "id": "wevity-5110025467939443626",
     "boardType": "contests",
     "title": "완도 대표축제 명칭 공모전",
     "category": "contest_general",
@@ -63572,7 +63448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5275222305645135550",
+    "id": "wevity-325898561237782817",
     "boardType": "contests",
     "title": "국립군산대학교 개교80주년 기념 슬로건 공모전",
     "category": "contest_general",
@@ -63603,7 +63479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1075826450244846897",
+    "id": "wevity-3980594861915536717",
     "boardType": "contests",
     "title": "대국민 체육시설 안전 공동 슬로건 공모전",
     "category": "contest_general",
@@ -63634,7 +63510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1597737971351276003",
+    "id": "wevity-3028409703274725307",
     "boardType": "contests",
     "title": "강원특별자치도교육청 홍보브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63665,7 +63541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7638141194919360474",
+    "id": "wevity-4395885097416933252",
     "boardType": "contests",
     "title": "쉐라톤 제주 호텔 마스코트 네이밍 공모전",
     "category": "contest_general",
@@ -63696,7 +63572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8396910324702192834",
+    "id": "wevity-4033183181393079789",
     "boardType": "contests",
     "title": "정찰제 후불제상조 회사 이름 공모전",
     "category": "contest_general",
@@ -63727,7 +63603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2829691478199104043",
+    "id": "wevity-4229317331795509678",
     "boardType": "contests",
     "title": "[경찰청] 제81주년 경찰의 날 기념식 슬로건(고정) 공모전",
     "category": "contest_general",
@@ -63758,7 +63634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2296735229368842185",
+    "id": "wevity-8290372101610315218",
     "boardType": "contests",
     "title": "서울YWCA와 함께 하는 환대의 말 공모전",
     "category": "contest_general",
@@ -63789,7 +63665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4109508737661946807",
+    "id": "wevity-8027147591983988587",
     "boardType": "contests",
     "title": "제63회 무역의 날 슬로건 공모전",
     "category": "contest_general",
@@ -63820,7 +63696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7577257872765115508",
+    "id": "wevity-5443935298952944011",
     "boardType": "contests",
     "title": "전국민 AI 역량 강화 정책 브랜드 공모전",
     "category": "contest_stem",
@@ -63851,7 +63727,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2852944614523189891",
+    "id": "wevity-922414181124010557",
     "boardType": "contests",
     "title": "검단구 구정소식지 명칭 공모",
     "category": "contest_general",
@@ -63882,7 +63758,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3044806098551090564",
+    "id": "wevity-1476596225747035208",
     "boardType": "contests",
     "title": "[화성시정신건강복지센터] 2026년 정신건강 슬로건 공모전",
     "category": "contest_general",
@@ -63913,7 +63789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4978406452213652807",
+    "id": "wevity-5965575606808849605",
     "boardType": "contests",
     "title": "[매머드커피] NEW! 브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63944,7 +63820,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5817588544369990575",
+    "id": "wevity-1680813163531294113",
     "boardType": "contests",
     "title": "2026 IFWF 인권주간 제2회 인권 표어 공모전",
     "category": "contest_general",
@@ -63975,7 +63851,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2625793031310232377",
+    "id": "wevity-7286218151047109149",
     "boardType": "contests",
     "title": "솥밥 프랜차이즈 음식점 네이밍 공모전",
     "category": "contest_general",
@@ -64006,7 +63882,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1106589693480381947",
+    "id": "wevity-6830325799629097359",
     "boardType": "contests",
     "title": "함안군 제7회 함안애(愛)복지박람회 슬로건 공모전",
     "category": "contest_general",
@@ -64037,7 +63913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7645365335686111864",
+    "id": "wevity-5920565596599825685",
     "boardType": "contests",
     "title": "파주 상생경제 플랫폼의 이름을 지어주세요! 명칭 공모전",
     "category": "contest_general",
@@ -64068,7 +63944,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6825701549809492129",
+    "id": "wevity-707341097192746221",
     "boardType": "contests",
     "title": "여성경제활동 지원센터(새일센터) 새 이름 공모전",
     "category": "contest_general",
@@ -64099,7 +63975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7721023476591544708",
+    "id": "wevity-4682668960221144312",
     "boardType": "contests",
     "title": "제주 디지털 통합 신원인증 앱 명칭 공모",
     "category": "contest_coding",
@@ -64130,7 +64006,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-860631728129143508",
+    "id": "wevity-2801041593036234019",
     "boardType": "contests",
     "title": "제6회 장애인 구강건강인식개선 캠페인 Smile Slogan! 모두의 미소를 위한 한 줄 슬로건 공모전",
     "category": "contest_general",
@@ -64161,7 +64037,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2218818068214845047",
+    "id": "wevity-1780181568227469993",
     "boardType": "contests",
     "title": "안산공동체복합시설 명칭 공모",
     "category": "contest_general",
@@ -64192,7 +64068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2627883710801068446",
+    "id": "wevity-7880954299159384766",
     "boardType": "contests",
     "title": "봉화군 농산물 공동브랜드 네이밍 공모전",
     "category": "contest_general",
@@ -64223,7 +64099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2270434220180316220",
+    "id": "wevity-2161092931395373033",
     "boardType": "contests",
     "title": "봉화군 도시재생 거점시설 네이밍 공모전",
     "category": "contest_general",
@@ -64254,7 +64130,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5605846172823013222",
+    "id": "wevity-5303229917006817387",
     "boardType": "contests",
     "title": "2026년 청소년운영위원회 미소 청소년전용카페 애칭 공모전",
     "category": "contest_writing",
@@ -64285,7 +64161,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5582615549058664087",
+    "id": "wevity-160147456159032731",
     "boardType": "contests",
     "title": "무주반디뮤지엄 일원 시설 명칭 공모",
     "category": "contest_general",
@@ -64316,7 +64192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3545470870143401419",
+    "id": "wevity-5065938898417457088",
     "boardType": "contests",
     "title": "[전남광주통합특별시 광산구] 하남동 청소년 자율공간 명칭 공모",
     "category": "contest_general",
@@ -64347,7 +64223,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1555762994883774232",
+    "id": "wevity-405581987585372536",
     "boardType": "contests",
     "title": "장성군 신규 공공체육시설(3개소) 명칭 공모전",
     "category": "contest_general",
@@ -64378,7 +64254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6865382330649471266",
+    "id": "wevity-1078004258230658458",
     "boardType": "contests",
     "title": "﻿2026 경기도 청년참여기구 명칭 공모",
     "category": "contest_general",
@@ -64409,7 +64285,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8531795636503767454",
+    "id": "wevity-3025064171553211357",
     "boardType": "contests",
     "title": "2026년 한국해양수산연수원 개인정보보호 표어 공모전",
     "category": "contest_general",
@@ -64440,7 +64316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5567193913175757691",
+    "id": "wevity-7167915584818859187",
     "boardType": "contests",
     "title": "충청권 운수종사자 대상 교통안전 슬로건 공모전",
     "category": "contest_general",
@@ -64471,7 +64347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-326725459126589853",
+    "id": "wevity-9109807911232175646",
     "boardType": "contests",
     "title": "김천시 시민운동 슬로건 리뉴얼 공모전",
     "category": "contest_general",
@@ -64502,7 +64378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3504563910415479661",
+    "id": "wevity-6042692661402857658",
     "boardType": "contests",
     "title": "가마지천 반려공존 하천문화공간 반려견 놀이터 명칭 공모",
     "category": "contest_general",
@@ -64533,7 +64409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1934338342008955219",
+    "id": "wevity-3533638992667192839",
     "boardType": "contests",
     "title": "(가칭)열린도서관 명칭 공모 공고",
     "category": "contest_reading",
@@ -64564,7 +64440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4615297761019002396",
+    "id": "wevity-7724558935678051658",
     "boardType": "contests",
     "title": "동서트레일 명칭 및 숲길정책 국민 아이디어 공모",
     "category": "contest_general",
@@ -64595,7 +64471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8291927755745425985",
+    "id": "wevity-3098367364015193445",
     "boardType": "contests",
     "title": "북항 프롬나드 코스 네이밍 공모전",
     "category": "contest_general",
@@ -64626,7 +64502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5773988004191108193",
+    "id": "wevity-6204550892810572598",
     "boardType": "contests",
     "title": "하천계곡 관리시스템 명칭 공모",
     "category": "contest_general",
@@ -64657,7 +64533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1456278692351560978",
+    "id": "wevity-1760141298066830738",
     "boardType": "contests",
     "title": "경기도 1인가구 지원 사업 명칭(네이밍) 공모",
     "category": "contest_general",
@@ -64688,7 +64564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8984508592199433050",
+    "id": "wevity-3827867423650260075",
     "boardType": "contests",
     "title": "의왕시 부곡커뮤니티센터 내 공공도서관 명칭 공모",
     "category": "contest_reading",
@@ -64719,7 +64595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7773422970220567245",
+    "id": "wevity-1630008739022369191",
     "boardType": "contests",
     "title": "2026년 도로전광표지(VMS) 교통안전 표어 공모전",
     "category": "contest_general",
@@ -64750,7 +64626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2231596270832655821",
+    "id": "wevity-2417998937455506594",
     "boardType": "contests",
     "title": "천하제일 영등포구 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -64781,7 +64657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4392566351629345188",
+    "id": "wevity-3803405551169142349",
     "boardType": "contests",
     "title": "[부산광역시 연제구] 구민과 함께하는 반부패·청렴 표어 공모전",
     "category": "contest_general",
@@ -64812,7 +64688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-701047584032596393",
+    "id": "wevity-6452498734007761013",
     "boardType": "contests",
     "title": "마음대로(大路) 한 책 N행시 공모전",
     "category": "contest_reading",
@@ -64843,7 +64719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4821411721886094362",
+    "id": "wevity-8827243383784606680",
     "boardType": "contests",
     "title": "순천시 민선9기 시정의 패러다임 大전환 시민주권 시대 슬로건 공모전",
     "category": "contest_general",
@@ -64874,7 +64750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4990345232855003148",
+    "id": "wevity-166852202609030030",
     "boardType": "contests",
     "title": "2026 군인권보호관 슬로건 공모전",
     "category": "contest_general",
@@ -64905,7 +64781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1891843758036408152",
+    "id": "wevity-1493366813517653608",
     "boardType": "contests",
     "title": "한국농촌경제연구원 마스코트 네이밍 공모전",
     "category": "contest_general",
@@ -64936,7 +64812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1851903225824172277",
+    "id": "wevity-4732233727076699218",
     "boardType": "contests",
     "title": "제10대 마포구의회 슬로건 공모전",
     "category": "contest_general",
@@ -64967,7 +64843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3401807349341489086",
+    "id": "wevity-5706304326251050865",
     "boardType": "contests",
     "title": "조달청 BEST 혁신기업 현판 네이밍 공모전",
     "category": "contest_general",
@@ -64998,7 +64874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1278612949619302168",
+    "id": "wevity-7025669603057182627",
     "boardType": "contests",
     "title": "2026 국내재취업 브랜드 네이밍 & 캐치프레이즈 공모전",
     "category": "contest_general",
@@ -65029,7 +64905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5393020377027058095",
+    "id": "wevity-8262566346298502733",
     "boardType": "contests",
     "title": "경산시 아동돌봄 통합 플랫폼 명칭 공모전",
     "category": "contest_general",
@@ -65060,7 +64936,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1600568222207890659",
+    "id": "wevity-1183605358809953071",
     "boardType": "contests",
     "title": "2027 청주독서대전 슬로건 공모전",
     "category": "contest_reading",
@@ -65091,7 +64967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6469712707459025999",
+    "id": "wevity-8721519577021350996",
     "boardType": "contests",
     "title": "직업계고 채용연계형 직무교육과정 지원사업 브랜드 네이밍&슬로건 공모전",
     "category": "contest_general",
@@ -65122,7 +64998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5574504233755445710",
+    "id": "wevity-3426151952108864607",
     "boardType": "contests",
     "title": "2026년 청렴 표어 공모전",
     "category": "contest_reading",
@@ -65153,7 +65029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-703723770275694311",
+    "id": "wevity-387822019264595961",
     "boardType": "contests",
     "title": "2026 국제종자박람회 10주년 기념 슬로건 대국민 공모전",
     "category": "contest_general",
@@ -65184,7 +65060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2575530559873396911",
+    "id": "wevity-7066852902004868033",
     "boardType": "contests",
     "title": "우리가 만드는 청렴 교실 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -65215,7 +65091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5110477747883704852",
+    "id": "wevity-5940206558165122329",
     "boardType": "contests",
     "title": "광주ㆍ전남 통합 관광브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -65246,7 +65122,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3259427157510402895",
+    "id": "wevity-489840583044346970",
     "boardType": "contests",
     "title": "여수해양경찰서 함정 승조원 지원시설 명칭 공모",
     "category": "contest_general",
@@ -65277,7 +65153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3029473776077619675",
+    "id": "wevity-212061377294668601",
     "boardType": "contests",
     "title": "[시흥시청소년수련관] 2026년 징검다리'와 함께하는 자율이용공간 네이밍 공모전",
     "category": "contest_general",
@@ -65308,7 +65184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8697166035804083966",
+    "id": "wevity-5343572922359072367",
     "boardType": "contests",
     "title": "전북특별자치도청년미래센터 위기청년(가족돌봄, 고립은둔) 응원 슬로건 공모전",
     "category": "contest_general",
@@ -65339,7 +65215,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2373234633115081276",
+    "id": "wevity-8166884314508158247",
     "boardType": "contests",
     "title": "2026년 중앙사회서비스원 대국민 슬로건 공모전",
     "category": "contest_general",
@@ -65370,7 +65246,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8488679204057624008",
+    "id": "wevity-1643338971143169608",
     "boardType": "contests",
     "title": "서울특별시교육청정독도서관 개관 50주년 기념 슬로건 공모전",
     "category": "contest_reading",
@@ -65401,7 +65277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8301163785923439094",
+    "id": "wevity-5658752072786881949",
     "boardType": "contests",
     "title": "대구평생학습플랫폼 디지털 배지(Digital Badges) 명칭 공모전",
     "category": "contest_general",
@@ -65432,7 +65308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1452684339832698533",
+    "id": "wevity-1562488805601265706",
     "boardType": "contests",
     "title": "[산업통상부/KIAT] K-Girls' Day 리브랜딩 네이밍 공모전",
     "category": "contest_general",
@@ -65463,7 +65339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-622685385110440646",
+    "id": "wevity-2726076224689860401",
     "boardType": "contests",
     "title": "2026년 장애아동지원센터 별칭 공모전",
     "category": "contest_coding",
@@ -65494,7 +65370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1163484488443533833",
+    "id": "wevity-1230845806392963872",
     "boardType": "contests",
     "title": "2026년 에너지절감 슬로건 공모전",
     "category": "contest_general",
@@ -65525,7 +65401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9146371201518588950",
+    "id": "wevity-6991940428768560255",
     "boardType": "contests",
     "title": "단양 다누리 어린이 실내놀이터 이름 공모전",
     "category": "contest_general",
@@ -65556,7 +65432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2073010871451417631",
+    "id": "wevity-2803071009491140653",
     "boardType": "contests",
     "title": "2026 기본사회위원회 슬로건 국민 공모전",
     "category": "contest_general",
@@ -65587,7 +65463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3423525281516031918",
+    "id": "wevity-8811358414914163658",
     "boardType": "contests",
     "title": "건강도시 안산 슬로건 공모전",
     "category": "contest_general",
@@ -65618,7 +65494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8771232257906978491",
+    "id": "wevity-1960978426178288052",
     "boardType": "contests",
     "title": "2026년 관악 사회적경제 주민 어울림 한마당 브랜드 네이밍 공모전",
     "category": "contest_general",
@@ -65649,7 +65525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5170278478161597197",
+    "id": "wevity-5587667038332917283",
     "boardType": "contests",
     "title": "(가칭) 원주 AI 교육센터 명칭 공모",
     "category": "contest_general",
@@ -65680,7 +65556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7669231532605647428",
+    "id": "wevity-2017360827301824799",
     "boardType": "contests",
     "title": "[식품의약품안전처] 의약외품 바로 알기 슬로건 공모전",
     "category": "contest_general",
@@ -65711,7 +65587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8079258104780096744",
+    "id": "wevity-8948405172116273583",
     "boardType": "contests",
     "title": "대한변리사회 창립 80주년 기념 슬로건 공모전",
     "category": "contest_general",
@@ -65742,7 +65618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4899120529055338936",
+    "id": "wevity-3299651081652297996",
     "boardType": "contests",
     "title": "2027학년도 신설 공립학교 교명 공모",
     "category": "contest_general",
@@ -65773,7 +65649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3287969598706731768",
+    "id": "wevity-2216020059063760141",
     "boardType": "contests",
     "title": "국립공주대-충남대 통합대학 교명 공모",
     "category": "contest_general",
@@ -65804,7 +65680,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5276508578135459132",
+    "id": "wevity-685819463122956882",
     "boardType": "contests",
     "title": "노모어피자 캐릭터 네이밍 공모전",
     "category": "contest_art",
@@ -65835,7 +65711,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4738939989542936192",
+    "id": "wevity-4598627053987574723",
     "boardType": "contests",
     "title": "2026년 고성군 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -65866,7 +65742,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4242766748713834494",
+    "id": "wevity-4254639795136296666",
     "boardType": "contests",
     "title": "2026년 제46회 장애인의 날 기념 장애인식개선 캠페인 이름 공모전",
     "category": "contest_general",
@@ -65897,7 +65773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6160501246474986618",
+    "id": "wevity-8489182953002671181",
     "boardType": "contests",
     "title": "2026년 장애인학대 예방의 날 첫 시행기념 학대예방의 날 슬로건 공모전",
     "category": "contest_general",
@@ -65928,7 +65804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2643920713163154961",
+    "id": "wevity-3625603953699725854",
     "boardType": "contests",
     "title": "평화·통일·민주시민교육 기구 명칭 공모전",
     "category": "contest_general",
@@ -65959,7 +65835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6319068407896187201",
+    "id": "wevity-9156225219036650427",
     "boardType": "contests",
     "title": "청담 우리들병원 44주년 개원기념일 기념 캐치프레이즈 공모전",
     "category": "contest_general",
@@ -65990,7 +65866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3424453996351474146",
+    "id": "wevity-1536699037687784993",
     "boardType": "contests",
     "title": "경남진주혁신도시 복합문화도서관 복합문화관 명칭 공모",
     "category": "contest_reading",
@@ -66021,7 +65897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6281492183274838232",
+    "id": "wevity-8222957178770752793",
     "boardType": "contests",
     "title": "부천여성청소년센터 센터 캐릭터 이름 공모전",
     "category": "contest_art",
@@ -66052,7 +65928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7399272713148530893",
+    "id": "wevity-695581721476839831",
     "boardType": "contests",
     "title": "서귀포시 종합체육관 명칭 공모",
     "category": "contest_general",
@@ -66083,7 +65959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8089273489405011661",
+    "id": "wevity-6595004348574616639",
     "boardType": "contests",
     "title": "시흥도시공사 관광시설 명칭 공모전",
     "category": "contest_general",
@@ -66114,7 +65990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5618689332462847276",
+    "id": "wevity-5644973147760182178",
     "boardType": "contests",
     "title": "신축시설 명칭 선정을 위한 아이디어 공모전",
     "category": "contest_general",
@@ -66145,7 +66021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8303284505336731892",
+    "id": "wevity-9081322241434062659",
     "boardType": "contests",
     "title": "2026 책 읽는 대한민국 캠페인 슬로건 공모",
     "category": "contest_general",
@@ -66176,7 +66052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6425852670400055048",
+    "id": "wevity-6978759482866670756",
     "boardType": "contests",
     "title": "제20회 금사참외축제 슬로건 공모전",
     "category": "contest_general",
@@ -66207,7 +66083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2295595463635379888",
+    "id": "wevity-80147843322911508",
     "boardType": "contests",
     "title": "재정경제부 마스코트 네이밍 공모전",
     "category": "contest_general",
@@ -66238,7 +66114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9167430521964091481",
+    "id": "wevity-3705849936228420750",
     "boardType": "contests",
     "title": "대전형 모두의 가게 이름 공모전",
     "category": "contest_general",
@@ -66269,7 +66145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3286687503855402209",
+    "id": "wevity-6362957285454107249",
     "boardType": "contests",
     "title": "고교 일학습병행(도제학교) 인식 개선 슬로건 공모전",
     "category": "contest_general",
@@ -66300,7 +66176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4496616733233909063",
+    "id": "wevity-4996382001719109415",
     "boardType": "contests",
     "title": "군산시 공공자전거 명칭 시민 공모전",
     "category": "contest_general",
@@ -66331,7 +66207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2918593823122106946",
+    "id": "wevity-6338474544756286524",
     "boardType": "contests",
     "title": "감정노동자 인권보호 캐치프레이즈 공모전",
     "category": "contest_general",
@@ -66362,7 +66238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6236783693633938245",
+    "id": "wevity-5474095374972849248",
     "boardType": "contests",
     "title": "경남금연지원센터 세계 금연의 날 슬로건 공모전",
     "category": "contest_general",
@@ -66393,7 +66269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-751030038522064214",
+    "id": "wevity-6560610378092802710",
     "boardType": "contests",
     "title": "제65회 탐라문화제 축제주제 공고",
     "category": "contest_general",
@@ -66424,7 +66300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1194258196279702804",
+    "id": "wevity-1972839528952609809",
     "boardType": "contests",
     "title": "제 19기 기상청 국민정책기자단 모집",
     "category": "contest_general",
@@ -66455,7 +66331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-645054357521881818",
+    "id": "wevity-3644365773303019172",
     "boardType": "contests",
     "title": "2026 농림식품기술기획평가원 iPET 농플루언서 모집",
     "category": "contest_general",
@@ -66486,7 +66362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1144503079461556112",
+    "id": "wevity-5344986673706163008",
     "boardType": "contests",
     "title": "2026 농림식품기술기획평가원 iPET 서포터즈 5기 모집",
     "category": "contest_general",
@@ -66517,7 +66393,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7176622784416091690",
+    "id": "wevity-2281008013318007337",
+    "boardType": "contests",
+    "title": "2026년 KISA 제8기 국민소통 청년참여단 모집",
+    "category": "contest_general",
+    "categoryName": "종합 아이디어공모",
+    "badge": "🏆 종합공모전",
+    "organizer": "한국인터넷진흥원",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111908",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026년 KISA 제8기 국민소통 청년참여단 모집 - 한국인터넷진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "학술",
+      "인천광역시"
+    ]
+  },
+  {
+    "id": "wevity-7866032432608210546",
     "boardType": "contests",
     "title": "2027년 공주시 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -66548,7 +66455,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-564426393181761467",
+    "id": "wevity-1190608235015696384",
     "boardType": "contests",
     "title": "[강남 아이즈 윈터 크루] 2026 강남 아이즈 미디어 윈터 페스타 공식 서포터즈 모집 공고",
     "category": "contest_general",
@@ -66557,9 +66464,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "GANGNAM EYES",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66575,11 +66482,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-825597647765478169",
+    "id": "wevity-1945621959391781769",
     "boardType": "contests",
     "title": "[한국관광공사] 공주·부여 C-투어버스 DRT 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -66610,7 +66517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1110727648009477635",
+    "id": "wevity-3414000153490970983",
     "boardType": "contests",
     "title": "누크커피, 이모생각(분식) 방문형 블로그 서포터즈 모집",
     "category": "contest_general",
@@ -66619,9 +66526,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "누크, 이모생각",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66637,42 +66544,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "강원특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-2169249027997279510",
-    "boardType": "contests",
-    "title": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집",
-    "category": "contest_coding",
-    "categoryName": "AI·코딩·SW대회",
-    "badge": "💻 AI·코딩대회",
-    "organizer": "한국장애인재단",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111854",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집 - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "학술",
       "대전광역시"
     ]
   },
   {
-    "id": "wevity-720016771470860043",
+    "id": "wevity-9066762153401077416",
     "boardType": "contests",
     "title": "글로벌 Youth 앰버서더 오디션 2026",
     "category": "contest_general",
@@ -66703,7 +66579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8550346260428575389",
+    "id": "wevity-1537875911842142962",
     "boardType": "contests",
     "title": "제6기 북극케어 대학생 서포터즈 모집",
     "category": "contest_coding",
@@ -66734,7 +66610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5175720678613809291",
+    "id": "wevity-2695552646816164586",
     "boardType": "contests",
     "title": "2026년 11월 생활무전기 정책홍보단 모집",
     "category": "contest_general",
@@ -66765,13 +66641,13 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8522225359547602292",
+    "id": "wevity-945530442175041478",
     "boardType": "contests",
-    "title": "교촌치킨 서포터즈 K-스피커스 13기 모집",
+    "title": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집",
     "category": "contest_general",
     "categoryName": "종합 아이디어공모",
     "badge": "🏆 종합공모전",
-    "organizer": "교촌에프앤비",
+    "organizer": "롯데물산",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
     "region": "chungnam",
@@ -66785,9 +66661,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111771",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111678",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "교촌치킨 서포터즈 K-스피커스 13기 모집 - 교촌에프앤비 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
+    "description": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집 - 롯데물산 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
       "공모전",
@@ -66796,38 +66672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1869972397412858058",
-    "boardType": "contests",
-    "title": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "롯데물산",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111678",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집 - 롯데물산 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "학술",
-      "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-7604880817288971392",
+    "id": "wevity-7249652801298235246",
     "boardType": "contests",
     "title": "2027년 서대문구 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -66836,9 +66681,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "서대문구청",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66854,11 +66699,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대구광역시"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-6118936843603702958",
+    "id": "wevity-878970346797353837",
     "boardType": "contests",
     "title": "[CCOMA] 여성 패션 브랜드 꼼마 앰버서더·서포터즈 모집",
     "category": "contest_general",
@@ -66867,9 +66712,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "CCOMA",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66885,11 +66730,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "울산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-6198507463093877925",
+    "id": "wevity-249401667700911737",
     "boardType": "contests",
     "title": "[THUMB] 남성 패션 브랜드 덤 앰버서더·서포터즈 모집",
     "category": "contest_general",
@@ -66898,9 +66743,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "THUMB",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66916,11 +66761,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상남도"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-2829153539491634101",
+    "id": "wevity-1833694613288427659",
     "boardType": "contests",
     "title": "2026 더불어민주당 은평구(을) 대학생위원회 모집",
     "category": "contest_general",
@@ -66929,9 +66774,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "더불어민주당 은평구(을) 대학생위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -66947,11 +66792,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상북도"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-4874829610366409785",
+    "id": "wevity-7746350481696836915",
     "boardType": "contests",
     "title": "2026 도외 유튜버 대상 제주 장기체류 콘텐츠 제작 지원",
     "category": "contest_general",
@@ -66982,7 +66827,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3431030075253537920",
+    "id": "wevity-6733063070683409608",
     "boardType": "contests",
     "title": "2026 더불어민주당 노원구(갑) 대학생위원회 신규위원 모집",
     "category": "contest_general",
@@ -66991,9 +66836,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "더불어민주당 노원구(갑) 대학생위원회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67009,11 +66854,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "광주광역시"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-7454105340918745889",
+    "id": "wevity-5340345723489750515",
     "boardType": "contests",
     "title": "2026 새마을운동 청년홍보단 새럽 6기 모집",
     "category": "contest_general",
@@ -67022,9 +66867,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "새마을운동중앙회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67040,11 +66885,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전북특별자치도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-1728286322001154185",
+    "id": "wevity-1790449719293830269",
     "boardType": "contests",
     "title": "2026년 건설안전 국민감시단 모집",
     "category": "contest_general",
@@ -67053,9 +66898,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국토안전관리원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67071,11 +66916,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전라남도"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-7255262204058395695",
+    "id": "wevity-4652948206429595166",
     "boardType": "contests",
     "title": "2026 사회적기업 국제포럼 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -67084,9 +66929,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "고용노동부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67102,11 +66947,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "제주특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-5438213006576073245",
+    "id": "wevity-6223945933489885553",
     "boardType": "contests",
     "title": "비클 서포터즈 비클럽 9기 모집",
     "category": "contest_general",
@@ -67115,9 +66960,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "비클",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67133,11 +66978,73 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
+      "제주특별자치도"
+    ]
+  },
+  {
+    "id": "wevity-743792744130781105",
+    "boardType": "contests",
+    "title": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집",
+    "category": "contest_coding",
+    "categoryName": "AI·코딩·SW대회",
+    "badge": "💻 AI·코딩대회",
+    "organizer": "한국장애인재단",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111854",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집 - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "학술",
       "서울특별시"
     ]
   },
   {
-    "id": "wevity-6717961602917505450",
+    "id": "wevity-8053983362080137305",
+    "boardType": "contests",
+    "title": "교촌치킨 서포터즈 K-스피커스 13기 모집",
+    "category": "contest_general",
+    "categoryName": "종합 아이디어공모",
+    "badge": "🏆 종합공모전",
+    "organizer": "교촌에프앤비",
+    "sourceType": "wevity_contest",
+    "sourceLabel": "공모전 전문플랫폼 연동",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
+    "startDate": "2026-10-15",
+    "endDate": "2026-12-15",
+    "applyStartDate": "2026-10-15",
+    "applyEndDate": "2026-11-30",
+    "status": "applying",
+    "dday": "D-34",
+    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
+    "fee": "무료 (온라인 접수)",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111771",
+    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "description": "교촌치킨 서포터즈 K-스피커스 13기 모집 - 교촌에프앤비 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
+    "tags": [
+      "전국대회",
+      "공모전",
+      "학술",
+      "경기도"
+    ]
+  },
+  {
+    "id": "wevity-1501856938630667176",
     "boardType": "contests",
     "title": "풀무원샘물 하루귀리 대학생 서포터즈 2기 모집",
     "category": "contest_general",
@@ -67146,9 +67053,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "풀무원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67164,11 +67071,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-5269131469049595835",
+    "id": "wevity-7720810827012742274",
     "boardType": "contests",
     "title": "시슐랭 프렌즈 1기 모집",
     "category": "contest_general",
@@ -67177,9 +67084,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국경제인협회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67195,11 +67102,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-5224341820980258141",
+    "id": "wevity-9089360661185413077",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 하반기 시민 서포터즈 모집",
     "category": "contest_general",
@@ -67230,7 +67137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7741962581623443697",
+    "id": "wevity-8197572079862162174",
     "boardType": "contests",
     "title": "2026 천안시마을공동체지원센터 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -67261,7 +67168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9162283606593329401",
+    "id": "wevity-3831795815331129679",
     "boardType": "contests",
     "title": "[현대자동차] H스타일리스트 14기 모집",
     "category": "contest_general",
@@ -67270,9 +67177,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "현대자동차",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67288,11 +67195,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-9040559015722100919",
+    "id": "wevity-7404101861329306850",
     "boardType": "contests",
     "title": "2026 서울 한강 걷기대회 서포터즈 모집",
     "category": "contest_general",
@@ -67323,7 +67230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8598462899807699051",
+    "id": "wevity-7250213642193677311",
     "boardType": "contests",
     "title": "[OPERA] 오페라 7기 서포터즈 모집",
     "category": "contest_general",
@@ -67332,9 +67239,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "피아스 코리아",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67350,11 +67257,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-4685516429219593655",
+    "id": "wevity-8703704776007335960",
     "boardType": "contests",
     "title": "[러블리페이퍼] 손수레 정비봉사단 러블리페어 모집",
     "category": "contest_general",
@@ -67363,9 +67270,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "사단법인 러블리페이퍼",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67381,11 +67288,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-7971511860009746768",
+    "id": "wevity-309806598068594135",
     "boardType": "contests",
     "title": "[인디에프] BIND 서포터즈 1기 모집",
     "category": "contest_general",
@@ -67394,9 +67301,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "㈜인디에프",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67412,11 +67319,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-6278058386022757052",
+    "id": "wevity-4939924408170947043",
     "boardType": "contests",
     "title": "서울리거피부과 아임서울(더마코스메틱) 아임러버 서포터즈12기 모집",
     "category": "contest_general",
@@ -67447,7 +67354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8688698837453525625",
+    "id": "wevity-9125223951543243517",
     "boardType": "contests",
     "title": "2026 USF 울산스타트업페스타 서포터즈 모집",
     "category": "contest_general",
@@ -67478,7 +67385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5732795164097284138",
+    "id": "wevity-2712701285497848098",
     "boardType": "contests",
     "title": "[dejavu] 데자뷰 7기 서포터즈 모집",
     "category": "contest_general",
@@ -67487,9 +67394,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "피아스 코리아",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67505,11 +67412,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-6068123853506373410",
+    "id": "wevity-194587754488510217",
     "boardType": "contests",
     "title": "[기후부/한국생태관광협회] 제13기 생태관광 영리더스클럽 서포터즈 모집",
     "category": "contest_general",
@@ -67518,9 +67425,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "기후에너지환경부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67536,11 +67443,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-287794786304176778",
+    "id": "wevity-5799732127713072036",
     "boardType": "contests",
     "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트",
     "category": "contest_music",
@@ -67549,9 +67456,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "LG",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67567,11 +67474,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-5328969849449767904",
+    "id": "wevity-9122148522840374351",
     "boardType": "contests",
     "title": "[타라티피에스] 툴디 서포터즈 14기 모집",
     "category": "contest_general",
@@ -67580,9 +67487,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "타라 티피에스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67598,11 +67505,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-2701750395460105325",
+    "id": "wevity-6609700635120706604",
     "boardType": "contests",
     "title": "퓨어무브 대학생 서포터즈 １기 모집",
     "category": "contest_general",
@@ -67611,9 +67518,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "퓨어무브",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67629,11 +67536,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-2128926662482757147",
+    "id": "wevity-2916468043040799343",
     "boardType": "contests",
     "title": "HAEMO(해모) 라이프스타일 서포터즈 1기 모집",
     "category": "contest_general",
@@ -67642,9 +67549,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "주식회사 해모",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67653,18 +67560,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111256",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111256",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "HAEMO(해모) 라이프스타일 서포터즈 1기 모집 - 주식회사 해모 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
       "공모전",
       "학술",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-5287777374659390840",
+    "id": "wevity-3167956557150851043",
     "boardType": "contests",
     "title": "ICNX 2026 공식 서포터즈(대학생 기자단) 모집",
     "category": "contest_general",
@@ -67695,7 +67602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1887575907700890123",
+    "id": "wevity-1295165636643127988",
     "boardType": "contests",
     "title": "벨르랑코 서포터즈 8기 모집",
     "category": "contest_general",
@@ -67704,9 +67611,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "벨르랑코",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67722,11 +67629,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-1411670100395735958",
+    "id": "wevity-2097071921545906473",
     "boardType": "contests",
     "title": "2026 제9회 대한민국패럴스마트폰영화제 대학생기자단 제7기 모집",
     "category": "contest_general",
@@ -67735,9 +67642,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)수레바퀴재활문화진흥회",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67753,11 +67660,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-1373725862675923520",
+    "id": "wevity-2525965909900058285",
     "boardType": "contests",
     "title": "2026 한동 국제 뽱 페스티벌을 알릴 뽱 크루 서포터즈 모집",
     "category": "contest_general",
@@ -67766,9 +67673,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한동대학교 글로컬사업단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67784,11 +67691,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-6585811045819857977",
+    "id": "wevity-1867267896472414779",
     "boardType": "contests",
     "title": "[아름다운 가게] 위아자 나눔위크 2026 지구체육관 서포터즈(STAFF) 모집",
     "category": "contest_general",
@@ -67797,9 +67704,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "중앙일보",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67815,11 +67722,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-4703206423842766568",
+    "id": "wevity-549737588850079120",
     "boardType": "contests",
     "title": "2026년 중앙행정기관 청년정책평가단 모집",
     "category": "contest_general",
@@ -67828,9 +67735,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국무조정실",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67846,11 +67753,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-2511209211686847638",
+    "id": "wevity-6702826217221999756",
     "boardType": "contests",
     "title": "2026 진주국제재즈페스티벌 서포터즈 JJ프렌즈 모집",
     "category": "contest_general",
@@ -67881,7 +67788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1253780583198665278",
+    "id": "wevity-7080686917855232449",
     "boardType": "contests",
     "title": "아동·청소년 온라인 성착취 예방을 위한 대학생 안심온지킴이 서포터즈 모집",
     "category": "contest_general",
@@ -67912,7 +67819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-959152475869388088",
+    "id": "wevity-1540623212056330237",
     "boardType": "contests",
     "title": "한국지식재산보호원 서포터즈 IP 서폿 2기 모집",
     "category": "contest_general",
@@ -67921,9 +67828,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국지식재산보호원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67939,11 +67846,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-9059071221599880268",
+    "id": "wevity-4569118000889731544",
     "boardType": "contests",
     "title": "2026 바이오미래포럼 대학생 서포터즈 모집",
     "category": "contest_stem",
@@ -67952,9 +67859,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "과학기술정보통신부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -67970,11 +67877,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-4948256885281244187",
+    "id": "wevity-354857661021868621",
     "boardType": "contests",
     "title": "언니의파우치 서포터즈 14기 모집",
     "category": "contest_general",
@@ -67983,9 +67890,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "주식회사 언니의파우치",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68001,11 +67908,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-7262944912369447357",
+    "id": "wevity-9068816132280643693",
     "boardType": "contests",
     "title": "2026 대한민국 관광기념품 박람회 서포터즈 모집",
     "category": "contest_general",
@@ -68014,9 +67921,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국관광공사",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68032,11 +67939,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-892527847487578688",
+    "id": "wevity-8666161131889362138",
     "boardType": "contests",
     "title": "[KOTMI] 한국섬유기계융합연구원 대학생 서포터즈 1기 KOTMATE 모집",
     "category": "contest_general",
@@ -68045,9 +67952,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "KOTMI",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68056,18 +67963,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=110987",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110987",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "[KOTMI] 한국섬유기계융합연구원 대학생 서포터즈 1기 KOTMATE 모집 - KOTMI 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
       "공모전",
       "학술",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-2915875012913639209",
+    "id": "wevity-4366146785922465617",
     "boardType": "contests",
     "title": "대구경북 청년노동인권사업단 서포터즈 YoungLaborClub 1기 모집",
     "category": "contest_general",
@@ -68098,7 +68005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2633497209661504096",
+    "id": "wevity-3413711578155389311",
     "boardType": "contests",
     "title": "2026 제2기 가축위생방역지원본부 서포터즈 모집",
     "category": "contest_general",
@@ -68107,9 +68014,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "가축위생방역지원본부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68125,11 +68032,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-1005695471912863868",
+    "id": "wevity-7878996703463634902",
     "boardType": "contests",
     "title": "펑크린 대학생 서포터즈 펑~크린에이터 2기 모집",
     "category": "contest_general",
@@ -68138,9 +68045,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "유한클로락스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68156,11 +68063,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-7793824440663027716",
+    "id": "wevity-3900097112653764113",
     "boardType": "contests",
     "title": "SPONUVA 대학생 서포터즈 스포터즈 1기 모집",
     "category": "contest_general",
@@ -68169,9 +68076,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "스포뉴바",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68187,11 +68094,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-7365911477015306185",
+    "id": "wevity-8866390677180998091",
     "boardType": "contests",
     "title": "에픽민트 서포터즈 EPIC CREW 1기 모집",
     "category": "contest_general",
@@ -68200,9 +68107,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "에픽민트",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68218,11 +68125,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-7593590704015397035",
+    "id": "wevity-5548105181424524042",
     "boardType": "contests",
     "title": "2026 한글주간 한글 지킴이 한글주간 누리꾼 4기 모집",
     "category": "contest_general",
@@ -68231,9 +68138,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "문화체육관광부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68249,11 +68156,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-4480993149339424290",
+    "id": "wevity-3581359672319110775",
     "boardType": "contests",
     "title": "제15회 이데일리 W페스타 서포터즈 모집",
     "category": "contest_general",
@@ -68262,9 +68169,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "이데일리",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68280,11 +68187,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-1796737770903691219",
+    "id": "wevity-4191931136805422869",
     "boardType": "contests",
     "title": "자원순환실천인증 단체 대항전 챌린지",
     "category": "contest_general",
@@ -68293,9 +68200,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국환경공단, 그린루틴",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68311,11 +68218,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-5730172252695021043",
+    "id": "wevity-3024664670768130205",
     "boardType": "contests",
     "title": "2026 킹콩크랩 서포터즈 모집",
     "category": "contest_general",
@@ -68324,9 +68231,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)킹콩F&B",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68342,11 +68249,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-5692209748656252351",
+    "id": "wevity-6188206237188069432",
     "boardType": "contests",
     "title": "[우체국물류지원단] 공정채용 강화를 위한 대국민 채용전형 모니터링단 모집",
     "category": "contest_general",
@@ -68355,9 +68262,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "우체국물류지원단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68373,11 +68280,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-6022991082137161533",
+    "id": "wevity-54079362492049804",
     "boardType": "contests",
     "title": "한국도로공사 대구경북본부 온라인 고객 패널 로드톡 1기 모집",
     "category": "contest_general",
@@ -68408,7 +68315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4268631801171185213",
+    "id": "wevity-5132156668407800657",
     "boardType": "contests",
     "title": "제8기 FiPA 시민참여혁신단 공개 모집",
     "category": "contest_general",
@@ -68417,9 +68324,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국어촌어항공단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68435,11 +68342,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-5819223484769155373",
+    "id": "wevity-4485339993075156768",
     "boardType": "contests",
     "title": "2026년 강원랜드 국민혁신단 모집 공고",
     "category": "contest_general",
@@ -68470,7 +68377,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4465987419355316185",
+    "id": "wevity-5525628991465176484",
     "boardType": "contests",
     "title": "HYUNDAI MOTORSTUDIO BUSAN 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -68501,7 +68408,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6843721373076755054",
+    "id": "wevity-1191346518192475110",
     "boardType": "contests",
     "title": "2026 포항국제음악제 POCO 서포터즈 모집",
     "category": "contest_music",
@@ -68521,7 +68428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110717",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110717",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "2026 포항국제음악제 POCO 서포터즈 모집 - 포항문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
@@ -68532,7 +68439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6984924766655122728",
+    "id": "wevity-968476654540418000",
     "boardType": "contests",
     "title": "2026 SBIC 서포터즈 모집",
     "category": "contest_general",
@@ -68563,7 +68470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8485615861850353114",
+    "id": "wevity-4412698625166232703",
     "boardType": "contests",
     "title": "[아모레퍼시픽] 바이탈뷰티 SUPER CREW 모집",
     "category": "contest_general",
@@ -68572,9 +68479,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "아모레퍼시픽",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68590,11 +68497,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-5199218588420182044",
+    "id": "wevity-1251309341575655942",
     "boardType": "contests",
     "title": "컨디션 대학생 서포터즈, 컨디션 C.R.E.W 2기 모집",
     "category": "contest_general",
@@ -68603,9 +68510,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "컨디션",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68621,11 +68528,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-1190930905723077411",
+    "id": "wevity-5356443194710787974",
     "boardType": "contests",
     "title": "2026 한국석유관리원 시민참여혁신단 모집",
     "category": "contest_general",
@@ -68634,9 +68541,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국석유관리원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68652,11 +68559,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경기도"
+      "인천광역시"
     ]
   },
   {
-    "id": "wevity-828780830193361099",
+    "id": "wevity-6309440090281816600",
     "boardType": "contests",
     "title": "제28회 부천국제애니메이션페스티벌(BIAF2026) 관객심사단 애니비(AniB) 모집",
     "category": "contest_general",
@@ -68687,7 +68594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3599543181361579132",
+    "id": "wevity-6931417731583241197",
     "boardType": "contests",
     "title": "2026년 스포츠토토 숏폼 공모전",
     "category": "contest_music",
@@ -68696,9 +68603,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "국민체육진흥공단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "location": "강원특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68714,11 +68621,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "인천광역시"
+      "강원특별자치도"
     ]
   },
   {
-    "id": "wevity-3220841391460562035",
+    "id": "wevity-5881129854147218616",
     "boardType": "contests",
     "title": "[윌라] 대학생 서포터즈 윌프렌즈 4기 모집",
     "category": "contest_general",
@@ -68727,9 +68634,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "윌라",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68745,11 +68652,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "강원특별자치도"
+      "대전광역시"
     ]
   },
   {
-    "id": "wevity-520588995218936771",
+    "id": "wevity-5688522283944687133",
     "boardType": "contests",
     "title": "[문화체육관광부×한국문화정보원] 문화데이터 활용 영상 제작 AI 챌린지",
     "category": "contest_music",
@@ -68758,9 +68665,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국문화정보원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "location": "세종특별자치시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68776,11 +68683,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "대전광역시"
+      "세종특별자치시"
     ]
   },
   {
-    "id": "wevity-7684051902173917038",
+    "id": "wevity-3075194158526300561",
     "boardType": "contests",
     "title": "[2026 안성시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집",
     "category": "contest_general",
@@ -68811,7 +68718,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7654642843418953980",
+    "id": "wevity-1369088443048288644",
     "boardType": "contests",
     "title": "[2026 용인시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집",
     "category": "contest_general",
@@ -68842,7 +68749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2340441460590411455",
+    "id": "wevity-1026941425188061531",
     "boardType": "contests",
     "title": "이장군족발보쌈 서포터즈 이장군PD 1기 모집",
     "category": "contest_general",
@@ -68851,9 +68758,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주)엘에스엘 플러스",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "location": "충청북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68869,11 +68776,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "세종특별자치시"
+      "충청북도"
     ]
   },
   {
-    "id": "wevity-6375912410593507748",
+    "id": "wevity-4511708239724863172",
     "boardType": "contests",
     "title": "i-FORUM 2026 서포터즈 모집",
     "category": "contest_general",
@@ -68882,9 +68789,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "아이뉴스24",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68900,11 +68807,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청북도"
+      "충청남도"
     ]
   },
   {
-    "id": "wevity-2053739444923453425",
+    "id": "wevity-1623635558101174875",
     "boardType": "contests",
     "title": "선불식 결합상품 소비자 피해예방 정보제공 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -68913,9 +68820,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(사)한국여성소비자연합",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "location": "부산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68931,11 +68838,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "충청남도"
+      "부산광역시"
     ]
   },
   {
-    "id": "wevity-5253557542979175561",
+    "id": "wevity-3751439627107224779",
     "boardType": "contests",
     "title": "2026 NRF 서포터즈 모집",
     "category": "contest_general",
@@ -68944,9 +68851,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국연구재단",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "location": "대구광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68962,11 +68869,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "부산광역시"
+      "대구광역시"
     ]
   },
   {
-    "id": "wevity-6334899281738662757",
+    "id": "wevity-3454843875023451054",
     "boardType": "contests",
     "title": "2026 아브뉴프랑 어린이 가족 미술제 대학생 서포터즈 모집",
     "category": "contest_art",
@@ -68975,9 +68882,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "호반프라퍼티㈜",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "location": "울산광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -68986,18 +68893,18 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110512",
+    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110512",
     "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
     "description": "2026 아브뉴프랑 어린이 가족 미술제 대학생 서포터즈 모집 - 호반프라퍼티㈜ 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
       "공모전",
       "학술",
-      "대구광역시"
+      "울산광역시"
     ]
   },
   {
-    "id": "wevity-2928611426813035901",
+    "id": "wevity-651813900693033770",
     "boardType": "contests",
     "title": "2026 케미스트릿 강남역 푸드위크 SEASON 2 체험단 모집",
     "category": "contest_general",
@@ -69006,9 +68913,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "서초구청",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69024,11 +68931,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "울산광역시"
+      "경상남도"
     ]
   },
   {
-    "id": "wevity-1132024201009745904",
+    "id": "wevity-1505348861632486158",
     "boardType": "contests",
     "title": "아모레퍼시픽 공식 서포터즈 A-마케터 3기 모집",
     "category": "contest_general",
@@ -69037,9 +68944,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "아모레퍼시픽",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "location": "경상북도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69055,11 +68962,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상남도"
+      "경상북도"
     ]
   },
   {
-    "id": "wevity-5227471328645090571",
+    "id": "wevity-3010900865609327520",
     "boardType": "contests",
     "title": "쓱7크루 2기 모집",
     "category": "contest_general",
@@ -69068,9 +68975,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "SSG.COM",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "location": "광주광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69086,11 +68993,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경상북도"
+      "광주광역시"
     ]
   },
   {
-    "id": "wevity-824630275593183494",
+    "id": "wevity-1164375920003902013",
     "boardType": "contests",
     "title": "에잇그로우 서포터즈 두피보증단 모집",
     "category": "contest_general",
@@ -69099,9 +69006,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "(주) 그레이스클럽",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69117,11 +69024,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "광주광역시"
+      "전북특별자치도"
     ]
   },
   {
-    "id": "wevity-9187609944692890643",
+    "id": "wevity-7660134366631259612",
     "boardType": "contests",
     "title": "2026 모두의 창업 2차 충남 서포터즈 모집",
     "category": "contest_general",
@@ -69152,7 +69059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5808159010171017772",
+    "id": "wevity-120615325500495350",
     "boardType": "contests",
     "title": "한국패션협회 K-Fashion IP 캠페인 서포터즈 챌린지 모집",
     "category": "contest_general",
@@ -69161,9 +69068,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "산업통상부",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "location": "전라남도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69179,11 +69086,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전북특별자치도"
+      "전라남도"
     ]
   },
   {
-    "id": "wevity-2661713735859778341",
+    "id": "wevity-3468359984761087436",
     "boardType": "contests",
     "title": "우리학교 출판사 청소년/영어덜트 문학 서포터즈 3기 모집",
     "category": "contest_english",
@@ -69192,9 +69099,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "우리학교",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "location": "제주특별자치도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69210,11 +69117,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "전라남도"
+      "제주특별자치도"
     ]
   },
   {
-    "id": "wevity-7268771596195536823",
+    "id": "wevity-7302813729969322060",
     "boardType": "contests",
     "title": "2027~2029 전국종합체육대회 우리동네 응원단장 모집",
     "category": "contest_general",
@@ -69245,7 +69152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1980136198781128486",
+    "id": "wevity-9056464971718733225",
     "boardType": "contests",
     "title": "LG 마이컵 대학생 서포터즈 1기 모집",
     "category": "contest_general",
@@ -69254,9 +69161,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "LG전자",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69272,11 +69179,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "제주특별자치도"
+      "서울특별시"
     ]
   },
   {
-    "id": "wevity-8741815285141770097",
+    "id": "wevity-4987991591167413406",
     "boardType": "contests",
     "title": "제3회 아이가 행복입니다 부산 서포터즈 모집",
     "category": "contest_general",
@@ -69307,7 +69214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5362495166923631490",
+    "id": "wevity-5927375187275360392",
     "boardType": "contests",
     "title": "2026 부산 수제맥주 마스터스 챌린지 서포터즈 모집",
     "category": "contest_general",
@@ -69338,7 +69245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-27886461514925980",
+    "id": "wevity-235562149150586074",
     "boardType": "contests",
     "title": "﻿2026 안동국제탈춤페스티벌 글로벌 호스트 모집",
     "category": "contest_general",
@@ -69369,7 +69276,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2361922653207804503",
+    "id": "wevity-5582120180885616653",
     "boardType": "contests",
     "title": "6주 만에 책을 내고 작가가 되세요! ! 누구나 참여 가능합니다! 58기 모집",
     "category": "contest_music",
@@ -69378,9 +69285,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "글ego",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69396,11 +69303,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "서울특별시"
+      "경기도"
     ]
   },
   {
-    "id": "wevity-7526351496028460135",
+    "id": "wevity-5472173466442673408",
     "boardType": "contests",
     "title": "KOHI 청년 서포터즈 : 이런(e-Learn) 인재 모집",
     "category": "contest_general",
@@ -69409,9 +69316,9 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "organizer": "한국보건복지인재원",
     "sourceType": "wevity_contest",
     "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "location": "인천광역시 및 전국 온라인 접수",
     "startDate": "2026-10-15",
     "endDate": "2026-12-15",
     "applyStartDate": "2026-10-15",
@@ -69427,42 +69334,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전국대회",
       "공모전",
       "학술",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-4408924191040101401",
-    "boardType": "contests",
-    "title": "2026 살생물제 안전관리 홍보단 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "기후에너지환경부",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110325",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 살생물제 안전관리 홍보단 모집 - 기후에너지환경부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "학술",
       "인천광역시"
     ]
   },
   {
-    "id": "wevity-7591598675118145854",
+    "id": "wevity-6535568974774096784",
     "boardType": "contests",
     "title": "[CJ제일제당] 햇반 30주년 AI 공모전 (갓 지은 AI디어)",
     "category": "contest_general",
@@ -69493,7 +69369,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8198551018253111097",
+    "id": "wevity-292373144735168192",
     "boardType": "contests",
     "title": "2026년도 대한민국 SW기술대상 및 IT 아키텍처대상",
     "category": "contest_coding",
@@ -69524,7 +69400,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7740254212084940343",
+    "id": "wevity-726295122879165104",
     "boardType": "contests",
     "title": "제2회 2026 대한민국 AI 창조공모대전",
     "category": "contest_art",
@@ -69555,7 +69431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2498832268297507197",
+    "id": "wevity-5710681211018422568",
     "boardType": "contests",
     "title": "현대자동차그룹 차량용 앱 개발 공모전",
     "category": "contest_coding",
@@ -69586,7 +69462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2145135663746429352",
+    "id": "wevity-7512737724236066502",
     "boardType": "contests",
     "title": "2026 AI 플레이 콘텐츠 제작 공모전",
     "category": "contest_general",
@@ -69617,7 +69493,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8028474328402079632",
+    "id": "wevity-8081410886132523072",
     "boardType": "contests",
     "title": "[세종사이버대학교 AI실무활용학과] 한국 고전 설화 또는 전래동화 캐릭터의 재해석 공모전",
     "category": "contest_art",
@@ -69648,7 +69524,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4260087172821088217",
+    "id": "wevity-6461803227165451580",
     "boardType": "contests",
     "title": "2026 K-AWARDS DIGITAL EXCELLENCE AWARDS",
     "category": "contest_general",
@@ -69679,7 +69555,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4123096653444460546",
+    "id": "wevity-7148177459823067584",
     "boardType": "contests",
     "title": "AI 달인의 꿀팁 챌린지 시즌3",
     "category": "contest_stem",
@@ -69710,7 +69586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2655342297617227384",
+    "id": "wevity-8606715475738936511",
     "boardType": "contests",
     "title": "화이트햇 2026 국방 사이버보안 콘테스트",
     "category": "contest_general",
@@ -69741,7 +69617,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2915272407790716920",
+    "id": "wevity-3868911748451930935",
     "boardType": "contests",
     "title": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회",
     "category": "contest_general",
@@ -69772,7 +69648,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6863125260059069844",
+    "id": "wevity-4385994219102509980",
     "boardType": "contests",
     "title": "AI 달인 100 챌린지",
     "category": "contest_stem",
@@ -69803,7 +69679,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4446105615594845800",
+    "id": "wevity-493189051549601828",
     "boardType": "contests",
     "title": "2026 한림 G-Lab@동해 AI활용 지역문제해결 해커톤",
     "category": "contest_coding",
@@ -69834,7 +69710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-161286361119298056",
+    "id": "wevity-2097827741906202400",
     "boardType": "contests",
     "title": "2026 AI 해킹 방어 대회(ACDC) 참가자 모집",
     "category": "contest_stem",
@@ -69865,7 +69741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9016885457766876492",
+    "id": "wevity-2878190082446595219",
     "boardType": "contests",
     "title": "2026 동해시 AI 활용 해커톤 대회",
     "category": "contest_coding",
@@ -69896,7 +69772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8342467670121025090",
+    "id": "wevity-528694615080180477",
     "boardType": "contests",
     "title": "나랏돈 50조 찾기 프로젝트 - 나라장터 해커톤",
     "category": "contest_coding",
@@ -69927,7 +69803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8980092752413986209",
+    "id": "wevity-4972571450052916193",
     "boardType": "contests",
     "title": "[서울대학교 창업지원단·H1R AI] 2026 SNU X Croche AI 앱 해커톤",
     "category": "contest_coding",
@@ -69958,7 +69834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-311109865996065142",
+    "id": "wevity-7464303367097984592",
     "boardType": "contests",
     "title": "충청북도 과학여행 이야기 AI 이미지‧영상 공모전",
     "category": "contest_stem",
@@ -69989,7 +69865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5797827336574000905",
+    "id": "wevity-1971497088850223648",
     "boardType": "contests",
     "title": "과학기술문화 활동가 AI콘텐츠 경진대회",
     "category": "contest_stem",
@@ -70020,7 +69896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6226678524326110030",
+    "id": "wevity-4135232077012434112",
     "boardType": "contests",
     "title": "SK하이닉스 AI 해커톤 2026",
     "category": "contest_coding",
@@ -70051,7 +69927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1543242023511959214",
+    "id": "wevity-8735749119198349174",
     "boardType": "contests",
     "title": "[방송미디어통신위원회] 생성형 AI 위험성 찾기 이벤트 시즌3",
     "category": "contest_general",
@@ -70082,7 +69958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1036029670287070739",
+    "id": "wevity-989435379873711201",
     "boardType": "contests",
     "title": "2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤",
     "category": "contest_coding",
@@ -70113,7 +69989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8493393235959575901",
+    "id": "wevity-9006046023510614833",
     "boardType": "contests",
     "title": "2026년 국립강원전문과학관 AI경진대회 (동화책 만들기, 4컷 과학만화 만들기)",
     "category": "contest_stem",
@@ -70144,7 +70020,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5403715947780762991",
+    "id": "wevity-8744669756331225831",
     "boardType": "contests",
     "title": "한국택견협회 X 반크(VANK) 택견 AI 콘텐츠 발굴 대회",
     "category": "contest_general",
@@ -70175,7 +70051,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-414382316016497520",
+    "id": "wevity-855973894277179375",
     "boardType": "contests",
     "title": "공공 웹사이트 불법광고 탐지 도구 개발 공모전",
     "category": "contest_coding",
@@ -70206,7 +70082,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4385802774889382466",
+    "id": "wevity-5315165698345827058",
     "boardType": "contests",
     "title": "2026 KoMaP AI 경진대회",
     "category": "contest_general",
@@ -70237,7 +70113,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5965233150282116221",
+    "id": "wevity-6758732913072418331",
     "boardType": "contests",
     "title": "SDU COSS와 함께하는 소개딩 (소프트웨어 개발보안 시큐어코딩 경진대회)",
     "category": "contest_coding",
@@ -70268,7 +70144,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8739420717233040299",
+    "id": "wevity-5811571574788592390",
     "boardType": "contests",
     "title": "2026 추계학술대회 대학생 ERP 아이디어 공모전",
     "category": "contest_general",
@@ -70299,7 +70175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5456418718691112735",
+    "id": "wevity-3148423154168698519",
     "boardType": "contests",
     "title": "2026 데이터+AI 혁신챌린지 데이터안심구역 경진대회",
     "category": "contest_stem",
@@ -70330,7 +70206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5183385395884019290",
+    "id": "wevity-1104460852397395246",
     "boardType": "contests",
     "title": "2026 0924영상제 영상 공모전",
     "category": "contest_music",
@@ -70361,7 +70237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5929571901949536676",
+    "id": "wevity-6439637925260369468",
     "boardType": "contests",
     "title": "제2회 성남 x KAIST AI경진대회 참가자 모집",
     "category": "contest_general",
@@ -70392,7 +70268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6337534834262624631",
+    "id": "wevity-918455383631575983",
     "boardType": "contests",
     "title": "(iM뱅크) 2026 AI Blookchain 경진대회",
     "category": "contest_general",
@@ -70423,7 +70299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1901713743207266688",
+    "id": "wevity-6104320788823828425",
     "boardType": "contests",
     "title": "제6회 우리은행 모의해킹 경진대회",
     "category": "contest_general",
@@ -70454,7 +70330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8163631677022273865",
+    "id": "wevity-1095921289521196947",
     "boardType": "contests",
     "title": "제1회 AI금융빅데이터플랫폼 소비데이터 활용 아이디어 공모전",
     "category": "contest_general",
@@ -70485,7 +70361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-230415703321133709",
+    "id": "wevity-7641272873759926010",
     "boardType": "contests",
     "title": "2026 청소년 AI 콘텐츠 경진대회 YACOF",
     "category": "contest_general",
@@ -70516,7 +70392,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3787316417580242460",
+    "id": "wevity-8821175050820790210",
     "boardType": "contests",
     "title": "2026 AI로 금산 창작물 공모전",
     "category": "contest_general",
@@ -70547,7 +70423,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2875999189543491720",
+    "id": "wevity-8399512431559613288",
     "boardType": "contests",
     "title": "2026 전남광주 청년(YOUTH) AI 솔버톤",
     "category": "contest_general",
@@ -70578,7 +70454,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7400800423838850240",
+    "id": "wevity-6844759785990564128",
     "boardType": "contests",
     "title": "모두의 AI 실험실 AI 서비스 경진대회",
     "category": "contest_stem",
@@ -70609,7 +70485,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2035620659641218881",
+    "id": "wevity-3909536737813027768",
     "boardType": "contests",
     "title": "KB스타즈 여자프로농구단 대학생 홍보대사 16기 모집",
     "category": "contest_music",
@@ -70640,7 +70516,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4420507187862033247",
+    "id": "wevity-9162516058995334770",
     "boardType": "contests",
     "title": "2026년 안양시 공공데이터・AI 활용 대학생 경진대회",
     "category": "contest_general",
@@ -70671,7 +70547,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3305601525173429702",
+    "id": "wevity-2439888769583185104",
     "boardType": "contests",
     "title": "2026년 공무원연금공단 AI•공공데이터 대국민 시각화 경진대회",
     "category": "contest_general",
@@ -70702,7 +70578,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2777751209845463748",
+    "id": "wevity-8036609868483802606",
     "boardType": "contests",
     "title": "국립광주과학관 2026 마이AI랩 AI-이음 프로젝트 공모전",
     "category": "contest_stem",
@@ -70733,7 +70609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-309446048961973063",
+    "id": "wevity-5170025364885359433",
     "boardType": "contests",
     "title": "2026 한국관광 데이터랩 활용 경진대회",
     "category": "contest_general",
@@ -70764,7 +70640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3757537618477900742",
+    "id": "wevity-8792205237479142447",
     "boardType": "contests",
     "title": "[국가정보원] 2026 사이버공격방어대회 참가자 모집",
     "category": "contest_general",
@@ -70795,7 +70671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4175613833044325418",
+    "id": "wevity-6729865539162154404",
     "boardType": "contests",
     "title": "2026 판타지아대구페스타 AI 콘텐츠 공모전",
     "category": "contest_general",
@@ -70826,7 +70702,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5050058691778007703",
+    "id": "wevity-5591232520740204833",
     "boardType": "contests",
     "title": "지능형 홈(AI@Home) matter AX Sprint 2026(개발자 해커톤)",
     "category": "contest_coding",
@@ -70857,7 +70733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8412797121284828576",
+    "id": "wevity-5586028260074707108",
     "boardType": "contests",
     "title": "일상을 바꾸는 한 줄 SKT 모두의 promp.T 공모전",
     "category": "contest_general",
@@ -70888,7 +70764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3199886274502737321",
+    "id": "wevity-5195445007745766294",
     "boardType": "contests",
     "title": "[NHN] 게임 X AI 해커톤 (NAN2026)",
     "category": "contest_coding",
@@ -70919,7 +70795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5747288997885931850",
+    "id": "wevity-2809419855287489490",
     "boardType": "contests",
     "title": "[방송미디어통신위원회] 더나은 생성형 AI 서비스 만들기 경진대회 시즌1",
     "category": "contest_general",
@@ -70950,7 +70826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-764053778025853634",
+    "id": "wevity-3078751909975904501",
     "boardType": "contests",
     "title": "2026 HACKSIUM BUSAN (동남권 특화산업 시나리오 기반 해킹방어대회)",
     "category": "contest_writing",
@@ -70981,7 +70857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8336225815621051160",
+    "id": "wevity-1728078456161262749",
     "boardType": "contests",
     "title": "제2회 매일유업 대학생 AI 영상 공모전",
     "category": "contest_music",
@@ -71012,7 +70888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3536650425183300465",
+    "id": "wevity-4903896865555843976",
     "boardType": "contests",
     "title": "2026 대전 AI 영상 공모전",
     "category": "contest_music",
@@ -71043,7 +70919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7753128101883087924",
+    "id": "wevity-5976713609144501164",
     "boardType": "contests",
     "title": "2026 관광데이터 활용 공모전(웹ㆍ앱 구현 부문)",
     "category": "contest_coding",
@@ -71074,7 +70950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2435328378678883779",
+    "id": "wevity-663600920402973218",
     "boardType": "contests",
     "title": "2026 D-Robotics Innovation Contest",
     "category": "contest_general",
@@ -71105,7 +70981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9016809700086643308",
+    "id": "wevity-4248416275269736664",
     "boardType": "contests",
     "title": "제4회 NAVER OGQ마켓 AI Competition 대회",
     "category": "contest_general",
@@ -71136,7 +71012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1617146214511347717",
+    "id": "wevity-577809863891156031",
     "boardType": "contests",
     "title": "2026 호남 IS 코딩챌린지",
     "category": "contest_coding",
@@ -71167,7 +71043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6682979600157029966",
+    "id": "wevity-3881090758418155748",
     "boardType": "contests",
     "title": "제4회 스마트축산 AI 경진대회",
     "category": "contest_general",
@@ -71198,7 +71074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1268540445268341511",
+    "id": "wevity-4532789687507400274",
     "boardType": "contests",
     "title": "SNU AI Challenge 2026",
     "category": "contest_general",
@@ -71229,7 +71105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4626270468163105400",
+    "id": "wevity-4666851031013593578",
     "boardType": "contests",
     "title": "제2회 한국수목원정원관리원 AI 활용 콘텐츠 공모전",
     "category": "contest_general",
@@ -71260,7 +71136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7490159413428964507",
+    "id": "wevity-3064851958377093221",
     "boardType": "contests",
     "title": "MOVE AI CHALLENGE 2026 - 물류 AI 아이디어 구현 해커톤",
     "category": "contest_coding",
@@ -71291,7 +71167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-192007165958672597",
+    "id": "wevity-2466551378571853078",
     "boardType": "contests",
     "title": "코웨이 비렉스 AI 영상 광고 · 숏폼 공모전",
     "category": "contest_music",
@@ -71322,7 +71198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1708223206147502320",
+    "id": "wevity-1623388915476851438",
     "boardType": "contests",
     "title": "2026 Big Data 활용 대회 참가자 모집",
     "category": "contest_general",
@@ -71353,7 +71229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3640894113918179360",
+    "id": "wevity-2331991231932601773",
     "boardType": "contests",
     "title": "2026년 제8회 K-디지털 트레이닝 해커톤",
     "category": "contest_coding",
@@ -71384,7 +71260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-376245771472864780",
+    "id": "wevity-2211259881334564878",
     "boardType": "contests",
     "title": "2026 장애 공감 공모전",
     "category": "contest_music",
@@ -71415,7 +71291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5355802506558301349",
+    "id": "wevity-6618269445704296032",
     "boardType": "contests",
     "title": "제13회 전국 ICT융합 AI 공모전",
     "category": "contest_stem",
@@ -71446,7 +71322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4866942132376676082",
+    "id": "wevity-6781643002775295956",
     "boardType": "contests",
     "title": "제3회 KRC AI 디지털 혁신 공모전",
     "category": "contest_general",
@@ -71477,7 +71353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-56203421075559450",
+    "id": "wevity-3657827973886689125",
     "boardType": "contests",
     "title": "제 5회 그린이니셔티브 60초 영화제 공모전",
     "category": "contest_music",
@@ -71508,7 +71384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2658884592984790979",
+    "id": "wevity-7694821305971604663",
     "boardType": "contests",
     "title": "2026년 시민·공무원 AI 공모전",
     "category": "contest_general",
@@ -71539,7 +71415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6278275522899259230",
+    "id": "wevity-6644985917858388849",
     "boardType": "contests",
     "title": "제5회 경운대학교 지능형 모빌리티 SW경진대회",
     "category": "contest_coding",
@@ -71570,7 +71446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2856736438055469563",
+    "id": "wevity-3166884183061899795",
     "boardType": "contests",
     "title": "2026 CHAI 대학생 AI 광고 공모전",
     "category": "contest_general",
@@ -71601,7 +71477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1895563814692101566",
+    "id": "wevity-2273207325186517661",
     "boardType": "contests",
     "title": "2026년 물류데이터·AI 활용 및 분석 아이디어 공모전",
     "category": "contest_general",
@@ -71632,7 +71508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8391734938577353876",
+    "id": "wevity-6866581810554693806",
     "boardType": "contests",
     "title": "2026 성평등 영상 콘텐츠 공모전",
     "category": "contest_music",
@@ -71663,7 +71539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-877323449448826354",
+    "id": "wevity-6595814318310646663",
     "boardType": "contests",
     "title": "제주 바이오 AX 해커톤: AI로 설계하는 제주 바이오의 미래 참가팀 모집",
     "category": "contest_coding",
@@ -71694,7 +71570,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8517916635757295968",
+    "id": "wevity-3134586066426821127",
     "boardType": "contests",
     "title": "2026년 춘천시 데이터 활용 해커톤 대회",
     "category": "contest_coding",
@@ -71725,7 +71601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9216926118052583293",
+    "id": "wevity-841434343300987839",
     "boardType": "contests",
     "title": "2026년 제 2회 강원권 중고교 AI 사이버 보안 챌린지",
     "category": "contest_general",
@@ -71756,7 +71632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8222006965588824897",
+    "id": "wevity-5778664115293506276",
     "boardType": "contests",
     "title": "2026년 서대문청소년센터 AI · 미디어콘텐츠공모전 Signal_A 참가자 모집",
     "category": "contest_general",
@@ -71787,7 +71663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-699966843640779122",
+    "id": "wevity-467944079845092756",
     "boardType": "contests",
     "title": "2026 쉬운 우리말 쓰기 영상 제작 공모전",
     "category": "contest_music",
@@ -71818,7 +71694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8762885044294382938",
+    "id": "wevity-2475888410754331010",
     "boardType": "contests",
     "title": "제1회 자유기업원 AI콘텐츠 공모전",
     "category": "contest_general",
@@ -71849,7 +71725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-467506763227392988",
+    "id": "wevity-1292610494990269966",
     "boardType": "contests",
     "title": "2026년 대한민국 AI 콘텐츠 어워즈 - 경쟁 부문 출품 공고",
     "category": "contest_general",
@@ -71880,7 +71756,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2930180791939398883",
+    "id": "wevity-5805874368246097536",
     "boardType": "contests",
     "title": "2026년 대한민국 AI 콘텐츠 어워즈 - 백남준 특별상 부문",
     "category": "contest_general",
@@ -71911,7 +71787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-621224089507826834",
+    "id": "wevity-3681156179034983069",
     "boardType": "contests",
     "title": "DIVE 2026 해커톤 참가팀 모집",
     "category": "contest_coding",
@@ -71942,7 +71818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4064249428839555898",
+    "id": "wevity-1959038969773684690",
     "boardType": "contests",
     "title": "[요기요 X 오라클 해커톤] 맛있는 일상 AI로 잇(IT)다 해커톤",
     "category": "contest_coding",
@@ -71970,626 +71846,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "공모전",
       "디자인",
       "제주특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-4621895452097905557",
-    "boardType": "contests",
-    "title": "2026 제7회 평화통일 사진 & 동영상 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "민주평화통일자문회의 양평군협의회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=1&ix=111898",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 제7회 평화통일 사진 & 동영상 공모전 - 민주평화통일자문회의 양평군협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-3214195317659050160",
-    "boardType": "contests",
-    "title": "2026년 제주시 안전문화운동 우수사례 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "제주시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=1&ix=111676",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 제주시 안전문화운동 우수사례 공모전 - 제주시 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "제주특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-6596948296049342454",
-    "boardType": "contests",
-    "title": "유니세프 한국위원회 2027 사회정서학습 수업사례 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "유니세프 한국위원회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=1&ix=111402",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "유니세프 한국위원회 2027 사회정서학습 수업사례 공모전 - 유니세프 한국위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-1959891592901400692",
-    "boardType": "contests",
-    "title": "2027년 연희문학창작촌 입주작가 정기공모",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "서울문화재단",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111737",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2027년 연희문학창작촌 입주작가 정기공모 - 서울문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-5466531312521304749",
-    "boardType": "contests",
-    "title": "2026 레트로 퓨처 페스티벌 G1 멘토 스테이지 암기왕 대회 발표자 모집",
-    "category": "contest_stem",
-    "categoryName": "과학탐구·창의발명",
-    "badge": "💡 과학·창의발명",
-    "organizer": "과학기술정보통신부 국립과천과학관",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111321",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 레트로 퓨처 페스티벌 G1 멘토 스테이지 암기왕 대회 발표자 모집 - 과학기술정보통신부 국립과천과학관 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-1627008310427312802",
-    "boardType": "contests",
-    "title": "양주시 2026년 GREEN(그린) 스마트 그린도시 탄소중립 그림 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "양주시 스마트그린포트",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111260",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "양주시 2026년 GREEN(그린) 스마트 그린도시 탄소중립 그림 공모전 - 양주시 스마트그린포트 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-7603925372230661270",
-    "boardType": "contests",
-    "title": "한국공항보안 어린이 그림그리기 대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "한국공항보안(주)",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111248",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "한국공항보안 어린이 그림그리기 대회 - 한국공항보안(주) 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-5138365836943650325",
-    "boardType": "contests",
-    "title": "제15회 조계사 어린이 미술대회 (나는 화가다)",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "대한불교조계종 조계사",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111211",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제15회 조계사 어린이 미술대회 (나는 화가다) - 대한불교조계종 조계사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "인천광역시"
-    ]
-  },
-  {
-    "id": "wevity-7790596954339796962",
-    "boardType": "contests",
-    "title": "2026년 제9회 대전 세계태양광총회 어린이 그림 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "대전관광공사",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111159",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 제9회 대전 세계태양광총회 어린이 그림 공모전 - 대전관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-2877763263493281576",
-    "boardType": "contests",
-    "title": "지역사회-학교 기반 알레르기질환 예방·관리 우수사례 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "질병관리청",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111113",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "지역사회-학교 기반 알레르기질환 예방·관리 우수사례 공모전 - 질병관리청 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "강원특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-2612410312948514496",
-    "boardType": "contests",
-    "title": "제1회 강서운전면허시험장 어린이 교통안전 창작 그림 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "한국도로교통공단 강서운전면허시험장",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111064",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제1회 강서운전면허시험장 어린이 교통안전 창작 그림 공모전 - 한국도로교통공단 강서운전면허시험장 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-3838325729908791702",
-    "boardType": "contests",
-    "title": "[식품의약품안전처] 제2차 안전한 어린이 의약정보 영상 콘텐츠 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "식품의약품안전처",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110942",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "[식품의약품안전처] 제2차 안전한 어린이 의약정보 영상 콘텐츠 공모전 - 식품의약품안전처 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "세종특별자치시"
-    ]
-  },
-  {
-    "id": "wevity-1912424354316276602",
-    "boardType": "contests",
-    "title": "제17회 화성시동요대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "화성신문사",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110927",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제17회 화성시동요대회 - 화성신문사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-6944006212830673852",
-    "boardType": "contests",
-    "title": "제 14회 경기어린이 건축물 그리기 대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "경기도건축사회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110876",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제 14회 경기어린이 건축물 그리기 대회 - 경기도건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-7460636519392336876",
-    "boardType": "contests",
-    "title": "2026년 제7회 아동 안전사고예방 아이디어 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "한국아동단체협의회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110824",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 제7회 아동 안전사고예방 아이디어 공모전 - 한국아동단체협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "충청북도"
-    ]
-  },
-  {
-    "id": "wevity-8445538103336874555",
-    "boardType": "contests",
-    "title": "2026년 제4회 서울아이 뛰움 체조 경연대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "서울특별시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110822",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026년 제4회 서울아이 뛰움 체조 경연대회 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-7281275000044601339",
-    "boardType": "contests",
-    "title": "제4회 남동 어린이 자원순환 포스터 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "남동구",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110785",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제4회 남동 어린이 자원순환 포스터 공모전 - 남동구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "충청남도"
-    ]
-  },
-  {
-    "id": "wevity-1664960069295609803",
-    "boardType": "contests",
-    "title": "한국소통학회 주최 제1회 전국대학생 토론대회",
-    "category": "contest_reading",
-    "categoryName": "독서토론·골든벨",
-    "badge": "📖 독서토론·골든벨",
-    "organizer": "한국소통학회/NS홈쇼핑",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111731",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "한국소통학회 주최 제1회 전국대학생 토론대회 - 한국소통학회/NS홈쇼핑 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-2139431456055448883",
-    "boardType": "contests",
-    "title": "2026 디지털아트 컬처랩 – 유스랩 온라인 미디어아트 교육 프로그램",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "전남광주통합특별시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111708",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "2026 디지털아트 컬처랩 – 유스랩 온라인 미디어아트 교육 프로그램 - 전남광주통합특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "전라남도"
-    ]
-  },
-  {
-    "id": "wevity-3643922364581800562",
-    "boardType": "contests",
-    "title": "제3회 다대는TV 유튜브 영상 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "다대1동 행정복지센터",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-34",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111651",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
-    "description": "제3회 다대는TV 유튜브 영상 공모전 - 다대1동 행정복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "대구광역시"
     ]
   },
   {
@@ -73988,37 +73244,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "tourapi-fest-4113301",
-    "boardType": "festivals",
-    "title": "2026 렉키의 수상한 피크닉",
-    "category": "festival_culture",
-    "categoryName": "지역 종합축제",
-    "badge": "🎪 지역 종합축제",
-    "organizer": "0507-1393-7113",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 창원시 마산합포구 돝섬1길 275 (월영동)",
-    "startDate": "2026-10-17",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-17",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=2026%20%EB%A0%89%ED%82%A4%EC%9D%98%20%EC%88%98%EC%83%81%ED%95%9C%20%ED%94%BC%ED%81%AC%EB%8B%89",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4113384_image2_1.jpg",
-    "description": "2026 렉키의 수상한 피크닉 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경상남도",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
     "id": "tourapi-fest-3016265",
     "boardType": "festivals",
     "title": "2026 유니카 코리아 국제영화제",
@@ -74112,7 +73337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5937318582434489891",
+    "id": "gg-fest-3883630211578015720",
     "boardType": "festivals",
     "title": "2026 김포 라베니체축제",
     "category": "festival_light",
@@ -74143,7 +73368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4213142822978718357",
+    "id": "gg-fest-6194314237474046114",
     "boardType": "festivals",
     "title": "제40회 정약용문화제",
     "category": "festival_tradition",
@@ -74825,37 +74050,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "tourapi-fest-4134915",
-    "boardType": "festivals",
-    "title": "성남테크아트페스티벌",
-    "category": "festival_culture",
-    "categoryName": "지역 종합축제",
-    "badge": "🎪 지역 종합축제",
-    "organizer": "031-783-8000",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 분당구 판교역로 지하160 (백현동) 판교역 광장 일원 / 탄천 둔치 일원, 탄천종합운동장 앞(사송교~하탑교)",
-    "startDate": "2026-10-23",
-    "endDate": "2026-10-25",
-    "applyStartDate": "2026-10-23",
-    "applyEndDate": "2026-10-25",
-    "status": "closed",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%82%A8%ED%85%8C%ED%81%AC%EC%95%84%ED%8A%B8%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/4134921_image2_1.jpg",
-    "description": "성남테크아트페스티벌 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경기도",
-      "가족나들이"
-    ],
-    "dday": "접수마감"
-  },
-  {
     "id": "tourapi-fest-1325331",
     "boardType": "festivals",
     "title": "문화다양성축제 MAMF(맘프)",
@@ -75321,7 +74515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4011550432705106589",
+    "id": "seoul-culture-2642940452258699724",
     "boardType": "festivals",
     "title": "서울시무형유산 석암제 시조 지정 10주년 기념 [제4회 호수문화제]",
     "category": "festival_tradition",
@@ -75352,7 +74546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8589560544347568722",
+    "id": "seoul-culture-8004551724889934513",
     "boardType": "festivals",
     "title": "[성동문화재단] 2026 톡톡 클래식 시리즈 [사랑에 빠지다 Fall in Love]",
     "category": "festival_tradition",
@@ -75383,7 +74577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-6794330512420910469",
+    "id": "seoul-culture-4351026460075062260",
     "boardType": "festivals",
     "title": "서울을 새롭게 맛보는 특별한 7일, 2026 서울미식주간",
     "category": "festival_food",
@@ -75414,7 +74608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "seoul-culture-1765706632465495155",
+    "id": "seoul-culture-1434674249051319648",
     "boardType": "festivals",
     "title": "제26회 한성백제문화제",
     "category": "park_eco",
@@ -75445,7 +74639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8033751405794474634",
+    "id": "seoul-culture-6708847564583510551",
     "boardType": "festivals",
     "title": "[서울시어울림플라자] 어울림 성장캠프 : 일도 JOB GO! 미래도 JOB GO!",
     "category": "festival_culture",
@@ -75476,7 +74670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7966121591951097082",
+    "id": "seoul-culture-8683373501338585789",
     "boardType": "contests",
     "title": "2026 제5회 전국 승가원 [장애공감 어린이 그림공모전 수상작 전시] 나답게, 너답게, 우리답게!",
     "category": "contest_art",
@@ -75507,7 +74701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-914433077511046280",
+    "id": "seoul-culture-1336896485206596855",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 서울 AI 평생학습 러닝그라운드",
     "category": "park_eco",
@@ -75538,7 +74732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-99330676298262342",
+    "id": "seoul-culture-2371436407592983831",
     "boardType": "festivals",
     "title": "[서초구청] 제1303회 서초금요음악회 창작오페라 [산후조리원]",
     "category": "festival_performance",
@@ -75569,7 +74763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7190320221006169824",
+    "id": "seoul-culture-3844852344948428490",
     "boardType": "festivals",
     "title": "[서울도서관] 10월 작가힙톡(Hip-Talk) - (Scalmani / Passera) 근대수필의 기원, 작가 갈릴레오와 언어의 힘 / 자연은 무엇으로 이루어져 있을까? 입자물리학 속으로 떠나는 여행",
     "category": "park_eco",
@@ -76189,7 +75383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7816365552092307855",
+    "id": "seoul-culture-3508846898764842111",
     "boardType": "festivals",
     "title": "[서울시] 서울시 공공미술 작품전시 《평화의 잔상》",
     "category": "expo_science",
@@ -76220,7 +75414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-47"
   },
   {
-    "id": "seoul-culture-939994405790872905",
+    "id": "seoul-culture-2001883565108380261",
     "boardType": "festivals",
     "title": "[동작문화재단] 예술교육 [교과서 밖 라디오 극장 - 스탠바이 유, 스탠바이 큐!] 2기수",
     "category": "festival_tradition",
@@ -76251,7 +75445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-5012979238461888627",
+    "id": "seoul-culture-839276830386205352",
     "boardType": "festivals",
     "title": "전시 [Bubble, Dream, Void]",
     "category": "expo_science",
@@ -76282,7 +75476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3252328538111938414",
+    "id": "seoul-culture-7610992713407286472",
     "boardType": "festivals",
     "title": "서울시민과 함께하는 [2026 서울펫림픽]",
     "category": "park_eco",
@@ -76313,7 +75507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-142492518395073624",
+    "id": "seoul-culture-5009444045847668067",
     "boardType": "festivals",
     "title": "2026 서울 바비큐 페스티벌",
     "category": "festival_culture",
@@ -76344,7 +75538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4817686011089345090",
+    "id": "seoul-culture-6446545849933418454",
     "boardType": "festivals",
     "title": "[서울시립과학관 x 노원천문우주과학관] 2026년 별빛축제",
     "category": "festival_light",
@@ -76375,7 +75569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4597470502406847885",
+    "id": "seoul-culture-3308659696344984182",
     "boardType": "festivals",
     "title": "[미래한강본부] 한강 포레스트 어드벤처 - 2026 한강페스티벌 가을",
     "category": "festival_season",
@@ -76406,7 +75600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5686801360914075554",
+    "id": "seoul-culture-4848274998705680599",
     "boardType": "festivals",
     "title": "이솝 만돌린 앙상블 정기연주회",
     "category": "festival_culture",
@@ -76437,7 +75631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-877835352181904449",
+    "id": "seoul-culture-2684412421968559989",
     "boardType": "festivals",
     "title": "[강동문화재단] 가족오페라 [마술피리]",
     "category": "festival_tradition",
@@ -76468,7 +75662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6996120942281434418",
+    "id": "seoul-culture-8345387228682965852",
     "boardType": "festivals",
     "title": "GYPSY TRAIN × SPAIN",
     "category": "festival_culture",
@@ -76499,7 +75693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7265241223211917137",
+    "id": "seoul-culture-8422483367108039321",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 2026 꿈의숲 시즌콘서트: Fall in Autumn - 심아일랜드",
     "category": "park_eco",
@@ -76530,7 +75724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7127823355508196838",
+    "id": "seoul-culture-5558123156800617644",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 얍 판 츠베덴의 모차르트 레퀴엠 ②",
     "category": "festival_culture",
@@ -76561,7 +75755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7971045318539383125",
+    "id": "seoul-culture-3318535895267202628",
     "boardType": "festivals",
     "title": "[서울시청] 2026 서울 러너스 페스티벌",
     "category": "park_eco",
@@ -76592,7 +75786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8250677116770773170",
+    "id": "seoul-culture-1560759022261387842",
     "boardType": "festivals",
     "title": "[구립증산도서관] 개관 18주년 기념 로비 체험 [점자 키링 만들기]",
     "category": "festival_culture",
@@ -76623,7 +75817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7854298185413470564",
+    "id": "seoul-culture-8097094255298696000",
     "boardType": "festivals",
     "title": "문예북흥 No.72 - 격동기의 뜨거운 파도를 타고 불꽃으로 산화한 젊음의 기록. 은밀하고 특별한 아지트-소설가 이화경의 『비밀구락부』",
     "category": "festival_light",
@@ -76654,7 +75848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6210682442498735486",
+    "id": "seoul-culture-4009021050003918715",
     "boardType": "festivals",
     "title": "희망 Dream: 게임음악 앙상블 콘서트 [PRESS START]",
     "category": "festival_culture",
@@ -76685,7 +75879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-1160281828820867796",
+    "id": "seoul-culture-6990794302051944460",
     "boardType": "festivals",
     "title": "[서울남산국악당] NEO-TRADITION: 맥-놀이",
     "category": "festival_culture",
@@ -76840,7 +76034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-3021794903052092092",
+    "id": "gg-fest-645339223100399855",
     "boardType": "festivals",
     "title": "반려동물 문화행사(페스티벌)",
     "category": "festival_culture",
@@ -76871,7 +76065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5469558187527398012",
+    "id": "gg-fest-7879263387528737123",
     "boardType": "festivals",
     "title": "2025 화성 학생동아리 축제",
     "category": "expo_science",
@@ -76902,7 +76096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6882614144355083510",
+    "id": "gg-fest-8572321329747769585",
     "boardType": "festivals",
     "title": "2026 김포 선셋 페스타",
     "category": "festival_food",
@@ -76933,7 +76127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4226051817934179519",
+    "id": "gg-fest-870033692750312158",
     "boardType": "festivals",
     "title": "제21회 광릉숲축제",
     "category": "sports_marathon",
@@ -76964,7 +76158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2377835227181510210",
+    "id": "gg-fest-1110085953439393435",
     "boardType": "festivals",
     "title": "10월 마토예술제",
     "category": "festival_performance",
@@ -77119,7 +76313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7987857938979346286",
+    "id": "seoul-culture-5163423845028756744",
     "boardType": "festivals",
     "title": "[영등포구청] 2026 영등포 어린이 미술대전",
     "category": "park_eco",
@@ -77150,7 +76344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7229980333120478129",
+    "id": "seoul-culture-4396981337736969271",
     "boardType": "festivals",
     "title": "제21회 박지윤 가야금 독주회 [철현유운(鐵絃流韻)]",
     "category": "festival_culture",
@@ -77181,7 +76375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-990912480547391661",
+    "id": "seoul-culture-6241445849294083860",
     "boardType": "festivals",
     "title": "[서울도서관] 2026 움직이는 서울형책방 16회 : 번역가의 서재",
     "category": "festival_culture",
@@ -77212,7 +76406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3373054083040964908",
+    "id": "seoul-culture-2248065132160619380",
     "boardType": "festivals",
     "title": "2026 종로구 주민소통공모사업 [미운오리새끼 발레단 공연]",
     "category": "festival_performance",
@@ -77429,7 +76623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-24"
   },
   {
-    "id": "seoul-culture-4530157703475869734",
+    "id": "seoul-culture-3354597574030685990",
     "boardType": "festivals",
     "title": "[세종문화회관] 에너미",
     "category": "festival_culture",
@@ -77460,7 +76654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-7575710754074079404",
+    "id": "seoul-culture-7541213607513742148",
     "boardType": "festivals",
     "title": "신교명 개인전 [Active Painting]",
     "category": "festival_culture",
@@ -77491,7 +76685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-8"
   },
   {
-    "id": "seoul-culture-4962854636957421521",
+    "id": "seoul-culture-3181493108564591078",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서울어텀페스타 선정작 [숨비소리, 해녀들의 노래]",
     "category": "festival_tradition",
@@ -77522,7 +76716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-6"
   },
   {
-    "id": "seoul-culture-7756791554326207325",
+    "id": "seoul-culture-4143423729166394120",
     "boardType": "festivals",
     "title": "[왔니껴 안동장터] 기미주안 전통주 체험",
     "category": "festival_tradition",
@@ -77615,7 +76809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-5574531715943975656",
+    "id": "seoul-culture-8527161928079990868",
     "boardType": "festivals",
     "title": "[마포문화재단] 제11회 M 클래식 축제 [전수진의 피아니즘]",
     "category": "festival_tradition",
@@ -77646,7 +76840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-3982267164868596415",
+    "id": "seoul-culture-3046311474825381400",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 마포중앙도서관",
     "category": "festival_culture",
@@ -77677,7 +76871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-7610357890484908810",
+    "id": "seoul-culture-3514023327446381296",
     "boardType": "festivals",
     "title": "2026 명원박물관 TEAGARDEN FESTIVAL [명원 마티네 가을]",
     "category": "expo_science",
@@ -77894,7 +77088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6405859469240763793",
+    "id": "seoul-culture-63641111176379517",
     "boardType": "festivals",
     "title": "[서울시립 사진미술관] 포토 디스커버리 프로젝트 《기계적 시선: 접촉하여 보기》",
     "category": "expo_science",
@@ -77925,7 +77119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-54"
   },
   {
-    "id": "seoul-culture-7337541449951230069",
+    "id": "seoul-culture-1442988442025164147",
     "boardType": "festivals",
     "title": "[서울역사박물관] 2026 딜쿠샤 주변 직장인 대상 점심시간 프로그램 [가을, 커피, 딜쿠샤 인사이드]",
     "category": "expo_science",
@@ -77956,7 +77150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-5694574416172780357",
+    "id": "seoul-culture-2101849564487851515",
     "boardType": "festivals",
     "title": "[역삼푸른솔도서관] 그림책에서 초등 국어까지, 우리 아이 문해력 로드맵",
     "category": "festival_culture",
@@ -77987,7 +77181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-5554800281645425275",
+    "id": "seoul-culture-8329004425811473218",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 김우옥 [혁명의 춤]",
     "category": "festival_tradition",
@@ -78018,7 +77212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6888757210019869364",
+    "id": "seoul-culture-2766442409840312972",
     "boardType": "festivals",
     "title": "[미림아트갤러리] 채운 회원전 《우리가 사랑한 시간 : THE TIME WE LOVED》",
     "category": "festival_culture",
@@ -78049,7 +77243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-6"
   },
   {
-    "id": "seoul-culture-1953069018940974957",
+    "id": "seoul-culture-2829923314599446133",
     "boardType": "festivals",
     "title": "2026 더아트프라자: 팔레트립 by IBK",
     "category": "festival_culture",
@@ -78080,7 +77274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-2494751562019812063",
+    "id": "seoul-culture-5142135511040060257",
     "boardType": "festivals",
     "title": "전시 [IMPRINTS OF TIME]",
     "category": "expo_science",
@@ -78111,7 +77305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-6853696017929044318",
+    "id": "seoul-culture-7752365825189791762",
     "boardType": "festivals",
     "title": "[이:음 예술창작 아카데미] 매개자 과정 2026 이음캠프 [알아차림]",
     "category": "festival_culture",
@@ -78142,7 +77336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-3611052754923094950",
+    "id": "seoul-culture-8302969069118474387",
     "boardType": "festivals",
     "title": "2026 Art Agora Festival",
     "category": "festival_culture",
@@ -78173,7 +77367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-5929750066648860",
+    "id": "seoul-culture-8998448618527291841",
     "boardType": "festivals",
     "title": "제30회 작곡가의방 [조윤제]",
     "category": "festival_culture",
@@ -78204,7 +77398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-3184959134146285711",
+    "id": "seoul-culture-2367145331856467174",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 뮤지엄 콘서트 ① ②",
     "category": "expo_science",
@@ -78235,7 +77429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-3532291801682915230",
+    "id": "seoul-culture-4490105867904331491",
     "boardType": "festivals",
     "title": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃8]",
     "category": "festival_tradition",
@@ -78266,7 +77460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-8823885584813241091",
+    "id": "seoul-culture-6797219564542916269",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Golden October]",
     "category": "festival_tradition",
@@ -78297,7 +77491,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-6228773998506179179",
+    "id": "seoul-culture-7014358036524007245",
     "boardType": "festivals",
     "title": "[서울로봇인공지능과학관] 강연/라임 콜로키엄 [2026년 제7회_AI와 함께 만드는, 맞춤형 로봇]",
     "category": "expo_science",
@@ -78328,7 +77522,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-6084272539477777198",
+    "id": "seoul-culture-3046018839840874054",
     "boardType": "festivals",
     "title": "제10회 2026 서울 문화원 엑스포",
     "category": "expo_science",
@@ -78359,7 +77553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-3905775436093073600",
+    "id": "seoul-culture-5523300837374519076",
     "boardType": "festivals",
     "title": "[구립증산도서관] 10월 책 읽어주는 사서 [수요일은 책이랑 쑥쑥]",
     "category": "festival_culture",
@@ -78390,7 +77584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-7568268204459280482",
+    "id": "seoul-culture-8905644761266905054",
     "boardType": "festivals",
     "title": "[구립증산도서관] 개관 시간 연장 지원 사업 [책이랑 뚝딱! 공방] 10월",
     "category": "festival_culture",
@@ -78421,7 +77615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-674886196679354838",
+    "id": "seoul-culture-41314358834922024",
     "boardType": "festivals",
     "title": "빛과 여백사이 ENTRE… lumiere & vide",
     "category": "festival_light",
@@ -78452,7 +77646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-4794008479271756945",
+    "id": "seoul-culture-1921159491734182334",
     "boardType": "festivals",
     "title": "[대우재단 시민강좌] 생명에게서 찾은 첨단기술의 비밀",
     "category": "festival_culture",
@@ -78483,7 +77677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-5116319595586948413",
+    "id": "seoul-culture-6130457822032869777",
     "boardType": "festivals",
     "title": "[마포문화재단] 제11회 M 클래식 축제 [뮤라벨 콘서트]",
     "category": "festival_tradition",
@@ -78514,7 +77708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-7370630591426326816",
+    "id": "seoul-culture-2714891923897618322",
     "boardType": "festivals",
     "title": "서울오라토리오 제88회 정기연주회 - 멘델스존 「엘리야」",
     "category": "festival_culture",
@@ -78545,7 +77739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-1"
   },
   {
-    "id": "seoul-culture-7604842666898402510",
+    "id": "seoul-culture-6036635085265710869",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 꿈의숲 마티네 콘서트 [벨에포크 아트&뮤직] 시리즈3",
     "category": "expo_science",
@@ -78669,6 +77863,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
+    "id": "tourapi-fest-2874329",
+    "boardType": "festivals",
+    "title": "홍성글로벌바비큐페스티벌",
+    "category": "festival_culture",
+    "categoryName": "지역 종합축제",
+    "badge": "🎪 지역 종합축제",
+    "organizer": "041-634-8705",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충청남도 홍성군 홍성읍 아문길 20-1 홍주성 일원",
+    "startDate": "2026-10-29",
+    "endDate": "2026-11-01",
+    "applyStartDate": "2026-10-29",
+    "applyEndDate": "2026-11-01",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%B0%94%EB%B9%84%ED%81%90%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4103630_image2_1.jpg",
+    "description": "홍성글로벌바비큐페스티벌 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "충청남도",
+      "가족나들이"
+    ],
+    "dday": "D-5"
+  },
+  {
     "id": "tourapi-fest-4134331",
     "boardType": "festivals",
     "title": "코리아 그랜드 페스티벌",
@@ -78698,37 +77923,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-19"
-  },
-  {
-    "id": "tourapi-fest-2874329",
-    "boardType": "festivals",
-    "title": "홍성글로벌바비큐페스티벌",
-    "category": "festival_culture",
-    "categoryName": "지역 종합축제",
-    "badge": "🎪 지역 종합축제",
-    "organizer": "041-634-8705",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 홍성군 홍성읍 아문길 27",
-    "startDate": "2026-10-29",
-    "endDate": "2026-11-01",
-    "applyStartDate": "2026-10-29",
-    "applyEndDate": "2026-11-01",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%ED%99%8D%EC%84%B1%EA%B8%80%EB%A1%9C%EB%B2%8C%EB%B0%94%EB%B9%84%ED%81%90%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/4103630_image2_1.jpg",
-    "description": "홍성글로벌바비큐페스티벌 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "충청남도",
-      "가족나들이"
-    ],
-    "dday": "D-5"
   },
   {
     "id": "tourapi-fest-4106717",
@@ -78762,7 +77956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-5132981598513672602",
+    "id": "seoul-culture-6341178690062617988",
     "boardType": "festivals",
     "title": "[2026 선돌 - 정반합] 은막",
     "category": "festival_culture",
@@ -78793,7 +77987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-647126629057495460",
+    "id": "seoul-culture-2074565932307682771",
     "boardType": "festivals",
     "title": "김진수의 이야기, 그의 노래 [살다 보믄]",
     "category": "festival_culture",
@@ -78824,7 +78018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-5457980826006081067",
+    "id": "seoul-culture-6044339107925799721",
     "boardType": "festivals",
     "title": "2026 빛남만남 (빛나는 남대문 악세사리와의 만남)",
     "category": "festival_light",
@@ -78855,7 +78049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-2852718979961126652",
+    "id": "seoul-culture-190952133209210910",
     "boardType": "festivals",
     "title": "[구립증산도서관] 점자 촉각책 제작 봉사 프로그램 [손끝으로 읽는 세상]",
     "category": "festival_culture",
@@ -78886,7 +78080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "seoul-culture-7910819371770524476",
+    "id": "seoul-culture-5046073890178046180",
     "boardType": "festivals",
     "title": "수림뉴웨이브 2026 - 이화영 [化寧; 편안하게 되리라]",
     "category": "festival_tradition",
@@ -78917,7 +78111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "seoul-culture-7371607103565988268",
+    "id": "seoul-culture-6065384205866926698",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 음악회-뮤지엄 콘서트 (송파책박물관)",
     "category": "expo_science",
@@ -78948,7 +78142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "seoul-culture-1416118215311959297",
+    "id": "seoul-culture-4103616272480131815",
     "boardType": "festivals",
     "title": "[서울역사박물관]  제6회 서울역사박물관 배리어프리영화관 [화이트 버드]",
     "category": "expo_science",
@@ -78979,7 +78173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-2"
   },
   {
-    "id": "seoul-culture-5545937896648588606",
+    "id": "seoul-culture-5047440198205904470",
     "boardType": "festivals",
     "title": "[종로구청] 서울예고와 함께하는 [재밌는 클래식 여행] 종로구민 음악회",
     "category": "festival_culture",
@@ -79008,6 +78202,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-2"
+  },
+  {
+    "id": "tourapi-fest-639648",
+    "boardType": "festivals",
+    "title": "예산사과축제",
+    "category": "farm_harvest",
+    "categoryName": "수확·농촌체험",
+    "badge": "🍎 수확·농촌체험",
+    "organizer": "041-332-3506",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "location": "충남 예산군 응봉면 후사리 39",
+    "startDate": "2026-10-30",
+    "endDate": "2026-10-31",
+    "applyStartDate": "2026-10-30",
+    "applyEndDate": "2026-10-31",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%EC%98%88%EC%82%B0%EC%82%AC%EA%B3%BC%EC%B6%95%EC%A0%9C",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/09/4096209_image2_1.jpg",
+    "description": "예산사과축제 - 한국관광공사 및 충청남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "충청남도",
+      "가족나들이"
+    ],
+    "dday": "D-4"
   },
   {
     "id": "tourapi-fest-4135564",
@@ -79289,7 +78514,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-9107632548999315462",
+    "id": "seoul-culture-3557460092243794339",
     "boardType": "festivals",
     "title": "유별남 사진전 [兪  ;  그러하다]",
     "category": "festival_culture",
@@ -79320,7 +78545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-3384339423461286933",
+    "id": "seoul-culture-5554350731948941663",
     "boardType": "festivals",
     "title": "2026 정동야행(夜行)",
     "category": "festival_light",
@@ -79351,7 +78576,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-3553466516732726862",
+    "id": "seoul-culture-924347231966278162",
     "boardType": "festivals",
     "title": "2026 백년나이트 10월 : WICKED",
     "category": "festival_culture",
@@ -79382,7 +78607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-7322100332805598359",
+    "id": "seoul-culture-8306390380254272390",
     "boardType": "festivals",
     "title": "[서울돈화문국악당] '광대생각' 신작 창작연희극 [코공]",
     "category": "festival_culture",
@@ -79413,7 +78638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-7687760212369017573",
+    "id": "seoul-culture-7518664391987022132",
     "boardType": "festivals",
     "title": "[서울책보고] 10월 모여보고",
     "category": "festival_culture",
@@ -79444,7 +78669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-2363327276009700127",
+    "id": "seoul-culture-4909739038685093878",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 음악회-뮤지엄 콘서트 (서울시립 북서울미술관)",
     "category": "expo_science",
@@ -79475,7 +78700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-2122469230487568557",
+    "id": "seoul-culture-6102845710232974941",
     "boardType": "festivals",
     "title": "[영등포문화재단] 페이퍼 바이닐 제작 워크숍 [Noise Collecting: LP로 재생하는 기억]",
     "category": "festival_tradition",
@@ -79506,7 +78731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-3057296544606225317",
+    "id": "seoul-culture-982432981465717217",
     "boardType": "festivals",
     "title": "[광진정보도서관] 역사는 우리의 삶을 치유할 수 있을까? 전범선 작가와의 만남",
     "category": "festival_tradition",
@@ -79537,7 +78762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "seoul-culture-4454469941386868291",
+    "id": "seoul-culture-7050475492643385889",
     "boardType": "festivals",
     "title": "[한성백제박물관] KBS국악관현악단과 함께하는 박물관 달빛 음악회",
     "category": "festival_light",
@@ -79568,18 +78793,80 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "tourapi-fest-3348362",
+    "id": "tourapi-fest-3383613",
     "boardType": "festivals",
-    "title": "성북거리문화축제 다다페스타",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "02-6906-9298",
+    "title": "고양행주한우 숯불구이축제",
+    "category": "festival_food",
+    "categoryName": "미식·먹거리축제",
+    "badge": "🍱 미식·먹거리",
+    "organizer": "031-960-3034,3050",
     "sourceType": "tour_api",
     "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 성북구 장월로 149 (장위동) 꿈의숲아이파크-래미안장위퍼스트하이 사이길",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "location": "경기도 고양시 덕양구 원당로 16 (주교동)",
+    "startDate": "2026-10-31",
+    "endDate": "2026-11-01",
+    "applyStartDate": "2026-10-31",
+    "applyEndDate": "2026-11-01",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%EA%B3%A0%EC%96%91%ED%96%89%EC%A3%BC%ED%95%9C%EC%9A%B0%20%EC%88%AF%EB%B6%88%EA%B5%AC%EC%9D%B4%EC%B6%95%EC%A0%9C",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/4066273_image2_1.JPG",
+    "description": "고양행주한우 숯불구이축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경기도",
+      "가족나들이"
+    ],
+    "dday": "D-5"
+  },
+  {
+    "id": "tourapi-fest-637693",
+    "boardType": "festivals",
+    "title": "마산가고파국화축제",
+    "category": "festival_season",
+    "categoryName": "꽃·단풍·계절축제",
+    "badge": "🌸 계절·꽃축제",
+    "organizer": "055-225-2341",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 창원시 마산합포구 월남동1가 46-3",
+    "startDate": "2026-10-31",
+    "endDate": "2026-11-08",
+    "applyStartDate": "2026-10-31",
+    "applyEndDate": "2026-11-08",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%EB%A7%88%EC%82%B0%EA%B0%80%EA%B3%A0%ED%8C%8C%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4114954_image2_1.jpg",
+    "description": "마산가고파국화축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경상남도",
+      "가족나들이"
+    ],
+    "dday": "D-12"
+  },
+  {
+    "id": "tourapi-fest-4133567",
+    "boardType": "festivals",
+    "title": "메이커 플레이",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "042-601-7910",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 유성구 대덕대로 481 (구성동) 국립중앙과학관 꿈이광장",
     "startDate": "2026-10-31",
     "endDate": "2026-10-31",
     "applyStartDate": "2026-10-31",
@@ -79587,13 +78874,13 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%B1%EB%B6%81%EA%B1%B0%EB%A6%AC%EB%AC%B8%ED%99%94%EC%B6%95%EC%A0%9C%20%EB%8B%A4%EB%8B%A4%ED%8E%98%EC%8A%A4%ED%83%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/37/4113337_image2_1.JPG",
-    "description": "성북거리문화축제 다다페스타 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
+    "url": "https://search.naver.com/search.naver?query=%EB%A9%94%EC%9D%B4%EC%BB%A4%20%ED%94%8C%EB%A0%88%EC%9D%B4",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4133576_image2_1.png",
+    "description": "메이커 플레이 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
       "지역축제",
       "공공데이터",
-      "서울특별시",
+      "대전광역시",
       "가족나들이"
     ],
     "dday": "D-4"
@@ -79628,68 +78915,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-5"
-  },
-  {
-    "id": "tourapi-fest-4134834",
-    "boardType": "festivals",
-    "title": "지평전통발효축제",
-    "category": "festival_tradition",
-    "categoryName": "전통·역사문화",
-    "badge": "🎎 전통·역사문화",
-    "organizer": "010-3868-2099",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 양평군 지평면 지평의병로116번길 1 지평면사무소 앞 광장 및 시장일원",
-    "startDate": "2026-10-31",
-    "endDate": "2026-11-01",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-11-01",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EC%A7%80%ED%8F%89%EC%A0%84%ED%86%B5%EB%B0%9C%ED%9A%A8%EC%B6%95%EC%A0%9C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4134835_image2_1.jpg",
-    "description": "지평전통발효축제 - 한국관광공사 및 경기도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경기도",
-      "가족나들이"
-    ],
-    "dday": "D-5"
-  },
-  {
-    "id": "tourapi-fest-4133567",
-    "boardType": "festivals",
-    "title": "메이커 플레이",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "042-601-7910",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 유성구 대덕대로 481 (구성동) 국립중앙과학관 꿈이광장",
-    "startDate": "2026-10-31",
-    "endDate": "2026-10-31",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-10-31",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EB%A9%94%EC%9D%B4%EC%BB%A4%20%ED%94%8C%EB%A0%88%EC%9D%B4",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/4133576_image2_1.png",
-    "description": "메이커 플레이 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "대전광역시",
-      "가족나들이"
-    ],
-    "dday": "D-4"
   },
   {
     "id": "tourapi-fest-2874909",
@@ -79785,37 +79010,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "tourapi-fest-4116358",
-    "boardType": "festivals",
-    "title": "밀양 매운맛 축제",
-    "category": "festival_culture",
-    "categoryName": "지역 종합축제",
-    "badge": "🎪 지역 종합축제",
-    "organizer": "055-359-4582",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 밀양시 삼문동 1-1 밀양강변 일원",
-    "startDate": "2026-10-31",
-    "endDate": "2026-11-01",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-11-01",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EB%B0%80%EC%96%91%20%EB%A7%A4%EC%9A%B4%EB%A7%9B%20%EC%B6%95%EC%A0%9C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/59/4116359_image2_1.jpg",
-    "description": "밀양 매운맛 축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경상남도",
-      "가족나들이"
-    ],
-    "dday": "D-5"
-  },
-  {
     "id": "tourapi-fest-4121348",
     "boardType": "festivals",
     "title": "동두천시 책문화축제",
@@ -79845,37 +79039,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "D-4"
-  },
-  {
-    "id": "tourapi-fest-637693",
-    "boardType": "festivals",
-    "title": "마산가고파국화축제",
-    "category": "festival_season",
-    "categoryName": "꽃·단풍·계절축제",
-    "badge": "🌸 계절·꽃축제",
-    "organizer": "055-225-2341",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 창원시 마산합포구 월남동1가 46-3",
-    "startDate": "2026-10-31",
-    "endDate": "2026-11-08",
-    "applyStartDate": "2026-10-31",
-    "applyEndDate": "2026-11-08",
-    "status": "applying",
-    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
-    "fee": "상세 문의 (현장 안내)",
-    "url": "https://search.naver.com/search.naver?query=%EB%A7%88%EC%82%B0%EA%B0%80%EA%B3%A0%ED%8C%8C%EA%B5%AD%ED%99%94%EC%B6%95%EC%A0%9C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4114954_image2_1.jpg",
-    "description": "마산가고파국화축제 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
-    "tags": [
-      "지역축제",
-      "공공데이터",
-      "경상남도",
-      "가족나들이"
-    ],
-    "dday": "D-12"
   },
   {
     "id": "tourapi-fest-1841539",
@@ -79909,7 +79072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-8032250838958376187",
+    "id": "seoul-culture-4380208726436234678",
     "boardType": "festivals",
     "title": "외국인과 함께하는 서대문역사 및 영천시장 미식 투어",
     "category": "festival_food",
@@ -79940,7 +79103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3730125747202309289",
+    "id": "seoul-culture-3608577433267892887",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 통합예술교육 프로그램 [별난 극장 놀이터]",
     "category": "park_eco",
@@ -79971,7 +79134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3033498982919485243",
+    "id": "seoul-culture-3915250143353996239",
     "boardType": "festivals",
     "title": "[국립박물관문화재단] 소리: 성덕대왕신종",
     "category": "expo_science",
@@ -80002,7 +79165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-8503405340549808357",
+    "id": "seoul-culture-4583897329516895122",
     "boardType": "festivals",
     "title": "[서울생활사박물관] 문화가 흐르는 박물관 [가을음악회]",
     "category": "expo_science",
@@ -80033,7 +79196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-1986465222600642681",
+    "id": "seoul-culture-9207439982921606343",
     "boardType": "festivals",
     "title": "[동작문화재단] 2026 동작 빵도동 축제",
     "category": "festival_food",
@@ -80064,7 +79227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-5207613711094793568",
+    "id": "seoul-culture-185246365996769394",
     "boardType": "festivals",
     "title": "2026 한강 물빛 재즈 크루즈",
     "category": "festival_light",
@@ -80095,7 +79258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-6943571996151332348",
+    "id": "seoul-culture-5240531068310850859",
     "boardType": "festivals",
     "title": "앙상블 어우름의 Adagio Knitting",
     "category": "festival_culture",
@@ -80126,7 +79289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-8452237627599961871",
+    "id": "seoul-culture-5707584688705744688",
     "boardType": "festivals",
     "title": "서초심포니오케스트라13주년 정기연주회 [Andante Catabile]",
     "category": "festival_performance",
@@ -80157,7 +79320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-9130571568601624171",
+    "id": "seoul-culture-1548995597461806899",
     "boardType": "festivals",
     "title": "2026 고척근린시장 새집들이 고고야시장",
     "category": "festival_culture",
@@ -80312,7 +79475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-164493237388398953",
+    "id": "gg-fest-7106584077961788587",
     "boardType": "festivals",
     "title": "제3회 화성 루나 빛 축제",
     "category": "festival_light",
@@ -80343,7 +79506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-6689677774527910903",
+    "id": "gg-fest-8644119101702533282",
     "boardType": "festivals",
     "title": "2026 김포 해병대문화축제",
     "category": "expo_science",
@@ -80374,7 +79537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-241537644379916178",
+    "id": "gg-fest-5103080735069568604",
     "boardType": "festivals",
     "title": "평택 원평나루 억새축제",
     "category": "festival_season",
@@ -80405,7 +79568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-9179337289023551282",
+    "id": "gg-fest-3709901255407265628",
     "boardType": "festivals",
     "title": "2026년 제8회 운정호수공원 불꽃축제",
     "category": "festival_light",
@@ -80436,7 +79599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-2785356862047815074",
+    "id": "gg-fest-8576060602657991782",
     "boardType": "festivals",
     "title": "2026년 가을걷이 한마당",
     "category": "expo_science",
@@ -80529,7 +79692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-22"
   },
   {
-    "id": "seoul-culture-8394086104843690618",
+    "id": "seoul-culture-8571899423328877454",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 구산동도서관마을 개관 11주년 기념 행사",
     "category": "festival_culture",
@@ -80560,7 +79723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "seoul-culture-8423932957484550607",
+    "id": "seoul-culture-1776644246453172370",
     "boardType": "festivals",
     "title": "[송파 청년아티스트센터] 예술가와 함께하는 풍납 탐구 생활 11월 프로그램",
     "category": "festival_culture",
@@ -80591,7 +79754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "seoul-culture-5707012367499046161",
+    "id": "seoul-culture-6573690977928377007",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월 문화프로그램 안내",
     "category": "festival_culture",
@@ -80622,7 +79785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "seoul-culture-6053606768070787847",
+    "id": "seoul-culture-6862261724582003745",
     "boardType": "festivals",
     "title": "2026 청와대 사랑채 국민화합 체험형 문화프로그램",
     "category": "festival_culture",
@@ -80653,7 +79816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-2627644811321423409",
+    "id": "seoul-culture-368682838170866547",
     "boardType": "festivals",
     "title": "진채화 원데이 클래스 [잼스톤 컬렉션2]",
     "category": "festival_culture",
@@ -80684,7 +79847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-7389072013543528334",
+    "id": "seoul-culture-7416828170831385024",
     "boardType": "festivals",
     "title": "2026 서울특별시 무형유산 삼현육각 전수발표회",
     "category": "festival_tradition",
@@ -80715,7 +79878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-9196177719007443701",
+    "id": "seoul-culture-2632592834856658668",
     "boardType": "festivals",
     "title": "2026 이북5도민어울림한마당축제",
     "category": "park_eco",
@@ -80746,7 +79909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-2853932430611961141",
+    "id": "seoul-culture-3844024736557940798",
     "boardType": "festivals",
     "title": "리비툼 오케스트라 제5회 정기연주회 : 모차르트 바이올린 협주곡 4번 & 멘델스존 교향곡 4번",
     "category": "festival_performance",
@@ -80777,7 +79940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-5"
   },
   {
-    "id": "seoul-culture-692467290169025118",
+    "id": "seoul-culture-2058234951387404070",
     "boardType": "festivals",
     "title": "2026 시 읽는 서울지하철",
     "category": "festival_tradition",
@@ -81242,7 +80405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-5421025673330134130",
+    "id": "gg-fest-7252555726935428536",
     "boardType": "festivals",
     "title": "우리가족 꼬마영웅 올림픽",
     "category": "festival_culture",
@@ -81273,7 +80436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "rss-seoul-1014926787441319965",
+    "id": "rss-seoul-258132017625158413",
     "boardType": "festivals",
     "title": "리비툼 오케스트라 제5회 정기연주회 : 모차르트 바이올린 협주곡 4번 &amp; 멘델스존 교향곡 4번",
     "category": "festival_performance",
@@ -81334,7 +80497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-8"
   },
   {
-    "id": "seoul-culture-8619154497857502007",
+    "id": "seoul-culture-2286221063898295561",
     "boardType": "festivals",
     "title": "[서울문화재단] 무대를 꿈꾸는 예술가들을 위한 6개의 창작 클래스",
     "category": "festival_tradition",
@@ -81365,7 +80528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "seoul-culture-8077387873548930797",
+    "id": "seoul-culture-3125154914982394837",
     "boardType": "festivals",
     "title": "SAD BOOK ― 다시 쓰기: 몸으로서의 도시",
     "category": "park_eco",
@@ -81396,7 +80559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-4817511510880091714",
+    "id": "seoul-culture-3874137993428976913",
     "boardType": "festivals",
     "title": "제5회 서울시니어연극제 [어린 노인]",
     "category": "festival_performance",
@@ -81427,7 +80590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-3548255752911308174",
+    "id": "seoul-culture-6996779025389772574",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 22026 서울시향 우리동네 실내악 - 중랑구청",
     "category": "festival_culture",
@@ -81551,7 +80714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "seoul-culture-4701203139772555803",
+    "id": "seoul-culture-3826195847857284615",
     "boardType": "festivals",
     "title": "[중랑문화재단] 2026 중랑아트센터 [나대기 예술아카데미] 11월 프로그램",
     "category": "festival_tradition",
@@ -81582,7 +80745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-2564707257534843770",
+    "id": "seoul-culture-5579488529070343267",
     "boardType": "festivals",
     "title": "제14회 인도영화제",
     "category": "festival_performance",
@@ -81613,7 +80776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-6091708986289788198",
+    "id": "seoul-culture-4079211287099283637",
     "boardType": "festivals",
     "title": "[3기] 서울아트책보고 북클럽 X 현대문학 : 세 번째 시간 『매스커레이드 호텔』 읽기 / 한이 소설가 · 편집자",
     "category": "festival_culture",
@@ -81644,7 +80807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-7"
   },
   {
-    "id": "seoul-culture-28182087862248531",
+    "id": "seoul-culture-8406889097239992655",
     "boardType": "festivals",
     "title": "제1회 스토리투씨네마 페스티벌",
     "category": "festival_culture",
@@ -81675,7 +80838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-7"
   },
   {
-    "id": "seoul-culture-9179267055788394312",
+    "id": "seoul-culture-5874258483224613433",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 심산영화관 [인생은 아름다워]",
     "category": "festival_tradition",
@@ -81861,7 +81024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-8108284013153353201",
+    "id": "seoul-culture-5755544904572369432",
     "boardType": "festivals",
     "title": "[청계천박물관] 2026년 11월 초등1~3학년 학급단체 교육 [씽씽! 청계천 시간여행]",
     "category": "expo_science",
@@ -81892,7 +81055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-8054790006778772103",
+    "id": "seoul-culture-2730990580009886493",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [국민연금공단과 함께하는 노후 준비 특강]",
     "category": "festival_culture",
@@ -81923,7 +81086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-3191896425933635358",
+    "id": "seoul-culture-1532023152273609232",
     "boardType": "festivals",
     "title": "오려내고 기워낸 나만의 시",
     "category": "festival_culture",
@@ -81954,7 +81117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-1010222069752241591",
+    "id": "seoul-culture-681399142153501173",
     "boardType": "festivals",
     "title": "[동작문화재단] 2026 상도어울마당 아트홀 개관 3주년 기획 프로그램 [상도 놀이터]",
     "category": "festival_tradition",
@@ -81985,7 +81148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-22"
   },
   {
-    "id": "seoul-culture-5604750289183845907",
+    "id": "seoul-culture-1409775262768282813",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [신문으로 배우는 초등 경제교육]",
     "category": "festival_culture",
@@ -82016,7 +81179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-22"
   },
   {
-    "id": "seoul-culture-1542727128687096865",
+    "id": "seoul-culture-7295974662182524014",
     "boardType": "festivals",
     "title": "[서울돈화문국악당] 12가사 완창 프로젝트 Ⅱ 문현의 4가사 절반창과 경제시조 [삶:歌]",
     "category": "festival_culture",
@@ -82047,7 +81210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-8"
   },
   {
-    "id": "seoul-culture-7940514993491039376",
+    "id": "seoul-culture-4192146745758631732",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [피아니스트 양지우의 with IN&OUT II]",
     "category": "festival_tradition",
@@ -82078,7 +81241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-8"
   },
   {
-    "id": "seoul-culture-8192819240651152245",
+    "id": "seoul-culture-4440968454502571411",
     "boardType": "festivals",
     "title": "손철주의 오래된 그림공부 [화가들의 재미난 속임수]",
     "category": "festival_culture",
@@ -82202,7 +81365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "rss-seoul-5162928791604720535",
+    "id": "rss-seoul-462890914538091051",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [피아니스트 양지우의 with IN&amp;OUT II]",
     "category": "festival_tradition",
@@ -82356,7 +81519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-4337864830633720501",
+    "id": "seoul-culture-577917005517204037",
     "boardType": "festivals",
     "title": "[서울시립 서서울미술관] 2026 서서울미술관 뉴미디어 신진작가전 《탈피하지 못하는 뱀은》",
     "category": "expo_science",
@@ -82387,7 +81550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-124"
   },
   {
-    "id": "seoul-culture-392426387182644409",
+    "id": "seoul-culture-45601738219188523",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [옛 밥상, 오늘의 삶을 차리다_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_culture",
@@ -82418,7 +81581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-4221379023687561794",
+    "id": "seoul-culture-2943436536411235292",
     "boardType": "festivals",
     "title": "2026 삼청각 명상 문화강좌 [마음을, 걷다]",
     "category": "festival_culture",
@@ -82449,7 +81612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-5504567994521455797",
+    "id": "seoul-culture-484245921163153492",
     "boardType": "festivals",
     "title": "명지대학교 영상애니메이션디자인전공 제 25회 졸업전시회 [PUZZLE]",
     "category": "expo_science",
@@ -82480,7 +81643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-13"
   },
   {
-    "id": "seoul-culture-8832736328774364998",
+    "id": "seoul-culture-645149015648727200",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [라보엠]",
     "category": "festival_culture",
@@ -82511,7 +81674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6794522205218405502",
+    "id": "seoul-culture-5797980610065116517",
     "boardType": "festivals",
     "title": "홍현기 개인전 [환기(換氣): 바람이 지나간 자리]",
     "category": "festival_culture",
@@ -82542,7 +81705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8459736898279643640",
+    "id": "seoul-culture-245309634960832313",
     "boardType": "festivals",
     "title": "[금천문화재단] 2026 어린이청소년극장네트워크 협력사업 [길 위의 아이]",
     "category": "festival_tradition",
@@ -82573,7 +81736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-2422377210148887478",
+    "id": "seoul-culture-101202517360819592",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 『니체 초인 수업』 강용수 저자와의 만남",
     "category": "festival_culture",
@@ -82604,7 +81767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-1111049253364700941",
+    "id": "seoul-culture-4052120187654572466",
     "boardType": "festivals",
     "title": "송파구립합창단 37주년 정기연주회 [밤을 품어내는 아침처럼]",
     "category": "farm_harvest",
@@ -82635,7 +81798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-3265452030992839049",
+    "id": "seoul-culture-8058376633958741638",
     "boardType": "festivals",
     "title": "예술, 마음으로 전하는 가장 특별한 선물",
     "category": "festival_culture",
@@ -82666,7 +81829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-3835958444043088380",
+    "id": "seoul-culture-7854297166358831815",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 노원문화예술회관",
     "category": "festival_performance",
@@ -82697,7 +81860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-8497794999879018191",
+    "id": "seoul-culture-686423439696671474",
     "boardType": "festivals",
     "title": "수림뉴웨이브 2026 - 이나연 [귀류 歸流]",
     "category": "festival_tradition",
@@ -83038,7 +82201,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-2423265955660318860",
+    "id": "seoul-culture-5565650740162010565",
     "boardType": "festivals",
     "title": "[한성백제박물관] 박물관에서 함께 보는 영화 그리고 이야기 [박물관 무비톡]",
     "category": "expo_science",
@@ -83069,7 +82232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-863378305627694752",
+    "id": "seoul-culture-1861202986199348210",
     "boardType": "festivals",
     "title": "국제 프리스타일 축구 월드 챔피언쉽 [2026 KILL THAT BALL: SEOUL]",
     "category": "festival_performance",
@@ -83100,7 +82263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8892255712497758920",
+    "id": "seoul-culture-3190919556704622518",
     "boardType": "festivals",
     "title": "제18회 언리미티드 에디션 - 서울아트북페어 2026",
     "category": "expo_science",
@@ -83131,7 +82294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-684426099134530977",
+    "id": "seoul-culture-4824082113591919830",
     "boardType": "festivals",
     "title": "국립무용단 [2026 안무가 프로젝트]",
     "category": "festival_culture",
@@ -83162,7 +82325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-4912314045847710509",
+    "id": "seoul-culture-6592684830384027146",
     "boardType": "festivals",
     "title": "강아솔 [안부인사]",
     "category": "festival_culture",
@@ -83193,7 +82356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-9083428734375123703",
+    "id": "seoul-culture-5819355859779990993",
     "boardType": "festivals",
     "title": "[서울형 키즈카페 한성백제박물관점] 영유아 예술체험 프로그램 [동그라미 세모 네모]",
     "category": "expo_science",
@@ -83224,7 +82387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-8032697357049759027",
+    "id": "seoul-culture-7197277610626002478",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 양천문화회관",
     "category": "festival_culture",
@@ -83844,7 +83007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3954337716157519133",
+    "id": "seoul-culture-8421480457374231232",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/영유아 [엄마 아빠, 책이랑 놀자!]",
     "category": "festival_culture",
@@ -83875,7 +83038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-4520569606909270113",
+    "id": "seoul-culture-3416787048542845010",
     "boardType": "festivals",
     "title": "연극 [점프x컷]",
     "category": "festival_tradition",
@@ -83906,7 +83069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-5141360684329963852",
+    "id": "seoul-culture-2777693462163833887",
     "boardType": "festivals",
     "title": "제2회 호호랑 친구들 - 수집가마켓",
     "category": "festival_culture",
@@ -83937,7 +83100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8706552260788118853",
+    "id": "seoul-culture-61139326812926095",
     "boardType": "festivals",
     "title": "제27회 은평구 청강정철호 국악제",
     "category": "festival_performance",
@@ -83968,7 +83131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3210784478477075050",
+    "id": "seoul-culture-6226831864536315956",
     "boardType": "festivals",
     "title": "2026 코리아발레스타즈 [호두까기인형]",
     "category": "park_eco",
@@ -83999,7 +83162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-5373910675513048589",
+    "id": "seoul-culture-1018363650097112109",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 은평 월간 다문화 미등록 [이주아동 이야기 은유 작가님과 함께하는 북토크]",
     "category": "festival_culture",
@@ -84030,7 +83193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-2175516826706146786",
+    "id": "seoul-culture-677916284800416401",
     "boardType": "festivals",
     "title": "박희수의 정가 [설화(說花)] 말은 입김이 되어 눈꽃처럼 흩어진다",
     "category": "festival_season",
@@ -84061,7 +83224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-7266976726881385272",
+    "id": "seoul-culture-2682633701560900454",
     "boardType": "festivals",
     "title": "[고려대학교] 2026 모두의 AI·AX 캠프(초·중·고 대상)",
     "category": "park_eco",
@@ -84526,7 +83689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-6"
   },
   {
-    "id": "seoul-culture-8979182651243533260",
+    "id": "seoul-culture-6091903943400492654",
     "boardType": "festivals",
     "title": "장우리 첼로 독주회",
     "category": "festival_culture",
@@ -84619,7 +83782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-2219909954848282775",
+    "id": "seoul-culture-919129844973381483",
     "boardType": "festivals",
     "title": "2026 서울시민 생활음악 심포니 페스티벌 [음악으로 사람을 잇다]",
     "category": "festival_culture",
@@ -84650,7 +83813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-6696210626650013809",
+    "id": "seoul-culture-7697298543908679587",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 클래식 with 대전시립교향악단",
     "category": "expo_science",
@@ -84681,7 +83844,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-3149609533959141742",
+    "id": "seoul-culture-2350889199631010301",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 마포 배리어프리 콘서트 [다른 음색, 하나의 울림] 유망 청년 예술가 초청 음악회",
     "category": "festival_tradition",
@@ -84712,7 +83875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-731809423325114376",
+    "id": "seoul-culture-9205144592222138437",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 서울여자대학교",
     "category": "festival_culture",
@@ -84743,7 +83906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-1532258359629570784",
+    "id": "seoul-culture-6253592401712793126",
     "boardType": "festivals",
     "title": "[강북문화재단] 마티네 콘서트 [From Italy to Spain]",
     "category": "festival_tradition",
@@ -84774,7 +83937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-2865729536396672827",
+    "id": "seoul-culture-302869529846510213",
     "boardType": "festivals",
     "title": "[성동문화재단] 세계 영화 상영회 9회차 '이탈리아 영화' [비발디와 나]",
     "category": "festival_tradition",
@@ -84805,7 +83968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-2776492010714181288",
+    "id": "seoul-culture-360660191666761415",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Remembering Bud Powell]",
     "category": "festival_tradition",
@@ -84836,7 +83999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-2944097151965266018",
+    "id": "seoul-culture-2142048879653330473",
     "boardType": "festivals",
     "title": "[성동구립도서관] 문화가 있는 날 [김헌 작가와의 만남]",
     "category": "festival_culture",
@@ -84898,7 +84061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6110317847229930164",
+    "id": "seoul-culture-6088006999585045085",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/도서관초대석 (김영찬 작가) [가르치지 않을 용기]",
     "category": "festival_culture",
@@ -84929,7 +84092,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-8757281762298712064",
+    "id": "seoul-culture-5865489987657931677",
     "boardType": "festivals",
     "title": "김대중의 망명일기와 기록물 특별전 '내면의 기록' 연계 강연 및 토크콘서트",
     "category": "expo_science",
@@ -84960,7 +84123,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-8160617623604533692",
+    "id": "seoul-culture-5342645340170049395",
     "boardType": "festivals",
     "title": "[서울디자인창업센터] 서울디자인런 2026 - 팔지 않고 사게 만든다",
     "category": "festival_culture",
@@ -84991,7 +84154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-6142139329553306262",
+    "id": "seoul-culture-587967800947868096",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 개관 11주년 기념 북토크 [사랑과 결함] 예소연 저자와의 만남",
     "category": "festival_culture",
@@ -85084,6 +84247,68 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
+    "id": "tourapi-fest-2995190",
+    "boardType": "festivals",
+    "title": "누들대전축제",
+    "category": "festival_light",
+    "categoryName": "빛·야경·드론쇼",
+    "badge": "✨ 빛·야경축제",
+    "organizer": "042-251-3801",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "location": "대전광역시 중구 계룡로904번길 30 (문화동) 대전 한빛탑광장",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-15",
+    "applyStartDate": "2026-11-13",
+    "applyEndDate": "2026-11-15",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%EB%88%84%EB%93%A4%EB%8C%80%EC%A0%84%EC%B6%95%EC%A0%9C",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/4138635_image2_1.jpg",
+    "description": "누들대전축제 - 한국관광공사 및 대전광역시 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "대전광역시",
+      "가족나들이"
+    ],
+    "dday": "D-19"
+  },
+  {
+    "id": "tourapi-fest-4113301",
+    "boardType": "festivals",
+    "title": "2026 렉키의 수상한 피크닉",
+    "category": "festival_culture",
+    "categoryName": "지역 종합축제",
+    "badge": "🎪 지역 종합축제",
+    "organizer": "0507-1393-7113",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "location": "경상남도 창원시 마산합포구 돝섬1길 275 (월영동)",
+    "startDate": "2026-11-13",
+    "endDate": "2026-11-14",
+    "applyStartDate": "2026-11-13",
+    "applyEndDate": "2026-11-14",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=2026%20%EB%A0%89%ED%82%A4%EC%9D%98%20%EC%88%98%EC%83%81%ED%95%9C%20%ED%94%BC%ED%81%AC%EB%8B%89",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/4113384_image2_1.jpg",
+    "description": "2026 렉키의 수상한 피크닉 - 한국관광공사 및 경상남도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "경상남도",
+      "가족나들이"
+    ],
+    "dday": "D-18"
+  },
+  {
     "id": "tourapi-fest-2769990",
     "boardType": "festivals",
     "title": "2026 대한민국 우리술 대축제",
@@ -85115,7 +84340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-5461301077041668823",
+    "id": "seoul-culture-7077371053852422295",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 M 초이스 연극 [투신 Two Scenes]",
     "category": "festival_tradition",
@@ -85146,7 +84371,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-8198623462702440252",
+    "id": "seoul-culture-8441165206948529879",
     "boardType": "festivals",
     "title": "[세종문화회관] CHANGMO : MONOLITH",
     "category": "festival_culture",
@@ -85177,7 +84402,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-8103801442906820653",
+    "id": "seoul-culture-405033263643239639",
     "boardType": "festivals",
     "title": "hnei(이석희) 작곡발표회 [비누, 비노, 배누, 비눌, 비널 그리고 사분]",
     "category": "festival_culture",
@@ -85208,7 +84433,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-4797302674784434026",
+    "id": "seoul-culture-4133942274664267341",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
     "category": "expo_science",
@@ -85239,7 +84464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-4861675909524755266",
+    "id": "seoul-culture-3065072513635967669",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (차우진) 관점은 동사다; 무엇에 귀 기울이고 무엇을 보아야 할까",
     "category": "festival_culture",
@@ -85270,7 +84495,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-427507800801017137",
+    "id": "seoul-culture-6700672722079049621",
     "boardType": "festivals",
     "title": "[구로천왕도서관] 은유 작가와의 만남 [해방의 밤]",
     "category": "farm_harvest",
@@ -85301,7 +84526,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-5660004110662432411",
+    "id": "seoul-culture-3066718700590034004",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
     "category": "festival_culture",
@@ -85332,7 +84557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-7550885878469217493",
+    "id": "seoul-culture-5664304160761946204",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 SPO Day",
     "category": "festival_culture",
@@ -85363,7 +84588,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "rss-seoul-968050893323757107",
+    "id": "rss-seoul-271132961899036726",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 &amp; 작가와의 대화]",
     "category": "expo_science",
@@ -85889,7 +85114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-784565658337256520",
+    "id": "seoul-culture-6371060474674951386",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 화염",
     "category": "festival_tradition",
@@ -85920,7 +85145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-57660652777428680",
+    "id": "seoul-culture-2257065463684458790",
     "boardType": "festivals",
     "title": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
     "category": "festival_tradition",
@@ -85951,7 +85176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-9121877400449136404",
+    "id": "seoul-culture-3546927743778523772",
     "boardType": "contests",
     "title": "조선왕릉 톺아보기: 조선왕릉 골든벨",
     "category": "contest_reading",
@@ -85982,7 +85207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-2162884823939823444",
+    "id": "seoul-culture-3648294807743381591",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이메이킹 해봄이웃집Maker [그림책으로 만나는 슈링클스 키캡 만들기]",
     "category": "festival_season",
@@ -86323,7 +85548,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-7248978398163568420",
+    "id": "seoul-culture-1548717991751201604",
     "boardType": "festivals",
     "title": "라 리저브 : 케이티 조지, 루시 예기아자리안, 마리아 킴",
     "category": "festival_culture",
@@ -86385,7 +85610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-2591288399973478605",
+    "id": "seoul-culture-501192999953305086",
     "boardType": "festivals",
     "title": "[3기] 서울아트책보고 북클럽 X 현대문학 : 네 번째 시간 『백조와 박쥐』 읽기 / 한이 소설가 · 편집자",
     "category": "festival_culture",
@@ -86416,7 +85641,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-6703671898431350483",
+    "id": "seoul-culture-4110950795761104221",
     "boardType": "festivals",
     "title": "[서초문화재단] 고음악 오디세이 [음악의 언어_Rhetoric(수사학)]",
     "category": "festival_tradition",
@@ -86447,7 +85672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-5074731527901888400",
+    "id": "seoul-culture-7120987369901940847",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 동남권캠퍼스 문화의계절 시리즈 [겨울, 설렘을 노래하는 뮤지컬]",
     "category": "festival_performance",
@@ -86478,7 +85703,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-9165032433229978606",
+    "id": "seoul-culture-2933422718266695054",
     "boardType": "festivals",
     "title": "2026 서울국제예술포럼(SAFT)",
     "category": "festival_culture",
@@ -86664,7 +85889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-7052419012958327457",
+    "id": "seoul-culture-2948860297425278372",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [트리플 빌 올 포 한스 판 마넨]",
     "category": "festival_culture",
@@ -86695,7 +85920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-6461479362574515024",
+    "id": "seoul-culture-7761289779724268468",
     "boardType": "festivals",
     "title": "[살롱클래식] 예 트리오 - Moonlight Across Time",
     "category": "festival_culture",
@@ -86726,7 +85951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-23"
   },
   {
-    "id": "seoul-culture-5395229714028033973",
+    "id": "seoul-culture-393619847368607356",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [찾아가는 서울국제노인영화제_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_performance",
@@ -86912,7 +86137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-152"
   },
   {
-    "id": "seoul-culture-6609955067227870096",
+    "id": "seoul-culture-6571430505250011168",
     "boardType": "festivals",
     "title": "[성북문화재단] 브런치콘서트 [11시11분] - 비바 바르셀로나",
     "category": "festival_light",
@@ -86943,7 +86168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-7353652925117688909",
+    "id": "seoul-culture-1566101238691644636",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (백영선) 우리 일과 삶을 확장시키는 관계의 기획 '커뮤니티 빌딩'",
     "category": "festival_culture",
@@ -87315,6 +86540,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
+    "id": "tourapi-fest-3395188",
+    "boardType": "festivals",
+    "title": "순창 KOREA 떡볶이 페스타",
+    "category": "festival_tradition",
+    "categoryName": "전통·역사문화",
+    "badge": "🎎 전통·역사문화",
+    "organizer": "063-653-1827",
+    "sourceType": "tour_api",
+    "sourceLabel": "한국관광공사 TourAPI 공공데이터",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "location": "전북특별자치도 순창군 순창읍 장류로 55 순창발효테마파크 및 전통고추장민속마을 일원",
+    "startDate": "2026-11-21",
+    "endDate": "2026-11-22",
+    "applyStartDate": "2026-11-21",
+    "applyEndDate": "2026-11-22",
+    "status": "applying",
+    "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
+    "fee": "상세 문의 (현장 안내)",
+    "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B0%BD%20KOREA%20%EB%96%A1%EB%B3%B6%EC%9D%B4%20%ED%8E%98%EC%8A%A4%ED%83%80",
+    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/39/3515039_image2_1.jpg",
+    "description": "순창 KOREA 떡볶이 페스타 - 한국관광공사 및 전북특별자치도 지자체 공식 등록 축제/행사입니다.",
+    "tags": [
+      "지역축제",
+      "공공데이터",
+      "전북특별자치도",
+      "가족나들이"
+    ],
+    "dday": "D-26"
+  },
+  {
     "id": "tourapi-fest-3470738",
     "boardType": "festivals",
     "title": "2026 런트립 남해! FALL & FUN",
@@ -87408,7 +86664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-2619386267886196082",
+    "id": "seoul-culture-4783891642398280207",
     "boardType": "festivals",
     "title": "[서울시청] 반짝반짝 남산밤길",
     "category": "farm_harvest",
@@ -87439,7 +86695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-7509976371227064796",
+    "id": "seoul-culture-7133791678510024216",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 11월 모두공연장 [마법 같은 영화음악  아카펠라 콘서트]",
     "category": "festival_performance",
@@ -87470,7 +86726,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-8126323829361626929",
+    "id": "seoul-culture-1884398234706489863",
     "boardType": "festivals",
     "title": "[용산역사박물관] 월간청음회_11월 청음회",
     "category": "expo_science",
@@ -87501,7 +86757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-9206045036222189911",
+    "id": "seoul-culture-2226985032491640978",
     "boardType": "festivals",
     "title": "[서울남산국악당] 불세출 [일상풍류방]",
     "category": "festival_culture",
@@ -87532,7 +86788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-244857219289442526",
+    "id": "seoul-culture-1161937775914721207",
     "boardType": "festivals",
     "title": "[동작문화재단] 본동어울마당 아트홀 '본동 세레나데' 11회차 [아트컴퍼니 행복자의 3인극 종이아빠]",
     "category": "festival_tradition",
@@ -87563,7 +86819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-3403875718074559988",
+    "id": "seoul-culture-1849777409475953200",
     "boardType": "festivals",
     "title": "[살롱클래식] 트리오 폰테스 - 낭만의 여정",
     "category": "festival_culture",
@@ -87687,7 +86943,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-1049963736217781921",
+    "id": "seoul-culture-6746760125962757",
     "boardType": "festivals",
     "title": "[성동구립도서관] 11월 영어스토리텔링 수업",
     "category": "festival_culture",
@@ -87749,7 +87005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-5568929414719426556",
+    "id": "seoul-culture-2310767282400246105",
     "boardType": "festivals",
     "title": "디자인코리아 2026",
     "category": "festival_culture",
@@ -87780,7 +87036,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-1906821571665108176",
+    "id": "seoul-culture-8205154556528655646",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Timeless Jazz]",
     "category": "festival_tradition",
@@ -87811,7 +87067,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-1001564874220584491",
+    "id": "seoul-culture-4931394435295102760",
     "boardType": "festivals",
     "title": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃9]",
     "category": "festival_tradition",
@@ -87904,7 +87160,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-9069324769606902586",
+    "id": "seoul-culture-8795693714625148601",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 창작음악극 [가명]",
     "category": "park_eco",
@@ -87935,7 +87191,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-30"
   },
   {
-    "id": "seoul-culture-1797961248097758779",
+    "id": "seoul-culture-632283928883234466",
     "boardType": "festivals",
     "title": "DK x SDF 국제 컨퍼런스",
     "category": "festival_culture",
@@ -87997,7 +87253,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-4053220427725028857",
+    "id": "seoul-culture-3720974846858209162",
     "boardType": "festivals",
     "title": "파인캐릭터 2026 (FineCharacter 2026)",
     "category": "festival_culture",
@@ -88028,7 +87284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-2879528194999255063",
+    "id": "seoul-culture-7081939608429602855",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (한국편집기자협회) 뉴스의 편집과 AI",
     "category": "festival_culture",
@@ -88059,7 +87315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "gg-fest-5511871610310166282",
+    "id": "gg-fest-2655724086998782888",
     "boardType": "festivals",
     "title": "제30회 파주장단콩축제",
     "category": "expo_science",
@@ -88276,7 +87532,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-5783893122543515593",
+    "id": "seoul-culture-8927732371765043017",
     "boardType": "festivals",
     "title": "[마포문화재단] 체홉 4대 장막 낭독극 [공놀이클럽의 사계절 체홉: 갈매기]",
     "category": "festival_tradition",
@@ -88338,7 +87594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-2918018071852093311",
+    "id": "seoul-culture-6433821417723102721",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 심산영화관 [러브스토리]",
     "category": "festival_tradition",
@@ -88431,7 +87687,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-54"
   },
   {
-    "id": "seoul-culture-6452564913715503125",
+    "id": "seoul-culture-6901858719667215009",
     "boardType": "festivals",
     "title": "[강동문화재단] 리트플레이 [겨울나그네]",
     "category": "festival_tradition",
@@ -88493,7 +87749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-8352209786225810725",
+    "id": "seoul-culture-6341224299716699942",
     "boardType": "festivals",
     "title": "아이와 함께 듣는 겨울의 클래식 동화 [비발디에서 디즈니까지]",
     "category": "festival_culture",
@@ -88524,7 +87780,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-2881037265862636839",
+    "id": "seoul-culture-6317976368160580150",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 고음악 시리즈 [바로크 노엘]",
     "category": "festival_tradition",
@@ -88617,7 +87873,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-43"
   },
   {
-    "id": "seoul-culture-7113764473042786589",
+    "id": "seoul-culture-7695006290256189",
     "boardType": "festivals",
     "title": "2026 서울빛초롱축제",
     "category": "festival_light",
@@ -88648,7 +87904,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-96"
   },
   {
-    "id": "seoul-culture-3806776150616807632",
+    "id": "seoul-culture-927749183197029567",
     "boardType": "festivals",
     "title": "2026 광화문마켓",
     "category": "park_eco",
@@ -88710,7 +87966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-2328784848361211518",
+    "id": "seoul-culture-3903433445773071486",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 서안화차",
     "category": "festival_tradition",
@@ -88741,7 +87997,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-4107971703567717889",
+    "id": "seoul-culture-98132859566123111",
     "boardType": "festivals",
     "title": "[서울시청] 서울광장 스케이트장",
     "category": "festival_culture",
@@ -88772,7 +88028,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-105"
   },
   {
-    "id": "seoul-culture-2509421793123507510",
+    "id": "seoul-culture-61759587593730693",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다-(서울)",
     "category": "festival_performance",
@@ -88803,7 +88059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-56"
   },
   {
-    "id": "seoul-culture-3381595814940873283",
+    "id": "seoul-culture-2189274354187685413",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [바이올리니스트 김지선의 Dia:logue-graph]",
     "category": "festival_tradition",
@@ -88865,7 +88121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-109"
   },
   {
-    "id": "seoul-culture-8819804937305781783",
+    "id": "seoul-culture-5669041387522437592",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-크리스마스, 재즈를 만나다-(서울)",
     "category": "festival_performance",
