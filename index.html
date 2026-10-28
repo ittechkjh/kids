@@ -1307,10 +1307,8 @@
               </div>
             </div>
 
-            <div class="overflow-x-auto -mx-4 sm:mx-0">
-              <div class="inline-block min-w-full align-middle px-4 sm:px-0" id="school-sigungu-table-wrap">
-                <!-- Rendered dynamically -->
-              </div>
+            <div id="school-sigungu-table-wrap">
+              <!-- Rendered dynamically -->
             </div>
           </div>
 
@@ -1394,7 +1392,12 @@
 
             <!-- A. 리치고 순위표 테이블 뷰 (Default) -->
             <div id="school-table-container" class="community-card overflow-hidden bg-white border border-slate-200/90 shadow-2xs">
-              <div class="overflow-x-auto">
+              <!-- 모바일 순위 리스트 (< sm) -->
+              <div id="school-mobile-list" class="block sm:hidden divide-y divide-slate-100">
+                <!-- Rendered dynamically -->
+              </div>
+              <!-- 태블릿/데스크톱 순위 테이블 (>= sm) -->
+              <div class="hidden sm:block overflow-x-auto">
                 <table class="w-full text-left text-xs border-collapse">
                   <thead>
                     <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-500 font-extrabold text-[11px]">

@@ -3376,22 +3376,58 @@ class DodamCommunityApp {
 
     let sigungus = [];
     if (this.schoolSido === 'all') {
-      sigungus = [
-        { rank: 1, sigungu: '서울 서초구', avg: '22.99%', median: '23.08%', count: '23곳', topSchool: '서울잠원초등학교 (39.47%)' },
-        { rank: 2, sigungu: '서울 강남구', avg: '19.26%', median: '18.57%', count: '33곳', topSchool: '서울신구초등학교 (38.54%)' },
-        { rank: 3, sigungu: '서울 성동구', avg: '16.50%', median: '17.50%', count: '21곳', topSchool: '서울응봉초등학교 (22.23%)' },
-        { rank: 4, sigungu: '경기 과천시', avg: '15.78%', median: '15.00%', count: '4곳', topSchool: '과천초등학교 (21.13%)' },
-        { rank: 5, sigungu: '서울 강북구', avg: '15.73%', median: '14.24%', count: '14곳', topSchool: '서울송천초등학교 (29.91%)' },
-        { rank: 6, sigungu: '대구 수성구', avg: '15.20%', median: '14.80%', count: '32곳', topSchool: '대구경동초등학교 (24.50%)' },
-        { rank: 7, sigungu: '서울 성북구', avg: '14.61%', median: '13.01%', count: '29곳', topSchool: '서울미아초등학교 (28.12%)' },
-        { rank: 8, sigungu: '경기 용인시 수지구', avg: '7.42%', median: '7.15%', count: '16곳', topSchool: '홍천초등학교 (15.00%)' },
-        { rank: 9, sigungu: '경기 안양시 동안구', avg: '7.39%', median: '7.50%', count: '21곳', topSchool: '안양민백초등학교 (17.24%)' },
-        { rank: 10, sigungu: '경기 포천시', avg: '6.46%', median: '3.92%', count: '30곳', topSchool: '왕방초등학교 (28.49%)' },
-        { rank: 11, sigungu: '경기 가평군', avg: '6.28%', median: '6.45%', count: '13곳', topSchool: '미원초등학교 (15.91%)' },
-        { rank: 12, sigungu: '경기 성남시 분당구', avg: '5.56%', median: '4.54%', count: '26곳', topSchool: '판교초등학교 (22.09%)' }
-      ];
-      if (titleEl) titleEl.textContent = `📊 전국 주요 시군구별 ${lvl} 순위`;
-      if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 평균 진학률 및 1위 학교 공시';
+      if (this.schoolLevel === 'middle') {
+        sigungus = [
+          { rank: 1, sigungu: '서울 강남구', avg: '28.50%', median: '26.80%', count: '24곳', topSchool: '대청중학교 (48.50%)' },
+          { rank: 2, sigungu: '서울 양천구', avg: '26.20%', median: '24.50%', count: '19곳', topSchool: '목운중학교 (44.20%)' },
+          { rank: 3, sigungu: '경기 성남시 분당구', avg: '25.80%', median: '23.90%', count: '26곳', topSchool: '내정중학교 (41.80%)' },
+          { rank: 4, sigungu: '서울 송파구', avg: '24.10%', median: '22.30%', count: '28곳', topSchool: '잠실중 / 해누리중 (38.90%)' },
+          { rank: 5, sigungu: '서울 서초구', avg: '23.70%', median: '22.00%', count: '16곳', topSchool: '서운중학교 (37.50%)' },
+          { rank: 6, sigungu: '경기 안양시 동안구', avg: '22.90%', median: '21.20%', count: '17곳', topSchool: '귀인중학교 (36.40%)' },
+          { rank: 7, sigungu: '대구 수성구', avg: '21.80%', median: '20.10%', count: '23곳', topSchool: '경신중 / 정화중 (34.20%)' },
+          { rank: 8, sigungu: '경기 용인시 수지구', avg: '20.50%', median: '19.30%', count: '16곳', topSchool: '이현중학교 (33.10%)' },
+          { rank: 9, sigungu: '대전 유성구', avg: '19.40%', median: '18.20%', count: '15곳', topSchool: '문정중학교 (31.80%)' },
+          { rank: 10, sigungu: '부산 해운대구', avg: '18.70%', median: '17.50%', count: '19곳', topSchool: '해운대중학교 (30.50%)' },
+          { rank: 11, sigungu: '경기 고양시 일산동구', avg: '17.60%', median: '16.40%', count: '12곳', topSchool: '정발중학교 (28.90%)' },
+          { rank: 12, sigungu: '인천 연수구', avg: '16.90%', median: '15.80%', count: '16곳', topSchool: '송도신정중학교 (27.50%)' }
+        ];
+        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 중학교 순위';
+        if (subtitleEl) subtitleEl.textContent = '전국 주요 학군 시군구별 특목고·자사고 평균 진학률 및 1위 학교 공시';
+      } else if (this.schoolLevel === 'high') {
+        sigungus = [
+          { rank: 1, sigungu: '경기 용인시 처인구', avg: '서울대 45명', median: '20명', count: '9곳', topSchool: '외대부고 (서울대 66명 / 의대 85명)' },
+          { rank: 2, sigungu: '전북 전주시 완산구', avg: '의대 32명', median: '15명', count: '14곳', topSchool: '상산고등학교 (의대 138명)' },
+          { rank: 3, sigungu: '서울 강남구', avg: '의대 28명', median: '18명', count: '22곳', topSchool: '휘문고 / 단대부고 (의대 122명)' },
+          { rank: 4, sigungu: '서울 은평구', avg: '서울대 22명', median: '8명', count: '18곳', topSchool: '하나고등학교 (서울대 57명)' },
+          { rank: 5, sigungu: '경기 성남시 분당구', avg: '서울대 18명', median: '12명', count: '18곳', topSchool: '낙생고등학교 (서울대 28명 / 의대 40명)' },
+          { rank: 6, sigungu: '충남 공주시', avg: '서울대 16명', median: '7명', count: '10곳', topSchool: '공주한일고 / 공주고 (서울대 24명)' },
+          { rank: 7, sigungu: '대구 수성구', avg: '의대 18명', median: '11명', count: '15곳', topSchool: '경신고등학교 (의대 73명)' },
+          { rank: 8, sigungu: '강원 횡성군', avg: 'SKY 17명', median: '6명', count: '5곳', topSchool: '민족사관고 (SKY/아이비 55명)' },
+          { rank: 9, sigungu: '서울 서초구', avg: '서울대 17명', median: '10명', count: '11곳', topSchool: '세화고등학교 (서울대 36명 / 의대 52명)' },
+          { rank: 10, sigungu: '서울 양천구', avg: '의대 16명', median: '10명', count: '15곳', topSchool: '강서고등학교 (의대 64명)' },
+          { rank: 11, sigungu: '경기 수원시 영통구', avg: '이공계 15명', median: '9명', count: '12곳', topSchool: '경기과학고 (이공계 특성화 98%)' },
+          { rank: 12, sigungu: '인천 연수구', avg: '서울대 12명', median: '7명', count: '13곳', topSchool: '인천포스코고 (서울대 18명)' }
+        ];
+        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 고등학교 순위';
+        if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 서울대·의약학 대입 합격 실적 및 1위 학교 공시';
+      } else {
+        sigungus = [
+          { rank: 1, sigungu: '서울 서초구', avg: '22.99%', median: '23.08%', count: '23곳', topSchool: '서울잠원초등학교 (39.47%)' },
+          { rank: 2, sigungu: '서울 강남구', avg: '19.26%', median: '18.57%', count: '33곳', topSchool: '서울신구초등학교 (38.54%)' },
+          { rank: 3, sigungu: '서울 성동구', avg: '16.50%', median: '17.50%', count: '21곳', topSchool: '서울응봉초등학교 (22.23%)' },
+          { rank: 4, sigungu: '경기 과천시', avg: '15.78%', median: '15.00%', count: '4곳', topSchool: '과천초등학교 (21.13%)' },
+          { rank: 5, sigungu: '서울 강북구', avg: '15.73%', median: '14.24%', count: '14곳', topSchool: '서울송천초등학교 (29.91%)' },
+          { rank: 6, sigungu: '대구 수성구', avg: '15.20%', median: '14.80%', count: '32곳', topSchool: '대구경동초등학교 (24.50%)' },
+          { rank: 7, sigungu: '서울 성북구', avg: '14.61%', median: '13.01%', count: '29곳', topSchool: '서울미아초등학교 (28.12%)' },
+          { rank: 8, sigungu: '경기 용인시 수지구', avg: '7.42%', median: '7.15%', count: '16곳', topSchool: '홍천초등학교 (15.00%)' },
+          { rank: 9, sigungu: '경기 안양시 동안구', avg: '7.39%', median: '7.50%', count: '21곳', topSchool: '안양민백초등학교 (17.24%)' },
+          { rank: 10, sigungu: '경기 포천시', avg: '6.46%', median: '3.92%', count: '30곳', topSchool: '왕방초등학교 (28.49%)' },
+          { rank: 11, sigungu: '경기 가평군', avg: '6.28%', median: '6.45%', count: '13곳', topSchool: '미원초등학교 (15.91%)' },
+          { rank: 12, sigungu: '경기 성남시 분당구', avg: '5.56%', median: '4.54%', count: '26곳', topSchool: '판교초등학교 (22.09%)' }
+        ];
+        if (titleEl) titleEl.textContent = `📊 전국 주요 시군구별 ${lvl} 순위`;
+        if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 평균 진학률 및 1위 학교 공시';
+      }
     } else {
       sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
       if (titleEl) titleEl.textContent = `📊 ${activeSido.name} 시군구별 ${lvl} 순위`;
@@ -3417,46 +3453,99 @@ class DodamCommunityApp {
       }
     }
 
+    const getTopSchool = (r) => {
+      if (this.schoolLevel === 'middle') {
+        return r.topSchoolMid || r.topSchool || '';
+      } else if (this.schoolLevel === 'high') {
+        return r.topSchoolHigh || r.topSchool || '';
+      } else {
+        return r.topSchoolElem || r.topSchool || '';
+      }
+    };
+
     tableWrap.innerHTML = `
-      <table class="w-full text-left text-xs border-collapse">
-        <thead>
-          <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-500 font-extrabold text-[11px]">
-            <th class="py-2.5 px-3 w-14 text-center">순위</th>
-            <th class="py-2.5 px-3">시군구</th>
-            <th class="py-2.5 px-3 text-right">평균</th>
-            <th class="py-2.5 px-3 text-right">중앙값</th>
-            <th class="py-2.5 px-3 text-right">학교 수</th>
-            <th class="py-2.5 px-4 text-right">1위 학교</th>
-          </tr>
-        </thead>
-        <tbody class="divide-y divide-slate-100">
-          ${displayList
-            .map((r) => {
-              const rankBadge =
-                r.rank === 1
-                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-slate-900 font-black text-[11px] shadow-2xs">1</span>'
-                  : r.rank === 2
-                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-300 text-slate-900 font-black text-[11px] shadow-2xs">2</span>'
-                  : r.rank === 3
-                  ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-600 text-white font-black text-[11px] shadow-2xs">3</span>'
-                  : `<span class="font-extrabold text-slate-500 text-[11px]">${r.rank}</span>`;
-              return `
-                <tr class="hover:bg-slate-50/80 transition cursor-pointer" onclick="app.onSigunguRowClick('${r.sigungu}')">
-                  <td class="py-2.5 px-3 text-center">${rankBadge}</td>
-                  <td class="py-2.5 px-3 font-black text-slate-900 hover:text-indigo-600 transition flex items-center gap-1">
-                    <span>${r.sigungu}</span>
-                    <i class="fa-solid fa-magnifying-glass text-[9px] text-slate-300"></i>
-                  </td>
-                  <td class="py-2.5 px-3 text-right font-extrabold text-indigo-700">${r.avg}</td>
-                  <td class="py-2.5 px-3 text-right font-bold text-slate-600">${r.median}</td>
-                  <td class="py-2.5 px-3 text-right text-slate-500 font-medium">${r.count}</td>
-                  <td class="py-2.5 px-4 text-right font-bold text-slate-800 text-[11px]">${r.topSchool}</td>
-                </tr>
-              `;
-            })
-            .join('')}
-        </tbody>
-      </table>
+      <!-- 모바일 전용 시군구 순위 리스트 (sm:hidden) -->
+      <div class="sm:hidden divide-y divide-slate-100">
+        ${displayList
+          .map((r) => {
+            const topSchool = getTopSchool(r);
+            const rankBadge =
+              r.rank === 1
+                ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-slate-900 font-black text-[11px] shadow-2xs">1</span>'
+                : r.rank === 2
+                ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-300 text-slate-900 font-black text-[11px] shadow-2xs">2</span>'
+                : r.rank === 3
+                ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-600 text-white font-black text-[11px] shadow-2xs">3</span>'
+                : `<span class="inline-flex items-center justify-center min-w-4 font-black text-slate-500 text-[11px]">${r.rank}</span>`;
+            return `
+              <div class="py-2.5 px-1 flex flex-col gap-1 cursor-pointer hover:bg-slate-50 active:bg-indigo-50/40 transition rounded-xl" onclick="app.onSigunguRowClick('${r.sigungu}')">
+                <div class="flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    ${rankBadge}
+                    <span class="font-black text-slate-900 text-xs">${r.sigungu}</span>
+                    <span class="text-[10px] text-slate-400 font-medium">${r.count}</span>
+                  </div>
+                  <div class="flex items-center gap-1 text-right">
+                    <span class="text-[10px] text-slate-400 font-medium">평균</span>
+                    <span class="text-xs font-black text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">${r.avg}</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-[11px] pl-7">
+                  <div class="flex items-center gap-1 text-slate-700 font-bold truncate">
+                    <span class="text-amber-500 font-black text-[10px]">👑 1위</span>
+                    <span class="truncate text-slate-800">${topSchool}</span>
+                  </div>
+                  <span class="text-slate-400 whitespace-nowrap ml-2 text-[10px]">중앙값 ${r.median}</span>
+                </div>
+              </div>
+            `;
+          })
+          .join('')}
+      </div>
+
+      <!-- 데스크톱 테이블 뷰 (hidden sm:block) -->
+      <div class="hidden sm:block overflow-x-auto">
+        <table class="w-full text-left text-xs border-collapse">
+          <thead>
+            <tr class="bg-slate-50/90 border-b border-slate-200 text-slate-500 font-extrabold text-[11px]">
+              <th class="py-2.5 px-3 w-14 text-center">순위</th>
+              <th class="py-2.5 px-3">시군구</th>
+              <th class="py-2.5 px-3 text-right">평균</th>
+              <th class="py-2.5 px-3 text-right">중앙값</th>
+              <th class="py-2.5 px-3 text-right">학교 수</th>
+              <th class="py-2.5 px-4 text-right">1위 학교</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-100">
+            ${displayList
+              .map((r) => {
+                const topSchool = getTopSchool(r);
+                const rankBadge =
+                  r.rank === 1
+                    ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-slate-900 font-black text-[11px] shadow-2xs">1</span>'
+                    : r.rank === 2
+                    ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-300 text-slate-900 font-black text-[11px] shadow-2xs">2</span>'
+                    : r.rank === 3
+                    ? '<span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-600 text-white font-black text-[11px] shadow-2xs">3</span>'
+                    : `<span class="font-extrabold text-slate-500 text-[11px]">${r.rank}</span>`;
+                return `
+                  <tr class="hover:bg-slate-50/80 transition cursor-pointer" onclick="app.onSigunguRowClick('${r.sigungu}')">
+                    <td class="py-2.5 px-3 text-center">${rankBadge}</td>
+                    <td class="py-2.5 px-3 font-black text-slate-900 hover:text-indigo-600 transition flex items-center gap-1">
+                      <span>${r.sigungu}</span>
+                      <i class="fa-solid fa-magnifying-glass text-[9px] text-slate-300"></i>
+                    </td>
+                    <td class="py-2.5 px-3 text-right font-extrabold text-indigo-700">${r.avg}</td>
+                    <td class="py-2.5 px-3 text-right font-bold text-slate-600">${r.median}</td>
+                    <td class="py-2.5 px-3 text-right text-slate-500 font-medium">${r.count}</td>
+                    <td class="py-2.5 px-4 text-right font-bold text-slate-800 text-[11px]">${topSchool}</td>
+                  </tr>
+                `;
+              })
+              .join('')}
+          </tbody>
+        </table>
+      </div>
     `;
   }
 
@@ -3466,7 +3555,7 @@ class DodamCommunityApp {
   }
 
   onSigunguRowClick(sigunguName) {
-    const cleanName = sigunguName.replace(/서울 |경기 |대구 |부산 |인천 |광주 |대전 |울산 /g, '').trim();
+    const cleanName = sigunguName.replace(/서울 |경기 |대구 |부산 |인천 |광주 |대전 |울산 |세종 |강원 |충북 |충남 |전북 |전남 |경북 |경남 |제주 /g, '').trim();
     this.schoolSearchKeyword = cleanName;
     const input = document.getElementById('school-search-input');
     if (input) input.value = cleanName;
@@ -3736,6 +3825,14 @@ class DodamCommunityApp {
     if (totalCount === 0) {
       if (badge) badge.textContent = '검색 결과 0곳';
       if (paginationEl) paginationEl.innerHTML = '';
+      const mobileListEl = document.getElementById('school-mobile-list');
+      if (mobileListEl) {
+        mobileListEl.innerHTML = `
+          <div class="text-center py-12 text-slate-500 font-bold text-xs">
+            선택하신 지역/조건에 일치하는 학교 정보가 없습니다.
+          </div>
+        `;
+      }
       if (tbody) {
         tbody.innerHTML = `
           <tr>
@@ -3965,80 +4062,141 @@ class DodamCommunityApp {
 
   renderSchoolRankingTable(pageSchools, startIdx, totalCount) {
     const tbody = document.getElementById('school-table-body');
+    const mobileList = document.getElementById('school-mobile-list');
     const rateHeader = document.getElementById('school-table-rate-header');
-    if (!tbody) return;
+    if (!tbody && !mobileList) return;
 
-    if (rateHeader) {
-      if (this.schoolLevel === 'middle') {
-        rateHeader.textContent = '특목고·자사고 합산 진학률';
-      } else if (this.schoolLevel === 'high') {
-        rateHeader.textContent = '서울대·의약학 대입 합격 실적';
-      } else {
-        rateHeader.textContent = '가까운 중학교 과고·외고·자사고 진학률';
-      }
+    let rateColTitle = '가까운 중학교 과고·외고·자사고 진학률';
+    let rateMobileLabel = '주변 진학률';
+    if (this.schoolLevel === 'middle') {
+      rateColTitle = '특목고·자사고 합산 진학률';
+      rateMobileLabel = '특목·자사고';
+    } else if (this.schoolLevel === 'high') {
+      rateColTitle = '서울대·의약학 대입 합격 실적';
+      rateMobileLabel = '대입 실적';
     }
+    if (rateHeader) rateHeader.textContent = rateColTitle;
 
-    tbody.innerHTML = pageSchools
-      .map((s) => {
-        const rank = s.rank || 1;
-        const rankBadge =
-          rank === 1
-            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-slate-900 font-black text-xs shadow-2xs">1</span>'
-            : rank === 2
-            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-300 text-slate-900 font-black text-xs shadow-2xs">2</span>'
-            : rank === 3
-            ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-600 text-white font-black text-xs shadow-2xs">3</span>'
-            : `<span class="font-extrabold text-slate-500 text-xs">${rank.toLocaleString()}</span>`;
-
-        let rateDisplay = '';
-        if (s.level === 'elementary') {
-          const rateVal = s.rate || '30.00%';
-          rateDisplay = `
-            <div class="inline-flex items-center gap-1.5 justify-end">
-              <span class="font-black text-xs text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">${rateVal}</span>
-            </div>
-          `;
-        } else if (s.level === 'middle') {
-          const rateVal = s.admissionRates?.totalSpecial || s.rate || '25.00%';
-          rateDisplay = `
-            <div class="inline-flex items-center gap-1.5 justify-end">
-              <span class="font-black text-xs text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">${rateVal}</span>
-            </div>
-          `;
-        } else {
-          const snu = s.collegeResults?.snuTotal || '10명';
-          const med = s.collegeResults?.medicalTotal || '15명';
-          rateDisplay = `
+    const getRateInfo = (s) => {
+      if (s.level === 'elementary') {
+        const rateVal = s.rate || '30.00%';
+        return {
+          desktop: `<span class="font-black text-xs text-indigo-700 bg-indigo-50 px-2.5 py-0.5 rounded-md border border-indigo-100">${rateVal}</span>`,
+          mobile: `<span class="font-black text-xs text-indigo-700 bg-indigo-50 px-2 py-0.5 rounded border border-indigo-100">${rateVal}</span>`
+        };
+      } else if (s.level === 'middle') {
+        const rateVal = s.admissionRates?.totalSpecial || s.rate || '25.00%';
+        return {
+          desktop: `<span class="font-black text-xs text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-100">${rateVal}</span>`,
+          mobile: `<span class="font-black text-xs text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-100">${rateVal}</span>`
+        };
+      } else {
+        const snu = s.collegeResults?.snuTotal || '10명';
+        const med = s.collegeResults?.medicalTotal || '15명';
+        return {
+          desktop: `
             <div class="inline-flex items-center gap-1.5 justify-end text-[11px]">
               <span class="font-extrabold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded border border-indigo-100">서울대 ${snu}</span>
               <span class="font-extrabold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-100">의대 ${med}</span>
             </div>
-          `;
-        }
+          `,
+          mobile: `
+            <div class="flex flex-col items-end gap-0.5 text-[10px]">
+              <span class="font-extrabold text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded border border-indigo-100">서울대 ${snu}</span>
+              <span class="font-extrabold text-rose-700 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-100">의대 ${med}</span>
+            </div>
+          `
+        };
+      }
+    };
 
-        return `
-          <tr class="hover:bg-indigo-50/40 transition cursor-pointer group" onclick="app.openSchoolModal('${s.id}')">
-            <td class="py-3 px-3 text-center">${rankBadge}</td>
-            <td class="py-3 px-4">
-              <div class="flex items-center gap-2 flex-wrap">
-                <span class="font-black text-slate-900 group-hover:text-indigo-600 text-xs transition flex items-center gap-1">
-                  <span>${s.name}</span>
-                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-300 group-hover:text-indigo-500 transition"></i>
-                </span>
-                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
-                <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
+    // 1. 모바일 전용 순위 리스트 렌더링 (< sm)
+    if (mobileList) {
+      mobileList.innerHTML = pageSchools
+        .map((s) => {
+          const rank = s.rank || 1;
+          const rankBadge =
+            rank === 1
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-slate-900 font-black text-xs shadow-2xs">1</span>'
+              : rank === 2
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-300 text-slate-900 font-black text-xs shadow-2xs">2</span>'
+              : rank === 3
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-600 text-white font-black text-xs shadow-2xs">3</span>'
+              : `<span class="inline-flex items-center justify-center min-w-5 font-black text-slate-500 text-xs">${rank.toLocaleString()}</span>`;
+
+          const rateInfo = getRateInfo(s);
+
+          return `
+            <div class="p-3.5 flex items-center justify-between gap-2.5 cursor-pointer hover:bg-slate-50 active:bg-indigo-50/40 transition group" onclick="app.openSchoolModal('${s.id}')">
+              <div class="flex items-start gap-2.5 min-w-0 flex-1">
+                <div class="pt-0.5 shrink-0">
+                  ${rankBadge}
+                </div>
+                <div class="min-w-0 flex-1">
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="font-black text-slate-900 text-xs sm:text-sm group-hover:text-indigo-600 transition truncate">${s.name}</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
+                    <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
+                  </div>
+                  <div class="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500 font-medium">
+                    <span class="truncate"><i class="fa-solid fa-location-dot text-slate-400 mr-1 text-[10px]"></i>${s.districtName}</span>
+                    <span class="text-slate-300">·</span>
+                    <span class="text-slate-400 whitespace-nowrap text-[10px]">${s.rankNation || ''}</span>
+                  </div>
+                </div>
               </div>
-            </td>
-            <td class="py-3 px-4 text-xs font-bold text-slate-600 whitespace-nowrap">
-              <i class="fa-solid fa-location-dot text-[10px] text-slate-400 mr-1"></i>${s.districtName}
-            </td>
-            <td class="py-3 px-4 text-right whitespace-nowrap">
-              ${rateDisplay}
-            </td>
-          </tr>
-        `;
-      })
-      .join('');
+              <div class="shrink-0 text-right pl-1">
+                ${rateInfo.mobile}
+                <div class="text-[10px] text-slate-400 mt-0.5 font-semibold">${rateMobileLabel}</div>
+              </div>
+            </div>
+          `;
+        })
+        .join('');
+    }
+
+    // 2. 데스크톱 테이블 뷰 렌더링 (>= sm)
+    if (tbody) {
+      tbody.innerHTML = pageSchools
+        .map((s) => {
+          const rank = s.rank || 1;
+          const rankBadge =
+            rank === 1
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-400 text-slate-900 font-black text-xs shadow-2xs">1</span>'
+              : rank === 2
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-300 text-slate-900 font-black text-xs shadow-2xs">2</span>'
+              : rank === 3
+              ? '<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-amber-600 text-white font-black text-xs shadow-2xs">3</span>'
+              : `<span class="font-extrabold text-slate-500 text-xs">${rank.toLocaleString()}</span>`;
+
+          const rateInfo = getRateInfo(s);
+
+          return `
+            <tr class="hover:bg-indigo-50/40 transition cursor-pointer group" onclick="app.openSchoolModal('${s.id}')">
+              <td class="py-3 px-3 text-center">${rankBadge}</td>
+              <td class="py-3 px-4">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="font-black text-slate-900 group-hover:text-indigo-600 text-xs transition flex items-center gap-1">
+                    <span>${s.name}</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-300 group-hover:text-indigo-500 transition"></i>
+                  </span>
+                  <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
+                </div>
+              </td>
+              <td class="py-3 px-4 text-xs font-bold text-slate-600 whitespace-nowrap">
+                <i class="fa-solid fa-location-dot text-[10px] text-slate-400 mr-1"></i>${s.districtName}
+              </td>
+              <td class="py-3 px-4 text-right whitespace-nowrap">
+                <div class="inline-flex items-center gap-1.5 justify-end">
+                  ${rateInfo.desktop}
+                </div>
+              </td>
+            </tr>
+          `;
+        })
+        .join('');
+    }
   }
 
   generateSchoolSubTabContent(s, activeTab) {
