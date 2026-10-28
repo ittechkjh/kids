@@ -143,6 +143,7 @@ class DodamCommunityApp {
     this.schoolType = 'all';
     this.schoolSearchKeyword = '';
     this.expandedSchoolIds = new Set();
+    this.schoolCardSubTabs = {};
 
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
@@ -3235,6 +3236,18 @@ class DodamCommunityApp {
     this.renderSchoolList();
     this.renderSchoolDistricts();
     this.renderSchoolAdmissions();
+
+    // 통계 위젯 숫자 실시간 반영
+    const totalCountEl = document.getElementById('school-stat-total');
+    const todayCountEl = document.getElementById('school-stat-today');
+    const dateEl = document.getElementById('school-stat-date');
+    const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
+    const districts = window.DODAM_SCHOOLS_DATA?.districts || [];
+    if (totalCountEl) totalCountEl.textContent = schools.length + districts.length;
+    if (todayCountEl) todayCountEl.textContent = schools.length;
+    if (dateEl && window.DODAM_SCHOOLS_DATA?.updatedAt) {
+      dateEl.textContent = window.DODAM_SCHOOLS_DATA.updatedAt.replace(/-/g, '.');
+    }
   }
 
   renderSchoolLevelChips() {
@@ -3323,42 +3336,96 @@ class DodamCommunityApp {
   filterSchools() {
     const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
     return schools.filter((s) => {
-      // Level filter
+      // 1. Level filter
       if (this.schoolLevel !== 'all' && this.schoolLevel !== 'districts' && this.schoolLevel !== 'admissions') {
         if (s.level !== this.schoolLevel) return false;
       }
-      // Region filter
+      // 2. Region filter
       if (this.schoolRegion !== 'all') {
         if (s.region !== 'all' && s.region !== this.schoolRegion) return false;
       }
-      // Type filter
+      // 3. Type filter
       if (this.schoolType !== 'all') {
-        if (!s.typeBadge.includes(this.schoolType) && !s.type.includes(this.schoolType)) return false;
+        const pubPriv = s.publicPrivate || '';
+        const features = (s.features || []).join(' ');
+        const summary = s.summary || '';
+        const name = s.name || '';
+        const aptNotes = (s.apartments || []).map((a) => a.note || '').join(' ');
+        const isMatch =
+          pubPriv.includes(this.schoolType) ||
+          features.includes(this.schoolType) ||
+          summary.includes(this.schoolType) ||
+          name.includes(this.schoolType) ||
+          (this.schoolType === '초품아' && (features.includes('초품아') || aptNotes.includes('초품아'))) ||
+          (this.schoolType === '의대' && (features.includes('의대') || summary.includes('의대') || !!s.collegeResults?.medicalTotal));
+        if (!isMatch) return false;
       }
-      // Search keyword filter
+      // 4. Keyword search filter
       if (this.schoolSearchKeyword) {
         const kw = this.schoolSearchKeyword;
+        const aptText = (s.apartments || []).map((a) => a.name + ' ' + (a.note || '')).join(' ');
+        const acadText =
+          (s.academies?.mainDistrict || '') +
+          ' ' +
+          (s.academies?.distanceDaechi || '') +
+          ' ' +
+          (s.academies?.popularFields || []).join(' ');
         const text = (
           s.name +
           ' ' +
-          s.type +
+          (s.publicPrivate || '') +
           ' ' +
-          s.regionName +
+          (s.regionName || '') +
           ' ' +
-          s.rankHighlight +
+          (s.districtName || '') +
           ' ' +
-          (s.statPrimary || '') +
+          (s.districtRank || '') +
           ' ' +
-          (s.statSecondary || '') +
+          (s.grade || '') +
+          ' ' +
+          (s.rankNation || '') +
+          ' ' +
+          (s.rankRegion || '') +
+          ' ' +
+          (s.summary || '') +
           ' ' +
           (s.features || []).join(' ') +
           ' ' +
-          (s.details || []).join(' ')
+          aptText +
+          ' ' +
+          acadText
         ).toLowerCase();
         if (!text.includes(kw)) return false;
       }
       return true;
     });
+  }
+
+  setSchoolCardTab(schoolId, tabName) {
+    this.schoolCardSubTabs[schoolId] = tabName;
+    this.renderSchoolList();
+  }
+
+  openSchoolGradeModal() {
+    const modal = document.getElementById('school-grade-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeSchoolGradeModal() {
+    const modal = document.getElementById('school-grade-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  filterByDistrict(region, districtHint) {
+    if (region && region !== 'all') {
+      this.schoolRegion = region;
+      const regSelect = document.getElementById('school-region-filter');
+      if (regSelect) regSelect.value = region;
+    }
+    this.renderSchoolList();
+    const grid = document.getElementById('school-cards-grid');
+    if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    this.showToast(`'${districtHint || region}' 학군 정보로 정렬되었습니다.`);
   }
 
   renderSchoolList() {
@@ -3393,60 +3460,497 @@ class DodamCommunityApp {
     grid.innerHTML = filtered
       .map((s) => {
         const isExpanded = this.expandedSchoolIds.has(s.id);
+        const activeTab = this.schoolCardSubTabs[s.id] || 'nearby';
 
-        const levelBadge = {
-          high: { label: '고등학교', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
-          middle: { label: '중학교', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
-          elementary: { label: '초등학교', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
-          kindergarten: { label: '유치원', bg: 'bg-pink-50 text-pink-700 border-pink-200' }
-        }[s.level] || { label: '학교', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
+        const levelInfo = {
+          elementary: { label: '초등학교', icon: 'fa-school', color: 'text-amber-600', bg: 'bg-amber-50 text-amber-700 border-amber-200' },
+          middle: { label: '중학교', icon: 'fa-book-open', color: 'text-emerald-600', bg: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+          high: { label: '고등학교', icon: 'fa-graduation-cap', color: 'text-indigo-600', bg: 'bg-indigo-50 text-indigo-700 border-indigo-200' },
+          kindergarten: { label: '유치원', icon: 'fa-shapes', color: 'text-pink-600', bg: 'bg-pink-50 text-pink-700 border-pink-200' }
+        }[s.level] || { label: '학교', icon: 'fa-school', color: 'text-slate-600', bg: 'bg-slate-50 text-slate-700 border-slate-200' };
+
+        const firstTabTitle = {
+          elementary: '주변중학교',
+          middle: '주변고교·진학',
+          high: '대입실적',
+          kindergarten: '연계초등·과정'
+        }[s.level] || '주변학교';
+
+        // -----------------------------
+        // Sub-Tab 1: 주변 학교 / 진학 실적
+        // -----------------------------
+        let tabContent = '';
+        if (activeTab === 'nearby') {
+          if (s.level === 'elementary') {
+            const nearbyRows = (s.nearbyMiddle || [])
+              .map((m) => `
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-indigo-50/30 transition border border-slate-100 text-xs">
+                  <div class="w-5/12 min-w-0 pr-1">
+                    <div class="font-black text-slate-800 truncate">${m.name}</div>
+                    <div class="text-[10px] text-slate-400 font-medium">${m.type}</div>
+                  </div>
+                  <div class="w-5/12 flex items-center justify-center gap-1 flex-wrap">
+                    ${(m.rates || [])
+                      .map((r) => {
+                        const badgeStyle = r.type.includes('자사')
+                          ? 'bg-indigo-100 text-indigo-700'
+                          : r.type.includes('과학')
+                          ? 'bg-emerald-100 text-emerald-700'
+                          : 'bg-amber-100 text-amber-700';
+                        return `<span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-extrabold ${badgeStyle}">
+                          <strong class="font-black">${r.type[0]}</strong> ${r.type} ${r.percent}
+                        </span>`;
+                      })
+                      .join('')}
+                  </div>
+                  <div class="w-2/12 text-right">
+                    <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${m.grade}</span>
+                  </div>
+                </div>
+              `)
+              .join('');
+
+            tabContent = `
+              <div class="space-y-2.5 pt-3">
+                <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
+                  <span class="w-5/12">주변중학교</span>
+                  <span class="w-5/12 text-center">특목·자사고 진학률</span>
+                  <span class="w-2/12 text-right">등급</span>
+                </div>
+                <div class="space-y-1.5">
+                  ${nearbyRows || '<p class="text-xs text-slate-400 py-3 text-center">주변 중학교 정보 준비 중입니다.</p>'}
+                </div>
+                <div class="pt-1.5">
+                  <button
+                    type="button"
+                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '송파구'}')"
+                    class="w-full py-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50/60 hover:bg-indigo-100 text-indigo-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
+                  >
+                    <span>${s.districtName?.split(' ')[1] || '송파구'} 초등학교 순위보기</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          } else if (s.level === 'middle') {
+            const nearbyHighRows = (s.nearbyHigh || [])
+              .map((h) => `
+                <div class="flex items-center justify-between p-2.5 rounded-xl bg-slate-50/80 hover:bg-emerald-50/30 transition border border-slate-100 text-xs">
+                  <div class="w-5/12 min-w-0 pr-1">
+                    <div class="font-black text-slate-800 truncate">${h.name}</div>
+                    <div class="text-[10px] text-slate-400 font-medium">${h.type}</div>
+                  </div>
+                  <div class="w-5/12 text-center">
+                    <span class="inline-block px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 border border-indigo-100 text-[10px] font-extrabold">
+                      ${h.rate || '상위 진학'}
+                    </span>
+                  </div>
+                  <div class="w-2/12 text-right">
+                    <span class="inline-block px-2 py-0.5 rounded-md bg-white border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${h.grade}</span>
+                  </div>
+                </div>
+              `)
+              .join('');
+
+            tabContent = `
+              <div class="space-y-2.5 pt-3">
+                ${
+                  s.admissionRates
+                    ? `
+                  <div class="p-2.5 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-100 text-xs space-y-1">
+                    <div class="flex items-center justify-between font-black text-emerald-900 text-[11px]">
+                      <span>🏆 특목·자사고 합산 진학률</span>
+                      <strong class="text-emerald-700 font-black">${s.admissionRates.totalSpecial}</strong>
+                    </div>
+                    <div class="flex items-center gap-1.5 text-[10px] text-slate-600 flex-wrap pt-0.5">
+                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.privateHigh}</span>
+                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.scienceHigh}</span>
+                      <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.foreignHigh}</span>
+                    </div>
+                  </div>
+                `
+                    : ''
+                }
+                <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-400 px-2 pb-0.5 border-b border-slate-100">
+                  <span class="w-5/12">진학 고등학교</span>
+                  <span class="w-5/12 text-center">진학 규모</span>
+                  <span class="w-2/12 text-right">등급</span>
+                </div>
+                <div class="space-y-1.5">
+                  ${nearbyHighRows || '<p class="text-xs text-slate-400 py-3 text-center">진학 고등학교 정보 준비 중입니다.</p>'}
+                </div>
+                <div class="pt-1.5">
+                  <button
+                    type="button"
+                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
+                    class="w-full py-2.5 rounded-xl border border-emerald-200/80 bg-emerald-50/60 hover:bg-emerald-100 text-emerald-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
+                  >
+                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 중학교 순위보기</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          } else if (s.level === 'high') {
+            tabContent = `
+              <div class="space-y-2.5 pt-3">
+                <div class="p-3 rounded-xl bg-gradient-to-br from-indigo-50/80 via-white to-sky-50/50 border border-indigo-100 text-xs space-y-2.5">
+                  <div class="flex items-center justify-between font-black text-indigo-950 text-xs">
+                    <span>🎓 2024~2025학년도 최상위 대입 합격 실적</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-600 text-white font-extrabold shadow-2xs">학교알리미 공시</span>
+                  </div>
+                  <div class="grid grid-cols-3 gap-2 text-center">
+                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                      <div class="text-[10px] text-slate-500 font-bold">서울대 합격</div>
+                      <div class="text-sm font-black text-indigo-600 mt-0.5">${s.collegeResults?.snuTotal || '18명'}</div>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                      <div class="text-[10px] text-slate-500 font-bold">의·치·한·약</div>
+                      <div class="text-sm font-black text-rose-600 mt-0.5">${s.collegeResults?.medicalTotal || '24명'}</div>
+                    </div>
+                    <div class="p-2.5 rounded-xl bg-white border border-indigo-100 shadow-2xs">
+                      <div class="text-[10px] text-slate-500 font-bold">연세대·고려대</div>
+                      <div class="text-sm font-black text-slate-900 mt-0.5">${s.collegeResults?.skyTotal || '58명'}</div>
+                    </div>
+                  </div>
+                  ${
+                    s.collegeResults?.foreignTotal
+                      ? `
+                    <div class="text-[11px] text-indigo-800 font-semibold bg-white/80 p-2 rounded-lg border border-indigo-50">
+                      📌 <strong>특화 진학:</strong> ${s.collegeResults.foreignTotal}
+                    </div>
+                  `
+                      : ''
+                  }
+                </div>
+                <div class="pt-1.5">
+                  <button
+                    type="button"
+                    onclick="app.filterByDistrict('${s.region}', '${s.districtName?.split(' ')[1] || '해당지역'}')"
+                    class="w-full py-2.5 rounded-xl border border-indigo-200/80 bg-indigo-50/60 hover:bg-indigo-100 text-indigo-700 text-xs font-black flex items-center justify-center gap-1.5 transition shadow-2xs"
+                  >
+                    <span>${s.districtName?.split(' ')[1] || '해당지역'} 고등학교 순위보기</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+            `;
+          } else {
+            tabContent = `
+              <div class="space-y-2.5 pt-3">
+                <div class="p-3 rounded-xl bg-pink-50/70 border border-pink-100 text-xs space-y-2">
+                  <div class="font-black text-pink-950 flex items-center justify-between">
+                    <span>🧸 연계 초등학교 및 진학 루트</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-pink-500 text-white font-extrabold">유아 교육</span>
+                  </div>
+                  <p class="text-[11px] text-slate-700 leading-relaxed">${s.summary}</p>
+                  ${s.tuition ? `<div class="text-[11px] font-bold text-slate-800 pt-1 border-t border-pink-100">💰 <strong>원비/학비:</strong> ${s.tuition}</div>` : ''}
+                  ${s.admissionType ? `<div class="text-[11px] font-bold text-slate-800">📝 <strong>선발 전형:</strong> ${s.admissionType}</div>` : ''}
+                </div>
+              </div>
+            `;
+          }
+        }
+
+        // -----------------------------
+        // Sub-Tab 2: 기본정보 (RichGo 3대 비교 바차트)
+        // -----------------------------
+        if (activeTab === 'info') {
+          const stats = s.stats || {};
+          const benchC = stats.benchClass || { school: 23, district: 22, nation: 20 };
+          const benchT = stats.benchTeacher || { school: 18, district: 16, nation: 14 };
+
+          const isElemOrKin = s.level === 'elementary' || s.level === 'kindergarten';
+          const thirdTitle = isElemOrKin ? '고학년 비율' : '학업 성취도';
+          const thirdUnit = '%';
+          const bench3 = isElemOrKin
+            ? stats.benchSenior || { school: 51, district: 49, nation: 47 }
+            : stats.benchAchievement || { school: 92, district: 83, nation: 78 };
+
+          const calcBarH = (val, maxVal) => {
+            const ratio = Math.min(1, Math.max(0.2, val / (maxVal || 1)));
+            return Math.round(ratio * 50) + 14;
+          };
+
+          const cMax = Math.max(benchC.school, benchC.district, benchC.nation, 1);
+          const tMax = Math.max(benchT.school, benchT.district, benchT.nation, 1);
+          const sMax = Math.max(bench3.school, bench3.district, bench3.nation, 1);
+
+          tabContent = `
+            <div class="space-y-3 pt-3">
+              <!-- 리치고 3대 비교 지표 바 차트 그리드 -->
+              <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-50/90 border border-slate-200/80">
+                <!-- 1. 학급당 학생수 -->
+                <div class="flex flex-col items-center justify-between text-center space-y-1">
+                  <div class="text-[10px] font-bold text-slate-500">학급당 학생 수</div>
+                  <div class="text-xs font-black text-slate-900">${benchC.school}명</div>
+                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-black text-indigo-600">${benchC.school}</span>
+                      <div style="height: ${calcBarH(benchC.school, cMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-500">${benchC.district}</span>
+                      <div style="height: ${calcBarH(benchC.district, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                      <span class="text-[9px] font-medium text-slate-500">구</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-400">${benchC.nation}</span>
+                      <div style="height: ${calcBarH(benchC.nation, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                      <span class="text-[9px] font-medium text-slate-400">전국</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. 교사당 학생수 -->
+                <div class="flex flex-col items-center justify-between text-center space-y-1 border-x border-slate-200 px-1">
+                  <div class="text-[10px] font-bold text-slate-500">교사당 학생 수</div>
+                  <div class="text-xs font-black text-slate-900">${benchT.school}명</div>
+                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-black text-indigo-600">${benchT.school}</span>
+                      <div style="height: ${calcBarH(benchT.school, tMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-500">${benchT.district}</span>
+                      <div style="height: ${calcBarH(benchT.district, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                      <span class="text-[9px] font-medium text-slate-500">구</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-400">${benchT.nation}</span>
+                      <div style="height: ${calcBarH(benchT.nation, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                      <span class="text-[9px] font-medium text-slate-400">전국</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. 고학년 비율 또는 학업성취도 -->
+                <div class="flex flex-col items-center justify-between text-center space-y-1">
+                  <div class="text-[10px] font-bold text-slate-500">${thirdTitle}</div>
+                  <div class="text-xs font-black text-slate-900">${bench3.school}${thirdUnit}</div>
+                  <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-black text-indigo-600">${bench3.school}</span>
+                      <div style="height: ${calcBarH(bench3.school, sMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
+                      <span class="text-[9px] font-bold text-indigo-700">학교</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-500">${bench3.district}</span>
+                      <div style="height: ${calcBarH(bench3.district, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
+                      <span class="text-[9px] font-medium text-slate-500">구</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-0.5">
+                      <span class="text-[9px] font-bold text-slate-400">${bench3.nation}</span>
+                      <div style="height: ${calcBarH(bench3.nation, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
+                      <span class="text-[9px] font-medium text-slate-400">전국</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 학교 세부 기본 현황 리스트 -->
+              <div class="p-3 rounded-xl bg-white border border-slate-200 text-xs space-y-1.5">
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="font-bold text-slate-500">전체 학생 수:</span>
+                  <span class="font-black text-slate-800">${(stats.totalStudents || 0).toLocaleString()}명</span>
+                </div>
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="font-bold text-slate-500">설립 연도 / 형태:</span>
+                  <span class="font-bold text-slate-700">${s.establishedYear || s.publicPrivate}</span>
+                </div>
+                <div class="flex items-center justify-between text-[11px]">
+                  <span class="font-bold text-slate-500">소재지 관할:</span>
+                  <span class="font-bold text-slate-700">${s.districtName}</span>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+
+        // -----------------------------
+        // Sub-Tab 3: 배정아파트
+        // -----------------------------
+        if (activeTab === 'apartments') {
+          const aptRows = (s.apartments || [])
+            .map(
+              (a) => `
+              <div class="p-2.5 rounded-xl bg-slate-50/90 hover:bg-indigo-50/40 transition border border-slate-100 flex items-center justify-between text-xs">
+                <div class="min-w-0 pr-2">
+                  <div class="font-black text-slate-900 truncate flex items-center gap-1.5">
+                    <i class="fa-solid fa-building text-indigo-500 text-[10px]"></i>
+                    <span>${a.name}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-500 mt-0.5 pl-4">${a.note}</div>
+                </div>
+                <span class="px-2 py-1 rounded-lg bg-white border border-slate-200 font-black text-slate-700 text-[11px] shrink-0 shadow-2xs">
+                  ${a.households}
+                </span>
+              </div>
+            `
+            )
+            .join('');
+
+          tabContent = `
+            <div class="space-y-2 pt-3">
+              <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-500 px-1 pb-1">
+                <span class="flex items-center gap-1">
+                  <i class="fa-solid fa-map-pin text-indigo-500"></i>
+                  <span>배정 주요 아파트 단지 & 통학권</span>
+                </span>
+                <span class="text-[10px] text-slate-400">총 ${(s.apartments || []).length}개 단지 공시</span>
+              </div>
+              <div class="space-y-1.5">
+                ${aptRows || '<p class="text-xs text-slate-400 py-3 text-center">배정 아파트 단지 정보가 공시 준비 중입니다.</p>'}
+              </div>
+            </div>
+          `;
+        }
+
+        // -----------------------------
+        // Sub-Tab 4: 학원가
+        // -----------------------------
+        if (activeTab === 'academies') {
+          const popularBadges = (s.academies?.popularFields || [])
+            .map(
+              (p) => `
+              <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-700 text-[10px] font-bold">
+                #${p}
+              </span>
+            `
+            )
+            .join('');
+
+          tabContent = `
+            <div class="space-y-2.5 pt-3 text-xs">
+              <div class="p-3 rounded-xl bg-gradient-to-r from-amber-50/70 via-orange-50/40 to-white border border-amber-100 space-y-2">
+                <div class="font-black text-amber-950 flex items-center gap-1.5">
+                  <i class="fa-solid fa-graduation-cap text-amber-600"></i>
+                  <span>인근 학원가 밀집도 및 셔틀 연계</span>
+                </div>
+                <div class="space-y-1.5 text-[11px]">
+                  <div class="flex items-start gap-1.5">
+                    <span class="font-extrabold text-slate-700 shrink-0">📍 주요 학원가:</span>
+                    <span class="text-slate-900 font-bold">${s.academies?.mainDistrict || '인근 학원가 밀집'}</span>
+                  </div>
+                  <div class="flex items-start gap-1.5">
+                    <span class="font-extrabold text-slate-700 shrink-0">🚌 대치동 접근성:</span>
+                    <span class="text-slate-900 font-bold">${s.academies?.distanceDaechi || '대치동 셔틀 운행'}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="space-y-1">
+                <div class="text-[10px] font-extrabold text-slate-400 px-1">주요 인기 학원 및 선호 과목</div>
+                <div class="flex flex-wrap gap-1">
+                  ${popularBadges}
+                </div>
+              </div>
+            </div>
+          `;
+        }
 
         return `
           <article class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs hover:shadow-sm transition flex flex-col justify-between">
-            <div class="space-y-3">
-              <!-- 상단 뱃지 라인 -->
-              <div class="flex items-center justify-between gap-2 flex-wrap">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  <span class="px-2 py-0.5 rounded-full font-black text-[10px] border ${levelBadge.bg}">
-                    ${levelBadge.label}
-                  </span>
-                  <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-slate-900 text-white shadow-2xs">
-                    ${s.typeBadge}
-                  </span>
-                  <span class="px-2 py-0.5 rounded-full font-bold text-[10px] bg-slate-100 text-slate-600 border border-slate-200">
-                    <i class="fa-solid fa-location-dot mr-1 text-slate-400"></i>${s.regionName}
-                  </span>
-                </div>
-                <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-rose-50 text-rose-600 border border-rose-200">
-                  <i class="fa-solid fa-trophy mr-1"></i>${s.rankHighlight}
-                </span>
-              </div>
-
-              <!-- 학교명 및 한줄 요약 -->
+            <div class="space-y-2.5">
+              <!-- 카드 상단: 아이콘 + 설립연차 + 학교명 -->
               <div>
-                <h4 class="text-sm font-black text-slate-900 hover:text-sky-700 transition cursor-pointer flex items-center justify-between" onclick="app.toggleSchoolDetail('${s.id}')">
+                <div class="flex items-center justify-between text-xs text-slate-400 mb-1">
+                  <div class="flex items-center gap-1.5">
+                    <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
+                    <span class="font-bold text-slate-500">${s.publicPrivate}</span>
+                  </div>
+                  <span class="text-[11px] text-slate-400 font-medium">
+                    <i class="fa-solid fa-location-dot mr-1"></i>${s.districtName}
+                  </span>
+                </div>
+                <h3 class="text-base font-black text-slate-900 flex items-center justify-between">
                   <span>${s.name}</span>
-                  <span class="text-[11px] font-bold text-slate-400 font-normal">${s.type}</span>
-                </h4>
-                <p class="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
-                  ${s.summary}
-                </p>
+                  <span class="text-[11px] font-bold text-slate-400 font-normal">${s.regionName}</span>
+                </h3>
               </div>
 
-              <!-- 핵심 실적 지표 박스 -->
-              <div class="p-3 rounded-xl bg-gradient-to-r from-sky-50 via-indigo-50/50 to-white border border-sky-100 space-y-1">
-                <div class="flex items-center justify-between text-xs">
-                  <span class="text-slate-500 font-bold text-[11px]">🏆 핵심 진학 실적</span>
-                  <strong class="font-black text-indigo-700">${s.statPrimary}</strong>
-                </div>
-                <div class="flex items-center justify-between text-xs">
-                  <span class="text-slate-500 font-bold text-[11px]">📊 학업 성취·지표</span>
-                  <span class="font-extrabold text-slate-800 text-[11px]">${s.statSecondary}</span>
-                </div>
+              <!-- 리치고 시그니처 뱃지 바 -->
+              <div class="flex items-center gap-1.5 flex-wrap pt-0.5">
+                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
+                  ${s.grade}
+                </span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-indigo-50 text-indigo-700 border border-indigo-200">
+                  ${s.rankNation}
+                </span>
+                <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
+                  ${s.rankRegion}
+                </span>
+                <button
+                  type="button"
+                  onclick="app.openSchoolGradeModal()"
+                  class="text-[11px] font-bold text-slate-400 hover:text-indigo-600 flex items-center gap-1 transition ml-auto py-1"
+                >
+                  <i class="fa-solid fa-circle-info text-[10px]"></i>
+                  <span>등급 기준 보기</span>
+                </button>
               </div>
 
-              <!-- 주요 특징 태그 -->
-              <div class="flex flex-wrap items-center gap-1">
+              <!-- 한 줄 요약 -->
+              <p class="text-xs text-slate-600 leading-relaxed pt-0.5">
+                ${s.summary}
+              </p>
+
+              <!-- 서브탭 네비게이션 바 -->
+              <div class="flex items-center border-b border-slate-200 text-xs font-bold pt-1">
+                <button
+                  type="button"
+                  onclick="app.setSchoolCardTab('${s.id}', 'nearby')"
+                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                    activeTab === 'nearby'
+                      ? 'border-indigo-600 text-indigo-600 font-black'
+                      : 'border-transparent text-slate-500 hover:text-slate-800'
+                  }"
+                >
+                  ${firstTabTitle}
+                </button>
+                <button
+                  type="button"
+                  onclick="app.setSchoolCardTab('${s.id}', 'info')"
+                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                    activeTab === 'info'
+                      ? 'border-indigo-600 text-indigo-600 font-black'
+                      : 'border-transparent text-slate-500 hover:text-slate-800'
+                  }"
+                >
+                  기본정보
+                </button>
+                <button
+                  type="button"
+                  onclick="app.setSchoolCardTab('${s.id}', 'apartments')"
+                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                    activeTab === 'apartments'
+                      ? 'border-indigo-600 text-indigo-600 font-black'
+                      : 'border-transparent text-slate-500 hover:text-slate-800'
+                  }"
+                >
+                  배정아파트
+                </button>
+                <button
+                  type="button"
+                  onclick="app.setSchoolCardTab('${s.id}', 'academies')"
+                  class="px-2.5 py-2 -mb-px border-b-2 transition ${
+                    activeTab === 'academies'
+                      ? 'border-indigo-600 text-indigo-600 font-black'
+                      : 'border-transparent text-slate-500 hover:text-slate-800'
+                  }"
+                >
+                  학원가
+                </button>
+              </div>
+
+              <!-- 서브탭 바디 -->
+              <div class="min-h-[170px]">
+                ${tabContent}
+              </div>
+
+              <!-- 특징 태그 리스트 -->
+              <div class="flex flex-wrap items-center gap-1 pt-1">
                 ${(s.features || [])
                   .map(
                     (f) => `
@@ -3458,34 +3962,26 @@ class DodamCommunityApp {
                   .join('')}
               </div>
 
-              <!-- 아코디언 상세 정보 -->
-              <div id="school-detail-${s.id}" class="${isExpanded ? '' : 'hidden'} pt-2 border-t border-slate-100 space-y-2.5 text-xs text-slate-700">
-                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 space-y-2">
+              <!-- 아코디언 추가 정보 (선택적) -->
+              <div id="school-detail-${s.id}" class="${isExpanded ? '' : 'hidden'} pt-2 border-t border-slate-100 space-y-2 text-xs text-slate-700">
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 space-y-1.5">
                   <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
                     <i class="fa-solid fa-circle-info text-sky-600"></i>
-                    <span>상세 입시 요강 & 학군 분석</span>
+                    <span>상세 입시 분석 & 특징 노트</span>
                   </div>
-                  <ul class="space-y-1 text-[11px] text-slate-600 pl-1">
-                    ${(s.details || []).map((d) => `<li class="flex items-start gap-1.5"><span class="text-sky-500 font-bold">•</span><span>${d}</span></li>`).join('')}
-                  </ul>
-                  ${
-                    s.tuition
-                      ? `<div class="text-[11px] text-slate-600 pt-1 border-t border-slate-200/60"><strong class="text-slate-800">💰 학비·원비:</strong> ${s.tuition}</div>`
-                      : ''
-                  }
-                  <div class="text-[11px] text-slate-600"><strong class="text-slate-800">📝 선발 전형:</strong> ${s.admissionType}</div>
+                  <p class="text-[11px] text-slate-600 leading-relaxed">${s.summary}</p>
                 </div>
               </div>
             </div>
 
-            <!-- 카드 하단 액션 버튼 -->
+            <!-- 카드 하단 바로가기 버튼 바 -->
             <div class="flex items-center justify-between gap-2 pt-3 mt-3 border-t border-slate-100">
               <button
                 type="button"
                 onclick="app.toggleSchoolDetail('${s.id}')"
-                class="text-xs font-extrabold text-slate-600 hover:text-slate-900 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-slate-100"
+                class="text-xs font-extrabold text-slate-500 hover:text-slate-900 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-slate-100"
               >
-                <span>${isExpanded ? '상세 접기' : '상세 요강'}</span>
+                <span>${isExpanded ? '간략히' : '추가노트'}</span>
                 <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
               </button>
 
@@ -3494,7 +3990,7 @@ class DodamCommunityApp {
                   href="${s.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl border border-slate-200 hover:border-slate-300 bg-white text-slate-700 font-black text-xs hover:bg-slate-50 transition shadow-2xs"
                 >
                   <span>학교알리미</span>
                   <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>

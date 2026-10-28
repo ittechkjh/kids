@@ -1287,7 +1287,7 @@
                 class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
               >
                 <option value="all">전체 지역 (전국)</option>
-                <option value="seoul">서울특별시 (강남·목동·노원)</option>
+                <option value="seoul">서울특별시 (송파·강남·목동·노원)</option>
                 <option value="gyeonggi">경기도 (분당·일산·평촌·용인)</option>
                 <option value="daegu">대구광역시 (수성구 범어동)</option>
                 <option value="busan">부산광역시 (해운대 센텀)</option>
@@ -1301,14 +1301,12 @@
                 class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-sky-500"
               >
                 <option value="all">전체 학교 유형</option>
-                <option value="자사고">전국·광역 자사고</option>
-                <option value="특목고">특목고 (외고·국제고·과고)</option>
-                <option value="영재학교">영재학교</option>
-                <option value="명문일반고">명문 일반고</option>
-                <option value="명문중학">공립 명문중학교</option>
-                <option value="사립초">사립 초등학교</option>
-                <option value="영유">영어유치원 (어학원 유치부)</option>
-                <option value="국공립">국공립 병설·단설</option>
+                <option value="공립">공립 학교</option>
+                <option value="사립">사립 학교</option>
+                <option value="자사고">자사고 (전국·광역)</option>
+                <option value="특목고">특목고 (외고·과학고)</option>
+                <option value="초품아">초품아 (단지 내 통학)</option>
+                <option value="의대">의약학계열 명문</option>
               </select>
             </div>
           </div>
@@ -1643,6 +1641,66 @@
         <button onclick="document.getElementById('scrap-modal').classList.add('hidden')" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
       </div>
       <div id="scrap-list-container" class="space-y-2.5 max-h-80 overflow-y-auto"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 6: 리치고(RichGo) 학군 등급 산출 기준 모달
+       ========================================== -->
+  <div id="school-grade-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <div class="flex items-center gap-2">
+          <span class="w-8 h-8 rounded-xl bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-sm">📊</span>
+          <h3 class="text-base font-black text-slate-900">리치고(RichGo) 학군 등급 산출 기준</h3>
+        </div>
+        <button onclick="app.closeSchoolGradeModal()" class="text-slate-400 hover:text-slate-600 transition"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      <div class="space-y-3 text-xs text-slate-700 leading-relaxed max-h-96 overflow-y-auto pr-1">
+        <p class="font-bold text-slate-800">
+          도담톡의 학군·학교 등급 데이터는 <strong class="text-indigo-600 font-black">리치고(RichGo) 빅데이터 학군 평가 지표</strong>와 학교알리미 공시, 대학 진학 실적, 수능 백분위를 종합 분석하여 산출되었습니다.
+        </p>
+        <div class="space-y-2 pt-1">
+          <div class="p-3 rounded-2xl bg-indigo-50/70 border border-indigo-100 space-y-1">
+            <div class="flex items-center justify-between font-black text-indigo-900">
+              <span>🏆 1.0 ~ 1.2등급 (전국 최상위 1~3%)</span>
+              <span class="px-2 py-0.5 rounded-full bg-indigo-600 text-white text-[10px]">최상위 학군</span>
+            </div>
+            <p class="text-[11px] text-indigo-800">
+              특목고·전국자사고 진학률 15% 이상, 서울대 합격 15명 이상 또는 의약학계열 20명 이상 배출. 대치·목동·송파·분당의 핵심 선호 학교.
+            </p>
+          </div>
+          <div class="p-3 rounded-2xl bg-sky-50/70 border border-sky-100 space-y-1">
+            <div class="flex items-center justify-between font-black text-sky-900">
+              <span>🥈 1.3 ~ 1.5등급 (전국 상위 5~10%)</span>
+              <span class="px-2 py-0.5 rounded-full bg-sky-600 text-white text-[10px]">명문 학군</span>
+            </div>
+            <p class="text-[11px] text-sky-800">
+              특목·자사고 진학률 8~14%, 인서울 주요 대학 진학률 45% 이상. 지역 내 1순위 지망 선호 학교.
+            </p>
+          </div>
+          <div class="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-100 space-y-1">
+            <div class="flex items-center justify-between font-black text-emerald-900">
+              <span>🥉 1.6 ~ 2.0등급 (전국 상위 15~25%)</span>
+              <span class="px-2 py-0.5 rounded-full bg-emerald-600 text-white text-[10px]">우수 학군</span>
+            </div>
+            <p class="text-[11px] text-emerald-800">
+              학업성취도 우수, 대단지 배후 초품아, 교사당 학생 수 및 학급당 학생수 쾌적, 면학 분위기 안정권.
+            </p>
+          </div>
+        </div>
+        <div class="bg-stone-50 p-3 rounded-2xl border border-stone-200 text-[11px] text-slate-600 space-y-1">
+          <div class="font-extrabold text-slate-800">💡 3대 핵심 비교 지표 산출 방식:</div>
+          <div>• <strong>학급당 학생수</strong>: 과밀(28명 이상) 여부 및 집중도 분석 (기준치: 전국 20명, 서울 22명)</div>
+          <div>• <strong>교사당 학생수</strong>: 교원 1인당 학생 케어 수준 (기준치: 전국 14명, 서울 16명)</div>
+          <div>• <strong>고학년 비율</strong>: 4~6학년 학생 / 전체 학생 비율 (학군 이주 수요가 높을수록 50% 상회)</div>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-stone-100 flex justify-end">
+        <button onclick="app.closeSchoolGradeModal()" class="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs transition">
+          확인
+        </button>
+      </div>
     </div>
   </div>
 
