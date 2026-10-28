@@ -127,6 +127,17 @@ class DodamCommunityApp {
     this.foodCurrentPage = 1;
 
     // Initialize User Data
+        // 5. Policy & Subsidies State (육아 정책·지원금)
+    this.policyCategory = 'all';
+    this.policyRegion = 'all';
+    this.policyAgeGroup = 'all';
+    this.policySearchKeyword = '';
+    this.expandedPolicyIds = new Set();
+    this.expandedFaqIndexes = new Set([0]);
+    this.calcChildrenCount = 2;
+    this.calcYoungestAge = '0';
+    this.calcRegion = 'all';
+
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
     this.loadSavedPosts();
@@ -149,9 +160,21 @@ class DodamCommunityApp {
 
     this.renderSidebarWidgets();
     this.renderFoodView();
+    this.initPolicyView();
     this.updateScrapBadge();
     this.renderUpdateBadges();
     this.initFirebaseSync();
+    // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
+    const initHash = (window.location.hash || '').replace('#', '');
+    if (['board', 'festivals', 'contests', 'food', 'policy'].includes(initHash)) {
+      this.switchMainView(initHash);
+    }
+    window.addEventListener('hashchange', () => {
+      const h = (window.location.hash || '').replace('#', '');
+      if (['board', 'festivals', 'contests', 'food', 'policy'].includes(h)) {
+        this.switchMainView(h);
+      }
+    });
   }
 
   renderUpdateBadges() {
@@ -340,10 +363,12 @@ class DodamCommunityApp {
     if (target) target.classList.remove('hidden');
 
     document.querySelectorAll('.nav-view-btn').forEach((btn) => {
+      const isPolicy = btn.getAttribute('data-view') === 'policy';
+      const colSpan = isPolicy ? ' col-span-2 sm:col-span-1' : '';
       const active = btn.getAttribute('data-view') === viewId;
       btn.className = active
-        ? 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm'
-        : 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-slate-100';
+        ? 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm text-center' + colSpan
+        : 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-stone-100 text-center' + colSpan;
     });
 
     this.renderBoardCategories();
@@ -370,6 +395,8 @@ class DodamCommunityApp {
           this.updateFoodMapMarkers();
         }
       }, 100);
+    } else if (viewId === 'policy') {
+      this.initPolicyView();
     }
   }
 
@@ -451,7 +478,21 @@ class DodamCommunityApp {
             </span>
             <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'food' ? 'bg-white text-rose-600' : 'bg-rose-500 text-white'} text-[9px] font-black">5,000곳</span>
           </button>
-        </div>
+          <button
+            onclick="app.switchMainView('policy')"
+            class="w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-extrabold transition ${
+              this.currentView === 'policy'
+                ? 'bg-emerald-600 text-white shadow-sm'
+                : 'bg-emerald-50 text-emerald-900 border border-emerald-200/80 hover:bg-emerald-100'
+            }"
+          >
+            <span class="flex items-center gap-2">
+              <i class="fa-solid fa-hand-holding-dollar ${this.currentView === 'policy' ? 'text-white' : 'text-emerald-600'}"></i>
+              <span>육아 정책·지원금 모아보기</span>
+            </span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'policy' ? 'bg-white text-emerald-600' : 'bg-emerald-600 text-white'} text-[9px] font-black">2026</span>
+          </button>
+</div>
       `;
 
       sideEl.innerHTML = catButtons + quickLinks;
@@ -2677,6 +2718,471 @@ class DodamCommunityApp {
   loadMoreRestaurants() {
     this.foodCurrentPage = (this.foodCurrentPage || 1) + 1;
     this.renderFoodView();
+  }
+
+  // ==========================================
+  // 7. 대한민국 육아 정책 & 정부 지원금 모아보기 컨트롤러
+  // ==========================================
+  initPolicyView() {
+    this.renderPolicyCategories();
+    this.renderPolicyPortals();
+    this.renderPolicyCalculator();
+    this.renderPolicyList();
+    this.renderPolicyFaqs();
+  }
+
+  renderPolicyPortals() {
+    const container = document.getElementById('policy-portals-container');
+    if (!container) return;
+    const portals = window.DODAM_POLICIES_DATA?.portals || [];
+    container.innerHTML = portals
+      .map(
+        (p) => `
+        <a
+          href="${p.url}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="p-2.5 rounded-xl border ${p.bgColor} hover:shadow-sm hover:scale-[1.01] transition flex flex-col justify-between gap-1.5 group"
+        >
+          <div class="flex items-center justify-between">
+            <span class="font-extrabold text-xs flex items-center gap-1.5 truncate">
+              <i class="fa-solid ${p.icon} text-xs"></i>
+              <span class="truncate">${p.name}</span>
+            </span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-60 group-hover:opacity-100"></i>
+          </div>
+          <p class="text-[10px] opacity-80 line-clamp-2 leading-tight">${p.desc}</p>
+        </a>
+      `
+      )
+      .join('');
+  }
+
+  renderPolicyCategories() {
+    const container = document.getElementById('policy-category-chips');
+    if (!container) return;
+    const categories = window.DODAM_POLICIES_DATA?.categories || [];
+    container.innerHTML = categories
+      .map((c) => {
+        const active = this.policyCategory === c.id;
+        return `
+          <button
+            type="button"
+            onclick="app.selectPolicyCategory('${c.id}')"
+            class="px-3 py-1.5 rounded-xl font-extrabold whitespace-nowrap transition flex items-center gap-1.5 text-xs ${
+              active
+                ? 'bg-slate-900 text-white shadow-sm'
+                : 'bg-stone-100 text-slate-600 hover:bg-stone-200'
+            }"
+          >
+            <i class="fa-solid ${c.icon} ${active ? 'text-emerald-400' : 'text-slate-400'}"></i>
+            <span>${c.name}</span>
+          </button>
+        `;
+      })
+      .join('');
+  }
+
+  selectPolicyCategory(catId) {
+    this.policyCategory = catId;
+    this.renderPolicyCategories();
+    this.renderPolicyList();
+  }
+
+  setPolicyAgeFilter(age) {
+    this.policyAgeGroup = age;
+    this.renderPolicyList();
+  }
+
+  setPolicyRegionFilter(region) {
+    this.policyRegion = region;
+    this.renderPolicyList();
+  }
+
+  onPolicySearch(keyword) {
+    this.policySearchKeyword = (keyword || '').trim().toLowerCase();
+    const clearBtn = document.getElementById('policy-search-clear');
+    if (clearBtn) {
+      clearBtn.classList.toggle('hidden', !this.policySearchKeyword);
+    }
+    this.renderPolicyList();
+  }
+
+  clearPolicySearch() {
+    this.policySearchKeyword = '';
+    const input = document.getElementById('policy-search-input');
+    if (input) input.value = '';
+    const clearBtn = document.getElementById('policy-search-clear');
+    if (clearBtn) clearBtn.classList.add('hidden');
+    this.renderPolicyList();
+  }
+
+  setCalcChildren(num) {
+    this.calcChildrenCount = parseInt(num, 10);
+    document.querySelectorAll('.calc-child-btn').forEach((btn) => {
+      const val = parseInt(btn.getAttribute('data-value'), 10);
+      const active = val === this.calcChildrenCount;
+      btn.className = active
+        ? 'calc-child-btn px-2 py-2 rounded-xl text-xs font-extrabold border border-emerald-500 bg-emerald-500 text-white shadow-sm transition'
+        : 'calc-child-btn px-2 py-2 rounded-xl text-xs font-extrabold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition';
+    });
+    this.renderPolicyCalculator();
+  }
+
+  setCalcAge(age) {
+    this.calcYoungestAge = age;
+    this.renderPolicyCalculator();
+  }
+
+  setCalcRegion(region) {
+    this.calcRegion = region;
+    this.renderPolicyCalculator();
+  }
+
+  renderPolicyCalculator() {
+    const resBox = document.getElementById('calc-result-box');
+    if (!resBox) return;
+
+    const children = this.calcChildrenCount || 2;
+    const age = this.calcYoungestAge || '0';
+    const region = this.calcRegion || 'all';
+
+    let monthlyCash = 0;
+    const breakdown = [];
+    const vouchers = [];
+    const discounts = [];
+
+    // Monthly cash calculation
+    if (age === 'pregnant') {
+      monthlyCash = 0;
+      vouchers.push('임신·출산 진료비 바우처 100만~140만 원 (국민행복카드)');
+      vouchers.push(`첫만남이용권 ${children >= 2 ? '300만 원 (둘째 이상)' : '200만 원 (첫째)'}`);
+    } else if (age === '0') {
+      monthlyCash += 100; // 부모급여 100만
+      monthlyCash += 10;  // 아동수당 10만
+      breakdown.push('만 0세 부모급여: 월 100만 원');
+      breakdown.push('아동수당: 월 10만 원');
+      vouchers.push(`첫만남이용권 ${children >= 2 ? '300만 원' : '200만 원'} (출생 1년 내)`);
+      discounts.push('한전 출산가구 전기요금 30% 감면 (월 최대 16,000원, 출생 3년)');
+      discounts.push('에너지바우처 (기초수급 영유아 포함 가구 연 최대 70만원)');
+    } else if (age === '1') {
+      monthlyCash += 50; // 부모급여 50만
+      monthlyCash += 10; // 아동수당 10만
+      breakdown.push('만 1세 부모급여: 월 50만 원');
+      breakdown.push('아동수당: 월 10만 원');
+      discounts.push('한전 출산가구 전기요금 30% 감면 (출생 후 3년까지)');
+      discounts.push('에너지바우처 냉·난방비 지원');
+    } else if (age === 'toddler') {
+      monthlyCash += 10; // 아동수당
+      breakdown.push('아동수당 (만 8세 미만): 월 10만 원');
+    } else {
+      breakdown.push('아동수당 연령 초과 (초등학생 이상)');
+    }
+
+    // Additional child allowances if multiple children
+    if (children >= 2) {
+      discounts.push('🎉 다자녀 혜택 대상 (2자녀 이상 기준 완화 적용)');
+      discounts.push('KTX & SRT 다자녀 행복 열차 30~50% 할인');
+      discounts.push('공공분양·청약 다자녀 특별공급 신청 자격 부여 (2자녀 이상)');
+      discounts.push('어린이집 1순위 우선 입소');
+      if (children >= 3) {
+        discounts.push('다자녀 자동차 취득세 감면 (7~9인승 전액, 승용차 140만원)');
+        discounts.push('도시가스 요금 동절기 월 최대 18,000원 감면');
+      }
+    }
+
+    // Local regional subsidies
+    if (region === 'seoul') {
+      vouchers.push('서울형 산후조리경비 100만 원 (서울 거주 산모)');
+      vouchers.push('서울시 임산부 교통비 70만 원 (대중교통/택시/주유비)');
+      if (age === 'toddler' || age === '1') {
+        discounts.push('서울형 아이돌봄비 (조부모 친인척 돌봄 시 월 30만 원, 최대 13개월 390만 원)');
+      }
+    } else if (region === 'gyeonggi') {
+      vouchers.push('경기도 산후조리비 50만 원 (경기지역화폐 지급)');
+    } else if (region === 'incheon') {
+      vouchers.push('인천 1억 플러스 아이드림 (1~7세 천사지원금 매년 120만 원)');
+    } else if (region === 'busan') {
+      if (children >= 2) {
+        discounts.push(`부산시 다자녀 교육지원포인트 (${children === 2 ? '연 30만 원' : '연 50만 원'} 동백전)`);
+      }
+    }
+
+    // Child Tax Credit mention
+    discounts.push('국세청 자녀장려금 (소득 7천만원 미만 시 자녀 1인당 최대 100만 원, 5월 신청)');
+
+    resBox.innerHTML = `
+      <div class="space-y-3">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-2.5 border-b border-slate-700">
+          <div>
+            <span class="text-[11px] font-extrabold text-emerald-400">💡 우리 가족 월 예상 기본 현금 수당</span>
+            <div class="text-xl font-black text-white mt-0.5">
+              ${
+                monthlyCash > 0
+                  ? `<span class="text-emerald-400 font-black">월 ${monthlyCash}만 원</span> <span class="text-xs text-slate-300 font-normal">(${breakdown.join(' + ')})</span>`
+                  : `<span class="text-slate-300 font-bold text-sm">월 기본수당 대상 외 (일시금 바우처 및 감면 혜택 집중)</span>`
+              }
+            </div>
+          </div>
+          <div class="text-right">
+            <span class="px-2 py-1 rounded-lg bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[11px] font-black">
+              ${children}자녀 가구 맞춤
+            </span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <!-- 일시금 바우처 -->
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-700/60 space-y-1.5">
+            <div class="font-extrabold text-pink-300 flex items-center gap-1.5">
+              <i class="fa-solid fa-gift"></i>
+              <span>추천 일시금 바우처 & 포인트</span>
+            </div>
+            <ul class="space-y-1 text-slate-300 text-[11px]">
+              ${vouchers.map((v) => `<li class="flex items-start gap-1.5"><span class="text-pink-400 font-bold">•</span><span>${v}</span></li>`).join('')}
+            </ul>
+          </div>
+
+          <!-- 요금감면 및 정책 -->
+          <div class="p-3 rounded-xl bg-slate-900/60 border border-slate-700/60 space-y-1.5">
+            <div class="font-extrabold text-amber-300 flex items-center gap-1.5">
+              <i class="fa-solid fa-bolt"></i>
+              <span>요금 감면 & 다자녀·세제 추천 혜택</span>
+            </div>
+            <ul class="space-y-1 text-slate-300 text-[11px]">
+              ${discounts.slice(0, 4).map((d) => `<li class="flex items-start gap-1.5"><span class="text-amber-400 font-bold">•</span><span>${d}</span></li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  filterPolicies() {
+    const data = window.DODAM_POLICIES_DATA?.policies || [];
+    return data.filter((p) => {
+      // Category filter
+      if (this.policyCategory !== 'all' && p.category !== this.policyCategory) {
+        return false;
+      }
+      // Age group filter
+      if (this.policyAgeGroup !== 'all') {
+        if (this.policyAgeGroup === 'multi') {
+          if (p.category !== 'multi_child' && p.ageGroup !== 'multi') return false;
+        } else if (p.ageGroup !== 'all' && p.ageGroup !== this.policyAgeGroup) {
+          return false;
+        }
+      }
+      // Region filter
+      if (this.policyRegion !== 'all') {
+        if (p.region !== 'all' && p.region !== this.policyRegion) {
+          return false;
+        }
+      }
+      // Keyword filter
+      if (this.policySearchKeyword) {
+        const kw = this.policySearchKeyword;
+        const text = (
+          p.title +
+          ' ' +
+          p.summary +
+          ' ' +
+          (p.targetGroup || '') +
+          ' ' +
+          (p.amountHighlight || '') +
+          ' ' +
+          (p.details || []).join(' ')
+        ).toLowerCase();
+        if (!text.includes(kw)) return false;
+      }
+      return true;
+    });
+  }
+
+  renderPolicyList() {
+    const grid = document.getElementById('policy-cards-grid');
+    const badge = document.getElementById('policy-filtered-count-badge');
+    const totalCountEl = document.getElementById('policy-stat-total');
+    if (!grid) return;
+
+    const allPolicies = window.DODAM_POLICIES_DATA?.policies || [];
+    if (totalCountEl) totalCountEl.textContent = `${allPolicies.length}+`;
+
+    const filtered = this.filterPolicies();
+    if (badge) {
+      badge.textContent = `검색 결과 ${filtered.length}건`;
+    }
+
+    if (filtered.length === 0) {
+      grid.innerHTML = `
+        <div class="col-span-1 md:col-span-2 text-center py-12 bg-white rounded-2xl border border-dashed border-slate-200">
+          <div class="w-12 h-12 mx-auto rounded-full bg-slate-100 text-slate-400 flex items-center justify-center text-xl mb-3">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <p class="text-sm font-bold text-slate-700">선택하신 조건에 일치하는 지원금 정책이 없습니다.</p>
+          <p class="text-xs text-slate-400 mt-1">검색어를 변경하시거나 카테고리/지역 필터를 '전체'로 설정해 보세요.</p>
+          <button
+            onclick="app.clearPolicySearch(); app.selectPolicyCategory('all'); document.getElementById('policy-age-filter').value='all'; document.getElementById('policy-region-filter').value='all'; app.setPolicyAgeFilter('all'); app.setPolicyRegionFilter('all');"
+            class="mt-4 px-4 py-2 rounded-xl bg-slate-900 text-white font-black text-xs hover:bg-slate-800 transition"
+          >
+            전체 필터 초기화
+          </button>
+        </div>
+      `;
+      return;
+    }
+
+    grid.innerHTML = filtered
+      .map((p) => {
+        const isExpanded = this.expandedPolicyIds.has(p.id);
+        const color = p.categoryColor || 'emerald';
+
+        const colorClasses = {
+          emerald: { badge: 'bg-emerald-50 text-emerald-700 border-emerald-200', highlight: 'bg-emerald-50 text-emerald-800 border-emerald-200' },
+          rose: { badge: 'bg-rose-50 text-rose-700 border-rose-200', highlight: 'bg-rose-50 text-rose-800 border-rose-200' },
+          blue: { badge: 'bg-blue-50 text-blue-700 border-blue-200', highlight: 'bg-blue-50 text-blue-800 border-blue-200' },
+          amber: { badge: 'bg-amber-50 text-amber-700 border-amber-200', highlight: 'bg-amber-50 text-amber-800 border-amber-200' },
+          purple: { badge: 'bg-purple-50 text-purple-700 border-purple-200', highlight: 'bg-purple-50 text-purple-800 border-purple-200' },
+          indigo: { badge: 'bg-indigo-50 text-indigo-700 border-indigo-200', highlight: 'bg-indigo-50 text-indigo-800 border-indigo-200' },
+          pink: { badge: 'bg-pink-50 text-pink-700 border-pink-200', highlight: 'bg-pink-50 text-pink-800 border-pink-200' }
+        }[color] || { badge: 'bg-slate-100 text-slate-700 border-slate-200', highlight: 'bg-slate-50 text-slate-800 border-slate-200' };
+
+        return `
+          <article class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs hover:shadow-sm transition flex flex-col justify-between">
+            <div class="space-y-3">
+              <!-- 상단 뱃지 라인 -->
+              <div class="flex items-center justify-between gap-2 flex-wrap">
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-full font-black text-[10px] border ${colorClasses.badge}">
+                    ${p.categoryName}
+                  </span>
+                  ${
+                    p.badge
+                      ? `<span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-rose-500 text-white shadow-2xs">${p.badge}</span>`
+                      : ''
+                  }
+                  <span class="px-2 py-0.5 rounded-full font-bold text-[10px] bg-slate-100 text-slate-600 border border-slate-200">
+                    ${p.regionName}
+                  </span>
+                </div>
+                <span class="text-[10px] text-slate-400 font-bold truncate max-w-[150px]">
+                  <i class="fa-solid fa-users mr-1"></i>${p.targetGroup}
+                </span>
+              </div>
+
+              <!-- 제목 및 요약 -->
+              <div>
+                <h4 class="text-sm font-black text-slate-900 hover:text-emerald-700 transition cursor-pointer" onclick="app.togglePolicyDetail('${p.id}')">
+                  ${p.title}
+                </h4>
+                <p class="text-xs text-slate-600 mt-1 line-clamp-2 leading-relaxed">
+                  ${p.summary}
+                </p>
+              </div>
+
+              <!-- 지원 금액 하이라이트 박스 -->
+              <div class="p-2.5 rounded-xl border ${colorClasses.highlight} flex items-center justify-between gap-2">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="text-sm font-black shrink-0">💰</span>
+                  <div class="min-w-0">
+                    <div class="text-[10px] text-slate-500 font-bold">지원 혜택 & 금액</div>
+                    <div class="text-xs font-black truncate">${p.amountHighlight}</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 아코디언 상세 정보 -->
+              <div id="policy-detail-${p.id}" class="${isExpanded ? '' : 'hidden'} pt-2 border-t border-slate-100 space-y-2.5 text-xs text-slate-700">
+                <div class="bg-slate-50 p-3 rounded-xl border border-slate-200/80 space-y-1.5">
+                  <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
+                    <i class="fa-solid fa-circle-info text-emerald-600"></i>
+                    <span>상세 지원 요건 & 이용 안내</span>
+                  </div>
+                  <ul class="space-y-1 text-[11px] text-slate-600 pl-1">
+                    ${(p.details || []).map((d) => `<li class="flex items-start gap-1.5"><span class="text-emerald-500 font-bold">•</span><span>${d}</span></li>`).join('')}
+                  </ul>
+                </div>
+
+                <div class="flex items-start gap-2 text-[11px] text-slate-600 pt-0.5">
+                  <strong class="font-bold text-slate-900 shrink-0"><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i>신청처:</strong>
+                  <span>${p.applyMethod}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 카드 하단 액션 버튼 -->
+            <div class="flex items-center justify-between gap-2 pt-3 mt-3 border-t border-slate-100">
+              <button
+                type="button"
+                onclick="app.togglePolicyDetail('${p.id}')"
+                class="text-xs font-extrabold text-slate-600 hover:text-slate-900 flex items-center gap-1 transition px-2 py-1 rounded-lg hover:bg-slate-100"
+              >
+                <span>${isExpanded ? '상세 접기' : '자세히 보기'}</span>
+                <i class="fa-solid ${isExpanded ? 'fa-chevron-up' : 'fa-chevron-down'} text-[10px]"></i>
+              </button>
+
+              <a
+                href="${p.applyUrl}"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-emerald-600 text-white font-black text-xs shadow-2xs transition"
+              >
+                <span>${p.applySiteName || '공식 신청 바로가기'}</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </article>
+        `;
+      })
+      .join('');
+  }
+
+  togglePolicyDetail(policyId) {
+    if (this.expandedPolicyIds.has(policyId)) {
+      this.expandedPolicyIds.delete(policyId);
+    } else {
+      this.expandedPolicyIds.add(policyId);
+    }
+    this.renderPolicyList();
+  }
+
+  renderPolicyFaqs() {
+    const container = document.getElementById('policy-faqs-container');
+    if (!container) return;
+    const faqs = window.DODAM_POLICIES_DATA?.faqs || [];
+    container.innerHTML = faqs
+      .map((faq, idx) => {
+        const isOpen = this.expandedFaqIndexes.has(idx);
+        return `
+          <div class="border border-slate-200 rounded-xl overflow-hidden transition">
+            <button
+              type="button"
+              onclick="app.togglePolicyFaq(${idx})"
+              class="w-full p-3.5 text-left bg-slate-50/70 hover:bg-slate-100 flex items-center justify-between gap-3 text-xs font-black text-slate-800 transition"
+            >
+              <div class="flex items-center gap-2">
+                <span class="w-5 h-5 rounded-full bg-rose-500 text-white flex items-center justify-center font-black text-[10px] shrink-0">Q</span>
+                <span>${faq.q}</span>
+              </div>
+              <i class="fa-solid ${isOpen ? 'fa-minus text-rose-500' : 'fa-plus text-slate-400'} text-xs shrink-0"></i>
+            </button>
+            <div class="${isOpen ? '' : 'hidden'} p-3.5 bg-white border-t border-slate-100 text-xs text-slate-600 leading-relaxed flex items-start gap-2">
+              <span class="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center font-black text-[10px] shrink-0 mt-0.5">A</span>
+              <div>${faq.a}</div>
+            </div>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  togglePolicyFaq(idx) {
+    if (this.expandedFaqIndexes.has(idx)) {
+      this.expandedFaqIndexes.delete(idx);
+    } else {
+      this.expandedFaqIndexes.add(idx);
+    }
+    this.renderPolicyFaqs();
   }
 }
 

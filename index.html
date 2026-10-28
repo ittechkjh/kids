@@ -138,7 +138,7 @@
       </div>
 
       <!-- 4대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사(볼거리·마라톤) / 대회일정(공부·사생·독서토론) / 맛집맵 -->
-      <nav class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 mt-3 pt-2.5 border-t border-stone-100">
+      <nav class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-1.5 mt-3 pt-2.5 border-t border-stone-100">
         <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition bg-slate-900 text-white shadow-sm text-center">
           <i class="fa-solid fa-clipboard-list text-rose-400"></i>
           <span>💬 도담 육아 게시판</span>
@@ -154,6 +154,10 @@
         <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
           <span>🍽️ 전국 안심 맛집맵</span>
+        </button>
+        <button data-view="policy" onclick="app.switchMainView('policy')" class="nav-view-btn col-span-2 sm:col-span-1 flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold transition text-slate-600 hover:bg-stone-100 text-center">
+          <i class="fa-solid fa-hand-holding-dollar text-emerald-500"></i>
+          <span>💰 육아 정책·지원금</span>
         </button>
       </nav>
     </div>
@@ -907,6 +911,242 @@
             <div id="food-load-more-container" class="pt-2 text-center"></div>
           </div>
         </section>
+
+        <!-- VIEW 7: 육아 정책·지원금 원스톱 모아보기 (신규 추가) -->
+        <section id="view-policy" class="view-section hidden space-y-5">
+          <!-- 상단 배너 & 실시간 정책 업데이트 현황 -->
+          <div class="community-card p-5 space-y-4 bg-gradient-to-br from-emerald-50/70 via-white to-blue-50/60 border border-emerald-100">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-emerald-600 text-white text-[11px] font-extrabold">2024~2026 정부 정책 최신 개정판</span>
+                  <span class="text-xs text-emerald-700 font-bold"><i class="fa-solid fa-arrows-rotate mr-1"></i>수시 변동 지원금 한곳에 모아보기</span>
+                </div>
+                <h2 class="text-lg font-black text-slate-900 mt-1">💰 대한민국 육아 정책 & 정부 지원금 원스톱 모아보기</h2>
+                <p class="text-xs text-slate-600">다자녀 혜택 완화(2자녀), 에너지바우처, 자녀장려금 대폭 확대, 부모급여·아동수당, 지자체별 출산지원금을 한눈에 확인하고 바로 신청하세요.</p>
+              </div>
+
+              <!-- 우측 통계 위젯 -->
+              <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shrink-0">
+                <div class="bg-white/95 backdrop-blur border border-emerald-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
+                  <div class="flex items-center justify-between gap-3">
+                    <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                      <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                      </span>
+                      <span>정부 복지포털 연동</span>
+                    </span>
+                    <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
+                      최신 정책: 2026.10월
+                    </span>
+                  </div>
+                  <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
+                    <span>수혜 정책: <strong id="policy-stat-total" class="font-black text-emerald-600">20+</strong>종</span>
+                    <span class="text-slate-300">|</span>
+                    <span><strong class="font-black text-slate-900">다자녀·에너지바우처</strong> 등</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4대 핵심 혜택 하이라이트 그리드 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-sm shrink-0">💵</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">만 0세 부모급여</div>
+                  <div class="text-xs font-black text-slate-900 truncate">월 100만 원 (1세 50만)</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-black text-sm shrink-0">⚡</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">에너지바우처 & 전기료</div>
+                  <div class="text-xs font-black text-slate-900 truncate">최대 70만원 + 전기 30%</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-blue-100 shadow-2xs flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-black text-sm shrink-0">📈</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">국세청 자녀장려금</div>
+                  <div class="text-xs font-black text-slate-900 truncate">소득 7천만 / 자녀당 100만</div>
+                </div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-black text-sm shrink-0">👨‍👩‍👧‍👦</div>
+                <div class="min-w-0">
+                  <div class="text-[10px] text-slate-500 font-bold">다자녀 혜택 완화</div>
+                  <div class="text-xs font-black text-slate-900 truncate">2자녀부터 특공·KTX·감면</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 맞춤 지원금 간편 모의계산기 위젯 -->
+          <div class="community-card p-5 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 text-white shadow-md space-y-4">
+            <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-700/80">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-xl bg-emerald-500 text-white flex items-center justify-center font-black text-sm shadow-sm">
+                  <i class="fa-solid fa-calculator"></i>
+                </div>
+                <div>
+                  <h3 class="text-sm font-black text-white flex items-center gap-2">
+                    <span>우리 집 맞춤 지원금 & 혜택 간편 모의계산기</span>
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-[10px] font-extrabold">실시간 계산</span>
+                  </h3>
+                  <p class="text-[11px] text-slate-300">자녀 수와 막내 연령, 거주 지역을 선택하면 매월 수령 가능한 예상 수당과 핵심 혜택을 즉시 계산해 드립니다.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 입력 컨트롤러 -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-300 mb-1.5">1. 자녀 수 (임신 포함)</label>
+                <div class="grid grid-cols-3 gap-1.5" id="calc-children-buttons">
+                  <button type="button" onclick="app.setCalcChildren(1)" class="calc-child-btn px-2 py-2 rounded-xl text-xs font-extrabold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-value="1">1자녀</button>
+                  <button type="button" onclick="app.setCalcChildren(2)" class="calc-child-btn px-2 py-2 rounded-xl text-xs font-extrabold border border-emerald-500 bg-emerald-500 text-white shadow-sm transition" data-value="2">2자녀 (다자녀)</button>
+                  <button type="button" onclick="app.setCalcChildren(3)" class="calc-child-btn px-2 py-2 rounded-xl text-xs font-extrabold border border-slate-700 bg-slate-800 text-slate-300 hover:bg-slate-700 transition" data-value="3">3자녀 이상</button>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-300 mb-1.5">2. 막내 아이 연령</label>
+                <select id="calc-age-select" onchange="app.setCalcAge(this.value)" class="w-full px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-emerald-500">
+                  <option value="pregnant">🤰 출산 준비 (임신 중)</option>
+                  <option value="0" selected>🍼 만 0세 (생후 0~11개월)</option>
+                  <option value="1">🧒 만 1세 (생후 12~23개월)</option>
+                  <option value="toddler">👦 만 2~7세 (유치원·어린이집)</option>
+                  <option value="school">🎒 만 8세 이상 (초등학생~)</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-[11px] font-extrabold text-slate-300 mb-1.5">3. 거주 지역 (특화 지원금)</label>
+                <select id="calc-region-select" onchange="app.setCalcRegion(this.value)" class="w-full px-3 py-2 rounded-xl text-xs font-bold bg-slate-800 text-white border border-slate-700 focus:outline-none focus:border-emerald-500">
+                  <option value="all">전국 공통 혜택</option>
+                  <option value="seoul">서울특별시 (산후조리경비 100만 / 아이돌봄비)</option>
+                  <option value="gyeonggi">경기도 (산후조리비 50만 지역화폐)</option>
+                  <option value="incheon">인천광역시 (1억플러스 천사지원금)</option>
+                  <option value="busan">부산광역시 (다자녀 교육지원포인트)</option>
+                  <option value="daegu">대구광역시 (대구형 출산축하금)</option>
+                  <option value="daejeon">대전광역시 (양육지원금)</option>
+                  <option value="gwangju">광주광역시 (출생육아수당)</option>
+                  <option value="sejong">세종특별자치시</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- 계산 결과 동적 박스 -->
+            <div id="calc-result-box" class="p-4 rounded-2xl bg-slate-800/90 border border-slate-700/80">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 대한민국 정부 5대 공식 복지 신청 포털 바로가기 -->
+          <div class="community-card p-4 bg-white border border-slate-200">
+            <div class="flex items-center justify-between mb-2.5">
+              <h3 class="text-xs font-black text-slate-900 flex items-center gap-1.5">
+                <i class="fa-solid fa-arrow-up-right-from-square text-rose-500"></i>
+                <span>대한민국 정부 5대 공식 지원금 신청 포털 원스톱 바로가기</span>
+              </h3>
+              <span class="text-[10px] text-slate-400">새창 열림</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2" id="policy-portals-container">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 검색 및 필터링 컨트롤 바 -->
+          <div class="community-card p-4 space-y-3 bg-white border border-slate-200">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+              <div class="relative flex-1">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input
+                  type="text"
+                  id="policy-search-input"
+                  oninput="app.onPolicySearch(this.value)"
+                  placeholder="지원금명, 혜택 내용, 키워드 검색 (예: 에너지바우처, 전기세, 다자녀, 자녀장려금)"
+                  class="w-full pl-8 pr-8 py-2 rounded-xl text-xs font-medium border border-slate-200 focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                />
+                <button
+                  id="policy-search-clear"
+                  onclick="app.clearPolicySearch()"
+                  class="hidden absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 text-xs"
+                >
+                  <i class="fa-solid fa-circle-xmark"></i>
+                </button>
+              </div>
+
+              <!-- 대상 연령 필터 -->
+              <select
+                id="policy-age-filter"
+                onchange="app.setPolicyAgeFilter(this.value)"
+                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-emerald-500"
+              >
+                <option value="all">전체 대상 연령</option>
+                <option value="pregnancy">🤰 임신·출산 준비</option>
+                <option value="infant">🍼 영아 (0~1세)</option>
+                <option value="toddler">🧒 유아 (2~7세)</option>
+                <option value="school">🎒 초등학생 이상</option>
+                <option value="multi">👨‍👩‍👧‍👦 다자녀 (2자녀 이상)</option>
+              </select>
+
+              <!-- 지역 필터 -->
+              <select
+                id="policy-region-filter"
+                onchange="app.setPolicyRegionFilter(this.value)"
+                class="px-3 py-2 rounded-xl text-xs font-bold border border-slate-200 bg-white text-slate-700 focus:outline-none focus:border-emerald-500"
+              >
+                <option value="all">전체 지역 (전국)</option>
+                <option value="seoul">서울특별시</option>
+                <option value="gyeonggi">경기도</option>
+                <option value="incheon">인천광역시</option>
+                <option value="busan">부산광역시</option>
+                <option value="daegu">대구광역시</option>
+                <option value="daejeon">대전광역시</option>
+                <option value="gwangju">광주광역시</option>
+                <option value="sejong">세종특별자치시</option>
+              </select>
+            </div>
+
+            <!-- 카테고리 칩 목록 -->
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs" id="policy-category-chips">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 상세 정책 카드 목록 -->
+          <div class="space-y-3">
+            <div class="flex items-center justify-between px-1">
+              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                <span>📋 상세 지원 정책 & 혜택 목록</span>
+                <span id="policy-filtered-count-badge" class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-extrabold">전체</span>
+              </h3>
+              <span class="text-[11px] text-slate-400">카드를 누르면 상세 신청 자격과 제출서류가 펼쳐집니다.</span>
+            </div>
+
+            <!-- 카드 그리드 -->
+            <div id="policy-cards-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- 자주 묻는 질문 FAQ -->
+          <div class="community-card p-5 bg-white border border-slate-200 space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="w-7 h-7 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-black text-sm">💡</span>
+              <div>
+                <h3 class="text-sm font-black text-slate-900">자주 묻는 육아 정책 & 지원금 핵심 Q&A</h3>
+                <p class="text-xs text-slate-500">부모님들이 가장 많이 질문하시는 중복 수령, 2자녀 다자녀 기준, 에너지바우처 신청 방법을 확인하세요.</p>
+              </div>
+            </div>
+            <div id="policy-faqs-container" class="space-y-2 pt-1">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+        </section>
   </main>
 
   <!-- 푸터 -->
@@ -1207,6 +1447,7 @@
   <script src="js/firebase_db.js"></script>
   <script src="js/events_data.js"></script>
   <script src="js/restaurants_data.js"></script>
+  <script src="js/policies_data.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   
