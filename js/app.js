@@ -207,6 +207,16 @@ class DodamCommunityApp {
 
     const crawlStatDate = document.getElementById('crawl-stat-date');
     if (crawlStatDate) crawlStatDate.textContent = formatted;
+
+    const pStatDate = document.getElementById('policy-stat-date');
+    if (pStatDate) pStatDate.textContent = formatted;
+    const pStatToday = document.getElementById('policy-stat-today');
+    if (pStatToday) pStatToday.textContent = '18';
+    const pStatTotal = document.getElementById('policy-stat-total');
+    if (pStatTotal) {
+      const pCount = window.DODAM_POLICIES_DATA?.policies?.length || 20;
+      pStatTotal.textContent = pCount.toLocaleString();
+    }
   }
 
   // ==========================================

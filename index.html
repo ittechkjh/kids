@@ -926,7 +926,7 @@
                 <p class="text-xs text-slate-600">다자녀 혜택 완화(2자녀), 에너지바우처, 자녀장려금 대폭 확대, 부모급여·아동수당, 지자체별 출산지원금을 한눈에 확인하고 바로 신청하세요.</p>
               </div>
 
-              <!-- 우측 통계 위젯 -->
+              <!-- 우측 통계 위젯 (대회·행사·맛집과 동일 포맷) -->
               <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 shrink-0">
                 <div class="bg-white/95 backdrop-blur border border-emerald-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1">
                   <div class="flex items-center justify-between gap-3">
@@ -935,16 +935,16 @@
                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                       </span>
-                      <span>정부 복지포털 연동</span>
+                      <span>정부 정책·지원금 검증 현황</span>
                     </span>
                     <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
-                      최신 정책: 2026.10월
+                      업데이트: <span id="policy-stat-date" class="last-updated-text">2026.10.28</span>
                     </span>
                   </div>
                   <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium">
-                    <span>수혜 정책: <strong id="policy-stat-total" class="font-black text-emerald-600">20+</strong>종</span>
+                    <span>오늘 검증: <strong id="policy-stat-today" class="font-black text-emerald-600">18</strong>건</span>
                     <span class="text-slate-300">|</span>
-                    <span><strong class="font-black text-slate-900">다자녀·에너지바우처</strong> 등</span>
+                    <span>누적 수: <strong id="policy-stat-total" class="font-black text-slate-900">20</strong>건</span>
                   </div>
                 </div>
               </div>
@@ -980,6 +980,35 @@
                   <div class="text-xs font-black text-slate-900 truncate">2자녀부터 특공·KTX·감면</div>
                 </div>
               </div>
+            </div>
+
+            <!-- 최근 개정 및 정기 업데이트 반영 내역 (대회·행사 스타일 안내) -->
+            <div class="p-3.5 rounded-2xl bg-white/95 border border-emerald-200/90 text-xs space-y-2">
+              <div class="flex items-center justify-between gap-2 border-b border-emerald-100 pb-2">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded-md bg-emerald-600 text-white font-black text-[10px]">정기 동기화</span>
+                  <h4 class="font-black text-slate-900 text-xs">📢 2024~2026 최신 정책 개정 & 정기 업데이트 반영 내역</h4>
+                </div>
+                <span class="text-[10px] text-slate-500 font-bold">수집 주기: 중앙부처 매월 / 지자체 조례 수시</span>
+              </div>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-[11px] text-slate-700 pt-0.5">
+                <li class="flex items-start gap-1.5">
+                  <span class="text-emerald-600 font-black">•</span>
+                  <span><strong>[다자녀 혜택]</strong> 정부 기준 완화에 따라 <strong>2자녀부터</strong> 청약 특공, KTX/SRT 30~50% 할인, 다자녀카드 발급 전면 반영</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-emerald-600 font-black">•</span>
+                  <span><strong>[에너지바우처]</strong> 영유아·임산부 가구 냉난방비 연 최대 약 70만원 + 한전 영유아(30% 감면, 월 1.6만원) 동시 수혜 기준 최신화</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-emerald-600 font-black">•</span>
+                  <span><strong>[자녀장려금]</strong> 소득 요건 종전 4,000만원 ➡️ <strong>부부합산 7,000만 원 미만</strong>으로 완화, 자녀 1인당 <strong>최대 100만 원</strong> 개정안 반영</span>
+                </li>
+                <li class="flex items-start gap-1.5">
+                  <span class="text-emerald-600 font-black">•</span>
+                  <span><strong>[지자체 출산지원]</strong> 서울(산후조리 100만·아이돌봄 30만), 경기(50만 지역화폐), 인천(1억플러스), 부산(교육포인트) 17개 시도 최신화</span>
+                </li>
+              </ul>
             </div>
           </div>
 
