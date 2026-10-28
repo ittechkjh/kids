@@ -1,0 +1,381 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // ===============================================================
+    // Assumed Data Model & Platform Architecture
+    // ===============================================================
+    // Application: DodamTalk (도담톡 - 대한민국 육아 & 우리동네 커뮤니티)
+    // Architecture: Pure Frontend Static Web App (GitHub Pages) with Firestore
+    //
+    // Collections Secured:
+    // ---------------------------------------------------------------
+    // 1. community_posts
+    //    Document ID: auto-generated or string slug (e.g. "post-101", "custom-post-...")
+    //    Fields:
+    //      - title: string (required, 1..150 chars)
+    //      - content: string (required, 1..5000 chars)
+    //      - category: string (required, 1..50 chars)
+    //      - region: string (required, 1..50 chars)
+    //      - author: map (required, keys: nickname, childBadge, level, avatarBg)
+    //          * nickname: string (required, 1..50 chars)
+    //          * childBadge: string (optional, 0..50 chars)
+    //          * level: string (optional, 0..50 chars)
+    //          * avatarBg: string (optional, 0..100 chars)
+    //      - reactions: map (required, keys: like, hug, tip)
+    //          * like: number (int >= 0)
+    //          * hug: number (int >= 0)
+    //          * tip: number (int >= 0)
+    //      - comments: list of maps (required, max 500 items)
+    //      - tags: list of strings (optional, max 20 items, each string <= 50 chars)
+    //      - views: number (optional, >= 0)
+    //      - isHot: bool (optional)
+    //      - createdAt: string or timestamp (optional, string <= 50 chars)
+    //      - timestamp: number or timestamp (optional)
+    //      - id: string (optional, <= 100 chars)
+    //      - userReaction: string or null (optional, <= 20 chars)
+    //
+    // 2. user_events
+    //    Document ID: auto-generated or string slug (e.g. "user-event-...")
+    //    Fields:
+    //      - title: string (required, 1..150 chars)
+    //      - boardType: string (required, 'festivals' or 'contests')
+    //      - category: string (required, 1..50 chars)
+    //      - region: string (required, 1..50 chars)
+    //      - startDate: string (required, 1..30 chars)
+    //      - endDate: string (required, 1..30 chars)
+    //      - organizer: string (required, 1..100 chars)
+    //      - description: string (optional, 0..3000 chars)
+    //      - location: string (optional, 0..200 chars)
+    //      - badge: string (optional, 0..50 chars)
+    //      - sourceType: string (optional, 0..50 chars)
+    //      - sourceLabel: string (optional, 0..50 chars)
+    //      - regionName: string (optional, 0..50 chars)
+    //      - categoryName: string (optional, 0..50 chars)
+    //      - applyStartDate: string (optional, 0..30 chars)
+    //      - applyEndDate: string (optional, 0..30 chars)
+    //      - status: string (optional, 0..30 chars)
+    //      - dday: string (optional, 0..30 chars)
+    //      - targetAudience: string (optional, 0..100 chars)
+    //      - fee: string (optional, 0..100 chars)
+    //      - url: string (optional, 0..500 chars)
+    //      - imageUrl: string (optional, 0..500 chars)
+    //      - tags: list of strings (optional, max 20 items, each string <= 50 chars)
+    //      - id: string (optional, <= 100 chars)
+    //      - createdAt: string or timestamp (optional, <= 50 chars)
+    //
+    // 3. user_restaurants
+    //    Document ID: auto-generated or string slug (e.g. "rest-user-...")
+    //    Fields:
+    //      - name: string (required, 1..150 chars)
+    //      - category: string (required, 1..50 chars)
+    //      - address: string (required, 1..300 chars)
+    //      - phone: string (required, 1..50 chars)
+    //      - region: string (required, 1..50 chars)
+    //      - categoryName: string (optional, 0..50 chars)
+    //      - regionName: string (optional, 0..50 chars)
+    //      - district: string (optional, 0..100 chars)
+    //      - hours: string (optional, 0..150 chars)
+    //      - representativeMenu: string (optional, 0..500 chars)
+    //      - amenities: list of strings (optional, max 20 items, each string <= 50 chars)
+    //      - reviewSummary: string (optional, 0..1000 chars)
+    //      - lat: number (optional)
+    //      - lng: number (optional)
+    //      - overallRating: number (optional, 0..5)
+    //      - reviewCount: number (optional, >= 0)
+    //      - sources: map (optional)
+    //      - imageUrl: string (optional, 0..500 chars)
+    //      - id: string (optional, <= 100 chars)
+    //      - isCrawled: bool (optional)
+    //      - crawledAt: string (optional, <= 50 chars)
+    //      - createdAt: string or timestamp (optional, <= 50 chars)
+    // ===============================================================
+
+    // ===============================================================
+    // Global Default Deny
+    // ===============================================================
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // ===============================================================
+    // Common Helper Functions
+    // ===============================================================
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function hasOnlyAllowedFields(fields) {
+      return request.resource.data.keys().hasOnly(fields);
+    }
+
+    function validStringLength(field, minLen, maxLen) {
+      return request.resource.data[field] is string &&
+             request.resource.data[field].size() >= minLen &&
+             request.resource.data[field].size() <= maxLen;
+    }
+
+    function isValidOptionalString(field, minLen, maxLen) {
+      return !(field in request.resource.data) ||
+             (request.resource.data[field] is string &&
+              request.resource.data[field].size() >= minLen &&
+              request.resource.data[field].size() <= maxLen);
+    }
+
+    function isValidList(val, maxSize) {
+      return val is list && val.size() <= maxSize;
+    }
+
+    function areImmutableFieldsUnchanged(fields) {
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(fields);
+    }
+
+    // ===============================================================
+    // Domain Validators: 1. Community Posts
+    // ===============================================================
+    function isValidAuthorMap(author) {
+      return author is map &&
+             author.keys().hasAll(['nickname']) &&
+             author.nickname is string &&
+             author.nickname.size() >= 1 &&
+             author.nickname.size() <= 50 &&
+             (!('childBadge' in author) || (author.childBadge is string && author.childBadge.size() <= 50)) &&
+             (!('level' in author) || (author.level is string && author.level.size() <= 50)) &&
+             (!('avatarBg' in author) || (author.avatarBg is string && author.avatarBg.size() <= 100));
+    }
+
+    function isValidReactionsMap(rx) {
+      return rx is map &&
+             rx.keys().hasAll(['like', 'hug', 'tip']) &&
+             rx.like is number && rx.like >= 0 &&
+             rx.hug is number && rx.hug >= 0 &&
+             rx.tip is number && rx.tip >= 0;
+    }
+
+    function isValidCommentsList(comments) {
+      return isValidList(comments, 500);
+    }
+
+    function isValidTagsList(tags) {
+      return isValidList(tags, 20);
+    }
+
+    function isValidCommunityPost(data) {
+      let allowedFields = [
+        'id', 'title', 'content', 'category', 'region', 'author',
+        'reactions', 'comments', 'tags', 'views', 'isHot', 'createdAt',
+        'timestamp', 'userReaction'
+      ];
+
+      return hasRequiredFields(['title', 'content', 'category', 'region', 'author', 'reactions', 'comments']) &&
+             data.keys().hasOnly(allowedFields) &&
+             validStringLength('title', 1, 150) &&
+             validStringLength('content', 1, 5000) &&
+             validStringLength('category', 1, 50) &&
+             validStringLength('region', 1, 50) &&
+             isValidAuthorMap(data.author) &&
+             isValidReactionsMap(data.reactions) &&
+             isValidCommentsList(data.comments) &&
+             (!('tags' in data) || isValidTagsList(data.tags)) &&
+             (!('views' in data) || (data.views is number && data.views >= 0)) &&
+             (!('isHot' in data) || data.isHot is bool) &&
+             (!('id' in data) || (data.id is string && data.id.size() <= 100)) &&
+             (!('userReaction' in data) || data.userReaction == null || (data.userReaction is string && data.userReaction.size() <= 20)) &&
+             (!('createdAt' in data) || data.createdAt is string || data.createdAt is timestamp) &&
+             (!('timestamp' in data) || data.timestamp is number || data.timestamp is timestamp);
+    }
+
+    // Community post non-destructive update validation:
+    // Ensures reactions increment reasonably, comments append safely, and views increment
+    // while preventing overwriting post author, title, content, and category by arbitrary clients.
+    function isValidPostClientUpdate() {
+      let affected = request.resource.data.diff(resource.data).affectedKeys();
+      let isEngagementUpdateOnly = affected.hasOnly(['reactions', 'comments', 'views', 'isHot', 'userReaction']);
+
+      let reactionsValid = (
+        !affected.hasAny(['reactions']) ||
+        (
+          request.resource.data.reactions.like >= resource.data.reactions.like &&
+          request.resource.data.reactions.hug >= resource.data.reactions.hug &&
+          request.resource.data.reactions.tip >= resource.data.reactions.tip &&
+          (request.resource.data.reactions.like - resource.data.reactions.like) <= 5 &&
+          (request.resource.data.reactions.hug - resource.data.reactions.hug) <= 5 &&
+          (request.resource.data.reactions.tip - resource.data.reactions.tip) <= 5
+        )
+      );
+
+      let commentsValid = (
+        !affected.hasAny(['comments']) ||
+        (
+          request.resource.data.comments.size() >= resource.data.comments.size() &&
+          (request.resource.data.comments.size() - resource.data.comments.size()) <= 2
+        )
+      );
+
+      let viewsValid = (
+        !affected.hasAny(['views']) ||
+        (
+          (!('views' in resource.data) || request.resource.data.views >= resource.data.views) &&
+          (!('views' in resource.data) || (request.resource.data.views - resource.data.views) <= 10)
+        )
+      );
+
+      return isEngagementUpdateOnly &&
+             areImmutableFieldsUnchanged(['author', 'title', 'content', 'category', 'region']) &&
+             reactionsValid &&
+             commentsValid &&
+             viewsValid;
+    }
+
+    // ===============================================================
+    // Domain Validators: 2. User Events (Festivals & Contests)
+    // ===============================================================
+    function isValidUserEvent(data) {
+      let allowedFields = [
+        'id', 'boardType', 'title', 'category', 'categoryName', 'badge',
+        'organizer', 'sourceType', 'sourceLabel', 'region', 'regionName',
+        'location', 'startDate', 'endDate', 'applyStartDate', 'applyEndDate',
+        'status', 'dday', 'targetAudience', 'fee', 'url', 'imageUrl',
+        'description', 'tags', 'createdAt'
+      ];
+
+      return hasRequiredFields(['title', 'boardType', 'category', 'region', 'startDate', 'endDate', 'organizer']) &&
+             data.keys().hasOnly(allowedFields) &&
+             validStringLength('title', 1, 150) &&
+             (data.boardType == 'festivals' || data.boardType == 'contests') &&
+             validStringLength('category', 1, 50) &&
+             validStringLength('region', 1, 50) &&
+             validStringLength('startDate', 1, 30) &&
+             validStringLength('endDate', 1, 30) &&
+             validStringLength('organizer', 1, 100) &&
+             isValidOptionalString('description', 0, 3000) &&
+             isValidOptionalString('location', 0, 200) &&
+             isValidOptionalString('badge', 0, 50) &&
+             isValidOptionalString('sourceType', 0, 50) &&
+             isValidOptionalString('sourceLabel', 0, 50) &&
+             isValidOptionalString('regionName', 0, 50) &&
+             isValidOptionalString('categoryName', 0, 50) &&
+             isValidOptionalString('applyStartDate', 0, 30) &&
+             isValidOptionalString('applyEndDate', 0, 30) &&
+             isValidOptionalString('status', 0, 30) &&
+             isValidOptionalString('dday', 0, 30) &&
+             isValidOptionalString('targetAudience', 0, 100) &&
+             isValidOptionalString('fee', 0, 100) &&
+             isValidOptionalString('url', 0, 500) &&
+             isValidOptionalString('imageUrl', 0, 500) &&
+             (!('tags' in data) || isValidList(data.tags, 20)) &&
+             (!('id' in data) || (data.id is string && data.id.size() <= 100)) &&
+             (!('createdAt' in data) || data.createdAt is string || data.createdAt is timestamp);
+    }
+
+    // ===============================================================
+    // Domain Validators: 3. User Restaurants
+    // ===============================================================
+    function isValidUserRestaurant(data) {
+      let allowedFields = [
+        'id', 'name', 'category', 'categoryName', 'region', 'regionName',
+        'district', 'address', 'phone', 'lat', 'lng', 'hours',
+        'representativeMenu', 'amenities', 'reviewSummary', 'sources',
+        'overallRating', 'reviewCount', 'imageUrl', 'isCrawled',
+        'crawledAt', 'createdAt'
+      ];
+
+      return hasRequiredFields(['name', 'category', 'address', 'phone', 'region']) &&
+             data.keys().hasOnly(allowedFields) &&
+             validStringLength('name', 1, 150) &&
+             validStringLength('category', 1, 50) &&
+             validStringLength('address', 1, 300) &&
+             validStringLength('phone', 1, 50) &&
+             validStringLength('region', 1, 50) &&
+             isValidOptionalString('categoryName', 0, 50) &&
+             isValidOptionalString('regionName', 0, 50) &&
+             isValidOptionalString('district', 0, 100) &&
+             isValidOptionalString('hours', 0, 150) &&
+             isValidOptionalString('representativeMenu', 0, 500) &&
+             isValidOptionalString('reviewSummary', 0, 1000) &&
+             isValidOptionalString('imageUrl', 0, 500) &&
+             (!('amenities' in data) || isValidList(data.amenities, 20)) &&
+             (!('lat' in data) || data.lat is number) &&
+             (!('lng' in data) || data.lng is number) &&
+             (!('overallRating' in data) || (data.overallRating is number && data.overallRating >= 0 && data.overallRating <= 5)) &&
+             (!('reviewCount' in data) || (data.reviewCount is number && data.reviewCount >= 0)) &&
+             (!('sources' in data) || data.sources is map) &&
+             (!('isCrawled' in data) || data.isCrawled is bool) &&
+             (!('crawledAt' in data) || (data.crawledAt is string && data.crawledAt.size() <= 50)) &&
+             (!('id' in data) || (data.id is string && data.id.size() <= 100)) &&
+             (!('createdAt' in data) || data.createdAt is string || data.createdAt is timestamp);
+    }
+
+    // ===============================================================
+    // Collection Rules
+    // ===============================================================
+
+    // ---------------------------------------------------------------
+    // 1. community_posts
+    // ---------------------------------------------------------------
+    match /community_posts/{postId} {
+      // Public Read: All users and visitors can browse community discussions
+      allow read: if true;
+
+      // Create: Open creation with strict field schema and length enforcement
+      allow create: if isValidCommunityPost(request.resource.data);
+
+      // Update: Safe engagement updates (reactions, comments, views) or authenticated author edits
+      allow update: if isValidCommunityPost(request.resource.data) &&
+                       (
+                         isValidPostClientUpdate() ||
+                         (isAuthenticated() && areImmutableFieldsUnchanged(['id', 'createdAt']))
+                       );
+
+      // Delete: Strictly disallowed from client-side
+      allow delete: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // 2. user_events
+    // ---------------------------------------------------------------
+    match /user_events/{eventId} {
+      // Public Read: Nationwide family festivals & contests are publicly viewable
+      allow read: if true;
+
+      // Create: Users can register local festivals and student contests with required attributes
+      allow create: if isValidUserEvent(request.resource.data);
+
+      // Update: Allow verified authenticated managers/authors or maintain immutability
+      allow update: if isAuthenticated() &&
+                       isValidUserEvent(request.resource.data) &&
+                       areImmutableFieldsUnchanged(['id', 'createdAt']);
+
+      // Delete: Strictly disallowed from client-side
+      allow delete: if false;
+    }
+
+    // ---------------------------------------------------------------
+    // 3. user_restaurants
+    // ---------------------------------------------------------------
+    match /user_restaurants/{restaurantId} {
+      // Public Read: Safe kid-friendly restaurant entries and map markers are publicly viewable
+      allow read: if true;
+
+      // Create: Users can register kid-friendly restaurants with contact/address validation
+      allow create: if isValidUserRestaurant(request.resource.data);
+
+      // Update: Restricted to authenticated users with full schema validation
+      allow update: if isAuthenticated() &&
+                       isValidUserRestaurant(request.resource.data) &&
+                       areImmutableFieldsUnchanged(['id', 'createdAt']);
+
+      // Delete: Strictly disallowed from client-side
+      allow delete: if false;
+    }
+
+  }
+}

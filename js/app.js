@@ -147,6 +147,93 @@ class DodamCommunityApp {
     this.renderSidebarWidgets();
     this.renderFoodView();
     this.updateScrapBadge();
+    this.initFirebaseSync();
+  }
+
+  // ==========================================
+  // [Firebase] Cloud Firestore 실시간 동기화
+  // ==========================================
+  initFirebaseSync() {
+    if (typeof window.DodamFirebase === 'undefined') return;
+
+    // 1. 커뮤니티 게시글 실시간 구독
+    window.DodamFirebase.subscribePosts((remotePosts) => {
+      if (Array.isArray(remotePosts) && remotePosts.length > 0) {
+        const remoteMap = new Map();
+        remotePosts.forEach((p) => remoteMap.set(p.id, p));
+
+        const merged = [...remotePosts];
+        (this.data.posts || []).forEach((p) => {
+          if (!remoteMap.has(p.id)) {
+            merged.push(p);
+          }
+        });
+        this.data.posts = merged;
+
+        if (this.currentView === 'board') {
+          this.renderBoardView();
+        }
+        if (this.activePostDetailId && remoteMap.has(this.activePostDetailId)) {
+          const updatedPost = remoteMap.get(this.activePostDetailId);
+          const likesEl = document.getElementById('post-detail-likes-count');
+          if (likesEl) {
+            const totalLikes =
+              (updatedPost.reactions?.like || 0) +
+              (updatedPost.reactions?.hug || 0) +
+              (updatedPost.reactions?.tip || 0);
+            likesEl.textContent = totalLikes;
+          }
+          this.renderPostDetailComments(updatedPost);
+        }
+      }
+    });
+
+    // 2. 사용자 등록 행사 실시간 구독
+    window.DodamFirebase.subscribeUserEvents((remoteEvents) => {
+      if (Array.isArray(remoteEvents) && remoteEvents.length > 0) {
+        const remoteMap = new Map();
+        remoteEvents.forEach((e) => remoteMap.set(e.id, e));
+
+        const merged = [...remoteEvents];
+        (this.allEvents || []).forEach((e) => {
+          if (!remoteMap.has(e.id)) {
+            merged.push(e);
+          }
+        });
+        this.allEvents = merged;
+
+        if (this.currentView === 'festivals') {
+          this.renderFestivalsRegionChips();
+          this.renderFestivalsCategoryChips();
+          this.renderFestivalsView();
+        } else if (this.currentView === 'contests') {
+          this.renderContestsRegionChips();
+          this.renderContestsCategoryChips();
+          this.renderContestsView();
+        }
+      }
+    });
+
+    // 3. 사용자 등록 맛집 실시간 구독
+    window.DodamFirebase.subscribeUserRestaurants((remoteRests) => {
+      if (Array.isArray(remoteRests) && remoteRests.length > 0) {
+        const remoteMap = new Map();
+        remoteRests.forEach((r) => remoteMap.set(r.id, r));
+
+        const merged = [...remoteRests];
+        (this.data.restaurants || []).forEach((r) => {
+          if (!remoteMap.has(r.id)) {
+            merged.push(r);
+          }
+        });
+        this.data.restaurants = merged;
+
+        if (this.currentView === 'food') {
+          this.renderFoodView();
+          this.updateFoodMapMarkers();
+        }
+      }
+    });
   }
 
   // ==========================================
@@ -658,6 +745,9 @@ class DodamCommunityApp {
     const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
     document.getElementById('post-detail-likes-count').textContent = totalLikes;
     this.saveCustomPosts();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.incrementLike(post.id);
+    }
     this.showToast('공감하셨습니다! ❤️');
   }
 
@@ -676,15 +766,19 @@ class DodamCommunityApp {
     const val = input.value.trim();
     if (!val) return;
 
-    post.comments.push({
+    const newComment = {
       id: `c-${Date.now()}`,
       author: this.profile.nickname,
       content: val,
       createdAt: '방금 전'
-    });
+    };
+    post.comments.push(newComment);
 
     input.value = '';
     this.saveCustomPosts();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.addComment(post.id, newComment);
+    }
     this.renderPostDetailComments(post);
     this.showToast('댓글이 등록되었습니다!');
   }
@@ -730,6 +824,9 @@ class DodamCommunityApp {
 
     this.data.posts.unshift(newPost);
     this.saveCustomPosts();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.createPost(newPost);
+    }
     this.closeWritePostModal();
     this.renderBoardView();
     this.showToast('게시글이 성공적으로 등록되었습니다!');
@@ -2577,6 +2674,9 @@ class DodamCommunityApp {
     if (!this.data.restaurants) this.data.restaurants = [];
     this.data.restaurants.unshift(newRest);
     this.saveCustomRestaurants();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.createUserRestaurant(newRest);
+    }
 
     document.getElementById('create-restaurant-modal').classList.add('hidden');
     this.foodCurrentPage = 1;
@@ -2684,6 +2784,9 @@ class DodamCommunityApp {
     } catch {}
 
     this.allEvents = [newEvt, ...(this.allEvents || [])];
+    if (window.DodamFirebase) {
+      window.DodamFirebase.createUserEvent(newEvt);
+    }
 
     this.renderFestivalsRegionChips();
     this.renderFestivalsCategoryChips();

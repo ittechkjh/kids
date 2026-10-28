@@ -1,8 +1,8 @@
 // 전국 17개 시도 지역행사 & 대회일정 데이터셋
 window.DODAM_EVENTS_METADATA = {
   "lastUpdated": "2026-10-27",
-  "totalEvents": 1466,
-  "festivalsCount": 1357,
+  "totalEvents": 1316,
+  "festivalsCount": 1207,
   "contestsCount": 109,
   "isTourApiIntegrated": true,
   "isSeoulApiIntegrated": true,
@@ -11,27 +11,27 @@ window.DODAM_EVENTS_METADATA = {
   "regionStats": {
     "seoul": {
       "name": "서울특별시",
-      "festivals": 347,
+      "festivals": 338,
       "contests": 57,
-      "total": 404
+      "total": 395
     },
     "incheon": {
       "name": "인천광역시",
-      "festivals": 32,
+      "festivals": 30,
       "contests": 3,
-      "total": 35
+      "total": 33
     },
     "daejeon": {
       "name": "대전광역시",
-      "festivals": 24,
+      "festivals": 18,
       "contests": 4,
-      "total": 28
+      "total": 22
     },
     "daegu": {
       "name": "대구광역시",
-      "festivals": 21,
+      "festivals": 19,
       "contests": 2,
-      "total": 23
+      "total": 21
     },
     "gwangju": {
       "name": "광주광역시",
@@ -41,75 +41,75 @@ window.DODAM_EVENTS_METADATA = {
     },
     "busan": {
       "name": "부산광역시",
-      "festivals": 76,
+      "festivals": 70,
       "contests": 5,
-      "total": 81
+      "total": 75
     },
     "ulsan": {
       "name": "울산광역시",
-      "festivals": 21,
+      "festivals": 19,
       "contests": 1,
-      "total": 22
+      "total": 20
     },
     "sejong": {
       "name": "세종특별자치시",
-      "festivals": 9,
+      "festivals": 8,
       "contests": 2,
-      "total": 11
+      "total": 10
     },
     "gyeonggi": {
       "name": "경기도",
-      "festivals": 340,
+      "festivals": 287,
       "contests": 8,
-      "total": 348
+      "total": 295
     },
     "gangwon": {
       "name": "강원특별자치도",
-      "festivals": 97,
-      "contests": 3,
-      "total": 100
-    },
-    "chungbuk": {
-      "name": "충청북도",
-      "festivals": 35,
-      "contests": 3,
-      "total": 38
-    },
-    "chungnam": {
-      "name": "충청남도",
-      "festivals": 57,
-      "contests": 2,
-      "total": 59
-    },
-    "jeonbuk": {
-      "name": "전북특별자치도",
-      "festivals": 53,
-      "contests": 3,
-      "total": 56
-    },
-    "jeonnam": {
-      "name": "전라남도",
       "festivals": 76,
       "contests": 3,
       "total": 79
     },
+    "chungbuk": {
+      "name": "충청북도",
+      "festivals": 27,
+      "contests": 3,
+      "total": 30
+    },
+    "chungnam": {
+      "name": "충청남도",
+      "festivals": 49,
+      "contests": 2,
+      "total": 51
+    },
+    "jeonbuk": {
+      "name": "전북특별자치도",
+      "festivals": 49,
+      "contests": 3,
+      "total": 52
+    },
+    "jeonnam": {
+      "name": "전라남도",
+      "festivals": 66,
+      "contests": 3,
+      "total": 69
+    },
     "gyeongbuk": {
       "name": "경상북도",
-      "festivals": 71,
+      "festivals": 67,
       "contests": 3,
-      "total": 74
+      "total": 70
     },
     "gyeongnam": {
       "name": "경상남도",
-      "festivals": 58,
+      "festivals": 54,
       "contests": 6,
-      "total": 64
+      "total": 60
     },
     "jeju": {
       "name": "제주특별자치도",
-      "festivals": 38,
+      "festivals": 28,
       "contests": 2,
-      "total": 40
+      "total": 30
     }
   },
   "sources": [
@@ -121,7 +121,7 @@ window.DODAM_EVENTS_METADATA = {
     {
       "key": "tour_api",
       "name": "한국관광공사 TourAPI 4.0 전국 축제",
-      "count": 1042
+      "count": 892
     },
     {
       "key": "seoul_open_data",
@@ -143,7 +143,7 @@ window.DODAM_EVENTS_METADATA = {
 
 window.DODAM_NATIONWIDE_EVENTS = [
   {
-    "id": "gg-fest-1517202694471237519",
+    "id": "gg-fest-6383278214070946416",
     "boardType": "festivals",
     "title": "제1회 상록수문화제",
     "category": "festival_culture",
@@ -174,7 +174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-681171206894237766",
+    "id": "gg-fest-8636113696603668405",
     "boardType": "festivals",
     "title": "2014 안양 아줌마축제",
     "category": "festival_performance",
@@ -205,7 +205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8637215897102615119",
+    "id": "gg-fest-1789699216121420033",
     "boardType": "festivals",
     "title": "2014 안양시민축제",
     "category": "expo_science",
@@ -236,7 +236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1223338014339923775",
+    "id": "gg-fest-8587828798398578528",
     "boardType": "festivals",
     "title": "제2회 상록수문화제",
     "category": "festival_culture",
@@ -267,7 +267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5523325075657329392",
+    "id": "gg-fest-4708968547466700565",
     "boardType": "festivals",
     "title": "제15회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -298,7 +298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4545524689186595229",
+    "id": "gg-fest-3574516764883386837",
     "boardType": "festivals",
     "title": "2015 안양 아줌마축제",
     "category": "festival_performance",
@@ -329,7 +329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5375956601791323574",
+    "id": "gg-fest-2205138014675029795",
     "boardType": "festivals",
     "title": "제3회 상록수문화제",
     "category": "festival_culture",
@@ -360,7 +360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1625660617596584415",
+    "id": "gg-fest-632898621214774436",
     "boardType": "festivals",
     "title": "2015 안양 시민축제",
     "category": "expo_science",
@@ -391,7 +391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9204880900439250930",
+    "id": "gg-fest-2796416992492245536",
     "boardType": "festivals",
     "title": "제15회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -422,7 +422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1296722804983251416",
+    "id": "gg-fest-7040509817726330871",
     "boardType": "festivals",
     "title": "제16회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -453,7 +453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3198155126105150747",
+    "id": "gg-fest-5690421502204500790",
     "boardType": "festivals",
     "title": "2016 안양 아줌마축제",
     "category": "festival_food",
@@ -484,7 +484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3697369446004387266",
+    "id": "gg-fest-5298517823803973653",
     "boardType": "festivals",
     "title": "여르미오페스티벌",
     "category": "festival_performance",
@@ -515,7 +515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8870793754707919152",
+    "id": "gg-fest-2312924386613883759",
     "boardType": "festivals",
     "title": "2016 광복기념음악회",
     "category": "festival_performance",
@@ -546,7 +546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1800089319753720719",
+    "id": "gg-fest-1654898039318098002",
     "boardType": "festivals",
     "title": "제4회 상록수문화제",
     "category": "festival_culture",
@@ -577,7 +577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7223563780978133022",
+    "id": "gg-fest-8625194839128405845",
     "boardType": "festivals",
     "title": "제16회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -608,7 +608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2076918150057952513",
+    "id": "gg-fest-5769792853973852451",
     "boardType": "festivals",
     "title": "2016 안양 시민축제",
     "category": "expo_science",
@@ -639,7 +639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5910087134337312001",
+    "id": "gg-fest-2375537622707879614",
     "boardType": "festivals",
     "title": "2016 제5회 안양공공예술프로젝트",
     "category": "expo_science",
@@ -670,7 +670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2109677544444283913",
+    "id": "gg-fest-8360518919794153364",
     "boardType": "festivals",
     "title": "2017 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -701,7 +701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-16875233335404699",
+    "id": "gg-fest-6665987991986176873",
     "boardType": "festivals",
     "title": "제17회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -732,7 +732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5965965318487832864",
+    "id": "gg-fest-5788811291385411171",
     "boardType": "festivals",
     "title": "2017 안양 아줌마축제",
     "category": "festival_performance",
@@ -763,7 +763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5581906085610203063",
+    "id": "gg-fest-5806183638008053374",
     "boardType": "festivals",
     "title": "2017 광복기념음악회",
     "category": "festival_performance",
@@ -794,7 +794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7570210223195558998",
+    "id": "gg-fest-374661732481611459",
     "boardType": "festivals",
     "title": "2017 안양 시민축제",
     "category": "expo_science",
@@ -825,7 +825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3482510647154897172",
+    "id": "gg-fest-8624657031031633105",
     "boardType": "festivals",
     "title": "제5회 상록수문화제",
     "category": "festival_culture",
@@ -856,7 +856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7886591701489301039",
+    "id": "gg-fest-477430625167850444",
     "boardType": "festivals",
     "title": "제17회 구리 코스모스 축제",
     "category": "festival_season",
@@ -887,7 +887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7070891394584514233",
+    "id": "gg-fest-3253538450815419836",
     "boardType": "festivals",
     "title": "2018 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -918,7 +918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4937766636661649743",
+    "id": "gg-fest-4522511680468468165",
     "boardType": "festivals",
     "title": "제18회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -949,7 +949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1927058322762356845",
+    "id": "gg-fest-4686787925772995998",
     "boardType": "festivals",
     "title": "2018 안양여성축제",
     "category": "festival_performance",
@@ -980,7 +980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5513683069995149547",
+    "id": "gg-fest-8336304731941756213",
     "boardType": "festivals",
     "title": "2018 광복기념음악회",
     "category": "festival_performance",
@@ -1011,7 +1011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6904242814778247659",
+    "id": "gg-fest-7175939072836228213",
     "boardType": "festivals",
     "title": "2018 안양 시민축제",
     "category": "expo_science",
@@ -1042,7 +1042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5423124259015831383",
+    "id": "gg-fest-2239035676370976480",
     "boardType": "festivals",
     "title": "제6회 상록수문화제",
     "category": "festival_culture",
@@ -1073,7 +1073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6561231601985930753",
+    "id": "gg-fest-4870895822346237549",
     "boardType": "festivals",
     "title": "제18회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1104,7 +1104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5408304206061623748",
+    "id": "gg-fest-7974728012772496396",
     "boardType": "festivals",
     "title": "2019 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -1135,7 +1135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3660616914135763633",
+    "id": "gg-fest-1246264119018119565",
     "boardType": "festivals",
     "title": "제19회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -1166,7 +1166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3475332830892530830",
+    "id": "gg-fest-7623731103237700743",
     "boardType": "festivals",
     "title": "2019 안양여성축제",
     "category": "festival_performance",
@@ -1197,7 +1197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-133618744768609744",
+    "id": "gg-fest-3633271901168481939",
     "boardType": "festivals",
     "title": "2019 광복기념음악회",
     "category": "festival_performance",
@@ -1228,7 +1228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-880293216586956779",
+    "id": "gg-fest-37209956277603824",
     "boardType": "festivals",
     "title": "2019 안양 시민축제",
     "category": "expo_science",
@@ -1259,7 +1259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6528245514405343174",
+    "id": "gg-fest-4404808008943779225",
     "boardType": "festivals",
     "title": "제19회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1290,7 +1290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5639814489448697030",
+    "id": "gg-fest-7917672283024468048",
     "boardType": "festivals",
     "title": "제7회 상록수문화제",
     "category": "expo_science",
@@ -1321,7 +1321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7300647325588551040",
+    "id": "gg-fest-7444336139831635906",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1352,7 +1352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4049721526372256013",
+    "id": "gg-fest-6407819673934472958",
     "boardType": "festivals",
     "title": "제8회 상록수문화제",
     "category": "festival_performance",
@@ -1383,7 +1383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8188110390369208249",
+    "id": "gg-fest-4690648787391483880",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1414,7 +1414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1714174292649411571",
+    "id": "gg-fest-717402392371196422",
     "boardType": "festivals",
     "title": "제9회 상록수문화제",
     "category": "expo_science",
@@ -1476,7 +1476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-3168092601949489338",
+    "id": "gg-fest-517511423431174723",
     "boardType": "festivals",
     "title": "제24회 양평단월고로쇠축제",
     "category": "festival_culture",
@@ -1507,7 +1507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-777095818165915674",
+    "id": "gg-fest-1107176109565690608",
     "boardType": "festivals",
     "title": "제20회 양평산수유한우축제",
     "category": "festival_season",
@@ -1538,7 +1538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6031771377457108382",
+    "id": "gg-fest-7671763889666747501",
     "boardType": "festivals",
     "title": "2023 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1569,7 +1569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6871028526480785409",
+    "id": "gg-fest-5784050434545662711",
     "boardType": "festivals",
     "title": "제13회 양평 용문산 산나물축제",
     "category": "festival_performance",
@@ -1600,7 +1600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3553834463475173539",
+    "id": "gg-fest-6706282872508103584",
     "boardType": "festivals",
     "title": "2023 구리 유채꽃 한강예술제",
     "category": "festival_season",
@@ -1631,7 +1631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-436583352079103548",
+    "id": "gg-fest-6029689071598852578",
     "boardType": "festivals",
     "title": "2023 광복78주년 광복기념음악회",
     "category": "festival_performance",
@@ -1662,7 +1662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2796541796968698966",
+    "id": "gg-fest-3396983810354370119",
     "boardType": "festivals",
     "title": "2023 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -1693,7 +1693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3549083397766442117",
+    "id": "gg-fest-5241132196803136060",
     "boardType": "festivals",
     "title": "제10회 상록수문화제",
     "category": "expo_science",
@@ -1724,7 +1724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5979394947851078607",
+    "id": "gg-fest-276621868500573226",
     "boardType": "festivals",
     "title": "제4회 양평부추축제",
     "category": "festival_food",
@@ -1755,7 +1755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7140001340879556691",
+    "id": "gg-fest-1434953990730843504",
     "boardType": "festivals",
     "title": "2023 구리 코스모스 한강예술제",
     "category": "festival_season",
@@ -1786,7 +1786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5035012441920711667",
+    "id": "gg-fest-86626127425546473",
     "boardType": "festivals",
     "title": "제19회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -1817,7 +1817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4616645607426456184",
+    "id": "gg-fest-4375716878385125844",
     "boardType": "festivals",
     "title": "2024 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1848,7 +1848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4974700899136446662",
+    "id": "gg-fest-5654885884996757077",
     "boardType": "festivals",
     "title": "2024 구리 유채꽃 축제",
     "category": "festival_season",
@@ -1879,7 +1879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6638576501476937880",
+    "id": "gg-fest-503928321661852268",
     "boardType": "festivals",
     "title": "2024 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -1910,7 +1910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5221336106221768352",
+    "id": "gg-fest-4869930434433918088",
     "boardType": "festivals",
     "title": "2024 구리 코스모스 축제",
     "category": "festival_season",
@@ -1941,7 +1941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8763672123876786890",
+    "id": "gg-fest-2532359852181990488",
     "boardType": "festivals",
     "title": "제27회 포천 산정호수 명성산 억새꽃 축제",
     "category": "festival_season",
@@ -1972,7 +1972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7592218548777731697",
+    "id": "gg-fest-1049135322075852571",
     "boardType": "festivals",
     "title": "제11회 상록수문화제",
     "category": "festival_performance",
@@ -2003,7 +2003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8700942170946473589",
+    "id": "gg-fest-6613693750643240754",
     "boardType": "festivals",
     "title": "2024 제2회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -2034,7 +2034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4019171113465909901",
+    "id": "gg-fest-5732720836762594407",
     "boardType": "festivals",
     "title": "제20회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -2096,7 +2096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2619558646060691752",
+    "id": "gg-fest-333441085523358206",
     "boardType": "festivals",
     "title": "광명등문화축제",
     "category": "expo_science",
@@ -2127,7 +2127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2244482045524925458",
+    "id": "gg-fest-4245445823133906516",
     "boardType": "festivals",
     "title": "2025 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -2158,7 +2158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4383693611302459332",
+    "id": "gg-fest-7722460262490219156",
     "boardType": "festivals",
     "title": "안산 벚꽃놀이터",
     "category": "festival_season",
@@ -2189,7 +2189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1026131886228139186",
+    "id": "gg-fest-5123723395183139756",
     "boardType": "festivals",
     "title": "2025 포천 한탄강 가든페스타",
     "category": "festival_season",
@@ -2220,7 +2220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6264115599449626651",
+    "id": "gg-fest-8182963634629822956",
     "boardType": "festivals",
     "title": "2025 구리 유채꽃 축제",
     "category": "festival_season",
@@ -2251,7 +2251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4299049130135361585",
+    "id": "gg-fest-8067247732621826736",
     "boardType": "festivals",
     "title": "제33회 오리문화제",
     "category": "festival_performance",
@@ -2282,7 +2282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3376424048564520868",
+    "id": "gg-fest-8296449958669202599",
     "boardType": "festivals",
     "title": "의정부음악극축제",
     "category": "park_eco",
@@ -2313,7 +2313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2310199555615628064",
+    "id": "gg-fest-4694752880345363042",
     "boardType": "festivals",
     "title": "제37회 고양행주문화제",
     "category": "festival_light",
@@ -2344,7 +2344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2475908752575746173",
+    "id": "gg-fest-1265601117845682129",
     "boardType": "festivals",
     "title": "오(oh)장미빛축제",
     "category": "festival_light",
@@ -2406,7 +2406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4307657774482441616",
+    "id": "gg-fest-7178428074319414892",
     "boardType": "festivals",
     "title": "2025 제8회 양주 회암사지 왕실 축제",
     "category": "festival_tradition",
@@ -2437,7 +2437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-36038174662481191",
+    "id": "gg-fest-6760697681971547954",
     "boardType": "festivals",
     "title": "동두천락페스티벌",
     "category": "festival_performance",
@@ -2468,7 +2468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2449162623265825586",
+    "id": "gg-fest-8482141658963153858",
     "boardType": "festivals",
     "title": "남한산성문화제",
     "category": "festival_tradition",
@@ -2499,7 +2499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8612883565612596720",
+    "id": "gg-fest-7948777191457257421",
     "boardType": "festivals",
     "title": "구름산예술제",
     "category": "expo_science",
@@ -2530,7 +2530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4657217263135703414",
+    "id": "gg-fest-6868369931633862185",
     "boardType": "festivals",
     "title": "2025 구리 코스모스 축제",
     "category": "festival_season",
@@ -2561,7 +2561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2283222259948091359",
+    "id": "gg-fest-6644305797062994778",
     "boardType": "festivals",
     "title": "2025년 제7회 양주 천만송이 천일홍 축제",
     "category": "festival_season",
@@ -2592,7 +2592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1107422305467830594",
+    "id": "gg-fest-282668167807789042",
     "boardType": "festivals",
     "title": "2025 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -2623,7 +2623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2115865905098887680",
+    "id": "gg-fest-5828181410856106524",
     "boardType": "festivals",
     "title": "2025 고양호수예술축제",
     "category": "festival_performance",
@@ -2654,7 +2654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2053006465179597358",
+    "id": "gg-fest-4322583103691029419",
     "boardType": "festivals",
     "title": "회룡문화제",
     "category": "festival_culture",
@@ -2685,7 +2685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8605719116888828070",
+    "id": "gg-fest-401342952567138371",
     "boardType": "festivals",
     "title": "제12회 상록수문화제",
     "category": "expo_science",
@@ -2716,7 +2716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1485261632608227111",
+    "id": "gg-fest-6112924661720725792",
     "boardType": "festivals",
     "title": "의왕백운호수축제",
     "category": "festival_tradition",
@@ -2778,7 +2778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8679549037039206243",
+    "id": "gg-fest-3422033073910645847",
     "boardType": "festivals",
     "title": "동두천시 자원봉사 축제",
     "category": "festival_culture",
@@ -2809,7 +2809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7102147756356780115",
+    "id": "gg-fest-3214446325336917510",
     "boardType": "festivals",
     "title": "2025 페스티벌 광명",
     "category": "festival_performance",
@@ -2840,7 +2840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7447395111419637008",
+    "id": "gg-fest-6288758409974455048",
     "boardType": "festivals",
     "title": "천사데이기념행사",
     "category": "sports_marathon",
@@ -2902,7 +2902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-604040907428128483",
+    "id": "gg-fest-5665871239393172998",
     "boardType": "festivals",
     "title": "2025 제3회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -2933,7 +2933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7930474617920776663",
+    "id": "gg-fest-9138341874786787631",
     "boardType": "festivals",
     "title": "제22회 자라섬 재즈페스티벌",
     "category": "festival_performance",
@@ -2964,7 +2964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1078181236409432540",
+    "id": "gg-fest-5254335845397083878",
     "boardType": "festivals",
     "title": "2025 구리 빛 축제",
     "category": "festival_light",
@@ -2995,7 +2995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4183468973363563761",
+    "id": "gg-fest-2732392035963594892",
     "boardType": "festivals",
     "title": "왕방산 국제MTB대회",
     "category": "festival_tradition",
@@ -3088,7 +3088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1035151559608081295",
+    "id": "gg-fest-7027687017209093229",
     "boardType": "festivals",
     "title": "광명동굴빛축제",
     "category": "festival_light",
@@ -3119,7 +3119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5916614329854452043",
+    "id": "gg-fest-5287875525359195068",
     "boardType": "festivals",
     "title": "동두천 청소년 별자리과학 축제",
     "category": "festival_culture",
@@ -3181,7 +3181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2624732207093680681",
+    "id": "gg-fest-7679942882891773663",
     "boardType": "festivals",
     "title": "도심재생 야간축제",
     "category": "festival_culture",
@@ -4142,7 +4142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8174899015089923250",
+    "id": "gg-fest-1325469154450865358",
     "boardType": "festivals",
     "title": "2025 동두천무형문화대축제",
     "category": "festival_performance",
@@ -4762,7 +4762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-4456145878592264774",
+    "id": "gg-fest-2311237279729371223",
     "boardType": "festivals",
     "title": "2026년 판교마당바위 해맞이축제",
     "category": "park_eco",
@@ -4917,7 +4917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-715009057738801710",
+    "id": "gg-fest-8987577653411052524",
     "boardType": "festivals",
     "title": "의왕왕송호수 겨울축제(날짜미정)",
     "category": "festival_tradition",
@@ -6529,7 +6529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2565203262140836751",
+    "id": "gg-fest-1652835133970038191",
     "boardType": "festivals",
     "title": "제20회 수진공원 벌터산한마당축제",
     "category": "expo_science",
@@ -7614,7 +7614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2521541407243528951",
+    "id": "gg-fest-8888504335693291531",
     "boardType": "festivals",
     "title": "이천체험문화축제",
     "category": "festival_food",
@@ -8234,7 +8234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-3618338506705539391",
+    "id": "gg-fest-3248752458636344436",
     "boardType": "festivals",
     "title": "2026 김포 벚꽃축제",
     "category": "festival_season",
@@ -8544,7 +8544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-113219067450941605",
+    "id": "gg-fest-4561819775429739323",
     "boardType": "festivals",
     "title": "하남뮤직페스티벌",
     "category": "festival_performance",
@@ -8792,7 +8792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2982432987250404457",
+    "id": "gg-fest-3854007427559367869",
     "boardType": "festivals",
     "title": "군포철쭉축제",
     "category": "expo_science",
@@ -10342,7 +10342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5077819292261951165",
+    "id": "gg-fest-4924171622299641155",
     "boardType": "festivals",
     "title": "여주도자기축제",
     "category": "expo_science",
@@ -10683,7 +10683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8528114192477691178",
+    "id": "gg-fest-6090939666375336722",
     "boardType": "festivals",
     "title": "제41회 부천복사골예술제",
     "category": "expo_science",
@@ -11055,7 +11055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7206169570883206937",
+    "id": "gg-fest-8332949244003735297",
     "boardType": "festivals",
     "title": "성남 어린이날 행사",
     "category": "festival_performance",
@@ -11520,7 +11520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5561878559517023051",
+    "id": "gg-fest-2445945927449651416",
     "boardType": "festivals",
     "title": "제16회 화성시 가족사랑축제",
     "category": "festival_culture",
@@ -11551,7 +11551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3716862227236186050",
+    "id": "gg-fest-6213668797276443542",
     "boardType": "festivals",
     "title": "지구촌 어울림 축제",
     "category": "festival_food",
@@ -11737,7 +11737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5069855066378027652",
+    "id": "gg-fest-6596343654796476565",
     "boardType": "festivals",
     "title": "식품안전의 날 행사",
     "category": "festival_culture",
@@ -12140,7 +12140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3198231369239628858",
+    "id": "gg-fest-7471142075449271086",
     "boardType": "festivals",
     "title": "화성시 연등 음악 축제",
     "category": "festival_culture",
@@ -12481,7 +12481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4131319616058085994",
+    "id": "gg-fest-7213174531026286557",
     "boardType": "festivals",
     "title": "제15회 화성 뱃놀이 축제",
     "category": "festival_performance",
@@ -12512,7 +12512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8675126925466863922",
+    "id": "gg-fest-1063692677238915550",
     "boardType": "festivals",
     "title": "화성뱃놀이축제",
     "category": "festival_culture",
@@ -14434,7 +14434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7066345177085039059",
+    "id": "gg-fest-4584460844047813423",
     "boardType": "festivals",
     "title": "2026 김포 아라마린페스티벌",
     "category": "festival_culture",
@@ -14868,7 +14868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2784267213356410429",
+    "id": "gg-fest-6786790007645805126",
     "boardType": "festivals",
     "title": "6월 마토예술제",
     "category": "festival_performance",
@@ -16449,7 +16449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1833386636668144024",
+    "id": "gg-fest-1440350156851498307",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;전국밴드경연대회",
     "category": "contest_general",
@@ -18557,7 +18557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-4891719138499647396",
+    "id": "gg-fest-8424820997783386372",
     "boardType": "festivals",
     "title": "2026 파크콘서트",
     "category": "festival_performance",
@@ -19146,7 +19146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5306091871160660198",
+    "id": "gg-fest-3585058943278386555",
     "boardType": "festivals",
     "title": "사회복지페스티벌",
     "category": "festival_culture",
@@ -19394,7 +19394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "gg-fest-1588828213199577978",
+    "id": "gg-fest-3277755576052234391",
     "boardType": "festivals",
     "title": "2026년 파주포크페스티벌",
     "category": "festival_performance",
@@ -19425,7 +19425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8849636459036287971",
+    "id": "gg-fest-8934962695539246134",
     "boardType": "festivals",
     "title": "화성송산포도축제",
     "category": "farm_harvest",
@@ -19735,7 +19735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7134165959922785411",
+    "id": "gg-fest-2742206999000728243",
     "boardType": "festivals",
     "title": "제18회 DMZ 국제다큐멘터리 영화제",
     "category": "festival_performance",
@@ -20603,7 +20603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3197417233089818202",
+    "id": "gg-fest-3519711575400616155",
     "boardType": "festivals",
     "title": "평택호 물빛축제",
     "category": "festival_light",
@@ -20634,7 +20634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4565773626955085410",
+    "id": "gg-fest-4289506223303709422",
     "boardType": "festivals",
     "title": "제13회 노을동요제",
     "category": "festival_performance",
@@ -21719,7 +21719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5981391339486797684",
+    "id": "gg-fest-7138125260920006751",
     "boardType": "festivals",
     "title": "제20회 시흥갯골축제",
     "category": "festival_performance",
@@ -21750,7 +21750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7070462940611282606",
+    "id": "gg-fest-4607637963587868019",
     "boardType": "festivals",
     "title": "2026 과천공연예술축제",
     "category": "festival_performance",
@@ -21781,7 +21781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-562854342609253961",
+    "id": "gg-fest-4734359937222888821",
     "boardType": "festivals",
     "title": "부천국제만화제",
     "category": "festival_culture",
@@ -22618,7 +22618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6095095813658202284",
+    "id": "gg-fest-7912509406912383699",
     "boardType": "festivals",
     "title": "하남이성산성문화축제",
     "category": "festival_food",
@@ -22649,7 +22649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4644995494856907816",
+    "id": "gg-fest-7094823653999864902",
     "boardType": "festivals",
     "title": "제3회 도농 어울림 축제",
     "category": "festival_culture",
@@ -23393,4656 +23393,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "tourapi-cul-433042",
-    "boardType": "festivals",
-    "title": "[경기도] 한과문화박물관 한가원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 포천시 영북면 산정호수로322번길 26-9",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%9C%EA%B3%BC%EB%AC%B8%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B0%80%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/95/4076895_image2_1.jpg",
-    "description": "한과문화박물관 한가원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1687304",
-    "boardType": "festivals",
-    "title": "[충청북도] 성마루미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 충주시 대소원면 장성길 38-1",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%84%B1%EB%A7%88%EB%A3%A8%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
-    "description": "성마루미술관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1622150",
-    "boardType": "festivals",
-    "title": "[경상남도] 거제민속박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 거제시 연초면 대금산로 339-7",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EA%B1%B0%EC%A0%9C%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
-    "description": "거제민속박물관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1605877",
-    "boardType": "festivals",
-    "title": "[경기도] 경기도어린이박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 용인시 기흥구 상갈로 6 (상갈동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/3058026_image2_1.jpg",
-    "description": "경기도어린이박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1607138",
-    "boardType": "festivals",
-    "title": "[부산광역시] 부산대학교 박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 금정구 부산대학로63번길 2",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/3332613_image2_1.jpg",
-    "description": "부산대학교 박물관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1617908",
-    "boardType": "festivals",
-    "title": "[인천광역시] 인하대학교 박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "인천광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 미추홀구 인하로 100",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9D%B8%ED%95%98%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/3393302_image2_1.JPG",
-    "description": "인하대학교 박물관 - 인천광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "인천광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130976",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 이승복기념관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 평창군 용평면 운두령로 500-11",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B4%EC%8A%B9%EB%B3%B5%EA%B8%B0%EB%85%90%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3034019_image2_1.jpg",
-    "description": "이승복기념관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-699241",
-    "boardType": "festivals",
-    "title": "[서울특별시] 김대중도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 마포구 신촌로4길 5-26",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B9%80%EB%8C%80%EC%A4%91%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/3393053_image2_1.JPG",
-    "description": "김대중도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130890",
-    "boardType": "festivals",
-    "title": "[대전광역시] 옛터민속박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 동구 산내로 321-35",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%98%9B%ED%84%B0%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/02/3524002_image2_1.jpg",
-    "description": "옛터민속박물관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129859",
-    "boardType": "festivals",
-    "title": "[경기도] 성남문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 수정구 산성대로215번길 7 (신흥동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/3053503_image2_1.jpg",
-    "description": "성남문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2878135",
-    "boardType": "festivals",
-    "title": "[경기도] 포천 무형유산 전수교육관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 포천시 정금로 267-1",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%AC%EC%B2%9C%20%EB%AC%B4%ED%98%95%EC%9C%A0%EC%82%B0%20%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/4130528_image2_1.jpg",
-    "description": "포천 무형유산 전수교육관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129718",
-    "boardType": "festivals",
-    "title": "[경기도] 수원문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 권선구 호매실로 237 (호매실동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3318476_image2_1.jpg",
-    "description": "수원문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130095",
-    "boardType": "festivals",
-    "title": "[경기도] 수원시민회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 팔달구 팔달산로 28 (매산로3가)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%EB%AF%BC%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3475858_image2_1.JPG",
-    "description": "수원시민회관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1626209",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 홍천교육도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 홍천군 홍천읍 꽃뫼로 93",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%99%8D%EC%B2%9C%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4129205_image2_1.jpg",
-    "description": "홍천교육도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130094",
-    "boardType": "festivals",
-    "title": "[경기도] 수원야외음악당 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 팔달구 동수원로 335 (인계동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%95%BC%EC%99%B8%EC%9D%8C%EC%95%85%EB%8B%B9",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/07/3055307_image2_1.JPG",
-    "description": "수원야외음악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130487",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 춘천인형극장&인형극박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 영서로 3017 (사농동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%9D%B8%ED%98%95%EA%B7%B9%EC%9E%A5%26%EC%9D%B8%ED%98%95%EA%B7%B9%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3561558_image2_1.jpg",
-    "description": "춘천인형극장&인형극박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130489",
-    "boardType": "festivals",
-    "title": "[경기도] 경기아트센터 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 팔달구 효원로307번길 20 (인계동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/3055250_image2_1.JPG",
-    "description": "경기아트센터 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130504",
-    "boardType": "festivals",
-    "title": "[전라남도] 완도어촌민속전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 완도군 완도읍 화흥포길 149",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EC%99%84%EB%8F%84%EC%96%B4%EC%B4%8C%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/3381085_image2_1.JPG",
-    "description": "완도어촌민속전시관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130508",
-    "boardType": "festivals",
-    "title": "[충청남도] 서산시문화회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 서산시 문화로 52 (읍내동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%84%9C%EC%82%B0%EC%8B%9C%EB%AC%B8%ED%99%94%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/16/3336916_image2_1.jpg",
-    "description": "서산시문화회관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130539",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 고판화박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 원주시 신림면 물안길 62",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%ED%8C%90%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/3375236_image2_1.JPG",
-    "description": "고판화박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129879",
-    "boardType": "festivals",
-    "title": "[경기도] 연천문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 연천군 연천읍 문화로 143",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%97%B0%EC%B2%9C%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/14/3476014_image2_1.JPG",
-    "description": "연천문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129870",
-    "boardType": "festivals",
-    "title": "[경기도] 안성문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기 안성시 강변남로 36 안성시 문화복지센터 3층",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/75/3475975_image2_1.JPG",
-    "description": "안성문화원 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129721",
-    "boardType": "festivals",
-    "title": "[전북특별자치도] 국립민속국악원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전북특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 남원시 양림길 54",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EB%AF%BC%EC%86%8D%EA%B5%AD%EC%95%85%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/3358422_image2_1.JPG",
-    "description": "국립민속국악원 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전북특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130064",
-    "boardType": "festivals",
-    "title": "[충청남도] 천안시 성정평생학습관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 천안시 서북구 성정중4길 29",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%B1%EC%A0%95%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/3342540_image2_1.JPG",
-    "description": "천안시 성정평생학습관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130506",
-    "boardType": "festivals",
-    "title": "[전북특별자치도] 남원향토박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전북특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 남원시 양림길 14-9",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%82%A8%EC%9B%90%ED%96%A5%ED%86%A0%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/15/3343915_image2_1.jpg",
-    "description": "남원향토박물관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전북특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129952",
-    "boardType": "festivals",
-    "title": "[충청북도] 제천문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 제천시 의림대로 125",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3348578_image2_1.JPG",
-    "description": "제천문화원 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130546",
-    "boardType": "festivals",
-    "title": "[경기도] 경기도국악당 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 용인시 기흥구 민속촌로 89 (보라동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%AD%EC%95%85%EB%8B%B9",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/3068530_image2_1.jpg",
-    "description": "경기도국악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130548",
-    "boardType": "festivals",
-    "title": "[충청북도] 충주농산물가공체험교육관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 충주시 동량면 충원대로 1346",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%B6%A9%EC%A3%BC%EB%86%8D%EC%82%B0%EB%AC%BC%EA%B0%80%EA%B3%B5%EC%B2%B4%ED%97%98%EA%B5%90%EC%9C%A1%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3063710_image2_1.JPG",
-    "description": "충주농산물가공체험교육관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130549",
-    "boardType": "festivals",
-    "title": "[경기도] 고양 어울림누리 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 고양시 덕양구 어울림로 33 (성사동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B3%A0%EC%96%91%20%EC%96%B4%EC%9A%B8%EB%A6%BC%EB%88%84%EB%A6%AC",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3527710_image2_1.jpg",
-    "description": "고양 어울림누리 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130550",
-    "boardType": "festivals",
-    "title": "[대전광역시] 지질박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 유성구 과학로 124",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%A7%80%EC%A7%88%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/3335732_image2_1.jpg",
-    "description": "지질박물관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130557",
-    "boardType": "festivals",
-    "title": "[경기도] 성호박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안산시 상록구 성호로 131 (부곡동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%ED%98%B8%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/3072592_image2_1.jpg",
-    "description": "성호박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130556",
-    "boardType": "festivals",
-    "title": "[경기도] 안산문화예술의전당 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안산시 단원구 화랑로 312 (고잔동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%82%B0%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%9D%98%EC%A0%84%EB%8B%B9",
-    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
-    "description": "안산문화예술의전당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130559",
-    "boardType": "festivals",
-    "title": "[전라남도] 구례향제줄풍류전수관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 구례군 구례읍 봉성산길 16",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EA%B5%AC%EB%A1%80%ED%96%A5%EC%A0%9C%EC%A4%84%ED%92%8D%EB%A5%98%EC%A0%84%EC%88%98%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/3587367_image2_1.jpg",
-    "description": "구례향제줄풍류전수관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130563",
-    "boardType": "festivals",
-    "title": "[전라남도] 땅끝해양자연사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 해남군 송지면 땅끝마을길 89",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%95%85%EB%81%9D%ED%95%B4%EC%96%91%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/3564386_image2_1.jpg",
-    "description": "땅끝해양자연사박물관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129889",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 고성문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 고성군 간성읍 간성로 71-7",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%EC%84%B1%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/3081077_image2_1.jpg",
-    "description": "고성문화원 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130582",
-    "boardType": "festivals",
-    "title": "[전라남도] 도화헌미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 고흥군 도화면 땅끝로 860-5",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%8F%84%ED%99%94%ED%97%8C%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/45/3552745_image2_1.jpg",
-    "description": "도화헌미술관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130635",
-    "boardType": "festivals",
-    "title": "[충청남도] 아라리오 갤러리 천안 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 천안시 동남구 만남로 43",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%95%84%EB%9D%BC%EB%A6%AC%EC%98%A4%20%EA%B0%A4%EB%9F%AC%EB%A6%AC%20%EC%B2%9C%EC%95%88",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/52/3570452_image2_1.jpg",
-    "description": "아라리오 갤러리 천안 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130149",
-    "boardType": "festivals",
-    "title": "[전라남도] 손양원목사 순교기념관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 여수시 산돌길 70-62",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EC%86%90%EC%96%91%EC%9B%90%EB%AA%A9%EC%82%AC%20%EC%88%9C%EA%B5%90%EA%B8%B0%EB%85%90%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3580978_image2_1.jpg",
-    "description": "손양원목사 순교기념관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130655",
-    "boardType": "festivals",
-    "title": "[경기도] 다도박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 김포시 월곶면 애기봉로275번길 187-49",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%8B%A4%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/67/3335767_image2_1.jpg",
-    "description": "다도박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130662",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 모형항공기박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 동산면 영서로 141",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%AA%A8%ED%98%95%ED%95%AD%EA%B3%B5%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3381621_image2_1.JPG",
-    "description": "모형항공기박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130664",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 강원경찰박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 신북읍 신샘밭로 361",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EC%9B%90%EA%B2%BD%EC%B0%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/3382483_image2_1.JPG",
-    "description": "강원경찰박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130677",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 삼척 민물고기전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 삼척시 근덕면 초당길 234",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%82%BC%EC%B2%99%20%EB%AF%BC%EB%AC%BC%EA%B3%A0%EA%B8%B0%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/3039999_image2_1.jpg",
-    "description": "삼척 민물고기전시관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130684",
-    "boardType": "festivals",
-    "title": "[경기도] 포천 반월아트홀 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 포천시 군내면 청성로 111",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%8F%AC%EC%B2%9C%20%EB%B0%98%EC%9B%94%EC%95%84%ED%8A%B8%ED%99%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/3563254_image2_1.jpg",
-    "description": "포천 반월아트홀 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2772449",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] HAPPY700 평창시네마 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 평창군 용평면 경강로 1689",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20HAPPY700%20%ED%8F%89%EC%B0%BD%EC%8B%9C%EB%84%A4%EB%A7%88",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/25/4129125_image2_1.jpg",
-    "description": "HAPPY700 평창시네마 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130711",
-    "boardType": "festivals",
-    "title": "[경기도] 수원시립만석전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 팔달구 정조로 833 (신풍동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%8C%EC%84%9D%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3584770_image2_1.jpg",
-    "description": "수원시립만석전시관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129892",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 평창문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 평창군 평창읍 문화예술길 53",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%8F%89%EC%B0%BD%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4129141_image2_1.jpg",
-    "description": "평창문화원 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130710",
-    "boardType": "festivals",
-    "title": "[경기도] 우석헌자연사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 남양주시 진접읍 금강로 1095",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%9A%B0%EC%84%9D%ED%97%8C%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/30/3077130_image2_1.jpg",
-    "description": "우석헌자연사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1337616",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 태백 고생대 자연사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 태백시 태백로 2249 (동점동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%83%9C%EB%B0%B1%20%EA%B3%A0%EC%83%9D%EB%8C%80%20%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/4128205_image2_1.jpg",
-    "description": "태백 고생대 자연사박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130709",
-    "boardType": "festivals",
-    "title": "[경기도] 서호미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 남양주시 화도읍 북한강로 1344",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%9C%ED%98%B8%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/44/3565444_image2_1.JPG",
-    "description": "서호미술관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130708",
-    "boardType": "festivals",
-    "title": "[경기도] 박물관 얼굴 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 광주시 남종면 분원길 3-6",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B0%95%EB%AC%BC%EA%B4%80%20%EC%96%BC%EA%B5%B4",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3527317_image2_1.jpg",
-    "description": "박물관 얼굴 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130717",
-    "boardType": "festivals",
-    "title": "[경기도] 농경유물전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 파주시 통일로 600 (아동동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%86%8D%EA%B2%BD%EC%9C%A0%EB%AC%BC%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3540617_image2_1.jpg",
-    "description": "농경유물전시관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130715",
-    "boardType": "festivals",
-    "title": "[경기도] 한국기독교역사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 이천시 대월면 대평로214번길 10-13",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%9C%EA%B5%AD%EA%B8%B0%EB%8F%85%EA%B5%90%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/12/3068812_image2_1.jpg",
-    "description": "한국기독교역사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130714",
-    "boardType": "festivals",
-    "title": "[경기도] 조각가 박시동 미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 연천군 백학면 백왕로225번길 240",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A1%B0%EA%B0%81%EA%B0%80%20%EB%B0%95%EC%8B%9C%EB%8F%99%20%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/3382265_image2_1.JPG",
-    "description": "조각가 박시동 미술관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130712",
-    "boardType": "festivals",
-    "title": "[전북특별자치도] 농업과학관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전북특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 전주시 덕진구 농생명로 300 (중동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%86%8D%EC%97%85%EA%B3%BC%ED%95%99%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/3364372_image2_1.JPG",
-    "description": "농업과학관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전북특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130704",
-    "boardType": "festivals",
-    "title": "[경기도] 문아트그라운드 뮤지엄 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 용인시 처인구 모현읍 문형동림로101번길 37",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%AC%B8%EC%95%84%ED%8A%B8%EA%B7%B8%EB%9D%BC%EC%9A%B4%EB%93%9C%20%EB%AE%A4%EC%A7%80%EC%97%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/3368678_image2_1.jpg",
-    "description": "문아트그라운드 뮤지엄 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2994661",
-    "boardType": "festivals",
-    "title": "[서울특별시] U+일상비일상의틈 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 강남구 강남대로 426 (역삼동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20U%2B%EC%9D%BC%EC%83%81%EB%B9%84%EC%9D%BC%EC%83%81%EC%9D%98%ED%8B%88",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/39/4136039_image2_1.jpg",
-    "description": "U+일상비일상의틈 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130724",
-    "boardType": "festivals",
-    "title": "[경기도] 여성생활사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 여주시 강천면 강천로 324-20",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%97%AC%EC%84%B1%EC%83%9D%ED%99%9C%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/36/3563636_image2_1.jpg",
-    "description": "여성생활사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2629039",
-    "boardType": "festivals",
-    "title": "[경상북도] 의성조문국박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 의성군 금성면 초전1길 83",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EC%9D%98%EC%84%B1%EC%A1%B0%EB%AC%B8%EA%B5%AD%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/86/4131886_image2_1.jpg",
-    "description": "의성조문국박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130726",
-    "boardType": "festivals",
-    "title": "[경기도] 하남역사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 하남시 덕풍동로 30 (덕풍동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%ED%95%98%EB%82%A8%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/40/3078540_image2_1.jpg",
-    "description": "하남역사박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130727",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 소양도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 삭주로145번길 69-8",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%86%8C%EC%96%91%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3475356_image2_1.jpg",
-    "description": "소양도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130728",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 강원특별자치도산림박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 화목원길 24 (사농동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%EC%82%B0%EB%A6%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3562176_image2_1.jpg",
-    "description": "강원특별자치도산림박물관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130729",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 남산도서관(춘천) 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 남산면 강촌로 311",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%82%A8%EC%82%B0%EB%8F%84%EC%84%9C%EA%B4%80%28%EC%B6%98%EC%B2%9C%29",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/90/3589390_image2_1.jpg",
-    "description": "남산도서관(춘천) - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130730",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 동내도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 동내면 학곡동1길 17-4",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%8F%99%EB%82%B4%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3475476_image2_1.jpg",
-    "description": "동내도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130734",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 고성교육도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 고성군 거진읍 거탄진로29번길 7",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B3%A0%EC%84%B1%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/3564543_image2_1.jpg",
-    "description": "고성교육도서관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130742",
-    "boardType": "festivals",
-    "title": "[경기도] 조명박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 양주시 광적면 광적로 235-48",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A1%B0%EB%AA%85%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/3559497_image2_1.jpg",
-    "description": "조명박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130748",
-    "boardType": "festivals",
-    "title": "[충청북도] 한국잠사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 청주시 흥덕구 강내면 청주역로 213-52",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%ED%95%9C%EA%B5%AD%EC%9E%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3057331_image2_1.jpg",
-    "description": "한국잠사박물관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130753",
-    "boardType": "festivals",
-    "title": "[전라남도] 목포시립도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 목포시 용당로160번길 32 (용당동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%AA%A9%ED%8F%AC%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/3381468_image2_1.JPG",
-    "description": "목포시립도서관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130755",
-    "boardType": "festivals",
-    "title": "[충청북도] 제천시립도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 제천시 내제로 318",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/42/3349042_image2_1.JPG",
-    "description": "제천시립도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130756",
-    "boardType": "festivals",
-    "title": "[충청북도] 제천기적의도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 제천시 용두천로38길 30",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A0%9C%EC%B2%9C%EA%B8%B0%EC%A0%81%EC%9D%98%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/3349000_image2_1.JPG",
-    "description": "제천기적의도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130758",
-    "boardType": "festivals",
-    "title": "[충청북도] 충주시립도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 충주시 예성로 207",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%B6%A9%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/73/3347573_image2_1.JPG",
-    "description": "충주시립도서관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130757",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 정선아리랑 전수관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 정선군 여량면 아우라지길 69",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%20%EC%A0%84%EC%88%98%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/3584627_image2_1.jpg",
-    "description": "정선아리랑 전수관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130760",
-    "boardType": "festivals",
-    "title": "[대전광역시] 대전한밭도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 중구 서문로 10",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EC%A0%84%ED%95%9C%EB%B0%AD%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/23/3063023_image2_1.JPG",
-    "description": "대전한밭도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130777",
-    "boardType": "festivals",
-    "title": "[충청남도] 합덕수리민속박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 당진시 합덕읍 덕평로 379-9",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%95%A9%EB%8D%95%EC%88%98%EB%A6%AC%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/3560511_image2_1.jpg",
-    "description": "합덕수리민속박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130789",
-    "boardType": "festivals",
-    "title": "[충청북도] 지적박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 제천시 금성면 양월로 34",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%B6%81%EB%8F%84%20%EC%A7%80%EC%A0%81%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/19/3348619_image2_1.JPG",
-    "description": "지적박물관 - 충청북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130804",
-    "boardType": "festivals",
-    "title": "[대전광역시] 유성도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 유성구 대덕대로 507-38",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9C%A0%EC%84%B1%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/05/3585105_image2_1.jpg",
-    "description": "유성도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130802",
-    "boardType": "festivals",
-    "title": "[대전광역시] 대전 가수원도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 서구 가수원로 91-11 (가수원동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EC%A0%84%20%EA%B0%80%EC%88%98%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/58/3033558_image2_1.JPG",
-    "description": "대전 가수원도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130813",
-    "boardType": "festivals",
-    "title": "[경기도] 성남시 수정도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 수정구 수정로332번길 32 (산성동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%88%98%EC%A0%95%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/3053835_image2_1.jpg",
-    "description": "성남시 수정도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130814",
-    "boardType": "festivals",
-    "title": "[경기도] 성남시 분당도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 분당구 불정로 110 (정자동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3053810_image2_1.jpg",
-    "description": "성남시 분당도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130817",
-    "boardType": "festivals",
-    "title": "[경기도] 성남시 중앙도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 분당구 판교로 546 (야탑동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/3062529_image2_1.jpg",
-    "description": "성남시 중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130816",
-    "boardType": "festivals",
-    "title": "[경기도] 수원 영통도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 영통구 청명로 151 (영통동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%88%98%EC%9B%90%20%EC%98%81%ED%86%B5%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/84/3475884_image2_1.JPG",
-    "description": "수원 영통도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130815",
-    "boardType": "festivals",
-    "title": "[경기도] 성남시 중원도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 중원구 원터로17번길 46 (성남동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EC%A4%91%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/3053774_image2_1.jpg",
-    "description": "성남시 중원도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130819",
-    "boardType": "festivals",
-    "title": "[경기도] 부천시립심곡도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 부천시 소사구 성무로 24 (심곡본동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B6%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EC%8B%AC%EA%B3%A1%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/27/3565827_image2_1.JPG",
-    "description": "부천시립심곡도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130820",
-    "boardType": "festivals",
-    "title": "[대전광역시] 갈마도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대전광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 서구 신갈마로127번길 138",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EC%A0%84%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B0%88%EB%A7%88%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/76/3585076_image2_1.jpg",
-    "description": "갈마도서관 - 대전광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대전광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130822",
-    "boardType": "festivals",
-    "title": "[경기도] 부천시립북부도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 부천시 원미구 삼작로301번길 5 (도당동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B6%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%B6%81%EB%B6%80%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3335789_image2_1.JPG",
-    "description": "부천시립북부도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130826",
-    "boardType": "festivals",
-    "title": "[경기도] 슬기샘어린이도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 장안구 송정로 9 (송죽동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%8A%AC%EA%B8%B0%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3057856_image2_1.JPG",
-    "description": "슬기샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130825",
-    "boardType": "festivals",
-    "title": "[경기도] 지혜샘어린이도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 권선구 동탄원천로 818 (권선동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A7%80%ED%98%9C%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/35/3584735_image2_1.jpg",
-    "description": "지혜샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130830",
-    "boardType": "festivals",
-    "title": "[경기도] 경기도교육청성남도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 수정구 공원로370번길 26 (신흥동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%EC%84%B1%EB%82%A8%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/71/3584771_image2_1.jpg",
-    "description": "경기도교육청성남도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130827",
-    "boardType": "festivals",
-    "title": "[경기도] 바른샘어린이도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 영통구 매봉로 10 (매탄동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%B0%94%EB%A5%B8%EC%83%98%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/97/3475897_image2_1.JPG",
-    "description": "바른샘어린이도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130831",
-    "boardType": "festivals",
-    "title": "[경기도] 경기도교육청중앙도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 장안구 조원로 18 (조원동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B2%BD%EA%B8%B0%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/13/3475913_image2_1.JPG",
-    "description": "경기도교육청중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130833",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 춘천시립도서관(장난감도서관) 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 춘천시 우석로 100",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B6%98%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%8F%84%EC%84%9C%EA%B4%80%28%EC%9E%A5%EB%82%9C%EA%B0%90%EB%8F%84%EC%84%9C%EA%B4%80%29",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/99/2745899_image2_1.jpg",
-    "description": "춘천시립도서관(장난감도서관) - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130837",
-    "boardType": "festivals",
-    "title": "[경기도] 서수원도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 권선구 탑동로57번길 35 (탑동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%9C%EC%88%98%EC%9B%90%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3584731_image2_1.jpg",
-    "description": "서수원도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130707",
-    "boardType": "festivals",
-    "title": "[경기도] 충현박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 광명시 오리로347번길 5-6 (소하동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%B6%A9%ED%98%84%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/3563410_image2_1.jpg",
-    "description": "충현박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130680",
-    "boardType": "festivals",
-    "title": "[경기도] 세계민속악기박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 파주시 탄현면 헤이리마을길 63-26",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B8%EA%B3%84%EB%AF%BC%EC%86%8D%EC%95%85%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3382831_image2_1.JPG",
-    "description": "세계민속악기박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130703",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 숲사랑홍보관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 강릉시 사천면 미노길 1",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%88%B2%EC%82%AC%EB%9E%91%ED%99%8D%EB%B3%B4%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/21/3333721_image2_1.jpg",
-    "description": "숲사랑홍보관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-3379703",
-    "boardType": "festivals",
-    "title": "[서울특별시] 푸투라서울 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 종로구 북촌로 61 (가회동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%ED%91%B8%ED%88%AC%EB%9D%BC%EC%84%9C%EC%9A%B8",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/53/4135453_image2_1.jpg",
-    "description": "푸투라서울 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130744",
-    "boardType": "festivals",
-    "title": "[경기도] 국립지도박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 수원시 영통구 월드컵로 92",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EC%A7%80%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3543028_image2_1.jpg",
-    "description": "국립지도박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-4135413",
-    "boardType": "festivals",
-    "title": "[서울특별시] 김창열 화가의 집 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 종로구 평창7길 74 (평창동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EA%B9%80%EC%B0%BD%EC%97%B4%20%ED%99%94%EA%B0%80%EC%9D%98%20%EC%A7%91",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/4115431_image2_1.jpg",
-    "description": "김창열 화가의 집 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-4135336",
-    "boardType": "festivals",
-    "title": "[경기도] 안성문화로74번길 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안성시 장기로74번길 36 (신흥동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EB%AC%B8%ED%99%94%EB%A1%9C74%EB%B2%88%EA%B8%B8",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/18/4131918_image2_1.jpg",
-    "description": "안성문화로74번길 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-4135260",
-    "boardType": "festivals",
-    "title": "[경기도] 안성시 문화창작플랫폼 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안성시 중앙로412번길 28 (동본동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EB%AC%B8%ED%99%94%EC%B0%BD%EC%9E%91%ED%94%8C%EB%9E%AB%ED%8F%BC",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/4131893_image2_1.jpg",
-    "description": "안성시 문화창작플랫폼 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-4135253",
-    "boardType": "festivals",
-    "title": "[경기도] 동방서림 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안성시 중앙3길 24 (동본동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%8F%99%EB%B0%A9%EC%84%9C%EB%A6%BC",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/10/4131910_image2_1.jpg",
-    "description": "동방서림 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130845",
-    "boardType": "festivals",
-    "title": "[경기도] 성남아트센터 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 성남시 분당구 성남대로 808 (야탑동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/06/3475806_image2_1.JPG",
-    "description": "성남아트센터 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2864368",
-    "boardType": "festivals",
-    "title": "[경상남도] 깨어있는시민 문화체험전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 김해시 진영읍 봉하로 132",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EA%B9%A8%EC%96%B4%EC%9E%88%EB%8A%94%EC%8B%9C%EB%AF%BC%20%EB%AC%B8%ED%99%94%EC%B2%B4%ED%97%98%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4135201_image2_1.JPG",
-    "description": "깨어있는시민 문화체험전시관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-731520",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 양구전쟁기념관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 양구군 해안면 해안서화로 35",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%96%91%EA%B5%AC%EC%A0%84%EC%9F%81%EA%B8%B0%EB%85%90%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4128054_image2_1.jpg",
-    "description": "양구전쟁기념관 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-864987",
-    "boardType": "festivals",
-    "title": "[인천광역시] 인천광역시 검단선사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "인천광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 검단구 고산후로121번길 7",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9D%B8%EC%B2%9C%EA%B4%91%EC%97%AD%EC%8B%9C%20%EA%B2%80%EB%8B%A8%EC%84%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/3529296_image2_1.jpg",
-    "description": "인천광역시 검단선사박물관 - 인천광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "인천광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130854",
-    "boardType": "festivals",
-    "title": "[충청남도] 해미 청소년 문화의집 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 서산시 해미면 성지3길 33",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%95%B4%EB%AF%B8%20%EC%B2%AD%EC%86%8C%EB%85%84%20%EB%AC%B8%ED%99%94%EC%9D%98%EC%A7%91",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/48/3337948_image2_1.jpg",
-    "description": "해미 청소년 문화의집 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130859",
-    "boardType": "festivals",
-    "title": "[강원특별자치도] 아라리인형의집 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "강원특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 정선군 북평면 명주내길 43-1",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B0%95%EC%9B%90%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%95%84%EB%9D%BC%EB%A6%AC%EC%9D%B8%ED%98%95%EC%9D%98%EC%A7%91",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/31/3342331_image2_1.jpg",
-    "description": "아라리인형의집 - 강원특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "강원특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130861",
-    "boardType": "festivals",
-    "title": "[전라남도] 국립남도국악원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 진도군 진도대로 3818 국립남도국악원",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EB%82%A8%EB%8F%84%EA%B5%AD%EC%95%85%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/83/3561383_image2_1.jpg",
-    "description": "국립남도국악원 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130866",
-    "boardType": "festivals",
-    "title": "[충청남도] 지당자연사박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 공주시 탄천면 장마루로 1241-90",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EC%A7%80%EB%8B%B9%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3355689_image2_1.jpg",
-    "description": "지당자연사박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130867",
-    "boardType": "festivals",
-    "title": "[경기도] 안성시 중앙도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 안성시 안성맞춤대로 1150 (금산동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%95%88%EC%84%B1%EC%8B%9C%20%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/56/3475956_image2_1.JPG",
-    "description": "안성시 중앙도서관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130875",
-    "boardType": "festivals",
-    "title": "[충청남도] 백제역사문화관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 부여군 규암면 백제문로 455",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%EB%B0%B1%EC%A0%9C%EC%97%AD%EC%82%AC%EB%AC%B8%ED%99%94%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/89/3568089_image2_1.jpg",
-    "description": "백제역사문화관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130876",
-    "boardType": "festivals",
-    "title": "[경기도] 왈츠와 닥터만 커피박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 남양주시 조안면 북한강로 856-37",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%99%88%EC%B8%A0%EC%99%80%20%EB%8B%A5%ED%84%B0%EB%A7%8C%20%EC%BB%A4%ED%94%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/20/3537220_image2_1.jpg",
-    "description": "왈츠와 닥터만 커피박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-690984",
-    "boardType": "festivals",
-    "title": "[서울특별시] 청와대 사랑채 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 종로구 효자로13길 45",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%B2%AD%EC%99%80%EB%8C%80%20%EC%82%AC%EB%9E%91%EC%B1%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/26/3310126_image2_1.jpg",
-    "description": "청와대 사랑채 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2782527",
-    "boardType": "festivals",
-    "title": "[전라남도] 봇재 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 보성군 보성읍 녹차로 750",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%B4%87%EC%9E%AC",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/74/3511574_image2_1.jpg",
-    "description": "봇재 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130899",
-    "boardType": "festivals",
-    "title": "[전라남도] 목포문화예술회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 목포시 남농로 102",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%EB%AA%A9%ED%8F%AC%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/00/3552800_image2_1.jpg",
-    "description": "목포문화예술회관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129796",
-    "boardType": "festivals",
-    "title": "[경기도] 렛츠런파크 서울 말박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 과천시 경마공원대로 107 (주암동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EB%A0%9B%EC%B8%A0%EB%9F%B0%ED%8C%8C%ED%81%AC%20%EC%84%9C%EC%9A%B8%20%EB%A7%90%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/22/4127022_image2_1.jpg",
-    "description": "렛츠런파크 서울 말박물관 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1284446",
-    "boardType": "festivals",
-    "title": "[울산광역시] 울산대곡박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "울산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 울주군 두동면 서하천전로 257",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%B8%EC%82%B0%EB%8C%80%EA%B3%A1%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/4128465_image2_1.jpg",
-    "description": "울산대곡박물관 - 울산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "울산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-615547",
-    "boardType": "festivals",
-    "title": "[충청남도] 태영민속박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "충청남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 금산군 남이면 하금평촌길 26",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%B6%A9%EC%B2%AD%EB%82%A8%EB%8F%84%20%ED%83%9C%EC%98%81%EB%AF%BC%EC%86%8D%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/3338685_image2_1.jpg",
-    "description": "태영민속박물관 - 충청남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "충청남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-696841",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 테디베어하우스 테지움 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 제주시 애월읍 평화로 2159",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%85%8C%EB%94%94%EB%B2%A0%EC%96%B4%ED%95%98%EC%9A%B0%EC%8A%A4%20%ED%85%8C%EC%A7%80%EC%9B%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/98/3034398_image2_1.jpg",
-    "description": "테디베어하우스 테지움 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2945183",
-    "boardType": "festivals",
-    "title": "[경기도] MEG아트홀 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 오산시 내삼미로 93 (수청동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20MEG%EC%95%84%ED%8A%B8%ED%99%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/72/4130472_image2_1.jpg",
-    "description": "MEG아트홀 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2720650",
-    "boardType": "festivals",
-    "title": "[부산광역시] 피아크 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 영도구 해양로195번길 180",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%ED%94%BC%EC%95%84%ED%81%AC",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/78/4130178_image2_1.jpg",
-    "description": "피아크 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1950218",
-    "boardType": "festivals",
-    "title": "[경상남도] 진주청동기문화박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 진주시 대평면 호반로 1353",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%A7%84%EC%A3%BC%EC%B2%AD%EB%8F%99%EA%B8%B0%EB%AC%B8%ED%99%94%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/29/3538929_image2_1.jpg",
-    "description": "진주청동기문화박물관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2620588",
-    "boardType": "festivals",
-    "title": "[경상남도] 진주시립이성자미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 진주시 에나로128번길 14 (충무공동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%82%A8%EB%8F%84%20%EC%A7%84%EC%A3%BC%EC%8B%9C%EB%A6%BD%EC%9D%B4%EC%84%B1%EC%9E%90%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/65/3540965_image2_1.jpg",
-    "description": "진주시립이성자미술관 - 경상남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2709995",
-    "boardType": "festivals",
-    "title": "[세종특별자치시] 대통령기록전시관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "세종특별자치시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 다솜로 250 (어진동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%B8%EC%A2%85%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EC%8B%9C%20%EB%8C%80%ED%86%B5%EB%A0%B9%EA%B8%B0%EB%A1%9D%EC%A0%84%EC%8B%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/43/3505143_image2_1.jpg",
-    "description": "대통령기록전시관 - 세종특별자치시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "세종특별자치시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130099",
-    "boardType": "festivals",
-    "title": "[경상북도] 대가야박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 고령군 대가야읍 대가야로 1203",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EB%8C%80%EA%B0%80%EC%95%BC%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/24/3516724_image2_1.jpg",
-    "description": "대가야박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130494",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 이중섭 미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 이중섭로 33 (서귀동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9D%B4%EC%A4%91%EC%84%AD%20%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/93/3533493_image2_1.jpg",
-    "description": "이중섭 미술관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130296",
-    "boardType": "festivals",
-    "title": "[경기도] 세종국악당 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 여주시 영릉로 125",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B8%EC%A2%85%EA%B5%AD%EC%95%85%EB%8B%B9",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/61/4130461_image2_1.jpg",
-    "description": "세종국악당 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1939093",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 삼매봉도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 남성중로153번길 15 (서홍동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%82%BC%EB%A7%A4%EB%B4%89%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/49/3383849_image2_1.jpg",
-    "description": "삼매봉도서관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2757468",
-    "boardType": "festivals",
-    "title": "[경기도] 기흥성뮤지엄 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경기도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 양평군 강하면 강남로 267",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B8%B0%ED%9D%A5%EC%84%B1%EB%AE%A4%EC%A7%80%EC%97%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4130392_image2_1.jpg",
-    "description": "기흥성뮤지엄 - 경기도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경기도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2836855",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 포도뮤지엄 가족 문화체험",
-    "category": "farm_harvest",
-    "categoryName": "수확·농촌체험",
-    "badge": "🍎 수확·농촌체험",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 산록남로 788 포도뮤지엄",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%8F%AC%EB%8F%84%EB%AE%A4%EC%A7%80%EC%97%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/79/4070579_image2_1.jpg",
-    "description": "포도뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2616589",
-    "boardType": "festivals",
-    "title": "[서울특별시] 양천구 영어특성화도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 양천구 목동동로 81 (신정동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EC%98%81%EC%96%B4%ED%8A%B9%EC%84%B1%ED%99%94%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/92/4129692_image2_1.jpg",
-    "description": "양천구 영어특성화도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-590415",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 감귤박물관 가족 문화체험",
-    "category": "farm_harvest",
-    "categoryName": "수확·농촌체험",
-    "badge": "🍎 수확·농촌체험",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 효돈순환로 441",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EA%B0%90%EA%B7%A4%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/32/3411132_image2_1.jpg",
-    "description": "감귤박물관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2611626",
-    "boardType": "festivals",
-    "title": "[서울특별시] 양천구 갈산도서관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 양천구 목동남로4길 48-6",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%96%91%EC%B2%9C%EA%B5%AC%20%EA%B0%88%EC%82%B0%EB%8F%84%EC%84%9C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/81/4129681_image2_1.jpg",
-    "description": "양천구 갈산도서관 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2660802",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 오설록 티뮤지엄 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 안덕면 신화역사로 15",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%98%A4%EC%84%A4%EB%A1%9D%20%ED%8B%B0%EB%AE%A4%EC%A7%80%EC%97%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/57/3497257_image2_1.jpg",
-    "description": "오설록 티뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130512",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 제주아트서커스 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 안덕면 동광로 214",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%A0%9C%EC%A3%BC%EC%95%84%ED%8A%B8%EC%84%9C%EC%BB%A4%EC%8A%A4",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/62/3034562_image2_1.jpg",
-    "description": "제주아트서커스 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2650449",
-    "boardType": "festivals",
-    "title": "[대구광역시] 물레책방 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대구광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 수성구 달구벌대로492길 15 (범어동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%AC%BC%EB%A0%88%EC%B1%85%EB%B0%A9",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/85/4130585_image2_1.jpg",
-    "description": "물레책방 - 대구광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대구광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1856967",
-    "boardType": "festivals",
-    "title": "[대구광역시] 대구미술관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "대구광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 수성구 미술관로 40 대구미술관",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%8C%80%EA%B5%AC%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%8C%80%EA%B5%AC%EB%AF%B8%EC%88%A0%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/96/4130596_image2_1.jpg",
-    "description": "대구미술관 - 대구광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "대구광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1751182",
-    "boardType": "festivals",
-    "title": "[서울특별시] 우리금융아트홀 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 송파구 올림픽로 424 (방이동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%B0%EB%A6%AC%EA%B8%88%EC%9C%B5%EC%95%84%ED%8A%B8%ED%99%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/47/4129647_image2_1.jpg",
-    "description": "우리금융아트홀 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-3523679",
-    "boardType": "festivals",
-    "title": "[경상북도] 김천시립박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 김천시 대항면 직지사길 130",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EA%B9%80%EC%B2%9C%EC%8B%9C%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/83/4080383_image2_1.jpg",
-    "description": "김천시립박물관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-3085174",
-    "boardType": "festivals",
-    "title": "[서울특별시] 올림픽공원 올림픽홀 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "서울특별시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 송파구 올림픽로 424 (방이동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%98%AC%EB%A6%BC%ED%94%BD%EA%B3%B5%EC%9B%90%20%EC%98%AC%EB%A6%BC%ED%94%BD%ED%99%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/41/4129641_image2_1.jpg",
-    "description": "올림픽공원 올림픽홀 - 서울특별시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "서울특별시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2717330",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 유민 아르누보 뮤지엄 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 성산읍 섭지코지로 107",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%9C%A0%EB%AF%BC%20%EC%95%84%EB%A5%B4%EB%88%84%EB%B3%B4%20%EB%AE%A4%EC%A7%80%EC%97%84",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/11/3548711_image2_1.jpg",
-    "description": "유민 아르누보 뮤지엄 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130363",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 초콜릿 박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 대정읍 일주서로3000번길 144",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EC%B4%88%EC%BD%9C%EB%A6%BF%20%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/28/3548628_image2_1.jpg",
-    "description": "초콜릿 박물관 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130382",
-    "boardType": "festivals",
-    "title": "[부산광역시] 사상문화원 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 사상구 가야대로196번길 51",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%82%AC%EC%83%81%EB%AC%B8%ED%99%94%EC%9B%90",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/01/4130101_image2_1.jpg",
-    "description": "사상문화원 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-129816",
-    "boardType": "festivals",
-    "title": "[부산광역시] 부산여자대학교 차박물관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 부산진구 진남로 506 부산여자대학",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B6%80%EC%82%B0%EC%97%AC%EC%9E%90%EB%8C%80%ED%95%99%EA%B5%90%20%EC%B0%A8%EB%B0%95%EB%AC%BC%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/54/4130054_image2_1.jpg",
-    "description": "부산여자대학교 차박물관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2676283",
-    "boardType": "festivals",
-    "title": "[경상북도] 국립울진해양과학관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "경상북도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 울진군 죽변면 해양과학길 8",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%20%EA%B5%AD%EB%A6%BD%EC%9A%B8%EC%A7%84%ED%95%B4%EC%96%91%EA%B3%BC%ED%95%99%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource_photo/59/4074459_image2_1.jpg",
-    "description": "국립울진해양과학관 - 경상북도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "경상북도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-2823059",
-    "boardType": "festivals",
-    "title": "[부산광역시] 박태준기념관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 기장군 임랑해안길 1 박태준기념관",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EB%B0%95%ED%83%9C%EC%A4%80%EA%B8%B0%EB%85%90%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/03/4130303_image2_1.jpg",
-    "description": "박태준기념관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1940880",
-    "boardType": "festivals",
-    "title": "[부산광역시] 요산김정한문학관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "부산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 금정구 팔송로 60-6 (남산동)",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EB%B6%80%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%94%EC%82%B0%EA%B9%80%EC%A0%95%ED%95%9C%EB%AC%B8%ED%95%99%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/66/4129966_image2_1.jpg",
-    "description": "요산김정한문학관 - 부산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "부산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130907",
-    "boardType": "festivals",
-    "title": "[전라남도] 해남문화예술회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전라남도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전남광주통합특별시 해남군 해남읍 군청길 4",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%9D%BC%EB%82%A8%EB%8F%84%20%ED%95%B4%EB%82%A8%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/17/3564417_image2_1.jpg",
-    "description": "해남문화예술회관 - 전라남도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전라남도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130909",
-    "boardType": "festivals",
-    "title": "[전북특별자치도] 무주양수홍보관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "전북특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 무주군 적상면 괴목로 788",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%84%EB%B6%81%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%EB%AC%B4%EC%A3%BC%EC%96%91%EC%88%98%ED%99%8D%EB%B3%B4%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/70/3583570_image2_1.jpg",
-    "description": "무주양수홍보관 - 전북특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "전북특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-1911160",
-    "boardType": "festivals",
-    "title": "[제주특별자치도] 헬로키티아일랜드 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "제주특별자치도 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 서귀포시 안덕면 한창로 340",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%A0%9C%EC%A3%BC%ED%8A%B9%EB%B3%84%EC%9E%90%EC%B9%98%EB%8F%84%20%ED%97%AC%EB%A1%9C%ED%82%A4%ED%8B%B0%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/80/3548380_image2_1.jpg",
-    "description": "헬로키티아일랜드 - 제주특별자치도에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "제주특별자치도",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
-    "id": "tourapi-cul-130524",
-    "boardType": "festivals",
-    "title": "[울산광역시] 울산문화예술회관 가족 문화체험",
-    "category": "expo_science",
-    "categoryName": "박물관·과학·전시",
-    "badge": "🏛️ 박물관·과학·전시",
-    "organizer": "울산광역시 문화시설",
-    "sourceType": "tour_api",
-    "sourceLabel": "한국관광공사 문화관광데이터",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 남구 번영로 200",
-    "startDate": "2026-10-01",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-10-01",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": "가족 / 어린이 / 학생",
-    "fee": "현장 문의 / 관람료 안내",
-    "url": "https://search.naver.com/search.naver?query=%EC%9A%B8%EC%82%B0%EA%B4%91%EC%97%AD%EC%8B%9C%20%EC%9A%B8%EC%82%B0%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%ED%9A%8C%EA%B4%80",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/77/1587977_image2_1.jpg",
-    "description": "울산문화예술회관 - 울산광역시에서 즐기는 가족 단위 체험·전시 문화시설입니다.",
-    "tags": [
-      "문화체험",
-      "박물관",
-      "울산광역시",
-      "TourAPI"
-    ],
-    "dday": "D-65"
-  },
-  {
     "id": "seoul-res-S260918162140781370",
     "boardType": "festivals",
     "title": "2026 백인제가옥 전시해설 예약",
@@ -28167,7 +23517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-34"
   },
   {
-    "id": "gg-fest-2110600649652982530",
+    "id": "gg-fest-5619892677299981462",
     "boardType": "festivals",
     "title": "제5회 정자동 놀터축제 및 작품발표회",
     "category": "expo_science",
@@ -28198,7 +23548,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-1865136523671703709",
+    "id": "gg-fest-84392237460677401",
     "boardType": "festivals",
     "title": "2026 모두모여모란",
     "category": "festival_performance",
@@ -28229,7 +23579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-6616594293690364746",
+    "id": "gg-fest-7994566835533800109",
     "boardType": "festivals",
     "title": "튼튼쑥쑥 걷기대회",
     "category": "sports_marathon",
@@ -28260,7 +23610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-3321693394708170658",
+    "id": "gg-fest-6414322493379904396",
     "boardType": "festivals",
     "title": "식품제조 홍보 및 판매관",
     "category": "festival_culture",
@@ -29190,7 +24540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-3"
   },
   {
-    "id": "gg-fest-2634443166416262109",
+    "id": "gg-fest-5924893912891139889",
     "boardType": "festivals",
     "title": "안성맞춤 남사당바우덕이축제",
     "category": "festival_culture",
@@ -29221,7 +24571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7700209703530757904",
+    "id": "gg-fest-7170530973054228708",
     "boardType": "festivals",
     "title": "2026 헤이리 판 페스티벌",
     "category": "expo_science",
@@ -29934,7 +25284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-1181377782296567784",
+    "id": "gg-fest-8761307220449255673",
     "boardType": "festivals",
     "title": "정조효문화제 및 정조대왕능행차 공동재현",
     "category": "festival_tradition",
@@ -29965,7 +25315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4236329544333011426",
+    "id": "gg-fest-6607595775951735434",
     "boardType": "festivals",
     "title": "용인시민의 날 연계 축제 행사",
     "category": "festival_culture",
@@ -29996,7 +25346,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-473970095172280039",
+    "id": "gg-fest-2534199839426940942",
     "boardType": "festivals",
     "title": "2026 수원화성 미디어아트",
     "category": "festival_light",
@@ -30089,7 +25439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3227164105633912065",
+    "id": "gg-fest-8239612799927840574",
     "boardType": "festivals",
     "title": "2026 정조대왕 능행차 공동재현",
     "category": "festival_tradition",
@@ -30120,7 +25470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7545669971462320209",
+    "id": "gg-fest-8444835620829069316",
     "boardType": "festivals",
     "title": "제63회 수원화성문화제",
     "category": "festival_tradition",
@@ -30616,7 +25966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2500907035944349312",
+    "id": "gg-fest-7109557169185465016",
     "boardType": "festivals",
     "title": "제18회 시민어울림한마당",
     "category": "festival_culture",
@@ -31391,7 +26741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5619458676349154588",
+    "id": "gg-fest-7005187442360032910",
     "boardType": "festivals",
     "title": "제26회 복사골청소년예술제",
     "category": "festival_culture",
@@ -31422,7 +26772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5966461045482129160",
+    "id": "gg-fest-2510958628871297381",
     "boardType": "festivals",
     "title": "제3회 파주페어_북앤컬처",
     "category": "expo_science",
@@ -32259,7 +27609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "wevity-8294535805671185709",
+    "id": "wevity-4830883597719945370",
     "boardType": "contests",
     "title": "제14회 한옥디자인 국제 공모전",
     "category": "contest_music",
@@ -32290,7 +27640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8476165146239133122",
+    "id": "wevity-3567716255266443038",
     "boardType": "contests",
     "title": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전",
     "category": "contest_music",
@@ -32321,7 +27671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6708158622858368512",
+    "id": "wevity-5692001281631640048",
     "boardType": "contests",
     "title": "드골2: 자유의 시대 포스터·굿즈 공모전",
     "category": "contest_art",
@@ -32352,7 +27702,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2706877774892828812",
+    "id": "wevity-7778620881175869538",
     "boardType": "contests",
     "title": "2026 한국공항보안(주) AI 디지털 이미지 공모전",
     "category": "contest_art",
@@ -32383,7 +27733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1411796096742404060",
+    "id": "wevity-1355291730985409112",
     "boardType": "contests",
     "title": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전",
     "category": "contest_stem",
@@ -32414,7 +27764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8196009927545929527",
+    "id": "wevity-5760560639851149928",
     "boardType": "contests",
     "title": "2026 부천시 웹툰융합 공모전",
     "category": "contest_art",
@@ -32445,7 +27795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4334899364157476081",
+    "id": "wevity-6923221812675646660",
     "boardType": "contests",
     "title": "2026년 부산항만공사 청소년 인권존중 포스터 공모전",
     "category": "contest_art",
@@ -32476,7 +27826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-335393046329182040",
+    "id": "wevity-8441634262602985201",
     "boardType": "contests",
     "title": "2026년 경상남도 어린이 불조심 포스터 공모전",
     "category": "contest_art",
@@ -32507,7 +27857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8274746869520807572",
+    "id": "wevity-5521819468625973586",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 기념우표 디자인 공모전",
     "category": "contest_art",
@@ -32538,7 +27888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4162636525202105197",
+    "id": "wevity-6145694166171625482",
     "boardType": "contests",
     "title": "2026 국가유산형 드론콘텐츠 디자인 공모전",
     "category": "contest_art",
@@ -32569,7 +27919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2708915916024913884",
+    "id": "wevity-5799606577242048298",
     "boardType": "contests",
     "title": "2026 레진성인공모전",
     "category": "contest_art",
@@ -32600,7 +27950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-670197725899246485",
+    "id": "wevity-6449926936964778012",
     "boardType": "contests",
     "title": "2026년 서울특별시 어린이·청소년 시민발언대 청소년이 바꾸는 서울 인스타툰 공모전",
     "category": "contest_art",
@@ -32631,7 +27981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8980468673840470456",
+    "id": "wevity-8585601896211130085",
     "boardType": "contests",
     "title": "제 27회 청소년만화축제 만화작품 공모전",
     "category": "contest_art",
@@ -32662,7 +28012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3729896541312969462",
+    "id": "wevity-155615560440818298",
     "boardType": "contests",
     "title": "2026 제23회 고양호수만화축제 청소년만화 공모전",
     "category": "contest_art",
@@ -32693,7 +28043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-245749874955160678",
+    "id": "wevity-742591659476134076",
     "boardType": "contests",
     "title": "2026년 용산구시설관리공단 캐릭터 공모전",
     "category": "contest_art",
@@ -32724,7 +28074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6994167404979186312",
+    "id": "wevity-6772500514660670630",
     "boardType": "contests",
     "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급",
     "category": "contest_music",
@@ -32755,7 +28105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2629056933081644078",
+    "id": "wevity-2168358282578455906",
     "boardType": "contests",
     "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!",
     "category": "contest_music",
@@ -32786,7 +28136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8177561465147954101",
+    "id": "wevity-412367129024418723",
     "boardType": "contests",
     "title": "제4회 현대문학x미래엔 청소년문학상 공모전",
     "category": "contest_music",
@@ -32817,7 +28167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3038787548540270540",
+    "id": "wevity-6434578726405554391",
     "boardType": "contests",
     "title": "2026 충남 문화예술후원사업 문화CF 스타상 (청년예술부문) 공모",
     "category": "contest_writing",
@@ -32848,7 +28198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1725841796229474742",
+    "id": "wevity-3788131333563608583",
     "boardType": "contests",
     "title": "2026 국립한밭대학교 포토에세이 공모전",
     "category": "contest_writing",
@@ -32879,7 +28229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3093243518418135531",
+    "id": "wevity-2132756512150934785",
     "boardType": "contests",
     "title": "2027 국제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -32910,7 +28260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3835544014638024081",
+    "id": "wevity-2403905070407602448",
     "boardType": "contests",
     "title": "세계일보 2027 신춘문예 공모",
     "category": "contest_writing",
@@ -32941,7 +28291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8290985099009837363",
+    "id": "wevity-8690727658482367675",
     "boardType": "contests",
     "title": "2027년 현대경제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -32972,7 +28322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2773649309453542253",
+    "id": "wevity-7643973771514359304",
     "boardType": "contests",
     "title": "2027 광남일보 한국문학대상",
     "category": "contest_writing",
@@ -33003,7 +28353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3284640691907644580",
+    "id": "wevity-3245849583978950283",
     "boardType": "contests",
     "title": "2026 광명시 올해의 책 독후감 공모전",
     "category": "contest_reading",
@@ -33034,7 +28384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1598817591982671344",
+    "id": "wevity-568188681344340989",
     "boardType": "contests",
     "title": "제26회 국립순천대학교 청소년 문예백일장",
     "category": "contest_writing",
@@ -33065,7 +28415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2728002934422927156",
+    "id": "wevity-1074827445061388742",
     "boardType": "contests",
     "title": "제39회 무등일보 신춘문예 공모",
     "category": "contest_writing",
@@ -33096,7 +28446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2542961080220027779",
+    "id": "wevity-8371895130017915829",
     "boardType": "contests",
     "title": "2026 부산 국제 한국디카시 공모전",
     "category": "contest_writing",
@@ -33127,7 +28477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7235233099288725049",
+    "id": "wevity-1469326412743445760",
     "boardType": "contests",
     "title": "제2회 연세국제창작공모전",
     "category": "contest_writing",
@@ -33158,7 +28508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6341610628411118198",
+    "id": "wevity-812515360770527401",
     "boardType": "contests",
     "title": "6G 서비스 시나리오 공모전",
     "category": "contest_writing",
@@ -33189,7 +28539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6501919128557786020",
+    "id": "wevity-5397287002402751087",
     "boardType": "contests",
     "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)",
     "category": "contest_coding",
@@ -33220,7 +28570,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3937855796383928899",
+    "id": "wevity-7572933209129621111",
     "boardType": "contests",
     "title": "2026 청도 바이브코딩 해커톤 with 해커그라운드",
     "category": "contest_coding",
@@ -33251,7 +28601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4341073983365508193",
+    "id": "wevity-743322203885295826",
     "boardType": "contests",
     "title": "2026 충북글로벌게임센터 AI 게임 개발 공모전",
     "category": "contest_coding",
@@ -33282,7 +28632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8819208464855997110",
+    "id": "wevity-561261166830011343",
     "boardType": "contests",
     "title": "2026 제8회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -33313,7 +28663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6331680528057287871",
+    "id": "wevity-6522013274693153596",
     "boardType": "contests",
     "title": "2026 조달청 AI 게임·콘텐츠 공모전",
     "category": "contest_coding",
@@ -33344,7 +28694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3401483457062988717",
+    "id": "wevity-8600399958357890254",
     "boardType": "contests",
     "title": "쿵야 IP를 활용한 로블록스(Roblox) 게임 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -33375,7 +28725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7466265219737764790",
+    "id": "wevity-912827017463156760",
     "boardType": "contests",
     "title": "제1회 한아전 게임 시나리오·그래픽 공모전",
     "category": "contest_coding",
@@ -33406,7 +28756,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5200311302568977727",
+    "id": "wevity-9033578939711101251",
     "boardType": "contests",
     "title": "2026 대전 콘텐츠페어 이스포츠 대전 브롤스타즈 참가자 모집",
     "category": "contest_coding",
@@ -33437,7 +28787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2919695874269864132",
+    "id": "wevity-611494284332817321",
     "boardType": "contests",
     "title": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회",
     "category": "contest_coding",
@@ -33468,7 +28818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4916482245440154917",
+    "id": "wevity-4309972725688240162",
     "boardType": "contests",
     "title": "제4회 경남 AI·SW 경진대회",
     "category": "contest_coding",
@@ -33499,7 +28849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-80008083969235711",
+    "id": "wevity-7177068552906988133",
     "boardType": "contests",
     "title": "2026 제5회 오픈소스 SW개발 경진대회",
     "category": "contest_coding",
@@ -33530,7 +28880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1630475143845400203",
+    "id": "wevity-1933486619260038962",
     "boardType": "contests",
     "title": "2026년 충청권 인디게임 공모전 인디유(indie·U)",
     "category": "contest_coding",
@@ -33561,7 +28911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8704365616734268232",
+    "id": "wevity-6930816247015833753",
     "boardType": "contests",
     "title": "2026 대학생 프로그래밍 경시대회",
     "category": "contest_coding",
@@ -33592,7 +28942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7748528762021026333",
+    "id": "wevity-948885366974205796",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지",
     "category": "contest_coding",
@@ -33623,7 +28973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1799595459072696063",
+    "id": "wevity-4417926231941543310",
     "boardType": "contests",
     "title": "[무계로 세계로 블루마블] 리그 오브 레전드 무작위 총력전 : 아수라장 - 선수 모집",
     "category": "contest_coding",
@@ -33654,7 +29004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3650636614000884088",
+    "id": "wevity-2734247871286112876",
     "boardType": "contests",
     "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전",
     "category": "contest_music",
@@ -33685,7 +29035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5229123705067508386",
+    "id": "wevity-6643278687127299102",
     "boardType": "contests",
     "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR",
     "category": "contest_music",
@@ -33716,7 +29066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7019461442685839520",
+    "id": "wevity-2185056835149739664",
     "boardType": "contests",
     "title": "2026 DATA·AI 분석 경진대회",
     "category": "contest_stem",
@@ -33747,7 +29097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7278500801996078525",
+    "id": "wevity-1911798481975912547",
     "boardType": "contests",
     "title": "한국공학한림원 공학의 가치 숏폼 콘테스트",
     "category": "contest_stem",
@@ -33778,7 +29128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4128963931814845638",
+    "id": "wevity-6626254928585667859",
     "boardType": "contests",
     "title": "2026 로보틱스 작품공모전",
     "category": "contest_stem",
@@ -33809,7 +29159,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1137546837437178263",
+    "id": "wevity-2878424809093889085",
     "boardType": "contests",
     "title": "우리 모두의 R&D 공모전",
     "category": "contest_stem",
@@ -33840,7 +29190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6445289961791504312",
+    "id": "wevity-472377184880937358",
     "boardType": "contests",
     "title": "2026 양자내성암호 전환 경진대회·해커톤",
     "category": "contest_coding",
@@ -33871,7 +29221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1273772780851682732",
+    "id": "wevity-4241413071826910866",
     "boardType": "contests",
     "title": "2026 POSTECH OIBC 빅데이터 경진대회",
     "category": "contest_stem",
@@ -33902,7 +29252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4714583629807507158",
+    "id": "wevity-2750819541485483762",
     "boardType": "contests",
     "title": "제 4회 청소년과학오디션",
     "category": "contest_stem",
@@ -33933,7 +29283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-712955091370252116",
+    "id": "wevity-1471570071416020276",
     "boardType": "contests",
     "title": "2027 전국 대학생 자작 미래자동차 경진대회",
     "category": "contest_stem",
@@ -33964,7 +29314,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4640385835292229685",
+    "id": "wevity-6171979823051810783",
     "boardType": "contests",
     "title": "2026 스페이스 해커톤",
     "category": "contest_coding",
@@ -33995,7 +29345,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7646979009424166835",
+    "id": "wevity-5642301904596146925",
     "boardType": "contests",
     "title": "2026년 3d 디자인 공모전",
     "category": "contest_stem",
@@ -34026,7 +29376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4196412552576120525",
+    "id": "wevity-7078768227630753075",
     "boardType": "contests",
     "title": "제 4회 청소년 과학 오디션",
     "category": "contest_stem",
@@ -34057,7 +29407,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8446191184182595906",
+    "id": "wevity-2919887488589804000",
     "boardType": "contests",
     "title": "N.O.V.A. 2026 대화형 의료 진단 AI 에이전트 대회",
     "category": "contest_stem",
@@ -34088,7 +29438,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3690293832972342174",
+    "id": "wevity-4296309935895511730",
     "boardType": "contests",
     "title": "선샤인 TIME TRAVEL 숏폼 영상 공모전",
     "category": "contest_music",
@@ -34119,7 +29469,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8819767028173698752",
+    "id": "wevity-8568310184634703233",
     "boardType": "contests",
     "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전",
     "category": "contest_music",
@@ -34150,7 +29500,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8609815671471351888",
+    "id": "wevity-6324982411036804687",
     "boardType": "contests",
     "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전)",
     "category": "contest_music",
@@ -34181,7 +29531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3113955026872255156",
+    "id": "wevity-1886919405971454459",
     "boardType": "contests",
     "title": "제7회 KMA 시니어모델선발대회",
     "category": "contest_music",
@@ -34212,7 +29562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2375827306064928827",
+    "id": "wevity-2855580716089299176",
     "boardType": "contests",
     "title": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모",
     "category": "contest_music",
@@ -34243,7 +29593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3683414995208726647",
+    "id": "wevity-8906019438660848956",
     "boardType": "contests",
     "title": "2026 강동문화재단 GAC Creative Bridge (아트 굿즈 창작지원 프로젝트)",
     "category": "contest_music",
@@ -34274,7 +29624,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8679192735070215859",
+    "id": "wevity-7840836596179572020",
     "boardType": "contests",
     "title": "2026 순창 코리아 떡볶이 페스타 – 전국 떡볶이 플래시몹 경연대회 참가자 모집",
     "category": "contest_music",
@@ -34305,7 +29655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7792853453489700225",
+    "id": "wevity-7936560638956426779",
     "boardType": "contests",
     "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
     "category": "contest_music",
@@ -35855,7 +31205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-649507905221623697",
+    "id": "gg-fest-2681623029001113992",
     "boardType": "festivals",
     "title": "2026 김포 라베니체축제",
     "category": "festival_light",
@@ -35886,7 +31236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5666167821641699154",
+    "id": "gg-fest-671759394101686131",
     "boardType": "festivals",
     "title": "제40회 정약용문화제",
     "category": "festival_tradition",
@@ -37405,7 +32755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-1591210134984983024",
+    "id": "gg-fest-2711167525752869920",
     "boardType": "festivals",
     "title": "반려동물 문화행사(페스티벌)",
     "category": "festival_culture",
@@ -37436,7 +32786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-178740681018985217",
+    "id": "gg-fest-1016018930777016062",
     "boardType": "festivals",
     "title": "2025 화성 학생동아리 축제",
     "category": "expo_science",
@@ -37467,7 +32817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7446529279874768636",
+    "id": "gg-fest-5346805928226079754",
     "boardType": "festivals",
     "title": "2026 김포 선셋 페스타",
     "category": "festival_food",
@@ -37498,7 +32848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3357337477760802326",
+    "id": "gg-fest-8223868903706938780",
     "boardType": "festivals",
     "title": "제21회 광릉숲축제",
     "category": "sports_marathon",
@@ -37529,7 +32879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3106405137442278025",
+    "id": "gg-fest-514558309316461900",
     "boardType": "festivals",
     "title": "10월 마토예술제",
     "category": "festival_performance",
@@ -38769,7 +34119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-7725087500250900551",
+    "id": "gg-fest-2890026827849171056",
     "boardType": "festivals",
     "title": "제3회 화성 루나 빛 축제",
     "category": "festival_light",
@@ -38800,7 +34150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-5124162930822797306",
+    "id": "gg-fest-2378693938411432340",
     "boardType": "festivals",
     "title": "2026 김포 해병대문화축제",
     "category": "expo_science",
@@ -38831,7 +34181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-7518492904893795937",
+    "id": "gg-fest-7779491961265749997",
     "boardType": "festivals",
     "title": "평택 원평나루 억새축제",
     "category": "festival_season",
@@ -38862,7 +34212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "gg-fest-2070014210133206490",
+    "id": "gg-fest-8512664313212094603",
     "boardType": "festivals",
     "title": "2026년 제8회 운정호수공원 불꽃축제",
     "category": "festival_light",
@@ -38893,7 +34243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-65"
   },
   {
-    "id": "gg-fest-1133258331985921499",
+    "id": "gg-fest-3485854540140979935",
     "boardType": "festivals",
     "title": "2026년 가을걷이 한마당",
     "category": "expo_science",
@@ -39048,7 +34398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "gg-fest-379218783460165176",
+    "id": "gg-fest-1461348441304291493",
     "boardType": "festivals",
     "title": "우리가족 꼬마영웅 올림픽",
     "category": "festival_culture",
@@ -39296,7 +34646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-5760659676525799629",
+    "id": "seoul-culture-6376534289604095329",
     "boardType": "festivals",
     "title": "[청계천박물관] 2026년 11월 초등1~3학년 학급단체 교육 [씽씽! 청계천 시간여행]",
     "category": "expo_science",
@@ -39327,7 +34677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-31"
   },
   {
-    "id": "seoul-culture-2224909017536611589",
+    "id": "seoul-culture-3822576856227511655",
     "boardType": "festivals",
     "title": "오려내고 기워낸 나만의 시",
     "category": "festival_culture",
@@ -39358,7 +34708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-7583355308837994936",
+    "id": "seoul-culture-9139831628515012303",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [국민연금공단과 함께하는 노후 준비 특강]",
     "category": "festival_culture",
@@ -39389,7 +34739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-3101801265157347910",
+    "id": "seoul-culture-6169874524419140336",
     "boardType": "festivals",
     "title": "[개봉도서관] 2026년 특성화 프로그램 [신문으로 배우는 초등 경제교육]",
     "category": "festival_culture",
@@ -39420,7 +34770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-22"
   },
   {
-    "id": "seoul-culture-3990492933779823148",
+    "id": "seoul-culture-697682434696459284",
     "boardType": "festivals",
     "title": "[동작문화재단] 2026 상도어울마당 아트홀 개관 3주년 기획 프로그램 [상도 놀이터]",
     "category": "festival_tradition",
@@ -39637,7 +34987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8931921761370508605",
+    "id": "seoul-culture-5120857991162282923",
     "boardType": "festivals",
     "title": "[서울시립 서서울미술관] 2026 서서울미술관 뉴미디어 신진작가전 《탈피하지 못하는 뱀은》",
     "category": "expo_science",
@@ -39668,7 +35018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-124"
   },
   {
-    "id": "seoul-culture-5519413964446304683",
+    "id": "seoul-culture-3410626054265437447",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [옛 밥상, 오늘의 삶을 차리다_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_culture",
@@ -39699,7 +35049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-630868097512536918",
+    "id": "seoul-culture-1414109980109043928",
     "boardType": "festivals",
     "title": "명지대학교 영상애니메이션디자인전공 제 25회 졸업전시회 [PUZZLE]",
     "category": "expo_science",
@@ -39730,7 +35080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-13"
   },
   {
-    "id": "seoul-culture-2190173889084611235",
+    "id": "seoul-culture-957225291787726224",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [라보엠]",
     "category": "festival_culture",
@@ -39761,7 +35111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-4442996748351566584",
+    "id": "seoul-culture-8148538804468145515",
     "boardType": "festivals",
     "title": "홍현기 개인전 [환기(換氣): 바람이 지나간 자리]",
     "category": "festival_culture",
@@ -39792,7 +35142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-1549487339204490531",
+    "id": "seoul-culture-3226967973875327240",
     "boardType": "festivals",
     "title": "[금천문화재단] 2026 어린이청소년극장네트워크 협력사업 [길 위의 아이]",
     "category": "festival_tradition",
@@ -39823,7 +35173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-862359595207312671",
+    "id": "seoul-culture-937324489501118573",
     "boardType": "festivals",
     "title": "예술, 마음으로 전하는 가장 특별한 선물",
     "category": "festival_culture",
@@ -39854,7 +35204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-6484950904112210244",
+    "id": "seoul-culture-5144573656158112333",
     "boardType": "festivals",
     "title": "송파구립합창단 37주년 정기연주회 [밤을 품어내는 아침처럼]",
     "category": "farm_harvest",
@@ -39885,7 +35235,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-1482604255983044768",
+    "id": "seoul-culture-6524879077152754875",
     "boardType": "festivals",
     "title": "수림뉴웨이브 2026 - 이나연 [귀류 歸流]",
     "category": "festival_tradition",
@@ -39916,7 +35266,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-6276351367012418371",
+    "id": "seoul-culture-6531487956115402841",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 노원문화예술회관",
     "category": "festival_performance",
@@ -39947,7 +35297,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-9"
   },
   {
-    "id": "seoul-culture-1239425448842143050",
+    "id": "seoul-culture-9152877523106216035",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 『니체 초인 수업』 강용수 저자와의 만남",
     "category": "festival_culture",
@@ -40257,7 +35607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6947886680958853470",
+    "id": "seoul-culture-7662928863849239229",
     "boardType": "festivals",
     "title": "국립무용단 [2026 안무가 프로젝트]",
     "category": "festival_culture",
@@ -40288,7 +35638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-1445646490260040809",
+    "id": "seoul-culture-1965263591511595557",
     "boardType": "festivals",
     "title": "국제 프리스타일 축구 월드 챔피언쉽 [2026 KILL THAT BALL: SEOUL]",
     "category": "festival_performance",
@@ -40319,7 +35669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8169528921422314685",
+    "id": "seoul-culture-6884662006951862861",
     "boardType": "festivals",
     "title": "제18회 언리미티드 에디션 - 서울아트북페어 2026",
     "category": "expo_science",
@@ -40350,7 +35700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-1858563448567310578",
+    "id": "seoul-culture-4019607342734776263",
     "boardType": "festivals",
     "title": "[서울형 키즈카페 한성백제박물관점] 영유아 예술체험 프로그램 [동그라미 세모 네모]",
     "category": "expo_science",
@@ -40381,7 +35731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-10"
   },
   {
-    "id": "seoul-culture-5667329010619599502",
+    "id": "seoul-culture-1223691236335038076",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 양천문화회관",
     "category": "festival_culture",
@@ -41001,7 +36351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6632933671938846564",
+    "id": "seoul-culture-2188981002521743411",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/영유아 [엄마 아빠, 책이랑 놀자!]",
     "category": "festival_culture",
@@ -41032,7 +36382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-625439533099376229",
+    "id": "seoul-culture-2613306627753641666",
     "boardType": "festivals",
     "title": "연극 [점프x컷]",
     "category": "festival_tradition",
@@ -41063,7 +36413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6364162922813062433",
+    "id": "seoul-culture-8477337829525777453",
     "boardType": "festivals",
     "title": "제2회 호호랑 친구들 - 수집가마켓",
     "category": "festival_culture",
@@ -41094,7 +36444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-7082643011803313507",
+    "id": "seoul-culture-3416611774694920551",
     "boardType": "festivals",
     "title": "2026 코리아발레스타즈 [호두까기인형]",
     "category": "park_eco",
@@ -41125,7 +36475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6525861262462183402",
+    "id": "seoul-culture-7304934741814094298",
     "boardType": "festivals",
     "title": "제27회 은평구 청강정철호 국악제",
     "category": "festival_performance",
@@ -41156,7 +36506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-12"
   },
   {
-    "id": "seoul-culture-5081310027592206464",
+    "id": "seoul-culture-8511224663355274326",
     "boardType": "festivals",
     "title": "[고려대학교] 2026 모두의 AI·AX 캠프(초·중·고 대상)",
     "category": "park_eco",
@@ -41187,7 +36537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-661745757457689177",
+    "id": "seoul-culture-1583040939586599930",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 은평 월간 다문화 미등록 [이주아동 이야기 은유 작가님과 함께하는 북토크]",
     "category": "festival_culture",
@@ -41218,7 +36568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-11"
   },
   {
-    "id": "seoul-culture-657492726090045637",
+    "id": "seoul-culture-1318039246613917013",
     "boardType": "festivals",
     "title": "박희수의 정가 [설화(說花)] 말은 입김이 되어 눈꽃처럼 흩어진다",
     "category": "festival_season",
@@ -41683,7 +37033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-6"
   },
   {
-    "id": "seoul-culture-7966096390687075305",
+    "id": "seoul-culture-4495492620969652016",
     "boardType": "festivals",
     "title": "장우리 첼로 독주회",
     "category": "festival_culture",
@@ -41776,7 +37126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-4"
   },
   {
-    "id": "seoul-culture-8967637548373457081",
+    "id": "seoul-culture-4943401901434248489",
     "boardType": "festivals",
     "title": "2026 서울시민 생활음악 심포니 페스티벌 [음악으로 사람을 잇다]",
     "category": "festival_culture",
@@ -41807,7 +37157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-3885775566869217479",
+    "id": "seoul-culture-5512675796044920170",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 서울여자대학교",
     "category": "festival_culture",
@@ -41838,7 +37188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-7605135481936287328",
+    "id": "seoul-culture-2411518617950015141",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 마포 배리어프리 콘서트 [다른 음색, 하나의 울림] 유망 청년 예술가 초청 음악회",
     "category": "festival_tradition",
@@ -41869,7 +37219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-5486924702097082781",
+    "id": "seoul-culture-5838764417298171971",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 클래식 with 대전시립교향악단",
     "category": "expo_science",
@@ -41900,7 +37250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-14"
   },
   {
-    "id": "seoul-culture-513792590058158058",
+    "id": "seoul-culture-6569511656870821617",
     "boardType": "festivals",
     "title": "[성동문화재단] 세계 영화 상영회 9회차 '이탈리아 영화' [비발디와 나]",
     "category": "festival_tradition",
@@ -41931,7 +37281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-4846504534607801381",
+    "id": "seoul-culture-2568461004325740153",
     "boardType": "festivals",
     "title": "[강북문화재단] 마티네 콘서트 [From Italy to Spain]",
     "category": "festival_tradition",
@@ -41962,7 +37312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-15"
   },
   {
-    "id": "seoul-culture-7529217308429335266",
+    "id": "seoul-culture-4601214729185748546",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Remembering Bud Powell]",
     "category": "festival_tradition",
@@ -42024,7 +37374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-2139263737642544819",
+    "id": "seoul-culture-5610592009378599669",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/도서관초대석 (김영찬 작가) [가르치지 않을 용기]",
     "category": "festival_culture",
@@ -42055,7 +37405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-3451761538907328498",
+    "id": "seoul-culture-1900788706870186757",
     "boardType": "festivals",
     "title": "김대중의 망명일기와 기록물 특별전 '내면의 기록' 연계 강연 및 토크콘서트",
     "category": "expo_science",
@@ -42086,7 +37436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-668361188490958001",
+    "id": "seoul-culture-5328717147785451285",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 개관 11주년 기념 북토크 [사랑과 결함] 예소연 저자와의 만남",
     "category": "festival_culture",
@@ -42210,7 +37560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-2579600601941687483",
+    "id": "seoul-culture-8995415789379920466",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 M 초이스 연극 [투신 Two Scenes]",
     "category": "festival_tradition",
@@ -42241,7 +37591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-4440845164001185966",
+    "id": "seoul-culture-7010937281688746634",
     "boardType": "festivals",
     "title": "[세종문화회관] CHANGMO : MONOLITH",
     "category": "festival_culture",
@@ -42272,7 +37622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6621515298140114694",
+    "id": "seoul-culture-2483332498497640907",
     "boardType": "festivals",
     "title": "hnei(이석희) 작곡발표회 [비누, 비노, 배누, 비눌, 비널 그리고 사분]",
     "category": "festival_culture",
@@ -42303,7 +37653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-8556628708662853877",
+    "id": "seoul-culture-2435519724342800836",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
     "category": "expo_science",
@@ -42334,7 +37684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-3504107686159965182",
+    "id": "seoul-culture-2724699360693657070",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
     "category": "festival_culture",
@@ -42365,7 +37715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-2872988867118188689",
+    "id": "seoul-culture-3418798871788728151",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 SPO Day",
     "category": "festival_culture",
@@ -42396,7 +37746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-17"
   },
   {
-    "id": "seoul-culture-1157450020019994866",
+    "id": "seoul-culture-597018829599045949",
     "boardType": "festivals",
     "title": "[구로천왕도서관] 은유 작가와의 만남 [해방의 밤]",
     "category": "farm_harvest",
@@ -42923,7 +38273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-2265512091393858871",
+    "id": "seoul-culture-7535569419225286857",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 화염",
     "category": "festival_tradition",
@@ -42954,7 +38304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-40"
   },
   {
-    "id": "seoul-culture-246733294219560084",
+    "id": "seoul-culture-4237677081197837444",
     "boardType": "contests",
     "title": "조선왕릉 톺아보기: 조선왕릉 골든벨",
     "category": "contest_reading",
@@ -42985,7 +38335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-2577178940690473444",
+    "id": "seoul-culture-6477220899161363403",
     "boardType": "festivals",
     "title": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
     "category": "festival_tradition",
@@ -43016,7 +38366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-18"
   },
   {
-    "id": "seoul-culture-6834823645002579649",
+    "id": "seoul-culture-4314307902401249735",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이메이킹 해봄이웃집Maker [그림책으로 만나는 슈링클스 키캡 만들기]",
     "category": "festival_season",
@@ -43295,7 +38645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-6900397557514112782",
+    "id": "seoul-culture-3310476355113251413",
     "boardType": "festivals",
     "title": "라 리저브 : 케이티 조지, 루시 예기아자리안, 마리아 킴",
     "category": "festival_culture",
@@ -43357,7 +38707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-8559086431520859332",
+    "id": "seoul-culture-8649339589889706545",
     "boardType": "festivals",
     "title": "2026 서울국제예술포럼(SAFT)",
     "category": "festival_culture",
@@ -43388,7 +38738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-7367194073228864489",
+    "id": "seoul-culture-302245257585809653",
     "boardType": "festivals",
     "title": "[3기] 서울아트책보고 북클럽 X 현대문학 : 네 번째 시간 『백조와 박쥐』 읽기 / 한이 소설가 · 편집자",
     "category": "festival_culture",
@@ -43419,7 +38769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-21"
   },
   {
-    "id": "seoul-culture-1828646957647377004",
+    "id": "seoul-culture-1876354535040999498",
     "boardType": "festivals",
     "title": "[서초문화재단] 고음악 오디세이 [음악의 언어_Rhetoric(수사학)]",
     "category": "festival_tradition",
@@ -43574,7 +38924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-6271096360274701136",
+    "id": "seoul-culture-4759715937942220584",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [트리플 빌 올 포 한스 판 마넨]",
     "category": "festival_culture",
@@ -43605,7 +38955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-1327094962918653940",
+    "id": "seoul-culture-8969697291157922506",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [찾아가는 서울국제노인영화제_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_performance",
@@ -43636,7 +38986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-23"
   },
   {
-    "id": "seoul-culture-2612705054571217495",
+    "id": "seoul-culture-2731169987846406885",
     "boardType": "festivals",
     "title": "[살롱클래식] 예 트리오 - Moonlight Across Time",
     "category": "festival_culture",
@@ -43822,7 +39172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-152"
   },
   {
-    "id": "seoul-culture-2181046986174078721",
+    "id": "seoul-culture-6780491529008883075",
     "boardType": "festivals",
     "title": "[성북문화재단] 브런치콘서트 [11시11분] - 비바 바르셀로나",
     "category": "festival_light",
@@ -44287,7 +39637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-1392652828293031895",
+    "id": "seoul-culture-1951127755796733665",
     "boardType": "festivals",
     "title": "[살롱클래식] 트리오 폰테스 - 낭만의 여정",
     "category": "festival_culture",
@@ -44318,7 +39668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-8158671175851506182",
+    "id": "seoul-culture-1432967726867761010",
     "boardType": "festivals",
     "title": "[서울남산국악당] 불세출 [일상풍류방]",
     "category": "festival_culture",
@@ -44349,7 +39699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-1626715168443374756",
+    "id": "seoul-culture-5453186059218229532",
     "boardType": "festivals",
     "title": "[용산역사박물관] 월간청음회_11월 청음회",
     "category": "expo_science",
@@ -44380,7 +39730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-25"
   },
   {
-    "id": "seoul-culture-4027443101576782590",
+    "id": "seoul-culture-5561496297564300344",
     "boardType": "festivals",
     "title": "[서울시청] 반짝반짝 남산밤길",
     "category": "farm_harvest",
@@ -44504,7 +39854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-16"
   },
   {
-    "id": "seoul-culture-7625518949629409098",
+    "id": "seoul-culture-5817389427316373996",
     "boardType": "festivals",
     "title": "[성동구립도서관] 11월 영어스토리텔링 수업",
     "category": "festival_culture",
@@ -44535,7 +39885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-26"
   },
   {
-    "id": "seoul-culture-3738828677259371603",
+    "id": "seoul-culture-8907138413175605780",
     "boardType": "festivals",
     "title": "디자인코리아 2026",
     "category": "festival_culture",
@@ -44566,7 +39916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-3741421608761944592",
+    "id": "seoul-culture-1049949969816125697",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Timeless Jazz]",
     "category": "festival_tradition",
@@ -44597,7 +39947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-29"
   },
   {
-    "id": "seoul-culture-8754965825052139665",
+    "id": "seoul-culture-5853280450418562650",
     "boardType": "festivals",
     "title": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃9]",
     "category": "festival_tradition",
@@ -44690,7 +40040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-32"
   },
   {
-    "id": "seoul-culture-2954708376034409043",
+    "id": "seoul-culture-1702083285324587159",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 창작음악극 [가명]",
     "category": "park_eco",
@@ -44721,7 +40071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-30"
   },
   {
-    "id": "seoul-culture-515420669731254831",
+    "id": "seoul-culture-7111477463469756151",
     "boardType": "festivals",
     "title": "DK x SDF 국제 컨퍼런스",
     "category": "festival_culture",
@@ -44783,7 +40133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-2753925723504551181",
+    "id": "seoul-culture-8388510585159501493",
     "boardType": "festivals",
     "title": "파인캐릭터 2026 (FineCharacter 2026)",
     "category": "festival_culture",
@@ -44814,7 +40164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "gg-fest-2556052931325732645",
+    "id": "gg-fest-9183036950706666000",
     "boardType": "festivals",
     "title": "제30회 파주장단콩축제",
     "category": "expo_science",
@@ -45031,7 +40381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-19"
   },
   {
-    "id": "seoul-culture-2963304666813223797",
+    "id": "seoul-culture-4785446645901358405",
     "boardType": "festivals",
     "title": "[마포문화재단] 체홉 4대 장막 낭독극 [공놀이클럽의 사계절 체홉: 갈매기]",
     "category": "festival_tradition",
@@ -45093,7 +40443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-33"
   },
   {
-    "id": "seoul-culture-473151507346845771",
+    "id": "seoul-culture-6974481926388328853",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 심산영화관 [러브스토리]",
     "category": "festival_tradition",
@@ -45155,7 +40505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-54"
   },
   {
-    "id": "seoul-culture-1323692432045046222",
+    "id": "seoul-culture-7083445436255572594",
     "boardType": "festivals",
     "title": "[강동문화재단] 리트플레이 [겨울나그네]",
     "category": "festival_tradition",
@@ -45217,7 +40567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-3468662204339790680",
+    "id": "seoul-culture-783338460670042103",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 고음악 시리즈 [바로크 노엘]",
     "category": "festival_tradition",
@@ -45248,7 +40598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-39"
   },
   {
-    "id": "seoul-culture-3492918302645065255",
+    "id": "seoul-culture-3561689665247558591",
     "boardType": "festivals",
     "title": "아이와 함께 듣는 겨울의 클래식 동화 [비발디에서 디즈니까지]",
     "category": "festival_culture",
@@ -45341,7 +40691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-2499545699365046981",
+    "id": "seoul-culture-7197565637198349827",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 서안화차",
     "category": "festival_tradition",
@@ -45372,7 +40722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-61"
   },
   {
-    "id": "seoul-culture-8889126930907941212",
+    "id": "seoul-culture-3142411446183619403",
     "boardType": "festivals",
     "title": "[서울시청] 서울광장 스케이트장",
     "category": "festival_culture",
@@ -45403,7 +40753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-105"
   },
   {
-    "id": "seoul-culture-2922115718725345496",
+    "id": "seoul-culture-7584471374583498630",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [바이올리니스트 김지선의 Dia:logue-graph]",
     "category": "festival_tradition",
@@ -45434,7 +40784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-56"
   },
   {
-    "id": "seoul-culture-1802525893028265455",
+    "id": "seoul-culture-8955426956676035648",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다-(서울)",
     "category": "festival_performance",
@@ -45496,7 +40846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "D-109"
   },
   {
-    "id": "seoul-culture-2232302365215735324",
+    "id": "seoul-culture-9137953864746950681",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-크리스마스, 재즈를 만나다-(서울)",
     "category": "festival_performance",
