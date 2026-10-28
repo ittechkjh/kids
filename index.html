@@ -28,10 +28,10 @@
 <body class="min-h-screen flex flex-col">
 
   <!-- 상단 공지 & 오늘의 육아 응원 배너 -->
-  <div class="bg-gradient-to-r from-rose-500 via-pink-500 to-amber-500 text-white text-xs py-2 px-4">
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded-full bg-white/25 font-extrabold text-[11px]">🌱 클린 육아 라운지</span>
+        <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 font-extrabold text-[11px]">🌱 클린 커뮤니티</span>
         <span class="font-medium">등업 제한 NO · 상업성 홍보글 ZERO! 내 아이 개월수와 우리 동네 육아 동지들과 편하게 이야기 나눠요.</span>
       </div>
       <div class="hidden sm:flex items-center gap-3 font-bold">
@@ -41,7 +41,7 @@
   </div>
 
   <!-- 스티키 메인 헤더 -->
-  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/80 shadow-sm">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-sm">
     <div class="max-w-7xl mx-auto px-4 py-3">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
         <!-- 로고 + 모바일 우측 버튼 -->
@@ -53,7 +53,7 @@
             <div>
               <div class="flex items-center gap-2">
                 <span class="font-black text-xl tracking-tight text-slate-900">도담톡</span>
-                <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 border border-rose-200">DodamTalk</span>
+                <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">DodamTalk</span>
               </div>
               <p class="text-xs text-slate-500">개월수 동기방 · 동네 공동육아 · 실시간 육아 수다</p>
             </div>
@@ -136,24 +136,24 @@
 
       <!-- 4대 핵심 플랫폼 탭 네비게이션: 게시판 / 지역행사(볼거리·마라톤) / 대회일정(공부·사생·독서토론) / 맛집맵 -->
       <nav class="flex items-center gap-2 mt-3 pt-2.5 border-t border-stone-100 overflow-x-auto no-scrollbar">
-        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm">
+        <button data-view="board" onclick="app.switchMainView('board')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm">
           <i class="fa-solid fa-clipboard-list"></i>
           <span>💬 도담 육아 게시판</span>
         </button>
         <button data-view="festivals" onclick="app.switchMainView('festivals')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-person-running text-amber-500"></i>
           <span>🎪 전국 지역행사 & 볼거리</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-amber-100 text-amber-700 font-black">축제·마라톤</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">축제·마라톤</span>
         </button>
         <button data-view="contests" onclick="app.switchMainView('contests')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-graduation-cap text-indigo-500"></i>
           <span>🏆 전국 대회일정 (공부·역량)</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-indigo-100 text-indigo-700 font-black">사생·독서토론</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">사생·독서토론</span>
         </button>
         <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100">
           <i class="fa-solid fa-map-location-dot text-rose-500"></i>
           <span>🍽️ 전국 안심 맛집 맵</span>
-          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-rose-100 text-rose-600 font-black">5,000곳</span>
+          <span class="px-1.5 py-0.2 text-[10px] rounded-full bg-slate-100 text-slate-600 font-bold">5,000곳</span>
         </button>
       </nav>
     </div>
@@ -165,10 +165,10 @@
         <!-- VIEW 1: 도담 육아 게시판 (실시간 라운지 -> 본격 커뮤니티 게시판 개편) -->
         <section id="view-board" class="view-section space-y-5">
           <!-- 상단 게시판 헤더 및 빠른 글쓰기 바 -->
-          <div class="community-card p-5 bg-gradient-to-r from-rose-50/80 via-white to-amber-50/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-rose-100">
+          <div class="community-card p-6 bg-white flex flex-col sm:flex-row sm:items-center justify-between gap-4 border border-slate-200 shadow-sm">
             <div>
               <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white font-extrabold text-[11px]">자유 소통</span>
+                <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-800 border border-slate-200 font-extrabold text-[11px]">자유 소통</span>
                 <h2 class="text-lg font-black text-slate-900">💬 도담 육아 커뮤니티 게시판</h2>
               </div>
               <p class="text-xs text-slate-500 font-medium mt-1">
@@ -225,11 +225,11 @@
         <!-- VIEW 2: 전국 지역행사 & 볼거리 (노는거, 볼거리: 지역축제, 가족 마라톤/걷기, 공원생태, 빛축제) -->
         <section id="view-festivals" class="view-section hidden space-y-5">
           <!-- 상단 배너 -->
-          <div class="community-card p-5 bg-gradient-to-r from-amber-50/80 via-white to-rose-50/70 border border-amber-200/80 space-y-3">
+          <div class="community-card p-6 bg-white border border-slate-200 shadow-sm space-y-3.5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div class="flex items-center gap-2 flex-wrap">
-                  <span class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-amber-500 to-rose-500 text-white font-extrabold text-[11px] shadow-sm">
+                  <span class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-extrabold text-[11px] rounded-lg">
                     전국 17개 시도 전역
                   </span>
                   <span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-700 text-[10px] font-bold">
@@ -246,7 +246,7 @@
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
                 <button
                   onclick="app.switchMainView('contests')"
-                  class="px-3 py-1.5 rounded-xl bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-xs font-black border border-indigo-200 transition flex items-center gap-1.5"
+                  class="px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5"
                 >
                   <i class="fa-solid fa-graduation-cap"></i>
                   <span>공부·사생·독서토론 대회일정 →</span>
@@ -273,19 +273,19 @@
             </div>
 
             <!-- 데이터 소스 통계 뱃지 -->
-            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-stone-100 text-[11px] font-bold text-slate-600">
-              <span class="text-slate-400">행사 구성:</span>
-              <span class="px-2 py-0.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200/60">
-                🏃 주말 가족 마라톤·걷기 <strong>7건</strong>
+            <div class="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 text-xs font-medium text-slate-600">
+              <span class="text-slate-400 font-semibold text-[11px]">카테고리 요약:</span>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-50 text-slate-700 border border-slate-200/80">
+                🏃 주말 가족 마라톤·걷기 <strong class="text-slate-900 ml-0.5">7건</strong>
               </span>
-              <span class="px-2 py-0.5 rounded-lg bg-sky-50 text-sky-700 border border-sky-200/60">
-                🎪 지역 문화 축제 <strong>5건</strong>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-50 text-slate-700 border border-slate-200/80">
+                🎪 지역 문화 축제 <strong class="text-slate-900 ml-0.5">5건</strong>
               </span>
-              <span class="px-2 py-0.5 rounded-lg bg-amber-50 text-amber-700 border border-amber-200/60">
-                ✨ 야경·빛·불꽃 축제 <strong>4건</strong>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-50 text-slate-700 border border-slate-200/80">
+                ✨ 야경·빛·불꽃 축제 <strong class="text-slate-900 ml-0.5">4건</strong>
               </span>
-              <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/60">
-                🌿 공원 생태 & 수확체험 <strong>4건</strong>
+              <span class="px-2.5 py-1 rounded-lg bg-slate-50 text-slate-700 border border-slate-200/80">
+                🌿 공원 생태체험 <strong class="text-slate-900 ml-0.5">4건</strong>
               </span>
             </div>
           </div>
@@ -293,10 +293,10 @@
           <!-- 지역행사 필터 컨트롤 바 -->
           <div class="community-card p-4 space-y-3.5">
             <!-- 전국 17개 시도 원클릭 지역 선택 바 -->
-            <div class="space-y-2 p-3 bg-amber-50/50 rounded-2xl border border-amber-200/60">
+            <div class="space-y-2.5 p-3.5 bg-slate-50/70 rounded-2xl border border-slate-200/80">
               <div class="flex items-center justify-between">
                 <div class="flex items-center gap-1.5">
-                  <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
+                  <i class="fa-solid fa-location-dot text-slate-800 text-xs"></i>
                   <span class="text-xs font-black text-slate-800">🗺️ 전국 17개 시·도 원클릭 지역 필터</span>
                 </div>
                 <span class="text-[10px] text-slate-400 font-bold">클릭 시 해당 지역 행사만 즉시 표시</span>
@@ -304,7 +304,7 @@
 
               <!-- 권역 그룹 탭 -->
               <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="festivals-region-group-tabs">
-                <button onclick="app.setFestivalsRegionGroup('all')" data-grp="all" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-amber-500 text-white font-black whitespace-nowrap shadow-sm">
+                <button onclick="app.setFestivalsRegionGroup('all')" data-grp="all" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm">
                   전국 전체
                 </button>
                 <button onclick="app.setFestivalsRegionGroup('capital')" data-grp="capital" class="fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">
@@ -451,11 +451,11 @@
         <!-- VIEW 3: 전국 대회일정 (공부 위주: 사생대회, 백일장, 독서토론/골든벨, 창의발명, 코딩, 수학/영어) -->
         <section id="view-contests" class="view-section hidden space-y-5">
           <!-- 상단 배너 -->
-          <div class="community-card p-5 bg-gradient-to-r from-indigo-50/80 via-white to-sky-50/70 border border-indigo-200/80 space-y-3">
+          <div class="community-card p-6 bg-white border border-slate-200 shadow-sm space-y-3.5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
               <div>
                 <div class="flex items-center gap-2 flex-wrap">
-                  <span class="px-2.5 py-0.5 rounded-full bg-gradient-to-r from-indigo-600 to-sky-600 text-white font-extrabold text-[11px] shadow-sm">
+                  <span class="px-2.5 py-0.5 rounded-full bg-slate-900 text-white font-extrabold text-[11px] rounded-lg">
                     전국 초·중등 및 유소년
                   </span>
                   <span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-700 text-[10px] font-bold">
@@ -472,7 +472,7 @@
               <div class="flex flex-col sm:flex-row items-start sm:items-center gap-2 shrink-0">
                 <button
                   onclick="app.switchMainView('festivals')"
-                  class="px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 text-xs font-black border border-amber-200 transition flex items-center gap-1.5"
+                  class="px-3 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-bold border border-slate-200 transition flex items-center gap-1.5"
                 >
                   <i class="fa-solid fa-person-running text-amber-500"></i>
                   <span>볼거리·축제·마라톤 일정 →</span>
@@ -533,7 +533,7 @@
 
               <!-- 권역 그룹 탭 -->
               <div class="flex items-center gap-1 overflow-x-auto no-scrollbar text-xs font-bold pb-1" id="contests-region-group-tabs">
-                <button onclick="app.setContestsRegionGroup('all')" data-grp="all" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-black whitespace-nowrap shadow-sm">
+                <button onclick="app.setContestsRegionGroup('all')" data-grp="all" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm">
                   전국 전체
                 </button>
                 <button onclick="app.setContestsRegionGroup('capital')" data-grp="capital" class="cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap">

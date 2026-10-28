@@ -1,10 +1,10 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
 
 :root {
-  --primary-coral: #f43f5e;
-  --primary-warm: #fb7185;
-  --accent-amber: #f59e0b;
-  --accent-indigo: #4f46e5;
+  --primary-main: #0f172a;
+  --primary-accent: #2563eb;
+  --primary-border: #e2e8f0;
+  --primary-bg: #f8fafc;
 }
 
 * {
@@ -13,8 +13,8 @@
 }
 
 body {
-  background-color: #faf8f6;
-  color: #1e293b;
+  background-color: #f8fafc;
+  color: #0f172a;
   overflow-x: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
   height: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #f5f3f0;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
   background: #cbd5e1;
@@ -45,21 +45,21 @@ body {
 /* Card & Feed Animations */
 .community-card {
   background: #ffffff;
-  border: 1px solid #f1ece6;
-  border-radius: 22px;
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03), 0 1px 2px -1px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .community-card:hover {
-  box-shadow: 0 10px 25px -5px rgba(244, 63, 94, 0.07), 0 4px 10px -3px rgba(15, 23, 42, 0.04);
-  border-color: #fecdd3;
+  box-shadow: 0 10px 25px -4px rgba(15, 23, 42, 0.06), 0 4px 6px -2px rgba(15, 23, 42, 0.03);
+  border-color: #cbd5e1;
 }
 
 /* Reaction Button Pop */
 @keyframes pop-scale {
   0% { transform: scale(1); }
-  50% { transform: scale(1.22); }
+  50% { transform: scale(1.18); }
   100% { transform: scale(1); }
 }
 
@@ -72,13 +72,15 @@ body {
   transition: width 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Warm Gradient Banner */
+/* Sophisticated Button & Banner Utility */
 .warm-hero-gradient {
-  background: linear-gradient(135deg, #fff1f2 0%, #fef3c7 55%, #e0e7ff 100%);
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
 }
 
 .coral-badge-gradient {
-  background: linear-gradient(135deg, #f43f5e 0%, #fb923c 100%);
+  background: #0f172a;
+  color: #ffffff;
 }
 
 /* Fade In Section */
@@ -89,7 +91,7 @@ body {
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(5px);
+    transform: translateY(4px);
   }
   to {
     opacity: 1;
@@ -101,7 +103,8 @@ body {
 #food-map {
   width: 100%;
   height: 480px;
-  border-radius: 20px;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
   z-index: 10;
 }
 
@@ -114,29 +117,29 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 5px 11px;
   border-radius: 9999px;
   font-size: 11px;
   font-weight: 800;
   white-space: nowrap;
   background: #ffffff;
-  color: #1e293b;
-  border: 2px solid #f43f5e;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18);
+  color: #0f172a;
+  border: 1.5px solid #0f172a;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.12);
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .food-pin-badge:hover {
-  transform: scale(1.12) translateY(-2px);
+  transform: scale(1.08) translateY(-2px);
   z-index: 999 !important;
 }
 
 .food-pin-badge.selected {
-  background: #f43f5e;
+  background: #0f172a;
   color: #ffffff;
-  box-shadow: 0 0 0 4px rgba(244, 63, 94, 0.3), 0 8px 18px rgba(244, 63, 94, 0.4);
-  transform: scale(1.15) translateY(-3px);
+  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.2), 0 8px 18px rgba(15, 23, 42, 0.3);
+  transform: scale(1.12) translateY(-2px);
 }
 
 .badge-naver {
@@ -156,7 +159,8 @@ body {
 
 .leaflet-popup-content-wrapper {
   border-radius: 16px !important;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.18) !important;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.14) !important;
+  border: 1px solid #e2e8f0;
   padding: 4px !important;
 }
 
@@ -165,65 +169,65 @@ body {
   line-height: 1.45 !important;
 }
 
-/* Leaflet MarkerCluster 커스텀 디자인 (수천개 핀 깔끔한 묶음) */
+/* Leaflet MarkerCluster 커스텀 스타일 */
 .marker-cluster-small {
-  background-color: rgba(244, 63, 94, 0.22) !important;
+  background-color: rgba(15, 23, 42, 0.15) !important;
   border-radius: 9999px !important;
 }
 .marker-cluster-small div {
-  background: linear-gradient(135deg, #f43f5e 0%, #fb7185 100%) !important;
+  background: #0f172a !important;
   color: #ffffff !important;
-  font-weight: 900 !important;
+  font-weight: 800 !important;
   font-size: 11px !important;
-  box-shadow: 0 4px 10px rgba(244, 63, 94, 0.4) !important;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2) !important;
   border: 2px solid #ffffff !important;
 }
 
 .marker-cluster-medium {
-  background-color: rgba(219, 39, 119, 0.22) !important;
+  background-color: rgba(15, 23, 42, 0.18) !important;
   border-radius: 9999px !important;
 }
 .marker-cluster-medium div {
-  background: linear-gradient(135deg, #db2777 0%, #f43f5e 100%) !important;
+  background: #1e293b !important;
   color: #ffffff !important;
-  font-weight: 900 !important;
+  font-weight: 800 !important;
   font-size: 12px !important;
-  box-shadow: 0 4px 12px rgba(219, 39, 119, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25) !important;
   border: 2px solid #ffffff !important;
 }
 
 .marker-cluster-large {
-  background-color: rgba(79, 70, 229, 0.22) !important;
+  background-color: rgba(15, 23, 42, 0.22) !important;
   border-radius: 9999px !important;
 }
 .marker-cluster-large div {
-  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%) !important;
+  background: #334155 !important;
   color: #ffffff !important;
-  font-weight: 900 !important;
+  font-weight: 800 !important;
   font-size: 13px !important;
-  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.45) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3) !important;
   border: 2px solid #ffffff !important;
 }
 
-/* 개별 맛집 콤팩트 핀 */
+/* 지도 내 컴팩트 핀 */
 .food-compact-pin {
   display: inline-flex;
   align-items: center;
   gap: 3px;
-  background: #f43f5e;
+  background: #0f172a;
   color: #ffffff;
-  padding: 3px 7px;
+  padding: 3px 8px;
   border-radius: 9999px;
-  border: 2px solid #ffffff;
+  border: 1.5px solid #ffffff;
   font-size: 10px;
-  font-weight: 900;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  font-weight: 800;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   white-space: nowrap;
   transition: transform 0.15s ease, background 0.15s ease;
 }
 .food-compact-pin:hover {
-  transform: scale(1.15) translateY(-2px);
-  background: #e11d48;
+  transform: scale(1.12) translateY(-2px);
+  background: #334155;
   z-index: 1000 !important;
 }

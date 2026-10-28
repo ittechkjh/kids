@@ -232,8 +232,8 @@ class DodamCommunityApp {
     document.querySelectorAll('.nav-view-btn').forEach((btn) => {
       const active = btn.getAttribute('data-view') === viewId;
       btn.className = active
-        ? 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-rose-500 text-white shadow-sm'
-        : 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition text-slate-600 hover:bg-stone-100';
+        ? 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm'
+        : 'nav-view-btn flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-slate-100';
     });
 
     this.renderBoardCategories();
@@ -811,13 +811,13 @@ class DodamCommunityApp {
             onclick="app.selectFestivalsRegion('${r.id}')"
             class="px-2.5 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center gap-1 border ${
               isActive
-                ? 'bg-amber-500 text-white border-amber-500 font-black shadow-sm'
-                : 'bg-white text-slate-700 border-stone-200 hover:bg-stone-50'
+                ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
             }"
           >
             <span>${r.name}</span>
-            <span class="text-[10px] px-1 py-0.2 rounded-full ${
-              isActive ? 'bg-white text-amber-700 font-black' : 'bg-stone-100 text-slate-500 font-semibold'
+            <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
+              isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>
           </button>
         `;
@@ -830,8 +830,8 @@ class DodamCommunityApp {
     document.querySelectorAll('.fest-grp-btn').forEach((btn) => {
       const active = btn.getAttribute('data-grp') === grp;
       btn.className = active
-        ? 'fest-grp-btn px-2.5 py-1 rounded-lg bg-amber-500 text-white font-black whitespace-nowrap shadow-sm'
-        : 'fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap';
+        ? 'fest-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm'
+        : 'fest-grp-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 whitespace-nowrap';
     });
 
     // If active region is not in new group, reset to all
@@ -883,7 +883,7 @@ class DodamCommunityApp {
       const active = chip.getAttribute('data-cat') === cat;
       chip.className = active
         ? 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
-        : 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200';
+        : 'fest-cat-chip px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-white border border-slate-200 text-slate-700 hover:bg-slate-50';
     });
     this.renderFestivalsView();
     if (this.festivalsViewMode === 'calendar') this.renderFestivalsCalendar();
@@ -1118,13 +1118,13 @@ class DodamCommunityApp {
             onclick="app.selectContestsRegion('${r.id}')"
             class="px-2.5 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition flex items-center gap-1 border ${
               isActive
-                ? 'bg-indigo-600 text-white border-indigo-600 font-black shadow-sm'
-                : 'bg-white text-slate-700 border-stone-200 hover:bg-stone-50'
+                ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
+                : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50'
             }"
           >
             <span>${r.name}</span>
-            <span class="text-[10px] px-1 py-0.2 rounded-full ${
-              isActive ? 'bg-white text-indigo-700 font-black' : 'bg-stone-100 text-slate-500 font-semibold'
+            <span class="text-[10px] px-1.5 py-0.2 rounded-full ${
+              isActive ? 'bg-white/20 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>
           </button>
         `;
@@ -1137,8 +1137,8 @@ class DodamCommunityApp {
     document.querySelectorAll('.cont-grp-btn').forEach((btn) => {
       const active = btn.getAttribute('data-grp') === grp;
       btn.className = active
-        ? 'cont-grp-btn px-2.5 py-1 rounded-lg bg-indigo-600 text-white font-black whitespace-nowrap shadow-sm'
-        : 'cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-stone-200 text-slate-600 hover:bg-stone-50 whitespace-nowrap';
+        ? 'cont-grp-btn px-2.5 py-1 rounded-lg bg-slate-900 text-white font-black whitespace-nowrap shadow-sm'
+        : 'cont-grp-btn px-2.5 py-1 rounded-lg bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 whitespace-nowrap';
     });
 
     const validGroupRegions = REGION_GROUPS[grp];
@@ -1189,7 +1189,7 @@ class DodamCommunityApp {
       const active = chip.getAttribute('data-cat') === cat;
       chip.className = active
         ? 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition bg-slate-900 text-white'
-        : 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-bold whitespace-nowrap transition bg-stone-100 text-slate-700 hover:bg-stone-200';
+        : 'cont-cat-chip px-3 py-1.5 rounded-xl text-xs font-medium whitespace-nowrap transition bg-white border border-slate-200 text-slate-700 hover:bg-slate-50';
     });
     this.renderContestsView();
     if (this.contestsViewMode === 'calendar') this.renderContestsCalendar();
@@ -1408,17 +1408,9 @@ class DodamCommunityApp {
     const isContest = evt.sourceType === 'special_contest';
     const isContestBoard = evt.boardType === 'contests';
 
-    let badgeClass = 'bg-amber-500 text-white';
-    if (evt.category === 'sports_marathon') badgeClass = 'bg-emerald-500 text-white';
-    else if (evt.category === 'contest_art') badgeClass = 'bg-rose-500 text-white';
-    else if (evt.category === 'contest_reading') badgeClass = 'bg-amber-600 text-white';
-    else if (evt.category === 'contest_stem') badgeClass = 'bg-sky-600 text-white';
-    else if (evt.category === 'contest_math') badgeClass = 'bg-indigo-600 text-white';
-
-    const cardHoverBorder = isContestBoard ? 'hover:border-indigo-300' : 'hover:border-amber-300';
-    const ctaGradient = isContestBoard
-      ? 'bg-gradient-to-r from-indigo-600 to-sky-600'
-      : 'coral-badge-gradient';
+    const badgeClass = 'bg-slate-900 text-white font-extrabold text-[11px] rounded-lg px-2.5 py-1 shadow-sm';
+    const cardHoverBorder = 'hover:border-slate-300';
+    const ctaGradient = 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm';
 
     return `
       <div class="community-card p-5 space-y-3.5 ${cardHoverBorder} hover:shadow-md transition">
@@ -1459,24 +1451,24 @@ class DodamCommunityApp {
         </div>
 
         <!-- 행사/대회 주요 스펙 박스 -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-stone-50 rounded-2xl p-3 border border-stone-200/60">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs bg-slate-50/80 rounded-xl p-3 border border-slate-200/80">
           <div class="space-y-1">
             <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-regular fa-calendar-check text-rose-500 w-4 text-center"></i>
+              <i class="fa-regular fa-calendar-check text-slate-600 w-4 text-center"></i>
               <span><strong>일정:</strong> ${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}</span>
             </div>
             <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-pen-nib text-amber-500 w-4 text-center"></i>
+              <i class="fa-solid fa-pen-nib text-slate-600 w-4 text-center"></i>
               <span><strong>접수:</strong> ${evt.applyStartDate} ~ ${evt.applyEndDate}</span>
             </div>
           </div>
           <div class="space-y-1">
             <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-children text-indigo-500 w-4 text-center"></i>
+              <i class="fa-solid fa-children text-slate-600 w-4 text-center"></i>
               <span class="truncate"><strong>대상:</strong> ${evt.targetAudience}</span>
             </div>
             <div class="flex items-center gap-2 text-slate-600">
-              <i class="fa-solid fa-ticket text-emerald-500 w-4 text-center"></i>
+              <i class="fa-solid fa-ticket text-slate-600 w-4 text-center"></i>
               <span><strong>비용:</strong> ${evt.fee}</span>
             </div>
           </div>
@@ -1486,7 +1478,7 @@ class DodamCommunityApp {
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1 border-t border-stone-100 text-xs">
           <div class="space-y-0.5 text-slate-500">
             <div class="flex items-center gap-1.5 font-bold text-slate-700">
-              <i class="fa-solid fa-location-dot text-rose-500"></i>
+              <i class="fa-solid fa-location-dot text-slate-700"></i>
               <span class="truncate max-w-xs sm:max-w-sm">${evt.location}</span>
             </div>
             <div class="text-[11px] text-slate-400">주최: ${evt.organizer}</div>
@@ -1495,7 +1487,7 @@ class DodamCommunityApp {
           <div class="flex items-center gap-2 shrink-0">
             <button
               onclick="app.openEventDetailModal('${evt.id}')"
-              class="px-3 py-2 rounded-xl border border-stone-200 bg-white hover:bg-stone-50 text-slate-700 font-extrabold text-xs transition flex items-center gap-1.5"
+              class="px-3 py-2 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 font-extrabold text-xs transition flex items-center gap-1.5"
             >
               <i class="fa-solid fa-circle-info text-slate-400"></i>
               <span>상세보기</span>
