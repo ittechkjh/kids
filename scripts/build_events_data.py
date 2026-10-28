@@ -1404,18 +1404,138 @@ def fetch_tourapi_events(api_key):
         print(f"TourAPI 호출 중 오류: {e}")
         return []
 
+DEFAULT_SEOUL_API_KEY = "6c424a69706b6a68323363476f4363"
+
+def fetch_seoul_api_events(api_key):
+    """
+    서울열린데이터광장(data.seoul.go.kr) OpenAPI 연동
+    - culturalEventInfo (서울시 문화행사 정보)
+    - ListPublicReservationCulture (서울시 공공서비스예약 문화체험)
+    """
+    print("서울열린데이터광장 실시간 데이터 연동을 시도합니다...")
+    events = []
+
+    # 1. culturalEventInfo (공연, 축제, 전시 등)
+    url1 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/culturalEventInfo/1/80/"
+    try:
+        req = urllib.request.Request(url1, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            rows = data.get("culturalEventInfo", {}).get("row", [])
+            for r in rows:
+                title = r.get("TITLE", "").strip()
+                if not title: continue
+                date_str = r.get("DATE", "")
+                dates = date_str.split("~")
+                s_date = dates[0].strip() if len(dates) > 0 else "2026-11-01"
+                e_date = dates[1].strip() if len(dates) > 1 else s_date
+
+                # 카테고리 판별
+                if any(k in title for k in ["마라톤", "걷기", "달리기"]):
+                    cat = "sports_marathon"
+                    cat_name = "주말 가족 마라톤"
+                elif any(k in title for k in ["빛", "야경", "불꽃", "루미나리에", "별빛"]):
+                    cat = "festival_night"
+                    cat_name = "야경 & 빛축제"
+                elif any(k in title for k in ["체험", "생태", "숲", "어린이", "가족", "박물관"]):
+                    cat = "park_eco"
+                    cat_name = "공원 생태체험"
+                else:
+                    cat = "festival_culture"
+                    cat_name = "지역 문화 축제"
+
+                cid = r.get("CODENAME", "")
+                events.append({
+                    "id": f"seoul-culture-{abs(hash(title))}",
+                    "boardType": "festivals",
+                    "title": title,
+                    "category": cat,
+                    "categoryName": cat_name,
+                    "badge": "🏛️ 서울시 문화행사",
+                    "organizer": r.get("ORG_NAME") or f"{r.get('GUNAME', '서울시')} 주최",
+                    "sourceType": "seoul_open_data",
+                    "sourceLabel": "서울열린데이터광장 공공데이터",
+                    "region": "seoul",
+                    "regionName": "서울특별시",
+                    "location": f"서울특별시 {r.get('GUNAME', '')} {r.get('PLACE', '')}".strip(),
+                    "startDate": s_date,
+                    "endDate": e_date,
+                    "applyStartDate": s_date,
+                    "applyEndDate": e_date,
+                    "status": "applying",
+                    "targetAudience": r.get("USE_TRGT") or "전체 시민 / 온 가족",
+                    "fee": r.get("USE_FEE") or "상세 안내 참조",
+                    "url": r.get("ORG_LINK") or "https://culture.seoul.go.kr",
+                    "imageUrl": r.get("MAIN_IMG") or "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
+                    "description": f"{title} - {r.get('PLACE', '서울')}에서 진행되는 서울시 공식 문화행사입니다.",
+                    "tags": ["서울시문화행사", cid or "공연", r.get("GUNAME", "서울"), "가족나들이"]
+                })
+            print(f"서울열린데이터광장 문화행사 {len(rows)}건 수신 완료")
+    except Exception as e:
+        print(f"서울 문화행사 조회 오류: {e}")
+
+    # 2. ListPublicReservationCulture (공공서비스예약 문화체험)
+    url2 = f"http://openapi.seoul.go.kr:8088/{api_key}/json/ListPublicReservationCulture/1/80/"
+    try:
+        req = urllib.request.Request(url2, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            rows = data.get("ListPublicReservationCulture", {}).get("row", [])
+            for r in rows:
+                title = r.get("SVCNM", "").strip()
+                if not title: continue
+                s_dt = r.get("SVCOPNBGNDT", "")[:10]
+                e_dt = r.get("SVCOPNENDDT", "")[:10]
+
+                events.append({
+                    "id": f"seoul-res-{r.get('SVCID', abs(hash(title)))}",
+                    "boardType": "festivals",
+                    "title": title,
+                    "category": "park_eco",
+                    "categoryName": "공원 생태체험",
+                    "badge": "🌿 서울 공공예약",
+                    "organizer": r.get("PLACENM") or "서울시 공공서비스예약",
+                    "sourceType": "seoul_open_data",
+                    "sourceLabel": "서울열린데이터광장 공공예약",
+                    "region": "seoul",
+                    "regionName": "서울특별시",
+                    "location": f"서울특별시 {r.get('PLACENM', '')}".strip(),
+                    "startDate": s_dt or "2026-11-01",
+                    "endDate": e_dt or s_dt or "2026-11-30",
+                    "applyStartDate": s_dt,
+                    "applyEndDate": e_dt,
+                    "status": "applying",
+                    "targetAudience": r.get("USETGTINFO") or "어린이 동반 가족",
+                    "fee": r.get("PAYATNM") or "무료",
+                    "url": r.get("SVCURL") or "https://yeyak.seoul.go.kr",
+                    "imageUrl": r.get("IMGURL") or "https://images.unsplash.com/photo-1576085898323-218337e3e43c?w=800&auto=format&fit=crop&q=80",
+                    "description": f"{title} - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+                    "tags": ["서울공공예약", r.get("MINCLASSNM", "체험"), "어린이체험", "가족예약"]
+                })
+            print(f"서울열린데이터광장 공공예약 {len(rows)}건 수신 완료")
+    except Exception as e:
+        print(f"서울 공공예약 조회 오류: {e}")
+
+    return events
+
 def build():
     today = datetime.date(2026, 10, 27)
 
-    # 1. API 키 확인 (환경변수 없으면 발급받은 기본 인증키 자동 사용)
-    api_key = os.environ.get("TOUR_API_KEY", DEFAULT_TOUR_API_KEY)
+    # 1. API 키 확인 (TourAPI & 서울열린데이터광장)
+    tour_api_key = os.environ.get("TOUR_API_KEY", DEFAULT_TOUR_API_KEY)
     tour_api_events = []
-    if api_key:
-        tour_api_events = fetch_tourapi_events(api_key)
+    if tour_api_key:
+        tour_api_events = fetch_tourapi_events(tour_api_key)
+
+    seoul_api_key = os.environ.get("SEOUL_API_KEY", DEFAULT_SEOUL_API_KEY)
+    seoul_api_events = []
+    if seoul_api_key:
+        seoul_api_events = fetch_seoul_api_events(seoul_api_key)
 
     combined_events = list(CURATED_EVENTS)
+    existing_titles = {e["title"].strip() for e in combined_events}
+
     if tour_api_events:
-        existing_titles = {e["title"].strip() for e in combined_events}
         added_cnt = 0
         for te in tour_api_events:
             if te["title"] not in existing_titles:
@@ -1423,6 +1543,15 @@ def build():
                 existing_titles.add(te["title"])
                 added_cnt += 1
         print(f"TourAPI 축제 {added_cnt}건이 통합 데이터셋에 추가되었습니다.")
+
+    if seoul_api_events:
+        added_seoul_cnt = 0
+        for se in seoul_api_events:
+            if se["title"] not in existing_titles:
+                combined_events.append(se)
+                existing_titles.add(se["title"])
+                added_seoul_cnt += 1
+        print(f"서울열린데이터광장 문화행사/공공예약 {added_seoul_cnt}건이 통합 데이터셋에 추가되었습니다.")
 
     # 2. D-Day 및 정렬 처리
     for e in combined_events:
@@ -1463,7 +1592,8 @@ def build():
         "totalEvents": len(combined_events),
         "festivalsCount": len(festivals),
         "contestsCount": len(contests),
-        "isTourApiIntegrated": bool(api_key and tour_api_events),
+        "isTourApiIntegrated": bool(tour_api_key and tour_api_events),
+        "isSeoulApiIntegrated": bool(seoul_api_key and seoul_api_events),
         "scope": "전국 17개 시도 전체",
         "regionStats": region_stats,
         "sources": [
