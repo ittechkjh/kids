@@ -2263,7 +2263,15 @@ class DodamCommunityApp {
     document.getElementById('evt-modal-dday').textContent = evt.dday;
     document.getElementById('evt-modal-region').textContent = `📍 ${evt.regionName}`;
     document.getElementById('evt-modal-title').textContent = evt.title;
-    document.getElementById('evt-modal-img').src = evt.imageUrl;
+    
+    const modalImg = document.getElementById('evt-modal-img');
+    if (modalImg) {
+      modalImg.src = evt.imageUrl || 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80';
+      modalImg.onerror = function() {
+        this.onerror = null;
+        this.src = 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80';
+      };
+    }
 
     document.getElementById('evt-modal-date').textContent = `${evt.startDate} ${evt.endDate !== evt.startDate ? `~ ${evt.endDate}` : ''}`;
     document.getElementById('evt-modal-apply').textContent = `${evt.applyStartDate} ~ ${evt.applyEndDate}`;
