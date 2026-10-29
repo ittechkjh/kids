@@ -2898,84 +2898,59 @@ class DodamCommunityApp {
   }
 
   getCleanRestaurantQuery(r) {
-    const rawName = (r.name || '').trim();
-    if (/(본점|DCC점|노형점|용산아이파크몰점|강남점|여의도점|안지랑본점|성산본점|보문로점|한옥마을점)$/.test(rawName)) {
-      return rawName;
+    let q = (r.name || '').trim();
+
+    // 1. 전국 주요 대표 맛집 표준 상호 매핑
+    if (q.includes('동화가든')) return '강릉 동화가든';
+    if (q.includes('만석닭강정')) return '속초 만석닭강정';
+    if (q.includes('성심당')) {
+      if (q.includes('DCC')) return '성심당 DCC점';
+      return '성심당 본점';
     }
-    let clean = rawName
-      .replace(/\s*\([^)]*\)/g, '')
-      .replace(/\s+[^\s]+\/[^\s]+/g, '')
-      .replace(/\s+[가-힣0-9A-Za-z·/]+(?:호점|점)$/, '')
-      .replace(/\s*\/.*$/, '')
-      .trim();
-    return clean || rawName;
+    if (q.includes('청초수물회')) return '속초 청초수물회';
+    if (q.includes('가보정')) return '수원 가보정';
+    if (q.includes('이성당')) return '군산 이성당';
+    if (q.includes('숙성도')) return '제주 숙성도 노형본점';
+    if (q.includes('연돈')) return '제주 연돈';
+    if (q.includes('춘심이네')) return '제주 춘심이네 본점';
+    if (q.includes('테라로사')) return '강릉 테라로사 커피공장';
+    if (q.includes('암소갈비집')) return '해운대 암소갈비집';
+
+    // 2. 합성어 및 긴 메뉴명/수식어 정제 (카카오맵 단독 검색 실패 방지)
+    q = q.replace(/\s+(짬뽕순두부|순두부|막국수|칼국수|물회|닭강정|돈까스|삼겹살|돼지갈비|소갈비|숯불갈비|장어구이|해물탕|아구찜|냉면|국밥|설렁탕|순대국|보쌈|족발|치킨|피자|파스타|베이커리|커피공장|카페|브런치|식당|전문점)(?:\s+본점|\s+직영점|\s+1호점)?$/i, '');
+    q = q.replace(/\s*\([^)]*\)/g, '').trim();
+
+    // 3. 지역명이 누락된 경우 시/군/구 보강 (전국 검색 정확도 향상)
+    const city = (r.district || '').split(' ')[0] || (r.regionName || '').slice(0, 2);
+    if (city && !q.includes(city) && !q.includes((r.regionName || '').slice(0, 2))) {
+      return `${city} ${q}`.trim();
+    }
+    return q || (r.name || '').trim();
   }
 
   getRestaurantSources(r) {
     const cleanName = this.getCleanRestaurantQuery(r);
     const query = encodeURIComponent(cleanName);
+
+    // 공식 카카오맵 연동: link/search 스키마 (모바일/PC 공통 오류 없이 단번에 검색 결과 표출)
+    const kakaoSearchUrl = `https://map.kakao.com/link/search/${query}`;
     const kakaoDirectUrl = `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}`;
-
-    if (r.sources && r.sources.naver && r.sources.kakao && r.sources.google) {
-      const currentNaver = r.sources.naver.url || '';
-      const updatedNaver = currentNaver.includes(query)
-        ? currentNaver.replace('/v5/search/', '/p/search/')
-        : `https://map.naver.com/p/search/${query}`;
-
-      const updatedKakao = (r.sources.kakao.url && r.sources.kakao.url.includes(query))
-        ? r.sources.kakao.url
-        : `https://map.kakao.com/?q=${query}`;
-
-      const updatedGoogle = (r.sources.google.url && r.sources.google.url.includes(query))
-        ? r.sources.google.url
-        : `https://www.google.com/maps/search/?api=1&query=${query}`;
-
-      return {
-        naver: {
-          ...r.sources.naver,
-          url: updatedNaver
-        },
-        kakao: {
-          ...r.sources.kakao,
-          url: updatedKakao,
-          directionsUrl: r.sources.kakao.directionsUrl || kakaoDirectUrl
-        },
-        google: {
-          ...r.sources.google,
-          url: updatedGoogle
-        }
-      };
-    }
-
-    const baseRating = Number(r.overallRating) || 4.5;
-    const totalReviews = Number(r.reviewCount) || 5200;
-
-    const naverRev = Math.round(totalReviews * 0.6);
-    const kakaoRev = Math.round(totalReviews * 0.25);
-    const googleRev = Math.max(80, totalReviews - naverRev - kakaoRev);
-
-    const naverRate = Math.min(5.0, Math.max(4.0, (baseRating + 0.05).toFixed(2)));
-    const kakaoRate = Math.min(5.0, Math.max(3.9, (baseRating - 0.1).toFixed(2)));
-    const googleRate = Math.min(5.0, Math.max(4.0, Number(baseRating).toFixed(2)));
+    const naverSearchUrl = `https://map.naver.com/p/search/${query}`;
+    const googleSearchUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
 
     return {
+      cleanName,
       naver: {
-        rating: Number(naverRate),
-        reviewCount: naverRev,
-        url: `https://map.naver.com/p/search/${query}`,
+        url: naverSearchUrl,
         name: '네이버 플레이스'
       },
       kakao: {
-        rating: Number(kakaoRate),
-        reviewCount: kakaoRev,
-        url: `https://map.kakao.com/?q=${query}`,
+        url: kakaoSearchUrl,
         directionsUrl: kakaoDirectUrl,
         name: '카카오맵'
       },
       google: {
-        rating: Number(googleRate),
-        reviewCount: googleRev,
-        url: `https://www.google.com/maps/search/?api=1&query=${query}`,
+        url: googleSearchUrl,
         name: '구글 지도'
       }
     };
@@ -3195,27 +3170,28 @@ class DodamCommunityApp {
             <span class="text-xs font-black text-slate-900">${r.name}</span>
           </div>
           <p class="text-slate-600 text-[11px]">${r.address}</p>
-          <div class="grid grid-cols-3 gap-1 text-center py-1.5 bg-stone-50 rounded-xl border border-stone-200">
-            <div>
-              <span class="text-[9px] font-bold text-emerald-700 block">네이버</span>
-              <span class="font-black text-slate-800 text-[11px]">★ ${sources.naver.rating}</span>
+
+          <div class="p-2 bg-gradient-to-r from-stone-50 to-slate-50 rounded-xl border border-stone-200/80 text-[11px] space-y-1">
+            <div class="flex items-center justify-between text-[10px] font-bold text-slate-600">
+              <span class="flex items-center gap-1">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sky-500 text-[9px]"></i>
+                <span>포털 실시간 리뷰 & 평점 확인</span>
+              </span>
+              <span class="text-emerald-700 font-extrabold">안심식당 DB</span>
             </div>
-            <div>
-              <span class="text-[9px] font-bold text-amber-600 block">카카오</span>
-              <span class="font-black text-slate-800 text-[11px]">★ ${sources.kakao.rating}</span>
-            </div>
-            <div>
-              <span class="text-[9px] font-bold text-blue-600 block">구글</span>
-              <span class="font-black text-slate-800 text-[11px]">★ ${sources.google.rating}</span>
-            </div>
+            <p class="text-[10px] text-slate-400 leading-tight">
+              * 네이버는 별점 폐지(키워드/방문자리뷰 연동), 카카오·구글은 실시간 별점 페이지로 즉시 연결됩니다.
+            </p>
           </div>
+
           <div class="flex flex-wrap gap-1">
-            ${r.amenities.map(a => `<span class="px-1.5 py-0.5 bg-white border border-stone-200 rounded text-[10px] font-bold text-slate-600">${a}</span>`).join('')}
+            ${(r.amenities || []).map(a => `<span class="px-1.5 py-0.5 bg-white border border-stone-200 rounded text-[10px] font-bold text-slate-600">${a}</span>`).join('')}
           </div>
+
           <div class="pt-1 grid grid-cols-3 gap-1">
-            <a href="${sources.naver.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-naver text-[10px] font-extrabold text-center hover:opacity-90">네이버 ↗</a>
-            <a href="${sources.kakao.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-kakao text-[10px] font-extrabold text-center hover:opacity-90">카카오 ↗</a>
-            <a href="${sources.google.url}" target="_blank" rel="noopener" class="py-1 rounded-lg badge-google text-[10px] font-extrabold text-center hover:opacity-90">구글 ↗</a>
+            <a href="${sources.naver.url}" target="_blank" rel="noopener" class="py-1.5 rounded-lg badge-naver text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">네이버 리뷰 ↗</a>
+            <a href="${sources.kakao.url}" target="_blank" rel="noopener" class="py-1.5 rounded-lg badge-kakao text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">카카오맵 ↗</a>
+            <a href="${sources.google.url}" target="_blank" rel="noopener" class="py-1.5 rounded-lg badge-google text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">구글 지도 ↗</a>
           </div>
         </div>
       `;
@@ -3364,13 +3340,7 @@ class DodamCommunityApp {
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
                   ${r.categoryName}
                 </span>
-                ${r.isCrawled ? `
-                <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
-                  <i class="fa-solid fa-circle-check text-emerald-500"></i>실데이터 검증
-                </span>` : `
-                <span class="px-2 py-0.5 rounded-md text-[10px] font-medium bg-stone-100 text-stone-500 border border-stone-200">
-                  통계추정치 (순차수집)
-                </span>`}
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">안심식당 DB</span>
                 ${r.distanceKm !== undefined ? `
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
                   <i class="fa-solid fa-person-walking text-[9px]"></i>${r.distanceKm}km
@@ -3379,35 +3349,35 @@ class DodamCommunityApp {
               <h3 class="text-base font-black text-slate-900 mt-1">${r.name}</h3>
               <p class="text-xs text-slate-500 mt-0.5">
                 <i class="fa-solid fa-location-dot text-rose-400 mr-1"></i>${r.address}
-                ${r.phone ? `· 📞 ${r.phone}` : ''}
+                ${(r.phone && !/^(014|028|025|060|038|07-)/.test(r.phone)) ? `· 📞 ${r.phone}` : ''}
               </p>
             </div>
 
-            <!-- 종합 평점 뱃지 -->
+                        <!-- 안심식당 인증 뱃지 -->
             <div class="text-right shrink-0">
-              <span class="inline-block px-3 py-1 rounded-2xl bg-amber-50 text-amber-900 border border-amber-200 font-black text-xs">
-                ★ 종합 ${r.overallRating}
+              <span class="inline-block px-3 py-1 rounded-2xl bg-emerald-50 text-emerald-900 border border-emerald-200 font-black text-xs">
+                🌱 안심식당 인증
               </span>
-              <div class="text-[10px] text-slate-400 font-bold mt-1">방문자 리뷰 ${totalReviews.toLocaleString()}건</div>
+              <div class="text-[10px] text-slate-400 font-bold mt-1">지자체 위생·가족 편의 검증</div>
             </div>
           </div>
 
-          <!-- 3대 포털 실시간 출처 링크 & 평점 비교 바 (핵심 기능) -->
+          <!-- 3대 포털 실시간 출처 링크 (더미 평점 제거, 100% 실시간 공식 페이지 연결) -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-stone-50 p-3 rounded-2xl border border-stone-200/70">
             <!-- 네이버 플레이스 -->
             <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
               <div>
                 <span class="text-[10px] font-extrabold text-emerald-600 block">🟢 네이버 플레이스</span>
-                <span class="font-black text-xs text-slate-800">★ ${sources.naver.rating} <span class="text-[10px] text-slate-400 font-normal">(${sources.naver.reviewCount.toLocaleString()}개)</span></span>
+                <span class="font-extrabold text-[11px] text-slate-700">방문자·블로그 실시간 리뷰</span>
               </div>
               <a
                 href="${sources.naver.url}"
                 target="_blank"
                 rel="noopener"
-                class="px-2 py-1 rounded-lg badge-naver text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
-                title="네이버 플레이스 바로가기"
+                class="px-2.5 py-1.5 rounded-lg badge-naver text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
+                title="네이버 플레이스 실시간 리뷰 보기"
               >
-                <span>네이버</span>
+                <span>실시간 리뷰</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </a>
             </div>
@@ -3416,16 +3386,16 @@ class DodamCommunityApp {
             <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
               <div>
                 <span class="text-[10px] font-extrabold text-amber-600 block">🟡 카카오맵</span>
-                <span class="font-black text-xs text-slate-800">★ ${sources.kakao.rating} <span class="text-[10px] text-slate-400 font-normal">(${sources.kakao.reviewCount.toLocaleString()}개)</span></span>
+                <span class="font-extrabold text-[11px] text-slate-700">실시간 별점 & 로드뷰</span>
               </div>
               <a
                 href="${sources.kakao.url}"
                 target="_blank"
                 rel="noopener"
-                class="px-2 py-1 rounded-lg badge-kakao text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
-                title="카카오맵 바로가기"
+                class="px-2.5 py-1.5 rounded-lg badge-kakao text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
+                title="카카오맵 실시간 별점 및 로드뷰 보기"
               >
-                <span>카카오</span>
+                <span>실시간 별점</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </a>
             </div>
@@ -3434,16 +3404,16 @@ class DodamCommunityApp {
             <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
               <div>
                 <span class="text-[10px] font-extrabold text-blue-600 block">🔵 구글 지도</span>
-                <span class="font-black text-xs text-slate-800">★ ${sources.google.rating} <span class="text-[10px] text-slate-400 font-normal">(${sources.google.reviewCount.toLocaleString()}개)</span></span>
+                <span class="font-extrabold text-[11px] text-slate-700">글로벌 실시간 평점</span>
               </div>
               <a
                 href="${sources.google.url}"
                 target="_blank"
                 rel="noopener"
-                class="px-2 py-1 rounded-lg badge-google text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition"
-                title="구글 지도 바로가기"
+                class="px-2.5 py-1.5 rounded-lg badge-google text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
+                title="구글 지도 실시간 평점 보기"
               >
-                <span>구글</span>
+                <span>실시간 평점</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </a>
             </div>
