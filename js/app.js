@@ -2534,9 +2534,9 @@ class DodamCommunityApp {
 
     // 하이브리드 수집 통계 위젯 업데이트
     const meta = window.DODAM_CRAWL_METADATA || {
-      lastUpdated: '2026-10-27',
-      todayCount: 187,
-      totalCount: 390,
+      lastUpdated: '2026-10-29',
+      todayCount: 810,
+      totalCount: 5000,
       targetCount: 5000
     };
     const statDate = document.getElementById('crawl-stat-date');
@@ -2544,8 +2544,8 @@ class DodamCommunityApp {
     const statTotal = document.getElementById('crawl-stat-total');
     const statTarget = document.getElementById('crawl-stat-target');
     if (statDate) statDate.textContent = meta.lastUpdated;
-    if (statToday) statToday.textContent = (meta.todayCount || 187).toLocaleString();
-    if (statTotal) statTotal.textContent = (meta.totalCount || 390).toLocaleString();
+    if (statToday) statToday.textContent = (meta.todayCount || 810).toLocaleString();
+    if (statTotal) statTotal.textContent = (meta.totalCount || 5000).toLocaleString();
     const totalRestaurantsCount = window.DODAM_NATIONWIDE_RESTAURANTS ? window.DODAM_NATIONWIDE_RESTAURANTS.length : (meta.targetCount || 5000);
     if (statTarget) statTarget.textContent = totalRestaurantsCount.toLocaleString();
 
