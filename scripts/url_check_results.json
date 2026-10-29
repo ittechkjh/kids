@@ -1,0 +1,66 @@
+[
+  {
+    "id": "adm-2028-reform-final",
+    "title": "[교육부 확정] 2028학년도 대학입학제도 개편 확정안 총정리 (수능·내신)",
+    "url": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-high-credit-system",
+    "title": "[고교학점제] 2025~2028 전면 시행 가이드: 192학점 이수 및 과목 선택 로드맵",
+    "url": "https://www.hscredit.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-susi-jungsi-timeline",
+    "title": "[대교협 공시] 2026~2027학년도 대학입학전형 기본사항 및 전형별 타임라인",
+    "url": "https://www.adiga.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-special-highschool-guide",
+    "title": "[고입 가이드] 전국단위 자사고·외고·국제고·과학고 전형 분석 및 합격 전략",
+    "url": "https://www.schoolinfo.go.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-medical-school-quota",
+    "title": "[의약학 입시] 의과대학·치대·한의대·약대 입시 전략 및 지역인재전형 분석",
+    "url": "https://www.adiga.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-free-semester-roadmap",
+    "title": "[2022 개정 교육과정] 중학교 자유학기제 및 진로연계학기 운영 안내",
+    "url": "https://www.ggoomgil.go.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-no-major-expansion",
+    "title": "[대학 혁신] 주요 대학 '무전공(자율전공)' 선발 확대 및 전공 배정 기준",
+    "url": "https://www.kcue.or.kr",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  },
+  {
+    "id": "adm-private-education-measures",
+    "title": "[사교육 경감] 교육부 공교육 경쟁력 제고 및 킬러문항 완전 배제 공시",
+    "url": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe",
+    "status": 200,
+    "error_text": false,
+    "message": "OK"
+  }
+]

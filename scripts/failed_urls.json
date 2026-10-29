@@ -1,0 +1,65 @@
+[
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.moe.go.kr/boardCnts/view.do?boardID=294&boardSeq=97445&lev=0&searchType=S&statusYN=W&page=1&s=moe&m=020402&opType=N",
+    "status": 200,
+    "error": true,
+    "reason": "찾을수가 없습니다"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.moe.go.kr/sub/info.do?m=030206&s=moe",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000000001",
+    "status": 200,
+    "error": true,
+    "reason": "페이지를 찾을 수 없습니다"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.letskorail.com",
+    "status": 200,
+    "error": true,
+    "reason": "존재하지 않는"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.seoul-momcare.com",
+    "status": null,
+    "error": true,
+    "reason": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.busan.go.kr",
+    "status": null,
+    "error": true,
+    "reason": "<urlopen error [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다>"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/realty/danji/$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/search?q=$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/realty/place/$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  }
+]

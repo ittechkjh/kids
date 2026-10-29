@@ -1,0 +1,338 @@
+[
+  {
+    "file": "index.html",
+    "url": "https://www.moe.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.adiga.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.kcue.or.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.suneung.re.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.schoolinfo.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.ebsi.co.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "index.html",
+    "url": "https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.moe.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.adiga.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.kcue.or.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.suneung.re.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.schoolinfo.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.ebsi.co.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.moe.go.kr/boardCnts/view.do?boardID=294&boardSeq=97445&lev=0&searchType=S&statusYN=W&page=1&s=moe&m=020402&opType=N",
+    "status": 200,
+    "error": true,
+    "reason": "찾을수가 없습니다"
+  },
+  {
+    "file": "js/admissions_data.js",
+    "url": "https://www.moe.go.kr/sub/info.do?m=030206&s=moe",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.bokjiro.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000000001",
+    "status": 200,
+    "error": true,
+    "reason": "페이지를 찾을 수 없습니다"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.energyv.or.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.hometax.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://online.kepco.co.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.gov.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.wetax.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.letskorail.com",
+    "status": 200,
+    "error": true,
+    "reason": "존재하지 않는"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.applyhome.co.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.nhis.or.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.seoul-momcare.com",
+    "status": null,
+    "error": true,
+    "reason": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://umppa.seoul.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://gg24.gg.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.incheon.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.busan.go.kr",
+    "status": null,
+    "error": true,
+    "reason": "<urlopen error [WinError 10054] 현재 연결은 원격 호스트에 의해 강제로 끊겼습니다>"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.work24.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/policies_data.js",
+    "url": "https://www.idolbom.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&auto=format&fit=crop&q=80",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=300&auto=format&fit=crop&q=80",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://search.naver.com/search.naver?query=$",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://www.openstreetmap.org/copyright",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://map.kakao.com/link/to/$",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://map.naver.com/p/search/$",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://map.kakao.com/?q=$",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://www.google.com/maps/search/?api=1&query=$",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/realty/danji/$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://www.moe.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/developers/mcp.html#tool-schools",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/search?q=$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://www.schoolinfo.go.kr",
+    "status": 200,
+    "error": false,
+    "reason": "OK"
+  },
+  {
+    "file": "js/app.js",
+    "url": "https://m.richgo.ai/realty/place/$",
+    "status": 404,
+    "error": true,
+    "reason": "HTTP 404"
+  }
+]

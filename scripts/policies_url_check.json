@@ -1,0 +1,32 @@
+[
+  {
+    "url": "https://online.kepco.co.kr",
+    "status": 200,
+    "error": false,
+    "message": "OK"
+  },
+  {
+    "url": "https://www.energyv.or.kr",
+    "status": 200,
+    "error": false,
+    "message": "OK"
+  },
+  {
+    "url": "https://www.bokjiro.go.kr",
+    "status": 200,
+    "error": false,
+    "message": "OK"
+  },
+  {
+    "url": "https://www.gov.kr/portal/onestopSvc/happyBirth",
+    "status": 200,
+    "error": false,
+    "message": "OK"
+  },
+  {
+    "url": "https://www.hometax.go.kr",
+    "status": 200,
+    "error": false,
+    "message": "OK"
+  }
+]

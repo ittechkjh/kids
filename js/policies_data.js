@@ -25,7 +25,7 @@ window.DODAM_POLICIES_DATA = {
     {
       name: '정부24 (행복출산)',
       desc: '출생신고 시 첫만남이용권·전기요금할인 원스톱 일괄신청',
-      url: 'https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000000001',
+      url: 'https://www.gov.kr/portal/onestopSvc/happyBirth',
       icon: 'fa-building-user',
       bgColor: 'bg-blue-50 text-blue-700 border-blue-200'
     },
@@ -291,7 +291,7 @@ window.DODAM_POLICIES_DATA = {
         '지급수단: 부모 명의 국민행복카드 바우처 포인트 자동 충전'
       ],
       applyMethod: '정부24(gov.kr), 복지로(bokjiro.go.kr) 또는 읍·면·동 주민센터 행복출산 원스톱 신청',
-      applyUrl: 'https://www.gov.kr/portal/rcvfvrSvc/dtlEx/000000000001',
+      applyUrl: 'https://www.gov.kr/portal/onestopSvc/happyBirth',
       applySiteName: '정부24 행복출산'
     },
     {
@@ -338,7 +338,7 @@ window.DODAM_POLICIES_DATA = {
         '신청기한: 출산일로부터 60일 이내 신청'
       ],
       applyMethod: '서울맘케어 시스템(seoul-momcare.com) 온라인 신청 또는 주소지 동주민센터 방문',
-      applyUrl: 'https://www.seoul-momcare.com',
+      applyUrl: 'https://umppa.seoul.go.kr',
       applySiteName: '서울맘케어 바로가기'
     },
     {
@@ -384,7 +384,7 @@ window.DODAM_POLICIES_DATA = {
         '사용기한: 임신 중 신청 시 출산 후 6개월까지 / 출산 후 신청 시 출산일로부터 6개월까지'
       ],
       applyMethod: '서울맘케어 시스템(seoul-momcare.com) 온라인 신청 또는 주소지 동주민센터',
-      applyUrl: 'https://www.seoul-momcare.com',
+      applyUrl: 'https://umppa.seoul.go.kr',
       applySiteName: '서울맘케어 시스템'
     },
     {

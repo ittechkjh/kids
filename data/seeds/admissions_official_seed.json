@@ -87,7 +87,7 @@
         "지식 암기형 평가 지양 ➔ 논·서술형 내신 평가 대폭 확대"
       ],
       "content": "\n<h3>1. 2028학년도 대입개편안 추진 배경 및 핵심 방향</h3>\n<p>교육부는 과도한 입시 경쟁과 사교육 카르텔을 유발하던 문·이과 유불리 현상을 근본적으로 해소하고, 고교학점제와 2022 개정 교육과정의 취지를 실질적으로 반영하기 위해 2028 대입개편안을 확정 공시하였습니다.</p>\n\n<div class=\"my-4 p-4 rounded-2xl bg-indigo-50 border border-indigo-100\">\n  <h4 class=\"font-black text-indigo-900 text-sm mb-2\">📌 2028 수능 개편 핵심 비교표</h4>\n  <table class=\"w-full text-xs text-left border-collapse\">\n    <thead>\n      <tr class=\"border-b border-indigo-200 text-indigo-900\">\n        <th class=\"py-2\">영역</th>\n        <th class=\"py-2\">기존 수능 (현행)</th>\n        <th class=\"py-2 text-rose-600 font-black\">2028 개편 수능 (확정)</th>\n      </tr>\n    </thead>\n    <tbody class=\"divide-y divide-indigo-100 text-slate-700\">\n      <tr>\n        <td class=\"py-2 font-bold\">국어</td>\n        <td>공통(독서·문학) + 선택(화작/언매)</td>\n        <td class=\"font-bold text-indigo-700\">공통국어 (선택과목 없음, 동일 시험)</td>\n      </tr>\n      <tr>\n        <td class=\"py-2 font-bold\">수학</td>\n        <td>공통(수I·수II) + 선택(확통/미적/기하)</td>\n        <td class=\"font-bold text-indigo-700\">대수 + 미적분I + 확률과통계 (공통 응시)</td>\n      </tr>\n      <tr>\n        <td class=\"py-2 font-bold\">사회·탐구</td>\n        <td>사회 9과목, 과학 8과목 중 택2</td>\n        <td class=\"font-bold text-rose-600\">통합사회 + 통합과학 (전원 공통 응시)</td>\n      </tr>\n      <tr>\n        <td class=\"py-2 font-bold\">한국사/영어</td>\n        <td>절대평가 (9등급)</td>\n        <td class=\"font-bold text-indigo-700\">절대평가 현행 유지 (9등급)</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<h3>2. 고교 내신 5등급제 개편 상세</h3>\n<p>학생 수 급감에 따라 소규모 학교 및 심화과목에서 1등급(4%) 산출이 불가능했던 왜곡을 막기 위해 5등급 체제로 전환됩니다.</p>\n<ul class=\"list-disc pl-5 space-y-1 text-slate-700 my-2\">\n  <li><strong>1등급:</strong> 상위 10% (기존 9등급제의 1~2등급 상위권 통합)</li>\n  <li><strong>2등급:</strong> 10% 초과 ~ 34% (누적 34%)</li>\n  <li><strong>3등급:</strong> 34% 초과 ~ 66% (누적 66%)</li>\n  <li><strong>4등급:</strong> 66% 초과 ~ 90% (누적 90%)</li>\n  <li><strong>5등급:</strong> 90% 초과 ~ 100% (하위 10%)</li>\n</ul>\n<p class=\"mt-3 text-slate-600\">※ 진로선택과목 및 융합선택과목을 포함한 전 과목에 성취도(A~E)와 석차등급(1~5등급)이 함께 기재됩니다.</p>\n            ",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/view.do?boardID=294&boardSeq=97445&lev=0&searchType=S&statusYN=W&page=1&s=moe&m=020402&opType=N"
+      "officialUrl": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe"
     },
     {
       "id": "adm-high-credit-system",
@@ -107,7 +107,7 @@
         "공통과목(1학년) + 선택과목(일반선택/진로선택/융합선택, 2~3학년) 체계"
       ],
       "content": "\n<h3>1. 고교학점제란?</h3>\n<p>고교학점제는 고등학생이 기초 소양과 기본 학력을 바탕으로 진로·적성에 따라 과목을 선택하고, 이수 기준에 도달한 과목에 대해 학점을 취득·누적하여 졸업하는 제도입니다.</p>\n\n<div class=\"my-3 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 space-y-2\">\n  <h4 class=\"font-black text-emerald-900 text-sm\">🎒 과목 유형별 특성</h4>\n  <p><strong>공통과목 (1학년):</strong> 국어, 수학, 영어, 한국사, 통합사회, 통합과학, 과학탐구실험 등 기본 학력 함양 필수 과목</p>\n  <p><strong>일반선택과목 (2~3학년):</strong> 교과별 학문 영역 내 주요 학습 내용으로 대학 진학 기본 교과</p>\n  <p><strong>진로선택과목:</strong> 심화 학습 및 진로 관련 전공 기초 과목 (예: 인공지능 수학, 고급 물리학 등)</p>\n  <p><strong>융합선택과목:</strong> 교과 내·교과 간 융합 주제 중심 실생활 연계 과목</p>\n</div>\n\n<h3>2. 학부모 과목 선택 팁</h3>\n<p>주요 대학(서울대, 연세대, 고려대, 성균관대 등)은 학생부종합전형 및 정시 교과평가에서 학생이 지망하는 학과와 관련된 권장 이수 과목을 충실히 들었는지를 매우 중요하게 평가합니다. 대학별 <strong>‘전공 연계 핵심 권장과목’</strong>을 1학년 2학기 과목 선택 조사 전에 반드시 확인하시기 바랍니다.</p>\n            ",
-      "officialUrl": "https://www.moe.go.kr/sub/info.do?m=030206&s=moe"
+      "officialUrl": "https://www.hscredit.kr"
     },
     {
       "id": "adm-susi-jungsi-timeline",
@@ -186,7 +186,7 @@
         "초등 6학년 2학기: 중학교 생활 적응 및 자유학기 준비 진로연계 프로그램 운영"
       ],
       "content": "\n<h3>1. 중학교 자유학기제 운영 개요</h3>\n<p>자유학기제는 중간·기말고사 등 지필시험 부담에서 벗어나 토론, 실습, 동아리, 예술·체육, 진로탐색 등 학생 참여형 수업과 과정중심평가를 진행하는 제도입니다.</p>\n<p>2022 개정 교육과정에 따라 자유학기는 1학년 1개 학기(102시간)로 집중 운영되며, 3학년 2학기에는 고등학교 학습 준비를 지원하는 <strong>'진로연계학기'</strong>가 운영됩니다.</p>\n            ",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.ggoomgil.go.kr"
     },
     {
       "id": "adm-no-major-expansion",
@@ -224,7 +224,7 @@
         "방과후 학교, 늘봄학교 전국 초등학교 전면 확대를 통한 돌봄·교육 사교육 경감"
       ],
       "content": "\n<h3>1. 공교육 정상화 및 수능 적정 난이도 확보</h3>\n<p>교육부는 고등학교 정규 교육과정을 충실히 이수한 학생이라면 사교육의 도움 없이도 충분히 풀 수 있는 '적정 난이도'의 변별력 있는 문항을 출제하는 기조를 확립하였습니다.</p>\n<p>불필요한 꼬기 문항 대신 종합적 사고력과 문제 해결력을 측정하는 문항 중심 출제가 정착되고 있습니다.</p>\n            ",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe"
     }
   ]
 }
