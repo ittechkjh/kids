@@ -3716,10 +3716,228 @@ class DodamCommunityApp {
   }
 
   // ==========================================
+  // [Richgo MCP API] 아파트 학군 실시간 연동기
+  // https://m.richgo.ai/developers/mcp.html#tool-schools
+  // ==========================================
+  initRichgoApartmentSection() {
+    const presetContainer = document.getElementById('richgo-preset-chips');
+    if (!presetContainer) return;
+
+    const presets = [
+      { name: '잠실엘스', label: '잠실엘스 (송파)' },
+      { name: '은마', label: '은마아파트 (대치)' },
+      { name: '반포자이', label: '반포자이 (서초)' },
+      { name: '목동신시가지7단지', label: '목동7단지 (양천)' },
+      { name: '판교푸르지오그랑블', label: '판교그랑블 (분당)' },
+      { name: '마포래미안푸르지오', label: '마래푸 (마포)' },
+      { name: '과천위버필드', label: '과천위버필드' },
+      { name: '킨텍스원시티', label: '킨텍스원시티' },
+      { name: '송도더샵퍼스트파크', label: '송도더샵 (인천)' },
+      { name: '범어자이', label: '범어자이 (대구)' },
+      { name: '크로바', label: '크로바 (대전)' }
+    ];
+
+    presetContainer.innerHTML = presets.map((p) => `
+      <button
+        type="button"
+        onclick="app.searchRichgoApartment('${p.name}')"
+        class="px-2.5 py-1 rounded-xl bg-white/10 hover:bg-white/25 border border-white/20 text-white font-extrabold text-[11px] whitespace-nowrap transition backdrop-blur-xs cursor-pointer"
+      >
+        ${p.label}
+      </button>
+    `).join('');
+
+    // 초기 실행 시 대표 학군 단지 1곳 자동 로딩
+    this.searchRichgoApartment('잠실엘스');
+  },
+
+  async searchRichgoApartment(queryParam) {
+    const inputEl = document.getElementById('richgo-apartment-search-input');
+    const query = queryParam || (inputEl ? inputEl.value.trim() : '');
+    if (!query) return;
+
+    if (inputEl) inputEl.value = query;
+
+    const resultsBox = document.getElementById('richgo-district-results-box');
+    if (!resultsBox) return;
+
+    resultsBox.innerHTML = `
+      <div class="p-6 text-center text-indigo-200 flex flex-col items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-notch fa-spin text-2xl text-amber-300"></i>
+        <div class="text-xs font-bold">리치고(Richgo) MCP API에서 [${query}] 단지 및 배정 학군 데이터를 실시간 조회 중입니다...</div>
+      </div>
+    `;
+
+    try {
+      if (!window.DodamRichgoAPI) throw new Error('DodamRichgoAPI not loaded');
+      const apts = await window.DodamRichgoAPI.searchApartments(query);
+      if (!apts || apts.length === 0) {
+        resultsBox.innerHTML = `
+          <div class="p-5 rounded-2xl bg-white/10 border border-white/20 text-center text-xs text-indigo-200">
+            [${query}] 단지 검색 결과가 없습니다. 상단 주요 학군 단지 버튼을 클릭하거나 다른 아파트명으로 검색해보세요.
+          </div>
+        `;
+        return;
+      }
+
+      const topApt = apts[0];
+      const districtData = await window.DodamRichgoAPI.getSchoolDistrict(topApt.danji_id);
+      const schools = districtData?.schools || [];
+
+      const elemSchools = schools.filter((s) => s.level === 'elementary');
+      const midSchools = schools.filter((s) => s.level === 'middle');
+      const highSchools = schools.filter((s) => s.level === 'high');
+
+      const renderSchoolItem = (s) => {
+        const distStr = s.walk_distance_m ? `도보 ${s.walk_distance_m}m` : (s.straight_distance_m ? `직선 ${s.straight_distance_m}m` : '인근');
+        const gradeBadge = s.grade ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-black bg-indigo-600 text-white">${s.grade}급</span>` : '';
+        const rankBadge = s.sd_rank ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-indigo-50 text-indigo-700 border border-indigo-200">${s.sd_rank}</span>` : '';
+        
+        let recordsHtml = '';
+        if (s.admission_records && s.admission_records.length > 0) {
+          recordsHtml = `
+            <div class="flex items-center gap-1 flex-wrap pt-1">
+              ${s.admission_records.slice(0, 3).map((r) => `
+                <span class="inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded bg-amber-50 text-amber-900 border border-amber-200 text-[10px] font-black">
+                  <span>${r.target}</span>
+                  <strong class="text-rose-600">${r.count}명</strong>
+                </span>
+              `).join('')}
+            </div>
+          `;
+        }
+
+        return `
+          <div class="p-3 rounded-2xl bg-white text-slate-900 border border-slate-200/90 shadow-2xs hover:border-indigo-400 transition space-y-1.5">
+            <div class="flex items-start justify-between gap-1.5">
+              <div class="min-w-0">
+                <div class="font-black text-xs sm:text-sm text-slate-900 truncate hover:text-indigo-600 cursor-pointer" onclick="app.searchSchoolAndOpenModal('${s.name}')">
+                  ${s.name}
+                </div>
+                <div class="text-[11px] text-slate-400 font-bold flex items-center gap-1 mt-0.5">
+                  <i class="fa-solid fa-person-walking text-indigo-500"></i>
+                  <span class="text-indigo-600 font-black">${distStr}</span>
+                </div>
+              </div>
+              <div class="flex items-center gap-1 shrink-0">
+                ${gradeBadge}
+                ${rankBadge}
+              </div>
+            </div>
+            ${recordsHtml}
+            <div class="pt-1 border-t border-slate-100 flex items-center justify-between text-[10px]">
+              <span class="text-slate-400 cursor-pointer hover:text-indigo-600 font-bold" onclick="app.searchSchoolAndOpenModal('${s.name}')">
+                분석 모달 보기 →
+              </span>
+              <a href="${s.url}" target="_blank" class="font-extrabold text-indigo-600 hover:underline flex items-center gap-0.5">
+                <span>리치고 원문</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+              </a>
+            </div>
+          </div>
+        `;
+      };
+
+      resultsBox.innerHTML = `
+        <div class="space-y-3">
+          <!-- 단지 헤더 바 -->
+          <div class="p-3.5 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+            <div class="space-y-0.5 min-w-0">
+              <div class="flex items-center gap-2">
+                <span class="px-2 py-0.5 rounded-md bg-amber-400 text-slate-950 font-black text-[10px]">선택 단지</span>
+                <h4 class="font-black text-white text-sm sm:text-base truncate">${topApt.name}</h4>
+              </div>
+              <p class="text-xs text-indigo-200 truncate">${topApt.address || '대한민국 주요 핵심 학군 주거 단지'}</p>
+            </div>
+            <a
+              href="${topApt.url || `https://m.richgo.ai/realty/danji/${topApt.danji_id}`}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3.5 py-1.5 rounded-xl bg-white text-slate-900 hover:bg-amber-300 font-black text-xs shadow-sm transition flex items-center gap-1 self-start sm:self-auto shrink-0"
+            >
+              <i class="fa-solid fa-chart-line text-indigo-600"></i>
+              <span>단지 시세·실거래 보기</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
+            </a>
+          </div>
+
+          <!-- 3단 학군 그리드 -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+            <!-- 1. 초등학교 -->
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+              <div class="flex items-center justify-between text-xs font-black text-amber-300 border-b border-white/10 pb-1.5">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-school"></i>
+                  <span>배정 초등학교 (${elemSchools.length}개)</span>
+                </span>
+                <span class="text-[10px] text-indigo-200 font-normal">통학구역 순</span>
+              </div>
+              <div class="space-y-2">
+                ${elemSchools.length > 0 ? elemSchools.map(renderSchoolItem).join('') : '<p class="text-xs text-indigo-300/70 py-4 text-center">배정 초등학교 정보가 없습니다.</p>'}
+              </div>
+            </div>
+
+            <!-- 2. 중학교 -->
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+              <div class="flex items-center justify-between text-xs font-black text-emerald-300 border-b border-white/10 pb-1.5">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span>배정·인근 중학교 (${midSchools.length}개)</span>
+                </span>
+                <span class="text-[10px] text-indigo-200 font-normal">거리순</span>
+              </div>
+              <div class="space-y-2">
+                ${midSchools.length > 0 ? midSchools.map(renderSchoolItem).join('') : '<p class="text-xs text-indigo-300/70 py-4 text-center">인근 중학교 정보가 없습니다.</p>'}
+              </div>
+            </div>
+
+            <!-- 3. 고등학교 -->
+            <div class="p-3 rounded-2xl bg-white/5 border border-white/10 space-y-2">
+              <div class="flex items-center justify-between text-xs font-black text-sky-300 border-b border-white/10 pb-1.5">
+                <span class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span>인근 고등학교 & 입시 (${highSchools.length}개)</span>
+                </span>
+                <span class="text-[10px] text-indigo-200 font-normal">대입실적 연동</span>
+              </div>
+              <div class="space-y-2">
+                ${highSchools.length > 0 ? highSchools.map(renderSchoolItem).join('') : '<p class="text-xs text-indigo-300/70 py-4 text-center">인근 고등학교 정보가 없습니다.</p>'}
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    } catch (err) {
+      console.error('searchRichgoApartment error:', err);
+      resultsBox.innerHTML = `
+        <div class="p-5 rounded-2xl bg-white/10 border border-white/20 text-center text-xs text-rose-300">
+          학군 데이터를 불러오는 중 오류가 발생했습니다. 잠시 후 다시 시도해주세요.
+        </div>
+      `;
+    }
+  },
+
+  searchSchoolAndOpenModal(schoolName) {
+    if (!schoolName) return;
+    const clean = schoolName.replace(/\s+/g, '');
+    const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
+    let match = schools.find((s) => s.name.replace(/\s+/g, '') === clean);
+    if (!match) {
+      match = schools.find((s) => s.name.includes(schoolName) || schoolName.includes(s.name));
+    }
+    if (match) {
+      this.openSchoolModal(match.id);
+    } else {
+      window.open(`https://m.richgo.ai/search?q=${encodeURIComponent(schoolName)}`, '_blank');
+    }
+  },
+
+  // ==========================================
   // 8. 전국 학교 정보 & 리치고(RichGo) 학군 순위 포털 컨트롤러
   // ==========================================
   initSchoolView() {
     this.renderSchoolLevelChips();
+    this.initRichgoApartmentSection();
     this.renderSchoolRichGoHeader();
     this.renderSchoolSidoPills();
     this.renderSchoolSigunguTable();
@@ -4390,6 +4608,7 @@ class DodamCommunityApp {
                   <span class="px-2.5 py-1 rounded-lg text-xs font-black bg-slate-100 text-slate-700 border border-slate-200">
                     ${s.rankRegion}
                   </span>
+                  ${(window.DodamRichgoAPI && window.DodamRichgoAPI.findRichgoSchool(s)) ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-400 text-slate-950 flex items-center gap-1 shadow-2xs"><i class="fa-solid fa-bolt text-[9px] text-indigo-700"></i>리치고 실시간 연동</span>' : ''}
                   <button
                     type="button"
                     onclick="app.openSchoolGradeModal()"
@@ -4638,6 +4857,7 @@ class DodamCommunityApp {
                   </span>
                   <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
                   <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
+                  ${(window.DodamRichgoAPI && window.DodamRichgoAPI.findRichgoSchool(s)) ? '<span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200 text-[9px] font-black">리치고</span>' : ''}
                 </div>
               </td>
               <td class="py-3 px-4 text-xs font-bold text-slate-600 whitespace-nowrap">
@@ -4967,6 +5187,199 @@ class DodamCommunityApp {
         </div>
       `;
     }
+
+    if (activeTab === 'richgo') {
+      const richgoSchool = window.DodamRichgoAPI ? window.DodamRichgoAPI.findRichgoSchool(s) : null;
+      const richgoUrl = richgoSchool?.url || `https://m.richgo.ai/search?q=${encodeURIComponent(s.name)}`;
+      
+      const gradeBadge = richgoSchool?.grade 
+        ? `<span class="px-2.5 py-1 rounded-xl text-xs font-black bg-indigo-600 text-white shadow-sm">리치고 ${richgoSchool.grade}등급</span>`
+        : `<span class="px-2.5 py-1 rounded-xl text-xs font-black bg-slate-800 text-white shadow-sm">리치고 공식 연동</span>`;
+      
+      const rankText = richgoSchool?.sd_rank || `${s.regionName || '시도'} 상위 공식 공시 학군`;
+
+      // 1. 학생/교원 통계 그리드
+      let statsGridHtml = '';
+      if (richgoSchool?.students || richgoSchool?.teachers || richgoSchool?.students_per_teacher) {
+        statsGridHtml = `
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1">
+            <div class="p-3 rounded-2xl bg-indigo-50/70 border border-indigo-100 text-center">
+              <div class="text-[10px] font-bold text-indigo-500">전체 학생 수</div>
+              <div class="text-sm font-black text-indigo-950 mt-0.5">${(richgoSchool.students || 0).toLocaleString()}명</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-emerald-50/70 border border-emerald-100 text-center">
+              <div class="text-[10px] font-bold text-emerald-600">교원 수</div>
+              <div class="text-sm font-black text-emerald-950 mt-0.5">${(richgoSchool.teachers || 0).toLocaleString()}명</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-amber-50/70 border border-amber-100 text-center">
+              <div class="text-[10px] font-bold text-amber-600">학급 수</div>
+              <div class="text-sm font-black text-amber-950 mt-0.5">${(richgoSchool.classes || 0).toLocaleString()}학급</div>
+            </div>
+            <div class="p-3 rounded-2xl bg-rose-50/70 border border-rose-100 text-center">
+              <div class="text-[10px] font-bold text-rose-600">교원 1인당 학생</div>
+              <div class="text-sm font-black text-rose-950 mt-0.5">${richgoSchool.students_per_teacher || '-'}명</div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 2. 입시/진학 실적
+      let admissionHtml = '';
+      if (richgoSchool?.admission_records && richgoSchool.admission_records.length > 0) {
+        admissionHtml = `
+          <div class="p-4 rounded-2xl bg-slate-900 text-white space-y-2.5 shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="text-xs font-black text-amber-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-graduation-cap"></i>
+                <span>리치고 공시 최상위 대입 실적</span>
+              </div>
+              <span class="text-[10px] text-slate-400 font-bold">최신 공시 기준</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs">
+              ${richgoSchool.admission_records.map((rec) => `
+                <div class="p-2.5 rounded-xl bg-slate-800/80 border border-slate-700/60 flex items-center justify-between">
+                  <span class="font-bold text-slate-300">${rec.target} (${rec.basis})</span>
+                  <strong class="font-black text-amber-400 text-sm">${rec.count}명</strong>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      } else if (richgoSchool?.admission_rates) {
+        const rates = richgoSchool.admission_rates;
+        admissionHtml = `
+          <div class="p-4 rounded-2xl bg-indigo-950 text-white space-y-2.5 border border-indigo-800/60 shadow-sm">
+            <div class="flex items-center justify-between">
+              <div class="text-xs font-black text-amber-300 flex items-center gap-1.5">
+                <i class="fa-solid fa-award"></i>
+                <span>리치고 특목고·자사고 진학률 공시</span>
+              </div>
+              <span class="text-[10px] text-indigo-300 font-bold">중학교 진학 통계</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
+              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
+                <div class="text-[10px] text-indigo-300">특목고 전체</div>
+                <div class="text-base font-black text-white mt-0.5">${rates.special_high_school_pct || 0}%</div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
+                <div class="text-[10px] text-indigo-300">과학고</div>
+                <div class="text-base font-black text-emerald-400 mt-0.5">${rates.science_high_pct || 0}%</div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
+                <div class="text-[10px] text-indigo-300">외고·국제고</div>
+                <div class="text-base font-black text-sky-400 mt-0.5">${rates.foreign_international_high_pct || 0}%</div>
+              </div>
+              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
+                <div class="text-[10px] text-indigo-300">자율형사립고</div>
+                <div class="text-base font-black text-amber-400 mt-0.5">${rates.autonomous_private_high_pct || 0}%</div>
+              </div>
+            </div>
+          </div>
+        `;
+      }
+
+      // 3. 연계/배정 학교 (feeder_schools)
+      let feederHtml = '';
+      if (richgoSchool?.feeder_schools && richgoSchool.feeder_schools.length > 0) {
+        const titleText = s.level === 'elementary' ? '졸업생 주요 배정 중학교' : '단지 공유 및 진학 고등학교';
+        feederHtml = `
+          <div class="space-y-1.5 pt-1">
+            <div class="text-[11px] font-black text-slate-500 flex items-center gap-1">
+              <i class="fa-solid fa-arrows-split-up-and-left text-indigo-600"></i>
+              <span>${titleText} (리치고 MCP 분석)</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+              ${richgoSchool.feeder_schools.map((f) => `
+                <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between hover:border-indigo-300 transition">
+                  <span class="font-extrabold text-slate-800">${f.name}</span>
+                  <a href="https://m.richgo.ai/realty/place/${s.level === 'elementary' ? 'middle' : 'high'}/${f.school_id}" target="_blank" class="text-[10px] font-black text-indigo-600 hover:underline">
+                    리치고 상세 →
+                  </a>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      // 4. 주변 배정 아파트 (nearby_apartments)
+      let aptHtml = '';
+      if (richgoSchool?.nearby_apartments && richgoSchool.nearby_apartments.length > 0) {
+        aptHtml = `
+          <div class="space-y-2 pt-2">
+            <div class="flex items-center justify-between">
+              <div class="text-[11px] font-black text-slate-700 flex items-center gap-1">
+                <i class="fa-solid fa-building text-rose-500"></i>
+                <span>주변 배정 아파트 & 리치고 실거래·추정 시세</span>
+              </div>
+              <span class="text-[10px] text-slate-400">대표 평형 기준</span>
+            </div>
+            <div class="space-y-1.5">
+              ${richgoSchool.nearby_apartments.slice(0, 6).map((apt) => {
+                const distText = apt.walk_distance_m ? `도보 ${apt.walk_distance_m}m` : '인근 단지';
+                const priceFormatted = apt.richgo_price_manwon 
+                  ? (apt.richgo_price_manwon >= 10000 
+                      ? `${Math.floor(apt.richgo_price_manwon / 10000)}억 ${apt.richgo_price_manwon % 10000 ? (apt.richgo_price_manwon % 10000).toLocaleString() + '만' : ''}원`
+                      : `${apt.richgo_price_manwon.toLocaleString()}만원`)
+                  : '-';
+                return `
+                  <div class="p-2.5 rounded-xl bg-white border border-slate-200/90 hover:border-indigo-300 transition flex items-center justify-between text-xs shadow-2xs">
+                    <div class="min-w-0 pr-2">
+                      <div class="font-black text-slate-900 truncate">${apt.name}</div>
+                      <div class="text-[10px] text-slate-400 flex items-center gap-1.5 mt-0.5">
+                        <span>${apt.pyeong ? apt.pyeong + '평' : ''}</span>
+                        <span>·</span>
+                        <span class="text-indigo-600 font-bold">${distText}</span>
+                      </div>
+                    </div>
+                    <div class="text-right shrink-0">
+                      <div class="font-black text-rose-600 text-xs">${priceFormatted}</div>
+                      <a href="${apt.url}" target="_blank" class="text-[10px] font-bold text-slate-400 hover:text-indigo-600 mt-0.5 inline-block">
+                        시세 상세 <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+                      </a>
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+        `;
+      }
+
+      return `
+        <div class="space-y-3.5 pt-2">
+          <!-- 리치고 인증 카드 -->
+          <div class="p-4 rounded-2xl bg-gradient-to-r from-indigo-50 via-slate-50 to-white border border-indigo-100 flex items-center justify-between gap-3 flex-wrap">
+            <div class="flex items-center gap-2.5">
+              ${gradeBadge}
+              <div>
+                <div class="font-black text-slate-900 text-sm">${rankText}</div>
+                <div class="text-[10px] text-slate-500">리치고(Richgo m.richgo.ai) MCP 알고리즘 실시간 분석</div>
+              </div>
+            </div>
+            <a
+              href="${richgoUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-2xs transition flex items-center gap-1"
+            >
+              <span>리치고 원문 분석 보기</span>
+              <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+            </a>
+          </div>
+
+          ${statsGridHtml}
+          ${admissionHtml}
+          ${feederHtml}
+          ${aptHtml}
+
+          <div class="text-[10px] text-slate-400 pt-1 text-center">
+            데이터 출처: 리치고(Richgo m.richgo.ai) MCP API (get_school & get_school_district) · 교육부 공시 실시간 연동
+          </div>
+        </div>
+      `;
+    }
+
     return '';
   }
 
@@ -5051,6 +5464,7 @@ class DodamCommunityApp {
     // 2. 서브탭 바 렌더링
     const tabs = [
       { id: 'nearby', label: firstTabTitle },
+      { id: 'richgo', label: '🏛️ 리치고 AI 학군 분석' },
       { id: 'info', label: '기본정보 (3단 바차트)' },
       { id: 'apartments', label: '배정아파트' },
       { id: 'academies', label: '학원가' }
@@ -5080,7 +5494,20 @@ class DodamCommunityApp {
 
     // 4. 하단 외부 바로가기 링크 렌더링
     if (linksEl) {
+      const richgoSchool = window.DodamRichgoAPI ? window.DodamRichgoAPI.findRichgoSchool(school) : null;
+      const richgoUrl = richgoSchool?.url || `https://m.richgo.ai/search?q=${encodeURIComponent(school.name)}`;
+
       linksEl.innerHTML = `
+        <a
+          href="${richgoUrl}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-indigo-200 hover:border-indigo-300 bg-indigo-50 text-indigo-700 font-black text-xs hover:bg-indigo-100 transition shadow-2xs"
+        >
+          <i class="fa-solid fa-bolt text-amber-500"></i>
+          <span>리치고 MCP 분석</span>
+          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+        </a>
         <a
           href="${school.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
           target="_blank"

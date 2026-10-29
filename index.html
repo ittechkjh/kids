@@ -1278,6 +1278,75 @@
             </div>
           </div>
 
+          <!-- 리치고(Richgo) 아파트 학군 실시간 연동기 -->
+          <div class="community-card p-4 sm:p-5 bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900 text-white rounded-3xl shadow-xl space-y-4 border border-indigo-700/60" id="richgo-apartment-section">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-indigo-700/60 pb-3">
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-rose-500 text-white shadow-sm flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                    <span>LIVE MCP 연동</span>
+                  </span>
+                  <span class="text-xs font-bold text-indigo-300">리치고(Richgo) m.richgo.ai 공식 API</span>
+                </div>
+                <h3 class="text-lg sm:text-xl font-black text-white tracking-tight flex items-center gap-2">
+                  <span>🏢 아파트별 학군 & 배정학교 실시간 조회</span>
+                </h3>
+                <p class="text-xs text-indigo-200">
+                  아파트 단지명(예: 잠실엘스, 은마, 반포자이, 판교그랑블, 목동7단지)을 검색하면 배정 초·중·고 도보 거리, 학군 등급(S/A/B), 시도 순위 및 대입 합격 실적을 실시간으로 가져옵니다.
+                </p>
+              </div>
+
+              <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+                <a
+                  href="https://m.richgo.ai/developers/mcp.html#tool-schools"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-black text-white transition backdrop-blur-xs"
+                >
+                  <i class="fa-solid fa-code text-[11px] text-amber-300"></i>
+                  <span>리치고 MCP 개발자 명세</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-white/70"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 아파트 검색바 -->
+            <div class="space-y-2">
+              <div class="relative flex items-center">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-indigo-300 text-sm"></i>
+                <input
+                  type="text"
+                  id="richgo-apartment-search-input"
+                  placeholder="아파트명 또는 단지명을 입력하세요 (예: 잠실엘스, 은마, 판교그랑블, 반포자이, 목동7단지, 마포래미안푸르지오...)"
+                  class="w-full pl-10 pr-24 py-3 rounded-2xl text-xs sm:text-sm font-bold bg-white text-slate-900 border-2 border-indigo-400 focus:border-amber-400 focus:outline-none shadow-inner placeholder:text-slate-400"
+                  onkeydown="if(event.key==='Enter') app.searchRichgoApartment()"
+                />
+                <button
+                  type="button"
+                  onclick="app.searchRichgoApartment()"
+                  class="absolute right-2 px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs transition shadow-sm flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-bolt text-[11px] text-amber-300"></i>
+                  <span>조회</span>
+                </button>
+              </div>
+
+              <!-- 대표 인기 단지 핫픽 태그 -->
+              <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-[11px]">
+                <span class="text-indigo-300 font-extrabold shrink-0 mr-1">🔥 주요 학군 아파트:</span>
+                <div class="flex items-center gap-1.5 flex-nowrap" id="richgo-preset-chips">
+                  <!-- Rendered dynamically -->
+                </div>
+              </div>
+            </div>
+
+            <!-- 아파트 학군 실시간 결과 컨테이너 -->
+            <div id="richgo-district-results-box" class="space-y-3 pt-1">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
           <!-- 학교 단계별 탭 (Level Chips) -->
           <div class="community-card p-3 bg-white border border-slate-200">
             <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-xs" id="school-level-chips">
@@ -1876,6 +1945,7 @@
   <script src="js/restaurants_data.js"></script>
   <script src="js/policies_data.js"></script>
   <script src="js/schools_data.js"></script>
+  <script src="js/richgo_data.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   
