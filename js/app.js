@@ -189,12 +189,12 @@ class DodamCommunityApp {
     this.initFirebaseSync();
     // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
     const initHash = (window.location.hash || '').replace('#', '');
-    if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions'].includes(initHash)) {
+    if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write'].includes(initHash)) {
       this.switchMainView(initHash);
     }
     window.addEventListener('hashchange', () => {
       const h = (window.location.hash || '').replace('#', '');
-      if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions'].includes(h)) {
+      if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write'].includes(h)) {
         this.switchMainView(h);
       }
     });
@@ -466,6 +466,8 @@ class DodamCommunityApp {
       this.initApartmentsView();
     } else if (viewId === 'admissions') {
       this.initAdmissionsView();
+    } else if (viewId === 'write') {
+      this.initWritePage();
     }
   }
 
@@ -824,13 +826,18 @@ class DodamCommunityApp {
 
     if (filtered.length === 0) {
       listEl.innerHTML = `
-        <div class="community-card p-10 text-center space-y-2">
-          <div class="text-2xl">🌱</div>
-          <div class="text-sm font-extrabold text-slate-700">해당 조건의 게시글이 아직 없습니다.</div>
-          <p class="text-xs text-slate-400">첫 번째로 질문이나 따뜻한 육아 꿀팁을 남겨보세요!</p>
-          <button onclick="app.openWritePostModal()" class="mt-2 px-4 py-2 rounded-xl coral-badge-gradient text-white text-xs font-bold">
-            새 글 쓰기
-          </button>
+        <div class="p-12 text-center space-y-3 bg-white rounded-2xl border border-stone-200 shadow-2xs">
+          <div class="w-14 h-14 mx-auto rounded-full bg-emerald-50 text-[#03C75A] flex items-center justify-center text-2xl shadow-2xs">
+            <i class="fa-solid fa-pen-nib"></i>
+          </div>
+          <div class="text-base font-black text-slate-800">등록된 게시글이 아직 없습니다.</div>
+          <p class="text-xs text-slate-500 max-w-sm mx-auto leading-relaxed">첫 번째 주인공이 되어 이웃 육아맘·대디들과 따뜻한 육아 이야기와 유용한 정보를 나누어보세요!</p>
+          <div class="pt-2">
+            <button onclick="app.openWritePage()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white text-xs font-black shadow-sm transition cursor-pointer">
+              <i class="fa-solid fa-feather-pointed"></i>
+              <span>첫 글 작성하기</span>
+            </button>
+          </div>
         </div>
       `;
       if (paginationEl) paginationEl.innerHTML = '';
@@ -1310,20 +1317,39 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // [네이버 스마트에디터 스타일 카페 글쓰기 컨트롤러]
+  // [네이버 스마트에디터 스타일 카페 글쓰기 컨트롤러 (풀페이지)]
   // ==========================================
-  openWritePostModal(catId) {
-    const modal = document.getElementById('write-post-modal');
-    if (!modal) return;
-
+  openWritePage(catId) {
     if (catId && document.getElementById('post-form-category')) {
       document.getElementById('post-form-category').value = catId;
     } else if (this.currentCategory && this.currentCategory !== 'all' && this.currentCategory !== 'hot') {
       const catSelect = document.getElementById('post-form-category');
       if (catSelect) catSelect.value = this.currentCategory;
     }
+    this.switchMainView('write');
+  }
 
-    // Check draft
+  openWritePostModal(catId) {
+    this.openWritePage(catId);
+  }
+
+  closeWritePostModal() {
+    this.switchMainView('board');
+  }
+
+  initWritePage() {
+    // 1. 작성자 프로필 정보 동기화
+    const authorNameEl = document.getElementById('write-author-name');
+    const authorBadgeEl = document.getElementById('write-author-badge');
+    const authorAvatarEl = document.getElementById('write-author-avatar');
+    if (authorNameEl) authorNameEl.textContent = this.profile.nickname || '도담맘';
+    if (authorBadgeEl) authorBadgeEl.textContent = `${this.profile.babyName || '도담이'} (${this.profile.ageBadge || '육아맘'})`;
+    if (authorAvatarEl) {
+      const firstChar = (this.profile.nickname || '도담맘').charAt(0);
+      authorAvatarEl.textContent = firstChar;
+    }
+
+    // 2. 임시저장 내역 확인
     const rawDraft = localStorage.getItem(this.draftKey);
     const draftBadge = document.getElementById('draft-count-badge');
     const loadBtn = document.getElementById('btn-draft-load');
@@ -1336,12 +1362,7 @@ class DodamCommunityApp {
     }
 
     this.renderAttachedImages();
-    modal.classList.remove('hidden');
-  }
-
-  closeWritePostModal() {
-    const modal = document.getElementById('write-post-modal');
-    if (modal) modal.classList.add('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   handlePhotoUpload(event) {
@@ -1502,15 +1523,19 @@ class DodamCommunityApp {
     const titleEl = document.getElementById('post-form-title');
     const contentEl = document.getElementById('post-form-content');
     const categoryEl = document.getElementById('post-form-category');
+    const prefixEl = document.getElementById('post-form-prefix');
     const regionEl = document.getElementById('post-form-region');
     const tagsEl = document.getElementById('post-form-tags');
 
-    const title = titleEl ? titleEl.value.trim() : '';
+    const rawTitle = titleEl ? titleEl.value.trim() : '';
     const content = contentEl ? contentEl.value.trim() : '';
-    if (!title || !content) {
+    if (!rawTitle || !content) {
       this.showToast('제목과 내용을 모두 입력해 주세요!');
       return;
     }
+
+    const prefix = prefixEl ? prefixEl.value.trim() : '';
+    const title = prefix ? `[${prefix}] ${rawTitle}` : rawTitle;
 
     const category = categoryEl ? categoryEl.value : 'newborn';
     const region = regionEl ? regionEl.value : 'all';
@@ -1551,6 +1576,7 @@ class DodamCommunityApp {
     if (titleEl) titleEl.value = '';
     if (contentEl) contentEl.value = '';
     if (tagsEl) tagsEl.value = '';
+    if (prefixEl) prefixEl.value = '';
     this.attachedImages = [];
     this.renderAttachedImages();
 
@@ -1561,7 +1587,7 @@ class DodamCommunityApp {
     const loadBtn = document.getElementById('btn-draft-load');
     if (loadBtn) loadBtn.classList.add('hidden');
 
-    this.closeWritePostModal();
+    this.switchMainView('board');
     this.renderBoardView();
     this.showToast('🎉 게시글이 성공적으로 등록되었습니다!');
   }
@@ -1619,7 +1645,9 @@ class DodamCommunityApp {
     try {
       const raw = localStorage.getItem(this.customPostsKey);
       if (raw) {
-        const posts = JSON.parse(raw);
+        let posts = JSON.parse(raw);
+        // Clean out any legacy mock/dummy posts that might have been saved in localStorage
+        posts = (posts || []).filter((p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock'));
         this.data.posts.unshift(...posts);
       }
     } catch {}
