@@ -1839,29 +1839,29 @@
           </div>
         </section>
 
-        <!-- VIEW 7: 아파트별 학군 & 배정학교 실시간 조회 게시판 -->
+        <!-- VIEW 7: 아파트별 학군 & 배정학교 실시간 조회 게시판 (밝고 세련된 프리미엄 에듀테크 디자인) -->
         <section id="view-apartments" class="view-section hidden space-y-5">
           <!-- 상단 헤더 배너 -->
-          <div class="community-card p-6 bg-gradient-to-br from-indigo-950 via-slate-900 to-indigo-900 text-white rounded-3xl shadow-xl space-y-4 border border-indigo-700/60">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-indigo-700/60 pb-4">
+          <div class="bg-white rounded-3xl border border-stone-200/90 shadow-2xs p-6 sm:p-7 space-y-5">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-4">
               <div class="space-y-1">
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-rose-500 text-white shadow-sm flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-white animate-pulse"></span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-emerald-50 text-emerald-700 border border-emerald-200 shadow-2xs flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                     <span>실시간 학군 연동</span>
                   </span>
-                  <span class="text-xs font-bold text-indigo-300">교육부 공식 학구도 및 전국 아파트 배정학교 분석</span>
+                  <span class="text-xs font-bold text-slate-400">교육부 공식 학구도 및 전국 아파트 배정학교 실시간 분석</span>
                 </div>
-                <h2 class="text-xl sm:text-2xl font-black text-white tracking-tight flex items-center gap-2">
-                  <span>🏢 전국 아파트별 학군 & 배정학교 실시간 조회</span>
+                <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
+                  <span>🏢 전국 아파트별 배정학교 & 학군 실시간 조회</span>
                 </h2>
-                <p class="text-xs text-indigo-200 leading-relaxed">
-                  아파트 단지명(예: 잠실엘스, 은마, 반포자이, 판교그랑블, 목동7단지)을 검색하면 배정 초·중·고 도보 거리, 학군 등급(S/A/B), 시도 내 순위 및 대입 합격 실적을 실시간으로 확인합니다.
+                <p class="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl">
+                  아파트 단지명(예: 잠실엘스, 은마, 반포자이, 판교그랑블, 목동7단지)을 검색하면 배정 초·중·고 도보 거리, 학군 등급(S/A/B), 시도 내 순위 및 특목고·대입 합격 실적을 실시간으로 확인합니다.
                 </p>
               </div>
 
               <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
-                <span class="px-3.5 py-1.5 rounded-xl bg-white/10 border border-white/20 text-xs font-black text-indigo-200">
+                <span class="px-3.5 py-1.5 rounded-xl bg-stone-100 border border-stone-200 text-xs font-black text-slate-700 shadow-2xs">
                   📍 전국 17개 시도 주요 아파트 단지 연동
                 </span>
               </div>
@@ -1870,27 +1870,29 @@
             <!-- 아파트 검색바 -->
             <div class="space-y-2.5 pt-1">
               <div class="relative flex items-center">
-                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-indigo-300 text-sm"></i>
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
                 <input
                   type="text"
                   id="apartments-search-input"
                   placeholder="아파트명 또는 단지명을 입력하세요 (예: 잠실엘스, 은마, 반포자이, 목동7단지, 판교그랑블, 마포래미안푸르지오...)"
-                  class="w-full pl-11 pr-24 py-3.5 rounded-2xl text-xs sm:text-sm font-bold bg-white text-slate-900 border-2 border-indigo-400 focus:border-amber-400 focus:outline-none shadow-inner placeholder:text-slate-400"
+                  class="w-full pl-11 pr-24 py-3.5 rounded-2xl text-xs sm:text-sm font-bold bg-[#f8f9fa] text-slate-900 border border-stone-200 focus:bg-white focus:border-[#03C75A] focus:outline-none shadow-inner placeholder:text-stone-400 transition"
                   onkeydown="if(event.key==='Enter') app.searchApartmentDistrict()"
                 />
                 <button
                   type="button"
                   onclick="app.searchApartmentDistrict()"
-                  class="absolute right-2.5 px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-black text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer"
+                  class="absolute right-2 px-5 py-2 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer"
                 >
-                  <i class="fa-solid fa-bolt text-[11px] text-amber-300"></i>
+                  <i class="fa-solid fa-bolt text-[11px] text-amber-200"></i>
                   <span>조회</span>
                 </button>
               </div>
 
               <!-- 대표 인기 단지 핫픽 태그 바 -->
               <div class="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar text-[11px]">
-                <span class="text-indigo-300 font-extrabold shrink-0 mr-1">🔥 주요 학군 아파트:</span>
+                <span class="text-rose-500 font-extrabold shrink-0 mr-1 flex items-center gap-1">
+                  <span>🔥 주요 학군 아파트:</span>
+                </span>
                 <div class="flex items-center gap-1.5 flex-nowrap" id="apartments-preset-chips">
                   <!-- Rendered dynamically -->
                 </div>
@@ -1898,7 +1900,7 @@
             </div>
 
             <!-- 아파트 학군 실시간 결과 컨테이너 -->
-            <div id="apartments-district-results-box" class="space-y-3 pt-2">
+            <div id="apartments-district-results-box" class="space-y-4 pt-3">
               <!-- Rendered dynamically -->
             </div>
           </div>
