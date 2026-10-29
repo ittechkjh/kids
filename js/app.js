@@ -487,6 +487,7 @@ class DodamCommunityApp {
           return `
             <button
               onclick="app.selectBoardCategory('${c.id}')"
+              data-category="${c.id}"
               class="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition ${
                 active
                   ? 'bg-rose-50 text-rose-600 font-extrabold'
@@ -598,6 +599,7 @@ class DodamCommunityApp {
             <button
               type="button"
               onclick="app.selectBoardCategory('${c.id}')"
+              data-category="${c.id}"
               class="px-3 py-1.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition border shrink-0 flex items-center gap-1.5 cursor-pointer ${
                 active
                   ? 'bg-[#03C75A] text-white border-[#03C75A] shadow-sm'

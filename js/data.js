@@ -6,6 +6,8 @@ window.DODAM_COMMUNITY_DATA = {
     { id: 'newborn', name: '🍼 출산·영아(0~24m)', icon: 'fa-baby-carriage', badgeColor: 'pink' },
     { id: 'toddler', name: '🧒 유아·어린이집(3~7세)', icon: 'fa-shapes', badgeColor: 'amber' },
     { id: 'school', name: '🎒 초등맘 라운지', icon: 'fa-school', badgeColor: 'emerald' },
+    { id: 'middle', name: '📚 중딩맘 라운지', icon: 'fa-book-open', badgeColor: 'teal' },
+    { id: 'high', name: '🎓 고딩맘 라운지', icon: 'fa-graduation-cap', badgeColor: 'indigo' },
     { id: 'working', name: '💼 워킹맘·대디', icon: 'fa-briefcase', badgeColor: 'indigo' },
     { id: 'talk', name: '🗣️ 속풀이·부부토크', icon: 'fa-comments', badgeColor: 'purple' },
     { id: 'tips', name: '💡 육아꿀팁·레시피', icon: 'fa-lightbulb', badgeColor: 'blue' }
