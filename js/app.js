@@ -3742,7 +3742,7 @@ class DodamCommunityApp {
         } else if (this.schoolLevel === 'high') {
           subtitleEl.textContent = '1위는 외대부고(용인, 서울대 66명)입니다. 2위는 상산고(전주, 의대 142명)입니다.';
         } else {
-          subtitleEl.textContent = '전국 초·중·고 15,000개 학교 순위와 특목·자사고 진학률 및 대입 실적 공시입니다.';
+          subtitleEl.textContent = '대한민국 교육부 공식 공시 전국 초·중·고 12,014개 학교 순위와 특목·자사고 진학률 및 대입 실적 공시입니다.';
         }
       } else {
         const sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
