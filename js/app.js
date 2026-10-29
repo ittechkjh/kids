@@ -3749,7 +3749,7 @@ class DodamCommunityApp {
 
     // 초기 실행 시 대표 학군 단지 1곳 자동 로딩
     this.searchRichgoApartment('잠실엘스');
-  },
+  }
 
   async searchRichgoApartment(queryParam) {
     const inputEl = document.getElementById('richgo-apartment-search-input');
@@ -3915,7 +3915,7 @@ class DodamCommunityApp {
         </div>
       `;
     }
-  },
+  }
 
   searchSchoolAndOpenModal(schoolName) {
     if (!schoolName) return;
@@ -3930,7 +3930,7 @@ class DodamCommunityApp {
     } else {
       window.open(`https://m.richgo.ai/search?q=${encodeURIComponent(schoolName)}`, '_blank');
     }
-  },
+  }
 
   // ==========================================
   // 8. 전국 학교 정보 & 리치고(RichGo) 학군 순위 포털 컨트롤러
