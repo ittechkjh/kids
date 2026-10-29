@@ -73,6 +73,9 @@ class DodamCommunityApp {
     this.currentRegion = 'all';
     this.boardSearchKeyword = '';
     this.boardSort = 'latest'; // 'latest' | 'popular' | 'comments' | 'views'
+    this.boardViewMode = 'cafe'; // 'cafe' | 'card' (네이버 카페 목록형 기본)
+    this.boardPage = 1;
+    this.boardPageSize = 15;
     this.activePollIndex = 0;
     this.activePostDetailId = null;
 
@@ -571,6 +574,7 @@ class DodamCommunityApp {
 
   selectBoardCategory(catId) {
     this.currentCategory = catId;
+    this.boardPage = 1;
     if (this.currentView !== 'board') {
       this.switchMainView('board');
     }
@@ -580,6 +584,7 @@ class DodamCommunityApp {
 
   onChangeRegion(regionId) {
     this.currentRegion = regionId;
+    this.boardPage = 1;
     const foodRegionFilter = document.getElementById('food-region-filter');
     if (foodRegionFilter) foodRegionFilter.value = regionId;
     this.updateQuickPillState(regionId);
@@ -590,6 +595,7 @@ class DodamCommunityApp {
 
   onSearchKeyword(keyword) {
     this.boardSearchKeyword = keyword.trim().toLowerCase();
+    this.boardPage = 1;
     const boardInput = document.getElementById('board-search-input');
     if (boardInput) boardInput.value = keyword;
     if (this.currentView !== 'board') {
@@ -600,11 +606,13 @@ class DodamCommunityApp {
 
   onBoardSearch(keyword) {
     this.boardSearchKeyword = keyword.trim().toLowerCase();
+    this.boardPage = 1;
     this.renderBoardView();
   }
 
   setBoardSort(sortMode) {
     this.boardSort = sortMode;
+    this.boardPage = 1;
     document.querySelectorAll('.board-sort-btn').forEach((btn) => {
       const active = btn.getAttribute('data-sort') === sortMode;
       btn.className = active
@@ -614,10 +622,126 @@ class DodamCommunityApp {
     this.renderBoardView();
   }
 
+  setBoardViewMode(mode) {
+    this.boardViewMode = mode;
+    const btnCafe = document.getElementById('btn-board-view-cafe');
+    const btnCard = document.getElementById('btn-board-view-card');
+    if (btnCafe && btnCard) {
+      if (mode === 'cafe') {
+        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5';
+        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5';
+      } else {
+        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5';
+        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5';
+      }
+    }
+    this.renderBoardView();
+  }
+
+  setBoardPage(page) {
+    this.boardPage = page;
+    this.renderBoardView();
+    const boardListEl = document.getElementById('board-posts-list');
+    if (boardListEl) {
+      boardListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+  getPinnedNotices() {
+    return [
+      {
+        id: 'notice-1',
+        tag: '필독',
+        tagColor: 'bg-rose-500 text-white',
+        title: '2026 전국 초·중·고 학군 리치고 분석 순위 & 입시 로드맵 안내',
+        author: '도담매니저',
+        date: '2026.10.28',
+        views: 12480,
+        likes: 382,
+        commentsCount: 42,
+        content: '전국 5,000개 초등학교, 중학교, 고등학교 리치고 학군 랭킹 데이터가 업데이트되었습니다. 지역별 1위 명문학교 및 특목고 진학률, 학업성취도를 지금 바로 확인해보세요!'
+      },
+      {
+        id: 'notice-2',
+        tag: '공지',
+        tagColor: 'bg-emerald-600 text-white',
+        title: '도담도담 육아 커뮤니티 클린 이용 수칙 및 나눔·질문 에티켓',
+        author: '운영팀',
+        date: '2026.10.25',
+        views: 8930,
+        likes: 215,
+        commentsCount: 18,
+        content: '모든 부모님들이 편안하고 따뜻하게 소통할 수 있도록 상호 존중과 배려의 댓글 문화를 만들어주세요. 육아 꿀팁, 학군 정보, 체험 후기 환영합니다.'
+      },
+      {
+        id: 'notice-3',
+        tag: '안내',
+        tagColor: 'bg-indigo-600 text-white',
+        title: '이번 주말 아이와 가볼만한 전국 사생대회 & 백일장 일정 모아보기',
+        author: '도담체험팀',
+        date: '2026.10.27',
+        views: 6420,
+        likes: 178,
+        commentsCount: 29,
+        content: '가을 나들이와 함께 참여할 수 있는 전국 국립박물관, 해양안전, 불조심 포스터 등 다채로운 어린이 공모전 일정이 등록되었습니다.'
+      }
+    ];
+  }
+
+  openNoticeDetailModal(noticeId) {
+    const notice = this.getPinnedNotices().find((n) => n.id === noticeId);
+    if (!notice) return;
+    const modal = document.getElementById('post-detail-modal');
+    if (!modal) return;
+    this.activePostDetailId = noticeId;
+    notice.views = (notice.views || 1000) + 1;
+
+    const catBadge = document.getElementById('post-detail-category-badge');
+    if (catBadge) {
+      catBadge.textContent = `[${notice.tag}] 공지사항`;
+      catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-rose-600 text-white';
+    }
+
+    document.getElementById('post-detail-title').textContent = notice.title;
+    document.getElementById('post-detail-author').textContent = notice.author;
+    document.getElementById('post-detail-author-badge').textContent = '공식 운영진';
+    document.getElementById('post-detail-region').textContent = '전국';
+    document.getElementById('post-detail-date').textContent = notice.date;
+    document.getElementById('post-detail-views').textContent = notice.views.toLocaleString();
+    document.getElementById('post-detail-content').textContent = notice.content;
+
+    const tagsEl = document.getElementById('post-detail-tags');
+    if (tagsEl) {
+      tagsEl.innerHTML = `<span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-600 text-xs font-semibold">#공지사항</span>
+        <span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-xs font-semibold">#필독</span>`;
+    }
+
+    document.getElementById('post-detail-likes-count').textContent = notice.likes;
+    
+    // Notice comment mock
+    const listEl = document.getElementById('post-detail-comments-list');
+    const countEl = document.getElementById('post-detail-comments-count');
+    if (countEl) countEl.textContent = `댓글 ${notice.commentsCount}개`;
+    if (listEl) {
+      listEl.innerHTML = `
+        <div class="p-3 bg-stone-50 rounded-xl text-xs text-slate-600 space-y-1">
+          <div class="flex items-center justify-between font-bold text-slate-800">
+            <span>도담이네맘</span>
+            <span class="text-[10px] text-slate-400 font-normal">2시간 전</span>
+          </div>
+          <div>공지 확인했습니다! 항상 유익한 정보 감사드립니다. 👍</div>
+        </div>
+      `;
+    }
+
+    modal.classList.remove('hidden');
+  }
+
   renderBoardView() {
     const listEl = document.getElementById('board-posts-list');
     const titleEl = document.getElementById('current-board-title');
     const countEl = document.getElementById('current-board-count');
+    const paginationEl = document.getElementById('board-pagination-container');
     if (!listEl) return;
 
     const catObj = this.data.categories.find((c) => c.id === this.currentCategory);
@@ -630,8 +754,9 @@ class DodamCommunityApp {
       if (this.boardSearchKeyword) {
         const matchTitle = p.title.toLowerCase().includes(this.boardSearchKeyword);
         const matchBody = p.content.toLowerCase().includes(this.boardSearchKeyword);
+        const matchAuthor = (p.author?.nickname || '').toLowerCase().includes(this.boardSearchKeyword);
         const matchTags = (p.tags || []).some((t) => t.toLowerCase().includes(this.boardSearchKeyword));
-        if (!matchTitle && !matchBody && !matchTags) return false;
+        if (!matchTitle && !matchBody && !matchAuthor && !matchTags) return false;
       }
       return true;
     });
@@ -639,8 +764,8 @@ class DodamCommunityApp {
     if (this.boardSort === 'popular') {
       filtered.sort(
         (a, b) =>
-          b.reactions.like + b.reactions.hug + b.reactions.tip -
-          (a.reactions.like + a.reactions.hug + a.reactions.tip)
+          b.reactions.like + (b.reactions.hug || 0) + (b.reactions.tip || 0) -
+          (a.reactions.like + (a.reactions.hug || 0) + (a.reactions.tip || 0))
       );
     } else if (this.boardSort === 'comments') {
       filtered.sort((a, b) => b.comments.length - a.comments.length);
@@ -663,88 +788,289 @@ class DodamCommunityApp {
           </button>
         </div>
       `;
+      if (paginationEl) paginationEl.innerHTML = '';
       return;
     }
 
-    listEl.innerHTML = filtered
-      .map((post) => {
+    // Paging calculation
+    const totalPosts = filtered.length;
+    const totalPages = Math.ceil(totalPosts / this.boardPageSize) || 1;
+    if (this.boardPage > totalPages) this.boardPage = totalPages;
+    if (this.boardPage < 1) this.boardPage = 1;
+
+    const startIdx = (this.boardPage - 1) * this.boardPageSize;
+    const endIdx = startIdx + this.boardPageSize;
+    const pagedPosts = filtered.slice(startIdx, endIdx);
+
+    const pinnedNotices = this.getPinnedNotices();
+
+    if (this.boardViewMode === 'cafe') {
+      // 1. Naver Cafe List Mode (네이버 카페 목록형)
+      const noticeRowsHtml = (this.boardPage === 1)
+        ? pinnedNotices.map((n) => `
+            <!-- PC Notice Row -->
+            <div onclick="app.openNoticeDetailModal('${n.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-3 bg-rose-50/45 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition items-center">
+              <div class="col-span-2 text-center">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[11px] font-black ${n.tagColor} shadow-2xs">${n.tag}</span>
+              </div>
+              <div class="col-span-5 flex items-center gap-1.5 min-w-0 pr-2">
+                <span class="font-black text-sm text-slate-900 hover:text-rose-600 truncate transition">${n.title}</span>
+                <span class="text-xs text-rose-500 font-black shrink-0">[${n.commentsCount}]</span>
+              </div>
+              <div class="col-span-2 text-center text-xs font-bold text-rose-700 truncate">${n.author}</div>
+              <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${n.date}</div>
+              <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${n.views.toLocaleString()}</div>
+              <div class="col-span-1 text-center text-xs text-rose-500 font-bold">${n.likes}</div>
+            </div>
+
+            <!-- Mobile Notice Row (2-line Naver Cafe Style) -->
+            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-4 py-3 bg-rose-50/45 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition space-y-1">
+              <div class="flex items-start gap-1.5">
+                <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black ${n.tagColor} shrink-0 mt-0.5">${n.tag}</span>
+                <span class="font-extrabold text-sm text-slate-900 leading-snug line-clamp-1 hover:text-rose-600">${n.title}</span>
+                <span class="text-xs text-rose-500 font-black shrink-0 mt-0.5">[${n.commentsCount}]</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-slate-500 pl-1">
+                <span class="font-bold text-rose-600">${n.author} · ${n.date}</span>
+                <div class="flex items-center gap-2">
+                  <span>조회 ${n.views.toLocaleString()}</span>
+                  <span class="text-rose-500 font-bold">♥ ${n.likes}</span>
+                </div>
+              </div>
+            </div>
+          `).join('')
+        : '';
+
+      const postRowsHtml = pagedPosts.map((post) => {
         const cat = this.data.categories.find((c) => c.id === post.category);
-        const isScrapped = this.scraps.includes(post.id);
+        const catName = cat ? cat.name : '자유';
         const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
+        const isScrapped = this.scraps.includes(post.id);
 
         return `
-          <article
-            onclick="app.openPostDetailModal('${post.id}')"
-            class="community-card p-5 space-y-3 cursor-pointer hover:border-rose-300 hover:shadow-md transition"
-          >
-            <div class="flex items-center justify-between gap-2">
-              <div class="flex items-center gap-2.5">
-                <div class="w-9 h-9 rounded-full ${post.author.avatarBg} flex items-center justify-center font-black text-xs">
-                  ${post.author.nickname.slice(0, 1)}
-                </div>
-                <div>
-                  <div class="flex items-center gap-1.5">
-                    <span class="font-extrabold text-xs text-slate-900">${post.author.nickname}</span>
-                    <span class="text-[10px] font-bold text-slate-400">${post.author.level}</span>
-                  </div>
-                  <div class="text-[11px] text-rose-500 font-bold">${post.author.childBadge} · <span class="text-slate-400 font-normal">${post.createdAt}</span></div>
-                </div>
-              </div>
+          <!-- PC Post Row (Naver Cafe Table Row) -->
+          <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-3 bg-white border-b border-stone-100 hover:bg-rose-50/30 cursor-pointer transition items-center group">
+            <div class="col-span-2 text-center">
+              <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-stone-100 text-slate-600 group-hover:bg-rose-100 group-hover:text-rose-700 transition">${catName}</span>
+            </div>
+            <div class="col-span-5 flex items-center gap-1.5 min-w-0 pr-2">
+              ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-50 text-rose-600 font-black text-[10px] border border-rose-200 shrink-0">HOT</span>' : ''}
+              <span class="font-bold text-sm text-slate-800 group-hover:text-rose-600 truncate transition">${post.title}</span>
+              ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-black shrink-0">[${post.comments.length}]</span>` : ''}
+            </div>
+            <div class="col-span-2 flex items-center justify-center gap-1.5 text-xs text-slate-700 truncate">
+              <span class="w-4 h-4 rounded-full ${post.author.avatarBg} text-[9px] flex items-center justify-center font-bold text-white shrink-0">${post.author.nickname[0]}</span>
+              <span class="truncate font-semibold">${post.author.nickname}</span>
+            </div>
+            <div class="col-span-1 text-center text-xs text-slate-400 font-medium">${post.createdAt}</div>
+            <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${post.views || 120}</div>
+            <div class="col-span-1 text-center text-xs text-rose-500 font-bold flex items-center justify-center gap-1">
+              <i class="fa-solid fa-heart text-[10px]"></i>
+              <span>${totalLikes}</span>
+            </div>
+          </div>
 
-              <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
-                ${post.isHot ? '<span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 font-extrabold text-[10px] border border-rose-200">🔥 베스트</span>' : ''}
-                <span class="px-2.5 py-0.5 rounded-full bg-stone-100 text-slate-600 font-bold text-[11px]">${cat ? cat.name : '자유수다'}</span>
-                <button
-                  onclick="app.toggleScrap('${post.id}')"
-                  title="스크랩"
-                  class="w-8 h-8 rounded-xl border ${
-                    isScrapped ? 'bg-amber-50 border-amber-300 text-amber-500' : 'border-stone-200 text-slate-400 hover:text-slate-600'
-                  } flex items-center justify-center transition"
-                >
-                  <i class="fa-solid fa-bookmark text-xs"></i>
-                </button>
+          <!-- Mobile Post Row (Naver Cafe 2-Line High Density) -->
+          <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-3 bg-white border-b border-stone-100 hover:bg-rose-50/30 cursor-pointer transition space-y-1.5">
+            <div class="flex items-start gap-1.5">
+              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-stone-100 text-slate-600 shrink-0 mt-0.5">${catName}</span>
+              ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-50 text-rose-600 font-black text-[9px] border border-rose-200 shrink-0 mt-0.5">HOT</span>' : ''}
+              <span class="font-bold text-sm text-slate-900 leading-snug line-clamp-2 hover:text-rose-600">${post.title}</span>
+              ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-black shrink-0 mt-0.5">[${post.comments.length}]</span>` : ''}
+            </div>
+            <div class="flex items-center justify-between text-[11px] text-slate-400 pl-1">
+              <div class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
+                <span class="truncate">${post.author.nickname}</span>
+                <span class="text-stone-300">·</span>
+                <span class="text-slate-400 shrink-0">${post.createdAt}</span>
+              </div>
+              <div class="flex items-center gap-2.5 shrink-0">
+                <span class="flex items-center gap-1 text-slate-500"><i class="fa-regular fa-eye text-[10px]"></i>${post.views || 120}</span>
+                <span class="flex items-center gap-1 text-rose-500 font-bold"><i class="fa-solid fa-heart text-[10px]"></i>${totalLikes}</span>
               </div>
             </div>
-
-            <div class="space-y-1.5">
-              <h3 class="text-base font-black text-slate-900 leading-snug hover:text-rose-600 transition flex items-center gap-1.5">
-                <span>${post.title}</span>
-                ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-extrabold">[${post.comments.length}]</span>` : ''}
-              </h3>
-              <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${post.content}</p>
-            </div>
-
-            ${
-              post.tags && post.tags.length > 0
-                ? `<div class="flex flex-wrap gap-1.5">
-                    ${post.tags.map((t) => `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-[10px] font-semibold">#${t}</span>`).join('')}
-                  </div>`
-                : ''
-            }
-
-            <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-slate-400 font-medium">
-              <div class="flex items-center gap-3">
-                <span class="flex items-center gap-1 text-rose-500 font-bold">
-                  <i class="fa-solid fa-heart text-[11px]"></i>
-                  <span>${totalLikes}</span>
-                </span>
-                <span class="flex items-center gap-1 text-slate-600 font-bold">
-                  <i class="fa-regular fa-comment text-[11px]"></i>
-                  <span>${post.comments.length}</span>
-                </span>
-                <span class="flex items-center gap-1">
-                  <i class="fa-regular fa-eye text-[11px]"></i>
-                  <span>${post.views || Math.floor(Math.random() * 50) + 120}</span>
-                </span>
-              </div>
-              <span class="text-rose-500 font-bold hover:underline text-[11px]">
-                답글 및 토론 보기 →
-              </span>
-            </div>
-          </article>
+          </div>
         `;
-      })
-      .join('');
+      }).join('');
+
+      listEl.innerHTML = `
+        <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-xs">
+          <!-- PC Header -->
+          <div class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-stone-50 border-b border-stone-200 text-xs font-bold text-slate-500 select-none">
+            <div class="col-span-2 text-center">말머리</div>
+            <div class="col-span-5 text-left pl-2">제목</div>
+            <div class="col-span-2 text-center">작성자</div>
+            <div class="col-span-1 text-center">작성일</div>
+            <div class="col-span-1 text-center">조회</div>
+            <div class="col-span-1 text-center">좋아요</div>
+          </div>
+
+          <!-- Pinned Notice Rows -->
+          ${noticeRowsHtml}
+
+          <!-- Normal Posts Rows -->
+          <div>
+            ${postRowsHtml}
+          </div>
+        </div>
+      `;
+    } else {
+      // 2. Card Feed Mode (피드 카드형 보기)
+      listEl.innerHTML = `
+        <div class="space-y-3">
+          ${pagedPosts
+            .map((post) => {
+              const cat = this.data.categories.find((c) => c.id === post.category);
+              const isScrapped = this.scraps.includes(post.id);
+              const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
+
+              return `
+                <article
+                  onclick="app.openPostDetailModal('${post.id}')"
+                  class="community-card p-5 space-y-3 cursor-pointer hover:border-rose-300 hover:shadow-md transition"
+                >
+                  <div class="flex items-center justify-between gap-2">
+                    <div class="flex items-center gap-2.5">
+                      <div class="w-9 h-9 rounded-full ${post.author.avatarBg} flex items-center justify-center font-black text-xs">
+                        ${post.author.nickname.slice(0, 1)}
+                      </div>
+                      <div>
+                        <div class="flex items-center gap-1.5">
+                          <span class="font-extrabold text-xs text-slate-900">${post.author.nickname}</span>
+                          <span class="text-[10px] font-bold text-slate-400">${post.author.level}</span>
+                        </div>
+                        <div class="text-[11px] text-rose-500 font-bold">${post.author.childBadge} · <span class="text-slate-400 font-normal">${post.createdAt}</span></div>
+                      </div>
+                    </div>
+
+                    <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
+                      ${post.isHot ? '<span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 font-extrabold text-[10px] border border-rose-200">🔥 베스트</span>' : ''}
+                      <span class="px-2.5 py-0.5 rounded-full bg-stone-100 text-slate-600 font-bold text-[11px]">${cat ? cat.name : '자유수다'}</span>
+                      <button
+                        onclick="app.toggleScrap('${post.id}')"
+                        title="스크랩"
+                        class="w-8 h-8 rounded-xl border ${
+                          isScrapped ? 'bg-amber-50 border-amber-300 text-amber-500' : 'border-stone-200 text-slate-400 hover:text-slate-600'
+                        } flex items-center justify-center transition"
+                      >
+                        <i class="fa-solid fa-bookmark text-xs"></i>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <h3 class="text-base font-black text-slate-900 leading-snug hover:text-rose-600 transition flex items-center gap-1.5">
+                      <span>${post.title}</span>
+                      ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-extrabold">[${post.comments.length}]</span>` : ''}
+                    </h3>
+                    <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${post.content}</p>
+                  </div>
+
+                  ${
+                    post.tags && post.tags.length > 0
+                      ? `<div class="flex flex-wrap gap-1.5">
+                          ${post.tags.map((t) => `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-[10px] font-semibold">#${t}</span>`).join('')}
+                        </div>`
+                      : ''
+                  }
+
+                  <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-slate-400 font-medium">
+                    <div class="flex items-center gap-3">
+                      <span class="flex items-center gap-1 text-rose-500 font-bold">
+                        <i class="fa-solid fa-heart text-[11px]"></i>
+                        <span>${totalLikes}</span>
+                      </span>
+                      <span class="flex items-center gap-1 text-slate-600 font-bold">
+                        <i class="fa-regular fa-comment text-[11px]"></i>
+                        <span>${post.comments.length}</span>
+                      </span>
+                      <span class="flex items-center gap-1">
+                        <i class="fa-regular fa-eye text-[11px]"></i>
+                        <span>${post.views || 120}</span>
+                      </span>
+                    </div>
+                    <span class="text-rose-500 font-bold hover:underline text-[11px]">
+                      답글 및 토론 보기 →
+                    </span>
+                  </div>
+                </article>
+              `;
+            })
+            .join('')}
+        </div>
+      `;
+    }
+
+    // Render Pagination Bar
+    if (paginationEl) {
+      if (totalPages <= 1) {
+        paginationEl.innerHTML = '';
+      } else {
+        const maxButtons = 5;
+        let startPage = Math.max(1, this.boardPage - Math.floor(maxButtons / 2));
+        let endPage = Math.min(totalPages, startPage + maxButtons - 1);
+        if (endPage - startPage + 1 < maxButtons) {
+          startPage = Math.max(1, endPage - maxButtons + 1);
+        }
+
+        let pagesHtml = '';
+        for (let p = startPage; p <= endPage; p++) {
+          const isActive = p === this.boardPage;
+          pagesHtml += `
+            <button
+              onclick="app.setBoardPage(${p})"
+              class="w-8 h-8 rounded-xl text-xs font-black transition ${
+                isActive
+                  ? 'coral-badge-gradient text-white shadow-2xs'
+                  : 'bg-white border border-stone-200 text-slate-700 hover:bg-stone-50'
+              }"
+            >${p}</button>
+          `;
+        }
+
+        paginationEl.innerHTML = `
+          <div class="inline-flex items-center justify-center gap-1.5 p-1 bg-stone-50 rounded-2xl border border-stone-200 shadow-2xs">
+            <button
+              onclick="app.setBoardPage(1)"
+              ${this.boardPage === 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-white text-slate-600"'}
+              class="w-8 h-8 rounded-xl text-xs flex items-center justify-center transition"
+              title="첫 페이지"
+            >
+              <i class="fa-solid fa-angles-left text-[10px]"></i>
+            </button>
+            <button
+              onclick="app.setBoardPage(${this.boardPage - 1})"
+              ${this.boardPage === 1 ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-white text-slate-600"'}
+              class="w-8 h-8 rounded-xl text-xs flex items-center justify-center transition"
+              title="이전 페이지"
+            >
+              <i class="fa-solid fa-chevron-left text-[10px]"></i>
+            </button>
+            
+            <div class="flex items-center gap-1">
+              ${pagesHtml}
+            </div>
+
+            <button
+              onclick="app.setBoardPage(${this.boardPage + 1})"
+              ${this.boardPage === totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-white text-slate-600"'}
+              class="w-8 h-8 rounded-xl text-xs flex items-center justify-center transition"
+              title="다음 페이지"
+            >
+              <i class="fa-solid fa-chevron-right text-[10px]"></i>
+            </button>
+            <button
+              onclick="app.setBoardPage(${totalPages})"
+              ${this.boardPage === totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-white text-slate-600"'}
+              class="w-8 h-8 rounded-xl text-xs flex items-center justify-center transition"
+              title="마지막 페이지"
+            >
+              <i class="fa-solid fa-angles-right text-[10px]"></i>
+            </button>
+          </div>
+        `;
+      }
+    }
   }
 
   openPostDetailModal(postId) {

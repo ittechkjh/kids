@@ -13251,7 +13251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=%EC%A0%9C23%ED%9A%8C%20%ED%95%9C%EA%B0%95%EC%82%AC%EB%9E%91%20%EA%B7%B8%EB%A6%BC%EA%B7%B8%EB%A6%AC%EA%B8%B0%20%EB%8C%80%ED%9A%8C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/50/4064550_image2_1.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "제23회 한강사랑 그림그리기 대회 - 한국관광공사 및 서울특별시 지자체 공식 등록 축제/행사입니다.",
     "tags": [
       "지역축제",
@@ -17436,7 +17436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 가족 관광객 / 경기도민",
     "fee": "무료 / 일부 체험 유료",
     "url": "https://www.pccf.or.kr/",
-    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제16회 평택뮤직페스티벌&amp;전국밴드경연대회 - 경기도 및 지자체 주관 공식 문화관광 축제입니다. 밴드경연대회 및 가수 축하공연 등",
     "tags": [
       "경기데이터드림",
@@ -20164,7 +20164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=%EC%A0%9C51%ED%9A%8C%20%EA%B0%95%EC%9B%90%EC%B6%95%EC%82%B0%EA%B2%BD%EC%A7%84%EB%8C%80%ED%9A%8C",
-    "imageUrl": "https://tong.visitkorea.or.kr/cms/resource/68/4104768_image2_1.jpg",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제51회 강원축산경진대회 - 한국관광공사 및 강원특별자치도 지자체 공식 등록 축제/행사입니다.",
     "tags": [
       "지역축제",
@@ -37770,7 +37770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "경기도민 / 온 가족",
     "fee": "무료 / 행사별 상이",
     "url": "https://search.naver.com/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%A0%9C16%ED%9A%8C%20%ED%8F%89%ED%83%9D%EB%AE%A4%EC%A7%81%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C%26amp%3Bamp%3B%EC%A0%84%EA%B5%AD%EB%B0%B4%EB%93%9C%EA%B2%BD%EC%97%B0%EB%8C%80%ED%9A%8C",
-    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제16회 평택뮤직페스티벌&amp;amp;전국밴드경연대회 - 정부·공공기관 공식 RSS/XML 피드로 수신된 행사 정보입니다. 밴드경연대회 및 가수 축하공연 등",
     "tags": [
       "공식RSS피드",
@@ -41676,7 +41676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=109966",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "제14회 한옥디자인 국제 공모전 - 사단법인 한옥건축학회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 건축/건설/인테리어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -41707,7 +41707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=109516",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 디자인 크리에이션 챌린지(DCC) 3D프린팅 제품디자인 공모전 - 단국대-스트라타시스 첨단제조융합연구센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -41738,7 +41738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111983",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부산 지역어 알리기 한 장 만화 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41769,7 +41769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111979",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 아름다운 우리말 달력 만들기 공모전 - 문화체육관광부·부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41800,7 +41800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111977",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "서울미래인재재단 대표 캐릭터 공모전 (서울의 미래, 새로운 얼굴) - 서울미래인재재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41831,7 +41831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111868",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "드골2: 자유의 시대 포스터·굿즈 공모전 - (주)모비데이즈 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41862,7 +41862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111785",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국공항보안(주) AI 디지털 이미지 공모전 - 한국공항보안(주) 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41893,7 +41893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111776",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41924,7 +41924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111749",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부천시 웹툰융합 공모전 - 부천대학교, 서울신학대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41955,7 +41955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111710",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 부산항만공사 청소년 인권존중 포스터 공모전 - 부산항만공사 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41986,7 +41986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111684",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 경상남도 어린이 불조심 포스터 공모전 - 경상남도 소방본부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42017,7 +42017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111663",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 단양 유네스코 세계지질공원 기념우표 디자인 공모전 - 단양군 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42048,7 +42048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111654",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026 국가유산형 드론콘텐츠 디자인 공모전 - 국가유산청 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42079,7 +42079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111586",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "2026 레진성인공모전 - 레진엔터테인먼트 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42110,7 +42110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111579",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 서울특별시 어린이·청소년 시민발언대 청소년이 바꾸는 서울 인스타툰 공모전 - 서울특별시립청소년활동진흥센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42141,7 +42141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111516",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "제 27회 청소년만화축제 만화작품 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42172,7 +42172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111498",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제23회 고양호수만화축제 청소년만화 공모전 - 한국청소년문화연대 조인핸드 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42203,7 +42203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111456",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 용산구시설관리공단 캐릭터 공모전 - 용산구시설관리공단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42234,7 +42234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111416",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "청주페이 카드 디자인 공모전 - 청주시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42265,7 +42265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111403",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 4TH 메타툰 여성향 성인 단편 노블코믹스 작화 모집 공모전 - 주식회사 메타툰 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42296,7 +42296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111394",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 국제 어린이 미술 대회 - 국제 파인 아트 디자인 협회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42327,7 +42327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111351",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "CREPET AWARDS 2026 반려용품 디자인 공모전 - 주식회사 에이아이아트 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42358,7 +42358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111293",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "2026 팬트리픽 마스코트 일러스트 공모전 - 주식회사 프랭크스토어 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42389,7 +42389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111243",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 K-슈즈 메이킹 챌린지 - 경남정보대 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42420,7 +42420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111175",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 초등학생 달빛어린이병원 그림 공모전 - 보건복지부, 국립중앙의료원, 중앙응급의료센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42451,7 +42451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111170",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "부산의 수돗물 순수365 홍보디자인 공모전 - 부산광역시 상수도사업본부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42482,7 +42482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111136",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "2027 국악누리 표지 그림 공모전 - 국립국악원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42513,7 +42513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=110977",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "디자인 잇 어워드 챌린지 2026 - (주)한국디자인산업연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42544,7 +42544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=110910",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "제20회 월간 아이러브캐릭터 캐릭터 공모전 - 월간 아이러브캐릭터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42575,7 +42575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=110817",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 플라이하이 AI 패션 디자인 고교 콘테스트 - 라사라패션교육개발 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42606,7 +42606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110709",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제41회 디자인 & 일러스트레이션 국제공모전 - (사)한국일러스트레이션학회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42637,7 +42637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110591",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "제17회 현대 주얼리 디자인 공모전 - 디자인정책연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42668,7 +42668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110566",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 의정부시 Sign-Up 간판 디자인 공모전 - 의정부시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42699,7 +42699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110380",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "붉은 동백의 순간 MOMENTO 와인라벨 아트웍 공모전 (참가비 있음) - 콘테로쏘코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42730,7 +42730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110228",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제7회 한국드로잉 공모대전 - 사단법인 한국색연필화협회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42761,7 +42761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111662",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "세계중요농업유산 등재 광양섬진강재첩 공동브랜드 디자인 공모전 - 광양시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42792,7 +42792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111537",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "에너지산업 수도 울진 BI 디자인 대국민 공모전 - 울진군 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42823,7 +42823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111471",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "부산 동구 북항 상어 캐릭터 디자인 공모전 - 부산 동구 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42854,7 +42854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111400",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2028 세계디자인수도 부산 파빌리온 디자인 국제공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42885,7 +42885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111277",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제6회 필(必)환경 캠페인 공모전 - 필한방병원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42916,7 +42916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111232",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "전남광주 업고 튀어 - Team Gemini_전남대 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42947,7 +42947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111199",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "전국우주항공경진대회-AI 활용 우주 SF 웹툰 대회 - 우주항공청 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42978,7 +42978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111171",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "[디자인-부산2026] 디자인 해커톤 1기 공개모집 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43009,7 +43009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111145",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "[동두천양주교육지원청] 동양 RAS PICK 캐릭터 디자인 공모전 - 동두천양주교육지원청 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43040,7 +43040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111119",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "피란수도 부산유산 BI공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43071,7 +43071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111112",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 필(必)환경 캠페인 공모전 - 필한방병원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43102,7 +43102,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111068",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "경상남도교육청 동부학생안전체험원 심벌마크(BI) 공모전 - 경상남도교육청 동부학생안전체험원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43133,7 +43133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111048",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 당진시 지방세 홍보 포스터 공모전 - 당진시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43164,7 +43164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111042",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 원주DB 프로농구단 시티유니폼 디자인 공모전 - 원주시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43195,7 +43195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111002",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "무안군 굿즈 디자인 경진대회 - 국립목포대학교 창업혁신센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43226,7 +43226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110999",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "제39회 빙그레 어린이 그림 잔치 - 빙그레 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43257,7 +43257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110961",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "유원커버(U1 COVER) 유원대학교 2027학년도 정시모집요강 표지디자인 공모전 - 유원대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43288,7 +43288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110944",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 하남시안전체험장 신규 로고 공모전 - 하남시안전체험장 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43319,7 +43319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110935",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 게임문화 그림일기 및 광고 포스터 공모전 - 한국게임산업협회, 한국콘텐츠진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43350,7 +43350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110905",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "The Pattern 2026 콘테스트 : 오픈소스 패션 모델링 어워드 - (사)부산섬유패션산업연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -43381,7 +43381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110798",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "부천을 굿즈하다 관광기념품 공모전 - 부천시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43412,7 +43412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110788",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026 K-디자인콘서트 공모전 - (사)인천경기디자인기업협회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43443,7 +43443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110786",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2027 우체국 연하카드·연하엽서 디자인 공모전 - 한국우편사업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43474,7 +43474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110778",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "서대문장애인종합복지관 개관 28주년 기념 마스코트 공모전 - 서대문장애인종합복지관 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43505,7 +43505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=110739",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "관악구 청소년과 함께하는 흡연예방 스토리 포스터 공모전 - 관악구보건소, 서울시 통합건강증진사업지원단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43536,7 +43536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110684",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 정신건강의 날 기념 정신건강 캐릭터 공모전 - 전남광역정신건강복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43567,7 +43567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110634",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제12회 동편제국악축제 포스터 디자인 공모전 - (주)케이아츠크리에이티브 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43598,7 +43598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110616",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 국립공원 재난안전 콘텐츠 대국민 공모전 - 국립공원공단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43629,7 +43629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110599",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "제14회 대한민국 어린이제품 디자인 공모전 - 문경시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43660,7 +43660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110590",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제12회 한국 AI 신발 디자인 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43691,7 +43691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110579",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서대문구청소년상담복지센터 캐릭터 공모전 - 서대문구청소년상담복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43722,7 +43722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110571",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026 광명업사이클아트센터 업사이클 브릭아트 공모전 - 광명업사이클아트센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43753,7 +43753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110490",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경남 3D 웹툰배경 활용 단편웹툰 공모전 - 경상남도 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43784,7 +43784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110473",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "기관 캐릭터 활용 안전·재난 포스터 공모전 - 한국산림복지진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43815,7 +43815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110436",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 평창군 청소년 예방 그림 공모전 - 평창경찰서 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43846,7 +43846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110404",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 부산교통공사 AI 이미지 공모전 - 부산교통공사 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43877,7 +43877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110403",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애인식개선 캠페인 우리, 함께 걷는 풍경 일러스트 공모전 - 노원구장애인가족지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43908,7 +43908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110399",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "통영시 청년센터 캐릭터 공모전 - 통영시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43939,7 +43939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110389",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 대전광역시 어린이 교통안전 그림공모전 - 대전광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -43970,7 +43970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110382",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1527788263495-3518a5c1342e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 서울시 어린이 소방안전 포스터 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44001,7 +44001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110377",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "빠나나AI 캐릭터 챌린지 - (주)빠나나AI 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44032,7 +44032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110375",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 중독예방 포스터 공모전 - 안산시중독관리통합지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44063,7 +44063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110271",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "pixiv 한국 학생 일러스트 공모전 2026 - 픽시브 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44094,7 +44094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110193",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 IDAWARD 제14회 대구인쇄출판 디자인공모전 - 대구출판산업지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44125,7 +44125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110118",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2026 인제대학교•(재)김해FC All-City Campus 웹툰•캐릭터 공모전 - 김해FC 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44156,7 +44156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110112",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "제17회 서울인쇄대상 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44187,7 +44187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110091",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532012164546-f432f2e3777f?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 대현도서관 웹툰 공모전 - 대현도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44218,7 +44218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110038",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1527788263495-3518a5c1342e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부천문화재단 청렴시민커뮤니케이터 청렴포스터 공모전 - 부천문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44249,7 +44249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110019",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "제17회 한국패션디자인학회 공모전 (기간연장) - 한국패션디자인학회, 무신사 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44280,7 +44280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110012",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "[대통령직속 빛의 위원회] 빛의 혁명 상징 디자인 공모전 - 대통령직속 빛의 위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 디자인/캐릭터/웹툰, 웹/모바일/IT, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -44311,7 +44311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=109994",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "민선 9기 완도군 브랜드 디자인 공모전 - 완도군 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44342,7 +44342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=109962",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제9회 대전 세계태양광총회 AI로 그리는 미래에너지 공모전 - 기후에너지환경부, 대전광역시, 한국태양광발전학회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44373,7 +44373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=109930",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "[기획예산처 복권위원회] 2026 복권기금 그림 공모전 - 기획예산처 복권위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44404,7 +44404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=109895",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "WDC BUSAN 2028 프로그램 연계 시민 참여 디자인 아이디어 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44435,7 +44435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=109883",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "제8회 오티콘챌린지 공모전 - 오티콘, 다이어텍 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 영상/UCC/사진, 디자인/캐릭터/웹툰, 웹/모바일/IT, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -44466,7 +44466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109865",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "전국민 AI 경진대회 캐릭터 공모전 (알고의 친구를 찾습니다) - 한국정보통신기술협회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44497,7 +44497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109858",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?w=800&auto=format&fit=crop&q=80",
     "description": "낙동강유역환경청 캐릭터 디자인 공모전 - 낙동강유역환경청 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44528,7 +44528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109852",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "제9회 D-TECH 공모전 - 장애인을 위한 기술·디자인 공모전 - 법무법인 디엘지, 한국사회복지협의회, 엠와이소셜컴퍼니(MYSC), 탭엔젤파트너스, 장애인기업종합지원센터, 재단법인 꿈꾸는사람들,  국회의원 최보윤, 국회의원 이주희 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44559,7 +44559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109835",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "[비애티튜드 매거진] 제2회 비애티튜드 인스타툰 공모 - 비애티튜드 매거진 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44590,7 +44590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109727",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "아산 성웅 이순신축제 BI 디자인 공모전 - (재)아산문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44621,7 +44621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109721",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경주시 경주다움 디자인(북천 폐철교 리뉴얼) 공모전 - 경주시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44652,7 +44652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109661",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 대구콘텐츠코리아랩 캐릭터 글로벌 진입 프로젝트 참가자 모집 공고 - 문화체육관광부, 대구광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44683,7 +44683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109654",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "시립일시청소년쉼터(이동형,동남) 2026 작은별 캐릭터 공모전 - 시립일시청소년쉼터(이동형, 동남) 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44714,7 +44714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109637",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "한국산림재난안전기술공단 대표 캐릭터 공모전 - 한국산림재난안전기술공단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44745,7 +44745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109632",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 거창군 관광 브랜드 디자인 공모전 - 거창군 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44776,7 +44776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109620",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "모든 인간은 죽는다 개정판 표지 디자인 공모 - 도서출판 삼인 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44807,7 +44807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109619",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 강원특별자치도민 심폐소생술·응급처치 디자인 공모전 - 보건복지부, 강원특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44838,7 +44838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109616",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 초등학교 교과서·지도서 표지 그림 공모전 - 한국교과서연구재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44869,7 +44869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109567",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제3회 해운대 환경 4컷 웹툰 공모전 - 부산광역시 해운대구 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -44900,7 +44900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111881",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급 - 글ego 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 문학/글/시나리오, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -44931,7 +44931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111812",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께! - 교정의 신 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 문학/글/시나리오, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -44962,7 +44962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=109996",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 현대문학x미래엔 청소년문학상 공모전 - 현대문학, 미래엔 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -44993,7 +44993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111917",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2027 매일신춘문예 공모 - 매일신문사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45024,7 +45024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111916",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남 문화예술후원사업 문화CF 스타상 (청년예술부문) 공모 - 충남문화관광재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45055,7 +45055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111909",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제1회 창원 마산국화축제 홍보 현장 디카시백일장 - 창신대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45086,7 +45086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111883",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 국립한밭대학교 포토에세이 공모전 - 국립한밭대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45117,7 +45117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111860",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2027 국제신문 신춘문예 공모 - 국제신문 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45148,7 +45148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111859",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "세계일보 2027 신춘문예 공모 - 세계일보 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45179,7 +45179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111857",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2027년 현대경제신문 신춘문예 공모 - 현대경제신문 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45210,7 +45210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111856",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2027 광남일보 한국문학대상 - 광남일보 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45241,7 +45241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111796",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 광명시 올해의 책 독후감 공모전 - 광명시도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45272,7 +45272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111795",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "제26회 국립순천대학교 청소년 문예백일장 - 국립순천대학교 문예창작학전공 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45303,7 +45303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111791",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제39회 무등일보 신춘문예 공모 - 무등일보 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45334,7 +45334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111789",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부산 국제 한국디카시 공모전 - KIT. 경남정보대학교 부산앵커센터 글로벌 디카시 연구소 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45365,7 +45365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111781",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 연세국제창작공모전 - 연세대학교, 연세노벨위크 조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45396,7 +45396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111775",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "6G 서비스 시나리오 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45427,7 +45427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111773",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 우리학교 청소년 문학상 공모 - 우리학교 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45458,7 +45458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111762",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 웨이노벨 웹소설 공모전 FIRST STORY CHALLENGE 2026 - 웨이노벨 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45489,7 +45489,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111739",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 꿈꾸미닷컴 꿈 수필 공모전 - 꿈꾸미닷컴 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45520,7 +45520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111655",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "실상문학 신인문학상 작품 모집 - (사)부산불교문인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45551,7 +45551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111645",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 함안복합문학관 디카시 공모전 - 함안복합문학관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45582,7 +45582,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111618",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2027 불교신문 신춘문예 공모 - 불교신문 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45613,7 +45613,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111608",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "포스텍 2027 SF 어워드 - 소통과공론연구소 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45644,7 +45644,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111594",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 블루카이트 창작 글쓰기 대회 (참가비 있음) - 블루카이트 출판사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45675,7 +45675,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111531",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전 - 광주정보문화산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45706,7 +45706,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111510",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 전국 고교생 웹소설 공모전 - 광주대학교 문예창작과 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45737,7 +45737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111492",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2027 제3회 소원문학상 - (주)소원나무 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45768,7 +45768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111477",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2027 오펜 공모전 (스토리텔러) - (주)씨제이이엔엠 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45799,7 +45799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=111476",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "서울SEOUL디카시 공모대전 - 한국디카시인협회 서울북부지회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45830,7 +45830,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111472",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전) - 영천시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45861,7 +45861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111470",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "제28회 문학축제 한양의시선(舊 시이어짓기대회) - 한양대학교 ERICA 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45892,7 +45892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111449",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 AI전자그림책 공모전 - AI 이야기 숲 - 한국독서문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45923,7 +45923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111428",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제18회 포항소재 문학작품 공모전 - 포항문인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45954,7 +45954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111406",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "[광주 신세계안과] 제47회 빛창공모전 겨울편 공모 - 신세계안과 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -45985,7 +45985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111388",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제36회 시장경제칼럼 공모전 - 자유기업원 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46016,7 +46016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111381",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2027년 경남도민신문 신춘문예 공모 - 경남도민신문, 시와비평 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46047,7 +46047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111374",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2027 영주신문 제4회 신춘문예 및 학생(학교밖청소년) 백일장 응모 - 영주신문문예진흥회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46078,7 +46078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111372",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 중부광역신문 신춘문예 - 중부광역신문, 청주시문학협회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46109,7 +46109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111371",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "제9회 박상륭상 응모원고 모집 - 박상륭상 운영회의 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46140,7 +46140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111333",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제17회 천강문학상 작품 공모 - 의령군 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46171,7 +46171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111309",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507842229452-7740e53a299d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제3회 리아북스 그림책 공모전 - 리아북스 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46202,7 +46202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111295",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "농민신문 제31회 신춘문예 작품 공모 - 농민신문 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46233,7 +46233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111292",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2027년 시산맥 신춘문예 공모 - 시산맥 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46264,7 +46264,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111217",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "직장인 사연 공모전 (제2회 쉐어잇 빡춘문예) - 쉐어잇 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46295,7 +46295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111147",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제31회 사랑의 편지쓰기 공모 - 바르게살기운동 세종시협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46326,7 +46326,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111023",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "제25회 사계절문학상 공모 - 사계절출판사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46357,7 +46357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111018",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제32회 제주신인문학상 공모 - 제주도문인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46388,7 +46388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110884",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 책읽는곰 어린이책 공모전 - 책읽는곰 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46419,7 +46419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110883",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제28회 의정부전국문학공모전 - 한국문인협회 의정부지부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46450,7 +46450,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110831",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "[엔리즈×네이버 시리즈] 2026 엔리즈 고등학생 대학생 웹소설 공모전 - 엔리즈 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46481,7 +46481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110768",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 밀리로드 출간 공모전 시즌 4 - 밀리의서재 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46512,7 +46512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110744",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 노벨피아 우주최강 웹소설 공모전 - 주) 메타크래프트 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46543,7 +46543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110731",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전국 민촌백일장 - 천안시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46574,7 +46574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110569",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 SF스토리 공모전 - 동아사이언스 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46605,7 +46605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110561",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제25회 대산대학문학상 공모 - 대산문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46636,7 +46636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110539",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "교보교육재단 2026년 제10회 책갈피 독서편지 공모전 - 교보교육재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46667,7 +46667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110520",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제33회 김유정기억하기 전국문예작품공모 - 김유정기념사업회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46698,7 +46698,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110497",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 정읍시 한 권의 책 전국 독후감 공모전 - 정읍시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46729,7 +46729,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=110421",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 통영 동피랑문학상 공모 - 동피랑문학상 운영위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46760,7 +46760,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=110330",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "알라딘 디스커버 프로젝트 - 그만둔 이야기 공모전 - 알라딘커뮤니케이션 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46791,7 +46791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=110315",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 구몬학습 창작 문학 공모전 with 현대자동차그룹 - (주)교원구몬 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46822,7 +46822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109979",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "[전북시조시인협회] 2026년 젊은 시조 작가상 공모 - 전북시조시인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46853,7 +46853,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109885",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제1회 히말라야 문예대전 작품 공모 - NGO 사단법인 나마스떼코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46884,7 +46884,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109884",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 제주4·3평화문학상 공모 - 제주4.3평화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46915,7 +46915,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109881",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2027 창비 청소년 문학상 공모 - 창비 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46946,7 +46946,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109670",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제9회 아산문학상 전국공모 및 제4회 아산향토문학상 공모 - 한국문인협회 아산지부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -46977,7 +46977,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109584",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532012164546-f432f2e3777f?w=800&auto=format&fit=crop&q=80",
     "description": "어린이동산 제36회 중편 동화 공모전 - 농민신문사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47008,7 +47008,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109198",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 이민호문학상 공모 - 이민호문학상 운영위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47039,7 +47039,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109195",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 자갈치문학상 공모 - 자갈치문학상운영위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47070,7 +47070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109126",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "제 2회 창비교육 동화 공모전 이야기친구상 - 창비교육 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47101,7 +47101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=108740",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 해냄 청소년 인문 사회 도서 공모전 - (주)해냄에듀 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47132,7 +47132,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107972",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제02회 문예지 시울 원고 공모전 - 문화출판 더하다 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47163,7 +47163,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107061",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "푸른 가이아를 위한 단편소설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47194,7 +47194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107059",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "소소한설 공모전 - 도서출판 득수 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47225,7 +47225,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=105038",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 외황강 문학상 공모전 - 울산광역시 남구 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47256,7 +47256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104443",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 문학동네 동시 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47287,7 +47287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104440",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 문학동네 초승달 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47318,7 +47318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=104436",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제28회 문학동네 어린이 문학상 공모전 - 문학동네 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47349,7 +47349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111644",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 춘천 한 문장 봄내글판 전국 공모전 - 춘천시 홍보담당관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47380,7 +47380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111631",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 겨울편 서울꿈새김판 문안 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47411,7 +47411,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111610",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중 - 작필(作筆) 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 논문/리포트, 문학/글/시나리오, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -47442,7 +47442,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111600",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 나라사랑 글짓기 대회 - 안동시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47473,7 +47473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111501",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 구상한강백일장 - 영등포구·(사)구상선생기념사업회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47504,7 +47504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111436",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 강남구 세계청소년 백일장 - 강남구 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47535,7 +47535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111420",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제30회 우암문화제 우암전국백일장대회 참가자 모집 - 대전동구문화원 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47566,7 +47566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111332",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 만추문예 - 매일경제신문, 교보문고 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47597,7 +47597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111316",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "제65회 율곡제 백일장 - 율곡제전위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47628,7 +47628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111300",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제31회 전국안양시낭송대회 예선 참가자 모집 - 한국문인협회 안양지부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47659,7 +47659,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111144",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제18회 가람시조문학신인상 공모 - 익산시 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47690,7 +47690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111098",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "함께 읽어요 2026 경남의 책 독후감 공모전 - 경남대표도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47721,7 +47721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111069",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&auto=format&fit=crop&q=80",
     "description": "[강동숲속도서관] 청소년 글쓰기 공모전 - 강동숲속도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47752,7 +47752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111067",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 송강문학 전국 시(詩) 공모전 - 진천군 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47783,7 +47783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111036",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제580회 한글날 기념 시애틀한국교육원 공모전 - 시애틀한국교육원 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47814,7 +47814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111025",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 사계절어린이문학상 공모 - 사계절출판사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47845,7 +47845,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111019",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제29회 김삿갓문화제 전국 일반백일장 - 영월문화관광재단 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47876,7 +47876,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110989",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제6회생육신 추모 함안 전국디카시공모전 - 서산서원 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47907,7 +47907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110986",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제16회 미추홀구문예대상 공모전 - 미추홀노인복지관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47938,7 +47938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110958",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제 14 회 신동문청소년문학상 - 시 전문 계간지 『딩아돌하』 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -47969,7 +47969,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110956",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제25회 원광김용문학상 - 원광대학교 신문방송사 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -48000,7 +48000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110952",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제52회 영천문화예술제 2026 영천시 전국 백일장 - 한국문인협회 영천지부 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -48031,7 +48031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110934",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 전국 어린이 글짓기 대회(새만금) - 국립새만금간척박물관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -48062,7 +48062,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110922",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "코리아 하이쿠 월드 유스 페스티벌 2026 - 한국하이쿠연맹 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -48093,7 +48093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110921",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 성남탄천문학 신인상 공모 - 탄천문학회 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -48124,7 +48124,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111768",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전) - (주)포항연합기술지주 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 취업/창업",
     "tags": [
       "전국대회",
@@ -48155,7 +48155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111884",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 청도 바이브코딩 해커톤 with 해커그라운드 - 해커그라운드 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48186,7 +48186,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111767",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충북글로벌게임센터 AI 게임 개발 공모전 - 청주시문화산업진흥재단 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48217,7 +48217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111685",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제8회 TS 보안 허점을 찾아라 공모전 - 한국교통안전공단 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48248,7 +48248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111628",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 조달청 AI 게임·콘텐츠 공모전 - 조달청 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48279,7 +48279,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110895",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "쿵야 IP를 활용한 로블록스(Roblox) 게임 콘텐츠 제작 공모전 - 넷마블 MNB 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48310,7 +48310,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110305",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 한아전 게임 시나리오·그래픽 공모전 - 한국IT전문학교 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48341,7 +48341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111359",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대전 콘텐츠페어 이스포츠 대전 브롤스타즈 참가자 모집 - 대전광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48372,7 +48372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111346",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회 - 국립창원대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48403,7 +48403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111062",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 경남 AI·SW 경진대회 - 경상남도, 창원특례시, 진주시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48434,7 +48434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110981",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제5회 오픈소스 SW개발 경진대회 - 과학기술정보통신부, 정보통신기획평가원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48465,7 +48465,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110962",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 충청권 인디게임 공모전 인디유(indie·U) - 대전정보문화산업진흥원, 충남콘텐츠진흥원, 청주시문화산업진흥재단 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48496,7 +48496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110767",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대학생 프로그래밍 경시대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48527,7 +48527,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110675",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -48558,7 +48558,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110653",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "[무계로 세계로 블루마블] 리그 오브 레전드 무작위 총력전 : 아수라장 - 선수 모집 - 김해시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48589,7 +48589,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110623",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "[무료] [CJ올리브네트웍스] AI 서비스 기획자 교육 과정 참여자 모집 (L.L.M. 아카데미) - CJ올리브네트웍스 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 게임/소프트웨어, 취업/창업",
     "tags": [
       "전국대회",
@@ -48620,7 +48620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110622",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제6회 K-인공지능(AI) 제조데이터 분석 경진대회 - 중소벤처기업부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -48651,7 +48651,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110498",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "[ZEP School] 메타버스 교과 콘텐츠 제작 공모전 - 주식회사 젭 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48682,7 +48682,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110419",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 경북 대학생 e스포츠 대회 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48713,7 +48713,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110223",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 세명컴퓨터고 중학생 SW 아이디어 공모전 - 세명컴퓨터고 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48744,7 +48744,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110121",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "오픈AI 게임 빌더스 서울 - 오픈AI 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48775,7 +48775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110065",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 2026 대한민국 고등학생 AI·SW 개발 공모전 - 한국인공지능·소프트웨어산업협회 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48806,7 +48806,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109568",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "제17회 LH 국토기술대전 - LH 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -48837,7 +48837,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109315",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 국립서울현충원 제6회 나라사랑 보드게임 대회 - 국가보훈부 국립서울현충원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48868,7 +48868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109265",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서든어택 무기 스킨 아이디어 공모전 - 넥슨 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48899,7 +48899,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109141",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "[KB국민은행] 제 8회 KB A.I Challenge - KB국민은행 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 웹/모바일/IT, 게임/소프트웨어, 과학/공학",
     "tags": [
       "전국대회",
@@ -48930,7 +48930,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109003",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 게임제너레이션 게임비평공모전 - 게임문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48961,7 +48961,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=108981",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "제19회 경상북도 아마추어 e스포츠 대회 참가 모집 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -48992,7 +48992,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=108733",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "화성상공회의소 2026 컴활 2급 경시대회 - 화성상공회의소 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49023,7 +49023,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=108707",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -49054,7 +49054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108495",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제4회 전북 청년 AI·빅데이터 경진대회 - 전북 인공지능·데이터 공동연구회, 전북대학교 빅데이터 혁신융합대학 사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49085,7 +49085,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108415",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 큐챔스 CUBE CHAMPIONS LEAGUE - E스포츠연합동아리 CUBE 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49116,7 +49116,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108288",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 임업통계 활용 경진대회 - 산림청 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 웹/모바일/IT, 게임/소프트웨어, 과학/공학",
     "tags": [
       "전국대회",
@@ -49147,7 +49147,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108287",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 대한민국 청년 인재양성 프로젝트 참가자 모집 - iM금융그룹 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 취업/창업, 해외",
     "tags": [
       "전국대회",
@@ -49178,7 +49178,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108263",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 강원 콘텐츠 페스타 - 강원 중·고교 e-스포츠 대항전 - 문화체육관광부 / 한국콘텐츠진흥원 / 강원특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49209,7 +49209,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108225",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "[SCPC2026] 제12회 삼성전자 대학생 프로그래밍 챌린지 (내용 수정) - 삼성전자 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49240,7 +49240,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108224",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 동남권 정보보호 사이버공방전 (SECTOR) 참가자 모집 - 경상남도 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49271,7 +49271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108154",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 글로벌 인디 게임제작 경진대회(GIGDC2026) - 한국콘텐츠진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49302,7 +49302,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108067",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 GNGC GAME JAM - 경남글로벌게임센터 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49333,7 +49333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108046",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제 1회 일상뒤집기 ai 어플 개발 공모전 - 나무서원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49364,7 +49364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=107956",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "[넥슨] 메이플스토리 글로벌 개발 콘테스트 (MapleStory Global Creator Challenge) - 넥슨 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49395,7 +49395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=107947",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "넥슨 영 프로그래머스 컵 (NEXON Young Programmers Cup) - 넥슨 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 게임/소프트웨어, 과학/공학",
     "tags": [
       "전국대회",
@@ -49426,7 +49426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=107818",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 인천 e스포츠 챌린지 (리그 오브 레전드, 발로란트, 이터널 리턴, FC 온라인, 브롤스타즈) - 인천광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49457,7 +49457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=107650",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "서울 디자인 AI 영상 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 게임/소프트웨어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -49488,7 +49488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107632",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전국 청소년 AI에이전트 코딩 경진대회 (참가비 있음) - 한양미래연구소 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49519,7 +49519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107466",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "스마일게이트멤버십 인디게임 부문 18기 모집 - 스마일게이트 퓨처랩 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49550,7 +49550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107427",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "[국립아시아문화전당] 2026 ACC 민주·인권·평화 영상(+AI) 콘텐츠 공모전 - 국립아시아문화전당 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 게임/소프트웨어, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -49581,7 +49581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107424",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부산광역시 공공데이터•AI 활용 창업경진대회 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 취업/창업",
     "tags": [
       "전국대회",
@@ -49612,7 +49612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107260",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 SW미래채움 고교 AI·SW 챌린지 대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49643,7 +49643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107244",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 AI·가상융합(XR) 서비스 개발자 경진대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49674,7 +49674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107195",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제4회 AI프로그래밍(무인이동체제어) 민간기능경기대회 - 사단법인 한국기능연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49705,7 +49705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107157",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 우주항공·제조 산업 현장 AI 적용 아이디어 공모전 - 중소벤처기업부, 중소벤처기업진흥공단, 경상남도, 경남테크노파크, 경상국립대학교, 경상국립대학교 인공지능 시스템 및 응용 연구실 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49736,7 +49736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107156",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제조AI 경진대회 - 중소벤처기업부, 중소벤처기업진흥공단, 경상남도, 경남테크노파크, 경상국립대학교, 경상국립대학교 인공지능 시스템 및 응용 연구실 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49767,7 +49767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107135",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "제24회 임베디드SW경진대회 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 게임/소프트웨어, 과학/공학",
     "tags": [
       "전국대회",
@@ -49798,7 +49798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=106965",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 문화체육관광 인공지능·데이터 활용 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -49829,7 +49829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=106801",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "[넥슨] 메이플스토리 해커톤, 2026 메커톤 - 넥슨코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49860,7 +49860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=106687",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 현대오토에버 배리어프리 앱 개발 콘테스트 공모전 - 현대오토에버, 서울사회복지공동모금회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -49891,7 +49891,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=106656",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 전주MBC K-하이테크 플랫폼 제2회 가상현실 공간 창작 공모전 - 전주MBC K-하이테크 플랫폼 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 영상/UCC/사진, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 건축/건설/인테리어, 기타",
     "tags": [
       "전국대회",
@@ -49922,7 +49922,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106572",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제 1회 서울 플레이업 AI 게임 챌린지 - NC AI 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49953,7 +49953,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106570",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "크래프톤 X 넵튠 글로벌 캐주얼 게임 공모전 - 크래프톤 X 넵튠 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -49984,7 +49984,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106562",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "제16회 e-ICON 세계대회 참가자 모집 - 교육부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50015,7 +50015,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106359",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "대한민국 대표 인디게임 축제 2026 인디크래프트 출품작 모집 - 성남시, 성남산업진흥원, 한국모바일게임협회 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50046,7 +50046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106357",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "[LoL/리그오브레전드] 제2회 국제 아마추어 E-스포츠 대회 (인제대 총장배) 참가자 모집 - 인제대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50077,7 +50077,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106353",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "유니티 스튜디오 챌린지 - 유니티 코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50108,7 +50108,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106194",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "[과학기술정보통신부] 2026 글로벌 피우다프로젝트 (SW개발 경진대회) - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -50139,7 +50139,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106152",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026. 독립운동GO! 모바일게임 제작 기획단 모집 - 국가보훈부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50170,7 +50170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106069",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 올담 데이터 활용 해커톤 모집 - 충청남도 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50201,7 +50201,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105926",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "Verse8 × YGG Play | Casual Degen Game Hackathon - Verse8 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50232,7 +50232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105914",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 스마일게이트 인디게임 창작 공모전 (IndieGo) - 스마일게이트 퓨처랩 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50263,7 +50263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105706",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "​[하나금융그룹] 하나 청년 금융인재 양성 프로젝트 참가자 모집 - 하나금융그룹 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 대외활동/서포터즈, 취업/창업",
     "tags": [
       "전국대회",
@@ -50294,7 +50294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105705",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 생활 속 목재이용 국민참여 공모전 (목재 공감(共感) 키트) - 목재문화진흥회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 디자인/캐릭터/웹툰, 게임/소프트웨어, 건축/건설/인테리어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -50325,7 +50325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105255",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "파주슈필 2026 어린이 보드게임 작가 모집 - 코리아보드게임즈 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50356,7 +50356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105067",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "퀄컴 AI 이노베이터 프로그램 (QAIPI) 2026-APAC - 퀄컴코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50387,7 +50387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105066",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남글로벌게임센터 인디게임파크 인큐베이팅 사업 인디게임팀 모집 - (재)충남콘텐츠진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50418,7 +50418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104997",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제4회 IT 코딩 발명 아이디어 및 에세이 경진대회 - 행복일자리운동본부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50449,7 +50449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104952",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 히트 게임즈 보드게임 공모전 - 히트게임즈 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50480,7 +50480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104916",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제6회 청소년 IT경시대회 - 한국정보기술진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50511,7 +50511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104817",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 메가스터디 게임 개발 공모전 - 메가스터디 SW입시센터 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50542,7 +50542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104221",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 잼S 메이커스 코딩 페스티발 - 주식회사 로보그램 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50573,7 +50573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104025",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "AI 에이전트 서비스 개발 공모전 참가자 모집 - 구름 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50604,7 +50604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103990",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "카카오 PlayMCP 개발 공모전 (MCP Player 10) - 카카오 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50635,7 +50635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103973",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "[CONX x 컴투스홀딩스] 놈 아레나 : 글로벌 게임 개발 공모전 - MetaMagnet Ltd. 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50666,7 +50666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103883",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "BIPAxVerse8 AI 게임 창작 콘테스트 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50697,7 +50697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103706",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "SEMO 챌린지 - 하드 코더스 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50728,7 +50728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103666",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2025 제천시장배 전국 e스포츠 대회 (리그 오브 레전드, 발로란트, 이터널 리턴) - 제천시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50759,7 +50759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103608",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "춘천MBC 2025 강원도내 직장인 FC온라인 대회 - 춘천MBC 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50790,7 +50790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103547",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "제 2회 NC AI VARCO Vocie 활용 게임 제작 공모전 - NC AI 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50821,7 +50821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103528",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2025 화성특례시장배 전국 E스포츠 대회 (리그 오브 레전드, FC 온라인) - 화성특례시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50852,7 +50852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103393",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "[울산정보산업진흥원] 2025년 울산 게임 기획 공모전 - 문화체육관광부, 울산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50883,7 +50883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103112",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "[Supercent] AI Creator Challenge - 슈퍼센트 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50914,7 +50914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103039",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "코리아 인디게임 쇼케이스 인디게임 서포터즈 모집 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50945,7 +50945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102950",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "엔카닷컴 2025 AI 개발/기획 공모전 - 엔카닷컴 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -50976,7 +50976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102931",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2025 이스포츠 대학리그 결선진출전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51007,7 +51007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102920",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "루키 게임 콘테스트 - 게임핑(인디드라이브) 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51038,7 +51038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102906",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2025 강원콘텐츠페스타 - 강원고교 e스포츠 발로란트 대항전 - 강원문화재단 외 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51069,7 +51069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102864",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "부산광역시장배 2025 브레나 베스트 플레이어 직장부 최강자전 - 부산광역시, 부산정보산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51100,7 +51100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102754",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 TS 보안 허점을 찾아라 공모전 - 한국교통안전공단 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51131,7 +51131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102745",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2025 일상을 바꿀 생성형 AI 및 대화형 GPT 기술 활용 공모전 - 세종사이버대학교 소프트웨어공학과 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51162,7 +51162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102669",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2025 관악 e스포츠 페스티벌 - 발로란트 - 관악구 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51193,7 +51193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102657",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2025 관악 e스포츠 페스티벌 - 리그 오브 레전드 - 관악구 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51224,7 +51224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102532",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 컴투스 글로벌 게임개발 공모전 컴:온 2025 - 컴투스, 게임문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -51255,7 +51255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102460",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2025 국제 이스포츠 아이디어 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 게임/소프트웨어",
     "tags": [
       "전국대회",
@@ -51286,7 +51286,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102188",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "[과학기술정보통신부] 제2회 미래융합 인재 발굴 소프트웨어 챌린지 - 과학기술정보통신부 , 경산시 정보통신기획평가원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 웹/모바일/IT, 게임/소프트웨어, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -51317,7 +51317,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111899",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전 - 농업협동조합중앙회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 과학/공학, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -51348,7 +51348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111647",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR - 신한금융그룹, 신한금융희망재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 과학/공학, 예체능/미술/음악, 취업/창업",
     "tags": [
       "전국대회",
@@ -51379,7 +51379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=110023",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 DATA·AI 분석 경진대회 - 한국과학기술정보연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -51410,7 +51410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111941",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "한국공학한림원 공학의 가치 숏폼 콘테스트 - 한국공학한림원 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진, 과학/공학",
     "tags": [
       "전국대회",
@@ -51441,7 +51441,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111592",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 로보틱스 작품공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51472,7 +51472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111493",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "우리 모두의 R&D 공모전 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51503,7 +51503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111368",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 양자내성암호 전환 경진대회·해커톤 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51534,7 +51534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111314",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 POSTECH OIBC 빅데이터 경진대회 - H에너지, POSTECH, UNIST, KAIST 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51565,7 +51565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111231",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "제 4회 청소년과학오디션 - 과학의전당 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51596,7 +51596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111009",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 스페이스 해커톤 - 우주항공청 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51627,7 +51627,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=108117",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 3d 디자인 공모전 - 한국생산성본부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51658,7 +51658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=107871",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "제 4회 청소년 과학 오디션 - 사단법인 과학의전당 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51689,7 +51689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111192",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&auto=format&fit=crop&q=80",
     "description": "2027 전국 대학생 자작 미래자동차 경진대회 - 영남대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51720,7 +51720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111155",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "N.O.V.A. 2026 대화형 의료 진단 AI 에이전트 대회 - 분당서울대학교병원 의료인공지능센터, 엘리스(elice) 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51751,7 +51751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=111045",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "[SK에코플랜트] 2026년 ConTech Meet-up Day - SK에코플랜트 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51782,7 +51782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110995",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "청소년 로봇대회 제2회 유스올림피아드 - 중원유스센터 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51813,7 +51813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110978",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "2026 수성구 로보틱스컵 대회 - 대구광역시 수성구, 수성미래교육재단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51844,7 +51844,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110929",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남권역 모빌리티 자율주행 경진대회 - 호서대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51875,7 +51875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110691",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "[2026년 J-STEM Challenge] 전북 청소년 미래공학 경진대회 - 한국여성과학기술인육성재단(WISET) 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51906,7 +51906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110655",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 연암대학교 스마트원예 전공 경진대회 (전국 고등학생) - 연암대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 논문/리포트, 과학/공학, 건축/건설/인테리어, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -51937,7 +51937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110646",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전북지역 중·고등학교여학생 공학탐구 경진대회 - 한국여성과학기술인육성재단(WISET) 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51968,7 +51968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110342",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "International ICT Innovative Services Awards 2026 - Taipei Computer Association 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -51999,7 +51999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110005",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 지능형 과학실 ON 연계 공동탐구 전국대회 - 한국과학창의재단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52030,7 +52030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109953",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "[NST] 대한민국 AI Native R&D를 함께 만드는 NAIS AI 해커톤 - 국가과학기술연구회(NST) 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52061,7 +52061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109695",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전국 중학생 바이오안전성·바이오산업 탐구력 캠프 - 한국생명공학연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52092,7 +52092,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109649",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제8회 안양시 학생 창의과학 경진대회 - 안양시인재육성재단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52123,7 +52123,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109527",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 KOMIPO 혁신 50대 과제 대국민 아이디어 공모 - 한국중부발전(주) 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 웹/모바일/IT, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -52154,7 +52154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109263",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "[삼성E&A, 삼성물산 건설부문, 삼성중공업] 2026 콘테크 공모전 - 삼성E&A, 삼성물산 건설부문, 삼성중공업 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52185,7 +52185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109155",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 고양특례시 빅데이터 공모전 - 고양특례시, 고양산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52216,7 +52216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109050",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "2026 COSS 차세대반도체 Microcontroller(MCU) 응용경진대회 - 차세대반도체 혁신융합대학사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52247,7 +52247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109030",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제5회 청소년 메이커 경진대회 - 서울시립수서청소년센터 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52278,7 +52278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109010",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 국립재활원 보조기기 해커톤 참가자 모집 - 국립재활원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52309,7 +52309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108932",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 보훈 공공데이터·AI 활용 아이디어 공모전 - 국가보훈부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52340,7 +52340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108646",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 초소형(큐브) 위성 경연대회 - 우주항공청 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52371,7 +52371,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108592",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 미래여성경제인육성사업 창업아이디어 멘토링•IP권리화 프로그램 참가자 모집 - 중소벤처기업부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 과학/공학, 대외활동/서포터즈, 취업/창업",
     "tags": [
       "전국대회",
@@ -52402,7 +52402,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108513",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 호남IS해커톤 - 광주정보문화산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52433,7 +52433,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108329",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 스마트농업 AI 경진대회 - 농림축산식품부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52464,7 +52464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108307",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 전국 고교생 기술대회 - 한국폴리텍대학 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52495,7 +52495,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108240",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 국민체육진흥공단 공공데이터 활용 경진대회 - 국민체육진흥공단 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 과학/공학, 기타",
     "tags": [
       "전국대회",
@@ -52526,7 +52526,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108140",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "[과학대회] 제13회 전국 무한상상 과학탐구 서바이벌 대전 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52557,7 +52557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108093",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "기상·기후 AI 해커톤 경진대회 - 기상청 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52588,7 +52588,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107754",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "AI·네트워크 응용분야 아이디어 공모 K-디지털 챌린지 : 넷 챌린지 캠프 시즌13 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52619,7 +52619,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107702",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "2026 가명정보 활용 경진대회 - 개인정보보호위원회, 과학기술정보통신부, 보건복지부, 금융위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52650,7 +52650,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107544",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 룬샷 경진대회 난제 해결방안 제안서 공모 - 국방과학연구소 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52681,7 +52681,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107443",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 방사선 기술 활용 창의ㆍ융합 아이디어 경진대회 - KARA CEO클럽 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52712,7 +52712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107435",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "Y-MAS Project 오프라인 경진대회 - 연세대학교 미래캠퍼스 의료AI반도체 전문인력양성 사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52743,7 +52743,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107426",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국수력원자력 기업이미지 공모전 - 한국수력원자력 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 디자인/캐릭터/웹툰, 웹/모바일/IT, 과학/공학, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -52774,7 +52774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107425",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국수력원자력 유튜브 짧은영상 공모전 - 한국수력원자력 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 과학/공학, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -52805,7 +52805,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107323",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 데이터+AI 크리에이터 캠프 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52836,7 +52836,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107294",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 업사이클링 해양과학 메이커톤 발명대회 - 국립울진해양과학관 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52867,7 +52867,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107290",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제10회 DfAM 경진대회 - 울산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52898,7 +52898,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107256",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "SK이노베이션 AI 임팩트 솔루션 공모전 - SK이노베이션 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52929,7 +52929,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107194",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제9회 프로토타입모델링(항공드론제작) 민간기능경기대회 - 사단법인 한국기능연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52960,7 +52960,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106936",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 DRB Space Challenge - DRB 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -52991,7 +52991,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106880",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&auto=format&fit=crop&q=80",
     "description": "Ansys Simulation Challenge 2026 참가자 모집 - 앤시스코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53022,7 +53022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106850",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대학생 논문경진대회 장애의 재해석 공모전 - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 과학/공학, 문학/글/시나리오, 봉사활동",
     "tags": [
       "전국대회",
@@ -53053,7 +53053,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106849",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제2회 스마트양식 도전해(海) AI 경진대회 - 해양수산부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53084,7 +53084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106844",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "2026 날씨 빅데이터 콘테스트 - 기상청 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53115,7 +53115,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106623",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전국 대학생 UAM 올림피아드 공모전 - 국토교통부, 한국교통안전공단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53146,7 +53146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106576",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 청소년 우주과학 경진대회 HIS Youth 참가자 모집 - 한국과학창의재단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53177,7 +53177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106563",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 튜닝 아이디어 경진대회 - 국토교통부, 경상북도, 김천시, 국토교통과학기술진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53208,7 +53208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106442",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "[HD건설기계] 퓨처 건설기계 챌린지 - 2026 대학생 공모전 - HD건설기계 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53239,7 +53239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106387",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 캠퍼스 특허 유니버시아드 대회 - 지식재산처 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53270,7 +53270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106328",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "대전사이언스 페스티벌 흑백과학자2 - 대전광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53301,7 +53301,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106304",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "[국가데이터처] 2026년 국가데이터 활용대회 - 국가데이터처 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53332,7 +53332,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106249",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전국기능경기대회 대국민 과제 공모전 - 한국산업인력공단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53363,7 +53363,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106091",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 인공지능 루키 대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53394,7 +53394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106089",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "인공지능 챔피언 대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53425,7 +53425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105948",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026년도 제31회 경기도 건축문화상 공모전 (계획작품 부문 / 사용승인 건축물 부문) - 경기건축문화제 추진위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 논문/리포트, 디자인/캐릭터/웹툰, 과학/공학, 건축/건설/인테리어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -53456,7 +53456,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105790",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "대학생 나노기술 공모전 나노영챌린지(Nano Young Challenge) 2026 - 나노기술연구협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53487,7 +53487,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105766",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "[국립중앙과학관] AI Hack Camp 2026 참가자 모집 - 국립중앙과학관 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53518,7 +53518,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105707",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 Esri Map Contest - Esri Korea 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53549,7 +53549,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105566",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&auto=format&fit=crop&q=80",
     "description": "제13회 산업안전보건 조사자료 논문 경진대회 - 한국산업안전보건공단 산업안전보건연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 과학/공학, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -53580,7 +53580,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105561",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제13회 광융합 기술사업화 아이디어 및 제품디자인 공모전 - 한국광기술원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53611,7 +53611,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105517",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "제7기 과기정통부 LMO SAFETY 기자단 모집 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 논문/리포트, 영상/UCC/사진, 디자인/캐릭터/웹툰, 과학/공학, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -53642,7 +53642,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105410",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "제43회 《문명 그 화려한 역설》 69개의 표지비밀 풀기 프로젝트 공모 (1억고료 문학상 수상작) - 도서출판 글여울 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학, 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -53673,7 +53673,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105384",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 드론 공방전 대회 - 대한민국 국방부, 과학기술정보통신부, 산업통상부, 국토교통부, 중소벤처기업부, 방위사업청 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53704,7 +53704,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105361",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "[산업통상부] 2026 엔지니어링산업 경진대회 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 과학/공학, 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -53735,7 +53735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105231",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 에너지·환경 탐구대회 - 삼성E&A 꿈나무 푸른교실 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53766,7 +53766,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104735",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한토목학회 Civil Talks - 미래 토목인이 들려주는 새로운 상상 - 대한토목학회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53797,7 +53797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104731",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한토목학회 토목구조물 모형 경진대회 - 대한토목학회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53828,7 +53828,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104322",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "대웅그룹 이노베어 공모전 5기 모집 - 대웅그룹 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53859,7 +53859,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104056",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제1회 물리대회 - 한국물리학회 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53890,7 +53890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103888",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "K-문샷 프로젝트 대국민 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53921,7 +53921,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103712",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "제주·AWS 글로벌 챌린지 해커톤 - 제주특별자치도, AWS 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -53952,7 +53952,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103705",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 포스텍 SF 어워드 (SF 단편소설 공모전) - 포스텍 소통과 공론 연구소 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 과학/공학, 문학/글/시나리오",
     "tags": [
       "전국대회",
@@ -53983,7 +53983,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103632",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 지역 창업 솔버톤 대회 참가자 모집 - 서울대학교 대학연대 지역인재양성 사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -54014,7 +54014,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103492",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=800&auto=format&fit=crop&q=80",
     "description": "나노팹데이터플랫폼 서비스 아이디어 도출 경진대회 - 한국과학기술정보연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 과학/공학",
     "tags": [
       "전국대회",
@@ -54045,7 +54045,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111750",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "선샤인 TIME TRAVEL 숏폼 영상 공모전 - SBS A&T 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54076,7 +54076,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111378",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전 - 한국외식산업연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 예체능/미술/음악, 취업/창업",
     "tags": [
       "전국대회",
@@ -54107,7 +54107,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=110179",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전) - Da-Ho Construction Co., Ltd. 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -54138,7 +54138,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111969",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 KMA 시니어모델선발대회 - 한국모델협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54169,7 +54169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111937",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모 - 힐로웨이브 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54200,7 +54200,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111923",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1527788263495-3518a5c1342e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 강동문화재단 GAC Creative Bridge (아트 굿즈 창작지원 프로젝트) - 강동문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54231,7 +54231,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111918",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "모두의 KISA 공모 - KISA에게 바란다 모두의 KISA - 한국인터넷진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54262,7 +54262,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=111911",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 순창 코리아 떡볶이 페스타 – 전국 떡볶이 플래시몹 경연대회 참가자 모집 - 전주대학교 RISE 사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54293,7 +54293,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111907",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "제 4회 산업기술 R&D 어린이 그림 그리기 공모전 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54324,7 +54324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111890",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "제57회 경상북도 산업디자인 전람회 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54355,7 +54355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111880",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS - 여성신문 / (사)여성문화네트워크 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54386,7 +54386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111878",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 모두의 노동 손그림 공모전 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54417,7 +54417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111876",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서울시여성가족재단 다목적라운지 전시 작품 공모 - 서울시여성가족재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54448,7 +54448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111846",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 전남자치경찰 홍보 콘텐츠 공모전 - 전남광주통합특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54479,7 +54479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111838",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 중앙일보 어린이 미술대회 - 중앙일보 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54510,7 +54510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111836",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 희귀질환 극복수기·사진 공모전 - 질병관리청 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54541,7 +54541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111835",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 손상예방의날 기념 경북권 손상 예방 포스터 공모전 - 질병관리청 경북권질병대응센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54572,7 +54572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111832",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "우리집 아침밥 레시피 SNS 공모전 - 농림축산식품부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54603,7 +54603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111831",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 스포츠 경연대회 참가자 모집 - 국민체육진흥공단 스포츠가치센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54634,7 +54634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111830",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 예술 경연대회 참가자 모집 - 국민체육진흥공단 스포츠가치센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54665,7 +54665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111827",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80",
     "description": "[곽재선문화재단x할리스 제5회 아트공모전] 몽실 아트공모전 - 곽재선문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54696,7 +54696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111824",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "제10회 동아뮤지컬콩쿠르 - 동아일보 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54727,7 +54727,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111820",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 이스타항공 기내식 레시피 공모전 - 이스타항공 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54758,7 +54758,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111817",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "[서천군지속가능발전협의회] 2026 내가 꿈꾸는 서천의 미래 K-SDGs 포스터 공모전 - 서천군지속가능발전협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54789,7 +54789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111816",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 스크린인쇄어워즈 - (사)한국스크린인쇄공업협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54820,7 +54820,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111810",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "[산사람 x AI-Kive] 진짜 오타쿠 AI MV 챌린지 - (주)과나(산사람) 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54851,7 +54851,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111803",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "광안리 M 드론라이트쇼 너의 꿈을 그려봐 그림 공모전 - 부산광역시 수영구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54882,7 +54882,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111780",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "플랫폼 미묘(mimio) 인천아트쇼2026 참여 작가 공모 - 아티클21 주식회사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54913,7 +54913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111727",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경북 영양군 밤하늘 사진·음원 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54944,7 +54944,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111720",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 단양 유네스코 세계지질공원 학생 홍보콘텐츠 공모전 - 단양군 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -54975,7 +54975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111719",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "﻿[2026서울한국춤페스티벌] 춤을 그리는 젊은이들 청년 안무가 작품 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55006,7 +55006,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111691",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 고립·은둔청년 인식개선 공모전 - 서울청년기지개센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55037,7 +55037,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111671",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 광주비엔날레 미디어파사드 신진 미디어아트 공모전 - 전남광주통합특별시 북구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55068,7 +55068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111661",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "경상남도교통문화연수원 2026 어린이 교통안전 포스터 공모전 - 경상남도교통문화연수원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55099,7 +55099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111635",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제3회 소무의도 그림 그리기 대회 - 인천광역시 영종구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55130,7 +55130,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111632",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 우리과일 요리경연대회 - 농림축산식품부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55161,7 +55161,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111619",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제주 다문화 미래세대 SDGs 드림챌린지 - 제주국제개발협력센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55192,7 +55192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111598",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 양산시 인구정책 콘텐츠 공모전 - 양산시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55223,7 +55223,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111596",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 울산시립미술관 미디어 스크린 시민 공모 프로젝트 - 울산시립미술관 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55254,7 +55254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111593",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제2회 AMT AI 작곡대회 - 프롬프트뱅크 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55285,7 +55285,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111591",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "[서울특별시] 2026 서울라이트 광화문 미디어파사드 작품 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55316,7 +55316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111549",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제14회 계란요리경연대회 & 제2회 알&닭 펫푸드경연대회 - 계란자조금관리위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55347,7 +55347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111474",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애인 권리증진 콘텐츠 공모전 - 성남시장애인권리증진센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55378,7 +55378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111469",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 KEA FOUNDATION 신진작가 공모 - KEA FOUNDATION 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55409,7 +55409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111398",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "제11회 한아전 웹툰·일러스트·포스터·영상 공모전 - 한국IT전문학교 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55440,7 +55440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111380",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "[MORE VISION] Chord Banditz - Open Call: BAND MEMBERS (모어비전 밴드 오디션) - (주)모어비전 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55471,7 +55471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111367",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 태권도 의류형 굿즈 · 체험형 굿즈 아이디어 공모전 - 무주군, 전주대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55502,7 +55502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111347",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서울로미디어캔버스 네이처 프로젝트전 2차 공모 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55533,7 +55533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111313",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 청목캘리그라피 공모전 (참가비 있음) - (사)한국청목캘리그라피예술협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55564,7 +55564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111274",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "김해시 캐릭터·슬로건 공모전 - 김해시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55595,7 +55595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111176",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=80",
     "description": "을숙도 대지·생태예술 국제공모 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55626,7 +55626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111156",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 전국 민화도슨팅 콘테스트 - 사)한국민화협회 충남지부/보령지회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55657,7 +55657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111032",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 아주국제미술대전 - 국제신문방송미디어교류협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55688,7 +55688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110911",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "2026 무브챌린지 대회 온라인 예선 및 오프라인 파이널 - 재단법인 데상트스포츠재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55719,7 +55719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110816",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "제12회 대한민국모던아트대상전 - 한국청소년미술협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55750,7 +55750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110771",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 국가지식정보 통합플랫폼 활용 우수사례 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55781,7 +55781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110666",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 부산광역시 인권공모전 - 부산광역시, 부산광역시인권센터 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55812,7 +55812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110620",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 어린이조선일보 글로벌 미술대회&루브르 박물관 전시대회 - 어린이조선일보,에듀조선,조선일보 뉴지엄 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55843,7 +55843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110575",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 승가원 장애바로알기 콘텐츠 공모전 - 승가원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55874,7 +55874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110549",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 뇌전증 인식개선 공모전 - 한국뇌전증협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55905,7 +55905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110362",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 긍정의 힘 마라톤 - (사)한국유튜브방송협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55936,7 +55936,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110359",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 코리아시즌 레이스 - (사)한국경비원협회중앙회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55967,7 +55967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110277",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "Meta와 함께하는 AI 페스티벌 – AI로 그려낸 가족 이야기 - 디지털리터러시협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -55998,7 +55998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110235",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2027 제6회 BIKAF IN 루브르 미술 공모전 & 루브르 국제전시회 - 비카프 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56029,7 +56029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110137",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 MPED X KORUS 국제 아트앤디자인 공모전 - MPED X KORUS 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56060,7 +56060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=110095",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 품바재생예술체험촌 새활용·리폼 콘테스트 - 음성군품바재생예술체험촌 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56091,7 +56091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=109818",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 하남 미사 호수 에너지런 - (사)행복한가게 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56122,7 +56122,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=109752",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "몽드아트어워드 - 주식회사 몽드 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56153,7 +56153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=109741",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "[국제공모전] IN:SENSE Design Award 2027 (참가비 있음) - 국제감각디자인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56184,7 +56184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=109564",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "2027 청주국제공예공모전 - 청주공예비엔날레조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56215,7 +56215,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=104715",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제4회 충청남도 드론 영상 및 사진 공모전 - 충청남도 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -56246,7 +56246,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111858",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 주얼리 예술제 참가자 모집 - 대구패션주얼리특구상인회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56277,7 +56277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111801",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 별빛미술관 신진작가 공모전시 참여작가 모집 - 하트하트재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56308,7 +56308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111753",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 영암 월출산 달빛뮤직페스티벌 달빛가요제 참가자 모집 - 영암군 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56339,7 +56339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111711",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "[통영시] 고양이섬 조각공모전 - 통영시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56370,7 +56370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111674",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 Awards - 화성특례시 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -56401,7 +56401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111646",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 세종사이버대 한국어학과 한글날 기념 공모전 (AI를 활용한 한국어 교육용 노래 만들기) - 세종사이버대 한국어학과 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56432,7 +56432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111633",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳 - 다시랩 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56463,7 +56463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111590",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 영등포 어린이 미술대전 - 영등포구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56494,7 +56494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111578",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "2026 연연지회 청소년 문화 경연대회 참가자 모집 - 삼각산 도선사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56525,7 +56525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111572",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 우리 임산물 숲푸드 콘텐츠 공모전 - 한국임업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56556,7 +56556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111563",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop&q=80",
     "description": "용인어린이상상의숲 상상 아트마켓 참여 예술가 공모 - 용인문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56587,7 +56587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111519",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1520523839898-50712705497c?w=800&auto=format&fit=crop&q=80",
     "description": "전국 한미 버거 콘테스트 송탄의 버거 맛을 찾아라 참가자 모집 - 평택시국제교류재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56618,7 +56618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111480",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 화성 루나빛축제 어린이 드론 그림 공모전 - 화성시문화관광재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56649,7 +56649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111462",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "4.16생명안전비엔날레 생명안전 그림그리기 대회 - 4.16재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56680,7 +56680,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111455",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "롯데몰 벨리타운 청량리 - AI 뮤직 공모전 - 롯데백화점 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56711,7 +56711,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111453",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "제 2회 롯데몰 동부산점 어린이 미술대회 - 롯데몰 동부산점 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56742,7 +56742,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111434",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 효성과 함께하는 제4회 올해의 작가상 공모 - 서울문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56773,7 +56773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111432",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 벨리곰 SPIN-OFF 디자인 공모전 (내용 및 일정 수정) - 롯데홈쇼핑 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56804,7 +56804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111424",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
     "description": "제30회 우암문화제 우암전통예술경연대회 - 대전동구문화원 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56835,7 +56835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111411",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "제29회 우리은행 미술대회 (우리 아트콘) - 우리은행 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56866,7 +56866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111405",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "TU Enter-Music Festa 중·고교(청소년) 시네마틱 뮤직비디오(M/V) 제작 공모전 - 동명대학교 엔터테인먼트뮤직학과 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56897,7 +56897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111382",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 전국공모 양산미술대전 - (사)한국미술협회양산지부 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56928,7 +56928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111379",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "제40회 충남 산업디자인 대전 디자이너 모집 - 충청남도 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56959,7 +56959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111373",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "2026 stART 코레일유통 미디어아트 청년작가 공모전 - 코레일유통 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -56990,7 +56990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111358",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "모두의 보스 온라인 가요제 - 모두의 보스 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -57021,7 +57021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111335",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "제11회 3대3 길거리농구대회 - (주)울산종합일보 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -57052,7 +57052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111612",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전 - 건강보험심사평가원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 웹/모바일/IT, 네이밍/슬로건, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -57083,7 +57083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111546",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집 - 미래에셋금융서비스 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 대외활동/서포터즈, 취업/창업, 기타",
     "tags": [
       "전국대회",
@@ -57114,7 +57114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111965",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 AI 활용 전국 대학생 창업 해커톤 참가자 모집 - 교육부, 한국교육학술정보원(KERIS) 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57145,7 +57145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111964",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 해양 창업아이디어 공모전 Spark-up 1876 - 부산항만공사ㆍ부산해양진흥공사ㆍ부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57176,7 +57176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111933",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부여 솔버톤 - 지역문제해결 아이디어 발굴 참가자 모집 - 부여군, 부여군지역공동체활성화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57207,7 +57207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111905",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "국가생명윤리정책원 2026년 ESG 대국민 아이디어 공모전 - 국가생명윤리정책원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57238,7 +57238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111885",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 배경데이터 활용 콘텐츠개발 아이디어 공모전 - 재단법인 광주정보문화산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57269,7 +57269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=111877",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 서울중구시설관리공단 ESG혁신 아이디어 공모전 - 서울중구시설관리공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57300,7 +57300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111865",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "현대모비스 창립 50주년 굿즈 아이디어 공모전 - 현대모비스 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57331,7 +57331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111863",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 인천공항 여행 공모전 (내가 만드는 한국여행) - 인천국제공항공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57362,7 +57362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111861",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 체육관련 규제개선 대국민 아이디어 공모전 - 국민체육진흥공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57393,7 +57393,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111855",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&auto=format&fit=crop&q=80",
     "description": "[해양수산과학기술진흥원] 2026년도 KIMST ESG경영·혁신 아이디어 공모전 - 해양수산과학기술진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57424,7 +57424,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111847",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회 - 한국사회보장정보원, 대구가톨릭대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57455,7 +57455,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111844",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "텐퍼센트커피 커스텀 레시피 콘테스트 - 텐퍼세트커피 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 기타",
     "tags": [
       "전국대회",
@@ -57486,7 +57486,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111841",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 NIA 탄소중립 혁신 아이디어 공모전 - 한국지능정보사회진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57517,7 +57517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111839",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경북 로컬 관광자원 혁신 콘텐츠 공모전 - 경상북도문화관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57548,7 +57548,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111805",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "보령시 웰니스 정책 제안 공모전 - 보령시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57579,7 +57579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111798",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[노사발전재단] 취약노동자 지원 네트워크 이름짓기 공모전 - 고용노동부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57610,7 +57610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111788",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "[강릉시] 시민의 생각으로 여는 민선9기 강릉 2026년 시민 아이디어 공모전 - 강릉시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57641,7 +57641,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111777",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 세종 청년의 내일 일자리 아이디어 공모전 - 세종일자리경제진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57672,7 +57672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111756",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 한국정책분석평가학회 대학생 정책아이디어공모전 - 한국정책분석평가학회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57703,7 +57703,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111755",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "초량천~산복도로 스토리텔링 공모전 - 부산광역시 동구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57734,7 +57734,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111712",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[한국주택금융공사] 2026년도 HF 대국민 혁신 아이디어 공모전 - 한국주택금융공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57765,7 +57765,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111709",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부산관광 아이디어 공모전 - 부산관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57796,7 +57796,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111701",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 종로구 아이디어 공모전 - 종로구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57827,7 +57827,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111698",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 함안지방공사 ESG·혁신 경영 아이디어 공모전 - 함안지방공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57858,7 +57858,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111695",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "천안 관광코스 공모전 - 천안시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57889,7 +57889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111675",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 한국산림복지진흥원 지식재산 아이디어 경진대회 - 한국산림복지진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57920,7 +57920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111668",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 영도구 정책제안 공모전 - 부산광역시 영도구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57951,7 +57951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111667",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[국토안전관리원] 위험현장 사고조사를 위한 첨단기술 활용 아이디어 공모전 - 국토안전관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -57982,7 +57982,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111666",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "[한국도로공사] AI 활용 아이디어 공모전 - 한국도로공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58013,7 +58013,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111652",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 함께학교 정책제안 공모전 - 교육부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58044,7 +58044,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111640",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 청년정책 공모전 - 국무조정실 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58075,7 +58075,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111634",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 양천구 아이디어 공모전 - 양천구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58106,7 +58106,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111624",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "한미일 미래협력 아이디어 챌린지 공모전 - 외교부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58137,7 +58137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111620",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "2027년도 새만금 정책연구과제 아이디어 공모 - 새만금개발청 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58168,7 +58168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111614",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남 로컬메이드 제품개발 공모전 - 선문대학교 앵커사업단, 식품공학·영양학부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58199,7 +58199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111611",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "[의성군] AI활용 서비스 개선 공모제안 경진대회 - 의성군 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58230,7 +58230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111597",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 신규 MICE 행사 아이디어 공모전 - 한국PCO협회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58261,7 +58261,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111574",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58292,7 +58292,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111573",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "[대전광역시 사회혁신센터] 시민생활·관계 개선 아이디어 공모전 - 대전광역시 사회혁신센터 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58323,7 +58323,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111518",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 글로컬 부산관광 트래블톤 공모전 - 부산관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58354,7 +58354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111506",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509228468518-180dd4864904?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전 - 한국과학기술원(KAIST) 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58385,7 +58385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111499",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 경산시 시정발전 아이디어 공모전 - 경산시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58416,7 +58416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111491",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남이라 누리는 정책체험·생활수기 공모전 - 충남콘텐츠연구소지음 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58447,7 +58447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111484",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "[한국장애인고용공단] 2026 KEAD 기업 규제개선 아이디어 공모전 - 한국장애인고용공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58478,7 +58478,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111466",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "도심 쓰레기 처방전 공모전 - 서울시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58509,7 +58509,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111465",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[무주군] 신규사업 발굴 군민 아이디어 공모전 - 무주군 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58540,7 +58540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111460",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "전국대학생 FTA 활용 비즈니스 경진대회 - 한국통상정보학회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58571,7 +58571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111407",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "특별한 강원 우리의 변화 공모전 - 강원특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58602,7 +58602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111397",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "인천광역시 일자리사업 시민제안 공모전 - 인천광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58633,7 +58633,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111365",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 시흥시 규제혁신 아이디어 공모 - 시흥시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58664,7 +58664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111352",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[감사원] 2026년 국민제안 감사 아이디어 공모 - 감사원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58695,7 +58695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111320",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "[행정안전부] 제7차 열린정부 실행계획 국민제안공모 - 행정안전부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58726,7 +58726,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111307",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 인천광역시의회 정책아이디어 공모전 - 인천광역시의회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58757,7 +58757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111299",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제천시 AI 활용 데이터 분석 아이디어 공모전 - 충청북도 제천시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58788,7 +58788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111291",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 모바일신분증 아이디어 공모전 - 행정안전부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58819,7 +58819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111271",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "제 3회 AI·디지털 융합 교육 콘텐츠 개발 경진대회 참가자 모집 - 부산대학교, 부산교육대학교, 부산에듀테크소프트랩,AIEDAP 경남권역 사업지원단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58850,7 +58850,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111251",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 청소년 에너지 에듀 페스타 공모 대회 (내용 수정) - 기후에너지환경부, 한국에너지공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58881,7 +58881,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111138",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "[군산시] 2026년 시민 정책 제안 공모전 - 군산시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58912,7 +58912,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111087",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "[의정부도시공사] AI 혁신 아이디어 공모전 - 의정부도시공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58943,7 +58943,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111058",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "[청주시] 2026 하반기 시민 테마아이디어 공모전 - 청주시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -58974,7 +58974,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110954",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 성남시 창의도시계획 공모전 - 성남시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59005,7 +59005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110880",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "여수 낭만의 길에 서다 여행 코스 공모전 - 여수시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59036,7 +59036,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110818",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 해운·항만·물류 AX 아이디어 공모전 - 한국해양진흥공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59067,7 +59067,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110750",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "상주시 대표축제 대국민 아이디어 공모전 - 상주시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59098,7 +59098,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110635",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 소방정책 아이디어 발굴 경진대회 - 한국소방단체총연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59129,7 +59129,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=110227",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 기아 PBV 아이디어 공모전 - KIA 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59160,7 +59160,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=109635",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[한국남동발전] 대국민 체감형 서비스 개선 아이디어 제안 - 한국남동발전 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59191,7 +59191,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=109402",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 (사)한국부동산금융투자포럼 대학생 아이디어 공모대회 - (사)한국부동산금융투자포럼 · 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59222,7 +59222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111673",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 안산시 시민 아이디어 공모전 - 안산시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59253,7 +59253,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111641",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "도민과 함께 만드는 경남교육 비전 공모전 - 경상남도교육청 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59284,7 +59284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111550",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 초·중·고 AI 디지털콘텐츠 경진대회 - 연암공과대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59315,7 +59315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111482",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532012164546-f432f2e3777f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 동작구 정책 아이디어 공모전 - 동작구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59346,7 +59346,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111481",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 익산시 시정발전 아이디어 공모전 - 익산시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59377,7 +59377,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111459",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&auto=format&fit=crop&q=80",
     "description": "2026 KSMS 추계 인천국제공항공사 대학생 아이디어 경진대회 - 사단법인 한국서비스경영학회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59408,7 +59408,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111447",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 새로한난 대국민 혁신 아이디어 공모전 - 한국지역난방공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59439,7 +59439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111441",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 파주시정 혁신 아이디어 공모전 - 파주시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59470,7 +59470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111408",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 성남시 탄소중립 아이디어 공모전 - 성남시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59501,7 +59501,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111390",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 K-MEDI AI 혁신 아이디어 챌린지 공모전 - 대구경북첨단의료산업진흥재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59532,7 +59532,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111386",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모 - 한국문화관광연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59563,7 +59563,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111363",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 K-푸드테크 해커톤 대회 - 경상북도,포항시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59594,7 +59594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111350",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&auto=format&fit=crop&q=80",
     "description": "해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전 - 국립해양생물자원관 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59625,7 +59625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111330",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제4회 안성시 시정발전 제안공모전 - 안성시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59656,7 +59656,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111329",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=80",
     "description": "[기후에너지환경부] 제13회 대학생 물환경 정책·기술 공모전 - 기후에너지환경부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59687,7 +59687,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111326",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "통합 라디오 애플리케이션 대국민 아이디어 공모 - 한국방송통신전파진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59718,7 +59718,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111323",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 강북구 청소년 사회적경제 아이디어 공모전 - 강북구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59749,7 +59749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111319",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[국가철도공단] 철도산업 규제ㆍ애로 개선제안 공모 - 국가철도공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59780,7 +59780,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111304",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 강서구 아이디어 공모전 - 부산광역시 강서구 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59811,7 +59811,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111283",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 지역 현안 해결 솔루션 챌린지 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59842,7 +59842,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111254",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "강원경찰청 도민과 함께 만드는 교통안전시설 개선 아이디어 공모전 - 강원경찰청 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59873,7 +59873,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111238",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "[포천도시공사] 2026년 주민참여예산제 아이디어 공모전 - 포천도시공사 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59904,7 +59904,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111224",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "태백시시설관리공단 2026 혁신아이디어 공모전 - 태백시시설관리공단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59935,7 +59935,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111218",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 수영 로컬 콘텐츠 개발 경진대회 (공모전) - 수영구청 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59966,7 +59966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111209",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 남양주시 다산 정약용 콘텐츠 아이디어 공모전 - 남양주시 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -59997,7 +59997,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111190",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 경상북도 정책제안 공모전 - 경상북도 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -60028,7 +60028,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111151",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대구 관광 혁신 아이디어 공모전 - 대구광역시관광협회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
     "tags": [
       "전국대회",
@@ -60059,7 +60059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111148",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "스파크업 : 모두의 에너지 (에너지 창업 경연대회) - 기후에너지환경부 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 논문/리포트, 예체능/미술/음악, 대외활동/서포터즈, 취업/창업",
     "tags": [
       "전국대회",
@@ -60090,7 +60090,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111976",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 (다시, 다리다) 유휴공간 활성화 아이디어 공모전 - 문화정원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60121,7 +60121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111887",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=800&auto=format&fit=crop&q=80",
     "description": "양천구 건축공간디자인상 공모 - 양천구 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60152,7 +60152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111853",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 LH가든(수원당수) 주민참여정원 아이디어공모 - 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60183,7 +60183,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111851",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 LH가든(수원당수) 학생참여정원 아이디어공모 - 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60214,7 +60214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111726",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "용산국제업무지구 AI 스마트도시 아이디어 공모 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60245,7 +60245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111703",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "제21회 2026년 한국공간디자인 전국공모전 - 한국공간디자인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60276,7 +60276,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111166",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제43회 골든스케일디자인어워드 - 사단법인 한국실내건축가협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60307,7 +60307,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110885",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한건축사협회 대학(원)생 모듈러건축 공모전 - 대한건축사협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60338,7 +60338,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110839",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 양평군 건축문화상 - 양평군 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60369,7 +60369,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110838",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 고양시 좋은 간판 공모전 - 고양시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60400,7 +60400,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110826",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제1회 KIBE 융합디자인 공모전 - (사)한국녹색플랜연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60431,7 +60431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110589",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 직스캐드 AX 경진대회 - 설계 및 영상 공모전 (건축, 인테리어, 제조, 영상, CAD) - 직스테크놀로지 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60462,7 +60462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110383",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 에어-비트 시티 건축디자인 공모전 - 에어-비트 시티 미래전략위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60493,7 +60493,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111464",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 도시정책 시민계획단 및 청소년계획단 모집 - 수원시 도시계획과 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60524,7 +60524,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=111443",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 시민참여 건축콘텐츠 전 사진, 영상 공모전 - (사)대구건축문화연합 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60555,7 +60555,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=111360",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제주국제건축문화제 건축문화대상 건축사진 공모전 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60586,7 +60586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110968",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제24회 김해 건축대상제 작품공모 - 김해시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60617,7 +60617,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110936",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "혹한기(겨울철) 현장근로자 안전사고 예방에 대한 슬로건 공모전 - 국토안전관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60648,7 +60648,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110815",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "NEXT SPACE DESIGN AWARD 2026 - (사)한국실내건축가협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60679,7 +60679,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110513",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제2회 건축 동아리(개인) 공모전 - 경남건축문화제조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60710,7 +60710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110341",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 LOWCA 건축 아이디어 공모전 - (사)저탄소사회를 지향하는 목조건축협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60741,7 +60741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110319",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 그린리모델링 챌린지 대학생 해커톤 - 국토교통부 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60772,7 +60772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110238",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 남도K-가든 페스티벌 시민참여정원 공모 - 여수시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60803,7 +60803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110105",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1525909002-1b05e0c869d8?w=800&auto=format&fit=crop&q=80",
     "description": "화명 야이수영장 국제 디자인 경쟁공모 - 부산광역시, (재)부산디자인진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60834,7 +60834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110092",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 제주 그린스팟 혼디해요 공모전 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60865,7 +60865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110088",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 영산강 가족정원 페스티벌 시민 참여정원 공모 - 나주시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60896,7 +60896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110081",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "국토안전관리원 2026년 국토안전 AI 콘텐츠 공모전 - 국토안전관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60927,7 +60927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=109963",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 강남구 아름다운 감성경관 공모전 - 강남구 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60958,7 +60958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109924",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 부산 가든쇼 큰손바닥정원 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -60989,7 +60989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109894",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 국토대전 - 국토교통부 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61020,7 +61020,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109800",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제9회 세종건축문화제 대학생 공모전 - 세종특별자치시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61051,7 +61051,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109684",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 수성 건축·조경 시각작품 국제 공모전 - 수성문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61082,7 +61082,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109647",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 AI HOME 인테리어 디자인 컨테스트 - 삼성전자 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61113,7 +61113,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109613",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제62회 경기건축대전 - 사단법인 한국건축가협회 경기건축가회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61144,7 +61144,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109352",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 아산시 브랜드 자산활용 관·학 협력 공공디자인 공모전 참여대학 모집 - 아산시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61175,7 +61175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109165",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 KICOX 산단안전 제도개선 공모전 - 한국산업단지공단 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61206,7 +61206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109084",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서귀포시 아름다운 간판상 공모전 - 서귀포시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61237,7 +61237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109019",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 서울시 좋은빛상 공모전 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61268,7 +61268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108988",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 동아시아문화도시 안동 정원문화교류전 시민 참여정원 작품 공모전 - 안동시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61299,7 +61299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108925",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 SH 스마트 건설기술 경진대회 - 서울주택도시개발공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61330,7 +61330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108809",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "서울출입국･외국인청 신축청사 건축물 미술작품 제작 및 설치 공모 - 법무부(서울출입국․외국인청) 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61361,7 +61361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108806",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "LH미래 : 도시공원 학생공모전 - LH 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61392,7 +61392,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108755",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제2회 서울한옥 미래상(Future of Seoul Hanok) 디자인 아이디어 공모 - 서울시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61423,7 +61423,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108663",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "LH 케이블타워 CT 디자인 아이디어 공모 - LH 한국토지주택공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61454,7 +61454,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108562",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제38회 대한민국 실내건축대전 - (사)한국실내건축가협회(KOSID), KCC글라스·홈씨씨 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61485,7 +61485,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108499",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국도로공사 정원디자인 공모전 - 한국도로공사 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61516,7 +61516,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108461",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 좋은데이 미술대전 - 좋은데이나눔재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 건축/건설/인테리어, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -61547,7 +61547,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108448",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 영월 정원산업박람회 학생참여정원 작품 공모 - 산림청, 강원특별자치도, 영월군 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61578,7 +61578,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108435",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제2회 전주시 도시재생 공간디자인 공모전 - 전주시도시재생지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61609,7 +61609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108365",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경기도 도시재생 경진대회 - 경기도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61640,7 +61640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108299",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제11회 우리동네 좋은집 찾기 공모전 - 서울특별시건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61671,7 +61671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108250",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1541701494587-cb58502866ab?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제18회 충남 공공디자인 공모전 - 충청남도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61702,7 +61702,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108052",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "제10회 진주시 도시·공공디자인 작품공모전 - 진주시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61733,7 +61733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107965",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "제8회 시흥시 도시·건축드로잉 공모전 - 시흥시 / (사)한국예총 시흥지회 건축가협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61764,7 +61764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107928",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제20회 빛공해 공모전 - 서울특별시, 조명박물관 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61795,7 +61795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107924",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제11회 전국대학생 CM 시공 · 경진대회 - 한국CM협회, 한국건설관리학회, 한국건축시공학회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61826,7 +61826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107792",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 울산조선해양축제 - 기발한 배 콘테스트 (참가비 있음) - 울산조선해양축제추진위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61857,7 +61857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107788",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 호반그룹×서울창업허브 오픈이노베이션_[2026 호반혁신기술공모전] - 호반, 서울경제진흥원, 창업진흥원, 한국건설기술연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61888,7 +61888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107781",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 HiKR MEDIA ART(하이커 미디어 아트) 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 건축/건설/인테리어, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -61919,7 +61919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107760",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "BIGFIELDS STUDENTS PRIZE 2026 (참가비 있음) - 한국건축가협회 대구·경북건축가회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61950,7 +61950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107723",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 구조물 내진설계 경진대회 - 부산대학교, (재)국토교통연구인프라운영원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -61981,7 +61981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107651",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 계룡장학재단 건축 아이디어 공모전 - 계룡장학재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 논문/리포트, 건축/건설/인테리어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -62012,7 +62012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107563",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경기정원문화박람회 작가정원 작품공모 - 경기도·양평군 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62043,7 +62043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107557",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 경기정원문화박람회 상상정원 작품공모 - 경기도·양평군 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62074,7 +62074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107522",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 충남 건축문화제 대학생 설계공모전 - 충청남도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62105,7 +62105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107445",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=80",
     "description": "제11회 전라남도 친환경·범용디자인 공모전 - 전라남도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62136,7 +62136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107289",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제23회 김해시 도시경관디자인 작품공모전 - 김해시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62167,7 +62167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107272",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 함께 디자인하는 미래학교 공간 공모전 - 대구광역시교육청 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62198,7 +62198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107204",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제44회 서울특별시 건축상 공모 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62229,7 +62229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107144",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 화성특례시 민간정원 공모전 - 화성특례시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62260,7 +62260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107086",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2026 광주_아시아국제건축공모전 - 광주광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62291,7 +62291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107074",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 안양시 건축문화상 작품 공모(아름다운 건축물 부문/계획작품 부문) - 안양시,안양지역건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62322,7 +62322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=107009",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 IPARK 기술제안 공모전 - IPARK현대산업개발 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62353,7 +62353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106767",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1582561424760-0321d75e81fa?w=800&auto=format&fit=crop&q=80",
     "description": "제16회 제주 공공디자인 공모전 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62384,7 +62384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106622",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 스마트건설 얼라이언스 기술실증 지원사업 공고 안내 - 국토교통부 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62415,7 +62415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106565",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 해양경찰 함정설계 공모전 - 해양경찰청, 대한조선학회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62446,7 +62446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106532",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 강원건축문화제 학생작품 전국 공모 - 강원특별자치도건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62477,7 +62477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106343",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 우덕미래건축가상 공모전 - 우덕재단 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62508,7 +62508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106294",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?w=800&auto=format&fit=crop&q=80",
     "description": "제18회 대한민국 도시숲 설계공모대전 - 산림청 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62539,7 +62539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106243",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 근현대건축 문화유산 활성화 공모전 - 국가유산청 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62570,7 +62570,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106174",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국리모델링건축대전 - (사)한국리모델링협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62601,7 +62601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106157",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대구 도시디자인 공모전 - 대구광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62632,7 +62632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106084",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 국산목재이용기술 대상(大賞) 공모 - 국산목재이용기술협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62663,7 +62663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106007",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 진주 정원박람회 시민참여정원 작품 공모 - 진주시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62694,7 +62694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=105969",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제6회 청주 파빌리온 아이디어 공모전 - 청주시 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62725,7 +62725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105881",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 경기도 공공디자인 공모전 - 경기도 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62756,7 +62756,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105822",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제24회 대한민국목조건축대전 공모전 - 산림청 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62787,7 +62787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105762",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제23회 2026 인천건축학생공모전 - 인천광역시,대한건축사협회 인천광역시건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62818,7 +62818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105600",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제18회 대학생 공작기계 창의 아이디어 공모전 - 한국공작기계산업협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62849,7 +62849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105567",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[공모전] 중간주택의 탐색-아파트단지와 다세대주택 사이 - 새건축사협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62880,7 +62880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105502",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 대구광역시 동구 공공디자인 공모전 - 대구광역시 동구 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62911,7 +62911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105427",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 다육 가드닝 전국대회 참가자 모집 - 화순군 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62942,7 +62942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105364",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제13회 유닛로드시스템 창의성 공모전 - 한국파렛트컨테이너협회 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -62973,7 +62973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105349",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "제7회 서울식물원 식재설계(Planting Design) 공모전 - 서울식물원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -63004,7 +63004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105235",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "[서울특별시] 2026년 제5회 서울대공원 학생정원 작품공모 - 서울특별시 서울대공원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -63035,7 +63035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105234",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "[서울특별시] 2026년 제5회 서울대공원 시민정원 작품공모 - 서울특별시 서울대공원 주최 전국 공모전 및 경진대회입니다. 분야 : 건축/건설/인테리어",
     "tags": [
       "전국대회",
@@ -63066,7 +63066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105145",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 꿈을 짓다! 건축 아이디어 공모전 - 시티문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 디자인/캐릭터/웹툰, 건축/건설/인테리어, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -63097,7 +63097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111992",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "한국해외인프라도시개발지원공사(KIND) 뉴 슬로건 공모전 - 한국해외인프라도시개발지원공사(KIND) 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63128,7 +63128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111945",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2027 KSPO 스포츠가치센터 슬로건 공모전 - 국민체육진흥공단 스포츠가치센터 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63159,7 +63159,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111866",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "한국노동연구원 캐릭터 네이밍 공모전 - 한국노동연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63190,7 +63190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111748",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 한전KDN 슬로건 공모전 - 한전KDN 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63221,7 +63221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111509",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "경남교육의 가치를 담은 브랜드 슬로건 공모전 - 경상남도교육청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63252,7 +63252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111452",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제21회 건설사업관리(CM) 표어 온라인 공모전 - 한국CM협회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63283,7 +63283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111512",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 전북 경력단절예방 실천 한 줄 공모전 - 전북여성가족재단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63314,7 +63314,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111507",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "맑은물에 두유 네이밍 공모전 - 맑은물에 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63345,7 +63345,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111504",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "(가칭) 트래디라운지 명칭 추가(연장) 공모 - 전주시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63376,7 +63376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111451",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "소상공인의 날 기념 N행시 대학생 공모전 - 소상공인연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63407,7 +63407,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111437",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "강릉시 청년센터 명칭 공모 - 강릉시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63438,7 +63438,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111429",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "완도 대표축제 명칭 공모전 - 완도군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63469,7 +63469,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111412",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "국립군산대학교 개교80주년 기념 슬로건 공모전 - 국립군산대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63500,7 +63500,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111387",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "대국민 체육시설 안전 공동 슬로건 공모전 - 국민체육진흥공단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63531,7 +63531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111303",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "강원특별자치도교육청 홍보브랜드 슬로건 공모전 - 강원특별자치도교육청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63562,7 +63562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111210",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "쉐라톤 제주 호텔 마스코트 네이밍 공모전 - 쉐라톤 제주 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63593,7 +63593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111207",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "정찰제 후불제상조 회사 이름 공모전 - 삼고라이프상조(주) 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63624,7 +63624,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111187",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[경찰청] 제81주년 경찰의 날 기념식 슬로건(고정) 공모전 - 경찰청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63655,7 +63655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111154",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "서울YWCA와 함께 하는 환대의 말 공모전 - 세종국어문화원, 서울YWCA 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63686,7 +63686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111134",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제63회 무역의 날 슬로건 공모전 - 한국무역협회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63717,7 +63717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111006",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "전국민 AI 역량 강화 정책 브랜드 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63748,7 +63748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110997",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "검단구 구정소식지 명칭 공모 - 검단구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63779,7 +63779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110937",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "[화성시정신건강복지센터] 2026년 정신건강 슬로건 공모전 - 화성시정신건강복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63810,7 +63810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110808",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "[매머드커피] NEW! 브랜드 슬로건 공모전 - 매머드커피 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63841,7 +63841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110769",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 IFWF 인권주간 제2회 인권 표어 공모전 - 인천여성가족재단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63872,7 +63872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110594",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "솥밥 프랜차이즈 음식점 네이밍 공모전 - (주)강해무역 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63903,7 +63903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110545",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "함안군 제7회 함안애(愛)복지박람회 슬로건 공모전 - 함안군 지역사회보장협의체 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63934,7 +63934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110527",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "파주 상생경제 플랫폼의 이름을 지어주세요! 명칭 공모전 - 파주시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63965,7 +63965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=110523",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "여성경제활동 지원센터(새일센터) 새 이름 공모전 - 성평등가족부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -63996,7 +63996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110505",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "제주 디지털 통합 신원인증 앱 명칭 공모 - 제주특별자치도 AI혁신추진단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64027,7 +64027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110444",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 장애인 구강건강인식개선 캠페인 Smile Slogan! 모두의 미소를 위한 한 줄 슬로건 공모전 - 스마일재단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64058,7 +64058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110422",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "안산공동체복합시설 명칭 공모 - 안산시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64089,7 +64089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110409",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "봉화군 농산물 공동브랜드 네이밍 공모전 - 경상북도 봉화군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64120,7 +64120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110387",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "봉화군 도시재생 거점시설 네이밍 공모전 - 봉화군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64151,7 +64151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110385",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 청소년운영위원회 미소 청소년전용카페 애칭 공모전 - 서산문화복지센터 청소년운영위원회 미소 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64182,7 +64182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110240",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "무주반디뮤지엄 일원 시설 명칭 공모 - 무주군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64213,7 +64213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110213",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "[전남광주통합특별시 광산구] 하남동 청소년 자율공간 명칭 공모 - 전남광주통합특별시 광산구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64244,7 +64244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110198",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "장성군 신규 공공체육시설(3개소) 명칭 공모전 - 장성군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64275,7 +64275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110136",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "﻿2026 경기도 청년참여기구 명칭 공모 - ﻿경기도미래세대재단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64306,7 +64306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110110",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 한국해양수산연수원 개인정보보호 표어 공모전 - 한국해양수산연수원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64337,7 +64337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110086",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "충청권 운수종사자 대상 교통안전 슬로건 공모전 - 대전지방국토관리청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64368,7 +64368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110064",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "김천시 시민운동 슬로건 리뉴얼 공모전 - 김천시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64399,7 +64399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110063",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "가마지천 반려공존 하천문화공간 반려견 놀이터 명칭 공모 - 김포시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64430,7 +64430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=109982",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "(가칭)열린도서관 명칭 공모 공고 - 강서구청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64461,7 +64461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109981",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&auto=format&fit=crop&q=80",
     "description": "동서트레일 명칭 및 숲길정책 국민 아이디어 공모 - 산림청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64492,7 +64492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109848",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "북항 프롬나드 코스 네이밍 공모전 - 부산항만공사 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64523,7 +64523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109598",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "하천계곡 관리시스템 명칭 공모 - 행정안전부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64554,7 +64554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109410",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "경기도 1인가구 지원 사업 명칭(네이밍) 공모 - 경기도 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64585,7 +64585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109401",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "의왕시 부곡커뮤니티센터 내 공공도서관 명칭 공모 - 의왕시중앙도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64616,7 +64616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109362",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 도로전광표지(VMS) 교통안전 표어 공모전 - 익산지방국토관리청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64647,7 +64647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109272",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "천하제일 영등포구 청렴 슬로건 공모전 - 영등포구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64678,7 +64678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109271",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "[부산광역시 연제구] 구민과 함께하는 반부패·청렴 표어 공모전 - 부산광역시 연제구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64709,7 +64709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109245",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "마음대로(大路) 한 책 N행시 공모전 - 국립순천대학교 도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64740,7 +64740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109143",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "순천시 민선9기 시정의 패러다임 大전환 시민주권 시대 슬로건 공모전 - 순천시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64771,7 +64771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=108885",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 군인권보호관 슬로건 공모전 - 국가인권위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64802,7 +64802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=108749",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "한국농촌경제연구원 마스코트 네이밍 공모전 - 한국농촌경제연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64833,7 +64833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=108645",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제10대 마포구의회 슬로건 공모전 - 마포구의회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64864,7 +64864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=108641",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "조달청 BEST 혁신기업 현판 네이밍 공모전 - 조달청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64895,7 +64895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=108598",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 국내재취업 브랜드 네이밍 & 캐치프레이즈 공모전 - 고용노동부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64926,7 +64926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108555",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "경산시 아동돌봄 통합 플랫폼 명칭 공모전 - 경산시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64957,7 +64957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108500",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "2027 청주독서대전 슬로건 공모전 - 청주시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -64988,7 +64988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108494",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "직업계고 채용연계형 직무교육과정 지원사업 브랜드 네이밍&슬로건 공모전 - 대한상공회의소 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65019,7 +65019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108324",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 청렴 표어 공모전 - 동작도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65050,7 +65050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108293",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 국제종자박람회 10주년 기념 슬로건 대국민 공모전 - 한국농업기술진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65081,7 +65081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108280",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "우리가 만드는 청렴 교실 청렴 슬로건 공모전 - 인천북부교육지원청 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65112,7 +65112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108215",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "광주ㆍ전남 통합 관광브랜드 슬로건 공모전 - 광주광역시 관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65143,7 +65143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108128",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=800&auto=format&fit=crop&q=80",
     "description": "여수해양경찰서 함정 승조원 지원시설 명칭 공모 - 여수해양경찰서 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65174,7 +65174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107948",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "[시흥시청소년수련관] 2026년 징검다리'와 함께하는 자율이용공간 네이밍 공모전 - 시흥시청소년수련관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65205,7 +65205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107926",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "전북특별자치도청년미래센터 위기청년(가족돌봄, 고립은둔) 응원 슬로건 공모전 - 전북특별자치도사회서비스원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65236,7 +65236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107873",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 중앙사회서비스원 대국민 슬로건 공모전 - 중앙사회서비스원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65267,7 +65267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107812",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "서울특별시교육청정독도서관 개관 50주년 기념 슬로건 공모전 - 서울특별시교육청정독도서관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65298,7 +65298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107749",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "대구평생학습플랫폼 디지털 배지(Digital Badges) 명칭 공모전 - 대구광역시행복진흥사회서비스원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65329,7 +65329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107691",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[산업통상부/KIAT] K-Girls' Day 리브랜딩 네이밍 공모전 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65360,7 +65360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=107639",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애아동지원센터 별칭 공모전 - 한국장애인개발원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65391,7 +65391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107518",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 에너지절감 슬로건 공모전 - 한국전력기술 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65422,7 +65422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107366",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "단양 다누리 어린이 실내놀이터 이름 공모전 - 단양군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65453,7 +65453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107251",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 기본사회위원회 슬로건 국민 공모전 - 기본사회위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65484,7 +65484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107181",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "건강도시 안산 슬로건 공모전 - 안산시 단원보건소 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65515,7 +65515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107143",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 관악 사회적경제 주민 어울림 한마당 브랜드 네이밍 공모전 - 관악구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65546,7 +65546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107140",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "(가칭) 원주 AI 교육센터 명칭 공모 - 원주시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65577,7 +65577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106945",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[식품의약품안전처] 의약외품 바로 알기 슬로건 공모전 - 식품의약품안전처 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65608,7 +65608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106927",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "대한변리사회 창립 80주년 기념 슬로건 공모전 - 대한변리사회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65639,7 +65639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106919",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2027학년도 신설 공립학교 교명 공모 - 부산광역시 강서구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65670,7 +65670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106898",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "국립공주대-충남대 통합대학 교명 공모 - 국립공주대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65701,7 +65701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106864",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&auto=format&fit=crop&q=80",
     "description": "노모어피자 캐릭터 네이밍 공모전 - 노모어피자 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65732,7 +65732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106819",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 고성군 청렴 슬로건 공모전 - 고성군 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65763,7 +65763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106774",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제46회 장애인의 날 기념 장애인식개선 캠페인 이름 공모전 - 진주시장애인종합복지관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65794,7 +65794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106724",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애인학대 예방의 날 첫 시행기념 학대예방의 날 슬로건 공모전 - 경기남부장애인권익옹호기관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65825,7 +65825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=106699",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "평화·통일·민주시민교육 기구 명칭 공모전 - 국립평화통일민주교육원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65856,7 +65856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106604",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "청담 우리들병원 44주년 개원기념일 기념 캐치프레이즈 공모전 - 청담 우리들병원 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65887,7 +65887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106556",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "경남진주혁신도시 복합문화도서관 복합문화관 명칭 공모 - 진주시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65918,7 +65918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106528",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "부천여성청소년센터 센터 캐릭터 이름 공모전 - 부천여성청소년센터 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65949,7 +65949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106525",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "서귀포시 종합체육관 명칭 공모 - 서귀포시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -65980,7 +65980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106477",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "시흥도시공사 관광시설 명칭 공모전 - 시흥도시공사 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66011,7 +66011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106419",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "신축시설 명칭 선정을 위한 아이디어 공모전 - 부산광역시 서구 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66042,7 +66042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106414",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507842229452-7740e53a299d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 책 읽는 대한민국 캠페인 슬로건 공모 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66073,7 +66073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106411",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제20회 금사참외축제 슬로건 공모전 - 금사참외축제추진위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66104,7 +66104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106394",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "재정경제부 마스코트 네이밍 공모전 - 재정경제부 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66135,7 +66135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106380",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "대전형 모두의 가게 이름 공모전 - 밀알복지관 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66166,7 +66166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106376",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "고교 일학습병행(도제학교) 인식 개선 슬로건 공모전 - 한국산업인력공단 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66197,7 +66197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106369",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "군산시 공공자전거 명칭 시민 공모전 - 군산시 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66228,7 +66228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106289",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "감정노동자 인권보호 캐치프레이즈 공모전 - 의왕도시공사 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66259,7 +66259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106287",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "경남금연지원센터 세계 금연의 날 슬로건 공모전 - 경남금연지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66290,7 +66290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106255",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제65회 탐라문화제 축제주제 공고 - 한국예총제주특별자치도지회 주최 전국 공모전 및 경진대회입니다. 분야 : 네이밍/슬로건",
     "tags": [
       "전국대회",
@@ -66321,7 +66321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111953",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "제 19기 기상청 국민정책기자단 모집 - 기상청 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66352,7 +66352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111922",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 농림식품기술기획평가원 iPET 농플루언서 모집 - 농림식품기술기획평가원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66383,7 +66383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111921",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 농림식품기술기획평가원 iPET 서포터즈 5기 모집 - 농림식품기술기획평가원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66414,7 +66414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111908",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 KISA 제8기 국민소통 청년참여단 모집 - 한국인터넷진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66445,7 +66445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111904",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=800&auto=format&fit=crop&q=80",
     "description": "2027년 공주시 SNS 서포터즈 모집 - 공주시청 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66476,7 +66476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111889",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "[강남 아이즈 윈터 크루] 2026 강남 아이즈 미디어 윈터 페스타 공식 서포터즈 모집 공고 - GANGNAM EYES 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66507,7 +66507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111886",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[한국관광공사] 공주·부여 C-투어버스 DRT 대학생 서포터즈 모집 - 한국관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66538,7 +66538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111862",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "누크커피, 이모생각(분식) 방문형 블로그 서포터즈 모집 - 누크, 이모생각 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66569,7 +66569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111828",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "글로벌 Youth 앰버서더 오디션 2026 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66600,7 +66600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111807",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제6기 북극케어 대학생 서포터즈 모집 - 해양수산부/ 한국해양수산개발원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66631,7 +66631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111783",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 11월 생활무전기 정책홍보단 모집 - 한국방송통신전파진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66662,7 +66662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111678",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집 - 롯데물산 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66693,7 +66693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111658",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2027년 서대문구 SNS 서포터즈 모집 - 서대문구청 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66724,7 +66724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=110894",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[CCOMA] 여성 패션 브랜드 꼼마 앰버서더·서포터즈 모집 - CCOMA 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66755,7 +66755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=110893",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[THUMB] 남성 패션 브랜드 덤 앰버서더·서포터즈 모집 - THUMB 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66786,7 +66786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=110141",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 더불어민주당 은평구(을) 대학생위원회 모집 - 더불어민주당 은평구(을) 대학생위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66817,7 +66817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=109446",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 도외 유튜버 대상 제주 장기체류 콘텐츠 제작 지원 - 제주특별자치도관광협회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66848,7 +66848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=109310",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 더불어민주당 노원구(갑) 대학생위원회 신규위원 모집 - 더불어민주당 노원구(갑) 대학생위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66879,7 +66879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=108343",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 새마을운동 청년홍보단 새럽 6기 모집 - 새마을운동중앙회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66910,7 +66910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=106515",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 건설안전 국민감시단 모집 - 국토안전관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66941,7 +66941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111927",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 사회적기업 국제포럼 대학생 서포터즈 모집 - 고용노동부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -66972,7 +66972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111882",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "비클 서포터즈 비클럽 9기 모집 - 비클 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67003,7 +67003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111854",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집 - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67034,7 +67034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111771",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "교촌치킨 서포터즈 K-스피커스 13기 모집 - 교촌에프앤비 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67065,7 +67065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111766",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "풀무원샘물 하루귀리 대학생 서포터즈 2기 모집 - 풀무원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67096,7 +67096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111757",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "시슐랭 프렌즈 1기 모집 - 한국경제인협회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67127,7 +67127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111699",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "[서울특별시] 2026년 하반기 시민 서포터즈 모집 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67158,7 +67158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111659",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 천안시마을공동체지원센터 대학생 서포터즈 모집 - 천안시, (사)천안공동체네트워크 함께이룸 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67189,7 +67189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111583",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[현대자동차] H스타일리스트 14기 모집 - 현대자동차 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67220,7 +67220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111580",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 서울 한강 걷기대회 서포터즈 모집 - 아주경제 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67251,7 +67251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111555",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[OPERA] 오페라 7기 서포터즈 모집 - 피아스 코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67282,7 +67282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111533",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "[러블리페이퍼] 손수레 정비봉사단 러블리페어 모집 - 사단법인 러블리페이퍼 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67313,7 +67313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111485",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "[인디에프] BIND 서포터즈 1기 모집 - ㈜인디에프 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67344,7 +67344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111475",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "서울리거피부과 아임서울(더마코스메틱) 아임러버 서포터즈12기 모집 - 서울리거피부과 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67375,7 +67375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111450",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 USF 울산스타트업페스타 서포터즈 모집 - 울산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67406,7 +67406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111410",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[dejavu] 데자뷰 7기 서포터즈 모집 - 피아스 코리아 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67437,7 +67437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111391",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=80",
     "description": "[기후부/한국생태관광협회] 제13기 생태관광 영리더스클럽 서포터즈 모집 - 기후에너지환경부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67468,7 +67468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111311",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=800&auto=format&fit=crop&q=80",
     "description": "LG 대국민 미소 사진 공모전 - 스마일 모먼트 - LG 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67499,7 +67499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111297",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "[타라티피에스] 툴디 서포터즈 14기 모집 - 타라 티피에스 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67530,7 +67530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111288",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "퓨어무브 대학생 서포터즈 １기 모집 - 퓨어무브 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67561,7 +67561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111256",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "HAEMO(해모) 라이프스타일 서포터즈 1기 모집 - 주식회사 해모 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67592,7 +67592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111200",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "ICNX 2026 공식 서포터즈(대학생 기자단) 모집 - 인천광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67623,7 +67623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111197",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "벨르랑코 서포터즈 8기 모집 - 벨르랑코 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67654,7 +67654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111189",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제9회 대한민국패럴스마트폰영화제 대학생기자단 제7기 모집 - (사)수레바퀴재활문화진흥회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67685,7 +67685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111150",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한동 국제 뽱 페스티벌을 알릴 뽱 크루 서포터즈 모집 - 한동대학교 글로컬사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67716,7 +67716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111139",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "[아름다운 가게] 위아자 나눔위크 2026 지구체육관 서포터즈(STAFF) 모집 - 중앙일보 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67747,7 +67747,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111117",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 중앙행정기관 청년정책평가단 모집 - 국무조정실 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67778,7 +67778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111063",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 진주국제재즈페스티벌 서포터즈 JJ프렌즈 모집 - 진주국제재즈페스티벌 조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67809,7 +67809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111057",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "아동·청소년 온라인 성착취 예방을 위한 대학생 안심온지킴이 서포터즈 모집 - 서울시온라인성착취안심ON센터 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67840,7 +67840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111056",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "한국지식재산보호원 서포터즈 IP 서폿 2기 모집 - 한국지식재산보호원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67871,7 +67871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111054",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "2026 바이오미래포럼 대학생 서포터즈 모집 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67902,7 +67902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111049",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "언니의파우치 서포터즈 14기 모집 - 주식회사 언니의파우치 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67933,7 +67933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111040",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대한민국 관광기념품 박람회 서포터즈 모집 - 한국관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67964,7 +67964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110987",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[KOTMI] 한국섬유기계융합연구원 대학생 서포터즈 1기 KOTMATE 모집 - KOTMI 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -67995,7 +67995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110979",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "대구경북 청년노동인권사업단 서포터즈 YoungLaborClub 1기 모집 - 대구경북청년노동인권사업단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68026,7 +68026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110972",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제2기 가축위생방역지원본부 서포터즈 모집 - 가축위생방역지원본부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68057,7 +68057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110967",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "펑크린 대학생 서포터즈 펑~크린에이터 2기 모집 - 유한클로락스 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68088,7 +68088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110949",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "SPONUVA 대학생 서포터즈 스포터즈 1기 모집 - 스포뉴바 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68119,7 +68119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110947",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "에픽민트 서포터즈 EPIC CREW 1기 모집 - 에픽민트 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68150,7 +68150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110928",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한글주간 한글 지킴이 한글주간 누리꾼 4기 모집 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68181,7 +68181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110860",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "제15회 이데일리 W페스타 서포터즈 모집 - 이데일리 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68212,7 +68212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110852",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "자원순환실천인증 단체 대항전 챌린지 - 한국환경공단, 그린루틴 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68243,7 +68243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110851",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 킹콩크랩 서포터즈 모집 - (주)킹콩F&B 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68274,7 +68274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110827",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[우체국물류지원단] 공정채용 강화를 위한 대국민 채용전형 모니터링단 모집 - 우체국물류지원단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68305,7 +68305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110790",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "한국도로공사 대구경북본부 온라인 고객 패널 로드톡 1기 모집 - 한국도로공사 대구경북본부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68336,7 +68336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110764",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "제8기 FiPA 시민참여혁신단 공개 모집 - 한국어촌어항공단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68367,7 +68367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110728",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 강원랜드 국민혁신단 모집 공고 - (주)강원랜드 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68398,7 +68398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110718",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "HYUNDAI MOTORSTUDIO BUSAN 대학생 서포터즈 모집 - 현대 모터스튜디오 부산 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68429,7 +68429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110717",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "2026 포항국제음악제 POCO 서포터즈 모집 - 포항문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68460,7 +68460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110715",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 SBIC 서포터즈 모집 - 성남시 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68491,7 +68491,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110714",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "[아모레퍼시픽] 바이탈뷰티 SUPER CREW 모집 - 아모레퍼시픽 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68522,7 +68522,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110712",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "컨디션 대학생 서포터즈, 컨디션 C.R.E.W 2기 모집 - 컨디션 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68553,7 +68553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110708",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국석유관리원 시민참여혁신단 모집 - 한국석유관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68584,7 +68584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110680",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제28회 부천국제애니메이션페스티벌(BIAF2026) 관객심사단 애니비(AniB) 모집 - (사)부천국제애니메이션페스티벌 조직위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68615,7 +68615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110678",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 스포츠토토 숏폼 공모전 - 국민체육진흥공단 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -68646,7 +68646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110645",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "[윌라] 대학생 서포터즈 윌프렌즈 4기 모집 - 윌라 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68677,7 +68677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110633",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "[문화체육관광부×한국문화정보원] 문화데이터 활용 영상 제작 AI 챌린지 - 한국문화정보원 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -68708,7 +68708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110605",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "[2026 안성시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집 - SK하이닉스 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68739,7 +68739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110604",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=800&auto=format&fit=crop&q=80",
     "description": "[2026 용인시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집 - SK하이닉스 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68770,7 +68770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110603",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "이장군족발보쌈 서포터즈 이장군PD 1기 모집 - (주)엘에스엘 플러스 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68801,7 +68801,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110595",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "i-FORUM 2026 서포터즈 모집 - 아이뉴스24 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68832,7 +68832,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110548",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "선불식 결합상품 소비자 피해예방 정보제공 SNS 서포터즈 모집 - (사)한국여성소비자연합 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68863,7 +68863,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110519",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 NRF 서포터즈 모집 - 한국연구재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68894,7 +68894,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110512",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 아브뉴프랑 어린이 가족 미술제 대학생 서포터즈 모집 - 호반프라퍼티㈜ 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68925,7 +68925,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110503",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 케미스트릿 강남역 푸드위크 SEASON 2 체험단 모집 - 서초구청 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68956,7 +68956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110502",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "아모레퍼시픽 공식 서포터즈 A-마케터 3기 모집 - 아모레퍼시픽 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -68987,7 +68987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110500",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "쓱7크루 2기 모집 - SSG.COM 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69018,7 +69018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110499",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "에잇그로우 서포터즈 두피보증단 모집 - (주) 그레이스클럽 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69049,7 +69049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110495",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "2026 모두의 창업 2차 충남 서포터즈 모집 - 충남창조경제혁신센터 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69080,7 +69080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110486",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "한국패션협회 K-Fashion IP 캠페인 서포터즈 챌린지 모집 - 산업통상부 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69111,7 +69111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110475",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=800&auto=format&fit=crop&q=80",
     "description": "우리학교 출판사 청소년/영어덜트 문학 서포터즈 3기 모집 - 우리학교 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69142,7 +69142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110465",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2027~2029 전국종합체육대회 우리동네 응원단장 모집 - 경기도체육회 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69173,7 +69173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110427",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "LG 마이컵 대학생 서포터즈 1기 모집 - LG전자 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69204,7 +69204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110350",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 아이가 행복입니다 부산 서포터즈 모집 - 부산광역시, 조선일보 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69235,7 +69235,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110348",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 부산 수제맥주 마스터스 챌린지 서포터즈 모집 - 부산광역시, 경제진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69266,7 +69266,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110343",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "﻿2026 안동국제탈춤페스티벌 글로벌 호스트 모집 - 한국정신문화재단 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69297,7 +69297,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110335",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
     "description": "6주 만에 책을 내고 작가가 되세요! ! 누구나 참여 가능합니다! 58기 모집 - 글ego 주최 전국 공모전 및 경진대회입니다. 분야 : 논문/리포트, 문학/글/시나리오, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -69328,7 +69328,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110328",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "KOHI 청년 서포터즈 : 이런(e-Learn) 인재 모집 - 한국보건복지인재원 주최 전국 공모전 및 경진대회입니다. 분야 : 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -69359,7 +69359,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111912",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "[CJ제일제당] 햇반 30주년 AI 공모전 (갓 지은 AI디어) - CJ제일제당 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69390,7 +69390,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111850",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026년도 대한민국 SW기술대상 및 IT 아키텍처대상 - (사)한국소프트웨어기술진흥협회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69421,7 +69421,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111837",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 2026 대한민국 AI 창조공모대전 - 한국창조미술협회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69452,7 +69452,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111802",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "현대자동차그룹 차량용 앱 개발 공모전 - 현대자동차그룹 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69483,7 +69483,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111800",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 AI 플레이 콘텐츠 제작 공모전 - 중앙대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69514,7 +69514,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111797",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507842229452-7740e53a299d?w=800&auto=format&fit=crop&q=80",
     "description": "[세종사이버대학교 AI실무활용학과] 한국 고전 설화 또는 전래동화 캐릭터의 재해석 공모전 - 세종사이버대학교 AI실무활용학과 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69545,7 +69545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111765",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?w=800&auto=format&fit=crop&q=80",
     "description": "2026 K-AWARDS DIGITAL EXCELLENCE AWARDS - 사단법인 한국디지털에이전시협회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69576,7 +69576,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111747",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&auto=format&fit=crop&q=80",
     "description": "AI 달인의 꿀팁 챌린지 시즌3 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69607,7 +69607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111682",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "화이트햇 2026 국방 사이버보안 콘테스트 - 국방부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69638,7 +69638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111567",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-87676104235f?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회 - 대구광역시 탄소중립지원센 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69669,7 +69669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=110273",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "AI 달인 100 챌린지 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69700,7 +69700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111843",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한림 G-Lab@동해 AI활용 지역문제해결 해커톤 - 한림대학교, 동해시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69731,7 +69731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111752",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 AI 해킹 방어 대회(ACDC) 참가자 모집 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69762,7 +69762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111734",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 동해시 AI 활용 해커톤 대회 - 동해시 & 한림대 G-Lab 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69793,7 +69793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111588",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "나랏돈 50조 찾기 프로젝트 - 나라장터 해커톤 - 개혁신당 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69824,7 +69824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111322",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "[서울대학교 창업지원단·H1R AI] 2026 SNU X Croche AI 앱 해커톤 - 하이어에이아이 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT, 취업/창업",
     "tags": [
       "전국대회",
@@ -69855,7 +69855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111279",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "충청북도 과학여행 이야기 AI 이미지‧영상 공모전 - 충북과학문화거점센터 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69886,7 +69886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111278",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "과학기술문화 활동가 AI콘텐츠 경진대회 - 충북과학문화거점센터 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69917,7 +69917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111265",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "SK하이닉스 AI 해커톤 2026 - SK하이닉스 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69948,7 +69948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111185",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "[방송미디어통신위원회] 생성형 AI 위험성 찾기 이벤트 시즌3 - 방송미디어통신위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -69979,7 +69979,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111124",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤 - 고용노동부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70010,7 +70010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111122",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 국립강원전문과학관 AI경진대회 (동화책 만들기, 4컷 과학만화 만들기) - 국립강원전문과학관 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70041,7 +70041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111047",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "한국택견협회 X 반크(VANK) 택견 AI 콘텐츠 발굴 대회 - 한국택견협회 X 반크(VANK) 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70072,7 +70072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110998",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "공공 웹사이트 불법광고 탐지 도구 개발 공모전 - 행정안전부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70103,7 +70103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110953",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "2026 KoMaP AI 경진대회 - 산업통상부,한국산업기술진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70134,7 +70134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110836",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "SDU COSS와 함께하는 소개딩 (소프트웨어 개발보안 시큐어코딩 경진대회) - 과학기술정보통신부·교육부·행정안전부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70165,7 +70165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110710",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 추계학술대회 대학생 ERP 아이디어 공모전 - 한국경영정보학회.영림원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70196,7 +70196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110659",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 데이터+AI 혁신챌린지 데이터안심구역 경진대회 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70227,7 +70227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110585",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "2026 0924영상제 영상 공모전 - 하남시청소년수련관 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -70258,7 +70258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110576",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 성남 x KAIST AI경진대회 참가자 모집 - 성남시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70289,7 +70289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110360",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "(iM뱅크) 2026 AI Blookchain 경진대회 - iM뱅크 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70320,7 +70320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110355",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "제6회 우리은행 모의해킹 경진대회 - 우리은행 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70351,7 +70351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110264",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 AI금융빅데이터플랫폼 소비데이터 활용 아이디어 공모전 - 비씨카드 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70382,7 +70382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110070",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026 청소년 AI 콘텐츠 경진대회 YACOF - 문화체육관광부, 전남광주통합특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70413,7 +70413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110053",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 AI로 금산 창작물 공모전 - 금산교육지원청 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70444,7 +70444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110040",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "2026 전남광주 청년(YOUTH) AI 솔버톤 - 중소벤처기업진흥공단 호남연수원 외 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70475,7 +70475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110003",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "모두의 AI 실험실 AI 서비스 경진대회 - 과학기술정보통신부, 한국지능정보사회진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70506,7 +70506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109974",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "KB스타즈 여자프로농구단 대학생 홍보대사 16기 모집 - KB스타즈 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -70537,7 +70537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109958",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 안양시 공공데이터・AI 활용 대학생 경진대회 - 안양시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70568,7 +70568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109956",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 공무원연금공단 AI•공공데이터 대국민 시각화 경진대회 - 공무원연금공단 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70599,7 +70599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109905",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "국립광주과학관 2026 마이AI랩 AI-이음 프로젝트 공모전 - 과학기술정보통신부, 한국지능정보사회진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70630,7 +70630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109888",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=800&auto=format&fit=crop&q=80",
     "description": "2026 한국관광 데이터랩 활용 경진대회 - 한국관광콘텐츠랩 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70661,7 +70661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109851",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "[국가정보원] 2026 사이버공격방어대회 참가자 모집 - 국가정보원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70692,7 +70692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=109792",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 판타지아대구페스타 AI 콘텐츠 공모전 - 대구광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70723,7 +70723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109674",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "지능형 홈(AI@Home) matter AX Sprint 2026(개발자 해커톤) - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70754,7 +70754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109554",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?w=800&auto=format&fit=crop&q=80",
     "description": "일상을 바꾸는 한 줄 SKT 모두의 promp.T 공모전 - SK텔레콤 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70785,7 +70785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109182",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "[NHN] 게임 X AI 해커톤 (NAN2026) - NHN 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70816,7 +70816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109174",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "[방송미디어통신위원회] 더나은 생성형 AI 서비스 만들기 경진대회 시즌1 - 방송미디어통신위원회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70847,7 +70847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109162",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026 HACKSIUM BUSAN (동남권 특화산업 시나리오 기반 해킹방어대회) - 과학기술정보통신부, 부산광역시, 한국인터넷진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70878,7 +70878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109144",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 매일유업 대학생 AI 영상 공모전 - 매일유업 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -70909,7 +70909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109142",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026 대전 AI 영상 공모전 - 대전광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -70940,7 +70940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109032",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "2026 관광데이터 활용 공모전(웹ㆍ앱 구현 부문) - 한국관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -70971,7 +70971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=108984",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485546246426-74dc88dec4d9?w=800&auto=format&fit=crop&q=80",
     "description": "2026 D-Robotics Innovation Contest - 엔티렉스 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71002,7 +71002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=108830",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 NAVER OGQ마켓 AI Competition 대회 - 네이버 OGQ마켓, 전국마이스터고등학교교장협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71033,7 +71033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=108794",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026 호남 IS 코딩챌린지 - 전주정보문화산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71064,7 +71064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=108767",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "제4회 스마트축산 AI 경진대회 - 농림축산식품부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71095,7 +71095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108754",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "SNU AI Challenge 2026 - 서울대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71126,7 +71126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108752",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "제2회 한국수목원정원관리원 AI 활용 콘텐츠 공모전 - 한국수목원정원관리원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71157,7 +71157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108702",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "MOVE AI CHALLENGE 2026 - 물류 AI 아이디어 구현 해커톤 - 국토교통부, 물류산업진흥재단 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71188,7 +71188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108662",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&auto=format&fit=crop&q=80",
     "description": "코웨이 비렉스 AI 영상 광고 · 숏폼 공모전 - 코웨이 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -71219,7 +71219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108653",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800&auto=format&fit=crop&q=80",
     "description": "2026 Big Data 활용 대회 참가자 모집 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71250,7 +71250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108567",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제8회 K-디지털 트레이닝 해커톤 - 고용노동부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71281,7 +71281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108549",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511192336575-5a79af67a629?w=800&auto=format&fit=crop&q=80",
     "description": "2026 장애 공감 공모전 - 한국장애인재단 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -71312,7 +71312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108544",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "제13회 전국 ICT융합 AI 공모전 - 과학기술정보통신부, 충청북도 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71343,7 +71343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108519",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제3회 KRC AI 디지털 혁신 공모전 - 한국농어촌공사 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71374,7 +71374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108509",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&auto=format&fit=crop&q=80",
     "description": "제 5회 그린이니셔티브 60초 영화제 공모전 - 제주MBC 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈, 기타",
     "tags": [
       "전국대회",
@@ -71405,7 +71405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108490",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 시민·공무원 AI 공모전 - 화성시 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71436,7 +71436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108424",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "제5회 경운대학교 지능형 모빌리티 SW경진대회 - 경운대학교 / 경운대학교 소프트웨어중심대학사업 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71467,7 +71467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108417",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 CHAI 대학생 AI 광고 공모전 - 차이커뮤니케이션 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어, 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 대외활동/서포터즈, 취업/창업",
     "tags": [
       "전국대회",
@@ -71498,7 +71498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108323",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 물류데이터·AI 활용 및 분석 아이디어 공모전 - 대전정보문화산업진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71529,7 +71529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108289",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "2026 성평등 영상 콘텐츠 공모전 - 제주특별자치도 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 디자인/캐릭터/웹툰, 웹/모바일/IT, 예체능/미술/음악, 대외활동/서포터즈",
     "tags": [
       "전국대회",
@@ -71560,7 +71560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108247",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "제주 바이오 AX 해커톤: AI로 설계하는 제주 바이오의 미래 참가팀 모집 - 제주테크노파크, 제주산학융합원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71591,7 +71591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108156",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1516962215378-7fa2e137ae93?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 춘천시 데이터 활용 해커톤 대회 - 춘천시,강원도민일보 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71622,7 +71622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108125",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 제 2회 강원권 중고교 AI 사이버 보안 챌린지 - 강원대학교, 한국인터넷진흥원, 강원특별자치도교육청, 국가정보원지부 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71653,7 +71653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108007",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 서대문청소년센터 AI · 미디어콘텐츠공모전 Signal_A 참가자 모집 - 서대문청소년센터 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71684,7 +71684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107977",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
     "description": "2026 쉬운 우리말 쓰기 영상 제작 공모전 - 국어문화원연합회 주최 전국 공모전 및 경진대회입니다. 분야 : 광고/마케팅, 영상/UCC/사진, 웹/모바일/IT, 문학/글/시나리오, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -71715,7 +71715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107874",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "제1회 자유기업원 AI콘텐츠 공모전 - 재단법인 자유기업원 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71746,7 +71746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107850",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1535378620166-273708d44e4c?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 대한민국 AI 콘텐츠 어워즈 - 경쟁 부문 출품 공고 - 경기도 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71777,7 +71777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107842",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "2026년 대한민국 AI 콘텐츠 어워즈 - 백남준 특별상 부문 - 경기도 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71808,7 +71808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107839",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "DIVE 2026 해커톤 참가팀 모집 - 부산테크노파크 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -71839,7 +71839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=107837",
-    "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
     "description": "[요기요 X 오라클 해커톤] 맛있는 일상 AI로 잇(IT)다 해커톤 - 위대한상상 주최 전국 공모전 및 경진대회입니다. 분야 : 웹/모바일/IT",
     "tags": [
       "전국대회",
@@ -74690,7 +74690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "누구나",
     "fee": "상세 안내 참조",
     "url": "https://sgwon.or.kr/introduce/04.php?admin_mode=read&no=181612",
-    "imageUrl": "https://culture.seoul.go.kr/cmmn/file/getImage.do?atchFileId=c978b819995644ac870c98f086db5107&thumb=Y",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "2026 제5회 전국 승가원 [장애공감 어린이 그림공모전 수상작 전시] 나답게, 너답게, 우리답게! - 한국장애인문화예술원 이음갤러리에서 진행되는 서울시 공식 문화행사입니다.",
     "tags": [
       "서울시문화행사",
@@ -82686,7 +82686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 미취학(5~7세) 및 초등학생 전학년",
     "fee": "무료 (도화지 현장 무료 배부)",
     "url": "https://www.museum.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544967082-d9d25d867d66?w=800&auto=format&fit=crop&q=80",
     "description": "국립중앙박물관의 유물과 가을 풍경을 주제로 펼쳐지는 전국 최고 권위의 어린이 그림그리기 대회입니다. 문화체육관광부장관상 수여.",
     "tags": [
       "사생대회",
@@ -82717,7 +82717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초등학생 (운문/산문 부문)",
     "fee": "무료",
     "url": "https://www.sejong.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "세종대왕의 한글 창제 정신을 되새기며 가을 호수공원에서 동시와 산문 솜씨를 뽐내는 전국 어린이 글짓기 대회입니다.",
     "tags": [
       "백일장",
@@ -82748,7 +82748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치부 및 초등학생",
     "fee": "무료",
     "url": "https://www.kcg.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1544717305-2782549b5136?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&auto=format&fit=crop&q=80",
     "description": "푸른 바다의 안전과 해양 생태계 보존을 주제로 그리는 전국 어린이 미술 사생실기대회입니다. 해양경찰청장상 수여.",
     "tags": [
       "해양경찰청",
@@ -82779,7 +82779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "유치부 및 초등학생",
     "fee": "무료 (친환경 크레파스 및 스케치북 지급)",
     "url": "https://www.forest.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800&auto=format&fit=crop&q=80",
     "description": "청정 금강소나무 숲길을 직접 눈으로 보고 그리는 전국 유소년 숲 생태 미술대회입니다. 산림청장상 수여.",
     "tags": [
       "산림청",
@@ -83616,7 +83616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치부 및 초등학생",
     "fee": "무료 (박물관 및 생태체험관 무료입장 혜택)",
     "url": "https://www.whalecity.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f?w=800&auto=format&fit=crop&q=80",
     "description": "푸른 동해와 고래를 테마로 펼쳐지는 어린이 사생대회. 해양수산부장관상 및 울산광역시장상 수여.",
     "tags": [
       "고래사생대회",
@@ -83647,7 +83647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초등학교 전학년 (저학년부/고학년부)",
     "fee": "무료 (로켓 제작 키트 무료 지급)",
     "url": "https://www.kasa.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1517976487507-5b3b4a45097c?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1517976487541-15cf44e451b4?w=800&auto=format&fit=crop&q=80",
     "description": "우주항공청 개청 기념 전국 최대 규모의 유소년 물로켓 및 화약로켓 과녁 명중 대회입니다. 우주항공청장상 수여.",
     "tags": [
       "물로켓대회",
@@ -83678,7 +83678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학교 1~6학년",
     "fee": "무료 (모든 미술·창작 재료 현장 제공)",
     "url": "https://www.acc.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&auto=format&fit=crop&q=80",
     "description": "아시아의 옛이야기를 모티브로 나만의 그림책 표지와 입체 조형물을 만들어보는 어린이 창의 문화콘텐츠 공모전입니다.",
     "tags": [
       "국립아시아문화전당",
@@ -83771,7 +83771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치원생 및 초등학생",
     "fee": "무료",
     "url": "https://www.nfa.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=800&auto=format&fit=crop&q=80",
     "description": "불조심과 생활 속 화재 안전을 주제로 상상력을 발휘하는 전통 깊은 어린이 미술 대회입니다. 행정안전부장관상 및 소방청장상 수여.",
     "tags": [
       "불조심포스터",
@@ -84700,7 +84700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학교 3학년~6학년",
     "fee": "무료",
     "url": "https://www.library.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1507842229452-7740e53a299d?w=800&auto=format&fit=crop&q=80",
     "description": "선정도서 5권을 완독하고 역사, 과학, 문학 상식을 퀴즈 서바이벌로 맞히는 흥미진진한 독서 챔피언십입니다.",
     "tags": [
       "독서골든벨",
@@ -84731,7 +84731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "유치부 및 초등학생",
     "fee": "무료 (도화지 및 원고지 배부)",
     "url": "https://www.gyeongju.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=800&auto=format&fit=crop&q=80",
     "description": "첨성대와 대릉원의 천년 고도를 배경으로 펼쳐지는 가을 사생대회 및 시·산문 백일장입니다. 경북도지사상 및 경북교육감상 수여.",
     "tags": [
       "사생대회",
@@ -84762,7 +84762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "유치부 및 초등부 (판소리/창작동요 부문)",
     "fee": "무료",
     "url": "https://www.jeonju.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?w=800&auto=format&fit=crop&q=80",
     "description": "우리 가락의 멋과 고운 동요 선율을 겨루는 유소년 국악·동요 경연대회입니다. 문화체육관광부장관상 및 전북특별자치도지사상 수여.",
     "tags": [
       "음악콩쿠르",
@@ -84793,7 +84793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초등학생 및 중학생",
     "fee": "무료",
     "url": "https://www.sciencecenter.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
     "description": "주어진 미지의 자연현상 문제를 현장 실험 키트를 활용해 과학적으로 검증하고 발표하는 탐구형 챌린지입니다.",
     "tags": [
       "과천과학관",
@@ -84824,7 +84824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초·중·고등학생 (운문/산문 부문)",
     "fee": "무료",
     "url": "https://www.gwe.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
     "description": "올림픽 평화 정신과 백두대간 자연을 노래하는 전국 청소년 글짓기 대회입니다. 문화체육관광부장관상 및 강원도지사상 수여.",
     "tags": [
       "평창백일장",
@@ -84855,7 +84855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초·중·고등학생",
     "fee": "무료",
     "url": "https://www.science.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=800&auto=format&fit=crop&q=80",
     "description": "생활 속 불편을 해소하는 기발한 과학 발명품을 제작하고 원리를 설명하는 국내 최고 권위의 학생 발명대회입니다. 대통령상 수여.",
     "tags": [
       "국립중앙과학관",
@@ -84917,7 +84917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치부 및 초등학생",
     "fee": "무료 (비엔날레 전시 무료 관람권 증정)",
     "url": "https://www.gwangjubiennale.org",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=800&auto=format&fit=crop&q=80",
     "description": "세계적인 미술 축제 광주비엔날레 무대에서 어린이들의 풍부한 상상력과 예술적 재능을 마음껏 펼치는 미술 실기대회입니다.",
     "tags": [
       "광주비엔날레",
@@ -84948,7 +84948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초·중·고등학생",
     "fee": "무료",
     "url": "https://www.yeosu.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800&auto=format&fit=crop&q=80",
     "description": "여수의 아름다운 가을 바다를 바라보며 시와 산문으로 문학적 감수성을 펼치는 전국 청소년 문학 축제입니다.",
     "tags": [
       "여수백일장",
@@ -85196,7 +85196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학생 고학년, 외국인",
     "fee": "상세 안내 참조",
     "url": "https://www.instagram.com/p/Desm5bzkrsQ/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
-    "imageUrl": "https://culture.seoul.go.kr/cmmn/file/getImage.do?atchFileId=23fd3d82960c4ae1886ab0241ac7457b&thumb=Y",
+    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=800&auto=format&fit=crop&q=80",
     "description": "조선왕릉 톺아보기: 조선왕릉 골든벨 - 선정릉에서 진행되는 서울시 공식 문화행사입니다.",
     "tags": [
       "서울시문화행사",
@@ -85444,7 +85444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유·초등학생 (그림 및 동시·산문)",
     "fee": "무료 (도화지 무료 지급 및 국가정원 무료입장)",
     "url": "https://scbay.suncheon.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=80",
     "description": "철새 흑두루미와 습지 자연생태의 소중함을 그림과 글로 표현하는 전국 어린이 환경 사생대회입니다. 환경부장관상 수여.",
     "tags": [
       "순천만사생대회",
@@ -85475,7 +85475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초등학생",
     "fee": "무료 (우편 접수 및 현장 실기대회 병행)",
     "url": "https://www.jeju.go.kr/wnh",
-    "imageUrl": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?w=800&auto=format&fit=crop&q=80",
     "description": "한라산, 성산일출봉, 거문오름 등 제주의 자연유산을 화폭에 담는 미술 공모전. 수상작은 유네스코 본부 및 자연유산센터에 전시됩니다.",
     "tags": [
       "제주미술공모전",
@@ -85816,7 +85816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 및 중학생 (개인 또는 2인 1팀)",
     "fee": "무료",
     "url": "https://www.cnse.or.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "물리, 화학, 생물, 지구과학 분야의 호기심을 스스로 탐구하여 결론을 도출하는 정통 청소년 과학 연구 발표 대회입니다.",
     "tags": [
       "과학전람회",
@@ -86002,7 +86002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 초·중·고등학생 및 청소년",
     "fee": "무료",
     "url": "https://www.kipa.org",
-    "imageUrl": "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?w=800&auto=format&fit=crop&q=80",
     "description": "일상의 불편함을 개선하는 번뜩이는 아이디어와 발명품을 겨루는 국내 최대 규모의 발명 축제입니다. 대통령상 및 국무총리상 수여.",
     "tags": [
       "발명대회",
@@ -86281,7 +86281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학교 1~6학년 (저학년부/고학년부 분리)",
     "fee": "무료 (지정 도서 2권 사전 읽기)",
     "url": "https://www.nlcy.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "지정 도서를 읽고 논리적인 자기 생각 발표와 팀 토론을 겨루는 전국 대회입니다. 서울특별시교육감상 및 도서문화상품권 수여.",
     "tags": [
       "독서토론",
@@ -86312,7 +86312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학생 및 중학생 (드론 비행 조종 및 장애물 자율주행 부문)",
     "fee": "무료",
     "url": "https://www.itp.or.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "자율주행 코딩 드론으로 장애물 링을 통과하고 미션을 해결하는 전국 유소년 항공우주 과학 챌린지입니다.",
     "tags": [
       "드론코딩",
@@ -86374,7 +86374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 1학년~6학년",
     "fee": "무료 (예선 원고 심사 후 본선 진출)",
     "url": "https://www.dge.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "자유 주제 3분 영어 스피치와 원어민 심사위원 질의응답을 통해 유창성과 표현력을 겨루는 전국 어린이 영어 말하기 대회입니다.",
     "tags": [
       "영어말하기대회",
@@ -86405,7 +86405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학교 3~6학년",
     "fee": "무료 (지정 도서 3권 완독 후 참여)",
     "url": "https://www.nlcy.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "선정 도서를 읽고 논술 및 퀴즈 골든벨, 패널 찬반 토론을 펼치는 정통 어린이 독서 역량 챔피언십입니다.",
     "tags": [
       "독서골든벨",
@@ -86436,7 +86436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학생 (저학년부/고학년부)",
     "fee": "무료",
     "url": "https://www.ifez.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
     "description": "기후변화와 미래도시를 주제로 영어 프레젠테이션 및 스피치를 펼치는 국제 규격 어린이 영어 말하기 대회입니다.",
     "tags": [
       "영어스피치",
@@ -86467,7 +86467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초·중·고등학생 (미션수행 로봇 부문)",
     "fee": "무료",
     "url": "https://www.robot-land.co.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=800&auto=format&fit=crop&q=80",
     "description": "라인트레이서, 자율주행, 재난구조 미션을 직접 코딩한 로봇으로 완수하는 전국 학생 로봇 올림피아드입니다. 경남도지사상 수여.",
     "tags": [
       "로봇경진대회",
@@ -86498,7 +86498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 5학년~중·고등학생",
     "fee": "무료",
     "url": "https://www.koreastudy.or.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&auto=format&fit=crop&q=80",
     "description": "선비 정신과 현대 윤리 문제를 접목하여 깊이 있는 비판적 사고와 논리적 발표력을 겨루는 전국 청소년 토론대회입니다.",
     "tags": [
       "독서토론",
@@ -86529,7 +86529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등부 및 청소년부",
     "fee": "무료 (수제 전주한지 캔버스 무료 제공)",
     "url": "https://www.ktcc.or.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&auto=format&fit=crop&q=80",
     "description": "천년 한지의 숨결 위에 수묵과 수채화로 한국의 멋을 표현하는 전국 청소년 한지 미술대회입니다. 문화체육관광부장관상 수여.",
     "tags": [
       "전주한지대회",
@@ -86901,7 +86901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 1학년~6학년",
     "fee": "응시료 30,000원 (전국 백분위 정밀 진단 성적표 제공)",
     "url": "https://www.kme.co.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1563770660941-20978e870e26?w=800&auto=format&fit=crop&q=80",
     "description": "단순 연산이 아닌 논리적 사고력과 문제 해결력을 측정하는 전국 규모 수학 학력평가 경시대회입니다.",
     "tags": [
       "수학올림피아드",
@@ -86932,7 +86932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 3학년~중등 3학년",
     "fee": "무료",
     "url": "https://www.busanit.or.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&auto=format&fit=crop&q=80",
     "description": "엔트리, 스크래치, 파이썬을 활용한 창의 알고리즘 문제 해결 및 AI 프롬프트 모델링 챌린지 대회입니다.",
     "tags": [
       "코딩대회",
@@ -87366,7 +87366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 1학년~중등 3학년 (스크래치/엔트리/파이썬)",
     "fee": "무료 (사전 온라인 예선 통과자 본선 진출)",
     "url": "https://www.kiria.org",
-    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=800&auto=format&fit=crop&q=80",
     "description": "실생활 문제를 블록코딩과 피지컬 로봇 센서로 해결하는 창의 코딩 챌린지입니다. 과학기술정보통신부장관상 수여.",
     "tags": [
       "코딩대회",
@@ -87397,7 +87397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등학교 4학년~6학년 (3인 1팀)",
     "fee": "무료",
     "url": "https://sejong.nl.go.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&auto=format&fit=crop&q=80",
     "description": "역사적 인물과 사건의 선택에 대해 심층 토론하고 반박하며 역사적 통찰력을 기르는 초등 전국 토론 한마당입니다.",
     "tags": [
       "역사토론",
@@ -87428,7 +87428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치부 및 초·중·고등학생",
     "fee": "무료",
     "url": "https://www.kasi.re.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1581092921461-eab62e97a780?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&auto=format&fit=crop&q=80",
     "description": "팀 창의 과제와 즉석 현장 과제를 수행하며 창의적 문제 해결력을 겨루는 국내 최대의 공인 창의력 올림피아드입니다. 특허청장상 수여.",
     "tags": [
       "창의력올림피아드",
@@ -87459,7 +87459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "초등 4학년~중·고등학생",
     "fee": "무료",
     "url": "https://aict.snu.ac.kr",
-    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=800&auto=format&fit=crop&q=80",
     "description": "아두이노, 마이크로비트, 라즈베리파이 센서를 제어하여 스마트시티 문제를 해결하는 피지컬 컴퓨팅 알고리즘 대회입니다.",
     "tags": [
       "로봇대회",
@@ -87521,7 +87521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "targetAudience": "전국 유치부 및 초등학생",
     "fee": "무료 (감귤 따기 체험권 무료 제공)",
     "url": "https://culture.seogwipo.go.kr/citrus",
-    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800&auto=format&fit=crop&q=80",
+    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=800&auto=format&fit=crop&q=80",
     "description": "노랗게 익은 제주 감귤밭에서 동시 짓기와 사생화를 그리며 가을 제주를 즐기는 어린이 문화 예술 한마당입니다.",
     "tags": [
       "제주감귤박물관",

@@ -198,26 +198,49 @@
           <!-- 실시간 육아 밸런스 투표 카드 (게시판 상단 하이라이트) -->
           <div id="active-poll-card" class="community-card p-5 bg-gradient-to-br from-white via-white to-rose-50/40"></div>
 
-          <!-- 게시판 검색 & 정렬 헤더 -->
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-1">
+          <!-- 게시판 검색 & 정렬 & 뷰모드 헤더 (네이버 카페 스타일) -->
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 px-1">
             <div class="flex items-center gap-2">
               <h3 id="current-board-title" class="text-sm font-black text-slate-900">전체 게시글</h3>
               <span id="current-board-count" class="text-xs font-bold text-rose-500"></span>
             </div>
-            <div class="flex items-center gap-2">
+            <div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+              <!-- 뷰 모드 토글: 네이버 카페 목록형 vs 피드 카드형 -->
+              <div class="inline-flex rounded-xl bg-stone-100 p-1 border border-stone-200 shrink-0">
+                <button
+                  id="btn-board-view-cafe"
+                  onclick="app.setBoardViewMode('cafe')"
+                  class="px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5"
+                  title="네이버 카페형 깔끔한 목록 보기"
+                >
+                  <i class="fa-solid fa-list-ul text-[10px] text-emerald-600"></i>
+                  <span>카페 목록형</span>
+                </button>
+                <button
+                  id="btn-board-view-card"
+                  onclick="app.setBoardViewMode('card')"
+                  class="px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5"
+                  title="피드 카드형 보기"
+                >
+                  <i class="fa-solid fa-table-cells-large text-[10px]"></i>
+                  <span>피드형</span>
+                </button>
+              </div>
+
               <!-- 게시판 내 검색창 -->
               <div class="relative">
                 <i class="fa-solid fa-magnifying-glass text-slate-400 text-xs absolute left-3 top-1/2 -translate-y-1/2"></i>
                 <input
                   id="board-search-input"
                   type="text"
-                  placeholder="제목, 내용, 태그 검색..."
+                  placeholder="제목, 내용, 작성자 검색..."
                   oninput="app.onBoardSearch(this.value)"
-                  class="pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 w-44"
+                  class="pl-8 pr-3 py-1.5 text-xs bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 w-40 sm:w-48"
                 />
               </div>
+
               <!-- 정렬 버튼 그룹 -->
-              <div class="flex items-center gap-1 bg-white border border-stone-200 rounded-xl p-1 text-xs">
+              <div class="flex items-center gap-1 bg-white border border-stone-200 rounded-xl p-1 text-xs shrink-0">
                 <button onclick="app.setBoardSort('latest')" data-sort="latest" class="board-sort-btn px-2.5 py-1 rounded-lg font-extrabold bg-slate-900 text-white">최신순</button>
                 <button onclick="app.setBoardSort('popular')" data-sort="popular" class="board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">공감순</button>
                 <button onclick="app.setBoardSort('comments')" data-sort="comments" class="board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800">댓글순</button>
@@ -226,8 +249,11 @@
             </div>
           </div>
 
-          <!-- 게시글 목록 (테이블 / 카드 하이브리드 리스트) -->
-          <div id="board-posts-list" class="space-y-3"></div>
+          <!-- 게시글 목록 (네이버 카페형 목록 / 피드형 하이브리드) -->
+          <div id="board-posts-list"></div>
+
+          <!-- 게시판 페이징 네비게이션 -->
+          <div id="board-pagination-container" class="pt-2 text-center"></div>
         </section>
 
         <!-- VIEW 2: 전국 지역행사 & 볼거리 (노는거, 볼거리: 지역축제, 가족 마라톤/걷기, 공원생태, 빛축제) -->
