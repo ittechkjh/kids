@@ -3297,10 +3297,6 @@ class DodamCommunityApp {
         } else {
           subtitleEl.textContent = '전국 초·중·고 15,000개 학교 순위와 특목·자사고 진학률 및 대입 실적 공시입니다.';
         }
-      } else if (this.schoolSido === 'seoul') {
-        subtitleEl.textContent = '1위는 서초구(22.99%)입니다. 2위는 강남구(19.26%)입니다.';
-      } else if (this.schoolSido === 'gyeonggi') {
-        subtitleEl.textContent = '1위는 과천시(15.78%)입니다. 2위는 용인시 수지구(7.42%)입니다.';
       } else {
         const sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
         if (sigungus.length >= 2) {
@@ -3374,65 +3370,39 @@ class DodamCommunityApp {
     };
     const lvl = levelNames[this.schoolLevel] || '초등학교';
 
-    let sigungus = [];
+    let rawList = [];
     if (this.schoolSido === 'all') {
+      rawList = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.all || [];
       if (this.schoolLevel === 'middle') {
-        sigungus = [
-          { rank: 1, sigungu: '서울 강남구', avg: '28.50%', median: '26.80%', count: '24곳', topSchool: '대청중학교 (48.50%)' },
-          { rank: 2, sigungu: '서울 양천구', avg: '26.20%', median: '24.50%', count: '19곳', topSchool: '목운중학교 (44.20%)' },
-          { rank: 3, sigungu: '경기 성남시 분당구', avg: '25.80%', median: '23.90%', count: '26곳', topSchool: '내정중학교 (41.80%)' },
-          { rank: 4, sigungu: '서울 송파구', avg: '24.10%', median: '22.30%', count: '28곳', topSchool: '잠실중 / 해누리중 (38.90%)' },
-          { rank: 5, sigungu: '서울 서초구', avg: '23.70%', median: '22.00%', count: '16곳', topSchool: '서운중학교 (37.50%)' },
-          { rank: 6, sigungu: '경기 안양시 동안구', avg: '22.90%', median: '21.20%', count: '17곳', topSchool: '귀인중학교 (36.40%)' },
-          { rank: 7, sigungu: '대구 수성구', avg: '21.80%', median: '20.10%', count: '23곳', topSchool: '경신중 / 정화중 (34.20%)' },
-          { rank: 8, sigungu: '경기 용인시 수지구', avg: '20.50%', median: '19.30%', count: '16곳', topSchool: '이현중학교 (33.10%)' },
-          { rank: 9, sigungu: '대전 유성구', avg: '19.40%', median: '18.20%', count: '15곳', topSchool: '문정중학교 (31.80%)' },
-          { rank: 10, sigungu: '부산 해운대구', avg: '18.70%', median: '17.50%', count: '19곳', topSchool: '해운대중학교 (30.50%)' },
-          { rank: 11, sigungu: '경기 고양시 일산동구', avg: '17.60%', median: '16.40%', count: '12곳', topSchool: '정발중학교 (28.90%)' },
-          { rank: 12, sigungu: '인천 연수구', avg: '16.90%', median: '15.80%', count: '16곳', topSchool: '송도신정중학교 (27.50%)' }
-        ];
-        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 중학교 순위';
+        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 중학교 학군 순위';
         if (subtitleEl) subtitleEl.textContent = '전국 주요 학군 시군구별 특목고·자사고 평균 진학률 및 1위 학교 공시';
       } else if (this.schoolLevel === 'high') {
-        sigungus = [
-          { rank: 1, sigungu: '경기 용인시 처인구', avg: '서울대 45명', median: '20명', count: '9곳', topSchool: '외대부고 (서울대 66명 / 의대 85명)' },
-          { rank: 2, sigungu: '전북 전주시 완산구', avg: '의대 32명', median: '15명', count: '14곳', topSchool: '상산고등학교 (의대 138명)' },
-          { rank: 3, sigungu: '서울 강남구', avg: '의대 28명', median: '18명', count: '22곳', topSchool: '휘문고 / 단대부고 (의대 122명)' },
-          { rank: 4, sigungu: '서울 은평구', avg: '서울대 22명', median: '8명', count: '18곳', topSchool: '하나고등학교 (서울대 57명)' },
-          { rank: 5, sigungu: '경기 성남시 분당구', avg: '서울대 18명', median: '12명', count: '18곳', topSchool: '낙생고등학교 (서울대 28명 / 의대 40명)' },
-          { rank: 6, sigungu: '충남 공주시', avg: '서울대 16명', median: '7명', count: '10곳', topSchool: '공주한일고 / 공주고 (서울대 24명)' },
-          { rank: 7, sigungu: '대구 수성구', avg: '의대 18명', median: '11명', count: '15곳', topSchool: '경신고등학교 (의대 73명)' },
-          { rank: 8, sigungu: '강원 횡성군', avg: 'SKY 17명', median: '6명', count: '5곳', topSchool: '민족사관고 (SKY/아이비 55명)' },
-          { rank: 9, sigungu: '서울 서초구', avg: '서울대 17명', median: '10명', count: '11곳', topSchool: '세화고등학교 (서울대 36명 / 의대 52명)' },
-          { rank: 10, sigungu: '서울 양천구', avg: '의대 16명', median: '10명', count: '15곳', topSchool: '강서고등학교 (의대 64명)' },
-          { rank: 11, sigungu: '경기 수원시 영통구', avg: '이공계 15명', median: '9명', count: '12곳', topSchool: '경기과학고 (이공계 특성화 98%)' },
-          { rank: 12, sigungu: '인천 연수구', avg: '서울대 12명', median: '7명', count: '13곳', topSchool: '인천포스코고 (서울대 18명)' }
-        ];
-        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 고등학교 순위';
-        if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 서울대·의약학 대입 합격 실적 및 1위 학교 공시';
+        if (titleEl) titleEl.textContent = '📊 전국 주요 시군구별 고등학교 학군 순위';
+        if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 대입(서울대·의약학) 합격 실적 및 1위 학교 공시';
       } else {
-        sigungus = [
-          { rank: 1, sigungu: '서울 서초구', avg: '22.99%', median: '23.08%', count: '23곳', topSchool: '서울잠원초등학교 (39.47%)' },
-          { rank: 2, sigungu: '서울 강남구', avg: '19.26%', median: '18.57%', count: '33곳', topSchool: '서울신구초등학교 (38.54%)' },
-          { rank: 3, sigungu: '서울 성동구', avg: '16.50%', median: '17.50%', count: '21곳', topSchool: '서울응봉초등학교 (22.23%)' },
-          { rank: 4, sigungu: '경기 과천시', avg: '15.78%', median: '15.00%', count: '4곳', topSchool: '과천초등학교 (21.13%)' },
-          { rank: 5, sigungu: '서울 강북구', avg: '15.73%', median: '14.24%', count: '14곳', topSchool: '서울송천초등학교 (29.91%)' },
-          { rank: 6, sigungu: '대구 수성구', avg: '15.20%', median: '14.80%', count: '32곳', topSchool: '대구경동초등학교 (24.50%)' },
-          { rank: 7, sigungu: '서울 성북구', avg: '14.61%', median: '13.01%', count: '29곳', topSchool: '서울미아초등학교 (28.12%)' },
-          { rank: 8, sigungu: '경기 용인시 수지구', avg: '7.42%', median: '7.15%', count: '16곳', topSchool: '홍천초등학교 (15.00%)' },
-          { rank: 9, sigungu: '경기 안양시 동안구', avg: '7.39%', median: '7.50%', count: '21곳', topSchool: '안양민백초등학교 (17.24%)' },
-          { rank: 10, sigungu: '경기 포천시', avg: '6.46%', median: '3.92%', count: '30곳', topSchool: '왕방초등학교 (28.49%)' },
-          { rank: 11, sigungu: '경기 가평군', avg: '6.28%', median: '6.45%', count: '13곳', topSchool: '미원초등학교 (15.91%)' },
-          { rank: 12, sigungu: '경기 성남시 분당구', avg: '5.56%', median: '4.54%', count: '26곳', topSchool: '판교초등학교 (22.09%)' }
-        ];
-        if (titleEl) titleEl.textContent = `📊 전국 주요 시군구별 ${lvl} 순위`;
-        if (subtitleEl) subtitleEl.textContent = '전국 주요 명문 학군 시군구별 평균 진학률 및 1위 학교 공시';
+        if (titleEl) titleEl.textContent = `📊 전국 주요 시군구별 ${lvl} 학군 순위`;
+        if (subtitleEl) subtitleEl.textContent = '전국 주요 학군 시군구별 평균 진학률 및 1위 학교 공시';
       }
     } else {
-      sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
+      rawList = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
       if (titleEl) titleEl.textContent = `📊 ${activeSido.name} 시군구별 ${lvl} 순위`;
       if (subtitleEl) subtitleEl.textContent = `${activeSido.name} 내 시군구별 평균·중앙값 진학률과 1위 학교 공시`;
     }
+
+    // Dynamic sort by active schoolLevel
+    let sigungus = rawList.map((item) => ({ ...item }));
+    if (this.schoolLevel === 'middle') {
+      sigungus.sort((a, b) => (b.scoreMid ?? parseFloat(b.avg || '0')) - (a.scoreMid ?? parseFloat(a.avg || '0')));
+    } else if (this.schoolLevel === 'high') {
+      sigungus.sort((a, b) => (b.scoreHigh ?? 0) - (a.scoreHigh ?? 0));
+    } else {
+      sigungus.sort((a, b) => (b.scoreElem ?? parseFloat(b.avg || '0')) - (a.scoreElem ?? parseFloat(a.avg || '0')));
+    }
+
+    // Re-assign 1..N ranks based on sorted order
+    sigungus.forEach((item, idx) => {
+      item.rank = idx + 1;
+    });
 
     if (sigungus.length === 0) {
       section.classList.add('hidden');
@@ -3555,17 +3525,26 @@ class DodamCommunityApp {
   }
 
   onSigunguRowClick(sigunguName) {
-    const cleanName = sigunguName.replace(/서울 |경기 |대구 |부산 |인천 |광주 |대전 |울산 |세종 |강원 |충북 |충남 |전북 |전남 |경북 |경남 |제주 /g, '').trim();
-    this.schoolSearchKeyword = cleanName;
+    let cleanName = sigunguName.replace(/서울 |경기 |대구 |부산 |인천 |광주 |대전 |울산 |세종 |강원 |충북 |충남 |전북 |전남 |경북 |경남 |제주 /g, '').trim();
+    let searchTarget = cleanName;
+    if (cleanName.includes('(')) {
+      const match = cleanName.match(/\((.+?)\)/);
+      if (match && match[1]) {
+        searchTarget = match[1].split('·')[0].trim();
+      } else {
+        searchTarget = cleanName.split('(')[0].trim();
+      }
+    }
+    this.schoolSearchKeyword = searchTarget;
     const input = document.getElementById('school-search-input');
-    if (input) input.value = cleanName;
+    if (input) input.value = searchTarget;
     const clearBtn = document.getElementById('school-search-clear');
     if (clearBtn) clearBtn.classList.remove('hidden');
     this.schoolPage = 1;
     this.renderSchoolList();
     const listSec = document.getElementById('school-list-section');
     if (listSec) listSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    this.showToast(`'${cleanName}' 학교 순위로 검색되었습니다.`);
+    this.showToast(`'${cleanName}' 학군 학교 순위로 검색되었습니다.`);
   }
 
   setSchoolViewMode(mode) {
