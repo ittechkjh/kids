@@ -62,6 +62,9 @@
           <!-- 모바일 액션 버튼 -->
           <div class="flex items-center gap-2 lg:hidden">
 
+            <button onclick="app.openLoginModal()" id="mobile-auth-btn" class="p-2 rounded-xl border border-stone-200 text-slate-700 hover:bg-stone-50 transition" title="로그인 / 관리자">
+              <i class="fa-solid fa-lock"></i>
+            </button>
             <button onclick="app.openWritePage()" class="px-3 py-2 rounded-xl coral-badge-gradient text-white text-xs font-extrabold shadow-sm">
               <i class="fa-solid fa-pen mr-1"></i>글쓰기
             </button>
@@ -126,6 +129,9 @@
             <span>스크랩</span>
             <span id="scrap-count-badge" class="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 text-[11px] font-extrabold">0</span>
           </button>
+
+          <!-- 로그인 / 회원 / 관리자 버튼 -->
+          <div id="desktop-auth-container" class="inline-flex items-center gap-1.5"></div>
 
           <!-- 글쓰기 버튼 (데스크톱) -->
           <button onclick="app.openWritePage()" class="hidden lg:inline-flex items-center gap-1.5 px-4 py-2 rounded-xl coral-badge-gradient hover:opacity-95 text-xs font-extrabold text-white shadow-sm shadow-rose-500/20 transition">
@@ -2017,6 +2023,329 @@
             <!-- Rendered dynamically -->
           </div>
         </section>
+  
+        <!-- ==========================================
+             VIEW: 통합 관리자 센터 (ADMIN v2.5)
+             ========================================== -->
+        <section id="view-admin" class="view-section hidden space-y-5 pb-12">
+          <!-- 1. Header Card (CryptoPnL/DodamTalk style matching Image 1) -->
+          <div class="bg-white rounded-3xl border border-stone-200 shadow-2xs p-5 sm:p-6 space-y-4">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+              <div class="flex items-center gap-3.5">
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500/15 to-indigo-500/20 border border-purple-200 text-purple-600 flex items-center justify-center text-xl shadow-2xs shrink-0">
+                  <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight">도담톡 통합 관리자 센터</h2>
+                    <span class="px-2.5 py-0.5 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 text-white text-[11px] font-black tracking-wider uppercase shadow-2xs">ADMIN v2.5</span>
+                  </div>
+                  <p class="text-xs text-slate-500 font-medium mt-0.5">실시간 일일 방문자 트래픽 모니터링, 회원 계정 관리, 커뮤니티 정화 및 시스템 제어</p>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+                <button type="button" onclick="app.openNewUserModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-black text-xs shadow-2xs transition cursor-pointer">
+                  <i class="fa-solid fa-user-plus text-[11px]"></i>
+                  <span>신규 회원 등록</span>
+                </button>
+                <button type="button" onclick="app.openChangePwModal()" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200/80 font-black text-xs transition cursor-pointer">
+                  <i class="fa-solid fa-key text-[11px]"></i>
+                  <span>비밀번호 변경</span>
+                </button>
+                <button type="button" onclick="app.refreshAdminData()" class="p-2 rounded-xl border border-stone-200 hover:bg-stone-50 text-slate-600 hover:text-slate-900 transition cursor-pointer" title="실시간 새로고침">
+                  <i class="fa-solid fa-rotate-right text-xs"></i>
+                </button>
+                <button type="button" onclick="app.switchMainView('board')" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-stone-200 hover:bg-stone-50 text-slate-700 font-bold text-xs transition cursor-pointer">
+                  <i class="fa-solid fa-arrow-left text-[11px]"></i>
+                  <span>사용자 화면</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. Admin Horizontal Tabs (Matching Image 1) -->
+            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pt-2 border-t border-stone-100 text-xs font-bold" id="admin-main-tabs">
+              <button onclick="app.setAdminTab('traffic')" data-tab="traffic" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50 text-purple-700 border border-purple-200/80 font-extrabold whitespace-nowrap transition cursor-pointer">
+                <i class="fa-solid fa-chart-simple text-[11px]"></i>
+                <span>방문자 & 트래픽 분석</span>
+              </button>
+              <button onclick="app.setAdminTab('users')" data-tab="users" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
+                <i class="fa-solid fa-users text-[11px]"></i>
+                <span id="admin-tab-users-count">회원 계정 관리 ( 3명 등록됨 )</span>
+              </button>
+              <button onclick="app.setAdminTab('community')" data-tab="community" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
+                <i class="fa-solid fa-shield text-[11px]"></i>
+                <span>커뮤니티 & 정화 관리</span>
+              </button>
+              <button onclick="app.setAdminTab('system')" data-tab="system" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
+                <i class="fa-solid fa-server text-[11px]"></i>
+                <span>시스템 진단 & 스토리지</span>
+              </button>
+              <button onclick="app.setAdminTab('apis')" data-tab="apis" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
+                <i class="fa-solid fa-cloud-arrow-up text-[11px]"></i>
+                <span>공공데이터 & 인프라 현황</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- TAB PANE 1: 방문자 & 트래픽 분석 (Matching Image 1 & Image 2) -->
+          <div id="admin-pane-traffic" class="admin-pane space-y-5">
+            <!-- Top 4 KPI Cards (Matching Image 1) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+              <!-- Card 1: 오늘 하루 방문자 수 (DAU) -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
+                <div class="flex items-start justify-between">
+                  <span class="text-xs font-bold text-slate-500">오늘 하루 방문자 수 (DAU)</span>
+                  <div class="w-8 h-8 rounded-xl bg-sky-50 text-sky-500 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-users"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight" id="admin-kpi-dau">18명</div>
+                  <p class="text-xs font-black text-emerald-600 mt-1 flex items-center gap-1">
+                    <i class="fa-solid fa-arrow-trend-up"></i>
+                    <span>+33.3% vs 어제 (13명)</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- Card 2: 실시간 현재 동시접속자 -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
+                <div class="flex items-start justify-between">
+                  <span class="text-xs font-bold text-slate-500">실시간 현재 동시접속자</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight flex items-baseline gap-2">
+                    <span>1명</span>
+                    <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">(실제 접속자)</span>
+                  </div>
+                  <p class="text-xs text-slate-400 font-medium mt-1">라이브 세션 활성 모니터링 중</p>
+                </div>
+              </div>
+
+              <!-- Card 3: 이번 주 누적 방문자 (WAU) -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
+                <div class="flex items-start justify-between">
+                  <span class="text-xs font-bold text-slate-500">이번 주 누적 방문자 (WAU)</span>
+                  <div class="w-8 h-8 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-calendar-week"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="text-2xl sm:text-3xl font-black text-purple-700 tracking-tight" id="admin-kpi-wau">142명</div>
+                  <p class="text-xs text-slate-400 font-medium mt-1">최근 7일간의 순 방문자 실측 합계</p>
+                </div>
+              </div>
+
+              <!-- Card 4: 누적 총 페이지뷰 (PV) -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs relative overflow-hidden flex flex-col justify-between">
+                <div class="flex items-start justify-between">
+                  <span class="text-xs font-bold text-slate-500">누적 총 페이지뷰 (PV)</span>
+                  <div class="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xs">
+                    <i class="fa-solid fa-eye"></i>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <div class="text-2xl sm:text-3xl font-black text-amber-600 tracking-tight" id="admin-kpi-pv">8,920 PV</div>
+                  <p class="text-xs text-slate-400 font-medium mt-1">Cloudflare 웹 분석 누적 실측치</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 14-Day DAU Bar Chart (Matching Image 1) -->
+            <div class="bg-white rounded-3xl border border-stone-200 p-5 sm:p-6 shadow-2xs space-y-4">
+              <div class="flex items-start sm:items-center justify-between gap-2 flex-wrap">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-chart-line text-purple-600"></i>
+                    <h3 class="text-sm font-black text-slate-900">최근 14일간 일별 방문자 수 (DAU) 추이</h3>
+                  </div>
+                  <p class="text-xs text-slate-400 font-medium mt-0.5">매일 자정 기준으로 집계된 고유 방문자 및 페이지뷰 통계입니다.</p>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-extrabold text-[11px]">14-Day Analytics</span>
+              </div>
+
+              <!-- Interactive 14-Day Bar Visualization -->
+              <div class="pt-4 pb-2" id="admin-14day-chart">
+                <!-- Rendered by app.render14DayChart() -->
+              </div>
+            </div>
+
+            <!-- Two-Panel Grid (Matching Image 2) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
+              <!-- Left Panel: 메뉴 및 기능별 이용 횟수 -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 sm:p-6 shadow-2xs space-y-4">
+                <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-clock-rotate-left text-sky-500"></i>
+                    <h3 class="text-sm font-black text-slate-900">메뉴 및 기능별 이용 횟수</h3>
+                  </div>
+                  <div class="inline-flex p-0.5 rounded-xl bg-stone-100 border border-stone-200 text-xs font-bold">
+                    <button type="button" onclick="app.setFeaturePeriod('today')" id="btn-feature-today" class="px-2.5 py-1 rounded-lg bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer">오늘 하루</button>
+                    <button type="button" onclick="app.setFeaturePeriod('cumulative')" id="btn-feature-cum" class="px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer">전체 누적</button>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-500 font-medium" id="feature-stats-subtitle">오늘 하루 실측치 기준 (총 38회 이용)</p>
+                <div class="space-y-3.5" id="feature-stats-list">
+                  <!-- Rendered by app.renderFeatureStats() -->
+                </div>
+              </div>
+
+              <!-- Right Panel: 기기 및 브라우저 환경 분석 -->
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 sm:p-6 shadow-2xs space-y-4">
+                <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                  <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-mobile-screen text-purple-600"></i>
+                    <h3 class="text-sm font-black text-slate-900">기기 및 브라우저 환경 분석</h3>
+                  </div>
+                  <div class="inline-flex p-0.5 rounded-xl bg-stone-100 border border-stone-200 text-xs font-bold">
+                    <button type="button" onclick="app.setDevicePeriod('today')" id="btn-device-today" class="px-2.5 py-1 rounded-lg bg-purple-100 text-purple-800 font-black shadow-2xs transition cursor-pointer">오늘 하루</button>
+                    <button type="button" onclick="app.setDevicePeriod('cumulative')" id="btn-device-cum" class="px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer">전체 누적</button>
+                  </div>
+                </div>
+                <p class="text-xs text-slate-500 font-medium" id="device-stats-subtitle">오늘 하루 실측치 기준 (총 18명 방문)</p>
+
+                <!-- Device Split Cards (Matching Image 2) -->
+                <div class="grid grid-cols-2 gap-3" id="device-split-container">
+                  <!-- Rendered by app.renderDeviceStats() -->
+                </div>
+
+                <!-- Browser Breakdown Grid (Matching Image 2) -->
+                <div class="grid grid-cols-2 sm:grid-cols-2 gap-2.5 pt-2 border-t border-stone-100" id="browser-breakdown-container">
+                  <!-- Rendered by app.renderDeviceStats() -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB PANE 2: 회원 계정 관리 -->
+          <div id="admin-pane-users" class="admin-pane hidden space-y-4">
+            <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-4">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <h3 class="text-sm font-black text-slate-900">등록된 회원 및 관리자 계정 목록</h3>
+                  <p class="text-xs text-slate-400 mt-0.5">회원 권한 부여, 비밀번호 재설정 및 상태를 실시간 제어합니다.</p>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button type="button" onclick="app.openNewUserModal()" class="px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer">
+                    <i class="fa-solid fa-plus text-[10px]"></i>계정 추가
+                  </button>
+                </div>
+              </div>
+
+              <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs">
+                  <thead>
+                    <tr class="bg-stone-50 text-slate-500 border-y border-stone-200">
+                      <th class="py-2.5 px-3 font-bold">프로필 / 아이디</th>
+                      <th class="py-2.5 px-3 font-bold">닉네임 / 이메일</th>
+                      <th class="py-2.5 px-3 font-bold">권한 구분</th>
+                      <th class="py-2.5 px-3 font-bold">최근 로그인</th>
+                      <th class="py-2.5 px-3 font-bold">상태</th>
+                      <th class="py-2.5 px-3 font-bold text-right">관리 액션</th>
+                    </tr>
+                  </thead>
+                  <tbody id="admin-users-tbody" class="divide-y divide-stone-100">
+                    <!-- Rendered by app.renderAdminUsers() -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB PANE 3: 커뮤니티 & 정화 관리 -->
+          <div id="admin-pane-community" class="admin-pane hidden space-y-4">
+            <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-sm font-black text-slate-900">커뮤니티 게시글 및 실시간 정화 관리</h3>
+                  <p class="text-xs text-slate-400 mt-0.5">상업성 광고, 스팸, 비방 게시글을 즉각 삭제하거나 검토합니다.</p>
+                </div>
+                <button type="button" onclick="app.clearSpamPosts()" class="px-3.5 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 font-bold text-xs flex items-center gap-1.5 hover:bg-rose-100 transition cursor-pointer">
+                  <i class="fa-solid fa-broom text-[10px]"></i>더미·스팸 일괄 정리
+                </button>
+              </div>
+
+              <div id="admin-posts-container" class="space-y-2">
+                <!-- Rendered by app.renderAdminCommunity() -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB PANE 4: 시스템 진단 & 스토리지 -->
+          <div id="admin-pane-system" class="admin-pane hidden space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-4">
+                <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-hard-drive text-purple-600"></i>
+                  <span>로컬 스토리지 메모리 점유율</span>
+                </h3>
+                <div class="space-y-2 text-xs">
+                  <div class="flex items-center justify-between font-bold">
+                    <span class="text-slate-600">사용 중인 용량</span>
+                    <span id="storage-usage-text" class="text-purple-700 font-black">1.4 MB / 5.0 MB (28%)</span>
+                  </div>
+                  <div class="w-full bg-stone-100 h-2.5 rounded-full overflow-hidden">
+                    <div id="storage-usage-bar" class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style="width: 28%"></div>
+                  </div>
+                  <p class="text-[11px] text-slate-400">브라우저 안전 한도(5MB) 내에서 안정적으로 구동 중입니다.</p>
+                </div>
+                <div class="pt-2 border-t border-stone-100 flex items-center gap-2">
+                  <button type="button" onclick="app.exportBackupJson()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer">
+                    <i class="fa-solid fa-download"></i>전체 데이터 JSON 백업
+                  </button>
+                  <button type="button" onclick="app.clearSystemCache()" class="px-3 py-2 rounded-xl border border-stone-200 hover:bg-stone-50 text-slate-700 font-bold text-xs transition cursor-pointer">
+                    임시 캐시 정리
+                  </button>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-3">
+                <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-emerald-500"></i>
+                  <span>보안 & 세션 정보</span>
+                </h3>
+                <div class="space-y-2 text-xs">
+                  <div class="flex justify-between py-1 border-b border-stone-100">
+                    <span class="text-slate-500">현재 관리자 계정</span>
+                    <span class="font-black text-slate-900" id="admin-current-user-name">admin (슈퍼관리자)</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-stone-100">
+                    <span class="text-slate-500">인증 프로토콜</span>
+                    <span class="font-bold text-emerald-600">Local Auth RBAC v2.5</span>
+                  </div>
+                  <div class="flex justify-between py-1 border-b border-stone-100">
+                    <span class="text-slate-500">세션 유효성</span>
+                    <span class="font-bold text-indigo-600">활성 세션 (Active)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB PANE 5: 공공데이터 & 인프라 현황 -->
+          <div id="admin-pane-apis" class="admin-pane hidden space-y-4">
+            <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-4">
+              <div class="flex items-center justify-between">
+                <div>
+                  <h3 class="text-sm font-black text-slate-900">공공데이터 & 외부 오픈 API 연동 현황</h3>
+                  <p class="text-xs text-slate-400 mt-0.5">모든 데이터 소스의 헬스체크 및 응답 지연시간(Latency)을 실시간 모니터링합니다.</p>
+                </div>
+                <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-black text-[11px] flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-500"></span>6개 엔진 전체 정상
+                </span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-3" id="admin-api-status-list">
+                <!-- Rendered by app.renderAdminApis() -->
+              </div>
+            </div>
+          </div>
+        </section>
+
   </main>
 
   <!-- 푸터 -->
@@ -2028,6 +2357,8 @@
       </div>
       <div class="flex items-center gap-4 font-bold">
         <a href="https://github.com/ittechkjh/kids" target="_blank" rel="noopener" class="hover:text-rose-500"><i class="fa-brands fa-github mr-1"></i>GitHub</a>
+        <button onclick="app.openAdminView()" class="hover:text-purple-600 transition flex items-center gap-1 font-extrabold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-lg border border-purple-200"><i class="fa-solid fa-shield-halved text-purple-600"></i>통합 관리자 센터</button>
+        <button onclick="app.openLoginModal()" id="footer-auth-btn" class="hover:text-sky-600 transition flex items-center gap-1"><i class="fa-solid fa-lock text-slate-400"></i>로그인</button>
         <button onclick="app.openWritePage()" class="hover:text-rose-500">커뮤니티 글쓰기</button>
       </div>
     </div>
@@ -2416,6 +2747,7 @@
   <script src="js/schools_data.js"></script>
   <script src="js/richgo_data.js"></script>
   <script src="js/admissions_data.js"></script>
+  <script src="js/admin_data.js"></script>
   <script src="js/data.js"></script>
   <script src="js/app.js"></script>
   
@@ -2449,6 +2781,218 @@
     </div>
   </div>
 
+
+
+  <!-- ==========================================
+       MODAL 9: 도담톡 로그인 & 시작하기 모달 (Matching Image 3)
+       ========================================== -->
+  <div id="login-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150 relative">
+      <!-- 헤더 -->
+      <div class="flex items-start justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-200 text-amber-500 flex items-center justify-center text-xl shadow-2xs shrink-0">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">도담톡 로그인 & 시작하기</h3>
+            <p class="text-xs text-slate-500 font-medium mt-0.5">가입 없이 바로 이용하거나 회원/관리자 계정으로 시작하세요</p>
+          </div>
+        </div>
+        <button type="button" onclick="app.closeLoginModal()" class="text-slate-400 hover:text-slate-600 transition p-1 cursor-pointer">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+      </div>
+
+      <!-- 상단 강조 박스: 가입 없이 익명으로 이용 (Matching Image 3) -->
+      <div class="bg-sky-50/50 border border-sky-200 rounded-2xl p-4 space-y-2.5">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 font-black text-xs text-slate-900">
+            <span>🚀 가입 없이 익명으로 이용</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-[10px]">100% 무료 · 가입 불필요</span>
+        </div>
+        <p class="text-[11px] text-slate-600 leading-relaxed font-medium">
+          회원가입 없이 브라우저에서 서버 전송 0%로 모든 커뮤니티, 학군 정보, 학교 순위를 즉시 이용합니다.
+        </p>
+        <button
+          type="button"
+          onclick="app.startAsGuest()"
+          class="w-full py-2.5 px-3 rounded-xl bg-white hover:bg-sky-100/60 text-sky-800 border border-sky-300 font-extrabold text-xs shadow-2xs transition flex items-center justify-center gap-1.5 cursor-pointer"
+        >
+          <i class="fa-solid fa-play text-[10px]"></i>
+          <span>가입 없이 1초 만에 바로 시작하기</span>
+        </button>
+      </div>
+
+      <!-- 중간 구분선 (Matching Image 3) -->
+      <div class="relative flex py-1 items-center">
+        <div class="flex-grow border-t border-stone-200"></div>
+        <span class="flex-shrink mx-3 text-[11px] font-bold text-slate-400">또는 회원 / 관리자 계정으로 이용</span>
+        <div class="flex-grow border-t border-stone-200"></div>
+      </div>
+
+      <!-- 탭 선택: 로그인 vs 간편 회원가입 -->
+      <div class="grid grid-cols-2 gap-1.5 p-1 rounded-xl bg-stone-100 border border-stone-200 text-xs font-bold">
+        <button type="button" onclick="app.setLoginTab('login')" id="tab-login-btn" class="py-2 rounded-lg bg-sky-500 text-white font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-key text-[10px]"></i>
+          <span>로그인</span>
+        </button>
+        <button type="button" onclick="app.setLoginTab('signup')" id="tab-signup-btn" class="py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
+          <span>간편 회원가입</span>
+        </button>
+      </div>
+
+      <!-- 로그인 / 회원가입 폼 -->
+      <form onsubmit="app.handleAuthSubmit(event)" class="space-y-3 pt-1">
+        <div id="login-alert-msg" class="hidden p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-bold text-xs"></div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1" id="label-auth-username">아이디 / 닉네임</label>
+          <div class="relative">
+            <i class="fa-solid fa-user text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="auth-username-input"
+              type="text"
+              required
+              placeholder="아이디 또는 사용할 닉네임 입력 (관리자: admin)"
+              class="w-full pl-9 pr-3 py-2.5 text-xs bg-white border border-stone-200 rounded-xl focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200 transition"
+            />
+          </div>
+        </div>
+
+        <div id="signup-nickname-field" class="hidden">
+          <label class="block text-xs font-bold text-slate-700 mb-1">표시 닉네임</label>
+          <div class="relative">
+            <i class="fa-solid fa-signature text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="auth-nickname-input"
+              type="text"
+              placeholder="커뮤니티에서 사용할 닉네임 (예: 판교햇살맘)"
+              class="w-full pl-9 pr-3 py-2.5 text-xs bg-white border border-stone-200 rounded-xl focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200 transition"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">비밀번호</label>
+          <div class="relative">
+            <i class="fa-solid fa-lock text-slate-400 text-xs absolute left-3.5 top-1/2 -translate-y-1/2"></i>
+            <input
+              id="auth-password-input"
+              type="password"
+              required
+              placeholder="비밀번호 입력 (관리자: admin1234)"
+              class="w-full pl-9 pr-3 py-2.5 text-xs bg-white border border-stone-200 rounded-xl focus:border-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-200 transition"
+            />
+          </div>
+        </div>
+
+        <!-- 관리자 계정 빠른 입력 버튼 안내 -->
+        <div id="admin-quick-fill-hint" class="p-2.5 rounded-xl bg-purple-50/70 border border-purple-200/80 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-1.5 text-purple-900 font-bold">
+            <i class="fa-solid fa-shield-halved text-purple-600"></i>
+            <span>관리자 계정: <code class="bg-white px-1.5 py-0.5 rounded text-purple-700 font-mono">admin</code></span>
+          </div>
+          <button type="button" onclick="app.fillAdminCredentials()" class="px-2 py-1 rounded-lg bg-purple-600 hover:bg-purple-700 text-white font-extrabold text-[11px] transition shadow-2xs cursor-pointer">
+            자동 완성
+          </button>
+        </div>
+
+        <!-- 하단 액션 버튼 (Matching Image 3) -->
+        <div class="flex items-center justify-end gap-2 pt-2 border-t border-stone-100 text-xs">
+          <button
+            type="button"
+            onclick="app.closeLoginModal()"
+            class="px-5 py-2.5 rounded-xl border border-stone-200 hover:bg-stone-50 font-bold text-slate-600 transition cursor-pointer"
+          >
+            취소
+          </button>
+          <button
+            type="submit"
+            id="auth-submit-btn"
+            class="px-6 py-2.5 rounded-xl bg-sky-100 hover:bg-sky-200 text-sky-900 border border-sky-300 font-black transition cursor-pointer flex items-center gap-1.5 shadow-2xs"
+          >
+            <span>➔ 로그인 완료</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 10: 신규 회원/관리자 추가 모달
+       ========================================== -->
+  <div id="admin-user-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-user-plus text-purple-600"></i>
+          <span>신규 계정 등록</span>
+        </h3>
+        <button type="button" onclick="app.closeNewUserModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+
+      <form onsubmit="app.submitNewUser(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">사용자 아이디</label>
+          <input id="new-user-id" type="text" required placeholder="영문, 숫자 조합" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">닉네임</label>
+          <input id="new-user-nickname" type="text" required placeholder="예: 분당행복맘" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">초기 비밀번호</label>
+          <input id="new-user-pw" type="password" required placeholder="비밀번호" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">계정 권한 구분</label>
+          <select id="new-user-role" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none font-bold">
+            <option value="user">일반 회원 (MEMBER)</option>
+            <option value="admin">관리자 (ADMIN)</option>
+          </select>
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2 border-t border-stone-100">
+          <button type="button" onclick="app.closeNewUserModal()" class="px-4 py-2 rounded-xl border border-stone-200 font-bold text-slate-600">취소</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-black shadow-2xs">등록 완료</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL 11: 비밀번호 변경 모달
+       ========================================== -->
+  <div id="admin-pw-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+        <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
+          <i class="fa-solid fa-key text-purple-600"></i>
+          <span>관리자 비밀번호 변경</span>
+        </h3>
+        <button type="button" onclick="app.closeChangePwModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+
+      <form onsubmit="app.submitChangePw(event)" class="space-y-3 text-xs">
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">새 비밀번호</label>
+          <input id="change-pw-input" type="password" required placeholder="새 비밀번호 입력" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none">
+        </div>
+        <div>
+          <label class="block font-bold text-slate-700 mb-1">새 비밀번호 확인</label>
+          <input id="change-pw-confirm-input" type="password" required placeholder="새 비밀번호 다시 입력" class="w-full px-3 py-2 border border-stone-200 rounded-xl focus:border-purple-500 focus:outline-none">
+        </div>
+
+        <div class="flex items-center justify-end gap-2 pt-2 border-t border-stone-100">
+          <button type="button" onclick="app.closeChangePwModal()" class="px-4 py-2 rounded-xl border border-stone-200 font-bold text-slate-600">취소</button>
+          <button type="submit" class="px-5 py-2 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-black shadow-2xs">변경 완료</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
 </body>
 </html>

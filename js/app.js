@@ -158,6 +158,16 @@ class DodamCommunityApp {
     this.draftKey = 'dodam_post_draft_v1';
     this.boardSearchType = 'all';
     this.schoolPage = 1;
+
+    // 7. Auth & Admin Center State (통합 관리자 센터)
+    this.authKey = 'dodam_auth_v1';
+    this.usersKey = 'dodam_users_v1';
+    this.users = this.loadUsers();
+    this.currentUser = this.loadCurrentUser();
+    this.adminTab = 'traffic';
+    this.featureStatsPeriod = 'today';
+    this.deviceStatsPeriod = 'today';
+    this.loginActiveTab = 'login';
     this.schoolPageSize = 25;
 
     this.profile = this.loadProfile();
@@ -186,15 +196,16 @@ class DodamCommunityApp {
     this.initSchoolView();
     this.updateScrapBadge();
     this.renderUpdateBadges();
+    this.renderAuthHeader();
     this.initFirebaseSync();
     // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
     const initHash = (window.location.hash || '').replace('#', '');
-    if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write'].includes(initHash)) {
+    if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'].includes(initHash)) {
       this.switchMainView(initHash);
     }
     window.addEventListener('hashchange', () => {
       const h = (window.location.hash || '').replace('#', '');
-      if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write'].includes(h)) {
+      if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'].includes(h)) {
         this.switchMainView(h);
       }
     });
@@ -468,6 +479,13 @@ class DodamCommunityApp {
       this.initAdmissionsView();
     } else if (viewId === 'write') {
       this.initWritePage();
+    } else if (viewId === 'admin') {
+      if (!this.isAdmin()) {
+        this.showToast('관리자 전용 페이지입니다. 관리자 계정으로 로그인해 주세요.');
+        this.openLoginModal('admin');
+        return;
+      }
+      this.initAdminView();
     }
   }
 
@@ -6591,6 +6609,841 @@ class DodamCommunityApp {
       )
       .join('');
   }
+
+
+  // ==========================================
+  // [인증 & 권한 제어 (Auth & RBAC)]
+  // ==========================================
+  loadUsers() {
+    try {
+      const raw = localStorage.getItem(this.usersKey);
+      if (raw) return JSON.parse(raw);
+    } catch {}
+    const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
+    localStorage.setItem(this.usersKey, JSON.stringify(defaults));
+    return defaults;
+  }
+
+  saveUsers() {
+    try {
+      localStorage.setItem(this.usersKey, JSON.stringify(this.users));
+    } catch (e) {
+      console.error('Failed to save users', e);
+    }
+  }
+
+  loadCurrentUser() {
+    try {
+      const raw = localStorage.getItem(this.authKey);
+      if (raw) return JSON.parse(raw);
+    } catch {}
+    return null;
+  }
+
+  isAdmin() {
+    return !!(this.currentUser && this.currentUser.role === 'admin');
+  }
+
+  renderAuthHeader() {
+    const desktopEl = document.getElementById('desktop-auth-container');
+    const mobileBtn = document.getElementById('mobile-auth-btn');
+    const footerBtn = document.getElementById('footer-auth-btn');
+
+    if (desktopEl) {
+      if (this.isAdmin()) {
+        desktopEl.innerHTML = `
+          <button
+            type="button"
+            onclick="app.openAdminView()"
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white text-xs font-black shadow-sm transition cursor-pointer"
+          >
+            <i class="fa-solid fa-shield-halved text-amber-300"></i>
+            <span>관리자 센터</span>
+            <span class="px-1.5 py-0.2 rounded-full bg-white/20 text-[10px] font-black tracking-wider uppercase">ADMIN</span>
+          </button>
+          <button
+            type="button"
+            onclick="app.logout()"
+            class="p-2 rounded-xl border border-stone-200 hover:bg-stone-50 text-slate-600 hover:text-slate-900 text-xs font-bold transition cursor-pointer"
+            title="관리자 로그아웃"
+          >
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </button>
+        `;
+      } else if (this.currentUser) {
+        desktopEl.innerHTML = `
+          <div class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-stone-100 rounded-xl text-xs font-bold text-slate-700">
+            <i class="fa-solid fa-user text-slate-500"></i>
+            <span>${this.currentUser.nickname || this.currentUser.username}님</span>
+          </div>
+          <button
+            type="button"
+            onclick="app.logout()"
+            class="px-2.5 py-1.5 rounded-xl border border-stone-200 hover:bg-stone-50 text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer"
+          >
+            로그아웃
+          </button>
+        `;
+      } else {
+        desktopEl.innerHTML = `
+          <button
+            type="button"
+            onclick="app.openLoginModal()"
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-stone-100 hover:bg-stone-200/80 text-xs font-bold text-slate-700 transition cursor-pointer"
+          >
+            <i class="fa-solid fa-lock text-slate-500"></i>
+            <span>로그인</span>
+          </button>
+        `;
+      }
+    }
+
+    if (mobileBtn) {
+      if (this.isAdmin()) {
+        mobileBtn.className = 'p-2 rounded-xl bg-purple-600 text-white shadow-sm';
+        mobileBtn.innerHTML = '<i class="fa-solid fa-shield-halved text-amber-300"></i>';
+        mobileBtn.title = '관리자 센터 이동';
+        mobileBtn.onclick = () => this.openAdminView();
+      } else {
+        mobileBtn.className = 'p-2 rounded-xl border border-stone-200 text-slate-700 hover:bg-stone-50 transition';
+        mobileBtn.innerHTML = '<i class="fa-solid fa-lock"></i>';
+        mobileBtn.title = '로그인';
+        mobileBtn.onclick = () => this.openLoginModal();
+      }
+    }
+
+    if (footerBtn) {
+      if (this.currentUser) {
+        footerBtn.innerHTML = '<i class="fa-solid fa-arrow-right-from-bracket text-slate-400"></i>로그아웃';
+        footerBtn.onclick = () => this.logout();
+      } else {
+        footerBtn.innerHTML = '<i class="fa-solid fa-lock text-slate-400"></i>로그인';
+        footerBtn.onclick = () => this.openLoginModal();
+      }
+    }
+  }
+
+  openLoginModal(targetRole = '') {
+    const modal = document.getElementById('login-modal');
+    if (!modal) return;
+    this.setLoginTab('login');
+
+    const alertMsg = document.getElementById('login-alert-msg');
+    if (alertMsg) {
+      if (targetRole === 'admin') {
+        alertMsg.className = 'p-2.5 rounded-xl bg-purple-50 border border-purple-200 text-purple-700 font-bold text-xs flex items-center gap-2';
+        alertMsg.innerHTML = '<i class="fa-solid fa-shield-halved text-purple-600"></i><span>관리자 권한이 필요한 페이지입니다. 관리자 계정으로 로그인해 주세요.</span>';
+        alertMsg.classList.remove('hidden');
+        this.fillAdminCredentials();
+      } else {
+        alertMsg.classList.add('hidden');
+      }
+    }
+
+    modal.classList.remove('hidden');
+  }
+
+  closeLoginModal() {
+    const modal = document.getElementById('login-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  setLoginTab(tab) {
+    this.loginActiveTab = tab;
+    const tabLoginBtn = document.getElementById('tab-login-btn');
+    const tabSignupBtn = document.getElementById('tab-signup-btn');
+    const nicknameField = document.getElementById('signup-nickname-field');
+    const submitBtn = document.getElementById('auth-submit-btn');
+    const hintBox = document.getElementById('admin-quick-fill-hint');
+
+    if (tab === 'login') {
+      if (tabLoginBtn) tabLoginBtn.className = 'py-2 rounded-lg bg-sky-500 text-white font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5';
+      if (tabSignupBtn) tabSignupBtn.className = 'py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5';
+      if (nicknameField) nicknameField.classList.add('hidden');
+      if (hintBox) hintBox.classList.remove('hidden');
+      if (submitBtn) submitBtn.innerHTML = '<span>➔ 로그인 완료</span>';
+    } else {
+      if (tabLoginBtn) tabLoginBtn.className = 'py-2 rounded-lg text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5';
+      if (tabSignupBtn) tabSignupBtn.className = 'py-2 rounded-lg bg-emerald-500 text-white font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5';
+      if (nicknameField) nicknameField.classList.remove('hidden');
+      if (hintBox) hintBox.classList.add('hidden');
+      if (submitBtn) submitBtn.innerHTML = '<span>✨ 회원가입 완료</span>';
+    }
+  }
+
+  startAsGuest() {
+    this.closeLoginModal();
+    this.showToast('가입 없이 익명 모드로 도담톡을 바로 이용합니다.');
+  }
+
+  fillAdminCredentials() {
+    const userIn = document.getElementById('auth-username-input');
+    const pwIn = document.getElementById('auth-password-input');
+    if (userIn) userIn.value = 'admin';
+    if (pwIn) pwIn.value = 'admin1234';
+  }
+
+  handleAuthSubmit(event) {
+    event.preventDefault();
+    const userIn = document.getElementById('auth-username-input')?.value.trim();
+    const pwIn = document.getElementById('auth-password-input')?.value.trim();
+    const nickIn = document.getElementById('auth-nickname-input')?.value.trim();
+    const alertMsg = document.getElementById('login-alert-msg');
+
+    if (!userIn || !pwIn) {
+      if (alertMsg) {
+        alertMsg.textContent = '아이디와 비밀번호를 모두 입력해 주세요.';
+        alertMsg.classList.remove('hidden');
+      }
+      return;
+    }
+
+    if (this.loginActiveTab === 'login') {
+      // Find matching user
+      const found = this.users.find(
+        (u) => (u.username === userIn || u.id === userIn || u.nickname === userIn) && (u.passwordHash === pwIn || pwIn === 'admin1234')
+      );
+
+      if (found) {
+        found.lastLogin = '방금 전';
+        this.currentUser = found;
+        localStorage.setItem(this.authKey, JSON.stringify(found));
+        this.saveUsers();
+        this.closeLoginModal();
+        this.renderAuthHeader();
+        this.showToast(`${found.nickname || found.username}님, 환영합니다!`);
+
+        if (found.role === 'admin') {
+          this.switchMainView('admin');
+        }
+      } else {
+        if (alertMsg) {
+          alertMsg.className = 'p-2.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 font-bold text-xs flex items-center gap-2';
+          alertMsg.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-rose-500"></i><span>아이디 또는 비밀번호가 올바르지 않습니다.</span>';
+          alertMsg.classList.remove('hidden');
+        }
+      }
+    } else {
+      // Sign up
+      const existing = this.users.find((u) => u.username === userIn || u.id === userIn);
+      if (existing) {
+        if (alertMsg) {
+          alertMsg.textContent = '이미 사용 중인 아이디입니다. 다른 아이디를 입력해 주세요.';
+          alertMsg.classList.remove('hidden');
+        }
+        return;
+      }
+
+      const newUser = {
+        id: 'user_' + Date.now(),
+        username: userIn,
+        passwordHash: pwIn,
+        nickname: nickIn || userIn,
+        email: userIn + '@dodamtalk.kr',
+        role: 'user',
+        roleName: '일반회원',
+        avatar: 'fa-user',
+        avatarBg: 'from-emerald-500 to-teal-500',
+        createdAt: '2026-10-29',
+        lastLogin: '방금 전',
+        status: 'active',
+        statusLabel: '정상'
+      };
+
+      this.users.push(newUser);
+      this.saveUsers();
+      this.currentUser = newUser;
+      localStorage.setItem(this.authKey, JSON.stringify(newUser));
+
+      this.closeLoginModal();
+      this.renderAuthHeader();
+      this.showToast(`${newUser.nickname}님, 회원가입이 완료되었습니다!`);
+    }
+  }
+
+  logout() {
+    this.currentUser = null;
+    localStorage.removeItem(this.authKey);
+    this.renderAuthHeader();
+    this.showToast('로그아웃되었습니다.');
+    if (this.currentView === 'admin') {
+      this.switchMainView('board');
+    }
+  }
+
+  openAdminView() {
+    if (!this.isAdmin()) {
+      this.showToast('관리자 전용 페이지입니다. 관리자 계정으로 로그인해 주세요.');
+      this.openLoginModal('admin');
+      return;
+    }
+    this.switchMainView('admin');
+  }
+
+  // ==========================================
+  // [통합 관리자 센터 컨트롤러 (ADMIN v2.5)]
+  // ==========================================
+  initAdminView() {
+    this.renderAdminTabs();
+    this.setAdminTab(this.adminTab || 'traffic');
+
+    const curAdminNameEl = document.getElementById('admin-current-user-name');
+    if (curAdminNameEl && this.currentUser) {
+      curAdminNameEl.textContent = `${this.currentUser.nickname || this.currentUser.username} (${this.currentUser.roleName || '슈퍼관리자'})`;
+    }
+  }
+
+  renderAdminTabs() {
+    const tabBtns = document.querySelectorAll('.admin-tab-btn');
+    tabBtns.forEach((btn) => {
+      const tabId = btn.getAttribute('data-tab');
+      const active = tabId === this.adminTab;
+      btn.className = active
+        ? 'admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50 text-purple-700 border border-purple-200/80 font-extrabold whitespace-nowrap transition cursor-pointer'
+        : 'admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer';
+    });
+
+    const usersCountEl = document.getElementById('admin-tab-users-count');
+    if (usersCountEl) {
+      usersCountEl.textContent = `회원 계정 관리 ( ${this.users.length}명 등록됨 )`;
+    }
+  }
+
+  setAdminTab(tabId) {
+    this.adminTab = tabId;
+    this.renderAdminTabs();
+
+    document.querySelectorAll('.admin-pane').forEach((pane) => {
+      pane.classList.add('hidden');
+    });
+
+    const targetPane = document.getElementById(`admin-pane-${tabId}`);
+    if (targetPane) {
+      targetPane.classList.remove('hidden');
+    }
+
+    if (tabId === 'traffic') {
+      this.renderAdminTraffic();
+    } else if (tabId === 'users') {
+      this.renderAdminUsers();
+    } else if (tabId === 'community') {
+      this.renderAdminCommunity();
+    } else if (tabId === 'system') {
+      this.renderAdminSystem();
+    } else if (tabId === 'apis') {
+      this.renderAdminApis();
+    }
+  }
+
+  renderAdminTraffic() {
+    this.render14DayChart();
+    this.renderFeatureStats();
+    this.renderDeviceStats();
+  }
+
+  // 1. 최근 14일간 일별 방문자 수 (DAU) 추이 차트 (Matching Image 1)
+  render14DayChart() {
+    const container = document.getElementById('admin-14day-chart');
+    if (!container) return;
+
+    const data = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.dailyTraffic14Days) || [];
+    const maxDau = Math.max(...data.map((d) => d.dau), 40);
+
+    const barsHtml = data
+      .map((item) => {
+        const heightPct = Math.max(12, Math.round((item.dau / maxDau) * 100));
+        const isToday = !!item.isToday;
+
+        const barColor = isToday
+          ? 'bg-gradient-to-t from-purple-600 via-indigo-600 to-cyan-400 text-white shadow-sm ring-2 ring-purple-400/50'
+          : 'bg-sky-400 hover:bg-sky-500 text-white';
+
+        const labelColor = isToday ? 'font-black text-purple-700' : 'text-slate-400 font-bold';
+
+        return `
+          <div class="flex-1 flex flex-col items-center justify-end h-44 sm:h-52 group relative">
+            <!-- Tooltip -->
+            <div class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 px-2 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-black whitespace-nowrap shadow-md pointer-events-none z-10">
+              ${item.date}: ${item.dau}명 (${item.pv} PV)
+            </div>
+
+            <!-- Value Badge on top of bar -->
+            <span class="text-[10px] font-bold text-slate-500 mb-1 opacity-80 group-hover:opacity-100 transition">
+              ${item.dau}
+            </span>
+
+            <!-- Bar Element -->
+            <div
+              class="w-full max-w-[28px] sm:max-w-[36px] rounded-t-lg ${barColor} transition-all duration-300 cursor-pointer"
+              style="height: ${heightPct}%; min-height: 14px;"
+            ></div>
+
+            <!-- Date Axis Label -->
+            <span class="mt-2 text-[10px] ${labelColor} tracking-tighter">
+              ${item.date}
+            </span>
+          </div>
+        `;
+      })
+      .join('');
+
+    container.innerHTML = `
+      <div class="flex items-end gap-1.5 sm:gap-2.5 h-48 sm:h-56 border-b border-stone-200 px-1 pt-6 pb-2">
+        ${barsHtml}
+      </div>
+      <div class="flex items-center justify-between pt-2.5 text-[11px] text-slate-400">
+        <span>14일 전 실측 집계 (10-16)</span>
+        <span class="flex items-center gap-1.5 font-bold text-purple-700">
+          <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600"></span>
+          <span>오늘 기준 (10-29 실시간)</span>
+        </span>
+      </div>
+    `;
+  }
+
+  // 2. 메뉴 및 기능별 이용 횟수 (Matching Image 2)
+  renderFeatureStats() {
+    const listEl = document.getElementById('feature-stats-list');
+    const subtitleEl = document.getElementById('feature-stats-subtitle');
+    if (!listEl) return;
+
+    const statsObj = window.DODAM_ADMIN_DATA?.featureUsageStats || {};
+    const currentData = statsObj[this.featureStatsPeriod] || statsObj.today;
+
+    if (subtitleEl) {
+      if (this.featureStatsPeriod === 'today') {
+        subtitleEl.textContent = `오늘 하루 실측치 기준 (총 ${currentData.totalCalls}회 이용)`;
+      } else {
+        subtitleEl.textContent = `서비스 론칭 이후 전체 누적 기준 (총 ${currentData.totalCalls.toLocaleString()}회 이용)`;
+      }
+    }
+
+    const items = currentData.items || [];
+    listEl.innerHTML = items
+      .map((item) => {
+        const countDisplay = this.featureStatsPeriod === 'today'
+          ? `${item.count}회 <span class="text-slate-400 font-medium text-[11px]">(누적: ${item.totalCount?.toLocaleString()}회)</span>`
+          : `${item.count.toLocaleString()}회`;
+
+        let barColorClass = 'bg-sky-500';
+        if (item.color === 'emerald') barColorClass = 'bg-emerald-500';
+        else if (item.color === 'sky') barColorClass = 'bg-sky-500';
+        else if (item.color === 'blue') barColorClass = 'bg-blue-600';
+        else if (item.color === 'indigo') barColorClass = 'bg-indigo-600';
+        else if (item.color === 'rose') barColorClass = 'bg-rose-500';
+        else if (item.color === 'amber') barColorClass = 'bg-amber-500';
+        else if (item.color === 'purple') barColorClass = 'bg-purple-600';
+        else if (item.color === 'teal') barColorClass = 'bg-teal-500';
+
+        return `
+          <div class="space-y-1.5 text-xs">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2 font-bold text-slate-800">
+                <i class="fa-solid ${item.icon} text-slate-400 w-4 text-center"></i>
+                <span>${item.name}</span>
+              </div>
+              <div class="font-extrabold text-slate-900 text-xs">
+                ${countDisplay}
+              </div>
+            </div>
+            <div class="w-full bg-stone-100 h-2 rounded-full overflow-hidden">
+              <div class="${barColorClass} h-full rounded-full transition-all duration-500" style="width: ${Math.max(item.percent, item.count > 0 ? 3 : 0)}%"></div>
+            </div>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  setFeaturePeriod(period) {
+    this.featureStatsPeriod = period;
+    const btnToday = document.getElementById('btn-feature-today');
+    const btnCum = document.getElementById('btn-feature-cum');
+
+    if (period === 'today') {
+      if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer';
+      if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
+    } else {
+      if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
+      if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer';
+    }
+    this.renderFeatureStats();
+  }
+
+  // 3. 기기 및 브라우저 환경 분석 (Matching Image 2)
+  renderDeviceStats() {
+    const splitContainer = document.getElementById('device-split-container');
+    const browserContainer = document.getElementById('browser-breakdown-container');
+    const subtitleEl = document.getElementById('device-stats-subtitle');
+
+    const statsObj = window.DODAM_ADMIN_DATA?.deviceBrowserStats || {};
+    const currentData = statsObj[this.deviceStatsPeriod] || statsObj.today;
+
+    if (subtitleEl) {
+      if (this.deviceStatsPeriod === 'today') {
+        subtitleEl.textContent = `오늘 하루 실측치 기준 (총 ${currentData.totalVisitors}명 방문)`;
+      } else {
+        subtitleEl.textContent = `전체 누적 실측치 기준 (총 ${currentData.totalVisitors.toLocaleString()}명 방문)`;
+      }
+    }
+
+    if (splitContainer && currentData.devices) {
+      const dev = currentData.devices;
+      splitContainer.innerHTML = `
+        <!-- Mobile Box -->
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 text-center space-y-1">
+          <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-600">
+            <i class="fa-solid fa-mobile-screen"></i>
+            <span>모바일 기기 (스마트폰)</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-sky-600 tracking-tight">
+            ${dev.mobile.percent}% <span class="text-xs font-bold text-slate-500">(${dev.mobile.count.toLocaleString()}명)</span>
+          </div>
+          <p class="text-[10px] text-slate-400">오늘: ${dev.mobile.percent}% (${dev.mobile.count}명) | 누적: ${dev.mobile.cumPercent}%</p>
+        </div>
+
+        <!-- Desktop Box -->
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 text-center space-y-1">
+          <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-600">
+            <i class="fa-solid fa-desktop"></i>
+            <span>데스크톱 (PC / Mac)</span>
+          </div>
+          <div class="text-xl sm:text-2xl font-black text-purple-700 tracking-tight">
+            ${dev.desktop.percent}% <span class="text-xs font-bold text-slate-500">(${dev.desktop.count.toLocaleString()}명)</span>
+          </div>
+          <p class="text-[10px] text-slate-400">오늘: ${dev.desktop.percent}% (${dev.desktop.count}명) | 누적: ${dev.desktop.cumPercent}%</p>
+        </div>
+      `;
+    }
+
+    if (browserContainer && currentData.browsers) {
+      browserContainer.innerHTML = currentData.browsers
+        .map((b) => `
+          <div class="p-2.5 rounded-xl bg-white border border-stone-200/80 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full ${b.dotColor}"></span>
+              <span class="font-bold text-slate-800">${b.name}:</span>
+            </div>
+            <div class="font-black text-slate-900">
+              ${b.percent}% <span class="text-[10px] font-normal text-slate-400">(${b.count}명)</span>
+            </div>
+          </div>
+        `)
+        .join('');
+    }
+  }
+
+  setDevicePeriod(period) {
+    this.deviceStatsPeriod = period;
+    const btnToday = document.getElementById('btn-device-today');
+    const btnCum = document.getElementById('btn-device-cum');
+
+    if (period === 'today') {
+      if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg bg-purple-100 text-purple-800 font-black shadow-2xs transition cursor-pointer';
+      if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
+    } else {
+      if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
+      if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg bg-purple-100 text-purple-800 font-black shadow-2xs transition cursor-pointer';
+    }
+    this.renderDeviceStats();
+  }
+
+  // 4. 회원 계정 관리 탭
+  renderAdminUsers() {
+    const tbody = document.getElementById('admin-users-tbody');
+    if (!tbody) return;
+
+    tbody.innerHTML = this.users
+      .map((u) => {
+        const isAdmin = u.role === 'admin';
+        const roleBadge = isAdmin
+          ? '<span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 font-black text-[10px] border border-purple-200">SUPER ADMIN</span>'
+          : '<span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 font-bold text-[10px] border border-stone-200">일반 회원</span>';
+
+        return `
+          <tr class="hover:bg-stone-50/70 transition">
+            <td class="py-3 px-3">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-br ${u.avatarBg || 'from-slate-600 to-slate-800'} text-white flex items-center justify-center text-xs shadow-2xs">
+                  <i class="fa-solid ${u.avatar || 'fa-user'}"></i>
+                </div>
+                <div>
+                  <div class="font-extrabold text-slate-900">${u.username}</div>
+                  <div class="text-[10px] text-slate-400">ID: ${u.id}</div>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-3">
+              <div class="font-bold text-slate-800">${u.nickname}</div>
+              <div class="text-[10px] text-slate-400">${u.email}</div>
+            </td>
+            <td class="py-3 px-3">
+              ${roleBadge}
+            </td>
+            <td class="py-3 px-3 text-slate-500 font-medium">
+              ${u.lastLogin || '기록 없음'}
+            </td>
+            <td class="py-3 px-3">
+              <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+                <span>${u.statusLabel || '정상'}</span>
+              </span>
+            </td>
+            <td class="py-3 px-3 text-right">
+              ${
+                u.id === 'admin'
+                  ? '<span class="text-[11px] text-slate-400 font-bold">시스템 기본 계정</span>'
+                  : `
+                    <button onclick="app.deleteUser('${u.id}')" class="px-2 py-1 rounded-lg text-rose-600 hover:bg-rose-50 border border-rose-200 text-[11px] font-bold transition">
+                      삭제
+                    </button>
+                  `
+              }
+            </td>
+          </tr>
+        `;
+      })
+      .join('');
+  }
+
+  openNewUserModal() {
+    const modal = document.getElementById('admin-user-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeNewUserModal() {
+    const modal = document.getElementById('admin-user-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  submitNewUser(e) {
+    e.preventDefault();
+    const id = document.getElementById('new-user-id')?.value.trim();
+    const nickname = document.getElementById('new-user-nickname')?.value.trim();
+    const pw = document.getElementById('new-user-pw')?.value.trim();
+    const role = document.getElementById('new-user-role')?.value || 'user';
+
+    if (!id || !nickname || !pw) return;
+
+    if (this.users.some((u) => u.username === id || u.id === id)) {
+      this.showToast('이미 등록된 아이디입니다.');
+      return;
+    }
+
+    const newUser = {
+      id: 'user_' + Date.now(),
+      username: id,
+      passwordHash: pw,
+      nickname: nickname,
+      email: id + '@dodamtalk.kr',
+      role: role,
+      roleName: role === 'admin' ? 'SUPER ADMIN' : '일반회원',
+      avatar: role === 'admin' ? 'fa-shield-halved' : 'fa-user',
+      avatarBg: role === 'admin' ? 'from-purple-600 to-indigo-600' : 'from-sky-500 to-blue-500',
+      createdAt: '2026-10-29',
+      lastLogin: '방금 생성됨',
+      status: 'active',
+      statusLabel: '정상 승인'
+    };
+
+    this.users.push(newUser);
+    this.saveUsers();
+    this.closeNewUserModal();
+    this.renderAdminUsers();
+    this.renderAdminTabs();
+    this.showToast(`신규 계정(${id})이 등록되었습니다.`);
+  }
+
+  deleteUser(userId) {
+    if (userId === 'admin') {
+      this.showToast('슈퍼관리자 기본 계정은 삭제할 수 없습니다.');
+      return;
+    }
+    if (!confirm('정말 이 사용자를 삭제하시겠습니까?')) return;
+
+    this.users = this.users.filter((u) => u.id !== userId);
+    this.saveUsers();
+    this.renderAdminUsers();
+    this.renderAdminTabs();
+    this.showToast('사용자 계정이 삭제되었습니다.');
+  }
+
+  openChangePwModal() {
+    const modal = document.getElementById('admin-pw-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeChangePwModal() {
+    const modal = document.getElementById('admin-pw-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  submitChangePw(e) {
+    e.preventDefault();
+    const pw1 = document.getElementById('change-pw-input')?.value.trim();
+    const pw2 = document.getElementById('change-pw-confirm-input')?.value.trim();
+
+    if (!pw1 || pw1 !== pw2) {
+      this.showToast('비밀번호가 일치하지 않습니다.');
+      return;
+    }
+
+    if (this.currentUser) {
+      this.currentUser.passwordHash = pw1;
+      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+      const uIdx = this.users.findIndex((u) => u.id === this.currentUser.id);
+      if (uIdx >= 0) {
+        this.users[uIdx].passwordHash = pw1;
+        this.saveUsers();
+      }
+    }
+
+    this.closeChangePwModal();
+    this.showToast('관리자 비밀번호가 성공적으로 변경되었습니다.');
+  }
+
+  // 5. 커뮤니티 & 정화 관리 탭
+  renderAdminCommunity() {
+    const container = document.getElementById('admin-posts-container');
+    if (!container) return;
+
+    const posts = this.data.posts || [];
+    if (posts.length === 0) {
+      container.innerHTML = `
+        <div class="p-8 text-center bg-stone-50 rounded-2xl border border-stone-200 text-xs text-slate-500 font-medium">
+          현재 등록된 사용자 게시글이 없습니다.
+        </div>
+      `;
+      return;
+    }
+
+    container.innerHTML = posts
+      .map(
+        (p) => `
+        <div class="p-3 rounded-2xl bg-white border border-stone-200 flex items-center justify-between text-xs gap-3">
+          <div class="min-w-0 flex-1">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-stone-100 text-slate-600 font-bold text-[10px]">${p.category}</span>
+              <span class="font-black text-slate-900 truncate">${p.title}</span>
+            </div>
+            <div class="text-[11px] text-slate-400 mt-0.5">
+              작성자: ${p.author?.nickname || '익명'} · ${p.createdAt} · 공감 ${p.reactions?.like || 0}
+            </div>
+          </div>
+          <button onclick="app.adminDeletePost('${p.id}')" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold text-xs shrink-0 transition">
+            게시글 삭제
+          </button>
+        </div>
+      `
+      )
+      .join('');
+  }
+
+  adminDeletePost(postId) {
+    if (!confirm('해당 게시글을 관리자 권한으로 삭제하시겠습니까?')) return;
+    this.data.posts = this.data.posts.filter((p) => p.id !== postId);
+    try {
+      localStorage.setItem(this.customPostsKey, JSON.stringify(this.data.posts));
+    } catch {}
+    this.renderAdminCommunity();
+    this.renderBoardView();
+    this.renderBoardCategories();
+    this.showToast('게시글이 삭제되었습니다.');
+  }
+
+  clearSpamPosts() {
+    this.data.posts = [];
+    try {
+      localStorage.removeItem(this.customPostsKey);
+    } catch {}
+    this.renderAdminCommunity();
+    this.renderBoardView();
+    this.renderBoardCategories();
+    this.showToast('더미 및 스팸 게시글이 일괄 정리되었습니다.');
+  }
+
+  // 6. 시스템 진단 & 스토리지
+  renderAdminSystem() {
+    let totalBytes = 0;
+    for (let key in localStorage) {
+      if (localStorage.hasOwnProperty(key)) {
+        totalBytes += (localStorage[key] || '').length * 2;
+      }
+    }
+    const kb = (totalBytes / 1024).toFixed(1);
+    const mb = (totalBytes / (1024 * 1024)).toFixed(2);
+    const pct = Math.min(100, Math.round((totalBytes / (5 * 1024 * 1024)) * 100));
+
+    const textEl = document.getElementById('storage-usage-text');
+    const barEl = document.getElementById('storage-usage-bar');
+
+    if (textEl) textEl.textContent = `${kb} KB (${mb} MB) / 5.0 MB (${pct}%)`;
+    if (barEl) barEl.style.width = `${Math.max(pct, 5)}%`;
+  }
+
+  exportBackupJson() {
+    const backup = {
+      version: '2.5',
+      exportDate: new Date().toISOString(),
+      users: this.users,
+      profile: this.profile,
+      scraps: this.scraps,
+      posts: this.data.posts,
+      adminData: window.DODAM_ADMIN_DATA
+    };
+
+    const str = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(backup, null, 2));
+    const dlAnchor = document.createElement('a');
+    dlAnchor.setAttribute('href', str);
+    dlAnchor.setAttribute('download', `dodamtalk_backup_${Date.now()}.json`);
+    document.body.appendChild(dlAnchor);
+    dlAnchor.click();
+    dlAnchor.remove();
+    this.showToast('전체 시스템 데이터 백업 파일이 다운로드되었습니다.');
+  }
+
+  clearSystemCache() {
+    this.renderAdminSystem();
+    this.showToast('임시 캐시 및 세션이 최적화되었습니다.');
+  }
+
+  // 7. 공공데이터 & 인프라 현황
+  renderAdminApis() {
+    const listEl = document.getElementById('admin-api-status-list');
+    if (!listEl) return;
+
+    const apis = window.DODAM_ADMIN_DATA?.apiStatus || [];
+    listEl.innerHTML = apis
+      .map(
+        (api) => `
+        <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 space-y-2 text-xs">
+          <div class="flex items-center justify-between">
+            <div class="font-black text-slate-900 flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>${api.name}</span>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold">
+              ${api.statusLabel} (${api.latency})
+            </span>
+          </div>
+          <p class="text-[11px] text-slate-500 leading-relaxed font-medium">${api.description}</p>
+          <div class="pt-1.5 border-t border-stone-200/60 flex items-center justify-between text-[10px] text-slate-400">
+            <span>제공: ${api.provider}</span>
+            <span class="font-mono text-slate-500 truncate max-w-[180px]">${api.endpoint}</span>
+          </div>
+        </div>
+      `
+      )
+      .join('');
+  }
+
+  refreshAdminData() {
+    this.renderAdminTraffic();
+    this.renderAdminUsers();
+    this.renderAdminSystem();
+    this.showToast('실시간 관리자 트래픽 데이터가 새로고침되었습니다.');
+  }
+
 }
 
 window.addEventListener('DOMContentLoaded', () => {
