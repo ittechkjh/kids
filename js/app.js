@@ -123,7 +123,7 @@ class DodamCommunityApp {
     this.foodMarkersMap = {};
     this.userLocation = null;
     this.userBeaconMarker = null;
-    this.foodPageSize = 30;
+    this.foodPageSize = 15;
     this.foodCurrentPage = 1;
 
     // Initialize User Data
@@ -2145,32 +2145,52 @@ class DodamCommunityApp {
     this.updateFoodMapMarkers();
   }
 
-  getRestaurantSources(r) {
-    const rawName = r.name || '';
-    const cleanName = rawName
+  getCleanRestaurantQuery(r) {
+    const rawName = (r.name || '').trim();
+    if (/(본점|DCC점|노형점|용산아이파크몰점|강남점|여의도점|안지랑본점|성산본점|보문로점|한옥마을점)$/.test(rawName)) {
+      return rawName;
+    }
+    let clean = rawName
       .replace(/\s*\([^)]*\)/g, '')
+      .replace(/\s+[^\s]+\/[^\s]+/g, '')
+      .replace(/\s+[가-힣0-9A-Za-z·/]+(?:호점|점)$/, '')
       .replace(/\s*\/.*$/, '')
       .trim();
+    return clean || rawName;
+  }
+
+  getRestaurantSources(r) {
+    const cleanName = this.getCleanRestaurantQuery(r);
     const query = encodeURIComponent(cleanName);
+    const kakaoDirectUrl = `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}`;
 
     if (r.sources && r.sources.naver && r.sources.kakao && r.sources.google) {
       const currentNaver = r.sources.naver.url || '';
-      const updatedNaver = currentNaver
-        .replace('/v5/search/', '/p/search/')
-        .replace(/%20%28.*%29/g, '');
+      const updatedNaver = currentNaver.includes(query)
+        ? currentNaver.replace('/v5/search/', '/p/search/')
+        : `https://map.naver.com/p/search/${query}`;
+
+      const updatedKakao = (r.sources.kakao.url && r.sources.kakao.url.includes(query))
+        ? r.sources.kakao.url
+        : `https://map.kakao.com/?q=${query}`;
+
+      const updatedGoogle = (r.sources.google.url && r.sources.google.url.includes(query))
+        ? r.sources.google.url
+        : `https://www.google.com/maps/search/?api=1&query=${query}`;
 
       return {
         naver: {
           ...r.sources.naver,
-          url: updatedNaver || `https://map.naver.com/p/search/${query}`
+          url: updatedNaver
         },
         kakao: {
           ...r.sources.kakao,
-          url: r.sources.kakao.url || `https://map.kakao.com/?q=${query}`
+          url: updatedKakao,
+          directionsUrl: r.sources.kakao.directionsUrl || kakaoDirectUrl
         },
         google: {
           ...r.sources.google,
-          url: r.sources.google.url || `https://www.google.com/maps/search/?api=1&query=${query}`
+          url: updatedGoogle
         }
       };
     }
@@ -2197,6 +2217,7 @@ class DodamCommunityApp {
         rating: Number(kakaoRate),
         reviewCount: kakaoRev,
         url: `https://map.kakao.com/?q=${query}`,
+        directionsUrl: kakaoDirectUrl,
         name: '카카오맵'
       },
       google: {
@@ -2529,7 +2550,7 @@ class DodamCommunityApp {
   renderFoodView() {
     const listEl = document.getElementById('food-restaurants-list');
     const badgeEl = document.getElementById('food-count-badge');
-    const loadMoreContainer = document.getElementById('food-load-more-container');
+    const paginationContainer = document.getElementById('food-load-more-container');
     if (!listEl) return;
 
     // 하이브리드 수집 통계 위젯 업데이트
@@ -2560,20 +2581,25 @@ class DodamCommunityApp {
           <p class="text-xs text-slate-400">다른 지역을 선택하거나 포털 사이트 실시간 검색을 이용해보세요.</p>
         </div>
       `;
-      if (loadMoreContainer) loadMoreContainer.innerHTML = '';
+      if (paginationContainer) paginationContainer.innerHTML = '';
       return;
     }
 
-    const pageSize = this.foodPageSize || 30;
-    const currentPage = this.foodCurrentPage || 1;
+    const pageSize = this.foodPageSize || 15;
     const totalCount = filtered.length;
-    const visibleCount = Math.min(totalCount, currentPage * pageSize);
-    const visibleItems = filtered.slice(0, visibleCount);
+    const totalPages = Math.ceil(totalCount / pageSize);
+    this.foodCurrentPage = Math.max(1, Math.min(this.foodCurrentPage || 1, totalPages));
+    const currentPage = this.foodCurrentPage;
+
+    const startIdx = (currentPage - 1) * pageSize;
+    const visibleItems = filtered.slice(startIdx, startIdx + pageSize);
 
     listEl.innerHTML = visibleItems
       .map((r) => {
         const sources = this.getRestaurantSources(r);
         const totalReviews = r.reviewCount || (sources.naver.reviewCount + sources.kakao.reviewCount);
+        const kakaoNavUrl = sources.kakao.directionsUrl || sources.kakao.url;
+
         return `
         <article class="community-card p-5 space-y-3.5 hover:border-rose-300 transition">
           <!-- 상단: 이름, 카테고리, 지역, 종합 평점 -->
@@ -2716,7 +2742,7 @@ class DodamCommunityApp {
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </a>
               <a
-                href="${sources.kakao.url}"
+                href="${kakaoNavUrl}"
                 target="_blank"
                 rel="noopener"
                 class="px-2.5 py-1.5 rounded-xl bg-amber-50 text-amber-900 border border-amber-200 hover:bg-amber-100 text-[11px] font-extrabold transition flex items-center gap-1"
@@ -2740,34 +2766,129 @@ class DodamCommunityApp {
       })
       .join('');
 
-    // Load More Button
-    if (loadMoreContainer) {
-      if (visibleCount < totalCount) {
-        const remaining = totalCount - visibleCount;
-        loadMoreContainer.innerHTML = `
-          <div class="pt-4 pb-8 text-center">
-            <button
-              onclick="app.loadMoreRestaurants()"
-              class="px-6 py-3 rounded-2xl bg-white border-2 border-rose-200 hover:border-rose-400 hover:bg-rose-50 text-rose-600 font-black text-sm shadow-sm hover:shadow transition flex items-center justify-center gap-2 mx-auto"
-            >
-              <span>더 많은 맛집 보기 (${visibleCount.toLocaleString()} / ${totalCount.toLocaleString()}곳 표시 중)</span>
-              <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-700 text-xs font-black">+${Math.min(pageSize, remaining).toLocaleString()}곳 더</span>
-            </button>
-          </div>
-        `;
-      } else {
-        loadMoreContainer.innerHTML = `
-          <div class="py-6 text-center text-xs font-bold text-slate-400">
-            전체 ${totalCount.toLocaleString()}곳의 검증된 맛집을 모두 불러왔습니다 🎉
-          </div>
-        `;
+    // Pagination Component
+    if (paginationContainer) {
+      paginationContainer.innerHTML = this.renderFoodPagination(currentPage, totalPages, totalCount, startIdx, pageSize);
+    }
+  }
+
+  renderFoodPagination(currentPage, totalPages, totalCount, startIdx, pageSize) {
+    if (totalPages <= 1) {
+      return `
+        <div class="py-4 text-center text-xs font-bold text-slate-400">
+          전체 ${totalCount.toLocaleString()}곳의 맛집이 표시되었습니다.
+        </div>
+      `;
+    }
+
+    const pageButtons = [];
+    const maxVisiblePages = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage + 1 < maxVisiblePages) {
+      startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    if (startPage > 1) {
+      pageButtons.push(`
+        <button
+          onclick="app.setFoodPage(1)"
+          class="w-8 h-8 rounded-xl border border-stone-200 text-xs font-bold hover:bg-stone-50 text-slate-700 transition"
+          title="첫 페이지"
+        >1</button>
+      `);
+      if (startPage > 2) {
+        pageButtons.push(`<span class="px-1 text-slate-300 text-xs">...</span>`);
       }
+    }
+
+    for (let p = startPage; p <= endPage; p++) {
+      const isCurrent = p === currentPage;
+      pageButtons.push(`
+        <button
+          onclick="app.setFoodPage(${p})"
+          class="w-8 h-8 rounded-xl text-xs font-black transition ${
+            isCurrent
+              ? 'bg-rose-500 text-white shadow-xs'
+              : 'border border-stone-200 hover:bg-stone-50 text-slate-700'
+          }"
+        >${p}</button>
+      `);
+    }
+
+    if (endPage < totalPages) {
+      if (endPage < totalPages - 1) {
+        pageButtons.push(`<span class="px-1 text-slate-300 text-xs">...</span>`);
+      }
+      pageButtons.push(`
+        <button
+          onclick="app.setFoodPage(${totalPages})"
+          class="px-2 h-8 rounded-xl border border-stone-200 text-xs font-bold hover:bg-stone-50 text-slate-700 transition"
+          title="마지막 페이지"
+        >${totalPages}</button>
+      `);
+    }
+
+    const startNum = (startIdx + 1).toLocaleString();
+    const endNum = Math.min(startIdx + pageSize, totalCount).toLocaleString();
+
+    return `
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 p-4 bg-white rounded-2xl border border-stone-200 shadow-2xs mt-2">
+        <div class="text-xs text-slate-500 font-bold text-center sm:text-left">
+          전체 <strong class="text-slate-900 font-black">${totalCount.toLocaleString()}</strong>곳 중 
+          <span class="text-rose-600 font-black">${startNum} ~ ${endNum}곳</span> 
+          (페이지 <strong class="text-slate-900">${currentPage}</strong> / ${totalPages})
+        </div>
+
+        <div class="flex items-center gap-1.5 flex-wrap justify-center">
+          <button
+            onclick="app.setFoodPage(${currentPage - 1})"
+            ${currentPage <= 1 ? 'disabled' : ''}
+            class="px-3 py-1.5 rounded-xl border border-stone-200 text-xs font-bold transition flex items-center gap-1 ${
+              currentPage <= 1
+                ? 'opacity-40 cursor-not-allowed text-slate-400 bg-stone-50'
+                : 'hover:bg-stone-50 text-slate-700'
+            }"
+          >
+            <i class="fa-solid fa-chevron-left text-[10px]"></i>
+            <span>이전</span>
+          </button>
+
+          ${pageButtons.join('')}
+
+          <button
+            onclick="app.setFoodPage(${currentPage + 1})"
+            ${currentPage >= totalPages ? 'disabled' : ''}
+            class="px-3 py-1.5 rounded-xl border border-stone-200 text-xs font-bold transition flex items-center gap-1 ${
+              currentPage >= totalPages
+                ? 'opacity-40 cursor-not-allowed text-slate-400 bg-stone-50'
+                : 'hover:bg-stone-50 text-slate-700'
+            }"
+          >
+            <span>다음</span>
+            <i class="fa-solid fa-chevron-right text-[10px]"></i>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  setFoodPage(page) {
+    const filtered = this.getFilteredRestaurants();
+    const pageSize = this.foodPageSize || 15;
+    const totalPages = Math.ceil(filtered.length / pageSize) || 1;
+    this.foodCurrentPage = Math.max(1, Math.min(page, totalPages));
+    this.renderFoodView();
+
+    const listEl = document.getElementById('food-restaurants-list');
+    if (listEl) {
+      listEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
   loadMoreRestaurants() {
-    this.foodCurrentPage = (this.foodCurrentPage || 1) + 1;
-    this.renderFoodView();
+    this.setFoodPage((this.foodCurrentPage || 1) + 1);
   }
 
   // ==========================================
