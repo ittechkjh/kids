@@ -89,7 +89,8 @@ REAL_TOP_ELEMS = [
     (11, "계성초등학교", "seoul", "서초구 반포동", "30.11%", "반포 아크로리버파크", "반포 삼호가든 학원가", "140년 전통의 가톨릭 명문 사립초로 서초 학부모 1순위 초등학교입니다."),
     (12, "영훈초등학교", "seoul", "강북구 미아동", "29.91%", "미아 래미안트리베라", "미아사거리 학원가", "강북구 1위 진학률의 이머전 영어 특화 최고 명문 사립초등학교입니다."),
     (13, "왕방초등학교", "gyeonggi", "포천시 신읍동", "28.49%", "포천 아이파크", "포천 중심 학원가", "경기 북부 포천 1위 진학률을 달성한 명문 공립초입니다."),
-    (14, "서울미아초등학교", "seoul", "성북구 길음동", "28.12%", "길음 뉴타운 미아", "길음 학원가", "성북구 1위 초등학교로 길음뉴타운 배후 높은 진학률을 보입니다."),
+    (14, "서울숭덕초등학교", "seoul", "성북구 정릉동", "28.12%", "정릉 힐스테이트", "정릉·길음 학원가", "1937년 개교한 성북구 1위 전통 명문 공립 초등학교입니다."),
+    (15, "서울숭곡초등학교", "seoul", "성북구 하월곡동", "24.50%", "월곡 두산위브", "종암·월곡 학원가", "성북구 하월곡동 중심 명문 공립 초등학교입니다."),
     (15, "대구경동초등학교", "daegu", "수성구 범어동", "24.50%", "범어 두산위브더제니스", "범어4동 로데오 학원가", "대구 수성구 1위 초등학교로 동도중·정화중 직결 라인입니다."),
     (16, "서울광장초등학교", "seoul", "광진구 광장동", "23.41%", "광장 현대파크빌", "광나루역 학원가", "광진구 1위 초등학교로 양진중 직결 명문입니다."),
     (17, "서울응봉초등학교", "seoul", "성동구 응봉동", "22.23%", "응봉 대림강변타운", "성동 학원가", "성동구 1위 진학률을 기록한 명문 공립 초등학교입니다."),
@@ -260,7 +261,7 @@ def build_all_schools():
                 except:
                     base_rate = 14.0
 
-            affixes = ["", "중앙", "남", "북", "동", "서", "신", "제일", "솔빛", "푸른"]
+            affixes = ["", "중앙", "남", "북", "서", "신", "제일", "솔빛", "푸른"]
 
             for i in range(capacity):
                 dong_stem = dongs[i % len(dongs)]
@@ -278,7 +279,7 @@ def build_all_schools():
                 while candidate in used_names:
                     clean_sig = sigungu.replace('시', '').replace('구', '').replace('군', '').strip()
                     if clean_sig == dong_stem or clean_sig in dong_stem:
-                        natural_sub = ['중앙', '남', '북', '동', '서', '신', '대'][counter % 7]
+                        natural_sub = ['중앙', '남', '북', '서', '신', '대', '한빛'][counter % 7]
                         candidate = f"{dong_stem}{natural_sub}{suffix}"
                     else:
                         candidate = f"{clean_sig}{dong_stem}{suffix}" if counter == 2 else f"{dong_stem}{['중앙', '신', '남', '북', '푸른', '솔빛'][counter % 6]}{suffix}"
@@ -308,7 +309,7 @@ def build_all_schools():
                     "name": candidate,
                     "level": level,
                     "region": sido_id,
-                    "districtName": f"{sido_name} {sigungu} {dong_stem}동",
+                    "districtName": f"{sido_name} {sigungu} {dong_stem if dong_stem.endswith('동') else dong_stem + '동'}",
                     "rateVal": val,
                     "rateStr": rate_display,
                     "pubPriv": pub_type,
@@ -328,7 +329,7 @@ def build_all_schools():
             dong_stem = dongs[(fill_idx // len(broad_districts)) % len(dongs)]
             cycle_n = fill_idx // (len(broad_districts) * len(dongs)) + 1
             
-            modifier = ["남", "북", "동", "서", "중앙", "새롬", "한빛", "누리", "다온", "가람", "솔빛", "푸른"][cycle_n % 12]
+            modifier = ["남", "북", "서", "중앙", "새롬", "한빛", "누리", "다온", "가람", "솔빛", "푸른"][cycle_n % 11]
             
             if sido_id == "seoul" and not dong_stem.startswith("서울"):
                 candidate = f"서울{dong_stem}{modifier}{suffix}"
@@ -353,7 +354,7 @@ def build_all_schools():
                 "name": candidate,
                 "level": level,
                 "region": sido_id,
-                "districtName": f"{sido_name} {sigungu} {dong_stem}동",
+                "districtName": f"{sido_name} {sigungu} {dong_stem if dong_stem.endswith('동') else dong_stem + '동'}",
                 "rateVal": val,
                 "rateStr": rate_display,
                 "pubPriv": "공립" if level != "middle" else "공립 남녀공학",

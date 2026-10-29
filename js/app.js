@@ -4320,8 +4320,8 @@ class DodamCommunityApp {
         : stats.benchAchievement || { school: 92, district: 83, nation: 78 };
 
       const calcBarH = (val, maxVal) => {
-        const ratio = Math.min(1, Math.max(0.2, val / (maxVal || 1)));
-        return Math.round(ratio * 50) + 14;
+        const ratio = Math.min(1, Math.max(0.18, (val || 0) / (maxVal || 1)));
+        return Math.round(ratio * 42) + 8;
       };
 
       const cMax = Math.max(benchC.school, benchC.district, benchC.nation, 1);
@@ -4330,69 +4330,69 @@ class DodamCommunityApp {
 
       return `
         <div class="space-y-3 pt-3">
-          <div class="grid grid-cols-3 gap-2 p-3 rounded-2xl bg-slate-50/90 border border-slate-200/80">
-            <div class="flex flex-col items-center justify-between text-center space-y-1">
-              <div class="text-[10px] font-bold text-slate-500">학급당 학생 수</div>
-              <div class="text-xs font-black text-slate-900">${benchC.school}명</div>
-              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-black text-indigo-600">${benchC.school}</span>
-                  <div style="height: ${calcBarH(benchC.school, cMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
+          <div class="grid grid-cols-3 gap-2 p-3.5 rounded-2xl bg-slate-50/90 border border-slate-200/80">
+            <!-- 학급당 학생 수 -->
+            <div class="flex flex-col items-center justify-between text-center">
+              <div class="text-[11px] font-black text-slate-600 mb-1">학급당 학생 수</div>
+              <div class="flex items-end justify-center gap-2 h-24 w-full pb-1">
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-black text-indigo-700 leading-none">${benchC.school}명</span>
+                  <div style="height: ${calcBarH(benchC.school, cMax)}px" class="w-4 rounded-t-md bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[10px] font-black text-indigo-800">학교</span>
                 </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-500">${benchC.district}</span>
-                  <div style="height: ${calcBarH(benchC.district, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                  <span class="text-[9px] font-medium text-slate-500">구</span>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-bold text-slate-600 leading-none">${benchC.district}</span>
+                  <div style="height: ${calcBarH(benchC.district, cMax)}px" class="w-4 rounded-t-md bg-slate-400"></div>
+                  <span class="text-[10px] font-bold text-slate-500">지역</span>
                 </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-400">${benchC.nation}</span>
-                  <div style="height: ${calcBarH(benchC.nation, cMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                  <span class="text-[9px] font-medium text-slate-400">전국</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex flex-col items-center justify-between text-center space-y-1 border-x border-slate-200 px-1">
-              <div class="text-[10px] font-bold text-slate-500">교사당 학생 수</div>
-              <div class="text-xs font-black text-slate-900">${benchT.school}명</div>
-              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-black text-indigo-600">${benchT.school}</span>
-                  <div style="height: ${calcBarH(benchT.school, tMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
-                </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-500">${benchT.district}</span>
-                  <div style="height: ${calcBarH(benchT.district, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                  <span class="text-[9px] font-medium text-slate-500">구</span>
-                </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-400">${benchT.nation}</span>
-                  <div style="height: ${calcBarH(benchT.nation, tMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                  <span class="text-[9px] font-medium text-slate-400">전국</span>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-medium text-slate-400 leading-none">${benchC.nation}</span>
+                  <div style="height: ${calcBarH(benchC.nation, cMax)}px" class="w-4 rounded-t-md bg-slate-300"></div>
+                  <span class="text-[10px] font-medium text-slate-400">전국</span>
                 </div>
               </div>
             </div>
 
-            <div class="flex flex-col items-center justify-between text-center space-y-1">
-              <div class="text-[10px] font-bold text-slate-500">${thirdTitle}</div>
-              <div class="text-xs font-black text-slate-900">${bench3.school}${thirdUnit}</div>
-              <div class="flex items-end justify-center gap-1.5 h-20 w-full pt-1">
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-black text-indigo-600">${bench3.school}</span>
-                  <div style="height: ${calcBarH(bench3.school, sMax)}px" class="w-3.5 rounded-t-sm bg-indigo-600 shadow-2xs"></div>
-                  <span class="text-[9px] font-bold text-indigo-700">학교</span>
+            <!-- 교사당 학생 수 -->
+            <div class="flex flex-col items-center justify-between text-center border-x border-slate-200/80 px-1">
+              <div class="text-[11px] font-black text-slate-600 mb-1">교사당 학생 수</div>
+              <div class="flex items-end justify-center gap-2 h-24 w-full pb-1">
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-black text-indigo-700 leading-none">${benchT.school}명</span>
+                  <div style="height: ${calcBarH(benchT.school, tMax)}px" class="w-4 rounded-t-md bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[10px] font-black text-indigo-800">학교</span>
                 </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-500">${bench3.district}</span>
-                  <div style="height: ${calcBarH(bench3.district, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-400"></div>
-                  <span class="text-[9px] font-medium text-slate-500">구</span>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-bold text-slate-600 leading-none">${benchT.district}</span>
+                  <div style="height: ${calcBarH(benchT.district, tMax)}px" class="w-4 rounded-t-md bg-slate-400"></div>
+                  <span class="text-[10px] font-bold text-slate-500">지역</span>
                 </div>
-                <div class="flex flex-col items-center gap-0.5">
-                  <span class="text-[9px] font-bold text-slate-400">${bench3.nation}</span>
-                  <div style="height: ${calcBarH(bench3.nation, sMax)}px" class="w-3.5 rounded-t-sm bg-slate-300"></div>
-                  <span class="text-[9px] font-medium text-slate-400">전국</span>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-medium text-slate-400 leading-none">${benchT.nation}</span>
+                  <div style="height: ${calcBarH(benchT.nation, tMax)}px" class="w-4 rounded-t-md bg-slate-300"></div>
+                  <span class="text-[10px] font-medium text-slate-400">전국</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 고학년 비율 / 학업 성취도 -->
+            <div class="flex flex-col items-center justify-between text-center">
+              <div class="text-[11px] font-black text-slate-600 mb-1">${thirdTitle}</div>
+              <div class="flex items-end justify-center gap-2 h-24 w-full pb-1">
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-black text-indigo-700 leading-none">${bench3.school}${thirdUnit}</span>
+                  <div style="height: ${calcBarH(bench3.school, sMax)}px" class="w-4 rounded-t-md bg-indigo-600 shadow-2xs"></div>
+                  <span class="text-[10px] font-black text-indigo-800">학교</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-bold text-slate-600 leading-none">${bench3.district}${thirdUnit}</span>
+                  <div style="height: ${calcBarH(bench3.district, sMax)}px" class="w-4 rounded-t-md bg-slate-400"></div>
+                  <span class="text-[10px] font-bold text-slate-500">지역</span>
+                </div>
+                <div class="flex flex-col items-center gap-1">
+                  <span class="text-[10px] font-medium text-slate-400 leading-none">${bench3.nation}${thirdUnit}</span>
+                  <div style="height: ${calcBarH(bench3.nation, sMax)}px" class="w-4 rounded-t-md bg-slate-300"></div>
+                  <span class="text-[10px] font-medium text-slate-400">전국</span>
                 </div>
               </div>
             </div>
