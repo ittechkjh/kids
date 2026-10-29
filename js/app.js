@@ -196,54 +196,76 @@ class DodamCommunityApp {
   }
 
   renderUpdateBadges() {
-    const rawDate = this.eventsMetadata?.lastUpdated || '2026-10-28';
+    const rawDate = this.eventsMetadata?.lastUpdated || '2026-10-29';
     const formatted = rawDate.replace(/-/g, '.');
 
     document.querySelectorAll('.last-updated-text').forEach((el) => {
       el.textContent = formatted;
     });
 
+    // 1. 공공 축제·행사
+    const festEvents = (this.allEvents || []).filter((e) => e.boardType === 'festivals');
+    const festActive = festEvents.filter((e) => e.status === 'ongoing' || e.status === 'applying');
     const fStatDate = document.getElementById('fest-stat-date');
     if (fStatDate) fStatDate.textContent = formatted;
     const fStatToday = document.getElementById('fest-stat-today');
-    if (fStatToday) fStatToday.textContent = '233';
+    if (fStatToday) fStatToday.textContent = (festActive.length || festEvents.length).toLocaleString();
     const fStatTotal = document.getElementById('fest-stat-total');
     if (fStatTotal) {
-      const fCount = (this.allEvents || []).filter((e) => e.boardType === 'festivals').length || 1829;
-      fStatTotal.textContent = fCount.toLocaleString();
+      fStatTotal.textContent = festEvents.length.toLocaleString();
     }
 
+    // 2. 전국 대회 공고
+    const contEvents = (this.allEvents || []).filter((e) => e.boardType === 'contests');
+    const contActive = contEvents.filter((e) => e.status === 'applying' || e.status === 'ongoing');
     const cStatDate = document.getElementById('cont-stat-date');
     if (cStatDate) cStatDate.textContent = formatted;
     const cStatToday = document.getElementById('cont-stat-today');
-    if (cStatToday) cStatToday.textContent = '128';
+    if (cStatToday) cStatToday.textContent = (contActive.length || contEvents.length).toLocaleString();
     const cStatTotal = document.getElementById('cont-stat-total');
     if (cStatTotal) {
-      const cCount = (this.allEvents || []).filter((e) => e.boardType === 'contests').length || 1038;
-      cStatTotal.textContent = cCount.toLocaleString();
+      cStatTotal.textContent = contEvents.length.toLocaleString();
     }
 
+    // 3. 맛집 데이터
     const crawlStatDate = document.getElementById('crawl-stat-date');
     if (crawlStatDate) crawlStatDate.textContent = formatted;
+    const crawlStatToday = document.getElementById('crawl-stat-today');
+    if (crawlStatToday) {
+      const restToday = window.DODAM_CRAWL_METADATA?.todayCount || 810;
+      crawlStatToday.textContent = restToday.toLocaleString();
+    }
+    const crawlStatTotal = document.getElementById('crawl-stat-total');
+    if (crawlStatTotal) {
+      const restTotal = window.DODAM_NATIONWIDE_RESTAURANTS?.length || window.DODAM_CRAWL_METADATA?.totalCount || 5000;
+      crawlStatTotal.textContent = restTotal.toLocaleString();
+    }
 
+    // 4. 정부 정책·지원금
+    const policies = window.DODAM_POLICIES_DATA?.policies || [];
+    const activePolicies = policies.filter((p) => p.status === 'active');
     const pStatDate = document.getElementById('policy-stat-date');
     if (pStatDate) pStatDate.textContent = formatted;
     const pStatToday = document.getElementById('policy-stat-today');
-    if (pStatToday) pStatToday.textContent = '18';
+    if (pStatToday) pStatToday.textContent = (activePolicies.length || policies.length).toLocaleString();
     const pStatTotal = document.getElementById('policy-stat-total');
     if (pStatTotal) {
-      const pCount = window.DODAM_POLICIES_DATA?.policies?.length || 20;
-      pStatTotal.textContent = pCount.toLocaleString();
+      pStatTotal.textContent = policies.length.toLocaleString();
     }
 
+    // 5. 학교·학군 순위
+    const allSchools = window.DODAM_SCHOOLS_RANKING || [];
     const sStatDate = document.getElementById('school-stat-date');
     if (sStatDate) sStatDate.textContent = formatted;
     const sStatToday = document.getElementById('school-stat-today');
-    if (sStatToday) sStatToday.textContent = '24';
+    if (sStatToday) {
+      const districtsCount = (window.DODAM_SCHOOLS_DATA?.districts?.length || 7) + (window.DODAM_SCHOOLS_DATA?.sidos?.length || 17);
+      sStatToday.textContent = districtsCount.toLocaleString();
+    }
     const sStatTotal = document.getElementById('school-stat-total');
     if (sStatTotal) {
-      const sCount = (window.DODAM_SCHOOLS_DATA?.schools?.length || 18) + (window.DODAM_SCHOOLS_DATA?.districts?.length || 7) + (window.DODAM_SCHOOLS_DATA?.admissions?.length || 4);
-      sStatTotal.textContent = sCount.toLocaleString();
+      const totalSchoolCount = allSchools.length || 12014;
+      sStatTotal.textContent = totalSchoolCount.toLocaleString();
     }
   }
 
@@ -648,18 +670,21 @@ class DodamCommunityApp {
   }
 
   getPinnedNotices() {
+    if (window.DODAM_COMMUNITY_DATA && Array.isArray(window.DODAM_COMMUNITY_DATA.notices)) {
+      return window.DODAM_COMMUNITY_DATA.notices;
+    }
     return [
       {
         id: 'notice-1',
         tag: '필독',
         tagColor: 'bg-rose-500 text-white',
-        title: '2026 전국 초·중·고 학군 리치고 분석 순위 & 입시 로드맵 안내',
+        title: '2026 전국 초·중·고 학군 분석 순위 & 입시 로드맵 안내',
         author: '도담매니저',
-        date: '2026.10.28',
+        date: '2026.10.29',
         views: 12480,
         likes: 382,
         commentsCount: 42,
-        content: '전국 5,000개 초등학교, 중학교, 고등학교 리치고 학군 랭킹 데이터가 업데이트되었습니다. 지역별 1위 명문학교 및 특목고 진학률, 학업성취도를 지금 바로 확인해보세요!'
+        content: '대한민국 교육부·NEIS 공식 공시 전국 12,014개 초등학교, 중학교, 고등학교 학군 랭킹 데이터가 업데이트되었습니다. 지역별 명문학교 및 특목고 진학률, 학업성취도를 지금 바로 확인해보세요!'
       },
       {
         id: 'notice-2',
@@ -863,7 +888,7 @@ class DodamCommunityApp {
               <span class="truncate font-semibold">${post.author.nickname}</span>
             </div>
             <div class="col-span-1 text-center text-xs text-slate-400 font-medium">${post.createdAt}</div>
-            <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${post.views || 120}</div>
+            <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${post.views ?? 0}</div>
             <div class="col-span-1 text-center text-xs text-rose-500 font-bold flex items-center justify-center gap-1">
               <i class="fa-solid fa-heart text-[10px]"></i>
               <span>${totalLikes}</span>
@@ -885,7 +910,7 @@ class DodamCommunityApp {
                 <span class="text-slate-400 shrink-0">${post.createdAt}</span>
               </div>
               <div class="flex items-center gap-2.5 shrink-0">
-                <span class="flex items-center gap-1 text-slate-500"><i class="fa-regular fa-eye text-[10px]"></i>${post.views || 120}</span>
+                <span class="flex items-center gap-1 text-slate-500"><i class="fa-regular fa-eye text-[10px]"></i>${post.views ?? 0}</span>
                 <span class="flex items-center gap-1 text-rose-500 font-bold"><i class="fa-solid fa-heart text-[10px]"></i>${totalLikes}</span>
               </div>
             </div>
@@ -986,7 +1011,7 @@ class DodamCommunityApp {
                       </span>
                       <span class="flex items-center gap-1">
                         <i class="fa-regular fa-eye text-[11px]"></i>
-                        <span>${post.views || 120}</span>
+                        <span>${post.views ?? 0}</span>
                       </span>
                     </div>
                     <span class="text-rose-500 font-bold hover:underline text-[11px]">
@@ -3740,27 +3765,24 @@ class DodamCommunityApp {
 
     titleEl.textContent = `${regionPrefix} ${levelName} 순위 2026`;
 
-    // 서브타이틀: 리치고 실제 화면 문구 미러링
+    // 서브타이틀: 상위 학교 실시간 데이터 기반 동적 렌더링
     if (subtitleEl) {
-      if (isNationwide) {
-        if (this.schoolLevel === 'elementary') {
-          subtitleEl.textContent = '1위는 서울잠원초등학교(서초구, 39.47%)입니다. 2위는 서울신구초등학교(강남구, 38.54%)입니다.';
-        } else if (this.schoolLevel === 'middle') {
-          subtitleEl.textContent = '1위는 대청중학교(강남구, 29.80%)입니다. 2위는 목운중학교(양천구, 26.50%)입니다.';
-        } else if (this.schoolLevel === 'high') {
-          subtitleEl.textContent = '1위는 외대부고(용인, 서울대 66명)입니다. 2위는 상산고(전주, 의대 142명)입니다.';
-        } else {
-          subtitleEl.textContent = '대한민국 교육부 공식 공시 전국 초·중·고 12,014개 학교 순위와 특목·자사고 진학률 및 대입 실적 공시입니다.';
-        }
+      const topSchools = this.filterSchools ? this.filterSchools() : [];
+      if (topSchools.length >= 2) {
+        const top1 = topSchools[0];
+        const top2 = topSchools[1];
+        const r1 = top1.districtName || top1.regionName || '';
+        const r2 = top2.districtName || top2.regionName || '';
+        const s1 = top1.rateStr ? `, ${top1.rateStr}` : '';
+        const s2 = top2.rateStr ? `, ${top2.rateStr}` : '';
+        subtitleEl.textContent = `1위는 ${top1.name}(${r1}${s1})입니다. 2위는 ${top2.name}(${r2}${s2})입니다.`;
+      } else if (topSchools.length === 1) {
+        const top1 = topSchools[0];
+        const r1 = top1.districtName || top1.regionName || '';
+        const s1 = top1.rateStr ? `, ${top1.rateStr}` : '';
+        subtitleEl.textContent = `1위는 ${top1.name}(${r1}${s1})입니다.`;
       } else {
-        const sigungus = window.DODAM_SCHOOLS_DATA?.sigunguRankings?.[this.schoolSido] || [];
-        if (sigungus.length >= 2) {
-          subtitleEl.textContent = `1위는 ${sigungus[0].sigungu}(${sigungus[0].avg})입니다. 2위는 ${sigungus[1].sigungu}(${sigungus[1].avg})입니다.`;
-        } else if (sigungus.length === 1) {
-          subtitleEl.textContent = `1위는 ${sigungus[0].sigungu}(${sigungus[0].avg})입니다.`;
-        } else {
-          subtitleEl.textContent = `${activeSido.name} 지역 ${levelName} 순위 및 학군 분석 공시입니다.`;
-        }
+        subtitleEl.textContent = `${regionPrefix} ${levelName} 공식 공시 학군 순위 및 진학 정보입니다.`;
       }
     }
   }
