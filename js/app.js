@@ -6167,37 +6167,6 @@ class DodamCommunityApp {
           </div>
         `;
       }
-        const rates = richgoSchool.admission_rates;
-        admissionHtml = `
-          <div class="p-4 rounded-2xl bg-indigo-950 text-white space-y-2.5 border border-indigo-800/60 shadow-sm">
-            <div class="flex items-center justify-between">
-              <div class="text-xs font-black text-amber-300 flex items-center gap-1.5">
-                <i class="fa-solid fa-award"></i>
-                <span>특목고·자사고 진학률 공시</span>
-              </div>
-              <span class="text-[10px] text-indigo-300 font-bold">중학교 진학 통계</span>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs">
-              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
-                <div class="text-[10px] text-indigo-300">특목고 전체</div>
-                <div class="text-base font-black text-white mt-0.5">${rates.special_high_school_pct || 0}%</div>
-              </div>
-              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
-                <div class="text-[10px] text-indigo-300">과학고</div>
-                <div class="text-base font-black text-emerald-400 mt-0.5">${rates.science_high_pct || 0}%</div>
-              </div>
-              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
-                <div class="text-[10px] text-indigo-300">외고·국제고</div>
-                <div class="text-base font-black text-sky-400 mt-0.5">${rates.foreign_international_high_pct || 0}%</div>
-              </div>
-              <div class="p-2.5 rounded-xl bg-indigo-900/60 border border-indigo-700/50 text-center">
-                <div class="text-[10px] text-indigo-300">자율형사립고</div>
-                <div class="text-base font-black text-amber-400 mt-0.5">${rates.autonomous_private_high_pct || 0}%</div>
-              </div>
-            </div>
-          </div>
-        `;
-      }
 
       // 3. 연계/배정 학교 (feeder_schools)
       let feederHtml = '';
