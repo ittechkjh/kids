@@ -4786,8 +4786,6 @@ class DodamCommunityApp {
     this.renderSchoolSidoPills();
     this.renderSchoolSigunguTable();
     this.renderSchoolList();
-    this.renderSchoolDistricts();
-    this.renderSchoolAdmissions();
 
     // 통계 위젯 숫자 실시간 반영 (15,000개 순위 DB)
     const totalCountEl = document.getElementById('school-stat-total');
@@ -5141,6 +5139,14 @@ class DodamCommunityApp {
   }
 
   selectSchoolLevel(levelId) {
+    if (levelId === 'districts') {
+      this.switchMainView('apartments');
+      return;
+    }
+    if (levelId === 'admissions') {
+      this.switchMainView('admissions');
+      return;
+    }
     this.schoolLevel = levelId;
     this.schoolPage = 1;
     this.renderSchoolLevelChips();
@@ -5152,34 +5158,12 @@ class DodamCommunityApp {
     const filterBar = document.getElementById('school-filter-bar');
     const richgoHeader = document.getElementById('school-richgo-header-box');
     const sigunguSec = document.getElementById('school-sigungu-section');
-    const distSec = document.getElementById('school-districts-section');
-    const admSec = document.getElementById('school-admissions-section');
 
-    if (levelId === 'districts') {
-      if (listSec) listSec.classList.add('hidden');
-      if (filterBar) filterBar.classList.add('hidden');
-      if (richgoHeader) richgoHeader.classList.add('hidden');
-      if (sigunguSec) sigunguSec.classList.add('hidden');
-      if (distSec) distSec.classList.remove('hidden');
-      if (admSec) admSec.classList.add('hidden');
-      distSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else if (levelId === 'admissions') {
-      if (listSec) listSec.classList.add('hidden');
-      if (filterBar) filterBar.classList.add('hidden');
-      if (richgoHeader) richgoHeader.classList.add('hidden');
-      if (sigunguSec) sigunguSec.classList.add('hidden');
-      if (distSec) distSec.classList.add('hidden');
-      if (admSec) admSec.classList.remove('hidden');
-      admSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    } else {
-      if (listSec) listSec.classList.remove('hidden');
-      if (filterBar) filterBar.classList.remove('hidden');
-      if (richgoHeader) richgoHeader.classList.remove('hidden');
-      if (sigunguSec) sigunguSec.classList.remove('hidden');
-      if (distSec) distSec.classList.toggle('hidden', levelId !== 'all');
-      if (admSec) admSec.classList.toggle('hidden', levelId !== 'all');
-      this.renderSchoolList();
-    }
+    if (listSec) listSec.classList.remove('hidden');
+    if (filterBar) filterBar.classList.remove('hidden');
+    if (richgoHeader) richgoHeader.classList.remove('hidden');
+    if (sigunguSec) sigunguSec.classList.remove('hidden');
+    this.renderSchoolList();
   }
 
   setSchoolRegionFilter(reg) {
@@ -6509,75 +6493,6 @@ class DodamCommunityApp {
     this.renderSchoolList();
   }
 
-  renderSchoolDistricts() {
-    const container = document.getElementById('school-districts-grid');
-    if (!container) return;
-    const districts = window.DODAM_SCHOOLS_DATA?.districts || [];
-    container.innerHTML = districts
-      .map(
-        (d) => `
-        <div class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs space-y-3">
-          <div class="flex items-center justify-between gap-2">
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-rose-50 text-rose-600 border border-rose-200">
-                  ${d.tag}
-                </span>
-                <span class="text-xs text-slate-400 font-bold">${d.regionName}</span>
-              </div>
-              <h4 class="text-sm font-black text-slate-900 mt-1">${d.name}</h4>
-            </div>
-          </div>
-
-          <p class="text-xs text-slate-700 leading-relaxed">${d.analysis}</p>
-
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 text-xs">
-            <div class="text-[11px] text-slate-600"><strong class="text-slate-900">📍 핵심 학원가:</strong> ${d.hotSpots}</div>
-            <div class="text-[11px] text-slate-600"><strong class="text-slate-900">🎓 초·중·고 테크트리:</strong> ${d.feederLine}</div>
-            <div class="text-[11px] text-emerald-700 font-bold pt-1 border-t border-slate-200/60"><i class="fa-solid fa-lightbulb mr-1"></i>진입 팁: ${d.tips}</div>
-          </div>
-        </div>
-      `
-      )
-      .join('');
-  }
-
-  renderSchoolAdmissions() {
-    const container = document.getElementById('school-admissions-grid');
-    if (!container) return;
-    const admissions = window.DODAM_SCHOOLS_DATA?.admissions || [];
-    container.innerHTML = admissions
-      .map(
-        (a) => `
-        <div class="community-card p-4 bg-white border border-slate-200/90 shadow-2xs space-y-3">
-          <div class="flex items-center justify-between gap-2">
-            <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-blue-50 text-blue-700 border border-blue-200">
-              ${a.category}
-            </span>
-            <span class="px-2 py-0.5 rounded-full font-black text-[10px] bg-slate-900 text-white">
-              ${a.badge}
-            </span>
-          </div>
-
-          <div>
-            <h4 class="text-sm font-black text-slate-900">${a.title}</h4>
-            <p class="text-xs text-slate-600 mt-1 leading-relaxed">${a.summary}</p>
-          </div>
-
-          <div class="p-3 rounded-xl bg-slate-50 border border-slate-200/80 space-y-1.5 text-xs">
-            <div class="font-extrabold text-[11px] text-slate-900 flex items-center gap-1.5">
-              <i class="fa-solid fa-check-circle text-blue-600"></i>
-              <span>핵심 대비 포인트</span>
-            </div>
-            <ul class="space-y-1 text-[11px] text-slate-600 pl-1">
-              ${(a.points || []).map((pt) => `<li class="flex items-start gap-1.5"><span class="text-blue-500 font-bold">•</span><span>${pt}</span></li>`).join('')}
-            </ul>
-          </div>
-        </div>
-      `
-      )
-      .join('');
-  }
 
 
   // ==========================================

@@ -1642,7 +1642,7 @@
                   <div class="text-xs font-black text-slate-900 truncate">영훈·계성초 & 대치·목동</div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-rose-300 transition" onclick="app.selectSchoolLevel('admissions')">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-rose-300 transition" onclick="app.switchMainView('admissions')">
                 <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-black text-sm shrink-0">🎯</div>
                 <div class="min-w-0">
                   <div class="text-[10px] text-slate-500 font-bold">2028 대입 개편안</div>
@@ -1827,34 +1827,7 @@
             </div>
           </div>
 
-          <!-- 2. 전국 7대 명문 학군지 심층 분석 섹션 -->
-          <div id="school-districts-section" class="space-y-3">
-            <div class="flex items-center justify-between px-1">
-              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-map-location-dot text-rose-500"></i>
-                <span>대한민국 7대 명문 학군지 심층 분석 & 초·중·고 테크트리</span>
-              </h3>
-              <span class="text-[11px] text-slate-400">대치·목동·중계·분당·평촌·수성·해운대</span>
-            </div>
-            <div id="school-districts-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              <!-- Rendered dynamically -->
-            </div>
-          </div>
-
-          <!-- 3. 2028 대입 & 고입 입시 가이드 섹션 -->
-          <div id="school-admissions-section" class="space-y-3">
-            <div class="flex items-center justify-between px-1">
-              <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
-                <i class="fa-solid fa-bullseye text-blue-500"></i>
-                <span>2028 대입 개편안 핵심 가이드 & 학교별 전형 팁</span>
-              </h3>
-              <span class="text-[11px] text-slate-400">내신 5등급제·수능통합 대비</span>
-            </div>
-            <div id="school-admissions-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
-              <!-- Rendered dynamically -->
-            </div>
-          </div>
-        </section>
+          </section>
 
         <!-- VIEW 7: 아파트별 학군 & 배정학교 실시간 조회 게시판 (밝고 세련된 프리미엄 에듀테크 디자인) -->
         <section id="view-apartments" class="view-section hidden space-y-5">

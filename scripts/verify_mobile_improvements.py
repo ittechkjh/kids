@@ -28,10 +28,10 @@ def verify_mobile():
         page.on("console", lambda msg: errors.append(f"Console error: {msg.text}") if msg.type == "error" else None)
 
         print(f"Loading {url} in mobile viewport (390x844)...")
-        page.goto(url, wait_until="networkidle")
+        page.goto(url, wait_until="domcontentloaded")
         page.wait_for_timeout(1000)
 
-        # 1. Measure header height (reduced from 350px to ~200-230px, and relative on mobile)
+        # 1. Measure header height
         header_box = page.locator('header').bounding_box()
         print(f"Mobile Header Box: {header_box}")
         assert header_box['height'] <= 235, f"Header height too large: {header_box['height']}px"
@@ -45,7 +45,6 @@ def verify_mobile():
         write_btn = page.locator('header .coral-badge-gradient span:has-text("글쓰기")').first
         write_box = write_btn.bounding_box()
         print(f"Mobile Write Button Text Box: {write_box}")
-        # Height should be <= 25px (single line, not stacked)
         assert write_box['height'] <= 26, f"Write button text wrapped vertically! height={write_box['height']}"
 
         # 4. Check bottom search button '검색'
@@ -83,31 +82,30 @@ def verify_mobile():
         assert scroll_y < 50, f"Scroll did not return to top! scrollY={scroll_y}"
 
         # 7. Test switching views on mobile
-        # Food view
         page.locator('header nav button[data-view="food"]').click()
         page.wait_for_timeout(600)
         page.screenshot(path="scripts/mobile_improved_food.png")
         print("Captured scripts/mobile_improved_food.png")
 
-        # School view
         page.locator('header nav button[data-view="school"]').click()
         page.wait_for_timeout(600)
+        # Check that legacy sections do NOT exist
+        assert page.locator('#school-districts-section').count() == 0, "Legacy districts section still exists in DOM!"
+        assert page.locator('#school-admissions-section').count() == 0, "Legacy admissions section still exists in DOM!"
         page.screenshot(path="scripts/mobile_improved_school.png")
-        print("Captured scripts/mobile_improved_school.png")
+        print("Captured scripts/mobile_improved_school.png (legacy sections successfully absent!)")
 
-        # Apartments view
         page.locator('header nav button[data-view="apartments"]').click()
         page.wait_for_timeout(600)
         page.screenshot(path="scripts/mobile_improved_apartments.png")
         print("Captured scripts/mobile_improved_apartments.png")
 
-        # Admissions view
         page.locator('header nav button[data-view="admissions"]').click()
         page.wait_for_timeout(600)
         page.screenshot(path="scripts/mobile_improved_admissions.png")
         print("Captured scripts/mobile_improved_admissions.png")
 
-        # 8. Check iPhone SE (375 x 667) for tightest width
+        # 8. Check iPhone SE (375 x 667)
         context_se = browser.new_context(
             viewport={'width': 375, 'height': 667},
             device_scale_factor=2,
@@ -115,7 +113,7 @@ def verify_mobile():
             has_touch=True
         )
         page_se = context_se.new_page()
-        page_se.goto(url, wait_until="networkidle")
+        page_se.goto(url, wait_until="domcontentloaded")
         page_se.wait_for_timeout(800)
         header_se = page_se.locator('header').bounding_box()
         print(f"iPhone SE Header Box: {header_se}")
