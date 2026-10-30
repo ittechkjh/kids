@@ -102,17 +102,27 @@ def kakao_panel(confirm_id):
     return http_json(f'https://place-api.map.kakao.com/places/panel3/{confirm_id}')
 
 
+def name_tokens(s):
+    return set(re.findall(r'[가-힣A-Za-z0-9]{2,}', re.sub(r'\(.*?\)', ' ', s or '')))
+
+
 def match_place(row, places):
     tel = digits(row.get('RELAX_RSTRNT_TEL'))
     addr = norm_addr(row.get('RELAX_ADD1'))
+    rname = row.get('RELAX_RSTRNT_NM', '')
+    rtok = name_tokens(rname)
     for p in places:
         ptel = digits(p.get('tel'))
         paddr = norm_addr(p.get('new_address'))
-        phone_ok = bool(tel) and tel == ptel
+        phone_ok = len(tel) >= 8 and tel == ptel
         addr_ok = bool(addr) and bool(paddr) and (addr[-14:] in paddr or paddr[-14:] in addr)
-        if phone_ok and addr_ok or (addr_ok and p.get('name', '').replace(' ', '')[:3] == row['RELAX_RSTRNT_NM'].replace(' ', '')[:3]):
+        pname = p.get('name', '')
+        name_ok = pname.replace(' ', '')[:3] == rname.replace(' ', '')[:3] or bool(rtok & name_tokens(pname))
+        # 전화번호는 업소 고유값이므로 상호가 유사하면 주소 표기(행정구역 개편 등)가 달라도 같은 업소로 본다
+        if (phone_ok and (addr_ok or name_ok)) or (addr_ok and name_ok):
             return p
     return None
+
 
 
 def verify_row(row):
@@ -173,9 +183,26 @@ def cmd_verify(args):
 def passes(v):
     if v.get('status') != 'verified':
         return False
-    rating_ok = (v.get('rating') or 0) >= MIN_RATING and (v.get('ratingCount') or 0) >= MIN_RATING_N
-    reviews_ok = (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0) >= MIN_REVIEWS
+    n = v.get('ratingCount') or 0
+    if n >= MIN_RATING_N and (v.get('rating') or 0) < 3.5:
+        return False  # 충분한 표본에서 낮은 평점이면 리뷰 수가 많아도 제외
+    rating_ok = (v.get('rating') or 0) >= MIN_RATING and n >= MIN_RATING_N
+    reviews_ok = n + (v.get('blogReviewCount') or 0) >= MIN_REVIEWS
     return rating_ok or reviews_ok
+
+
+FULLNAME_ABBR = {'경상북도': '경북', '경상남도': '경남', '충청북도': '충북', '충청남도': '충남',
+                 '전라북도': '전북', '전북특별자치도': '전북', '전라남도': '전남', '전남광주통합특별시': '전남'}
+
+
+def region_of(row, v):
+    """카카오 주소(약칭: 서울/경북/전남 등)를 우선 사용. 전남광주통합특별시는 카카오 주소로 광주/전남을 구분."""
+    first = ((v.get('roadAddress') or '').split() or [''])[0][:2]
+    if first in REGION_MAP:
+        return REGION_MAP[first]
+    si = row.get('RELAX_SI_NM') or ''
+    abbr = FULLNAME_ABBR.get(si) or si[:2]
+    return REGION_MAP.get(abbr)
 
 
 def cmd_build(args):
@@ -186,7 +213,7 @@ def cmd_build(args):
         if sid not in raw or not passes(v):
             continue
         r = raw[sid]
-        reg = REGION_MAP.get((r.get('RELAX_SI_NM') or '')[:2])
+        reg = region_of(r, v)
         if not reg:
             continue
         name = v['placeName'] or r['RELAX_RSTRNT_NM']
@@ -200,7 +227,7 @@ def cmd_build(args):
             'region': reg[0], 'regionName': reg[1], 'district': ' '.join(r['RELAX_ADD1'].split()[1:3]),
             'address': addr, 'phone': v.get('tel') or r.get('RELAX_RSTRNT_TEL'),
             'lat': lat, 'lng': lng,
-            'overallRating': v.get('rating'), 'reviewCount': (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0),
+            'overallRating': v.get('rating') or None, 'reviewCount': (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0),
             'amenities': ['농림축산식품부 안심식당 지정'],
             'verifiedAt': v['checkedAt'],
             'sources': {

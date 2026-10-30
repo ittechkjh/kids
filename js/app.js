@@ -2951,21 +2951,21 @@ class DodamCommunityApp {
       cleanName,
       naver: {
         url: naverSearchUrl,
-        rating: src.naver?.rating || (ov + 0.15).toFixed(2),
-        reviewCount: src.naver?.reviewCount || r.reviewCount || 3500,
+        rating: src.naver?.rating ?? '-',
+        reviewCount: src.naver?.reviewCount ?? 0,
         name: '네이버 플레이스'
       },
       kakao: {
         url: kakaoSearchUrl,
         directionsUrl: kakaoDirectUrl,
-        rating: src.kakao?.rating || (ov - 0.45).toFixed(1),
-        reviewCount: src.kakao?.reviewCount || Math.round((r.reviewCount || 1000) * 0.08),
+        rating: src.kakao?.rating ?? '-',
+        reviewCount: src.kakao?.reviewCount ?? 0,
         name: '카카오맵'
       },
       google: {
         url: googleSearchUrl,
-        rating: src.google?.rating || (ov - 0.1).toFixed(1),
-        reviewCount: src.google?.reviewCount || Math.round((r.reviewCount || 1000) * 0.25),
+        rating: src.google?.rating ?? '-',
+        reviewCount: src.google?.reviewCount ?? 0,
         name: '구글 지도'
       }
     };
@@ -3124,11 +3124,11 @@ class DodamCommunityApp {
     if (sortVal === 'distance' && this.userLocation) {
       list.sort((a, b) => (a.distanceKm ?? 99999) - (b.distanceKm ?? 99999));
     } else if (sortVal === 'naver') {
-      list.sort((a, b) => this.getRestaurantSources(b).naver.rating - this.getRestaurantSources(a).naver.rating);
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).naver.rating) || 0) - (Number(this.getRestaurantSources(a).naver.rating) || 0));
     } else if (sortVal === 'kakao') {
-      list.sort((a, b) => this.getRestaurantSources(b).kakao.rating - this.getRestaurantSources(a).kakao.rating);
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).kakao.rating) || 0) - (Number(this.getRestaurantSources(a).kakao.rating) || 0));
     } else if (sortVal === 'google') {
-      list.sort((a, b) => this.getRestaurantSources(b).google.rating - this.getRestaurantSources(a).google.rating);
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).google.rating) || 0) - (Number(this.getRestaurantSources(a).google.rating) || 0));
     } else if (sortVal === 'reviews') {
       list.sort((a, b) => {
         const revB = b.reviewCount || (this.getRestaurantSources(b).naver.reviewCount + this.getRestaurantSources(b).kakao.reviewCount);
