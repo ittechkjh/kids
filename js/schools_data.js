@@ -303,7 +303,12 @@
         { name: distShort + ' 센트럴파크', households: '980세대', note: '도보 통학권 (도보 7분)' }
       ],
       academies: resolveAcademyInfo(name, districtName, region, acadName),
-      features: [pubPriv, grade, (rank <= 100 ? '최상위' : '선호학교'), '특목명문'],
+      features: (function() {
+        const sid = level + '-' + rank;
+        const entry = (typeof window !== 'undefined' && window.DODAM_NEIS_MAP) ? window.DODAM_NEIS_MAP[sid] : null;
+        const g = (entry && entry[2]) ? entry[2] : (name.includes('여자') || name.includes('여중') || name.includes('여고') ? '여학교' : (name.includes('남자') || name.includes('남중') || name.includes('남고') ? '남학교' : '남녀공학'));
+        return [pubPriv, g, grade, (rank <= 100 ? '최상위' : '선호학교'), '특목명문'];
+      })(),
       nearbyMiddle: nearbyMiddle,
       nearbyHigh: nearbyHigh,
       collegeResults: collegeResults,
@@ -320,6 +325,14 @@
         const sid = level + '-' + rank;
         const entry = (typeof window !== 'undefined' && window.DODAM_NEIS_MAP) ? window.DODAM_NEIS_MAP[sid] : null;
         return (entry && entry[1]) ? entry[1] : '';
+      })(),
+      genderType: (function() {
+        const sid = level + '-' + rank;
+        const entry = (typeof window !== 'undefined' && window.DODAM_NEIS_MAP) ? window.DODAM_NEIS_MAP[sid] : null;
+        if (entry && entry[2]) return entry[2];
+        if (name.includes('여자') || name.includes('여중') || name.includes('여고')) return '여학교';
+        if (name.includes('남자') || name.includes('남중') || name.includes('남고')) return '남학교';
+        return '남녀공학';
       })()
     };
   });

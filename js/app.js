@@ -4788,7 +4788,7 @@ class DodamCommunityApp {
     if (match) {
       this.openSchoolModal(match.id);
     } else {
-      window.open(`https://m.richgo.ai/realty/search?q=${encodeURIComponent(schoolName)}`, '_blank');
+      window.open(`https://www.schoolinfo.go.kr/ei/ss/pbanSrch/searchSchool.do?schulNm=${encodeURIComponent(schoolName)}`, '_blank');
     }
   }
 
@@ -5229,15 +5229,18 @@ class DodamCommunityApp {
       if (this.schoolRegion !== 'all') {
         if (s.region !== 'all' && s.region !== this.schoolRegion) return false;
       }
-      // 4. Type filter
+      // 4. Type filter (공립/사립, 남녀공학/남학교/여학교, 특목고, 자사고 등)
       if (this.schoolType !== 'all') {
         const pubPriv = s.publicPrivate || '';
+        const gender = s.genderType || '';
         const features = (s.features || []).join(' ');
         const summary = s.summary || '';
         const name = s.name || '';
         const aptNotes = (s.apartments || []).map((a) => a.note || '').join(' ');
         const isMatch =
           pubPriv.includes(this.schoolType) ||
+          gender === this.schoolType ||
+          gender.includes(this.schoolType) ||
           features.includes(this.schoolType) ||
           summary.includes(this.schoolType) ||
           name.includes(this.schoolType) ||
@@ -5259,6 +5262,8 @@ class DodamCommunityApp {
           s.name +
           ' ' +
           (s.publicPrivate || '') +
+          ' ' +
+          (s.genderType || '') +
           ' ' +
           (s.regionName || '') +
           ' ' +
@@ -5424,6 +5429,11 @@ class DodamCommunityApp {
                     <div class="flex items-center gap-1.5">
                       <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
                       <span class="font-bold text-slate-500">${s.publicPrivate}</span>
+                      <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${
+                        s.genderType === '남학교' ? 'bg-blue-50 text-blue-700 border border-blue-100' :
+                        s.genderType === '여학교' ? 'bg-pink-50 text-pink-700 border border-pink-100' :
+                        'bg-slate-100 text-slate-600'
+                      }">${s.genderType || '남녀공학'}</span>
                     </div>
                     <span class="text-[11px] text-slate-400 font-medium">
                       <i class="fa-solid fa-location-dot mr-1"></i>${s.districtName}
@@ -5655,6 +5665,11 @@ class DodamCommunityApp {
                   <div class="flex items-center gap-1.5 flex-wrap">
                     <span class="font-black text-slate-900 text-xs sm:text-sm group-hover:text-indigo-600 transition truncate">${s.name}</span>
                     <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
+                    <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${
+                      s.genderType === '남학교' ? 'bg-blue-50 text-blue-700 border border-blue-100' :
+                      s.genderType === '여학교' ? 'bg-pink-50 text-pink-700 border border-pink-100' :
+                      'bg-slate-100 text-slate-600'
+                    }">${s.genderType || '남녀공학'}</span>
                     <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
                   </div>
                   <div class="flex items-center gap-1.5 mt-1 text-[11px] text-slate-500 font-medium">
@@ -5700,6 +5715,11 @@ class DodamCommunityApp {
                     <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-300 group-hover:text-indigo-500 transition"></i>
                   </span>
                   <span class="px-1.5 py-0.5 rounded text-[10px] font-bold ${s.publicPrivate === '사립' ? 'bg-amber-100 text-amber-800' : 'bg-slate-100 text-slate-600'}">${s.publicPrivate}</span>
+                  <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${
+                    s.genderType === '남학교' ? 'bg-blue-50 text-blue-700 border border-blue-100' :
+                    s.genderType === '여학교' ? 'bg-pink-50 text-pink-700 border border-pink-100' :
+                    'bg-slate-100 text-slate-600'
+                  }">${s.genderType || '남녀공학'}</span>
                   <span class="px-1.5 py-0.5 rounded bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${s.grade}</span>
                   ${(window.DodamRichgoAPI && window.DodamRichgoAPI.findRichgoSchool(s)) ? '<span class="px-1.5 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200 text-[9px] font-black">공식인증</span>' : ''}
                 </div>
@@ -5945,13 +5965,22 @@ class DodamCommunityApp {
               <span class="font-black text-slate-800">${(stats.totalStudents || 0).toLocaleString()}명</span>
             </div>
             <div class="flex items-center justify-between text-[11px]">
-              <span class="font-bold text-slate-500">설립 형태:</span>
+              <span class="font-bold text-slate-500">설립 구분:</span>
               <span class="font-bold text-slate-700">${s.publicPrivate}</span>
             </div>
             <div class="flex items-center justify-between text-[11px]">
-              <span class="font-bold text-slate-500">소재지 관할:</span>
+              <span class="font-bold text-slate-500">성별 구분:</span>
+              <span class="font-extrabold ${
+                s.genderType === '남학교' ? 'text-blue-600' :
+                s.genderType === '여학교' ? 'text-pink-600' :
+                'text-indigo-600'
+              }">${s.genderType || '남녀공학'}</span>
+            </div>
+            <div class="flex items-center justify-between text-[11px]">
+              <span class="font-bold text-slate-500">소속 지역:</span>
               <span class="font-bold text-slate-700">${s.districtName}</span>
             </div>
+          </div>
           </div>
         </div>
       `;
@@ -6047,7 +6076,9 @@ class DodamCommunityApp {
 
     if (activeTab === 'richgo') {
       const richgoSchool = window.DodamRichgoAPI ? window.DodamRichgoAPI.findRichgoSchool(s) : null;
-      const richgoUrl = richgoSchool?.url || `https://m.richgo.ai/realty/search?q=${encodeURIComponent(s.name)}`;
+      // 리치고에 등록된 학교는 리치고 상세 페이지로, 미등록 학교는 아파트 검색창 대신 학교알리미 공식 상세 공시 페이지로 안전 직결
+      const richgoUrl = richgoSchool?.url || s.schoolInfoUrl || `https://www.schoolinfo.go.kr/ei/ss/pbanSrch/searchSchool.do?schulNm=${encodeURIComponent(s.name)}`;
+      const detailBtnLabel = richgoSchool?.url ? '상세 분석 보기' : '공시 상세 분석';
       
       const gradeBadge = richgoSchool?.grade 
         ? `<span class="px-2.5 py-1 rounded-xl text-xs font-black bg-indigo-600 text-white shadow-sm">AI 학군 ${richgoSchool.grade}등급</span>`
@@ -6186,7 +6217,7 @@ class DodamCommunityApp {
               ${feederList.map((f) => {
                 const targetUrl = f.school_id 
                   ? `https://m.richgo.ai/realty/place/${s.level === 'elementary' ? 'middle' : 'high'}/${f.school_id}`
-                  : `https://m.richgo.ai/realty/search?q=${encodeURIComponent(f.name)}`;
+                  : `https://www.schoolinfo.go.kr/ei/ss/pbanSrch/searchSchool.do?schulNm=${encodeURIComponent(f.name)}`;
                 return `
                 <div class="p-2.5 rounded-xl bg-slate-50 border border-slate-200/80 flex items-center justify-between hover:border-indigo-300 transition">
                   <div>
@@ -6265,7 +6296,7 @@ class DodamCommunityApp {
               rel="noopener noreferrer"
               class="px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-2xs transition flex items-center gap-1"
             >
-              <span>상세 분석 보기</span>
+              <span>${detailBtnLabel}</span>
               <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
             </a>
           </div>
@@ -6343,12 +6374,25 @@ class DodamCommunityApp {
         <i class="fa-solid ${levelInfo.icon} ${levelInfo.color}"></i>
         <span class="font-bold text-slate-600">${school.publicPrivate} ${levelInfo.label}</span>
         <span class="text-slate-300">·</span>
+        <span class="px-1.5 py-0.5 rounded text-[10px] font-extrabold ${
+          school.genderType === '남학교' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
+          school.genderType === '여학교' ? 'bg-pink-50 text-pink-700 border border-pink-200' :
+          'bg-indigo-50 text-indigo-700 border border-indigo-200'
+        }">${school.genderType || '남녀공학'}</span>
+        <span class="text-slate-300">·</span>
         <span>${school.districtName}</span>
       </div>
       <h2 class="text-xl font-black text-slate-900 mt-1">${school.name}</h2>
       <div class="flex items-center gap-1.5 flex-wrap pt-1">
         <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-slate-900 text-white shadow-2xs">
           전국 #${school.rank ? school.rank.toLocaleString() + '위' : school.districtRank}
+        </span>
+        <span class="px-2.5 py-0.5 rounded-lg text-xs font-black ${
+          school.genderType === '남학교' ? 'bg-blue-600 text-white shadow-2xs' :
+          school.genderType === '여학교' ? 'bg-pink-600 text-white shadow-2xs' :
+          'bg-teal-700 text-white shadow-2xs'
+        }">
+          ${school.genderType || '남녀공학'}
         </span>
         <span class="px-2.5 py-0.5 rounded-lg text-xs font-black bg-indigo-600 text-white shadow-2xs">
           학군 ${school.grade}
@@ -6397,19 +6441,34 @@ class DodamCommunityApp {
     // 4. 하단 외부 바로가기 링크 렌더링
     if (linksEl) {
       const richgoSchool = window.DodamRichgoAPI ? window.DodamRichgoAPI.findRichgoSchool(school) : null;
-      const richgoUrl = richgoSchool?.url || `https://m.richgo.ai/realty/search?q=${encodeURIComponent(school.name)}`;
+      const richgoBtn = richgoSchool?.url
+        ? `
+          <a
+            href="${richgoSchool.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-indigo-200 hover:border-indigo-300 bg-indigo-50 text-indigo-700 font-black text-xs hover:bg-indigo-100 transition shadow-2xs"
+          >
+            <i class="fa-solid fa-bolt text-amber-500"></i>
+            <span>리치고 AI 분석</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        `
+        : `
+          <a
+            href="https://search.naver.com/search.naver?query=${encodeURIComponent((school.districtName || '') + ' ' + school.name + ' 학군')}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-indigo-200 hover:border-indigo-300 bg-indigo-50 text-indigo-700 font-black text-xs hover:bg-indigo-100 transition shadow-2xs"
+          >
+            <i class="fa-solid fa-chart-line text-indigo-600"></i>
+            <span>포털 학군 심층분석</span>
+            <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
+          </a>
+        `;
 
       linksEl.innerHTML = `
-        <a
-          href="${richgoUrl}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-indigo-200 hover:border-indigo-300 bg-indigo-50 text-indigo-700 font-black text-xs hover:bg-indigo-100 transition shadow-2xs"
-        >
-          <i class="fa-solid fa-bolt text-amber-500"></i>
-          <span>리치고 MCP 분석</span>
-          <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-        </a>
+        ${richgoBtn}
         <a
           href="${school.schoolInfoUrl || 'https://www.schoolinfo.go.kr'}"
           target="_blank"
