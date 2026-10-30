@@ -243,9 +243,11 @@
     let admissionRates = null;
 
     if (level === 'elementary') {
+      const midGrade1 = rank <= 150 ? '1.0등급' : (rank <= 600 ? '1.1등급' : '1.2등급');
+      const midGrade2 = rank <= 150 ? '1.1등급' : (rank <= 600 ? '1.2등급' : '1.3등급');
       nearbyMiddle = [
-        { name: distShort + ' 1위 중학교', type: '공립', rate: rateStr, distance: '도보 4분 (310m)', isDirect: true },
-        { name: distShort + ' 대표 중학교', type: '공립', rate: '18.50%', distance: '도보 8분 (560m)', isDirect: false }
+        { name: distShort + ' 1위 중학교', type: '공립', rate: rateStr, grade: midGrade1, distance: '도보 4분 (310m)', isDirect: true },
+        { name: distShort + ' 대표 중학교', type: '공립', rate: '18.50%', grade: midGrade2, distance: '도보 8분 (560m)', isDirect: false }
       ];
     } else if (level === 'middle') {
       admissionRates = {
@@ -255,8 +257,8 @@
         totalSpecial: rateStr
       };
       nearbyHigh = [
-        { name: distShort + ' 과학고·영재학교', type: '특목고', snu: '24명', distance: '차량 12분' },
-        { name: distShort + ' 자율형사립고', type: '자사고', snu: '18명', distance: '차량 8분' }
+        { name: distShort + ' 과학고·영재학교', type: '특목고', snu: '24명', grade: '1.0등급', distance: '차량 12분' },
+        { name: distShort + ' 자율형사립고', type: '자사고', snu: '18명', grade: '1.0등급', distance: '차량 8분' }
       ];
     } else {
       collegeResults = {
@@ -305,7 +307,20 @@
       nearbyMiddle: nearbyMiddle,
       nearbyHigh: nearbyHigh,
       collegeResults: collegeResults,
-      admissionRates: admissionRates
+      admissionRates: admissionRates,
+      linkUrl: (function() {
+        const sid = level + '-' + rank;
+        const entry = (typeof window !== 'undefined' && window.DODAM_NEIS_MAP) ? window.DODAM_NEIS_MAP[sid] : null;
+        let url = entry && entry[0] ? entry[0].trim() : '';
+        if (url && !/^https?:\/\//i.test(url)) url = 'http://' + url;
+        return url || ('https://www.schoolinfo.go.kr/ei/ss/pbanSrch/searchSchool.do?schulNm=' + encodeURIComponent(name));
+      })(),
+      schoolInfoUrl: 'https://www.schoolinfo.go.kr/ei/ss/pbanSrch/searchSchool.do?schulNm=' + encodeURIComponent(name),
+      phone: (function() {
+        const sid = level + '-' + rank;
+        const entry = (typeof window !== 'undefined' && window.DODAM_NEIS_MAP) ? window.DODAM_NEIS_MAP[sid] : null;
+        return (entry && entry[1]) ? entry[1] : '';
+      })()
     };
   });
 
