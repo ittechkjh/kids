@@ -441,8 +441,8 @@ class DodamCommunityApp {
     document.querySelectorAll('.nav-view-btn').forEach((btn) => {
       const active = btn.getAttribute('data-view') === viewId;
       btn.className = active
-        ? 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm text-center'
-        : 'nav-view-btn flex items-center justify-center gap-1.5 px-2.5 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-stone-100 text-center';
+        ? 'nav-view-btn flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-1.5 px-1 sm:px-2.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-extrabold whitespace-nowrap transition bg-slate-900 text-white shadow-sm text-center'
+        : 'nav-view-btn flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-1.5 px-1 sm:px-2.5 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold whitespace-nowrap transition text-slate-600 hover:text-slate-900 hover:bg-stone-100 text-center';
     });
 
     this.renderBoardCategories();
@@ -618,15 +618,14 @@ class DodamCommunityApp {
               type="button"
               onclick="app.selectBoardCategory('${c.id}')"
               data-category="${c.id}"
-              class="px-3 py-1.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition border shrink-0 flex items-center gap-1.5 cursor-pointer ${
+              class="w-full sm:w-auto px-2.5 py-2 sm:py-1.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition border shrink-0 flex items-center justify-between sm:justify-start gap-1.5 cursor-pointer ${
                 active
                   ? 'bg-[#03C75A] text-white border-[#03C75A] shadow-sm'
                   : 'bg-stone-50 text-slate-700 border-stone-200 hover:bg-white hover:border-stone-300'
               }"
             >
-              <i class="fa-solid ${c.icon || 'fa-tag'} text-[10px] ${active ? 'text-white' : 'text-slate-400'}"></i>
-              <span>${c.name}</span>
-              <span class="px-1.5 py-0.2 rounded-full text-[10px] font-black ${
+              <span class="truncate text-[11px] sm:text-xs">${c.name}</span>
+              <span class="px-1.5 py-0.2 rounded-full text-[10px] font-black shrink-0 ${
                 active ? 'bg-white/25 text-white' : 'bg-stone-200 text-slate-600'
               }">${count}</span>
             </button>
@@ -7419,4 +7418,17 @@ class DodamCommunityApp {
 window.addEventListener('DOMContentLoaded', () => {
   window.app = new DodamCommunityApp();
   window.app.init();
+});
+
+// 모바일 플로팅 탑버튼 스크롤 감지 리스너
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('mobile-scroll-top-btn');
+  if (!btn) return;
+  if (window.scrollY > 280) {
+    btn.classList.remove('opacity-0', 'pointer-events-none');
+    btn.classList.add('opacity-100');
+  } else {
+    btn.classList.add('opacity-0', 'pointer-events-none');
+    btn.classList.remove('opacity-100');
+  }
 });
