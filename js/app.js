@@ -5990,32 +5990,42 @@ class DodamCommunityApp {
       const aptRows = (s.apartments || [])
         .map(
           (a) => `
-          <div class="p-2.5 rounded-xl bg-slate-50/90 hover:bg-indigo-50/40 transition border border-slate-100 flex items-center justify-between text-xs">
-            <div class="min-w-0 pr-2">
-              <div class="font-black text-slate-900 truncate flex items-center gap-1.5">
-                <i class="fa-solid fa-building text-indigo-500 text-[10px]"></i>
+          <div class="p-3 rounded-2xl bg-white hover:bg-indigo-50/30 transition border border-slate-200/90 flex items-center justify-between text-xs shadow-2xs">
+            <div class="min-w-0 pr-3">
+              <div class="font-black text-slate-900 truncate flex items-center gap-1.5 text-sm">
+                <i class="fa-solid fa-building text-indigo-600 text-xs"></i>
                 <span>${a.name}</span>
               </div>
-              <div class="text-[10px] text-slate-500 mt-0.5 pl-4">${a.note}</div>
+              <div class="text-[11px] text-slate-500 mt-1 flex items-center gap-1.5 flex-wrap">
+                <span class="text-indigo-600 font-bold">${a.note || '배정 우수 단지'}</span>
+              </div>
             </div>
-            <span class="px-2 py-1 rounded-lg bg-white border border-slate-200 font-black text-slate-700 text-[11px] shrink-0 shadow-2xs">
-              ${a.households}
-            </span>
+            <div class="text-right shrink-0 flex flex-col items-end gap-1">
+              <span class="px-2 py-0.5 rounded-md bg-slate-100 border border-slate-200 text-slate-700 font-black text-[11px] shadow-2xs">${a.households || '1,000세대+'}</span>
+              <button
+                type="button"
+                onclick="app.closeSchoolModal(); app.switchMainView('apartments'); app.searchApartmentDistrict('${a.name}')"
+                class="text-[10px] font-bold text-indigo-600 hover:text-indigo-800 hover:underline flex items-center gap-1 mt-0.5"
+              >
+                <span>단지 분석</span>
+                <i class="fa-solid fa-arrow-right text-[8px]"></i>
+              </button>
+            </div>
           </div>
         `
         )
         .join('');
 
       return `
-        <div class="space-y-2 pt-3">
-          <div class="flex items-center justify-between text-[11px] font-extrabold text-slate-500 px-1 pb-1">
-            <span class="flex items-center gap-1">
-              <i class="fa-solid fa-map-pin text-indigo-500"></i>
-              <span>배정 주요 아파트 단지 & 통학권</span>
-            </span>
-            <span class="text-[10px] text-slate-400">총 ${(s.apartments || []).length}개 단지 공시</span>
+        <div class="space-y-3 pt-2">
+          <div class="p-3 rounded-xl bg-indigo-50/50 border border-indigo-100 text-[11px] text-indigo-900 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-school text-indigo-600"></i>
+              <span>해당 학교 통학구역 및 배정 비율이 높은 대표 주요 단지 목록입니다.</span>
+            </div>
+            <span class="text-[10px] font-bold text-indigo-600">총 ${(s.apartments || []).length}개 단지</span>
           </div>
-          <div class="space-y-1.5">
+          <div class="space-y-2">
             ${aptRows || '<p class="text-xs text-slate-400 py-3 text-center">배정 아파트 단지 정보 준비 중입니다.</p>'}
           </div>
         </div>
