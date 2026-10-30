@@ -2899,27 +2899,34 @@ class DodamCommunityApp {
   getCleanRestaurantQuery(r) {
     let q = (r.name || '').trim();
 
-    // 1. 전국 주요 대표 맛집 표준 상호 매핑
-    if (q.includes('동화가든')) return '강릉 동화가든';
-    if (q.includes('만석닭강정')) return '속초 만석닭강정';
+    // 1. 전국 주요 대표 맛집 표준 상호 매핑 (공식 매장명 1:1 다이렉트 매칭)
+    if (q.includes('동화가든')) return '강릉 동화가든 짬뽕순두부 본점';
+    if (q.includes('만석닭강정')) return '속초 만석닭강정 본점';
     if (q.includes('성심당')) {
       if (q.includes('DCC')) return '성심당 DCC점';
       return '성심당 본점';
     }
-    if (q.includes('청초수물회')) return '속초 청초수물회';
-    if (q.includes('가보정')) return '수원 가보정';
-    if (q.includes('이성당')) return '군산 이성당';
-    if (q.includes('숙성도')) return '제주 숙성도 노형본점';
+    if (q.includes('청초수물회')) return '속초 청초수물회 속초본점';
+    if (q.includes('가보정')) return '가보정 인계본점';
+    if (q.includes('이성당')) return '이성당 본점';
+    if (q.includes('숙성도')) return '숙성도 노형본점';
     if (q.includes('연돈')) return '제주 연돈';
-    if (q.includes('춘심이네')) return '제주 춘심이네 본점';
-    if (q.includes('테라로사')) return '강릉 테라로사 커피공장';
+    if (q.includes('춘심이네')) return '춘심이네 본점';
+    if (q.includes('테라로사')) return '테라로사 커피공장 강릉본점';
     if (q.includes('암소갈비집')) return '해운대 암소갈비집';
+    if (q.includes('홍콩반점')) return q; // e.g. 홍콩반점0410 연신내점
+    if (q.includes('역촌왕돈까스')) return '역촌왕돈까스';
+    if (q.includes('만포면옥')) return '만포면옥 본점';
 
-    // 2. 합성어 및 긴 메뉴명/수식어 정제 (카카오맵 단독 검색 실패 방지)
-    q = q.replace(/\s+(짬뽕순두부|순두부|막국수|칼국수|물회|닭강정|돈까스|삼겹살|돼지갈비|소갈비|숯불갈비|장어구이|해물탕|아구찜|냉면|국밥|설렁탕|순대국|보쌈|족발|치킨|피자|파스타|베이커리|커피공장|카페|브런치|식당|전문점)(?:\s+본점|\s+직영점|\s+1호점)?$/i, '');
+    // 2. 이미 지점명(점, 본점)이 포함되어 있거나 고유 상호인 경우 상호명 그대로 100% 매칭
+    if (/([가-힣0-9]+점|본점)$/.test(q)) {
+      return q;
+    }
+
+    // 3. 괄호 제거
     q = q.replace(/\s*\([^)]*\)/g, '').trim();
 
-    // 3. 지역명이 누락된 경우 시/군/구 보강 (전국 검색 정확도 향상)
+    // 4. 단독 상호명인 경우에만 지역구 힌트 보강
     const city = (r.district || '').split(' ')[0] || (r.regionName || '').slice(0, 2);
     if (city && !q.includes(city) && !q.includes((r.regionName || '').slice(0, 2))) {
       return `${city} ${q}`.trim();
@@ -2931,14 +2938,14 @@ class DodamCommunityApp {
     const cleanName = this.getCleanRestaurantQuery(r);
     const query = encodeURIComponent(cleanName);
 
-    // 공식 포털 연동 URL: 모바일/PC 100% 호환 (?q= 표준 파라미터 사용)
-    const kakaoSearchUrl = `https://map.kakao.com/?q=${query}`;
-    const kakaoDirectUrl = `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}`;
-    const naverSearchUrl = `https://map.naver.com/p/search/${query}`;
-    const googleSearchUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
-
     const src = r.sources || {};
     const ov = parseFloat(r.overallRating) || 4.2;
+
+    // 공식 포털 연동 URL: 등록된 검증 URL 우선 사용, 없을 시 최적 검색 쿼리 사용
+    const kakaoSearchUrl = src.kakao?.url || `https://map.kakao.com/?q=${query}`;
+    const kakaoDirectUrl = src.kakao?.directionsUrl || `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}`;
+    const naverSearchUrl = src.naver?.url || `https://map.naver.com/p/search/${query}`;
+    const googleSearchUrl = src.google?.url || `https://www.google.com/maps/search/?api=1&query=${query}`;
 
     return {
       cleanName,
