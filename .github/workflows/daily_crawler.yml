@@ -29,14 +29,25 @@ jobs:
           SEOUL_API_KEY: ${{ secrets.SEOUL_API_KEY || '6c424a69706b6a68323363476f4363' }}
           GG_API_KEY: ${{ secrets.GG_API_KEY || 'adb521523a0b4de0925726149359947a' }}
         run: |
-          python scripts/safe_crawler.py
           python scripts/build_events_data.py
+
+      - name: 안심식당 공공데이터 수집 → 포털 실존 검증(일일 한도) → 데이터 빌드
+        env:
+          MAFRA_API_KEY: ${{ secrets.MAFRA_API_KEY }}
+        run: |
+          if [ -n "$MAFRA_API_KEY" ]; then
+            [ -f scripts/data/mafra_raw.json ] || python scripts/pipeline_restaurants.py fetch
+            python scripts/pipeline_restaurants.py verify --limit 2000
+            python scripts/pipeline_restaurants.py build
+          else
+            echo "MAFRA_API_KEY 시크릿이 없어 맛집 검증을 건너뜁니다."
+          fi
 
       - name: 변경 데이터 자동 커밋 및 배포
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add js/restaurants_data.js js/events_data.js
+          git add -f js/restaurants_data.js js/events_data.js scripts/data/mafra_raw.json scripts/data/verify_cache.json
           if git diff --staged --quiet; then
             echo "갱신할 변경사항이 없습니다."
           else
