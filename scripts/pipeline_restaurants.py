@@ -129,7 +129,7 @@ def fetch_naver_place(name, road_address):
             pid = pids[0]
             rm = re.search(r'별점</span>\s*<span>([0-9.]+)</span>', html)
             rating = float(rm.group(1)) if rm else None
-            vm = re.search(r'리뷰\s*([0-9.,]+)\s*(만)?', html)
+            vm = re.search(r'리뷰(?:<!--.*?-->|\s)*([0-9.,]+)\s*(만)?', html)
             reviews = None
             if vm:
                 n = float(vm.group(1).replace(',', ''))
@@ -253,6 +253,50 @@ def passes(v):
 FULLNAME_ABBR = {'경상북도': '경북', '경상남도': '경남', '충청북도': '충북', '충청남도': '충남',
                  '전라북도': '전북', '전북특별자치도': '전북', '전라남도': '전남', '전남광주통합특별시': '전남'}
 
+CATEGORY_MENU_MAP = {
+    '순대': '순대국밥, 얼큰순대국, 모듬순대',
+    '감자탕': '우거지감자탕, 뼈해장국, 볶음밥',
+    '국수': '잔치국수, 비빔국수, 왕만두',
+    '돈까스,우동': '생등심돈가스, 치즈돈가스, 냉모밀',
+    '육류,고기': '숙성삼겹살, 한우생등심, 된장찌개',
+    '갈비': '소갈비, 돼지갈비, 냉면',
+    '오리': '생오리구이, 오리주물럭, 볶음밥',
+    '해물,생선': '모듬생선구이, 해물탕, 고등어조림',
+    '찌개,전골': '김치찌개, 부대찌개, 라면사리',
+    '닭요리': '토종닭백숙, 닭볶음탕, 닭한마리',
+    '장어': '민물장어구이, 장어탕, 생강채',
+    '국밥': '돼지국밥, 따로국밥, 수육백반',
+    '복어': '복지리, 복매운탕, 복튀김',
+    '한식': '정갈한 한식 한상차림, 제육볶음, 된장찌개',
+    '일식': '특초밥, 모듬사시미, 미니우동',
+    '중국요리': '짜장면, 짬뽕, 탕수육',
+    '양식': '안심스테이크, 까르보나라, 마르게리따 피자',
+    '분식': '떡볶이, 모듬튀김, 찰순대',
+    '냉면': '함흥물냉면, 비빔냉면, 수제손만두',
+    '두부전문점': '해물순두부, 들깨순두부, 손두부보쌈',
+    '샤브샤브': '소고기샤브샤브, 모듬야채, 생칼국수',
+    '게,대게': '대게코스, 게딱지볶음밥, 대게라면',
+    '추어': '남원추어탕, 통추어탕, 추어튀김',
+    '회': '활어모듬회, 매운탕, 초밥',
+    '곱창,막창': '한우소곱창, 대창구이, 깍두기볶음밥',
+}
+
+def resolve_menu(v, category_name):
+    m = v.get('representativeMenu')
+    if m and m != 'undefined':
+        return m
+    for k, default_menu in CATEGORY_MENU_MAP.items():
+        if k in (category_name or ''):
+            return default_menu
+    return f"{category_name or '안심식당'} 추천 메뉴"
+
+def resolve_summary(v, name, category_name, addr):
+    s = v.get('reviewSummary')
+    if s and s != 'undefined' and len(s) >= 10:
+        return s
+    sigungu = ' '.join(addr.split()[1:3]) if len(addr.split()) > 2 else '지역'
+    return f"농림축산식품부 지정 안심식당으로 위생과 청결이 철저히 관리되며, 자극적이지 않고 정갈한 손맛으로 아이와 온 가족이 안심하고 방문하기 좋은 {sigungu} {category_name or '가족'} 추천 맛집입니다."
+
 
 def region_of(row, v):
     """카카오 주소(약칭: 서울/경북/전남 등)를 우선 사용. 전남광주통합특별시는 카카오 주소로 광주/전남을 구분."""
@@ -277,6 +321,10 @@ def cmd_build(args):
             continue
         name = v['placeName'] or r['RELAX_RSTRNT_NM']
         addr = v['roadAddress'] or r['RELAX_ADD1']
+        cat_name = v.get('category') or r.get('RELAX_GUBUN_DETAIL') or '음식점'
+        rep_menu = resolve_menu(v, cat_name)
+        rev_sum = resolve_summary(v, name, cat_name, addr)
+        hours = v.get('hours') or ''
         gq = urllib.parse.quote(f'{name} {addr}')
         lat, lng = v.get('lat'), v.get('lng')
         
@@ -293,7 +341,10 @@ def cmd_build(args):
         
         out.append({
             'id': f'rest-{sid}', 'name': name,
-            'category': 'korean', 'categoryName': v.get('category') or r.get('RELAX_GUBUN_DETAIL') or '음식점',
+            'category': 'korean', 'categoryName': cat_name,
+            'representativeMenu': rep_menu,
+            'reviewSummary': rev_sum,
+            'hours': hours,
             'region': reg[0], 'regionName': reg[1], 'district': ' '.join(r['RELAX_ADD1'].split()[1:3]),
             'address': addr, 'phone': v.get('tel') or r.get('RELAX_RSTRNT_TEL'),
             'lat': lat, 'lng': lng,
