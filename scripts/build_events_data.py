@@ -971,7 +971,8 @@ def fetch_official_rss_feeds(seoul_api_key=DEFAULT_SEOUL_API_KEY, gg_api_key=DEF
     return rss_events
 
 def build():
-    today = datetime.date(2026, 10, 27)
+    kst = datetime.timezone(datetime.timedelta(hours=9))
+    today = datetime.datetime.now(kst).date()
 
     # 1. API 키 확인 (TourAPI & 서울열린데이터광장)
     tour_api_key = os.environ.get("TOUR_API_KEY", DEFAULT_TOUR_API_KEY)

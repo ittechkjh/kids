@@ -3192,7 +3192,7 @@ class DodamCommunityApp {
                 <i class="fa-solid fa-star text-[10px]"></i>
                 <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
               </span>
-              <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver.rating} · 🟡 카카오 ${sources.kakao.rating} · 🔵 구글 ${sources.google.rating}</span>
+              <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? Number(sources.naver.reviewCount).toLocaleString() + '건' : '-')} · 🟡 카카오 ${sources.kakao?.rating ? '★ ' + sources.kakao.rating : '-'} · 🔵 구글 ${sources.google?.rating ? '★ ' + sources.google.rating : '지도'}</span>
             </div>
           </div>
 
@@ -3372,9 +3372,9 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-emerald-600">🟢 네이버</span>
-                  <span class="font-black text-xs text-slate-900">★ ${sources.naver.rating}</span>
+                  <span class="font-black text-xs text-slate-900">${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? '방문자 인증' : '플레이스 연동')}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">방문자리뷰 ${Number(sources.naver.reviewCount).toLocaleString()}건</span>
+                <span class="text-[10px] text-slate-400 font-medium">방문자리뷰 ${Number(sources.naver?.reviewCount || 0).toLocaleString()}건</span>
               </div>
               <a
                 href="${sources.naver.url}"
@@ -3393,9 +3393,9 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-amber-600">🟡 카카오</span>
-                  <span class="font-black text-xs text-slate-900">★ ${sources.kakao.rating}</span>
+                  <span class="font-black text-xs text-slate-900">${sources.kakao?.rating ? '★ ' + sources.kakao.rating : '-'}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">별점리뷰 ${Number(sources.kakao.reviewCount).toLocaleString()}건</span>
+                <span class="text-[10px] text-slate-400 font-medium">별점리뷰 ${Number(sources.kakao?.reviewCount || 0).toLocaleString()}건</span>
               </div>
               <a
                 href="${sources.kakao.url}"
@@ -3414,9 +3414,9 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-blue-600">🔵 구글</span>
-                  <span class="font-black text-xs text-slate-900">★ ${sources.google.rating}</span>
+                  <span class="font-black text-xs text-slate-900">${sources.google?.rating ? '★ ' + sources.google.rating : '지도연동'}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">글로벌평점 ${Number(sources.google.reviewCount).toLocaleString()}건</span>
+                <span class="text-[10px] text-slate-400 font-medium">${sources.google?.reviewCount ? '글로벌평점 ' + Number(sources.google.reviewCount).toLocaleString() + '건' : '실시간 리뷰 연동'}</span>
               </div>
               <a
                 href="${sources.google.url}"

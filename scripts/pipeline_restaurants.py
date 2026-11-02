@@ -3,7 +3,7 @@
 안심식당 실데이터 파이프라인 (하드코딩/난수/추정치 없음)
 
 1) fetch  : 농림축산식품부 안심식당 공공 OpenAPI 전수 수집 (지정 유지 'Y' 업소만)
-2) verify : 카카오맵에서 실제 업소 매칭(전화/도로명주소 일치) + 실제 평점/리뷰 수 수집
+2) verify : 카카오맵에서 실제 업소 매칭(전화/도로명주소 일치) + 네이버 모바일 실시간 별점/리뷰 수 연동
              - 일일 처리량 제한(--limit) 및 안전 딜레이, 결과는 캐시에 누적(중단/재개 가능)
 3) build  : 기준(평점 4.0+ 또는 리뷰 1,000+)을 통과한 '검증 완료' 업소만 js/restaurants_data.js 생성
 
@@ -26,6 +26,10 @@ OUT_PATH = os.path.join(ROOT, 'js', 'restaurants_data.js')
 MAFRA_URL = 'http://211.237.50.150:7080/openapi/{key}/json/Grid_20200713000000000605_1/{a}/{b}'
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/120 Safari/537.36',
       'Referer': 'https://map.kakao.com/', 'pf': 'PC'}
+UA_MOBILE = {
+    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
+    'Referer': 'https://m.search.naver.com/'
+}
 
 # 기준: 평점 4.0 이상(최소 표본 MIN_RATING_N) 또는 리뷰(카카오 별점리뷰 + 블로그리뷰) 1,000건 이상
 MIN_RATING, MIN_RATING_N, MIN_REVIEWS = 4.0, 20, 1000
@@ -102,6 +106,52 @@ def kakao_panel(confirm_id):
     return http_json(f'https://place-api.map.kakao.com/places/panel3/{confirm_id}')
 
 
+def fetch_naver_place(name, road_address):
+    parts = (road_address or '').split()
+    sigungu = f"{parts[0][:2]} {parts[1]}" if len(parts) > 1 else ''
+    district_road = ' '.join(parts[1:3]) if len(parts) > 2 else ''
+    
+    queries = []
+    if sigungu: queries.append(f"{name} {sigungu}".strip())
+    if district_road and district_road != sigungu: queries.append(f"{name} {district_road}".strip())
+    if len(parts) > 1: queries.append(f"{name} {parts[1]}".strip())
+    queries.append(name.strip())
+    
+    seen = set()
+    for q in [q for q in queries if q and not (q in seen or seen.add(q))]:
+        u = f"https://m.search.naver.com/search.naver?query={urllib.parse.quote(q)}"
+        req = urllib.request.Request(u, headers=UA_MOBILE)
+        try:
+            html = urllib.request.urlopen(req, timeout=6).read().decode('utf-8', 'replace')
+            pids = re.findall(r'https?://m\.place\.naver\.com/restaurant/(\d+)', html)
+            if not pids:
+                continue
+            pid = pids[0]
+            rm = re.search(r'별점</span>\s*<span>([0-9.]+)</span>', html)
+            rating = float(rm.group(1)) if rm else None
+            vm = re.search(r'리뷰\s*([0-9.,]+)\s*(만)?', html)
+            reviews = None
+            if vm:
+                n = float(vm.group(1).replace(',', ''))
+                reviews = int(n * 10000) if vm.group(2) == '만' else int(n)
+            return {
+                'naverId': pid,
+                'naverRating': rating,
+                'naverReviewCount': reviews or 0,
+                'naverUrl': f"https://m.place.naver.com/restaurant/{pid}"
+            }
+        except Exception:
+            continue
+            
+    fallback_q = f"{name} {sigungu}".strip()
+    return {
+        'naverId': None,
+        'naverRating': None,
+        'naverReviewCount': 0,
+        'naverUrl': f"https://map.naver.com/p/search/{urllib.parse.quote(fallback_q)}"
+    }
+
+
 def name_tokens(s):
     return set(re.findall(r'[가-힣A-Za-z0-9]{2,}', re.sub(r'\(.*?\)', ' ', s or '')))
 
@@ -124,7 +174,6 @@ def match_place(row, places):
     return None
 
 
-
 def verify_row(row):
     addr = row.get('RELAX_ADD1', '')
     name = row.get('RELAX_RSTRNT_NM', '')
@@ -141,17 +190,27 @@ def verify_row(row):
     blog = (panel.get('blog_review') or {}).get('review_count') or 0
     summ = panel.get('summary') or {}
     point = summ.get('point') or {}
+    road_addr = (summ.get('address') or {}).get('road') or addr
+    p_name = summ.get('name') or hit.get('name') or name
+    
+    # 네이버 플레이스 정보 연동 (별점 + 방문자리뷰수 + 정확한 Place URL)
+    n_info = fetch_naver_place(p_name, road_addr)
+    
     return {
         'status': 'verified',
         'kakaoId': hit['confirmid'],
-        'placeName': summ.get('name') or hit.get('name'),
-        'roadAddress': (summ.get('address') or {}).get('road'),
+        'placeName': p_name,
+        'roadAddress': road_addr,
         'tel': hit.get('tel'),
         'lat': point.get('lat'), 'lng': point.get('lon'),
         'category': (summ.get('category') or {}).get('name'),
         'rating': score.get('average_score'),
         'ratingCount': score.get('review_count') or 0,
         'blogReviewCount': blog,
+        'naverId': n_info.get('naverId'),
+        'naverRating': n_info.get('naverRating'),
+        'naverReviewCount': n_info.get('naverReviewCount') or 0,
+        'naverUrl': n_info.get('naverUrl'),
         'checkedAt': datetime.date.today().isoformat(),
     }
 
@@ -187,7 +246,7 @@ def passes(v):
     if n >= MIN_RATING_N and (v.get('rating') or 0) < 3.5:
         return False  # 충분한 표본에서 낮은 평점이면 리뷰 수가 많아도 제외
     rating_ok = (v.get('rating') or 0) >= MIN_RATING and n >= MIN_RATING_N
-    reviews_ok = n + (v.get('blogReviewCount') or 0) >= MIN_REVIEWS
+    reviews_ok = n + (v.get('blogReviewCount') or 0) + (v.get('naverReviewCount') or 0) >= MIN_REVIEWS
     return rating_ok or reviews_ok
 
 
@@ -218,24 +277,37 @@ def cmd_build(args):
             continue
         name = v['placeName'] or r['RELAX_RSTRNT_NM']
         addr = v['roadAddress'] or r['RELAX_ADD1']
-        q = urllib.parse.quote(name)
         gq = urllib.parse.quote(f'{name} {addr}')
         lat, lng = v.get('lat'), v.get('lng')
+        
+        k_rat = v.get('rating')
+        n_rat = v.get('naverRating')
+        if k_rat and n_rat:
+            ov = round((k_rat + n_rat) / 2, 1)
+        else:
+            ov = k_rat or n_rat or None
+            
+        k_rev = (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0)
+        n_rev = v.get('naverReviewCount') or 0
+        total_rev = k_rev + n_rev
+        
         out.append({
             'id': f'rest-{sid}', 'name': name,
             'category': 'korean', 'categoryName': v.get('category') or r.get('RELAX_GUBUN_DETAIL') or '음식점',
             'region': reg[0], 'regionName': reg[1], 'district': ' '.join(r['RELAX_ADD1'].split()[1:3]),
             'address': addr, 'phone': v.get('tel') or r.get('RELAX_RSTRNT_TEL'),
             'lat': lat, 'lng': lng,
-            'overallRating': v.get('rating') or None, 'reviewCount': (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0),
+            'overallRating': ov, 'reviewCount': total_rev,
             'amenities': ['농림축산식품부 안심식당 지정'],
             'verifiedAt': v['checkedAt'],
             'sources': {
-                'kakao': {'rating': v.get('rating'), 'reviewCount': v.get('ratingCount'),
+                'kakao': {'rating': k_rat, 'reviewCount': v.get('ratingCount') or 0,
                           'url': f'https://place.map.kakao.com/{v["kakaoId"]}',
                           'directionsUrl': f'https://map.kakao.com/link/to/{v["kakaoId"]}', 'name': '카카오맵'},
-                'naver': {'url': f'https://map.naver.com/p/search/{urllib.parse.quote(name + " " + addr.split()[1])}', 'name': '네이버 플레이스'},
-                'google': {'url': f'https://www.google.com/maps/search/?api=1&query={gq}', 'name': '구글 지도'},
+                'naver': {'rating': n_rat, 'reviewCount': n_rev,
+                          'url': v.get('naverUrl') or f'https://map.naver.com/p/search/{urllib.parse.quote(name + " " + addr.split()[1])}', 'name': '네이버 플레이스'},
+                'google': {'rating': v.get('googleRating'), 'reviewCount': v.get('googleReviewCount') or 0,
+                           'url': f'https://www.google.com/maps/search/?api=1&query={gq}', 'name': '구글 지도'},
             },
         })
     today = datetime.date.today().isoformat()
