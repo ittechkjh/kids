@@ -245,7 +245,8 @@ class DodamCommunityApp {
 
     // 3. 맛집 데이터
     const crawlStatDate = document.getElementById('crawl-stat-date');
-    if (crawlStatDate) crawlStatDate.textContent = formatted;
+    const foodLastUpdated = window.DODAM_CRAWL_METADATA?.lastUpdated || formatted;
+    if (crawlStatDate) crawlStatDate.textContent = foodLastUpdated.replace(/-/g, '.');
     const crawlStatToday = document.getElementById('crawl-stat-today');
     if (crawlStatToday) {
       const restToday = window.DODAM_CRAWL_METADATA?.todayCount || 810;
@@ -2951,21 +2952,21 @@ class DodamCommunityApp {
       cleanName,
       naver: {
         url: naverSearchUrl,
-        rating: (src.naver?.rating && src.naver.rating !== '-') ? src.naver.rating : (r.overallRating ? (Number(r.overallRating) >= 4.9 ? 4.9 : Number(r.overallRating)) : 4.8),
-        reviewCount: src.naver?.reviewCount || 85,
+        rating: (src.naver?.rating && src.naver.rating !== '-') ? src.naver.rating : null,
+        reviewCount: src.naver?.reviewCount || 0,
         name: '네이버 플레이스'
       },
       kakao: {
         url: kakaoSearchUrl,
         directionsUrl: kakaoDirectUrl,
-        rating: (src.kakao?.rating && src.kakao.rating !== '-') ? src.kakao.rating : (r.overallRating ? Number(r.overallRating) : 4.8),
-        reviewCount: src.kakao?.reviewCount || 25,
+        rating: (src.kakao?.rating && src.kakao.rating !== '-') ? src.kakao.rating : null,
+        reviewCount: src.kakao?.reviewCount || 0,
         name: '카카오맵'
       },
       google: {
         url: googleSearchUrl,
-        rating: (src.google?.rating && src.google.rating !== '-') ? src.google.rating : (r.overallRating ? Math.max(4.2, Number((Number(r.overallRating) - 0.3).toFixed(1))) : 4.5),
-        reviewCount: src.google?.reviewCount || 15,
+        rating: (src.google?.rating && src.google.rating !== '-') ? src.google.rating : null,
+        reviewCount: src.google?.reviewCount || 0,
         name: '구글 지도'
       }
     };
@@ -3297,7 +3298,8 @@ class DodamCommunityApp {
     const statDate = document.getElementById('crawl-stat-date');
     const statTotal = document.getElementById('crawl-stat-total');
     const totalCountVerified = (window.DODAM_NATIONWIDE_RESTAURANTS || []).length;
-    if (statDate) statDate.textContent = '2026.10.30';
+    const meta = window.DODAM_CRAWL_METADATA || {};
+    if (statDate) statDate.textContent = meta.lastUpdated ? meta.lastUpdated.replace(/-/g, '.') : '2026.11.03';
     if (statTotal) statTotal.textContent = totalCountVerified.toLocaleString();
 
     const filtered = this.getFilteredRestaurants();

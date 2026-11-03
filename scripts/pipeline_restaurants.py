@@ -219,35 +219,69 @@ def cmd_verify(args):
     raw = load(RAW_PATH, [])
     cache = load(CACHE_PATH, {})
     todo = [r for r in raw if str(r['RELAX_SEQ']) not in cache]
-    print(f'전체 {len(raw)} / 검증완료 {len(cache)} / 남음 {len(todo)} / 오늘 처리 한도 {args.limit}')
+    workers = getattr(args, 'workers', 5)
+    limit = getattr(args, 'limit', 1000)
+    target = todo[:limit]
+    print(f'전체 {len(raw)} / 검증완료 {len(cache)} / 남음 {len(todo)} / 오늘 처리 목표 {len(target)} (워커 {workers}개)')
+
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+
+    lock = threading.Lock()
     done = 0
-    for r in todo[:args.limit]:
+    verified = 0
+
+    def worker(r):
+        nonlocal done, verified
         sid = str(r['RELAX_SEQ'])
         try:
-            cache[sid] = verify_row(r)
-        except Exception as e:  # 네트워크 오류는 기록하지 않고 다음 실행에서 재시도
-            print(f'  오류(재시도 대상) {r["RELAX_RSTRNT_NM"]}: {e}')
-            time.sleep(10)
-            continue
-        done += 1
-        if done % 25 == 0:
-            save(CACHE_PATH, cache)
-            print(f'  진행 {done}/{min(args.limit, len(todo))}')
-        time.sleep(random.uniform(2.2, 3.2))
+            res = verify_row(r)
+        except Exception as e:
+            res = {'status': 'rejected', 'reason': f'error_{str(e)[:30]}', 'checkedAt': datetime.date.today().isoformat()}
+        with lock:
+            cache[sid] = res
+            done += 1
+            if res.get('status') == 'verified':
+                verified += 1
+            if done % 50 == 0 or done == len(target):
+                save(CACHE_PATH, cache)
+                print(f'  [2026-11-03 일일 검증] 진행 {done}/{len(target)} (실존 확인 {verified}곳, 누적 {len(cache)}곳)')
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        list(ex.map(worker, target))
+
     save(CACHE_PATH, cache)
-    print(f'이번 실행 처리 {done}건, 누적 {len(cache)}/{len(raw)}')
+    print(f'오늘 검증 완료: 처리 {done}건, 실존 확인 {verified}건, 누적 캐시 {len(cache)}/{len(raw)}')
 
 
 # ---------------------------------------------------------------- 3) build
 def passes(v):
     if v.get('status') != 'verified':
         return False
-    n = v.get('ratingCount') or 0
-    if n >= MIN_RATING_N and (v.get('rating') or 0) < 3.5:
-        return False  # 충분한 표본에서 낮은 평점이면 리뷰 수가 많아도 제외
-    rating_ok = (v.get('rating') or 0) >= MIN_RATING and n >= MIN_RATING_N
-    reviews_ok = n + (v.get('blogReviewCount') or 0) + (v.get('naverReviewCount') or 0) >= MIN_REVIEWS
-    return rating_ok or reviews_ok
+
+    # 1. 포털 평점 (카카오, 네이버, 구글 중 실제 수집된 평점만 사용)
+    k_rat = v.get('rating')
+    n_rat = v.get('naverRating')
+    g_rat = v.get('googleRating')
+
+    valid_ratings = [r for r in [k_rat, n_rat, g_rat] if r is not None and r > 0]
+    if not valid_ratings:
+        return False
+
+    # 사용자 명시 기준: 평점 4.0 이상 (포털 중 적어도 하나가 4.0 이상)
+    rating_ok = any(r >= 4.0 for r in valid_ratings)
+
+    # 2. 리뷰 수 (네이버 방문자리뷰, 카카오 별점+블로그리뷰, 구글 리뷰 합산 또는 개별 1000건 이상)
+    k_rev = (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0)
+    n_rev = v.get('naverReviewCount') or 0
+    g_rev = v.get('googleReviewCount') or 0
+    total_rev = k_rev + n_rev + g_rev
+
+    # 사용자 명시 기준: 리뷰 1000건 이상 (네이버가 1000건이거나, 카카오가 1000건이거나, 전체 합산 1000건 이상)
+    reviews_ok = (n_rev >= 1000) or (k_rev >= 1000) or (g_rev >= 1000) or (total_rev >= 1000)
+
+    # 사용자 최종 기준: "리뷰 1000건과 평점 4.0을 만족해야 하는데" -> AND 조건
+    return rating_ok and reviews_ok
 
 
 FULLNAME_ABBR = {'경상북도': '경북', '경상남도': '경남', '충청북도': '충북', '충청남도': '충남',
@@ -328,38 +362,21 @@ def cmd_build(args):
         gq = urllib.parse.quote(f'{name} {addr}')
         lat, lng = v.get('lat'), v.get('lng')
         
-        # 1. 카카오 평점 및 리뷰
+        # 1. 카카오 평점 및 리뷰 (실제 수집값만 사용)
         k_rat = v.get('rating')
-        if not k_rat:
-            k_rat = round(4.5 + ((int(sid) % 5) * 0.1), 1)
         k_rev = (v.get('ratingCount') or 0) + (v.get('blogReviewCount') or 0)
-        if k_rev == 0:
-            k_rev = 15 + ((int(sid) * 7) % 35)
             
-        # 2. 네이버 평점 및 리뷰
+        # 2. 네이버 평점 및 리뷰 (실제 수집값만 사용 - 없는 평점은 None 유지, 가짜/추정치 절대 금지)
         n_rat = v.get('naverRating')
-        if not n_rat:
-            seed = int(sid) % 100
-            delta = ((seed % 9) - 4) * 0.03
-            n_rat = round(min(4.96, max(4.55, k_rat + delta)), 1)
         n_rev = v.get('naverReviewCount') or 0
-        if n_rev == 0:
-            seed = int(sid) % 100
-            n_rev = max(55, ((v.get('blogReviewCount') or 0) * 3) + (seed * 11) + 68)
             
-        # 3. 구글 지도 평점 및 리뷰
+        # 3. 구글 지도 평점 및 리뷰 (실제 수집값만 사용 - 없는 평점은 None 유지, 가짜/추정치 절대 금지)
         g_rat = v.get('googleRating')
-        if not g_rat:
-            seed = int(sid) % 100
-            g_delta = ((seed % 7) - 4) * 0.05
-            g_rat = round(min(4.8, max(4.3, k_rat - 0.3 + g_delta)), 1)
         g_rev = v.get('googleReviewCount') or 0
-        if g_rev == 0:
-            seed = int(sid) % 100
-            g_rev = max(8, (seed % 35) + 12)
             
-        # 종합 평점 및 총 리뷰수
-        ov = round((k_rat + n_rat + g_rat) / 3, 1)
+        # 실제 검증된 평점들의 평균 (미제공 포털은 평균에서 배제)
+        valid_ratings = [r for r in [k_rat, n_rat, g_rat] if r is not None and r > 0]
+        ov = round(sum(valid_ratings) / len(valid_ratings), 1) if valid_ratings else 4.0
         total_rev = k_rev + n_rev + g_rev
         
         out.append({
@@ -373,7 +390,7 @@ def cmd_build(args):
             'lat': lat, 'lng': lng,
             'overallRating': ov, 'reviewCount': total_rev,
             'amenities': ['농림축산식품부 안심식당 지정'],
-            'verifiedAt': v['checkedAt'],
+            'verifiedAt': v.get('checkedAt') or today,
             'sources': {
                 'kakao': {'rating': k_rat, 'reviewCount': k_rev,
                           'url': f'https://place.map.kakao.com/{v["kakaoId"]}',
@@ -389,8 +406,8 @@ def cmd_build(args):
         'lastUpdated': today, 'totalCount': len(out), 'targetCount': len(raw),
         'verifiedCount': sum(1 for v in cache.values() if v.get('status') == 'verified'),
         'checkedCount': len(cache),
-        'criteria': f'안심식당 지정업소 중 카카오맵 실존 매칭 + (평점 {MIN_RATING}+ 또는 리뷰 {MIN_REVIEWS:,}+)',
-        'status': f'공공데이터 {len(raw)}곳 중 {len(cache)}곳 검증, {len(out)}곳 기준 통과',
+        'criteria': f'농림축산식품부 안심식당 포털 실존 검증 + (평점 {MIN_RATING}+ 및 리뷰 {MIN_REVIEWS:,}+ 동시 충족)',
+        'status': f'공공데이터 {len(raw)}곳 중 {len(cache)}곳 검증, {len(out)}곳 엄선 통과',
     }
     with open(OUT_PATH, 'w', encoding='utf-8') as f:
         f.write('// 자동 생성 파일 - scripts/pipeline_restaurants.py (수기 편집/하드코딩 금지)\n')
@@ -410,7 +427,10 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest='cmd', required=True)
     sub.add_parser('fetch').set_defaults(fn=cmd_fetch)
-    v = sub.add_parser('verify'); v.add_argument('--limit', type=int, default=2500); v.set_defaults(fn=cmd_verify)
+    v = sub.add_parser('verify')
+    v.add_argument('--limit', type=int, default=1500)
+    v.add_argument('--workers', type=int, default=5)
+    v.set_defaults(fn=cmd_verify)
     sub.add_parser('build').set_defaults(fn=cmd_build)
     sub.add_parser('status').set_defaults(fn=cmd_status)
     a = ap.parse_args(); a.fn(a)
