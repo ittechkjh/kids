@@ -2,8 +2,8 @@ name: Daily Restaurant Batch Crawler
 
 on:
   schedule:
-    # 매일 한국 시간(KST) 새벽 03:00 실행 (UTC 18:00)
-    - cron: '0 18 * * *'
+    # 매일 한국 시간(KST) 새벽 03:15 실행 (UTC 18:15 - 정각 혼잡 회피)
+    - cron: '15 18 * * *'
   workflow_dispatch: # GitHub 웹페이지에서 [Run workflow] 버튼으로 즉시 수동 실행 가능
 
 permissions:
@@ -35,13 +35,11 @@ jobs:
         env:
           MAFRA_API_KEY: ${{ secrets.MAFRA_API_KEY }}
         run: |
-          if [ -n "$MAFRA_API_KEY" ]; then
-            [ -f scripts/data/mafra_raw.json ] || python scripts/pipeline_restaurants.py fetch
-            python scripts/pipeline_restaurants.py verify --limit 2000
-            python scripts/pipeline_restaurants.py build
-          else
-            echo "MAFRA_API_KEY 시크릿이 없어 맛집 검증을 건너뜁니다."
+          if [ ! -f scripts/data/mafra_raw.json ] && [ -n "$MAFRA_API_KEY" ]; then
+            python scripts/pipeline_restaurants.py fetch
           fi
+          python scripts/pipeline_restaurants.py verify --limit 1500 --workers 5
+          python scripts/pipeline_restaurants.py build
 
       - name: 변경 데이터 자동 커밋 및 배포
         run: |
