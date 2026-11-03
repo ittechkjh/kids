@@ -107,7 +107,12 @@ def kakao_panel(confirm_id):
 
 
 def clean_addr_for_search(addr):
-    s = (addr or '').replace('전남광주통합특별시', '전남').replace('전북특별자치도', '전북').replace('강원특별자치도', '강원').replace('제주특별자치도', '제주')
+    s = addr or ''
+    if '전남광주통합특별시' in s:
+        parts = s.split()
+        is_gwangju = len(parts) >= 2 and parts[1].endswith('구')
+        s = s.replace('전남광주통합특별시', '광주' if is_gwangju else '전남')
+    s = s.replace('전북특별자치도', '전북').replace('강원특별자치도', '강원').replace('제주특별자치도', '제주')
     s = re.sub(r'\(.*?\)', '', s)
     return s.strip()
 
@@ -117,98 +122,104 @@ def strip_branch(name):
     return re.sub(r'\s+\S*(?:본점|별관|직영점|지점|점|호점|본관|신관)$', '', s).strip()
 
 
-def fetch_naver_place(name, road_address):
+def fetch_naver_place(name, road_address, tel=None):
+    """
+    네이버 PC 통합검색(search.naver.com)에서 도로명주소 또는 전화번호가 일치하는
+    실제 동일 업소만 매칭하고, 네이버 화면에 실제 노출되는 공식 별점(별점 X.XX / visitorReviewScore)만 가져온다.
+    별점 미공개 업소(visitorReviewScore: null)는 절대 개별 리뷰의 rating: 5 등을 가져오지 않고 None으로 유지한다.
+    """
     addr_clean = clean_addr_for_search(road_address)
     parts = addr_clean.split()
-    sigungu = ' '.join(parts[:2]) if len(parts) >= 2 else ''
-    city = parts[1] if len(parts) > 1 else ''
-    city_short = re.sub(r'(시|군|구)$', '', city) if len(city) >= 3 else city
-    dong_road = ' '.join(parts[1:3]) if len(parts) >= 3 else sigungu
+    sido_sigungu = ' '.join(parts[:2]) if len(parts) >= 2 else ''
+    city_short = re.sub(r'(시|군|구)$', '', parts[1]) if len(parts) >= 2 and len(parts[1]) >= 3 else (parts[1] if len(parts) >= 2 else '')
+    road_token = parts[2] if len(parts) >= 3 else ''
+    bldg_num = parts[3] if len(parts) >= 4 and re.match(r'^\d', parts[3]) else ''
+    road_with_num = f"{road_token} {bldg_num}".strip() if bldg_num else road_token
+    tel_digits = digits(tel)
     base_name = strip_branch(name)
+    name_core = re.sub(r'\s+', '', base_name or name or '')[:3]
 
     queries = [
-        f"{name} {sigungu}".strip(),
+        f"{sido_sigungu} {name}".strip(),
         f"{city_short} {name}".strip(),
-        f"{name} {dong_road}".strip(),
-        name.strip(),
+        f"{sido_sigungu} {road_token} {name}".strip(),
     ]
     if base_name and base_name != name:
-        queries.extend([
-            f"{base_name} {sigungu}".strip(),
-            f"{city_short} {base_name}".strip(),
-            base_name.strip(),
-        ])
+        queries.append(f"{sido_sigungu} {base_name}".strip())
 
-    pid = None
-    rating_from_search = None
-    reviews_from_search = 0
     seen = set()
     for q in [q for q in queries if q and not (q in seen or seen.add(q))]:
         u = f"https://search.naver.com/search.naver?query={urllib.parse.quote(q)}"
         req = urllib.request.Request(u, headers=UA)
         try:
             html = urllib.request.urlopen(req, timeout=6).read().decode('utf-8', 'replace')
-            pids = (
-                re.findall(r'place\.naver\.com(?:/|\\u002F)restaurant(?:/|\\u002F)(\d{7,11})', html)
-                or re.findall(r'bizes(?:/|\\u002F)place-id(?:/|\\u002F)(\d{7,11})', html)
-                or re.findall(r'place\.naver\.com(?:/|\\u002F)place(?:/|\\u002F)(\d{7,11})', html)
-                or re.findall(r'"id"\s*:\s*"(\d{8,10})"', html)
-            )
-            if not pids:
-                continue
-            pid = pids[0]
-            rm = re.search(r'별점</span>\s*<span[^>]*>([0-9.]+)</span>', html) or re.search(r'별점</span><span>([0-9.]+)</span>', html)
-            if rm:
-                rating_from_search = float(rm.group(1))
-            vm = re.findall(r'방문자리뷰\s*([0-9,]+)', html)
-            bm = re.findall(r'블로그리뷰\s*([0-9,]+)', html)
-            v_cnt = int(vm[0].replace(',', '')) if vm else 0
-            b_cnt = int(bm[0].replace(',', '')) if bm else 0
-            if v_cnt + b_cnt > 0:
-                reviews_from_search = v_cnt + b_cnt
-            break
         except Exception:
             continue
 
-    if pid:
-        rating = rating_from_search
-        reviews = reviews_from_search
-        menus = []
-        for path in ('restaurant', 'place'):
-            u_home = f"https://m.place.naver.com/{path}/{pid}/home"
-            try:
-                html_home = urllib.request.urlopen(urllib.request.Request(u_home, headers=UA), timeout=6).read().decode('utf-8', 'replace')
-                sr = re.search(r'"visitorReviewsScore":\s*([0-9.]+)', html_home)
-                if sr and float(sr.group(1)) > 0:
-                    rating = float(sr.group(1))
-                vr = re.search(r'"visitorReviewsTotal":\s*(\d+)', html_home)
-                br = re.search(r'"(?:cafeBlogReviewsTotal|blogCafeReviewCount)":\s*(\d+)', html_home)
-                v_cnt = int(vr.group(1)) if vr else 0
-                b_cnt = int(br.group(1)) if br else 0
-                if v_cnt + b_cnt > 0:
-                    reviews = max(reviews, v_cnt + b_cnt)
-                menu_names = re.findall(r'"__typename":"(?:Menu|PlaceDetail_BaeminMenu)"[^}]*?"name":"([^"]+)"', html_home)
-                for mn in menu_names:
-                    mn_clean = mn.strip()
-                    if mn_clean and mn_clean not in menus and '공기밥' not in mn_clean and '음료' not in mn_clean:
-                        menus.append(mn_clean)
-                if rating is None:
-                    indiv = [float(x) for x in re.findall(r'"rating":\s*([1-5](?:\.\d)?)', html_home)]
-                    if indiv:
-                        rating = round(sum(indiv) / len(indiv), 2)
-                if reviews > 0 or rating is not None:
-                    break
-            except Exception:
-                pass
-        return {
-            'naverId': pid,
-            'naverRating': rating,
-            'naverReviewCount': reviews or 0,
-            'naverUrl': f"https://m.place.naver.com/restaurant/{pid}",
-            'naverMenus': menus[:3],
-        }
+        # 1) 단일 플레이스 직접 매칭 카드 (Single-Place Direct Match Card)
+        m = re.search(r'(?:entry/place/|restaurant/)(\d{7,11})', html)
+        if m and '"PlaceListBusinessesItem:' not in html[:m.start()]:
+            pid = m.group(1)
+            idx = m.start()
+            card_html = html[max(0, idx - 1000):min(len(html), idx + 30000)]
+            addr_ok = bool(road_with_num and road_with_num in card_html) or (bool(road_token and road_token in card_html) and len(parts) >= 2 and parts[1] in card_html)
+            phone_ok = bool(len(tel_digits) >= 8 and tel and tel in card_html)
+            if addr_ok or phone_ok:
+                window = html[max(0, idx - 1000):min(len(html), idx + 3500)]
+                window = re.sub(r'^[^<]*>', ' ', window)
+                window = re.sub(r'<[^>]*$', ' ', window)
+                clean = re.sub(r'<[^>]+>', ' ', window)
+                clean = re.sub(r'\s+', ' ', clean).strip()
+                header = re.split(r'\b(?:길찾기|거리뷰|내비게이션|공유|알림받기)\b', clean)[0]
+                if not name_core or name_core in re.sub(r'\s+', '', header):
+                    rm = re.search(r'별점\s*([0-9.]+)', header)
+                    vm = re.search(r'리뷰\s*([0-9.,]+)\s*(만)?', header)
+                    v_visit = re.search(r'방문자리뷰\s*([0-9,]+)', header)
+                    v_blog = re.search(r'블로그리뷰\s*([0-9,]+)', header)
+                    rat = float(rm.group(1)) if rm else None
+                    rev = 0
+                    if vm:
+                        n = float(vm.group(1).replace(',', ''))
+                        rev = int(n * 10000) if vm.group(2) == '만' else int(n)
+                    elif v_visit or v_blog:
+                        rev = (int(v_visit.group(1).replace(',', '')) if v_visit else 0) + (int(v_blog.group(1).replace(',', '')) if v_blog else 0)
+                    return {
+                        'naverId': pid,
+                        'naverRating': rat,
+                        'naverReviewCount': rev,
+                        'naverUrl': f"https://m.place.naver.com/restaurant/{pid}",
+                        'naverMenus': [],
+                    }
 
-    fallback_q = f"{name} {sigungu}".strip()
+        # 2) 다중 목록 매칭 (PlaceListBusinessesItem JSON)
+        for m in re.finditer(r'"PlaceListBusinessesItem:(\d+)"\s*:\s*\{', html):
+            pid = m.group(1)
+            chunk = html[m.start():m.start() + 2500]
+            p_tel = re.search(r'"phone"\s*:\s*"([^"]*)"', chunk)
+            p_addr = re.search(r'"fullAddress"\s*:\s*"([^"]*)"', chunk) or re.search(r'"roadAddress"\s*:\s*"([^"]*)"', chunk)
+            p_name = re.search(r'"normalizedName"\s*:\s*"([^"]*)"', chunk)
+            v_score = re.search(r'"visitorReviewScore"\s*:\s*([0-9.]+|null)', chunk)
+            v_cnt = re.search(r'"visitorReviewCount"\s*:\s*"?(\d+)"?', chunk)
+            b_cnt = re.search(r'"blogCafeReviewCount"\s*:\s*"?(\d+)"?', chunk)
+
+            addr_val = p_addr.group(1) if p_addr else ''
+            tel_val = digits(p_tel.group(1)) if p_tel else ''
+            name_val = re.sub(r'\s+', '', p_name.group(1)) if p_name else ''
+
+            phone_ok = len(tel_digits) >= 8 and tel_digits == tel_val
+            addr_ok = bool(road_with_num and road_with_num in addr_val) or (bool(road_token and road_token in addr_val) and name_core in name_val)
+            if phone_ok or addr_ok:
+                rat = float(v_score.group(1)) if (v_score and v_score.group(1) != 'null') else None
+                rev = (int(v_cnt.group(1)) if v_cnt else 0) + (int(b_cnt.group(1)) if b_cnt else 0)
+                return {
+                    'naverId': pid,
+                    'naverRating': rat,
+                    'naverReviewCount': rev,
+                    'naverUrl': f"https://m.place.naver.com/restaurant/{pid}",
+                    'naverMenus': [],
+                }
+
+    fallback_q = f"{name} {sido_sigungu}".strip()
     return {
         'naverId': None,
         'naverRating': None,
@@ -584,7 +595,6 @@ def cmd_heal(args):
         cur_menu = v.get('representativeMenu') or ''
         needs_fix = (
             not v.get('naverId')
-            or v.get('naverRating') is None
             or v.get('googleRating') is None
             or not cur_menu
             or '있음' in cur_menu

@@ -3374,9 +3374,9 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-emerald-600">🟢 네이버</span>
-                  <span class="font-black text-xs text-slate-900">${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? '방문자 인증' : '플레이스 연결')}</span>
+                  <span class="font-black text-xs text-slate-900">${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? '별점 미공개' : '플레이스 연결')}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">${sources.naver?.reviewCount ? '방문자리뷰 ' + Number(sources.naver.reviewCount).toLocaleString() + '건' : '실시간 리뷰 확인'}</span>
+                <span class="text-[10px] text-slate-400 font-medium">${sources.naver?.reviewCount ? '방문자·블로그 ' + Number(sources.naver.reviewCount).toLocaleString() + '건' : '실시간 리뷰 확인'}</span>
               </div>
               <a
                 href="${sources.naver.url}"
