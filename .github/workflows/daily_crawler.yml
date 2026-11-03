@@ -38,7 +38,8 @@ jobs:
           if [ ! -f scripts/data/mafra_raw.json ] && [ -n "$MAFRA_API_KEY" ]; then
             python scripts/pipeline_restaurants.py fetch
           fi
-          python scripts/pipeline_restaurants.py verify --limit 1500 --workers 5
+          python scripts/pipeline_restaurants.py verify --limit 4000 --workers 8
+          python scripts/pipeline_restaurants.py heal --limit 150
           python scripts/pipeline_restaurants.py build
 
       - name: 변경 데이터 자동 커밋 및 배포

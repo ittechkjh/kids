@@ -18,7 +18,8 @@ rem 3. 안심식당 공공데이터 수집 및 카카오/포털 실존 검증 + 
 if not exist scripts\data\mafra_raw.json (
   uv run python scripts\pipeline_restaurants.py fetch >> %LOGFILE% 2>&1
 )
-uv run python scripts\pipeline_restaurants.py verify --limit 1500 --workers 5 >> %LOGFILE% 2>&1
+uv run python scripts\pipeline_restaurants.py verify --limit 4000 --workers 8 >> %LOGFILE% 2>&1
+uv run python scripts\pipeline_restaurants.py heal --limit 150 >> %LOGFILE% 2>&1
 uv run python scripts\pipeline_restaurants.py build >> %LOGFILE% 2>&1
 
 rem 4. 갱신 결과 커밋 및 원격 푸시
