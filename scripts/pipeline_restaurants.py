@@ -106,50 +106,167 @@ def kakao_panel(confirm_id):
     return http_json(f'https://place-api.map.kakao.com/places/panel3/{confirm_id}')
 
 
+def clean_addr_for_search(addr):
+    s = (addr or '').replace('전남광주통합특별시', '전남').replace('전북특별자치도', '전북').replace('강원특별자치도', '강원').replace('제주특별자치도', '제주')
+    s = re.sub(r'\(.*?\)', '', s)
+    return s.strip()
+
+
+def strip_branch(name):
+    s = re.sub(r'\(.*?\)', '', name or '').strip()
+    return re.sub(r'\s+\S*(?:본점|별관|직영점|지점|점|호점|본관|신관)$', '', s).strip()
+
+
 def fetch_naver_place(name, road_address):
-    parts = (road_address or '').split()
-    sigungu = f"{parts[0][:2]} {parts[1]}" if len(parts) > 1 else ''
-    district_road = ' '.join(parts[1:3]) if len(parts) > 2 else ''
-    
-    queries = []
-    if sigungu: queries.append(f"{name} {sigungu}".strip())
-    if district_road and district_road != sigungu: queries.append(f"{name} {district_road}".strip())
-    if len(parts) > 1: queries.append(f"{name} {parts[1]}".strip())
-    queries.append(name.strip())
-    
+    addr_clean = clean_addr_for_search(road_address)
+    parts = addr_clean.split()
+    sigungu = ' '.join(parts[:2]) if len(parts) >= 2 else ''
+    city = parts[1] if len(parts) > 1 else ''
+    city_short = re.sub(r'(시|군|구)$', '', city) if len(city) >= 3 else city
+    dong_road = ' '.join(parts[1:3]) if len(parts) >= 3 else sigungu
+    base_name = strip_branch(name)
+
+    queries = [
+        f"{name} {sigungu}".strip(),
+        f"{city_short} {name}".strip(),
+        f"{name} {dong_road}".strip(),
+        name.strip(),
+    ]
+    if base_name and base_name != name:
+        queries.extend([
+            f"{base_name} {sigungu}".strip(),
+            f"{city_short} {base_name}".strip(),
+            base_name.strip(),
+        ])
+
+    pid = None
+    rating_from_search = None
+    reviews_from_search = 0
     seen = set()
     for q in [q for q in queries if q and not (q in seen or seen.add(q))]:
-        u = f"https://m.search.naver.com/search.naver?query={urllib.parse.quote(q)}"
-        req = urllib.request.Request(u, headers=UA_MOBILE)
+        u = f"https://search.naver.com/search.naver?query={urllib.parse.quote(q)}"
+        req = urllib.request.Request(u, headers=UA)
         try:
             html = urllib.request.urlopen(req, timeout=6).read().decode('utf-8', 'replace')
-            pids = re.findall(r'https?://m\.place\.naver\.com/restaurant/(\d+)', html)
+            pids = (
+                re.findall(r'place\.naver\.com(?:/|\\u002F)restaurant(?:/|\\u002F)(\d{7,11})', html)
+                or re.findall(r'bizes(?:/|\\u002F)place-id(?:/|\\u002F)(\d{7,11})', html)
+                or re.findall(r'place\.naver\.com(?:/|\\u002F)place(?:/|\\u002F)(\d{7,11})', html)
+                or re.findall(r'"id"\s*:\s*"(\d{8,10})"', html)
+            )
             if not pids:
                 continue
             pid = pids[0]
-            rm = re.search(r'별점</span>\s*<span>([0-9.]+)</span>', html)
-            rating = float(rm.group(1)) if rm else None
-            vm = re.search(r'리뷰(?:<!--.*?-->|\s)*([0-9.,]+)\s*(만)?', html)
-            reviews = None
-            if vm:
-                n = float(vm.group(1).replace(',', ''))
-                reviews = int(n * 10000) if vm.group(2) == '만' else int(n)
-            return {
-                'naverId': pid,
-                'naverRating': rating,
-                'naverReviewCount': reviews or 0,
-                'naverUrl': f"https://m.place.naver.com/restaurant/{pid}"
-            }
+            rm = re.search(r'별점</span>\s*<span[^>]*>([0-9.]+)</span>', html) or re.search(r'별점</span><span>([0-9.]+)</span>', html)
+            if rm:
+                rating_from_search = float(rm.group(1))
+            vm = re.findall(r'방문자리뷰\s*([0-9,]+)', html)
+            bm = re.findall(r'블로그리뷰\s*([0-9,]+)', html)
+            v_cnt = int(vm[0].replace(',', '')) if vm else 0
+            b_cnt = int(bm[0].replace(',', '')) if bm else 0
+            if v_cnt + b_cnt > 0:
+                reviews_from_search = v_cnt + b_cnt
+            break
         except Exception:
             continue
-            
+
+    if pid:
+        rating = rating_from_search
+        reviews = reviews_from_search
+        menus = []
+        for path in ('restaurant', 'place'):
+            u_home = f"https://m.place.naver.com/{path}/{pid}/home"
+            try:
+                html_home = urllib.request.urlopen(urllib.request.Request(u_home, headers=UA), timeout=6).read().decode('utf-8', 'replace')
+                sr = re.search(r'"visitorReviewsScore":\s*([0-9.]+)', html_home)
+                if sr and float(sr.group(1)) > 0:
+                    rating = float(sr.group(1))
+                vr = re.search(r'"visitorReviewsTotal":\s*(\d+)', html_home)
+                br = re.search(r'"(?:cafeBlogReviewsTotal|blogCafeReviewCount)":\s*(\d+)', html_home)
+                v_cnt = int(vr.group(1)) if vr else 0
+                b_cnt = int(br.group(1)) if br else 0
+                if v_cnt + b_cnt > 0:
+                    reviews = max(reviews, v_cnt + b_cnt)
+                menu_names = re.findall(r'"__typename":"(?:Menu|PlaceDetail_BaeminMenu)"[^}]*?"name":"([^"]+)"', html_home)
+                for mn in menu_names:
+                    mn_clean = mn.strip()
+                    if mn_clean and mn_clean not in menus and '공기밥' not in mn_clean and '음료' not in mn_clean:
+                        menus.append(mn_clean)
+                if rating is None:
+                    indiv = [float(x) for x in re.findall(r'"rating":\s*([1-5](?:\.\d)?)', html_home)]
+                    if indiv:
+                        rating = round(sum(indiv) / len(indiv), 2)
+                if reviews > 0 or rating is not None:
+                    break
+            except Exception:
+                pass
+        return {
+            'naverId': pid,
+            'naverRating': rating,
+            'naverReviewCount': reviews or 0,
+            'naverUrl': f"https://m.place.naver.com/restaurant/{pid}",
+            'naverMenus': menus[:3],
+        }
+
     fallback_q = f"{name} {sigungu}".strip()
     return {
         'naverId': None,
         'naverRating': None,
         'naverReviewCount': 0,
-        'naverUrl': f"https://map.naver.com/p/search/{urllib.parse.quote(fallback_q)}"
+        'naverUrl': f"https://map.naver.com/p/search/{urllib.parse.quote(fallback_q)}",
+        'naverMenus': [],
     }
+
+
+def fetch_google_place(name, road_address):
+    addr_clean = clean_addr_for_search(road_address)
+    parts = addr_clean.split()
+    sigungu = ' '.join(parts[:2]) if len(parts) >= 2 else ''
+    city = parts[1] if len(parts) > 1 else ''
+    road = ' '.join(parts[:4]) if len(parts) >= 4 else addr_clean
+    base_name = strip_branch(name)
+
+    queries = [
+        f"{name} {sigungu}".strip(),
+        f"{name} {city}".strip(),
+        f"{name} {road}".strip(),
+        name.strip(),
+    ]
+    if base_name and base_name != name:
+        queries.extend([
+            f"{base_name} {sigungu}".strip(),
+            f"{base_name} {city}".strip(),
+            base_name.strip(),
+        ])
+    seen = set()
+    for q in [q for q in queries if q and not (q in seen or seen.add(q))]:
+        u = f"https://www.google.com/search?tbm=map&authuser=0&hl=ko&gl=kr&q={urllib.parse.quote(q)}"
+        try:
+            txt = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=6).read().decode('utf-8', 'replace')
+            m = re.findall(r'"2ahUKEw[^"]*"\],null,null,null,([1-5](?:\.\d)?),(\d+)\]', txt)
+            if m:
+                return {'googleRating': float(m[0][0]), 'googleReviewCount': int(m[0][1])}
+        except Exception:
+            continue
+    return {'googleRating': None, 'googleReviewCount': 0}
+
+
+def extract_kakao_menus(panel):
+    items = ((panel.get('menu') or {}).get('menus') or {}).get('items') or []
+    names = []
+    for it in items:
+        if isinstance(it, dict) and it.get('name'):
+            n = it['name'].strip()
+            if n and '공기밥' not in n and n not in names:
+                names.append(n)
+    if not names:
+        y_items = ((panel.get('menu') or {}).get('yogiyo_menus') or {}).get('items') or []
+        for it in y_items:
+            if isinstance(it, dict) and it.get('name'):
+                n = it['name'].strip()
+                if n and '공기밥' not in n and n not in names:
+                    names.append(n)
+    return names[:3]
 
 
 def name_tokens(s):
@@ -195,7 +312,12 @@ def verify_row(row):
     
     # 네이버 플레이스 정보 연동 (별점 + 방문자리뷰수 + 정확한 Place URL)
     n_info = fetch_naver_place(p_name, road_addr)
-    
+    # 구글 지도 평점 및 리뷰 수 연동
+    g_info = fetch_google_place(p_name, road_addr)
+    # 대표 메뉴 추출 (카카오 메뉴 우선 -> 네이버 메뉴)
+    menus = extract_kakao_menus(panel) or n_info.get('naverMenus') or []
+    rep_menu = ', '.join(menus) if menus else None
+
     return {
         'status': 'verified',
         'kakaoId': hit['confirmid'],
@@ -204,6 +326,7 @@ def verify_row(row):
         'tel': hit.get('tel'),
         'lat': point.get('lat'), 'lng': point.get('lon'),
         'category': (summ.get('category') or {}).get('name'),
+        'representativeMenu': rep_menu,
         'rating': score.get('average_score'),
         'ratingCount': score.get('review_count') or 0,
         'blogReviewCount': blog,
@@ -211,6 +334,8 @@ def verify_row(row):
         'naverRating': n_info.get('naverRating'),
         'naverReviewCount': n_info.get('naverReviewCount') or 0,
         'naverUrl': n_info.get('naverUrl'),
+        'googleRating': g_info.get('googleRating'),
+        'googleReviewCount': g_info.get('googleReviewCount') or 0,
         'checkedAt': datetime.date.today().isoformat(),
     }
 
@@ -317,7 +442,7 @@ CATEGORY_MENU_MAP = {
 
 def resolve_menu(v, category_name):
     m = v.get('representativeMenu')
-    if m and m != 'undefined':
+    if m and m != 'undefined' and '있음' not in m:
         return m
     for k, default_menu in CATEGORY_MENU_MAP.items():
         if k in (category_name or ''):
@@ -343,12 +468,19 @@ def region_of(row, v):
 
 
 def cmd_build(args):
+    today = datetime.date.today().isoformat()
     raw = {str(r['RELAX_SEQ']): r for r in load(RAW_PATH, [])}
     cache = load(CACHE_PATH, {})
     out = []
+    seen_kakao_ids = set()
     for sid, v in cache.items():
         if sid not in raw or not passes(v):
             continue
+        kid = v.get('kakaoId')
+        if kid and kid in seen_kakao_ids:
+            continue
+        if kid:
+            seen_kakao_ids.add(kid)
         r = raw[sid]
         reg = region_of(r, v)
         if not reg:

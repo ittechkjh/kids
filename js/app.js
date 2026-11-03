@@ -3193,7 +3193,7 @@ class DodamCommunityApp {
                 <i class="fa-solid fa-star text-[10px]"></i>
                 <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
               </span>
-              <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? Number(sources.naver.reviewCount).toLocaleString() + '건' : '플레이스')} · 🟡 카카오 ${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : '-'} · 🔵 구글 ${sources.google?.rating ? '★ ' + sources.google.rating : '지도연동'}</span>
+              <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? Number(sources.naver.reviewCount).toLocaleString() + '건' : '플레이스')} · 🟡 카카오 ${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? Number(sources.kakao.reviewCount).toLocaleString() + '건' : '카카오맵')} · 🔵 구글 ${sources.google?.rating ? '★ ' + sources.google.rating : '지도연동'}</span>
             </div>
           </div>
 
@@ -3395,9 +3395,9 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-amber-600">🟡 카카오</span>
-                  <span class="font-black text-xs text-slate-900">${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : '-'}</span>
+                  <span class="font-black text-xs text-slate-900">${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? '블로그 인증' : '카카오맵 연동')}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">별점리뷰 ${Number(sources.kakao?.reviewCount || 0).toLocaleString()}건</span>
+                <span class="text-[10px] text-slate-400 font-medium">${sources.kakao?.rating ? '별점·블로그 ' : '블로그리뷰 '}${Number(sources.kakao?.reviewCount || 0).toLocaleString()}건</span>
               </div>
               <a
                 href="${sources.kakao.url}"
