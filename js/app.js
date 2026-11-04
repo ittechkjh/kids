@@ -289,6 +289,16 @@ class DodamCommunityApp {
       pStatTotal.textContent = policies.length.toLocaleString();
     }
 
+    // 5. 교육부 입시 정보 포털
+    const admMeta = window.DODAM_ADMISSIONS_DATA?.metadata || {};
+    const admGuides = window.DODAM_ADMISSIONS_DATA?.guides || [];
+    const admDateEl = document.getElementById('admissions-updated-date');
+    if (admDateEl) admDateEl.textContent = admMeta.lastUpdated ? admMeta.lastUpdated.replace(/-/g, '.') : formatted;
+    const admNewEl = document.getElementById('admissions-stat-new');
+    if (admNewEl) admNewEl.textContent = `+${(admMeta.todayCollectedCount || 20).toLocaleString()}`;
+    const admTotalEl = document.getElementById('admissions-stat-total');
+    if (admTotalEl) admTotalEl.textContent = (admGuides.length || admMeta.totalCount || 51).toLocaleString();
+
     // 5. 학교·학군 순위
     const allSchools = window.DODAM_SCHOOLS_RANKING || [];
     const sStatDate = document.getElementById('school-stat-date');
@@ -4404,7 +4414,8 @@ class DodamCommunityApp {
 
     const allGuides = window.DODAM_ADMISSIONS_DATA?.guides || [];
     const filtered = allGuides.filter((g) => {
-      if (this.admissionsCategory !== 'all' && g.category !== this.admissionsCategory) {
+      const gCat = g.category || g.categoryId;
+      if (this.admissionsCategory !== 'all' && gCat !== this.admissionsCategory) {
         return false;
       }
       if (this.admissionsSearchKeyword) {

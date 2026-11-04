@@ -1,8 +1,9 @@
 {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-10-29",
-    "totalCount": 31,
+    "lastUpdated": "2026-11-04",
+    "totalCount": 51,
+    "todayCollectedCount": 20,
     "officialSources": [
       {
         "name": "교육부 (MOE)",
@@ -59,15 +60,420 @@
     {
       "id": "curriculum",
       "name": "2022 개정 교육과정",
-      "icon": "fa-book-open"
+      "icon": "fa-book-open-reader"
+    },
+    {
+      "id": "suneung",
+      "name": "수능 및 모의평가",
+      "icon": "fa-pen-to-square"
     },
     {
       "id": "policy",
-      "name": "교육부 정책·공공데이터",
-      "icon": "fa-chart-pie"
+      "name": "교육부 최신 공시·보도",
+      "icon": "fa-landmark"
     }
   ],
   "guides": [
+    {
+      "id": "moe-107561",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107560",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107562",
+      "category": "college",
+      "categoryId": "college",
+      "categoryName": "수시·정시 전형",
+      "title": "의대 신설 지역/대학 선정 및 정원 배정",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "대입 가이드",
+      "badgeColor": "bg-indigo-600 text-white",
+      "target": "수험생 및 고등학생 학부모",
+      "summary": "교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "대학 입학 전형 시행계획 및 모집요강 가이드라인",
+        "학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시",
+        "대교협 대학어디가(ADIGA) 포털 연동 안내"
+      ],
+      "content": "<h3>의대 신설 지역/대학 선정 및 정원 배정</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>대학 입학 전형 시행계획 및 모집요강 가이드라인</li>\n  <li>학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시</li>\n  <li>대교협 대학어디가(ADIGA) 포털 연동 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107547",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.03",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107546",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.03",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107537",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 전국 학교예술교육 축제 개최",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.02",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 전국 학교예술교육 축제 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.02</p>\n<p>교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107533",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "데이터로 읽는 우리 교육 제17호 발간",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.01",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 데이터로 읽는 우리 교육 제17호 발간. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>데이터로 읽는 우리 교육 제17호 발간</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.01</p>\n<p>교육부 홍보담당관 공식 발표 - 데이터로 읽는 우리 교육 제17호 발간. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107533&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107533&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107526",
+      "category": "specialhigh",
+      "categoryId": "specialhigh",
+      "categoryName": "고입 전형",
+      "title": "인공지능시대사이버보안영재교육지원을위한 교육부.LG유플러스.티오리한국 업무협약 체결",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.10.30",
+      "badge": "특목·자사고",
+      "badgeColor": "bg-amber-500 text-white",
+      "target": "초등·중학생 학부모",
+      "summary": "교육부 홍보담당관 공식 발표 - 인공지능시대사이버보안영재교육지원을위한 교육부.LG유플러스.티오리한국 업무협약 체결. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "전국 단위 자사고 및 외국어고·국제고 자기주도학습 전형 요강",
+        "영재학교·과학고 입학전형 및 내신 평가 반영 비율",
+        "시·도 교육청 고등학교 입학전형 기본계획"
+      ],
+      "content": "<h3>인공지능시대사이버보안영재교육지원을위한 교육부.LG유플러스.티오리한국 업무협약 체결</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.10.30</p>\n<p>교육부 홍보담당관 공식 발표 - 인공지능시대사이버보안영재교육지원을위한 교육부.LG유플러스.티오리한국 업무협약 체결. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>전국 단위 자사고 및 외국어고·국제고 자기주도학습 전형 요강</li>\n  <li>영재학교·과학고 입학전형 및 내신 평가 반영 비율</li>\n  <li>시·도 교육청 고등학교 입학전형 기본계획</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107526&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107526&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107521",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "교육부, 제3회 특별성과 우수사례 시상",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.10.30",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 교육부, 제3회 특별성과 우수사례 시상. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>교육부, 제3회 특별성과 우수사례 시상</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.10.30</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부, 제3회 특별성과 우수사례 시상. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107521&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107521&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107517",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "“우리 지역, 우리 아이에게 꼭 맞게” 사교육 고민 덜고, 영유아기 교육 선택 돕는다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.10.29",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - “우리 지역, 우리 아이에게 꼭 맞게” 사교육 고민 덜고, 영유아기 교육 선택 돕는다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>“우리 지역, 우리 아이에게 꼭 맞게” 사교육 고민 덜고, 영유아기 교육 선택 돕는다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.10.29</p>\n<p>교육부 홍보담당관 공식 발표 - “우리 지역, 우리 아이에게 꼭 맞게” 사교육 고민 덜고, 영유아기 교육 선택 돕는다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107517&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107517&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107472",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 &nbsp;영유아사교육비조사 안내",
+      "agency": "교육부 영유아정책총괄과",
+      "date": "2026.10.21",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 영유아정책총괄과 공식 발표 - 2026년 &nbsp;영유아사교육비조사 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 영유아정책총괄과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 &nbsp;영유아사교육비조사 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (영유아정책총괄과) | <strong>공시일:</strong> 2026.10.21</p>\n<p>교육부 영유아정책총괄과 공식 발표 - 2026년 &nbsp;영유아사교육비조사 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 영유아정책총괄과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107472&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107472&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107457",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 교육시설분야 유공자 장관표창 계획 안내",
+      "agency": "교육부 대학시설지원과",
+      "date": "2026.10.20",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 대학시설지원과 공식 발표 - 2026년 교육시설분야 유공자 장관표창 계획 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 대학시설지원과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 교육시설분야 유공자 장관표창 계획 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (대학시설지원과) | <strong>공시일:</strong> 2026.10.20</p>\n<p>교육부 대학시설지원과 공식 발표 - 2026년 교육시설분야 유공자 장관표창 계획 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 대학시설지원과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107457&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107457&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107455",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「2026년 대한민국 우수교육시설」 작품 공모 안내",
+      "agency": "교육부 대학시설지원과",
+      "date": "2026.10.19",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 대학시설지원과 공식 발표 - 「2026년 대한민국 우수교육시설」 작품 공모 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 대학시설지원과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「2026년 대한민국 우수교육시설」 작품 공모 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (대학시설지원과) | <strong>공시일:</strong> 2026.10.19</p>\n<p>교육부 대학시설지원과 공식 발표 - 「2026년 대한민국 우수교육시설」 작품 공모 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 대학시설지원과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107455&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107455&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107002",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「대학 AI 활용 윤리 가이드라인」 안내",
+      "agency": "교육부 인공지능융합인재양성과",
+      "date": "2026.08.24",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 인공지능융합인재양성과 공식 발표 - 「대학 AI 활용 윤리 가이드라인」 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 인공지능융합인재양성과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「대학 AI 활용 윤리 가이드라인」 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (인공지능융합인재양성과) | <strong>공시일:</strong> 2026.08.24</p>\n<p>교육부 인공지능융합인재양성과 공식 발표 - 「대학 AI 활용 윤리 가이드라인」 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 인공지능융합인재양성과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107002&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=107002&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106766",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "교육부 소관 공인 민간자격 변경 승인 공고",
+      "agency": "교육부 평생학습정책과",
+      "date": "2026.07.24",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 평생학습정책과 공식 발표 - 교육부 소관 공인 민간자격 변경 승인 공고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 평생학습정책과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>교육부 소관 공인 민간자격 변경 승인 공고</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (평생학습정책과) | <strong>공시일:</strong> 2026.07.24</p>\n<p>교육부 평생학습정책과 공식 발표 - 교육부 소관 공인 민간자격 변경 승인 공고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 평생학습정책과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106766&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106766&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106759",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내",
+      "agency": "교육부 교육데이터정책과",
+      "date": "2026.07.23",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 교육데이터정책과 공식 발표 - 제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 교육데이터정책과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (교육데이터정책과) | <strong>공시일:</strong> 2026.07.23</p>\n<p>교육부 교육데이터정책과 공식 발표 - 제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 교육데이터정책과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106759&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106759&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106758",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「2026년 보육 유공자」 정부포상 계획",
+      "agency": "교육부 영유아정책총괄과",
+      "date": "2026.07.22",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 영유아정책총괄과 공식 발표 - 「2026년 보육 유공자」 정부포상 계획. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 영유아정책총괄과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「2026년 보육 유공자」 정부포상 계획</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (영유아정책총괄과) | <strong>공시일:</strong> 2026.07.22</p>\n<p>교육부 영유아정책총괄과 공식 발표 - 「2026년 보육 유공자」 정부포상 계획. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 영유아정책총괄과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106758&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106758&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106700",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림",
+      "agency": "교육부 반부패청렴담당관",
+      "date": "2026.07.14",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 반부패청렴담당관 공식 발표 - 2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (반부패청렴담당관) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 반부패청렴담당관 공식 발표 - 2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106700&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106700&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106699",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림",
+      "agency": "교육부 반부패청렴담당관",
+      "date": "2026.07.14",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 반부패청렴담당관 공식 발표 - 2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (반부패청렴담당관) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 반부패청렴담당관 공식 발표 - 2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-106692",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026 대한민국 인재상 선발 공고",
+      "agency": "교육부 인재정책총괄과",
+      "date": "2026.07.14",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 인재정책총괄과 공식 발표 - 2026 대한민국 인재상 선발 공고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 인재정책총괄과 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026 대한민국 인재상 선발 공고</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (인재정책총괄과) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 인재정책총괄과 공식 발표 - 2026 대한민국 인재상 선발 공고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 인재정책총괄과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106692&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106692&lev=0&statusYN=W&s=moe&m=0205"
+    },
     {
       "id": "adm-2028-reform-final",
       "category": "reform2028",
@@ -86,7 +492,8 @@
         "학교 시험 서·논술형 평가 비중 확대(지필평가 30% 이상 권고)"
       ],
       "content": "<h3>1. 2028학년도 수능시험 체제 개편 및 주요 특징</h3>\n<p>교육부가 확정 발표한 2028 대입 개편안의 핵심은 <strong>'공정과 통합'</strong>입니다. 국어, 수학, 탐구 영역에서 선택과목이 완전히 폐지되고 모든 학생이 동일한 시험지를 응시하게 됩니다.</p>\n<ul>\n  <li><strong>국어 영역:</strong> 화법과 언어, 독서와 작문, 문학 공통 응시</li>\n  <li><strong>수학 영역:</strong> 대수, 미적분Ⅰ, 확률과 통계 공통 응시 (기존 문과 범위 수준)</li>\n  <li><strong>탐구 영역:</strong> 통합사회, 통합과학 전 수험생 공통 응시 (융합형 문항 출제)</li>\n</ul>\n\n<h3>2. 고교 내신 5등급제 개편 기준</h3>\n<p>기존 9등급제(1등급 4%) 체제에서 지나친 상대평가 줄세우기 폐해를 완화하기 위해 <strong>5등급제 체제</strong>로 전면 개편됩니다.</p>\n<ul>\n  <li>1등급: 상위 10% (기존 1등급+2등급 상위권)</li>\n  <li>2등급: 누적 11% ~ 34% (24% 구간)</li>\n  <li>3등급: 누적 35% ~ 66% (32% 구간)</li>\n  <li>4등급: 누적 67% ~ 90% (24% 구간)</li>\n  <li>5등급: 누적 91% ~ 100% (10% 구간)</li>\n</ul>\n<p>모든 과목 성적표에는 5등급 상대평가 등급과 함께 절대평가(A·B·C·D·E) 성취도가 병기 표기됩니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe"
+      "officialUrl": "https://www.moe.go.kr/boardCnts/list.do?boardID=294&m=020402&s=moe",
+      "categoryId": "reform2028"
     },
     {
       "id": "adm-2028-suneung-integrated",
@@ -105,7 +512,8 @@
         "변별력 확보를 위한 문해력 기반 신유형 복합지문 대비 필요"
       ],
       "content": "<h3>통합사회·통합과학 수능 출제 방식</h3>\n<p>통합사회와 통합과학은 고1 공통과목으로, 특정 심화 과목을 선택하지 않아도 기초 학업 소양을 검증할 수 있도록 융합형 개념 문항으로 출제됩니다. 단순 암기 위주가 아닌 실생활 문제 해결력과 과학적 탐구 역량을 집중 평가합니다.</p>",
-      "officialUrl": "https://www.suneung.re.kr"
+      "officialUrl": "https://www.suneung.re.kr",
+      "categoryId": "reform2028"
     },
     {
       "id": "adm-2028-naesin-5grades",
@@ -124,7 +532,8 @@
         "정시 수능전형에서도 학생부 교과 이수 현황 반영 대학 확대 전망"
       ],
       "content": "<h3>내신 5등급제 전환의 대입 영향 분석</h3>\n<p>내신 1등급 비율이 10%로 늘어나면서, 특목고·자사고 및 교육특구 일반고 학생들의 내신 불이익이 대폭 완화됩니다. 이에 따라 대학들은 단순 내신 정량 점수뿐만 아니라 지원자의 과목 선택 노력, 세부능력 및 특기사항(세특), 심층 면접을 종합 반영할 계획입니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "reform2028"
     },
     {
       "id": "adm-2028-med-engineering",
@@ -143,7 +552,8 @@
         "면접 및 대학별 고사(MIM, 수리·과학 논술)의 변별력 증대"
       ],
       "content": "<h3>의대 및 상위권 이공계열의 대입 선발 기준</h3>\n<p>수능에서 심화수학(미적분Ⅱ·기하)이 제외되었으나, 서울대·연세대·고려대 등 상위권 대학은 학생부 교과 평가에서 자연계열 학과별 필수 권장이수과목을 지정하여 고교에서 해당 과목을 이수했는지 여부를 엄격히 평가합니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "reform2028"
     },
     {
       "id": "adm-2028-univ-reflection",
@@ -162,7 +572,8 @@
         "진로연계 전공 권장이수과목 이수 여부 체크리스트 제공"
       ],
       "content": "<h3>서울 주요 대학의 2028 전형 설계 방향</h3>\n<p>내신 5등급제 전환에 따라 상위권 대학은 학생부 정성평가 비중을 늘리고 있습니다. 고교 3년간 자신이 지망하는 전공 분야와 연계된 진로선택과목 및 융합선택과목을 충실히 이수하는 것이 대입 성공의 핵심 열쇠입니다.</p>",
-      "officialUrl": "https://www.kcue.or.kr"
+      "officialUrl": "https://www.kcue.or.kr",
+      "categoryId": "reform2028"
     },
     {
       "id": "adm-highcredit-192points",
@@ -181,7 +592,8 @@
         "출석률 2/3 이상 + 학업성취율 40% 이상 충족 시 학점 취득"
       ],
       "content": "<h3>고교학점제 이수 체계 및 졸업 요건</h3>\n<p>고교학점제는 학생이 기초 소양과 기본 학력을 바탕으로 진로와 적성에 따라 과목을 선택하고 이수 기준에 도달한 과목에 대해 학점을 취득하여 졸업하는 제도입니다. 학기 단위로 과목이 운영되며 수강 신청을 통해 개인별 맞춤 시간표가 편성됩니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "highcredit"
     },
     {
       "id": "adm-curriculum-selection",
@@ -201,7 +613,8 @@
         "융합선택과목: 교과 내/교과 간 융합 주제 중심 실생활 적용 과목"
       ],
       "content": "<h3>계열별 추천 과목 이수 로드맵</h3>\n<p>2022 개정 교육과정에서는 진로에 따른 과목 선택이 매우 중요합니다. 공학계열 희망자는 일반선택의 물리학과 진로선택의 미적분Ⅱ, 기하를 반드시 이수해야 하며, 상경계열은 경제수학과 확률과 통계, 사회·문화를 선택하는 것이 유리합니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-highcredit-setek",
@@ -220,7 +633,8 @@
         "진로선택 및 융합선택 과목의 세특이 학종 평가의 핵심 변별 요소"
       ],
       "content": "<h3>성공적인 세특 관리를 위한 수업 참여법</h3>\n<p>학생부종합전형에서 가장 영향력이 큰 항목은 교과 세특(세부능력 및 특기사항)입니다. 교사가 학생의 지적 호기심과 과제 해결력을 관찰할 수 있도록 수업 시간에 적극적으로 질문하고 교과서 개념을 심화 확장하는 탐구 노력을 보여주는 것이 필수적입니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "highcredit"
     },
     {
       "id": "adm-highcredit-min-achievement",
@@ -239,7 +653,8 @@
         "기초학력 미달 방지를 위한 예방-진단-보정 3단계 안전망 가동"
       ],
       "content": "<h3>최소 성취수준 보장지도의 취지와 절차</h3>\n<p>고교학점제는 책임 교육을 지향합니다. 학업에 어려움을 겪는 학생이 발생할 경우 즉시 예방 프로그램을 가동하며, 미이수가 발생하더라도 별도의 보충 학습을 통해 성취 수준에 도달할 수 있도록 체계적으로 지원합니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "highcredit"
     },
     {
       "id": "adm-middle-free-semester",
@@ -258,7 +673,8 @@
         "중3 2학기: 고교학점제 예비학교 및 고교 과목 선택 사전 탐색 집중"
       ],
       "content": "<h3>중학교 자유학기제와 고교 진학 연계</h3>\n<p>2022 개정 교육과정에서는 중학교 1학년 자유학기(1개 학기 또는 1년)와 함께 중학교 3학년 2학기에 '진로연계학기'가 도입되어 고등학교 생활과 고교학점제 과목 선택을 미리 체험하고 준비할 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-schedule-2026-2027",
@@ -278,7 +694,8 @@
         "정시모집 원서접수: 12월 말 ~ 1월 초 (가/나/다군 각 1회, 총 3회 지원)"
       ],
       "content": "<h3>2026~2027학년도 대입 주요 전형 일정 총정리</h3>\n<table class=\"w-full text-xs text-left border-collapse my-3\">\n  <thead>\n    <tr class=\"bg-stone-100 border-b border-stone-200\">\n      <th class=\"p-2 font-bold\">구분</th>\n      <th class=\"p-2 font-bold\">전형 기간</th>\n      <th class=\"p-2 font-bold\">비고</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr class=\"border-b border-stone-100\">\n      <td class=\"p-2 font-semibold\">수시 원서접수</td>\n      <td class=\"p-2\">9월 초순 (대학별 3일 이상)</td>\n      <td class=\"p-2 text-rose-600 font-bold\">최대 6회 지원</td>\n    </tr>\n    <tr class=\"border-b border-stone-100\">\n      <td class=\"p-2 font-semibold\">수능 시험일</td>\n      <td class=\"p-2\">11월 셋째 주 목요일</td>\n      <td class=\"p-2\">전국 시험장 동시 실시</td>\n    </tr>\n    <tr class=\"border-b border-stone-100\">\n      <td class=\"p-2 font-semibold\">수능 성적 통지</td>\n      <td class=\"p-2\">12월 초순</td>\n      <td class=\"p-2\">성적표 배부 (표준점수, 백분위, 등급)</td>\n    </tr>\n    <tr class=\"border-b border-stone-100\">\n      <td class=\"p-2 font-semibold\">정시 원서접수</td>\n      <td class=\"p-2\">12월 말 ~ 1월 초</td>\n      <td class=\"p-2 text-indigo-600 font-bold\">군별 1회 (가/나/다 총 3회)</td>\n    </tr>\n    <tr>\n      <td class=\"p-2 font-semibold\">추가모집</td>\n      <td class=\"p-2\">2월 하순</td>\n      <td class=\"p-2 text-emerald-600 font-bold\">미등록 결원 발생 대학</td>\n    </tr>\n  </tbody>\n</table>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-suneung-timeline",
@@ -297,7 +714,8 @@
         "9월 모평: 수시 원서접수 직전 최종 실력 점검 및 수시 최저 예측 지표"
       ],
       "content": "<h3>평가원 모의평가의 의미와 수능 연계성</h3>\n<p>한국교육과정평가원이 주관하는 6월과 9월 모의평가는 당해 연도 수능의 난이도와 신유형 출제 경향을 가늠할 수 있는 가장 신뢰성 높은 척도입니다. 특히 N수생이 대거 유입되므로 자신의 객관적인 전국 백분위 위치를 확인하고 수시 지원 범위를 확정하는 기준이 됩니다.</p>",
-      "officialUrl": "https://www.suneung.re.kr"
+      "officialUrl": "https://www.suneung.re.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-susi-jungsi-ratio",
@@ -316,7 +734,8 @@
         "수시 학생부위주전형(교과+종합)이 전체의 86.1% 차지"
       ],
       "content": "<h3>수도권 vs 비수도권 전형 비율의 차이</h3>\n<p>전국 통계상으로는 수시 비중이 약 80%에 달하지만, 서울 소재 주요 16개 대학(서울대, 연세대, 고려대, 성균관대 등)은 교육부 방침에 따라 정시 수능위주전형 선발 비율을 40% 이상 유지하고 있습니다. 따라서 상위권 대학 진학을 목표로 한다면 수시와 수능을 모두 준비하는 투트랙 전략이 필수적입니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-additional-recruitment",
@@ -335,7 +754,8 @@
         "의약학계열 및 주요 대학 비인기 학과 결원 발생 시 역전 찬스 활용"
       ],
       "content": "<h3>추가모집 지원 전략과 유의사항</h3>\n<p>추가모집은 정시 합격자 등록 포기로 발생한 결원을 충원하는 전형으로 지원 횟수에 제한이 없습니다. 실시간 경쟁률을 모니터링하며 빠른 원서접수와 등록이 필수적입니다.</p>",
-      "officialUrl": "https://www.kcue.or.kr"
+      "officialUrl": "https://www.kcue.or.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-hakjong-3elements",
@@ -354,7 +774,8 @@
         "공동체역량: 협업과 소통능력, 나눔과 배려, 성실성과 규칙준수, 리더십"
       ],
       "content": "<h3>학생부종합전형 3대 평가요소별 세부 평가 기준</h3>\n<ul>\n  <li><strong>학업역량:</strong> 대학 학업을 충실히 수행할 수 있는 기초 수학 능력. 교과 성적뿐 아니라 교과 수업 내에서의 지적 호기심과 과제 집착력, 탐구 보고서 수준을 종합 평가합니다.</li>\n  <li><strong>진로역량:</strong> 자신의 진로와 적성을 탐색하고 관련 교과목을 적극적으로 이수했는지 여부. 선택과목 개설이 어려운 환경에서도 공동교육과정, 소인수과목을 이수했는지를 긍정적으로 평가합니다.</li>\n  <li><strong>공동체역량:</strong> 학교 구성원으로서 협력하고 배려하는 태도. 동아리, 학급 자치활동, 멘토-멘티 활동을 통해 증명됩니다.</li>\n</ul>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-gyogwa-min-cut",
@@ -373,7 +794,8 @@
         "학교장 추천 인원 제한 및 고교별 배정 인원 사전 확인 필수"
       ],
       "content": "<h3>학생부교과전형의 성공 방정식</h3>\n<p>학생부교과전형은 내신 성적이 당락의 기본이지만, 상위권 대학은 대부분 수능 최저학력기준을 두고 있습니다. 수능최저를 충족하지 못해 탈락하는 지원자가 절반 이상이므로 수능 등급 관리가 최종 합격의 결정적 변수입니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-nonsul-trends",
@@ -392,7 +814,8 @@
         "의약학계열 논술: 극도로 높은 수능최저(3합4, 4합5)와 고난도 수학 문항 통과 필수"
       ],
       "content": "<h3>논술전형 준비 전략</h3>\n<p>논술전형은 학생부 교과 반영 비율이 낮거나 실질 반영력이 미미하여 내신 3~5등급 수험생들이 상위권 대학에 도전할 수 있는 유력한 통로입니다. 매년 5~7월 각 대학에서 실시하는 온라인 모의논술에 반드시 응시하여 채점 기준을 파악해야 합니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-jungsi-gun-analysis",
@@ -412,7 +835,8 @@
         "대학별 수능 환산점수(국·수·영·탐 반영비율 및 변환표준점수) 대입 필수"
       ],
       "content": "<h3>정시 지원의 3군 포트폴리오 원칙</h3>\n<p>정시는 가, 나, 다군 각 1회씩 총 3번만 지원 가능합니다. 가군과 나군 중 하나는 반드시 최초 합격이 보장되는 안정 지원을 하고, 나머지 군에서 소신 및 적정 지원을 배분하는 것이 재수 위험을 방지하는 표준 전략입니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-local-talent-quota",
@@ -431,7 +855,8 @@
         "수도권 대비 합격 내신 및 수능 커트라인이 상대적으로 유리하게 형성"
       ],
       "content": "<h3>지역인재 전형의 기회와 자격 요건</h3>\n<p>'지방대학 및 지역균형인재 육성에 관한 법률' 개정으로 지방 의대 및 약학대학의 지역인재 선발 비율이 법정 의무화되었습니다. 비수도권 소재 학생들에게 의약학계열 진학의 가장 확실한 사다리로 작용하고 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "college"
     },
     {
       "id": "adm-gifted-schools",
@@ -451,7 +876,8 @@
         "의약학계열 진학 시 장학금 회수 및 불이익 규정 엄격 적용"
       ],
       "content": "<h3>영재학교 입학 전형의 3단계 프로세스</h3>\n<p>영재학교는 초중등교육법이 아닌 영재교육진흥법의 적용을 받아 5월에 가장 먼저 고입 전형을 시작합니다. 1단계 학생기록물 평가, 2단계 영재성 및 창의적 문제해결력 검사, 3단계 영재성 다면평가(1박 2일 또는 당일 캠프)로 최종 합격자를 선발합니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "specialhigh"
     },
     {
       "id": "adm-science-high",
@@ -470,7 +896,8 @@
         "2단계: 소집면접 (수학·과학 창의융합 문항 구술 면접)"
       ],
       "content": "<h3>과학고 입학전형 핵심 대비 전략</h3>\n<p>과학고는 전기 고등학교에 해당하며 시도별로 지원 자격이 제한됩니다. 수학과 과학 내신 성취도는 반드시 A등급을 유지해야 하며, 자소서에 기재된 탐구 활동과 실험 보고서에 대해 출석 면담에서 깊이 있는 질문이 이어지므로 완벽한 숙지가 필요합니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "specialhigh"
     },
     {
       "id": "adm-nationwide-jasa",
@@ -490,7 +917,8 @@
         "민사고: 횡성 소재 전인교육, 영어 및 개별 교과 심층 구술면접"
       ],
       "content": "<h3>전국단위 자사고 입시 경쟁력 분석</h3>\n<p>전국단위 자사고는 우수한 교사진과 심화 교육과정 편성 자율권을 바탕으로 매년 서울대 및 의약학계열 진학 실적에서 압도적인 성과를 거두고 있습니다. 1단계 교과 내신에서 동점자가 많기 때문에 2단계 자기주도학습 면접이 실질적인 최종 합격을 결정합니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "specialhigh"
     },
     {
       "id": "adm-foreign-lang-high",
@@ -509,7 +937,8 @@
         "2단계: 자기주도학습 영역 및 인성 영역 면접(40점)"
       ],
       "content": "<h3>외고·국제고 입시와 대입 전망</h3>\n<p>2028 대입 개편에서 문이과 통합형 수능과 내신 5등급제가 도입됨에 따라 외고와 국제고 학생들의 수시 학생부종합전형 및 정시 진학 여건이 한층 개선되었습니다. 깊이 있는 인문·사회·어학적 소양을 기르는 최적의 환경을 제공합니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "specialhigh"
     },
     {
       "id": "adm-high-selection-guide",
@@ -528,7 +957,8 @@
         "대학별 수시·정시 유불리와 통학 거리, 면학 분위기 종합 고려 필수"
       ],
       "content": "<h3>고등학교 선택을 위한 자녀 진단 3대 지표</h3>\n<p>고교 선택은 단순한 명문고 타이틀보다 아이의 성향과 학습 스타일이 학교 분위기와 맞는지 여부가 가장 중요합니다. 스트레스에 취약한 아이가 자사고에 진학해 하위권에 머무를 경우 학습 동기를 잃을 수 있으므로 내신과 수능 모두를 고려한 균형 있는 선택이 요구됩니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "specialhigh"
     },
     {
       "id": "adm-roadmap-elementary",
@@ -547,7 +977,8 @@
         "자기주도 학습 플래너 작성과 스마트폰 미디어 사용 시간 통제 습관 형성"
       ],
       "content": "<h3>초등 학습의 본질: 지치지 않는 학습 체력 만들기</h3>\n<p>초등학교 때 지나친 고난도 선행 학습은 중·고등학교에 진학했을 때 학습 번아웃을 유발합니다. 초등 시기에 가장 중요한 것은 다양한 분야의 양서를 깊이 있게 읽고 스스로 요약하고 질문하는 <strong>'문해력의 기초'</strong>를 탄탄히 다지는 것입니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-roadmap-middle",
@@ -566,7 +997,8 @@
         "중3 2학기: 고1 공통수학·공통영어 기본 개념 1회독 완성 및 고교 최종 결정"
       ],
       "content": "<h3>중학교 시기의 학습 목표와 실전 전략</h3>\n<p>중학교 내신은 절대평가(A등급 90점 이상)이므로 성취도 A를 받는 비율이 20~30%에 달합니다. 중학교 A등급에 안주하지 말고, 고등학교 상대평가 체제에서도 상위권을 유지할 수 있는 심화 문제 해결력을 길러야 합니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-roadmap-high",
@@ -585,7 +1017,8 @@
         "고3: 수시 6장 카드 조합(상향 2, 적정 2, 안정 2) 확정 및 수능 실전 모의훈련"
       ],
       "content": "<h3>고교 3개년 대입 로드맵의 골든타임</h3>\n<p>고등학교에서는 1학년 1학기 첫 중간고사부터 대입 성적표가 시작됩니다. 매 학기 내신에 최선을 다하되, 6월과 9월 평가원 모의고사 성적을 바탕으로 자신이 정시로 갈 수 있는 대학 라인을 냉정히 분석하여 수시 지원 하한선을 정해야 합니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-reading-competency",
@@ -604,7 +1037,8 @@
         "EBSi 연계 수능특강 지문 분석 및 신문 칼럼 요약하기 실천법"
       ],
       "content": "<h3>문해력이 모든 대입 성적을 좌우합니다</h3>\n<p>수능 국어 영역뿐만 아니라 수학의 긴 서술형 문항, 탐구 영역의 복합 도표 해석 문항 모두 문해력에 기반합니다. 어릴 때부터 다양한 분야의 비문학 지문을 정독하고 핵심을 자신의 언어로 요약하는 습관이 최상위권 도약의 밑거름입니다.</p>",
-      "officialUrl": "https://www.ebsi.co.kr"
+      "officialUrl": "https://www.ebsi.co.kr",
+      "categoryId": "curriculum"
     },
     {
       "id": "adm-data-competition-rate",
@@ -623,7 +1057,8 @@
         "수도권 주요 대학 신입생 충원율 99.8% 달성 현황"
       ],
       "content": "<h3>대학알리미 공공데이터 분석 결과</h3>\n<p>공공데이터포털(data.go.kr)과 대학알리미(academyinfo.go.kr)에서 공시한 자료에 따르면, 첨단 반도체·AI 계열 및 보건의료계열 학과의 취업률과 입시 경쟁률이 지속적으로 상승하고 있습니다. 대학 지원 시 해당 학과의 정원 내외 충원율과 전속 교수진 현황을 검토하는 것이 중요합니다.</p>",
-      "officialUrl": "https://www.adiga.kr"
+      "officialUrl": "https://www.adiga.kr",
+      "categoryId": "policy"
     },
     {
       "id": "adm-data-medical-capacity",
@@ -642,7 +1077,8 @@
         "비수도권 지역인재 의무 선발 인원 세부 내역"
       ],
       "content": "<h3>전국 의약학계열 정원 배치 및 분석</h3>\n<p>의약학계열은 최상위권 자연계열 수험생들이 가장 선호하는 모집 단위입니다. 비수도권 대학을 중심으로 지역인재 전형이 대폭 확대되어 지역 소재 고교 졸업자들에게 유리한 기회가 열려 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr"
+      "officialUrl": "https://www.moe.go.kr",
+      "categoryId": "policy"
     },
     {
       "id": "adm-data-high-advancement",
@@ -661,7 +1097,8 @@
         "교육특구 일반고: 수시 학종 및 정시 수능 진학 투트랙 분포"
       ],
       "content": "<h3>고등학교 유형별 진학 실적의 진실</h3>\n<p>학교알리미 공시 데이터를 분석하면 고교 유형별 특징이 명확히 드러납니다. 자사고나 교육특구 일반고의 경우 4년제 대학 진학률 통계에 더해 '기타(재수)' 비율이 40% 안팎으로 높게 나타나는데, 이는 하위권 대학 합격을 포기하고 상위권 목표를 위해 재도전하는 학생이 많기 때문입니다.</p>",
-      "officialUrl": "https://www.schoolinfo.go.kr"
+      "officialUrl": "https://www.schoolinfo.go.kr",
+      "categoryId": "policy"
     }
   ]
 }

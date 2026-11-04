@@ -1924,9 +1924,27 @@
                 </p>
               </div>
 
-              <div class="flex items-center gap-2 self-start sm:self-auto shrink-0 text-xs">
-                <span class="text-slate-500 font-bold">최종 공시 업데이트:</span>
-                <strong class="text-indigo-600 font-black" id="admissions-updated-date">2026.10.29</strong>
+              <!-- 교육부 공식 공시 수집 현황 배지 -->
+              <div class="bg-white/95 backdrop-blur border border-indigo-200/90 rounded-2xl px-3.5 py-2 shadow-sm text-xs space-y-1 self-start sm:self-auto shrink-0">
+                <div class="flex items-center justify-between gap-3">
+                  <span class="flex items-center gap-1.5 font-black text-slate-800 text-[11px]">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                    </span>
+                    <span>교육부 공식 공시 수집 현황</span>
+                  </span>
+                  <span class="text-[10px] font-extrabold px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-md">
+                    업데이트: <span id="admissions-updated-date">2026.11.04</span>
+                  </span>
+                </div>
+                <div class="flex items-center gap-2 text-[11px] text-slate-600 font-medium flex-wrap">
+                  <span>오늘 수집: <strong id="admissions-stat-new" class="font-black text-rose-600">+20</strong>건</span>
+                  <span class="text-slate-300">|</span>
+                  <span>공식 공시: <strong id="admissions-stat-total" class="font-black text-indigo-600">51</strong>건</span>
+                  <span class="text-slate-300">|</span>
+                  <span>출처: <strong class="font-bold text-slate-800">교육부·대교협·평가원</strong></span>
+                </div>
               </div>
             </div>
 
