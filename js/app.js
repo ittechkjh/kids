@@ -4367,7 +4367,7 @@ class DodamCommunityApp {
         <button
           type="button"
           onclick="app.setAdmissionsCategory('${cat.id}')"
-          class="px-3.5 py-1.5 rounded-full text-xs font-extrabold whitespace-nowrap transition border shrink-0 ${
+          class="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-bold whitespace-nowrap transition border shrink-0 ${
             active
               ? 'bg-indigo-600 text-white border-indigo-600 shadow-sm'
               : 'bg-white text-slate-700 border-slate-200 hover:border-slate-400 hover:bg-slate-50'
