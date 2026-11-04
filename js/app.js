@@ -4117,7 +4117,7 @@ class DodamCommunityApp {
       <button
         type="button"
         onclick="app.searchApartmentDistrict('${p.name}')"
-        class="px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-200 text-slate-700 font-extrabold text-xs whitespace-nowrap transition cursor-pointer"
+        class="px-2 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-200 text-slate-700 font-extrabold text-[11px] whitespace-nowrap transition cursor-pointer"
       >
         ${p.label}
       </button>
