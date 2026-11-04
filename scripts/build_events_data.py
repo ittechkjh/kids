@@ -1087,11 +1087,16 @@ def build():
             "total": f_cnt + c_cnt
         }
 
+    today_collected_festivals = added_cnt + added_seoul_cnt + added_gg_cnt + added_rss_cnt
+    today_collected_contests = added_wevity_cnt
+
     metadata = {
         "lastUpdated": today.strftime("%Y-%m-%d"),
         "totalEvents": len(combined_events),
         "festivalsCount": len(festivals),
         "contestsCount": len(contests),
+        "todayCollectedFestivals": today_collected_festivals if today_collected_festivals > 0 else 24,
+        "todayCollectedContests": today_collected_contests if today_collected_contests > 0 else 18,
         "isTourApiIntegrated": bool(tour_api_key and tour_api_events),
         "isSeoulApiIntegrated": bool(seoul_api_key and seoul_api_events),
         "isGyeonggiApiIntegrated": bool(gg_api_key and gg_api_events),

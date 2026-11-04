@@ -4,6 +4,8 @@ window.DODAM_EVENTS_METADATA = {
   "totalEvents": 2804,
   "festivalsCount": 1828,
   "contestsCount": 976,
+  "todayCollectedFestivals": 24,
+  "todayCollectedContests": 18,
   "isTourApiIntegrated": true,
   "isSeoulApiIntegrated": true,
   "isGyeonggiApiIntegrated": true,

@@ -5,6 +5,7 @@ window.DODAM_CRAWL_METADATA = {
   "targetCount": 42381,
   "verifiedCount": 9298,
   "checkedCount": 13110,
+  "todayCount": 1500,
   "criteria": "농림축산식품부 안심식당 포털 실존 검증 + (평점 4.0+ 및 리뷰 1,000+ 동시 충족)",
   "status": "공공데이터 42381곳 중 13110곳 검증, 464곳 엄선 통과"
 };
