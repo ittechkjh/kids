@@ -698,7 +698,8 @@ class DodamCommunityApp {
     }
 
     try {
-      window.Kakao.Auth.login({
+      if (window.Kakao.Auth && typeof window.Kakao.Auth.login === 'function') {
+        window.Kakao.Auth.login({
         scope: 'profile_nickname,profile_image',
         success: (authObj) => {
           window.Kakao.API.request({
@@ -752,6 +753,12 @@ class DodamCommunityApp {
           }
         }
       });
+      } else if (window.Kakao.Auth && typeof window.Kakao.Auth.authorize === 'function') {
+        const redirectUri = window.location.origin + window.location.pathname;
+        window.Kakao.Auth.authorize({ redirectUri: redirectUri });
+      } else {
+        this.showToast('⚠️ 카카오 인증 메서드를 찾을 수 없습니다. 다시 시도해주세요.');
+      }
     } catch (e) {
       console.error('Kakao login error:', e);
       this.showToast('⚠️ 카카오 로그인 창을 띄울 수 없습니다: ' + e.message);
