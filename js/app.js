@@ -700,7 +700,6 @@ class DodamCommunityApp {
     try {
       if (window.Kakao.Auth && typeof window.Kakao.Auth.login === 'function') {
         window.Kakao.Auth.login({
-        scope: 'profile_nickname,profile_image',
         success: (authObj) => {
           window.Kakao.API.request({
             url: '/v2/user/me',
