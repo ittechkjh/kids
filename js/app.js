@@ -198,6 +198,9 @@ class DodamCommunityApp {
     this.renderUpdateBadges();
     this.renderAuthHeader();
     this.initFirebaseSync();
+    this.initKakaoSdk();
+    this.initNaverSdk();
+    this.initOAuthListeners();
     // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
     const initHash = (window.location.hash || '').replace('#', '');
     if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'].includes(initHash)) {
@@ -438,12 +441,18 @@ class DodamCommunityApp {
         <!-- 1행: 프로필 요약 & 등급 -->
         <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div class="flex items-center gap-3">
-            <div class="w-12 h-12 rounded-2xl coral-badge-gradient text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
-              ${(this.profile.nickname || '도').slice(0, 1)}
-            </div>
+            ${this.profile.profileImage ? `
+              <img src="${this.profile.profileImage}" alt="프로필" class="w-12 h-12 rounded-2xl object-cover shadow-sm shrink-0 border-2 border-amber-300">
+            ` : `
+              <div class="w-12 h-12 rounded-2xl coral-badge-gradient text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
+                ${(this.profile.nickname || '도').slice(0, 1)}
+              </div>
+            `}
             <div>
               <div class="flex items-center gap-2 flex-wrap">
                 <span class="font-black text-sm text-slate-900">${this.profile.nickname}</span>
+                ${this.currentUser?.provider === 'kakao' ? '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black bg-[#FEE500] text-[#191919] border border-[#E6CF00]"><i class="fa-solid fa-comment text-[9px]"></i>카카오 인증</span>' : ''}
+                ${this.currentUser?.provider === 'naver' ? '<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-black bg-[#03C75A] text-white"><span class="font-black text-[9px]">N</span>네이버 인증</span>' : ''}
                 <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${lvl.badgeClass}">${lvl.name}</span>
                 <span class="text-xs font-bold text-slate-400">· ${this.profile.region}</span>
               </div>
@@ -522,15 +531,140 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 카카오 & 네이버 소셜 로그인 연동
+  // 카카오 & 네이버 정식 OAuth 2.0 SDK 연동
   // ==========================================
-  loginWithKakao() {
-    const nick = this.profile.nickname || '카카오도담맘';
+  initKakaoSdk() {
+    const kakaoKey = window.DODAM_SOCIAL_CONFIG?.kakaoJavascriptKey;
+    if (window.Kakao && kakaoKey && !window.Kakao.isInitialized()) {
+      try {
+        window.Kakao.init(kakaoKey);
+        console.log('[Kakao SDK] 정식 SDK 초기화 완료:', window.Kakao.isInitialized());
+      } catch (e) {
+        console.warn('[Kakao SDK] 초기화 예외:', e);
+      }
+    }
+  }
+
+  initNaverSdk() {
+    const clientId = window.DODAM_SOCIAL_CONFIG?.naverClientId;
+    if (window.naver && window.naver.LoginWithNaverId && clientId) {
+      try {
+        const callbackUrl = window.DODAM_SOCIAL_CONFIG.naverCallbackUrl || (window.location.origin + window.location.pathname);
+        this.naverLogin = new window.naver.LoginWithNaverId({
+          clientId: clientId,
+          callbackUrl: callbackUrl,
+          isPopup: true,
+          loginButton: { color: "green", type: 1, height: 40 }
+        });
+        this.naverLogin.init();
+        console.log('[Naver SDK] 정식 SDK 초기화 완료');
+      } catch (e) {
+        console.warn('[Naver SDK] 초기화 예외:', e);
+      }
+    }
+  }
+
+  initOAuthListeners() {
+    // 팝업 통신 수신 (Naver 또는 외부 OAuth callback)
+    window.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'NAVER_OAUTH_TOKEN' && e.data.token) {
+        this.fetchNaverProfile(e.data.token);
+      }
+    });
+
+    // 현재 창 자체가 Naver OAuth redirect 또는 팝업 콜백으로 열린 경우
+    if (window.location.hash && window.location.hash.includes('access_token')) {
+      const hash = window.location.hash.substring(1);
+      const params = new URLSearchParams(hash);
+      const token = params.get('access_token');
+      if (token) {
+        if (window.opener && !window.opener.closed) {
+          try {
+            window.opener.postMessage({ type: 'NAVER_OAUTH_TOKEN', token: token }, '*');
+            window.close();
+            return;
+          } catch (e) {}
+        }
+        // 단독 창 리다이렉트인 경우
+        this.fetchNaverProfile(token);
+        history.replaceState(null, null, window.location.pathname + window.location.search);
+      }
+    }
+  }
+
+  openSocialConfigModal(provider = 'kakao') {
+    this.closeLoginModal();
+    this.pendingSocialProvider = provider;
+    const kakaoInput = document.getElementById('cfg-kakao-key');
+    if (kakaoInput) kakaoInput.value = window.DODAM_SOCIAL_CONFIG?.kakaoJavascriptKey || '';
+    const naverInput = document.getElementById('cfg-naver-id');
+    if (naverInput) naverInput.value = window.DODAM_SOCIAL_CONFIG?.naverClientId || '';
+
+    const btnText = document.getElementById('cfg-submit-btn-text');
+    if (btnText) {
+      btnText.textContent = provider === 'kakao' ? '키 저장 및 실제 카카오 인증 시작' : '키 저장 및 실제 네이버 인증 시작';
+    }
+
+    const modal = document.getElementById('social-config-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeSocialConfigModal() {
+    const modal = document.getElementById('social-config-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  saveSocialKeysAndLogin() {
+    const kakaoKey = (document.getElementById('cfg-kakao-key')?.value || '').trim();
+    const naverId = (document.getElementById('cfg-naver-id')?.value || '').trim();
+
+    if (!window.DODAM_SOCIAL_CONFIG) window.DODAM_SOCIAL_CONFIG = {};
+    if (kakaoKey) window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey = kakaoKey;
+    if (naverId) window.DODAM_SOCIAL_CONFIG.naverClientId = naverId;
+
+    try {
+      localStorage.setItem('dodam_social_custom_keys', JSON.stringify({
+        kakaoJavascriptKey: window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey || '',
+        naverClientId: window.DODAM_SOCIAL_CONFIG.naverClientId || ''
+      }));
+    } catch {}
+
+    this.initKakaoSdk();
+    this.initNaverSdk();
+    this.closeSocialConfigModal();
+
+    if (this.pendingSocialProvider === 'kakao') {
+      if (kakaoKey) {
+        this.loginWithKakao();
+      } else {
+        this.showToast('⚠️ 카카오 JavaScript 키가 입력되지 않았습니다.');
+      }
+    } else if (this.pendingSocialProvider === 'naver') {
+      if (naverId) {
+        this.loginWithNaver();
+      } else {
+        this.showToast('⚠️ 네이버 Client ID가 입력되지 않았습니다.');
+      }
+    } else {
+      this.showToast('💾 소셜 API 키가 성공적으로 저장되었습니다.');
+    }
+  }
+
+  continueWithDemoLogin() {
+    const provider = this.pendingSocialProvider || 'kakao';
+    this.closeSocialConfigModal();
+    this.loginWithMockDemo(provider);
+  }
+
+  loginWithMockDemo(provider = 'kakao') {
+    const isKakao = provider === 'kakao';
+    const nick = this.profile.nickname || (isKakao ? '카카오체험맘' : '네이버체험맘');
     this.currentUser = {
-      id: 'kakao-' + Date.now(),
-      username: 'kakao_' + Math.floor(Math.random() * 9000 + 1000),
+      id: `${provider}-demo-` + Date.now(),
+      username: `${provider}_demo`,
       nickname: nick,
-      provider: 'kakao',
+      provider: provider,
+      isDemo: true,
       role: 'member'
     };
     try {
@@ -540,33 +674,156 @@ class DodamCommunityApp {
     this.closeLoginModal();
     this.renderAuthHeader();
     this.renderProfileWidget();
-    this.showToast(`🟡 카카오 계정으로 간편 로그인되었습니다! 환영합니다, ${nick}님!`);
+    this.showToast(`🧪 [체험 모드] ${isKakao ? '카카오' : '네이버'} 회원으로 시작합니다. 정식 API 키를 등록하면 실제 OAuth 인증 팝업이 작동합니다.`);
 
     if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
       setTimeout(() => this.openProfileModal(), 500);
     }
   }
 
-  loginWithNaver() {
-    const nick = this.profile.nickname || '네이버도담맘';
-    this.currentUser = {
-      id: 'naver-' + Date.now(),
-      username: 'naver_' + Math.floor(Math.random() * 9000 + 1000),
-      nickname: nick,
-      provider: 'naver',
-      role: 'member'
-    };
+  loginWithKakao() {
+    const kakaoKey = window.DODAM_SOCIAL_CONFIG?.kakaoJavascriptKey;
+    if (!kakaoKey) {
+      this.openSocialConfigModal('kakao');
+      this.showToast('ℹ️ 실제 카카오 인증창을 띄우려면 카카오 개발자 JavaScript 키가 필요합니다.');
+      return;
+    }
+
+    this.initKakaoSdk();
+
+    if (!window.Kakao || !window.Kakao.isInitialized()) {
+      this.showToast('⚠️ 카카오 SDK 초기화에 실패했습니다. 키를 확인해주세요.');
+      this.openSocialConfigModal('kakao');
+      return;
+    }
+
     try {
-      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-    } catch {}
+      window.Kakao.Auth.login({
+        scope: 'profile_nickname,profile_image',
+        success: (authObj) => {
+          window.Kakao.API.request({
+            url: '/v2/user/me',
+            success: (res) => {
+              const kakaoAccount = res.kakao_account || {};
+              const kakaoProfile = kakaoAccount.profile || {};
+              const realNick = kakaoProfile.nickname || res.properties?.nickname || '카카오회원';
+              const realPhoto = kakaoProfile.profile_image_url || res.properties?.profile_image || '';
 
-    this.closeLoginModal();
-    this.renderAuthHeader();
-    this.renderProfileWidget();
-    this.showToast(`🟢 네이버 계정으로 간편 로그인되었습니다! 환영합니다, ${nick}님!`);
+              this.currentUser = {
+                id: 'kakao_' + res.id,
+                username: 'kakao_' + res.id,
+                nickname: realNick,
+                provider: 'kakao',
+                profileImage: realPhoto,
+                role: 'member',
+                authenticated: true
+              };
 
-    if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
-      setTimeout(() => this.openProfileModal(), 500);
+              this.profile.nickname = realNick;
+              if (realPhoto) this.profile.profileImage = realPhoto;
+              this.profile.provider = 'kakao';
+
+              try {
+                localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+                this.saveProfileData();
+              } catch {}
+
+              this.closeLoginModal();
+              this.renderAuthHeader();
+              this.renderProfileWidget();
+              this.showToast(`🟡 카카오 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
+
+              if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
+                setTimeout(() => this.openProfileModal(), 500);
+              }
+            },
+            fail: (err) => {
+              console.error('Kakao profile request failed:', err);
+              this.showToast('⚠️ 카카오 회원정보 요청 실패: ' + (err.msg || JSON.stringify(err)));
+            }
+          });
+        },
+        fail: (err) => {
+          console.error('Kakao auth login failed:', err);
+          if (err.error === 'access_denied') {
+            this.showToast('카카오 로그인이 취소되었습니다.');
+          } else {
+            this.showToast('⚠️ 카카오 로그인 실패: ' + (err.error_description || err.msg || '인증 실패'));
+          }
+        }
+      });
+    } catch (e) {
+      console.error('Kakao login error:', e);
+      this.showToast('⚠️ 카카오 로그인 창을 띄울 수 없습니다: ' + e.message);
+    }
+  }
+
+  loginWithNaver() {
+    const clientId = window.DODAM_SOCIAL_CONFIG?.naverClientId;
+    if (!clientId) {
+      this.openSocialConfigModal('naver');
+      this.showToast('ℹ️ 실제 네이버 인증창을 띄우려면 네이버 Client ID가 필요합니다.');
+      return;
+    }
+
+    try {
+      const callbackUrl = encodeURIComponent(window.DODAM_SOCIAL_CONFIG.naverCallbackUrl || (window.location.origin + window.location.pathname));
+      const state = Math.random().toString(36).substring(2, 15);
+      sessionStorage.setItem('naver_oauth_state', state);
+
+      const naverAuthUrl = `https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}`;
+
+      const width = 500;
+      const height = 650;
+      const left = window.screenX + (window.outerWidth - width) / 2;
+      const top = window.screenY + (window.outerHeight - height) / 2;
+
+      window.open(naverAuthUrl, 'naverLoginPopup', `width=${width},height=${height},left=${left},top=${top},scrollbars=yes`);
+    } catch (e) {
+      console.error('Naver login popup error:', e);
+      this.showToast('⚠️ 네이버 로그인 팝업 호출 실패: ' + e.message);
+    }
+  }
+
+  fetchNaverProfile(accessToken) {
+    if (!accessToken) return;
+    if (this.naverLogin) {
+      this.naverLogin.getLoginStatus((status) => {
+        if (status) {
+          const user = this.naverLogin.user;
+          const realNick = user.getNickName() || user.getName() || '네이버회원';
+          const realPhoto = user.getProfileImage() || '';
+          const id = user.getId() || ('naver_' + Date.now());
+
+          this.currentUser = {
+            id: 'naver_' + id,
+            username: 'naver_' + id,
+            nickname: realNick,
+            provider: 'naver',
+            profileImage: realPhoto,
+            role: 'member',
+            authenticated: true
+          };
+
+          this.profile.nickname = realNick;
+          if (realPhoto) this.profile.profileImage = realPhoto;
+          this.profile.provider = 'naver';
+
+          try {
+            localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+            this.saveProfileData();
+          } catch {}
+
+          this.closeLoginModal();
+          this.renderAuthHeader();
+          this.renderProfileWidget();
+          this.showToast(`🟢 네이버 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
+
+          if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
+            setTimeout(() => this.openProfileModal(), 500);
+          }
+        }
+      });
     }
   }
 
