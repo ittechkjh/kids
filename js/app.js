@@ -837,7 +837,7 @@ class DodamCommunityApp {
   // 프로필 모달 및 탭 컨트롤
   // ==========================================
   setProfileTab(tabName) {
-    const tabs = ['info', 'growth', 'level'];
+    const tabs = ['info', 'growth', 'level', 'account'];
     tabs.forEach((t) => {
       const el = document.getElementById(`prof-tab-${t}`);
       const btn = document.getElementById(`tab-prof-${t}-btn`);
@@ -867,6 +867,7 @@ class DodamCommunityApp {
     this.renderInterestChips();
     this.renderGrowthSection();
     this.renderLevelSection();
+    this.renderAccountSection();
 
     this.setProfileTab(targetTab);
     const modal = document.getElementById('profile-modal');
@@ -876,6 +877,215 @@ class DodamCommunityApp {
   closeProfileModal() {
     const modal = document.getElementById('profile-modal');
     if (modal) modal.classList.add('hidden');
+  }
+
+  // ==========================================
+  // 회원 계정 정보 수정 및 탈퇴 관리
+  // ==========================================
+  renderAccountSection() {
+    const badgeEl = document.getElementById('acc-provider-badge');
+    const userEl = document.getElementById('acc-username-display');
+    const roleEl = document.getElementById('acc-role-display');
+    const nickInput = document.getElementById('acc-nickname-input');
+    const pwSection = document.getElementById('acc-password-section');
+    const socialSection = document.getElementById('acc-social-section');
+
+    const cur = this.currentUser;
+    const isSocial = cur && (cur.provider === 'kakao' || cur.provider === 'naver');
+    const isGuest = !cur || cur.provider === 'guest';
+    const isAdmin = cur && (cur.role === 'admin' || cur.username === 'admin');
+
+    if (nickInput) {
+      nickInput.value = this.profile.nickname || (cur ? (cur.nickname || cur.username) : '판교도담맘');
+    }
+
+    if (badgeEl) {
+      if (cur?.provider === 'kakao') {
+        badgeEl.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#FEE500] text-[#191919] border border-[#E6CF00]';
+        badgeEl.innerHTML = '<i class="fa-solid fa-comment text-[9px]"></i><span>카카오 공식 연동 회원</span>';
+      } else if (cur?.provider === 'naver') {
+        badgeEl.className = 'inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-[#03C75A] text-white';
+        badgeEl.innerHTML = '<span class="font-black text-[9px]">N</span><span>네이버 공식 연동 회원</span>';
+      } else if (isAdmin) {
+        badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-black bg-purple-600 text-white';
+        badgeEl.textContent = '🛡️ 최고 관리자 계정';
+      } else if (isGuest) {
+        badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-black bg-slate-200 text-slate-700';
+        badgeEl.textContent = '🚀 가입 없는 게스트 모드';
+      } else {
+        badgeEl.className = 'px-2.5 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-800';
+        badgeEl.textContent = '🔑 일반 등록 회원';
+      }
+    }
+
+    if (userEl) {
+      userEl.textContent = cur ? (cur.username || cur.id) : '(게스트 세션)';
+    }
+
+    if (roleEl) {
+      roleEl.textContent = isAdmin ? '최고 관리자' : (isGuest ? '익명 게스트' : '정회원');
+    }
+
+    if (pwSection) {
+      pwSection.classList.toggle('hidden', isSocial || isGuest);
+    }
+
+    if (socialSection) {
+      socialSection.classList.toggle('hidden', !isSocial);
+    }
+  }
+
+  updateAccountNickname(e) {
+    if (e) e.preventDefault();
+    const input = document.getElementById('acc-nickname-input');
+    const newNick = (input?.value || '').trim();
+
+    if (!newNick || newNick.length < 2 || newNick.length > 20) {
+      this.showToast('⚠️ 닉네임은 2자 이상 20자 이하로 입력해주세요.');
+      return;
+    }
+
+    this.profile.nickname = newNick;
+    if (this.currentUser) {
+      this.currentUser.nickname = newNick;
+      try {
+        localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+      } catch {}
+      const uIdx = this.users.findIndex(u => u.id === this.currentUser.id || u.username === this.currentUser.username);
+      if (uIdx >= 0) {
+        this.users[uIdx].nickname = newNick;
+        this.saveUsers();
+      }
+    }
+
+    this.saveProfileData();
+    const profNickInput = document.getElementById('prof-nickname');
+    if (profNickInput) profNickInput.value = newNick;
+
+    this.renderAuthHeader();
+    this.renderProfileWidget();
+    this.showToast(`✅ 활동 닉네임이 '${newNick}'(으)로 변경되었습니다!`);
+  }
+
+  updateAccountPassword(e) {
+    if (e) e.preventDefault();
+    const pw1 = document.getElementById('acc-new-password')?.value.trim();
+    const pw2 = document.getElementById('acc-confirm-password')?.value.trim();
+
+    if (!pw1 || pw1.length < 4) {
+      this.showToast('⚠️ 비밀번호는 최소 4자 이상 입력해주세요.');
+      return;
+    }
+
+    if (pw1 !== pw2) {
+      this.showToast('⚠️ 새 비밀번호가 일치하지 않습니다. 다시 확인해주세요.');
+      return;
+    }
+
+    if (this.currentUser) {
+      this.currentUser.passwordHash = pw1;
+      try {
+        localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+      } catch {}
+
+      const uIdx = this.users.findIndex(u => u.id === this.currentUser.id || u.username === this.currentUser.username);
+      if (uIdx >= 0) {
+        this.users[uIdx].passwordHash = pw1;
+        this.saveUsers();
+      }
+    }
+
+    const p1 = document.getElementById('acc-new-password');
+    const p2 = document.getElementById('acc-confirm-password');
+    if (p1) p1.value = '';
+    if (p2) p2.value = '';
+
+    this.showToast('🔒 비밀번호가 성공적으로 변경되었습니다!');
+  }
+
+  resyncSocialProfile() {
+    if (this.currentUser?.provider === 'kakao' && window.Kakao && window.Kakao.isInitialized()) {
+      try {
+        window.Kakao.API.request({
+          url: '/v2/user/me',
+          success: (res) => {
+            const kakaoAccount = res.kakao_account || {};
+            const kakaoProfile = kakaoAccount.profile || {};
+            const realNick = kakaoProfile.nickname || res.properties?.nickname;
+            const realPhoto = kakaoProfile.profile_image_url || res.properties?.profile_image;
+
+            if (realNick) {
+              this.currentUser.nickname = realNick;
+              this.profile.nickname = realNick;
+            }
+            if (realPhoto) {
+              this.currentUser.profileImage = realPhoto;
+              this.profile.profileImage = realPhoto;
+            }
+            try {
+              localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+            } catch {}
+            this.saveProfileData();
+            this.renderAccountSection();
+            this.renderAuthHeader();
+            this.renderProfileWidget();
+            this.showToast('🟡 카카오 계정의 최신 프로필 정보로 동기화되었습니다.');
+          },
+          fail: () => {
+            this.showToast('카카오 계정 동기화에 실패했습니다. 다시 로그인해주세요.');
+          }
+        });
+      } catch (e) {
+        this.showToast('카카오 동기화 중 오류가 발생했습니다.');
+      }
+    } else {
+      this.showToast('현재 연결된 소셜 계정의 최신 정보가 유지되고 있습니다.');
+    }
+  }
+
+  confirmAccountWithdrawal() {
+    const confirm1 = window.confirm(
+      '⚠️ 정말로 도담도담 회원 탈퇴를 진행하시겠습니까?\n\n' +
+      '탈퇴 시 작성하신 [아이 성장 다이어리], [활동 점수 및 등급], [스크랩한 공고] 및 모든 개인 프로필 정보가 즉시 영구 삭제되며 다시 복구할 수 없습니다.'
+    );
+    if (!confirm1) return;
+
+    const confirm2 = window.confirm(
+      '🚨 최종 확인: 탈퇴 후에는 이전 활동 내역을 절대 되돌릴 수 없습니다.\n\n정말로 모든 데이터를 삭제하고 탈퇴하시겠습니까?'
+    );
+    if (!confirm2) return;
+
+    // 카카오 연동 해제 시도
+    if (this.currentUser?.provider === 'kakao' && window.Kakao && window.Kakao.API) {
+      try {
+        window.Kakao.API.request({ url: '/v1/user/unlink' });
+      } catch (e) {}
+    }
+
+    // 유저 목록에서 삭제
+    if (this.currentUser) {
+      const curId = this.currentUser.id;
+      const curUser = this.currentUser.username;
+      this.users = this.users.filter(u => u.id !== curId && u.username !== curUser);
+      this.saveUsers();
+    }
+
+    // 로컬 스토리지 데이터 초기화
+    try {
+      localStorage.removeItem(this.authKey);
+      localStorage.removeItem('dodam_user_profile');
+      localStorage.removeItem('dodam_growth_records');
+      localStorage.removeItem('dodam_checked_in_date');
+    } catch {}
+
+    // 상태 리셋
+    this.currentUser = null;
+    this.profile = this.getDefaultProfile();
+
+    this.closeProfileModal();
+    this.renderAuthHeader();
+    this.renderProfileWidget();
+    this.showToast('👋 회원 탈퇴가 안전하게 완료되었습니다. 그동안 도담도담을 이용해주셔서 진심으로 감사드립니다.');
   }
 
   renderInterestChips() {

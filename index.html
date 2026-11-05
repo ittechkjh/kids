@@ -2396,8 +2396,8 @@
         </button>
       </div>
 
-      <!-- 3대 탭: [아이&부모 프로필] / [성장 다이어리] / [활동점수 & 등업] -->
-      <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs font-bold shrink-0">
+      <!-- 4대 탭: [아이&부모 프로필] / [성장 다이어리] / [활동점수 & 등업] / [계정·탈퇴 관리] -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs font-bold shrink-0">
         <button type="button" onclick="app.setProfileTab('info')" id="tab-prof-info-btn" class="py-2 rounded-xl bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-user-pen text-rose-500"></i>
           <span>아이&부모 프로필</span>
@@ -2409,6 +2409,10 @@
         <button type="button" onclick="app.setProfileTab('level')" id="tab-prof-level-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-award text-amber-500"></i>
           <span>활동점수·등업</span>
+        </button>
+        <button type="button" onclick="app.setProfileTab('account')" id="tab-prof-account-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-user-gear text-slate-600"></i>
+          <span>계정·탈퇴 관리</span>
         </button>
       </div>
 
@@ -2633,6 +2637,140 @@
 
             <div class="p-2.5 rounded-xl bg-stone-50 border border-stone-200/60 text-[10px] text-slate-500 space-y-0.5">
               <div>💡 <strong>포인트 획득 방법:</strong> 매일 출석체크(+50P), 글 작성(+30P), 성장기록 작성(+10P), 댓글(+10P), 도움 채택받기(+20P & 도움 +1회)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- [TAB 4] 계정 정보 수정 & 회원 탈퇴 -->
+        <div id="prof-tab-account" class="hidden space-y-3.5">
+          <!-- 계정 기본 상태 카드 -->
+          <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-id-card text-indigo-500"></i>
+                <span>내 로그인 계정 정보</span>
+              </span>
+              <span id="acc-provider-badge" class="px-2.5 py-0.5 rounded-full text-[10px] font-black bg-slate-200 text-slate-700">일반 회원</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+              <div class="bg-white p-2.5 rounded-xl border border-stone-200/80">
+                <span class="text-[10px] text-slate-400 font-bold block">로그인 아이디</span>
+                <span id="acc-username-display" class="font-extrabold text-slate-800 text-xs">user_123</span>
+              </div>
+              <div class="bg-white p-2.5 rounded-xl border border-stone-200/80">
+                <span class="text-[10px] text-slate-400 font-bold block">계정 권한</span>
+                <span id="acc-role-display" class="font-extrabold text-slate-800 text-xs">일반 회원</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 로그인 정보 수정: 닉네임 변경 -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-4 space-y-3">
+            <div class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+              <i class="fa-solid fa-user-pen text-rose-500"></i>
+              <span>활동 닉네임 변경</span>
+            </div>
+            <form onsubmit="app.updateAccountNickname(event)" class="space-y-2">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-600 mb-1">새로운 닉네임</label>
+                <div class="flex gap-2">
+                  <input
+                    id="acc-nickname-input"
+                    type="text"
+                    required
+                    placeholder="사용할 닉네임 입력 (2~12자)"
+                    class="flex-1 px-3 py-2 border border-stone-300 rounded-xl text-xs font-bold focus:border-rose-400 focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    class="px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0"
+                  >
+                    닉네임 변경
+                  </button>
+                </div>
+              </div>
+              <p class="text-[10px] text-slate-400 font-medium">* 닉네임을 변경하면 작성하신 글, 댓글 및 프로필 화면에 즉시 적용됩니다.</p>
+            </form>
+          </div>
+
+          <!-- 로그인 정보 수정: 비밀번호 변경 (일반 계정 전용) -->
+          <div id="acc-password-section" class="bg-white border border-stone-200 rounded-2xl p-4 space-y-3">
+            <div class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+              <i class="fa-solid fa-key text-amber-500"></i>
+              <span>비밀번호 변경</span>
+            </div>
+            <form onsubmit="app.updateAccountPassword(event)" class="space-y-2.5">
+              <div>
+                <label class="block text-[11px] font-bold text-slate-600 mb-1">새 비밀번호</label>
+                <input
+                  id="acc-new-password"
+                  type="password"
+                  required
+                  placeholder="새로운 비밀번호 입력"
+                  class="w-full px-3 py-2 border border-stone-300 rounded-xl text-xs focus:border-amber-400 focus:outline-none"
+                />
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-slate-600 mb-1">새 비밀번호 확인</label>
+                <input
+                  id="acc-confirm-password"
+                  type="password"
+                  required
+                  placeholder="새로운 비밀번호 다시 입력"
+                  class="w-full px-3 py-2 border border-stone-300 rounded-xl text-xs focus:border-amber-400 focus:outline-none"
+                />
+              </div>
+              <div class="flex justify-end pt-1">
+                <button
+                  type="submit"
+                  class="px-4 py-2 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-black text-xs shadow-2xs transition cursor-pointer"
+                >
+                  비밀번호 변경 완료
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- 소셜 계정 상태 안내 (카카오/네이버 계정일 경우 표시) -->
+          <div id="acc-social-section" class="hidden bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-2.5">
+            <div class="flex items-center justify-between">
+              <span class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+                <span>소셜 공식 계정 연동 보호</span>
+              </span>
+              <button
+                type="button"
+                onclick="app.resyncSocialProfile()"
+                class="px-2.5 py-1 rounded-lg bg-white border border-stone-200 hover:bg-stone-50 text-[11px] font-bold text-slate-600 shadow-2xs transition cursor-pointer flex items-center gap-1"
+              >
+                <i class="fa-solid fa-arrows-rotate text-slate-400 text-[10px]"></i>
+                <span>프로필 재동기화</span>
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed font-medium">
+              카카오/네이버 공식 OAuth 2.0으로 안전하게 로그인되어 비밀번호 없이 간편하게 이용 중입니다.
+            </p>
+          </div>
+
+          <!-- 회원 탈퇴 (Danger Zone) -->
+          <div class="bg-rose-50/50 border border-rose-200 rounded-2xl p-4 space-y-3">
+            <div class="flex items-center gap-2 text-rose-700 font-black text-xs">
+              <i class="fa-solid fa-triangle-exclamation text-rose-500"></i>
+              <span>회원 탈퇴 (계정 및 데이터 영구 삭제)</span>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed font-medium">
+              회원 탈퇴 시 작성하신 <strong>아이 성장 다이어리, 획득한 활동 점수와 등급, 스크랩 공고 및 모든 프로필 정보가 즉시 영구 삭제</strong>되며 다시 복구할 수 없습니다.
+            </p>
+            <div class="flex justify-end pt-1">
+              <button
+                type="button"
+                onclick="app.confirmAccountWithdrawal()"
+                class="px-4 py-2 rounded-xl bg-rose-600 hover:bg-rose-700 text-white font-black text-xs shadow-2xs transition cursor-pointer flex items-center gap-1.5"
+              >
+                <i class="fa-solid fa-user-xmark"></i>
+                <span>도담도담 회원 탈퇴하기</span>
+              </button>
             </div>
           </div>
         </div>
