@@ -362,6 +362,22 @@ class DodamCommunityApp {
   // ==========================================
   // 1. 내 프로필, 아이 성장기록 & 등급/등업 관리
   // ==========================================
+  getDefaultProfile() {
+    return {
+      nickname: '도담맘',
+      babyName: '도담이',
+      months: 24,
+      ageBadge: '24개월 (2세)',
+      gender: 'boy',
+      region: '경기 성남 분당',
+      interests: ['food', 'festivals', 'school', 'policy'],
+      points: 0,
+      helpsCount: 0,
+      checkedInToday: false,
+      growthRecords: []
+    };
+  }
+
   loadProfile() {
     try {
       const raw = localStorage.getItem(this.profileKey);
@@ -1044,47 +1060,47 @@ class DodamCommunityApp {
   }
 
   confirmAccountWithdrawal() {
-    const confirm1 = window.confirm(
+    const ok = window.confirm(
       '⚠️ 정말로 도담도담 회원 탈퇴를 진행하시겠습니까?\n\n' +
       '탈퇴 시 작성하신 [아이 성장 다이어리], [활동 점수 및 등급], [스크랩한 공고] 및 모든 개인 프로필 정보가 즉시 영구 삭제되며 다시 복구할 수 없습니다.'
     );
-    if (!confirm1) return;
+    if (!ok) return;
 
-    const confirm2 = window.confirm(
-      '🚨 최종 확인: 탈퇴 후에는 이전 활동 내역을 절대 되돌릴 수 없습니다.\n\n정말로 모든 데이터를 삭제하고 탈퇴하시겠습니까?'
-    );
-    if (!confirm2) return;
-
-    // 카카오 연동 해제 시도
+    // 1. 카카오 소셜 연동 해제 시도
     if (this.currentUser?.provider === 'kakao' && window.Kakao && window.Kakao.API) {
       try {
         window.Kakao.API.request({ url: '/v1/user/unlink' });
       } catch (e) {}
     }
 
-    // 유저 목록에서 삭제
+    // 2. 등록 유저 목록에서 삭제
     if (this.currentUser) {
       const curId = this.currentUser.id;
       const curUser = this.currentUser.username;
-      this.users = this.users.filter(u => u.id !== curId && u.username !== curUser);
+      this.users = (this.users || []).filter(u => u.id !== curId && u.username !== curUser);
       this.saveUsers();
     }
 
-    // 로컬 스토리지 데이터 초기화
+    // 3. 로컬 스토리지 모든 회원 데이터 삭제
     try {
       localStorage.removeItem(this.authKey);
+      localStorage.removeItem(this.profileKey);
       localStorage.removeItem('dodam_user_profile');
       localStorage.removeItem('dodam_growth_records');
       localStorage.removeItem('dodam_checked_in_date');
-    } catch {}
+      localStorage.removeItem('dodam_scraps_v1');
+    } catch (e) {}
 
-    // 상태 리셋
+    // 4. 상태 리셋
     this.currentUser = null;
     this.profile = this.getDefaultProfile();
+    this.scraps = [];
 
+    // 5. 모달 닫기 및 UI 전체 리프레시
     this.closeProfileModal();
     this.renderAuthHeader();
     this.renderProfileWidget();
+    this.updateScrapBadge();
     this.showToast('👋 회원 탈퇴가 안전하게 완료되었습니다. 그동안 도담도담을 이용해주셔서 진심으로 감사드립니다.');
   }
 
