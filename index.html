@@ -195,6 +195,9 @@
 
         <!-- VIEW 1: 도담 육아 게시판 (네이버 카페 완벽 일체형) -->
         <section id="view-board" class="view-section space-y-4">
+          <!-- 내 육아 프로필 & 아이 성장기록 & 등급 현황 위젯 -->
+          <div id="my-profile-widget"></div>
+
           <!-- 1. 네이버 카페형 상단 헤더 & 카테고리 탭 바 -->
           <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-4 sm:p-5 space-y-3.5">
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-3.5">
@@ -2373,39 +2376,268 @@
   </footer>
 
   <!-- ==========================================
-       MODAL 2: 내 아이 & 부모 프로필 설정 모달
+       MODAL 2: 내 육아 프로필 & 아이 성장기록 & 등업 센터
        ========================================== -->
-  <div id="profile-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
-    <div class="bg-white rounded-3xl max-w-md w-full p-6 shadow-2xl border border-stone-200 space-y-4">
-      <div class="flex items-center justify-between border-b border-stone-100 pb-3">
-        <h3 class="text-base font-black text-slate-900">👶 내 육아 프로필 & 아이 정보 설정</h3>
-        <button onclick="app.closeProfileModal()" class="text-slate-400 hover:text-slate-600"><i class="fa-solid fa-xmark text-lg"></i></button>
+  <div id="profile-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full max-h-[92vh] flex flex-col p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150">
+      <!-- 모달 상단 헤더 -->
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl coral-badge-gradient text-white flex items-center justify-center font-black text-lg shadow-sm">
+            <i class="fa-solid fa-baby"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">내 육아 프로필 & 성장기록</h3>
+            <p class="text-xs text-slate-500 font-medium">아이 정보 설정, 성장 다이어리 및 활동 등급을 관리합니다</p>
+          </div>
+        </div>
+        <button type="button" onclick="app.closeProfileModal()" class="text-slate-400 hover:text-slate-600 transition p-1 cursor-pointer">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
       </div>
 
-      <form onsubmit="app.saveProfile(event)" class="space-y-3 text-xs">
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">부모 닉네임</label>
-          <input id="prof-nickname" type="text" required class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
+      <!-- 3대 탭: [아이&부모 프로필] / [성장 다이어리] / [활동점수 & 등업] -->
+      <div class="grid grid-cols-3 gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs font-bold shrink-0">
+        <button type="button" onclick="app.setProfileTab('info')" id="tab-prof-info-btn" class="py-2 rounded-xl bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-user-pen text-rose-500"></i>
+          <span>아이&부모 프로필</span>
+        </button>
+        <button type="button" onclick="app.setProfileTab('growth')" id="tab-prof-growth-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-ruler-combined text-indigo-500"></i>
+          <span>성장 다이어리</span>
+        </button>
+        <button type="button" onclick="app.setProfileTab('level')" id="tab-prof-level-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-award text-amber-500"></i>
+          <span>활동점수·등업</span>
+        </button>
+      </div>
+
+      <!-- 스크롤 컨텐츠 영역 -->
+      <div class="flex-1 overflow-y-auto space-y-4 pr-1 text-xs">
+        
+        <!-- [TAB 1] 아이 & 부모 정보 입력 -->
+        <div id="prof-tab-info" class="space-y-3.5">
+          <form onsubmit="app.saveProfile(event)" class="space-y-3.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">부모 닉네임</label>
+                <input id="prof-nickname" type="text" required class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold focus:border-rose-400 focus:outline-none" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 mb-1">우리 동네 (거주 지역)</label>
+                <input id="prof-region" type="text" required placeholder="예: 분당·판교, 서울 송파" class="w-full border border-stone-300 rounded-xl px-3 py-2 font-bold focus:border-rose-400 focus:outline-none" />
+              </div>
+            </div>
+
+            <!-- 아이 정보 박스 -->
+            <div class="bg-rose-50/50 border border-rose-200/80 rounded-2xl p-3.5 space-y-3">
+              <div class="flex items-center justify-between">
+                <span class="font-black text-rose-900 flex items-center gap-1.5">
+                  <i class="fa-solid fa-child-reaching text-rose-500"></i>
+                  <span>우리 아이 기본 정보</span>
+                </span>
+                <span class="text-[10px] font-extrabold text-rose-600 bg-rose-100/60 px-2 py-0.5 rounded-full">맞춤 추천에 활용</span>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                <div>
+                  <label class="block font-bold text-slate-700 mb-1">아이 애칭 / 이름</label>
+                  <input id="prof-babyname" type="text" required placeholder="예: 도담이" class="w-full bg-white border border-rose-200 rounded-xl px-3 py-2 font-bold focus:outline-none focus:border-rose-400" />
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-700 mb-1">성별</label>
+                  <select id="prof-gender" class="w-full bg-white border border-rose-200 rounded-xl px-2.5 py-2 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
+                    <option value="boy">👦 왕자님 (남아)</option>
+                    <option value="girl">👧 공주님 (여아)</option>
+                    <option value="pregnant">🤰 출산 준비중 (임신)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block font-bold text-slate-700 mb-1">아이 연령 / 개월수</label>
+                  <select id="prof-months" class="w-full bg-white border border-rose-200 rounded-xl px-2.5 py-2 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
+                    <option value="0">출산 준비중 (임신)</option>
+                    <option value="6">0~6개월 (신생아·영아)</option>
+                    <option value="12">7~12개월 (돌 전 아기)</option>
+                    <option value="24" selected>13~24개월 (돌 이후·2세)</option>
+                    <option value="36">25~36개월 (3세)</option>
+                    <option value="48">37~48개월 (4세)</option>
+                    <option value="60">49~60개월 (5세)</option>
+                    <option value="72">61~72개월 (6세)</option>
+                    <option value="84">7세 (취학 전)</option>
+                    <option value="96">초등 저학년 (1~3학년)</option>
+                    <option value="132">초등 고학년 (4~6학년)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- 관심 주제 선택 칩스 -->
+            <div>
+              <label class="block font-bold text-slate-700 mb-1.5 flex items-center justify-between">
+                <span>관심 육아 주제 (복수 선택)</span>
+                <span class="text-[10px] text-slate-400">선택한 주제의 글과 행사를 우선 추천합니다</span>
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="prof-interests-container">
+                <!-- Rendered dynamically by app -->
+              </div>
+            </div>
+
+            <div class="flex justify-end gap-2 pt-2 border-t border-stone-100">
+              <button type="button" onclick="app.closeProfileModal()" class="px-4 py-2 rounded-xl border border-stone-200 font-bold text-slate-600 hover:bg-stone-50 transition cursor-pointer">닫기</button>
+              <button type="submit" class="px-5 py-2 rounded-xl coral-badge-gradient text-white font-extrabold shadow-sm transition cursor-pointer">프로필 저장하기</button>
+            </div>
+          </form>
         </div>
-        <div>
-          <label class="block font-bold text-slate-700 mb-1">아이 애칭 / 태명</label>
-          <input id="prof-babyname" type="text" required class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
-        </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">아이 개월수 / 나이 표기</label>
-            <input id="prof-agebadge" type="text" required placeholder="예: 11개월 아기" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
+
+        <!-- [TAB 2] 아이 성장 다이어리 (키/몸무게/성장메모) -->
+        <div id="prof-tab-growth" class="hidden space-y-3.5">
+          <!-- 최신 성장 요약 카드 -->
+          <div class="bg-indigo-50/60 border border-indigo-200/80 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <div class="text-[11px] font-extrabold text-indigo-700 flex items-center gap-1.5">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>우리 아이 최근 성장 기록</span>
+              </div>
+              <div class="flex items-baseline gap-3 mt-1">
+                <div>
+                  <span class="text-xs text-slate-500 font-bold">키:</span>
+                  <span id="growth-summary-height" class="text-lg font-black text-slate-900 ml-1">--</span>
+                  <span class="text-xs text-slate-500">cm</span>
+                </div>
+                <div>
+                  <span class="text-xs text-slate-500 font-bold">몸무게:</span>
+                  <span id="growth-summary-weight" class="text-lg font-black text-indigo-600 ml-1">--</span>
+                  <span class="text-xs text-slate-500">kg</span>
+                </div>
+              </div>
+              <p id="growth-summary-memo" class="text-xs text-slate-600 mt-1 italic font-medium">"기록을 등록해보세요"</p>
+            </div>
+            <div class="text-[10px] text-indigo-600 font-extrabold bg-white px-2.5 py-1 rounded-xl border border-indigo-200 self-start sm:self-auto shrink-0 shadow-2xs">
+              성장기록 작성 시 <strong class="text-rose-600">+10P</strong> 적립
+            </div>
           </div>
-          <div>
-            <label class="block font-bold text-slate-700 mb-1">우리 동네</label>
-            <input id="prof-region" type="text" required placeholder="예: 분당·판교" class="w-full border border-stone-300 rounded-xl px-3.5 py-2 font-bold" />
+
+          <!-- 새 성장 기록 추가 폼 -->
+          <form onsubmit="app.addGrowthRecord(event)" class="bg-stone-50 border border-stone-200 rounded-2xl p-3.5 space-y-2.5">
+            <div class="font-extrabold text-slate-800 text-xs flex items-center gap-1.5">
+              <i class="fa-solid fa-plus-circle text-indigo-500"></i>
+              <span>새 성장 기록 작성</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2.5">
+              <div>
+                <label class="block font-bold text-slate-600 text-[11px] mb-1">키 (cm)</label>
+                <input id="input-growth-height" type="number" step="0.1" required placeholder="예: 88.5" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 font-bold focus:outline-none focus:border-indigo-400" />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-600 text-[11px] mb-1">몸무게 (kg)</label>
+                <input id="input-growth-weight" type="number" step="0.1" required placeholder="예: 12.4" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 font-bold focus:outline-none focus:border-indigo-400" />
+              </div>
+            </div>
+            <div>
+              <label class="block font-bold text-slate-600 text-[11px] mb-1">오늘의 성장 메모 / 예방접종</label>
+              <input id="input-growth-memo" type="text" placeholder="예: 영유아 검진 완료, 첫 걸음마 5발자국 뗌!" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 font-medium focus:outline-none focus:border-indigo-400" />
+            </div>
+            <div class="flex justify-end pt-1">
+              <button type="submit" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-sm transition cursor-pointer">
+                + 성장 기록 저장하기 (+10P)
+              </button>
+            </div>
+          </form>
+
+          <!-- 최근 기록 히스토리 목록 -->
+          <div class="space-y-2">
+            <div class="font-black text-slate-700 text-xs flex items-center justify-between">
+              <span>성장 기록 히스토리</span>
+              <span id="growth-history-count" class="text-[11px] text-slate-400 font-bold">0건</span>
+            </div>
+            <div id="growth-history-list" class="space-y-1.5 max-h-48 overflow-y-auto">
+              <!-- Rendered dynamically -->
+            </div>
           </div>
         </div>
-        <div class="flex justify-end gap-2 pt-3 border-t border-stone-100">
-          <button type="button" onclick="app.closeProfileModal()" class="px-4 py-2 rounded-xl border border-stone-200 font-bold text-slate-600">닫기</button>
-          <button type="submit" class="px-5 py-2 rounded-xl bg-slate-900 text-white font-extrabold">프로필 저장</button>
+
+        <!-- [TAB 3] 활동점수 & 등업 시스템 -->
+        <div id="prof-tab-level" class="hidden space-y-3.5">
+          <!-- 내 등급 및 점수 메인 카드 -->
+          <div class="bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-rose-500/10 border border-amber-300/80 rounded-2xl p-4 space-y-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span id="level-display-badge" class="px-2.5 py-1 rounded-full bg-amber-500 text-white font-black text-xs shadow-2xs">
+                  🌷 Lv.3 꽃봉오리맘
+                </span>
+                <span class="text-xs font-black text-slate-900" id="level-display-nickname">도담맘 님</span>
+              </div>
+              <button
+                type="button"
+                id="btn-level-attendance"
+                onclick="app.checkInAttendance()"
+                class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-[11px] shadow-sm transition cursor-pointer flex items-center gap-1"
+              >
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>오늘 출석체크 (+50P)</span>
+              </button>
+            </div>
+
+            <!-- 핵심 지표 2종: 활동 점수 & 도움 준 횟수 -->
+            <div class="grid grid-cols-2 gap-2 text-center bg-white/80 rounded-xl p-3 border border-amber-200/60">
+              <div>
+                <div class="text-[11px] font-bold text-slate-500">활동 점수 (도담 포인트)</div>
+                <div class="text-lg font-black text-rose-600 mt-0.5" id="level-display-points">450 P</div>
+              </div>
+              <div class="border-l border-amber-100">
+                <div class="text-[11px] font-bold text-slate-500">도움 준 횟수 (답변·채택)</div>
+                <div class="text-lg font-black text-indigo-600 mt-0.5" id="level-display-helps">8 회</div>
+              </div>
+            </div>
+
+            <!-- 다음 등급 진행도 프로그레스 바 -->
+            <div class="space-y-1.5">
+              <div class="flex items-center justify-between text-[11px] font-bold">
+                <span class="text-slate-600" id="level-next-info">다음 [Lv.4 열매맘]까지 150P 남음</span>
+                <span class="text-amber-700 font-extrabold" id="level-progress-pct">75%</span>
+              </div>
+              <div class="w-full h-2.5 bg-stone-200 rounded-full overflow-hidden">
+                <div id="level-progress-bar" class="h-full bg-gradient-to-r from-amber-400 to-rose-500 rounded-full transition-all duration-300" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5대 등급 체계 및 등업 조건 가이드 -->
+          <div class="bg-white border border-stone-200 rounded-2xl p-3.5 space-y-2.5">
+            <div class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+              <i class="fa-solid fa-ranking-star text-amber-500"></i>
+              <span>도담톡 5단계 육아 등급 체계</span>
+            </div>
+            <div class="space-y-1.5 text-[11px]">
+              <div class="flex items-center justify-between p-2 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-slate-800">🌱 Lv.1 새싹맘·대디</span>
+                <span class="text-slate-500">가입 즉시 부여 (0 ~ 99P)</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-emerald-800">🌿 Lv.2 줄기맘·대디</span>
+                <span class="text-slate-500">100P 이상 + 도움 1회 이상</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-indigo-800">🌷 Lv.3 꽃봉오리맘·대디</span>
+                <span class="text-slate-500">300P 이상 + 도움 3회 이상</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-rose-800">🍎 Lv.4 열매맘·대디</span>
+                <span class="text-slate-500">600P 이상 + 도움 7회 이상</span>
+              </div>
+              <div class="flex items-center justify-between p-2 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-purple-800">👑 Lv.5 멘토맘·대디</span>
+                <span class="text-slate-500">1,000P 이상 + 도움 15회 이상</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-stone-50 border border-stone-200/60 text-[10px] text-slate-500 space-y-0.5">
+              <div>💡 <strong>포인트 획득 방법:</strong> 매일 출석체크(+50P), 글 작성(+30P), 성장기록 작성(+10P), 댓글(+10P), 도움 채택받기(+20P & 도움 +1회)</div>
+            </div>
+          </div>
         </div>
-      </form>
+
+      </div>
     </div>
   </div>
 
@@ -2834,10 +3066,33 @@
         </button>
       </div>
 
-      <!-- 중간 구분선 (Matching Image 3) -->
+      <!-- 카카오 & 네이버 1초 간편 로그인 -->
+      <div class="space-y-2 pt-1">
+        <button
+          type="button"
+          onclick="app.loginWithKakao()"
+          class="w-full py-2.5 px-3 rounded-xl bg-[#FEE500] hover:bg-[#FDD835] text-[#191919] font-black text-xs shadow-2xs transition flex items-center justify-center gap-2 cursor-pointer border border-[#E6CF00]"
+        >
+          <svg class="w-4 h-4 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 3C6.477 3 2 6.477 2 10.767c0 2.778 1.884 5.215 4.708 6.577-.206.772-.746 2.793-.854 3.224-.136.545.2.537.42.392.174-.115 2.766-1.882 3.882-2.645.602.086 1.22.132 1.844.132 5.523 0 10-3.477 10-7.767C22 6.477 17.523 3 12 3z"/>
+          </svg>
+          <span>카카오로 1초 만에 시작하기</span>
+        </button>
+
+        <button
+          type="button"
+          onclick="app.loginWithNaver()"
+          class="w-full py-2.5 px-3 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-2xs transition flex items-center justify-center gap-2 cursor-pointer border border-[#029B46]"
+        >
+          <span class="w-4 h-4 rounded-xs bg-white text-[#03C75A] font-black text-[11px] flex items-center justify-center leading-none shrink-0">N</span>
+          <span>네이버로 시작하기</span>
+        </button>
+      </div>
+
+      <!-- 중간 구분선 -->
       <div class="relative flex py-1 items-center">
         <div class="flex-grow border-t border-stone-200"></div>
-        <span class="flex-shrink mx-3 text-[11px] font-bold text-slate-400">또는 회원 / 관리자 계정으로 이용</span>
+        <span class="flex-shrink mx-3 text-[11px] font-bold text-slate-400">또는 아이디 / 비밀번호 로그인</span>
         <div class="flex-grow border-t border-stone-200"></div>
       </div>
 

@@ -357,21 +357,42 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 1. 내 프로필 & 출석체크 관리
+  // 1. 내 프로필, 아이 성장기록 & 등급/등업 관리
   // ==========================================
   loadProfile() {
     try {
       const raw = localStorage.getItem(this.profileKey);
-      if (raw) return JSON.parse(raw);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        // Ensure defaults for new fields
+        if (parsed.months === undefined) parsed.months = 24;
+        if (!parsed.gender) parsed.gender = 'boy';
+        if (!parsed.interests) parsed.interests = ['food', 'festivals', 'school', 'policy'];
+        if (parsed.helpsCount === undefined) parsed.helpsCount = 8;
+        if (!parsed.growthRecords || !Array.isArray(parsed.growthRecords)) {
+          parsed.growthRecords = [
+            { id: 1, date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
+            { id: 2, date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
+          ];
+        }
+        return parsed;
+      }
     } catch {}
     return {
       nickname: '판교도담맘',
       babyName: '도담이',
-      ageBadge: '11개월 아기',
-      region: '분당·판교',
+      months: 24,
+      ageBadge: '24개월 (2세)',
+      gender: 'boy',
+      region: '경기 성남 분당',
+      interests: ['food', 'festivals', 'school', 'policy'],
       points: 450,
-      level: 'Lv.4 열정맘',
-      checkedInToday: false
+      helpsCount: 8,
+      checkedInToday: false,
+      growthRecords: [
+        { id: 1, date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
+        { id: 2, date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
+      ]
     };
   }
 
@@ -379,45 +400,112 @@ class DodamCommunityApp {
     localStorage.setItem(this.profileKey, JSON.stringify(this.profile));
   }
 
+  calculateLevel(points = 0, helps = 0) {
+    if (points >= 1000 && helps >= 15) {
+      return { name: '👑 Lv.5 멘토맘·대디', shortName: '멘토', levelNum: 5, badgeClass: 'bg-purple-600 text-white', nextPoints: 1000, nextName: '최고 등급', progress: 100, neededPoints: 0 };
+    }
+    if (points >= 600 && helps >= 7) {
+      const p = Math.min(100, Math.round(((points - 600) / 400) * 100));
+      return { name: '🍎 Lv.4 열매맘·대디', shortName: '열매', levelNum: 4, badgeClass: 'bg-rose-500 text-white', nextPoints: 1000, nextName: 'Lv.5 멘토맘·대디', progress: p, neededPoints: 1000 - points };
+    }
+    if (points >= 300 && helps >= 3) {
+      const p = Math.min(100, Math.round(((points - 300) / 300) * 100));
+      return { name: '🌷 Lv.3 꽃봉오리맘·대디', shortName: '꽃봉오리', levelNum: 3, badgeClass: 'bg-indigo-600 text-white', nextPoints: 600, nextName: 'Lv.4 열매맘·대디', progress: p, neededPoints: 600 - points };
+    }
+    if (points >= 100 && helps >= 1) {
+      const p = Math.min(100, Math.round(((points - 100) / 200) * 100));
+      return { name: '🌿 Lv.2 줄기맘·대디', shortName: '줄기', levelNum: 2, badgeClass: 'bg-emerald-600 text-white', nextPoints: 300, nextName: 'Lv.3 꽃봉오리맘·대디', progress: p, neededPoints: 300 - points };
+    }
+    const p = Math.min(100, Math.round((points / 100) * 100));
+    return { name: '🌱 Lv.1 새싹맘·대디', shortName: '새싹', levelNum: 1, badgeClass: 'bg-slate-700 text-white', nextPoints: 100, nextName: 'Lv.2 줄기맘·대디', progress: p, neededPoints: 100 - points };
+  }
+
   renderProfileWidget() {
     const el = document.getElementById('my-profile-widget');
     if (!el) return;
 
-    el.innerHTML = `
-      <div class="flex items-center gap-3">
-        <div class="w-12 h-12 rounded-2xl coral-badge-gradient text-white flex items-center justify-center font-black text-lg shadow-sm">
-          ${this.profile.nickname.slice(0, 1)}
-        </div>
-        <div>
-          <div class="flex items-center gap-1.5">
-            <span class="font-black text-sm text-slate-900">${this.profile.nickname}</span>
-            <span class="px-2 py-0.2 rounded-full bg-rose-50 text-rose-600 text-[10px] font-extrabold border border-rose-200">${this.profile.level}</span>
-          </div>
-          <p class="text-xs text-slate-500 mt-0.5">👶 ${this.profile.babyName} (${this.profile.ageBadge}) · ${this.profile.region}</p>
-        </div>
-      </div>
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
 
-      <div class="grid grid-cols-3 gap-2 pt-2 text-center bg-stone-50 rounded-2xl p-2.5 border border-stone-200/60">
-        <div>
-          <div class="text-[10px] text-slate-400 font-bold">육아 포인트</div>
-          <div class="text-xs font-black text-rose-600">${this.profile.points.toLocaleString()} P</div>
+    const latestGrowth = (this.profile.growthRecords && this.profile.growthRecords.length > 0)
+      ? this.profile.growthRecords[0]
+      : null;
+
+    const genderText = this.profile.gender === 'girl' ? '공주님(여아)' : (this.profile.gender === 'pregnant' ? '출산준비' : '왕자님(남아)');
+
+    el.innerHTML = `
+      <div class="bg-gradient-to-br from-rose-50/60 via-white to-amber-50/40 rounded-2xl border border-rose-200/80 p-4 shadow-2xs space-y-3">
+        <!-- 1행: 프로필 요약 & 등급 -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-2xl coral-badge-gradient text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
+              ${(this.profile.nickname || '도').slice(0, 1)}
+            </div>
+            <div>
+              <div class="flex items-center gap-2 flex-wrap">
+                <span class="font-black text-sm text-slate-900">${this.profile.nickname}</span>
+                <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${lvl.badgeClass}">${lvl.name}</span>
+                <span class="text-xs font-bold text-slate-400">· ${this.profile.region}</span>
+              </div>
+              <p class="text-xs text-slate-600 font-medium mt-0.5 flex items-center gap-1.5 flex-wrap">
+                <span>👶 <strong>${this.profile.babyName}</strong> (${this.profile.ageBadge}, ${genderText})</span>
+                ${latestGrowth ? `<span class="text-slate-300">|</span><span class="text-indigo-600 font-bold">📏 ${latestGrowth.height}cm · ${latestGrowth.weight}kg</span>` : ''}
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+            <button
+              type="button"
+              onclick="app.checkInAttendance()"
+              class="px-3 py-1.5 rounded-xl ${this.profile.checkedInToday ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-rose-500 hover:bg-rose-600 text-white'} font-black text-xs shadow-2xs transition flex items-center gap-1.5 cursor-pointer"
+            >
+              <i class="fa-solid ${this.profile.checkedInToday ? 'fa-check text-emerald-600' : 'fa-calendar-check'}"></i>
+              <span>${this.profile.checkedInToday ? '출석 완료' : '출석체크 (+50P)'}</span>
+            </button>
+            <button
+              type="button"
+              onclick="app.openProfileModal()"
+              class="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 font-extrabold text-xs text-slate-700 shadow-2xs transition flex items-center gap-1.5 cursor-pointer"
+            >
+              <i class="fa-solid fa-gear text-slate-400"></i>
+              <span>프로필·성장 관리</span>
+            </button>
+          </div>
         </div>
-        <div>
-          <div class="text-[10px] text-slate-400 font-bold">스크랩</div>
-          <div class="text-xs font-black text-slate-800">${this.scraps.length}개</div>
+
+        <!-- 2행: 핵심 활동 지표 3종 & 다음 등업 프로그레스 -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center bg-white/90 rounded-xl p-2.5 border border-stone-200/60 text-xs">
+          <div>
+            <div class="text-[10px] text-slate-400 font-bold">활동 점수</div>
+            <div class="text-xs font-black text-rose-600 mt-0.5">${(this.profile.points || 0).toLocaleString()} P</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-slate-400 font-bold">도움 준 횟수</div>
+            <div class="text-xs font-black text-indigo-600 mt-0.5">${(this.profile.helpsCount || 0).toLocaleString()} 회</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-slate-400 font-bold">스크랩한 공고</div>
+            <div class="text-xs font-black text-amber-600 mt-0.5">${(this.scraps || []).length} 개</div>
+          </div>
+          <div>
+            <div class="text-[10px] text-slate-400 font-bold">내 활동글</div>
+            <div class="text-xs font-black text-emerald-600 mt-0.5">${(this.data?.posts || []).length} 건</div>
+          </div>
         </div>
-        <div>
-          <div class="text-[10px] text-slate-400 font-bold">활동 게시글</div>
-          <div class="text-xs font-black text-indigo-600">${this.data.posts.length}건</div>
+
+        <!-- 3행: 다음 등급 진행도 바 -->
+        <div class="space-y-1">
+          <div class="flex items-center justify-between text-[11px] font-bold">
+            <span class="text-slate-500">${lvl.neededPoints > 0 ? `다음 [${lvl.nextName}]까지 ${lvl.neededPoints}P 남음` : '최고 등급 달성!'}</span>
+            <span class="text-rose-600 font-black">${lvl.progress}%</span>
+          </div>
+          <div class="w-full h-2 bg-stone-200 rounded-full overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-rose-400 to-amber-500 rounded-full transition-all duration-300" style="width: ${lvl.progress}%"></div>
+          </div>
         </div>
       </div>
     `;
-
-    const attBtn = document.getElementById('attendance-btn');
-    if (attBtn && this.profile.checkedInToday) {
-      attBtn.innerHTML = `<i class="fa-solid fa-check text-emerald-600"></i><span>출석 완료 (+50P)</span>`;
-      attBtn.className = 'py-2 px-3 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-xs font-extrabold flex items-center justify-center gap-1.5';
-    }
   }
 
   checkInAttendance() {
@@ -426,34 +514,358 @@ class DodamCommunityApp {
       return;
     }
     this.profile.checkedInToday = true;
-    this.profile.points += 50;
+    this.profile.points = (this.profile.points || 0) + 50;
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderAuthHeader();
     this.showToast('🎉 오늘의 육아 출석체크 완료! +50 포인트가 적립되었습니다.');
   }
 
-  openProfileModal() {
-    document.getElementById('prof-nickname').value = this.profile.nickname;
-    document.getElementById('prof-babyname').value = this.profile.babyName;
-    document.getElementById('prof-agebadge').value = this.profile.ageBadge;
-    document.getElementById('prof-region').value = this.profile.region;
-    document.getElementById('profile-modal').classList.remove('hidden');
+  // ==========================================
+  // 카카오 & 네이버 소셜 로그인 연동
+  // ==========================================
+  loginWithKakao() {
+    const nick = this.profile.nickname || '카카오도담맘';
+    this.currentUser = {
+      id: 'kakao-' + Date.now(),
+      username: 'kakao_' + Math.floor(Math.random() * 9000 + 1000),
+      nickname: nick,
+      provider: 'kakao',
+      role: 'member'
+    };
+    try {
+      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+    } catch {}
+
+    this.closeLoginModal();
+    this.renderAuthHeader();
+    this.renderProfileWidget();
+    this.showToast(`🟡 카카오 계정으로 간편 로그인되었습니다! 환영합니다, ${nick}님!`);
+
+    if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
+      setTimeout(() => this.openProfileModal(), 500);
+    }
+  }
+
+  loginWithNaver() {
+    const nick = this.profile.nickname || '네이버도담맘';
+    this.currentUser = {
+      id: 'naver-' + Date.now(),
+      username: 'naver_' + Math.floor(Math.random() * 9000 + 1000),
+      nickname: nick,
+      provider: 'naver',
+      role: 'member'
+    };
+    try {
+      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+    } catch {}
+
+    this.closeLoginModal();
+    this.renderAuthHeader();
+    this.renderProfileWidget();
+    this.showToast(`🟢 네이버 계정으로 간편 로그인되었습니다! 환영합니다, ${nick}님!`);
+
+    if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
+      setTimeout(() => this.openProfileModal(), 500);
+    }
+  }
+
+  // ==========================================
+  // 프로필 모달 및 탭 컨트롤
+  // ==========================================
+  setProfileTab(tabName) {
+    const tabs = ['info', 'growth', 'level'];
+    tabs.forEach((t) => {
+      const el = document.getElementById(`prof-tab-${t}`);
+      const btn = document.getElementById(`tab-prof-${t}-btn`);
+      if (el) el.classList.toggle('hidden', t !== tabName);
+      if (btn) {
+        if (t === tabName) {
+          btn.className = 'py-2 rounded-xl bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5';
+        } else {
+          btn.className = 'py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5';
+        }
+      }
+    });
+  }
+
+  openProfileModal(targetTab = 'info') {
+    const nickInput = document.getElementById('prof-nickname');
+    if (nickInput) nickInput.value = this.profile.nickname || '판교도담맘';
+    const regionInput = document.getElementById('prof-region');
+    if (regionInput) regionInput.value = this.profile.region || '경기 성남 분당';
+    const babyInput = document.getElementById('prof-babyname');
+    if (babyInput) babyInput.value = this.profile.babyName || '도담이';
+    const genderSelect = document.getElementById('prof-gender');
+    if (genderSelect) genderSelect.value = this.profile.gender || 'boy';
+    const monthsSelect = document.getElementById('prof-months');
+    if (monthsSelect) monthsSelect.value = String(this.profile.months || 24);
+
+    this.renderInterestChips();
+    this.renderGrowthSection();
+    this.renderLevelSection();
+
+    this.setProfileTab(targetTab);
+    const modal = document.getElementById('profile-modal');
+    if (modal) modal.classList.remove('hidden');
   }
 
   closeProfileModal() {
-    document.getElementById('profile-modal').classList.add('hidden');
+    const modal = document.getElementById('profile-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  renderInterestChips() {
+    const container = document.getElementById('prof-interests-container');
+    if (!container) return;
+
+    const topics = [
+      { id: 'babyfood', name: '🍼 이유식·육아템' },
+      { id: 'festivals', name: '🎪 주말 축제·나들이' },
+      { id: 'contests', name: '🏆 사생·글짓기 대회' },
+      { id: 'food', name: '🍱 안심식당 맛집' },
+      { id: 'policy', name: '💵 부모급여·지원금' },
+      { id: 'school', name: '🏫 명문 학군·초등배정' },
+      { id: 'admissions', name: '📚 2028 대입·교육' },
+      { id: 'health', name: '💉 소아과·영유아검진' }
+    ];
+
+    const currentInterests = new Set(this.profile.interests || ['food', 'festivals', 'school', 'policy']);
+
+    container.innerHTML = topics.map((t) => {
+      const selected = currentInterests.has(t.id);
+      return `
+        <button
+          type="button"
+          onclick="app.toggleInterest('${t.id}')"
+          class="p-2 rounded-xl border text-[11px] font-extrabold transition flex items-center justify-between cursor-pointer ${
+            selected
+              ? 'bg-rose-50 text-rose-700 border-rose-300 shadow-2xs'
+              : 'bg-white text-slate-600 border-stone-200 hover:bg-stone-50'
+          }"
+        >
+          <span>${t.name}</span>
+          <i class="fa-solid ${selected ? 'fa-circle-check text-rose-500' : 'fa-circle text-stone-300'} text-[10px]"></i>
+        </button>
+      `;
+    }).join('');
+  }
+
+  toggleInterest(topicId) {
+    if (!this.profile.interests) this.profile.interests = [];
+    const idx = this.profile.interests.indexOf(topicId);
+    if (idx > -1) {
+      this.profile.interests.splice(idx, 1);
+    } else {
+      this.profile.interests.push(topicId);
+    }
+    this.renderInterestChips();
   }
 
   saveProfile(e) {
-    e.preventDefault();
-    this.profile.nickname = document.getElementById('prof-nickname').value.trim();
-    this.profile.babyName = document.getElementById('prof-babyname').value.trim();
-    this.profile.ageBadge = document.getElementById('prof-agebadge').value.trim();
-    this.profile.region = document.getElementById('prof-region').value.trim();
+    if (e) e.preventDefault();
+    const nick = (document.getElementById('prof-nickname')?.value || '').trim();
+    const region = (document.getElementById('prof-region')?.value || '').trim();
+    const babyName = (document.getElementById('prof-babyname')?.value || '').trim();
+    const gender = document.getElementById('prof-gender')?.value || 'boy';
+    const months = parseInt(document.getElementById('prof-months')?.value || '24', 10);
+
+    if (nick) this.profile.nickname = nick;
+    if (region) this.profile.region = region;
+    if (babyName) this.profile.babyName = babyName;
+    this.profile.gender = gender;
+    this.profile.months = months;
+
+    if (months === 0) {
+      this.profile.ageBadge = '출산준비중 (임신)';
+    } else if (months <= 12) {
+      this.profile.ageBadge = `${months}개월 아기`;
+    } else if (months <= 72) {
+      const years = Math.floor(months / 12);
+      this.profile.ageBadge = `${months}개월 (${years}세)`;
+    } else if (months <= 84) {
+      this.profile.ageBadge = '7세 (취학 전)';
+    } else if (months <= 96) {
+      this.profile.ageBadge = '초등 저학년';
+    } else {
+      this.profile.ageBadge = '초등 고학년';
+    }
+
+    this.profile.isCustomized = true;
+
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderAuthHeader();
     this.closeProfileModal();
-    this.showToast('내 육아 프로필 정보가 업데이트되었습니다!');
+    this.showToast('🎉 내 육아 프로필과 아이 정보가 성공적으로 저장되었습니다!');
+  }
+
+  // ==========================================
+  // 아이 성장 다이어리 관리
+  // ==========================================
+  renderGrowthSection() {
+    const records = this.profile.growthRecords || [];
+    const countEl = document.getElementById('growth-history-count');
+    if (countEl) countEl.textContent = `${records.length}건`;
+
+    const summaryHeight = document.getElementById('growth-summary-height');
+    const summaryWeight = document.getElementById('growth-summary-weight');
+    const summaryMemo = document.getElementById('growth-summary-memo');
+
+    if (records.length > 0) {
+      const latest = records[0];
+      if (summaryHeight) summaryHeight.textContent = latest.height;
+      if (summaryWeight) summaryWeight.textContent = latest.weight;
+      if (summaryMemo) summaryMemo.textContent = `"${latest.memo || '무럭무럭 잘 크고 있어요!'}" (${latest.date})`;
+    } else {
+      if (summaryHeight) summaryHeight.textContent = '--';
+      if (summaryWeight) summaryWeight.textContent = '--';
+      if (summaryMemo) summaryMemo.textContent = '"아직 등록된 성장 기록이 없습니다."';
+    }
+
+    const listEl = document.getElementById('growth-history-list');
+    if (!listEl) return;
+
+    if (records.length === 0) {
+      listEl.innerHTML = `<div class="p-4 text-center text-slate-400 bg-stone-50 rounded-xl">성장 기록을 등록하고 아이의 성장을 한눈에 관리해보세요!</div>`;
+      return;
+    }
+
+    listEl.innerHTML = records.map((r) => `
+      <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between gap-3 text-xs">
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-extrabold text-[10px]">${r.date}</span>
+          <span class="font-black text-slate-800">📏 ${r.height} cm</span>
+          <span class="font-black text-indigo-600">⚖️ ${r.weight} kg</span>
+          <span class="text-slate-500 truncate max-w-[180px]">${r.memo || ''}</span>
+        </div>
+        <button
+          type="button"
+          onclick="app.deleteGrowthRecord(${r.id})"
+          class="text-slate-300 hover:text-rose-500 transition p-1 cursor-pointer shrink-0"
+          title="기록 삭제"
+        >
+          <i class="fa-solid fa-trash-can text-xs"></i>
+        </button>
+      </div>
+    `).join('');
+  }
+
+  addGrowthRecord(e) {
+    if (e) e.preventDefault();
+    const hInput = document.getElementById('input-growth-height');
+    const wInput = document.getElementById('input-growth-weight');
+    const mInput = document.getElementById('input-growth-memo');
+
+    const height = parseFloat(hInput?.value || '0');
+    const weight = parseFloat(wInput?.value || '0');
+    const memo = (mInput?.value || '').trim();
+
+    if (!height || !weight) {
+      this.showToast('키와 몸무게를 정확히 입력해주세요.');
+      return;
+    }
+
+    const todayStr = new Date().toISOString().slice(0, 10).replace(/-/g, '.');
+
+    if (!this.profile.growthRecords) this.profile.growthRecords = [];
+    this.profile.growthRecords.unshift({
+      id: Date.now(),
+      date: todayStr,
+      height: height,
+      weight: weight,
+      memo: memo || '건강하게 쑥쑥 크는 중!'
+    });
+
+    this.profile.points = (this.profile.points || 0) + 10;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+
+    this.saveProfileData();
+    this.renderGrowthSection();
+    this.renderLevelSection();
+    this.renderProfileWidget();
+    this.renderAuthHeader();
+
+    if (hInput) hInput.value = '';
+    if (wInput) wInput.value = '';
+    if (mInput) mInput.value = '';
+
+    this.showToast('🎉 아이 성장 기록이 등록되었습니다! (+10P 활동 점수 적립)');
+  }
+
+  deleteGrowthRecord(recordId) {
+    if (!confirm('이 성장 기록을 삭제하시겠습니까?')) return;
+    this.profile.growthRecords = (this.profile.growthRecords || []).filter((r) => r.id !== recordId);
+    this.saveProfileData();
+    this.renderGrowthSection();
+    this.renderProfileWidget();
+    this.showToast('성장 기록이 삭제되었습니다.');
+  }
+
+  // ==========================================
+  // 등급 및 등업 센터 렌더링
+  // ==========================================
+  renderLevelSection() {
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+
+    const badgeEl = document.getElementById('level-display-badge');
+    if (badgeEl) {
+      badgeEl.textContent = lvl.name;
+      badgeEl.className = `px-2.5 py-1 rounded-full font-black text-xs shadow-2xs ${lvl.badgeClass}`;
+    }
+
+    const nickEl = document.getElementById('level-display-nickname');
+    if (nickEl) nickEl.textContent = `${this.profile.nickname} 님`;
+
+    const pointsEl = document.getElementById('level-display-points');
+    if (pointsEl) pointsEl.textContent = `${(this.profile.points || 0).toLocaleString()} P`;
+
+    const helpsEl = document.getElementById('level-display-helps');
+    if (helpsEl) helpsEl.textContent = `${(this.profile.helpsCount || 0).toLocaleString()} 회`;
+
+    const nextInfoEl = document.getElementById('level-next-info');
+    if (nextInfoEl) {
+      nextInfoEl.textContent = lvl.neededPoints > 0
+        ? `다음 [${lvl.nextName}]까지 ${lvl.neededPoints}P 남음`
+        : '최고 등급 달성 완료!';
+    }
+
+    const pctEl = document.getElementById('level-progress-pct');
+    if (pctEl) pctEl.textContent = `${lvl.progress}%`;
+
+    const barEl = document.getElementById('level-progress-bar');
+    if (barEl) barEl.style.width = `${lvl.progress}%`;
+
+    const attBtn = document.getElementById('btn-level-attendance');
+    if (attBtn) {
+      if (this.profile.checkedInToday) {
+        attBtn.innerHTML = `<i class="fa-solid fa-check text-emerald-300"></i><span>출석 완료</span>`;
+        attBtn.className = 'px-3 py-1.5 rounded-xl bg-emerald-700 text-white font-black text-[11px] shadow-sm';
+      } else {
+        attBtn.innerHTML = `<i class="fa-solid fa-calendar-check"></i><span>오늘 출석체크 (+50P)</span>`;
+        attBtn.className = 'px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-[11px] shadow-sm transition cursor-pointer flex items-center gap-1';
+      }
+    }
+  }
+
+  // ==========================================
+  // 도움 감사하기 (채택 시스템)
+  // ==========================================
+  giveHelpThanks(authorName) {
+    this.profile.points = (this.profile.points || 0) + 20;
+    this.profile.helpsCount = (this.profile.helpsCount || 0) + 1;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+
+    this.saveProfileData();
+    this.renderProfileWidget();
+    this.renderAuthHeader();
+    this.showToast(`💡 ${authorName || '작성자'}님의 답변에 감사를 전했습니다! (+20P & 도움 +1회 적립)`);
   }
 
   // ==========================================
@@ -1309,8 +1721,20 @@ class DodamCommunityApp {
               <div class="flex items-center gap-2">
                 <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px]">${initial}</span>
                 <span class="font-black text-slate-900">${author}</span>
+                <span class="px-1.5 py-0.2 rounded-full bg-stone-100 text-slate-600 border border-stone-200 text-[9px] font-extrabold">🌱 새싹</span>
               </div>
-              <span class="text-[11px] text-slate-400 font-medium">${time}</span>
+              <div class="flex items-center gap-2">
+                <span class="text-[11px] text-slate-400 font-medium">${time}</span>
+                <button
+                  type="button"
+                  onclick="app.giveHelpThanks('${author}')"
+                  class="px-2 py-0.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 text-[10px] font-black border border-indigo-200 flex items-center gap-1 transition cursor-pointer shadow-2xs"
+                  title="답변이 도움되었을 때 채택하고 포인트를 선물합니다"
+                >
+                  <i class="fa-solid fa-thumbs-up text-[9px]"></i>
+                  <span>도움이 됐어요</span>
+                </button>
+              </div>
             </div>
             <p class="text-xs text-slate-800 leading-relaxed pl-7">${text}</p>
           </div>
@@ -6738,11 +7162,20 @@ class DodamCommunityApp {
           </button>
         `;
       } else if (this.currentUser) {
+        const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+        const nick = this.profile.nickname || this.currentUser.nickname || this.currentUser.username || '도담맘';
         desktopEl.innerHTML = `
-          <div class="inline-flex items-center gap-1.5 px-2.5 py-1.5 bg-stone-100 rounded-xl text-xs font-bold text-slate-700">
-            <i class="fa-solid fa-user text-slate-500"></i>
-            <span>${this.currentUser.nickname || this.currentUser.username}님</span>
-          </div>
+          <button
+            type="button"
+            onclick="app.openProfileModal()"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100/70 border border-rose-200/80 rounded-xl text-xs font-bold text-rose-900 transition cursor-pointer shadow-2xs"
+            title="내 프로필, 성장기록 & 등급 관리"
+          >
+            <span class="w-5 h-5 rounded-full coral-badge-gradient text-white flex items-center justify-center text-[10px] font-black">${nick.slice(0, 1)}</span>
+            <span>${nick}님</span>
+            <span class="px-1.5 py-0.2 rounded-full ${lvl.badgeClass} text-[9px] font-black">${lvl.shortName}</span>
+            <span class="text-rose-600 font-black text-[11px]">${(this.profile.points || 0).toLocaleString()}P</span>
+          </button>
           <button
             type="button"
             onclick="app.logout()"
