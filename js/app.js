@@ -69,11 +69,15 @@ class DodamCommunityApp {
 
     // 1. Navigation & Board State
     this.currentView = 'board'; // 'board' | 'festivals' | 'contests' | 'food'
+    this.boardLoungeMode = 'all'; // 'all' | 'age' | 'local' | 'qa'
     this.currentCategory = 'all';
+    this.currentAgeStage = 'all';
+    this.currentLocalHub = 'all';
+    this.currentLocalTopic = 'all';
     this.currentRegion = 'all';
     this.boardSearchKeyword = '';
     this.boardSort = 'latest'; // 'latest' | 'popular' | 'comments' | 'views'
-    this.boardViewMode = 'cafe'; // 'cafe' | 'card' (네이버 카페 목록형 기본)
+    this.boardViewMode = 'card'; // 'card' (소통 피드형 기본) | 'cafe' (카페 목록형)
     this.boardPage = 1;
     this.boardPageSize = 15;
     this.activePollIndex = 0;
@@ -328,17 +332,28 @@ class DodamCommunityApp {
     window.DodamFirebase.subscribePosts((remotePosts) => {
       if (Array.isArray(remotePosts) && remotePosts.length > 0) {
         const remoteMap = new Map();
-        remotePosts.forEach((p) => remoteMap.set(p.id, p));
+        const validRemote = remotePosts.filter((p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock'));
+        validRemote.forEach((p) => {
+          if (!p.ageStage) p.ageStage = p.category || 'all';
+          if (!p.localHub) p.localHub = p.region && p.region !== 'all' ? this.getLocalHubFromProfileRegion(p.region) : 'all';
+          remoteMap.set(p.id, p);
+        });
 
-        const merged = [...remotePosts];
-        (this.data.posts || []).forEach((p) => {
-          if (!remoteMap.has(p.id)) {
-            merged.push(p);
-          }
+        const seenTitles = new Set();
+        const merged = [];
+        [...validRemote, ...(this.data.posts || [])].forEach((p) => {
+          if (!p || !p.id) return;
+          const dedupKey = `${p.id}`;
+          const titleKey = `${(p.title || '').trim()}__${p.author?.nickname || ''}`;
+          if (seenTitles.has(dedupKey) || seenTitles.has(titleKey)) return;
+          seenTitles.add(dedupKey);
+          seenTitles.add(titleKey);
+          merged.push(p);
         });
         this.data.posts = merged;
 
         if (this.currentView === 'board') {
+          this.renderBoardCategories();
           this.renderBoardView();
         }
         if (this.activePostDetailId && remoteMap.has(this.activePostDetailId)) {
@@ -1421,13 +1436,63 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 3. 도담 육아 게시판 컨트롤러
+  // 3. 도담 육아 게시판 & 자녀 나이별 라운지 & 지역 맘카페 컨트롤러
   // ==========================================
+  getChildAgeStageFromMonths(months) {
+    const m = Number(months ?? 24);
+    if (m <= 0) return 'preg';
+    if (m <= 12) return 'newborn';
+    if (m <= 36) return 'toddler_early';
+    if (m <= 84) return 'toddler';
+    if (m <= 120) return 'school';
+    if (m <= 156) return 'elem_high';
+    return 'middle_high';
+  }
+
+  getLocalHubFromProfileRegion(regionText) {
+    const txt = (regionText || '').toLowerCase();
+    if (txt.includes('강남') || txt.includes('서초') || txt.includes('송파') || txt.includes('잠실') || txt.includes('대치')) return 'seoul_gangnam';
+    if (txt.includes('목동') || txt.includes('양천') || txt.includes('마포') || txt.includes('강서')) return 'seoul_mokdong';
+    if (txt.includes('서울') || txt.includes('성동') || txt.includes('광진') || txt.includes('노원')) return 'seoul_seongdong';
+    if (txt.includes('분당') || txt.includes('판교') || txt.includes('성남') || txt.includes('위례') || txt.includes('용인') || txt.includes('수지')) return 'gg_bundang';
+    if (txt.includes('동탄') || txt.includes('수원') || txt.includes('광교') || txt.includes('화성')) return 'gg_dongtan';
+    if (txt.includes('일산') || txt.includes('고양') || txt.includes('김포') || txt.includes('파주') || txt.includes('다산')) return 'gg_ilsan';
+    if (txt.includes('경기')) return 'gg_bundang';
+    if (txt.includes('인천') || txt.includes('송도') || txt.includes('청라') || txt.includes('검단')) return 'incheon_songdo';
+    if (txt.includes('부산') || txt.includes('해운대') || txt.includes('센텀') || txt.includes('울산') || txt.includes('경남')) return 'busan_centum';
+    if (txt.includes('대구') || txt.includes('수성') || txt.includes('경북')) return 'daegu_suseong';
+    if (txt.includes('대전') || txt.includes('세종') || txt.includes('충청') || txt.includes('충남') || txt.includes('충북')) return 'daejeon_sejong';
+    if (txt.includes('광주') || txt.includes('전라') || txt.includes('전남') || txt.includes('전북') || txt.includes('강원') || txt.includes('제주')) return 'gwangju_jeju';
+    return 'gg_bundang';
+  }
+
   renderBoardCategories() {
     const sideEl = document.getElementById('sidebar-category-list');
     const chipEl = document.getElementById('board-category-chips');
-
     const categories = this.data.categories || [];
+
+    // Update "내 아이 또래글 맞춤" button label
+    const myAgeBtnLabel = document.getElementById('btn-my-age-match-label');
+    const myAgeBtn = document.getElementById('btn-my-age-match');
+    const targetMyStage = this.getChildAgeStageFromMonths(this.profile?.months);
+    if (myAgeBtnLabel) {
+      const babyName = this.profile?.babyName || '도담이';
+      const ageBadge = this.profile?.ageBadge || '24개월';
+      myAgeBtnLabel.textContent =
+        this.currentAgeStage === targetMyStage
+          ? `✓ ${babyName}(${ageBadge}) 또래글 보기 중`
+          : `내 아이(${babyName}·${ageBadge}) 또래글 맞춤`;
+    }
+    if (myAgeBtn) {
+      myAgeBtn.className =
+        this.currentAgeStage === targetMyStage
+          ? 'inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-600 text-white border border-rose-600 font-black text-xs transition cursor-pointer shadow-sm'
+          : 'inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-xs transition cursor-pointer shadow-2xs';
+    }
+
+    this.renderBoardLoungeTabs();
+    this.renderBoardAgeLounge();
+    this.renderBoardLocalMomCafe();
 
     if (sideEl) {
       const catButtons = categories
@@ -1467,7 +1532,7 @@ class DodamCommunityApp {
               <i class="fa-solid fa-person-running ${this.currentView === 'festivals' ? 'text-white' : 'text-amber-500'}"></i>
               <span>전국 지역행사 (볼거리·축제)</span>
             </span>
-            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'festivals' ? 'bg-white text-amber-600' : 'bg-amber-500 text-white'} text-[9px] font-black">26건</span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'festivals' ? 'bg-white text-amber-600' : 'bg-amber-500 text-white'} text-[9px] font-black">추천</span>
           </button>
 
           <button
@@ -1482,7 +1547,7 @@ class DodamCommunityApp {
               <i class="fa-solid fa-graduation-cap ${this.currentView === 'contests' ? 'text-white' : 'text-indigo-600'}"></i>
               <span>전국 대회일정 (사생·독서)</span>
             </span>
-            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'contests' ? 'bg-white text-indigo-600' : 'bg-indigo-600 text-white'} text-[9px] font-black">21건</span>
+            <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'contests' ? 'bg-white text-indigo-600' : 'bg-indigo-600 text-white'} text-[9px] font-black">공모</span>
           </button>
 
           <button
@@ -1528,7 +1593,7 @@ class DodamCommunityApp {
             </span>
             <span class="px-1.5 py-0.2 rounded-full ${this.currentView === 'school' ? 'bg-white text-sky-600' : 'bg-sky-600 text-white'} text-[9px] font-black">랭킹</span>
           </button>
-</div>
+        </div>
       `;
 
       sideEl.innerHTML = catButtons + quickLinks;
@@ -1549,20 +1614,476 @@ class DodamCommunityApp {
               type="button"
               onclick="app.selectBoardCategory('${c.id}')"
               data-category="${c.id}"
-              class="w-full sm:w-auto px-2.5 py-2 sm:py-1.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition border shrink-0 flex items-center justify-between sm:justify-start gap-1.5 cursor-pointer ${
+              class="px-3 py-1.5 rounded-xl text-xs font-extrabold whitespace-nowrap transition border shrink-0 flex items-center gap-1.5 cursor-pointer ${
                 active
-                  ? 'bg-[#03C75A] text-white border-[#03C75A] shadow-sm'
+                  ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
                   : 'bg-stone-50 text-slate-700 border-stone-200 hover:bg-white hover:border-stone-300'
               }"
             >
               <span class="truncate text-[11px] sm:text-xs">${c.name}</span>
               <span class="px-1.5 py-0.2 rounded-full text-[10px] font-black shrink-0 ${
-                active ? 'bg-white/25 text-white' : 'bg-stone-200 text-slate-600'
+                active ? 'bg-white/20 text-white' : 'bg-stone-200 text-slate-600'
               }">${count}</span>
             </button>
           `;
         })
         .join('');
+    }
+  }
+
+  renderBoardLoungeTabs() {
+    document.querySelectorAll('.board-lounge-tab').forEach((btn) => {
+      const m = btn.getAttribute('data-lounge');
+      const isActive = m === this.boardLoungeMode;
+      if (isActive) {
+        btn.className = 'board-lounge-tab p-3 rounded-2xl border-2 text-left transition cursor-pointer bg-slate-900 text-white border-slate-900 shadow-md';
+        btn.querySelectorAll('span, p').forEach((el) => {
+          if (el.tagName === 'P') el.className = 'text-[11px] text-slate-300 mt-1 truncate';
+        });
+      } else {
+        const bgMap = {
+          all: 'bg-stone-50 hover:bg-stone-100 border-stone-200 text-slate-800',
+          age: 'bg-rose-50/60 hover:bg-rose-50 border-rose-200 text-slate-800',
+          local: 'bg-emerald-50/60 hover:bg-emerald-50 border-emerald-200 text-slate-800',
+          qa: 'bg-indigo-50/60 hover:bg-indigo-50 border-indigo-200 text-slate-800'
+        };
+        btn.className = `board-lounge-tab p-3 rounded-2xl border text-left transition cursor-pointer ${bgMap[m] || bgMap.all}`;
+      }
+    });
+
+    const agePanel = document.getElementById('board-age-lounge-panel');
+    const localPanel = document.getElementById('board-local-momcafe-panel');
+    if (agePanel && localPanel) {
+      if (this.boardLoungeMode === 'age') {
+        agePanel.classList.remove('hidden');
+        localPanel.classList.add('hidden');
+      } else if (this.boardLoungeMode === 'local') {
+        agePanel.classList.add('hidden');
+        localPanel.classList.remove('hidden');
+      } else {
+        agePanel.classList.remove('hidden');
+        localPanel.classList.remove('hidden');
+      }
+    }
+  }
+
+  setBoardLoungeMode(mode) {
+    this.boardLoungeMode = mode || 'all';
+    this.boardPage = 1;
+    if (mode === 'all') {
+      this.currentAgeStage = 'all';
+      this.currentLocalHub = 'all';
+      this.currentLocalTopic = 'all';
+      this.currentCategory = 'all';
+    } else if (mode === 'age' && this.currentAgeStage === 'all') {
+      // Keep 'all' or highlight user's baby age stage
+    }
+    this.renderBoardCategories();
+    this.renderBoardView();
+  }
+
+  renderBoardAgeLounge() {
+    const chipsEl = document.getElementById('board-age-stage-chips');
+    const descEl = document.getElementById('board-age-active-desc');
+    const kwBar = document.getElementById('board-age-keywords-bar');
+    if (!chipsEl) return;
+
+    const stages = this.data.ageStages || [];
+    const activeStageObj = stages.find((s) => s.id === this.currentAgeStage) || stages[0];
+
+    if (descEl && activeStageObj) {
+      descEl.textContent = activeStageObj.desc || '';
+    }
+
+    chipsEl.innerHTML = stages
+      .map((s) => {
+        const active = s.id === this.currentAgeStage;
+        const count = (this.data.posts || []).filter((p) => {
+          if (s.id === 'all') return true;
+          return p.ageStage === s.id || p.category === s.id || (s.id === 'middle_high' && (p.category === 'middle' || p.category === 'high'));
+        }).length;
+
+        return `
+          <button
+            type="button"
+            onclick="app.selectAgeStage('${s.id}')"
+            class="px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition flex items-center gap-1.5 border shrink-0 cursor-pointer ${
+              active
+                ? 'bg-rose-600 text-white border-rose-600 shadow-sm'
+                : 'bg-white text-slate-700 border-rose-200/80 hover:bg-rose-50'
+            }"
+          >
+            <span>${s.name}</span>
+            <span class="px-1.5 py-0.2 rounded-full text-[10px] ${
+              active ? 'bg-white/25 text-white' : 'bg-rose-100 text-rose-700'
+            }">${count}</span>
+          </button>
+        `;
+      })
+      .join('');
+
+    if (kwBar && activeStageObj && Array.isArray(activeStageObj.keywords)) {
+      kwBar.innerHTML = `
+        <span class="font-extrabold text-rose-600 mr-1 flex items-center gap-1">
+          <i class="fa-solid fa-fire-flame-curved text-[10px]"></i>
+          <span>이 시기 핫키워드:</span>
+        </span>
+        ${activeStageObj.keywords
+          .map(
+            (kw) => `
+          <button
+            type="button"
+            onclick="app.onSearchKeyword('${kw}')"
+            class="px-2 py-0.5 rounded-lg bg-white/90 hover:bg-rose-100 text-slate-700 hover:text-rose-800 border border-rose-200/70 font-bold text-[11px] transition cursor-pointer"
+          >#${kw}</button>
+        `
+          )
+          .join('')}
+      `;
+    }
+  }
+
+  selectAgeStage(stageId) {
+    this.currentAgeStage = stageId;
+    this.boardPage = 1;
+    const quickAgeEl = document.getElementById('quick-post-age');
+    if (quickAgeEl && stageId !== 'all') quickAgeEl.value = stageId;
+    this.renderBoardCategories();
+    this.renderBoardView();
+  }
+
+  filterByMyChildAge() {
+    const myStage = this.getChildAgeStageFromMonths(this.profile?.months);
+    if (this.currentAgeStage === myStage) {
+      this.currentAgeStage = 'all';
+      this.renderBoardCategories();
+      this.renderBoardView();
+      this.showToast('전체 연령 게시글 보기로 전환되었습니다.');
+      return;
+    }
+    this.boardLoungeMode = 'age';
+    this.currentAgeStage = myStage;
+    this.boardPage = 1;
+    const quickAgeEl = document.getElementById('quick-post-age');
+    if (quickAgeEl) quickAgeEl.value = myStage;
+    this.renderBoardCategories();
+    this.renderBoardView();
+    const stageObj = (this.data.ageStages || []).find((s) => s.id === myStage);
+    this.showToast(`👶 ${this.profile?.babyName || '우리 아이'}(${this.profile?.ageBadge || '24개월'}) 맞춤 [${stageObj ? stageObj.shortName : '또래'}] 라운지가 적용되었습니다!`);
+  }
+
+  renderBoardLocalMomCafe() {
+    const hubEl = document.getElementById('board-local-hub-chips');
+    const topicEl = document.getElementById('board-local-topic-chips');
+    const titleEl = document.getElementById('board-local-hub-title');
+    if (!hubEl || !topicEl) return;
+
+    const hubs = this.data.localHubs || [];
+    const topics = this.data.localTopics || [];
+    const activeHubObj = hubs.find((h) => h.id === this.currentLocalHub) || hubs[0];
+
+    if (titleEl && activeHubObj) {
+      titleEl.textContent =
+        activeHubObj.id === 'all'
+          ? '전국 동네 맘카페 통합 라운지 (동네를 선택해보세요!)'
+          : `${activeHubObj.name} 실시간 동네 소통방`;
+    }
+
+    hubEl.innerHTML = hubs
+      .map((h) => {
+        const active = h.id === this.currentLocalHub;
+        const count = (this.data.posts || []).filter((p) => {
+          if (h.id === 'all') return true;
+          return p.localHub === h.id || (p.region === h.region && !p.localHub);
+        }).length;
+
+        return `
+          <button
+            type="button"
+            onclick="app.selectLocalHub('${h.id}')"
+            class="px-3 py-1.5 rounded-xl text-xs font-black whitespace-nowrap transition flex items-center gap-1.5 border shrink-0 cursor-pointer ${
+              active
+                ? 'bg-[#03C75A] text-white border-[#03C75A] shadow-sm'
+                : 'bg-white text-slate-700 border-emerald-200/80 hover:bg-emerald-50'
+            }"
+          >
+            <span>${h.id === 'all' ? '🌏 전국 전체' : '📍 ' + h.shortName}</span>
+            <span class="px-1.5 py-0.2 rounded-full text-[10px] ${
+              active ? 'bg-white/25 text-white' : 'bg-emerald-100 text-emerald-800'
+            }">${count}</span>
+          </button>
+        `;
+      })
+      .join('');
+
+    topicEl.innerHTML = topics
+      .map((t) => {
+        const active = t.id === this.currentLocalTopic;
+        return `
+          <button
+            type="button"
+            onclick="app.selectLocalTopic('${t.id}')"
+            class="px-2.5 py-1 rounded-lg text-[11px] font-black transition border cursor-pointer flex items-center gap-1 ${
+              active
+                ? 'bg-slate-900 text-white border-slate-900 shadow-2xs'
+                : 'bg-white/90 text-slate-700 border-emerald-200/80 hover:bg-emerald-100/60'
+            }"
+          >
+            <span>${t.name}</span>
+          </button>
+        `;
+      })
+      .join('');
+  }
+
+  selectLocalHub(hubId) {
+    this.currentLocalHub = hubId;
+    this.boardPage = 1;
+    const quickHubEl = document.getElementById('quick-post-hub');
+    if (quickHubEl) quickHubEl.value = hubId;
+    this.renderBoardCategories();
+    this.renderBoardView();
+  }
+
+  selectLocalTopic(topicId) {
+    this.currentLocalTopic = topicId;
+    this.boardPage = 1;
+    const quickTopicEl = document.getElementById('quick-post-topic');
+    if (quickTopicEl && topicId !== 'all') quickTopicEl.value = topicId;
+    this.renderBoardCategories();
+    this.renderBoardView();
+  }
+
+  selectMyProfileLocalHub() {
+    const targetHub = this.getLocalHubFromProfileRegion(this.profile?.region);
+    this.boardLoungeMode = 'local';
+    this.currentLocalHub = targetHub;
+    this.boardPage = 1;
+    const quickHubEl = document.getElementById('quick-post-hub');
+    if (quickHubEl) quickHubEl.value = targetHub;
+    this.renderBoardCategories();
+    this.renderBoardView();
+    const hubObj = (this.data.localHubs || []).find((h) => h.id === targetHub);
+    this.showToast(`🏡 내 프로필 지역(${this.profile?.region || '분당·판교'})에 맞춰 [${hubObj ? hubObj.shortName : '우리 동네'} 맘카페]로 이동했습니다!`);
+  }
+
+  jumpToLocalService(targetView) {
+    const hubs = this.data.localHubs || [];
+    const activeHub = hubs.find((h) => h.id === this.currentLocalHub);
+    const regionId = activeHub && activeHub.region !== 'all' ? activeHub.region : 'all';
+
+    if (targetView === 'food') {
+      this.currentRegion = regionId;
+      this.switchMainView('food');
+      this.showToast(`🍽️ ${activeHub ? activeHub.shortName : '전국'} 안심 키즈맛집 지도로 이동했습니다!`);
+    } else if (targetView === 'festivals') {
+      if (regionId !== 'all') this.festivalsRegion = regionId;
+      this.switchMainView('festivals');
+      this.showToast(`🎪 ${activeHub ? activeHub.shortName : '전국'} 주말 가족 나들이·축제 정보로 이동했습니다!`);
+    } else if (targetView === 'school') {
+      if (regionId !== 'all') this.schoolSido = regionId;
+      this.switchMainView('school');
+      this.showToast(`🏫 ${activeHub ? activeHub.shortName : '전국'} 초·중·고 학군 순위 정보로 이동했습니다!`);
+    }
+  }
+
+  prefillQuickComposer(presetType) {
+    const titleEl = document.getElementById('quick-post-title');
+    const contentEl = document.getElementById('quick-post-content');
+    const topicEl = document.getElementById('quick-post-topic');
+    const ageEl = document.getElementById('quick-post-age');
+    const hubEl = document.getElementById('quick-post-hub');
+
+    const myStage = this.getChildAgeStageFromMonths(this.profile?.months);
+    const myHub = this.getLocalHubFromProfileRegion(this.profile?.region);
+    if (ageEl && ageEl.value === 'all') ageEl.value = myStage;
+    if (hubEl && hubEl.value === 'all') hubEl.value = myHub;
+
+    const hubObj = (this.data.localHubs || []).find((h) => h.id === (hubEl?.value || myHub));
+    const hubShort = hubObj && hubObj.id !== 'all' ? hubObj.shortName : (this.profile?.region || '우리 동네');
+    const ageBadge = this.profile?.ageBadge || '24개월';
+
+    if (presetType === 'hospital') {
+      if (topicEl) topicEl.value = 'hospital';
+      if (titleEl) titleEl.value = `[${hubShort}] 아기 진료 친절하고 과잉진료 없는 소아과·어린이치과 추천 부탁드려요!`;
+      if (contentEl) contentEl.value = `${ageBadge} 아기 키우고 있는데 ${hubShort} 근처에서 대기 시스템 편하고 원장님 꼼꼼하신 소아과 어디 다니시나요? 동네 맘님들 찐후기 부탁드립니다 🙏`;
+    } else if (presetType === 'age_qa') {
+      if (topicEl) topicEl.value = 'qa';
+      if (titleEl) titleEl.value = `[${ageBadge} 또래고민] 이 시기 수면·식습관 원래 다 이런가요? 선배맘님들 조언 구해요!`;
+      if (contentEl) contentEl.value = `요즘 부쩍 자기주장이 강해져서 밥 먹이기랑 재우기가 쉽지 않네요 ㅠㅠ 같은 ${ageBadge} 또래 키우시는 엄마 아빠들은 어떻게 육아하고 계신지 궁금해요!`;
+    } else if (presetType === 'share') {
+      if (topicEl) topicEl.value = 'share';
+      if (titleEl) titleEl.value = `[${hubShort} 무료드림] 아기가 커서 졸업한 깨끗한 육아용품·동화책 나눔합니다 🎁`;
+      if (contentEl) contentEl.value = `실사용 기간 짧고 상태 깨끗한 육아템 ${hubShort} 이웃 맘님께 무료 드림해요! 필요하신 분 댓글 남겨주세요 😊`;
+    }
+    if (titleEl) titleEl.focus();
+    this.showToast('✍️ 질문·소통 양식이 자동으로 채워졌습니다! 편하게 수정 후 등록해보세요.');
+  }
+
+  submitQuickPost() {
+    const ageEl = document.getElementById('quick-post-age');
+    const hubEl = document.getElementById('quick-post-hub');
+    const topicEl = document.getElementById('quick-post-topic');
+    const titleEl = document.getElementById('quick-post-title');
+    const contentEl = document.getElementById('quick-post-content');
+
+    const rawTitle = (titleEl?.value || '').trim();
+    const rawContent = (contentEl?.value || '').trim();
+
+    if (!rawTitle && !rawContent) {
+      this.showToast('⚠️ 제목이나 소통할 내용을 한 줄 이상 입력해 주세요!');
+      if (titleEl) titleEl.focus();
+      return;
+    }
+
+    const ageStage = ageEl?.value && ageEl.value !== 'all' ? ageEl.value : this.getChildAgeStageFromMonths(this.profile?.months);
+    const localHub = hubEl?.value || 'all';
+    const topicVal = topicEl?.value || 'talk';
+
+    const hubObj = (this.data.localHubs || []).find((h) => h.id === localHub);
+    const localHubName = hubObj && hubObj.id !== 'all' ? hubObj.shortName : (this.profile?.region || '전국');
+    const region = hubObj && hubObj.region ? hubObj.region : 'all';
+
+    const topicMap = {
+      talk: { cat: ageStage || 'talk', localTopic: 'all', localTopicName: '💬 일상수다', isQuestion: false },
+      qa: { cat: ageStage || 'talk', localTopic: 'all', localTopicName: '❓ 육아고민 Q&A', isQuestion: true },
+      hospital: { cat: ageStage || 'newborn', localTopic: 'hospital', localTopicName: '🏥 소아과·병원 추천', isQuestion: true },
+      daycare: { cat: ageStage || 'toddler', localTopic: 'daycare', localTopicName: '🏫 어린이집·학원 후기', isQuestion: true },
+      share: { cat: ageStage || 'toddler', localTopic: 'share', localTopicName: '🥕 동네 무료나눔·드림', isQuestion: false },
+      place: { cat: ageStage || 'talk', localTopic: 'place', localTopicName: '☕ 동네 키즈맛집·번개', isQuestion: false },
+      living: { cat: ageStage || 'school', localTopic: 'living', localTopicName: '🏠 동네 살기·학군', isQuestion: true },
+      tips: { cat: 'tips', localTopic: 'all', localTopicName: '💡 육아꿀팁·레시피', isQuestion: false }
+    };
+
+    const mapped = topicMap[topicVal] || topicMap.talk;
+    const finalTitle = rawTitle || (rawContent.length > 40 ? rawContent.slice(0, 40) + '...' : rawContent);
+    const finalContent = rawContent || rawTitle;
+
+    const stageObj = (this.data.ageStages || []).find((s) => s.id === ageStage);
+    const autoTags = [
+      localHubName !== '전국' ? localHubName.split('·')[0] + '맘' : '도담육아',
+      stageObj && stageObj.id !== 'all' ? stageObj.shortName.replace(/\s+/g, '') : '육아소통',
+      mapped.localTopicName.replace(/^[^\s]+\s/, '')
+    ];
+
+    const newPost = {
+      id: `custom-post-${Date.now()}`,
+      category: mapped.cat,
+      ageStage: ageStage,
+      region: region,
+      localHub: localHub,
+      localHubName: localHubName,
+      localTopic: mapped.localTopic,
+      localTopicName: mapped.localTopicName,
+      isQuestion: mapped.isQuestion,
+      isSolved: false,
+      title: finalTitle,
+      content: finalContent,
+      images: [],
+      author: {
+        nickname: this.profile?.nickname || '도담맘',
+        level: this.profile?.level || '🌷 꽃봉오리맘',
+        childBadge: `👶 ${this.profile?.babyName || '도담이'} (${this.profile?.ageBadge || '24개월'}) · ${localHubName}`,
+        avatarBg: 'bg-[#03C75A] text-white'
+      },
+      createdAt: '방금 전',
+      timestamp: Date.now(),
+      views: 1,
+      isHot: false,
+      reactions: { like: 1, hug: 0, tip: 0 },
+      tags: autoTags,
+      comments: []
+    };
+
+    this.data.posts.unshift(newPost);
+    this.saveCustomPosts();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.createPost(newPost);
+    }
+
+    // Award points
+    this.profile.points = (this.profile.points || 0) + 15;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+    this.saveProfileData();
+    this.renderProfileWidget();
+
+    if (titleEl) titleEl.value = '';
+    if (contentEl) contentEl.value = '';
+
+    this.boardPage = 1;
+    this.renderBoardCategories();
+    this.renderBoardView();
+    this.showToast('🎉 소통글이 1초 만에 등록되었습니다! (+15P 활동점수 적립)');
+  }
+
+  reactToPostInline(postId, reactionType = 'like') {
+    const post = this.data.posts.find((p) => p.id === postId);
+    if (!post) return;
+    if (!post.reactions) post.reactions = { like: 0, hug: 0, tip: 0 };
+    post.reactions[reactionType] = (post.reactions[reactionType] || 0) + 1;
+
+    this.saveCustomPosts();
+    if (window.DodamFirebase && reactionType === 'like') {
+      window.DodamFirebase.incrementLike(post.id);
+    }
+
+    const msgMap = {
+      like: '❤️ 따뜻한 공감을 보냈습니다!',
+      hug: '🤗 힘내라고 토닥토닥 응원을 보냈습니다!',
+      tip: '💡 유익한 육아 꿀팁으로 추천했습니다!'
+    };
+    this.renderBoardView();
+    this.showToast(msgMap[reactionType] || msgMap.like);
+  }
+
+  submitInlineComment(event, postId) {
+    if (event) event.preventDefault();
+    const post = this.data.posts.find((p) => p.id === postId);
+    const input = document.getElementById(`inline-comment-input-${postId}`);
+    if (!post || !input) return;
+
+    const val = input.value.trim();
+    if (!val) return;
+
+    const newComment = {
+      id: `c-${Date.now()}`,
+      author: this.profile?.nickname || '도담맘',
+      level: this.profile?.level || '🌷 꽃봉오리맘',
+      childBadge: this.profile?.ageBadge || '육아맘',
+      content: val,
+      createdAt: '방금 전'
+    };
+
+    if (!Array.isArray(post.comments)) post.comments = [];
+    post.comments.push(newComment);
+    if (post.isQuestion) post.isSolved = true;
+
+    input.value = '';
+    this.saveCustomPosts();
+    if (window.DodamFirebase) {
+      window.DodamFirebase.addComment(post.id, newComment);
+    }
+
+    // Award +10P for warm comment
+    this.profile.points = (this.profile.points || 0) + 10;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+    this.saveProfileData();
+    this.renderProfileWidget();
+
+    this.renderBoardView();
+    this.showToast('💬 따뜻한 댓글이 바로 등록되었습니다! (+10P 적립)');
+  }
+
+  insertQuickComment(text) {
+    const input = document.getElementById('post-comment-input');
+    if (!input) return;
+    input.value = text;
+    input.focus();
+    // Auto-submit for true 1-second convenience
+    if (this.activePostDetailId) {
+      this.submitBoardComment(new Event('submit'));
     }
   }
 
@@ -1610,8 +2131,8 @@ class DodamCommunityApp {
     document.querySelectorAll('.board-sort-btn').forEach((btn) => {
       const active = btn.getAttribute('data-sort') === sortMode;
       btn.className = active
-        ? 'board-sort-btn px-2.5 py-1 rounded-lg font-extrabold bg-slate-900 text-white'
-        : 'board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800';
+        ? 'board-sort-btn px-2.5 py-1 rounded-lg font-extrabold bg-slate-900 text-white cursor-pointer'
+        : 'board-sort-btn px-2.5 py-1 rounded-lg font-bold text-slate-500 hover:text-slate-800 cursor-pointer';
     });
     this.renderBoardView();
   }
@@ -1622,11 +2143,11 @@ class DodamCommunityApp {
     const btnCard = document.getElementById('btn-board-view-card');
     if (btnCafe && btnCard) {
       if (mode === 'cafe') {
-        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5';
-        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5';
+        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5 cursor-pointer';
+        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5 cursor-pointer';
       } else {
-        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5';
-        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5';
+        btnCard.className = 'px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5 cursor-pointer';
+        btnCafe.className = 'px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5 cursor-pointer';
       }
     }
     this.renderBoardView();
@@ -1650,37 +2171,25 @@ class DodamCommunityApp {
         id: 'notice-1',
         tag: '필독',
         tagColor: 'bg-rose-500 text-white',
-        title: '2026 전국 초·중·고 학군 분석 순위 & 입시 로드맵 안내',
+        title: '2026 전국 초·중·고 학군 분석 순위 & 우리 동네 맘카페 오픈 안내',
         author: '도담매니저',
-        date: '2026.10.29',
+        date: '2026.11.06',
         views: 12480,
         likes: 382,
         commentsCount: 42,
-        content: '대한민국 교육부·NEIS 공식 공시 전국 12,014개 초등학교, 중학교, 고등학교 학군 랭킹 데이터가 업데이트되었습니다. 지역별 명문학교 및 특목고 진학률, 학업성취도를 지금 바로 확인해보세요!'
+        content: '자녀 나이별(임신·출산~중·고등) 맞춤 라운지와 전국 거점 동네 맘카페(소아과 추천, 어린이집·유치원 후기, 무료나눔·드림) 기능이 새롭게 업그레이드되었습니다!'
       },
       {
         id: 'notice-2',
         tag: '공지',
         tagColor: 'bg-emerald-600 text-white',
-        title: '도담도담 육아 커뮤니티 클린 이용 수칙 및 나눔·질문 에티켓',
+        title: '도담도담 육아 커뮤니티 따뜻한 공감 & 동네 무료나눔 에티켓 안내',
         author: '운영팀',
-        date: '2026.10.25',
+        date: '2026.11.01',
         views: 8930,
         likes: 215,
         commentsCount: 18,
-        content: '모든 부모님들이 편안하고 따뜻하게 소통할 수 있도록 상호 존중과 배려의 댓글 문화를 만들어주세요. 육아 꿀팁, 학군 정보, 체험 후기 환영합니다.'
-      },
-      {
-        id: 'notice-3',
-        tag: '안내',
-        tagColor: 'bg-indigo-600 text-white',
-        title: '이번 주말 아이와 가볼만한 전국 사생대회 & 백일장 일정 모아보기',
-        author: '도담체험팀',
-        date: '2026.10.27',
-        views: 6420,
-        likes: 178,
-        commentsCount: 29,
-        content: '가을 나들이와 함께 참여할 수 있는 전국 국립박물관, 해양안전, 불조심 포스터 등 다채로운 어린이 공모전 일정이 등록되었습니다.'
+        content: '모든 부모님들이 편안하고 따뜻하게 소통할 수 있도록 공감(❤️), 토닥토닥(🤗), 도움 채택(+20P) 문화를 함께 만들어주세요.'
       }
     ];
   }
@@ -1714,11 +2223,14 @@ class DodamCommunityApp {
     }
 
     document.getElementById('post-detail-likes-count').textContent = notice.likes;
-    
-    // Notice comment mock
+    const hugsEl = document.getElementById('post-detail-hugs-count');
+    if (hugsEl) hugsEl.textContent = 48;
+    const tipsEl = document.getElementById('post-detail-tips-count');
+    if (tipsEl) tipsEl.textContent = 95;
+
     const listEl = document.getElementById('post-detail-comments-list');
     const countEl = document.getElementById('post-detail-comments-count');
-    if (countEl) countEl.textContent = `댓글 ${notice.commentsCount}개`;
+    if (countEl) countEl.textContent = `${notice.commentsCount}`;
     if (listEl) {
       listEl.innerHTML = `
         <div class="p-3 bg-stone-50 rounded-xl text-xs text-slate-600 space-y-1">
@@ -1726,7 +2238,7 @@ class DodamCommunityApp {
             <span>도담이네맘</span>
             <span class="text-[10px] text-slate-400 font-normal">2시간 전</span>
           </div>
-          <div>공지 확인했습니다! 항상 유익한 정보 감사드립니다. 👍</div>
+          <div>공지 확인했습니다! 자녀 나이별 라운지랑 동네 맘카페가 생겨서 훨씬 소통하기 편해졌네요 👍</div>
         </div>
       `;
     }
@@ -1738,22 +2250,84 @@ class DodamCommunityApp {
     const listEl = document.getElementById('board-posts-list');
     const titleEl = document.getElementById('current-board-title');
     const countEl = document.getElementById('current-board-count');
+    const filterBadgesEl = document.getElementById('active-board-filter-badges');
     const paginationEl = document.getElementById('board-pagination-container');
     if (!listEl) return;
 
-    const catObj = this.data.categories.find((c) => c.id === this.currentCategory);
-    if (titleEl && catObj) titleEl.textContent = catObj.name;
+    const catObj = (this.data.categories || []).find((c) => c.id === this.currentCategory);
+    const stageObj = (this.data.ageStages || []).find((s) => s.id === this.currentAgeStage);
+    const hubObj = (this.data.localHubs || []).find((h) => h.id === this.currentLocalHub);
+    const topicObj = (this.data.localTopics || []).find((t) => t.id === this.currentLocalTopic);
 
-    let filtered = this.data.posts.filter((p) => {
+    // Dynamic Heading
+    let headingParts = [];
+    if (this.boardLoungeMode === 'qa') headingParts.push('🙋‍♀️ 육아 고민 Q&A');
+    else if (this.boardLoungeMode === 'local') headingParts.push('📍 우리 동네 맘카페');
+    else if (this.boardLoungeMode === 'age') headingParts.push('👶 자녀 나이별 라운지');
+
+    if (stageObj && stageObj.id !== 'all') headingParts.push(stageObj.shortName);
+    if (hubObj && hubObj.id !== 'all') headingParts.push(hubObj.shortName);
+    if (topicObj && topicObj.id !== 'all') headingParts.push(topicObj.name);
+    if (catObj && catObj.id !== 'all') headingParts.push(catObj.name);
+
+    if (titleEl) {
+      titleEl.textContent = headingParts.length > 0 ? headingParts.join(' · ') : '전체 소통글';
+    }
+
+    // Render active filter reset badges
+    if (filterBadgesEl) {
+      const badges = [];
+      if (this.currentAgeStage !== 'all' && stageObj) {
+        badges.push(`<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 text-[11px] font-black">${stageObj.shortName} <button onclick="app.selectAgeStage('all')" class="hover:text-rose-950 cursor-pointer">✕</button></span>`);
+      }
+      if (this.currentLocalHub !== 'all' && hubObj) {
+        badges.push(`<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[11px] font-black">📍 ${hubObj.shortName} <button onclick="app.selectLocalHub('all')" class="hover:text-emerald-950 cursor-pointer">✕</button></span>`);
+      }
+      if (this.currentLocalTopic !== 'all' && topicObj) {
+        badges.push(`<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 text-[11px] font-black">${topicObj.name} <button onclick="app.selectLocalTopic('all')" class="hover:text-amber-950 cursor-pointer">✕</button></span>`);
+      }
+      if (this.boardSearchKeyword) {
+        badges.push(`<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-200 text-slate-800 text-[11px] font-black">🔍 "${this.boardSearchKeyword}" <button onclick="app.onSearchKeyword('')" class="hover:text-slate-950 cursor-pointer">✕</button></span>`);
+      }
+      filterBadgesEl.innerHTML = badges.join('');
+    }
+
+    let filtered = (this.data.posts || []).filter((p) => {
+      if (this.boardLoungeMode === 'qa') {
+        const isQa = p.isQuestion || p.category === 'qa' || (p.title && (p.title.includes('?') || p.title.includes('질문') || p.title.includes('추천') || p.title.includes('고민') || p.title.includes('어디')));
+        if (!isQa) return false;
+      }
       if (this.currentCategory === 'hot' && !p.isHot) return false;
       if (this.currentCategory !== 'all' && this.currentCategory !== 'hot' && p.category !== this.currentCategory) return false;
+
+      if (this.currentAgeStage !== 'all') {
+        const matchStage =
+          p.ageStage === this.currentAgeStage ||
+          p.category === this.currentAgeStage ||
+          (this.currentAgeStage === 'middle_high' && (p.category === 'middle' || p.category === 'high' || p.ageStage === 'middle_high'));
+        if (!matchStage) return false;
+      }
+
+      if (this.currentLocalHub !== 'all') {
+        const matchHub = p.localHub === this.currentLocalHub || (hubObj && p.region === hubObj.region && p.localHub === 'all');
+        if (!matchHub) return false;
+      }
+
+      if (this.currentLocalTopic !== 'all') {
+        if (p.localTopic !== this.currentLocalTopic) return false;
+      }
+
       if (this.currentRegion !== 'all' && p.region !== 'all' && p.region !== this.currentRegion) return false;
+
       if (this.boardSearchKeyword) {
-        const matchTitle = p.title.toLowerCase().includes(this.boardSearchKeyword);
-        const matchBody = p.content.toLowerCase().includes(this.boardSearchKeyword);
-        const matchAuthor = (p.author?.nickname || '').toLowerCase().includes(this.boardSearchKeyword);
-        const matchTags = (p.tags || []).some((t) => t.toLowerCase().includes(this.boardSearchKeyword));
-        if (!matchTitle && !matchBody && !matchAuthor && !matchTags) return false;
+        const kw = this.boardSearchKeyword;
+        const matchTitle = (p.title || '').toLowerCase().includes(kw);
+        const matchBody = (p.content || '').toLowerCase().includes(kw);
+        const matchAuthor = (p.author?.nickname || '').toLowerCase().includes(kw);
+        const matchHubName = (p.localHubName || '').toLowerCase().includes(kw);
+        const matchTopicName = (p.localTopicName || '').toLowerCase().includes(kw);
+        const matchTags = (p.tags || []).some((t) => t.toLowerCase().includes(kw));
+        if (!matchTitle && !matchBody && !matchAuthor && !matchHubName && !matchTopicName && !matchTags) return false;
       }
       return true;
     });
@@ -1761,31 +2335,37 @@ class DodamCommunityApp {
     if (this.boardSort === 'popular') {
       filtered.sort(
         (a, b) =>
-          b.reactions.like + (b.reactions.hug || 0) + (b.reactions.tip || 0) -
-          (a.reactions.like + (a.reactions.hug || 0) + (a.reactions.tip || 0))
+          (b.reactions?.like || 0) + (b.reactions?.hug || 0) + (b.reactions?.tip || 0) -
+          ((a.reactions?.like || 0) + (a.reactions?.hug || 0) + (a.reactions?.tip || 0))
       );
     } else if (this.boardSort === 'comments') {
-      filtered.sort((a, b) => b.comments.length - a.comments.length);
+      filtered.sort((a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
     } else if (this.boardSort === 'views') {
       filtered.sort((a, b) => (b.views || 0) - (a.views || 0));
     } else {
-      filtered.sort((a, b) => b.timestamp - a.timestamp);
+      filtered.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
     }
 
-    if (countEl) countEl.textContent = `${filtered.length}개의 게시글`;
+    if (countEl) countEl.textContent = `${filtered.length}개의 소통글`;
 
     if (filtered.length === 0) {
       listEl.innerHTML = `
-        <div class="p-12 text-center space-y-3 bg-white rounded-2xl border border-stone-200 shadow-2xs">
+        <div class="p-10 text-center space-y-3 bg-white rounded-3xl border border-stone-200 shadow-2xs">
           <div class="w-14 h-14 mx-auto rounded-full bg-emerald-50 text-[#03C75A] flex items-center justify-center text-2xl shadow-2xs">
-            <i class="fa-solid fa-pen-nib"></i>
+            <i class="fa-solid fa-comments"></i>
           </div>
-          <div class="text-base font-black text-slate-800">등록된 게시글이 아직 없습니다.</div>
-          <p class="text-xs text-slate-500 max-w-sm mx-auto leading-relaxed">첫 번째 주인공이 되어 이웃 육아맘·대디들과 따뜻한 육아 이야기와 유용한 정보를 나누어보세요!</p>
-          <div class="pt-2">
-            <button onclick="app.openWritePage()" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white text-xs font-black shadow-sm transition cursor-pointer">
-              <i class="fa-solid fa-feather-pointed"></i>
-              <span>첫 글 작성하기</span>
+          <div class="text-base font-black text-slate-800">선택하신 조건의 게시글이 아직 없습니다.</div>
+          <p class="text-xs text-slate-500 max-w-md mx-auto leading-relaxed">
+            위쪽의 <strong>⚡ 1초 빠른 육아수다·동네질문 바</strong>에서 첫 번째 질문을 남기시거나 전체 필터로 초기화해보세요!
+          </p>
+          <div class="pt-2 flex items-center justify-center gap-2">
+            <button onclick="app.resetBoardFilter()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-black transition cursor-pointer">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span>전체 소통글 보기</span>
+            </button>
+            <button onclick="document.getElementById('quick-post-title')?.focus()" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white text-xs font-black shadow-sm transition cursor-pointer">
+              <i class="fa-solid fa-bolt"></i>
+              <span>1초 첫 질문 남기기 (+15P)</span>
             </button>
           </div>
         </div>
@@ -1803,14 +2383,15 @@ class DodamCommunityApp {
     const startIdx = (this.boardPage - 1) * this.boardPageSize;
     const endIdx = startIdx + this.boardPageSize;
     const pagedPosts = filtered.slice(startIdx, endIdx);
-
     const pinnedNotices = this.getPinnedNotices();
 
     if (this.boardViewMode === 'cafe') {
-      // 1. Naver Cafe List Mode (네이버 카페 목록형)
-      const noticeRowsHtml = (this.boardPage === 1)
-        ? pinnedNotices.map((n) => `
-            <!-- PC Notice Row -->
+      // 1. 카페 목록형 (고밀도 테이블 + 연령/동네 배지 표시)
+      const noticeRowsHtml =
+        this.boardPage === 1
+          ? pinnedNotices
+              .map(
+                (n) => `
             <div onclick="app.openNoticeDetailModal('${n.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-3 bg-rose-50/45 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition items-center">
               <div class="col-span-2 text-center">
                 <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[11px] font-black ${n.tagColor} shadow-2xs">${n.tag}</span>
@@ -1824,180 +2405,256 @@ class DodamCommunityApp {
               <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${n.views.toLocaleString()}</div>
               <div class="col-span-1 text-center text-xs text-rose-500 font-bold">${n.likes}</div>
             </div>
-
-            <!-- Mobile Notice Row (2-line Naver Cafe Style) -->
             <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-4 py-3 bg-rose-50/45 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition space-y-1">
               <div class="flex items-start gap-1.5">
                 <span class="px-1.5 py-0.5 rounded-md text-[10px] font-black ${n.tagColor} shrink-0 mt-0.5">${n.tag}</span>
-                <span class="font-extrabold text-sm text-slate-900 leading-snug line-clamp-1 hover:text-rose-600">${n.title}</span>
-                <span class="text-xs text-rose-500 font-black shrink-0 mt-0.5">[${n.commentsCount}]</span>
-              </div>
-              <div class="flex items-center justify-between text-[11px] text-slate-500 pl-1">
-                <span class="font-bold text-rose-600">${n.author} · ${n.date}</span>
-                <div class="flex items-center gap-2">
-                  <span>조회 ${n.views.toLocaleString()}</span>
-                  <span class="text-rose-500 font-bold">♥ ${n.likes}</span>
-                </div>
+                <span class="font-extrabold text-sm text-slate-900 leading-snug line-clamp-1">${n.title}</span>
               </div>
             </div>
-          `).join('')
-        : '';
+          `
+              )
+              .join('')
+          : '';
 
-      const postRowsHtml = pagedPosts.map((post) => {
-        const cat = this.data.categories.find((c) => c.id === post.category);
-        const catName = cat ? cat.name : '자유';
-        const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
-        const isScrapped = this.scraps.includes(post.id);
+      const postRowsHtml = pagedPosts
+        .map((post) => {
+          const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
+          const stageBadge = stObj && stObj.id !== 'all' ? stObj.shortName : '자유소통';
+          const hubLabel = post.localHubName && post.localHubName !== '전국 전체' ? `📍${post.localHubName}` : '';
+          const totalLikes = (post.reactions?.like || 0) + (post.reactions?.hug || 0) + (post.reactions?.tip || 0);
 
-        return `
-          <!-- PC Post Row (Naver Cafe Table Row) -->
-          <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-3 bg-white border-b border-stone-100 hover:bg-rose-50/30 cursor-pointer transition items-center group">
-            <div class="col-span-2 text-center">
-              <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[11px] font-bold bg-stone-100 text-slate-600 group-hover:bg-rose-100 group-hover:text-rose-700 transition">${catName}</span>
-            </div>
-            <div class="col-span-5 flex items-center gap-1.5 min-w-0 pr-2">
-              ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-50 text-rose-600 font-black text-[10px] border border-rose-200 shrink-0">HOT</span>' : ''}
-              ${(post.createdAt && (post.createdAt.includes('분') || post.createdAt.includes('방금'))) ? '<span class="px-1 py-0.2 rounded bg-emerald-50 text-emerald-700 font-black text-[9px] border border-emerald-200 shrink-0">N</span>' : ''}
-              ${(post.images && post.images.length > 0) ? '<i class="fa-regular fa-image text-emerald-600 text-[11px] shrink-0" title="사진 첨부"></i>' : ''}
-              <span class="font-bold text-sm text-slate-900 group-hover:text-[#03C75A] truncate transition">${post.title}</span>
-              ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-black shrink-0">[${post.comments.length}]</span>` : ''}
-            </div>
-            <div class="col-span-2 flex items-center justify-center gap-1.5 text-xs text-slate-700 truncate">
-              <span class="w-4 h-4 rounded-full ${post.author.avatarBg} text-[9px] flex items-center justify-center font-bold text-white shrink-0">${post.author.nickname[0]}</span>
-              <span class="truncate font-semibold">${post.author.nickname}</span>
-            </div>
-            <div class="col-span-1 text-center text-xs text-slate-400 font-medium">${post.createdAt}</div>
-            <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${post.views ?? 0}</div>
-            <div class="col-span-1 text-center text-xs text-rose-500 font-bold flex items-center justify-center gap-1">
-              <i class="fa-solid fa-heart text-[10px]"></i>
-              <span>${totalLikes}</span>
-            </div>
-          </div>
-
-          <!-- Mobile Post Row (Naver Cafe 2-Line High Density) -->
-          <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-3 bg-white border-b border-stone-100 hover:bg-rose-50/30 cursor-pointer transition space-y-1.5">
-            <div class="flex items-start gap-1.5">
-              <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-stone-100 text-slate-600 shrink-0 mt-0.5">${catName}</span>
-              ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-50 text-rose-600 font-black text-[9px] border border-rose-200 shrink-0 mt-0.5">HOT</span>' : ''}
-              ${(post.createdAt && (post.createdAt.includes('분') || post.createdAt.includes('방금'))) ? '<span class="px-1 py-0.2 rounded bg-emerald-50 text-emerald-700 font-black text-[9px] border border-emerald-200 shrink-0 mt-0.5">N</span>' : ''}
-              ${(post.images && post.images.length > 0) ? '<i class="fa-regular fa-image text-emerald-600 text-[11px] shrink-0 mt-0.5" title="사진 첨부"></i>' : ''}
-              <span class="font-bold text-sm text-slate-900 leading-snug line-clamp-2 hover:text-[#03C75A]">${post.title}</span>
-              ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-black shrink-0 mt-0.5">[${post.comments.length}]</span>` : ''}
-            </div>
-            <div class="flex items-center justify-between text-[11px] text-slate-400 pl-1">
-              <div class="flex items-center gap-1.5 text-slate-600 font-medium truncate">
-                <span class="truncate">${post.author.nickname}</span>
-                <span class="text-stone-300">·</span>
-                <span class="text-slate-400 shrink-0">${post.createdAt}</span>
+          return `
+            <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-3 bg-white border-b border-stone-100 hover:bg-emerald-50/30 cursor-pointer transition items-center group">
+              <div class="col-span-2 flex flex-col items-center justify-center gap-0.5">
+                <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 text-rose-700 border border-rose-200/70 truncate max-w-full">${stageBadge}</span>
+                ${hubLabel ? `<span class="text-[10px] font-bold text-emerald-700 truncate max-w-full">${hubLabel}</span>` : ''}
               </div>
-              <div class="flex items-center gap-2.5 shrink-0">
-                <span class="flex items-center gap-1 text-slate-500"><i class="fa-regular fa-eye text-[10px]"></i>${post.views ?? 0}</span>
-                <span class="flex items-center gap-1 text-rose-500 font-bold"><i class="fa-solid fa-heart text-[10px]"></i>${totalLikes}</span>
+              <div class="col-span-5 flex items-center gap-1.5 min-w-0 pr-2">
+                ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-50 text-rose-600 font-black text-[10px] border border-rose-200 shrink-0">HOT</span>' : ''}
+                ${post.localTopicName && post.localTopic !== 'all' ? `<span class="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 font-bold text-[10px] border border-emerald-200 shrink-0">${post.localTopicName}</span>` : ''}
+                <span class="font-bold text-sm text-slate-900 group-hover:text-[#03C75A] truncate transition">${post.title}</span>
+                ${(post.comments?.length || 0) > 0 ? `<span class="text-xs text-rose-500 font-black shrink-0">[${post.comments.length}]</span>` : ''}
+              </div>
+              <div class="col-span-2 flex items-center justify-center gap-1.5 text-xs text-slate-700 truncate">
+                <span class="w-4 h-4 rounded-full ${post.author?.avatarBg || 'bg-emerald-600 text-white'} text-[9px] flex items-center justify-center font-bold text-white shrink-0">${(post.author?.nickname || '도')[0]}</span>
+                <span class="truncate font-semibold">${post.author?.nickname || '도담맘'}</span>
+              </div>
+              <div class="col-span-1 text-center text-xs text-slate-400 font-medium">${post.createdAt}</div>
+              <div class="col-span-1 text-center text-xs text-slate-500 font-medium">${post.views ?? 0}</div>
+              <div class="col-span-1 text-center text-xs text-rose-500 font-bold flex items-center justify-center gap-1">
+                <i class="fa-solid fa-heart text-[10px]"></i>
+                <span>${totalLikes}</span>
               </div>
             </div>
-          </div>
-        `;
-      }).join('');
+
+            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-3 bg-white border-b border-stone-100 hover:bg-emerald-50/30 cursor-pointer transition space-y-1.5">
+              <div class="flex items-center gap-1.5 flex-wrap">
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-rose-50 text-rose-700">${stageBadge}</span>
+                ${hubLabel ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700">${hubLabel}</span>` : ''}
+                ${post.localTopicName && post.localTopic !== 'all' ? `<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-stone-100 text-slate-700">${post.localTopicName}</span>` : ''}
+              </div>
+              <div class="font-bold text-sm text-slate-900 leading-snug line-clamp-2">${post.title}</div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400">
+                <span>${post.author?.nickname || '도담맘'} · ${post.createdAt}</span>
+                <span class="text-rose-500 font-bold">♥ ${totalLikes} · 댓글 ${post.comments?.length || 0}</span>
+              </div>
+            </div>
+          `;
+        })
+        .join('');
 
       listEl.innerHTML = `
         <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-xs">
-          <!-- PC Header -->
           <div class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-stone-50 border-b border-stone-200 text-xs font-bold text-slate-500 select-none">
-            <div class="col-span-2 text-center">말머리</div>
+            <div class="col-span-2 text-center">연령·동네</div>
             <div class="col-span-5 text-left pl-2">제목</div>
             <div class="col-span-2 text-center">작성자</div>
             <div class="col-span-1 text-center">작성일</div>
             <div class="col-span-1 text-center">조회</div>
-            <div class="col-span-1 text-center">좋아요</div>
+            <div class="col-span-1 text-center">공감</div>
           </div>
-
-          <!-- Pinned Notice Rows -->
           ${noticeRowsHtml}
-
-          <!-- Normal Posts Rows -->
-          <div>
-            ${postRowsHtml}
-          </div>
+          <div>${postRowsHtml}</div>
         </div>
       `;
     } else {
-      // 2. Card Feed Mode (피드 카드형 보기)
+      // 2. 소통 피드형 (기본 모드: 연령·동네 배지 + 본문 미리보기 + 즉시 3종 공감 + 댓글 미리보기 & 바로 댓글 달기)
       listEl.innerHTML = `
-        <div class="space-y-3">
+        <div class="space-y-3.5">
           ${pagedPosts
             .map((post) => {
-              const cat = this.data.categories.find((c) => c.id === post.category);
+              const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
+              const stageBadge = stObj && stObj.id !== 'all' ? `${stObj.icon} ${stObj.shortName}` : '👶 전연령 공통';
+              const hubBadge = post.localHubName && post.localHubName !== '전국 전체' ? `📍 ${post.localHubName}` : '🌏 전국 소통';
+              const topicBadge = post.localTopicName || '💬 육아소통';
               const isScrapped = this.scraps.includes(post.id);
-              const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
+              const likeCnt = post.reactions?.like || 0;
+              const hugCnt = post.reactions?.hug || 0;
+              const tipCnt = post.reactions?.tip || 0;
+              const recentComments = (post.comments || []).slice(-2);
 
               return `
-                <article
-                  onclick="app.openPostDetailModal('${post.id}')"
-                  class="community-card p-5 space-y-3 cursor-pointer hover:border-rose-300 hover:shadow-md transition"
-                >
-                  <div class="flex items-center justify-between gap-2">
-                    <div class="flex items-center gap-2.5">
-                      <div class="w-9 h-9 rounded-full ${post.author.avatarBg} flex items-center justify-center font-black text-xs">
-                        ${post.author.nickname.slice(0, 1)}
+                <article class="bg-white rounded-3xl border border-stone-200/90 p-4 sm:p-5 space-y-3.5 shadow-2xs hover:border-emerald-300/90 hover:shadow-md transition">
+                  <!-- 상단: 작성자 정보 + 자녀 나이별 배지 + 우리동네 맘카페 배지 -->
+                  <div class="flex items-start justify-between gap-2">
+                    <div class="flex items-center gap-2.5 cursor-pointer" onclick="app.openPostDetailModal('${post.id}')">
+                      <div class="w-10 h-10 rounded-2xl ${post.author?.avatarBg || 'bg-rose-500 text-white'} flex items-center justify-center font-black text-sm shadow-2xs shrink-0">
+                        ${(post.author?.nickname || '도').slice(0, 1)}
                       </div>
                       <div>
-                        <div class="flex items-center gap-1.5">
-                          <span class="font-extrabold text-xs text-slate-900">${post.author.nickname}</span>
-                          <span class="text-[10px] font-bold text-slate-400">${post.author.level}</span>
+                        <div class="flex items-center gap-1.5 flex-wrap">
+                          <span class="font-black text-xs sm:text-sm text-slate-900">${post.author?.nickname || '도담맘'}</span>
+                          <span class="px-1.5 py-0.2 rounded-md bg-stone-100 text-slate-600 text-[10px] font-extrabold">${post.author?.level || '🌷 꽃봉오리맘'}</span>
+                          <span class="text-[11px] text-slate-400 font-medium">· ${post.createdAt}</span>
                         </div>
-                        <div class="text-[11px] text-rose-500 font-bold">${post.author.childBadge} · <span class="text-slate-400 font-normal">${post.createdAt}</span></div>
+                        <div class="flex items-center gap-1.5 flex-wrap mt-1">
+                          <span class="px-2 py-0.5 rounded-lg bg-rose-50 text-rose-700 border border-rose-200/70 text-[11px] font-extrabold">${post.author?.childBadge || stageBadge}</span>
+                        </div>
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-1.5" onclick="event.stopPropagation()">
-                      ${post.isHot ? '<span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 font-extrabold text-[10px] border border-rose-200">🔥 베스트</span>' : ''}
-                      <span class="px-2.5 py-0.5 rounded-full bg-stone-100 text-slate-600 font-bold text-[11px]">${cat ? cat.name : '자유수다'}</span>
+                    <!-- 우측 라운지 태그 & 스크랩 -->
+                    <div class="flex items-center gap-1.5 flex-wrap justify-end shrink-0">
+                      ${post.isHot ? '<span class="px-2 py-0.5 rounded-full bg-rose-500 text-white font-black text-[10px] shadow-2xs">🔥 인기</span>' : ''}
+                      ${
+                        post.isQuestion
+                          ? post.isSolved || (post.comments?.length || 0) > 0
+                            ? '<span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-black text-[10px] border border-emerald-200">✅ 답변완료</span>'
+                            : '<span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-900 font-black text-[10px] border border-amber-300 animate-pulse">🙋‍♀️ 답변대기</span>'
+                          : ''
+                      }
+                      <span onclick="app.selectAgeStage('${post.ageStage || 'all'}')" class="px-2.5 py-0.5 rounded-full bg-pink-50 hover:bg-pink-100 text-rose-700 border border-pink-200 font-extrabold text-[11px] cursor-pointer transition" title="이 연령대 글 모아보기">${stageBadge}</span>
+                      <span onclick="app.selectLocalHub('${post.localHub || 'all'}')" class="px-2.5 py-0.5 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 font-extrabold text-[11px] cursor-pointer transition" title="이 동네 맘카페 글 모아보기">${hubBadge}</span>
+                      <span class="px-2.5 py-0.5 rounded-full bg-stone-100 text-slate-700 font-bold text-[11px]">${topicBadge}</span>
                       <button
+                        type="button"
                         onclick="app.toggleScrap('${post.id}')"
                         title="스크랩"
                         class="w-8 h-8 rounded-xl border ${
                           isScrapped ? 'bg-amber-50 border-amber-300 text-amber-500' : 'border-stone-200 text-slate-400 hover:text-slate-600'
-                        } flex items-center justify-center transition"
+                        } flex items-center justify-center transition cursor-pointer"
                       >
                         <i class="fa-solid fa-bookmark text-xs"></i>
                       </button>
                     </div>
                   </div>
 
-                  <div class="space-y-1.5">
-                    <h3 class="text-base font-black text-slate-900 leading-snug hover:text-rose-600 transition flex items-center gap-1.5">
+                  <!-- 본문 영역 (클릭 시 상세 모달) -->
+                  <div onclick="app.openPostDetailModal('${post.id}')" class="space-y-2 cursor-pointer group">
+                    <h3 class="text-base sm:text-lg font-black text-slate-900 leading-snug group-hover:text-[#03C75A] transition flex items-center gap-1.5 flex-wrap">
                       <span>${post.title}</span>
-                      ${post.comments.length > 0 ? `<span class="text-xs text-rose-500 font-extrabold">[${post.comments.length}]</span>` : ''}
                     </h3>
-                    <p class="text-xs text-slate-600 leading-relaxed line-clamp-2">${post.content}</p>
+                    <p class="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3 whitespace-pre-line">${post.content}</p>
+                    ${
+                      post.images && post.images.length > 0
+                        ? `<div class="pt-1 flex gap-2 overflow-x-auto">
+                            ${post.images.map((img) => `<img src="${img}" alt="첨부사진" class="h-28 w-auto rounded-2xl object-cover border border-stone-200" />`).join('')}
+                          </div>`
+                        : ''
+                    }
                   </div>
 
+                  <!-- 해시태그 (클릭 시 즉시 태그 검색) -->
                   ${
                     post.tags && post.tags.length > 0
                       ? `<div class="flex flex-wrap gap-1.5">
-                          ${post.tags.map((t) => `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-[10px] font-semibold">#${t}</span>`).join('')}
+                          ${post.tags
+                            .map(
+                              (t) =>
+                                `<button type="button" onclick="app.onSearchKeyword('${t}')" class="px-2.5 py-0.5 rounded-lg bg-stone-100 hover:bg-emerald-50 text-slate-600 hover:text-emerald-700 text-[11px] font-bold transition cursor-pointer">#${t}</button>`
+                            )
+                            .join('')}
                         </div>`
                       : ''
                   }
 
-                  <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-slate-400 font-medium">
-                    <div class="flex items-center gap-3">
-                      <span class="flex items-center gap-1 text-rose-500 font-bold">
-                        <i class="fa-solid fa-heart text-[11px]"></i>
-                        <span>${totalLikes}</span>
-                      </span>
-                      <span class="flex items-center gap-1 text-slate-600 font-bold">
-                        <i class="fa-regular fa-comment text-[11px]"></i>
-                        <span>${post.comments.length}</span>
-                      </span>
-                      <span class="flex items-center gap-1">
-                        <i class="fa-regular fa-eye text-[11px]"></i>
-                        <span>${post.views ?? 0}</span>
-                      </span>
+                  <!-- 목록에서 바로 누르는 3종 공감 리액션 바 & 상세열기 -->
+                  <div class="pt-2.5 border-t border-stone-100 flex items-center justify-between gap-2 flex-wrap">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                      <button
+                        type="button"
+                        onclick="app.reactToPostInline('${post.id}', 'like')"
+                        class="px-3 py-1.5 rounded-xl bg-rose-50/80 hover:bg-rose-100 text-rose-600 border border-rose-200/80 text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer"
+                      >
+                        <span>❤️ 공감</span>
+                        <span class="font-black">${likeCnt}</span>
+                      </button>
+                      <button
+                        type="button"
+                        onclick="app.reactToPostInline('${post.id}', 'hug')"
+                        class="px-3 py-1.5 rounded-xl bg-amber-50/80 hover:bg-amber-100 text-amber-800 border border-amber-200/80 text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer"
+                      >
+                        <span>🤗 토닥토닥</span>
+                        <span class="font-black">${hugCnt}</span>
+                      </button>
+                      <button
+                        type="button"
+                        onclick="app.reactToPostInline('${post.id}', 'tip')"
+                        class="px-3 py-1.5 rounded-xl bg-emerald-50/80 hover:bg-emerald-100 text-emerald-700 border border-emerald-200/80 text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer"
+                      >
+                        <span>💡 꿀팁</span>
+                        <span class="font-black">${tipCnt}</span>
+                      </button>
+                      <button
+                        type="button"
+                        onclick="app.openPostDetailModal('${post.id}')"
+                        class="px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-xs font-extrabold flex items-center gap-1.5 transition cursor-pointer"
+                      >
+                        <i class="fa-regular fa-comment-dots text-[#03C75A]"></i>
+                        <span>댓글 ${post.comments?.length || 0}</span>
+                      </button>
                     </div>
-                    <span class="text-rose-500 font-bold hover:underline text-[11px]">
-                      답글 및 토론 보기 →
-                    </span>
+
+                    <div class="flex items-center gap-3 text-[11px] text-slate-400 font-bold">
+                      <span>조회 ${(post.views || 1).toLocaleString()}</span>
+                      <button type="button" onclick="app.openPostDetailModal('${post.id}')" class="text-[#03C75A] hover:underline font-black cursor-pointer">
+                        전체 대화 보기 →
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 인라인 베스트/최신 댓글 미리보기 + 모달 안 열고 바로 댓글 달기 -->
+                  <div class="bg-stone-50/90 rounded-2xl p-3 border border-stone-200/70 space-y-2.5">
+                    ${
+                      recentComments.length > 0
+                        ? `<div class="space-y-1.5">
+                            ${recentComments
+                              .map(
+                                (c) => `
+                              <div class="flex items-start justify-between gap-2 text-xs">
+                                <div class="min-w-0 flex-1">
+                                  <span class="font-black text-slate-900 mr-1.5">${c.author || '도담맘'}</span>
+                                  ${c.childBadge ? `<span class="text-[10px] font-bold text-rose-600 mr-1.5">(${c.childBadge})</span>` : ''}
+                                  <span class="text-slate-700">${c.content || c.text || ''}</span>
+                                </div>
+                                <button
+                                  type="button"
+                                  onclick="app.giveHelpThanks('${c.author || '도담맘'}')"
+                                  class="shrink-0 px-2 py-0.5 rounded-lg bg-white hover:bg-indigo-50 text-indigo-600 border border-indigo-200/80 text-[10px] font-black transition cursor-pointer"
+                                  title="도움이 된 댓글에 감사를 전하고 포인트를 선물합니다"
+                                >👍 도움됐어요</button>
+                              </div>
+                            `
+                              )
+                              .join('')}
+                          </div>`
+                        : `<div class="text-[11px] text-slate-400 font-medium">아직 첫 댓글이 없어요. 이웃 맘·대디에게 따뜻한 첫 댓글을 남겨보세요!</div>`
+                    }
+
+                    <form onsubmit="app.submitInlineComment(event, '${post.id}')" class="flex items-center gap-1.5 pt-1">
+                      <input
+                        id="inline-comment-input-${post.id}"
+                        type="text"
+                        placeholder="이곳에서 바로 따뜻한 댓글이나 동네 정보를 남겨보세요 (+10P)"
+                        class="flex-1 bg-white border border-stone-200 rounded-xl px-3 py-1.5 text-xs text-slate-800 focus:outline-none focus:border-[#03C75A]"
+                      />
+                      <button
+                        type="submit"
+                        class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shrink-0 transition cursor-pointer"
+                      >
+                        댓글등록
+                      </button>
+                    </form>
                   </div>
                 </article>
               `;
@@ -2052,11 +2709,7 @@ class DodamCommunityApp {
             >
               <i class="fa-solid fa-chevron-left text-[10px]"></i>
             </button>
-            
-            <div class="flex items-center gap-1">
-              ${pagesHtml}
-            </div>
-
+            <div class="flex items-center gap-1">${pagesHtml}</div>
             <button
               onclick="app.setBoardPage(${this.boardPage + 1})"
               ${this.boardPage === totalPages ? 'disabled class="opacity-30 cursor-not-allowed"' : 'class="hover:bg-white text-slate-600"'}
@@ -2087,18 +2740,23 @@ class DodamCommunityApp {
     post.views += 1;
 
     const modal = document.getElementById('post-detail-modal');
-    const cat = this.data.categories.find((c) => c.id === post.category);
+    const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
+    const cat = (this.data.categories || []).find((c) => c.id === post.category);
 
     const catBadge = document.getElementById('post-detail-category-badge');
     if (catBadge) {
-      catBadge.textContent = cat ? cat.name : '자유게시판';
+      const labelParts = [];
+      if (stObj && stObj.id !== 'all') labelParts.push(stObj.shortName);
+      else if (cat) labelParts.push(cat.name);
+      if (post.localTopicName) labelParts.push(post.localTopicName);
+      catBadge.textContent = labelParts.join(' · ') || '도담 육아소통';
       catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-emerald-50 text-[#03C75A] border border-emerald-200';
     }
 
     document.getElementById('post-detail-title').textContent = post.title;
     document.getElementById('post-detail-author').textContent = post.author?.nickname || '도담회원';
     document.getElementById('post-detail-author-badge').textContent = post.author?.childBadge || '육아회원';
-    document.getElementById('post-detail-region').textContent = post.region === 'all' ? '전국' : post.region;
+    document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
     document.getElementById('post-detail-date').textContent = post.createdAt;
     document.getElementById('post-detail-views').textContent = (post.views || 1).toLocaleString();
     document.getElementById('post-detail-content').textContent = post.content;
@@ -2110,16 +2768,19 @@ class DodamCommunityApp {
       avatarEl.className = `w-8 h-8 rounded-full ${post.author?.avatarBg || 'bg-rose-500 text-white'} flex items-center justify-center font-black text-xs shrink-0 shadow-2xs`;
     }
 
-    // 사진 렌더링
     const imgBox = document.getElementById('post-detail-images-box');
     if (imgBox) {
       if (post.images && post.images.length > 0) {
         imgBox.classList.remove('hidden');
-        imgBox.innerHTML = post.images.map((img) => `
+        imgBox.innerHTML = post.images
+          .map(
+            (img) => `
           <div class="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 max-h-96 flex items-center justify-center">
             <img src="${img}" alt="첨부 이미지" class="w-full h-auto object-contain max-h-96" />
           </div>
-        `).join('');
+        `
+          )
+          .join('');
       } else {
         imgBox.classList.add('hidden');
         imgBox.innerHTML = '';
@@ -2138,8 +2799,12 @@ class DodamCommunityApp {
       commentAuthorEl.textContent = this.profile?.nickname || '도담맘';
     }
 
-    const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
-    document.getElementById('post-detail-likes-count').textContent = totalLikes;
+    const likesEl = document.getElementById('post-detail-likes-count');
+    if (likesEl) likesEl.textContent = post.reactions?.like || 0;
+    const hugsEl = document.getElementById('post-detail-hugs-count');
+    if (hugsEl) hugsEl.textContent = post.reactions?.hug || 0;
+    const tipsEl = document.getElementById('post-detail-tips-count');
+    if (tipsEl) tipsEl.textContent = post.reactions?.tip || 0;
 
     this.renderPostDetailComments(post);
     modal.classList.remove('hidden');
@@ -2193,7 +2858,7 @@ class DodamCommunityApp {
     if (countEl) countEl.textContent = comments.length;
 
     if (comments.length === 0) {
-      listEl.innerHTML = `<div class="p-6 text-center text-xs text-slate-400 bg-stone-50 rounded-2xl border border-stone-100">아직 작성된 댓글이 없습니다. 첫 번째 댓글을 남겨보세요!</div>`;
+      listEl.innerHTML = `<div class="p-6 text-center text-xs text-slate-400 bg-stone-50 rounded-2xl border border-stone-100">아직 작성된 댓글이 없습니다. 아래 ⚡ 1초 댓글 버튼을 눌러 첫 응원을 남겨보세요!</div>`;
       return;
     }
 
@@ -2203,14 +2868,17 @@ class DodamCommunityApp {
         const time = c.time || c.createdAt || '방금 전';
         const author = c.author || '도담회원';
         const initial = author[0] || '맘';
+        const level = c.level || '🌷 꽃봉오리맘';
+        const childBadge = c.childBadge || '';
 
         return `
           <div class="p-3.5 rounded-2xl bg-stone-50/80 border border-stone-200/80 space-y-1.5 hover:bg-stone-50 transition">
-            <div class="flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
+            <div class="flex items-center justify-between text-xs flex-wrap gap-1">
+              <div class="flex items-center gap-2 flex-wrap">
                 <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[10px]">${initial}</span>
                 <span class="font-black text-slate-900">${author}</span>
-                <span class="px-1.5 py-0.2 rounded-full bg-stone-100 text-slate-600 border border-stone-200 text-[9px] font-extrabold">🌱 새싹</span>
+                <span class="px-1.5 py-0.2 rounded-full bg-stone-100 text-slate-600 border border-stone-200 text-[9px] font-extrabold">${level}</span>
+                ${childBadge ? `<span class="px-1.5 py-0.2 rounded-full bg-rose-50 text-rose-700 text-[9px] font-bold">${childBadge}</span>` : ''}
               </div>
               <div class="flex items-center gap-2">
                 <span class="text-[11px] text-slate-400 font-medium">${time}</span>
@@ -2221,7 +2889,7 @@ class DodamCommunityApp {
                   title="답변이 도움되었을 때 채택하고 포인트를 선물합니다"
                 >
                   <i class="fa-solid fa-thumbs-up text-[9px]"></i>
-                  <span>도움이 됐어요</span>
+                  <span>도움이 됐어요 (+20P)</span>
                 </button>
               </div>
             </div>
@@ -2232,18 +2900,30 @@ class DodamCommunityApp {
       .join('');
   }
 
-  reactToPostModal() {
+  reactToPostModal(type = 'like') {
     if (!this.activePostDetailId) return;
     const post = this.data.posts.find((p) => p.id === this.activePostDetailId);
     if (!post) return;
-    post.reactions.like += 1;
-    const totalLikes = post.reactions.like + (post.reactions.hug || 0) + (post.reactions.tip || 0);
-    document.getElementById('post-detail-likes-count').textContent = totalLikes;
+    if (!post.reactions) post.reactions = { like: 0, hug: 0, tip: 0 };
+    post.reactions[type] = (post.reactions[type] || 0) + 1;
+
+    const likesEl = document.getElementById('post-detail-likes-count');
+    if (likesEl) likesEl.textContent = post.reactions.like || 0;
+    const hugsEl = document.getElementById('post-detail-hugs-count');
+    if (hugsEl) hugsEl.textContent = post.reactions.hug || 0;
+    const tipsEl = document.getElementById('post-detail-tips-count');
+    if (tipsEl) tipsEl.textContent = post.reactions.tip || 0;
+
     this.saveCustomPosts();
-    if (window.DodamFirebase) {
+    if (window.DodamFirebase && type === 'like') {
       window.DodamFirebase.incrementLike(post.id);
     }
-    this.showToast('공감하셨습니다! ❤️');
+    const toastMap = {
+      like: '공감하셨습니다! ❤️',
+      hug: '따뜻한 토닥토닥 응원을 보냈습니다! 🤗',
+      tip: '유익한 꿀팁으로 추천하셨습니다! 💡'
+    };
+    this.showToast(toastMap[type] || toastMap.like);
   }
 
   toggleScrapModal() {
@@ -2252,7 +2932,7 @@ class DodamCommunityApp {
   }
 
   submitBoardComment(e) {
-    e.preventDefault();
+    if (e && e.preventDefault) e.preventDefault();
     if (!this.activePostDetailId) return;
     const post = this.data.posts.find((p) => p.id === this.activePostDetailId);
     const input = document.getElementById('post-comment-input');
@@ -2263,19 +2943,29 @@ class DodamCommunityApp {
 
     const newComment = {
       id: `c-${Date.now()}`,
-      author: this.profile.nickname,
+      author: this.profile?.nickname || '도담맘',
+      level: this.profile?.level || '🌷 꽃봉오리맘',
+      childBadge: this.profile?.ageBadge || '육아맘',
       content: val,
       createdAt: '방금 전'
     };
     post.comments.push(newComment);
+    if (post.isQuestion) post.isSolved = true;
 
     input.value = '';
     this.saveCustomPosts();
     if (window.DodamFirebase) {
       window.DodamFirebase.addComment(post.id, newComment);
     }
+
+    this.profile.points = (this.profile.points || 0) + 10;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+    this.saveProfileData();
+    this.renderProfileWidget();
+
     this.renderPostDetailComments(post);
-    this.showToast('댓글이 등록되었습니다!');
+    this.showToast('💬 댓글이 등록되었습니다! (+10P 적립)');
   }
 
   // ==========================================
@@ -2300,7 +2990,6 @@ class DodamCommunityApp {
   }
 
   initWritePage() {
-    // 1. 작성자 프로필 정보 동기화
     const authorNameEl = document.getElementById('write-author-name');
     const authorBadgeEl = document.getElementById('write-author-badge');
     const authorAvatarEl = document.getElementById('write-author-avatar');
@@ -2311,7 +3000,6 @@ class DodamCommunityApp {
       authorAvatarEl.textContent = firstChar;
     }
 
-    // 2. 임시저장 내역 확인
     const rawDraft = localStorage.getItem(this.draftKey);
     const draftBadge = document.getElementById('draft-count-badge');
     const loadBtn = document.getElementById('btn-draft-load');
@@ -2506,17 +3194,31 @@ class DodamCommunityApp {
       ? rawTags.split(/[,\s]+/).map((t) => t.replace(/^#/, '').trim()).filter(Boolean)
       : [];
 
+    const myHub = this.getLocalHubFromProfileRegion(this.profile?.region);
+    const hubObj = (this.data.localHubs || []).find((h) => h.id === myHub);
+
     const newPost = {
       id: `custom-post-${Date.now()}`,
       category,
+      ageStage: ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
+        ? category
+        : category === 'middle' || category === 'high'
+        ? 'middle_high'
+        : this.getChildAgeStageFromMonths(this.profile?.months),
       region,
+      localHub: region === 'all' ? 'all' : myHub,
+      localHubName: region === 'all' ? '전국 전체' : (hubObj ? hubObj.shortName : (this.profile?.region || '우리 동네')),
+      localTopic: prefix === '질문' ? 'hospital' : prefix === '나눔' ? 'share' : 'all',
+      localTopicName: prefix ? `💬 ${prefix}` : '💬 육아소통',
+      isQuestion: prefix === '질문' || title.includes('?'),
+      isSolved: false,
       title,
       content,
       images: [...this.attachedImages],
       author: {
         nickname: this.profile.nickname,
         level: this.profile.level,
-        childBadge: `${this.profile.babyName} (${this.profile.ageBadge})`,
+        childBadge: `👶 ${this.profile.babyName} (${this.profile.ageBadge})`,
         avatarBg: 'bg-emerald-600 text-white'
       },
       createdAt: '방금 전',
@@ -2534,7 +3236,12 @@ class DodamCommunityApp {
       window.DodamFirebase.createPost(newPost);
     }
 
-    // Reset inputs
+    this.profile.points = (this.profile.points || 0) + 30;
+    const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
+    this.profile.level = lvl.name;
+    this.saveProfileData();
+    this.renderProfileWidget();
+
     if (titleEl) titleEl.value = '';
     if (contentEl) contentEl.value = '';
     if (tagsEl) tagsEl.value = '';
@@ -2542,7 +3249,6 @@ class DodamCommunityApp {
     this.attachedImages = [];
     this.renderAttachedImages();
 
-    // Clear draft
     localStorage.removeItem(this.draftKey);
     const draftBadge = document.getElementById('draft-count-badge');
     if (draftBadge) draftBadge.textContent = '0';
@@ -2551,7 +3257,7 @@ class DodamCommunityApp {
 
     this.switchMainView('board');
     this.renderBoardView();
-    this.showToast('🎉 게시글이 성공적으로 등록되었습니다!');
+    this.showToast('🎉 게시글이 성공적으로 등록되었습니다! (+30P 활동점수 적립)');
   }
 
   setBoardPageSize(size) {
@@ -2575,7 +3281,6 @@ class DodamCommunityApp {
     this.boardSearchKeyword = val.toLowerCase();
     this.boardPage = 1;
 
-    // Sync top input
     const topInput = document.getElementById('board-search-input');
     if (topInput) topInput.value = val;
 
@@ -2583,7 +3288,11 @@ class DodamCommunityApp {
   }
 
   resetBoardFilter() {
+    this.boardLoungeMode = 'all';
     this.currentCategory = 'all';
+    this.currentAgeStage = 'all';
+    this.currentLocalHub = 'all';
+    this.currentLocalTopic = 'all';
     this.currentRegion = 'all';
     this.boardSearchKeyword = '';
     this.boardPage = 1;
@@ -2595,7 +3304,7 @@ class DodamCommunityApp {
 
     this.renderBoardCategories();
     this.renderBoardView();
-    this.showToast('전체 목록으로 초기화되었습니다.');
+    this.showToast('전체 소통 목록으로 초기화되었습니다.');
   }
 
   saveCustomPosts() {

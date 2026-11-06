@@ -193,37 +193,50 @@
   <!-- 메인 뷰 컨테이너 (사이드바 제거 및 와이드 레이아웃 적용) -->
   <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
 
-        <!-- VIEW 1: 도담 육아 게시판 (네이버 카페 완벽 일체형) -->
+        <!-- VIEW 1: 도담 육아 게시판 & 자녀 나이별 라운지 & 우리 동네 맘카페 -->
         <section id="view-board" class="view-section space-y-4">
           <!-- 내 육아 프로필 & 아이 성장기록 & 등급 현황 위젯 -->
           <div id="my-profile-widget"></div>
 
-          <!-- 1. 네이버 카페형 상단 헤더 & 카테고리 탭 바 -->
-          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-4 sm:p-5 space-y-3.5">
+          <!-- 1. 3차원 소통 라운지 허브 (전체 수다방 / 자녀 나이별 라운지 / 우리 동네 맘카페 / 고민 Q&A) -->
+          <div class="bg-white rounded-3xl border border-stone-200 shadow-2xs p-4 sm:p-5 space-y-4">
+            <!-- 상단 타이틀 & 액션 바 -->
             <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-3.5">
               <div class="space-y-1">
-                <div class="flex items-center gap-2">
-                  <span class="px-2 py-0.5 rounded-md bg-[#03C75A]/10 text-[#03C75A] font-black text-[11px] border border-[#03C75A]/20 flex items-center gap-1">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2.5 py-0.5 rounded-full bg-[#03C75A]/10 text-[#03C75A] font-black text-[11px] border border-[#03C75A]/20 flex items-center gap-1">
                     <i class="fa-solid fa-comments"></i>
-                    <span>도담 맘카페</span>
+                    <span>도담 육아 소통방 & 지역 맘카페</span>
                   </span>
-                  <span class="text-xs font-bold text-slate-400">엄마·아빠들의 따뜻한 육아 나눔터</span>
+                  <span class="px-2 py-0.5 rounded-full bg-rose-50 text-rose-600 font-extrabold text-[11px] border border-rose-200">
+                    👶 또래별 발달고민 · 📍 동네 소아과·어린이집·나눔
+                  </span>
                 </div>
                 <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                  <span>☕ 도담 육아 커뮤니티</span>
+                  <span>☕ 도담 육아 라운지 & 우리 동네 맘카페</span>
                 </h2>
               </div>
 
-              <!-- 상단 우측 카페 글쓰기 & 투표 토글 버튼 -->
-              <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+              <!-- 상단 우측 버튼: 내 아이 또래 자동맞춤 / 육아 투표 / 에디터 글쓰기 -->
+              <div class="flex items-center gap-2 self-start sm:self-auto shrink-0 flex-wrap">
+                <button
+                  type="button"
+                  onclick="app.filterByMyChildAge()"
+                  id="btn-my-age-match"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-xs transition cursor-pointer shadow-2xs"
+                  title="내 프로필의 아이 개월수에 맞는 또래 게시글만 바로 모아봅니다"
+                >
+                  <i class="fa-solid fa-wand-magic-sparkles text-rose-500"></i>
+                  <span id="btn-my-age-match-label">내 아이 또래글 맞춤</span>
+                </button>
                 <button
                   type="button"
                   onclick="app.togglePollBanner()"
                   id="btn-toggle-poll"
-                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 font-bold text-xs transition cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-bold text-xs transition cursor-pointer"
                 >
                   <i class="fa-solid fa-chart-pie text-amber-500"></i>
-                  <span>육아 투표</span>
+                  <span>육아 밸런스 투표</span>
                 </button>
                 <button
                   type="button"
@@ -231,32 +244,275 @@
                   class="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-sm transition cursor-pointer"
                 >
                   <i class="fa-solid fa-pen-nib"></i>
-                  <span>카페 글쓰기</span>
+                  <span>사진·긴글 에디터</span>
                 </button>
               </div>
             </div>
 
-            <!-- 네이버 카페 말머리 탭 (스크롤 바) -->
-            <div class="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-1.5 sm:gap-2 text-xs py-1" id="board-category-chips"></div>
+            <!-- 4대 메인 소통 라운지 전환 탭 -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="board-lounge-mode-tabs">
+              <button
+                type="button"
+                onclick="app.setBoardLoungeMode('all')"
+                data-lounge="all"
+                class="board-lounge-tab p-3 rounded-2xl border text-left transition cursor-pointer bg-slate-900 text-white border-slate-900 shadow-sm"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-black">💬 전체 도담 수다방</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-white/20 text-white font-extrabold">통합</span>
+                </div>
+                <p class="text-[11px] text-slate-300 mt-1 truncate">실시간 인기글·수다·꿀팁 한눈에</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="app.setBoardLoungeMode('age')"
+                data-lounge="age"
+                class="board-lounge-tab p-3 rounded-2xl border text-left transition cursor-pointer bg-rose-50/60 hover:bg-rose-50 text-slate-800 border-rose-200"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-black text-rose-900">👶 자녀 나이별 라운지</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-rose-200/80 text-rose-800 font-extrabold">연령맞춤</span>
+                </div>
+                <p class="text-[11px] text-rose-700/80 mt-1 truncate">임신·영아·유아·초등·중고등 또래모임</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="app.setBoardLoungeMode('local')"
+                data-lounge="local"
+                class="board-lounge-tab p-3 rounded-2xl border text-left transition cursor-pointer bg-emerald-50/60 hover:bg-emerald-50 text-slate-800 border-emerald-200"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-black text-emerald-900">📍 우리 동네 맘카페</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-200/80 text-emerald-900 font-extrabold">지역소통</span>
+                </div>
+                <p class="text-[11px] text-emerald-700/80 mt-1 truncate">동네 소아과·어린이집·나눔·번개</p>
+              </button>
+
+              <button
+                type="button"
+                onclick="app.setBoardLoungeMode('qa')"
+                data-lounge="qa"
+                class="board-lounge-tab p-3 rounded-2xl border text-left transition cursor-pointer bg-indigo-50/60 hover:bg-indigo-50 text-slate-800 border-indigo-200"
+              >
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-black text-indigo-900">🙋‍♀️ 육아 고민 Q&A</span>
+                  <span class="text-[10px] px-1.5 py-0.5 rounded-full bg-indigo-200/80 text-indigo-900 font-extrabold">+20P 채택</span>
+                </div>
+                <p class="text-[11px] text-indigo-700/80 mt-1 truncate">선배맘·동네맘의 빠른 답변과 조언</p>
+              </button>
+            </div>
+
+            <!-- [섹션 A] 👶 자녀 나이별(생애주기) 필터 바 & 발달 키워드 가이드 -->
+            <div id="board-age-lounge-panel" class="rounded-2xl bg-gradient-to-r from-rose-50/70 via-amber-50/40 to-pink-50/60 border border-rose-200/80 p-3.5 space-y-2.5">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="px-2 py-0.5 rounded-lg bg-rose-500 text-white font-black text-[11px]">👶 자녀 나이별</span>
+                  <span class="text-xs font-black text-slate-800">아이 성장 단계별 맞춤 라운지</span>
+                </div>
+                <span id="board-age-active-desc" class="text-[11px] font-bold text-rose-700">
+                  아이 연령대를 선택하면 같은 또래 부모님들의 고민과 발달 꿀팁만 모아볼 수 있어요!
+                </span>
+              </div>
+
+              <!-- 연령대 선택 칩 -->
+              <div id="board-age-stage-chips" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1"></div>
+
+              <!-- 선택된 연령대의 실시간 인기 키워드 칩 -->
+              <div id="board-age-keywords-bar" class="flex items-center gap-1.5 flex-wrap text-[11px] pt-0.5"></div>
+            </div>
+
+            <!-- [섹션 B] 📍 우리 동네 맘카페 라운지 (동네 거점 선택 + 6대 동네 말머리 + 지역정보 바로가기) -->
+            <div id="board-local-momcafe-panel" class="rounded-2xl bg-gradient-to-r from-emerald-50/70 via-teal-50/40 to-sky-50/60 border border-emerald-200/80 p-3.5 space-y-3">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="px-2 py-0.5 rounded-lg bg-[#03C75A] text-white font-black text-[11px]">📍 우리 동네 맘카페</span>
+                  <span class="text-xs font-black text-slate-800" id="board-local-hub-title">전국 동네 맘카페 통합 라운지</span>
+                </div>
+                <div class="flex items-center gap-1.5 flex-wrap">
+                  <button
+                    type="button"
+                    onclick="app.selectMyProfileLocalHub()"
+                    class="px-2.5 py-1 rounded-lg bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-300 font-black text-[11px] transition cursor-pointer shadow-2xs flex items-center gap-1"
+                  >
+                    <i class="fa-solid fa-house-chimney-user text-emerald-600 text-[10px]"></i>
+                    <span>내 프로필 지역 자동선택</span>
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.jumpToLocalService('food')"
+                    class="px-2.5 py-1 rounded-lg bg-white hover:bg-rose-50 text-rose-700 border border-rose-200 font-bold text-[11px] transition cursor-pointer"
+                  >
+                    🍽️ 동네 안심맛집
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.jumpToLocalService('festivals')"
+                    class="px-2.5 py-1 rounded-lg bg-white hover:bg-amber-50 text-amber-800 border border-amber-200 font-bold text-[11px] transition cursor-pointer"
+                  >
+                    🎪 동네 주말행사
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.jumpToLocalService('school')"
+                    class="px-2.5 py-1 rounded-lg bg-white hover:bg-indigo-50 text-indigo-700 border border-indigo-200 font-bold text-[11px] transition cursor-pointer"
+                  >
+                    🏫 동네 학군·학교순위
+                  </button>
+                </div>
+              </div>
+
+              <!-- 전국 주요 거점 맘카페 선택 칩 -->
+              <div id="board-local-hub-chips" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1"></div>
+
+              <!-- 지역 맘카페 6대 특화 말머리 (소아과 / 어린이집 / 무료나눔 / 키즈맛집 / 동네살기) -->
+              <div id="board-local-topic-chips" class="flex items-center gap-1.5 flex-wrap pt-1 border-t border-emerald-200/50"></div>
+            </div>
+
+            <!-- [섹션 C] 세부 주제별 카테고리 칩 (기존 호환 + 빠른 필터) -->
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar text-xs py-0.5" id="board-category-chips"></div>
 
             <!-- 접이식 실시간 육아 밸런스 투표 카드 -->
             <div id="active-poll-card" class="hidden rounded-2xl bg-gradient-to-br from-amber-50/60 to-rose-50/40 p-4 border border-amber-200/60 transition-all"></div>
           </div>
 
-          <!-- 2. 게시판 테이블 상단 컨트롤 바 (네이버 카페 표준) -->
-          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
-            <div class="flex items-center gap-2">
-              <h3 id="current-board-title" class="text-sm font-black text-slate-900">전체글</h3>
-              <span id="current-board-count" class="text-xs font-bold text-rose-500"></span>
+          <!-- 2. ⚡ 1초 빠른 수다·동네질문 작성 바 (페이지 이동 없이 바로 소통!) -->
+          <div class="bg-white rounded-3xl border-2 border-emerald-500/30 shadow-xs p-4 sm:p-5 space-y-3" id="quick-talk-composer">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div class="flex items-center gap-2">
+                <span class="w-7 h-7 rounded-xl bg-emerald-100 text-[#03C75A] flex items-center justify-center font-black text-sm">⚡</span>
+                <div>
+                  <h3 class="text-xs sm:text-sm font-black text-slate-900 flex items-center gap-1.5">
+                    <span>1초 빠른 육아수다 · 우리동네 질문하기</span>
+                    <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-[10px] font-black">작성 시 +15P 적립</span>
+                  </h3>
+                  <p class="text-[11px] text-slate-500">복잡한 에디터 이동 없이 궁금한 동네 소아과, 또래 발달 고민, 오늘의 육아 수다를 바로 남겨보세요!</p>
+                </div>
+              </div>
+
+              <!-- 원클릭 질문/수다 프롬프트 버튼 -->
+              <div class="flex items-center gap-1.5 flex-wrap text-[11px]">
+                <button type="button" onclick="app.prefillQuickComposer('hospital')" class="px-2.5 py-1 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 font-bold border border-rose-200 cursor-pointer transition">🏥 동네 소아과 추천질문</button>
+                <button type="button" onclick="app.prefillQuickComposer('age_qa')" class="px-2.5 py-1 rounded-lg bg-amber-50 hover:bg-amber-100 text-amber-800 font-bold border border-amber-200 cursor-pointer transition">👶 또래 발달 고민</button>
+                <button type="button" onclick="app.prefillQuickComposer('share')" class="px-2.5 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-bold border border-emerald-200 cursor-pointer transition">🥕 동네 나눔·드림</button>
+              </div>
             </div>
 
-            <div class="flex items-center gap-2 flex-wrap sm:flex-nowrap justify-between sm:justify-end text-xs">
+            <!-- 선택 옵션 3종 (자녀 연령대 / 우리 동네 / 말머리) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-xs">
+              <select id="quick-post-age" class="px-3 py-2 rounded-xl bg-stone-50 border border-stone-200 font-bold text-slate-700 focus:outline-none focus:border-[#03C75A]">
+                <option value="all">👶 자녀 연령대 (전체)</option>
+                <option value="preg">🤰 임신·출산준비</option>
+                <option value="newborn">🍼 0~12개월 신생아·영아</option>
+                <option value="toddler_early">🚼 13~36개월 걸음마·두돌</option>
+                <option value="toddler">🧒 4~7세 유아·유치원</option>
+                <option value="school">🎒 초등 1~3학년 저학년</option>
+                <option value="elem_high">📚 초등 4~6학년 고학년</option>
+                <option value="middle_high">🏫 중·고등 입시맘</option>
+              </select>
+
+              <select id="quick-post-hub" class="px-3 py-2 rounded-xl bg-stone-50 border border-stone-200 font-bold text-slate-700 focus:outline-none focus:border-[#03C75A]">
+                <option value="all">📍 우리 동네 선택 (전국 공통)</option>
+                <option value="seoul_gangnam">📍 서울 강남·서초·송파</option>
+                <option value="seoul_mokdong">📍 서울 목동·마포·강서</option>
+                <option value="seoul_seongdong">📍 서울 성동·광진·노원</option>
+                <option value="gg_bundang">📍 경기 분당·판교·위례·용인</option>
+                <option value="gg_dongtan">📍 경기 동탄·수원·광교·화성</option>
+                <option value="gg_ilsan">📍 경기 일산·김포·파주·다산</option>
+                <option value="incheon_songdo">📍 인천 송도·청라·검단</option>
+                <option value="busan_centum">📍 부산 해운대·센텀·경남</option>
+                <option value="daegu_suseong">📍 대구 수성·달서·경북</option>
+                <option value="daejeon_sejong">📍 대전 둔산·세종·충청</option>
+                <option value="gwangju_jeju">📍 광주·전라·강원·제주</option>
+              </select>
+
+              <select id="quick-post-topic" class="px-3 py-2 rounded-xl bg-stone-50 border border-stone-200 font-bold text-slate-700 focus:outline-none focus:border-[#03C75A]">
+                <option value="talk">💬 일상수다·공감토크</option>
+                <option value="qa">❓ 육아 고민 질문 (Q&A)</option>
+                <option value="hospital">🏥 동네 소아과·병원·약국</option>
+                <option value="daycare">🏫 어린이집·유치원·학원 후기</option>
+                <option value="share">🥕 동네 무료나눔·드림·벼룩</option>
+                <option value="place">☕ 동네 키즈맛집·놀이터·번개</option>
+                <option value="living">🏠 동네 살기·이사·학군 질문</option>
+                <option value="tips">💡 나만의 육아꿀팁·레시피</option>
+              </select>
+            </div>
+
+            <!-- 제목 + 본문 + 등록 버튼 -->
+            <div class="flex flex-col sm:flex-row gap-2">
+              <div class="flex-1 space-y-2">
+                <input
+                  id="quick-post-title"
+                  type="text"
+                  placeholder="제목 또는 한줄 질문을 입력해주세요 (예: 판교역 근처 주말 진료 소아과 어디가 좋을까요?)"
+                  class="w-full px-3.5 py-2 rounded-xl bg-stone-50 border border-stone-200 text-xs sm:text-sm font-bold text-slate-900 focus:bg-white focus:border-[#03C75A] focus:outline-none"
+                />
+                <textarea
+                  id="quick-post-content"
+                  rows="2"
+                  placeholder="우리 아이 월령이나 동네를 함께 적어주시면 이웃 맘·대디들이 훨씬 정확한 답변을 남겨드려요 😊"
+                  class="w-full px-3.5 py-2 rounded-xl bg-stone-50 border border-stone-200 text-xs text-slate-700 focus:bg-white focus:border-[#03C75A] focus:outline-none resize-none"
+                ></textarea>
+              </div>
+              <div class="flex sm:flex-col justify-end gap-2 shrink-0">
+                <button
+                  type="button"
+                  onclick="app.submitQuickPost()"
+                  class="flex-1 sm:flex-none px-5 py-3 rounded-2xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-sm transition cursor-pointer flex items-center justify-center gap-1.5"
+                >
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>1초 바로 등록</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.openWritePage()"
+                  class="px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 font-bold text-[11px] transition cursor-pointer flex items-center justify-center gap-1"
+                >
+                  <i class="fa-regular fa-image text-emerald-600"></i>
+                  <span>사진 첨부 글쓰기</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. 게시판 상단 컨트롤 바 (뷰 모드 전환 + 정렬 + 검색) -->
+          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs px-4 py-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5">
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 id="current-board-title" class="text-sm font-black text-slate-900">전체글</h3>
+              <span id="current-board-count" class="text-xs font-bold text-rose-500"></span>
+              <div id="active-board-filter-badges" class="flex items-center gap-1 flex-wrap"></div>
+            </div>
+
+            <div class="flex items-center gap-2 flex-wrap justify-between sm:justify-end text-xs">
+              <!-- 소통 피드형 vs 카페 테이블형 보기 전환 -->
+              <div class="flex items-center gap-1 bg-stone-100 border border-stone-200 rounded-xl p-0.5">
+                <button
+                  type="button"
+                  id="btn-board-view-card"
+                  onclick="app.setBoardViewMode('card')"
+                  class="px-2.5 py-1 rounded-lg text-xs font-black transition bg-white text-slate-900 shadow-2xs flex items-center gap-1.5 cursor-pointer"
+                >
+                  <i class="fa-solid fa-comments text-[#03C75A]"></i>
+                  <span>소통 피드형</span>
+                </button>
+                <button
+                  type="button"
+                  id="btn-board-view-cafe"
+                  onclick="app.setBoardViewMode('cafe')"
+                  class="px-2.5 py-1 rounded-lg text-xs font-bold text-slate-500 hover:text-slate-800 transition flex items-center gap-1.5 cursor-pointer"
+                >
+                  <i class="fa-solid fa-list-ul"></i>
+                  <span>카페 목록형</span>
+                </button>
+              </div>
+
               <!-- 정렬 선택기 -->
               <div class="flex items-center gap-1 bg-stone-50 border border-stone-200 rounded-xl p-0.5 font-bold">
-                <button onclick="app.setBoardSort('latest')" data-sort="latest" class="board-sort-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white">최신순</button>
-                <button onclick="app.setBoardSort('popular')" data-sort="popular" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900">공감순</button>
-                <button onclick="app.setBoardSort('comments')" data-sort="comments" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900">댓글순</button>
-                <button onclick="app.setBoardSort('views')" data-sort="views" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900">조회순</button>
+                <button onclick="app.setBoardSort('latest')" data-sort="latest" class="board-sort-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white cursor-pointer">최신순</button>
+                <button onclick="app.setBoardSort('popular')" data-sort="popular" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">공감순</button>
+                <button onclick="app.setBoardSort('comments')" data-sort="comments" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">댓글순</button>
+                <button onclick="app.setBoardSort('views')" data-sort="views" class="board-sort-btn px-2.5 py-1 rounded-lg text-slate-600 hover:text-slate-900 cursor-pointer">조회순</button>
               </div>
 
               <!-- 페이지당 글 수 셀렉터 -->
@@ -276,7 +532,7 @@
                 <input
                   id="board-search-input"
                   type="text"
-                  placeholder="제목·작성자 검색"
+                  placeholder="동네·월령·제목 검색"
                   oninput="app.onBoardSearch(this.value)"
                   class="pl-7 pr-3 py-1 bg-stone-50 border border-stone-200 rounded-xl text-xs font-medium w-36 sm:w-44 focus:outline-none focus:bg-white focus:border-[#03C75A]"
                 />
@@ -284,7 +540,7 @@
             </div>
           </div>
 
-          <!-- 3. 네이버 카페형 게시글 목록 테이블 -->
+          <!-- 4. 게시글 목록 컨테이너 (소통 피드형 또는 카페 목록형) -->
           <div id="board-posts-list"></div>
 
           <!-- 4. 네이버 카페형 하단 컨트롤 & 페이지네이션 바 -->
@@ -399,13 +655,16 @@
                 <div>
                   <select id="post-form-category" class="w-full bg-white border border-stone-200 rounded-lg px-3.5 py-2 font-bold text-slate-800 focus:border-[#03C75A] focus:outline-none transition">
                     <option value="">게시판을 선택해 주세요.</option>
-                    <option value="newborn" selected>🍼 출산·영아(0~24m)</option>
-                    <option value="toddler">🧒 유아·어린이집(3~7세)</option>
-                    <option value="school">🎒 초등맘 라운지</option>
-                    <option value="middle">📚 중딩맘 라운지</option>
-                    <option value="high">🎓 고딩맘 라운지</option>
+                    <option value="preg">🤰 임신·출산준비</option>
+                    <option value="newborn" selected>🍼 신생아·영아(0~12m)</option>
+                    <option value="toddler_early">🚼 걸음마·두돌(13~36m)</option>
+                    <option value="toddler">🧒 유아·유치원(4~7세)</option>
+                    <option value="school">🎒 초등 저학년(1~3학년)</option>
+                    <option value="elem_high">📚 초등 고학년(4~6학년)</option>
+                    <option value="middle">🏫 중딩맘 라운지</option>
+                    <option value="high">🎓 고딩·입시맘 라운지</option>
                     <option value="working">💼 워킹맘·대디</option>
-                    <option value="talk">🗣️ 속풀이·부부토크</option>
+                    <option value="talk">🗣️ 속풀이·일상수다</option>
                     <option value="tips">💡 육아꿀팁·레시피</option>
                   </select>
                 </div>
@@ -2851,16 +3110,32 @@
         <!-- 해시태그 목록 -->
         <div id="post-detail-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
 
-        <!-- 네이버 카페 스타일 중앙 공감(좋아요) 반응 바 -->
-        <div class="py-4 border-y border-stone-100 flex items-center justify-center gap-3">
+        <!-- 3종 따뜻한 육아 공감 리액션 바 (공감해요 / 토닥토닥 / 꿀팁저장) -->
+        <div class="py-3.5 border-y border-stone-100 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
           <button
+            type="button"
             id="post-detail-like-btn"
-            onclick="app.reactToPostModal()"
-            class="flex items-center gap-2 px-5 py-2.5 rounded-2xl border-2 border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-black text-xs transition shadow-2xs cursor-pointer"
+            onclick="app.reactToPostModal('like')"
+            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-black text-xs transition shadow-2xs cursor-pointer"
           >
-            <i class="fa-solid fa-heart text-sm text-rose-500"></i>
-            <span>공감해요</span>
+            <span>❤️ 공감해요</span>
             <span id="post-detail-likes-count" class="px-2 py-0.5 rounded-full bg-white text-rose-600 font-black text-xs shadow-2xs">0</span>
+          </button>
+          <button
+            type="button"
+            onclick="app.reactToPostModal('hug')"
+            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 text-amber-800 font-black text-xs transition shadow-2xs cursor-pointer"
+          >
+            <span>🤗 토닥토닥 힘내요</span>
+            <span id="post-detail-hugs-count" class="px-2 py-0.5 rounded-full bg-white text-amber-800 font-black text-xs shadow-2xs">0</span>
+          </button>
+          <button
+            type="button"
+            onclick="app.reactToPostModal('tip')"
+            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-xs transition shadow-2xs cursor-pointer"
+          >
+            <span>💡 유익한 꿀팁</span>
+            <span id="post-detail-tips-count" class="px-2 py-0.5 rounded-full bg-white text-emerald-700 font-black text-xs shadow-2xs">0</span>
           </button>
         </div>
 
@@ -2878,12 +3153,20 @@
         </div>
       </div>
 
-      <!-- 3. 네이버 카페형 댓글 입력 폼 -->
+      <!-- 3. 원클릭 공감 댓글 스티커 & 댓글 입력 폼 -->
       <form onsubmit="app.submitBoardComment(event)" class="pt-3 border-t border-stone-100 space-y-2 shrink-0">
+        <!-- 한 손 육아맘을 위한 1초 빠른 공감 댓글 칩 -->
+        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-[11px]">
+          <span class="text-slate-400 font-extrabold shrink-0">⚡ 1초 댓글:</span>
+          <button type="button" onclick="app.insertQuickComment('🙌 저도 요즘 똑같은 고민 중인데 너무 공감돼요!')" class="px-2.5 py-1 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold whitespace-nowrap cursor-pointer transition">🙌 저도 똑같은 고민이에요</button>
+          <button type="button" onclick="app.insertQuickComment('🤗 그 시기엔 원래 다 그렇더라구요! 엄마 아빠가 너무 잘하고 계세요 토닥토닥 💕')" class="px-2.5 py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-bold whitespace-nowrap cursor-pointer transition">🤗 토닥토닥 힘내세요!</button>
+          <button type="button" onclick="app.insertQuickComment('💡 정성스러운 육아 꿀팁 공유 정말 감사합니다! 바로 저장해갑니다 👍')" class="px-2.5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold whitespace-nowrap cursor-pointer transition">💡 꿀팁 감사합니다</button>
+          <button type="button" onclick="app.insertQuickComment('📍 반가워요! 저도 같은 동네에서 또래 키우고 있어요 자주 소통해요 😊')" class="px-2.5 py-1 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 font-bold whitespace-nowrap cursor-pointer transition">📍 같은 동네맘 반가워요</button>
+        </div>
         <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-600">
           <span class="w-2 h-2 rounded-full bg-[#03C75A]"></span>
           <span id="comment-author-name">도담맘</span>
-          <span class="text-slate-400 font-medium">님으로 댓글 작성 중</span>
+          <span class="text-slate-400 font-medium">님으로 댓글 작성 중 (+10P 적립)</span>
         </div>
         <div class="flex items-center gap-2">
           <input
