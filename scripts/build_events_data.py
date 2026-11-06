@@ -800,6 +800,21 @@ def fetch_wevity_contests():
     with ThreadPoolExecutor(max_workers=15) as executor:
         batch_results = list(executor.map(fetch_url, tasks))
 
+    diverse_pool = [
+        "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&auto=format&fit=crop&q=80",
+        "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&auto=format&fit=crop&q=80",
+    ]
+
     contests = []
     seen_titles = set()
     for batch in batch_results:
@@ -810,6 +825,7 @@ def fetch_wevity_contests():
 
             reg_key, reg_name = determine_contest_region(title, organizer)
             c_cat, c_name, c_badge = classify_contest_category(title, organizer, sub_tit)
+            fallback_img = diverse_pool[abs(hash(title)) % len(diverse_pool)]
 
             contests.append({
                 "id": f"wevity-{abs(hash(title))}",
@@ -833,12 +849,34 @@ def fetch_wevity_contests():
                 "targetAudience": "전국 유·초·중·고등학생 및 청소년",
                 "fee": "무료 (온라인 접수)",
                 "url": f"https://www.wevity.com/{link}",
-                "imageUrl": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=80",
+                "imageUrl": fallback_img,
                 "description": f"{title} - {organizer} 주최 전국 공모전 및 경진대회입니다. {sub_tit}",
                 "tags": ["전국대회", "공모전", cat_name.split("/")[0], reg_name]
             })
 
-    print(f"공모전 전문 플랫폼(위비티)에서 실시간 전국 대회 {len(contests)}건 수신 완료")
+    def fetch_detail_poster(c_item):
+        try:
+            req = urllib.request.Request(c_item["url"], headers=headers)
+            with urllib.request.urlopen(req, context=ctx, timeout=6) as resp:
+                d_html = resp.read().decode("utf-8", errors="ignore")
+                og = re.search(r'<meta property="og:image" content="([^"]+)"', d_html)
+                if og:
+                    img = og.group(1).strip()
+                    if "/upload/contest/" in img and "noimgs" not in img:
+                        c_item["imageUrl"] = ("https://www.wevity.com" + img) if img.startswith("/") else img
+                        return
+                th = re.search(r'<div class="thumb">.*?<img[^>]+src="([^"]+)"', d_html, re.DOTALL)
+                if th:
+                    img = th.group(1).strip()
+                    if "/upload/contest/" in img and "noimgs" not in img:
+                        c_item["imageUrl"] = ("https://www.wevity.com" + img) if img.startswith("/") else img
+        except Exception:
+            pass
+
+    with ThreadPoolExecutor(max_workers=30) as executor:
+        list(executor.map(fetch_detail_poster, contests))
+
+    print(f"공모전 전문 플랫폼(위비티)에서 실시간 전국 대회 {len(contests)}건 (공식 포스터 포함) 수신 완료")
     return contests
 
 # =============================================================================

@@ -3511,14 +3511,35 @@ class DodamCommunityApp {
     return html;
   }
 
+  getFallbackEventImage(evt) {
+    const pool = [
+      'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1560421683-6856ea585c78?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=400&auto=format&fit=crop&q=80',
+      'https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=400&auto=format&fit=crop&q=80'
+    ];
+    const seed = (evt?.title || evt?.id || 'dodam');
+    let h = 0;
+    for (let i = 0; i < seed.length; i++) {
+      h = (h * 31 + seed.charCodeAt(i)) >>> 0;
+    }
+    return pool[h % pool.length];
+  }
+
   // 공통 이벤트 카드 렌더러
   renderEventCardHtml(evt, themeColor) {
     const isContest = evt.boardType === 'contests';
     const activeColor = isContest ? 'indigo' : 'amber';
-    const defaultImg = isContest
-      ? 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=300&auto=format&fit=crop&q=80'
-      : 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=300&auto=format&fit=crop&q=80';
-    const imgUrl = evt.imageUrl || defaultImg;
+    const defaultImg = this.getFallbackEventImage(evt);
+    const imgUrl = (evt.imageUrl && !evt.imageUrl.includes('1434030216411-0b793f4b4173')) ? evt.imageUrl : defaultImg;
 
     let ddayBadge = '';
     if (evt.dday === '접수마감') {
