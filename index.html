@@ -235,10 +235,33 @@
                 >
                   ❓ 질문·고민
                 </button>
+                <button
+                  type="button"
+                  onclick="app.setBoardLoungeMode('guide')"
+                  data-lounge="guide"
+                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                >
+                  📖 육아가이드
+                </button>
+                <!-- Dummy for replace boundary -->
+                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                >
+                  ❓ 질문·고민
+                </button>
               </div>
 
               <!-- 우측: 내 아이 맞춤 토글 & 카페 글쓰기 -->
               <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="app.openAiParentingReportModal()"
+                  id="btn-admin-ai-report-top"
+                  class="hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-xs shadow-2xs transition cursor-pointer"
+                  title="관리자 전용: AI 육아가이드 심층 리포트를 즉시 생성합니다"
+                >
+                  <i class="fa-solid fa-wand-magic-sparkles text-amber-300 text-[11px]"></i>
+                  <span>⚡ AI 리포트 생성 (관리자)</span>
+                </button>
                 <button
                   type="button"
                   onclick="app.filterByMyChildAge()"
@@ -309,6 +332,28 @@
               </div>
             </div>
 
+                        <!-- 서브 E: 육아가이드 서브필터 -->
+            <div id="board-subfilter-guide" class="hidden flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-stone-100 text-xs">
+              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+                <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-1">분야:</span>
+                <button onclick="app.filterGuideCategory('all')" data-gcat="all" class="board-gcat-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px]">전체 리포트</button>
+                <button onclick="app.filterGuideCategory('sleep')" data-gcat="sleep" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🍼 수면·수유</button>
+                <button onclick="app.filterGuideCategory('food')" data-gcat="food" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🥣 이유식·영양</button>
+                <button onclick="app.filterGuideCategory('growth')" data-gcat="growth" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🧒 훈육·발달</button>
+                <button onclick="app.filterGuideCategory('health')" data-gcat="health" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🏥 건강·응급</button>
+                <button onclick="app.filterGuideCategory('edu')" data-gcat="edu" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🎒 학습·입학</button>
+              </div>
+              <div id="admin-ai-report-guide-trigger" class="shrink-0">
+                <button
+                  type="button"
+                  onclick="app.openAiParentingReportModal()"
+                  class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-purple-50 hover:bg-purple-100 text-purple-700 border border-purple-200 font-black text-[11px] transition cursor-pointer"
+                >
+                  <i class="fa-solid fa-wand-magic-sparkles text-purple-600"></i>
+                  <span>⚡ AI 리포트 생성 (관리자)</span>
+                </button>
+              </div>
+            </div>
             <!-- 서브 D: 질문·고민 서브필터 -->
             <div id="board-subfilter-qa" class="hidden flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1 border-t border-stone-100 text-xs">
               <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-1">분류:</span>
@@ -362,21 +407,21 @@
               <div class="flex items-center gap-0.5 bg-stone-100 p-0.5 rounded-lg">
                 <button
                   type="button"
-                  id="btn-board-view-card"
-                  onclick="app.setBoardViewMode('card')"
+                  id="btn-board-view-cafe"
+                  onclick="app.setBoardViewMode('cafe')"
                   class="p-1 rounded bg-white text-slate-800 shadow-2xs cursor-pointer"
-                  title="카드 피드형"
+                  title="네이버카페 목록형"
                 >
-                  <i class="fa-solid fa-grip-lines text-xs"></i>
+                  <i class="fa-solid fa-list-ul text-xs"></i>
                 </button>
                 <button
                   type="button"
-                  id="btn-board-view-cafe"
-                  onclick="app.setBoardViewMode('cafe')"
+                  id="btn-board-view-card"
+                  onclick="app.setBoardViewMode('card')"
                   class="p-1 rounded text-slate-400 hover:text-slate-700 cursor-pointer"
-                  title="목록형"
+                  title="카드 피드형"
                 >
-                  <i class="fa-solid fa-list-ul text-xs"></i>
+                  <i class="fa-solid fa-grip-lines text-xs"></i>
                 </button>
               </div>
             </div>
@@ -3340,22 +3385,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script src="js/firebase_config.js"></script>
-  <script src="js/firebase_db.js"></script>
-  <script src="js/events_data.js"></script>
-  <script src="js/restaurants_data.js"></script>
-  <script src="js/policies_data.js"></script>
-  <script src="js/neis_schools_map.js"></script>
-  <script src="js/schools_data.js"></script>
-  <script src="js/richgo_data.js"></script>
-  <script src="js/admissions_data.js"></script>
-  <script src="js/admin_data.js"></script>
-  <script src="js/data.js"></script>
+  <script charset="utf-8" src="js/firebase_config.js"></script>
+  <script charset="utf-8" src="js/firebase_db.js"></script>
+  <script charset="utf-8" src="js/events_data.js"></script>
+  <script charset="utf-8" src="js/restaurants_data.js"></script>
+  <script charset="utf-8" src="js/policies_data.js"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js"></script>
+  <script charset="utf-8" src="js/schools_data.js"></script>
+  <script charset="utf-8" src="js/richgo_data.js"></script>
+  <script charset="utf-8" src="js/admissions_data.js"></script>
+  <script charset="utf-8" src="js/admin_data.js"></script>
+  <script charset="utf-8" src="js/data.js"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script src="js/social_config.js"></script>
-  <script src="js/app.js"></script>
+  <script charset="utf-8" src="js/social_config.js"></script>
+  <script charset="utf-8" src="js/app.js"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달
@@ -3392,6 +3437,108 @@
   <!-- ==========================================
        MODAL 9: 도담톡 로그인 & 시작하기 모달 (Matching Image 3)
        ========================================== -->
+  <!-- AI 육아가이드 리포트 생성 모달 (관리자 전용) -->
+  <div id="ai-parenting-report-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-xl w-full border border-stone-200 shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <!-- 모달 헤더 -->
+      <div class="p-5 border-b border-stone-100 flex items-center justify-between bg-gradient-to-r from-purple-50 via-indigo-50 to-rose-50">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-purple-600 to-indigo-600 text-white flex items-center justify-center font-black text-lg shadow-sm shrink-0">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div>
+            <div class="flex items-center gap-1.5">
+              <h3 class="font-black text-slate-900 text-base">AI 육아가이드 전문 리포트 생성기</h3>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-purple-600 text-white uppercase tracking-wider">ADMIN ONLY</span>
+            </div>
+            <p class="text-xs text-slate-500 font-medium">소아임상 지침 & 아동심리 빅데이터 기반 심층 분석 리포트를 즉시 발행합니다.</p>
+          </div>
+        </div>
+        <button type="button" onclick="app.closeAiParentingReportModal()" class="w-8 h-8 rounded-full hover:bg-stone-200/60 text-slate-400 hover:text-slate-700 flex items-center justify-center transition cursor-pointer">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- 모달 본문 -->
+      <div class="p-5 overflow-y-auto space-y-4 text-xs">
+        <div class="p-3.5 rounded-2xl bg-indigo-50/70 border border-indigo-200/80 text-indigo-900 space-y-1">
+          <div class="font-black text-xs flex items-center gap-1.5">
+            <i class="fa-solid fa-circle-info text-indigo-600"></i>
+            <span>AI 육아가이드 발행 시스템 안내</span>
+          </div>
+          <p class="text-[11px] leading-relaxed text-indigo-800">
+            생성된 리포트는 <strong>📖 육아가이드</strong> 카테고리에 고해상도 인포그래픽 SVG, 4단계 행동 솔루션, 소아과 전문의 경고 신호, 실전 Q&A가 포함된 프리미엄 게시글로 자동 등록됩니다.
+          </p>
+        </div>
+
+        <div class="space-y-1.5">
+          <label class="block font-black text-slate-800 text-xs">1. 분석 리포트 주제 선택</label>
+          <select id="ai-report-preset-select" onchange="app.onAiReportPresetChange(this.value)" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-3 text-xs font-bold text-slate-800 focus:outline-none focus:border-purple-500">
+            <option value="sleep_0_12m">🍼 [신생아·영아] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 리포트</option>
+            <option value="weaning_food">🥣 [영유아 영양] 초기·중기·후기 이유식 영양 밸런스 & 알레르기 안전 가이드</option>
+            <option value="discipline_3_7y">🧒 [유아 발달] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션</option>
+            <option value="school_prep">🎒 [초등 준비] 초등 입학 준비 & 자기주도 학습 습관 형성 로드맵</option>
+            <option value="pediatric_health">🏥 [소아 건강] 환절기 유아 호흡기·독감 예방 & 응급상황 대처 프로토콜</option>
+            <option value="working_parents">💼 [워킹맘·대디] 일·가정 양립 시간관리 & 부모 번아웃 예방 멘탈 케어</option>
+            <option value="custom">✍️ 직접 주제 및 요구사항 입력 (커스텀)</option>
+          </select>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2">
+          <div class="space-y-1.5">
+            <label class="block font-black text-slate-800 text-xs">2. 대상 월령 / 학령기</label>
+            <select id="ai-report-age-stage" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-2.5 text-xs font-bold text-slate-800 focus:outline-none focus:border-purple-500">
+              <option value="newborn">🍼 영아 (0~12개월)</option>
+              <option value="toddler_early">🚼 걸음마·두돌 (13~36개월)</option>
+              <option value="toddler">🧒 유아 (4~7세)</option>
+              <option value="school">🎒 초등학생 (8~13세)</option>
+              <option value="all">🌏 전 연령 공통</option>
+            </select>
+          </div>
+          <div class="space-y-1.5">
+            <label class="block font-black text-slate-800 text-xs">3. 세부 가이드 분야</label>
+            <select id="ai-report-guide-type" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-2.5 text-xs font-bold text-slate-800 focus:outline-none focus:border-purple-500">
+              <option value="sleep">수면·수유</option>
+              <option value="food">이유식·영양</option>
+              <option value="growth">훈육·발달심리</option>
+              <option value="health">건강·응급처치</option>
+              <option value="edu">학습·교육</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="ai-report-custom-box" class="hidden space-y-1.5">
+          <label class="block font-black text-slate-800 text-xs">4. 세부 분석 주제 및 추가 요청사항</label>
+          <input type="text" id="ai-report-custom-title" placeholder="리포트 제목 (예: 18개월 아기 숟가락 거부와 식사 예절 지도)" class="w-full bg-stone-50 border border-stone-200 rounded-xl p-2.5 text-xs font-bold text-slate-800 focus:outline-none focus:border-purple-500 mb-2" />
+          <textarea id="ai-report-custom-prompt" rows="3" placeholder="중점적으로 분석할 소아과 지침이나 부모 행동 가이드라인을 적어주세요." class="w-full bg-stone-50 border border-stone-200 rounded-xl p-3 text-xs font-medium text-slate-800 focus:outline-none focus:border-purple-500 resize-none"></textarea>
+        </div>
+
+        <div id="ai-report-generating-status" class="hidden p-4 rounded-2xl bg-purple-50 border border-purple-200 text-center space-y-2">
+          <div class="inline-flex items-center gap-2 font-black text-purple-700 text-xs">
+            <i class="fa-solid fa-spinner fa-spin text-purple-600 text-sm"></i>
+            <span>도담 AI 케어랩 딥러닝 리포트 엔진 가동 중...</span>
+          </div>
+          <p class="text-[11px] text-purple-600 font-medium">소아임상 지침 매핑 및 고화질 인포그래픽 카드를 생성하고 있습니다.</p>
+          <div class="w-full bg-purple-200 rounded-full h-1.5 overflow-hidden">
+            <div class="bg-gradient-to-r from-purple-600 to-indigo-600 h-1.5 rounded-full animate-pulse w-3/4"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 모달 푸터 -->
+      <div class="p-4 bg-stone-50 border-t border-stone-100 flex items-center justify-end gap-2">
+        <button type="button" onclick="app.closeAiParentingReportModal()" class="px-4 py-2.5 rounded-xl border border-stone-200 bg-white hover:bg-stone-100 text-slate-700 font-bold text-xs transition cursor-pointer">
+          취소
+        </button>
+        <button type="button" id="btn-run-ai-parenting-report" onclick="app.executeGenerateAiReport()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-xs shadow-md transition flex items-center gap-1.5 cursor-pointer">
+          <i class="fa-solid fa-bolt text-amber-300"></i>
+          <span>AI 리포트 즉시 발행 및 육아가이드 등록</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
   <div id="login-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
     <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150 relative">
       <!-- 헤더 -->

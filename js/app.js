@@ -77,9 +77,10 @@ class DodamCommunityApp {
     this.currentRegion = 'all';
     this.boardSearchKeyword = '';
     this.boardSort = 'latest'; // 'latest' | 'popular' | 'comments' | 'views'
-    this.boardViewMode = 'card'; // 'card' (소통 피드형 기본) | 'cafe' (카페 목록형)
+    this.boardViewMode = 'cafe'; // 'cafe' (네이버카페 목록형 기본) | 'card' (피드형) // 'card' (소통 피드형 기본) | 'cafe' (카페 목록형)
     this.boardPage = 1;
     this.boardPageSize = 15;
+    this.guideSubCategory = 'all';
     this.activePollIndex = 0;
     this.activePostDetailId = null;
 
@@ -398,6 +399,10 @@ class DodamCommunityApp {
       const raw = localStorage.getItem(this.profileKey);
       if (raw) {
         const parsed = JSON.parse(raw);
+        if (!this.currentUser) {
+          parsed.profileImage = null;
+          parsed.provider = null;
+        }
         // Ensure defaults for new fields
         if (parsed.months === undefined) parsed.months = 24;
         if (!parsed.gender) parsed.gender = 'boy';
@@ -457,6 +462,40 @@ class DodamCommunityApp {
   renderProfileWidget() {
     const el = document.getElementById('my-profile-widget');
     if (!el) return;
+
+    const isLoggedIn = !!(this.currentUser && (this.currentUser.authenticated || this.currentUser.id));
+    if (!isLoggedIn) {
+      el.innerHTML = `
+        <div class="bg-gradient-to-br from-stone-50 via-white to-stone-50/60 rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-2xl bg-stone-100 border border-stone-200 text-slate-400 flex items-center justify-center font-black text-xl shadow-2xs shrink-0">
+                <i class="fa-solid fa-user"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2 flex-wrap">
+                  <span class="font-black text-sm text-slate-800">도담 방문자 (게스트)</span>
+                  <span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-stone-100 text-slate-500 border border-stone-200">비로그인</span>
+                </div>
+                <p class="text-xs text-slate-500 font-medium mt-0.5">로그인하시면 자녀 개월수 맞춤 또래방과 우리 동네 맘카페 소통에 참여하실 수 있습니다.</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-2 self-start sm:self-auto shrink-0">
+              <button
+                type="button"
+                onclick="app.openLoginModal()"
+                class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shadow-2xs transition flex items-center gap-1.5 cursor-pointer"
+              >
+                <i class="fa-solid fa-arrow-right-to-bracket text-emerald-400"></i>
+                <span>간편 로그인 / 시작하기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      return;
+    }
 
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
@@ -1651,6 +1690,12 @@ class DodamCommunityApp {
     if (subLocal) subLocal.classList.toggle('hidden', this.boardLoungeMode !== 'local');
     if (subQa) subQa.classList.toggle('hidden', this.boardLoungeMode !== 'qa');
 
+    const subGuide = document.getElementById('board-subfilter-guide');
+    if (subGuide) subGuide.classList.toggle('hidden', this.boardLoungeMode !== 'guide');
+
+    const guideAdminBtn = document.getElementById('admin-ai-report-guide-trigger');
+    if (guideAdminBtn) guideAdminBtn.classList.toggle('hidden', !this.isAdmin());
+
     // Update active cat buttons in subfilter-all
     document.querySelectorAll('.board-cat-btn').forEach((btn) => {
       const c = btn.getAttribute('data-cat');
@@ -1675,6 +1720,9 @@ class DodamCommunityApp {
       this.currentCategory = 'all';
     } else if (mode === 'qa') {
       this.qaFilterStatus = 'all';
+    } else if (mode === 'guide') {
+      this.currentCategory = 'guide';
+      this.guideSubCategory = 'all';
     }
     this.renderBoardCategories();
     this.renderBoardView();
@@ -1683,6 +1731,19 @@ class DodamCommunityApp {
   filterQaStatus(status) {
     this.qaFilterStatus = status;
     this.boardPage = 1;
+    this.renderBoardView();
+  }
+
+  filterGuideCategory(subCat) {
+    this.guideSubCategory = subCat || 'all';
+    this.boardPage = 1;
+    document.querySelectorAll('.board-gcat-btn').forEach((btn) => {
+      const gc = btn.getAttribute('data-gcat');
+      const isAct = gc === this.guideSubCategory;
+      btn.className = isAct
+        ? 'board-gcat-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px]'
+        : 'board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]';
+    });
     this.renderBoardView();
   }
 
@@ -1997,6 +2058,8 @@ class DodamCommunityApp {
         titleEl.textContent = `📍 ${hubObj.shortName} 동네 맘카페`;
       } else if (this.boardLoungeMode === 'qa') {
         titleEl.textContent = '❓ 육아 질문·고민';
+      } else if (this.boardLoungeMode === 'guide') {
+        titleEl.textContent = '📖 AI 육아가이드 리포트';
       } else if (catObj && catObj.id !== 'all') {
         titleEl.textContent = catObj.name;
       } else {
@@ -2010,6 +2073,15 @@ class DodamCommunityApp {
         if (!isQa) return false;
         if (this.qaFilterStatus === 'waiting' && (p.isSolved || (p.comments?.length || 0) > 0)) return false;
         if (this.qaFilterStatus === 'solved' && (!p.isSolved && (p.comments?.length || 0) === 0)) return false;
+      }
+      if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
+        const isGuide = p.category === 'guide' || p.isAiReport;
+        if (!isGuide) return false;
+        if (this.guideSubCategory !== 'all') {
+          const subMatch = (p.guideType === this.guideSubCategory) || (p.tags && p.tags.includes(this.guideSubCategory));
+          if (!subMatch) return false;
+        }
+        return true;
       }
       if (this.currentCategory === 'hot' && !p.isHot) return false;
       if (this.currentCategory !== 'all' && this.currentCategory !== 'hot' && p.category !== this.currentCategory) return false;
@@ -2082,7 +2154,7 @@ class DodamCommunityApp {
     const pinnedNotices = this.getPinnedNotices();
 
     if (this.boardViewMode === 'cafe') {
-      // 1. 카페 목록형 (클린 테이블)
+      // 1. 네이버카페 스타일 목록형 테이블 (말머리 | 제목 [댓글수] | 작성자 | 작성일 | 조회)
       const noticeRowsHtml =
         this.boardPage === 1
           ? pinnedNotices
@@ -2090,15 +2162,23 @@ class DodamCommunityApp {
                 (n) => `
             <div onclick="app.openNoticeDetailModal('${n.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition items-center text-xs">
               <div class="col-span-2 text-center"><span class="px-2 py-0.5 rounded bg-rose-500 text-white font-black text-[10px]">${n.tag}</span></div>
-              <div class="col-span-6 font-bold text-slate-900 truncate">${n.title}</div>
-              <div class="col-span-2 text-center text-slate-600 truncate">${n.author}</div>
-              <div class="col-span-1 text-center text-slate-400">${n.date.slice(5)}</div>
-              <div class="col-span-1 text-center text-rose-500 font-bold">♥ ${n.likes}</div>
+              <div class="col-span-6 font-bold text-slate-900 truncate flex items-center gap-1.5">
+                <span class="truncate">${n.title}</span>
+                <span class="text-rose-500 font-bold text-[11px]">[${n.commentsCount || 42}]</span>
+              </div>
+              <div class="col-span-2 text-center text-slate-700 font-bold truncate">${n.author}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px]">${n.date.slice(5)}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px]">${(n.views || 0).toLocaleString()}</div>
             </div>
-            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-4 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs">
+            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-4 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs space-y-1">
               <div class="flex items-center gap-1.5">
                 <span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[10px]">${n.tag}</span>
                 <span class="font-bold text-slate-900 truncate">${n.title}</span>
+                <span class="text-rose-500 font-bold text-[11px]">[${n.commentsCount || 42}]</span>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-slate-400">
+                <span>${n.author} · ${n.date.slice(5)}</span>
+                <span>조회 ${(n.views || 0).toLocaleString()}</span>
               </div>
             </div>
           `
@@ -2109,29 +2189,63 @@ class DodamCommunityApp {
       const postRowsHtml = pagedPosts
         .map((post) => {
           const totalLikes = (post.reactions?.like || 0) + (post.reactions?.hug || 0) + (post.reactions?.tip || 0);
-          const badgeText = post.localHubName && post.localHubName !== '전국 전체' ? post.localHubName.split('·')[0] : (post.ageStage ? post.ageStage : '자유');
+          let badgeText = '자유';
+          let badgeClass = 'bg-stone-100 text-slate-600';
+
+          if (post.isAiReport) {
+            badgeText = '🤖 AI가이드';
+            badgeClass = 'bg-purple-100 text-purple-800 font-black border border-purple-200';
+          } else if (post.category === 'guide') {
+            badgeText = '📖 육아가이드';
+            badgeClass = 'bg-rose-100 text-rose-800 font-black border border-rose-200';
+          } else if (post.localHubName && post.localHubName !== '전국 전체') {
+            badgeText = '📍 ' + post.localHubName.split('·')[0];
+            badgeClass = 'bg-emerald-50 text-emerald-700 font-bold border border-emerald-200';
+          } else if (post.ageStage && post.ageStage !== 'all') {
+            const stObj = (this.data.ageStages || []).find((s) => s.id === post.ageStage);
+            badgeText = stObj ? stObj.shortName : post.ageStage;
+            badgeClass = 'bg-amber-50 text-amber-800 font-bold border border-amber-200';
+          } else if (post.isQuestion) {
+            badgeText = '❓ 질문';
+            badgeClass = 'bg-sky-50 text-sky-700 font-bold border border-sky-200';
+          }
+
+          const commentsCount = (post.comments?.length || 0);
+          const views = post.views || 1;
+          const authorName = post.author?.nickname || '도담맘';
 
           return `
-            <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition items-center text-xs group">
-              <div class="col-span-2 text-center"><span class="px-2 py-0.5 rounded bg-stone-100 text-slate-600 font-bold text-[10px] truncate max-w-full inline-block">${badgeText}</span></div>
+            <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50/80 cursor-pointer transition items-center text-xs group">
+              <div class="col-span-2 text-center">
+                <span class="px-2 py-0.5 rounded-md ${badgeClass} text-[10px] truncate max-w-full inline-block">${badgeText}</span>
+              </div>
               <div class="col-span-6 font-medium text-slate-900 group-hover:text-[#03C75A] truncate flex items-center gap-1.5">
+                ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
+                ${post.isAiReport ? '<span class="px-1.5 py-0.2 rounded bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-[9px]">AI</span>' : ''}
+                <span class="truncate">${post.title}</span>
+                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
+              </div>
+              <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1">
+                <span class="truncate">${authorName}</span>
+                ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px]" title="공식 AI 리포트"></i>' : ''}
+              </div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px]">${post.createdAt || '방금'}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px]">${views.toLocaleString()}</div>
+            </div>
+            <!-- 모바일 2줄 카페 목록 -->
+            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1">
+              <div class="font-medium text-slate-900 line-clamp-1 flex items-center gap-1.5">
+                <span class="px-1.5 py-0.2 rounded ${badgeClass} text-[10px] shrink-0">${badgeText}</span>
                 ${post.isHot ? '<span class="text-rose-500 font-black text-[10px]">HOT</span>' : ''}
                 <span class="truncate">${post.title}</span>
-                ${(post.comments?.length || 0) > 0 ? `<span class="text-rose-500 font-bold text-[11px]">[${post.comments.length}]</span>` : ''}
-              </div>
-              <div class="col-span-2 text-center text-slate-600 truncate">${post.author?.nickname || '도담맘'}</div>
-              <div class="col-span-1 text-center text-slate-400">${post.createdAt}</div>
-              <div class="col-span-1 text-center text-rose-500 font-bold">♥ ${totalLikes}</div>
-            </div>
-            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1">
-              <div class="font-medium text-slate-900 line-clamp-1 flex items-center gap-1">
-                ${post.isHot ? '<span class="text-rose-500 font-black text-[10px]">HOT</span>' : ''}
-                <span>${post.title}</span>
-                ${(post.comments?.length || 0) > 0 ? `<span class="text-rose-500 font-bold text-[11px]">[${post.comments.length}]</span>` : ''}
+                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span>${post.author?.nickname || '도담맘'} · ${badgeText}</span>
-                <span class="text-rose-500 font-bold">♥ ${totalLikes}</span>
+                <span>${authorName} · ${post.createdAt}</span>
+                <div class="flex items-center gap-2">
+                  <span>조회 ${views.toLocaleString()}</span>
+                  <span class="text-rose-500 font-bold">♥ ${totalLikes}</span>
+                </div>
               </div>
             </div>
           `;
@@ -2140,12 +2254,12 @@ class DodamCommunityApp {
 
       listEl.innerHTML = `
         <div class="bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-2xs">
-          <div class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2 bg-stone-50 border-b border-stone-200 text-xs font-bold text-slate-500 select-none">
-            <div class="col-span-2 text-center">분류</div>
+          <div class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2 bg-stone-50/90 border-b border-stone-200 text-xs font-bold text-slate-600 select-none">
+            <div class="col-span-2 text-center">말머리</div>
             <div class="col-span-6 text-left pl-1">제목</div>
             <div class="col-span-2 text-center">작성자</div>
-            <div class="col-span-1 text-center">시간</div>
-            <div class="col-span-1 text-center">공감</div>
+            <div class="col-span-1 text-center">작성일</div>
+            <div class="col-span-1 text-center">조회</div>
           </div>
           ${noticeRowsHtml}
           <div>${postRowsHtml}</div>
@@ -2285,12 +2399,17 @@ class DodamCommunityApp {
 
     const catBadge = document.getElementById('post-detail-category-badge');
     if (catBadge) {
-      const labelParts = [];
-      if (stObj && stObj.id !== 'all') labelParts.push(stObj.shortName);
-      else if (cat) labelParts.push(cat.name);
-      if (post.localTopicName) labelParts.push(post.localTopicName);
-      catBadge.textContent = labelParts.join(' · ') || '도담 육아소통';
-      catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-emerald-50 text-[#03C75A] border border-emerald-200';
+      if (post.isAiReport) {
+        catBadge.textContent = '🤖 도담 AI 육아가이드 전문 리포트';
+        catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-sm';
+      } else {
+        const labelParts = [];
+        if (stObj && stObj.id !== 'all') labelParts.push(stObj.shortName);
+        else if (cat) labelParts.push(cat.name);
+        if (post.localTopicName) labelParts.push(post.localTopicName);
+        catBadge.textContent = labelParts.join(' · ') || '도담 육아소통';
+        catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-emerald-50 text-[#03C75A] border border-emerald-200';
+      }
     }
 
     document.getElementById('post-detail-title').textContent = post.title;
@@ -2299,7 +2418,14 @@ class DodamCommunityApp {
     document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
     document.getElementById('post-detail-date').textContent = post.createdAt;
     document.getElementById('post-detail-views').textContent = (post.views || 1).toLocaleString();
-    document.getElementById('post-detail-content').textContent = post.content;
+    const contentEl = document.getElementById('post-detail-content');
+    if (contentEl) {
+      if (post.isAiReport || (post.content && post.content.includes('<')) || post.contentHtml) {
+        contentEl.innerHTML = post.contentHtml || post.content;
+      } else {
+        contentEl.textContent = post.content;
+      }
+    }
 
     const avatarEl = document.getElementById('post-detail-avatar');
     if (avatarEl) {
@@ -7909,6 +8035,16 @@ class DodamCommunityApp {
     const mobileBtn = document.getElementById('mobile-auth-btn');
     const footerBtn = document.getElementById('footer-auth-btn');
 
+    const topAiBtn = document.getElementById('btn-admin-ai-report-top');
+    if (topAiBtn) {
+      topAiBtn.classList.toggle('hidden', !this.isAdmin());
+    }
+
+    const guideAiBtn = document.getElementById('admin-ai-report-guide-trigger');
+    if (guideAiBtn) {
+      guideAiBtn.classList.toggle('hidden', !this.isAdmin());
+    }
+
     if (desktopEl) {
       if (this.isAdmin()) {
         desktopEl.innerHTML = `
@@ -8133,8 +8269,14 @@ class DodamCommunityApp {
   logout() {
     this.currentUser = null;
     localStorage.removeItem(this.authKey);
+    this.profile = this.getDefaultProfile();
+    this.profile.profileImage = null;
+    this.profile.provider = null;
+    this.saveProfileData();
     this.renderAuthHeader();
-    this.showToast('로그아웃되었습니다.');
+    this.renderProfileWidget();
+    this.renderBoardView();
+    this.showToast('안전하게 로그아웃되었습니다.');
     if (this.currentView === 'admin') {
       this.switchMainView('board');
     }
@@ -8712,6 +8854,527 @@ class DodamCommunityApp {
     this.renderAdminSystem();
     this.showToast('실시간 관리자 트래픽 데이터가 새로고침되었습니다.');
   }
+
+
+
+  // ==========================================
+  // [도담 AI 케어랩 육아가이드 전문 리포트 시스템 (HOMEPAGE 스타일)]
+  // ==========================================
+  openAiParentingReportModal() {
+    if (!this.isAdmin()) {
+      this.showToast('AI 리포트 발행은 관리자 권한이 필요합니다. 관리자로 로그인해 주세요.');
+      this.openLoginModal('admin');
+      return;
+    }
+    const modal = document.getElementById('ai-parenting-report-modal');
+    if (!modal) return;
+    modal.classList.remove('hidden');
+
+    const statusEl = document.getElementById('ai-report-generating-status');
+    if (statusEl) statusEl.classList.add('hidden');
+    const runBtn = document.getElementById('btn-run-ai-parenting-report');
+    if (runBtn) {
+      runBtn.disabled = false;
+      runBtn.innerHTML = '<i class="fa-solid fa-bolt text-amber-300"></i><span>AI 리포트 즉시 발행 및 육아가이드 등록</span>';
+    }
+  }
+
+  closeAiParentingReportModal() {
+    const modal = document.getElementById('ai-parenting-report-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  onAiReportPresetChange(val) {
+    const customBox = document.getElementById('ai-report-custom-box');
+    const ageStageEl = document.getElementById('ai-report-age-stage');
+    const guideTypeEl = document.getElementById('ai-report-guide-type');
+
+    if (customBox) {
+      customBox.classList.toggle('hidden', val !== 'custom');
+    }
+
+    if (val === 'sleep_0_12m') {
+      if (ageStageEl) ageStageEl.value = 'newborn';
+      if (guideTypeEl) guideTypeEl.value = 'sleep';
+    } else if (val === 'weaning_food') {
+      if (ageStageEl) ageStageEl.value = 'toddler_early';
+      if (guideTypeEl) guideTypeEl.value = 'food';
+    } else if (val === 'discipline_3_7y') {
+      if (ageStageEl) ageStageEl.value = 'toddler';
+      if (guideTypeEl) guideTypeEl.value = 'growth';
+    } else if (val === 'school_prep') {
+      if (ageStageEl) ageStageEl.value = 'school';
+      if (guideTypeEl) guideTypeEl.value = 'edu';
+    } else if (val === 'pediatric_health') {
+      if (ageStageEl) ageStageEl.value = 'all';
+      if (guideTypeEl) guideTypeEl.value = 'health';
+    } else if (val === 'working_parents') {
+      if (ageStageEl) ageStageEl.value = 'all';
+      if (guideTypeEl) guideTypeEl.value = 'growth';
+    }
+  }
+
+  generateParentingReportSvg(data) {
+    const badgeText = data.badgeText || '도담 AI 케어랩 심층 리포트';
+    const headlineTag = data.headlineTag || '💡 2026 소아발달 심층 분석';
+    const headlineMain = data.headlineMain || '0~12개월 통잠 수면교육 & 원더윅스';
+    const headlineSub = data.headlineSub || '수면 압력 조절과 분리불안 대처 4단계 프로토콜';
+    const b1 = data.b1 || '① 월령별 생체리듬 멜라토닌 분비 주기 정밀 매핑';
+    const b2 = data.b2 || '② 원더윅스 급성장기 밤중 수유·야경증 안심 수면의식';
+    const b3 = data.b3 || '③ 낮잠 총량 관리와 취침 전 블루라이트 차단 루틴';
+    const metricScore = data.metricScore || '98.4%';
+    const metricText = data.metricText || '소아임상 지침 일치';
+    const actionText = data.actionText || '4단계 수면의식 실천';
+
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+    <defs>
+      <linearGradient id="p_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a"/><stop offset="50%" stop-color="#1e1b4b"/><stop offset="100%" stop-color="#090d16"/>
+      </linearGradient>
+      <radialGradient id="p_glow1" cx="20%" cy="25%" r="60%">
+        <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.35"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+      </radialGradient>
+      <radialGradient id="p_glow2" cx="80%" cy="40%" r="55%">
+        <stop offset="0%" stop-color="#ec4899" stop-opacity="0.25"/><stop offset="100%" stop-color="#ec4899" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="p_gold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#d97706"/>
+      </linearGradient>
+      <filter id="p_drop" x="-10%" y="-10%" width="130%" height="130%">
+        <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.75"/>
+      </filter>
+    </defs>
+
+    <rect width="800" height="450" fill="url(#p_bg)"/>
+    <rect width="800" height="450" fill="url(#p_glow1)"/>
+    <rect width="800" height="450" fill="url(#p_glow2)"/>
+
+    <g opacity="0.06" stroke="#c084fc" stroke-width="1">
+      <line x1="0" y1="90" x2="800" y2="90"/><line x1="0" y1="180" x2="800" y2="180"/>
+      <line x1="0" y1="270" x2="800" y2="270"/><line x1="0" y1="360" x2="800" y2="360"/>
+      <line x1="160" y1="0" x2="160" y2="450"/><line x1="320" y1="0" x2="320" y2="450"/>
+      <line x1="480" y1="0" x2="480" y2="450"/><line x1="640" y1="0" x2="640" y2="450"/>
+    </g>
+
+    <g transform="translate(30, 24)">
+      <rect width="210" height="30" rx="8" fill="#e11d48" filter="url(#p_drop)"/>
+      <circle cx="18" cy="15" r="5" fill="#ffffff"/>
+      <text x="32" y="21" fill="#ffffff" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${badgeText}</text>
+
+      <rect x="220" y="0" width="145" height="30" rx="8" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.2"/>
+      <text x="292" y="20" fill="#c084fc" font-size="12" font-weight="800" font-family="'Pretendard', sans-serif" text-anchor="middle">소아청소년과 전문 검수</text>
+
+      <g transform="translate(605, 0)">
+        <rect width="165" height="30" rx="8" fill="#0b1322" fill-opacity="0.95" stroke="#ec4899" stroke-width="1.4"/>
+        <circle cx="18" cy="15" r="4.5" fill="#db2777"/>
+        <circle cx="18" cy="15" r="2" fill="#f472b6"/>
+        <text x="92" y="20" fill="#f472b6" font-size="13" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" letter-spacing="0.4" text-anchor="middle">도담 AI 케어랩</text>
+      </g>
+    </g>
+
+    <g transform="translate(35, 90)">
+      <rect x="0" y="0" width="220" height="28" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="1"/>
+      <text x="14" y="19" fill="#cbd5e1" font-size="12" font-weight="800" font-family="'Pretendard', sans-serif">${headlineTag}</text>
+
+      <text x="0" y="66" fill="#ffffff" font-size="26" font-weight="900" font-family="'Pretendard', sans-serif" filter="url(#p_drop)">
+        ${headlineMain}
+      </text>
+
+      <text x="0" y="106" fill="url(#p_gold)" font-size="24" font-weight="900" font-family="'Pretendard', sans-serif" filter="url(#p_drop)">
+        ${headlineSub}
+      </text>
+
+      <g transform="translate(0, 136)">
+        <rect width="465" height="48" rx="12" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.8" filter="url(#p_drop)"/>
+        <circle cx="28" cy="24" r="14" fill="#7c3aed"/>
+        <text x="28" y="29" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle">✓</text>
+        <text x="52" y="30" fill="#ede9fe" font-size="13.5" font-weight="800" font-family="'Pretendard', sans-serif">
+          <tspan fill="#a78bfa">임상 지침 적합도 ${metricScore}</tspan> | 부모 스트레스 완화 &amp; 긍정 육아 로드맵
+        </text>
+      </g>
+
+      <g transform="translate(5, 208)">
+        <circle cx="6" cy="6" r="4" fill="#a855f7"/>
+        <text x="18" y="11" fill="#e2e8f0" font-size="13" font-weight="700" font-family="'Pretendard', sans-serif">${b1}</text>
+
+        <circle cx="6" cy="34" r="4" fill="#ec4899"/>
+        <text x="18" y="39" fill="#e2e8f0" font-size="13" font-weight="700" font-family="'Pretendard', sans-serif">${b2}</text>
+
+        <circle cx="6" cy="62" r="4" fill="#38bdf8"/>
+        <text x="18" y="67" fill="#e2e8f0" font-size="13" font-weight="700" font-family="'Pretendard', sans-serif">${b3}</text>
+      </g>
+    </g>
+
+    <g transform="translate(525, 88)">
+      <rect x="0" y="0" width="245" height="275" rx="20" fill="#0f172a" fill-opacity="0.9" stroke="#334155" stroke-width="2" filter="url(#p_drop)"/>
+      <rect x="0" y="0" width="245" height="42" rx="20" fill="#1e1b4b"/>
+      <text x="122" y="27" fill="#f8fafc" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif" text-anchor="middle">실시간 발달 임상 지표</text>
+
+      <g transform="translate(18, 54)">
+        <rect width="210" height="74" rx="12" fill="#1e1b4b" stroke="#7c3aed" stroke-width="1.2"/>
+        <text x="14" y="24" fill="#c4b5fd" font-size="11" font-weight="700">소아임상 가이드 적합도</text>
+        <text x="14" y="54" fill="#a78bfa" font-size="28" font-weight="900" font-family="monospace">${metricScore}</text>
+        <rect x="108" y="34" width="92" height="22" rx="6" fill="#7c3aed"/>
+        <text x="154" y="49" fill="#ffffff" font-size="10.5" font-weight="800" text-anchor="middle">${metricText}</text>
+      </g>
+
+      <g transform="translate(18, 138)">
+        <rect width="210" height="66" rx="12" fill="#2e1065" stroke="#ec4899" stroke-width="1.2"/>
+        <text x="14" y="24" fill="#fbcfe8" font-size="11" font-weight="700">추천 핵심 행동 지침</text>
+        <text x="14" y="52" fill="#f472b6" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${actionText}</text>
+      </g>
+
+      <g transform="translate(18, 214)">
+        <rect width="210" height="44" rx="10" fill="#18132b" stroke="#8b5cf6" stroke-width="1.2"/>
+        <text x="105" y="19" fill="#c084fc" font-size="11" font-weight="800" text-anchor="middle">도담 육아연구소 종합 판정</text>
+        <text x="105" y="36" fill="#facc15" font-size="11.5" font-weight="900" text-anchor="middle">🌟 안심 긍정 훈육 권장</text>
+      </g>
+    </g>
+
+    <g transform="translate(0, 422)">
+      <rect width="800" height="28" fill="#090d16" fill-opacity="0.95"/>
+      <text x="400" y="440" fill="#64748b" font-size="11" font-family="'Pretendard', sans-serif" text-anchor="middle">도담도담 AI 케어랩 • 대한소아청소년과학회 &amp; 한국아동심리학회 임상 빅데이터 기반 발행</text>
+    </g>
+  </svg>`;
+
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg.replace(/\s+/g, ' ').trim());
+  }
+
+  buildParentingReportHtml(topicKey, customTitle, customPrompt, ageStage, guideType) {
+    let reportData = {
+      badgeText: '도담 AI 케어랩 심층 리포트',
+      headlineTag: '💡 2026 소아발달 심층 분석',
+      headlineMain: '0~12개월 통잠 수면교육 & 원더윅스',
+      headlineSub: '수면 압력 조절과 분리불안 대처 4단계 프로토콜',
+      b1: '① 월령별 생체리듬 멜라토닌 분비 주기 정밀 매핑',
+      b2: '② 원더윅스 급성장기 밤중 수유·야경증 안심 수면의식',
+      b3: '③ 낮잠 총량 관리와 취침 전 블루라이트 차단 루틴',
+      metricScore: '98.4%',
+      metricText: '소아임상 일치',
+      actionText: '4단계 수면의식 실천'
+    };
+
+    let postTitle = '';
+    let sec1 = '';
+    let sec2 = '';
+    let sec3 = '';
+    let sec4 = '';
+    let sec5 = '';
+    let tags = [];
+
+    if (topicKey === 'sleep_0_12m') {
+      postTitle = '[AI 육아가이드] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 분석 리포트';
+      reportData.headlineMain = '0~12개월 통잠 수면교육 & 원더윅스';
+      reportData.headlineSub = '수면 압력 조절과 분리불안 대처 4단계 프로토콜';
+      reportData.actionText = '4단계 수면의식 실천';
+      tags = ['수면교육', '원더윅스', '통잠', '수면의식', '밤수끊기', '도담AI가이드'];
+
+      sec1 = `
+        <p>생후 0~12개월 아기의 수면 문제는 단순한 잠투정이 아닌 <strong>뇌 신경망의 급격한 도약(원더윅스, Wonder Weeks)</strong>과 <strong>생체 일주기 리듬 형성</strong> 과정에서 발생하는 자연스러운 발달 신호입니다.</p>
+        <ul style="list-style-type: disc; padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+          <li><strong>생후 6~8주:</strong> 멜라토닌 자가 합성 시작, 낮과 밤의 명암 구분 훈련 최적기</li>
+          <li><strong>생후 4개월:</strong> 1차 수면 퇴행기(Sleep Regression), 성인 수면 주기(REM-비REM)로 전환</li>
+          <li><strong>생후 8~10개월:</strong> 대상영속성 발달로 인한 분리불안 급증 및 야경증 대비 필요</li>
+        </ul>
+      `;
+
+      sec2 = `
+        <p>아기의 수면 뇌파는 성인보다 렘(REM) 수면 비율이 50% 이상 높아 얕은 잠 단계에서 외부 자극이나 신체 변화(뒤집기, 이앓이)에 쉽게 반응합니다. 이를 '잠투정'으로 오해하여 즉시 안아 올리거나 수유하면 아기는 <strong>연관 수면 연관(Sleep Association)</strong>을 형성하여 스스로 잠드는 능력을 잃게 됩니다.</p>
+        <p>핵심은 '수면 압력(Sleep Pressure)'을 적절히 쌓아주는 낮 시간 활동량과, 취침 전 일정한 신호를 보내는 <strong>예측 가능한 수면의식(Bedtime Routine)</strong> 구축에 있습니다.</p>
+      `;
+
+      sec3 = `
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 8px;">📋 도담 AI 권장: 성공적인 통잠을 위한 4단계 프로토콜</h5>
+          <ol style="padding-left: 20px; line-height: 1.8; color: #334155;">
+            <li><strong>1단계 환경 통제 (19:30):</strong> 실내온도 20~22℃, 습도 50~60%, 웜톤 간접조명만 켜기</li>
+            <li><strong>2단계 진정 루틴 (20:00):</strong> 미온수 목욕 → 보습 마사지 → 잠옷 교체 (촉각 안정)</li>
+            <li><strong>3단계 수면의식 (20:20):</strong> 조용한 자장가 또는 백색소음, 애착인형/이불 안겨주기</li>
+            <li><strong>4단계 졸릴 때 눕히기 (20:30):</strong> 완전히 잠들기 직전 눈이 감길 때 침대에 눕혀 스스로 잠들게 하기</li>
+          </ol>
+        </div>
+      `;
+
+      sec4 = `
+        <div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 14px 18px; border-radius: 8px; margin: 14px 0;">
+          <strong style="color: #be123c; font-size: 13px;">⚠️ 소아청소년과 전문의 긴급 진료 권고 징후</strong>
+          <ul style="margin-top: 6px; padding-left: 18px; color: #881337; line-height: 1.7;">
+            <li>아기가 자다 깨어 다리를 배 쪽으로 모으며 자지러지게 우는 경우 (장중첩증 의심)</li>
+            <li>수면 중 호흡이 10초 이상 멈추거나 쌕쌕거리는 천명음이 동반되는 경우</li>
+            <li>38℃ 이상의 고열과 함께 수유량이 평소의 50% 이하로 급감할 때</li>
+          </ul>
+        </div>
+      `;
+
+      sec5 = `
+        <div style="space-y: 10px;">
+          <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 12px; margin-bottom: 8px;">
+            <p style="font-weight: 800; color: #6b21a8; margin-bottom: 4px;">Q. 밤중 수유는 언제 끊는 것이 좋은가요?</p>
+            <p style="color: #4c1d95; line-height: 1.6; margin: 0;">A. 소아과적으로 생후 6개월(체중 약 7~8kg) 이후에는 생리적으로 밤새 먹지 않고도 혈당 유지가 가능합니다. 이유식을 시작하면서 서서히 밤수 수유량을 줄여 7~8개월 완성을 목표로 하세요.</p>
+          </div>
+          <div style="background: #faf5ff; border: 1px solid #e9d5ff; border-radius: 10px; padding: 12px;">
+            <p style="font-weight: 800; color: #6b21a8; margin-bottom: 4px;">Q. 안눕법과 퍼버법 중 어떤 수면교육이 더 안전한가요?</p>
+            <p style="color: #4c1d95; line-height: 1.6; margin: 0;">A. 기질이 예민한 아이는 안아주고 달래주는 '안눕법(쉬닥법)'이 정서적 안정에 유리하며, 고집이 세고 안아주면 더 깨는 아이는 점진적 반응 지연법(수정 퍼버법)이 통잠 도달 기간이 빠릅니다.</p>
+          </div>
+        </div>
+      `;
+    } else if (topicKey === 'weaning_food') {
+      postTitle = '[AI 육아가이드] 초기·중기·후기 이유식 영양 밸런스 & 알레르기 안전 가이드';
+      reportData.headlineMain = '이유식 영양 밸런스 & 알레르기 예방';
+      reportData.headlineSub = '월령별 식단 구성표와 철분·아연 흡수율 극대화 전략';
+      reportData.actionText = '10대 알레르겐 순차 테스트';
+      tags = ['이유식', '영양가이드', '알레르기테스트', '철분보충', '도담AI가이드'];
+
+      sec1 = `<p>생후 6개월부터는 모유나 분유만으로는 아기의 체내 <strong>저장 철분(Iron stores)</strong>이 고갈되므로, 쇠고기·달걀 등 동물성 단백질과 미량 영양소 공급이 두뇌 발달의 필수 요건입니다.</p>`;
+      sec2 = `<p>과거와 달리 최신 소아 알레르기 학회 가이드라인은 달걀, 땅콩 등 주요 알레르기 유발 식품을 늦게 먹이기보다 <strong>생후 6개월경 이른 시기에 소량씩 접하는 것</strong>이 면역 관용 형성에 유리하다고 권고합니다.</p>`;
+      sec3 = `
+        <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #166534; margin-bottom: 8px;">🥦 월령별 단계별 실천 지침</h5>
+          <p style="color: #14532d; line-height: 1.7; margin: 0;">
+            • <strong>초기(6개월):</strong> 쌀미음 + 소고기 토핑 (입자 크기 1mm 이하 부드러운 퓌레)<br/>
+            • <strong>중기(7~8개월):</strong> 소고기/닭고기 + 채소 2종 + 죽 형태 (입자 크기 3mm, 혀로 으깰 수 있는 농도)<br/>
+            • <strong>후기(9~11개월):</strong> 무른밥 + 핑거푸드 자기주도식 병행 (철분 흡수를 위해 비타민C 과일 곁들이기)
+          </p>
+        </div>
+      `;
+      sec4 = `<div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 14px 18px; border-radius: 8px; margin: 14px 0;"><strong style="color: #be123c;">⚠️ 아나필락시스 및 급성 알레르기 경고</strong>: 식후 2시간 이내 입술 부종, 두드러기, 쌕쌕거림 발생 시 즉시 응급실로 이동해야 합니다.</div>`;
+      sec5 = `<p style="color: #334155; line-height: 1.7;">새로운 식재료는 반드시 <strong>평일 오전</strong>에 테스트하여 병원 방문이 가능한 시간대를 확보하세요.</p>`;
+    } else if (topicKey === 'discipline_3_7y') {
+      postTitle = '[AI 육아가이드] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션';
+      reportData.headlineMain = '3~7세 떼쓰기·분리불안 심리 분석';
+      reportData.headlineSub = '전두엽 미성숙 이해와 분노 폭발 진정 3단계 감정코칭';
+      reportData.actionText = '3단계 공감 훈육법';
+      tags = ['훈육가이드', '감정코칭', '떼쓰기', '분리불안', '아동심리', '도담AI가이드'];
+
+      sec1 = `<p>만 3~5세 아이의 떼쓰기는 전두엽(감정 조절 중추)이 아직 미성숙한 상태에서 <strong>자아 효능감과 독립심</strong>이 폭발할 때 나타나는 지극히 정상적인 인지 발달 과정입니다.</p>`;
+      sec2 = `<p>분노와 좌절을 느낄 때 부모가 함께 언성을 높이면 아동의 뇌는 '위협 상태'로 인식하여 투쟁-도피(Fight or Flight) 반응으로 이어집니다. 부모의 차분한 목소리와 눈맞춤이 아이의 미주신경을 안정시키는 유일한 열쇠입니다.</p>`;
+      sec3 = `
+        <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #1e40af; margin-bottom: 8px;">💖 하임 기너트 & 가트맨식 3단계 긍정 감정코칭</h5>
+          <ol style="padding-left: 20px; line-height: 1.8; color: #1e3a8a;">
+            <li><strong>1단계 감정 온전히 읽어주기:</strong> "더 놀고 싶었는데 그만해야 해서 정말 아쉽고 화가 났구나." (감정은 100% 수용)</li>
+            <li><strong>2단계 명확한 한계 제시:</strong> "하지만 물건을 던지거나 소리를 지르는 건 안 되는 거야." (행동은 단호하게 제한)</li>
+            <li><strong>3단계 대안 선택권 주기:</strong> "마지막으로 미끄럼틀 1번 더 탈래, 아니면 집에 가서 재미있는 공룡 스티커 놀이 할래?" (아동의 통제감 회복)</li>
+          </ol>
+        </div>
+      `;
+      sec4 = `<div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 14px 18px; border-radius: 8px; margin: 14px 0;"><strong style="color: #be123c;">⚠️ 정서 발달 전문가 상담 권장</strong>: 만 6세 이후에도 주 3회 이상 30분 넘게 분노 발작이 지속되거나 자해 행동을 보일 경우 아동발달센터 상담을 권장합니다.</div>`;
+      sec5 = `<p style="color: #334155; line-height: 1.7;">아이의 잘못된 행동 직후 바로 설교하지 마세요. 아이의 심박수가 정상으로 돌아오고 눈물이 마른 뒤 10분 후에 차분히 이야기 나누는 것이 뇌과학적으로 3배 이상 효과적입니다.</p>`;
+    } else {
+      // General or Custom Topic
+      const customT = customTitle || '소아 발달 & 맞춤형 부모 행동 솔루션';
+      postTitle = `[AI 육아가이드] ${customT}`;
+      reportData.headlineMain = customT.slice(0, 24);
+      reportData.headlineSub = '소아임상 지침 & 아동심리 빅데이터 기반 심층 분석';
+      reportData.actionText = '단계별 실천 로드맵';
+      tags = ['육아가이드', '소아건강', '부모교육', '도담AI가이드'];
+
+      sec1 = `<p>${customPrompt || '우리 아이의 건강한 성장과 정서적 안정을 위해 소아의학 임상 기준과 아동발달 심리학을 종합한 전문 솔루션입니다.'}</p>`;
+      sec2 = `<p>아이의 발달 단계에 적합한 자극과 부모의 일관된 양육 태도가 결합할 때 자율성과 회복탄력성이 가장 이상적으로 발달합니다.</p>`;
+      sec3 = `
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 8px;">📌 권장 3단계 실천 가이드</h5>
+          <p style="color: #334155; line-height: 1.7; margin: 0;">
+            1. 아이의 신체적·심리적 신호 관찰 및 일관된 일과 루틴 정착<br/>
+            2. 칭찬보다는 구체적인 노력 과정 격려하기<br/>
+            3. 부모 자신의 스트레스 관리와 충분한 에너지 충전
+          </p>
+        </div>
+      `;
+      sec4 = `<div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 14px 18px; border-radius: 8px; margin: 14px 0;"><strong style="color: #be123c;">⚠️ 주의사항</strong>: 증상이 3일 이상 지속되거나 일상생활에 지장을 줄 때는 전문의 상담을 병행하세요.</div>`;
+      sec5 = `<p style="color: #334155; line-height: 1.7;">도담 커뮤니티의 또래방 및 동네 맘카페에서 선배 부모님들과 생생한 경험담을 나눠보세요.</p>`;
+    }
+
+    const svgUri = this.generateParentingReportSvg(reportData);
+
+    const fullHtml = `
+      <div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
+        <!-- Top Branded Header -->
+        <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%); padding: 16px 20px; border-radius: 16px; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px;">
+              🤖
+            </div>
+            <div>
+              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM AI CARE-LAB RESEARCH BRIEF</div>
+              <div style="font-size: 15px; font-weight: 900;">도담 AI 육아가이드 전문 심층 리포트</div>
+            </div>
+          </div>
+          <div style="display: flex; items-center; gap: 6px;">
+            <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 800;">전문 검수 완료</span>
+            <span style="background: #fbbf24; color: #78350f; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 900;">공식 리포트</span>
+          </div>
+        </div>
+
+        <!-- 16:9 HD Infographic SVG -->
+        <div class="post-img-container" style="text-align: center; margin: 16px 0;">
+          <img src="${svgUri}" alt="도담 AI 케어랩 전문 인포그래픽 리포트" style="width: 100%; max-width: 800px; display: block; margin: 0 auto; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;" />
+        </div>
+
+        <!-- Section 1 -->
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 32px; margin-bottom: 12px; border-left: 4px solid #db2777; padding-left: 12px;">
+          1. 📌 핵심 요약 &amp; 발달 브리핑 (Executive Summary)
+        </h4>
+        <div style="font-size: 14.5px; color: #334155;">
+          ${sec1}
+        </div>
+
+        <!-- Section 2 -->
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 32px; margin-bottom: 12px; border-left: 4px solid #7c3aed; padding-left: 12px;">
+          2. 🔍 소아의학 및 아동발달심리 심층 분석
+        </h4>
+        <div style="font-size: 14.5px; color: #334155;">
+          ${sec2}
+        </div>
+
+        <!-- Section 3 -->
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 32px; margin-bottom: 12px; border-left: 4px solid #10b981; padding-left: 12px;">
+          3. 💡 시기별 맞춤 실천 솔루션 &amp; 부모 행동 가이드
+        </h4>
+        <div style="font-size: 14.5px; color: #334155;">
+          ${sec3}
+        </div>
+
+        <!-- Section 4 -->
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 32px; margin-bottom: 12px; border-left: 4px solid #f43f5e; padding-left: 12px;">
+          4. ⚠️ 소아청소년과 전문의 조언 &amp; 병원 방문 체크리스트
+        </h4>
+        <div style="font-size: 14.5px; color: #334155;">
+          ${sec4}
+        </div>
+
+        <!-- Section 5 -->
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 32px; margin-bottom: 12px; border-left: 4px solid #0284c7; padding-left: 12px;">
+          5. 💬 선배 맘·대디 실전 FAQ &amp; Q&amp;A
+        </h4>
+        <div style="font-size: 14.5px; color: #334155;">
+          ${sec5}
+        </div>
+
+        <!-- Section 6: Warm Encouragement Conclusion -->
+        <div style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border: 1px solid #f0abfc; border-left: 4px solid #c026d3; border-radius: 14px; padding: 20px 22px; margin: 30px 0; color: #701a75;">
+          <div style="font-weight: 900; font-size: 15px; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+            <span>🌈 6. 도담 AI 케어랩 전문의 종합 조언</span>
+          </div>
+          <p style="font-size: 14px; line-height: 1.8; margin: 0; font-weight: 500;">
+            육아는 정답을 맞히는 시험이 아니라 아이와 부모가 서로를 알아가는 아름다운 여정입니다.<br/>
+            오늘 하루도 최선을 다한 부모님 자신을 꼭 칭찬해 주세요. 도담도담이 대한민국 모든 부모님의 든든한 육아 동반자가 되어 드리겠습니다. 🍼
+          </p>
+        </div>
+      </div>
+    `;
+
+    return {
+      title: postTitle,
+      contentHtml: fullHtml,
+      tags: tags
+    };
+  }
+
+  async executeGenerateAiReport() {
+    if (!this.isAdmin()) {
+      this.showToast('관리자만 리포트를 생성할 수 있습니다.');
+      return;
+    }
+
+    const presetSelect = document.getElementById('ai-report-preset-select');
+    const ageStageEl = document.getElementById('ai-report-age-stage');
+    const guideTypeEl = document.getElementById('ai-report-guide-type');
+    const customTitleEl = document.getElementById('ai-report-custom-title');
+    const customPromptEl = document.getElementById('ai-report-custom-prompt');
+    const statusBox = document.getElementById('ai-report-generating-status');
+    const runBtn = document.getElementById('btn-run-ai-parenting-report');
+
+    const topicKey = presetSelect?.value || 'sleep_0_12m';
+    const ageStage = ageStageEl?.value || 'newborn';
+    const guideType = guideTypeEl?.value || 'sleep';
+    const customTitle = customTitleEl?.value?.trim() || '';
+    const customPrompt = customPromptEl?.value?.trim() || '';
+
+    if (statusBox) statusBox.classList.remove('hidden');
+    if (runBtn) {
+      runBtn.disabled = true;
+      runBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>AI 리포트 생성 및 발행 중...</span>';
+    }
+
+    // Simulate AI generation process smoothly
+    await new Promise((r) => setTimeout(r, 800));
+
+    try {
+      const generated = this.buildParentingReportHtml(topicKey, customTitle, customPrompt, ageStage, guideType);
+
+      const newPostId = `guide-ai-report-${Date.now()}`;
+      const now = new Date();
+      const monthStr = String(now.getMonth() + 1).padStart(2, '0');
+      const dayStr = String(now.getDate()).padStart(2, '0');
+      const todayFormatted = `${now.getFullYear()}.${monthStr}.${dayStr}`;
+
+      const newPost = {
+        id: newPostId,
+        category: 'guide',
+        guideType: guideType,
+        ageStage: ageStage,
+        region: 'all',
+        localHub: 'all',
+        localHubName: '전국 전체',
+        isQuestion: false,
+        isSolved: false,
+        isHot: true,
+        isAiReport: true,
+        title: generated.title,
+        content: generated.contentHtml,
+        contentHtml: generated.contentHtml,
+        images: [],
+        author: {
+          nickname: '도담 AI 육아연구소',
+          level: '👑 공식 리포트',
+          childBadge: '🤖 소아전문 AI 케어랩',
+          avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+        },
+        createdAt: todayFormatted,
+        timestamp: Date.now(),
+        views: 1,
+        reactions: { like: 18, hug: 9, tip: 32 },
+        tags: generated.tags,
+        comments: [
+          {
+            id: `c-ai-1`,
+            author: '판교도담맘',
+            level: '🌷 꽃봉오리맘',
+            childBadge: '👶 12개월 남아',
+            content: '정말 유익한 리포트네요! 소아과 방문 기준이랑 4단계 프로토콜 인쇄해서 냉장고에 붙여두었습니다 👍',
+            createdAt: '방금 전'
+          }
+        ]
+      };
+
+      // Add to beginning of posts array
+      if (!this.data.posts) this.data.posts = [];
+      this.data.posts.unshift(newPost);
+      this.saveCustomPosts();
+
+      this.closeAiParentingReportModal();
+      this.showToast('🎉 AI 육아가이드 리포트가 성공적으로 발행되어 게시판에 등록되었습니다!');
+
+      // Switch to guide mode and open detail modal immediately
+      this.boardLoungeMode = 'guide';
+      this.currentCategory = 'guide';
+      this.guideSubCategory = 'all';
+      this.boardPage = 1;
+      this.renderBoardCategories();
+      this.renderBoardView();
+      this.openPostDetailModal(newPost.id);
+    } catch (err) {
+      console.error('Failed to generate AI report:', err);
+      alert('AI 리포트 생성 중 오류가 발생했습니다.');
+      if (statusBox) statusBox.classList.add('hidden');
+      if (runBtn) {
+        runBtn.disabled = false;
+        runBtn.innerHTML = '<i class="fa-solid fa-bolt text-amber-300"></i><span>AI 리포트 즉시 발행 및 육아가이드 등록</span>';
+      }
+    }
+  }
+
 
 }
 

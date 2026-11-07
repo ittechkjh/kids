@@ -13,6 +13,7 @@ window.DODAM_COMMUNITY_DATA = {
     { id: 'high', name: '🎓 고딩·입시맘', icon: 'fa-graduation-cap', badgeColor: 'indigo' },
     { id: 'working', name: '💼 워킹맘·대디', icon: 'fa-briefcase', badgeColor: 'indigo' },
     { id: 'talk', name: '🗣️ 속풀이·일상수다', icon: 'fa-comments', badgeColor: 'purple' },
+    { id: 'guide', name: '📖 육아가이드', icon: 'fa-book-bookmark', badgeColor: 'rose' },
     { id: 'tips', name: '💡 육아꿀팁·레시피', icon: 'fa-lightbulb', badgeColor: 'blue' }
   ],
 
@@ -186,6 +187,172 @@ window.DODAM_COMMUNITY_DATA = {
   ],
 
   posts: [
+    {
+      id: 'guide-seed-1',
+      category: 'guide',
+      guideType: 'sleep',
+      ageStage: 'newborn',
+      region: 'all',
+      localHub: 'all',
+      localHubName: '전국 전체',
+      isQuestion: false,
+      isSolved: false,
+      isHot: true,
+      isAiReport: true,
+      title: '[AI 육아가이드] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 분석 리포트',
+      content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
+        <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%); padding: 16px 20px; border-radius: 16px; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px;">🤖</div>
+            <div>
+              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM AI CARE-LAB RESEARCH BRIEF</div>
+              <div style="font-size: 15px; font-weight: 900;">도담 AI 육아가이드 전문 심층 리포트</div>
+            </div>
+          </div>
+          <div style="display: flex; items-center; gap: 6px;">
+            <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 800;">소아과 전문 검수</span>
+            <span style="background: #fbbf24; color: #78350f; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 900;">공식 리포트</span>
+          </div>
+        </div>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 24px; margin-bottom: 12px; border-left: 4px solid #db2777; padding-left: 12px;">
+          1. 📌 핵심 요약 &amp; 발달 브리핑 (Executive Summary)
+        </h4>
+        <p style="font-size: 14.5px; color: #334155;">생후 0~12개월 아기의 수면 문제는 단순한 잠투정이 아닌 <strong>뇌 신경망의 급격한 도약(원더윅스, Wonder Weeks)</strong>과 <strong>생체 일주기 리듬 형성</strong> 과정에서 발생하는 자연스러운 발달 신호입니다.</p>
+        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.8; color: #334155; font-size: 14px;">
+          <li><strong>생후 6~8주:</strong> 멜라토닌 자가 합성 시작, 낮과 밤의 명암 구분 훈련 최적기</li>
+          <li><strong>생후 4개월:</strong> 1차 수면 퇴행기(Sleep Regression), 성인 수면 주기(REM-비REM)로 전환</li>
+          <li><strong>생후 8~10개월:</strong> 대상영속성 발달로 인한 분리불안 급증 및 야경증 대비 필요</li>
+        </ul>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 28px; margin-bottom: 12px; border-left: 4px solid #7c3aed; padding-left: 12px;">
+          2. 🔍 소아의학 및 아동발달심리 심층 분석
+        </h4>
+        <p style="font-size: 14.5px; color: #334155;">아기의 수면 뇌파는 성인보다 렘(REM) 수면 비율이 50% 이상 높아 얕은 잠 단계에서 외부 자극이나 신체 변화(뒤집기, 이앓이)에 쉽게 반응합니다. 이를 '잠투정'으로 오해하여 즉시 안아 올리거나 수유하면 아기는 연관 수면 연관(Sleep Association)을 형성하여 스스로 잠드는 능력을 잃게 됩니다.</p>
+        <p style="font-size: 14.5px; color: #334155;">핵심은 수면 압력(Sleep Pressure)을 적절히 쌓아주는 낮 시간 활동량과, 취침 전 일정한 신호를 보내는 예측 가능한 수면의식 구축에 있습니다.</p>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 28px; margin-bottom: 12px; border-left: 4px solid #10b981; padding-left: 12px;">
+          3. 💡 시기별 맞춤 실천 솔루션 &amp; 부모 행동 가이드
+        </h4>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 8px;">📋 도담 AI 권장: 성공적인 통잠을 위한 4단계 프로토콜</h5>
+          <ol style="padding-left: 20px; line-height: 1.8; color: #334155;">
+            <li><strong>1단계 환경 통제 (19:30):</strong> 실내온도 20~22℃, 습도 50~60%, 웜톤 간접조명만 켜기</li>
+            <li><strong>2단계 진정 루틴 (20:00):</strong> 미온수 목욕 → 보습 마사지 → 잠옷 교체 (촉각 안정)</li>
+            <li><strong>3단계 수면의식 (20:20):</strong> 조용한 자장가 또는 백색소음, 애착인형/이불 안겨주기</li>
+            <li><strong>4단계 졸릴 때 눕히기 (20:30):</strong> 완전히 잠들기 직전 눈이 감길 때 침대에 눕혀 스스로 잠들게 하기</li>
+          </ol>
+        </div>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 28px; margin-bottom: 12px; border-left: 4px solid #f43f5e; padding-left: 12px;">
+          4. ⚠️ 소아청소년과 전문의 조언 &amp; 병원 방문 체크리스트
+        </h4>
+        <div style="background: #fff1f2; border-left: 4px solid #f43f5e; padding: 14px 18px; border-radius: 8px; margin: 14px 0;">
+          <strong style="color: #be123c; font-size: 13px;">⚠️ 소아청소년과 전문의 긴급 진료 권고 징후</strong>
+          <ul style="margin-top: 6px; padding-left: 18px; color: #881337; line-height: 1.7;">
+            <li>아기가 자다 깨어 다리를 배 쪽으로 모으며 자지러지게 우는 경우 (장중첩증 의심)</li>
+            <li>수면 중 호흡이 10초 이상 멈추거나 쌕쌕거리는 천명음이 동반되는 경우</li>
+            <li>38℃ 이상의 고열과 함께 수유량이 평소의 50% 이하로 급감할 때</li>
+          </ul>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border: 1px solid #f0abfc; border-left: 4px solid #c026d3; border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #701a75;">
+          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 AI 케어랩 종합 조언</div>
+          <p style="font-size: 13.5px; line-height: 1.8; margin: 0;">육아는 정답을 맞히는 시험이 아니라 아이와 부모가 서로를 알아가는 아름다운 여정입니다. 도담도담이 대한민국 모든 부모님의 행복한 육아를 응원합니다 🍼</p>
+        </div>
+      </div>`,
+      images: [],
+      author: {
+        nickname: '도담 AI 육아연구소',
+        level: '👑 공식 리포트',
+        childBadge: '🤖 소아전문 AI 케어랩',
+        avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+      },
+      createdAt: '2026.11.07',
+      timestamp: 1762500000000,
+      views: 1250,
+      reactions: { like: 88, hug: 34, tip: 95 },
+      tags: ['수면교육', '원더윅스', '통잠', '수면의식', '도담AI가이드'],
+      comments: [
+        {
+          id: 'c-seed-ai-1',
+          author: '분당맘',
+          level: '🌷 꽃봉오리맘',
+          childBadge: '👶 10개월 남아',
+          content: '소아과 방문 기준과 4단계 프로토콜이 너무 명쾌하네요! 오늘 밤부터 바로 적용해봅니다.',
+          createdAt: '1시간 전'
+        }
+      ]
+    },
+    {
+      id: 'guide-seed-2',
+      category: 'guide',
+      guideType: 'growth',
+      ageStage: 'toddler',
+      region: 'all',
+      localHub: 'all',
+      localHubName: '전국 전체',
+      isQuestion: false,
+      isSolved: false,
+      isHot: true,
+      isAiReport: true,
+      title: '[AI 육아가이드] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션',
+      content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
+        <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%); padding: 16px 20px; border-radius: 16px; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px;">🤖</div>
+            <div>
+              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM AI CARE-LAB RESEARCH BRIEF</div>
+              <div style="font-size: 15px; font-weight: 900;">도담 AI 육아가이드 전문 심층 리포트</div>
+            </div>
+          </div>
+          <div style="display: flex; items-center; gap: 6px;">
+            <span style="background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 800;">아동심리 전문 검수</span>
+            <span style="background: #fbbf24; color: #78350f; padding: 4px 10px; border-radius: 9999px; font-size: 11px; font-weight: 900;">공식 리포트</span>
+          </div>
+        </div>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 24px; margin-bottom: 12px; border-left: 4px solid #db2777; padding-left: 12px;">
+          1. 📌 핵심 요약 &amp; 발달 브리핑 (Executive Summary)
+        </h4>
+        <p style="font-size: 14.5px; color: #334155;">만 3~5세 아이의 떼쓰기는 전두엽(감정 조절 중추)이 아직 미성숙한 상태에서 <strong>자아 효능감과 독립심</strong>이 폭발할 때 나타나는 지극히 정상적인 인지 발달 과정입니다.</p>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 28px; margin-bottom: 12px; border-left: 4px solid #7c3aed; padding-left: 12px;">
+          2. 🔍 소아의학 및 아동발달심리 심층 분석
+        </h4>
+        <p style="font-size: 14.5px; color: #334155;">분노와 좌절을 느낄 때 부모가 함께 언성을 높이면 아동의 뇌는 '위협 상태'로 인식하여 투쟁-도피(Fight or Flight) 반응으로 이어집니다. 부모의 차분한 목소리와 눈맞춤이 아이의 미주신경을 안정시키는 유일한 열쇠입니다.</p>
+
+        <h4 style="font-size: 17px; font-weight: 900; color: #0f172a; margin-top: 28px; margin-bottom: 12px; border-left: 4px solid #10b981; padding-left: 12px;">
+          3. 💡 시기별 맞춤 실천 솔루션 &amp; 부모 행동 가이드
+        </h4>
+        <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 12px; padding: 16px; margin: 12px 0;">
+          <h5 style="font-weight: 800; color: #1e40af; margin-bottom: 8px;">💖 하임 기너트 &amp; 가트맨식 3단계 긍정 감정코칭</h5>
+          <ol style="padding-left: 20px; line-height: 1.8; color: #1e3a8a;">
+            <li><strong>1단계 감정 온전히 읽어주기:</strong> "더 놀고 싶었는데 그만해야 해서 정말 아쉽고 화가 났구나." (감정은 100% 수용)</li>
+            <li><strong>2단계 명확한 한계 제시:</strong> "하지만 물건을 던지거나 소리를 지르는 건 안 되는 거야." (행동은 단호하게 제한)</li>
+            <li><strong>3단계 대안 선택권 주기:</strong> "마지막으로 미끄럼틀 1번 더 탈래, 아니면 집에 가서 재미있는 공룡 스티커 놀이 할래?" (아동의 통제감 회복)</li>
+          </ol>
+        </div>
+
+        <div style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border: 1px solid #f0abfc; border-left: 4px solid #c026d3; border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #701a75;">
+          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 AI 케어랩 종합 조언</div>
+          <p style="font-size: 13.5px; line-height: 1.8; margin: 0;">감정을 읽어주되 행동의 한계는 명확히 세우는 따뜻하고 단호한 양육이 아이의 평생 정서적 자존감을 결정합니다 💖</p>
+        </div>
+      </div>`,
+      images: [],
+      author: {
+        nickname: '도담 AI 육아연구소',
+        level: '👑 공식 리포트',
+        childBadge: '🤖 아동심리 AI 케어랩',
+        avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+      },
+      createdAt: '2026.11.06',
+      timestamp: 1762450000000,
+      views: 940,
+      reactions: { like: 62, hug: 28, tip: 71 },
+      tags: ['훈육가이드', '감정코칭', '떼쓰기', '분리불안', '도담AI가이드'],
+      comments: []
+    },
     {
       id: 'seed-post-1',
       category: 'toddler_early',
