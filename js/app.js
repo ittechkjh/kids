@@ -407,26 +407,31 @@ class DodamCommunityApp {
         if (parsed.months === undefined) parsed.months = 24;
         if (!parsed.gender) parsed.gender = 'boy';
         if (!parsed.interests) parsed.interests = ['food', 'festivals', 'school', 'policy'];
-        if (parsed.helpsCount === undefined) parsed.helpsCount = 8;
+        if (parsed.helpsCount === undefined) parsed.helpsCount = 0;
+        if (parsed.points === undefined) parsed.points = 0;
+
+        // Reset dummy mock points (450/500P with 8 helps) so newly joined users start at Lv.1
+        if (parsed.helpsCount === 8 && (parsed.points === 450 || parsed.points === 500)) {
+          parsed.helpsCount = 0;
+          parsed.points = parsed.checkedInToday ? 50 : 0;
+        }
+
         if (!parsed.growthRecords || !Array.isArray(parsed.growthRecords)) {
-          parsed.growthRecords = [
-            { id: 1, date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
-            { id: 2, date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
-          ];
+          parsed.growthRecords = [];
         }
         return parsed;
       }
     } catch {}
     return {
-      nickname: '판교도담맘',
+      nickname: '도담맘',
       babyName: '도담이',
       months: 24,
       ageBadge: '24개월 (2세)',
       gender: 'boy',
       region: '경기 성남 분당',
       interests: ['food', 'festivals', 'school', 'policy'],
-      points: 450,
-      helpsCount: 8,
+      points: 0,
+      helpsCount: 0,
       checkedInToday: false,
       growthRecords: [
         { id: 1, date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
@@ -8214,8 +8219,24 @@ class DodamCommunityApp {
         this.currentUser = found;
         localStorage.setItem(this.authKey, JSON.stringify(found));
         this.saveUsers();
+
+        // Sync profile with logged in user
+        this.profile.nickname = found.nickname || found.username;
+        if (found.points !== undefined) {
+          this.profile.points = found.points;
+        } else if (this.profile.helpsCount === 8 && (this.profile.points === 450 || this.profile.points === 500)) {
+          this.profile.points = this.profile.checkedInToday ? 50 : 0;
+          this.profile.helpsCount = 0;
+        }
+        if (found.helpsCount !== undefined) {
+          this.profile.helpsCount = found.helpsCount;
+        }
+        this.saveProfileData();
+
         this.closeLoginModal();
         this.renderAuthHeader();
+        this.renderProfileWidget();
+        this.renderLevelSection();
         this.showToast(`${found.nickname || found.username}님, 환영합니다!`);
 
         if (found.role === 'admin') {
@@ -8255,14 +8276,25 @@ class DodamCommunityApp {
         statusLabel: '정상'
       };
 
+      newUser.points = 0;
+      newUser.helpsCount = 0;
       this.users.push(newUser);
       this.saveUsers();
       this.currentUser = newUser;
       localStorage.setItem(this.authKey, JSON.stringify(newUser));
 
+      // Reset profile points for new user so they start at Lv.1 새싹맘 (0P)
+      this.profile.nickname = newUser.nickname;
+      this.profile.points = 0;
+      this.profile.helpsCount = 0;
+      this.profile.checkedInToday = false;
+      this.saveProfileData();
+
       this.closeLoginModal();
       this.renderAuthHeader();
-      this.showToast(`${newUser.nickname}님, 회원가입이 완료되었습니다!`);
+      this.renderProfileWidget();
+      this.renderLevelSection();
+      this.showToast(`${newUser.nickname}님, 회원가입이 완료되었습니다! (Lv.1 새싹맘)`);
     }
   }
 
