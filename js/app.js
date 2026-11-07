@@ -471,9 +471,9 @@ class DodamCommunityApp {
     const isLoggedIn = !!(this.currentUser && (this.currentUser.authenticated || this.currentUser.id));
     if (!isLoggedIn) {
       el.innerHTML = `
-        <div class="bg-gradient-to-br from-stone-50 via-white to-stone-50/60 rounded-2xl border border-stone-200/90 p-4 shadow-2xs space-y-3">
+        <div class="bg-gradient-to-br from-stone-50 via-white to-stone-50/60 rounded-2xl border border-stone-200/90 p-3.5 sm:p-4 shadow-2xs space-y-3">
           <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3 min-w-0">
               <div class="w-12 h-12 rounded-2xl bg-stone-100 border border-stone-200 text-slate-400 flex items-center justify-center font-black text-xl shadow-2xs shrink-0">
                 <i class="fa-solid fa-user"></i>
               </div>
@@ -1522,10 +1522,10 @@ class DodamCommunityApp {
     if (myAgeBtnLabel) {
       const babyName = this.profile?.babyName || '도담이';
       const ageBadge = this.profile?.ageBadge || '24개월';
-      myAgeBtnLabel.textContent =
-        this.currentAgeStage === targetMyStage
-          ? `✓ ${babyName}(${ageBadge}) 또래글 보기 중`
-          : `내 아이(${babyName}·${ageBadge}) 또래글 맞춤`;
+      const isMyStage = this.currentAgeStage === targetMyStage;
+      myAgeBtnLabel.innerHTML = isMyStage
+        ? `<span class="sm:hidden">✓ 또래글 중</span><span class="hidden sm:inline">✓ ${babyName}(${ageBadge}) 또래글 보기 중</span>`
+        : `<span class="sm:hidden">내 아이 또래</span><span class="hidden sm:inline">내 아이(${babyName}·${ageBadge}) 또래글</span>`;
     }
     if (myAgeBtn) {
       myAgeBtn.className =
@@ -1680,8 +1680,8 @@ class DodamCommunityApp {
       const m = btn.getAttribute('data-lounge');
       const isActive = m === this.boardLoungeMode;
       btn.className = isActive
-        ? 'board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs'
-        : 'board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900';
+        ? 'board-lounge-tab whitespace-nowrap shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs'
+        : 'board-lounge-tab whitespace-nowrap shrink-0 px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900';
     });
 
     // Subfilter 1-line visibility
@@ -2175,15 +2175,15 @@ class DodamCommunityApp {
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${n.date.slice(5)}</div>
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${(n.views || 0).toLocaleString()}</div>
             </div>
-            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-4 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs space-y-1">
-              <div class="flex items-center gap-1.5">
-                <span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[10px]">${n.tag}</span>
-                <span class="font-bold text-slate-900 truncate">${n.title}</span>
-                <span class="text-rose-500 font-bold text-[11px]">[${n.commentsCount || 42}]</span>
+            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-3.5 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs space-y-1 overflow-hidden">
+              <div class="flex items-center gap-1.5 min-w-0">
+                <span class="px-1.5 py-0.5 rounded bg-rose-500 text-white font-black text-[10px] shrink-0">${n.tag}</span>
+                <span class="font-bold text-slate-900 truncate min-w-0 flex-1">${n.title}</span>
+                <span class="text-rose-500 font-bold text-[11px] shrink-0">[${n.commentsCount || 42}]</span>
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span>${n.author} · ${n.date.slice(5)}</span>
-                <span>조회 ${(n.views || 0).toLocaleString()}</span>
+                <span class="truncate max-w-[60%]">${n.author} · ${n.date.slice(5)}</span>
+                <span class="shrink-0">조회 ${(n.views || 0).toLocaleString()}</span>
               </div>
             </div>
           `
@@ -2237,17 +2237,18 @@ class DodamCommunityApp {
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${post.createdAt || '방금'}</div>
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${views.toLocaleString()}</div>
             </div>
-            <!-- 모바일 2줄 카페 목록 -->
-            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1">
-              <div class="font-medium text-slate-900 line-clamp-1 flex items-center gap-1.5">
-                <span class="px-1.5 py-0.2 rounded ${badgeClass} text-[10px] shrink-0">${badgeText}</span>
-                ${post.isHot ? '<span class="text-rose-500 font-black text-[10px]">HOT</span>' : ''}
-                <span class="truncate">${post.title}</span>
-                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
+            <!-- 모바일 2줄 카페 목록 (수평 오버플로우 방지 및 여백 최적화) -->
+            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-3.5 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1 overflow-hidden">
+              <div class="flex items-center gap-1.5 min-w-0 w-full">
+                <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold">${badgeText}</span>
+                ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
+                ${post.isAiReport ? '<span class="px-1 py-0.2 rounded bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-[9px] shrink-0">AI</span>' : ''}
+                <span class="truncate min-w-0 flex-1 font-bold text-slate-900 text-xs">${post.title}</span>
+                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0">[${commentsCount}]</span>` : ''}
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span>${authorName} · ${post.createdAt}</span>
-                <div class="flex items-center gap-2">
+                <span class="truncate max-w-[55%]">${authorName} · ${post.createdAt}</span>
+                <div class="flex items-center gap-2 shrink-0">
                   <span>조회 ${views.toLocaleString()}</span>
                   <span class="text-rose-500 font-bold">♥ ${totalLikes}</span>
                 </div>
@@ -2309,11 +2310,11 @@ class DodamCommunityApp {
                     </button>
                   </div>
 
-                  <!-- 2행: 제목 & 본문 -->
+                  <!-- 2행: 제목 & 본문 (오버플로우 방지) -->
                   <div class="space-y-1">
-                    <h4 class="text-sm font-bold text-slate-900 leading-snug flex items-center gap-1.5">
+                    <h4 class="text-sm font-bold text-slate-900 leading-snug flex items-center gap-1.5 min-w-0">
                       ${post.isQuestion ? '<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 text-[10px] font-black shrink-0">질문</span>' : ''}
-                      <span class="line-clamp-1">${post.title}</span>
+                      <span class="line-clamp-1 min-w-0 flex-1">${post.title}</span>
                     </h4>
                     <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">${post.content}</p>
                   </div>

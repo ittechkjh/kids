@@ -201,13 +201,13 @@
           <!-- 1. 심플 상단 네비게이션: 메인 라운지 탭 4종 + 간편 글쓰기 버튼 -->
           <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-3 sm:p-4 space-y-3">
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <!-- 메인 탭 4개 (깔끔한 알약형 탭) -->
-              <div class="flex items-center gap-1.5 p-1 bg-stone-100 rounded-xl" id="board-lounge-mode-tabs">
+              <!-- 메인 탭 4개 (깔끔한 알약형 탭 - 1줄 가로 스크롤 & 단어 줄바꿈 방지) -->
+              <div class="flex items-center gap-1.5 p-1 bg-stone-100 rounded-xl overflow-x-auto no-scrollbar w-full sm:w-auto shrink-0" id="board-lounge-mode-tabs">
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('all')"
                   data-lounge="all"
-                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs"
+                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs shrink-0"
                 >
                   💬 전체 수다
                 </button>
@@ -215,7 +215,7 @@
                   type="button"
                   onclick="app.setBoardLoungeMode('age')"
                   data-lounge="age"
-                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
                 >
                   👶 또래방
                 </button>
@@ -223,7 +223,7 @@
                   type="button"
                   onclick="app.setBoardLoungeMode('local')"
                   data-lounge="local"
-                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
                 >
                   📍 우리동네
                 </button>
@@ -231,7 +231,7 @@
                   type="button"
                   onclick="app.setBoardLoungeMode('qa')"
                   data-lounge="qa"
-                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
                 >
                   ❓ 질문·고민
                 </button>
@@ -239,20 +239,19 @@
                   type="button"
                   onclick="app.setBoardLoungeMode('guide')"
                   data-lounge="guide"
-                  class="board-lounge-tab px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
+                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
                 >
                   📖 육아가이드
                 </button>
-
               </div>
 
-              <!-- 우측: 내 아이 맞춤 토글 & 카페 글쓰기 -->
-              <div class="flex items-center gap-2">
+              <!-- 우측: 내 아이 맞춤 토글 & 카페 글쓰기 (모바일 1줄 정렬) -->
+              <div class="flex items-center justify-between sm:justify-end gap-2 w-full sm:w-auto">
                 <button
                   type="button"
                   onclick="app.openAiParentingReportModal()"
                   id="btn-admin-ai-report-top"
-                  class="hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-xs shadow-2xs transition cursor-pointer"
+                  class="hidden inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap"
                   title="관리자 전용: AI 육아가이드 심층 리포트를 즉시 생성합니다"
                 >
                   <i class="fa-solid fa-wand-magic-sparkles text-amber-300 text-[11px]"></i>
@@ -262,16 +261,16 @@
                   type="button"
                   onclick="app.filterByMyChildAge()"
                   id="btn-my-age-match"
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-extrabold text-xs transition cursor-pointer"
+                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-extrabold text-xs transition cursor-pointer shrink-0 whitespace-nowrap"
                   title="내 프로필에 등록된 아이 또래글만 모아봅니다"
                 >
                   <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-[11px]"></i>
-                  <span id="btn-my-age-match-label">내 아이 또래글</span>
+                  <span id="btn-my-age-match-label">내 아이 또래</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.openWritePage()"
-                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-2xs transition cursor-pointer"
+                  class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap ml-auto sm:ml-0"
                 >
                   <i class="fa-solid fa-pen-nib text-[11px]"></i>
                   <span>글쓰기</span>
@@ -2901,27 +2900,27 @@
        ========================================== -->
   <div id="post-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
     <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col p-5 sm:p-6 shadow-2xl border border-stone-200">
-      <!-- 1. 상단 네이버 카페 네비게이션 바 -->
-      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0 text-xs">
-        <div class="flex items-center gap-2">
-          <span id="post-detail-category-badge" class="px-2.5 py-1 rounded-full font-black text-[11px]"></span>
+      <!-- 1. 상단 네이버 카페 네비게이션 바 (모바일 완벽 대응) -->
+      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0 text-xs gap-1.5">
+        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
+          <span id="post-detail-category-badge" class="px-2.5 py-1 rounded-full font-black text-[11px] truncate max-w-[130px] sm:max-w-none shrink-0"></span>
           <span class="text-stone-300">|</span>
-          <button onclick="app.navigatePostDetail(-1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1">
+          <button onclick="app.navigatePostDetail(-1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1 shrink-0">
             <i class="fa-solid fa-chevron-left text-[10px]"></i>
-            <span>이전글</span>
+            <span class="hidden xs:inline">이전글</span>
           </button>
-          <button onclick="app.navigatePostDetail(1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1">
-            <span>다음글</span>
+          <button onclick="app.navigatePostDetail(1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1 shrink-0">
+            <span class="hidden xs:inline">다음글</span>
             <i class="fa-solid fa-chevron-right text-[10px]"></i>
           </button>
         </div>
 
-        <div class="flex items-center gap-2">
-          <button onclick="app.copyPostUrl()" class="px-2.5 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-600 font-bold text-[11px] flex items-center gap-1 transition">
+        <div class="flex items-center gap-1.5 shrink-0">
+          <button onclick="app.copyPostUrl()" class="px-2 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-600 font-bold text-[11px] flex items-center gap-1 transition">
             <i class="fa-solid fa-link text-[10px]"></i>
-            <span>URL 복사</span>
+            <span class="hidden sm:inline">URL 복사</span>
           </button>
-          <button onclick="app.closePostDetailModal()" class="text-slate-400 hover:text-slate-600 text-lg p-1 transition">
+          <button onclick="app.closePostDetailModal()" class="text-slate-400 hover:text-slate-600 text-lg p-1 transition" aria-label="닫기">
             <i class="fa-solid fa-xmark"></i>
           </button>
         </div>
