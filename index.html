@@ -27,14 +27,14 @@
 </head>
 <body class="min-h-screen flex flex-col">
 
-  <!-- 상단 공지 & 오늘의 육아 응원 배너 -->
-  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 font-extrabold text-[11px]">🌱 클린 커뮤니티</span>
-        <span class="font-medium">등업 제한 NO · 상업성 홍보글 ZERO! 내 아이 개월수와 우리 동네 육아 동지들과 편하게 이야기 나눠요.</span>
+  <!-- 상단 공지 & 오늘의 육아 응원 배너 (모바일 1줄 슬림화) -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 min-w-0">
+      <div class="flex items-center gap-2 min-w-0 flex-1">
+        <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 font-extrabold text-[10px] shrink-0">🌱 클린</span>
+        <span class="font-medium truncate text-[11px] sm:text-xs min-w-0 flex-1">등업 제한 NO · 광고 ZERO! 개월수·우리동네 육아 커뮤니티</span>
       </div>
-      <div class="hidden sm:flex items-center gap-3 font-bold">
+      <div class="hidden sm:flex items-center gap-3 font-bold text-xs shrink-0">
         <button onclick="app.switchMainView('cohort')" class="underline hover:text-amber-100">👶 우리 아기 개월수 동기방 입장하기 →</button>
       </div>
     </div>
@@ -191,7 +191,7 @@
   </header>
 
   <!-- 메인 뷰 컨테이너 (사이드바 제거 및 와이드 레이아웃 적용) -->
-  <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-6 space-y-6">
+  <main class="flex-1 max-w-6xl w-full mx-auto px-3 sm:px-4 py-4 sm:py-6 space-y-4 sm:space-y-6 pb-20">
 
         <!-- VIEW 1: 도담 육아 게시판 (심플 & 직관적인 클린 UI) -->
         <section id="view-board" class="view-section space-y-3.5">
@@ -201,47 +201,52 @@
           <!-- 1. 심플 상단 네비게이션: 메인 라운지 탭 4종 + 간편 글쓰기 버튼 -->
           <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-3 sm:p-4 space-y-3">
             <div class="flex items-center justify-between gap-2 flex-wrap">
-              <!-- 메인 탭 4개 (깔끔한 알약형 탭 - 1줄 가로 스크롤 & 단어 줄바꿈 방지) -->
-              <div class="flex items-center gap-1.5 p-1 bg-stone-100 rounded-xl overflow-x-auto no-scrollbar w-full sm:w-auto shrink-0" id="board-lounge-mode-tabs">
+              <!-- 메인 탭 5종 (모바일 5열 균등 배치로 글자 잘림 제로, PC 알약형) -->
+              <div class="grid grid-cols-5 sm:flex sm:items-center gap-1 sm:gap-1.5 p-1 bg-stone-100 rounded-xl w-full sm:w-auto" id="board-lounge-mode-tabs">
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('all')"
                   data-lounge="all"
-                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs shrink-0"
+                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs"
                 >
-                  💬 전체 수다
+                  <span class="sm:hidden text-[11px]">💬전체</span>
+                  <span class="hidden sm:inline text-xs">💬 전체 수다</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('age')"
                   data-lounge="age"
-                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
+                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
                 >
-                  👶 또래방
+                  <span class="sm:hidden text-[11px]">👶또래</span>
+                  <span class="hidden sm:inline text-xs">👶 또래방</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('local')"
                   data-lounge="local"
-                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
+                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
                 >
-                  📍 우리동네
+                  <span class="sm:hidden text-[11px]">📍동네</span>
+                  <span class="hidden sm:inline text-xs">📍 우리동네</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('qa')"
                   data-lounge="qa"
-                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
+                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
                 >
-                  ❓ 질문·고민
+                  <span class="sm:hidden text-[11px]">❓고민</span>
+                  <span class="hidden sm:inline text-xs">❓ 질문·고민</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.setBoardLoungeMode('guide')"
                   data-lounge="guide"
-                  class="board-lounge-tab whitespace-nowrap px-3.5 py-1.5 rounded-lg text-xs font-bold transition cursor-pointer text-slate-600 hover:text-slate-900 shrink-0"
+                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
                 >
-                  📖 육아가이드
+                  <span class="sm:hidden text-[11px]">📖가이드</span>
+                  <span class="hidden sm:inline text-xs">📖 육아가이드</span>
                 </button>
               </div>
 
@@ -278,27 +283,27 @@
               </div>
             </div>
 
-            <!-- 서브 필터 바 (탭 선택에 따라 딱 1줄만 깔끔하게 노출) -->
+            <!-- 서브 필터 바 (모바일 래핑 지원으로 잘림 제로) -->
             <!-- 서브 A: 전체 수다 카테고리 -->
-            <div id="board-subfilter-all" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1 border-t border-stone-100 text-xs">
-              <button onclick="app.selectBoardCategory('all')" data-cat="all" class="board-cat-btn px-3 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0">전체글</button>
-              <button onclick="app.selectBoardCategory('hot')" data-cat="hot" class="board-cat-btn px-3 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0">🔥 인기글</button>
-              <button onclick="app.selectBoardCategory('talk')" data-cat="talk" class="board-cat-btn px-3 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0">🗣️ 일상수다</button>
-              <button onclick="app.selectBoardCategory('tips')" data-cat="tips" class="board-cat-btn px-3 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0">💡 육아꿀팁</button>
-              <button onclick="app.selectBoardCategory('working')" data-cat="working" class="board-cat-btn px-3 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0">💼 워킹맘·대디</button>
+            <div id="board-subfilter-all" class="flex items-center gap-1.5 flex-wrap pt-1 border-t border-stone-100 text-xs">
+              <button onclick="app.selectBoardCategory('all')" data-cat="all" class="board-cat-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px] whitespace-nowrap">전체글</button>
+              <button onclick="app.selectBoardCategory('hot')" data-cat="hot" class="board-cat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🔥 인기글</button>
+              <button onclick="app.selectBoardCategory('talk')" data-cat="talk" class="board-cat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🗣️ 일상수다</button>
+              <button onclick="app.selectBoardCategory('tips')" data-cat="tips" class="board-cat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">💡 육아꿀팁</button>
+              <button onclick="app.selectBoardCategory('working')" data-cat="working" class="board-cat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">💼 워킹맘·대디</button>
             </div>
 
-            <!-- 서브 B: 또래방 연령 선택 (1줄 스크롤) -->
-            <div id="board-subfilter-age" class="hidden flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1 border-t border-stone-100 text-xs">
-              <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-1">연령:</span>
-              <div id="board-age-stage-chips" class="contents"></div>
+            <!-- 서브 B: 또래방 연령 선택 (모바일 래핑 지원) -->
+            <div id="board-subfilter-age" class="hidden flex items-center gap-1.5 flex-wrap pt-1 border-t border-stone-100 text-xs">
+              <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-0.5">연령:</span>
+              <div id="board-age-stage-chips" class="flex items-center gap-1.5 flex-wrap"></div>
             </div>
 
-            <!-- 서브 C: 우리동네 선택 (동네 셀렉트 + 주제 칩 1줄) -->
+            <!-- 서브 C: 우리동네 선택 (동네 셀렉트 + 주제 칩 모바일 완벽 정렬) -->
             <div id="board-subfilter-local" class="hidden flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-stone-100 text-xs">
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+              <div class="flex items-center gap-1.5 w-full sm:w-auto">
                 <span class="text-slate-400 font-bold shrink-0 text-[11px]">동네:</span>
-                <select id="board-local-hub-select" onchange="app.selectLocalHub(this.value)" class="bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1 text-xs font-bold text-slate-800 focus:outline-none">
+                <select id="board-local-hub-select" onchange="app.selectLocalHub(this.value)" class="flex-1 sm:flex-none bg-stone-50 border border-stone-200 rounded-lg px-2 py-1 text-xs font-bold text-slate-800 focus:outline-none max-w-[180px] sm:max-w-none truncate">
                   <option value="all">🌏 전국 전체</option>
                   <option value="seoul_gangnam">📍 서울 강남·서초·송파</option>
                   <option value="seoul_mokdong">📍 서울 목동·마포·강서</option>
@@ -312,31 +317,31 @@
                   <option value="daejeon_sejong">📍 대전 둔산·세종·충청</option>
                   <option value="gwangju_jeju">📍 호남·강원·제주</option>
                 </select>
-                <button type="button" onclick="app.selectMyProfileLocalHub()" class="px-2 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-extrabold text-[11px] shrink-0 transition">
+                <button type="button" onclick="app.selectMyProfileLocalHub()" class="px-2 py-1 rounded-lg bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-extrabold text-[11px] shrink-0 transition whitespace-nowrap">
                   🏡 내 동네
                 </button>
               </div>
 
-              <!-- 동네 말머리 칩 -->
-              <div class="flex items-center gap-1 overflow-x-auto no-scrollbar" id="board-local-topic-chips">
-                <button onclick="app.selectLocalTopic('all')" data-lt="all" class="board-lt-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px]">전체</button>
-                <button onclick="app.selectLocalTopic('hospital')" data-lt="hospital" class="board-lt-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🏥 소아과</button>
-                <button onclick="app.selectLocalTopic('daycare')" data-lt="daycare" class="board-lt-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🏫 어린이집</button>
-                <button onclick="app.selectLocalTopic('share')" data-lt="share" class="board-lt-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🥕 무료나눔</button>
-                <button onclick="app.selectLocalTopic('place')" data-lt="place" class="board-lt-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">☕ 키즈맛집</button>
+              <!-- 동네 말머리 칩 (모바일 래핑 지원) -->
+              <div class="flex items-center gap-1.5 flex-wrap w-full sm:w-auto" id="board-local-topic-chips">
+                <button onclick="app.selectLocalTopic('all')" data-lt="all" class="board-lt-btn px-2 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px] whitespace-nowrap">전체</button>
+                <button onclick="app.selectLocalTopic('hospital')" data-lt="hospital" class="board-lt-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🏥 소아과</button>
+                <button onclick="app.selectLocalTopic('daycare')" data-lt="daycare" class="board-lt-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🏫 어린이집</button>
+                <button onclick="app.selectLocalTopic('share')" data-lt="share" class="board-lt-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🥕 무료나눔</button>
+                <button onclick="app.selectLocalTopic('place')" data-lt="place" class="board-lt-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">☕ 키즈맛집</button>
               </div>
             </div>
 
-                        <!-- 서브 E: 육아가이드 서브필터 -->
+                        <!-- 서브 E: 육아가이드 서브필터 (모바일 텍스트 최적화) -->
             <div id="board-subfilter-guide" class="hidden flex flex-col sm:flex-row sm:items-center justify-between gap-2 pt-1 border-t border-stone-100 text-xs">
-              <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
-                <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-1">분야:</span>
-                <button onclick="app.filterGuideCategory('all')" data-gcat="all" class="board-gcat-btn px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px]">전체 리포트</button>
-                <button onclick="app.filterGuideCategory('sleep')" data-gcat="sleep" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🍼 수면·수유</button>
-                <button onclick="app.filterGuideCategory('food')" data-gcat="food" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🥣 이유식·영양</button>
-                <button onclick="app.filterGuideCategory('growth')" data-gcat="growth" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🧒 훈육·발달</button>
-                <button onclick="app.filterGuideCategory('health')" data-gcat="health" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🏥 건강·응급</button>
-                <button onclick="app.filterGuideCategory('edu')" data-gcat="edu" class="board-gcat-btn px-2.5 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px]">🎒 학습·입학</button>
+              <div class="flex items-center gap-1.5 flex-wrap w-full sm:w-auto">
+                <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-0.5">분야:</span>
+                <button onclick="app.filterGuideCategory('all')" data-gcat="all" class="board-gcat-btn px-2 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px] whitespace-nowrap">전체</button>
+                <button onclick="app.filterGuideCategory('sleep')" data-gcat="sleep" class="board-gcat-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🍼 수면</button>
+                <button onclick="app.filterGuideCategory('food')" data-gcat="food" class="board-gcat-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🥣 이유식</button>
+                <button onclick="app.filterGuideCategory('growth')" data-gcat="growth" class="board-gcat-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🧒 훈육</button>
+                <button onclick="app.filterGuideCategory('health')" data-gcat="health" class="board-gcat-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🏥 건강</button>
+                <button onclick="app.filterGuideCategory('edu')" data-gcat="edu" class="board-gcat-btn px-2 py-1 rounded-lg font-bold text-slate-600 hover:bg-stone-100 shrink-0 text-[11px] whitespace-nowrap">🎒 학습</button>
               </div>
               <div id="admin-ai-report-guide-trigger" class="shrink-0">
                 <button
@@ -349,12 +354,12 @@
                 </button>
               </div>
             </div>
-            <!-- 서브 D: 질문·고민 서브필터 -->
-            <div id="board-subfilter-qa" class="hidden flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1 border-t border-stone-100 text-xs">
-              <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-1">분류:</span>
-              <button onclick="app.filterQaStatus('all')" class="px-2.5 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px]">전체 질문</button>
-              <button onclick="app.filterQaStatus('waiting')" class="px-2.5 py-1 rounded-lg font-bold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 shrink-0 text-[11px]">🙋‍♀️ 답변 대기중</button>
-              <button onclick="app.filterQaStatus('solved')" class="px-2.5 py-1 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 shrink-0 text-[11px]">✅ 해결된 질문</button>
+            <!-- 서브 D: 질문·고민 서브필터 (모바일 래핑 지원) -->
+            <div id="board-subfilter-qa" class="hidden flex items-center gap-1.5 flex-wrap pt-1 border-t border-stone-100 text-xs">
+              <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-0.5">분류:</span>
+              <button onclick="app.filterQaStatus('all')" class="px-2 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px] whitespace-nowrap">전체</button>
+              <button onclick="app.filterQaStatus('waiting')" class="px-2 py-1 rounded-lg font-bold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 shrink-0 text-[11px] whitespace-nowrap">🙋‍♀️ 답변대기</button>
+              <button onclick="app.filterQaStatus('solved')" class="px-2 py-1 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 shrink-0 text-[11px] whitespace-nowrap">✅ 해결완료</button>
             </div>
           </div>
 
@@ -367,7 +372,7 @@
               <input
                 id="quick-post-title"
                 type="text"
-                placeholder="궁금한 육아 고민이나 오늘 동네 이야기를 가볍게 남겨보세요..."
+                placeholder="궁금한 육아 고민이나 동네 이야기를 남겨보세요..."
                 onkeydown="if(event.key==='Enter') app.submitQuickSimplePost()"
                 class="flex-1 bg-stone-50 hover:bg-stone-100/80 focus:bg-white border border-stone-200 rounded-xl px-3.5 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#03C75A] transition"
               />
@@ -566,8 +571,8 @@
 
               <!-- 3. 스마트에디터 툴바 -->
               <div class="border border-stone-200 rounded-xl bg-stone-50/70 p-2 space-y-1.5 text-xs select-none">
-                <!-- 1행: 아이콘 기능 버튼 -->
-                <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 text-slate-600 font-medium">
+                <!-- 1행: 아이콘 기능 버튼 (모바일 래핑 지원) -->
+                <div class="flex items-center gap-1.5 flex-wrap pb-1 text-slate-600 font-medium">
                   <button type="button" onclick="document.getElementById('post-file-input').click()" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-white border border-stone-200 hover:bg-stone-100 text-slate-700 font-bold transition shrink-0">
                     <i class="fa-regular fa-image text-emerald-600"></i>
                     <span>사진 첨부</span>
@@ -3789,7 +3794,7 @@
   <button
     id="mobile-scroll-top-btn"
     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-    class="fixed bottom-5 right-5 z-40 w-11 h-11 rounded-full bg-slate-900/90 text-white shadow-lg border border-slate-700 flex items-center justify-center text-sm transition-all opacity-0 pointer-events-none hover:bg-slate-800 sm:bottom-6 sm:right-6"
+    class="fixed bottom-6 right-4 z-40 w-10 h-10 rounded-full bg-slate-900/80 text-white shadow-lg border border-slate-700 flex items-center justify-center text-xs transition-all opacity-0 pointer-events-none hover:bg-slate-800 sm:bottom-6 sm:right-6"
     title="맨 위로 가기"
   >
     <i class="fa-solid fa-arrow-up"></i>
