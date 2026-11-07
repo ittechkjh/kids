@@ -4289,10 +4289,15 @@ class DodamCommunityApp {
       return q;
     }
 
-    // 3. 괄호 제거
-    q = q.replace(/\s*\([^)]*\)/g, '').trim();
+    // 3. '&' 뒤 부가 설명 및 괄호 제거
+    q = q.split('&')[0].replace(/\s*\([^)]*\)/g, '').trim();
 
-    // 4. 단독 상호명인 경우에만 지역구 힌트 보강
+    // 4. 이미 고유 시설명(6글자 이상 관광지/명소)인 경우 원문 그대로 검색하여 정확도 100% 보장
+    if (r.type === 'attraction' && q.length >= 5 && !['아이사랑놀이터', '장난감도서관', '육아종합지원센터', '공동육아나눔터', '유아숲체험원'].includes(q)) {
+      return q;
+    }
+
+    // 5. 단독 상호명인 경우에만 지역구 힌트 보강
     const city = (r.district || '').split(' ')[0] || (r.regionName || '').slice(0, 2);
     if (city && !q.includes(city) && !q.includes((r.regionName || '').slice(0, 2))) {
       return `${city} ${q}`.trim();
@@ -4365,11 +4370,97 @@ class DodamCommunityApp {
     document.querySelectorAll('.food-quick-pill').forEach((btn) => {
       const isMatch = btn.getAttribute('data-region') === regionId;
       if (isMatch) {
-        btn.className = 'food-quick-pill px-2.5 py-1 rounded-xl bg-slate-900 text-white text-[11px] font-bold shrink-0 shadow-sm';
+        btn.className = 'food-quick-pill inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900 text-white text-[11px] font-bold shrink-0 shadow-sm whitespace-nowrap';
       } else {
-        btn.className = 'food-quick-pill px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0 transition';
+        btn.className = 'food-quick-pill inline-flex items-center px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0 transition whitespace-nowrap';
       }
     });
+    this.updateFoodRegionCounts();
+  }
+
+  updateFoodRegionCounts() {
+    const activeRegion = document.getElementById('food-region-filter')?.value || 'all';
+    const categoryVal = document.getElementById('food-category-filter')?.value || 'all';
+    const needChair = document.getElementById('amenity-chair')?.checked ?? false;
+    const needPlayroom = document.getElementById('amenity-playroom')?.checked ?? false;
+    const needRoom = document.getElementById('amenity-room')?.checked ?? false;
+    const needParking = document.getElementById('amenity-parking')?.checked ?? false;
+    const needStroller = document.getElementById('amenity-stroller')?.checked ?? false;
+    const searchKeyword = (document.getElementById('food-portal-query')?.value || '').trim().toLowerCase();
+
+    const restaurantsList = this.data.restaurants || window.DODAM_NATIONWIDE_RESTAURANTS || [];
+    const attractionsList = this.data.attractions || window.DODAM_NATIONWIDE_ATTRACTIONS || [];
+
+    // 상단 3대 서브탭 개수 표시 업데이트
+    const tabAll = document.getElementById('food-type-tab-all');
+    const tabRest = document.getElementById('food-type-tab-restaurant');
+    const tabAttr = document.getElementById('food-type-tab-attraction');
+    if (tabAll) tabAll.innerHTML = `🌟 전체 모아보기 <span class="ml-1 px-1.5 py-0.5 rounded-full bg-rose-50 text-rose-600 text-[10px] font-extrabold">${(restaurantsList.length + attractionsList.length).toLocaleString()}</span>`;
+    if (tabRest) tabRest.innerHTML = `🍽️ 안심 키즈맛집·카페 <span class="ml-1 px-1.5 py-0.5 rounded-full bg-amber-50 text-amber-700 text-[10px] font-extrabold">${restaurantsList.length.toLocaleString()}</span>`;
+    if (tabAttr) tabAttr.innerHTML = `🎡 전국 유명 관광지·명소 <span class="ml-1 px-1.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 text-[10px] font-extrabold">${attractionsList.length.toLocaleString()}</span>`;
+
+    let pool = [];
+    if (this.foodType === 'restaurant') {
+      pool = restaurantsList;
+    } else if (this.foodType === 'attraction') {
+      pool = attractionsList;
+    } else {
+      pool = [...restaurantsList, ...attractionsList];
+    }
+
+    // 지역 필터를 제외한 나머지 조건으로 필터링된 풀 계산
+    const baseList = pool.filter((r) => {
+      if (categoryVal !== 'all' && r.category !== categoryVal) return false;
+      if (needChair && !r.amenities.some((a) => a.includes('아기의자') || a.includes('수유실'))) return false;
+      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸') || a.includes('키즈존') || a.includes('놀이시설') || a.includes('테마파크'))) return false;
+      if (needRoom && !r.amenities.some((a) => a.includes('룸') || a.includes('수유실'))) return false;
+      if (needParking && !r.amenities.some((a) => a.includes('주차'))) return false;
+      if (needStroller && !r.amenities.some((a) => a.includes('유모차'))) return false;
+      if (searchKeyword) {
+        const textToSearch = [
+          r.name, r.address, r.district || '', r.categoryName,
+          r.regionName, r.representativeMenu, r.reviewSummary, r.amenities.join(' ')
+        ].join(' ').toLowerCase();
+        if (!textToSearch.includes(searchKeyword)) return false;
+      }
+      return true;
+    });
+
+    const regCounts = {};
+    baseList.forEach((r) => {
+      regCounts[r.region] = (regCounts[r.region] || 0) + 1;
+    });
+
+    const regionLabels = {
+      all: '전국 전체', seoul: '서울', gyeonggi: '경기', incheon: '인천', gangwon: '강원',
+      daejeon: '대전', sejong: '세종', chungnam: '충남', chungbuk: '충북', gwangju: '광주',
+      jeonbuk: '전북', jeonnam: '전남', daegu: '대구', gyeongbuk: '경북', busan: '부산',
+      ulsan: '울산', gyeongnam: '경남', jeju: '제주'
+    };
+
+    document.querySelectorAll('.food-quick-pill').forEach((btn) => {
+      const reg = btn.getAttribute('data-region');
+      const label = regionLabels[reg] || reg;
+      const cnt = reg === 'all' ? baseList.length : (regCounts[reg] || 0);
+      const isMatch = reg === activeRegion;
+      btn.className = isMatch
+        ? 'food-quick-pill inline-flex items-center px-2.5 py-1 rounded-xl bg-slate-900 text-white text-[11px] font-bold shrink-0 shadow-sm whitespace-nowrap'
+        : 'food-quick-pill inline-flex items-center px-2.5 py-1 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 text-[11px] font-bold shrink-0 transition whitespace-nowrap';
+      btn.innerHTML = `<span>${label}</span><span class="ml-1 px-1.5 py-0.2 rounded-full text-[10px] font-extrabold ${isMatch ? 'bg-rose-500 text-white' : 'bg-white text-rose-600 border border-stone-200/80'}">${cnt.toLocaleString()}</span>`;
+    });
+
+    // 드롭다운(<select id="food-region-filter">) 각 옵션에도 검색 건수 표시
+    const regSelect = document.getElementById('food-region-filter');
+    if (regSelect) {
+      regSelect.querySelectorAll('option').forEach((opt) => {
+        if (!opt.dataset.baseLabel) {
+          opt.dataset.baseLabel = opt.textContent.replace(/\s*\([0-9,]+곳\)$/, '').trim();
+        }
+        const val = opt.value;
+        const cnt = val === 'all' ? baseList.length : (regCounts[val] || 0);
+        opt.textContent = `${opt.dataset.baseLabel} (${cnt.toLocaleString()}곳)`;
+      });
+    }
   }
 
   locateUserAndFindRestaurants() {
@@ -4683,6 +4774,7 @@ class DodamCommunityApp {
     if (statTotal) statTotal.textContent = (totalCountVerified || meta.totalCount || 1061).toLocaleString();
     if (statChecked) statChecked.textContent = (meta.checkedCount || 25110).toLocaleString();
 
+    this.updateFoodRegionCounts();
     const filtered = this.getFilteredRestaurants();
     if (badgeEl) badgeEl.textContent = filtered.length.toLocaleString();
 
