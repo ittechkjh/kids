@@ -26,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261107_v6" />
+  <link rel="stylesheet" href="css/styles.css?v=20261107_v7" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -166,8 +166,8 @@
         </button>
         <button data-view="food" onclick="app.switchMainView('food')" class="nav-view-btn flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-1.5 px-1 sm:px-2 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-utensils text-rose-500 text-xs"></i>
-          <span class="sm:hidden">안심맛집</span>
-          <span class="hidden sm:inline">전국 안심 맛집</span>
+          <span class="sm:hidden">맛집·명소</span>
+          <span class="hidden sm:inline">전국 맛집·관광지</span>
         </button>
         <button data-view="policy" onclick="app.switchMainView('policy')" class="nav-view-btn flex flex-col sm:flex-row items-center justify-center gap-0.5 sm:gap-1.5 py-1.5 px-1 sm:px-2 sm:py-2 rounded-xl text-[11px] sm:text-xs font-bold transition text-slate-600 hover:bg-stone-100 text-center">
           <i class="fa-solid fa-hand-holding-dollar text-emerald-500 text-xs"></i>
@@ -1269,6 +1269,31 @@
           </div>
 
           <!-- 지역 & 음식 카테고리 & 편의시설 필터 -->
+          <!-- 맛집 / 관광지 서브카테고리 선택 탭 바 -->
+          <div class="flex items-center gap-1.5 p-1 bg-stone-100 rounded-2xl w-full sm:w-auto overflow-x-auto no-scrollbar">
+            <button
+              id="food-type-tab-all"
+              onclick="app.setFoodType('all')"
+              class="food-type-tab flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-black transition bg-white text-slate-900 shadow-sm shrink-0 whitespace-nowrap"
+            >
+              🌟 전체 모아보기
+            </button>
+            <button
+              id="food-type-tab-restaurant"
+              onclick="app.setFoodType('restaurant')"
+              class="food-type-tab flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 hover:text-slate-900 shrink-0 whitespace-nowrap"
+            >
+              🍽️ 안심 키즈맛집·카페
+            </button>
+            <button
+              id="food-type-tab-attraction"
+              onclick="app.setFoodType('attraction')"
+              class="food-type-tab flex-1 sm:flex-initial px-4 py-2 rounded-xl text-xs font-bold transition text-slate-600 hover:text-slate-900 shrink-0 whitespace-nowrap"
+            >
+              🎡 전국 유명 관광지·명소
+            </button>
+          </div>
+
           <div class="community-card p-4 space-y-3">
             <!-- 전국 주요 권역 빠른 선택 퀵 바 -->
             <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 border-b border-stone-100">
@@ -1328,12 +1353,21 @@
                 </select>
 
                 <select id="food-category-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
-                  <option value="all">🍴 음식 종류: 전체</option>
-                  <option value="korean">한식 · 숯불구이/한정식/국수</option>
-                  <option value="western">양식 · 파스타/스테이크/피자</option>
-                  <option value="brunch">브런치 · 대형 베이커리카페</option>
-                  <option value="chinese">중식 · 딤섬/탕수육/훠궈</option>
-                  <option value="japanese">일식 · 돈까스/초밥/샤브</option>
+                  <option value="all">🍴 음식·명소 종류: 전체</option>
+                  <optgroup label="🍽️ 안심 키즈맛집·카페">
+                    <option value="korean">한식 · 숯불구이/한정식/국수</option>
+                    <option value="western">양식 · 파스타/스테이크/피자</option>
+                    <option value="brunch">브런치 · 대형 베이커리카페</option>
+                    <option value="chinese">중식 · 딤섬/탕수육/훠궈</option>
+                    <option value="japanese">일식 · 돈까스/초밥/샤브</option>
+                  </optgroup>
+                  <optgroup label="🎡 전국 유명 관광지·명소">
+                    <option value="themepark">🎡 테마파크·놀이공원</option>
+                    <option value="aquarium">🐬 아쿠아리움·동물원</option>
+                    <option value="museum">🏛️ 박물관·과학관·어린이체험관</option>
+                    <option value="nature">🌿 수목원·자연휴양림·생태공원</option>
+                    <option value="landmark">🏰 랜드마크·역사문화명소</option>
+                  </optgroup>
                 </select>
 
                 <select id="food-sort-filter" onchange="app.onFoodFilterChange()" class="text-xs font-bold bg-stone-100 border border-stone-200 rounded-xl px-3 py-1.5 text-slate-800">
@@ -3363,22 +3397,23 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/data.js?v=20261107_v7"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261107_v6"></script>
-  <script charset="utf-8" src="js/app.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261107_v7"></script>
+  <script charset="utf-8" src="js/app.js?v=20261107_v7"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

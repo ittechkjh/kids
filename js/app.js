@@ -133,6 +133,7 @@ class DodamCommunityApp {
     this.userBeaconMarker = null;
     this.foodPageSize = 15;
     this.foodCurrentPage = 1;
+    this.foodType = 'all'; // 'all' | 'restaurant' | 'attraction'
 
     // Initialize User Data
         // 5. Policy & Subsidies State (육아 정책·지원금)
@@ -178,6 +179,8 @@ class DodamCommunityApp {
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
     this.loadSavedPosts();
+    if (!this.data.restaurants) this.data.restaurants = window.DODAM_NATIONWIDE_RESTAURANTS || [];
+    if (!this.data.attractions) this.data.attractions = window.DODAM_NATIONWIDE_ATTRACTIONS || [];
   }
 
   init() {
@@ -4417,6 +4420,23 @@ class DodamCommunityApp {
     );
   }
 
+
+  setFoodType(type) {
+    this.foodType = type;
+    document.querySelectorAll('.food-type-tab').forEach((tab) => {
+      tab.classList.remove('bg-white', 'text-slate-900', 'font-black', 'shadow-sm');
+      tab.classList.add('text-slate-600', 'font-bold');
+    });
+    const activeBtn = document.getElementById(`food-type-tab-${type}`);
+    if (activeBtn) {
+      activeBtn.classList.remove('text-slate-600', 'font-bold');
+      activeBtn.classList.add('bg-white', 'text-slate-900', 'font-black', 'shadow-sm');
+    }
+    this.foodCurrentPage = 1;
+    this.renderFoodView();
+    this.updateFoodMapMarkers();
+  }
+
   getFilteredRestaurants() {
     const regionVal = document.getElementById('food-region-filter')?.value || 'all';
     const categoryVal = document.getElementById('food-category-filter')?.value || 'all';
@@ -4429,7 +4449,19 @@ class DodamCommunityApp {
     const needStroller = document.getElementById('amenity-stroller')?.checked ?? false;
     const searchKeyword = (document.getElementById('food-portal-query')?.value || '').trim().toLowerCase();
 
-    let list = (this.data.restaurants || []).filter((r) => {
+    const restaurantsList = this.data.restaurants || window.DODAM_NATIONWIDE_RESTAURANTS || [];
+    const attractionsList = this.data.attractions || window.DODAM_NATIONWIDE_ATTRACTIONS || [];
+
+    let pool = [];
+    if (this.foodType === 'restaurant') {
+      pool = restaurantsList;
+    } else if (this.foodType === 'attraction') {
+      pool = attractionsList;
+    } else {
+      pool = [...restaurantsList, ...attractionsList];
+    }
+
+    let list = pool.filter((r) => {
       // Region filter
       if (regionVal !== 'all') {
         if (regionVal === 'pangyo') {
@@ -4446,9 +4478,9 @@ class DodamCommunityApp {
       }
 
       if (categoryVal !== 'all' && r.category !== categoryVal) return false;
-      if (needChair && !r.amenities.some((a) => a.includes('아기의자'))) return false;
-      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸') || a.includes('키즈존'))) return false;
-      if (needRoom && !r.amenities.some((a) => a.includes('룸'))) return false;
+      if (needChair && !r.amenities.some((a) => a.includes('아기의자') || a.includes('수유실'))) return false;
+      if (needPlayroom && !r.amenities.some((a) => a.includes('놀이방') || a.includes('키즈룸') || a.includes('키즈존') || a.includes('놀이시설') || a.includes('테마파크'))) return false;
+      if (needRoom && !r.amenities.some((a) => a.includes('룸') || a.includes('수유실'))) return false;
       if (needParking && !r.amenities.some((a) => a.includes('주차'))) return false;
       if (needStroller && !r.amenities.some((a) => a.includes('유모차'))) return false;
 
@@ -4479,15 +4511,15 @@ class DodamCommunityApp {
     if (sortVal === 'distance' && this.userLocation) {
       list.sort((a, b) => (a.distanceKm ?? 99999) - (b.distanceKm ?? 99999));
     } else if (sortVal === 'naver') {
-      list.sort((a, b) => (Number(this.getRestaurantSources(b).naver.rating) || 0) - (Number(this.getRestaurantSources(a).naver.rating) || 0));
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).naver?.rating) || 0) - (Number(this.getRestaurantSources(a).naver?.rating) || 0));
     } else if (sortVal === 'kakao') {
-      list.sort((a, b) => (Number(this.getRestaurantSources(b).kakao.rating) || 0) - (Number(this.getRestaurantSources(a).kakao.rating) || 0));
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).kakao?.rating) || 0) - (Number(this.getRestaurantSources(a).kakao?.rating) || 0));
     } else if (sortVal === 'google') {
-      list.sort((a, b) => (Number(this.getRestaurantSources(b).google.rating) || 0) - (Number(this.getRestaurantSources(a).google.rating) || 0));
+      list.sort((a, b) => (Number(this.getRestaurantSources(b).google?.rating) || 0) - (Number(this.getRestaurantSources(a).google?.rating) || 0));
     } else if (sortVal === 'reviews') {
       list.sort((a, b) => {
-        const revB = b.reviewCount || (this.getRestaurantSources(b).naver.reviewCount + this.getRestaurantSources(b).kakao.reviewCount);
-        const revA = a.reviewCount || (this.getRestaurantSources(a).naver.reviewCount + this.getRestaurantSources(a).kakao.reviewCount);
+        const revB = b.reviewCount || ((this.getRestaurantSources(b).naver?.reviewCount || 0) + (this.getRestaurantSources(b).kakao?.reviewCount || 0));
+        const revA = a.reviewCount || ((this.getRestaurantSources(a).naver?.reviewCount || 0) + (this.getRestaurantSources(a).kakao?.reviewCount || 0));
         return revB - revA;
       });
     } else {
@@ -4517,11 +4549,12 @@ class DodamCommunityApp {
 
     restaurants.forEach((r) => {
       const sources = this.getRestaurantSources(r);
+      const isAttr = r.type === 'attraction';
 
       // Compact Pin for clean, cluster-ready nationwide viewing
       const iconHtml = `
-        <div class="food-compact-pin" id="pin-${r.id}" title="${r.name} (★${r.overallRating})">
-          <i class="fa-solid fa-utensils"></i>
+        <div class="food-compact-pin ${isAttr ? 'is-attraction' : ''}" id="pin-${r.id}" title="${r.name} (★${r.overallRating})">
+          <i class="fa-solid ${isAttr ? 'fa-landmark' : 'fa-utensils'}"></i>
           <span>${r.overallRating}</span>
         </div>
       `;
@@ -4536,7 +4569,7 @@ class DodamCommunityApp {
       const popupContent = `
         <div class="space-y-2 text-xs">
           <div class="flex items-center gap-1.5 flex-wrap">
-            <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-100 text-rose-700">${r.categoryName}</span>
+            <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold ${isAttr ? 'bg-indigo-100 text-indigo-700' : 'bg-rose-100 text-rose-700'}">${isAttr ? '🎡 ' + r.categoryName : r.categoryName}</span>
             <span class="text-xs font-black text-slate-900">${r.name}</span>
           </div>
           <p class="text-slate-600 text-[11px]">${r.address}</p>
@@ -4564,81 +4597,48 @@ class DodamCommunityApp {
       `;
 
       const marker = L.marker([r.lat, r.lng], { icon: customIcon });
-      marker.bindPopup(popupContent, { maxWidth: 280 });
+      marker.bindPopup(popupContent, { maxWidth: 300, className: 'food-marker-popup' });
 
       markerBatch.push(marker);
       this.foodMarkersMap[r.id] = marker;
       bounds.push([r.lat, r.lng]);
     });
 
-    // High performance bulk add to cluster layer
-    if (typeof this.foodMarkersLayer.addLayers === 'function') {
-      this.foodMarkersLayer.addLayers(markerBatch);
-    } else {
-      markerBatch.forEach(m => this.foodMarkersLayer.addLayer(m));
-    }
+    this.foodMarkersLayer.addLayers(markerBatch);
 
-    if (bounds.length > 0) {
+    if (bounds.length > 0 && !this.userLocation) {
       if (bounds.length === 1) {
         this.foodMap.setView(bounds[0], 14);
-      } else if (bounds.length > 800) {
-        // Nationwide overview
-        this.foodMap.setView([36.2, 127.8], 7);
       } else {
-        this.foodMap.fitBounds(bounds, { padding: [40, 40], maxZoom: 14 });
+        this.foodMap.fitBounds(bounds, { padding: [30, 30], maxZoom: 14 });
       }
     }
   }
 
   focusRestaurantOnMap(restId) {
-    const restaurant = (this.data.restaurants || []).find((r) => r.id === restId);
+    const pool = [...(this.data.restaurants || window.DODAM_NATIONWIDE_RESTAURANTS || []), ...(this.data.attractions || window.DODAM_NATIONWIDE_ATTRACTIONS || [])];
+    const restaurant = pool.find((r) => r.id === restId);
     if (!restaurant) return;
 
-    this.initFoodMap();
+    const mapCard = document.getElementById('food-map');
+    if (mapCard) {
+      mapCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     if (this.foodMap) {
-      const marker = this.foodMarkersMap[restId];
-      if (marker && this.foodMarkersLayer && typeof this.foodMarkersLayer.zoomToShowLayer === 'function') {
-        this.foodMarkersLayer.zoomToShowLayer(marker, () => {
-          marker.openPopup();
-        });
-      } else if (marker) {
-        this.foodMap.setView([restaurant.lat, restaurant.lng], 15, { duration: 0.6 });
-        marker.openPopup();
-      } else {
-        this.foodMap.setView([restaurant.lat, restaurant.lng], 15, { duration: 0.6 });
-      }
-
-      const mapCard = document.getElementById('food-map');
-      if (mapCard) {
-        mapCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  }
-
-  searchExternalPortal(portal) {
-    const input = document.getElementById('food-portal-query');
-    const userQuery = input ? input.value.trim() : '';
-    const regionFilter = document.getElementById('food-region-filter')?.value || 'all';
-    const regionName = regionFilter === 'all' ? '' : (document.getElementById('food-region-filter')?.selectedOptions[0]?.text.replace('📍 지역: ', '') || '');
-
-    const query = userQuery || (regionName ? `${regionName} 아이와 맛집` : '가족외식 아기의자 맛집');
-
-    let url = '';
-    let portalName = '';
-    if (portal === 'naver') {
-      url = `https://map.naver.com/p/search/${encodeURIComponent(query)}`;
-      portalName = '네이버 플레이스';
-    } else if (portal === 'kakao') {
-      url = `https://map.kakao.com/?q=${encodeURIComponent(query)}`;
-      portalName = '카카오맵';
-    } else if (portal === 'google') {
-      url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
-      portalName = '구글 지도';
-    }
-
-    if (url) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-      this.showToast(`[${portalName}] '${query}' 실시간 검색 창을 열었습니다!`);
+      this.foodMap.setView([restaurant.lat, restaurant.lng], 15, { animate: true });
+      setTimeout(() => {
+        const marker = this.foodMarkersMap[restId];
+        if (marker) {
+          if (this.foodMarkersLayer.hasLayer(marker)) {
+            marker.openPopup();
+          } else {
+            this.foodMarkersLayer.zoomToShowLayer(marker, () => {
+              marker.openPopup();
+            });
+          }
+        }
+      }, 400);
     }
   }
 
@@ -4648,17 +4648,17 @@ class DodamCommunityApp {
     const paginationContainer = document.getElementById('food-load-more-container');
     if (!listEl) return;
 
-    // 실존 검증 데이터 현황 업데이트 (가비지 데이터 완전 제거)
+    // 실존 검증 데이터 현황 업데이트
     const statDate = document.getElementById('crawl-stat-date');
     const statToday = document.getElementById('crawl-stat-today');
     const statTotal = document.getElementById('crawl-stat-total');
     const statChecked = document.getElementById('crawl-stat-checked');
-    const totalCountVerified = (window.DODAM_NATIONWIDE_RESTAURANTS || []).length;
+    const totalCountVerified = (window.DODAM_NATIONWIDE_RESTAURANTS || []).length + (window.DODAM_NATIONWIDE_ATTRACTIONS || []).length;
     const meta = window.DODAM_CRAWL_METADATA || {};
-    if (statDate) statDate.textContent = meta.lastUpdated ? meta.lastUpdated.replace(/-/g, '.') : '2026.11.03';
+    if (statDate) statDate.textContent = meta.lastUpdated ? meta.lastUpdated.replace(/-/g, '.') : '2026.11.07';
     if (statToday) statToday.textContent = (meta.todayCount || 1500).toLocaleString();
-    if (statTotal) statTotal.textContent = (totalCountVerified || meta.totalCount || 464).toLocaleString();
-    if (statChecked) statChecked.textContent = (meta.checkedCount || 13110).toLocaleString();
+    if (statTotal) statTotal.textContent = (totalCountVerified || meta.totalCount || 1061).toLocaleString();
+    if (statChecked) statChecked.textContent = (meta.checkedCount || 25110).toLocaleString();
 
     const filtered = this.getFilteredRestaurants();
     if (badgeEl) badgeEl.textContent = filtered.length.toLocaleString();
@@ -4667,7 +4667,7 @@ class DodamCommunityApp {
       listEl.innerHTML = `
         <div class="community-card p-10 text-center space-y-2">
           <div class="text-2xl">🍽️</div>
-          <div class="text-sm font-extrabold text-slate-700">선택하신 조건에 맞는 맛집이 없습니다.</div>
+          <div class="text-sm font-extrabold text-slate-700">선택하신 조건에 맞는 맛집 및 관광지가 없습니다.</div>
           <p class="text-xs text-slate-400">다른 지역을 선택하거나 포털 사이트 실시간 검색을 이용해보세요.</p>
         </div>
       `;
@@ -4686,9 +4686,10 @@ class DodamCommunityApp {
 
     listEl.innerHTML = visibleItems
       .map((r) => {
+        const isAttr = r.type === 'attraction';
         const sources = this.getRestaurantSources(r);
-        const totalReviews = r.reviewCount || (sources.naver.reviewCount + sources.kakao.reviewCount);
-        const kakaoNavUrl = sources.kakao.directionsUrl || sources.kakao.url;
+        const totalReviews = r.reviewCount || ((sources.naver?.reviewCount || 0) + (sources.kakao?.reviewCount || 0));
+        const kakaoNavUrl = sources.kakao?.directionsUrl || sources.kakao?.url;
 
         return `
         <article class="community-card p-5 space-y-3.5 hover:border-rose-300 transition">
@@ -4696,13 +4697,17 @@ class DodamCommunityApp {
           <div class="flex items-start justify-between gap-3">
             <div>
               <div class="flex items-center gap-1.5 flex-wrap">
-                <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold bg-rose-50 text-rose-600 border border-rose-200">
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-extrabold ${isAttr ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' : 'bg-rose-50 text-rose-600 border border-rose-200'}">
                   📍 ${r.regionName} ${r.district ? `· ${r.district}` : ''}
                 </span>
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
                   ${r.categoryName}
                 </span>
+                ${isAttr ? `
+                <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">🎡 전국 유명 관광지</span>
+                ` : `
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">안심식당 DB</span>
+                `}
                 ${r.distanceKm !== undefined ? `
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-black bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1">
                   <i class="fa-solid fa-person-walking text-[9px]"></i>${r.distanceKm}km
@@ -4715,9 +4720,9 @@ class DodamCommunityApp {
               </p>
             </div>
 
-                        <!-- 종합 평점 & 안심식당 뱃지 -->
+            <!-- 종합 평점 -->
             <div class="text-right shrink-0">
-              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-amber-500 text-white font-black text-sm shadow-sm">
+              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl ${isAttr ? 'bg-indigo-600' : 'bg-amber-500'} text-white font-black text-sm shadow-sm">
                 <i class="fa-solid fa-star text-xs"></i>
                 <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
               </div>
@@ -4791,13 +4796,13 @@ class DodamCommunityApp {
             </div>
           </div>
 
-          <!-- 편의시설 태그 & 대표 메뉴 -->
+          <!-- 편의시설 태그 & 대표 메뉴 / 볼거리 -->
           <div class="space-y-1.5 text-xs">
             <div class="flex flex-wrap gap-1">
               ${r.amenities
                 .map(
                   (a) => `
-                <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-700 font-bold text-[11px]">
+                <span class="px-2 py-0.5 rounded-md ${isAttr ? 'bg-indigo-50 text-indigo-700' : 'bg-stone-100 text-slate-700'} font-bold text-[11px]">
                   ${a}
                 </span>
               `
@@ -4806,12 +4811,12 @@ class DodamCommunityApp {
             </div>
 
             <div class="text-slate-600 pt-0.5">
-              🍽️ <strong>대표 메뉴:</strong> ${(r.representativeMenu && r.representativeMenu !== 'undefined') ? r.representativeMenu : (r.categoryName ? r.categoryName + ' 대표 메뉴' : '안심식당 추천 메뉴')}
+              ${isAttr ? '🎡 <strong>대표 볼거리·체험:</strong>' : '🍽️ <strong>대표 메뉴:</strong>'} ${(r.representativeMenu && r.representativeMenu !== 'undefined') ? r.representativeMenu : (isAttr ? '가족 나들이 명소 및 체험 프로그램' : '안심식당 추천 메뉴')}
               ${(r.hours && r.hours !== 'undefined') ? `<span class="ml-2 text-slate-400">| ⏰ ${r.hours}</span>` : ''}
             </div>
 
-            <div class="p-3 rounded-xl bg-rose-50/50 border border-rose-100 text-[12px] text-slate-700 leading-relaxed">
-              💬 <strong>육아맘·대디 한줄평:</strong> "${(r.reviewSummary && r.reviewSummary !== 'undefined') ? r.reviewSummary : '농림축산식품부 지정 안심식당으로 위생과 청결이 철저히 관리되며, 온 가족이 안심하고 방문하기 좋은 추천 맛집입니다.'}"
+            <div class="p-3 rounded-xl ${isAttr ? 'bg-indigo-50/60 border border-indigo-100' : 'bg-rose-50/50 border border-rose-100'} text-[12px] text-slate-700 leading-relaxed">
+              ${isAttr ? '💡 <strong>가족 나들이 꿀팁:</strong>' : '💬 <strong>육아맘·대디 한줄평:</strong>'} "${(r.reviewSummary && r.reviewSummary !== 'undefined') ? r.reviewSummary : (isAttr ? '아이와 함께 즐기기 좋은 전국 대표 가족 명소입니다.' : '온 가족이 안심하고 방문하기 좋은 추천 맛집입니다.')}"
             </div>
           </div>
 
@@ -4821,7 +4826,7 @@ class DodamCommunityApp {
               onclick="app.focusRestaurantOnMap('${r.id}')"
               class="px-3.5 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs flex items-center gap-1.5 shadow-sm transition"
             >
-              <i class="fa-solid fa-location-crosshairs text-rose-400"></i>
+              <i class="fa-solid fa-location-crosshairs ${isAttr ? 'text-indigo-400' : 'text-rose-400'}"></i>
               <span>지도에서 위치 보기</span>
             </button>
 
@@ -4865,6 +4870,7 @@ class DodamCommunityApp {
       paginationContainer.innerHTML = this.renderFoodPagination(currentPage, totalPages, totalCount, startIdx, pageSize);
     }
   }
+
 
   renderFoodPagination(currentPage, totalPages, totalCount, startIdx, pageSize) {
     if (totalPages <= 1) {
