@@ -223,12 +223,18 @@ class DodamCommunityApp {
   }
 
   renderUpdateBadges() {
-    const rawDate = this.eventsMetadata?.lastUpdated || '2026-10-29';
+    // 6대 핵심 서비스(축제, 대회, 맛집·관광지, 정책, 학군, 입시) 통합 최신 업데이트 일자
+    const rawDate = this.eventsMetadata?.lastUpdated || window.DODAM_CRAWL_METADATA?.lastUpdated || '2026-11-07';
     const formatted = rawDate.replace(/-/g, '.');
 
+    // 모든 상단 뱃지 일괄 동기화
     document.querySelectorAll('.last-updated-text').forEach((el) => {
       el.textContent = formatted;
     });
+    const cDate = document.getElementById('crawl-stat-date');
+    if (cDate) cDate.textContent = formatted;
+    const aDate = document.getElementById('admissions-updated-date');
+    if (aDate) aDate.textContent = formatted;
 
     // 1. 공공 축제·행사
     const festEvents = (this.allEvents || []).filter((e) => e.boardType === 'festivals');
@@ -275,8 +281,10 @@ class DodamCommunityApp {
     }
     const crawlStatTotal = document.getElementById('crawl-stat-total');
     if (crawlStatTotal) {
-      const restTotal = window.DODAM_NATIONWIDE_RESTAURANTS?.length || window.DODAM_CRAWL_METADATA?.totalCount || 464;
-      crawlStatTotal.textContent = restTotal.toLocaleString();
+      const restCount = window.DODAM_NATIONWIDE_RESTAURANTS?.length || 993;
+      const attrCount = window.DODAM_NATIONWIDE_ATTRACTIONS?.length || 1094;
+      const totalVerified = restCount + attrCount;
+      crawlStatTotal.textContent = totalVerified.toLocaleString();
     }
     const crawlStatChecked = document.getElementById('crawl-stat-checked');
     if (crawlStatChecked) {

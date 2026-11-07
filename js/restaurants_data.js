@@ -1,6 +1,6 @@
 // 자동 생성 파일 - scripts/pipeline_restaurants.py (수기 편집/하드코딩 금지)
 window.DODAM_CRAWL_METADATA = {
-  "lastUpdated": "2026-11-06",
+  "lastUpdated": "2026-11-07",
   "totalCount": 993,
   "targetCount": 42381,
   "verifiedCount": 17372,

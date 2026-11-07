@@ -1,7 +1,7 @@
 // 도담톡 (DodamTalk) - 대한민국 육아 정책 & 정부 지원금 데이터셋 (2024~2026 최신 개정판)
 // 다자녀 혜택, 에너지바우처, 자녀장려금, 부모급여, 아동수당, 지자체별 출산지원금 등
 window.DODAM_POLICIES_DATA = {
-  updatedAt: '2026-10-28',
+  updatedAt: '2026-11-07',
   categories: [
     { id: 'all', name: '전체 모아보기', icon: 'fa-layer-group', color: 'slate' },
     { id: 'multi_child', name: '👨‍👩‍👧‍👦 다자녀 혜택', icon: 'fa-people-roof', color: 'amber' },
