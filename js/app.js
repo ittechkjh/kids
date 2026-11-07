@@ -3103,10 +3103,10 @@ class DodamCommunityApp {
         return `
           <button
             onclick="app.selectFestivalsRegion('${r.id}')"
-            class="w-full py-1.5 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
+            class="w-full py-1 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
             title="${r.name} (${count}개)"
           >
-            <span class="truncate">${r.name === '전국 전체' ? '전국' : r.name}</span>
+            <span class="whitespace-nowrap font-bold">${r.name === '전국 전체' ? '전국' : r.name}</span>
             <span class="text-[10px] px-1 py-0.2 rounded-full ${
               isActive ? 'bg-white/25 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>
@@ -3497,10 +3497,10 @@ class DodamCommunityApp {
         return `
           <button
             onclick="app.selectContestsRegion('${r.id}')"
-            class="w-full py-1.5 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
+            class="w-full py-1 px-1 rounded-xl text-[11px] sm:text-xs transition flex items-center justify-center gap-1 border text-center ${activeClass}"
             title="${r.name} (${count}개)"
           >
-            <span class="truncate">${r.name === '전국 전체' ? '전국' : r.name}</span>
+            <span class="whitespace-nowrap font-bold">${r.name === '전국 전체' ? '전국' : r.name}</span>
             <span class="text-[10px] px-1 py-0.2 rounded-full ${
               isActive ? 'bg-white/25 text-white font-black' : 'bg-slate-100 text-slate-500 font-semibold'
             }">${count}</span>

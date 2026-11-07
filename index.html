@@ -857,7 +857,7 @@
               </div>
 
               <!-- 17개 시도 퀵 칩스 (한눈에 보는 모바일 4열 컴팩트 그리드 - 옆으로 밀지 않고 한눈에 파악) -->
-              <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-9 gap-1.5 pt-1" id="festivals-region-chips"></div>
+              <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-1.5 pt-1" id="festivals-region-chips"></div>
             </div>
 
             <!-- 1차: 행사 카테고리 칩 (모바일 자동 줄바꿈) -->
@@ -1082,7 +1082,7 @@
               </div>
 
               <!-- 17개 시도 퀵 칩스 (한눈에 보는 모바일 4열 컴팩트 그리드 - 옆으로 밀지 않고 한눈에 파악) -->
-              <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-9 gap-1.5 pt-1" id="contests-region-chips"></div>
+              <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-9 gap-1.5 pt-1" id="contests-region-chips"></div>
             </div>
 
             <!-- 1차: 대회 카테고리 칩 (모바일 자동 줄바꿈) -->
@@ -1483,34 +1483,34 @@
               </div>
             </div>
 
-            <!-- 4대 핵심 혜택 하이라이트 그리드 -->
+            <!-- 4대 핵심 혜택 하이라이트 그리드 (모바일 텍스트 줄바꿈 대응) -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
-              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2.5">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2">
                 <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-sm shrink-0">💵</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">만 0세 부모급여</div>
-                  <div class="text-xs font-black text-slate-900 truncate">월 100만 원 (1세 50만)</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">만 0세 부모급여</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">월 100만 원<span class="text-[10px] text-slate-500 font-normal block sm:inline"> (1세 50만)</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2">
                 <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-black text-sm shrink-0">⚡</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">에너지바우처 & 전기료</div>
-                  <div class="text-xs font-black text-slate-900 truncate">최대 70만원 + 전기 30%</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">에너지 & 전기료</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">최대 70만원<span class="text-[10px] text-slate-500 font-normal block sm:inline"> (전기 30%)</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-blue-100 shadow-2xs flex items-center gap-2.5">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-blue-100 shadow-2xs flex items-center gap-2">
                 <div class="w-8 h-8 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center font-black text-sm shrink-0">📈</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">국세청 자녀장려금</div>
-                  <div class="text-xs font-black text-slate-900 truncate">소득 7천만 / 자녀당 100만</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">국세청 자녀장려금</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">자녀당 100만<span class="text-[10px] text-slate-500 font-normal block sm:inline"> (소득 7천만)</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2.5">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2">
                 <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-black text-sm shrink-0">👨‍👩‍👧‍👦</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">다자녀 혜택 완화</div>
-                  <div class="text-xs font-black text-slate-900 truncate">2자녀부터 특공·KTX·감면</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">다자녀 혜택 완화</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">2자녀부터 특공<span class="text-[10px] text-slate-500 font-normal block sm:inline"> (KTX 감면)</span></div>
                 </div>
               </div>
             </div>
@@ -1748,34 +1748,34 @@
               </div>
             </div>
 
-            <!-- 4대 입시 핵심 하이라이트 그리드 -->
+            <!-- 4대 입시 핵심 하이라이트 그리드 (모바일 텍스트 최적화) -->
             <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-1 text-xs">
-              <div class="p-2.5 rounded-xl bg-white/90 border border-indigo-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-indigo-300 transition" onclick="app.selectSchoolLevel('high')">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-indigo-100 shadow-2xs flex items-center gap-2 cursor-pointer hover:border-indigo-300 transition" onclick="app.selectSchoolLevel('high')">
                 <div class="w-8 h-8 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center font-black text-sm shrink-0">🏛️</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">고교 서울대·의대 랭킹</div>
-                  <div class="text-xs font-black text-slate-900 truncate">외대부고·상산고·단대부고</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">고교 서울대·의대</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">외대부고·상산고<span class="text-[10px] text-slate-500 font-normal block sm:inline"> 외</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-emerald-300 transition" onclick="app.selectSchoolLevel('middle')">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-emerald-100 shadow-2xs flex items-center gap-2 cursor-pointer hover:border-emerald-300 transition" onclick="app.selectSchoolLevel('middle')">
                 <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center font-black text-sm shrink-0">📚</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">중학 특목·자사고 순위</div>
-                  <div class="text-xs font-black text-slate-900 truncate">대청중·목운중·내정중</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">중학 특목·자사고</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">대청·목운·내정중<span class="text-[10px] text-slate-500 font-normal block sm:inline"> 외</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-amber-300 transition" onclick="app.selectSchoolLevel('elementary')">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-amber-100 shadow-2xs flex items-center gap-2 cursor-pointer hover:border-amber-300 transition" onclick="app.selectSchoolLevel('elementary')">
                 <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center font-black text-sm shrink-0">🎒</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">명문 사립·공립초등</div>
-                  <div class="text-xs font-black text-slate-900 truncate">영훈·계성초 & 대치·목동</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">명문 사립·공립초</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">영훈·계성·대치초<span class="text-[10px] text-slate-500 font-normal block sm:inline"> 외</span></div>
                 </div>
               </div>
-              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2.5 cursor-pointer hover:border-rose-300 transition" onclick="app.switchMainView('admissions')">
+              <div class="p-2.5 rounded-xl bg-white/90 border border-rose-100 shadow-2xs flex items-center gap-2 cursor-pointer hover:border-rose-300 transition" onclick="app.switchMainView('admissions')">
                 <div class="w-8 h-8 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center font-black text-sm shrink-0">🎯</div>
-                <div class="min-w-0">
-                  <div class="text-[10px] text-slate-500 font-bold">2028 대입 개편안</div>
-                  <div class="text-xs font-black text-slate-900 truncate">내신 5등급제 & 수능통합</div>
+                <div class="min-w-0 flex-1">
+                  <div class="text-[10px] text-slate-500 font-bold truncate">2028 대입 개편안</div>
+                  <div class="text-[11px] sm:text-xs font-black text-slate-900 leading-tight">내신 5등급제<span class="text-[10px] text-slate-500 font-normal block sm:inline"> (수능통합)</span></div>
                 </div>
               </div>
             </div>
@@ -1882,7 +1882,7 @@
                   type="text"
                   id="school-search-input"
                   oninput="app.onSchoolSearch(this.value)"
-                  placeholder="학교명, 지역(구·동), 학군, 키워드 검색 (예: 잠원초, 신구초, 반포, 대치, 의대, 외대부고)"
+                  placeholder="학교명, 지역, 학군 검색 (예: 잠원초, 대치, 외대부고)"
                   class="w-full pl-8 pr-8 py-2 rounded-xl text-xs font-medium border border-slate-200 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
                 />
                 <button

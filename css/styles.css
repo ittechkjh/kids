@@ -20,10 +20,17 @@ body {
   overflow-wrap: break-word;
 }
 
-/* 한국어 단어 중간 줄바꿈 방지 */
+/* 한국어 단어 중간 줄바꿈 방지 (데스크톱 keep-all, 모바일 유연한 줄바꿈) */
 h1, h2, h3, h4, h5, h6, p, span, button, a, label, select, input {
   word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  h1, h2, h3, h4, h5, h6, p, span, button, a, label, select, input, div {
+    word-break: normal;
+    overflow-wrap: break-word;
+  }
 }
 
 /* Custom Scrollbar */
