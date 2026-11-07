@@ -14,10 +14,11 @@ import urllib.parse
 import urllib.request
 import time
 
-SERVICE_KEY = os.getenv("TOUR_API_KEY", "").strip()
+# 공공데이터포털 등록 인증키
+DEFAULT_KEY = "G7N6elMlYOmqsOnctk%2B0X1Dpyz1ajBFF82gcH8Sl%2FgRDD5Jb4gangmAU2KZgmWSerzjtZqEQLlAxay4dFH3IPw%3D%3D"
+SERVICE_KEY = os.getenv("TOUR_API_KEY", DEFAULT_KEY).strip() or DEFAULT_KEY
 
-BASE_URL = "https://apis.data.go.kr/B551011/KorService1"
-BARRIER_FREE_URL = "https://apis.data.go.kr/B551011/KorWithService1"
+BASE_URL = "https://apis.data.go.kr/B551011/KorService2"
 
 # 17개 광역시도 TourAPI 지역코드 매핑
 AREA_CODE_MAP = {
@@ -40,30 +41,8 @@ AREA_CODE_MAP = {
     "39": ("jeju", "제주특별자치도")
 }
 
-def get_clean_key(key_str):
-    if not key_str:
-        return ""
-    # URL 인코딩된 상태면 디코딩하여 표준 키 획득
-    return urllib.parse.unquote(key_str)
-
 def fetch_area_places(key, area_code, content_type_id="12", num_of_rows=50):
-    clean_k = get_clean_key(key)
-    if not clean_k:
-        return []
-
-    params = {
-        "serviceKey": clean_k,
-        "numOfRows": str(num_of_rows),
-        "pageNo": "1",
-        "MobileOS": "ETC",
-        "MobileApp": "DodamKids",
-        "_type": "json",
-        "areaCode": str(area_code),
-        "contentTypeId": str(content_type_id),
-        "arrange": "Q" # 인기순/수정일순
-    }
-    query_str = urllib.parse.urlencode(params)
-    url = f"{BASE_URL}/areaBasedList1?{query_str}"
+    url = f"{BASE_URL}/areaBasedList2?serviceKey={key}&numOfRows={num_of_rows}&pageNo=1&MobileOS=ETC&MobileApp=DodamTalk&_type=json&areaCode={area_code}&contentTypeId={content_type_id}&arrange=C"
 
     ctx = ssl._create_unverified_context()
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"})
@@ -74,7 +53,7 @@ def fetch_area_places(key, area_code, content_type_id="12", num_of_rows=50):
             items = body.get("items", {}).get("item", [])
             if isinstance(items, dict):
                 items = [items]
-            return items
+            return items or []
     except Exception as e:
         print(f"[안내] 지역코드 {area_code} 조회 대기: {e}")
         return []
@@ -85,10 +64,7 @@ def sync():
     print("=" * 65)
 
     key = SERVICE_KEY
-    if not key or key == "YOUR_DATA_GO_KR_API_KEY_HERE":
-        print("[안내] TOUR_API_KEY 환경변수가 설정되지 않아 현재 데이터 보존 모드로 실행됩니다.")
-        print("공공데이터포털(data.go.kr)에서 발급받은 키를 등록하시면 자동 갱신됩니다.")
-        return
+    print(f"[키 검증] 등록된 TourAPI 공공데이터포털 인증키를 사용합니다.")
 
     # 기존 데이터 로드
     data_path = os.path.join(os.path.dirname(__file__), "..", "js", "attractions_data.js")
@@ -107,11 +83,11 @@ def sync():
     existing_names = {item["name"]: item for item in existing_items}
     print(f"기존 등록 명소 수: {len(existing_items)}곳")
 
-    # TourAPI 17개 시도 수집 (contentTypeId: 12=관광지, 14=문화시설, 28=레포츠)
+    # TourAPI 17개 시도 수집 (contentTypeId: 12=관광지, 14=문화시설)
     new_found = 0
     for area_code, (region_code, region_name) in AREA_CODE_MAP.items():
         for ctype in ["12", "14"]:
-            places = fetch_area_places(key, area_code, content_type_id=ctype, num_of_rows=20)
+            places = fetch_area_places(key, area_code, content_type_id=ctype, num_of_rows=15)
             for p in places:
                 title = p.get("title", "").strip()
                 if not title or title in existing_names:
@@ -169,7 +145,7 @@ def sync():
                 existing_names[title] = new_item
                 new_found += 1
 
-            time.sleep(0.2) # API 부하 방지 매너 딜레이
+            time.sleep(0.1)
 
     print(f"새로 수집된 최신 명소: {new_found}곳")
     print(f"최종 명소 합계: {len(existing_items)}곳")

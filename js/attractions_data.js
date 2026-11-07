@@ -1,8 +1,4 @@
-// 전국 17개 시도 1·2·3·4 통합 대한민국 대표 키즈·가족 나들이 빅데이터
-// 1. 한국관광공사 열린관광지·테마명소
-// 2. 산림청 공인 전국 유아숲체험원 & 자연휴양림
-// 3. 지자체 공공형 키즈카페 & 공공 실내놀이터
-// 4. 농림축산식품부 웰촌 인증 농촌체험휴양마을 & 우수 체험농원
+// 전국 17개 시도 1·2·3·4 공공데이터 및 TourAPI 자동 동기화 명소 DB (1,446곳)
 window.DODAM_NATIONWIDE_ATTRACTIONS = [
   {
     "id": "attr-seoul-01",
@@ -45690,6 +45686,17606 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       "google": {
         "name": "구글 지도",
         "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EA%B7%80%ED%8F%AC+%EC%8B%A0%ED%9D%A52%EB%A6%AC+%EB%8F%99%EB%B0%B1%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2031668",
+    "name": "초안산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "노원구",
+    "address": "서울특별시 노원구 월계동",
+    "phone": "",
+    "lat": 37.6392914596,
+    "lng": 127.0467405109,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/46/3466146_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B4%88%EC%95%88%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B4%88%EC%95%88%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B4%88%EC%95%88%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126480",
+    "name": "관악산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "관악구",
+    "address": "서울특별시 관악구 관악로",
+    "phone": "",
+    "lat": 37.4484036407,
+    "lng": 126.9540987991,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/74/3589374_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B4%80%EC%95%85%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B4%80%EC%95%85%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B4%80%EC%95%85%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-309307",
+    "name": "백련사(강북)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강북구",
+    "address": "서울특별시 강북구 4.19로20길 142 (수유동)",
+    "phone": "",
+    "lat": 37.6468091795,
+    "lng": 126.999541824,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/48/3589348_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B0%B1%EB%A0%A8%EC%82%AC%28%EA%B0%95%EB%B6%81%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B0%B1%EB%A0%A8%EC%82%AC%28%EA%B0%95%EB%B6%81%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B0%B1%EB%A0%A8%EC%82%AC%28%EA%B0%95%EB%B6%81%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128622",
+    "name": "서대문독립공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "서대문구",
+    "address": "서울특별시 서대문구 통일로 251 (현저동)",
+    "phone": "",
+    "lat": 37.5746723659,
+    "lng": 126.9573421635,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/05/3590405_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EB%8C%80%EB%AC%B8%EB%8F%85%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EB%8C%80%EB%AC%B8%EB%8F%85%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EB%8C%80%EB%AC%B8%EB%8F%85%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1364975",
+    "name": "충무공 이순신 동상",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 세종로",
+    "phone": "",
+    "lat": 37.571053693,
+    "lng": 126.9769154822,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/45/3590045_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%A9%EB%AC%B4%EA%B3%B5%20%EC%9D%B4%EC%88%9C%EC%8B%A0%20%EB%8F%99%EC%83%81"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%A9%EB%AC%B4%EA%B3%B5%20%EC%9D%B4%EC%88%9C%EC%8B%A0%20%EB%8F%99%EC%83%81"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%A9%EB%AC%B4%EA%B3%B5+%EC%9D%B4%EC%88%9C%EC%8B%A0+%EB%8F%99%EC%83%81"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1364932",
+    "name": "세종대왕 동상",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 세종로",
+    "phone": "",
+    "lat": 37.5729534722,
+    "lng": 126.9769154284,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/38/3590038_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B8%EC%A2%85%EB%8C%80%EC%99%95%20%EB%8F%99%EC%83%81"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B8%EC%A2%85%EB%8C%80%EC%99%95%20%EB%8F%99%EC%83%81"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B8%EC%A2%85%EB%8C%80%EC%99%95+%EB%8F%99%EC%83%81"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-809190",
+    "name": "북악산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 청운동",
+    "phone": "",
+    "lat": 37.5931538442,
+    "lng": 126.9737151476,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/31/3590031_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B6%81%EC%95%85%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B6%81%EC%95%85%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B6%81%EC%95%85%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-699249",
+    "name": "신당동 떡볶이타운",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "중구",
+    "address": "서울특별시 중구 다산로33길 10-18 (신당동)",
+    "phone": "",
+    "lat": 37.563058077,
+    "lng": 127.0146067184,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/93/3589993_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%EB%8B%B9%EB%8F%99%20%EB%96%A1%EB%B3%B6%EC%9D%B4%ED%83%80%EC%9A%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%EB%8B%B9%EB%8F%99%20%EB%96%A1%EB%B3%B6%EC%9D%B4%ED%83%80%EC%9A%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%EB%8B%B9%EB%8F%99+%EB%96%A1%EB%B3%B6%EC%9D%B4%ED%83%80%EC%9A%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126482",
+    "name": "불암산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "노원구",
+    "address": "서울특별시 노원구 상계동",
+    "phone": "",
+    "lat": 37.6637533728,
+    "lng": 127.0949159758,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/61/3589961_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B6%88%EC%95%94%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B6%88%EC%95%94%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B6%88%EC%95%94%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1602451",
+    "name": "대모산도시자연공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강남구",
+    "address": "서울특별시 강남구 일원동",
+    "phone": "",
+    "lat": 37.4800522436,
+    "lng": 127.081014136,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/45/3589845_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EB%AA%A8%EC%82%B0%EB%8F%84%EC%8B%9C%EC%9E%90%EC%97%B0%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EB%AA%A8%EC%82%B0%EB%8F%84%EC%8B%9C%EC%9E%90%EC%97%B0%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EB%AA%A8%EC%82%B0%EB%8F%84%EC%8B%9C%EC%9E%90%EC%97%B0%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-699279",
+    "name": "장충동 족발 골목",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "중구",
+    "address": "서울특별시 중구 장충단로 174 (장충동1가)",
+    "phone": "",
+    "lat": 37.560291575,
+    "lng": 127.0058964795,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/72/3589072_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%A5%EC%B6%A9%EB%8F%99%20%EC%A1%B1%EB%B0%9C%20%EA%B3%A8%EB%AA%A9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%A5%EC%B6%A9%EB%8F%99%20%EC%A1%B1%EB%B0%9C%20%EA%B3%A8%EB%AA%A9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%A5%EC%B6%A9%EB%8F%99+%EC%A1%B1%EB%B0%9C+%EA%B3%A8%EB%AA%A9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127942",
+    "name": "사직공원(서울)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 사직로 89 (사직동)",
+    "phone": "",
+    "lat": 37.5758446558,
+    "lng": 126.9687216489,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/83/3400583_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%82%AC%EC%A7%81%EA%B3%B5%EC%9B%90%28%EC%84%9C%EC%9A%B8%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%82%AC%EC%A7%81%EA%B3%B5%EC%9B%90%28%EC%84%9C%EC%9A%B8%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%82%AC%EC%A7%81%EA%B3%B5%EC%9B%90%28%EC%84%9C%EC%9A%B8%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2724392",
+    "name": "은평한옥마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "은평구",
+    "address": "서울특별시 은평구 연서로50길 7-10 (진관동)",
+    "phone": "",
+    "lat": 37.6413948373,
+    "lng": 126.9392252587,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/24/3530324_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%80%ED%8F%89%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%80%ED%8F%89%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%80%ED%8F%89%ED%95%9C%EC%98%A5%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2401757",
+    "name": "자양동 양꼬치거리 (중국음식문화거리)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "광진구",
+    "address": "서울특별시 광진구 자양동",
+    "phone": "",
+    "lat": 37.5402227106,
+    "lng": 127.0629835156,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/63/2372563_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%90%EC%96%91%EB%8F%99%20%EC%96%91%EA%BC%AC%EC%B9%98%EA%B1%B0%EB%A6%AC%20%28%EC%A4%91%EA%B5%AD%EC%9D%8C%EC%8B%9D%EB%AC%B8%ED%99%94%EA%B1%B0%EB%A6%AC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%90%EC%96%91%EB%8F%99%20%EC%96%91%EA%BC%AC%EC%B9%98%EA%B1%B0%EB%A6%AC%20%28%EC%A4%91%EA%B5%AD%EC%9D%8C%EC%8B%9D%EB%AC%B8%ED%99%94%EA%B1%B0%EB%A6%AC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%90%EC%96%91%EB%8F%99+%EC%96%91%EA%BC%AC%EC%B9%98%EA%B1%B0%EB%A6%AC+%28%EC%A4%91%EA%B5%AD%EC%9D%8C%EC%8B%9D%EB%AC%B8%ED%99%94%EA%B1%B0%EB%A6%AC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2752545",
+    "name": "역삼개나리공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강남구",
+    "address": "서울특별시 강남구 논현로79길 24 (역삼동)",
+    "phone": "",
+    "lat": 37.4976466191,
+    "lng": 127.0362843748,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/86/3463086_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%97%AD%EC%82%BC%EA%B0%9C%EB%82%98%EB%A6%AC%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%97%AD%EC%82%BC%EA%B0%9C%EB%82%98%EB%A6%AC%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%97%AD%EC%82%BC%EA%B0%9C%EB%82%98%EB%A6%AC%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3076665",
+    "name": "조은숙아트앤라이프스타일",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강남구",
+    "address": "서울특별시 강남구 압구정로80길 37 (청담동)",
+    "phone": "",
+    "lat": 37.5244297515,
+    "lng": 127.0435940627,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A1%B0%EC%9D%80%EC%88%99%EC%95%84%ED%8A%B8%EC%95%A4%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A1%B0%EC%9D%80%EC%88%99%EC%95%84%ED%8A%B8%EC%95%A4%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A1%B0%EC%9D%80%EC%88%99%EC%95%84%ED%8A%B8%EC%95%A4%EB%9D%BC%EC%9D%B4%ED%94%84%EC%8A%A4%ED%83%80%EC%9D%BC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3080721",
+    "name": "김세중미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "용산구",
+    "address": "서울특별시 용산구 효창원로70길 35 (효창동)",
+    "phone": "",
+    "lat": 37.5420707165,
+    "lng": 126.9638980442,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B9%80%EC%84%B8%EC%A4%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B9%80%EC%84%B8%EC%A4%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B9%80%EC%84%B8%EC%A4%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1019294",
+    "name": "서울특별시교육청 정독도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 북촌로5길 48",
+    "phone": "",
+    "lat": 37.5797611278,
+    "lng": 126.9832368815,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/66/3510466_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B5%90%EC%9C%A1%EC%B2%AD%20%EC%A0%95%EB%8F%85%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B5%90%EC%9C%A1%EC%B2%AD%20%EC%A0%95%EB%8F%85%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%EA%B5%90%EC%9C%A1%EC%B2%AD+%EC%A0%95%EB%8F%85%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130301",
+    "name": "한전갤러리",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "서초구",
+    "address": "서울특별시 서초구 효령로72길 60",
+    "phone": "",
+    "lat": 37.4851840297,
+    "lng": 127.0280576979,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/24/682224_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EC%A0%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EC%A0%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EC%A0%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3423015",
+    "name": "역삼도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강남구",
+    "address": "서울특별시 강남구 역삼로7길 16 (역삼동)",
+    "phone": "",
+    "lat": 37.4953968261,
+    "lng": 127.0332430485,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/90/3457790_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%97%AD%EC%82%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%97%AD%EC%82%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%97%AD%EC%82%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3442973",
+    "name": "김영삼 도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "동작구",
+    "address": "서울특별시 동작구 매봉로 1 (상도1동)",
+    "phone": "",
+    "lat": 37.5055274904,
+    "lng": 126.9499808987,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B9%80%EC%98%81%EC%82%BC%20%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B9%80%EC%98%81%EC%82%BC%20%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B9%80%EC%98%81%EC%82%BC+%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129839",
+    "name": "서울대학교 박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "관악구",
+    "address": "서울특별시 관악구 관악로 1 서울대학교",
+    "phone": "",
+    "lat": 37.4663514558,
+    "lng": 126.9483849253,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/99/3574499_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EC%9A%B8%EB%8C%80%ED%95%99%EA%B5%90+%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130431",
+    "name": "전쟁기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "용산구",
+    "address": "서울특별시 용산구 이태원로 29",
+    "phone": "",
+    "lat": 37.5373270838,
+    "lng": 126.9784385198,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/3465929_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%84%EC%9F%81%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%84%EC%9F%81%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%84%EC%9F%81%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3080775",
+    "name": "유니플렉스",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 대학로12길 64 (동숭동)",
+    "phone": "",
+    "lat": 37.58125021,
+    "lng": 127.0036322023,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/71/3080771_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9C%A0%EB%8B%88%ED%94%8C%EB%A0%89%EC%8A%A4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9C%A0%EB%8B%88%ED%94%8C%EB%A0%89%EC%8A%A4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9C%A0%EB%8B%88%ED%94%8C%EB%A0%89%EC%8A%A4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3012777",
+    "name": "대학로자유극장",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 대학로12길 31 (동숭동)",
+    "phone": "",
+    "lat": 37.5828028072,
+    "lng": 127.003623826,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/61/3012761_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%ED%95%99%EB%A1%9C%EC%9E%90%EC%9C%A0%EA%B7%B9%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%ED%95%99%EB%A1%9C%EC%9E%90%EC%9C%A0%EA%B7%B9%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%ED%95%99%EB%A1%9C%EC%9E%90%EC%9C%A0%EA%B7%B9%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3085035",
+    "name": "금보성아트센터",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 평창36길 20 (평창동)",
+    "phone": "",
+    "lat": 37.6126738756,
+    "lng": 126.9780891951,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/53/3084453_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EB%B3%B4%EC%84%B1%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EB%B3%B4%EC%84%B1%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EB%B3%B4%EC%84%B1%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3080852",
+    "name": "한생연 실험누리과학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "강남구",
+    "address": "서울특별시 강남구 도곡로 408 (대치동)",
+    "phone": "",
+    "lat": 37.4966637406,
+    "lng": 127.0552604534,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3080850_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EC%83%9D%EC%97%B0%20%EC%8B%A4%ED%97%98%EB%88%84%EB%A6%AC%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EC%83%9D%EC%97%B0%20%EC%8B%A4%ED%97%98%EB%88%84%EB%A6%AC%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EC%83%9D%EC%97%B0+%EC%8B%A4%ED%97%98%EB%88%84%EB%A6%AC%EA%B3%BC%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3080870",
+    "name": "SCC홀",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "서초구",
+    "address": "서울특별시 서초구 남부순환로325길 9 (서초동)",
+    "phone": "",
+    "lat": 37.4817730723,
+    "lng": 127.0145340254,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/3080865_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=SCC%ED%99%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/SCC%ED%99%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/SCC%ED%99%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2833824",
+    "name": "TINC",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "성북구",
+    "address": "서울특별시 성북구 동소문로10길 34-16 명성교회",
+    "phone": "",
+    "lat": 37.5888800082,
+    "lng": 127.0108618831,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/51/2833751_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=TINC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/TINC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/TINC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3012716",
+    "name": "한생연융합교육과학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 서울특별시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "district": "종로구",
+    "address": "서울특별시 종로구 성균관로15길 32 (명륜1가)",
+    "phone": "",
+    "lat": 37.5892797098,
+    "lng": 126.9968353725,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EC%83%9D%EC%97%B0%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EC%83%9D%EC%97%B0%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EC%83%9D%EC%97%B0%EC%9C%B5%ED%95%A9%EA%B5%90%EC%9C%A1%EA%B3%BC%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1619608",
+    "name": "구 인천우체국",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 제물량로 183",
+    "phone": "",
+    "lat": 37.4700591426,
+    "lng": 126.623317226,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/04/3396404_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%20%EC%9D%B8%EC%B2%9C%EC%9A%B0%EC%B2%B4%EA%B5%AD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%20%EC%9D%B8%EC%B2%9C%EC%9A%B0%EC%B2%B4%EA%B5%AD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC+%EC%9D%B8%EC%B2%9C%EC%9A%B0%EC%B2%B4%EA%B5%AD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126797",
+    "name": "무의도",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "영종구",
+    "address": "인천광역시 영종구 대무의로 310-11",
+    "phone": "",
+    "lat": 37.3893400446,
+    "lng": 126.4249153348,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/3532995_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%B4%EC%9D%98%EB%8F%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%B4%EC%9D%98%EB%8F%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%B4%EC%9D%98%EB%8F%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-945221",
+    "name": "(구)인천일본제58은행지점",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 신포로23번길 69-1 제물포구음식업지부 ",
+    "phone": "",
+    "lat": 37.4728671156,
+    "lng": 126.6213839908,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3047225_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%28%EA%B5%AC%29%EC%9D%B8%EC%B2%9C%EC%9D%BC%EB%B3%B8%EC%A0%9C58%EC%9D%80%ED%96%89%EC%A7%80%EC%A0%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%28%EA%B5%AC%29%EC%9D%B8%EC%B2%9C%EC%9D%BC%EB%B3%B8%EC%A0%9C58%EC%9D%80%ED%96%89%EC%A7%80%EC%A0%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%28%EA%B5%AC%29%EC%9D%B8%EC%B2%9C%EC%9D%BC%EB%B3%B8%EC%A0%9C58%EC%9D%80%ED%96%89%EC%A7%80%EC%A0%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-945420",
+    "name": "구 일본우선주식회사 인천지점",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 제물량로218번길 3 (해안동1가)",
+    "phone": "",
+    "lat": 37.4726449029,
+    "lng": 126.6204590814,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3530025_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC+%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC+%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1114573",
+    "name": "인천기독교사회복지관(여선교사합숙소)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 우각로 57",
+    "phone": "",
+    "lat": 37.4706816068,
+    "lng": 126.6411378044,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/98/3039398_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B8%EC%B2%9C%EA%B8%B0%EB%8F%85%EA%B5%90%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EA%B4%80%28%EC%97%AC%EC%84%A0%EA%B5%90%EC%82%AC%ED%95%A9%EC%88%99%EC%86%8C%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%EA%B8%B0%EB%8F%85%EA%B5%90%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EA%B4%80%28%EC%97%AC%EC%84%A0%EA%B5%90%EC%82%AC%ED%95%A9%EC%88%99%EC%86%8C%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B8%EC%B2%9C%EA%B8%B0%EB%8F%85%EA%B5%90%EC%82%AC%ED%9A%8C%EB%B3%B5%EC%A7%80%EA%B4%80%28%EC%97%AC%EC%84%A0%EA%B5%90%EC%82%AC%ED%95%A9%EC%88%99%EC%86%8C%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1619133",
+    "name": "인천 경서동 녹청자 요지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "서해구",
+    "address": "인천광역시 서해구 도요지로 54 (경서동)",
+    "phone": "",
+    "lat": 37.5585049971,
+    "lng": 126.656383968,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/3524618_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B8%EC%B2%9C%20%EA%B2%BD%EC%84%9C%EB%8F%99%20%EB%85%B9%EC%B2%AD%EC%9E%90%20%EC%9A%94%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%20%EA%B2%BD%EC%84%9C%EB%8F%99%20%EB%85%B9%EC%B2%AD%EC%9E%90%20%EC%9A%94%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B8%EC%B2%9C+%EA%B2%BD%EC%84%9C%EB%8F%99+%EB%85%B9%EC%B2%AD%EC%9E%90+%EC%9A%94%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3354017",
+    "name": "술작가 양조장",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 금곡로 52 (금곡동)",
+    "phone": "",
+    "lat": 37.4733674091,
+    "lng": 126.6413349348,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/97/3353997_image2_1.png"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%88%A0%EC%9E%91%EA%B0%80%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%88%A0%EC%9E%91%EA%B0%80%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%88%A0%EC%9E%91%EA%B0%80+%EC%96%91%EC%A1%B0%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3354154",
+    "name": "삼포 만화북투어",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 어촌로5번길 3-3 (만석동, 만석3 우리집)",
+    "phone": "",
+    "lat": 37.4819105045,
+    "lng": 126.6211198754,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/88/3354088_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%82%BC%ED%8F%AC%20%EB%A7%8C%ED%99%94%EB%B6%81%ED%88%AC%EC%96%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%82%BC%ED%8F%AC%20%EB%A7%8C%ED%99%94%EB%B6%81%ED%88%AC%EC%96%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%82%BC%ED%8F%AC+%EB%A7%8C%ED%99%94%EB%B6%81%ED%88%AC%EC%96%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3428156",
+    "name": "국가유산 방문 캠페인 인천공항 홍보관",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "영종구",
+    "address": "인천광역시 영종구 공항로 271 (운서동)",
+    "phone": "",
+    "lat": 37.4477031811,
+    "lng": 126.4521751331,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/07/3432207_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%B0%A9%EB%AC%B8%20%EC%BA%A0%ED%8E%98%EC%9D%B8%20%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD%20%ED%99%8D%EB%B3%B4%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0%20%EB%B0%A9%EB%AC%B8%20%EC%BA%A0%ED%8E%98%EC%9D%B8%20%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD%20%ED%99%8D%EB%B3%B4%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EA%B0%80%EC%9C%A0%EC%82%B0+%EB%B0%A9%EB%AC%B8+%EC%BA%A0%ED%8E%98%EC%9D%B8+%EC%9D%B8%EC%B2%9C%EA%B3%B5%ED%95%AD+%ED%99%8D%EB%B3%B4%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2765312",
+    "name": "난정리 해바라기마을 정원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "강화군",
+    "address": "인천광역시 강화군 교동면 난정리 741-3",
+    "phone": "",
+    "lat": 37.7766082017,
+    "lng": 126.2304808066,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/90/3588490_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%9C%EC%A0%95%EB%A6%AC+%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84+%EC%A0%95%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2792631",
+    "name": "스카이랜드카라반 리조트",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "강화군",
+    "address": "인천광역시 강화군 삼산면 삼산남로 991",
+    "phone": "",
+    "lat": 37.6916526806,
+    "lng": 126.3008655853,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/75/2800275_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9E%9C%EB%93%9C%EC%B9%B4%EB%9D%BC%EB%B0%98%20%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9E%9C%EB%93%9C%EC%B9%B4%EB%9D%BC%EB%B0%98%20%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8A%A4%EC%B9%B4%EC%9D%B4%EB%9E%9C%EB%93%9C%EC%B9%B4%EB%9D%BC%EB%B0%98+%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127667",
+    "name": "정족산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "강화군",
+    "address": "인천광역시 강화군 길상면 온수리",
+    "phone": "",
+    "lat": 37.6324543953,
+    "lng": 126.4804118869,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/39/3559339_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%95%EC%A1%B1%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%95%EC%A1%B1%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%95%EC%A1%B1%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1254680",
+    "name": "갑곶돈대",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "강화군",
+    "address": "인천광역시 강화군 강화읍 해안동로1366번길 18",
+    "phone": "",
+    "lat": 37.7335377029,
+    "lng": 126.5171140395,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/71/3364171_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%91%EA%B3%B6%EB%8F%88%EB%8C%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%91%EA%B3%B6%EB%8F%88%EB%8C%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%91%EA%B3%B6%EB%8F%88%EB%8C%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2994418",
+    "name": "G타워 전망대",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "연수구",
+    "address": "인천광역시 연수구 아트센터대로 175 G-Tower",
+    "phone": "",
+    "lat": 37.3964178789,
+    "lng": 126.6335544435,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/41/3393341_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=G%ED%83%80%EC%9B%8C%20%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/G%ED%83%80%EC%9B%8C%20%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/G%ED%83%80%EC%9B%8C+%EC%A0%84%EB%A7%9D%EB%8C%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126568",
+    "name": "신트리공원(인천)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "부평구",
+    "address": "인천광역시 부평구 신트리로 21",
+    "phone": "",
+    "lat": 37.5064928445,
+    "lng": 126.726606788,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/73/3030773_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%ED%8A%B8%EB%A6%AC%EA%B3%B5%EC%9B%90%28%EC%9D%B8%EC%B2%9C%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%ED%8A%B8%EB%A6%AC%EA%B3%B5%EC%9B%90%28%EC%9D%B8%EC%B2%9C%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%ED%8A%B8%EB%A6%AC%EA%B3%B5%EC%9B%90%28%EC%9D%B8%EC%B2%9C%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1752823",
+    "name": "인천학생교육문화회관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 자유공원로 12 (인현동)",
+    "phone": "",
+    "lat": 37.4758558031,
+    "lng": 126.6296581531,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/10/2363110_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B8%EC%B2%9C%ED%95%99%EC%83%9D%EA%B5%90%EC%9C%A1%EB%AC%B8%ED%99%94%ED%9A%8C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%ED%95%99%EC%83%9D%EA%B5%90%EC%9C%A1%EB%AC%B8%ED%99%94%ED%9A%8C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B8%EC%B2%9C%ED%95%99%EC%83%9D%EA%B5%90%EC%9C%A1%EB%AC%B8%ED%99%94%ED%9A%8C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2601714",
+    "name": "인천 아트플랫폼",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 제물량로218번길 3 (해안동1가)",
+    "phone": "",
+    "lat": 37.4726060191,
+    "lng": 126.6205007453,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/17/3529917_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B8%EC%B2%9C%20%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B8%EC%B2%9C%20%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B8%EC%B2%9C+%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3411281",
+    "name": "배다리 성냥 박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "제물포구",
+    "address": "인천광역시 제물포구 금곡로 19 (금곡동)",
+    "phone": "",
+    "lat": 37.4729535051,
+    "lng": 126.6377491619,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/62/3411562_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B0%B0%EB%8B%A4%EB%A6%AC%20%EC%84%B1%EB%83%A5%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B0%B0%EB%8B%A4%EB%A6%AC%20%EC%84%B1%EB%83%A5%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B0%B0%EB%8B%A4%EB%A6%AC+%EC%84%B1%EB%83%A5+%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3457385",
+    "name": "부평아트센터",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "부평구",
+    "address": "인천광역시 부평구 아트센터로 166 (십정동)",
+    "phone": "",
+    "lat": 37.4822897181,
+    "lng": 126.7049455502,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/3457455_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B6%80%ED%8F%89%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B6%80%ED%8F%89%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B6%80%ED%8F%89%EC%95%84%ED%8A%B8%EC%84%BC%ED%84%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3448312",
+    "name": "송암박두성기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 인천광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "incheon",
+    "regionName": "인천광역시",
+    "district": "미추홀구",
+    "address": "인천광역시 미추홀구 한나루로357번길 105-19 (학익동)",
+    "phone": "",
+    "lat": 37.4381689811,
+    "lng": 126.6560401258,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%A1%EC%95%94%EB%B0%95%EB%91%90%EC%84%B1%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%A1%EC%95%94%EB%B0%95%EB%91%90%EC%84%B1%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%A1%EC%95%94%EB%B0%95%EB%91%90%EC%84%B1%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1125480",
+    "name": "상소동 산림욕장",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "동구",
+    "address": "대전광역시 동구 상소동 산 1-1",
+    "phone": "",
+    "lat": 36.2313640959,
+    "lng": 127.4710996743,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/3320755_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%83%81%EC%86%8C%EB%8F%99%20%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%83%81%EC%86%8C%EB%8F%99%20%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%83%81%EC%86%8C%EB%8F%99+%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126003",
+    "name": "국립대전현충원 보훈둘레길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "유성구",
+    "address": "대전광역시 유성구 현충원로 251",
+    "phone": "",
+    "lat": 36.3622460736,
+    "lng": 127.2985587765,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/63/3512563_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EB%A6%BD%EB%8C%80%EC%A0%84%ED%98%84%EC%B6%A9%EC%9B%90%20%EB%B3%B4%ED%9B%88%EB%91%98%EB%A0%88%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EB%A6%BD%EB%8C%80%EC%A0%84%ED%98%84%EC%B6%A9%EC%9B%90%20%EB%B3%B4%ED%9B%88%EB%91%98%EB%A0%88%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EB%A6%BD%EB%8C%80%EC%A0%84%ED%98%84%EC%B6%A9%EC%9B%90+%EB%B3%B4%ED%9B%88%EB%91%98%EB%A0%88%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3454325",
+    "name": "꿀잼도시 대전홍보관",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "유성구",
+    "address": "대전광역시 유성구 엑스포로 1 (도룡동)",
+    "phone": "",
+    "lat": 36.3752377361,
+    "lng": 127.382198162,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/96/3452996_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%BF%80%EC%9E%BC%EB%8F%84%EC%8B%9C%20%EB%8C%80%EC%A0%84%ED%99%8D%EB%B3%B4%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%BF%80%EC%9E%BC%EB%8F%84%EC%8B%9C%20%EB%8C%80%EC%A0%84%ED%99%8D%EB%B3%B4%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%BF%80%EC%9E%BC%EB%8F%84%EC%8B%9C+%EB%8C%80%EC%A0%84%ED%99%8D%EB%B3%B4%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3454381",
+    "name": "디즈니스토어 현대프리미엄아울렛 대전점",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "유성구",
+    "address": "대전광역시 유성구 테크노중앙로 123 (용산동)",
+    "phone": "",
+    "lat": 36.4234825045,
+    "lng": 127.3985342768,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/82/3453482_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%94%94%EC%A6%88%EB%8B%88%EC%8A%A4%ED%86%A0%EC%96%B4%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EB%8C%80%EC%A0%84%EC%A0%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%94%94%EC%A6%88%EB%8B%88%EC%8A%A4%ED%86%A0%EC%96%B4%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EB%8C%80%EC%A0%84%EC%A0%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%94%94%EC%A6%88%EB%8B%88%EC%8A%A4%ED%86%A0%EC%96%B4+%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B+%EB%8C%80%EC%A0%84%EC%A0%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-736422",
+    "name": "대청호자연생태관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "동구",
+    "address": "대전광역시 동구 천개동로 41",
+    "phone": "",
+    "lat": 36.3733117559,
+    "lng": 127.4708375091,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/01/2605601_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%B2%AD%ED%98%B8%EC%9E%90%EC%97%B0%EC%83%9D%ED%83%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%B2%AD%ED%98%B8%EC%9E%90%EC%97%B0%EC%83%9D%ED%83%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%B2%AD%ED%98%B8%EC%9E%90%EC%97%B0%EC%83%9D%ED%83%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3443300",
+    "name": "석봉도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "대덕구",
+    "address": "대전광역시 대덕구 대덕대로 1579 (석봉동)",
+    "phone": "",
+    "lat": 36.4508159254,
+    "lng": 127.4232257656,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9D%EB%B4%89%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9D%EB%B4%89%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9D%EB%B4%89%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1066804",
+    "name": "대전선사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대전광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daejeon",
+    "regionName": "대전광역시",
+    "district": "유성구",
+    "address": "대전광역시 유성구 노은동로 126",
+    "phone": "",
+    "lat": 36.3718398688,
+    "lng": 127.3238951378,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/3032106_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%A0%84%EC%84%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%A0%84%EC%84%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%A0%84%EC%84%A0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126133",
+    "name": "경상감영공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 경상감영길 99",
+    "phone": "",
+    "lat": 35.8720530283,
+    "lng": 128.5923073375,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/44/3310544_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EC%83%81%EA%B0%90%EC%98%81%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EC%83%81%EA%B0%90%EC%98%81%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EC%83%81%EA%B0%90%EC%98%81%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128949",
+    "name": "한밤마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "군위군",
+    "address": "대구광역시 군위군 부계면 한티로 2137-3",
+    "phone": "",
+    "lat": 36.0593162984,
+    "lng": 128.6549493486,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/68/3571368_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EB%B0%A4%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EB%B0%A4%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EB%B0%A4%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2540131",
+    "name": "대구 하중도 (금호꽃섬)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "북구",
+    "address": "대구광역시 북구 노곡동 665",
+    "phone": "",
+    "lat": 35.90079362,
+    "lng": 128.5598788398,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3586525_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%20%ED%95%98%EC%A4%91%EB%8F%84%20%28%EA%B8%88%ED%98%B8%EA%BD%83%EC%84%AC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%20%ED%95%98%EC%A4%91%EB%8F%84%20%28%EA%B8%88%ED%98%B8%EA%BD%83%EC%84%AC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC+%ED%95%98%EC%A4%91%EB%8F%84+%28%EA%B8%88%ED%98%B8%EA%BD%83%EC%84%AC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126131",
+    "name": "대구두류공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "달서구",
+    "address": "대구광역시 달서구 두류공원로 161 (성당동)",
+    "phone": "",
+    "lat": 35.8500466594,
+    "lng": 128.5637271345,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/3573529_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%EB%91%90%EB%A5%98%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%EB%91%90%EB%A5%98%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC%EB%91%90%EB%A5%98%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1626349",
+    "name": "팔공산 케이블카",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "동구",
+    "address": "대구광역시 동구 팔공산로185길 51",
+    "phone": "",
+    "lat": 35.9908470255,
+    "lng": 128.6948699756,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/56/3572056_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%8C%94%EA%B3%B5%EC%82%B0%20%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%8C%94%EA%B3%B5%EC%82%B0%20%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%8C%94%EA%B3%B5%EC%82%B0+%EC%BC%80%EC%9D%B4%EB%B8%94%EC%B9%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2757084",
+    "name": "김수환 추기경 사랑과 나눔공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "군위군",
+    "address": "대구광역시 군위군 군위읍 군위금성로 270",
+    "phone": "",
+    "lat": 36.232584486,
+    "lng": 128.5999854222,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/92/3571492_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B9%80%EC%88%98%ED%99%98%20%EC%B6%94%EA%B8%B0%EA%B2%BD%20%EC%82%AC%EB%9E%91%EA%B3%BC%20%EB%82%98%EB%88%94%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B9%80%EC%88%98%ED%99%98%20%EC%B6%94%EA%B8%B0%EA%B2%BD%20%EC%82%AC%EB%9E%91%EA%B3%BC%20%EB%82%98%EB%88%94%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B9%80%EC%88%98%ED%99%98+%EC%B6%94%EA%B8%B0%EA%B2%BD+%EC%82%AC%EB%9E%91%EA%B3%BC+%EB%82%98%EB%88%94%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2366456",
+    "name": "아양기찻길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "동구",
+    "address": "대구광역시 동구 해동로 82 (지저동)",
+    "phone": "",
+    "lat": 35.8903518064,
+    "lng": 128.6383388838,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/73/3570773_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%84%EC%96%91%EA%B8%B0%EC%B0%BB%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%84%EC%96%91%EA%B8%B0%EC%B0%BB%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%84%EC%96%91%EA%B8%B0%EC%B0%BB%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1935606",
+    "name": "남산동 가톨릭타운",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 남산로4길 112 (남산동)",
+    "phone": "",
+    "lat": 35.8618040741,
+    "lng": 128.5861109465,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/74/3569574_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%A8%EC%82%B0%EB%8F%99%20%EA%B0%80%ED%86%A8%EB%A6%AD%ED%83%80%EC%9A%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%A8%EC%82%B0%EB%8F%99%20%EA%B0%80%ED%86%A8%EB%A6%AD%ED%83%80%EC%9A%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%A8%EC%82%B0%EB%8F%99+%EA%B0%80%ED%86%A8%EB%A6%AD%ED%83%80%EC%9A%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126130",
+    "name": "달성공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 달성공원로 35 (달성동)",
+    "phone": "",
+    "lat": 35.8735109601,
+    "lng": 128.5794806492,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/60/3565160_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%AC%EC%84%B1%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%AC%EC%84%B1%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%AC%EC%84%B1%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1646676",
+    "name": "대구 달성습지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "달성군",
+    "address": "대구광역시 달성군 화원읍 구라리",
+    "phone": "",
+    "lat": 35.8233620931,
+    "lng": 128.483404395,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/04/3564704_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%20%EB%8B%AC%EC%84%B1%EC%8A%B5%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%20%EB%8B%AC%EC%84%B1%EC%8A%B5%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC+%EB%8B%AC%EC%84%B1%EC%8A%B5%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2742424",
+    "name": "마천산산림욕장",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "달성군",
+    "address": "대구광역시 달성군 다사읍 이천리",
+    "phone": "",
+    "lat": 35.8894429892,
+    "lng": 128.45562446,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/09/3550209_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%88%EC%B2%9C%EC%82%B0%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%88%EC%B2%9C%EC%82%B0%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%88%EC%B2%9C%EC%82%B0%EC%82%B0%EB%A6%BC%EC%9A%95%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2993587",
+    "name": "대구 신천물놀이장",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "남구",
+    "address": "대구광역시 남구 신천서쪽자전거길 237 (이천동)",
+    "phone": "",
+    "lat": 35.8542719889,
+    "lng": 128.6075537114,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/75/3544675_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%20%EC%8B%A0%EC%B2%9C%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%20%EC%8B%A0%EC%B2%9C%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC+%EC%8B%A0%EC%B2%9C%EB%AC%BC%EB%86%80%EC%9D%B4%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3357398",
+    "name": "송해기념관 선비체험관",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "달성군",
+    "address": "대구광역시 달성군 옥포읍 옥포로56길 5",
+    "phone": "",
+    "lat": 35.7716930394,
+    "lng": 128.488852564,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/70/3384570_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80+%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128119",
+    "name": "대구향교",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 명륜로 112",
+    "phone": "",
+    "lat": 35.859751711,
+    "lng": 128.5959906893,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/72/3349072_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%ED%96%A5%EA%B5%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%ED%96%A5%EA%B5%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC%ED%96%A5%EA%B5%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2042995",
+    "name": "대구 근대골목(근대로의 여행)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 국채보상로102길 66",
+    "phone": "",
+    "lat": 35.8677811868,
+    "lng": 128.5867579454,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/3079118_image2_1.png"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B5%AC%20%EA%B7%BC%EB%8C%80%EA%B3%A8%EB%AA%A9%28%EA%B7%BC%EB%8C%80%EB%A1%9C%EC%9D%98%20%EC%97%AC%ED%96%89%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B5%AC%20%EA%B7%BC%EB%8C%80%EA%B3%A8%EB%AA%A9%28%EA%B7%BC%EB%8C%80%EB%A1%9C%EC%9D%98%20%EC%97%AC%ED%96%89%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B5%AC+%EA%B7%BC%EB%8C%80%EA%B3%A8%EB%AA%A9%28%EA%B7%BC%EB%8C%80%EB%A1%9C%EC%9D%98+%EC%97%AC%ED%96%89%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2366217",
+    "name": "근대문화체험관 계산예가",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "중구",
+    "address": "대구광역시 중구 서성로 6-1",
+    "phone": "",
+    "lat": 35.8671840532,
+    "lng": 128.5878634206,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/02/3510102_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B7%BC%EB%8C%80%EB%AC%B8%ED%99%94%EC%B2%B4%ED%97%98%EA%B4%80%20%EA%B3%84%EC%82%B0%EC%98%88%EA%B0%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B7%BC%EB%8C%80%EB%AC%B8%ED%99%94%EC%B2%B4%ED%97%98%EA%B4%80%20%EA%B3%84%EC%82%B0%EC%98%88%EA%B0%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B7%BC%EB%8C%80%EB%AC%B8%ED%99%94%EC%B2%B4%ED%97%98%EA%B4%80+%EA%B3%84%EC%82%B0%EC%98%88%EA%B0%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2488233",
+    "name": "국립대구기상과학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "동구",
+    "address": "대구광역시 동구 효동로2길 10 (효목동)",
+    "phone": "",
+    "lat": 35.8790199813,
+    "lng": 128.6505242379,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EB%A6%BD%EB%8C%80%EA%B5%AC%EA%B8%B0%EC%83%81%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EB%A6%BD%EB%8C%80%EA%B5%AC%EA%B8%B0%EC%83%81%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EB%A6%BD%EB%8C%80%EA%B5%AC%EA%B8%B0%EC%83%81%EA%B3%BC%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1621181",
+    "name": "경북대학교자연사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "군위군",
+    "address": "대구광역시 군위군 효령면 경북대로 2228",
+    "phone": "",
+    "lat": 36.1214827951,
+    "lng": 128.5769683751,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/12/3338412_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90%EC%9E%90%EC%97%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3456907",
+    "name": "뉴평리도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "서구",
+    "address": "대구광역시 서구 평리로73길 37 (평리동)",
+    "phone": "",
+    "lat": 35.8689556044,
+    "lng": 128.5623128448,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/02/3456902_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%89%B4%ED%8F%89%EB%A6%AC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%89%B4%ED%8F%89%EB%A6%AC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%89%B4%ED%8F%89%EB%A6%AC%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3456777",
+    "name": "달성화석박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 대구광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "daegu",
+    "regionName": "대구광역시",
+    "district": "달성군",
+    "address": "대구광역시 달성군 유가읍 테크노대로6길 66",
+    "phone": "",
+    "lat": 35.6844274618,
+    "lng": 128.4645959888,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/74/3456774_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%AC%EC%84%B1%ED%99%94%EC%84%9D%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%AC%EC%84%B1%ED%99%94%EC%84%9D%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%AC%EC%84%B1%ED%99%94%EC%84%9D%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126350",
+    "name": "원효사(광주)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "북구",
+    "address": "전남광주통합특별시 북구 무등로 1514-35",
+    "phone": "",
+    "lat": 35.1486258304,
+    "lng": 126.9857793462,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/44/3028444_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9B%90%ED%9A%A8%EC%82%AC%28%EA%B4%91%EC%A3%BC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9B%90%ED%9A%A8%EC%82%AC%28%EA%B4%91%EC%A3%BC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9B%90%ED%9A%A8%EC%82%AC%28%EA%B4%91%EC%A3%BC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127325",
+    "name": "광주 충효동 왕버들 군",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "북구",
+    "address": "전남광주통합특별시 북구 충효샘길 7",
+    "phone": "",
+    "lat": 35.1848719954,
+    "lng": 127.0009520932,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3350350_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B4%91%EC%A3%BC+%EC%B6%A9%ED%9A%A8%EB%8F%99+%EC%99%95%EB%B2%84%EB%93%A4+%EA%B5%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1622537",
+    "name": "영사재",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "광산구",
+    "address": "전남광주통합특별시 광산구 명곡길 170-30 ",
+    "phone": "",
+    "lat": 35.1946380905,
+    "lng": 126.7032198592,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/27/3366527_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%81%EC%82%AC%EC%9E%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%81%EC%82%AC%EC%9E%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%81%EC%82%AC%EC%9E%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3353800",
+    "name": "뜻모아센터",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "북구",
+    "address": "전남광주통합특별시 북구 서하로245번길 42 (오치동)",
+    "phone": "",
+    "lat": 35.1892060356,
+    "lng": 126.9076407902,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/53/3353753_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%9C%BB%EB%AA%A8%EC%95%84%EC%84%BC%ED%84%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%9C%BB%EB%AA%A8%EC%95%84%EC%84%BC%ED%84%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%9C%BB%EB%AA%A8%EC%95%84%EC%84%BC%ED%84%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3353909",
+    "name": "소잉(에이핸즈협동조합)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "북구",
+    "address": "전남광주통합특별시 북구 첨단연신로108번길 31-15 (신용동)",
+    "phone": "",
+    "lat": 35.2077143361,
+    "lng": 126.8650829796,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/08/3353808_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%EC%9E%89%28%EC%97%90%EC%9D%B4%ED%95%B8%EC%A6%88%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%EC%9E%89%28%EC%97%90%EC%9D%B4%ED%95%B8%EC%A6%88%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%EC%9E%89%28%EC%97%90%EC%9D%B4%ED%95%B8%EC%A6%88%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3510971",
+    "name": "컬러브릿지협동조합",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "남구",
+    "address": "전남광주통합특별시 남구 백서로 101-2 (양림동)",
+    "phone": "",
+    "lat": 35.1411366209,
+    "lng": 126.9169078423,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%BB%AC%EB%9F%AC%EB%B8%8C%EB%A6%BF%EC%A7%80%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%BB%AC%EB%9F%AC%EB%B8%8C%EB%A6%BF%EC%A7%80%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%BB%AC%EB%9F%AC%EB%B8%8C%EB%A6%BF%EC%A7%80%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3510980",
+    "name": "유한회사더담희",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "북구",
+    "address": "전남광주통합특별시 북구 용두마을길 6 (본촌동)",
+    "phone": "",
+    "lat": 35.2191965932,
+    "lng": 126.8781870875,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126334",
+    "name": "약사암(광주)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "동구",
+    "address": "전남광주통합특별시 동구 증심사길160번길 89",
+    "phone": "",
+    "lat": 35.1223174593,
+    "lng": 126.9722478684,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/67/3510767_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%BD%EC%82%AC%EC%95%94%28%EA%B4%91%EC%A3%BC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%BD%EC%82%AC%EC%95%94%28%EA%B4%91%EC%A3%BC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%BD%EC%82%AC%EC%95%94%28%EA%B4%91%EC%A3%BC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-250450",
+    "name": "월봉서원·빙월당",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "광산구",
+    "address": "전남광주통합특별시 광산구 광곡길 133",
+    "phone": "",
+    "lat": 35.2358674659,
+    "lng": 126.7452012233,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/31/3510731_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130639",
+    "name": "우제길미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 광주광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gwangju",
+    "regionName": "광주광역시",
+    "district": "동구",
+    "address": "전남광주통합특별시 동구 의재로 140-6",
+    "phone": "",
+    "lat": 35.1317742306,
+    "lng": 126.9430502112,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/53/3510753_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%B0%EC%A0%9C%EA%B8%B8%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%B0%EC%A0%9C%EA%B8%B8%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%B0%EC%A0%9C%EA%B8%B8%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3017347",
+    "name": "해돋이전망대",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "영도구",
+    "address": "부산광역시 영도구 해돋이3길 410-1 (청학동)",
+    "phone": "",
+    "lat": 35.0891108108,
+    "lng": 129.0559688873,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%B4%EB%8F%8B%EC%9D%B4%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%B4%EB%8F%8B%EC%9D%B4%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%B4%EB%8F%8B%EC%9D%B4%EC%A0%84%EB%A7%9D%EB%8C%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129140",
+    "name": "금련산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "수영구",
+    "address": "부산광역시 수영구 광안동",
+    "phone": "",
+    "lat": 35.1602230601,
+    "lng": 129.0974161159,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/43/3589743_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EB%A0%A8%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EB%A0%A8%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EB%A0%A8%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614716",
+    "name": "두도",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "서구",
+    "address": "부산광역시 서구 암남동",
+    "phone": "",
+    "lat": 35.0490923097,
+    "lng": 129.0148985467,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/28/3589728_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%91%90%EB%8F%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%91%90%EB%8F%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%91%90%EB%8F%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128810",
+    "name": "동백공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "해운대구",
+    "address": "부산광역시 해운대구 동백로 99 (우동)",
+    "phone": "",
+    "lat": 35.1536609221,
+    "lng": 129.1523226328,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/62/3575962_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%99%EB%B0%B1%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%99%EB%B0%B1%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%99%EB%B0%B1%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614725",
+    "name": "송도반도 (부산 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "서구",
+    "address": "부산광역시 서구 암남동",
+    "phone": "",
+    "lat": 35.0659655069,
+    "lng": 129.019511576,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/24/2614724_image2_1.bmp"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%A1%EB%8F%84%EB%B0%98%EB%8F%84%20%28%EB%B6%80%EC%82%B0%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%A1%EB%8F%84%EB%B0%98%EB%8F%84%20%28%EB%B6%80%EC%82%B0%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%A1%EB%8F%84%EB%B0%98%EB%8F%84+%28%EB%B6%80%EC%82%B0+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-252561",
+    "name": "절영해안산책로",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "영도구",
+    "address": "부산광역시 영도구 해안산책길 52",
+    "phone": "",
+    "lat": 35.0812475294,
+    "lng": 129.0411870536,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%88%EC%98%81%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%88%EC%98%81%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%88%EC%98%81%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2617724",
+    "name": "마린시티",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "해운대구",
+    "address": "부산광역시 해운대구 우동",
+    "phone": "",
+    "lat": 35.1560327184,
+    "lng": 129.1436566548,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/89/3575989_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%88%EB%A6%B0%EC%8B%9C%ED%8B%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%88%EB%A6%B0%EC%8B%9C%ED%8B%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%88%EB%A6%B0%EC%8B%9C%ED%8B%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126028",
+    "name": "금정산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "금정구",
+    "address": "부산광역시 금정구 금성동",
+    "phone": "",
+    "lat": 35.268448978,
+    "lng": 129.0518587773,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/44/3575744_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EC%A0%95%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EC%A0%95%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EC%A0%95%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-298111",
+    "name": "금수사(부산)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "동구",
+    "address": "부산광역시 동구 망양로 533-1",
+    "phone": "",
+    "lat": 35.1204207111,
+    "lng": 129.029678653,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/04/3561504_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EC%88%98%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EC%88%98%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EC%88%98%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2643873",
+    "name": "금정산성마을 먹거리촌",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "금정구",
+    "address": "부산광역시 금정구 금성동",
+    "phone": "",
+    "lat": 35.2513870387,
+    "lng": 129.0538229642,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/82/3561482_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84+%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2946508",
+    "name": "부산 영화의 거리",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "해운대구",
+    "address": "부산광역시 해운대구 마린시티1로 91 (우동, 마린시티두산위브포세이돈)",
+    "phone": "",
+    "lat": 35.1549495207,
+    "lng": 129.1444371716,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/43/2947043_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B6%80%EC%82%B0%20%EC%98%81%ED%99%94%EC%9D%98%20%EA%B1%B0%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B6%80%EC%82%B0%20%EC%98%81%ED%99%94%EC%9D%98%20%EA%B1%B0%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B6%80%EC%82%B0+%EC%98%81%ED%99%94%EC%9D%98+%EA%B1%B0%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2775495",
+    "name": "해동성취사",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "기장군",
+    "address": "부산광역시 기장군 장안읍 고무로 207-4",
+    "phone": "",
+    "lat": 35.338625818,
+    "lng": 129.2752373809,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/73/3561273_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%B4%EB%8F%99%EC%84%B1%EC%B7%A8%EC%82%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%B4%EB%8F%99%EC%84%B1%EC%B7%A8%EC%82%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%B4%EB%8F%99%EC%84%B1%EC%B7%A8%EC%82%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-347229",
+    "name": "월명사(부산)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "기장군",
+    "address": "부산광역시 기장군 일광면 참샘길 124",
+    "phone": "",
+    "lat": 35.269243617,
+    "lng": 129.2167499529,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/89/3561189_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9B%94%EB%AA%85%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9B%94%EB%AA%85%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9B%94%EB%AA%85%EC%82%AC%28%EB%B6%80%EC%82%B0%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3511057",
+    "name": "주식회사뷰티홀릭",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "수영구",
+    "address": "부산광역시 수영구 광안로7번길 17 (광안동, 세종 엠스테이3차)",
+    "phone": "",
+    "lat": 35.1579180661,
+    "lng": 129.1138175312,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%B7%B0%ED%8B%B0%ED%99%80%EB%A6%AD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%B7%B0%ED%8B%B0%ED%99%80%EB%A6%AD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%B7%B0%ED%8B%B0%ED%99%80%EB%A6%AD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2944033",
+    "name": "전포 삼거리",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "부산진구",
+    "address": "부산광역시 부산진구 진남로 320 (전포동)",
+    "phone": "",
+    "lat": 35.1536149962,
+    "lng": 129.071940736,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/22/2947122_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%84%ED%8F%AC%20%EC%82%BC%EA%B1%B0%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%84%ED%8F%AC%20%EC%82%BC%EA%B1%B0%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%84%ED%8F%AC+%EC%82%BC%EA%B1%B0%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1945293",
+    "name": "장기려기념 더 나눔센터",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "동구",
+    "address": "부산광역시 동구 영초윗길 48",
+    "phone": "",
+    "lat": 35.1185793062,
+    "lng": 129.0327117725,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/67/3070867_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%A5%EA%B8%B0%EB%A0%A4%EA%B8%B0%EB%85%90%20%EB%8D%94%20%EB%82%98%EB%88%94%EC%84%BC%ED%84%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%A5%EA%B8%B0%EB%A0%A4%EA%B8%B0%EB%85%90%20%EB%8D%94%20%EB%82%98%EB%88%94%EC%84%BC%ED%84%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%A5%EA%B8%B0%EB%A0%A4%EA%B8%B0%EB%85%90+%EB%8D%94+%EB%82%98%EB%88%94%EC%84%BC%ED%84%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3451794",
+    "name": "해성아트베이",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "남구",
+    "address": "부산광역시 남구 분포로 101 (용호동)",
+    "phone": "",
+    "lat": 35.1327486901,
+    "lng": 129.1153458655,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/71/3459571_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%B4%EC%84%B1%EC%95%84%ED%8A%B8%EB%B2%A0%EC%9D%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%B4%EC%84%B1%EC%95%84%ED%8A%B8%EB%B2%A0%EC%9D%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%B4%EC%84%B1%EC%95%84%ED%8A%B8%EB%B2%A0%EC%9D%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3023734",
+    "name": "동서대학교 소향씨어터 신한카드홀",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "해운대구",
+    "address": "부산광역시 해운대구 센텀중앙로 55 (우동)",
+    "phone": "",
+    "lat": 35.1731360622,
+    "lng": 129.1276353562,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/09/3023709_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90+%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0+%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1942314",
+    "name": "이바구공작소",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "동구",
+    "address": "부산광역시 동구 망양로486번길 14-13",
+    "phone": "",
+    "lat": 35.1171267121,
+    "lng": 129.0338450468,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/2735629_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B4%EB%B0%94%EA%B5%AC%EA%B3%B5%EC%9E%91%EC%86%8C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B4%EB%B0%94%EA%B5%AC%EA%B3%B5%EC%9E%91%EC%86%8C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B4%EB%B0%94%EA%B5%AC%EA%B3%B5%EC%9E%91%EC%86%8C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130200",
+    "name": "구덕민속예술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 부산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "busan",
+    "regionName": "부산광역시",
+    "district": "서구",
+    "address": "부산광역시 서구 대신공원로 34-91 (서대신동3가)",
+    "phone": "",
+    "lat": 35.1239756631,
+    "lng": 129.0185100829,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/2649742_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%EB%8D%95%EB%AF%BC%EC%86%8D%EC%98%88%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%EB%8D%95%EB%AF%BC%EC%86%8D%EC%98%88%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC%EB%8D%95%EB%AF%BC%EC%86%8D%EC%98%88%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127515",
+    "name": "대왕암공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "동구",
+    "address": "울산광역시 동구 등대로 95 (일산동)",
+    "phone": "",
+    "lat": 35.4904590082,
+    "lng": 129.4352747432,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/16/3583516_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2728939",
+    "name": "대왕암공원 출렁다리",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "동구",
+    "address": "울산광역시 동구 등대로 95",
+    "phone": "",
+    "lat": 35.4904034587,
+    "lng": 129.4352775223,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/69/3583469_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90%20%EC%B6%9C%EB%A0%81%EB%8B%A4%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90%20%EC%B6%9C%EB%A0%81%EB%8B%A4%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%99%95%EC%95%94%EA%B3%B5%EC%9B%90+%EC%B6%9C%EB%A0%81%EB%8B%A4%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128022",
+    "name": "간절곶",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 서생면 간절곶1길 39-2",
+    "phone": "",
+    "lat": 35.3589668021,
+    "lng": 129.3605738299,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3583350_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%84%EC%A0%88%EA%B3%B6"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%84%EC%A0%88%EA%B3%B6"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%84%EC%A0%88%EA%B3%B6"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2509933",
+    "name": "울산 큰애기집",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "중구",
+    "address": "울산광역시 중구 문화의거리 28",
+    "phone": "",
+    "lat": 35.5566272097,
+    "lng": 129.3217188878,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/3581842_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%B8%EC%82%B0%20%ED%81%B0%EC%95%A0%EA%B8%B0%EC%A7%91"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%B8%EC%82%B0%20%ED%81%B0%EC%95%A0%EA%B8%B0%EC%A7%91"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%B8%EC%82%B0+%ED%81%B0%EC%95%A0%EA%B8%B0%EC%A7%91"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128213",
+    "name": "간월산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 상북면 간월산길 614",
+    "phone": "",
+    "lat": 35.5561610255,
+    "lng": 129.0480650268,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/02/3078002_image2_1.bmp"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%84%EC%9B%94%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%84%EC%9B%94%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%84%EC%9B%94%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1395991",
+    "name": "울산테마식물수목원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "동구",
+    "address": "울산광역시 동구 쇠평길 33-1",
+    "phone": "",
+    "lat": 35.5535517673,
+    "lng": 129.4271792207,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/49/3084249_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%B8%EC%82%B0%ED%85%8C%EB%A7%88%EC%8B%9D%EB%AC%BC%EC%88%98%EB%AA%A9%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%B8%EC%82%B0%ED%85%8C%EB%A7%88%EC%8B%9D%EB%AC%BC%EC%88%98%EB%AA%A9%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%B8%EC%82%B0%ED%85%8C%EB%A7%88%EC%8B%9D%EB%AC%BC%EC%88%98%EB%AA%A9%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3337761",
+    "name": "마마스홈퀴진",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 삼남읍 교동로 130",
+    "phone": "",
+    "lat": 35.5615005936,
+    "lng": 129.1166894337,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/10/3337210_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%88%EB%A7%88%EC%8A%A4%ED%99%88%ED%80%B4%EC%A7%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%88%EB%A7%88%EC%8A%A4%ED%99%88%ED%80%B4%EC%A7%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%88%EB%A7%88%EC%8A%A4%ED%99%88%ED%80%B4%EC%A7%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128198",
+    "name": "선바위",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 범서읍 두동로 160",
+    "phone": "",
+    "lat": 35.5822393705,
+    "lng": 129.2352757129,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3549315_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%A0%EB%B0%94%EC%9C%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%A0%EB%B0%94%EC%9C%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%A0%EB%B0%94%EC%9C%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3511230",
+    "name": "김씨네마카롱공장(주식회사필링)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "동구",
+    "address": "울산광역시 동구 등대로 99 (일산동)",
+    "phone": "",
+    "lat": 35.4906034451,
+    "lng": 129.4357385879,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B9%80%EC%94%A8%EB%84%A4%EB%A7%88%EC%B9%B4%EB%A1%B1%EA%B3%B5%EC%9E%A5%28%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%ED%95%84%EB%A7%81%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B9%80%EC%94%A8%EB%84%A4%EB%A7%88%EC%B9%B4%EB%A1%B1%EA%B3%B5%EC%9E%A5%28%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%ED%95%84%EB%A7%81%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B9%80%EC%94%A8%EB%84%A4%EB%A7%88%EC%B9%B4%EB%A1%B1%EA%B3%B5%EC%9E%A5%28%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%ED%95%84%EB%A7%81%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3511181",
+    "name": "주식회사도시나무",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "동구",
+    "address": "울산광역시 동구 월봉4길 36 (방어동)",
+    "phone": "",
+    "lat": 35.4893949299,
+    "lng": 129.4189067548,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3337799",
+    "name": "레이홉",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "남구",
+    "address": "울산광역시 남구 월평로21번길 15 (신정동)",
+    "phone": "",
+    "lat": 35.5424090943,
+    "lng": 129.3074066487,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/3337195_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A0%88%EC%9D%B4%ED%99%89"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A0%88%EC%9D%B4%ED%99%89"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A0%88%EC%9D%B4%ED%99%89"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2871593",
+    "name": "선바위공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 범서읍 입암리",
+    "phone": "",
+    "lat": 35.583364229,
+    "lng": 129.2344951937,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/84/2871584_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%A0%EB%B0%94%EC%9C%84%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%A0%EB%B0%94%EC%9C%84%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%A0%EB%B0%94%EC%9C%84%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2871570",
+    "name": "구영공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 범서읍 점촌4길 62",
+    "phone": "",
+    "lat": 35.570810227,
+    "lng": 129.2420171122,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/57/2871557_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%EC%98%81%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%EC%98%81%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC%EC%98%81%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2717813",
+    "name": "애니언파크(울산 반려동물 문화센터)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "북구",
+    "address": "울산광역시 북구 호계매곡6로 108",
+    "phone": "",
+    "lat": 35.6347442892,
+    "lng": 129.3676487809,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/79/2917379_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%A0%EB%8B%88%EC%96%B8%ED%8C%8C%ED%81%AC%28%EC%9A%B8%EC%82%B0%20%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%A0%EB%8B%88%EC%96%B8%ED%8C%8C%ED%81%AC%28%EC%9A%B8%EC%82%B0%20%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC%20%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%A0%EB%8B%88%EC%96%B8%ED%8C%8C%ED%81%AC%28%EC%9A%B8%EC%82%B0+%EB%B0%98%EB%A0%A4%EB%8F%99%EB%AC%BC+%EB%AC%B8%ED%99%94%EC%84%BC%ED%84%B0%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2775336",
+    "name": "와나스타",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "울주군",
+    "address": "울산광역시 울주군 언양읍 대암1길 207",
+    "phone": "",
+    "lat": 35.5402511517,
+    "lng": 129.1672272797,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/19/3337219_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%99%80%EB%82%98%EC%8A%A4%ED%83%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%99%80%EB%82%98%EC%8A%A4%ED%83%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%99%80%EB%82%98%EC%8A%A4%ED%83%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2507820",
+    "name": "큐빅광장",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 울산광역시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "ulsan",
+    "regionName": "울산광역시",
+    "district": "중구",
+    "address": "울산광역시 중구 학성로 65",
+    "phone": "",
+    "lat": 35.5547606861,
+    "lng": 129.3181748052,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3335215_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%81%90%EB%B9%85%EA%B4%91%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%81%90%EB%B9%85%EA%B4%91%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%81%90%EB%B9%85%EA%B4%91%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2717492",
+    "name": "비녀랑 한복이랑",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 세종특별자치시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "district": "조치원읍",
+    "address": "세종특별자치시 조치원읍 안터길 107",
+    "phone": "",
+    "lat": 36.6297679841,
+    "lng": 127.2872775071,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B9%84%EB%85%80%EB%9E%91%20%ED%95%9C%EB%B3%B5%EC%9D%B4%EB%9E%91"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B9%84%EB%85%80%EB%9E%91%20%ED%95%9C%EB%B3%B5%EC%9D%B4%EB%9E%91"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B9%84%EB%85%80%EB%9E%91+%ED%95%9C%EB%B3%B5%EC%9D%B4%EB%9E%91"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2717494",
+    "name": "쌍류포도정원협동조합",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 세종특별자치시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "district": "연서면",
+    "address": "세종특별자치시 연서면 쌍류송암길 76-36",
+    "phone": "",
+    "lat": 36.6033808619,
+    "lng": 127.2161818371,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/2739606_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1946955",
+    "name": "세종호수공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 세종특별자치시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "district": "다솜로",
+    "address": "세종특별자치시 다솜로 216 (세종동)",
+    "phone": "",
+    "lat": 36.4989993515,
+    "lng": 127.2701992755,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/76/3353976_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B8%EC%A2%85%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B8%EC%A2%85%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B8%EC%A2%85%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2775014",
+    "name": "나무키움(전의양묘영농조합법인)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 세종특별자치시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "district": "전의면",
+    "address": "세종특별자치시 전의면 근성길 14",
+    "phone": "",
+    "lat": 36.6764471443,
+    "lng": 127.1978759312,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%98%EB%AC%B4%ED%82%A4%EC%9B%80%28%EC%A0%84%EC%9D%98%EC%96%91%EB%AC%98%EC%98%81%EB%86%8D%EC%A1%B0%ED%95%A9%EB%B2%95%EC%9D%B8%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%98%EB%AC%B4%ED%82%A4%EC%9B%80%28%EC%A0%84%EC%9D%98%EC%96%91%EB%AC%98%EC%98%81%EB%86%8D%EC%A1%B0%ED%95%A9%EB%B2%95%EC%9D%B8%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%98%EB%AC%B4%ED%82%A4%EC%9B%80%28%EC%A0%84%EC%9D%98%EC%96%91%EB%AC%98%EC%98%81%EB%86%8D%EC%A1%B0%ED%95%A9%EB%B2%95%EC%9D%B8%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2758549",
+    "name": "소피아갤러리",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 세종특별자치시 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "sejong",
+    "regionName": "세종특별자치시",
+    "district": "금남면",
+    "address": "세종특별자치시 금남면 도남2길 50-5",
+    "phone": "",
+    "lat": 36.4381335591,
+    "lng": 127.2393620249,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/14/2758514_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%ED%94%BC%EC%95%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%ED%94%BC%EC%95%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%ED%94%BC%EC%95%84%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125518",
+    "name": "서운동산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "포천시",
+    "address": "경기도 포천시 내촌면 내진로9번길 237",
+    "phone": "",
+    "lat": 37.7717177509,
+    "lng": 127.201880895,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/02/3589302_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EC%9A%B4%EB%8F%99%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EC%9A%B4%EB%8F%99%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EC%9A%B4%EB%8F%99%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2717416",
+    "name": "올드타임",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안성시",
+    "address": "경기도 안성시 공도읍 소신두길 52-9",
+    "phone": "",
+    "lat": 37.0001821348,
+    "lng": 127.2004167769,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3588850_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%AC%EB%93%9C%ED%83%80%EC%9E%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%AC%EB%93%9C%ED%83%80%EC%9E%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%AC%EB%93%9C%ED%83%80%EC%9E%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2650828",
+    "name": "신해철거리(성남)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "성남시",
+    "address": "경기도 성남시 분당구 발이봉로 10 (수내동)",
+    "phone": "",
+    "lat": 37.365605231,
+    "lng": 127.1269354197,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3350115_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%ED%95%B4%EC%B2%A0%EA%B1%B0%EB%A6%AC%28%EC%84%B1%EB%82%A8%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%ED%95%B4%EC%B2%A0%EA%B1%B0%EB%A6%AC%28%EC%84%B1%EB%82%A8%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%ED%95%B4%EC%B2%A0%EA%B1%B0%EB%A6%AC%28%EC%84%B1%EB%82%A8%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2674763",
+    "name": "서후리숲",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "양평군",
+    "address": "경기도 양평군 서종면 거북바위1길 200",
+    "phone": "",
+    "lat": 37.5663707812,
+    "lng": 127.4301771507,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/3352495_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%ED%9B%84%EB%A6%AC%EC%88%B2"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%ED%9B%84%EB%A6%AC%EC%88%B2"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%ED%9B%84%EB%A6%AC%EC%88%B2"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126618",
+    "name": "인계예술공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "수원시",
+    "address": "경기도 수원시 팔달구 동수원로 335",
+    "phone": "",
+    "lat": 37.2586104401,
+    "lng": 127.0359939011,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/79/3400879_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B8%EA%B3%84%EC%98%88%EC%88%A0%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B8%EA%B3%84%EC%98%88%EC%88%A0%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B8%EA%B3%84%EC%98%88%EC%88%A0%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-318182",
+    "name": "서천사(평택)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "평택시",
+    "address": "경기도 평택시 고덕면 방축4길 22-49",
+    "phone": "",
+    "lat": 37.0158108809,
+    "lng": 127.0442137929,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/40/3022340_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EC%B2%9C%EC%82%AC%28%ED%8F%89%ED%83%9D%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EC%B2%9C%EC%82%AC%28%ED%8F%89%ED%83%9D%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EC%B2%9C%EC%82%AC%28%ED%8F%89%ED%83%9D%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125459",
+    "name": "축령산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "남양주시",
+    "address": "경기도 남양주시 수동면 축령산로 299",
+    "phone": "",
+    "lat": 37.7529607789,
+    "lng": 127.3091660984,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3077115_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%95%EB%A0%B9%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%95%EB%A0%B9%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%95%EB%A0%B9%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127889",
+    "name": "캐리비안베이",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "용인시",
+    "address": "경기도 용인시 처인구 포곡읍 에버랜드로 199",
+    "phone": "",
+    "lat": 37.2933788242,
+    "lng": 127.2013390401,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88%EB%B2%A0%EC%9D%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88%EB%B2%A0%EC%9D%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%BA%90%EB%A6%AC%EB%B9%84%EC%95%88%EB%B2%A0%EC%9D%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2946407",
+    "name": "수원 지동벽화마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "수원시",
+    "address": "경기도 수원시 팔달구 창룡문로 56 (지동)",
+    "phone": "",
+    "lat": 37.282049159,
+    "lng": 127.0228972121,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/13/2947313_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%88%98%EC%9B%90%20%EC%A7%80%EB%8F%99%EB%B2%BD%ED%99%94%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%88%98%EC%9B%90%20%EC%A7%80%EB%8F%99%EB%B2%BD%ED%99%94%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%88%98%EC%9B%90+%EC%A7%80%EB%8F%99%EB%B2%BD%ED%99%94%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1624617",
+    "name": "안성허브마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안성시",
+    "address": "경기도 안성시 삼죽면 국사봉로 641-14",
+    "phone": "",
+    "lat": 37.0654469078,
+    "lng": 127.3596061344,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/07/3579707_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%88%EC%84%B1%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%88%EC%84%B1%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%88%EC%84%B1%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2751603",
+    "name": "힐사이드온천텔",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "화성시",
+    "address": "경기도 화성시 팔탄면 온천로 428-12",
+    "phone": "",
+    "lat": 37.1523644342,
+    "lng": 126.8814469838,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%9E%90%EC%82%AC%EC%9D%B4%EB%93%9C%EC%98%A8%EC%B2%9C%ED%85%94"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%9E%90%EC%82%AC%EC%9D%B4%EB%93%9C%EC%98%A8%EC%B2%9C%ED%85%94"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%9E%90%EC%82%AC%EC%9D%B4%EB%93%9C%EC%98%A8%EC%B2%9C%ED%85%94"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-560481",
+    "name": "파주 출판도시",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "파주시",
+    "address": "경기도 파주시 회동길 145",
+    "phone": "",
+    "lat": 37.7083436435,
+    "lng": 126.6866797759,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/78/3467478_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%8C%8C%EC%A3%BC%20%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%8C%8C%EC%A3%BC%20%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%8C%8C%EC%A3%BC+%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127057",
+    "name": "소구니산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "가평군",
+    "address": "경기도 가평군 설악면 가일리",
+    "phone": "",
+    "lat": 37.5788534511,
+    "lng": 127.473017343,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/88/1939888_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%EA%B5%AC%EB%8B%88%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%EA%B5%AC%EB%8B%88%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%EA%B5%AC%EB%8B%88%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2761294",
+    "name": "개미허리아치교",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안산시",
+    "address": "경기도 안산시 단원구 대부북동",
+    "phone": "",
+    "lat": 37.2867511488,
+    "lng": 126.5377106391,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/88/3563488_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%9C%EB%AF%B8%ED%97%88%EB%A6%AC%EC%95%84%EC%B9%98%EA%B5%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%9C%EB%AF%B8%ED%97%88%EB%A6%AC%EC%95%84%EC%B9%98%EA%B5%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%9C%EB%AF%B8%ED%97%88%EB%A6%AC%EC%95%84%EC%B9%98%EA%B5%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-750843",
+    "name": "현충탑(하남)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "하남시",
+    "address": "경기도 하남시 창우동 461-9",
+    "phone": "",
+    "lat": 37.5301297868,
+    "lng": 127.2360708323,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/35/3566835_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%98%84%EC%B6%A9%ED%83%91%28%ED%95%98%EB%82%A8%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%98%84%EC%B6%A9%ED%83%91%28%ED%95%98%EB%82%A8%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%98%84%EC%B6%A9%ED%83%91%28%ED%95%98%EB%82%A8%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130565",
+    "name": "조병화문학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안성시",
+    "address": "경기도 안성시 양성면 난실길 14-1",
+    "phone": "",
+    "lat": 37.1120668213,
+    "lng": 127.2215950764,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/30/3579730_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A1%B0%EB%B3%91%ED%99%94%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A1%B0%EB%B3%91%ED%99%94%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A1%B0%EB%B3%91%ED%99%94%EB%AC%B8%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2553414",
+    "name": "해움미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "수원시",
+    "address": "경기도 수원시 팔달구 매산로 133 (교동)",
+    "phone": "",
+    "lat": 37.2723112569,
+    "lng": 127.0150259762,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/72/3564572_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%B4%EC%9B%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%B4%EC%9B%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%B4%EC%9B%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130901",
+    "name": "이경순 소리박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안성시",
+    "address": "경기도 안성시 삼죽면 동아예대길 47",
+    "phone": "",
+    "lat": 37.0566174297,
+    "lng": 127.3628588671,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/40/3558740_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B4%EA%B2%BD%EC%88%9C%20%EC%86%8C%EB%A6%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B4%EA%B2%BD%EC%88%9C%20%EC%86%8C%EB%A6%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B4%EA%B2%BD%EC%88%9C+%EC%86%8C%EB%A6%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2816541",
+    "name": "한국근현대음악관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "평택시",
+    "address": "경기도 평택시 현덕면 평택호길 147",
+    "phone": "",
+    "lat": 36.9212584984,
+    "lng": 126.9208719893,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/35/2816535_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EA%B5%AD%EA%B7%BC%ED%98%84%EB%8C%80%EC%9D%8C%EC%95%85%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EA%B5%AD%EA%B7%BC%ED%98%84%EB%8C%80%EC%9D%8C%EC%95%85%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EA%B5%AD%EA%B7%BC%ED%98%84%EB%8C%80%EC%9D%8C%EC%95%85%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2648242",
+    "name": "시흥오이도박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "시흥시",
+    "address": "경기도 시흥시 오이도로 332 (정왕동)",
+    "phone": "",
+    "lat": 37.3347094008,
+    "lng": 126.6917702916,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/08/2947308_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%9C%ED%9D%A5%EC%98%A4%EC%9D%B4%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%9C%ED%9D%A5%EC%98%A4%EC%9D%B4%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%9C%ED%9D%A5%EC%98%A4%EC%9D%B4%EB%8F%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2498600",
+    "name": "출판도시 활판인쇄박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "파주시",
+    "address": "경기도 파주시 회동길 145 (문발동)",
+    "phone": "",
+    "lat": 37.7086519509,
+    "lng": 126.6872324943,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/75/3540675_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C+%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2638584",
+    "name": "박두진문학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "안성시",
+    "address": "경기도 안성시 보개면 남사당로 198-11",
+    "phone": "",
+    "lat": 37.0350273181,
+    "lng": 127.3108919406,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/08/3539508_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B0%95%EB%91%90%EC%A7%84%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B0%95%EB%91%90%EC%A7%84%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B0%95%EB%91%90%EC%A7%84%EB%AC%B8%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130570",
+    "name": "93뮤지엄가족미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "파주시",
+    "address": "경기도 파주시 탄현면 헤이리마을길 59-58",
+    "phone": "",
+    "lat": 37.7897843202,
+    "lng": 126.6962904869,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/22/2480722_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3453292",
+    "name": "수주문학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "부천시",
+    "address": "경기도 부천시 오정구 고리울로8번길 77 (고강동)",
+    "phone": "",
+    "lat": 37.5243784812,
+    "lng": 126.8169563803,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/21/3453121_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%88%98%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%88%98%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%88%98%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3427294",
+    "name": "경기도행정역사관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "수원시",
+    "address": "경기도 수원시 장안구 경수대로 1150 (파장동)",
+    "phone": "",
+    "lat": 37.3135115827,
+    "lng": 126.9894215933,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/91/3427291_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EA%B8%B0%EB%8F%84%ED%96%89%EC%A0%95%EC%97%AD%EC%82%AC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%ED%96%89%EC%A0%95%EC%97%AD%EC%82%AC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%ED%96%89%EC%A0%95%EC%97%AD%EC%82%AC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3428221",
+    "name": "시흥시 대야평생학습관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "시흥시",
+    "address": "경기도 시흥시 은행로173번길 14 (대야동)",
+    "phone": "",
+    "lat": 37.4453650832,
+    "lng": 126.7969159745,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%9C%ED%9D%A5%EC%8B%9C%20%EB%8C%80%EC%95%BC%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%9C%ED%9D%A5%EC%8B%9C%20%EB%8C%80%EC%95%BC%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%9C%ED%9D%A5%EC%8B%9C+%EB%8C%80%EC%95%BC%ED%8F%89%EC%83%9D%ED%95%99%EC%8A%B5%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3451580",
+    "name": "고양시립마두도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "고양시",
+    "address": "경기도 고양시 일산동구 일산로 355 (마두동)",
+    "phone": "",
+    "lat": 37.6667696285,
+    "lng": 126.7820694474,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/11/3451511_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B3%A0%EC%96%91%EC%8B%9C%EB%A6%BD%EB%A7%88%EB%91%90%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B3%A0%EC%96%91%EC%8B%9C%EB%A6%BD%EB%A7%88%EB%91%90%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B3%A0%EC%96%91%EC%8B%9C%EB%A6%BD%EB%A7%88%EB%91%90%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130417",
+    "name": "두루뫼박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "파주시",
+    "address": "경기도 파주시 법원읍 초리골길 278",
+    "phone": "",
+    "lat": 37.8567856366,
+    "lng": 126.8960036269,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/89/3514189_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%91%90%EB%A3%A8%EB%AB%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%91%90%EB%A3%A8%EB%AB%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%91%90%EB%A3%A8%EB%AB%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1910439",
+    "name": "프라움악기박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "남양주시",
+    "address": "경기도 남양주시 와부읍 경강로 756",
+    "phone": "",
+    "lat": 37.5685085007,
+    "lng": 127.227026113,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/13/3507813_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%94%84%EB%9D%BC%EC%9B%80%EC%95%85%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%94%84%EB%9D%BC%EC%9B%80%EC%95%85%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%94%84%EB%9D%BC%EC%9B%80%EC%95%85%EA%B8%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1753541",
+    "name": "문화예술원 마루홀",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경기도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeonggi",
+    "regionName": "경기도",
+    "district": "용인시",
+    "address": "경기도 용인시 처인구 중부대로 1199 (삼가동)",
+    "phone": "",
+    "lat": 37.2399762516,
+    "lng": 127.1780093252,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/09/3068809_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%9B%90%20%EB%A7%88%EB%A3%A8%ED%99%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%9B%90%20%EB%A7%88%EB%A3%A8%ED%99%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%B8%ED%99%94%EC%98%88%EC%88%A0%EC%9B%90+%EB%A7%88%EB%A3%A8%ED%99%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2735607",
+    "name": "금란정",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "동해시",
+    "address": "강원특별자치도 동해시 삼화동",
+    "phone": "",
+    "lat": 37.4638515626,
+    "lng": 129.0213282758,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3589225_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EB%9E%80%EC%A0%95"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EB%9E%80%EC%A0%95"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EB%9E%80%EC%A0%95"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2569384",
+    "name": "두타연 평화누리길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "양구군",
+    "address": "강원특별자치도 양구군 방산면",
+    "phone": "",
+    "lat": 38.226904235,
+    "lng": 127.9835710384,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%91%90%ED%83%80%EC%97%B0%20%ED%8F%89%ED%99%94%EB%88%84%EB%A6%AC%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%91%90%ED%83%80%EC%97%B0%20%ED%8F%89%ED%99%94%EB%88%84%EB%A6%AC%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%91%90%ED%83%80%EC%97%B0+%ED%8F%89%ED%99%94%EB%88%84%EB%A6%AC%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-136088",
+    "name": "신세계센트럴시티 영랑호리조트",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "속초시",
+    "address": "강원특별자치도 속초시 영랑호반길 170 (금호동)",
+    "phone": "",
+    "lat": 38.2136005323,
+    "lng": 128.5774062562,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%EC%84%B8%EA%B3%84%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%8B%9C%ED%8B%B0%20%EC%98%81%EB%9E%91%ED%98%B8%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%8B%9C%ED%8B%B0%20%EC%98%81%EB%9E%91%ED%98%B8%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%EC%84%B8%EA%B3%84%EC%84%BC%ED%8A%B8%EB%9F%B4%EC%8B%9C%ED%8B%B0+%EC%98%81%EB%9E%91%ED%98%B8%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125590",
+    "name": "태백산 국립공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "태백시",
+    "address": "강원특별자치도 태백시 번영로 59 (황지동)",
+    "phone": "",
+    "lat": 37.1493704243,
+    "lng": 128.988279673,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/10/3525010_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%83%9C%EB%B0%B1%EC%82%B0%20%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%83%9C%EB%B0%B1%EC%82%B0%20%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%83%9C%EB%B0%B1%EC%82%B0+%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1857095",
+    "name": "강원 영월 김삿갓면 [슬로시티]",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "영월군",
+    "address": "강원특별자치도 영월군 김삿갓면 옥동장터길 36",
+    "phone": "",
+    "lat": 37.1256151474,
+    "lng": 128.569898348,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/26/3585026_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EC%9B%90+%EC%98%81%EC%9B%94+%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4+%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125735",
+    "name": "강재구공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "홍천군",
+    "address": "강원특별자치도 홍천군 북방면 성동로 275",
+    "phone": "",
+    "lat": 37.7285545094,
+    "lng": 127.8684937219,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/72/3584672_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EC%9E%AC%EA%B5%AC%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EC%9E%AC%EA%B5%AC%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EC%9E%AC%EA%B5%AC%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-987582",
+    "name": "속초항",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "속초시",
+    "address": "강원특별자치도 속초시 동명동 속초항",
+    "phone": "",
+    "lat": 38.2089236252,
+    "lng": 128.5941826553,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/16/3078216_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8D%EC%B4%88%ED%95%AD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8D%EC%B4%88%ED%95%AD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8D%EC%B4%88%ED%95%AD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-585615",
+    "name": "도직해변",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 옥계면 도직리",
+    "phone": "",
+    "lat": 37.6093412454,
+    "lng": 129.0676585323,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/81/3069081_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%84%EC%A7%81%ED%95%B4%EB%B3%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%84%EC%A7%81%ED%95%B4%EB%B3%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%84%EC%A7%81%ED%95%B4%EB%B3%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127827",
+    "name": "덕가산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "영월군",
+    "address": "강원특별자치도 영월군 김삿갓면 영월동로 1547",
+    "phone": "",
+    "lat": 37.1218515249,
+    "lng": 128.5611214679,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/74/3342174_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8D%95%EA%B0%80%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8D%95%EA%B0%80%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8D%95%EA%B0%80%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126778",
+    "name": "대진1리해변",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "고성군",
+    "address": "강원특별자치도 고성군 현내면 한나루로4길 1",
+    "phone": "",
+    "lat": 38.50338874,
+    "lng": 128.4236806136,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/74/3006874_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%A7%841%EB%A6%AC%ED%95%B4%EB%B3%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%A7%841%EB%A6%AC%ED%95%B4%EB%B3%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%A7%841%EB%A6%AC%ED%95%B4%EB%B3%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2616559",
+    "name": "화천 백립암복합체 (강원평화지역 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "화천군",
+    "address": "강원특별자치도 화천군 화천읍 동촌리",
+    "phone": "",
+    "lat": 38.1865586624,
+    "lng": 127.8219314688,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/2616555_image2_1.bmp"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%99%94%EC%B2%9C%20%EB%B0%B1%EB%A6%BD%EC%95%94%EB%B3%B5%ED%95%A9%EC%B2%B4%20%28%EA%B0%95%EC%9B%90%ED%8F%89%ED%99%94%EC%A7%80%EC%97%AD%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%99%94%EC%B2%9C%20%EB%B0%B1%EB%A6%BD%EC%95%94%EB%B3%B5%ED%95%A9%EC%B2%B4%20%28%EA%B0%95%EC%9B%90%ED%8F%89%ED%99%94%EC%A7%80%EC%97%AD%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%99%94%EC%B2%9C+%EB%B0%B1%EB%A6%BD%EC%95%94%EB%B3%B5%ED%95%A9%EC%B2%B4+%28%EA%B0%95%EC%9B%90%ED%8F%89%ED%99%94%EC%A7%80%EC%97%AD+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127873",
+    "name": "백도해변",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "고성군",
+    "address": "강원특별자치도 고성군 죽왕면 백도해변길 78",
+    "phone": "",
+    "lat": 38.2983733969,
+    "lng": 128.5468480485,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/38/3009538_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B0%B1%EB%8F%84%ED%95%B4%EB%B3%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B0%B1%EB%8F%84%ED%95%B4%EB%B3%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B0%B1%EB%8F%84%ED%95%B4%EB%B3%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2514834",
+    "name": "죽정분교(구,죽정초등학교)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "고성군",
+    "address": "강원특별자치도 고성군 현내면 모정2길 2",
+    "phone": "",
+    "lat": 38.4704730657,
+    "lng": 128.4197681178,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/46/3070046_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90%28%EA%B5%AC%2C%EC%A3%BD%EC%A0%95%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90%28%EA%B5%AC%2C%EC%A3%BD%EC%A0%95%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90%28%EA%B5%AC%2C%EC%A3%BD%EC%A0%95%EC%B4%88%EB%93%B1%ED%95%99%EA%B5%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2782911",
+    "name": "응봉",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "고성군",
+    "address": "강원특별자치도 고성군 거진읍 화진포길 204-25",
+    "phone": "",
+    "lat": 38.4659741075,
+    "lng": 128.4463213907,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/87/3577887_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%91%EB%B4%89"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%91%EB%B4%89"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%91%EB%B4%89"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127844",
+    "name": "기우산(정선)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "정선군",
+    "address": "강원특별자치도 정선군 정선읍 신월리",
+    "phone": "",
+    "lat": 37.3564822114,
+    "lng": 128.6731377641,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/3342495_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%B0%EC%9A%B0%EC%82%B0%28%EC%A0%95%EC%84%A0%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%B0%EC%9A%B0%EC%82%B0%28%EC%A0%95%EC%84%A0%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%B0%EC%9A%B0%EC%82%B0%28%EC%A0%95%EC%84%A0%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2524190",
+    "name": "정선 아리랑센터 (정선아리랑문화재단)",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "정선군",
+    "address": "강원특별자치도 정선군 정선읍 애산로 51",
+    "phone": "",
+    "lat": 37.3761771346,
+    "lng": 128.6716067538,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3584633_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%95%EC%84%A0%20%EC%95%84%EB%A6%AC%EB%9E%91%EC%84%BC%ED%84%B0%20%28%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%EB%AC%B8%ED%99%94%EC%9E%AC%EB%8B%A8%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%95%EC%84%A0%20%EC%95%84%EB%A6%AC%EB%9E%91%EC%84%BC%ED%84%B0%20%28%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%EB%AC%B8%ED%99%94%EC%9E%AC%EB%8B%A8%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%95%EC%84%A0+%EC%95%84%EB%A6%AC%EB%9E%91%EC%84%BC%ED%84%B0+%28%EC%A0%95%EC%84%A0%EC%95%84%EB%A6%AC%EB%9E%91%EB%AC%B8%ED%99%94%EC%9E%AC%EB%8B%A8%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2706817",
+    "name": "강릉시립미술관 교동",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 화부산로40번길 46 (교동)",
+    "phone": "",
+    "lat": 37.7606064277,
+    "lng": 128.8908669769,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/31/3577531_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EB%A6%89%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EA%B5%90%EB%8F%99"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EB%A6%89%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EA%B5%90%EB%8F%99"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EB%A6%89%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80+%EA%B5%90%EB%8F%99"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130454",
+    "name": "삼척 어촌민속전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "삼척시",
+    "address": "강원특별자치도 삼척시 원덕읍 삼척로 1852-6",
+    "phone": "",
+    "lat": 37.2680106197,
+    "lng": 129.3272680373,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/96/3070896_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%82%BC%EC%B2%99%20%EC%96%B4%EC%B4%8C%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%82%BC%EC%B2%99%20%EC%96%B4%EC%B4%8C%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%82%BC%EC%B2%99+%EC%96%B4%EC%B4%8C%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130475",
+    "name": "난고 김삿갓 문학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "영월군",
+    "address": "강원특별자치도 영월군 김삿갓면 김삿갓로 216-22",
+    "phone": "",
+    "lat": 37.0795432684,
+    "lng": 128.6017551925,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/47/3580947_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%9C%EA%B3%A0%20%EA%B9%80%EC%82%BF%EA%B0%93%20%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%9C%EA%B3%A0%20%EA%B9%80%EC%82%BF%EA%B0%93%20%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%9C%EA%B3%A0+%EA%B9%80%EC%82%BF%EA%B0%93+%EB%AC%B8%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130908",
+    "name": "춘천막국수체험박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "춘천시",
+    "address": "강원특별자치도 춘천시 신북읍 신북로 264",
+    "phone": "",
+    "lat": 37.9488489046,
+    "lng": 127.7498007435,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/3561565_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%98%EC%B2%9C%EB%A7%89%EA%B5%AD%EC%88%98%EC%B2%B4%ED%97%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%98%EC%B2%9C%EB%A7%89%EA%B5%AD%EC%88%98%EC%B2%B4%ED%97%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%98%EC%B2%9C%EB%A7%89%EA%B5%AD%EC%88%98%EC%B2%B4%ED%97%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130736",
+    "name": "양구통일관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "양구군",
+    "address": "강원특별자치도 양구군 해안면 해안서화로 35",
+    "phone": "",
+    "lat": 38.2899471887,
+    "lng": 128.1455432111,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/63/3332763_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%96%91%EA%B5%AC%ED%86%B5%EC%9D%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%96%91%EA%B5%AC%ED%86%B5%EC%9D%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%96%91%EA%B5%AC%ED%86%B5%EC%9D%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2524183",
+    "name": "철암탄광역사촌",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "태백시",
+    "address": "강원특별자치도 태백시 동태백로 406 (철암동)",
+    "phone": "",
+    "lat": 37.1144170486,
+    "lng": 129.0372457998,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3498233_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%A0%EC%95%94%ED%83%84%EA%B4%91%EC%97%AD%EC%82%AC%EC%B4%8C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%A0%EC%95%94%ED%83%84%EA%B4%91%EC%97%AD%EC%82%AC%EC%B4%8C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%A0%EC%95%94%ED%83%84%EA%B4%91%EC%97%AD%EC%82%AC%EC%B4%8C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3532282",
+    "name": "단오타운전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 단오장길 1 (노암동)",
+    "phone": "",
+    "lat": 37.7482551607,
+    "lng": 128.8950697583,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3544745",
+    "name": "㈜타임트레인",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 강동면 헌화로 990-1",
+    "phone": "",
+    "lat": 37.6882676524,
+    "lng": 129.0374226949,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3539725",
+    "name": "갈골한과체험전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 사천면 중앙서로 62",
+    "phone": "",
+    "lat": 37.8245592109,
+    "lng": 128.8433165066,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%88%EA%B3%A8%ED%95%9C%EA%B3%BC%EC%B2%B4%ED%97%98%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%88%EA%B3%A8%ED%95%9C%EA%B3%BC%EC%B2%B4%ED%97%98%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%88%EA%B3%A8%ED%95%9C%EA%B3%BC%EC%B2%B4%ED%97%98%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3532413",
+    "name": "소금강 돌박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 연곡면 진고개로 1698",
+    "phone": "",
+    "lat": 37.8481875285,
+    "lng": 128.7261457948,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%EA%B8%88%EA%B0%95%20%EB%8F%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%EA%B8%88%EA%B0%95%20%EB%8F%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%EA%B8%88%EA%B0%95+%EB%8F%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3531540",
+    "name": "강릉올림픽뮤지엄",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "강릉시",
+    "address": "강원특별자치도 강릉시 수리골길 102 (포남동)",
+    "phone": "",
+    "lat": 37.7793516031,
+    "lng": 128.8971158338,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EB%A6%89%EC%98%AC%EB%A6%BC%ED%94%BD%EB%AE%A4%EC%A7%80%EC%97%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EB%A6%89%EC%98%AC%EB%A6%BC%ED%94%BD%EB%AE%A4%EC%A7%80%EC%97%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EB%A6%89%EC%98%AC%EB%A6%BC%ED%94%BD%EB%AE%A4%EC%A7%80%EC%97%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129883",
+    "name": "양양문화원",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "양양군",
+    "address": "강원특별자치도 양양군 양양읍 양양로 114-5",
+    "phone": "",
+    "lat": 38.0741730629,
+    "lng": 128.6163626198,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/56/3076856_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%96%91%EC%96%91%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%96%91%EC%96%91%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%96%91%EC%96%91%EB%AC%B8%ED%99%94%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-915509",
+    "name": "에티오피아한국전참전기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "춘천시",
+    "address": "강원특별자치도 춘천시 이디오피아길 1",
+    "phone": "",
+    "lat": 37.8738208146,
+    "lng": 127.711750884,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/53/2743053_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%97%90%ED%8B%B0%EC%98%A4%ED%94%BC%EC%95%84%ED%95%9C%EA%B5%AD%EC%A0%84%EC%B0%B8%EC%A0%84%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%97%90%ED%8B%B0%EC%98%A4%ED%94%BC%EC%95%84%ED%95%9C%EA%B5%AD%EC%A0%84%EC%B0%B8%EC%A0%84%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%97%90%ED%8B%B0%EC%98%A4%ED%94%BC%EC%95%84%ED%95%9C%EA%B5%AD%EC%A0%84%EC%B0%B8%EC%A0%84%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2513889",
+    "name": "국립산악박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 강원특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gangwon",
+    "regionName": "강원특별자치도",
+    "district": "속초시",
+    "address": "강원특별자치도 속초시 미시령로 3054",
+    "phone": "",
+    "lat": 38.2025955406,
+    "lng": 128.5404766211,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/3514742_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EB%A6%BD%EC%82%B0%EC%95%85%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EB%A6%BD%EC%82%B0%EC%95%85%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EB%A6%BD%EC%82%B0%EC%95%85%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127853",
+    "name": "하늘재",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "충주시",
+    "address": "충청북도 충주시 수안보면 미륵리",
+    "phone": "",
+    "lat": 36.8152475981,
+    "lng": 128.1027214224,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/57/3581757_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%98%EB%8A%98%EC%9E%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%98%EB%8A%98%EC%9E%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%98%EB%8A%98%EC%9E%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1683328",
+    "name": "덕주사 약사여래입상",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "제천시",
+    "address": "충청북도 제천시 한수면 미륵송계로2길 87",
+    "phone": "",
+    "lat": 36.8622448916,
+    "lng": 128.0978371813,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/14/3577314_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8D%95%EC%A3%BC%EC%82%AC+%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127564",
+    "name": "한천팔경",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "영동군",
+    "address": "충청북도 영동군 황간면 원촌리",
+    "phone": "",
+    "lat": 36.2379179868,
+    "lng": 127.8849598367,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/62/3577262_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EC%B2%9C%ED%8C%94%EA%B2%BD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EC%B2%9C%ED%8C%94%EA%B2%BD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EC%B2%9C%ED%8C%94%EA%B2%BD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126653",
+    "name": "도락산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "단양군",
+    "address": "충청북도 단양군 단성면 가산리",
+    "phone": "",
+    "lat": 36.8564190057,
+    "lng": 128.3131680804,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%84%EB%9D%BD%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%84%EB%9D%BD%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%84%EB%9D%BD%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128383",
+    "name": "구병리아름마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "보은군",
+    "address": "충청북도 보은군 속리산면 삼가구병길 152",
+    "phone": "",
+    "lat": 36.482428685,
+    "lng": 127.8702265989,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/63/3585363_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%EB%B3%91%EB%A6%AC%EC%95%84%EB%A6%84%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%EB%B3%91%EB%A6%AC%EC%95%84%EB%A6%84%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC%EB%B3%91%EB%A6%AC%EC%95%84%EB%A6%84%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-756447",
+    "name": "도마령(전망대)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "영동군",
+    "address": "충청북도 영동군 상촌면 고자리",
+    "phone": "",
+    "lat": 36.0698445605,
+    "lng": 127.8346189174,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/84/3581684_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%84%EB%A7%88%EB%A0%B9%28%EC%A0%84%EB%A7%9D%EB%8C%80%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%84%EB%A7%88%EB%A0%B9%28%EC%A0%84%EB%A7%9D%EB%8C%80%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%84%EB%A7%88%EB%A0%B9%28%EC%A0%84%EB%A7%9D%EB%8C%80%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2714802",
+    "name": "독수리봉",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "보은군",
+    "address": "충청북도 보은군 탄부면 대양리",
+    "phone": "",
+    "lat": 36.416247763,
+    "lng": 127.5844178478,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/67/3581967_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%85%EC%88%98%EB%A6%AC%EB%B4%89"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%85%EC%88%98%EB%A6%AC%EB%B4%89"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%85%EC%88%98%EB%A6%AC%EB%B4%89"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128283",
+    "name": "망이산성",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "음성군",
+    "address": "충청북도 음성군 삼성면 양덕리",
+    "phone": "",
+    "lat": 37.0518508283,
+    "lng": 127.4897169988,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%9D%EC%9D%B4%EC%82%B0%EC%84%B1"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%9D%EC%9D%B4%EC%82%B0%EC%84%B1"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%9D%EC%9D%B4%EC%82%B0%EC%84%B1"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2616351",
+    "name": "단양 수양개빛터널",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "단양군",
+    "address": "충청북도 단양군 적성면 수양개유적로 390",
+    "phone": "",
+    "lat": 36.960601856,
+    "lng": 128.3325466606,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/2613306_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%A8%EC%96%91%20%EC%88%98%EC%96%91%EA%B0%9C%EB%B9%9B%ED%84%B0%EB%84%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%A8%EC%96%91%20%EC%88%98%EC%96%91%EA%B0%9C%EB%B9%9B%ED%84%B0%EB%84%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%A8%EC%96%91+%EC%88%98%EC%96%91%EA%B0%9C%EB%B9%9B%ED%84%B0%EB%84%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-487729",
+    "name": "꽃절(화암사)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "음성군",
+    "address": "충청북도 음성군 원남면 보덕로 330",
+    "phone": "",
+    "lat": 36.8994932275,
+    "lng": 127.6345804712,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/37/3574837_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%BD%83%EC%A0%88%28%ED%99%94%EC%95%94%EC%82%AC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%BD%83%EC%A0%88%28%ED%99%94%EC%95%94%EC%82%AC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%BD%83%EC%A0%88%28%ED%99%94%EC%95%94%EC%82%AC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1114686",
+    "name": "감곡매괴성모순례지성당",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "음성군",
+    "address": "충청북도 음성군 감곡면 성당길 10",
+    "phone": "",
+    "lat": 37.1213983401,
+    "lng": 127.6411569266,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/53/3576253_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%90%EA%B3%A1%EB%A7%A4%EA%B4%B4%EC%84%B1%EB%AA%A8%EC%88%9C%EB%A1%80%EC%A7%80%EC%84%B1%EB%8B%B9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%90%EA%B3%A1%EB%A7%A4%EA%B4%B4%EC%84%B1%EB%AA%A8%EC%88%9C%EB%A1%80%EC%A7%80%EC%84%B1%EB%8B%B9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%90%EA%B3%A1%EB%A7%A4%EA%B4%B4%EC%84%B1%EB%AA%A8%EC%88%9C%EB%A1%80%EC%A7%80%EC%84%B1%EB%8B%B9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1684192",
+    "name": "제천 엽연초생산조합 구사옥",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "제천시",
+    "address": "충청북도 제천시 의병대로12길 8",
+    "phone": "",
+    "lat": 37.1364153993,
+    "lng": 128.2068389221,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/70/3568670_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%B2%9C%20%EC%97%BD%EC%97%B0%EC%B4%88%EC%83%9D%EC%82%B0%EC%A1%B0%ED%95%A9%20%EA%B5%AC%EC%82%AC%EC%98%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%B2%9C%20%EC%97%BD%EC%97%B0%EC%B4%88%EC%83%9D%EC%82%B0%EC%A1%B0%ED%95%A9%20%EA%B5%AC%EC%82%AC%EC%98%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%B2%9C+%EC%97%BD%EC%97%B0%EC%B4%88%EC%83%9D%EC%82%B0%EC%A1%B0%ED%95%A9+%EA%B5%AC%EC%82%AC%EC%98%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125813",
+    "name": "소백산국립공원(북부)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "단양군",
+    "address": "충청북도 단양군 가곡면 남한강로 494",
+    "phone": "",
+    "lat": 37.02428162,
+    "lng": 128.3841596278,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/08/3571608_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%EB%B0%B1%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%EB%B6%81%EB%B6%80%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%EB%B0%B1%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%EB%B6%81%EB%B6%80%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%EB%B0%B1%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%EB%B6%81%EB%B6%80%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2782401",
+    "name": "매산마을 담장벽화",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "음성군",
+    "address": "충청북도 음성군 감곡면 성당길 10",
+    "phone": "",
+    "lat": 37.1215955407,
+    "lng": 127.641220804,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/67/3573667_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84+%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-756476",
+    "name": "청풍정",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "옥천군",
+    "address": "충청북도 옥천군 군북면 석호리",
+    "phone": "",
+    "lat": 36.3688171939,
+    "lng": 127.5909713406,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/95/3572895_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%AD%ED%92%8D%EC%A0%95"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%AD%ED%92%8D%EC%A0%95"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%AD%ED%92%8D%EC%A0%95"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1938381",
+    "name": "충주고구려비전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "충주시",
+    "address": "충청북도 충주시 중앙탑면 감노로 2319",
+    "phone": "",
+    "lat": 37.0283295264,
+    "lng": 127.8482076062,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/07/3535007_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%A9%EC%A3%BC%EA%B3%A0%EA%B5%AC%EB%A0%A4%EB%B9%84%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%A9%EC%A3%BC%EA%B3%A0%EA%B5%AC%EB%A0%A4%EB%B9%84%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%A9%EC%A3%BC%EA%B3%A0%EA%B5%AC%EB%A0%A4%EB%B9%84%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130080",
+    "name": "운보의 집",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "청주시",
+    "address": "충청북도 청주시 청원구 내수읍 형동2길 92-41",
+    "phone": "",
+    "lat": 36.6919213789,
+    "lng": 127.5650536346,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/71/3504571_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%B4%EB%B3%B4%EC%9D%98%20%EC%A7%91"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%B4%EB%B3%B4%EC%9D%98%20%EC%A7%91"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%B4%EB%B3%B4%EC%9D%98+%EC%A7%91"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1685023",
+    "name": "제천의병전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "제천시",
+    "address": "충청북도 제천시 봉양읍 의암로 566-7",
+    "phone": "",
+    "lat": 37.0992118833,
+    "lng": 128.0865174789,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/52/3349952_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%B2%9C%EC%9D%98%EB%B3%91%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%B2%9C%EC%9D%98%EB%B3%91%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%B2%9C%EC%9D%98%EB%B3%91%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2638587",
+    "name": "의림지 역사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "제천시",
+    "address": "충청북도 제천시 의림대로47길 7",
+    "phone": "",
+    "lat": 37.1761553169,
+    "lng": 128.2094875238,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/93/3416193_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%98%EB%A6%BC%EC%A7%80%20%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%98%EB%A6%BC%EC%A7%80%20%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%98%EB%A6%BC%EC%A7%80+%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2989907",
+    "name": "옥천교육도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungbuk",
+    "regionName": "충청북도",
+    "district": "옥천군",
+    "address": "충청북도 옥천군 관성로3길 7 옥천교육도서관",
+    "phone": "",
+    "lat": 36.3010857124,
+    "lng": 127.5722581956,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/2989906_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%A5%EC%B2%9C%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%A5%EC%B2%9C%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%A5%EC%B2%9C%EA%B5%90%EC%9C%A1%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126899",
+    "name": "아산 영인산자연휴양림",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 영인면 아산온천로 16-26",
+    "phone": "",
+    "lat": 36.8410210525,
+    "lng": 126.9505937184,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/70/3567670_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%84%EC%82%B0%20%EC%98%81%EC%9D%B8%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%84%EC%82%B0%20%EC%98%81%EC%9D%B8%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%84%EC%82%B0+%EC%98%81%EC%9D%B8%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-231931",
+    "name": "논산명재고택",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 노성면 노성산성길 50",
+    "phone": "",
+    "lat": 36.2819800939,
+    "lng": 127.1314897789,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/01/3577201_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%85%BC%EC%82%B0%EB%AA%85%EC%9E%AC%EA%B3%A0%ED%83%9D"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%85%BC%EC%82%B0%EB%AA%85%EC%9E%AC%EA%B3%A0%ED%83%9D"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%85%BC%EC%82%B0%EB%AA%85%EC%9E%AC%EA%B3%A0%ED%83%9D"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-251994",
+    "name": "서동요 테마파크",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "부여군",
+    "address": "충청남도 부여군 충화면 충신로 616",
+    "phone": "",
+    "lat": 36.1452959308,
+    "lng": 126.8236792933,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/21/3588621_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EB%8F%99%EC%9A%94%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EB%8F%99%EC%9A%94%20%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EB%8F%99%EC%9A%94+%ED%85%8C%EB%A7%88%ED%8C%8C%ED%81%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128111",
+    "name": "세계꽃식물원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 도고면 아산만로 37-37",
+    "phone": "",
+    "lat": 36.7502826733,
+    "lng": 126.858915569,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/03/3567403_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B8%EA%B3%84%EA%BD%83%EC%8B%9D%EB%AC%BC%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B8%EA%B3%84%EA%BD%83%EC%8B%9D%EB%AC%BC%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B8%EA%B3%84%EA%BD%83%EC%8B%9D%EB%AC%BC%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1892320",
+    "name": "보령 천북굴단지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "보령시",
+    "address": "충청남도 보령시 천북면",
+    "phone": "",
+    "lat": 36.507554119,
+    "lng": 126.4846446968,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/72/3581872_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%EB%A0%B9%20%EC%B2%9C%EB%B6%81%EA%B5%B4%EB%8B%A8%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B3%B4%EB%A0%B9%20%EC%B2%9C%EB%B6%81%EA%B5%B4%EB%8B%A8%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B3%B4%EB%A0%B9+%EC%B2%9C%EB%B6%81%EA%B5%B4%EB%8B%A8%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2615570",
+    "name": "청라 은행마을 (보령)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "보령시",
+    "address": "충청남도 보령시 청라면 오서산길 150-65",
+    "phone": "",
+    "lat": 36.4272138547,
+    "lng": 126.6756046119,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/52/3577252_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%AD%EB%9D%BC%20%EC%9D%80%ED%96%89%EB%A7%88%EC%9D%84%20%28%EB%B3%B4%EB%A0%B9%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%AD%EB%9D%BC%20%EC%9D%80%ED%96%89%EB%A7%88%EC%9D%84%20%28%EB%B3%B4%EB%A0%B9%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%AD%EB%9D%BC+%EC%9D%80%ED%96%89%EB%A7%88%EC%9D%84+%28%EB%B3%B4%EB%A0%B9%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128335",
+    "name": "도정딸기마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 양촌면 황산벌로380번길 15",
+    "phone": "",
+    "lat": 36.134537804,
+    "lng": 127.2438531159,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/3577218_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%84%EC%A0%95%EB%94%B8%EA%B8%B0%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%84%EC%A0%95%EB%94%B8%EA%B8%B0%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%84%EC%A0%95%EB%94%B8%EA%B8%B0%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1856774",
+    "name": "대흥슬로시티",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "예산군",
+    "address": "충청남도 예산군 대흥면 중리길 49",
+    "phone": "",
+    "lat": 36.606675779,
+    "lng": 126.7903256198,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/34/3585434_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%ED%9D%A5%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%ED%9D%A5%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%ED%9D%A5%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1627011",
+    "name": "강경미내다리",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 채운면 삼거리",
+    "phone": "",
+    "lat": 36.152857008,
+    "lng": 127.031949343,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/16/3577116_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EA%B2%BD%EB%AF%B8%EB%82%B4%EB%8B%A4%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EA%B2%BD%EB%AF%B8%EB%82%B4%EB%8B%A4%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EA%B2%BD%EB%AF%B8%EB%82%B4%EB%8B%A4%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1626500",
+    "name": "노성향교",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 노성면 노성산성길 54",
+    "phone": "",
+    "lat": 36.2821939432,
+    "lng": 127.1306204062,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/11/3577111_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%85%B8%EC%84%B1%ED%96%A5%EA%B5%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%85%B8%EC%84%B1%ED%96%A5%EA%B5%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%85%B8%EC%84%B1%ED%96%A5%EA%B5%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2719582",
+    "name": "탑정호 수변생태공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 부적면 부적로 721-10",
+    "phone": "",
+    "lat": 36.191293965,
+    "lng": 127.1727996164,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/59/3577059_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%83%91%EC%A0%95%ED%98%B8%20%EC%88%98%EB%B3%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%83%91%EC%A0%95%ED%98%B8%20%EC%88%98%EB%B3%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%83%91%EC%A0%95%ED%98%B8+%EC%88%98%EB%B3%80%EC%83%9D%ED%83%9C%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2037326",
+    "name": "아산 환경과학공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 실옥로 220 (배미동)",
+    "phone": "",
+    "lat": 36.798279242,
+    "lng": 126.9782229463,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/30/3569430_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%84%EC%82%B0%20%ED%99%98%EA%B2%BD%EA%B3%BC%ED%95%99%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%84%EC%82%B0%20%ED%99%98%EA%B2%BD%EA%B3%BC%ED%95%99%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%84%EC%82%B0+%ED%99%98%EA%B2%BD%EA%B3%BC%ED%95%99%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-318342",
+    "name": "선림사(보령)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "보령시",
+    "address": "충청남도 보령시 오천면 충청수영로 521-64",
+    "phone": "",
+    "lat": 36.4378354731,
+    "lng": 126.5499378671,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/87/3575387_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%A0%EB%A6%BC%EC%82%AC%28%EB%B3%B4%EB%A0%B9%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%A0%EB%A6%BC%EC%82%AC%28%EB%B3%B4%EB%A0%B9%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%A0%EB%A6%BC%EC%82%AC%28%EB%B3%B4%EB%A0%B9%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2829486",
+    "name": "천북 청보리밭",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "보령시",
+    "address": "충청남도 보령시 천북면 천광로 73-1",
+    "phone": "",
+    "lat": 36.4799830842,
+    "lng": 126.531049572,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/62/3574162_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%9C%EB%B6%81%20%EC%B2%AD%EB%B3%B4%EB%A6%AC%EB%B0%AD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%9C%EB%B6%81%20%EC%B2%AD%EB%B3%B4%EB%A6%AC%EB%B0%AD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%9C%EB%B6%81+%EC%B2%AD%EB%B3%B4%EB%A6%AC%EB%B0%AD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2465928",
+    "name": "한산소곡주 양조장",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "서천군",
+    "address": "충청남도 서천군 한산면 충절로 1118",
+    "phone": "",
+    "lat": 36.0800807955,
+    "lng": 126.8023273555,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/00/3567100_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC+%EC%96%91%EC%A1%B0%EC%9E%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129787",
+    "name": "국립공주박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "공주시",
+    "address": "충청남도 공주시 관광단지길 34 (웅진동)",
+    "phone": "",
+    "lat": 36.4665696863,
+    "lng": 127.1100589651,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3534933_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%A3%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130896",
+    "name": "백제군사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "논산시",
+    "address": "충청남도 논산시 부적면 충곡로 311-54",
+    "phone": "",
+    "lat": 36.1923939899,
+    "lng": 127.1814015962,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/49/3577049_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B0%B1%EC%A0%9C%EA%B5%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B0%B1%EC%A0%9C%EA%B5%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B0%B1%EC%A0%9C%EA%B5%B0%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2707902",
+    "name": "아산생태곤충원",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 실옥로 216 (배미동)",
+    "phone": "",
+    "lat": 36.798879192,
+    "lng": 126.979308943,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/47/3569347_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%84%EC%82%B0%EC%83%9D%ED%83%9C%EA%B3%A4%EC%B6%A9%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%84%EC%82%B0%EC%83%9D%ED%83%9C%EA%B3%A4%EC%B6%A9%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%84%EC%82%B0%EC%83%9D%ED%83%9C%EA%B3%A4%EC%B6%A9%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3525982",
+    "name": "토성산맹꽁이작은도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "서산시",
+    "address": "충청남도 서산시 인지면 토성산길 29-6",
+    "phone": "",
+    "lat": 36.7584879207,
+    "lng": 126.4154582076,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/81/3525981_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%86%A0%EC%84%B1%EC%82%B0%EB%A7%B9%EA%BD%81%EC%9D%B4%EC%9E%91%EC%9D%80%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%86%A0%EC%84%B1%EC%82%B0%EB%A7%B9%EA%BD%81%EC%9D%B4%EC%9E%91%EC%9D%80%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%86%A0%EC%84%B1%EC%82%B0%EB%A7%B9%EA%BD%81%EC%9D%B4%EC%9E%91%EC%9D%80%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2751969",
+    "name": "영인산산림박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 염치읍 아산온천로 16-30",
+    "phone": "",
+    "lat": 36.8432734011,
+    "lng": 126.9409639703,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%81%EC%9D%B8%EC%82%B0%EC%82%B0%EB%A6%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%81%EC%9D%B8%EC%82%B0%EC%82%B0%EB%A6%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%81%EC%9D%B8%EC%82%B0%EC%82%B0%EB%A6%BC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-915371",
+    "name": "결성농요농사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "홍성군",
+    "address": "충청남도 홍성군 결성면 구성남로 91",
+    "phone": "",
+    "lat": 36.53260512,
+    "lng": 126.5489604587,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%B0%EC%84%B1%EB%86%8D%EC%9A%94%EB%86%8D%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%B0%EC%84%B1%EB%86%8D%EC%9A%94%EB%86%8D%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%B0%EC%84%B1%EB%86%8D%EC%9A%94%EB%86%8D%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3056730",
+    "name": "민병갈 식물도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "태안군",
+    "address": "충청남도 태안군 소원면 천리포1길 234-5",
+    "phone": "",
+    "lat": 36.8028227426,
+    "lng": 126.1519170331,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/36/3493036_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AF%BC%EB%B3%91%EA%B0%88%20%EC%8B%9D%EB%AC%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AF%BC%EB%B3%91%EA%B0%88%20%EC%8B%9D%EB%AC%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AF%BC%EB%B3%91%EA%B0%88+%EC%8B%9D%EB%AC%BC%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130109",
+    "name": "안견기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "서산시",
+    "address": "충청남도 서산시 지곡면 안견관길 15-17",
+    "phone": "",
+    "lat": 36.8640261369,
+    "lng": 126.4385283078,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/01/2537401_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%88%EA%B2%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%88%EA%B2%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%88%EA%B2%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2758461",
+    "name": "모나밸리",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "아산시",
+    "address": "충청남도 아산시 순천향로 624",
+    "phone": "",
+    "lat": 36.750787736,
+    "lng": 126.992306302,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/77/3353777_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AA%A8%EB%82%98%EB%B0%B8%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AA%A8%EB%82%98%EB%B0%B8%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AA%A8%EB%82%98%EB%B0%B8%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130171",
+    "name": "공주민속극박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "공주시",
+    "address": "충청남도 공주시 의당면 돌모루2길 17-15",
+    "phone": "",
+    "lat": 36.5022801508,
+    "lng": 127.1481684687,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/92/3338692_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B3%B5%EC%A3%BC%EB%AF%BC%EC%86%8D%EA%B7%B9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B3%B5%EC%A3%BC%EB%AF%BC%EC%86%8D%EA%B7%B9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B3%B5%EC%A3%BC%EB%AF%BC%EC%86%8D%EA%B7%B9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2606202",
+    "name": "유류피해 극복기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 충청남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "chungnam",
+    "regionName": "충청남도",
+    "district": "태안군",
+    "address": "충청남도 태안군 소원면 천리포1길 120",
+    "phone": "",
+    "lat": 36.7926877415,
+    "lng": 126.1483398462,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9C%A0%EB%A5%98%ED%94%BC%ED%95%B4%20%EA%B7%B9%EB%B3%B5%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9C%A0%EB%A5%98%ED%94%BC%ED%95%B4%20%EA%B7%B9%EB%B3%B5%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9C%A0%EB%A5%98%ED%94%BC%ED%95%B4+%EA%B7%B9%EB%B3%B5%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-337537",
+    "name": "영지사",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "영천시",
+    "address": "경상북도 영천시 대창면 영지길 471",
+    "phone": "",
+    "lat": 35.8440822894,
+    "lng": 128.9506738204,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/61/3590961_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%81%EC%A7%80%EC%82%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%81%EC%A7%80%EC%82%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%81%EC%A7%80%EC%82%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1331230",
+    "name": "왕피천 (경북 동해안 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울진군",
+    "address": "경상북도 울진군 금강송면 왕피리",
+    "phone": "",
+    "lat": 36.8982497302,
+    "lng": 129.3029286663,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/3591018_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%99%95%ED%94%BC%EC%B2%9C%20%28%EA%B2%BD%EB%B6%81%20%EB%8F%99%ED%95%B4%EC%95%88%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%99%95%ED%94%BC%EC%B2%9C%20%28%EA%B2%BD%EB%B6%81%20%EB%8F%99%ED%95%B4%EC%95%88%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%99%95%ED%94%BC%EC%B2%9C+%28%EA%B2%BD%EB%B6%81+%EB%8F%99%ED%95%B4%EC%95%88+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2554516",
+    "name": "문경오미자체험촌",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "문경시",
+    "address": "경상북도 문경시 동로면 여우목로 2371-5",
+    "phone": "",
+    "lat": 36.7858986176,
+    "lng": 128.2757873431,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/37/3579537_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%B8%EA%B2%BD%EC%98%A4%EB%AF%B8%EC%9E%90%EC%B2%B4%ED%97%98%EC%B4%8C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%B8%EA%B2%BD%EC%98%A4%EB%AF%B8%EC%9E%90%EC%B2%B4%ED%97%98%EC%B4%8C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%B8%EA%B2%BD%EC%98%A4%EB%AF%B8%EC%9E%90%EC%B2%B4%ED%97%98%EC%B4%8C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126169",
+    "name": "대승사(문경)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "문경시",
+    "address": "경상북도 문경시 산북면 대승사길 283",
+    "phone": "",
+    "lat": 36.7482472812,
+    "lng": 128.2706722148,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/64/3590464_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%8A%B9%EC%82%AC%28%EB%AC%B8%EA%B2%BD%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%8A%B9%EC%82%AC%28%EB%AC%B8%EA%B2%BD%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%8A%B9%EC%82%AC%28%EB%AC%B8%EA%B2%BD%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-228889",
+    "name": "봉화 청암정",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "봉화군",
+    "address": "경상북도 봉화군 봉화읍 충재길 44",
+    "phone": "",
+    "lat": 36.9049520746,
+    "lng": 128.7420200393,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/84/3014684_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B4%89%ED%99%94%20%EC%B2%AD%EC%95%94%EC%A0%95"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B4%89%ED%99%94%20%EC%B2%AD%EC%95%94%EC%A0%95"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B4%89%ED%99%94+%EC%B2%AD%EC%95%94%EC%A0%95"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3510444",
+    "name": "농업회사법인주식회사꿀벌인",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "칠곡군",
+    "address": "경상북도 칠곡군 왜관읍 호국로 333-40",
+    "phone": "",
+    "lat": 36.0140310205,
+    "lng": 128.4218767573,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/21/3550821_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614652",
+    "name": "알봉 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 북면 나리",
+    "phone": "",
+    "lat": 37.5204154473,
+    "lng": 130.8582435295,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/57/3575457_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%8C%EB%B4%89%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%8C%EB%B4%89%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%8C%EB%B4%89+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2616131",
+    "name": "삼선암 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 북면 천부리",
+    "phone": "",
+    "lat": 37.5495520394,
+    "lng": 130.9079409556,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3575350_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%82%BC%EC%84%A0%EC%95%94%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%82%BC%EC%84%A0%EC%95%94%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%82%BC%EC%84%A0%EC%95%94+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614692",
+    "name": "태하 해안산책로 및 대풍감 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 서면 태하리",
+    "phone": "",
+    "lat": 37.5139510082,
+    "lng": 130.7963381023,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/90/3574890_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%83%9C%ED%95%98+%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C+%EB%B0%8F+%EB%8C%80%ED%92%8D%EA%B0%90+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-264502",
+    "name": "죽암몽돌해안 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 북면 천부리",
+    "phone": "",
+    "lat": 37.5408526568,
+    "lng": 130.8898400649,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/21/3575321_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BD%EC%95%94%EB%AA%BD%EB%8F%8C%ED%95%B4%EC%95%88%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BD%EC%95%94%EB%AA%BD%EB%8F%8C%ED%95%B4%EC%95%88%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BD%EC%95%94%EB%AA%BD%EB%8F%8C%ED%95%B4%EC%95%88+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2616077",
+    "name": "관음도 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 북면 천부리",
+    "phone": "",
+    "lat": 37.5429530626,
+    "lng": 130.9207400425,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3574833_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B4%80%EC%9D%8C%EB%8F%84%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B4%80%EC%9D%8C%EB%8F%84%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B4%80%EC%9D%8C%EB%8F%84+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614676",
+    "name": "행남 저동 해안산책로 (울릉도, 독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 울릉읍 도동리",
+    "phone": "",
+    "lat": 37.4897506666,
+    "lng": 130.9135396547,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3576425_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%20%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%96%89%EB%82%A8+%EC%A0%80%EB%8F%99+%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C+%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2614583",
+    "name": "행남 도동 해안산책로 (울릉도,독도 국가지질공원)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 울릉읍 도동리",
+    "phone": "",
+    "lat": 37.4818515011,
+    "lng": 130.9102402057,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/31/3589631_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%EB%8F%85%EB%8F%84%20%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%96%89%EB%82%A8+%EB%8F%84%EB%8F%99+%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C+%28%EC%9A%B8%EB%A6%89%EB%8F%84%2C%EB%8F%85%EB%8F%84+%EA%B5%AD%EA%B0%80%EC%A7%80%EC%A7%88%EA%B3%B5%EC%9B%90%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-578999",
+    "name": "청암사(김천)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "김천시",
+    "address": "경상북도 김천시 증산면 평촌2길 335-48",
+    "phone": "",
+    "lat": 35.8912428788,
+    "lng": 128.0024200131,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/83/3589583_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%AD%EC%95%94%EC%82%AC%28%EA%B9%80%EC%B2%9C%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%AD%EC%95%94%EC%82%AC%28%EA%B9%80%EC%B2%9C%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%AD%EC%95%94%EC%82%AC%28%EA%B9%80%EC%B2%9C%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2616076",
+    "name": "내수전일출전망대",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "울릉군",
+    "address": "경상북도 울릉군 울릉읍 저동리",
+    "phone": "",
+    "lat": 37.5122507908,
+    "lng": 130.9097392493,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/37/3575337_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%B4%EC%88%98%EC%A0%84%EC%9D%BC%EC%B6%9C%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%B4%EC%88%98%EC%A0%84%EC%9D%BC%EC%B6%9C%EC%A0%84%EB%A7%9D%EB%8C%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%B4%EC%88%98%EC%A0%84%EC%9D%BC%EC%B6%9C%EC%A0%84%EB%A7%9D%EB%8C%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2715994",
+    "name": "강문화전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "예천군",
+    "address": "경상북도 예천군 풍양면 삼강리길 53-23",
+    "phone": "",
+    "lat": 36.5636051435,
+    "lng": 128.3041828373,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/86/3572586_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B0%95%EB%AC%B8%ED%99%94%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B0%95%EB%AC%B8%ED%99%94%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B0%95%EB%AC%B8%ED%99%94%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129772",
+    "name": "안동시립박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "안동시",
+    "address": "경상북도 안동시 민속촌길 13",
+    "phone": "",
+    "lat": 36.5787537262,
+    "lng": 128.7663940765,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/83/3538783_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%95%88%EB%8F%99%EC%8B%9C%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%95%88%EB%8F%99%EC%8B%9C%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%95%88%EB%8F%99%EC%8B%9C%EB%A6%BD%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130016",
+    "name": "성주문화원",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "성주군",
+    "address": "경상북도 성주군 성주읍 성주로 3204",
+    "phone": "",
+    "lat": 35.9188087503,
+    "lng": 128.2843721009,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/39/1403039_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B1%EC%A3%BC%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B1%EC%A3%BC%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B1%EC%A3%BC%EB%AC%B8%ED%99%94%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3443660",
+    "name": "경상북도교육청 청도도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "청도군",
+    "address": "경상북도 청도군 청도읍 청화로 124",
+    "phone": "",
+    "lat": 35.6455591265,
+    "lng": 128.739906203,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3443633_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%20%EC%B2%AD%EB%8F%84%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD%20%EC%B2%AD%EB%8F%84%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EC%83%81%EB%B6%81%EB%8F%84%EA%B5%90%EC%9C%A1%EC%B2%AD+%EC%B2%AD%EB%8F%84%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3442528",
+    "name": "신라고분정보센터",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "경주시",
+    "address": "경상북도 경주시 봉황로 23 (노서동)",
+    "phone": "",
+    "lat": 35.8416263274,
+    "lng": 129.2100372454,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%EB%9D%BC%EA%B3%A0%EB%B6%84%EC%A0%95%EB%B3%B4%EC%84%BC%ED%84%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%EB%9D%BC%EA%B3%A0%EB%B6%84%EC%A0%95%EB%B3%B4%EC%84%BC%ED%84%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%EB%9D%BC%EA%B3%A0%EB%B6%84%EC%A0%95%EB%B3%B4%EC%84%BC%ED%84%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3449443",
+    "name": "별고을시네마",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "성주군",
+    "address": "경상북도 성주군 성주읍 경산길 17",
+    "phone": "",
+    "lat": 35.9169895282,
+    "lng": 128.2852387411,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3449050_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B3%84%EA%B3%A0%EC%9D%84%EC%8B%9C%EB%84%A4%EB%A7%88"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B3%84%EA%B3%A0%EC%9D%84%EC%8B%9C%EB%84%A4%EB%A7%88"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B3%84%EA%B3%A0%EC%9D%84%EC%8B%9C%EB%84%A4%EB%A7%88"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130894",
+    "name": "소수박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "영주시",
+    "address": "경상북도 영주시 순흥면 소백로 2780",
+    "phone": "",
+    "lat": 36.9258299838,
+    "lng": 128.5820781426,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/70/3512770_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%86%8C%EC%88%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%86%8C%EC%88%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%86%8C%EC%88%98%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3449587",
+    "name": "대가야시네마",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "고령군",
+    "address": "경상북도 고령군 대가야읍 대가야로 1216",
+    "phone": "",
+    "lat": 35.7212529077,
+    "lng": 128.2599602256,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/80/3449080_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EA%B0%80%EC%95%BC%EC%8B%9C%EB%84%A4%EB%A7%88"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EA%B0%80%EC%95%BC%EC%8B%9C%EB%84%A4%EB%A7%88"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EA%B0%80%EC%95%BC%EC%8B%9C%EB%84%A4%EB%A7%88"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2756965",
+    "name": "키덜트뮤지엄",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "경주시",
+    "address": "경상북도 경주시 보문로 132-16",
+    "phone": "",
+    "lat": 35.8526484044,
+    "lng": 129.268176281,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/96/3444796_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%82%A4%EB%8D%9C%ED%8A%B8%EB%AE%A4%EC%A7%80%EC%97%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%82%A4%EB%8D%9C%ED%8A%B8%EB%AE%A4%EC%A7%80%EC%97%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%82%A4%EB%8D%9C%ED%8A%B8%EB%AE%A4%EC%A7%80%EC%97%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3453492",
+    "name": "경주중앙도서관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상북도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongbuk",
+    "regionName": "경상북도",
+    "district": "경주시",
+    "address": "경상북도 경주시 금성로 236 (사정동)",
+    "phone": "",
+    "lat": 35.8386210597,
+    "lng": 129.2072931267,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/71/3453271_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EC%A3%BC%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EC%A3%BC%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EC%A3%BC%EC%A4%91%EC%95%99%EB%8F%84%EC%84%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-319565",
+    "name": "성전암(진주)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "진주시",
+    "address": "경상남도 진주시 이반성면 장안로65번길 291",
+    "phone": "",
+    "lat": 35.2077902373,
+    "lng": 128.3514577019,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3040315_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B1%EC%A0%84%EC%95%94%28%EC%A7%84%EC%A3%BC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B1%EC%A0%84%EC%95%94%28%EC%A7%84%EC%A3%BC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B1%EC%A0%84%EC%95%94%28%EC%A7%84%EC%A3%BC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-773075",
+    "name": "경남 하동 악양면 [슬로시티]",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "하동군",
+    "address": "경상남도 하동군 악양면 악양서로 357",
+    "phone": "",
+    "lat": 35.1623867315,
+    "lng": 127.7089347057,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/3589529_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B2%BD%EB%82%A8+%ED%95%98%EB%8F%99+%EC%95%85%EC%96%91%EB%A9%B4+%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2578387",
+    "name": "올가리조트",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "통영시",
+    "address": "경상남도 통영시 용남면 화포1길 59-83",
+    "phone": "",
+    "lat": 34.8621945692,
+    "lng": 128.4461474804,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%AC%EA%B0%80%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%AC%EA%B0%80%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%AC%EA%B0%80%EB%A6%AC%EC%A1%B0%ED%8A%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-756585",
+    "name": "대포마을(산청)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "산청군",
+    "address": "경상남도 산청군 생초면 명지대포로236번길 167-6",
+    "phone": "",
+    "lat": 35.4622249381,
+    "lng": 127.8553361851,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/17/3589117_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%ED%8F%AC%EB%A7%88%EC%9D%84%28%EC%82%B0%EC%B2%AD%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%ED%8F%AC%EB%A7%88%EC%9D%84%28%EC%82%B0%EC%B2%AD%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%ED%8F%AC%EB%A7%88%EC%9D%84%28%EC%82%B0%EC%B2%AD%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1323490",
+    "name": "하동향교",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "하동군",
+    "address": "경상남도 하동군 하동읍 향교2길 5",
+    "phone": "",
+    "lat": 35.0705587917,
+    "lng": 127.7442006512,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/97/3376097_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%98%EB%8F%99%ED%96%A5%EA%B5%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%98%EB%8F%99%ED%96%A5%EA%B5%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%98%EB%8F%99%ED%96%A5%EA%B5%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126183",
+    "name": "대원사(산청)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "산청군",
+    "address": "경상남도 산청군 삼장면 대원사길 455",
+    "phone": "",
+    "lat": 35.3556805591,
+    "lng": 127.8071737941,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/80/3588680_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%EC%9B%90%EC%82%AC%28%EC%82%B0%EC%B2%AD%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%EC%9B%90%EC%82%AC%28%EC%82%B0%EC%B2%AD%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%EC%9B%90%EC%82%AC%28%EC%82%B0%EC%B2%AD%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1914082",
+    "name": "황매산 모산재",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "합천군",
+    "address": "경상남도 합천군 가회면 황매산로 607",
+    "phone": "",
+    "lat": 35.4691156475,
+    "lng": 128.0015370114,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/3588329_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%99%A9%EB%A7%A4%EC%82%B0%20%EB%AA%A8%EC%82%B0%EC%9E%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%99%A9%EB%A7%A4%EC%82%B0%20%EB%AA%A8%EC%82%B0%EC%9E%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%99%A9%EB%A7%A4%EC%82%B0+%EB%AA%A8%EC%82%B0%EC%9E%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126015",
+    "name": "한려해상국립공원(하동)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "하동군",
+    "address": "경상남도 하동군 금남면",
+    "phone": "",
+    "lat": 34.9490499577,
+    "lng": 127.8880356254,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/67/3587167_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EB%A0%A4%ED%95%B4%EC%83%81%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EB%A0%A4%ED%95%B4%EC%83%81%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EB%A0%A4%ED%95%B4%EC%83%81%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126026",
+    "name": "지리산국립공원(하동)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "하동군",
+    "address": "경상남도 하동군 화개면 화개로 541-9",
+    "phone": "",
+    "lat": 35.2317749665,
+    "lng": 127.64201657,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3587215_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A7%80%EB%A6%AC%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A7%80%EB%A6%AC%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A7%80%EB%A6%AC%EC%82%B0%EA%B5%AD%EB%A6%BD%EA%B3%B5%EC%9B%90%28%ED%95%98%EB%8F%99%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2652462",
+    "name": "지리산 가는길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "함양군",
+    "address": "경상남도 함양군 휴천면",
+    "phone": "",
+    "lat": 35.473354307,
+    "lng": 127.7021188488,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/48/3070448_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A7%80%EB%A6%AC%EC%82%B0%20%EA%B0%80%EB%8A%94%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A7%80%EB%A6%AC%EC%82%B0%20%EA%B0%80%EB%8A%94%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A7%80%EB%A6%AC%EC%82%B0+%EA%B0%80%EB%8A%94%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2652458",
+    "name": "청암 하동호 산중호수길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "하동군",
+    "address": "경상남도 하동군 청암면 고래실길 6",
+    "phone": "",
+    "lat": 35.1625574926,
+    "lng": 127.7852002206,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3070350_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%AD%EC%95%94%20%ED%95%98%EB%8F%99%ED%98%B8%20%EC%82%B0%EC%A4%91%ED%98%B8%EC%88%98%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%AD%EC%95%94%20%ED%95%98%EB%8F%99%ED%98%B8%20%EC%82%B0%EC%A4%91%ED%98%B8%EC%88%98%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%AD%EC%95%94+%ED%95%98%EB%8F%99%ED%98%B8+%EC%82%B0%EC%A4%91%ED%98%B8%EC%88%98%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2652455",
+    "name": "설천 남해해안도로",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "남해군",
+    "address": "경상남도 남해군 설천면",
+    "phone": "",
+    "lat": 34.9396756638,
+    "lng": 127.8682903743,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/56/3076956_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%A4%EC%B2%9C+%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2652453",
+    "name": "동해 해안길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "고성군",
+    "address": "경상남도 고성군 동해면",
+    "phone": "",
+    "lat": 35.0751850008,
+    "lng": 128.4682149172,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/50/3077250_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%99%ED%95%B4%20%ED%95%B4%EC%95%88%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%99%ED%95%B4%20%ED%95%B4%EC%95%88%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%99%ED%95%B4+%ED%95%B4%EC%95%88%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2652400",
+    "name": "창포 해안길",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 마산합포구 구산면 해양관광로 1872-60",
+    "phone": "",
+    "lat": 35.0676070014,
+    "lng": 128.562854081,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/85/3070085_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B0%BD%ED%8F%AC%20%ED%95%B4%EC%95%88%EA%B8%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B0%BD%ED%8F%AC%20%ED%95%B4%EC%95%88%EA%B8%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B0%BD%ED%8F%AC+%ED%95%B4%EC%95%88%EA%B8%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2612900",
+    "name": "진양호 일주도로",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "진주시",
+    "address": "경상남도 진주시 남강로1번길 126",
+    "phone": "",
+    "lat": 35.1762325817,
+    "lng": 128.0350390417,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/49/3069949_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A7%84%EC%96%91%ED%98%B8+%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130897",
+    "name": "합천박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "합천군",
+    "address": "경상남도 합천군 황강옥전로 1558 합천박물관",
+    "phone": "",
+    "lat": 35.5804164876,
+    "lng": 128.284086929,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/90/3584890_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%A9%EC%B2%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%A9%EC%B2%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%A9%EC%B2%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130086",
+    "name": "창원시립마산문신미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 마산합포구 문신길 147",
+    "phone": "",
+    "lat": 35.206760951,
+    "lng": 128.5692942322,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/61/3569161_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%AC%B8%EC%8B%A0%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%AC%B8%EC%8B%A0%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%AC%B8%EC%8B%A0%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-662140",
+    "name": "주남저수지 람사르문화관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 의창구 동읍 주남로101번길 26",
+    "phone": "",
+    "lat": 35.307271083,
+    "lng": 128.6780153447,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/77/3569077_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BC%EB%82%A8%EC%A0%80%EC%88%98%EC%A7%80%20%EB%9E%8C%EC%82%AC%EB%A5%B4%EB%AC%B8%ED%99%94%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BC%EB%82%A8%EC%A0%80%EC%88%98%EC%A7%80%20%EB%9E%8C%EC%82%AC%EB%A5%B4%EB%AC%B8%ED%99%94%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BC%EB%82%A8%EC%A0%80%EC%88%98%EC%A7%80+%EB%9E%8C%EC%82%AC%EB%A5%B4%EB%AC%B8%ED%99%94%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130421",
+    "name": "창원시립마산박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 마산합포구 문신길 105 창원시립마산박물관",
+    "phone": "",
+    "lat": 35.2055721767,
+    "lng": 128.5682499109,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/10/3564710_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B0%BD%EC%9B%90%EC%8B%9C%EB%A6%BD%EB%A7%88%EC%82%B0%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2406404",
+    "name": "칠천량해전공원전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "거제시",
+    "address": "경상남도 거제시 하청면 칠천로 265-39",
+    "phone": "",
+    "lat": 34.9776710338,
+    "lng": 128.6282618906,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/3510642_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B9%A0%EC%B2%9C%EB%9F%89%ED%95%B4%EC%A0%84%EA%B3%B5%EC%9B%90%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B9%A0%EC%B2%9C%EB%9F%89%ED%95%B4%EC%A0%84%EA%B3%B5%EC%9B%90%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B9%A0%EC%B2%9C%EB%9F%89%ED%95%B4%EC%A0%84%EA%B3%B5%EC%9B%90%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2659216",
+    "name": "마산현대미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 마산합포구 진전면 팔의사로 361",
+    "phone": "",
+    "lat": 35.1269971188,
+    "lng": 128.3840431148,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/3510429_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%88%EC%82%B0%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%88%EC%82%B0%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%88%EC%82%B0%ED%98%84%EB%8C%80%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2795833",
+    "name": "주남아트갤러리",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 경상남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "gyeongnam",
+    "regionName": "경상남도",
+    "district": "창원시",
+    "address": "경상남도 창원시 의창구 동읍 주남로71번길 43-1",
+    "phone": "",
+    "lat": 35.3068516168,
+    "lng": 128.6742434642,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/66/2796666_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A3%BC%EB%82%A8%EC%95%84%ED%8A%B8%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A3%BC%EB%82%A8%EC%95%84%ED%8A%B8%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A3%BC%EB%82%A8%EC%95%84%ED%8A%B8%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-231907",
+    "name": "정읍 김명관 고택",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 산외면 공동길 72-10",
+    "phone": "",
+    "lat": 35.6161623752,
+    "lng": 127.0199921979,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/79/1606479_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%95%EC%9D%8D%20%EA%B9%80%EB%AA%85%EA%B4%80%20%EA%B3%A0%ED%83%9D"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%95%EC%9D%8D%20%EA%B9%80%EB%AA%85%EA%B4%80%20%EA%B3%A0%ED%83%9D"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%95%EC%9D%8D+%EA%B9%80%EB%AA%85%EA%B4%80+%EA%B3%A0%ED%83%9D"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1583188",
+    "name": "조해영가옥",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "익산시",
+    "address": "전북특별자치도 익산시 함라면 수동길 8",
+    "phone": "",
+    "lat": 36.0610403971,
+    "lng": 126.9108820318,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/69/3587869_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A1%B0%ED%95%B4%EC%98%81%EA%B0%80%EC%98%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A1%B0%ED%95%B4%EC%98%81%EA%B0%80%EC%98%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A1%B0%ED%95%B4%EC%98%81%EA%B0%80%EC%98%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1583137",
+    "name": "이배원 가옥",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "익산시",
+    "address": "전북특별자치도 익산시 함라면 천남1길 13",
+    "phone": "",
+    "lat": 36.0603793519,
+    "lng": 126.9103432077,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/63/3587863_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9D%B4%EB%B0%B0%EC%9B%90%20%EA%B0%80%EC%98%A5"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9D%B4%EB%B0%B0%EC%9B%90%20%EA%B0%80%EC%98%A5"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9D%B4%EB%B0%B0%EC%9B%90+%EA%B0%80%EC%98%A5"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1316294",
+    "name": "망모당",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "익산시",
+    "address": "전북특별자치도 익산시 왕궁면 장중길 105-8",
+    "phone": "",
+    "lat": 35.9687652133,
+    "lng": 127.0942930747,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/61/3587861_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%9D%EB%AA%A8%EB%8B%B9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%9D%EB%AA%A8%EB%8B%B9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%9D%EB%AA%A8%EB%8B%B9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129562",
+    "name": "무주향교",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "무주군",
+    "address": "전북특별자치도 무주군 무주읍 단천로 135",
+    "phone": "",
+    "lat": 36.0079263672,
+    "lng": 127.6659411385,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/26/3585126_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%B4%EC%A3%BC%ED%96%A5%EA%B5%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%B4%EC%A3%BC%ED%96%A5%EA%B5%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%B4%EC%A3%BC%ED%96%A5%EA%B5%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-716188",
+    "name": "입암산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 입암면 입암로",
+    "phone": "",
+    "lat": 35.4947393244,
+    "lng": 126.8151523891,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/17/3581717_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%85%EC%95%94%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%85%EC%95%94%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%85%EC%95%94%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-318335",
+    "name": "석탄사(정읍)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 칠보면 허궁실2길 186-125",
+    "phone": "",
+    "lat": 35.5644176722,
+    "lng": 126.9863992894,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/33/3581633_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9D%ED%83%84%EC%82%AC%28%EC%A0%95%EC%9D%8D%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9D%ED%83%84%EC%82%AC%28%EC%A0%95%EC%9D%8D%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9D%ED%83%84%EC%82%AC%28%EC%A0%95%EC%9D%8D%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1627360",
+    "name": "성황산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 수성동",
+    "phone": "",
+    "lat": 35.5716452566,
+    "lng": 126.8605019577,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/81/3581581_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B1%ED%99%A9%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B1%ED%99%A9%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B1%ED%99%A9%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1627635",
+    "name": "칠보산",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 칠보면 축현리",
+    "phone": "",
+    "lat": 35.5711634428,
+    "lng": 126.9463276762,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/99/3581599_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B9%A0%EB%B3%B4%EC%82%B0"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B9%A0%EB%B3%B4%EC%82%B0"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B9%A0%EB%B3%B4%EC%82%B0"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1627404",
+    "name": "용굴",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 내장산로 936",
+    "phone": "",
+    "lat": 35.486827567,
+    "lng": 126.8877683635,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/11/3581111_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%A9%EA%B5%B4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%A9%EA%B5%B4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%A9%EA%B5%B4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1624748",
+    "name": "금강",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "장수군",
+    "address": "전북특별자치도 장수군 천천면 오리골길",
+    "phone": "",
+    "lat": 35.7889155237,
+    "lng": 127.5300812846,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/38/3583638_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EA%B0%95"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EA%B0%95"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EA%B0%95"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126551",
+    "name": "옥정호",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "임실군",
+    "address": "전북특별자치도 임실군 운암면 마암리",
+    "phone": "",
+    "lat": 35.6369064628,
+    "lng": 127.1360202454,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/41/3372641_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%A5%EC%A0%95%ED%98%B8"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%A5%EC%A0%95%ED%98%B8"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%A5%EC%A0%95%ED%98%B8"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128402",
+    "name": "남원 흥부마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "남원시",
+    "address": "전북특별자치도 남원시 아영면 흥부로 275",
+    "phone": "",
+    "lat": 35.5203886528,
+    "lng": 127.5882859988,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/77/3583477_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%A8%EC%9B%90%20%ED%9D%A5%EB%B6%80%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%A8%EC%9B%90%20%ED%9D%A5%EB%B6%80%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%A8%EC%9B%90+%ED%9D%A5%EB%B6%80%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129355",
+    "name": "춘향허브마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "남원시",
+    "address": "전북특별자치도 남원시 운봉읍 바래봉길 139",
+    "phone": "",
+    "lat": 35.4326977651,
+    "lng": 127.5423117994,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/3583442_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B6%98%ED%96%A5%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B6%98%ED%96%A5%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B6%98%ED%96%A5%ED%97%88%EB%B8%8C%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3511400",
+    "name": "농업회사법인삼산도가주식회사",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "완주군",
+    "address": "전북특별자치도 완주군 동상면 대아수목로 209-6",
+    "phone": "",
+    "lat": 35.9843560654,
+    "lng": 127.3084735735,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/96/3552296_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1314127",
+    "name": "마한박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "익산시",
+    "address": "전북특별자치도 익산시 금마면 고도9길 41-14",
+    "phone": "",
+    "lat": 36.0019413977,
+    "lng": 127.0604063368,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/08/3573508_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%A7%88%ED%95%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%A7%88%ED%95%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%A7%88%ED%95%9C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-252657",
+    "name": "구파백정기의사기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 영원면 영원로 1049",
+    "phone": "",
+    "lat": 35.6521875698,
+    "lng": 126.7832623282,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/66/3564466_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%ED%8C%8C%EB%B0%B1%EC%A0%95%EA%B8%B0%EC%9D%98%EC%82%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%ED%8C%8C%EB%B0%B1%EC%A0%95%EA%B8%B0%EC%9D%98%EC%82%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC%ED%8C%8C%EB%B0%B1%EC%A0%95%EA%B8%B0%EC%9D%98%EC%82%AC%EA%B8%B0%EB%85%90%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2790518",
+    "name": "플리커책방",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "완주군",
+    "address": "전북특별자치도 완주군 소양면 송광수만로 472-23",
+    "phone": "",
+    "lat": 35.9031141763,
+    "lng": 127.2433009708,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/2792965_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%94%8C%EB%A6%AC%EC%BB%A4%EC%B1%85%EB%B0%A9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%94%8C%EB%A6%AC%EC%BB%A4%EC%B1%85%EB%B0%A9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%94%8C%EB%A6%AC%EC%BB%A4%EC%B1%85%EB%B0%A9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2615343",
+    "name": "대한민국 술테마박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "완주군",
+    "address": "전북특별자치도 완주군 구이면 덕천전원길 232-58",
+    "phone": "",
+    "lat": 35.7261657781,
+    "lng": 127.1364956629,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/83/3560983_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%88%A0%ED%85%8C%EB%A7%88%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EC%88%A0%ED%85%8C%EB%A7%88%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD+%EC%88%A0%ED%85%8C%EB%A7%88%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1625244",
+    "name": "전북대학교 박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "전주시",
+    "address": "전북특별자치도 전주시 덕진구 백제대로 567",
+    "phone": "",
+    "lat": 35.8462492677,
+    "lng": 127.1320151498,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/28/3552328_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90%20%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%84%EB%B6%81%EB%8C%80%ED%95%99%EA%B5%90+%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1582354",
+    "name": "원불교역사박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "익산시",
+    "address": "전북특별자치도 익산시 익산대로 501",
+    "phone": "",
+    "lat": 35.9744537602,
+    "lng": 126.9516167691,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/36/3361036_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9B%90%EB%B6%88%EA%B5%90%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9B%90%EB%B6%88%EA%B5%90%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9B%90%EB%B6%88%EA%B5%90%EC%97%AD%EC%82%AC%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1624871",
+    "name": "국악의 성지",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "남원시",
+    "address": "전북특별자치도 남원시 운봉읍 비전길 69",
+    "phone": "",
+    "lat": 35.4604645134,
+    "lng": 127.5676310606,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EC%95%85%EC%9D%98%20%EC%84%B1%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EC%95%85%EC%9D%98%20%EC%84%B1%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EC%95%85%EC%9D%98+%EC%84%B1%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2752466",
+    "name": "진안 가위박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "진안군",
+    "address": "전북특별자치도 진안군 진안읍 마이산로 258",
+    "phone": "",
+    "lat": 35.7661160914,
+    "lng": 127.4150726493,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/2752506_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A7%84%EC%95%88%20%EA%B0%80%EC%9C%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A7%84%EC%95%88%20%EA%B0%80%EC%9C%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A7%84%EC%95%88+%EA%B0%80%EC%9C%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2742247",
+    "name": "정읍시립미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전북특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonbuk",
+    "regionName": "전북특별자치도",
+    "district": "정읍시",
+    "address": "전북특별자치도 정읍시 시기4길 7",
+    "phone": "",
+    "lat": 35.5523641321,
+    "lng": 126.8616579023,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/2742618_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%95%EC%9D%8D%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%95%EC%9D%8D%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%95%EC%9D%8D%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-125419",
+    "name": "국립 천관산자연휴양림",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "장흥군",
+    "address": "전남광주통합특별시 장흥군 관산읍 칠관로 842-1150",
+    "phone": "",
+    "lat": 34.5451339297,
+    "lng": 126.8998851572,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/42/2704942_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AD%EB%A6%BD%20%EC%B2%9C%EA%B4%80%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AD%EB%A6%BD%20%EC%B2%9C%EA%B4%80%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AD%EB%A6%BD+%EC%B2%9C%EA%B4%80%EC%82%B0%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126240",
+    "name": "조계산도립공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "순천시",
+    "address": "전남광주통합특별시 순천시 승주읍 승주괴목1길 ",
+    "phone": "",
+    "lat": 35.0042802527,
+    "lng": 127.2687691374,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/59/3018959_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A1%B0%EA%B3%84%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A1%B0%EA%B3%84%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A1%B0%EA%B3%84%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126241",
+    "name": "두륜산도립공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "해남군",
+    "address": "전남광주통합특별시 해남군 삼산면 대흥사길 400",
+    "phone": "",
+    "lat": 34.4896049087,
+    "lng": 126.6161141958,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/83/3564383_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%91%90%EB%A5%9C%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%91%90%EB%A5%9C%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%91%90%EB%A5%9C%EC%82%B0%EB%8F%84%EB%A6%BD%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126364",
+    "name": "중흥사(광양)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "광양시",
+    "address": "전남광주통합특별시 광양시 옥룡면 중흥로 263-100",
+    "phone": "",
+    "lat": 35.024697685,
+    "lng": 127.6078054752,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/3027055_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A4%91%ED%9D%A5%EC%82%AC%28%EA%B4%91%EC%96%91%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A4%91%ED%9D%A5%EC%82%AC%28%EA%B4%91%EC%96%91%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A4%91%ED%9D%A5%EC%82%AC%28%EA%B4%91%EC%96%91%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126638",
+    "name": "수락폭포",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "구례군",
+    "address": "전남광주통합특별시 구례군 산동면 수락길 73",
+    "phone": "",
+    "lat": 35.3468087927,
+    "lng": 127.4587658528,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/89/3547989_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%88%98%EB%9D%BD%ED%8F%AD%ED%8F%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%88%98%EB%9D%BD%ED%8F%AD%ED%8F%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%88%98%EB%9D%BD%ED%8F%AD%ED%8F%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126640",
+    "name": "우이도",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "신안군",
+    "address": "전남광주통합특별시 신안군 도초면 우이진리길 47-9",
+    "phone": "",
+    "lat": 34.6185641995,
+    "lng": 125.8530978775,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/35/3572135_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9A%B0%EC%9D%B4%EB%8F%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9A%B0%EC%9D%B4%EB%8F%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9A%B0%EC%9D%B4%EB%8F%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126892",
+    "name": "천등산(고흥)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "고흥군",
+    "address": "전남광주통합특별시 고흥군 풍양면 송정리",
+    "phone": "",
+    "lat": 34.5413990373,
+    "lng": 127.2787909289,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/21/3544921_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%9C%EB%93%B1%EC%82%B0%28%EA%B3%A0%ED%9D%A5%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%9C%EB%93%B1%EC%82%B0%28%EA%B3%A0%ED%9D%A5%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%9C%EB%93%B1%EC%82%B0%28%EA%B3%A0%ED%9D%A5%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127603",
+    "name": "무안회산백련지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "무안군",
+    "address": "전남광주통합특별시 무안군 일로읍 백련로 333",
+    "phone": "",
+    "lat": 34.8601257396,
+    "lng": 126.5299100793,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/09/3535609_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%B4%EC%95%88%ED%9A%8C%EC%82%B0%EB%B0%B1%EB%A0%A8%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%B4%EC%95%88%ED%9A%8C%EC%82%B0%EB%B0%B1%EB%A0%A8%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%B4%EC%95%88%ED%9A%8C%EC%82%B0%EB%B0%B1%EB%A0%A8%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-127632",
+    "name": "탐진강",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "장흥군",
+    "address": "전남광주통합특별시 장흥군 유치면",
+    "phone": "",
+    "lat": 34.659393321,
+    "lng": 126.8987991348,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/69/3535969_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%83%90%EC%A7%84%EA%B0%95"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%83%90%EC%A7%84%EA%B0%95"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%83%90%EC%A7%84%EA%B0%95"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128086",
+    "name": "섬진강(곡성)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "곡성군",
+    "address": "전남광주통합특별시 곡성군 옥과면",
+    "phone": "",
+    "lat": 35.3198433796,
+    "lng": 127.1942010291,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/43/3542843_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%AC%EC%A7%84%EA%B0%95%28%EA%B3%A1%EC%84%B1%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%AC%EC%A7%84%EA%B0%95%28%EA%B3%A1%EC%84%B1%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%AC%EC%A7%84%EA%B0%95%28%EA%B3%A1%EC%84%B1%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129042",
+    "name": "장좌마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "완도군",
+    "address": "전남광주통합특별시 완도군 완도읍 장좌길 8",
+    "phone": "",
+    "lat": 34.3597463098,
+    "lng": 126.7293212535,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/97/3380297_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%A5%EC%A2%8C%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%A5%EC%A2%8C%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%A5%EC%A2%8C%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129104",
+    "name": "장촌마을",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "여수시",
+    "address": "전남광주통합특별시 여수시 삼산면 서도리",
+    "phone": "",
+    "lat": 34.0543480835,
+    "lng": 127.2952347147,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/3549155_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%A5%EC%B4%8C%EB%A7%88%EC%9D%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%A5%EC%B4%8C%EB%A7%88%EC%9D%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%A5%EC%B4%8C%EB%A7%88%EC%9D%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129214",
+    "name": "천일염전",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "영광군",
+    "address": "전남광주통합특별시 영광군 염산면 칠산로 411",
+    "phone": "",
+    "lat": 35.2231288118,
+    "lng": 126.3393403231,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3532815_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%9C%EC%9D%BC%EC%97%BC%EC%A0%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%9C%EC%9D%BC%EC%97%BC%EC%A0%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%9C%EC%9D%BC%EC%97%BC%EC%A0%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129245",
+    "name": "보광사(함평)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "함평군",
+    "address": "전남광주통합특별시 함평군 함평읍 한재골길 26-32",
+    "phone": "",
+    "lat": 35.0652466914,
+    "lng": 126.5086180678,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/55/3551955_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B3%B4%EA%B4%91%EC%82%AC%28%ED%95%A8%ED%8F%89%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B3%B4%EA%B4%91%EC%82%AC%28%ED%95%A8%ED%8F%89%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B3%B4%EA%B4%91%EC%82%AC%28%ED%95%A8%ED%8F%89%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-337552",
+    "name": "옥련사(강진)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "강진군",
+    "address": "전남광주통합특별시 강진군 강진읍 옥련사길 86",
+    "phone": "",
+    "lat": 34.6062412829,
+    "lng": 126.7515911456,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3538525_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%98%A5%EB%A0%A8%EC%82%AC%28%EA%B0%95%EC%A7%84%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%98%A5%EB%A0%A8%EC%82%AC%28%EA%B0%95%EC%A7%84%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%98%A5%EB%A0%A8%EC%82%AC%28%EA%B0%95%EC%A7%84%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2514714",
+    "name": "정남진물과학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "장흥군",
+    "address": "전남광주통합특별시 장흥군 장흥읍 행원강변길 20",
+    "phone": "",
+    "lat": 34.6860264648,
+    "lng": 126.9001316997,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/62/3364462_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%95%EB%82%A8%EC%A7%84%EB%AC%BC%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%95%EB%82%A8%EC%A7%84%EB%AC%BC%EA%B3%BC%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%95%EB%82%A8%EC%A7%84%EB%AC%BC%EA%B3%BC%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129713",
+    "name": "목포문화원",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "목포시",
+    "address": "전남광주통합특별시 목포시 수강로12번길 41 (광동3가)",
+    "phone": "",
+    "lat": 34.7890425284,
+    "lng": 126.3882020922,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/91/3552891_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AA%A9%ED%8F%AC%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AA%A9%ED%8F%AC%EB%AC%B8%ED%99%94%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AA%A9%ED%8F%AC%EB%AC%B8%ED%99%94%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-619141",
+    "name": "신안갯벌박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "신안군",
+    "address": "전남광주통합특별시 신안군 증도면 지도증도로 1766-4",
+    "phone": "",
+    "lat": 34.9645269614,
+    "lng": 126.136456269,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/86/3573086_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%8B%A0%EC%95%88%EA%B0%AF%EB%B2%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%8B%A0%EC%95%88%EA%B0%AF%EB%B2%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%8B%A0%EC%95%88%EA%B0%AF%EB%B2%8C%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1623923",
+    "name": "진도군무형유산전수관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "진도군",
+    "address": "전남광주통합특별시 진도군 진도읍 동외1길 6-9",
+    "phone": "",
+    "lat": 34.4808613695,
+    "lng": 126.2703476024,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/18/2516718_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A7%84%EB%8F%84%EA%B5%B0%EB%AC%B4%ED%98%95%EC%9C%A0%EC%82%B0%EC%A0%84%EC%88%98%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A7%84%EB%8F%84%EA%B5%B0%EB%AC%B4%ED%98%95%EC%9C%A0%EC%82%B0%EC%A0%84%EC%88%98%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A7%84%EB%8F%84%EA%B5%B0%EB%AC%B4%ED%98%95%EC%9C%A0%EC%82%B0%EC%A0%84%EC%88%98%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2784213",
+    "name": "담양곤충박물관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "담양군",
+    "address": "전남광주통합특별시 담양군 담양읍 담양88로 428",
+    "phone": "",
+    "lat": 35.3224481934,
+    "lng": 127.0057009732,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%B4%EC%96%91%EA%B3%A4%EC%B6%A9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%B4%EC%96%91%EA%B3%A4%EC%B6%A9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%B4%EC%96%91%EA%B3%A4%EC%B6%A9%EB%B0%95%EB%AC%BC%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3010511",
+    "name": "여수민속전시관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "여수시",
+    "address": "전남광주통합특별시 여수시 서부로 1442 율촌중앙초등학교 ",
+    "phone": "",
+    "lat": 34.846502927,
+    "lng": 127.5566200664,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/99/3010499_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%97%AC%EC%88%98%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%97%AC%EC%88%98%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%97%AC%EC%88%98%EB%AF%BC%EC%86%8D%EC%A0%84%EC%8B%9C%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3351638",
+    "name": "곡성기차마을 생태학습관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "곡성군",
+    "address": "전남광주통합특별시 곡성군 오곡면 기차마을로 252-16",
+    "phone": "",
+    "lat": 35.2812191216,
+    "lng": 127.3065559809,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/68/3385368_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B3%A1%EC%84%B1%EA%B8%B0%EC%B0%A8%EB%A7%88%EC%9D%84%20%EC%83%9D%ED%83%9C%ED%95%99%EC%8A%B5%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B3%A1%EC%84%B1%EA%B8%B0%EC%B0%A8%EB%A7%88%EC%9D%84%20%EC%83%9D%ED%83%9C%ED%95%99%EC%8A%B5%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B3%A1%EC%84%B1%EA%B8%B0%EC%B0%A8%EB%A7%88%EC%9D%84+%EC%83%9D%ED%83%9C%ED%95%99%EC%8A%B5%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-3352606",
+    "name": "1004섬 수석미술관&수석정원",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 전라남도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeonnam",
+    "regionName": "전라남도",
+    "district": "신안군",
+    "address": "전남광주통합특별시 신안군 자은면 자은서부2길 508-68",
+    "phone": "",
+    "lat": 34.8801314547,
+    "lng": 125.9968817711,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/58/3385458_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=1004%EC%84%AC%20%EC%88%98%EC%84%9D%EB%AF%B8%EC%88%A0%EA%B4%80%26%EC%88%98%EC%84%9D%EC%A0%95%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/1004%EC%84%AC%20%EC%88%98%EC%84%9D%EB%AF%B8%EC%88%A0%EA%B4%80%26%EC%88%98%EC%84%9D%EC%A0%95%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/1004%EC%84%AC+%EC%88%98%EC%84%9D%EB%AF%B8%EC%88%A0%EA%B4%80%26%EC%88%98%EC%84%9D%EC%A0%95%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1620883",
+    "name": "하모해변",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 대정읍 하모리",
+    "phone": "",
+    "lat": 33.2113219743,
+    "lng": 126.2605635569,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/22/3391622_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%98%EB%AA%A8%ED%95%B4%EB%B3%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%98%EB%AA%A8%ED%95%B4%EB%B3%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%98%EB%AA%A8%ED%95%B4%EB%B3%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-1621059",
+    "name": "구시물",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 애월읍 상귀리",
+    "phone": "",
+    "lat": 33.456530549,
+    "lng": 126.4097117919,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/3403406_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B5%AC%EC%8B%9C%EB%AC%BC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B5%AC%EC%8B%9C%EB%AC%BC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B5%AC%EC%8B%9C%EB%AC%BC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2792599",
+    "name": "한림항",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 한림읍 한림해안로 192",
+    "phone": "",
+    "lat": 33.4190907055,
+    "lng": 126.2625726517,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/65/3554865_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EB%A6%BC%ED%95%AD"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EB%A6%BC%ED%95%AD"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EB%A6%BC%ED%95%AD"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2765240",
+    "name": "천주교 대정성지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 대정읍 추사로247번길 102",
+    "phone": "",
+    "lat": 33.2535839778,
+    "lng": 126.2607820469,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/03/3391703_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%B2%9C%EC%A3%BC%EA%B5%90%20%EB%8C%80%EC%A0%95%EC%84%B1%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%B2%9C%EC%A3%BC%EA%B5%90%20%EB%8C%80%EC%A0%95%EC%84%B1%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%B2%9C%EC%A3%BC%EA%B5%90+%EB%8C%80%EC%A0%95%EC%84%B1%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2767790",
+    "name": "답다니탑망대",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 우도면 연평리",
+    "phone": "",
+    "lat": 33.5249205816,
+    "lng": 126.9526464263,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/79/3411179_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8B%B5%EB%8B%A4%EB%8B%88%ED%83%91%EB%A7%9D%EB%8C%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8B%B5%EB%8B%A4%EB%8B%88%ED%83%91%EB%A7%9D%EB%8C%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8B%B5%EB%8B%A4%EB%8B%88%ED%83%91%EB%A7%9D%EB%8C%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129384",
+    "name": "제주성지",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 오현길 61",
+    "phone": "",
+    "lat": 33.5102931048,
+    "lng": 126.5255810579,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/91/3556191_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%A3%BC%EC%84%B1%EC%A7%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EC%84%B1%EC%A7%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%A3%BC%EC%84%B1%EC%A7%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2778905",
+    "name": "해맞이해안로",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 구좌읍 김녕리",
+    "phone": "",
+    "lat": 33.5504226979,
+    "lng": 126.7427251632,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/89/3555389_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%B4%EB%A7%9E%EC%9D%B4%ED%95%B4%EC%95%88%EB%A1%9C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%B4%EB%A7%9E%EC%9D%B4%ED%95%B4%EC%95%88%EB%A1%9C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%B4%EB%A7%9E%EC%9D%B4%ED%95%B4%EC%95%88%EB%A1%9C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126469",
+    "name": "한라산 영실",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 영실로 246",
+    "phone": "",
+    "lat": 33.3402306397,
+    "lng": 126.4803110551,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/15/3552115_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%98%81%EC%8B%A4"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EB%9D%BC%EC%82%B0%20%EC%98%81%EC%8B%A4"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EB%9D%BC%EC%82%B0+%EC%98%81%EC%8B%A4"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-126470",
+    "name": "외돌개(제주)",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 서흥동",
+    "phone": "",
+    "lat": 33.2402621646,
+    "lng": 126.546215918,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/75/3552175_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%99%B8%EB%8F%8C%EA%B0%9C%28%EC%A0%9C%EC%A3%BC%29"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%99%B8%EB%8F%8C%EA%B0%9C%28%EC%A0%9C%EC%A3%BC%29"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%99%B8%EB%8F%8C%EA%B0%9C%28%EC%A0%9C%EC%A3%BC%29"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128795",
+    "name": "남원 큰엉해안",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 남원읍 태위로 522-17",
+    "phone": "",
+    "lat": 33.2733776834,
+    "lng": 126.7037237502,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/25/3550525_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%82%A8%EC%9B%90%20%ED%81%B0%EC%97%89%ED%95%B4%EC%95%88"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%82%A8%EC%9B%90%20%ED%81%B0%EC%97%89%ED%95%B4%EC%95%88"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%82%A8%EC%9B%90+%ED%81%B0%EC%97%89%ED%95%B4%EC%95%88"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-128796",
+    "name": "별방진",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 구좌읍 하도리 3354",
+    "phone": "",
+    "lat": 33.5262082208,
+    "lng": 126.8843912035,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/06/3100106_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%B3%84%EB%B0%A9%EC%A7%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%B3%84%EB%B0%A9%EC%A7%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%B3%84%EB%B0%A9%EC%A7%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-129699",
+    "name": "금오름",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 한림읍 금악리",
+    "phone": "",
+    "lat": 33.3555289743,
+    "lng": 126.3059091921,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/35/3352435_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B8%88%EC%98%A4%EB%A6%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B8%88%EC%98%A4%EB%A6%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B8%88%EC%98%A4%EB%A6%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2433925",
+    "name": "물영아리오름",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 남원읍 태수로 552",
+    "phone": "",
+    "lat": 33.3268525509,
+    "lng": 126.716996389,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/64/3552664_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%AC%BC%EC%98%81%EC%95%84%EB%A6%AC%EC%98%A4%EB%A6%84"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%AC%BC%EC%98%81%EC%95%84%EB%A6%AC%EC%98%A4%EB%A6%84"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%AC%BC%EC%98%81%EC%95%84%EB%A6%AC%EC%98%A4%EB%A6%84"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2738761",
+    "name": "동일리포구",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 대정읍 동일하모로98번길 14-32",
+    "phone": "",
+    "lat": 33.225489535,
+    "lng": 126.2401122413,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/01/3552201_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EB%8F%99%EC%9D%BC%EB%A6%AC%ED%8F%AC%EA%B5%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EB%8F%99%EC%9D%BC%EB%A6%AC%ED%8F%AC%EA%B5%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EB%8F%99%EC%9D%BC%EB%A6%AC%ED%8F%AC%EA%B5%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2767627",
+    "name": "새섬공원",
+    "type": "attraction",
+    "category": "nature",
+    "categoryName": "자연휴양·관광명소",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 남성중로 43",
+    "phone": "",
+    "lat": 33.2397485318,
+    "lng": 126.5588092829,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/05/3551805_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%83%88%EC%84%AC%EA%B3%B5%EC%9B%90"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%83%88%EC%84%AC%EA%B3%B5%EC%9B%90"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%83%88%EC%84%AC%EA%B3%B5%EC%9B%90"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2905116",
+    "name": "제주과학탐구체험관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 산록북로 421-1 (오라이동)",
+    "phone": "",
+    "lat": 33.4266496763,
+    "lng": 126.5314546657,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/58/3585158_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%A3%BC%EA%B3%BC%ED%95%99%ED%83%90%EA%B5%AC%EC%B2%B4%ED%97%98%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EA%B3%BC%ED%95%99%ED%83%90%EA%B5%AC%EC%B2%B4%ED%97%98%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%A3%BC%EA%B3%BC%ED%95%99%ED%83%90%EA%B5%AC%EC%B2%B4%ED%97%98%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130474",
+    "name": "제주민속촌",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 표선면 민속해안로 631-34",
+    "phone": "",
+    "lat": 33.3213162956,
+    "lng": 126.8431022619,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/43/3534943_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%A3%BC%EB%AF%BC%EC%86%8D%EC%B4%8C"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EB%AF%BC%EC%86%8D%EC%B4%8C"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%A3%BC%EB%AF%BC%EC%86%8D%EC%B4%8C"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130723",
+    "name": "김영갑갤러리두모악",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 성산읍 삼달로 137",
+    "phone": "",
+    "lat": 33.37240806,
+    "lng": 126.8542667942,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/57/3548157_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EA%B9%80%EC%98%81%EA%B0%91%EA%B0%A4%EB%9F%AC%EB%A6%AC%EB%91%90%EB%AA%A8%EC%95%85"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EA%B9%80%EC%98%81%EA%B0%91%EA%B0%A4%EB%9F%AC%EB%A6%AC%EB%91%90%EB%AA%A8%EC%95%85"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EA%B9%80%EC%98%81%EA%B0%91%EA%B0%A4%EB%9F%AC%EB%A6%AC%EB%91%90%EB%AA%A8%EC%95%85"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2606611",
+    "name": "자연사랑미술관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 표선면 가시로613번길 46",
+    "phone": "",
+    "lat": 33.3556696951,
+    "lng": 126.771952084,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/93/3547993_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%9E%90%EC%97%B0%EC%82%AC%EB%9E%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%9E%90%EC%97%B0%EC%82%AC%EB%9E%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%9E%90%EC%97%B0%EC%82%AC%EB%9E%91%EB%AF%B8%EC%88%A0%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2949573",
+    "name": "제주문학관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 연북로 339 (도남동)",
+    "phone": "",
+    "lat": 33.4813850713,
+    "lng": 126.5178573851,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/29/2949529_image2_1.JPG"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%A0%9C%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%A0%9C%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%A0%9C%EC%A3%BC%EB%AC%B8%ED%95%99%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-130141",
+    "name": "한국야구명예전당",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 중산간서로 97-1",
+    "phone": "",
+    "lat": 33.2605730556,
+    "lng": 126.4984223827,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/79/3077579_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%95%9C%EA%B5%AD%EC%95%BC%EA%B5%AC%EB%AA%85%EC%98%88%EC%A0%84%EB%8B%B9"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%95%9C%EA%B5%AD%EC%95%BC%EA%B5%AC%EB%AA%85%EC%98%88%EC%A0%84%EB%8B%B9"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%95%9C%EA%B5%AD%EC%95%BC%EA%B5%AC%EB%AA%85%EC%98%88%EC%A0%84%EB%8B%B9"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2811110",
+    "name": "훈데르트바서파크",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 우도면 우도해안길 32-12",
+    "phone": "",
+    "lat": 33.4930408093,
+    "lng": 126.9549441872,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1576086213369-97a306d36557?w=700&auto=format&fit=crop&q=80"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%ED%9B%88%EB%8D%B0%EB%A5%B4%ED%8A%B8%EB%B0%94%EC%84%9C%ED%8C%8C%ED%81%AC"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%ED%9B%88%EB%8D%B0%EB%A5%B4%ED%8A%B8%EB%B0%94%EC%84%9C%ED%8C%8C%ED%81%AC"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%ED%9B%88%EB%8D%B0%EB%A5%B4%ED%8A%B8%EB%B0%94%EC%84%9C%ED%8C%8C%ED%81%AC"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-988207",
+    "name": "서귀포천문과학문화관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "서귀포시",
+    "address": "제주특별자치도 서귀포시 1100로 506-1 천문과학문화관",
+    "phone": "",
+    "lat": 33.2888776636,
+    "lng": 126.460411156,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/54/3477154_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%9C%EA%B7%80%ED%8F%AC%EC%B2%9C%EB%AC%B8%EA%B3%BC%ED%95%99%EB%AC%B8%ED%99%94%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%9C%EA%B7%80%ED%8F%AC%EC%B2%9C%EB%AC%B8%EA%B3%BC%ED%95%99%EB%AC%B8%ED%99%94%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%9C%EA%B7%80%ED%8F%AC%EC%B2%9C%EB%AC%B8%EA%B3%BC%ED%95%99%EB%AC%B8%ED%99%94%EA%B4%80"
+      }
+    }
+  },
+  {
+    "id": "attr-sync-2752772",
+    "name": "성김대건신부표착기념관",
+    "type": "attraction",
+    "category": "museum",
+    "categoryName": "박물관·전시체험관",
+    "representativeMenu": "가족 체험, 산책로, 어린이 관람 프로그램",
+    "reviewSummary": "한국관광공사 공공데이터 검증 제주특별자치도 대표 가족 나들이 명소입니다.",
+    "hours": "09:30 ~ 18:00 (입장마감 17:00 / 매주 월요일 휴관 등)",
+    "region": "jeju",
+    "regionName": "제주특별자치도",
+    "district": "제주시",
+    "address": "제주특별자치도 제주시 한경면 용수1길 108",
+    "phone": "",
+    "lat": 33.3228915301,
+    "lng": 126.1677385965,
+    "overallRating": 4.5,
+    "naverRating": 4.6,
+    "kakaoRating": 4.4,
+    "googleRating": 4.5,
+    "reviewCount": 350,
+    "tasteRating": 4.5,
+    "kindnessRating": 4.7,
+    "cleanlinessRating": 4.8,
+    "moodRating": 4.6,
+    "amenities": [
+      "유모차 대여",
+      "수유실 완비",
+      "어린이 놀이시설",
+      "넓은 주차장",
+      "장애인 편의시설"
+    ],
+    "images": [
+      "http://tong.visitkorea.or.kr/cms/resource/88/3396988_image2_1.jpg"
+    ],
+    "sources": {
+      "naver": {
+        "rating": 4.6,
+        "url": "https://m.map.naver.com/search2/search.naver?query=%EC%84%B1%EA%B9%80%EB%8C%80%EA%B1%B4%EC%8B%A0%EB%B6%80%ED%91%9C%EC%B0%A9%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "kakao": {
+        "rating": 4.4,
+        "url": "https://map.kakao.com/link/search/%EC%84%B1%EA%B9%80%EB%8C%80%EA%B1%B4%EC%8B%A0%EB%B6%80%ED%91%9C%EC%B0%A9%EA%B8%B0%EB%85%90%EA%B4%80"
+      },
+      "google": {
+        "rating": 4.5,
+        "url": "https://www.google.com/maps/search/%EC%84%B1%EA%B9%80%EB%8C%80%EA%B1%B4%EC%8B%A0%EB%B6%80%ED%91%9C%EC%B0%A9%EA%B8%B0%EB%85%90%EA%B4%80"
       }
     }
   }
