@@ -26,11 +26,9 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, label, select, input {
   overflow-wrap: break-word;
 }
 
-@media (max-width: 640px) {
-  h1, h2, h3, h4, h5, h6, p, span, button, a, label, select, input, div {
-    word-break: normal;
-    overflow-wrap: break-word;
-  }
+/* Buttons, chips, pills, badges: keep words together */
+button, .badge, [class*="chip"], [class*="pill"], [class*="tab"], label {
+  word-break: keep-all;
 }
 
 /* Custom Scrollbar */

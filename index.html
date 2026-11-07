@@ -26,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261107_v5" />
+  <link rel="stylesheet" href="css/styles.css?v=20261107_v6" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -839,7 +839,7 @@
             </div>
 
             <!-- 1차: 행사 카테고리 칩 (모바일 자동 줄바꿈) -->
-            <div class="flex flex-wrap items-center gap-1.5 pb-1" id="festivals-category-chips"></div>
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar sm:flex-wrap pb-1" id="festivals-category-chips"></div>
 
             <!-- 2차: 지역 + 접수상태 + 검색창 -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
@@ -1064,7 +1064,7 @@
             </div>
 
             <!-- 1차: 대회 카테고리 칩 (모바일 자동 줄바꿈) -->
-            <div class="flex flex-wrap items-center gap-1.5 pb-1" id="contests-category-chips"></div>
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar sm:flex-wrap pb-1" id="contests-category-chips"></div>
 
             <!-- 2차: 지역 + 접수상태 + 검색창 -->
             <div class="grid grid-cols-1 sm:grid-cols-12 gap-2 pt-1">
@@ -1238,10 +1238,10 @@
                   placeholder="식당명, 지역(판교, 송파, 제주...), 메뉴(갈비, 파스타...), 편의시설 실시간 검색"
                   class="flex-1 text-xs bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 focus:bg-white focus:outline-none focus:ring-2 focus:ring-rose-400"
                 />
-                <div class="flex items-center gap-1.5 shrink-0">
+                <div class="grid grid-cols-3 gap-1.5 sm:flex sm:items-center shrink-0 w-full sm:w-auto">
                   <button
                     onclick="app.searchExternalPortal('naver')"
-                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-naver text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    class="flex-1 sm:flex-initial px-2 sm:px-3 py-2 rounded-xl badge-naver text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm whitespace-nowrap"
                     title="네이버 플레이스에서 검색"
                   >
                     <i class="fa-solid fa-n text-[10px]"></i>
@@ -1249,7 +1249,7 @@
                   </button>
                   <button
                     onclick="app.searchExternalPortal('kakao')"
-                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-kakao text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    class="flex-1 sm:flex-initial px-2 sm:px-3 py-2 rounded-xl badge-kakao text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm whitespace-nowrap"
                     title="카카오맵에서 검색"
                   >
                     <i class="fa-solid fa-comment text-[10px]"></i>
@@ -1257,7 +1257,7 @@
                   </button>
                   <button
                     onclick="app.searchExternalPortal('google')"
-                    class="flex-1 sm:flex-initial px-3 py-2 rounded-xl badge-google text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm"
+                    class="flex-1 sm:flex-initial px-2 sm:px-3 py-2 rounded-xl badge-google text-xs font-extrabold flex items-center justify-center gap-1 hover:opacity-95 shadow-sm whitespace-nowrap"
                     title="구글 지도에서 검색"
                   >
                     <i class="fa-brands fa-google text-[10px]"></i>
@@ -1363,23 +1363,23 @@
             <!-- 편의시설 다중 체크 필터 -->
             <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pt-1">
               <span class="text-[11px] font-bold text-slate-400 whitespace-nowrap">편의시설:</span>
-              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+              <label class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold cursor-pointer hover:bg-stone-200 transition shrink-0 whitespace-nowrap">
                 <input type="checkbox" id="amenity-chair" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
                 <span>🪑 아기의자 완비</span>
               </label>
-              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+              <label class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold cursor-pointer hover:bg-stone-200 transition shrink-0 whitespace-nowrap">
                 <input type="checkbox" id="amenity-playroom" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
                 <span>🎪 키즈룸/놀이방</span>
               </label>
-              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+              <label class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold cursor-pointer hover:bg-stone-200 transition shrink-0 whitespace-nowrap">
                 <input type="checkbox" id="amenity-room" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
                 <span>🚪 프라이빗 룸</span>
               </label>
-              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+              <label class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold cursor-pointer hover:bg-stone-200 transition shrink-0 whitespace-nowrap">
                 <input type="checkbox" id="amenity-parking" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
                 <span>🚗 넓은 주차장</span>
               </label>
-              <label class="inline-flex items-center gap-1 px-2.5 py-1 rounded-xl bg-stone-100 text-slate-700 text-[11px] font-bold cursor-pointer hover:bg-stone-200 transition">
+              <label class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold cursor-pointer hover:bg-stone-200 transition shrink-0 whitespace-nowrap">
                 <input type="checkbox" id="amenity-stroller" onchange="app.onFoodFilterChange()" class="accent-rose-500 rounded" />
                 <span>🛒 유모차 진입</span>
               </label>
@@ -3363,22 +3363,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/data.js?v=20261107_v5"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/data.js?v=20261107_v6"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261107_v5"></script>
-  <script charset="utf-8" src="js/app.js?v=20261107_v5"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261107_v6"></script>
+  <script charset="utf-8" src="js/app.js?v=20261107_v6"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

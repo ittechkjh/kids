@@ -3189,7 +3189,7 @@ class DodamCommunityApp {
         <button
           onclick="app.setFestivalsCategory('${c.id}')"
           data-cat="${c.id}"
-          class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap transition flex items-center gap-1.5 border ${
+          class="fest-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap shrink-0 transition flex items-center gap-1.5 border ${
             isActive
               ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
               : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold'
@@ -3582,7 +3582,7 @@ class DodamCommunityApp {
         <button
           onclick="app.setContestsCategory('${c.id}')"
           data-cat="${c.id}"
-          class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap transition flex items-center gap-1.5 border ${
+          class="cont-cat-chip px-3 py-1.5 rounded-xl text-xs whitespace-nowrap shrink-0 transition flex items-center gap-1.5 border ${
             isActive
               ? 'bg-slate-900 text-white border-slate-900 font-black shadow-sm'
               : 'bg-white text-slate-700 border-slate-200 hover:border-slate-300 hover:bg-slate-50 font-bold'
