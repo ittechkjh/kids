@@ -1681,8 +1681,8 @@ class DodamCommunityApp {
       const m = btn.getAttribute('data-lounge');
       const isActive = m === this.boardLoungeMode;
       btn.className = isActive
-        ? 'board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs'
-        : 'board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900';
+        ? 'board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs'
+        : 'board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900';
     });
 
     // Subfilter 1-line visibility
@@ -2177,9 +2177,9 @@ class DodamCommunityApp {
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${(n.views || 0).toLocaleString()}</div>
             </div>
             <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-3.5 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs space-y-1 overflow-hidden">
-              <div class="flex items-center gap-1.5 min-w-0">
+              <div class="flex items-start gap-1.5 min-w-0">
                 <span class="px-1.5 py-0.5 rounded bg-rose-500 text-white font-black text-[10px] shrink-0">${n.tag}</span>
-                <span class="font-bold text-slate-900 truncate min-w-0 flex-1">${n.title}</span>
+                <span class="font-bold text-slate-900 line-clamp-2 break-keep min-w-0 flex-1 text-xs leading-snug">${n.title}</span>
                 <span class="text-rose-500 font-bold text-[11px] shrink-0">[${n.commentsCount || 42}]</span>
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
@@ -2240,10 +2240,10 @@ class DodamCommunityApp {
             </div>
             <!-- 모바일 2줄 카페 목록 (가독성 & 중복 뱃지 최적화) -->
             <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-3.5 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1 overflow-hidden">
-              <div class="flex items-center gap-1.5 min-w-0 w-full">
+              <div class="flex items-start gap-1.5 min-w-0 w-full">
                 <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold">${badgeText}</span>
                 ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
-                <span class="truncate min-w-0 flex-1 font-bold text-slate-900 text-xs">${post.title}</span>
+                <span class="line-clamp-2 break-keep min-w-0 flex-1 font-bold text-slate-900 text-xs leading-snug">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0">[${commentsCount}]</span>` : ''}
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">

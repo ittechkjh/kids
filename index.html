@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>도담톡 (DodamTalk) | 등업·광고 없는 개월수·우리동네 맞춤 육아 커뮤니티</title>
   <meta name="description" content="출생 개월수별 동기방, 실시간 육아 고민 투표, 우리 동네 공동육아 품앗이, 육아템 무료나눔 장터, 소아 성장 백분위 및 해열제 계산기까지 한곳에 모은 차세대 육아 커뮤니티" />
   <meta property="og:title" content="도담톡 (DodamTalk) - 요즘 엄마·아빠들의 솔직한 육아 라운지" />
@@ -23,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/styles.css?v=20261107_v4" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -203,50 +206,25 @@
             <div class="flex items-center justify-between gap-2 flex-wrap">
               <!-- 메인 탭 5종 (모바일 5열 균등 배치로 글자 잘림 제로, PC 알약형) -->
               <div class="grid grid-cols-5 sm:flex sm:items-center gap-1 sm:gap-1.5 p-1 bg-stone-100 rounded-xl w-full sm:w-auto" id="board-lounge-mode-tabs">
-                <button
-                  type="button"
-                  onclick="app.setBoardLoungeMode('all')"
-                  data-lounge="all"
-                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs"
-                >
-                  <span class="sm:hidden text-[11px]">💬전체</span>
-                  <span class="hidden sm:inline text-xs">💬 전체 수다</span>
+                <button type="button" onclick="app.setBoardLoungeMode('all')" data-lounge="all" class="board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-black transition cursor-pointer bg-white text-slate-900 shadow-2xs">
+                  <span class="text-xs sm:text-xs leading-none">💬</span>
+                  <span class="text-[10px] sm:text-xs font-black tracking-tight sm:ml-1">전체</span>
                 </button>
-                <button
-                  type="button"
-                  onclick="app.setBoardLoungeMode('age')"
-                  data-lounge="age"
-                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
-                >
-                  <span class="sm:hidden text-[11px]">👶또래</span>
-                  <span class="hidden sm:inline text-xs">👶 또래방</span>
+                <button type="button" onclick="app.setBoardLoungeMode('age')" data-lounge="age" class="board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900">
+                  <span class="text-xs sm:text-xs leading-none">👶</span>
+                  <span class="text-[10px] sm:text-xs font-bold tracking-tight sm:ml-1">또래방</span>
                 </button>
-                <button
-                  type="button"
-                  onclick="app.setBoardLoungeMode('local')"
-                  data-lounge="local"
-                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
-                >
-                  <span class="sm:hidden text-[11px]">📍동네</span>
-                  <span class="hidden sm:inline text-xs">📍 우리동네</span>
+                <button type="button" onclick="app.setBoardLoungeMode('local')" data-lounge="local" class="board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900">
+                  <span class="text-xs sm:text-xs leading-none">📍</span>
+                  <span class="text-[10px] sm:text-xs font-bold tracking-tight sm:ml-1">우리동네</span>
                 </button>
-                <button
-                  type="button"
-                  onclick="app.setBoardLoungeMode('qa')"
-                  data-lounge="qa"
-                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
-                >
-                  <span class="sm:hidden text-[11px]">❓고민</span>
-                  <span class="hidden sm:inline text-xs">❓ 질문·고민</span>
+                <button type="button" onclick="app.setBoardLoungeMode('qa')" data-lounge="qa" class="board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900">
+                  <span class="text-xs sm:text-xs leading-none">❓</span>
+                  <span class="text-[10px] sm:text-xs font-bold tracking-tight sm:ml-1">고민·질문</span>
                 </button>
-                <button
-                  type="button"
-                  onclick="app.setBoardLoungeMode('guide')"
-                  data-lounge="guide"
-                  class="board-lounge-tab whitespace-nowrap px-1 sm:px-3.5 py-1.5 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900"
-                >
-                  <span class="sm:hidden text-[11px]">📖가이드</span>
-                  <span class="hidden sm:inline text-xs">📖 육아가이드</span>
+                <button type="button" onclick="app.setBoardLoungeMode('guide')" data-lounge="guide" class="board-lounge-tab flex flex-col sm:flex-row items-center justify-center py-1 sm:py-1.5 px-0.5 sm:px-3 rounded-lg text-center font-bold transition cursor-pointer text-slate-600 hover:text-slate-900">
+                  <span class="text-xs sm:text-xs leading-none">📖</span>
+                  <span class="text-[10px] sm:text-xs font-bold tracking-tight sm:ml-1">가이드</span>
                 </button>
               </div>
 
@@ -3385,22 +3363,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js"></script>
-  <script charset="utf-8" src="js/firebase_db.js"></script>
-  <script charset="utf-8" src="js/events_data.js"></script>
-  <script charset="utf-8" src="js/restaurants_data.js"></script>
-  <script charset="utf-8" src="js/policies_data.js"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js"></script>
-  <script charset="utf-8" src="js/schools_data.js"></script>
-  <script charset="utf-8" src="js/richgo_data.js"></script>
-  <script charset="utf-8" src="js/admissions_data.js"></script>
-  <script charset="utf-8" src="js/admin_data.js"></script>
-  <script charset="utf-8" src="js/data.js"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/data.js?v=20261107_v4"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js"></script>
-  <script charset="utf-8" src="js/app.js"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261107_v4"></script>
+  <script charset="utf-8" src="js/app.js?v=20261107_v4"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

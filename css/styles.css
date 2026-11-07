@@ -246,3 +246,15 @@ h1, h2, h3, h4, h5, h6, p, span, button, a, label, select, input {
   background: #334155;
   z-index: 1000 !important;
 }
+
+
+/* Mobile title clamp and word break fallback */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.break-keep {
+  word-break: keep-all;
+}
