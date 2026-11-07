@@ -1,4 +1,4 @@
-name: Daily Restaurant Batch Crawler
+name: Daily Restaurant & Tourism Batch Crawler
 
 on:
   schedule:
@@ -22,6 +22,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: 전국 유아동 관광지·휴양마을·키즈카페 공공데이터 자동 동기화
+        env:
+          TOUR_API_KEY: ${{ secrets.TOUR_API_KEY }}
+        run: |
+          if [ -n "$TOUR_API_KEY" ]; then
+            python scripts/fetch_tourapi.py
+          else
+            echo "TOUR_API_KEY 시크릿이 설정되지 않아 기존 관광지 데이터(1,094곳)를 유지합니다."
+          fi
 
       - name: 일일 안전 분할 맛집 크롤러 및 전국 행사·대회 데이터 수집기 실행
         env:
@@ -50,10 +60,10 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add -f js/restaurants_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
+          git add -f js/restaurants_data.js js/attractions_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
           if git diff --staged --quiet; then
             echo "갱신할 변경사항이 없습니다."
           else
-            git commit -m "chore(crawler): 일일 맛집, 전국 행사·대회, 교육부 입시정보 자동 수집 및 갱신 [skip ci]"
+            git commit -m "chore(crawler): 일일 맛집, 관광지, 전국 행사·대회, 교육부 입시정보 자동 수집 및 갱신 [skip ci]"
             git push origin main
           fi
