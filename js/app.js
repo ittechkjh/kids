@@ -4551,10 +4551,25 @@ class DodamCommunityApp {
       const sources = this.getRestaurantSources(r);
       const isAttr = r.type === 'attraction';
 
-      // Compact Pin for clean, cluster-ready nationwide viewing
+      // Category-specific Pin styling for nationwide cluster view
+      let pinClass = isAttr ? 'is-attraction' : '';
+      let iconClass = isAttr ? 'fa-landmark' : 'fa-utensils';
+      if (isAttr) {
+        if (r.category === 'forest') {
+          pinClass = 'is-forest';
+          iconClass = 'fa-tree';
+        } else if (r.category === 'public_kidscafe') {
+          pinClass = 'is-kidscafe';
+          iconClass = 'fa-shapes';
+        } else if (r.category === 'farm') {
+          pinClass = 'is-farm';
+          iconClass = 'fa-wheat-awn';
+        }
+      }
+
       const iconHtml = `
-        <div class="food-compact-pin ${isAttr ? 'is-attraction' : ''}" id="pin-${r.id}" title="${r.name} (★${r.overallRating})">
-          <i class="fa-solid ${isAttr ? 'fa-landmark' : 'fa-utensils'}"></i>
+        <div class="food-compact-pin ${pinClass}" id="pin-${r.id}" title="${r.name} (★${r.overallRating})">
+          <i class="fa-solid ${iconClass}"></i>
           <span>${r.overallRating}</span>
         </div>
       `;
@@ -4703,9 +4718,12 @@ class DodamCommunityApp {
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-stone-100 text-slate-700">
                   ${r.categoryName}
                 </span>
-                ${isAttr ? `
-                <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">🎡 전국 유명 관광지</span>
-                ` : `
+                ${isAttr ? (
+                  r.category === 'forest' ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">🌲 산림청 유아숲체험원</span>' :
+                  r.category === 'public_kidscafe' ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-purple-50 text-purple-800 border border-purple-200">🎪 지자체 공공 키즈카페</span>' :
+                  r.category === 'farm' ? '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">🍓 농식품부 농촌체험마을</span>' :
+                  '<span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-indigo-50 text-indigo-800 border border-indigo-200">🎡 전국 유명 관광지</span>'
+                ) : `
                 <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-50 text-amber-800 border border-amber-200">안심식당 DB</span>
                 `}
                 ${r.distanceKm !== undefined ? `

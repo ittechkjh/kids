@@ -26,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261107_v8" />
+  <link rel="stylesheet" href="css/styles.css?v=20261107_v10" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -342,9 +342,9 @@
           </div>
 
           <!-- 2. 심플 간편 질문·수다 바 (한 줄 입력 또는 접이식) -->
-          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-2.5 sm:p-3 overflow-hidden">
-            <div class="flex items-center gap-1.5 sm:gap-2 min-w-0 w-full">
-              <div class="w-8 h-8 rounded-full bg-emerald-50 text-[#03C75A] flex items-center justify-center font-black text-xs shrink-0">
+          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-2 sm:p-2.5 overflow-hidden w-full max-w-full">
+            <div class="flex items-center gap-1.5 sm:gap-2 w-full min-w-0">
+              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-50 text-[#03C75A] flex items-center justify-center font-black text-xs shrink-0">
                 <i class="fa-solid fa-comment-dots"></i>
               </div>
               <input
@@ -352,12 +352,12 @@
                 type="text"
                 placeholder="궁금한 육아 고민이나 동네 이야기를 남겨보세요..."
                 onkeydown="if(event.key==='Enter') app.submitQuickSimplePost()"
-                class="min-w-0 flex-1 bg-stone-50 hover:bg-stone-100/80 focus:bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#03C75A] transition"
+                class="w-0 min-w-0 flex-1 bg-stone-50 hover:bg-stone-100/80 focus:bg-white border border-stone-200 rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#03C75A] transition"
               />
               <button
                 type="button"
                 onclick="app.submitQuickSimplePost()"
-                class="px-3.5 sm:px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shrink-0 transition cursor-pointer shadow-2xs whitespace-nowrap"
+                class="shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs transition cursor-pointer shadow-2xs whitespace-nowrap"
               >
                 등록
               </button>
@@ -1367,6 +1367,9 @@
                     <option value="museum">🏛️ 박물관·과학관·어린이체험관</option>
                     <option value="nature">🌿 수목원·자연휴양림·생태공원</option>
                     <option value="landmark">🏰 랜드마크·역사문화명소</option>
+                    <option value="forest">🌲 유아숲체험원·숲놀이터</option>
+                    <option value="public_kidscafe">🎪 공공형 키즈카페·실내놀이터</option>
+                    <option value="farm">🍓 농촌체험휴양마을·체험농원</option>
                   </optgroup>
                 </select>
 
@@ -3397,23 +3400,23 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/data.js?v=20261107_v8"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/data.js?v=20261107_v10"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261107_v8"></script>
-  <script charset="utf-8" src="js/app.js?v=20261107_v8"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261107_v10"></script>
+  <script charset="utf-8" src="js/app.js?v=20261107_v10"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달
