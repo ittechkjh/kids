@@ -26,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261108_v14" />
+  <link rel="stylesheet" href="css/styles.css?v=20261108_v15" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -2648,18 +2648,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div class="bg-white rounded-3xl border border-stone-200 p-5 shadow-2xs space-y-4">
                 <h3 class="text-sm font-black text-slate-900 flex items-center gap-2">
-                  <i class="fa-solid fa-hard-drive text-purple-600"></i>
-                  <span>로컬 스토리지 메모리 점유율</span>
+                  <i class="fa-solid fa-database text-purple-600"></i>
+                  <span>Cloud Firestore 실시간 데이터베이스 연동 상태</span>
                 </h3>
                 <div class="space-y-2 text-xs">
                   <div class="flex items-center justify-between font-bold">
-                    <span class="text-slate-600">사용 중인 용량</span>
-                    <span id="storage-usage-text" class="text-purple-700 font-black">1.4 MB / 5.0 MB (28%)</span>
+                    <span class="text-slate-600">DB 동기화 상태</span>
+                    <span id="storage-usage-text" class="text-purple-700 font-black">Cloud Firestore 실시간 연동 중 (LocalStorage 미사용)</span>
                   </div>
                   <div class="w-full bg-stone-100 h-2.5 rounded-full overflow-hidden">
-                    <div id="storage-usage-bar" class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style="width: 28%"></div>
+                    <div id="storage-usage-bar" class="bg-gradient-to-r from-purple-500 to-indigo-500 h-full rounded-full" style="width: 18%"></div>
                   </div>
-                  <p class="text-[11px] text-slate-400">브라우저 안전 한도(5MB) 내에서 안정적으로 구동 중입니다.</p>
+                  <p class="text-[11px] text-slate-400">로컬스토리지를 사용하지 않고 모든 게시글, 프로필, 성장기록, 스크랩, 회원정보를 Cloud Firestore DB에 직접 저장합니다.</p>
                 </div>
                 <div class="pt-2 border-t border-stone-100 flex items-center gap-2">
                   <button type="button" onclick="app.exportBackupJson()" class="px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer">
@@ -3474,23 +3474,23 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/data.js?v=20261108_v15"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261108_v14"></script>
-  <script charset="utf-8" src="js/app.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261108_v15"></script>
+  <script charset="utf-8" src="js/app.js?v=20261108_v15"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

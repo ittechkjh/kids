@@ -7,12 +7,6 @@ class KidsInfraApiClient {
   }
 
   loadConfig() {
-    try {
-      const raw = localStorage.getItem(this.storageKey);
-      if (raw) return JSON.parse(raw);
-    } catch (e) {
-      console.warn('API 설정 로드 실패:', e);
-    }
     return {
       proxyUrl: '',
       dataGoKrKey: '',
@@ -23,7 +17,9 @@ class KidsInfraApiClient {
 
   saveConfig(newConfig) {
     this.config = { ...this.config, ...newConfig };
-    localStorage.setItem(this.storageKey, JSON.stringify(this.config));
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveApiConfig === 'function') {
+      window.DodamFirebase.saveApiConfig(this.config);
+    }
     return this.config;
   }
 

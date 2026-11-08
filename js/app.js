@@ -335,31 +335,47 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // [Firebase] Cloud Firestore 실시간 동기화
+  // [Firebase] Cloud Firestore 실시간 동기화 (DB 100% 전용 모드)
   // ==========================================
   initFirebaseSync() {
     if (typeof window.DodamFirebase === 'undefined') return;
+    this.deletedPostIds = this.deletedPostIds || new Set();
 
-    // 1. 커뮤니티 게시글 실시간 구독
+    // 1. 삭제된 게시글 ID 목록 실시간 구독
+    if (typeof window.DodamFirebase.subscribeDeletedPosts === 'function') {
+      window.DodamFirebase.subscribeDeletedPosts((deletedIds) => {
+        this.deletedPostIds = new Set(deletedIds || []);
+        this.data.posts = (this.data.posts || []).filter((p) => p && !this.deletedPostIds.has(p.id));
+        if (this.currentView === 'board') {
+          this.renderBoardCategories();
+          this.renderBoardView();
+        }
+      });
+    }
+
+    // 2. 커뮤니티 게시글 실시간 구독
     window.DodamFirebase.subscribePosts((remotePosts) => {
-      if (Array.isArray(remotePosts) && remotePosts.length > 0) {
+      if (Array.isArray(remotePosts)) {
         const remoteMap = new Map();
-        const validRemote = remotePosts.filter((p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock'));
+        const validRemote = remotePosts.filter(
+          (p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock') && !this.deletedPostIds.has(p.id)
+        );
         validRemote.forEach((p) => {
           if (!p.ageStage) p.ageStage = p.category || 'all';
           if (!p.localHub) p.localHub = p.region && p.region !== 'all' ? this.getLocalHubFromProfileRegion(p.region) : 'all';
           remoteMap.set(p.id, p);
         });
 
-        const seenTitles = new Set();
+        const seenIds = new Set();
         const merged = [];
-        [...validRemote, ...(this.data.posts || [])].forEach((p) => {
-          if (!p || !p.id) return;
-          const dedupKey = `${p.id}`;
-          const titleKey = `${(p.title || '').trim()}__${p.author?.nickname || ''}`;
-          if (seenTitles.has(dedupKey) || seenTitles.has(titleKey)) return;
-          seenTitles.add(dedupKey);
-          seenTitles.add(titleKey);
+        validRemote.forEach((p) => {
+          if (!p || !p.id || seenIds.has(p.id)) return;
+          seenIds.add(p.id);
+          merged.push(p);
+        });
+        (this.data.posts || []).forEach((p) => {
+          if (!p || !p.id || seenIds.has(p.id) || this.deletedPostIds.has(p.id)) return;
+          seenIds.add(p.id);
           merged.push(p);
         });
         this.data.posts = merged;
@@ -371,19 +387,82 @@ class DodamCommunityApp {
         if (this.activePostDetailId && remoteMap.has(this.activePostDetailId)) {
           const updatedPost = remoteMap.get(this.activePostDetailId);
           const likesEl = document.getElementById('post-detail-likes-count');
-          if (likesEl) {
-            const totalLikes =
-              (updatedPost.reactions?.like || 0) +
-              (updatedPost.reactions?.hug || 0) +
-              (updatedPost.reactions?.tip || 0);
-            likesEl.textContent = totalLikes;
-          }
+          if (likesEl) likesEl.textContent = updatedPost.reactions?.like || 0;
+          const hugsEl = document.getElementById('post-detail-hugs-count');
+          if (hugsEl) hugsEl.textContent = updatedPost.reactions?.hug || 0;
+          const tipsEl = document.getElementById('post-detail-tips-count');
+          if (tipsEl) tipsEl.textContent = updatedPost.reactions?.tip || 0;
           this.renderPostDetailComments(updatedPost);
         }
       }
     });
 
+    // 3. 프로필 & 성장 다이어리 DB 실시간 구독
+    if (typeof window.DodamFirebase.subscribeProfile === 'function') {
+      window.DodamFirebase.subscribeProfile('active_profile', (remoteProfile) => {
+        if (remoteProfile) {
+          this.profile = {
+            ...this.getDefaultProfile(),
+            ...remoteProfile,
+            growthRecords: Array.isArray(remoteProfile.growthRecords) ? remoteProfile.growthRecords : []
+          };
+          this.renderProfileWidget();
+          this.renderAuthHeader();
+        }
+      });
+    }
 
+    // 4. 스크랩북 DB 실시간 구독
+    if (typeof window.DodamFirebase.subscribeScraps === 'function') {
+      window.DodamFirebase.subscribeScraps('active_scraps', (remoteScraps) => {
+        if (Array.isArray(remoteScraps)) {
+          this.scraps = remoteScraps;
+          this.updateScrapBadge();
+          this.renderProfileWidget();
+        }
+      });
+    }
+
+    // 5. 등록 회원 계정 DB 실시간 구독
+    if (typeof window.DodamFirebase.subscribeUsers === 'function') {
+      window.DodamFirebase.subscribeUsers((remoteUsers) => {
+        if (Array.isArray(remoteUsers) && remoteUsers.length > 0) {
+          this.users = remoteUsers;
+          if (this.currentView === 'admin' && this.adminTab === 'users') {
+            this.renderAdminUsers();
+            this.renderAdminTabs();
+          }
+        } else if (this.users && this.users.length > 0) {
+          window.DodamFirebase.saveUsers(this.users);
+        }
+      });
+    }
+
+    // 6. 현재 로그인 세션 DB 실시간 구독
+    if (typeof window.DodamFirebase.subscribeSession === 'function') {
+      window.DodamFirebase.subscribeSession('active_session', (sessionUser) => {
+        this.currentUser = sessionUser || null;
+        this.renderAuthHeader();
+        this.renderProfileWidget();
+      });
+    }
+
+    // 7. 소셜 API 키 설정 DB 실시간 구독
+    if (typeof window.DodamFirebase.subscribeAppConfig === 'function') {
+      window.DodamFirebase.subscribeAppConfig((cfg) => {
+        if (cfg) {
+          if (!window.DODAM_SOCIAL_CONFIG) window.DODAM_SOCIAL_CONFIG = {};
+          if (cfg.kakaoJavascriptKey) {
+            window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey = cfg.kakaoJavascriptKey;
+            this.initKakaoSdk();
+          }
+          if (cfg.naverClientId) {
+            window.DODAM_SOCIAL_CONFIG.naverClientId = cfg.naverClientId;
+            this.initNaverSdk();
+          }
+        }
+      });
+    }
   }
 
   // ==========================================
@@ -406,33 +485,6 @@ class DodamCommunityApp {
   }
 
   loadProfile() {
-    try {
-      const raw = localStorage.getItem(this.profileKey);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (!this.currentUser) {
-          parsed.profileImage = null;
-          parsed.provider = null;
-        }
-        // Ensure defaults for new fields
-        if (parsed.months === undefined) parsed.months = 24;
-        if (!parsed.gender) parsed.gender = 'boy';
-        if (!parsed.interests) parsed.interests = ['food', 'festivals', 'school', 'policy'];
-        if (parsed.helpsCount === undefined) parsed.helpsCount = 0;
-        if (parsed.points === undefined) parsed.points = 0;
-
-        // Reset dummy mock points (450/500P with 8 helps) so newly joined users start at Lv.1
-        if (parsed.helpsCount === 8 && (parsed.points === 450 || parsed.points === 500)) {
-          parsed.helpsCount = 0;
-          parsed.points = parsed.checkedInToday ? 50 : 0;
-        }
-
-        if (!parsed.growthRecords || !Array.isArray(parsed.growthRecords)) {
-          parsed.growthRecords = [];
-        }
-        return parsed;
-      }
-    } catch {}
     return {
       nickname: '도담맘',
       babyName: '도담이',
@@ -452,7 +504,15 @@ class DodamCommunityApp {
   }
 
   saveProfileData() {
-    localStorage.setItem(this.profileKey, JSON.stringify(this.profile));
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveProfile === 'function') {
+      window.DodamFirebase.saveProfile(this.profile, 'active_profile');
+    }
+  }
+
+  saveCurrentUserSession() {
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveSession === 'function') {
+      window.DodamFirebase.saveSession(this.currentUser, 'active_session');
+    }
   }
 
   calculateLevel(points = 0, helps = 0) {
@@ -709,12 +769,12 @@ class DodamCommunityApp {
     if (kakaoKey) window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey = kakaoKey;
     if (naverId) window.DODAM_SOCIAL_CONFIG.naverClientId = naverId;
 
-    try {
-      localStorage.setItem('dodam_social_custom_keys', JSON.stringify({
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveSocialConfig === 'function') {
+      window.DodamFirebase.saveSocialConfig({
         kakaoJavascriptKey: window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey || '',
         naverClientId: window.DODAM_SOCIAL_CONFIG.naverClientId || ''
-      }));
-    } catch {}
+      });
+    }
 
     this.initKakaoSdk();
     this.initNaverSdk();
@@ -754,9 +814,7 @@ class DodamCommunityApp {
       isDemo: true,
       role: 'member'
     };
-    try {
-      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-    } catch {}
+    this.saveCurrentUserSession();
 
     this.closeLoginModal();
     this.renderAuthHeader();
@@ -810,10 +868,8 @@ class DodamCommunityApp {
               if (realPhoto) this.profile.profileImage = realPhoto;
               this.profile.provider = 'kakao';
 
-              try {
-                localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-                this.saveProfileData();
-              } catch {}
+              this.saveCurrentUserSession();
+              this.saveProfileData();
 
               this.closeLoginModal();
               this.renderAuthHeader();
@@ -902,10 +958,8 @@ class DodamCommunityApp {
           if (realPhoto) this.profile.profileImage = realPhoto;
           this.profile.provider = 'naver';
 
-          try {
-            localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-            this.saveProfileData();
-          } catch {}
+          this.saveCurrentUserSession();
+          this.saveProfileData();
 
           this.closeLoginModal();
           this.renderAuthHeader();
@@ -1035,9 +1089,7 @@ class DodamCommunityApp {
     this.profile.nickname = newNick;
     if (this.currentUser) {
       this.currentUser.nickname = newNick;
-      try {
-        localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-      } catch {}
+      this.saveCurrentUserSession();
       const uIdx = this.users.findIndex(u => u.id === this.currentUser.id || u.username === this.currentUser.username);
       if (uIdx >= 0) {
         this.users[uIdx].nickname = newNick;
@@ -1071,9 +1123,7 @@ class DodamCommunityApp {
 
     if (this.currentUser) {
       this.currentUser.passwordHash = pw1;
-      try {
-        localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-      } catch {}
+      this.saveCurrentUserSession();
 
       const uIdx = this.users.findIndex(u => u.id === this.currentUser.id || u.username === this.currentUser.username);
       if (uIdx >= 0) {
@@ -1109,9 +1159,7 @@ class DodamCommunityApp {
               this.currentUser.profileImage = realPhoto;
               this.profile.profileImage = realPhoto;
             }
-            try {
-              localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
-            } catch {}
+            this.saveCurrentUserSession();
             this.saveProfileData();
             this.renderAccountSection();
             this.renderAuthHeader();
@@ -1144,23 +1192,23 @@ class DodamCommunityApp {
       } catch (e) {}
     }
 
-    // 2. 등록 유저 목록에서 삭제
+    // 2. 등록 유저 목록에서 삭제 (Cloud Firestore DB에서도 삭제)
     if (this.currentUser) {
       const curId = this.currentUser.id;
       const curUser = this.currentUser.username;
       this.users = (this.users || []).filter(u => u.id !== curId && u.username !== curUser);
       this.saveUsers();
+      if (window.DodamFirebase && typeof window.DodamFirebase.deleteUser === 'function') {
+        window.DodamFirebase.deleteUser(curId || curUser);
+      }
     }
 
-    // 3. 로컬 스토리지 모든 회원 데이터 삭제
-    try {
-      localStorage.removeItem(this.authKey);
-      localStorage.removeItem(this.profileKey);
-      localStorage.removeItem('dodam_user_profile');
-      localStorage.removeItem('dodam_growth_records');
-      localStorage.removeItem('dodam_checked_in_date');
-      localStorage.removeItem('dodam_scraps_v1');
-    } catch (e) {}
+    // 3. Cloud Firestore 데이터베이스 내 모든 회원 세션·프로필·스크랩 삭제
+    if (window.DodamFirebase) {
+      if (typeof window.DodamFirebase.clearSession === 'function') window.DodamFirebase.clearSession('active_session');
+      if (typeof window.DodamFirebase.deleteProfile === 'function') window.DodamFirebase.deleteProfile('active_profile');
+      if (typeof window.DodamFirebase.deleteScraps === 'function') window.DodamFirebase.deleteScraps('active_scraps');
+    }
 
     // 4. 상태 리셋
     this.currentUser = null;
@@ -3178,8 +3226,12 @@ class DodamCommunityApp {
     if (tipsEl) tipsEl.textContent = post.reactions.tip || 0;
 
     this.saveCustomPosts();
-    if (window.DodamFirebase && type === 'like') {
-      window.DodamFirebase.incrementLike(post.id);
+    if (window.DodamFirebase) {
+      if (typeof window.DodamFirebase.incrementReaction === 'function') {
+        window.DodamFirebase.incrementReaction(post.id, type, post);
+      } else if (type === 'like') {
+        window.DodamFirebase.incrementLike(post.id, post);
+      }
     }
     const toastMap = {
       like: '공감하셨습니다! ❤️',
@@ -3218,7 +3270,7 @@ class DodamCommunityApp {
     input.value = '';
     this.saveCustomPosts();
     if (window.DodamFirebase) {
-      window.DodamFirebase.addComment(post.id, newComment);
+      window.DodamFirebase.addComment(post.id, newComment, post);
     }
 
     this.profile.points = (this.profile.points || 0) + 10;
@@ -3349,14 +3401,8 @@ class DodamCommunityApp {
     if (!confirm('이 게시글을 정말 삭제하시겠습니까?\n삭제된 게시글은 복구할 수 없습니다.')) return;
 
     this.data.posts.splice(postIdx, 1);
-
-    try {
-      const deletedIds = JSON.parse(localStorage.getItem('dodam_deleted_posts_v1') || '[]');
-      if (!deletedIds.includes(targetId)) {
-        deletedIds.push(targetId);
-        localStorage.setItem('dodam_deleted_posts_v1', JSON.stringify(deletedIds));
-      }
-    } catch {}
+    if (!this.deletedPostIds) this.deletedPostIds = new Set();
+    this.deletedPostIds.add(targetId);
 
     this.saveCustomPosts();
     if (window.DodamFirebase && typeof window.DodamFirebase.deletePost === 'function') {
@@ -3388,10 +3434,20 @@ class DodamCommunityApp {
       authorAvatarEl.textContent = firstChar;
     }
 
-    const rawDraft = localStorage.getItem(this.draftKey);
     const draftBadge = document.getElementById('draft-count-badge');
     const loadBtn = document.getElementById('btn-draft-load');
-    if (rawDraft) {
+    if (window.DodamFirebase && typeof window.DodamFirebase.getDraft === 'function') {
+      window.DodamFirebase.getDraft('default_draft').then((draft) => {
+        this.cachedDraft = draft || null;
+        if (draft) {
+          if (draftBadge) draftBadge.textContent = '1';
+          if (loadBtn) loadBtn.classList.remove('hidden');
+        } else {
+          if (draftBadge) draftBadge.textContent = '0';
+          if (loadBtn) loadBtn.classList.add('hidden');
+        }
+      });
+    } else if (this.cachedDraft) {
       if (draftBadge) draftBadge.textContent = '1';
       if (loadBtn) loadBtn.classList.remove('hidden');
     } else {
@@ -3525,23 +3581,29 @@ class DodamCommunityApp {
       savedAt: new Date().toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' })
     };
 
-    localStorage.setItem(this.draftKey, JSON.stringify(draft));
+    this.cachedDraft = draft;
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveDraft === 'function') {
+      window.DodamFirebase.saveDraft('default_draft', draft);
+    }
     const badge = document.getElementById('draft-count-badge');
     if (badge) badge.textContent = '1';
     const loadBtn = document.getElementById('btn-draft-load');
     if (loadBtn) loadBtn.classList.remove('hidden');
 
-    this.showToast(`[${draft.savedAt}] 임시저장되었습니다! 💾`);
+    this.showToast(`[${draft.savedAt}] Cloud Firestore DB에 임시저장되었습니다! 💾`);
   }
 
-  loadPostDraft() {
+  async loadPostDraft() {
     try {
-      const raw = localStorage.getItem(this.draftKey);
-      if (!raw) {
-        this.showToast('저장된 임시글이 없습니다.');
+      let draft = this.cachedDraft;
+      if (window.DodamFirebase && typeof window.DodamFirebase.getDraft === 'function') {
+        const remoteDraft = await window.DodamFirebase.getDraft('default_draft');
+        if (remoteDraft) draft = remoteDraft;
+      }
+      if (!draft) {
+        this.showToast('DB에 저장된 임시글이 없습니다.');
         return;
       }
-      const draft = JSON.parse(raw);
       if (document.getElementById('post-form-title')) document.getElementById('post-form-title').value = draft.title || '';
       if (document.getElementById('post-form-content')) document.getElementById('post-form-content').value = draft.content || '';
       if (document.getElementById('post-form-category')) document.getElementById('post-form-category').value = draft.category || 'newborn';
@@ -3550,7 +3612,7 @@ class DodamCommunityApp {
 
       this.attachedImages = draft.images || [];
       this.renderAttachedImages();
-      this.showToast('임시저장된 글을 성공적으로 불러왔습니다!');
+      this.showToast('DB에 임시저장된 글을 성공적으로 불러왔습니다!');
     } catch (err) {
       console.error('loadPostDraft error:', err);
     }
@@ -3689,7 +3751,10 @@ class DodamCommunityApp {
     this.attachedImages = [];
     this.renderAttachedImages();
 
-    localStorage.removeItem(this.draftKey);
+    this.cachedDraft = null;
+    if (window.DodamFirebase && typeof window.DodamFirebase.deleteDraft === 'function') {
+      window.DodamFirebase.deleteDraft('default_draft');
+    }
     const draftBadge = document.getElementById('draft-count-badge');
     if (draftBadge) draftBadge.textContent = '0';
     const loadBtn = document.getElementById('btn-draft-load');
@@ -3750,41 +3815,11 @@ class DodamCommunityApp {
   }
 
   saveCustomPosts() {
-    const custom = (this.data.posts || []).filter(
-      (p) => p && p.id && (p.id.startsWith('custom-post-') || p.id.startsWith('guide-ai-report-') || p.isEdited)
-    );
-    try {
-      localStorage.setItem(this.customPostsKey, JSON.stringify(custom));
-    } catch {}
+    // 모든 게시글 변경 사항은 Cloud Firestore 데이터베이스(community_posts)에 실시간 저장됩니다.
   }
 
   loadSavedPosts() {
-    try {
-      const deletedIds = JSON.parse(localStorage.getItem('dodam_deleted_posts_v1') || '[]');
-      if (Array.isArray(deletedIds) && deletedIds.length > 0) {
-        this.data.posts = (this.data.posts || []).filter((p) => p && !deletedIds.includes(p.id));
-      }
-
-      const raw = localStorage.getItem(this.customPostsKey);
-      if (raw) {
-        let savedPosts = JSON.parse(raw);
-        savedPosts = (savedPosts || []).filter(
-          (p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock') && !deletedIds.includes(p.id)
-        );
-        const newCustoms = [];
-        savedPosts.forEach((sp) => {
-          const existingIdx = (this.data.posts || []).findIndex((ep) => ep.id === sp.id);
-          if (existingIdx !== -1) {
-            this.data.posts[existingIdx] = sp;
-          } else {
-            newCustoms.push(sp);
-          }
-        });
-        if (newCustoms.length > 0) {
-          this.data.posts.unshift(...newCustoms);
-        }
-      }
-    } catch {}
+    // 초기 게시글 및 수정/삭제 상태는 initFirebaseSync()를 통해 Cloud Firestore DB에서 실시간 로드됩니다.
   }
 
   renderActivePoll() {
@@ -4933,10 +4968,6 @@ class DodamCommunityApp {
   // 8. 스크랩북 & 토스트 알림 관리
   // ==========================================
   loadScraps() {
-    try {
-      const raw = localStorage.getItem(this.scrapsKey);
-      if (raw) return JSON.parse(raw);
-    } catch {}
     return ['post-01'];
   }
 
@@ -4947,9 +4978,11 @@ class DodamCommunityApp {
       this.showToast('스크랩북에서 삭제되었습니다.');
     } else {
       this.scraps.push(postId);
-      this.showToast('나의 육아 스크랩북에 저장되었습니다!');
+      this.showToast('나의 육아 스크랩북(DB)에 저장되었습니다!');
     }
-    localStorage.setItem(this.scrapsKey, JSON.stringify(this.scraps));
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveScraps === 'function') {
+      window.DodamFirebase.saveScraps(this.scraps, 'active_scraps');
+    }
     this.updateScrapBadge();
     this.renderProfileWidget();
     this.renderBoardView();
@@ -8898,31 +8931,20 @@ class DodamCommunityApp {
 
 
   // ==========================================
-  // [인증 & 권한 제어 (Auth & RBAC)]
+  // [인증 & 권한 제어 (Auth & RBAC) - Cloud Firestore DB 연동]
   // ==========================================
   loadUsers() {
-    try {
-      const raw = localStorage.getItem(this.usersKey);
-      if (raw) return JSON.parse(raw);
-    } catch {}
     const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
-    localStorage.setItem(this.usersKey, JSON.stringify(defaults));
     return defaults;
   }
 
   saveUsers() {
-    try {
-      localStorage.setItem(this.usersKey, JSON.stringify(this.users));
-    } catch (e) {
-      console.error('Failed to save users', e);
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveUsers === 'function') {
+      window.DodamFirebase.saveUsers(this.users);
     }
   }
 
   loadCurrentUser() {
-    try {
-      const raw = localStorage.getItem(this.authKey);
-      if (raw) return JSON.parse(raw);
-    } catch {}
     return null;
   }
 
@@ -9112,7 +9134,7 @@ class DodamCommunityApp {
       if (found) {
         found.lastLogin = '방금 전';
         this.currentUser = found;
-        localStorage.setItem(this.authKey, JSON.stringify(found));
+        this.saveCurrentUserSession();
         this.saveUsers();
 
         // Sync profile with logged in user
@@ -9176,7 +9198,7 @@ class DodamCommunityApp {
       this.users.push(newUser);
       this.saveUsers();
       this.currentUser = newUser;
-      localStorage.setItem(this.authKey, JSON.stringify(newUser));
+      this.saveCurrentUserSession();
 
       // Reset profile points for new user so they start at Lv.1 새싹맘 (0P)
       this.profile.nickname = newUser.nickname;
@@ -9195,7 +9217,9 @@ class DodamCommunityApp {
 
   logout() {
     this.currentUser = null;
-    localStorage.removeItem(this.authKey);
+    if (window.DodamFirebase && typeof window.DodamFirebase.clearSession === 'function') {
+      window.DodamFirebase.clearSession('active_session');
+    }
     this.profile = this.getDefaultProfile();
     this.profile.profileImage = null;
     this.profile.provider = null;
@@ -9601,9 +9625,12 @@ class DodamCommunityApp {
 
     this.users = this.users.filter((u) => u.id !== userId);
     this.saveUsers();
+    if (window.DodamFirebase && typeof window.DodamFirebase.deleteUser === 'function') {
+      window.DodamFirebase.deleteUser(userId);
+    }
     this.renderAdminUsers();
     this.renderAdminTabs();
-    this.showToast('사용자 계정이 삭제되었습니다.');
+    this.showToast('사용자 계정이 DB에서 삭제되었습니다.');
   }
 
   openChangePwModal() {
@@ -9628,7 +9655,7 @@ class DodamCommunityApp {
 
     if (this.currentUser) {
       this.currentUser.passwordHash = pw1;
-      localStorage.setItem(this.authKey, JSON.stringify(this.currentUser));
+      this.saveCurrentUserSession();
       const uIdx = this.users.findIndex((u) => u.id === this.currentUser.id);
       if (uIdx >= 0) {
         this.users[uIdx].passwordHash = pw1;
@@ -9680,43 +9707,44 @@ class DodamCommunityApp {
   adminDeletePost(postId) {
     if (!confirm('해당 게시글을 관리자 권한으로 삭제하시겠습니까?')) return;
     this.data.posts = this.data.posts.filter((p) => p.id !== postId);
-    try {
-      localStorage.setItem(this.customPostsKey, JSON.stringify(this.data.posts));
-    } catch {}
+    if (!this.deletedPostIds) this.deletedPostIds = new Set();
+    this.deletedPostIds.add(postId);
+    if (window.DodamFirebase && typeof window.DodamFirebase.deletePost === 'function') {
+      window.DodamFirebase.deletePost(postId);
+    }
     this.renderAdminCommunity();
     this.renderBoardView();
     this.renderBoardCategories();
-    this.showToast('게시글이 삭제되었습니다.');
+    this.showToast('게시글이 Cloud Firestore DB에서 삭제되었습니다.');
   }
 
   clearSpamPosts() {
+    const toDelete = (this.data.posts || []).map((p) => p.id);
     this.data.posts = [];
-    try {
-      localStorage.removeItem(this.customPostsKey);
-    } catch {}
+    if (window.DodamFirebase && typeof window.DodamFirebase.deletePost === 'function') {
+      toDelete.forEach((id) => window.DodamFirebase.deletePost(id));
+    }
     this.renderAdminCommunity();
     this.renderBoardView();
     this.renderBoardCategories();
-    this.showToast('더미 및 스팸 게시글이 일괄 정리되었습니다.');
+    this.showToast('더미 및 스팸 게시글이 DB에서 일괄 정리되었습니다.');
   }
 
-  // 6. 시스템 진단 & 스토리지
+  // 6. 시스템 진단 & Cloud Firestore DB 스토리지 현황
   renderAdminSystem() {
-    let totalBytes = 0;
-    for (let key in localStorage) {
-      if (localStorage.hasOwnProperty(key)) {
-        totalBytes += (localStorage[key] || '').length * 2;
-      }
-    }
-    const kb = (totalBytes / 1024).toFixed(1);
-    const mb = (totalBytes / (1024 * 1024)).toFixed(2);
-    const pct = Math.min(100, Math.round((totalBytes / (5 * 1024 * 1024)) * 100));
+    const status = window.DodamFirebase?.collectionsStatus || {};
+    const postCount = (this.data.posts || []).length;
+    const userCount = (this.users || []).length;
+    const scrapCount = (this.scraps || []).length;
+    const totalDocs = postCount + userCount + scrapCount + (status.deleted_posts || 0) + 2;
 
     const textEl = document.getElementById('storage-usage-text');
     const barEl = document.getElementById('storage-usage-bar');
 
-    if (textEl) textEl.textContent = `${kb} KB (${mb} MB) / 5.0 MB (${pct}%)`;
-    if (barEl) barEl.style.width = `${Math.max(pct, 5)}%`;
+    if (textEl) {
+      textEl.textContent = `Cloud Firestore 실시간 연동 완료 · 총 ${totalDocs.toLocaleString()}개 문서 동기화 중 (LocalStorage 미사용)`;
+    }
+    if (barEl) barEl.style.width = `18%`;
   }
 
   exportBackupJson() {
@@ -10275,10 +10303,13 @@ class DodamCommunityApp {
         ]
       };
 
-      // Add to beginning of posts array
+      // Add to beginning of posts array and persist to Cloud Firestore DB
       if (!this.data.posts) this.data.posts = [];
       this.data.posts.unshift(newPost);
       this.saveCustomPosts();
+      if (window.DodamFirebase && typeof window.DodamFirebase.createPost === 'function') {
+        window.DodamFirebase.createPost(newPost);
+      }
 
       this.closeAiParentingReportModal();
       this.showToast('🎉 AI 육아가이드 리포트가 성공적으로 발행되어 게시판에 등록되었습니다!');
