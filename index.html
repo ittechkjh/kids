@@ -26,7 +26,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261107_v13" />
+  <link rel="stylesheet" href="css/styles.css?v=20261108_v14" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -198,6 +198,7 @@
 
         <!-- VIEW 1: 도담 육아 게시판 (심플 & 직관적인 클린 UI) -->
         <section id="view-board" class="view-section space-y-3.5">
+          <div id="board-list-container" class="space-y-3.5">
           <!-- 내 육아 프로필 요약 바 -->
           <div id="my-profile-widget"></div>
 
@@ -433,6 +434,225 @@
               </div>
             </div>
           </div>
+          </div>
+
+          <!-- ==========================================
+               와이드 풀스크린 게시글 상세 뷰어 (#board-detail-view)
+               ========================================== -->
+          <div id="board-detail-view" class="hidden space-y-4">
+            <!-- 1. 상단 액션 툴바 카드 -->
+            <div class="bg-white rounded-2xl border border-stone-200 px-4 sm:px-6 py-3.5 flex items-center justify-between flex-wrap gap-2.5 shadow-2xs">
+              <div class="flex items-center gap-2 flex-wrap">
+                <button
+                  type="button"
+                  onclick="app.closePostDetailModal()"
+                  class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-extrabold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <span>← 전체 포럼 목록으로 돌아가기</span>
+                </button>
+                <div class="hidden sm:flex items-center gap-1 text-xs text-slate-500 pl-1">
+                  <button type="button" onclick="app.navigatePostDetail(-1)" class="px-2.5 py-1.5 rounded-xl hover:bg-stone-100 font-bold flex items-center gap-1 transition cursor-pointer">
+                    <i class="fa-solid fa-chevron-left text-[10px]"></i>
+                    <span>이전글</span>
+                  </button>
+                  <button type="button" onclick="app.navigatePostDetail(1)" class="px-2.5 py-1.5 rounded-xl hover:bg-stone-100 font-bold flex items-center gap-1 transition cursor-pointer">
+                    <span>다음글</span>
+                    <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                <button
+                  type="button"
+                  id="btn-download-all-images"
+                  onclick="app.downloadAllPostImages()"
+                  class="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <i class="fa-regular fa-images text-slate-500"></i>
+                  <span id="btn-download-all-images-label">사진 1장 일괄 다운로드</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.copyPostForNaverBlog()"
+                  class="px-3.5 py-1.5 rounded-xl bg-sky-50/80 hover:bg-sky-100 border border-sky-200 text-slate-800 font-extrabold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <i class="fa-regular fa-copy text-sky-600"></i>
+                  <span>네이버 블로그/카페 복사</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.openPostInNewWindow()"
+                  class="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[11px] text-slate-500"></i>
+                  <span>새창서 보기</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.openEditPostModal()"
+                  class="px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 border border-stone-200 hover:border-amber-200 text-slate-700 hover:text-amber-800 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <i class="fa-solid fa-pen text-[11px] text-slate-500"></i>
+                  <span>수정</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.deleteCurrentPost()"
+                  class="px-3 py-1.5 rounded-xl bg-white hover:bg-rose-50 border border-stone-200 hover:border-rose-200 text-slate-700 hover:text-rose-600 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+                >
+                  <i class="fa-regular fa-trash-can text-[11px] text-rose-500"></i>
+                  <span>삭제</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 2. 메인 와이드 아티클 본문 카드 -->
+            <article class="bg-white rounded-3xl border border-stone-200 p-5 sm:p-10 shadow-xs space-y-6">
+              <!-- 메타 헤더 바 -->
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-2 flex-wrap text-xs sm:text-[13px]">
+                  <span id="post-detail-category-badge" class="px-3 py-1 rounded-full font-extrabold text-xs bg-sky-50 text-sky-700 border border-sky-200"></span>
+                  <span class="text-slate-300">•</span>
+                  <div class="flex items-center gap-1.5">
+                    <div id="post-detail-avatar" class="w-6 h-6 rounded-full bg-rose-500 text-white flex items-center justify-center font-black text-[11px] shrink-0 shadow-2xs"></div>
+                    <span id="post-detail-author" class="font-black text-slate-900"></span>
+                    <span id="post-detail-author-badge" class="text-slate-500 font-bold text-xs"></span>
+                    <span id="post-detail-region" class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 font-bold text-[11px]"></span>
+                  </div>
+                  <span class="text-slate-300">•</span>
+                  <span id="post-detail-date" class="text-slate-500 font-medium"></span>
+                  <span class="text-slate-300">•</span>
+                  <span class="text-slate-600 font-bold">조회수 <strong id="post-detail-views" class="text-sky-600 font-black">0</strong></span>
+                </div>
+
+                <div class="flex items-center gap-1.5 shrink-0">
+                  <button type="button" onclick="app.copyPostUrl()" class="px-3 py-1.5 rounded-xl bg-stone-50 border border-stone-200 hover:bg-stone-100 text-slate-600 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer">
+                    <i class="fa-solid fa-link text-[11px]"></i>
+                    <span>링크 복사</span>
+                  </button>
+                  <button type="button" onclick="app.toggleScrapModal()" id="post-detail-scrap-btn" class="px-3 py-1.5 rounded-xl bg-stone-50 border border-stone-200 hover:bg-stone-100 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer">
+                    <i class="fa-regular fa-bookmark text-amber-500"></i>
+                    <span>스크랩</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- 대형 아티클 제목 + 굵은 하단 구분선 -->
+              <h1 id="post-detail-title" class="text-xl sm:text-2xl md:text-[26px] font-black text-slate-900 leading-snug tracking-tight pb-5 border-b-2 border-slate-800"></h1>
+
+              <!-- 본문 및 고해상도 요약 인포그래픽 카드 영역 -->
+              <div id="post-detail-content" class="text-sm sm:text-[15px] text-slate-800 leading-8 space-y-6 py-2"></div>
+
+              <!-- 추가 첨부 사진 갤러리 렌더링 -->
+              <div id="post-detail-images-box" class="space-y-6 hidden"></div>
+
+              <!-- 해시태그 목록 -->
+              <div id="post-detail-tags" class="flex flex-wrap gap-2 pt-2"></div>
+
+              <!-- 3종 따뜻한 육아 공감 리액션 바 -->
+              <div class="py-5 border-y border-stone-200 flex items-center justify-center gap-2.5 sm:gap-4 flex-wrap">
+                <button
+                  type="button"
+                  id="post-detail-like-btn"
+                  onclick="app.reactToPostModal('like')"
+                  class="flex items-center gap-2 px-5 py-2.5 rounded-2xl border-2 border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-black text-xs sm:text-sm transition shadow-2xs cursor-pointer"
+                >
+                  <span>❤️ 공감해요</span>
+                  <span id="post-detail-likes-count" class="px-2.5 py-0.5 rounded-full bg-white text-rose-600 font-black text-xs shadow-2xs">0</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.reactToPostModal('hug')"
+                  class="flex items-center gap-2 px-5 py-2.5 rounded-2xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 text-amber-800 font-black text-xs sm:text-sm transition shadow-2xs cursor-pointer"
+                >
+                  <span>🤗 토닥토닥 힘내요</span>
+                  <span id="post-detail-hugs-count" class="px-2.5 py-0.5 rounded-full bg-white text-amber-800 font-black text-xs shadow-2xs">0</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.reactToPostModal('tip')"
+                  class="flex items-center gap-2 px-5 py-2.5 rounded-2xl border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-xs sm:text-sm transition shadow-2xs cursor-pointer"
+                >
+                  <span>💡 유익한 꿀팁</span>
+                  <span id="post-detail-tips-count" class="px-2.5 py-0.5 rounded-full bg-white text-emerald-700 font-black text-xs shadow-2xs">0</span>
+                </button>
+              </div>
+
+              <!-- 댓글 목록 섹션 -->
+              <div class="space-y-4 pt-2">
+                <div class="flex items-center justify-between">
+                  <h4 class="text-sm font-black text-slate-900 flex items-center gap-1.5">
+                    <i class="fa-solid fa-comments text-[#03C75A]"></i>
+                    <span>댓글 <strong class="text-[#03C75A]" id="post-detail-comments-count">0</strong></span>
+                  </h4>
+                  <span class="text-xs text-slate-400 font-bold">등록순</span>
+                </div>
+
+                <div id="post-detail-comments-list" class="space-y-3"></div>
+              </div>
+
+              <!-- 원클릭 공감 댓글 스티커 & 댓글 입력 폼 -->
+              <form onsubmit="app.submitBoardComment(event)" class="pt-4 border-t border-stone-200 space-y-3">
+                <div class="flex items-center gap-1.5 flex-wrap text-xs">
+                  <span class="text-slate-400 font-extrabold shrink-0">⚡ 1초 댓글:</span>
+                  <button type="button" onclick="app.insertQuickComment('🙌 저도 요즘 똑같은 고민 중인데 너무 공감돼요!')" class="px-3 py-1 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold whitespace-nowrap cursor-pointer transition">🙌 저도 똑같은 고민이에요</button>
+                  <button type="button" onclick="app.insertQuickComment('🤗 그 시기엔 원래 다 그렇더라구요! 엄마 아빠가 너무 잘하고 계세요 토닥토닥 💕')" class="px-3 py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-bold whitespace-nowrap cursor-pointer transition">🤗 토닥토닥 힘내세요!</button>
+                  <button type="button" onclick="app.insertQuickComment('💡 정성스러운 육아 꿀팁 공유 정말 감사합니다! 바로 저장해갑니다 👍')" class="px-3 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold whitespace-nowrap cursor-pointer transition">💡 꿀팁 감사합니다</button>
+                  <button type="button" onclick="app.insertQuickComment('📍 반가워요! 저도 같은 동네에서 또래 키우고 있어요 자주 소통해요 😊')" class="px-3 py-1 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 font-bold whitespace-nowrap cursor-pointer transition">📍 같은 동네맘 반가워요</button>
+                </div>
+                <div class="flex items-center gap-1.5 text-xs font-bold text-slate-600">
+                  <span class="w-2 h-2 rounded-full bg-[#03C75A]"></span>
+                  <span id="comment-author-name">도담맘</span>
+                  <span class="text-slate-400 font-medium">님으로 댓글 작성 중 (+10P 적립)</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <input
+                    id="post-comment-input"
+                    type="text"
+                    required
+                    placeholder="따뜻한 응원이나 경험, 조언을 남겨주세요..."
+                    class="flex-1 border border-stone-200 rounded-xl px-4 py-2.5 text-xs sm:text-sm focus:outline-none focus:border-[#03C75A] focus:bg-white bg-stone-50 transition"
+                  />
+                  <button
+                    type="submit"
+                    class="px-6 py-2.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs sm:text-sm shrink-0 shadow-2xs transition cursor-pointer"
+                  >
+                    등록
+                  </button>
+                </div>
+              </form>
+            </article>
+
+            <!-- 3. 하단 목록 복귀 및 수정/삭제 바 -->
+            <div class="bg-white rounded-2xl border border-stone-200 px-4 sm:px-6 py-3.5 flex items-center justify-between flex-wrap gap-2 shadow-2xs">
+              <button
+                type="button"
+                onclick="app.closePostDetailModal()"
+                class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 font-extrabold text-xs flex items-center gap-1.5 transition cursor-pointer"
+              >
+                <span>← 전체 포럼 목록으로 돌아가기</span>
+              </button>
+              <div class="flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="app.openEditPostModal()"
+                  class="px-3.5 py-2 rounded-xl bg-white hover:bg-amber-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+                >
+                  <i class="fa-solid fa-pen text-[11px] text-slate-500"></i>
+                  <span>글 수정</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="app.deleteCurrentPost()"
+                  class="px-3.5 py-2 rounded-xl bg-white hover:bg-rose-50 border border-stone-200 text-rose-600 font-bold text-xs flex items-center gap-1.5 transition cursor-pointer"
+                >
+                  <i class="fa-regular fa-trash-can text-[11px]"></i>
+                  <span>글 삭제</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- VIEW 9: 네이버 스마트에디터형 카페 글쓰기 전용 화면 (풀페이지) -->
@@ -442,16 +662,16 @@
             <div class="flex items-center gap-3">
               <button
                 type="button"
-                onclick="app.switchMainView('board')"
+                onclick="app.cancelWriteOrEdit()"
                 class="text-slate-400 hover:text-slate-700 transition p-1 text-base flex items-center gap-1.5 cursor-pointer"
                 title="게시판 목록으로 돌아가기"
               >
                 <i class="fa-solid fa-arrow-left"></i>
-                <span class="text-xs font-bold sm:inline hidden">목록으로</span>
+                <span class="text-xs font-bold sm:inline hidden">돌아가기</span>
               </button>
               <div class="h-4 w-px bg-stone-200 sm:block hidden"></div>
               <h2 class="text-lg sm:text-xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                <span>카페 글쓰기</span>
+                <span id="write-page-title">카페 글쓰기</span>
               </h2>
             </div>
 
@@ -506,6 +726,7 @@
                     <option value="working">💼 워킹맘·대디</option>
                     <option value="talk">🗣️ 속풀이·일상수다</option>
                     <option value="tips">💡 육아꿀팁·레시피</option>
+                    <option value="guide">📖 육아가이드</option>
                   </select>
                 </div>
 
@@ -651,7 +872,7 @@
               <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
                 <button
                   type="button"
-                  onclick="app.switchMainView('board')"
+                  onclick="app.cancelWriteOrEdit()"
                   class="px-4 py-2 rounded-lg border border-stone-200 text-slate-600 hover:bg-stone-50 font-bold transition cursor-pointer"
                 >
                   취소
@@ -2915,154 +3136,7 @@
     </div>
   </div>
 
-  <!-- ==========================================
-       MODAL: 네이버 카페형 게시글 상세 뷰어 & 댓글 모달
-       ========================================== -->
-  <div id="post-detail-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
-    <div class="bg-white rounded-3xl max-w-2xl w-full max-h-[92vh] flex flex-col p-5 sm:p-6 shadow-2xl border border-stone-200">
-      <!-- 1. 상단 네이버 카페 네비게이션 바 (모바일 완벽 대응) -->
-      <div class="flex items-center justify-between border-b border-stone-100 pb-3 shrink-0 text-xs gap-1.5">
-        <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
-          <span id="post-detail-category-badge" class="px-2.5 py-1 rounded-full font-black text-[11px] truncate max-w-[130px] sm:max-w-none shrink-0"></span>
-          <span class="text-stone-300">|</span>
-          <button onclick="app.navigatePostDetail(-1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1 shrink-0">
-            <i class="fa-solid fa-chevron-left text-[10px]"></i>
-            <span class="hidden xs:inline">이전글</span>
-          </button>
-          <button onclick="app.navigatePostDetail(1)" class="text-slate-500 hover:text-slate-900 font-bold flex items-center gap-1 shrink-0">
-            <span class="hidden xs:inline">다음글</span>
-            <i class="fa-solid fa-chevron-right text-[10px]"></i>
-          </button>
-        </div>
-
-        <div class="flex items-center gap-1.5 shrink-0">
-          <button onclick="app.copyPostUrl()" class="px-2 py-1 rounded-lg bg-stone-100 hover:bg-stone-200 text-slate-600 font-bold text-[11px] flex items-center gap-1 transition">
-            <i class="fa-solid fa-link text-[10px]"></i>
-            <span class="hidden sm:inline">URL 복사</span>
-          </button>
-          <button onclick="app.closePostDetailModal()" class="text-slate-400 hover:text-slate-600 text-lg p-1 transition" aria-label="닫기">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- 2. 본문 스크롤 영역 -->
-      <div class="overflow-y-auto space-y-4 py-4 flex-1 pr-1">
-        <!-- 작성자 및 제목 헤더 -->
-        <div class="space-y-3">
-          <h2 id="post-detail-title" class="text-lg sm:text-xl font-black text-slate-900 leading-snug"></h2>
-
-          <div class="flex items-center justify-between gap-2 p-3 rounded-2xl bg-stone-50 border border-stone-100 text-xs">
-            <div class="flex items-center gap-2.5 min-w-0">
-              <div id="post-detail-avatar" class="w-8 h-8 rounded-full bg-rose-500 text-white flex items-center justify-center font-black text-xs shrink-0 shadow-2xs"></div>
-              <div class="min-w-0">
-                <div class="flex items-center gap-1.5 flex-wrap">
-                  <span id="post-detail-author" class="font-black text-slate-900"></span>
-                  <span id="post-detail-author-badge" class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 font-extrabold text-[10px]"></span>
-                  <span id="post-detail-region" class="px-1.5 py-0.2 rounded bg-indigo-50 text-indigo-700 font-extrabold text-[10px]"></span>
-                </div>
-                <div class="flex items-center gap-2 text-[11px] text-slate-400 font-medium mt-0.5">
-                  <span id="post-detail-date"></span>
-                  <span>·</span>
-                  <span>조회 <span id="post-detail-views">0</span></span>
-                </div>
-              </div>
-            </div>
-
-            <div class="flex items-center gap-1.5 shrink-0">
-              <button onclick="app.toggleScrapModal()" id="post-detail-scrap-btn" class="px-3 py-1.5 rounded-xl bg-white border border-stone-200 hover:bg-stone-100 text-slate-700 font-bold text-xs flex items-center gap-1 shadow-2xs transition">
-                <i class="fa-regular fa-bookmark text-amber-500"></i>
-                <span>스크랩</span>
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- 첨부 사진 갤러리 렌더링 -->
-        <div id="post-detail-images-box" class="space-y-2 hidden"></div>
-
-        <!-- 본문 내용 -->
-        <div id="post-detail-content" class="text-xs sm:text-sm text-slate-800 leading-relaxed whitespace-pre-line py-2"></div>
-
-        <!-- 해시태그 목록 -->
-        <div id="post-detail-tags" class="flex flex-wrap gap-1.5 pt-1"></div>
-
-        <!-- 3종 따뜻한 육아 공감 리액션 바 (공감해요 / 토닥토닥 / 꿀팁저장) -->
-        <div class="py-3.5 border-y border-stone-100 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-          <button
-            type="button"
-            id="post-detail-like-btn"
-            onclick="app.reactToPostModal('like')"
-            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-rose-200 bg-rose-50 hover:bg-rose-100 text-rose-600 font-black text-xs transition shadow-2xs cursor-pointer"
-          >
-            <span>❤️ 공감해요</span>
-            <span id="post-detail-likes-count" class="px-2 py-0.5 rounded-full bg-white text-rose-600 font-black text-xs shadow-2xs">0</span>
-          </button>
-          <button
-            type="button"
-            onclick="app.reactToPostModal('hug')"
-            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-amber-200 bg-amber-50 hover:bg-amber-100 text-amber-800 font-black text-xs transition shadow-2xs cursor-pointer"
-          >
-            <span>🤗 토닥토닥 힘내요</span>
-            <span id="post-detail-hugs-count" class="px-2 py-0.5 rounded-full bg-white text-amber-800 font-black text-xs shadow-2xs">0</span>
-          </button>
-          <button
-            type="button"
-            onclick="app.reactToPostModal('tip')"
-            class="flex items-center gap-1.5 px-4 py-2 rounded-2xl border-2 border-emerald-200 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 font-black text-xs transition shadow-2xs cursor-pointer"
-          >
-            <span>💡 유익한 꿀팁</span>
-            <span id="post-detail-tips-count" class="px-2 py-0.5 rounded-full bg-white text-emerald-700 font-black text-xs shadow-2xs">0</span>
-          </button>
-        </div>
-
-        <!-- 댓글 목록 섹션 -->
-        <div class="space-y-3 pt-2">
-          <div class="flex items-center justify-between">
-            <h4 class="text-xs font-black text-slate-900 flex items-center gap-1.5">
-              <i class="fa-solid fa-comments text-[#03C75A]"></i>
-              <span>댓글 <strong class="text-[#03C75A]" id="post-detail-comments-count">0</strong></span>
-            </h4>
-            <span class="text-[11px] text-slate-400 font-bold">등록순</span>
-          </div>
-
-          <div id="post-detail-comments-list" class="space-y-2.5"></div>
-        </div>
-      </div>
-
-      <!-- 3. 원클릭 공감 댓글 스티커 & 댓글 입력 폼 -->
-      <form onsubmit="app.submitBoardComment(event)" class="pt-3 border-t border-stone-100 space-y-2 shrink-0">
-        <!-- 한 손 육아맘을 위한 1초 빠른 공감 댓글 칩 -->
-        <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar pb-1 text-[11px]">
-          <span class="text-slate-400 font-extrabold shrink-0">⚡ 1초 댓글:</span>
-          <button type="button" onclick="app.insertQuickComment('🙌 저도 요즘 똑같은 고민 중인데 너무 공감돼요!')" class="px-2.5 py-1 rounded-full bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold whitespace-nowrap cursor-pointer transition">🙌 저도 똑같은 고민이에요</button>
-          <button type="button" onclick="app.insertQuickComment('🤗 그 시기엔 원래 다 그렇더라구요! 엄마 아빠가 너무 잘하고 계세요 토닥토닥 💕')" class="px-2.5 py-1 rounded-full bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-bold whitespace-nowrap cursor-pointer transition">🤗 토닥토닥 힘내세요!</button>
-          <button type="button" onclick="app.insertQuickComment('💡 정성스러운 육아 꿀팁 공유 정말 감사합니다! 바로 저장해갑니다 👍')" class="px-2.5 py-1 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold whitespace-nowrap cursor-pointer transition">💡 꿀팁 감사합니다</button>
-          <button type="button" onclick="app.insertQuickComment('📍 반가워요! 저도 같은 동네에서 또래 키우고 있어요 자주 소통해요 😊')" class="px-2.5 py-1 rounded-full bg-sky-50 hover:bg-sky-100 text-sky-700 border border-sky-200 font-bold whitespace-nowrap cursor-pointer transition">📍 같은 동네맘 반가워요</button>
-        </div>
-        <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-600">
-          <span class="w-2 h-2 rounded-full bg-[#03C75A]"></span>
-          <span id="comment-author-name">도담맘</span>
-          <span class="text-slate-400 font-medium">님으로 댓글 작성 중 (+10P 적립)</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <input
-            id="post-comment-input"
-            type="text"
-            required
-            placeholder="따뜻한 응원이나 경험, 조언을 남겨주세요..."
-            class="flex-1 border border-stone-200 rounded-xl px-3.5 py-2 text-xs focus:outline-none focus:border-[#03C75A] focus:bg-white bg-stone-50 transition"
-          />
-          <button
-            type="submit"
-            class="px-5 py-2 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shrink-0 shadow-2xs transition cursor-pointer"
-          >
-            등록
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
+  <!-- (와이드 게시글 상세 뷰어는 #board-detail-view로 통합됨) -->
 
 
   <!-- ==========================================
@@ -3400,23 +3474,23 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/data.js?v=20261107_v13"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/data.js?v=20261108_v14"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261107_v13"></script>
-  <script charset="utf-8" src="js/app.js?v=20261107_v13"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261108_v14"></script>
+  <script charset="utf-8" src="js/app.js?v=20261108_v14"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

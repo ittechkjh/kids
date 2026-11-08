@@ -1436,6 +1436,13 @@ class DodamCommunityApp {
     if (viewId === 'events') viewId = 'festivals';
     this.currentView = viewId;
 
+    if (viewId === 'board') {
+      const listWrap = document.getElementById('board-list-container');
+      const detailWrap = document.getElementById('board-detail-view');
+      if (listWrap) listWrap.classList.remove('hidden');
+      if (detailWrap) detailWrap.classList.add('hidden');
+    }
+
     document.querySelectorAll('.view-section').forEach((sec) => sec.classList.add('hidden'));
     const target = document.getElementById(`view-${viewId}`);
     if (target) target.classList.remove('hidden');
@@ -2010,14 +2017,17 @@ class DodamCommunityApp {
   openNoticeDetailModal(noticeId) {
     const notice = this.getPinnedNotices().find((n) => n.id === noticeId);
     if (!notice) return;
-    const modal = document.getElementById('post-detail-modal');
-    if (!modal) return;
     this.activePostDetailId = noticeId;
+
+    const listWrap = document.getElementById('board-list-container');
+    const detailWrap = document.getElementById('board-detail-view');
+    if (listWrap) listWrap.classList.add('hidden');
+    if (detailWrap) detailWrap.classList.remove('hidden');
 
     const catBadge = document.getElementById('post-detail-category-badge');
     if (catBadge) {
-      catBadge.textContent = '공지사항';
-      catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-rose-600 text-white';
+      catBadge.textContent = '📢 공식 공지사항';
+      catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-rose-600 text-white';
     }
 
     document.getElementById('post-detail-title').textContent = notice.title;
@@ -2026,10 +2036,20 @@ class DodamCommunityApp {
     document.getElementById('post-detail-region').textContent = '전국';
     document.getElementById('post-detail-date').textContent = notice.date;
     document.getElementById('post-detail-views').textContent = notice.views.toLocaleString();
-    document.getElementById('post-detail-content').textContent = notice.content;
+
+    const noticeAsPost = {
+      id: notice.id,
+      title: notice.title,
+      content: notice.content,
+      category: 'all',
+      author: { nickname: notice.author, childBadge: '공식 운영진' },
+      tags: ['공지사항', '클린커뮤니티', '도담톡안내'],
+      images: []
+    };
+    this.renderPostRichDetailContent(noticeAsPost);
 
     const tagsEl = document.getElementById('post-detail-tags');
-    if (tagsEl) tagsEl.innerHTML = `<span class="px-2 py-0.5 rounded-lg bg-stone-100 text-slate-600 text-xs font-bold">#공지사항</span>`;
+    if (tagsEl) tagsEl.innerHTML = `<span class="px-2.5 py-1 rounded-lg bg-stone-100 text-slate-600 text-xs font-bold">#공지사항</span>`;
 
     const likesEl = document.getElementById('post-detail-likes-count');
     if (likesEl) likesEl.textContent = notice.likes;
@@ -2043,17 +2063,17 @@ class DodamCommunityApp {
     const listEl = document.getElementById('post-detail-comments-list');
     if (listEl) {
       listEl.innerHTML = `
-        <div class="p-3 bg-stone-50 rounded-xl text-xs text-slate-600 space-y-1">
-          <div class="flex items-center justify-between font-bold text-slate-800">
+        <div class="p-3.5 bg-stone-50 rounded-2xl border border-stone-200/80 text-xs text-slate-700 space-y-1">
+          <div class="flex items-center justify-between font-bold text-slate-900">
             <span>도담맘</span>
-            <span class="text-[10px] text-slate-400 font-normal">방금 전</span>
+            <span class="text-[11px] text-slate-400 font-normal">방금 전</span>
           </div>
-          <div>게시판이 한결 깔끔하고 보기 편해졌네요! 유익한 정보 감사합니다 👍</div>
+          <div>게시판이 한결 넓고 깔끔해져서 읽기 너무 편하네요! 유익한 정보 감사합니다 👍</div>
         </div>
       `;
     }
 
-    modal.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   renderBoardView() {
@@ -2241,6 +2261,10 @@ class DodamCommunityApp {
                 ${post.isAiReport ? '<span class="px-1.5 py-0.2 rounded bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-[9px]">AI</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
+                <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
+                  <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-amber-100 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
+                  <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-rose-100 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
+                </span>
               </div>
               <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1">
                 <span class="truncate">${authorName}</span>
@@ -2327,10 +2351,10 @@ class DodamCommunityApp {
                       ${post.isQuestion ? '<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-900 text-[10px] font-black shrink-0">질문</span>' : ''}
                       <span class="line-clamp-1 min-w-0 flex-1">${post.title}</span>
                     </h4>
-                    <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">${post.content}</p>
+                    <p class="text-xs text-slate-600 line-clamp-2 leading-relaxed">${this.escapeSvgXml(this.extractPlainTextFromHtml(post.content))}</p>
                   </div>
 
-                  <!-- 3행: 하단 반응 (좋아요, 댓글, 조회) -->
+                  <!-- 3행: 하단 반응 (좋아요, 댓글, 조회, 수정/삭제) -->
                   <div class="pt-2 border-t border-stone-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
                     <div class="flex items-center gap-3">
                       <span class="flex items-center gap-1 text-rose-500 font-bold">
@@ -2343,7 +2367,11 @@ class DodamCommunityApp {
                       </span>
                     </div>
 
-                    <span class="text-slate-400">조회 ${post.views || 1}</span>
+                    <div class="flex items-center gap-2">
+                      <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
+                      <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
+                      <span class="text-slate-400">조회 ${post.views || 1}</span>
+                    </div>
                   </div>
                 </article>
               `;
@@ -2403,66 +2431,390 @@ class DodamCommunityApp {
     }
   }
 
-  openPostDetailModal(postId) {
-    const post = this.data.posts.find((p) => p.id === postId);
-    if (!post) return;
-    this.activePostDetailId = postId;
-    if (!post.views) post.views = 120;
-    post.views += 1;
+  escapeSvgXml(str) {
+    return String(str || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+  }
 
-    const modal = document.getElementById('post-detail-modal');
+  generateDarkSummaryInfographicSvg(cardData) {
+    const topPillLeft = this.escapeSvgXml(cardData.topPillLeft || '2026 맞춤 육아 분석');
+    const topPillMid = this.escapeSvgXml(cardData.topPillMid || '도담 전문 에디터 뷰');
+    const subTag = this.escapeSvgXml(cardData.subTag || '💡 2026 도담 육아 핵심 브리핑');
+    const mainTitle = this.escapeSvgXml((cardData.mainTitle || '우리 아이 발달 단계별 맞춤 솔루션').slice(0, 28));
+    const subTitle = this.escapeSvgXml((cardData.subTitle || '실전 육아 핵심 포인트와 체크리스트').slice(0, 30));
+    const highlightLine = this.escapeSvgXml(cardData.highlightLine || '실전 육아 꿀팁 · 맞춤 혜택 극대화 · 팩트 체크 검증');
+    const b1 = this.escapeSvgXml((cardData.b1 || '① 월령·발달 단계별 핵심 체크포인트 및 생활 루틴 점검').slice(0, 38));
+    const b2 = this.escapeSvgXml((cardData.b2 || '② 우리 동네 육아 인프라 및 선배 부모 실전 노하우 반영').slice(0, 38));
+    const b3 = this.escapeSvgXml((cardData.b3 || '③ 아이 기질과 가정 환경에 맞춘 단계별 실천 전략 적용').slice(0, 38));
+    const rightHeader = this.escapeSvgXml(cardData.rightHeader || '핵심 육아·생활 체크포인트');
+    const targetText = this.escapeSvgXml((cardData.targetText || '해당 시기 자녀 양육 부모').slice(0, 18));
+    const benefitText = this.escapeSvgXml((cardData.benefitText || '시행착오 단축 & 안심 육아').slice(0, 18));
+    const benefitSub = this.escapeSvgXml((cardData.benefitSub || '실전 노하우 vs 이론 완벽 정리').slice(0, 22));
+    const cautionText = this.escapeSvgXml((cardData.cautionText || '아이 기질·발달 개인차 고려').slice(0, 18));
+
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 460" width="840" height="460">
+      <defs>
+        <linearGradient id="dk_bg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#0b1120"/>
+          <stop offset="55%" stop-color="#0f172a"/>
+          <stop offset="100%" stop-color="#070b14"/>
+        </linearGradient>
+        <radialGradient id="dk_glow_amber" cx="22%" cy="24%" r="55%">
+          <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.16"/>
+          <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="dk_glow_blue" cx="82%" cy="45%" r="55%">
+          <stop offset="0%" stop-color="#0284c7" stop-opacity="0.18"/>
+          <stop offset="100%" stop-color="#0284c7" stop-opacity="0"/>
+        </radialGradient>
+        <linearGradient id="dk_orange_pill" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#ea580c"/>
+          <stop offset="100%" stop-color="#d97706"/>
+        </linearGradient>
+        <filter id="dk_shadow" x="-10%" y="-10%" width="125%" height="125%">
+          <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.65"/>
+        </filter>
+      </defs>
+
+      <rect width="840" height="460" rx="18" fill="url(#dk_bg)"/>
+      <rect width="840" height="460" rx="18" fill="url(#dk_glow_amber)"/>
+      <rect width="840" height="460" rx="18" fill="url(#dk_glow_blue)"/>
+
+      <g opacity="0.08" stroke="#64748b" stroke-width="1">
+        <line x1="0" y1="92" x2="840" y2="92"/>
+        <line x1="0" y1="184" x2="840" y2="184"/>
+        <line x1="0" y1="276" x2="840" y2="276"/>
+        <line x1="0" y1="368" x2="840" y2="368"/>
+        <line x1="168" y1="0" x2="168" y2="460"/>
+        <line x1="336" y1="0" x2="336" y2="460"/>
+        <line x1="504" y1="0" x2="504" y2="460"/>
+        <line x1="672" y1="0" x2="672" y2="460"/>
+      </g>
+
+      <!-- Top Header Pills -->
+      <g transform="translate(34, 24)">
+        <rect width="186" height="32" rx="8" fill="url(#dk_orange_pill)" filter="url(#dk_shadow)"/>
+        <circle cx="18" cy="16" r="4.5" fill="#ffffff"/>
+        <text x="32" y="21" fill="#ffffff" font-size="12.5" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif">${topPillLeft}</text>
+
+        <rect x="198" y="0" width="142" height="32" rx="8" fill="#111827" stroke="#d97706" stroke-width="1.3"/>
+        <text x="269" y="21" fill="#fbbf24" font-size="12" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="middle">${topPillMid}</text>
+
+        <g transform="translate(612, 0)">
+          <rect width="160" height="32" rx="8" fill="#0b1322" stroke="#0284c7" stroke-width="1.4"/>
+          <circle cx="18" cy="16" r="4.5" fill="#0284c7"/>
+          <circle cx="18" cy="16" r="2" fill="#38bdf8"/>
+          <text x="90" y="21" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', monospace, sans-serif" letter-spacing="0.5" text-anchor="middle">dodamtalk.kr</text>
+        </g>
+      </g>
+
+      <!-- Left Main Content -->
+      <g transform="translate(34, 92)">
+        <rect x="0" y="0" width="215" height="28" rx="7" fill="#1e293b" stroke="#475569" stroke-width="1"/>
+        <text x="14" y="19" fill="#cbd5e1" font-size="11.5" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif">${subTag}</text>
+
+        <text x="0" y="64" fill="#ffffff" font-size="24.5" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" filter="url(#dk_shadow)">${mainTitle}</text>
+        <text x="0" y="102" fill="#f59e0b" font-size="22" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" filter="url(#dk_shadow)">${subTitle}</text>
+
+        <g transform="translate(0, 128)">
+          <rect width="458" height="46" rx="11" fill="#131c2e" stroke="#d97706" stroke-width="1.6" filter="url(#dk_shadow)"/>
+          <circle cx="26" cy="23" r="12" fill="#d97706"/>
+          <text x="26" y="28" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle">✓</text>
+          <text x="48" y="28" fill="#fde68a" font-size="13.5" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif">${highlightLine}</text>
+        </g>
+
+        <g transform="translate(4, 200)">
+          <circle cx="6" cy="6" r="4" fill="#f59e0b"/>
+          <text x="18" y="11" fill="#f1f5f9" font-size="13" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif">${b1}</text>
+
+          <circle cx="6" cy="36" r="4" fill="#10b981"/>
+          <text x="18" y="41" fill="#f1f5f9" font-size="13" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif">${b2}</text>
+
+          <circle cx="6" cy="66" r="4" fill="#38bdf8"/>
+          <text x="18" y="71" fill="#f1f5f9" font-size="13" font-weight="800" font-family="'Pretendard', -apple-system, sans-serif">${b3}</text>
+        </g>
+      </g>
+
+      <!-- Right Summary Box -->
+      <g transform="translate(522, 86)">
+        <rect x="0" y="0" width="284" height="296" rx="18" fill="#111827" fill-opacity="0.94" stroke="#1e293b" stroke-width="1.8" filter="url(#dk_shadow)"/>
+        <text x="142" y="30" fill="#f8fafc" font-size="13.5" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="middle">${rightHeader}</text>
+
+        <!-- Box 1: Target -->
+        <g transform="translate(18, 46)">
+          <rect width="248" height="68" rx="11" fill="#161f30" stroke="#d97706" stroke-width="1.3"/>
+          <text x="14" y="24" fill="#94a3b8" font-size="11" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif">권장 타깃 (Target)</text>
+          <text x="14" y="50" fill="#fbbf24" font-size="14.5" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif">${targetText}</text>
+        </g>
+
+        <!-- Box 2: Benefits -->
+        <g transform="translate(18, 126)">
+          <rect width="248" height="78" rx="11" fill="#0f2427" stroke="#10b981" stroke-width="1.3"/>
+          <text x="14" y="23" fill="#94a3b8" font-size="11" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif">핵심 기대 효과 (Benefits)</text>
+          <text x="14" y="48" fill="#34d399" font-size="14.5" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif">${benefitText}</text>
+          <text x="234" y="68" fill="#cbd5e1" font-size="10.5" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="end">${benefitSub}</text>
+        </g>
+
+        <!-- Box 3: Caution -->
+        <g transform="translate(18, 216)">
+          <rect width="248" height="64" rx="11" fill="#231420" stroke="#f43f5e" stroke-width="1.3"/>
+          <text x="14" y="23" fill="#94a3b8" font-size="11" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif">주의사항 (Caution)</text>
+          <text x="14" y="47" fill="#fb7185" font-size="14" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif">${cautionText}</text>
+        </g>
+      </g>
+
+      <!-- Bottom Bar -->
+      <g transform="translate(0, 412)">
+        <line x1="34" y1="6" x2="450" y2="6" stroke="#d97706" stroke-width="3"/>
+        <circle cx="450" cy="6" r="4.5" fill="#f59e0b"/>
+        <rect y="14" width="840" height="34" fill="#060911" fill-opacity="0.95"/>
+        <text x="34" y="35" fill="#94a3b8" font-size="11.5" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif">▶ 기준: 2026 실전 육아 가이드 · 팩트 기반 맞춤형 전략</text>
+        <text x="806" y="35" fill="#38bdf8" font-size="12" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="end">🌐 dodamtalk.kr | 실전 육아 백서</text>
+      </g>
+    </svg>`;
+
+    return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg.replace(/\s+/g, ' ').trim());
+  }
+
+  renderInfographicBlockHtml(imgSrc, imgIdx, captionText = '') {
+    return `
+      <div class="my-6 space-y-3">
+        <div class="max-w-[780px] w-full mx-auto rounded-2xl overflow-hidden shadow-lg border border-slate-800 bg-[#0b1120]">
+          <img
+            id="post-detail-render-img-${imgIdx}"
+            src="${imgSrc}"
+            alt="${this.escapeSvgXml(captionText || '도담톡 핵심 요약 카드')}"
+            class="w-full h-auto block"
+          />
+        </div>
+        <div class="flex items-center justify-center gap-2.5 flex-wrap pt-1">
+          <button
+            type="button"
+            onclick="app.copyPostImageToClipboard(${imgIdx})"
+            class="px-4 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 border border-sky-200 text-slate-800 font-extrabold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+          >
+            <span>🖼️ 이 사진 복사 (네이버 Ctrl+V용)</span>
+          </button>
+          <button
+            type="button"
+            onclick="app.downloadPostImageAsPng(${imgIdx})"
+            class="px-4 py-2 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+          >
+            <i class="fa-solid fa-download text-[11px] text-slate-500"></i>
+            <span>PNG 다운로드</span>
+          </button>
+        </div>
+      </div>
+    `;
+  }
+
+  extractPlainTextFromHtml(htmlStr) {
+    if (!htmlStr) return '';
+    const temp = document.createElement('div');
+    temp.innerHTML = htmlStr
+      .replace(/<br\s*\/?>/gi, '\n')
+      .replace(/<\/p>/gi, '\n\n')
+      .replace(/<\/h[1-6]>/gi, '\n')
+      .replace(/<\/li>/gi, '\n')
+      .replace(/<\/div>/gi, '\n');
+    return (temp.textContent || temp.innerText || '')
+      .replace(/\n{3,}/g, '\n\n')
+      .trim();
+  }
+
+  renderPostRichDetailContent(post) {
+    const contentEl = document.getElementById('post-detail-content');
+    const imgBox = document.getElementById('post-detail-images-box');
+    if (!contentEl) return;
+
+    this.currentPostDetailImages = [];
     const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
     const cat = (this.data.categories || []).find((c) => c.id === post.category);
+    const categoryLabel = (stObj && stObj.id !== 'all' ? stObj.shortName : cat?.name || '도담 육아 가이드').replace(/^[^\w가-힣]+/, '').trim();
+    const cleanTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '').trim();
+    const authorRole = post.author?.nickname || '도담 육아 에디터';
+    const targetBadge = post.localHubName && post.localHubName !== '전국 전체'
+      ? `${post.localHubName} 양육 가정`
+      : (stObj && stObj.id !== 'all' ? `${stObj.shortName} 자녀 부모` : '전국 영유아·초등 학부모');
 
-    const catBadge = document.getElementById('post-detail-category-badge');
-    if (catBadge) {
-      if (post.isAiReport) {
-        catBadge.textContent = '🤖 도담 AI 육아가이드 전문 리포트';
-        catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-sm';
-      } else {
-        const labelParts = [];
-        if (stObj && stObj.id !== 'all') labelParts.push(stObj.shortName);
-        else if (cat) labelParts.push(cat.name);
-        if (post.localTopicName) labelParts.push(post.localTopicName);
-        catBadge.textContent = labelParts.join(' · ') || '도담 육아소통';
-        catBadge.className = 'px-2.5 py-1 rounded-full text-xs font-black bg-emerald-50 text-[#03C75A] border border-emerald-200';
-      }
+    const rawContent = post.contentHtml || post.content || '';
+    const isRichHtml = rawContent.includes('<h4') || rawContent.includes('ai-parenting-report-article');
+
+    let renderedHtml = '';
+
+    if (isRichHtml) {
+      // Parse sections from AI report HTML or structured HTML and inject dark summary cards with copy/download buttons
+      const plainText = this.extractPlainTextFromHtml(rawContent);
+      const lines = plainText.split('\n').map((l) => l.trim()).filter(Boolean);
+      const introParagraphs = [
+        `${cleanTitle}에 대해 부모님들의 고민이 깊어지는 시기입니다. 아이의 성장 발달 단계와 가정 환경에 맞춘 정확한 기준을 세우면 시행착오를 크게 줄일 수 있습니다.`,
+        `오늘은 소아청소년과 임상 지침과 선배 부모님들의 실전 노하우를 바탕으로, 가정에서 바로 적용할 수 있는 핵심 실천 전략을 명확히 정리해 드립니다.`
+      ];
+
+      const sectionDefs = [
+        {
+          heading: `1. 핵심 요약 & 발달 브리핑: ${cleanTitle.slice(0, 24)}`,
+          subTitle: '발달 단계별 핵심 원리와 골든타임 분석',
+          b1: lines[2] || '① 시기별 핵심 발달 신호와 생체 리듬 변화 정확히 파악',
+          b2: lines[3] || '② 부모의 일관된 반응과 안정적인 환경 조성 프로토콜',
+          b3: lines[4] || '③ 일상 속 작은 루틴 교정으로 스트레스 최소화 실천',
+          benefitText: '초기 대응 & 루틴 정착',
+          cautionText: '조급함보다 일관성 유지'
+        },
+        {
+          heading: `2. 시기별 맞춤 실천 솔루션 & 부모 행동 가이드`,
+          subTitle: '가정에서 즉시 적용하는 단계별 행동 프로토콜',
+          b1: '① 1단계 환경 조성: 아이가 안정감을 느끼는 예측 가능한 일과',
+          b2: '② 2단계 공감 소통: 감정은 100% 수용하되 행동 한계는 명확히 제시',
+          b3: '③ 3단계 자율성 격려: 결과가 아닌 노력 과정 중심의 긍정 피드백',
+          benefitText: '자기조절력 & 애착 강화',
+          cautionText: '감정적 훈육·일관성 결여 주의'
+        }
+      ];
+
+      const svg0 = this.generateDarkSummaryInfographicSvg({
+        topPillLeft: `2026 ${categoryLabel}`,
+        topPillMid: authorRole.slice(0, 10),
+        subTag: `💡 2026 ${categoryLabel} 분석`,
+        mainTitle: cleanTitle.slice(0, 25),
+        subTitle: sectionDefs[0].subTitle,
+        b1: sectionDefs[0].b1,
+        b2: sectionDefs[0].b2,
+        b3: sectionDefs[0].b3,
+        rightHeader: '맞춤 육아 핵심 체크포인트',
+        targetText: targetBadge,
+        benefitText: sectionDefs[0].benefitText,
+        benefitSub: '임상 지침 vs 실전 육아 결합',
+        cautionText: sectionDefs[0].cautionText
+      });
+      this.currentPostDetailImages.push(svg0);
+
+      const svg1 = this.generateDarkSummaryInfographicSvg({
+        topPillLeft: `실전 행동 프로토콜`,
+        topPillMid: '단계별 가이드',
+        subTag: `💡 실전 적용 체크리스트`,
+        mainTitle: `${cleanTitle.slice(0, 18)} 실천 전략`,
+        subTitle: sectionDefs[1].subTitle,
+        b1: sectionDefs[1].b1,
+        b2: sectionDefs[1].b2,
+        b3: sectionDefs[1].b3,
+        rightHeader: '단계별 실천 기대 효과',
+        targetText: targetBadge,
+        benefitText: sectionDefs[1].benefitText,
+        benefitSub: '가정 내 루틴 정착 로드맵',
+        cautionText: sectionDefs[1].cautionText
+      });
+      this.currentPostDetailImages.push(svg1);
+
+      // Strip any existing inline <img src="data:image/svg..."> from rawContent to avoid duplicate raw SVGs without buttons
+      const cleanedReportHtml = rawContent.replace(/<div class="post-img-container"[\s\S]*?<\/div>/gi, '');
+
+      renderedHtml = `
+        <div class="space-y-4 text-slate-800 text-sm sm:text-[15px] leading-8 pb-5 border-b border-stone-200">
+          <p>${introParagraphs[0]}</p>
+          <p>${introParagraphs[1]}</p>
+        </div>
+        <div class="pt-2 space-y-4">
+          <h3 class="text-base sm:text-lg font-black text-slate-900">${sectionDefs[0].heading}</h3>
+          ${this.renderInfographicBlockHtml(svg0, 0, sectionDefs[0].heading)}
+        </div>
+        <div class="prose max-w-none text-sm sm:text-[15px] leading-8 text-slate-800 space-y-4">
+          ${cleanedReportHtml}
+        </div>
+        <div class="pt-4 border-t border-stone-200 space-y-4">
+          <h3 class="text-base sm:text-lg font-black text-slate-900">${sectionDefs[1].heading}</h3>
+          ${this.renderInfographicBlockHtml(svg1, 1, sectionDefs[1].heading)}
+        </div>
+      `;
+    } else {
+      // Regular Community Post or Custom Post: Format spaciously + generate 1 High-Res Dark Infographic Summary Card
+      const paragraphs = String(rawContent || '')
+        .split(/\n+/)
+        .map((p) => p.trim())
+        .filter(Boolean);
+
+      const sentences = String(rawContent || '')
+        .split(/(?<=[.?!~])\s+|\n+/)
+        .map((s) => s.trim())
+        .filter((s) => s.length > 4);
+
+      const b1Text = sentences[0] ? `① ${sentences[0].slice(0, 35)}` : `① ${cleanTitle.slice(0, 32)}`;
+      const b2Text = sentences[1] ? `② ${sentences[1].slice(0, 35)}` : `② ${targetBadge} 맞춤 경험 및 실전 노하우 공유`;
+      const b3Text = sentences[2] ? `③ ${sentences[2].slice(0, 35)}` : `③ 댓글 소통을 통한 우리 동네·또래 부모 팩트체크`;
+
+      const svgCard = this.generateDarkSummaryInfographicSvg({
+        topPillLeft: `2026 ${categoryLabel}`,
+        topPillMid: authorRole.slice(0, 10),
+        subTag: `💡 ${post.localTopicName || categoryLabel} 핵심 요약`,
+        mainTitle: cleanTitle.slice(0, 25),
+        subTitle: post.isQuestion ? '우리 동네·또래 부모 실전 조언 & 해결책' : '실전 육아 경험담 & 핵심 체크포인트',
+        highlightLine: '실전 육아 꿀팁 · 동네 맘카페 검증 · 맞춤 정보 공유',
+        b1: b1Text,
+        b2: b2Text,
+        b3: b3Text,
+        rightHeader: '게시글 핵심 요약 브리핑',
+        targetText: targetBadge,
+        benefitText: post.isQuestion ? '맞춤형 해결책 & 공감' : '실전 육아 정보 획득',
+        benefitSub: `${post.localHubName || '전국'} 또래 부모 소통`,
+        cautionText: '상황별·아이별 맞춤 적용 권장'
+      });
+      this.currentPostDetailImages.push(svgCard);
+
+      const formattedParagraphs = paragraphs
+        .map((p) => `<p class="text-sm sm:text-[15px] leading-8 text-slate-800">${this.escapeSvgXml(p)}</p>`)
+        .join('');
+
+      renderedHtml = `
+        <div class="space-y-4 pb-5 border-b border-stone-200">
+          ${formattedParagraphs}
+        </div>
+        <div class="pt-2 space-y-3">
+          <h3 class="text-base sm:text-lg font-black text-slate-900">1. ${this.escapeSvgXml(cleanTitle)} 핵심 요약 카드</h3>
+          ${this.renderInfographicBlockHtml(svgCard, 0, cleanTitle)}
+        </div>
+      `;
     }
 
-    document.getElementById('post-detail-title').textContent = post.title;
-    document.getElementById('post-detail-author').textContent = post.author?.nickname || '도담회원';
-    document.getElementById('post-detail-author-badge').textContent = post.author?.childBadge || '육아회원';
-    document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
-    document.getElementById('post-detail-date').textContent = post.createdAt;
-    document.getElementById('post-detail-views').textContent = (post.views || 1).toLocaleString();
-    const contentEl = document.getElementById('post-detail-content');
-    if (contentEl) {
-      if (post.isAiReport || (post.content && post.content.includes('<')) || post.contentHtml) {
-        contentEl.innerHTML = post.contentHtml || post.content;
-      } else {
-        contentEl.textContent = post.content;
-      }
-    }
+    contentEl.innerHTML = renderedHtml;
 
-    const avatarEl = document.getElementById('post-detail-avatar');
-    if (avatarEl) {
-      const initial = (post.author?.nickname || '도')[0];
-      avatarEl.textContent = initial;
-      avatarEl.className = `w-8 h-8 rounded-full ${post.author?.avatarBg || 'bg-rose-500 text-white'} flex items-center justify-center font-black text-xs shrink-0 shadow-2xs`;
-    }
-
-    const imgBox = document.getElementById('post-detail-images-box');
+    // Render any user-attached photos with their own Copy & PNG Download buttons
     if (imgBox) {
       if (post.images && post.images.length > 0) {
         imgBox.classList.remove('hidden');
         imgBox.innerHTML = post.images
-          .map(
-            (img) => `
-          <div class="rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 max-h-96 flex items-center justify-center">
-            <img src="${img}" alt="첨부 이미지" class="w-full h-auto object-contain max-h-96" />
-          </div>
-        `
-          )
+          .map((imgUrl, idx) => {
+            const globalIdx = this.currentPostDetailImages.length;
+            this.currentPostDetailImages.push(imgUrl);
+            return `
+              <div class="pt-4 border-t border-stone-100 space-y-3">
+                <h4 class="text-sm sm:text-base font-black text-slate-800">📷 첨부 사진 ${idx + 1}</h4>
+                <div class="max-w-[780px] w-full mx-auto rounded-2xl overflow-hidden border border-stone-200 bg-stone-50 shadow-xs">
+                  <img id="post-detail-render-img-${globalIdx}" src="${imgUrl}" alt="첨부 이미지 ${idx + 1}" class="w-full h-auto max-h-[540px] object-contain mx-auto block" crossorigin="anonymous" />
+                </div>
+                <div class="flex items-center justify-center gap-2.5 flex-wrap">
+                  <button
+                    type="button"
+                    onclick="app.copyPostImageToClipboard(${globalIdx})"
+                    class="px-4 py-2 rounded-xl bg-sky-50 hover:bg-sky-100 border border-sky-200 text-slate-800 font-extrabold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+                  >
+                    <span>🖼️ 이 사진 복사 (네이버 Ctrl+V용)</span>
+                  </button>
+                  <button
+                    type="button"
+                    onclick="app.downloadPostImageAsPng(${globalIdx})"
+                    class="px-4 py-2 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+                  >
+                    <i class="fa-solid fa-download text-[11px] text-slate-500"></i>
+                    <span>PNG 다운로드</span>
+                  </button>
+                </div>
+              </div>
+            `;
+          })
           .join('');
       } else {
         imgBox.classList.add('hidden');
@@ -2470,10 +2822,234 @@ class DodamCommunityApp {
       }
     }
 
+    const dlAllLabel = document.getElementById('btn-download-all-images-label');
+    if (dlAllLabel) {
+      dlAllLabel.textContent = `사진 ${this.currentPostDetailImages.length}장 일괄 다운로드`;
+    }
+  }
+
+  convertImageSrcToPngBlob(src, width = 1680, height = 920) {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          canvas.width = img.naturalWidth && img.naturalWidth > 800 ? img.naturalWidth : width;
+          canvas.height = img.naturalHeight && img.naturalHeight > 450 ? img.naturalHeight : height;
+          const ctx = canvas.getContext('2d');
+          ctx.fillStyle = '#0b1120';
+          ctx.fillRect(0, 0, canvas.width, canvas.height);
+          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+          canvas.toBlob((blob) => {
+            if (blob) resolve(blob);
+            else reject(new Error('PNG 변환 실패'));
+          }, 'image/png');
+        } catch (err) {
+          reject(err);
+        }
+      };
+      img.onerror = (e) => reject(e);
+      img.src = src;
+    });
+  }
+
+  async copyPostImageToClipboard(imgIndex = 0) {
+    const src = (this.currentPostDetailImages || [])[imgIndex];
+    if (!src) {
+      this.showToast('복사할 이미지를 찾을 수 없습니다.');
+      return;
+    }
+    try {
+      const blob = await this.convertImageSrcToPngBlob(src);
+      if (navigator.clipboard && window.ClipboardItem) {
+        await navigator.clipboard.write([new ClipboardItem({ 'image/png': blob })]);
+        this.showToast('🖼️ 이미지가 클립보드에 복사되었습니다! 네이버 블로그·카페에서 Ctrl+V로 바로 붙여넣으세요.');
+      } else {
+        await this.downloadPostImageAsPng(imgIndex);
+      }
+    } catch (err) {
+      console.error('copyPostImageToClipboard error:', err);
+      this.showToast('브라우저 보안 정책으로 직접 복사가 제한되어 PNG 다운로드로 대체합니다.');
+      await this.downloadPostImageAsPng(imgIndex);
+    }
+  }
+
+  async downloadPostImageAsPng(imgIndex = 0) {
+    const src = (this.currentPostDetailImages || [])[imgIndex];
+    if (!src) return;
+    try {
+      const blob = await this.convertImageSrcToPngBlob(src);
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `dodamtalk_post_${this.activePostDetailId || 'card'}_${imgIndex + 1}.png`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 2000);
+      this.showToast(`⬇️ 사진 #${imgIndex + 1} 고화질 PNG 다운로드 완료!`);
+    } catch (err) {
+      console.error('downloadPostImageAsPng error:', err);
+      const a = document.createElement('a');
+      a.href = src;
+      a.download = `dodamtalk_image_${imgIndex + 1}.png`;
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  }
+
+  async downloadAllPostImages() {
+    const imgs = this.currentPostDetailImages || [];
+    if (imgs.length === 0) {
+      this.showToast('다운로드할 사진이 없습니다.');
+      return;
+    }
+    this.showToast(`🖼️ 총 ${imgs.length}장의 고화질 PNG 사진을 순차 다운로드합니다...`);
+    for (let i = 0; i < imgs.length; i++) {
+      await this.downloadPostImageAsPng(i);
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+
+  async copyPostForNaverBlog() {
+    const post = (this.data.posts || []).find((p) => p.id === this.activePostDetailId);
+    if (!post) return;
+
+    const plainBody = this.extractPlainTextFromHtml(post.contentHtml || post.content || '');
+    const tagsStr = (post.tags || []).map((t) => `#${t}`).join(' ');
+    const shareUrl = `${window.location.origin}${window.location.pathname}#board`;
+
+    const richHtml = `
+      <div style="font-family: 'Pretendard', 'Malgun Gothic', sans-serif; line-height: 1.9; color: #1e293b; max-width: 760px;">
+        <h2 style="font-size: 22px; font-weight: 900; color: #0f172a; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 18px;">
+          ${this.escapeSvgXml(post.title)}
+        </h2>
+        <p style="font-size: 13px; color: #64748b; margin-bottom: 20px;">
+          작성자: <strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> (${this.escapeSvgXml(post.author?.childBadge || '육아회원')}) | 지역: ${this.escapeSvgXml(post.localHubName || '전국')}
+        </p>
+        <div style="font-size: 15px; color: #1e293b; white-space: pre-line; margin-bottom: 24px;">
+          ${this.escapeSvgXml(plainBody)}
+        </div>
+        ${tagsStr ? `<p style="font-size: 13px; color: #0284c7; font-weight: 700;">${this.escapeSvgXml(tagsStr)}</p>` : ''}
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;" />
+        <p style="font-size: 12px; color: #94a3b8;">출처: 도담톡 (DodamTalk) 전국 육아 커뮤니티 (${shareUrl})</p>
+      </div>
+    `;
+
+    const plainText = `${post.title}\n\n${plainBody}\n\n${tagsStr}\n출처: 도담톡 (${shareUrl})`;
+
+    try {
+      if (navigator.clipboard && window.ClipboardItem) {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            'text/html': new Blob([richHtml], { type: 'text/html' }),
+            'text/plain': new Blob([plainText], { type: 'text/plain' })
+          })
+        ]);
+      } else {
+        await navigator.clipboard.writeText(plainText);
+      }
+      this.showToast('📋 네이버 블로그/카페 맞춤 서식이 복사되었습니다! 에디터에서 Ctrl+V로 붙여넣으세요.');
+    } catch {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(plainText);
+      }
+      this.showToast('📋 게시글 본문과 태그가 클립보드에 복사되었습니다!');
+    }
+  }
+
+  openPostInNewWindow() {
+    const post = (this.data.posts || []).find((p) => p.id === this.activePostDetailId);
+    if (!post) return;
+    const contentEl = document.getElementById('post-detail-content');
+    const bodyHtml = contentEl ? contentEl.innerHTML : (post.contentHtml || post.content || '');
+    const tagsHtml = (post.tags || []).map((t) => `<span style="display:inline-block;padding:4px 10px;border-radius:8px;background:#f1f5f9;color:#334155;font-size:12px;font-weight:700;margin-right:6px;">#${this.escapeSvgXml(t)}</span>`).join('');
+
+    const win = window.open('', '_blank');
+    if (!win) {
+      this.showToast('팝업 차단을 해제해 주세요.');
+      return;
+    }
+    win.document.write(`<!DOCTYPE html>
+      <html lang="ko">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>${this.escapeSvgXml(post.title)} - 도담톡</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      <body class="bg-stone-100 text-slate-900 p-4 sm:p-10">
+        <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
+          <div class="flex items-center justify-between text-xs text-slate-500">
+            <span><strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> · ${this.escapeSvgXml(post.createdAt || '')} · 조회수 ${(post.views || 1).toLocaleString()}</span>
+            <button onclick="window.print()" class="px-3 py-1.5 rounded-lg border border-stone-200 font-bold text-slate-700 hover:bg-stone-50 cursor-pointer">🖨️ 인쇄 / PDF 저장</button>
+          </div>
+          <h1 class="text-2xl font-black text-slate-900 pb-4 border-b-2 border-slate-800">${this.escapeSvgXml(post.title)}</h1>
+          <div class="text-[15px] leading-8 text-slate-800 space-y-6">${bodyHtml}</div>
+          <div class="pt-4">${tagsHtml}</div>
+        </div>
+      </body>
+      </html>`);
+    win.document.close();
+  }
+
+  openPostDetailModal(postId) {
+    const post = this.data.posts.find((p) => p.id === postId);
+    if (!post) return;
+    this.activePostDetailId = postId;
+    if (!post.views) post.views = 120;
+    post.views += 1;
+
+    if (this.currentView !== 'board') {
+      this.switchMainView('board');
+    }
+
+    const listWrap = document.getElementById('board-list-container');
+    const detailWrap = document.getElementById('board-detail-view');
+    if (listWrap) listWrap.classList.add('hidden');
+    if (detailWrap) detailWrap.classList.remove('hidden');
+
+    const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
+    const cat = (this.data.categories || []).find((c) => c.id === post.category);
+
+    const catBadge = document.getElementById('post-detail-category-badge');
+    if (catBadge) {
+      if (post.isAiReport) {
+        catBadge.textContent = '🤖 도담 AI 육아가이드';
+        catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xs';
+      } else {
+        const labelParts = [];
+        if (stObj && stObj.id !== 'all') labelParts.push(stObj.shortName);
+        else if (cat) labelParts.push(cat.name);
+        if (post.localTopicName) labelParts.push(post.localTopicName);
+        catBadge.textContent = labelParts.join(' · ') || '💡 도담 육아팁';
+        catBadge.className = 'px-3 py-1 rounded-full text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-200';
+      }
+    }
+
+    document.getElementById('post-detail-title').textContent = post.title;
+    document.getElementById('post-detail-author').textContent = post.author?.nickname || '도담회원';
+    document.getElementById('post-detail-author-badge').textContent = post.author?.childBadge ? `(${post.author.childBadge})` : '';
+    document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
+    document.getElementById('post-detail-date').textContent = post.createdAt;
+    document.getElementById('post-detail-views').textContent = (post.views || 1).toLocaleString();
+
+    const avatarEl = document.getElementById('post-detail-avatar');
+    if (avatarEl) {
+      const initial = (post.author?.nickname || '도')[0];
+      avatarEl.textContent = initial;
+      avatarEl.className = `w-6 h-6 rounded-full ${post.author?.avatarBg || 'bg-rose-500 text-white'} flex items-center justify-center font-black text-[11px] shrink-0 shadow-2xs`;
+    }
+
+    this.renderPostRichDetailContent(post);
+
     const tagsEl = document.getElementById('post-detail-tags');
     if (tagsEl) {
       tagsEl.innerHTML = (post.tags || [])
-        .map((t) => `<span class="px-2.5 py-1 rounded-lg bg-stone-100 text-slate-700 text-xs font-bold">#${t}</span>`)
+        .map((t) => `<span class="px-3 py-1 rounded-xl bg-stone-100 text-slate-700 text-xs font-bold">#${t}</span>`)
         .join('');
     }
 
@@ -2490,7 +3066,7 @@ class DodamCommunityApp {
     if (tipsEl) tipsEl.textContent = post.reactions?.tip || 0;
 
     this.renderPostDetailComments(post);
-    modal.classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   navigatePostDetail(dir) {
@@ -2527,6 +3103,10 @@ class DodamCommunityApp {
 
   closePostDetailModal() {
     this.activePostDetailId = null;
+    const listWrap = document.getElementById('board-list-container');
+    const detailWrap = document.getElementById('board-detail-view');
+    if (detailWrap) detailWrap.classList.add('hidden');
+    if (listWrap) listWrap.classList.remove('hidden');
     const modal = document.getElementById('post-detail-modal');
     if (modal) modal.classList.add('hidden');
     this.renderBoardView();
@@ -2665,6 +3245,24 @@ class DodamCommunityApp {
   // [네이버 스마트에디터 스타일 카페 글쓰기 컨트롤러 (풀페이지)]
   // ==========================================
   openWritePage(catId) {
+    this.editingPostId = null;
+    const titleHeaderEl = document.getElementById('write-page-title');
+    if (titleHeaderEl) titleHeaderEl.textContent = '카페 글쓰기';
+    const topBtn = document.getElementById('btn-post-submit-top');
+    if (topBtn) topBtn.innerHTML = '<span>등록</span>';
+    const bottomBtn = document.getElementById('btn-post-submit-bottom');
+    if (bottomBtn) bottomBtn.textContent = '등록하기';
+
+    const titleEl = document.getElementById('post-form-title');
+    const contentEl = document.getElementById('post-form-content');
+    const tagsEl = document.getElementById('post-form-tags');
+    const prefixEl = document.getElementById('post-form-prefix');
+    if (titleEl) titleEl.value = '';
+    if (contentEl) contentEl.value = '';
+    if (tagsEl) tagsEl.value = '';
+    if (prefixEl) prefixEl.value = '';
+    this.attachedImages = [];
+
     if (catId && document.getElementById('post-form-category')) {
       document.getElementById('post-form-category').value = catId;
     } else if (this.currentCategory && this.currentCategory !== 'all' && this.currentCategory !== 'hot') {
@@ -2672,6 +3270,103 @@ class DodamCommunityApp {
       if (catSelect) catSelect.value = this.currentCategory;
     }
     this.switchMainView('write');
+  }
+
+  openEditPostModal(postId) {
+    const targetId = postId || this.activePostDetailId;
+    if (!targetId) return;
+    const post = (this.data.posts || []).find((p) => p.id === targetId);
+    if (!post) {
+      this.showToast('공지사항 등 시스템 기본 안내글은 수정할 수 없습니다.');
+      return;
+    }
+
+    this.editingPostId = post.id;
+    this.switchMainView('write');
+
+    const titleHeaderEl = document.getElementById('write-page-title');
+    if (titleHeaderEl) titleHeaderEl.textContent = '게시글 수정하기';
+    const topBtn = document.getElementById('btn-post-submit-top');
+    if (topBtn) topBtn.innerHTML = '<span>수정 완료</span>';
+    const bottomBtn = document.getElementById('btn-post-submit-bottom');
+    if (bottomBtn) bottomBtn.textContent = '수정 완료하기';
+
+    const catEl = document.getElementById('post-form-category');
+    const prefixEl = document.getElementById('post-form-prefix');
+    const regionEl = document.getElementById('post-form-region');
+    const titleEl = document.getElementById('post-form-title');
+    const contentEl = document.getElementById('post-form-content');
+    const tagsEl = document.getElementById('post-form-tags');
+
+    if (catEl) {
+      catEl.value = post.category || post.ageStage || 'talk';
+    }
+    if (regionEl) {
+      regionEl.value = post.region || 'all';
+    }
+
+    let rawTitle = post.title || '';
+    let detectedPrefix = '';
+    const prefixMatch = rawTitle.match(/^\[(질문|정보|후기|나눔|일상|공감)\]\s*(.*)$/);
+    if (prefixMatch) {
+      detectedPrefix = prefixMatch[1];
+      rawTitle = prefixMatch[2];
+    }
+    if (prefixEl) prefixEl.value = detectedPrefix;
+    if (titleEl) titleEl.value = rawTitle;
+
+    if (contentEl) {
+      const rawBody = post.rawTextContent || post.content || '';
+      contentEl.value = rawBody.includes('<') ? this.extractPlainTextFromHtml(rawBody) : rawBody;
+    }
+    if (tagsEl) {
+      tagsEl.value = (post.tags || []).join(', ');
+    }
+
+    this.attachedImages = [...(post.images || [])];
+    this.renderAttachedImages();
+    this.showToast('✏️ 게시글 수정 모드로 전환되었습니다.');
+  }
+
+  cancelWriteOrEdit() {
+    const prevEditId = this.editingPostId;
+    this.editingPostId = null;
+    this.switchMainView('board');
+    if (prevEditId) {
+      this.openPostDetailModal(prevEditId);
+    }
+  }
+
+  deleteCurrentPost(postId) {
+    const targetId = postId || this.activePostDetailId;
+    if (!targetId) return;
+    const postIdx = (this.data.posts || []).findIndex((p) => p.id === targetId);
+    if (postIdx === -1) {
+      this.showToast('시스템 기본 공지글은 삭제할 수 없습니다.');
+      return;
+    }
+
+    if (!confirm('이 게시글을 정말 삭제하시겠습니까?\n삭제된 게시글은 복구할 수 없습니다.')) return;
+
+    this.data.posts.splice(postIdx, 1);
+
+    try {
+      const deletedIds = JSON.parse(localStorage.getItem('dodam_deleted_posts_v1') || '[]');
+      if (!deletedIds.includes(targetId)) {
+        deletedIds.push(targetId);
+        localStorage.setItem('dodam_deleted_posts_v1', JSON.stringify(deletedIds));
+      }
+    } catch {}
+
+    this.saveCustomPosts();
+    if (window.DodamFirebase && typeof window.DodamFirebase.deletePost === 'function') {
+      window.DodamFirebase.deletePost(targetId);
+    }
+
+    this.closePostDetailModal();
+    this.renderBoardCategories();
+    this.renderBoardView();
+    this.showToast('🗑️ 게시글이 삭제되었습니다.');
   }
 
   openWritePostModal(catId) {
@@ -2890,6 +3585,57 @@ class DodamCommunityApp {
     const myHub = this.getLocalHubFromProfileRegion(this.profile?.region);
     const hubObj = (this.data.localHubs || []).find((h) => h.id === myHub);
 
+    if (this.editingPostId) {
+      const existingPost = (this.data.posts || []).find((p) => p.id === this.editingPostId);
+      const editedId = this.editingPostId;
+      this.editingPostId = null;
+
+      if (existingPost) {
+        existingPost.title = title;
+        existingPost.content = content;
+        existingPost.rawTextContent = content;
+        existingPost.contentHtml = null;
+        existingPost.category = category;
+        existingPost.ageStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
+          ? category
+          : category === 'middle' || category === 'high'
+          ? 'middle_high'
+          : existingPost.ageStage || this.getChildAgeStageFromMonths(this.profile?.months);
+        existingPost.region = region;
+        if (region === 'all') {
+          existingPost.localHub = 'all';
+          existingPost.localHubName = '전국 전체';
+        } else {
+          existingPost.localHub = existingPost.localHub && existingPost.localHub !== 'all' ? existingPost.localHub : myHub;
+          existingPost.localHubName = existingPost.localHubName && existingPost.localHubName !== '전국 전체'
+            ? existingPost.localHubName
+            : (hubObj ? hubObj.shortName : (this.profile?.region || '우리 동네'));
+        }
+        existingPost.tags = tags;
+        existingPost.images = [...this.attachedImages];
+        existingPost.isEdited = true;
+
+        this.saveCustomPosts();
+        if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
+          window.DodamFirebase.updatePost(existingPost);
+        }
+      }
+
+      if (titleEl) titleEl.value = '';
+      if (contentEl) contentEl.value = '';
+      if (tagsEl) tagsEl.value = '';
+      if (prefixEl) prefixEl.value = '';
+      this.attachedImages = [];
+      this.renderAttachedImages();
+
+      this.switchMainView('board');
+      this.renderBoardCategories();
+      this.renderBoardView();
+      this.openPostDetailModal(editedId);
+      this.showToast('✅ 게시글이 성공적으로 수정되었습니다!');
+      return;
+    }
+
     const newPost = {
       id: `custom-post-${Date.now()}`,
       category,
@@ -2907,6 +3653,7 @@ class DodamCommunityApp {
       isSolved: false,
       title,
       content,
+      rawTextContent: content,
       images: [...this.attachedImages],
       author: {
         nickname: this.profile.nickname,
@@ -2949,7 +3696,9 @@ class DodamCommunityApp {
     if (loadBtn) loadBtn.classList.add('hidden');
 
     this.switchMainView('board');
+    this.renderBoardCategories();
     this.renderBoardView();
+    this.openPostDetailModal(newPost.id);
     this.showToast('🎉 게시글이 성공적으로 등록되었습니다! (+30P 활동점수 적립)');
   }
 
@@ -3001,18 +3750,39 @@ class DodamCommunityApp {
   }
 
   saveCustomPosts() {
-    const custom = this.data.posts.filter((p) => p.id.startsWith('custom-post-'));
-    localStorage.setItem(this.customPostsKey, JSON.stringify(custom));
+    const custom = (this.data.posts || []).filter(
+      (p) => p && p.id && (p.id.startsWith('custom-post-') || p.id.startsWith('guide-ai-report-') || p.isEdited)
+    );
+    try {
+      localStorage.setItem(this.customPostsKey, JSON.stringify(custom));
+    } catch {}
   }
 
   loadSavedPosts() {
     try {
+      const deletedIds = JSON.parse(localStorage.getItem('dodam_deleted_posts_v1') || '[]');
+      if (Array.isArray(deletedIds) && deletedIds.length > 0) {
+        this.data.posts = (this.data.posts || []).filter((p) => p && !deletedIds.includes(p.id));
+      }
+
       const raw = localStorage.getItem(this.customPostsKey);
       if (raw) {
-        let posts = JSON.parse(raw);
-        // Clean out any legacy mock/dummy posts that might have been saved in localStorage
-        posts = (posts || []).filter((p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock'));
-        this.data.posts.unshift(...posts);
+        let savedPosts = JSON.parse(raw);
+        savedPosts = (savedPosts || []).filter(
+          (p) => p && p.id && !p.id.startsWith('post-10') && !p.id.startsWith('post-mock') && !deletedIds.includes(p.id)
+        );
+        const newCustoms = [];
+        savedPosts.forEach((sp) => {
+          const existingIdx = (this.data.posts || []).findIndex((ep) => ep.id === sp.id);
+          if (existingIdx !== -1) {
+            this.data.posts[existingIdx] = sp;
+          } else {
+            newCustoms.push(sp);
+          }
+        });
+        if (newCustoms.length > 0) {
+          this.data.posts.unshift(...newCustoms);
+        }
       }
     } catch {}
   }
