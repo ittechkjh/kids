@@ -511,6 +511,16 @@ class DodamCommunityApp {
             window.DODAM_SOCIAL_CONFIG.naverClientId = cfg.naverClientId;
             this.initNaverSdk();
           }
+          if (cfg.adminPassword) {
+            try {
+              localStorage.setItem('dodam_admin_password', String(cfg.adminPassword).trim());
+            } catch (e) {}
+            const admin = (this.users || []).find((u) => u && (u.username === 'admin' || u.id === 'admin'));
+            if (admin) {
+              admin.password = String(cfg.adminPassword).trim();
+              admin.passwordHash = String(cfg.adminPassword).trim();
+            }
+          }
         }
       });
     }
@@ -9478,17 +9488,70 @@ class DodamCommunityApp {
   // ==========================================
   // [인증 & 권한 제어 (Auth & RBAC) - Cloud Firestore DB 연동]
   // ==========================================
+  isAdminSession(sid) {
+    if (!sid) return false;
+    try {
+      const s1 = sessionStorage.getItem('dodam_admin_sid');
+      if (s1 && s1 === sid) return true;
+      const s2 = localStorage.getItem('dodam_admin_sid');
+      if (s2 && s2 === sid) return true;
+      if (this.sessionId && this.sessionId === sid) {
+        if (this.isAdmin() || sessionStorage.getItem('dodam_admin_authenticated') === '1' || localStorage.getItem('dodam_is_admin_client') === '1' || (window.location.hash || '').startsWith('#/admin')) {
+          return true;
+        }
+      }
+    } catch (e) {}
+    return false;
+  }
+
+  isAdminEvent(e) {
+    if (!e) return true;
+    if (e.view === 'admin') return true;
+    if (e.role === 'admin' || e.user === 'admin' || e.user === '최고관리자' || e.user === '도담 공식 관리자') return true;
+    if (e.sid && this.isAdminSession(e.sid)) return true;
+    return false;
+  }
+
+  getAdminPassword() {
+    try {
+      const localPw = localStorage.getItem('dodam_admin_password');
+      if (localPw && localPw.trim()) return localPw.trim();
+    } catch (e) {}
+
+    if (window.DODAM_SOCIAL_CONFIG && window.DODAM_SOCIAL_CONFIG.adminPassword) {
+      return String(window.DODAM_SOCIAL_CONFIG.adminPassword).trim();
+    }
+
+    const adminUser = (this.users || []).find((u) => u && (u.username === 'admin' || u.id === 'admin'));
+    if (adminUser) {
+      if (adminUser.password && String(adminUser.password).trim()) return String(adminUser.password).trim();
+      if (adminUser.passwordHash && String(adminUser.passwordHash).trim()) return String(adminUser.passwordHash).trim();
+    }
+
+    if (window.DODAM_ADMIN_DATA && Array.isArray(window.DODAM_ADMIN_DATA.defaultUsers)) {
+      const defAdmin = window.DODAM_ADMIN_DATA.defaultUsers.find((u) => u && u.username === 'admin');
+      if (defAdmin && (defAdmin.password || defAdmin.passwordHash)) {
+        return String(defAdmin.password || defAdmin.passwordHash).trim();
+      }
+    }
+
+    return 'admin1234';
+  }
+
   cleanUsersList(users) {
     if (!Array.isArray(users)) return [];
     const badIds = ['user_1', 'user_2'];
     const badNames = ['dodam_mom', 'daechi_papa', '판교도담맘', '대치초등파파'];
     let list = users.filter((u) => u && !badIds.includes(u.id) && !badNames.includes(u.username) && !badNames.includes(u.nickname));
-    const hasAdmin = list.some((u) => u.username === 'admin' || u.id === 'admin');
-    if (!hasAdmin) {
-      list.unshift({
+    
+    const curPw = this.getAdminPassword();
+    let admin = list.find((u) => u.username === 'admin' || u.id === 'admin');
+    if (!admin) {
+      admin = {
         id: 'admin',
         username: 'admin',
-        passwordHash: 'admin1234',
+        password: curPw,
+        passwordHash: curPw,
         nickname: '도담 공식 관리자',
         email: 'admin@dodamtalk.kr',
         role: 'admin',
@@ -9499,17 +9562,36 @@ class DodamCommunityApp {
         lastLogin: new Date().toISOString().slice(0, 10),
         status: 'active',
         statusLabel: '정상 승인'
-      });
+      };
+      list.unshift(admin);
+    } else {
+      admin.password = curPw;
+      admin.passwordHash = curPw;
     }
     return list;
   }
 
   loadUsers() {
-    const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
-    return this.cleanUsersList(defaults);
+    let loaded = null;
+    try {
+      const raw = localStorage.getItem(this.usersKey);
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (Array.isArray(parsed) && parsed.length > 0) loaded = parsed;
+      }
+    } catch (e) {}
+
+    if (!loaded) {
+      const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
+      loaded = [...defaults];
+    }
+    return this.cleanUsersList(loaded);
   }
 
   saveUsers() {
+    try {
+      localStorage.setItem(this.usersKey, JSON.stringify(this.users));
+    } catch (e) {}
     if (window.DodamFirebase && typeof window.DodamFirebase.saveUsers === 'function') {
       window.DodamFirebase.saveUsers(this.users);
     }
@@ -9840,6 +9922,22 @@ class DodamCommunityApp {
       else if (/Firefox/i.test(ua)) browser = 'Firefox';
       this.userBrowserName = browser;
 
+      const hash = window.location.hash || '';
+      const isOpeningAdmin = hash.startsWith('#/admin');
+      const isKnownAdmin = this.isAdmin() ||
+        (this.currentUser && this.currentUser.role === 'admin') ||
+        sessionStorage.getItem('dodam_admin_authenticated') === '1' ||
+        localStorage.getItem('dodam_is_admin_client') === '1' ||
+        isOpeningAdmin;
+
+      if (isKnownAdmin) {
+        try {
+          sessionStorage.setItem('dodam_admin_sid', this.sessionId);
+          localStorage.setItem('dodam_admin_sid', this.sessionId);
+        } catch (e) {}
+        return; // 관리자 세션 또는 접속은 방문/뷰 통계 로깅에서 즉시 제외
+      }
+
       const todayKst = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
       let visitedKey = 'dodam_visited_' + todayKst;
       let alreadyVisited = false;
@@ -9868,6 +9966,14 @@ class DodamCommunityApp {
   trackViewEvent(viewId) {
     if (!viewId || viewId === 'admin') return;
     try {
+      const isKnownAdmin = this.isAdmin() ||
+        (this.currentUser && this.currentUser.role === 'admin') ||
+        sessionStorage.getItem('dodam_admin_authenticated') === '1' ||
+        localStorage.getItem('dodam_is_admin_client') === '1' ||
+        (window.location.hash || '').startsWith('#/admin');
+
+      if (isKnownAdmin) return;
+
       if (window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
         window.DodamFirebase.logAnalyticsEvent({
           t: 'view',
@@ -9939,30 +10045,54 @@ class DodamCommunityApp {
       return;
     }
 
-    let adminUser = (this.users || []).find((u) => u.username === id || u.username === 'admin' || u.role === 'admin');
-    const validPw = (adminUser && adminUser.password) ? adminUser.password : 'admin1234';
+    const validPw = this.getAdminPassword();
 
-    if (pw === validPw || pw === 'admin1234') {
+    if (pw === validPw) {
+      let adminUser = (this.users || []).find((u) => u.username === id || u.username === 'admin' || u.role === 'admin');
       if (!adminUser) {
         adminUser = {
           id: 'admin',
-          username: id || 'admin',
-          nickname: '도담최고관리자',
+          username: 'admin',
+          password: validPw,
+          passwordHash: validPw,
+          nickname: '도담 공식 관리자',
+          email: 'admin@dodamtalk.kr',
           role: 'admin',
-          roleName: '최고관리자',
-          provider: 'local',
-          createdAt: new Date().toISOString()
+          roleName: 'SUPER ADMIN',
+          avatar: 'fa-shield-halved',
+          avatarBg: 'from-purple-600 to-indigo-600',
+          createdAt: '2026-10-01',
+          lastLogin: new Date().toISOString().slice(0, 10),
+          status: 'active',
+          statusLabel: '정상 승인'
         };
+        this.users.unshift(adminUser);
+      } else {
+        adminUser.password = validPw;
+        adminUser.passwordHash = validPw;
+        adminUser.lastLogin = new Date().toISOString().slice(0, 10);
       }
+
       this.currentUser = adminUser;
+
       try {
         localStorage.setItem('dodam_current_user', JSON.stringify(adminUser));
         sessionStorage.setItem('dodam_admin_authenticated', '1');
+        localStorage.setItem('dodam_is_admin_client', '1');
+        if (this.sessionId) {
+          sessionStorage.setItem('dodam_admin_sid', this.sessionId);
+          localStorage.setItem('dodam_admin_sid', this.sessionId);
+        }
       } catch (err) {}
 
+      if (window.DodamFirebase && typeof window.DodamFirebase.saveSession === 'function') {
+        window.DodamFirebase.saveSession('active_session', adminUser);
+      }
+
       this.renderAuthHeader();
+      this.renderProfileWidget();
       await this.initAdminView();
-      alert('👑 최고 관리자(Admin) 인증이 완료되었습니다. 관리자 센터에 오신 것을 환영합니다!');
+      this.showToast('👑 최고 관리자 인증이 완료되었습니다.');
       return;
     }
 
@@ -10039,7 +10169,7 @@ class DodamCommunityApp {
   }
 
   calculateAndRenderAnalytics() {
-    const events = this.analyticsEvents || [];
+    const rawEvents = this.analyticsEvents || [];
 
     const getKstDateStr = (dateObj) => {
       const kst = new Date(dateObj.getTime() + (dateObj.getTimezoneOffset() + 540) * 60000);
@@ -10052,23 +10182,50 @@ class DodamCommunityApp {
     const yesterdayStr = getKstDateStr(yesterday);
     const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
     const sevenDaysAgoStr = getKstDateStr(sevenDaysAgo);
+    const nowMs = now.getTime();
+
+    // 순수 외부 방문자 이벤트만 필터링 (관리자 세션/접속/뷰 완전 제외)
+    const events = rawEvents
+      .map((e) => {
+        const ts = e.timestamp || e.ts || (e.time ? new Date(e.time).getTime() : 0);
+        let date = e.date;
+        if (!date && ts) {
+          const kst = new Date(ts + 9 * 3600 * 1000);
+          date = kst.toISOString().slice(0, 10);
+        }
+        return {
+          ...e,
+          timestamp: ts,
+          date: date || todayStr
+        };
+      })
+      .filter((e) => !this.isAdminEvent(e));
 
     const todayEvents = events.filter((e) => e.date === todayStr);
     const yesterdayEvents = events.filter((e) => e.date === yesterdayStr);
     const last7DaysEvents = events.filter((e) => e.date >= sevenDaysAgoStr);
 
+    // 순수 외부 방문자 실측 DAU
     const todaySids = new Set(todayEvents.map((e) => e.sid));
-    if (this.sessionId) todaySids.add(this.sessionId);
     const todayDau = todaySids.size;
 
     const yesterdaySids = new Set(yesterdayEvents.map((e) => e.sid));
     const yesterdayDau = yesterdaySids.size;
 
+    // 순수 외부 방문자 실측 WAU
     const wauSids = new Set(last7DaysEvents.map((e) => e.sid));
-    if (this.sessionId) wauSids.add(this.sessionId);
     const wau = wauSids.size;
 
-    const totalPv = Math.max(events.length, todayDau);
+    const totalPv = events.length;
+
+    // 실시간 동시접속자: 최근 10분 이내 활동한 순수 외부 방문자 고유 세션 집계
+    const tenMinAgo = nowMs - 10 * 60 * 1000;
+    const activeRecentEvents = events.filter((e) => {
+      const ts = e.timestamp || (e.time ? new Date(e.time).getTime() : 0);
+      return ts >= tenMinAgo;
+    });
+    const activeSids = new Set(activeRecentEvents.map((e) => e.sid));
+    const concurrentCount = activeSids.size;
 
     const dauEl = document.getElementById('admin-kpi-dau');
     const dauDiffEl = document.getElementById('admin-kpi-dau-diff');
@@ -10085,7 +10242,7 @@ class DodamCommunityApp {
       dauDiffEl.className = `text-xs font-black ${colorClass} mt-1 flex items-center gap-1`;
       dauDiffEl.innerHTML = `<i class="fa-solid ${icon}"></i><span>${diffStr}</span>`;
     }
-    if (concurrentEl) concurrentEl.textContent = '1명';
+    if (concurrentEl) concurrentEl.textContent = `${concurrentCount}명`;
     if (wauEl) wauEl.textContent = `${wau}명`;
     if (pvEl) pvEl.textContent = `${totalPv.toLocaleString()} PV`;
 
@@ -10096,7 +10253,6 @@ class DodamCommunityApp {
       const label = dateStr.slice(5);
       const dayEvents = events.filter((e) => e.date === dateStr);
       const sids = new Set(dayEvents.map((e) => e.sid));
-      if (i === 0 && this.sessionId) sids.add(this.sessionId);
       const dayDau = sids.size;
       const dayPv = Math.max(dayEvents.length, dayDau);
       dailyStats.push({
@@ -10111,8 +10267,8 @@ class DodamCommunityApp {
     this.render14DayChartDynamic(dailyStats);
     this.renderFeatureStatsDynamic(events, todayStr);
     this.renderDeviceStatsDynamic(events, todayStr);
-    this.renderPageAccessTable();
-    this.renderVisitorLogs();
+    this.renderPageAccessTable(events, todayStr, nowMs);
+    this.renderVisitorLogs(events, nowMs);
   }
 
   render14DayChartDynamic(dailyStats) {
@@ -10374,7 +10530,7 @@ class DodamCommunityApp {
   // 4. 회원 계정 관리 탭
 
 
-  renderPageAccessTable() {
+  renderPageAccessTable(filteredEvents, targetDateStr, currentMs) {
     const tbody = document.getElementById('admin-page-access-table-body');
     if (!tbody) return;
 
@@ -10387,14 +10543,19 @@ class DodamCommunityApp {
       { key: 'school', name: '전국 초·중·고 학업성취도 랭킹', path: '#/school', icon: 'fa-graduation-cap', bg: 'bg-sky-50 text-sky-600 border-sky-200' },
       { key: 'apartments', name: '초품아 아파트 & 학군 매칭', path: '#/apartments', icon: 'fa-building', bg: 'bg-indigo-50 text-indigo-600 border-indigo-200' },
       { key: 'admissions', name: '교육부 입시 가이드 & 고교학점제', path: '#/admissions', icon: 'fa-book-bookmark', bg: 'bg-purple-50 text-purple-600 border-purple-200' },
-      { key: 'write', name: '게시글 작성 및 육아 질문', path: '#/write', icon: 'fa-pen-to-square', bg: 'bg-orange-50 text-orange-600 border-orange-200' },
-      { key: 'admin', name: '도담톡 통합 관리자 센터', path: '#/admin', icon: 'fa-shield-halved', bg: 'bg-purple-50 text-purple-700 border-purple-200' }
+      { key: 'write', name: '게시글 작성 및 육아 질문', path: '#/write', icon: 'fa-pen-to-square', bg: 'bg-orange-50 text-orange-600 border-orange-200' }
     ];
 
-    const events = this.analyticsEvents || [];
     const now = new Date();
-    const todayStr = new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000).toISOString().slice(0, 10);
-    const nowMs = now.getTime();
+    const todayStr = targetDateStr || new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000).toISOString().slice(0, 10);
+    const nowMs = currentMs || now.getTime();
+    const rawList = filteredEvents || (this.analyticsEvents || []);
+    const events = rawList
+      .map((e) => {
+        const ts = e.timestamp || e.ts || (e.time ? new Date(e.time).getTime() : 0);
+        return { ...e, timestamp: ts };
+      })
+      .filter((e) => !this.isAdminEvent(e));
 
     const formatKst = (d) => {
       if (!d) return '-';
@@ -10405,7 +10566,7 @@ class DodamCommunityApp {
     };
 
     const formatRelTime = (ms) => {
-      if (!ms) return '방금 전';
+      if (!ms) return '-';
       const diffSec = Math.floor((nowMs - ms) / 1000);
       if (diffSec < 60) return '방금 전';
       if (diffSec < 3600) return `${Math.floor(diffSec / 60)}분 전`;
@@ -10418,46 +10579,41 @@ class DodamCommunityApp {
         const pageEvents = events.filter((e) => e.view === p.key);
         const todayPageEvents = pageEvents.filter((e) => e.date === todayStr);
 
-        const isCurrentView = this.currentView === p.key;
-        const todayCount = todayPageEvents.length + (isCurrentView ? 1 : 0);
-        const totalCount = Math.max(pageEvents.length + (isCurrentView ? 1 : 0), todayCount);
+        const todayCount = todayPageEvents.length;
+        const totalCount = pageEvents.length;
 
-        let lastTs = 0;
-        let lastDevice = this.userDeviceType || 'desktop';
-        let lastBrowser = this.userBrowserName || 'Edge';
-        let lastUser = this.currentUser ? (this.currentUser.nickname || this.currentUser.username) : '게스트';
+        let lastTs = null;
+        let lastDevice = 'desktop';
+        let lastBrowser = '-';
+        let lastUser = '-';
 
-        if (isCurrentView) {
-          lastTs = nowMs;
-        } else if (pageEvents.length > 0) {
+        if (pageEvents.length > 0) {
           const lastE = pageEvents[pageEvents.length - 1];
-          lastTs = lastE.timestamp || (lastE.time ? new Date(lastE.time).getTime() : nowMs - 3600 * 1000);
+          lastTs = lastE.timestamp || (lastE.time ? new Date(lastE.time).getTime() : nowMs);
           if (lastE.device) lastDevice = lastE.device;
           if (lastE.browser) lastBrowser = lastE.browser;
           if (lastE.user) lastUser = lastE.user;
           else if (lastE.sid) lastUser = `게스트 #${lastE.sid.slice(0, 8)}`;
-        } else {
-          lastTs = nowMs - 7 * 3600 * 1000;
         }
 
         const firstTodayE = todayPageEvents[0];
         const firstTimeStr = firstTodayE
           ? formatKst(firstTodayE.timestamp || firstTodayE.time)
-          : isCurrentView
-          ? formatKst(nowMs)
           : '-';
 
-        const isRecent = nowMs - lastTs < 10 * 60 * 1000;
-        const relTimeBadge = isRecent
-          ? '<span class="px-1.5 py-0.5 rounded font-black bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px]">방금 전</span>'
-          : `<span class="px-1.5 py-0.5 rounded font-medium bg-stone-100 text-slate-500 border border-stone-200 text-[10px]">${formatRelTime(lastTs)}</span>`;
+        const isRecent = lastTs ? (nowMs - lastTs < 10 * 60 * 1000) : false;
+        const relTimeBadge = lastTs
+          ? (isRecent
+              ? '<span class="px-1.5 py-0.5 rounded font-black bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px]">방금 전</span>'
+              : `<span class="px-1.5 py-0.5 rounded font-medium bg-stone-100 text-slate-500 border border-stone-200 text-[10px]">${formatRelTime(lastTs)}</span>`)
+          : '<span class="text-slate-400 font-mono text-[11px]">-</span>';
 
         const devIcon = lastDevice === 'mobile' ? 'fa-mobile-screen' : 'fa-desktop';
-        const devText = lastDevice === 'mobile' ? '모바일' : 'PC/데스크톱';
+        const devText = lastTs ? (lastDevice === 'mobile' ? '모바일' : 'PC/데스크톱') : 'PC/데스크톱';
 
         const statusBadge = isRecent
           ? '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black">활성</span>'
-          : '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-500 border border-stone-200 text-[10px] font-bold">대기 중</span>';
+          : '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-400 border border-stone-200 text-[10px] font-bold">대기 중</span>';
 
         return `
           <tr class="hover:bg-stone-50/70 transition">
@@ -10479,7 +10635,7 @@ class DodamCommunityApp {
               <div class="space-y-0.5">
                 <div class="font-mono text-xs font-bold text-slate-800 flex items-center gap-1.5">
                   <i class="fa-regular fa-clock text-purple-600 text-[11px]"></i>
-                  <span>${formatKst(lastTs)}</span>
+                  <span>${lastTs ? formatKst(lastTs) : '-'}</span>
                 </div>
                 <div>${relTimeBadge}</div>
               </div>
@@ -10515,14 +10671,20 @@ class DodamCommunityApp {
       .join('');
   }
 
-  renderVisitorLogs() {
+  renderVisitorLogs(filteredEvents, currentMs) {
     const tbody = document.getElementById('admin-visitor-logs-table-body');
     const countBadge = document.getElementById('admin-visitor-logs-count');
     if (!tbody) return;
 
-    const events = this.analyticsEvents || [];
     const now = new Date();
-    const nowMs = now.getTime();
+    const nowMs = currentMs || now.getTime();
+    const rawList = filteredEvents || (this.analyticsEvents || []);
+    const events = rawList
+      .map((e) => {
+        const ts = e.timestamp || e.ts || (e.time ? new Date(e.time).getTime() : 0);
+        return { ...e, timestamp: ts };
+      })
+      .filter((e) => !this.isAdminEvent(e));
 
     const formatKst = (d) => {
       if (!d) return '-';
@@ -10542,36 +10704,27 @@ class DodamCommunityApp {
     };
 
     const pageNames = {
-      board: '도담 육아 게시판',
-      food: '전국 맛집·관광지',
-      festivals: '지역행사 & 축제',
-      contests: '전국 대회일정',
-      policy: '육아 정책·지원금',
-      school: '전국 학교 순위',
-      apartments: '아파트 학군·배정',
-      admissions: '교육부 입시 정보',
-      write: '게시글 작성',
-      admin: '통합 관리자 센터'
+      board: '도담 육아 커뮤니티 & 자유톡',
+      food: '전국 맛집·아이 안심식당 지도',
+      festivals: '지역행사 & 어린이 축제 일정',
+      contests: '전국 어린이 백일장 & 미술대회',
+      policy: '2026 부모급여 & 양육수당 계산기',
+      school: '전국 초·중·고 학업성취도 랭킹',
+      apartments: '초품아 아파트 & 학군 매칭',
+      admissions: '교육부 입시 가이드 & 고교학점제',
+      write: '게시글 작성 및 육아 질문',
+      admin: '도담톡 통합 관리자 센터'
     };
 
+    // 순수 외부 방문자 로그만 역순 정렬 (관리자 세션/접속/뷰 완전 배제)
     const logs = [...events].reverse();
-    if (this.sessionId && logs.length === 0) {
-      logs.push({
-        sid: this.sessionId,
-        time: now.toISOString(),
-        view: this.currentView || 'board',
-        device: this.userDeviceType || 'desktop',
-        browser: this.userBrowserName || 'Edge',
-        user: this.currentUser ? this.currentUser.nickname : '게스트'
-      });
-    }
 
     if (countBadge) {
       countBadge.textContent = `최근 ${Math.min(logs.length, 100)}건`;
     }
 
     if (logs.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="6" class="py-8 text-center text-slate-400 text-xs">최근 접속 기록이 없습니다.</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="6" class="py-12 text-center text-slate-400 text-xs font-medium"><i class="fa-regular fa-folder-open mr-1.5 text-slate-300"></i>최근 방문자 활동 로그가 없습니다. (외부 방문자 접속 시 실시간 기록됩니다)</td></tr>';
       return;
     }
 
@@ -10584,11 +10737,12 @@ class DodamCommunityApp {
         const pageName = pageNames[log.view] || log.view || '메인 화면';
         const devIcon = log.device === 'mobile' ? 'fa-mobile-screen' : 'fa-desktop';
         const devText = log.device === 'mobile' ? '모바일' : '데스크톱';
-        const shortSession = (log.sid || log.sessionId || 'session').slice(0, 8);
+        const rawSid = log.sid || log.sessionId || 'session';
+        const shortSession = rawSid.includes('_') ? rawSid.split('_').pop() : rawSid.slice(-6);
 
         const isMember = log.user && log.user !== '게스트' && log.user !== '비회원 (게스트)';
         const userBadge = isMember
-          ? `<span class="px-2 py-0.5 rounded text-[10px] font-black bg-purple-50 text-purple-700 border border-purple-200">👑 ${log.user}</span>`
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">👑 ${log.user}</span>`
           : `<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-stone-100 text-slate-600 border border-stone-200">게스트 #${shortSession}</span>`;
 
         return `
@@ -10609,7 +10763,8 @@ class DodamCommunityApp {
             </td>
             <td class="py-2.5 px-4">
               <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-50 text-sky-700 border border-sky-200 text-xs font-bold">
-                <span>↳ ${pageName}</span>
+                <span>↳</span>
+                <span>${pageName}</span>
               </span>
             </td>
             <td class="py-2.5 px-4">
@@ -10618,15 +10773,13 @@ class DodamCommunityApp {
                 <span>${devText} · ${log.browser || 'Chrome'}</span>
               </div>
             </td>
-            <td class="py-2.5 px-4 text-xs text-slate-400 font-mono">
-              ${formatKst(log.firstTime || ts)}
+            <td class="py-2.5 px-4 font-mono text-xs text-slate-500">
+              ${formatKst(ts)}
             </td>
             <td class="py-2.5 px-4 text-center">
-              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
-                isRecent
-                  ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                  : 'bg-stone-100 text-slate-500 border border-stone-200'
-              }">${isRecent ? '세션 유지' : '종료'}</span>
+              <span class="px-2 py-0.5 rounded-full ${isRecent ? 'bg-emerald-50 text-emerald-700 border border-emerald-200 font-black' : 'bg-stone-100 text-slate-400 border border-stone-200 font-medium'} text-[10px]">
+                ${isRecent ? '활성 세션' : '종료'}
+              </span>
             </td>
           </tr>
         `;
@@ -10718,9 +10871,14 @@ class DodamCommunityApp {
             <td class="py-3 px-3 text-right">
               ${
                 u.id === 'admin'
-                  ? '<span class="text-[11px] text-slate-400 font-bold">시스템 기본 계정</span>'
+                  ? `
+                    <button onclick="app.openChangePwModal('admin')" class="px-2.5 py-1 rounded-lg text-purple-700 hover:bg-purple-50 border border-purple-200 text-[11px] font-bold transition flex items-center gap-1 inline-flex cursor-pointer shadow-2xs">
+                      <i class="fa-solid fa-key text-[10px]"></i>
+                      <span>비밀번호 변경</span>
+                    </button>
+                  `
                   : `
-                    <button onclick="app.deleteUser('${u.id}')" class="px-2 py-1 rounded-lg text-rose-600 hover:bg-rose-50 border border-rose-200 text-[11px] font-bold transition">
+                    <button onclick="app.deleteUser('${u.id}')" class="px-2 py-1 rounded-lg text-rose-600 hover:bg-rose-50 border border-rose-200 text-[11px] font-bold transition cursor-pointer">
                       삭제
                     </button>
                   `
@@ -10814,7 +10972,7 @@ class DodamCommunityApp {
   }
 
   submitChangePw(event) {
-    event.preventDefault();
+    if (event && event.preventDefault) event.preventDefault();
     const pw = document.getElementById('change-pw-input')?.value.trim();
     const pwConfirm = document.getElementById('change-pw-confirm-input')?.value.trim();
 
@@ -10827,14 +10985,53 @@ class DodamCommunityApp {
       return;
     }
 
-    const targetUser = this.users.find((u) => u.id === (this.changePwTargetUserId || 'admin'));
+    // 1. Save to localStorage
+    try {
+      localStorage.setItem('dodam_admin_password', pw);
+    } catch (e) {}
+
+    // 2. Update users state in memory (both password and passwordHash)
+    const targetId = this.changePwTargetUserId || 'admin';
+    let targetUser = (this.users || []).find((u) => u.id === targetId || u.username === targetId);
     if (targetUser) {
+      targetUser.password = pw;
       targetUser.passwordHash = pw;
-      this.saveUsers();
+    } else {
+      targetUser = {
+        id: 'admin',
+        username: 'admin',
+        password: pw,
+        passwordHash: pw,
+        nickname: '도담 공식 관리자',
+        role: 'admin',
+        roleName: 'SUPER ADMIN'
+      };
+      this.users.unshift(targetUser);
+    }
+
+    // 3. Save users to localStorage and Firestore
+    this.saveUsers();
+
+    // 4. Save to Firestore app_config so changes persist across all devices
+    if (window.DodamFirebase && typeof window.DodamFirebase.writeSysStateRecord === 'function') {
+      window.DodamFirebase.writeSysStateRecord('app_config', {
+        adminPassword: pw,
+        updatedAt: Date.now()
+      });
+    }
+
+    // 5. Sync memory defaultUsers
+    if (window.DODAM_ADMIN_DATA && Array.isArray(window.DODAM_ADMIN_DATA.defaultUsers)) {
+      const defAdmin = window.DODAM_ADMIN_DATA.defaultUsers.find((u) => u.username === 'admin');
+      if (defAdmin) {
+        defAdmin.password = pw;
+        defAdmin.passwordHash = pw;
+      }
     }
 
     this.closeChangePwModal();
-    this.showToast('관리자 비밀번호가 성공적으로 변경되었습니다.');
+    this.renderAdminUsers();
+    alert('✅ 관리자 비밀번호가 성공적으로 변경 및 영구 저장되었습니다.\n(새 비밀번호: ' + pw + ')');
   }
 
   // 5. 커뮤니티 & 정화 관리 탭
