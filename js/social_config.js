@@ -20,7 +20,7 @@ window.DODAM_SOCIAL_CONFIG = {
     try {
       return window.location.origin + window.location.pathname;
     } catch (e) {
-      return "https://ittechkjh.github.io/kids/";
+      return "https://dodamtalk.com/";
     }
   })()
 };

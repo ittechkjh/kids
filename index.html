@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <meta http-equiv="Pragma" content="no-cache" />
-  <meta http-equiv="Expires" content="0" />
-  <title>도담톡 (DodamTalk) | 등업·광고 없는 개월수·우리동네 맞춤 육아 커뮤니티</title>
-  <meta name="description" content="출생 개월수별 동기방, 실시간 육아 고민 투표, 우리 동네 공동육아 품앗이, 육아템 무료나눔 장터, 소아 성장 백분위 및 해열제 계산기까지 한곳에 모은 차세대 육아 커뮤니티" />
-  <meta property="og:title" content="도담톡 (DodamTalk) - 요즘 엄마·아빠들의 솔직한 육아 라운지" />
-  <meta property="og:description" content="내 아이 개월수에 딱 맞는 동기방과 우리 동네 공동육아 모임에서 육아 동지를 만나보세요!" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <title>도담톡 (DodamTalk) | 대한민국 육아·출산지원금·가족나들이·학군 통합 플랫폼</title>
+  <meta name="description" content="출생 개월수별 육아 소통방, 전국 가족 축제·어린이 대회 일정, 유모차 안심 맛집·나들이 지도, 2026 부모급여·출산지원금 모의계산, 전국 초·중·고 학군 및 2028 대입 개편안 분석을 제공하는 육아 데이터 플랫폼입니다." />
+  <meta name="keywords" content="도담톡, DodamTalk, 육아 커뮤니티, 신생아 수면교육, 이유식 가이드, 부모급여, 출산지원금, 아이와 가볼만한곳, 유모차 나들이, 초등 학군, 2028 대입개편" />
+  <link rel="canonical" href="https://dodamtalk.com/" />
+  <meta property="og:title" content="도담톡 (DodamTalk) - 대한민국 엄마·아빠를 위한 육아·정책·학군 통합 플랫폼" />
+  <meta property="og:description" content="내 아이 개월수 맞춤 육아 가이드부터 전국 주말 나들이, 정부 지원금, 학군·입시 정보까지 한곳에서 확인하세요!" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dodamtalk.com/" />
+  <meta property="og:site_name" content="도담톡 (DodamTalk)" />
+  <meta property="og:locale" content="ko_KR" />
+
+  <!-- 구조화 데이터 (Google SEO & AdSense Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "도담톡 (DodamTalk)",
+    "alternateName": "DodamTalk 육아·정책·학군 포털",
+    "url": "https://dodamtalk.com/",
+    "description": "출생 개월수별 육아 가이드, 전국 가족 행사·대회 일정, 유모차 안심 나들이 맵, 출산·양육 지원금, 학군·입시 정보를 제공하는 대한민국 통합 육아 플랫폼",
+    "publisher": {
+      "@type": "Organization",
+      "name": "도담톡 (DodamTalk)",
+      "url": "https://dodamtalk.com/",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "contact@dodamtalk.com",
+        "contactType": "customer support"
+      }
+    }
+  }
+  </script>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -34,11 +59,11 @@
   <div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-2 min-w-0">
       <div class="flex items-center gap-2 min-w-0 flex-1">
-        <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 font-extrabold text-[10px] shrink-0">🌱 클린</span>
-        <span class="font-medium truncate text-[11px] sm:text-xs min-w-0 flex-1">등업 제한 NO · 광고 ZERO! 개월수·우리동네 육아 커뮤니티</span>
+        <span class="px-2 py-0.5 rounded-full bg-slate-800 text-slate-200 border border-slate-700 font-extrabold text-[10px] shrink-0">🌱 도담톡</span>
+        <span class="font-medium truncate text-[11px] sm:text-xs min-w-0 flex-1">등업 제한 NO! 개월수·우리동네 맞춤 육아·정책·학군 통합 플랫폼</span>
       </div>
       <div class="hidden sm:flex items-center gap-3 font-bold text-xs shrink-0">
-        <button onclick="app.switchMainView('cohort')" class="underline hover:text-amber-100">👶 우리 아기 개월수 동기방 입장하기 →</button>
+        <a href="/guides.html" class="text-emerald-300 hover:text-emerald-200 underline">📚 육아·출산정책 심층 백과사전 →</a>
       </div>
     </div>
   </div>
@@ -2716,18 +2741,79 @@
 
   </main>
 
-  <!-- 푸터 -->
-  <footer class="bg-white border-t border-stone-200 mt-12">
-    <div class="max-w-7xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-slate-500">
-      <div>
-        <p class="font-extrabold text-slate-800">도담톡 (DodamTalk) — 대한민국 엄마·아빠를 위한 개월수·동네 맞춤 육아 커뮤니티</p>
-        <p class="mt-1">등업 없이 누구나 소통하는 클린 육아 라운지 · 동기방 · 공동육아 품앗이 · 나눔장터</p>
+  <!-- 검색엔진 & 애드센스 크롤러용 정적 육아·정책·교육 핵심 가이드 섹션 -->
+  <section id="seo-static-guides-section" class="max-w-7xl mx-auto px-4 mt-10">
+    <div class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-2xs space-y-5">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-stone-100 pb-4">
+        <div>
+          <span class="px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-700 font-extrabold text-[11px]">도담 AI 케어랩 &amp; 공공데이터 필수 백과</span>
+          <h2 class="text-base sm:text-lg font-black text-slate-900 mt-1">대한민국 부모님을 위한 시기별 육아·지원금·학군 핵심 가이드</h2>
+        </div>
+        <a href="/guides.html" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-rose-50 text-slate-800 hover:text-rose-700 font-extrabold text-xs transition shrink-0">
+          <span>전체 심층 칼럼 아카이브 보기</span>
+          <i class="fa-solid fa-arrow-right text-[10px]"></i>
+        </a>
       </div>
-      <div class="flex items-center gap-4 font-bold">
-        <a href="https://github.com/ittechkjh/kids" target="_blank" rel="noopener" class="hover:text-rose-500"><i class="fa-brands fa-github mr-1"></i>GitHub</a>
-        <button onclick="app.openAdminView()" class="hover:text-purple-600 transition flex items-center gap-1 font-extrabold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-lg border border-purple-200"><i class="fa-solid fa-shield-halved text-purple-600"></i>통합 관리자 센터</button>
-        <button onclick="app.openLoginModal()" id="footer-auth-btn" class="hover:text-sky-600 transition flex items-center gap-1"><i class="fa-solid fa-lock text-slate-400"></i>로그인</button>
-        <button onclick="app.openWritePage()" class="hover:text-rose-500">커뮤니티 글쓰기</button>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-slate-600 leading-relaxed">
+        <article class="p-4 rounded-2xl bg-stone-50/80 border border-stone-200/80 space-y-1.5">
+          <h3 class="font-black text-slate-900 text-sm">
+            <a href="/guides.html#guide-1" class="hover:text-rose-600">🍼 생후 0~12개월 통잠 수면교육 &amp; 이유식 영양 가이드</a>
+          </h3>
+          <p>신생아 일주기 생체리듬 형성부터 생후 4개월 수면퇴행기 극복을 위한 4단계 수면의식 프로토콜, 체내 저장 철분 보충을 위한 초기·중기·후기 소고기 이유식 식단 구성 및 알레르기 안전 테스트 기준을 안내합니다.</p>
+        </article>
+        <article class="p-4 rounded-2xl bg-stone-50/80 border border-stone-200/80 space-y-1.5">
+          <h3 class="font-black text-slate-900 text-sm">
+            <a href="/guides.html#guide-4" class="hover:text-rose-600">💵 2026년 정부 출산·양육 지원금 &amp; 부모급여 총정리</a>
+          </h3>
+          <p>첫만남이용권(200~300만 원), 만 0세 월 100만 원·만 1세 월 50만 원 부모급여, 만 8세 미만 아동수당, 6+6 부모육아휴직제 및 전국 17개 시도별 출산장려금 혜택과 원스톱 신청 절차를 상세히 비교합니다.</p>
+        </article>
+        <article class="p-4 rounded-2xl bg-stone-50/80 border border-stone-200/80 space-y-1.5">
+          <h3 class="font-black text-slate-900 text-sm">
+            <a href="/guides.html#guide-6" class="hover:text-rose-600">🏫 초등 입학 문해력 체크리스트 &amp; 2028 대입 개편안</a>
+          </h3>
+          <p>취학 전 아동의 기초 문해력·수감각 준비 전략과 전국 초·중·고 학군 및 배정 아파트 분석, 고교학점제 전면 시행 및 내신 5등급제·수능 통합형 개편에 따른 2028 대입 핵심 로드맵을 제공합니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="bg-white border-t border-stone-200 mt-10">
+    <div class="max-w-7xl mx-auto px-4 py-8 space-y-5 text-xs text-slate-500">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <p class="font-extrabold text-slate-800 text-sm">도담톡 (DodamTalk · dodamtalk.com) — 대한민국 육아·정책·학군 통합 플랫폼</p>
+          <p class="mt-1">개월수별 육아 라운지 · 전국 가족 축제·대회 일정 · 유모차 안심 나들이 맵 · 출산지원금 &amp; 학군 분석</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-3 sm:gap-4 font-bold text-slate-700">
+          <a href="/about.html" class="hover:text-rose-600 transition">서비스 소개</a>
+          <span class="text-stone-300">|</span>
+          <a href="/guides.html" class="hover:text-rose-600 transition">육아·정책 백과</a>
+          <span class="text-stone-300">|</span>
+          <a href="/terms.html" class="hover:text-rose-600 transition">이용약관</a>
+          <span class="text-stone-300">|</span>
+          <a href="/privacy.html" class="font-black text-slate-900 hover:text-rose-600 transition">개인정보처리방침</a>
+          <span class="text-stone-300">|</span>
+          <a href="/contact.html" class="hover:text-rose-600 transition">고객센터·문의</a>
+          <span class="text-stone-300">|</span>
+          <a href="/sitemap.xml" class="hover:text-rose-600 transition">사이트맵</a>
+        </div>
+      </div>
+
+      <div class="pt-4 border-t border-stone-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[11px] text-slate-400">
+        <div>
+          <span>© 2026 도담톡 (DodamTalk). All rights reserved.</span>
+          <span class="mx-1.5">·</span>
+          <span>공식 도메인: https://dodamtalk.com</span>
+          <span class="mx-1.5">·</span>
+          <span>문의 및 제보: contact@dodamtalk.com</span>
+        </div>
+        <div class="flex items-center gap-3 font-bold text-slate-500">
+          <button onclick="app.openAdminView()" class="hover:text-purple-600 transition flex items-center gap-1 text-[11px]"><i class="fa-solid fa-shield-halved text-slate-400"></i>관리자</button>
+          <button onclick="app.openLoginModal()" id="footer-auth-btn" class="hover:text-sky-600 transition flex items-center gap-1 text-[11px]"><i class="fa-solid fa-lock text-slate-400"></i>로그인</button>
+          <button onclick="app.openWritePage()" class="hover:text-rose-500 text-[11px]">글쓰기</button>
+        </div>
       </div>
     </div>
   </footer>
