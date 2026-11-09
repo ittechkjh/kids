@@ -113,7 +113,12 @@ class DodamFirebaseService {
         'dodam_user_profile',
         'dodam_growth_records',
         'dodam_checked_in_date',
-        'kidsinfra_api_config_v1'
+        'kidsinfra_api_config_v1',
+        'dodam_admin_password',
+        'dodam_current_user',
+        'dodam_is_admin_client',
+        'dodam_admin_sid',
+        'dodam_analytics_sid'
       ];
       legacyKeys.forEach((k) => {
         if (typeof localStorage !== 'undefined') {
@@ -582,11 +587,26 @@ class DodamFirebaseService {
     }
   }
 
+  async saveAppConfig(configData) {
+    if (!configData) return false;
+    const prev = this.latestSysState.app_config || {};
+    const payload = {
+      ...prev,
+      ...configData,
+      updatedAt: Date.now()
+    };
+    this.latestSysState.app_config = payload;
+    return this.writeSysStateRecord('app_config', payload);
+  }
+
   async saveSocialConfig(configData) {
     if (!configData) return false;
+    const prev = this.latestSysState.app_config || {};
     const payload = {
-      kakaoJavascriptKey: configData.kakaoJavascriptKey || '',
-      naverClientId: configData.naverClientId || '',
+      ...prev,
+      kakaoJavascriptKey: configData.kakaoJavascriptKey || prev.kakaoJavascriptKey || '',
+      naverClientId: configData.naverClientId || prev.naverClientId || '',
+      adminPassword: configData.adminPassword || prev.adminPassword || '',
       updatedAt: Date.now()
     };
     this.latestSysState.app_config = payload;

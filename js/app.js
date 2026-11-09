@@ -512,13 +512,11 @@ class DodamCommunityApp {
             this.initNaverSdk();
           }
           if (cfg.adminPassword) {
-            try {
-              localStorage.setItem('dodam_admin_password', String(cfg.adminPassword).trim());
-            } catch (e) {}
+            this.remoteAdminPassword = String(cfg.adminPassword).trim();
             const admin = (this.users || []).find((u) => u && (u.username === 'admin' || u.id === 'admin'));
             if (admin) {
-              admin.password = String(cfg.adminPassword).trim();
-              admin.passwordHash = String(cfg.adminPassword).trim();
+              admin.password = this.remoteAdminPassword;
+              admin.passwordHash = this.remoteAdminPassword;
             }
           }
         }
@@ -9493,10 +9491,8 @@ class DodamCommunityApp {
     try {
       const s1 = sessionStorage.getItem('dodam_admin_sid');
       if (s1 && s1 === sid) return true;
-      const s2 = localStorage.getItem('dodam_admin_sid');
-      if (s2 && s2 === sid) return true;
       if (this.sessionId && this.sessionId === sid) {
-        if (this.isAdmin() || sessionStorage.getItem('dodam_admin_authenticated') === '1' || localStorage.getItem('dodam_is_admin_client') === '1' || (window.location.hash || '').startsWith('#/admin')) {
+        if (this.isAdmin() || sessionStorage.getItem('dodam_admin_authenticated') === '1' || (window.location.hash || '').startsWith('#/admin')) {
           return true;
         }
       }
@@ -9513,19 +9509,24 @@ class DodamCommunityApp {
   }
 
   getAdminPassword() {
-    try {
-      const localPw = localStorage.getItem('dodam_admin_password');
-      if (localPw && localPw.trim()) return localPw.trim();
-    } catch (e) {}
-
-    if (window.DODAM_SOCIAL_CONFIG && window.DODAM_SOCIAL_CONFIG.adminPassword) {
-      return String(window.DODAM_SOCIAL_CONFIG.adminPassword).trim();
+    // 1. Cloud Firestore DB 시스템 설정(app_config) 최신값 우선
+    if (this.remoteAdminPassword && this.remoteAdminPassword.trim()) {
+      return this.remoteAdminPassword.trim();
+    }
+    if (window.DodamFirebase && window.DodamFirebase.latestSysState?.app_config?.adminPassword) {
+      return String(window.DodamFirebase.latestSysState.app_config.adminPassword).trim();
     }
 
+    // 2. Cloud Firestore DB users 컬렉션의 admin 계정 비밀번호
     const adminUser = (this.users || []).find((u) => u && (u.username === 'admin' || u.id === 'admin'));
     if (adminUser) {
       if (adminUser.password && String(adminUser.password).trim()) return String(adminUser.password).trim();
       if (adminUser.passwordHash && String(adminUser.passwordHash).trim()) return String(adminUser.passwordHash).trim();
+    }
+
+    // 3. 소셜/시스템 config
+    if (window.DODAM_SOCIAL_CONFIG && window.DODAM_SOCIAL_CONFIG.adminPassword) {
+      return String(window.DODAM_SOCIAL_CONFIG.adminPassword).trim();
     }
 
     if (window.DODAM_ADMIN_DATA && Array.isArray(window.DODAM_ADMIN_DATA.defaultUsers)) {
@@ -9572,26 +9573,13 @@ class DodamCommunityApp {
   }
 
   loadUsers() {
-    let loaded = null;
-    try {
-      const raw = localStorage.getItem(this.usersKey);
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed) && parsed.length > 0) loaded = parsed;
-      }
-    } catch (e) {}
-
-    if (!loaded) {
-      const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
-      loaded = [...defaults];
-    }
-    return this.cleanUsersList(loaded);
+    // 로컬스토리지 사용 배제 — Cloud Firestore DB에서 실시간 로드
+    const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
+    return this.cleanUsersList(defaults);
   }
 
   saveUsers() {
-    try {
-      localStorage.setItem(this.usersKey, JSON.stringify(this.users));
-    } catch (e) {}
+    // 로컬스토리지 사용 배제 — Cloud Firestore DB에만 영구 저장
     if (window.DodamFirebase && typeof window.DodamFirebase.saveUsers === 'function') {
       window.DodamFirebase.saveUsers(this.users);
     }
@@ -9927,13 +9915,11 @@ class DodamCommunityApp {
       const isKnownAdmin = this.isAdmin() ||
         (this.currentUser && this.currentUser.role === 'admin') ||
         sessionStorage.getItem('dodam_admin_authenticated') === '1' ||
-        localStorage.getItem('dodam_is_admin_client') === '1' ||
         isOpeningAdmin;
 
       if (isKnownAdmin) {
         try {
           sessionStorage.setItem('dodam_admin_sid', this.sessionId);
-          localStorage.setItem('dodam_admin_sid', this.sessionId);
         } catch (e) {}
         return; // 관리자 세션 또는 접속은 방문/뷰 통계 로깅에서 즉시 제외
       }
@@ -9969,7 +9955,6 @@ class DodamCommunityApp {
       const isKnownAdmin = this.isAdmin() ||
         (this.currentUser && this.currentUser.role === 'admin') ||
         sessionStorage.getItem('dodam_admin_authenticated') === '1' ||
-        localStorage.getItem('dodam_is_admin_client') === '1' ||
         (window.location.hash || '').startsWith('#/admin');
 
       if (isKnownAdmin) return;
@@ -10075,19 +10060,18 @@ class DodamCommunityApp {
 
       this.currentUser = adminUser;
 
-      try {
-        localStorage.setItem('dodam_current_user', JSON.stringify(adminUser));
-        sessionStorage.setItem('dodam_admin_authenticated', '1');
-        localStorage.setItem('dodam_is_admin_client', '1');
-        if (this.sessionId) {
-          sessionStorage.setItem('dodam_admin_sid', this.sessionId);
-          localStorage.setItem('dodam_admin_sid', this.sessionId);
-        }
-      } catch (err) {}
-
+      // Cloud Firestore DB active_session에 실시간 세션 저장
       if (window.DodamFirebase && typeof window.DodamFirebase.saveSession === 'function') {
         window.DodamFirebase.saveSession('active_session', adminUser);
       }
+
+      // 현재 브라우저 탭 세션만 기록 (로컬스토리지 사용 배제)
+      try {
+        sessionStorage.setItem('dodam_admin_authenticated', '1');
+        if (this.sessionId) {
+          sessionStorage.setItem('dodam_admin_sid', this.sessionId);
+        }
+      } catch (err) {}
 
       this.renderAuthHeader();
       this.renderProfileWidget();
@@ -10971,7 +10955,7 @@ class DodamCommunityApp {
     if (modal) modal.classList.add('hidden');
   }
 
-  submitChangePw(event) {
+  async submitChangePw(event) {
     if (event && event.preventDefault) event.preventDefault();
     const pw = document.getElementById('change-pw-input')?.value.trim();
     const pwConfirm = document.getElementById('change-pw-confirm-input')?.value.trim();
@@ -10985,12 +10969,10 @@ class DodamCommunityApp {
       return;
     }
 
-    // 1. Save to localStorage
-    try {
-      localStorage.setItem('dodam_admin_password', pw);
-    } catch (e) {}
+    // 1. 메모리 최신값 갱신
+    this.remoteAdminPassword = pw;
 
-    // 2. Update users state in memory (both password and passwordHash)
+    // 2. 관리자 계정 객체 갱신 (password & passwordHash)
     const targetId = this.changePwTargetUserId || 'admin';
     let targetUser = (this.users || []).find((u) => u.id === targetId || u.username === targetId);
     if (targetUser) {
@@ -11009,12 +10991,14 @@ class DodamCommunityApp {
       this.users.unshift(targetUser);
     }
 
-    // 3. Save users to localStorage and Firestore
+    // 3. Cloud Firestore DB users 컬렉션에 영구 저장
     this.saveUsers();
 
-    // 4. Save to Firestore app_config so changes persist across all devices
-    if (window.DodamFirebase && typeof window.DodamFirebase.writeSysStateRecord === 'function') {
-      window.DodamFirebase.writeSysStateRecord('app_config', {
+    // 4. Cloud Firestore DB app_config 시스템 문서에 영구 저장 (로컬스토리지 배제)
+    if (window.DodamFirebase && typeof window.DodamFirebase.saveAppConfig === 'function') {
+      await window.DodamFirebase.saveAppConfig({ adminPassword: pw });
+    } else if (window.DodamFirebase && typeof window.DodamFirebase.writeSysStateRecord === 'function') {
+      await window.DodamFirebase.writeSysStateRecord('app_config', {
         adminPassword: pw,
         updatedAt: Date.now()
       });
