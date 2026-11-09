@@ -179,6 +179,15 @@ class DodamCommunityApp {
     this.profile = this.loadProfile();
     this.scraps = this.loadScraps();
     this.loadSavedPosts();
+    this.deletedPostIds = new Set();
+    this.myPostIds = new Set();
+    try {
+      const rawMy = sessionStorage.getItem('dodam_my_post_ids');
+      if (rawMy) {
+        const parsedMy = JSON.parse(rawMy);
+        if (Array.isArray(parsedMy)) this.myPostIds = new Set(parsedMy);
+      }
+    } catch (e) {}
     if (!this.data.restaurants) this.data.restaurants = window.DODAM_NATIONWIDE_RESTAURANTS || [];
     if (!this.data.attractions) this.data.attractions = window.DODAM_NATIONWIDE_ATTRACTIONS || [];
   }
@@ -470,7 +479,15 @@ class DodamCommunityApp {
     // 6. 현재 로그인 세션 DB 실시간 구독
     if (typeof window.DodamFirebase.subscribeSession === 'function') {
       window.DodamFirebase.subscribeSession('active_session', (sessionUser) => {
-        this.currentUser = sessionUser || null;
+        const localActive = sessionStorage.getItem('dodam_current_user') || sessionStorage.getItem('dodam_admin_authenticated');
+        if (!localActive) {
+          this.currentUser = null;
+        } else if (sessionUser && typeof sessionUser === 'object') {
+          this.currentUser = {
+            ...(this.currentUser || {}),
+            ...sessionUser
+          };
+        }
         if (this.currentUser) {
           if (this.currentUser.savedProfile && !this.profile?.isCustomized) {
             this.profile = {
@@ -618,7 +635,7 @@ class DodamCommunityApp {
     if (window.DodamFirebase && typeof window.DodamFirebase.saveProfile === 'function') {
       window.DodamFirebase.saveProfile(this.profile, 'active_profile');
     }
-    if (this.currentUser) {
+    if (this.currentUser && typeof this.currentUser === 'object') {
       this.currentUser.savedProfile = this.profile;
       this.saveCurrentUserSession();
     }
@@ -2500,6 +2517,7 @@ class DodamCommunityApp {
     };
 
     this.data.posts.unshift(newPost);
+    this.registerMyPostId(newPost.id);
     this.saveCustomPosts();
     if (window.DodamFirebase) {
       window.DodamFirebase.createPost(newPost);
@@ -2853,10 +2871,12 @@ class DodamCommunityApp {
                 ${post.isAiReport ? '<span class="px-1.5 py-0.2 rounded bg-gradient-to-r from-purple-600 to-indigo-600 text-white font-black text-[9px]">AI</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
-                <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
-                  <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-amber-100 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
-                  <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-rose-100 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
-                </span>
+                ${this.canManagePost(post) ? `
+                  <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
+                    <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-amber-100 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
+                    <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-rose-100 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
+                  </span>
+                ` : ''}
               </div>
               <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1">
                 <span class="truncate">${authorName}</span>
@@ -2960,8 +2980,10 @@ class DodamCommunityApp {
                     </div>
 
                     <div class="flex items-center gap-2">
-                      <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
-                      <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
+                      ${this.canManagePost(post) ? `
+                        <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
+                        <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
+                      ` : ''}
                       <span class="text-slate-400">조회 ${post.views || 1}</span>
                     </div>
                   </div>
@@ -3657,6 +3679,18 @@ class DodamCommunityApp {
     const tipsEl = document.getElementById('post-detail-tips-count');
     if (tipsEl) tipsEl.textContent = post.reactions?.tip || 0;
 
+    const canManage = this.canManagePost(post);
+    const btnEdit = document.getElementById('btn-post-detail-edit');
+    const btnDelete = document.getElementById('btn-post-detail-delete');
+    if (btnEdit) {
+      if (canManage) btnEdit.classList.remove('hidden');
+      else btnEdit.classList.add('hidden');
+    }
+    if (btnDelete) {
+      if (canManage) btnDelete.classList.remove('hidden');
+      else btnDelete.classList.add('hidden');
+    }
+
     this.renderPostDetailComments(post);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -3870,12 +3904,71 @@ class DodamCommunityApp {
     this.switchMainView('write');
   }
 
+  registerMyPostId(postId) {
+    if (!postId) return;
+    if (!this.myPostIds) this.myPostIds = new Set();
+    this.myPostIds.add(postId);
+    try {
+      sessionStorage.setItem('dodam_my_post_ids', JSON.stringify(Array.from(this.myPostIds)));
+    } catch (e) {}
+  }
+
+  canManagePost(post) {
+    if (!post) return false;
+
+    // 1. 관리자는 모든 글 수정/삭제 가능 (전체 관리 권한)
+    if (this.isAdmin() || sessionStorage.getItem('dodam_admin_authenticated') === '1') {
+      return true;
+    }
+
+    // 2. 시스템 기본 시드글 / 공식 AI 가이드 / 공지글은 일반 사용자가 수정/삭제 불가
+    const isSeed = String(post.id).startsWith('guide-seed') ||
+                   String(post.id).startsWith('c-seed') ||
+                   String(post.id).startsWith('seed-post') ||
+                   post.isAiReport || post.isNotice;
+    if (isSeed) {
+      return false;
+    }
+
+    // 3. 현재 브라우저 세션에서 직접 등록한 글인 경우 허용
+    if (this.myPostIds && this.myPostIds.has(post.id)) {
+      return true;
+    }
+
+    const myId = this.currentUser?.id || this.currentUser?.username;
+    const authorUserId = post.author?.userId || post.author?.id;
+    const myNick = (this.currentUser?.nickname || this.profile?.nickname || '').trim();
+    const authorNick = (post.author?.nickname || '').trim();
+
+    // 4. 회원 로그인 상태인 경우: 본인 계정 ID 일치 여부 확인
+    if (myId) {
+      if (authorUserId && authorUserId === myId) return true;
+      if (!authorUserId && authorNick && myNick && authorNick === myNick) return true;
+      return false;
+    }
+
+    // 5. 비로그인(게스트) 상태인 경우:
+    // 등록 회원이 작성한 글은 게스트가 수정/삭제 불가
+    if (authorUserId) return false;
+
+    // 세션 ID 일치 확인
+    if (this.sessionId && (post.author?.sessionId === this.sessionId || post.sessionId === this.sessionId)) {
+      return true;
+    }
+
+    return false;
+  }
+
   openEditPostModal(postId) {
     const targetId = postId || this.activePostDetailId;
     if (!targetId) return;
     const post = (this.data.posts || []).find((p) => p.id === targetId);
     if (!post) {
       this.showToast('공지사항 등 시스템 기본 안내글은 수정할 수 없습니다.');
+      return;
+    }
+    if (!this.canManagePost(post)) {
+      this.showToast('⚠️ 본인이 작성한 게시글만 수정할 수 있습니다. (관리자 제외)');
       return;
     }
 
@@ -3941,6 +4034,11 @@ class DodamCommunityApp {
     const postIdx = (this.data.posts || []).findIndex((p) => p.id === targetId);
     if (postIdx === -1) {
       this.showToast('시스템 기본 공지글은 삭제할 수 없습니다.');
+      return;
+    }
+    const targetPost = this.data.posts[postIdx];
+    if (!this.canManagePost(targetPost)) {
+      this.showToast('⚠️ 본인이 작성한 게시글만 삭제할 수 있습니다. (관리자 제외)');
       return;
     }
 
@@ -4198,6 +4296,12 @@ class DodamCommunityApp {
       const editedId = this.editingPostId;
       this.editingPostId = null;
 
+      if (!existingPost || !this.canManagePost(existingPost)) {
+        this.showToast('⚠️ 본인이 작성한 게시글만 수정할 수 있습니다. (관리자 제외)');
+        this.switchMainView('board');
+        return;
+      }
+
       if (existingPost) {
         existingPost.title = title;
         existingPost.content = content;
@@ -4264,6 +4368,8 @@ class DodamCommunityApp {
       rawTextContent: content,
       images: [...this.attachedImages],
       author: {
+        userId: this.currentUser?.id || this.currentUser?.username || null,
+        sessionId: this.sessionId || null,
         nickname: this.profile.nickname,
         level: this.profile.level,
         childBadge: `👶 ${this.profile.babyName} (${this.profile.ageBadge})`,
@@ -4279,6 +4385,7 @@ class DodamCommunityApp {
     };
 
     this.data.posts.unshift(newPost);
+    this.registerMyPostId(newPost.id);
     this.saveCustomPosts();
     if (window.DodamFirebase) {
       window.DodamFirebase.createPost(newPost);
@@ -10062,12 +10169,13 @@ class DodamCommunityApp {
 
       // Cloud Firestore DB active_session에 실시간 세션 저장
       if (window.DodamFirebase && typeof window.DodamFirebase.saveSession === 'function') {
-        window.DodamFirebase.saveSession('active_session', adminUser);
+        window.DodamFirebase.saveSession(adminUser, 'active_session');
       }
 
       // 현재 브라우저 탭 세션만 기록 (로컬스토리지 사용 배제)
       try {
         sessionStorage.setItem('dodam_admin_authenticated', '1');
+        sessionStorage.setItem('dodam_current_user', JSON.stringify(adminUser));
         if (this.sessionId) {
           sessionStorage.setItem('dodam_admin_sid', this.sessionId);
         }

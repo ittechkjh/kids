@@ -179,7 +179,7 @@ class DodamFirebaseService {
     const safeComments = Array.isArray(post.comments) ? [...post.comments.slice(0, 450)] : [];
     // 마지막 숨김 메타 항목으로 확장 속성을 보존
     safeComments.push({
-      __dodam_meta__: true,
+      isDodamMeta: true, _dodam_meta: true,
       meta: extraMeta
     });
 
@@ -215,7 +215,7 @@ class DodamFirebaseService {
     let extraMeta = {};
     const cleanComments = [];
     comments.forEach((c) => {
-      if (c && c.__dodam_meta__ && c.meta) {
+      if (c && (c.isDodamMeta || c._dodam_meta || c.__dodam_meta__) && c.meta) {
         extraMeta = c.meta;
       } else if (c) {
         cleanComments.push(c);
@@ -567,8 +567,14 @@ class DodamFirebaseService {
   }
 
   async saveSession(userObj, sessionId = 'active_session') {
-    this.latestSysState.user_sessions = { user: userObj || null };
-    return this.writeSysStateRecord('user_sessions', { user: userObj || null });
+    let targetUser = userObj;
+    let targetSessionId = sessionId;
+    if (typeof userObj === 'string' && typeof sessionId === 'object') {
+      targetUser = sessionId;
+      targetSessionId = userObj;
+    }
+    this.latestSysState.user_sessions = { user: targetUser || null };
+    return this.writeSysStateRecord('user_sessions', { user: targetUser || null });
   }
 
   async clearSession(sessionId = 'active_session') {
