@@ -406,6 +406,7 @@ class DodamCommunityApp {
             ...remoteProfile,
             growthRecords: Array.isArray(remoteProfile.growthRecords) ? remoteProfile.growthRecords : []
           };
+          this.ensureChildrenArray();
           this.renderProfileWidget();
           this.renderAuthHeader();
         }
@@ -466,8 +467,56 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // 1. 내 프로필, 아이 성장기록 & 등급/등업 관리
+  // 1. 내 프로필, 다자녀 정보, 성장기록 & 등급/등업 관리
   // ==========================================
+  getAgeBadgeFromMonths(months) {
+    const m = parseInt(months, 10) || 0;
+    if (m === 0) return '출산준비중 (임신)';
+    if (m <= 12) return `${m}개월 아기`;
+    if (m <= 72) return `${m}개월 (${Math.floor(m / 12)}세)`;
+    if (m <= 84) return '7세 (취학 전)';
+    if (m <= 96) return '초등 저학년';
+    if (m <= 132) return '초등 고학년';
+    if (m <= 168) return '중학생 (1~3학년)';
+    return '고등학생 (1~3학년)';
+  }
+
+  ensureChildrenArray() {
+    if (!this.profile) this.profile = this.getDefaultProfile();
+    if (!Array.isArray(this.profile.children) || this.profile.children.length === 0) {
+      const firstMonths = this.profile.months !== undefined ? parseInt(this.profile.months, 10) : 24;
+      this.profile.children = [
+        {
+          id: 'child_1',
+          name: this.profile.babyName || '도담이',
+          gender: this.profile.gender || 'boy',
+          months: firstMonths,
+          ageBadge: this.profile.ageBadge || this.getAgeBadgeFromMonths(firstMonths)
+        }
+      ];
+    } else {
+      this.profile.children = this.profile.children.map((c, idx) => {
+        const m = c.months !== undefined ? parseInt(c.months, 10) : 24;
+        return {
+          id: c.id || `child_${idx + 1}`,
+          name: c.name || `아이${idx + 1}`,
+          gender: c.gender || 'boy',
+          months: m,
+          ageBadge: this.getAgeBadgeFromMonths(m)
+        };
+      });
+    }
+
+    const primary = this.profile.children[0];
+    if (primary) {
+      this.profile.babyName = primary.name;
+      this.profile.gender = primary.gender;
+      this.profile.months = primary.months;
+      this.profile.ageBadge = primary.ageBadge;
+    }
+    return this.profile.children;
+  }
+
   getDefaultProfile() {
     return {
       nickname: '도담맘',
@@ -475,6 +524,9 @@ class DodamCommunityApp {
       months: 24,
       ageBadge: '24개월 (2세)',
       gender: 'boy',
+      children: [
+        { id: 'child_1', name: '도담이', gender: 'boy', months: 24, ageBadge: '24개월 (2세)' }
+      ],
       region: '경기 성남 분당',
       interests: ['food', 'festivals', 'school', 'policy'],
       points: 0,
@@ -491,19 +543,23 @@ class DodamCommunityApp {
       months: 24,
       ageBadge: '24개월 (2세)',
       gender: 'boy',
+      children: [
+        { id: 'child_1', name: '도담이', gender: 'boy', months: 24, ageBadge: '24개월 (2세)' }
+      ],
       region: '경기 성남 분당',
       interests: ['food', 'festivals', 'school', 'policy'],
       points: 0,
       helpsCount: 0,
       checkedInToday: false,
       growthRecords: [
-        { id: 1, date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
-        { id: 2, date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
+        { id: 1, childId: 'child_1', childName: '도담이', date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
+        { id: 2, childId: 'child_1', childName: '도담이', date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
       ]
     };
   }
 
   saveProfileData() {
+    this.ensureChildrenArray();
     if (window.DodamFirebase && typeof window.DodamFirebase.saveProfile === 'function') {
       window.DodamFirebase.saveProfile(this.profile, 'active_profile');
     }
@@ -545,8 +601,7 @@ class DodamCommunityApp {
         progress: 100,
         neededPoints: 0,
         neededHelps: 0,
-        nextConditionText: '🎉 도담톡 최고 등급 [Lv.5 멘토맘·대디] 달성!',
-        currentPerk: '퍼플 크라운 VIP 멘토 배지 · 게시판 상단 [명예 멘토 칼럼] 고정 노출 · VIP 체험단 & 공연 무료 초청권 1순위 배정'
+        nextConditionText: '🎉 도담톡 최고 등급 [Lv.5 멘토맘·대디] 달성!'
       };
     }
     if (points >= 3000 && helps >= 25) {
@@ -558,8 +613,7 @@ class DodamCommunityApp {
         badgeClass: 'bg-rose-500 text-white',
         nextPoints: 7000,
         nextName: 'Lv.5 멘토맘·대디',
-        ...next,
-        currentPerk: '열매 스페셜 배지 & 프로필 하이라이트 · 우리 동네 명예 운영위원 위촉 · 작성글 [인기 추천] 우선 선정'
+        ...next
       };
     }
     if (points >= 1000 && helps >= 10) {
@@ -571,8 +625,7 @@ class DodamCommunityApp {
         badgeClass: 'bg-indigo-600 text-white',
         nextPoints: 3000,
         nextName: 'Lv.4 열매맘·대디',
-        ...next,
-        currentPerk: '꽃봉오리 배지 · 작성 질문글 상단 우선 노출(추천 가중치) · 도담 AI 심층 발달 리포트 열람 · 지역 체험단 신청 자격'
+        ...next
       };
     }
     if (points >= 300 && helps >= 3) {
@@ -584,8 +637,7 @@ class DodamCommunityApp {
         badgeClass: 'bg-emerald-600 text-white',
         nextPoints: 1000,
         nextName: 'Lv.3 꽃봉오리맘·대디',
-        ...next,
-        currentPerk: '초록 줄기 인증 배지 · 우리 동네 나눔장터 및 공동육아 소모임 개설 권한 · 스크랩북 무제한 저장'
+        ...next
       };
     }
     const next = buildNextInfo(300, 3, 0, 'Lv.2 줄기맘·대디');
@@ -596,8 +648,7 @@ class DodamCommunityApp {
       badgeClass: 'bg-slate-700 text-white',
       nextPoints: 300,
       nextName: 'Lv.2 줄기맘·대디',
-      ...next,
-      currentPerk: '전 게시판 열람·글쓰기, 전국 행사·안심식당·학군·지원금 무제한 조회, 아이 성장 다이어리 이용'
+      ...next
     };
   }
 
@@ -639,6 +690,7 @@ class DodamCommunityApp {
       return;
     }
 
+    const children = this.ensureChildrenArray();
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
 
@@ -646,7 +698,12 @@ class DodamCommunityApp {
       ? this.profile.growthRecords[0]
       : null;
 
-    const genderText = this.profile.gender === 'girl' ? '공주님(여아)' : (this.profile.gender === 'pregnant' ? '출산준비' : '왕자님(남아)');
+    const childrenSummaryHtml = children
+      .map((c) => {
+        const icon = c.gender === 'girl' ? '👧' : (c.gender === 'pregnant' ? '🤰' : '👦');
+        return `<span>${icon} <strong>${c.name}</strong> (${c.ageBadge})</span>`;
+      })
+      .join('<span class="text-slate-300">·</span>');
 
     el.innerHTML = `
       <div class="bg-gradient-to-br from-rose-50/60 via-white to-amber-50/40 rounded-2xl border border-rose-200/80 p-4 shadow-2xs space-y-3">
@@ -670,8 +727,8 @@ class DodamCommunityApp {
               <div class="text-xs text-slate-600 font-medium mt-1 flex items-center gap-1.5 flex-wrap">
                 <span class="font-bold text-slate-700">📍 ${this.profile.region}</span>
                 <span class="text-slate-300">·</span>
-                <span>👶 <strong>${this.profile.babyName}</strong> (${this.profile.ageBadge})</span>
-                ${latestGrowth ? `<span class="text-slate-300">·</span><span class="text-indigo-600 font-bold">📏 ${latestGrowth.height}cm · ${latestGrowth.weight}kg</span>` : ''}
+                ${childrenSummaryHtml}
+                ${latestGrowth ? `<span class="text-slate-300">·</span><span class="text-indigo-600 font-bold">📏 ${latestGrowth.childName ? `[${latestGrowth.childName}] ` : ''}${latestGrowth.height}cm · ${latestGrowth.weight}kg</span>` : ''}
               </div>
             </div>
           </div>
@@ -1058,6 +1115,22 @@ class DodamCommunityApp {
   // 프로필 모달 및 탭 컨트롤
   // ==========================================
   setProfileTab(tabName) {
+    if (tabName === 'growth') {
+      this.syncChildrenDraftFromDom();
+      if (Array.isArray(this.editingChildren) && this.editingChildren.length > 0) {
+        this.profile.children = this.editingChildren.map((c, idx) => {
+          const m = parseInt(c.months !== undefined ? c.months : 24, 10);
+          return {
+            id: c.id || `child_${idx + 1}`,
+            name: (c.name || '').trim() || `아이${idx + 1}`,
+            gender: c.gender || 'boy',
+            months: m,
+            ageBadge: this.getAgeBadgeFromMonths(m)
+          };
+        });
+      }
+      this.renderGrowthSection();
+    }
     const tabs = ['info', 'growth', 'level', 'account'];
     tabs.forEach((t) => {
       const el = document.getElementById(`prof-tab-${t}`);
@@ -1078,13 +1151,9 @@ class DodamCommunityApp {
     if (nickInput) nickInput.value = this.profile.nickname || '판교도담맘';
     const regionInput = document.getElementById('prof-region');
     if (regionInput) regionInput.value = this.profile.region || '경기 성남 분당';
-    const babyInput = document.getElementById('prof-babyname');
-    if (babyInput) babyInput.value = this.profile.babyName || '도담이';
-    const genderSelect = document.getElementById('prof-gender');
-    if (genderSelect) genderSelect.value = this.profile.gender || 'boy';
-    const monthsSelect = document.getElementById('prof-months');
-    if (monthsSelect) monthsSelect.value = String(this.profile.months || 24);
 
+    this.editingChildren = JSON.parse(JSON.stringify(this.ensureChildrenArray()));
+    this.renderChildrenFormRows();
     this.renderInterestChips();
     this.renderGrowthSection();
     this.renderLevelSection();
@@ -1098,6 +1167,142 @@ class DodamCommunityApp {
   closeProfileModal() {
     const modal = document.getElementById('profile-modal');
     if (modal) modal.classList.add('hidden');
+  }
+
+  syncChildrenDraftFromDom() {
+    const rows = document.querySelectorAll('.prof-child-row');
+    if (!rows || rows.length === 0) return;
+    const updated = [];
+    rows.forEach((row, idx) => {
+      const id = row.getAttribute('data-child-id') || `child_${idx + 1}`;
+      const name = (row.querySelector('.prof-child-name')?.value || '').trim() || `아이${idx + 1}`;
+      const gender = row.querySelector('.prof-child-gender')?.value || 'boy';
+      const months = parseInt(row.querySelector('.prof-child-months')?.value || '24', 10);
+      updated.push({
+        id,
+        name,
+        gender,
+        months,
+        ageBadge: this.getAgeBadgeFromMonths(months)
+      });
+    });
+    if (updated.length > 0) {
+      this.editingChildren = updated;
+    }
+  }
+
+  renderChildrenFormRows() {
+    const listEl = document.getElementById('prof-children-list');
+    if (!listEl) return;
+
+    if (!Array.isArray(this.editingChildren) || this.editingChildren.length === 0) {
+      this.editingChildren = JSON.parse(JSON.stringify(this.ensureChildrenArray()));
+    }
+
+    const badgeEl = document.getElementById('prof-children-count-badge');
+    if (badgeEl) badgeEl.textContent = `총 ${this.editingChildren.length}명`;
+
+    const orderLabels = ['첫째', '둘째', '셋째', '넷째', '다섯째', '여섯째'];
+    const ageOptions = [
+      { value: 0, label: '출산 준비중 (임신)' },
+      { value: 6, label: '0~6개월 (신생아·영아)' },
+      { value: 12, label: '7~12개월 (돌 전 아기)' },
+      { value: 24, label: '13~24개월 (돌 이후·2세)' },
+      { value: 36, label: '25~36개월 (3세)' },
+      { value: 48, label: '37~48개월 (4세)' },
+      { value: 60, label: '49~60개월 (5세)' },
+      { value: 72, label: '61~72개월 (6세)' },
+      { value: 84, label: '7세 (취학 전)' },
+      { value: 96, label: '초등 저학년 (1~3학년)' },
+      { value: 132, label: '초등 고학년 (4~6학년)' },
+      { value: 168, label: '중학생 (중학교 1~3학년)' },
+      { value: 204, label: '고등학생 (고등학교 1~3학년)' }
+    ];
+
+    listEl.innerHTML = this.editingChildren
+      .map((child, idx) => {
+        const orderText = orderLabels[idx] || `${idx + 1}째`;
+        const curMonths = parseInt(child.months !== undefined ? child.months : 24, 10);
+        const optionsHtml = ageOptions
+          .map((opt) => `<option value="${opt.value}" ${opt.value === curMonths ? 'selected' : ''}>${opt.label}</option>`)
+          .join('');
+
+        return `
+          <div class="prof-child-row bg-white/90 border border-rose-200/90 rounded-2xl p-3 space-y-2 shadow-2xs" data-child-id="${child.id || `child_${idx + 1}`}">
+            <div class="flex items-center justify-between">
+              <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-lg bg-rose-100 text-rose-800 font-black text-[10.5px]">
+                <i class="fa-solid fa-child text-[10px]"></i>
+                <span>${orderText} 자녀</span>
+              </span>
+              ${
+                this.editingChildren.length > 1
+                  ? `<button type="button" onclick="app.removeChildFormRow(${idx})" class="text-[11px] font-bold text-slate-400 hover:text-rose-600 transition cursor-pointer flex items-center gap-1">
+                      <i class="fa-solid fa-trash-can text-[10px]"></i>
+                      <span>삭제</span>
+                    </button>`
+                  : `<span class="text-[10px] text-slate-400 font-medium">기본 자녀</span>`
+              }
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+              <div>
+                <label class="block font-bold text-slate-700 text-[11px] mb-1">아이 애칭 / 이름</label>
+                <input
+                  type="text"
+                  required
+                  value="${(child.name || '').replace(/"/g, '&quot;')}"
+                  placeholder="예: 도담이"
+                  class="prof-child-name w-full bg-white border border-rose-200 rounded-xl px-3 py-1.5 font-bold focus:outline-none focus:border-rose-400"
+                />
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 text-[11px] mb-1">성별</label>
+                <select class="prof-child-gender w-full bg-white border border-rose-200 rounded-xl px-2.5 py-1.5 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
+                  <option value="boy" ${child.gender === 'boy' ? 'selected' : ''}>👦 왕자님 (남아)</option>
+                  <option value="girl" ${child.gender === 'girl' ? 'selected' : ''}>👧 공주님 (여아)</option>
+                  <option value="pregnant" ${child.gender === 'pregnant' ? 'selected' : ''}>🤰 출산 준비중 (임신)</option>
+                </select>
+              </div>
+              <div>
+                <label class="block font-bold text-slate-700 text-[11px] mb-1">아이 연령 / 학년</label>
+                <select class="prof-child-months w-full bg-white border border-rose-200 rounded-xl px-2.5 py-1.5 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
+                  ${optionsHtml}
+                </select>
+              </div>
+            </div>
+          </div>
+        `;
+      })
+      .join('');
+  }
+
+  addChildFormRow() {
+    this.syncChildrenDraftFromDom();
+    if (!Array.isArray(this.editingChildren)) {
+      this.editingChildren = JSON.parse(JSON.stringify(this.ensureChildrenArray()));
+    }
+    if (this.editingChildren.length >= 6) {
+      this.showToast('자녀 프로필은 최대 6명까지 등록할 수 있습니다.');
+      return;
+    }
+    const nextIdx = this.editingChildren.length + 1;
+    this.editingChildren.push({
+      id: `child_${Date.now()}_${nextIdx}`,
+      name: '',
+      gender: 'boy',
+      months: 24,
+      ageBadge: this.getAgeBadgeFromMonths(24)
+    });
+    this.renderChildrenFormRows();
+  }
+
+  removeChildFormRow(idx) {
+    this.syncChildrenDraftFromDom();
+    if (!Array.isArray(this.editingChildren) || this.editingChildren.length <= 1) {
+      this.showToast('최소 1명의 자녀 정보는 유지되어야 합니다.');
+      return;
+    }
+    this.editingChildren.splice(idx, 1);
+    this.renderChildrenFormRows();
   }
 
   // ==========================================
@@ -1354,29 +1559,32 @@ class DodamCommunityApp {
     if (e) e.preventDefault();
     const nick = (document.getElementById('prof-nickname')?.value || '').trim();
     const region = (document.getElementById('prof-region')?.value || '').trim();
-    const babyName = (document.getElementById('prof-babyname')?.value || '').trim();
-    const gender = document.getElementById('prof-gender')?.value || 'boy';
-    const months = parseInt(document.getElementById('prof-months')?.value || '24', 10);
+
+    this.syncChildrenDraftFromDom();
+    const children = Array.isArray(this.editingChildren) && this.editingChildren.length > 0
+      ? this.editingChildren
+      : this.ensureChildrenArray();
 
     if (nick) this.profile.nickname = nick;
     if (region) this.profile.region = region;
-    if (babyName) this.profile.babyName = babyName;
-    this.profile.gender = gender;
-    this.profile.months = months;
 
-    if (months === 0) {
-      this.profile.ageBadge = '출산준비중 (임신)';
-    } else if (months <= 12) {
-      this.profile.ageBadge = `${months}개월 아기`;
-    } else if (months <= 72) {
-      const years = Math.floor(months / 12);
-      this.profile.ageBadge = `${months}개월 (${years}세)`;
-    } else if (months <= 84) {
-      this.profile.ageBadge = '7세 (취학 전)';
-    } else if (months <= 96) {
-      this.profile.ageBadge = '초등 저학년';
-    } else {
-      this.profile.ageBadge = '초등 고학년';
+    this.profile.children = children.map((c, idx) => {
+      const m = parseInt(c.months !== undefined ? c.months : 24, 10);
+      return {
+        id: c.id || `child_${idx + 1}`,
+        name: (c.name || '').trim() || `아이${idx + 1}`,
+        gender: c.gender || 'boy',
+        months: m,
+        ageBadge: this.getAgeBadgeFromMonths(m)
+      };
+    });
+
+    const primary = this.profile.children[0];
+    if (primary) {
+      this.profile.babyName = primary.name;
+      this.profile.gender = primary.gender;
+      this.profile.months = primary.months;
+      this.profile.ageBadge = primary.ageBadge;
     }
 
     this.profile.isCustomized = true;
@@ -1385,61 +1593,133 @@ class DodamCommunityApp {
     this.profile.level = lvl.name;
 
     this.saveProfileData();
+    this.renderGrowthSection();
     this.renderProfileWidget();
     this.renderAuthHeader();
     this.closeProfileModal();
-    this.showToast('🎉 내 육아 프로필과 아이 정보가 성공적으로 저장되었습니다!');
+    this.showToast(`🎉 내 육아 프로필과 자녀 ${this.profile.children.length}명의 정보가 저장되었습니다!`);
   }
 
   // ==========================================
-  // 아이 성장 다이어리 관리
+  // 아이 성장 다이어리 관리 (다자녀 개별 관리 지원)
   // ==========================================
+  selectGrowthChild(childId) {
+    this.selectedGrowthChildId = childId;
+    this.renderGrowthSection();
+  }
+
   renderGrowthSection() {
-    const records = this.profile.growthRecords || [];
+    const children = this.ensureChildrenArray();
+    if (!this.selectedGrowthChildId || !children.some((c) => c.id === this.selectedGrowthChildId)) {
+      this.selectedGrowthChildId = children[0]?.id || 'child_1';
+    }
+
+    const activeChild = children.find((c) => c.id === this.selectedGrowthChildId) || children[0];
+    const orderLabels = ['첫째', '둘째', '셋째', '넷째', '다섯째', '여섯째'];
+
+    // 1. 상단 자녀 선택 탭 렌더링
+    const tabsEl = document.getElementById('growth-child-tabs');
+    if (tabsEl) {
+      tabsEl.innerHTML = children
+        .map((c, idx) => {
+          const isSelected = c.id === this.selectedGrowthChildId;
+          const icon = c.gender === 'girl' ? '👧' : (c.gender === 'pregnant' ? '🤰' : '👦');
+          const orderText = orderLabels[idx] || `${idx + 1}째`;
+          return `
+            <button
+              type="button"
+              onclick="app.selectGrowthChild('${c.id}')"
+              class="px-3 py-1.5 rounded-xl text-xs font-extrabold transition flex items-center gap-1.5 cursor-pointer border ${
+                isSelected
+                  ? 'bg-indigo-600 text-white border-indigo-600 shadow-2xs'
+                  : 'bg-white text-slate-700 border-stone-200 hover:bg-indigo-50/50'
+              }"
+            >
+              <span>${icon} ${orderText} ${c.name}</span>
+              <span class="text-[10px] ${isSelected ? 'text-indigo-100' : 'text-slate-400'}">(${c.ageBadge})</span>
+            </button>
+          `;
+        })
+        .join('');
+    }
+
+    // 2. 성장 기록 입력 폼의 대상 자녀 드롭다운 동기화
+    const childSelectEl = document.getElementById('input-growth-child-id');
+    if (childSelectEl) {
+      childSelectEl.innerHTML = children
+        .map((c, idx) => {
+          const orderText = orderLabels[idx] || `${idx + 1}째`;
+          return `<option value="${c.id}" ${c.id === this.selectedGrowthChildId ? 'selected' : ''}>${orderText} · ${c.name} (${c.ageBadge})</option>`;
+        })
+        .join('');
+    }
+
+    // 3. 선택된 자녀의 성장 기록 필터링 (기존 기록 중 childId가 없는 경우 첫째 자녀로 매핑)
+    const allRecords = this.profile.growthRecords || [];
+    const primaryId = children[0]?.id || 'child_1';
+    const childRecords = allRecords.filter((r) => {
+      const rChildId = r.childId || primaryId;
+      return rChildId === this.selectedGrowthChildId;
+    });
+
+    const summaryTitleEl = document.getElementById('growth-summary-title');
+    if (summaryTitleEl && activeChild) {
+      summaryTitleEl.textContent = `${activeChild.name} (${activeChild.ageBadge}) 최근 성장 기록`;
+    }
+
+    const historyTitleEl = document.getElementById('growth-history-title');
+    if (historyTitleEl && activeChild) {
+      historyTitleEl.textContent = `${activeChild.name}의 성장 기록 히스토리`;
+    }
+
     const countEl = document.getElementById('growth-history-count');
-    if (countEl) countEl.textContent = `${records.length}건`;
+    if (countEl) countEl.textContent = `${childRecords.length}건`;
 
     const summaryHeight = document.getElementById('growth-summary-height');
     const summaryWeight = document.getElementById('growth-summary-weight');
     const summaryMemo = document.getElementById('growth-summary-memo');
 
-    if (records.length > 0) {
-      const latest = records[0];
+    if (childRecords.length > 0) {
+      const latest = childRecords[0];
       if (summaryHeight) summaryHeight.textContent = latest.height;
       if (summaryWeight) summaryWeight.textContent = latest.weight;
       if (summaryMemo) summaryMemo.textContent = `"${latest.memo || '무럭무럭 잘 크고 있어요!'}" (${latest.date})`;
     } else {
       if (summaryHeight) summaryHeight.textContent = '--';
       if (summaryWeight) summaryWeight.textContent = '--';
-      if (summaryMemo) summaryMemo.textContent = '"아직 등록된 성장 기록이 없습니다."';
+      if (summaryMemo) summaryMemo.textContent = `"${activeChild ? activeChild.name : '아이'}의 첫 성장 기록을 등록해보세요."`;
     }
 
     const listEl = document.getElementById('growth-history-list');
     if (!listEl) return;
 
-    if (records.length === 0) {
-      listEl.innerHTML = `<div class="p-4 text-center text-slate-400 bg-stone-50 rounded-xl">성장 기록을 등록하고 아이의 성장을 한눈에 관리해보세요!</div>`;
+    if (childRecords.length === 0) {
+      listEl.innerHTML = `<div class="p-4 text-center text-slate-400 bg-stone-50 rounded-xl">${activeChild ? activeChild.name : '아이'}의 성장 기록을 등록하고 키·몸무게 변화를 한눈에 관리해보세요!</div>`;
       return;
     }
 
-    listEl.innerHTML = records.map((r) => `
-      <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between gap-3 text-xs">
-        <div class="flex items-center gap-2">
-          <span class="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-extrabold text-[10px]">${r.date}</span>
-          <span class="font-black text-slate-800">📏 ${r.height} cm</span>
-          <span class="font-black text-indigo-600">⚖️ ${r.weight} kg</span>
-          <span class="text-slate-500 truncate max-w-[180px]">${r.memo || ''}</span>
+    listEl.innerHTML = childRecords.map((r) => {
+      const cName = r.childName || activeChild?.name || '우리 아이';
+      return `
+        <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between gap-3 text-xs">
+          <div class="flex items-center gap-2 flex-wrap min-w-0">
+            <span class="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-700 font-extrabold text-[10px] shrink-0">${r.date}</span>
+            <span class="px-2 py-0.5 rounded-md bg-rose-50 text-rose-700 font-extrabold text-[10px] shrink-0">${cName}</span>
+            <span class="font-black text-slate-800 shrink-0">📏 ${r.height} cm</span>
+            <span class="font-black text-indigo-600 shrink-0">⚖️ ${r.weight} kg</span>
+            <span class="text-slate-500 truncate max-w-[180px]">${r.memo || ''}</span>
+          </div>
+          <button
+            type="button"
+            onclick="app.deleteGrowthRecord(${r.id})"
+            class="text-slate-300 hover:text-rose-500 transition p-1 cursor-pointer shrink-0"
+            title="기록 삭제"
+          >
+            <i class="fa-solid fa-trash-can text-xs"></i>
+          </button>
         </div>
-        <button
-          type="button"
-          onclick="app.deleteGrowthRecord(${r.id})"
-          class="text-slate-300 hover:text-rose-500 transition p-1 cursor-pointer shrink-0"
-          title="기록 삭제"
-        >
-          <i class="fa-solid fa-trash-can text-xs"></i>
-        </button>
-      </div>
-    `).join('');
+      `;
+    }).join('');
   }
 
   addGrowthRecord(e) {
@@ -1447,6 +1727,7 @@ class DodamCommunityApp {
     const hInput = document.getElementById('input-growth-height');
     const wInput = document.getElementById('input-growth-weight');
     const mInput = document.getElementById('input-growth-memo');
+    const childSelect = document.getElementById('input-growth-child-id');
 
     const height = parseFloat(hInput?.value || '0');
     const weight = parseFloat(wInput?.value || '0');
@@ -1457,11 +1738,18 @@ class DodamCommunityApp {
       return;
     }
 
+    const children = this.ensureChildrenArray();
+    const targetChildId = childSelect?.value || this.selectedGrowthChildId || children[0]?.id || 'child_1';
+    const targetChild = children.find((c) => c.id === targetChildId) || children[0];
+    this.selectedGrowthChildId = targetChild.id;
+
     const todayStr = new Date().toISOString().slice(0, 10).replace(/-/g, '.');
 
     if (!this.profile.growthRecords) this.profile.growthRecords = [];
     this.profile.growthRecords.unshift({
       id: Date.now(),
+      childId: targetChild.id,
+      childName: targetChild.name,
       date: todayStr,
       height: height,
       weight: weight,
@@ -1482,7 +1770,7 @@ class DodamCommunityApp {
     if (wInput) wInput.value = '';
     if (mInput) mInput.value = '';
 
-    this.showToast('🎉 아이 성장 기록이 등록되었습니다! (+5P 활동 점수 적립)');
+    this.showToast(`🎉 [${targetChild.name}] 성장 기록이 등록되었습니다! (+5P 활동 점수 적립)`);
   }
 
   deleteGrowthRecord(recordId) {
@@ -1509,9 +1797,6 @@ class DodamCommunityApp {
 
     const nickEl = document.getElementById('level-display-nickname');
     if (nickEl) nickEl.textContent = `${this.profile.nickname} 님`;
-
-    const perkEl = document.getElementById('level-current-perk');
-    if (perkEl && lvl.currentPerk) perkEl.textContent = lvl.currentPerk;
 
     const pointsEl = document.getElementById('level-display-points');
     if (pointsEl) pointsEl.textContent = `${(this.profile.points || 0).toLocaleString()} P`;

@@ -51,7 +51,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261109_v18" />
+  <link rel="stylesheet" href="css/styles.css?v=20261109_v19" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -2874,45 +2874,27 @@
               </div>
             </div>
 
-            <!-- 아이 정보 박스 -->
+            <!-- 아이 정보 박스 (다자녀 추가 등록 지원) -->
             <div class="bg-rose-50/50 border border-rose-200/80 rounded-2xl p-3.5 space-y-3">
-              <div class="flex items-center justify-between">
-                <span class="font-black text-rose-900 flex items-center gap-1.5">
-                  <i class="fa-solid fa-child-reaching text-rose-500"></i>
-                  <span>우리 아이 기본 정보</span>
-                </span>
-                <span class="text-[10px] font-extrabold text-rose-600 bg-rose-100/60 px-2 py-0.5 rounded-full">맞춤 추천에 활용</span>
+              <div class="flex items-center justify-between flex-wrap gap-2">
+                <div class="flex items-center gap-1.5">
+                  <i class="fa-solid fa-children text-rose-500"></i>
+                  <span class="font-black text-rose-900">우리 아이 기본 정보</span>
+                  <span id="prof-children-count-badge" class="text-[10px] font-extrabold text-rose-600 bg-rose-100/80 px-2 py-0.5 rounded-full">1명</span>
+                </div>
+                <button
+                  type="button"
+                  onclick="app.addChildFormRow()"
+                  class="px-2.5 py-1 rounded-xl bg-white hover:bg-rose-50 text-rose-600 border border-rose-300 font-extrabold text-[11px] shadow-2xs transition cursor-pointer flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-plus text-[10px]"></i>
+                  <span>자녀 추가 등록</span>
+                </button>
               </div>
 
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">아이 애칭 / 이름</label>
-                  <input id="prof-babyname" type="text" required placeholder="예: 도담이" class="w-full bg-white border border-rose-200 rounded-xl px-3 py-2 font-bold focus:outline-none focus:border-rose-400" />
-                </div>
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">성별</label>
-                  <select id="prof-gender" class="w-full bg-white border border-rose-200 rounded-xl px-2.5 py-2 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
-                    <option value="boy">👦 왕자님 (남아)</option>
-                    <option value="girl">👧 공주님 (여아)</option>
-                    <option value="pregnant">🤰 출산 준비중 (임신)</option>
-                  </select>
-                </div>
-                <div>
-                  <label class="block font-bold text-slate-700 mb-1">아이 연령 / 개월수</label>
-                  <select id="prof-months" class="w-full bg-white border border-rose-200 rounded-xl px-2.5 py-2 font-bold focus:outline-none focus:border-rose-400 cursor-pointer">
-                    <option value="0">출산 준비중 (임신)</option>
-                    <option value="6">0~6개월 (신생아·영아)</option>
-                    <option value="12">7~12개월 (돌 전 아기)</option>
-                    <option value="24" selected>13~24개월 (돌 이후·2세)</option>
-                    <option value="36">25~36개월 (3세)</option>
-                    <option value="48">37~48개월 (4세)</option>
-                    <option value="60">49~60개월 (5세)</option>
-                    <option value="72">61~72개월 (6세)</option>
-                    <option value="84">7세 (취학 전)</option>
-                    <option value="96">초등 저학년 (1~3학년)</option>
-                    <option value="132">초등 고학년 (4~6학년)</option>
-                  </select>
-                </div>
+              <!-- 동적 자녀 입력 카드 리스트 -->
+              <div id="prof-children-list" class="space-y-2.5">
+                <!-- Rendered dynamically by app.renderChildrenFormRows() -->
               </div>
             </div>
 
@@ -2934,14 +2916,30 @@
           </form>
         </div>
 
-        <!-- [TAB 2] 아이 성장 다이어리 (키/몸무게/성장메모) -->
+        <!-- [TAB 2] 아이 성장 다이어리 (자녀별 키/몸무게/성장메모) -->
         <div id="prof-tab-growth" class="hidden space-y-3.5">
+          <!-- 자녀 선택 탭 바 -->
+          <div class="space-y-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-extrabold text-slate-700 flex items-center gap-1.5">
+                <i class="fa-solid fa-children text-indigo-500"></i>
+                <span>성장 기록을 관리할 자녀 선택</span>
+              </span>
+              <button type="button" onclick="app.setProfileTab('info')" class="text-[10px] font-bold text-indigo-600 hover:underline cursor-pointer">
+                + 자녀 추가/수정하기
+              </button>
+            </div>
+            <div id="growth-child-tabs" class="flex items-center gap-1.5 flex-wrap">
+              <!-- Rendered dynamically by app.renderGrowthSection() -->
+            </div>
+          </div>
+
           <!-- 최신 성장 요약 카드 -->
           <div class="bg-indigo-50/60 border border-indigo-200/80 rounded-2xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <div class="text-[11px] font-extrabold text-indigo-700 flex items-center gap-1.5">
                 <i class="fa-solid fa-chart-line"></i>
-                <span>우리 아이 최근 성장 기록</span>
+                <span id="growth-summary-title">우리 아이 최근 성장 기록</span>
               </div>
               <div class="flex items-baseline gap-3 mt-1">
                 <div>
@@ -2964,9 +2962,17 @@
 
           <!-- 새 성장 기록 추가 폼 -->
           <form onsubmit="app.addGrowthRecord(event)" class="bg-stone-50 border border-stone-200 rounded-2xl p-3.5 space-y-2.5">
-            <div class="font-extrabold text-slate-800 text-xs flex items-center gap-1.5">
-              <i class="fa-solid fa-plus-circle text-indigo-500"></i>
-              <span>새 성장 기록 작성</span>
+            <div class="flex items-center justify-between gap-2 flex-wrap">
+              <div class="font-extrabold text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-plus-circle text-indigo-500"></i>
+                <span>새 성장 기록 작성</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <label for="input-growth-child-id" class="text-[11px] font-bold text-slate-600">대상 자녀:</label>
+                <select id="input-growth-child-id" onchange="app.selectGrowthChild(this.value)" class="bg-white border border-indigo-200 rounded-xl px-2.5 py-1 text-[11px] font-extrabold text-indigo-800 focus:outline-none focus:border-indigo-400 cursor-pointer">
+                  <!-- Populated dynamically -->
+                </select>
+              </div>
             </div>
             <div class="grid grid-cols-2 gap-2.5">
               <div>
@@ -2979,8 +2985,8 @@
               </div>
             </div>
             <div>
-              <label class="block font-bold text-slate-600 text-[11px] mb-1">오늘의 성장 메모 / 예방접종</label>
-              <input id="input-growth-memo" type="text" placeholder="예: 영유아 검진 완료, 첫 걸음마 5발자국 뗌!" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 font-medium focus:outline-none focus:border-indigo-400" />
+              <label class="block font-bold text-slate-600 text-[11px] mb-1">오늘의 성장 메모 / 예방접종 / 학교생활</label>
+              <input id="input-growth-memo" type="text" placeholder="예: 영유아 검진 완료, 키가 부쩍 컸어요!" class="w-full bg-white border border-stone-300 rounded-xl px-3 py-1.5 font-medium focus:outline-none focus:border-indigo-400" />
             </div>
             <div class="flex justify-end pt-1">
               <button type="submit" class="px-4 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white font-black text-xs shadow-sm transition cursor-pointer">
@@ -2992,7 +2998,7 @@
           <!-- 최근 기록 히스토리 목록 -->
           <div class="space-y-2">
             <div class="font-black text-slate-700 text-xs flex items-center justify-between">
-              <span>성장 기록 히스토리</span>
+              <span id="growth-history-title">성장 기록 히스토리</span>
               <span id="growth-history-count" class="text-[11px] text-slate-400 font-bold">0건</span>
             </div>
             <div id="growth-history-list" class="space-y-1.5 max-h-48 overflow-y-auto">
@@ -3023,15 +3029,6 @@
               </button>
             </div>
 
-            <!-- 현재 내 등급 적용 혜택 요약 -->
-            <div class="p-2.5 rounded-xl bg-white/90 border border-amber-200/80 flex items-start gap-2 text-[11px]">
-              <i class="fa-solid fa-gift text-rose-500 mt-0.5 shrink-0"></i>
-              <div class="min-w-0">
-                <span class="font-extrabold text-slate-800">현재 적용 중인 등급 혜택: </span>
-                <span id="level-current-perk" class="text-slate-600 font-medium">전 게시판 열람·글쓰기, 전국 행사·안심식당·지원금 무제한 조회, 아이 성장 다이어리 이용</span>
-              </div>
-            </div>
-
             <!-- 핵심 지표 2종: 활동 점수 & 도움 준 횟수 -->
             <div class="grid grid-cols-2 gap-2 text-center bg-white/80 rounded-xl p-3 border border-amber-200/60">
               <div>
@@ -3056,77 +3053,41 @@
             </div>
           </div>
 
-          <!-- 5대 등급 체계 및 등급별 전용 혜택 가이드 -->
+          <!-- 5대 등급 체계 및 등업 기준 가이드 (혜택 문구 제외) -->
           <div class="bg-white border border-stone-200 rounded-2xl p-3.5 space-y-2.5">
             <div class="flex items-center justify-between">
               <div class="font-black text-slate-800 text-xs flex items-center gap-1.5">
                 <i class="fa-solid fa-ranking-star text-amber-500"></i>
-                <span>도담톡 5단계 육아 등급 기준 & 레벨업 혜택</span>
+                <span>도담톡 5단계 육아 등급 체계</span>
               </div>
               <span class="text-[10px] font-bold text-rose-600 bg-rose-50 px-2 py-0.5 rounded-full border border-rose-200">점수 + 도움 횟수 동시 충족</span>
             </div>
 
-            <div class="space-y-2 text-[11px]">
-              <!-- Lv.1 -->
-              <div class="p-2.5 rounded-xl bg-stone-50 border border-stone-200/80 space-y-1">
-                <div class="flex items-center justify-between">
-                  <span class="font-extrabold text-slate-800">🌱 Lv.1 새싹맘·대디</span>
-                  <span class="text-[10px] font-bold text-slate-500 bg-white px-2 py-0.5 rounded-lg border border-stone-200">가입 즉시 (0 ~ 299P)</span>
-                </div>
-                <div class="text-slate-600 text-[10.5px] leading-relaxed">
-                  • <strong>기본 권한:</strong> 커뮤니티 전 게시판 열람·글쓰기, 전국 행사·안심식당·학군·지원금 조회, 성장 다이어리 기록
-                </div>
+            <div class="space-y-1.5 text-[11px]">
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-slate-800">🌱 Lv.1 새싹맘·대디</span>
+                <span class="text-slate-500 font-bold">가입 즉시 부여 (0 ~ 299P)</span>
               </div>
-
-              <!-- Lv.2 -->
-              <div class="p-2.5 rounded-xl bg-emerald-50/40 border border-emerald-200/80 space-y-1">
-                <div class="flex items-center justify-between">
-                  <span class="font-extrabold text-emerald-800">🌿 Lv.2 줄기맘·대디</span>
-                  <span class="text-[10px] font-bold text-emerald-700 bg-white px-2 py-0.5 rounded-lg border border-emerald-200">300P 이상 + 도움 3회 이상</span>
-                </div>
-                <div class="text-slate-700 text-[10.5px] leading-relaxed">
-                  • <strong>등업 혜택:</strong> 닉네임 <strong>[줄기 인증 배지]</strong> 부착 · <strong>우리 동네 나눔장터 및 공동육아 소모임 개설 권한</strong> · 스크랩북 무제한 저장
-                </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-emerald-800">🌿 Lv.2 줄기맘·대디</span>
+                <span class="text-slate-600 font-bold">300P 이상 + 도움 3회 이상</span>
               </div>
-
-              <!-- Lv.3 -->
-              <div class="p-2.5 rounded-xl bg-indigo-50/40 border border-indigo-200/80 space-y-1">
-                <div class="flex items-center justify-between">
-                  <span class="font-extrabold text-indigo-800">🌷 Lv.3 꽃봉오리맘·대디</span>
-                  <span class="text-[10px] font-bold text-indigo-700 bg-white px-2 py-0.5 rounded-lg border border-indigo-200">1,000P 이상 + 도움 10회 이상</span>
-                </div>
-                <div class="text-slate-700 text-[10.5px] leading-relaxed">
-                  • <strong>등업 혜택:</strong> <strong>[꽃봉오리 배지]</strong> 부착 · <strong>작성한 질문글 상단 우선 노출(추천 가중치)</strong> · <strong>도담 AI 케어랩 심층 발달 리포트</strong> 맞춤 열람 · 지역 체험단·도서 서평단 신청 자격
-                </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-indigo-800">🌷 Lv.3 꽃봉오리맘·대디</span>
+                <span class="text-slate-600 font-bold">1,000P 이상 + 도움 10회 이상</span>
               </div>
-
-              <!-- Lv.4 -->
-              <div class="p-2.5 rounded-xl bg-rose-50/40 border border-rose-200/80 space-y-1">
-                <div class="flex items-center justify-between">
-                  <span class="font-extrabold text-rose-800">🍎 Lv.4 열매맘·대디</span>
-                  <span class="text-[10px] font-bold text-rose-700 bg-white px-2 py-0.5 rounded-lg border border-rose-200">3,000P 이상 + 도움 25회 이상</span>
-                </div>
-                <div class="text-slate-700 text-[10.5px] leading-relaxed">
-                  • <strong>등업 혜택:</strong> <strong>[열매 스페셜 배지 & 프로필 하이라이트]</strong> · <strong>우리 동네 맘카페 명예 운영위원 위촉</strong> · 작성 꿀팁글 <strong>[인기 추천] 피드 우선 선정</strong> · 제휴 키즈카페·공연 초청 이벤트 우선 추첨
-                </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-rose-800">🍎 Lv.4 열매맘·대디</span>
+                <span class="text-slate-600 font-bold">3,000P 이상 + 도움 25회 이상</span>
               </div>
-
-              <!-- Lv.5 -->
-              <div class="p-2.5 rounded-xl bg-purple-50/50 border border-purple-200/90 space-y-1">
-                <div class="flex items-center justify-between">
-                  <span class="font-extrabold text-purple-900">👑 Lv.5 멘토맘·대디</span>
-                  <span class="text-[10px] font-bold text-purple-700 bg-white px-2 py-0.5 rounded-lg border border-purple-200">7,000P 이상 + 도움 50회 이상</span>
-                </div>
-                <div class="text-slate-700 text-[10.5px] leading-relaxed">
-                  • <strong>최고 등급 VIP 혜택:</strong> <strong>[퍼플 크라운 VIP 멘토 배지]</strong> · 게시판 상단 <strong>[명예 멘토 칼럼] 단독 고정 노출 권한</strong> · <strong>육아용품·교구 VIP 체험단 및 어린이 공연/전시 무료 초청권 1순위 배정</strong> · 연말 베스트 멘토 공식 리워드 기프트 증정
-                </div>
+              <div class="flex items-center justify-between p-2.5 rounded-xl bg-stone-50 border border-stone-100">
+                <span class="font-extrabold text-purple-800">👑 Lv.5 멘토맘·대디</span>
+                <span class="text-slate-600 font-bold">7,000P 이상 + 도움 50회 이상</span>
               </div>
             </div>
 
-            <div class="p-2.5 rounded-xl bg-amber-50/60 border border-amber-200/70 text-[10.5px] text-slate-600 space-y-1">
-              <div>💡 <strong>포인트 & 도움 횟수 획득 방법 (밸런스 개편):</strong></div>
-              <div>• <strong>일일 출석체크:</strong> +10P (1일 1회) &nbsp;|&nbsp; <strong>게시글 작성:</strong> +15P (한줄글 +10P) &nbsp;|&nbsp; <strong>댓글·성장기록:</strong> +5P</div>
-              <div>• <strong>질문글 답변 채택 (도움 됐어요):</strong> <strong class="text-indigo-700">+25P & 도움 횟수 +1회</strong> (이웃 부모님께 실질적인 육아 도움을 줄수록 빠르게 등업됩니다!)</div>
+            <div class="p-2.5 rounded-xl bg-stone-50 border border-stone-200/60 text-[10.5px] text-slate-600 space-y-0.5">
+              <div>💡 <strong>포인트 획득 방법:</strong> 매일 출석체크(+10P), 게시글 작성(+15P / 한줄글 +10P), 댓글·성장기록(+5P), 도움 채택받기(+25P & 도움 +1회)</div>
             </div>
           </div>
         </div>
@@ -3607,23 +3568,23 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/data.js?v=20261109_v18"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/data.js?v=20261109_v19"></script>
   <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
   <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261109_v18"></script>
-  <script charset="utf-8" src="js/app.js?v=20261109_v18"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261109_v19"></script>
+  <script charset="utf-8" src="js/app.js?v=20261109_v19"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달
