@@ -401,13 +401,25 @@ class DodamCommunityApp {
     if (typeof window.DodamFirebase.subscribeProfile === 'function') {
       window.DodamFirebase.subscribeProfile('active_profile', (remoteProfile) => {
         if (remoteProfile) {
+          const cleanGrowth = Array.isArray(remoteProfile.growthRecords)
+            ? remoteProfile.growthRecords.filter(
+                (r) =>
+                  r &&
+                  r.id !== 1 &&
+                  r.id !== 2 &&
+                  r.memo !== '영유아 구강검진 완료 및 첫 단어 성공!' &&
+                  r.memo !== '가을 나들이 축제 다녀옴'
+              )
+            : [];
           this.profile = {
             ...this.getDefaultProfile(),
             ...remoteProfile,
-            growthRecords: Array.isArray(remoteProfile.growthRecords) ? remoteProfile.growthRecords : []
+            growthRecords: cleanGrowth
           };
           this.ensureChildrenArray();
           this.renderProfileWidget();
+          this.renderGrowthSection();
+          this.renderLevelSection();
           this.renderAuthHeader();
         }
       });
@@ -417,7 +429,7 @@ class DodamCommunityApp {
     if (typeof window.DodamFirebase.subscribeScraps === 'function') {
       window.DodamFirebase.subscribeScraps('active_scraps', (remoteScraps) => {
         if (Array.isArray(remoteScraps)) {
-          this.scraps = remoteScraps;
+          this.scraps = remoteScraps.filter((id) => id && id !== 'post-01');
           this.updateScrapBadge();
           this.renderProfileWidget();
         }
@@ -443,8 +455,26 @@ class DodamCommunityApp {
     if (typeof window.DodamFirebase.subscribeSession === 'function') {
       window.DodamFirebase.subscribeSession('active_session', (sessionUser) => {
         this.currentUser = sessionUser || null;
+        if (this.currentUser) {
+          if (this.currentUser.savedProfile && !this.profile?.isCustomized) {
+            this.profile = {
+              ...this.getDefaultProfile(),
+              ...this.currentUser.savedProfile
+            };
+          } else {
+            if (this.currentUser.nickname && (!this.profile.nickname || this.profile.nickname === '도담맘')) {
+              this.profile.nickname = this.currentUser.nickname;
+            }
+            if (this.currentUser.profileImage) {
+              this.profile.profileImage = this.currentUser.profileImage;
+            }
+          }
+          this.ensureChildrenArray();
+        }
         this.renderAuthHeader();
         this.renderProfileWidget();
+        this.renderGrowthSection();
+        this.renderLevelSection();
       });
     }
 
@@ -551,10 +581,7 @@ class DodamCommunityApp {
       points: 0,
       helpsCount: 0,
       checkedInToday: false,
-      growthRecords: [
-        { id: 1, childId: 'child_1', childName: '도담이', date: '2026.11.05', height: 88.5, weight: 12.4, memo: '영유아 구강검진 완료 및 첫 단어 성공!' },
-        { id: 2, childId: 'child_1', childName: '도담이', date: '2026.10.15', height: 86.8, weight: 12.0, memo: '가을 나들이 축제 다녀옴' }
-      ]
+      growthRecords: []
     };
   }
 
@@ -562,6 +589,10 @@ class DodamCommunityApp {
     this.ensureChildrenArray();
     if (window.DodamFirebase && typeof window.DodamFirebase.saveProfile === 'function') {
       window.DodamFirebase.saveProfile(this.profile, 'active_profile');
+    }
+    if (this.currentUser) {
+      this.currentUser.savedProfile = this.profile;
+      this.saveCurrentUserSession();
     }
   }
 
@@ -764,8 +795,8 @@ class DodamCommunityApp {
             <div class="text-xs font-black text-indigo-600 mt-0.5">${(this.profile.helpsCount || 0).toLocaleString()} 회</div>
           </div>
           <div>
-            <div class="text-[10px] text-slate-400 font-bold">스크랩한 공고</div>
-            <div class="text-xs font-black text-amber-600 mt-0.5">${(this.scraps || []).length} 개</div>
+            <div class="text-[10px] text-slate-400 font-bold">스크랩한 글</div>
+            <div class="text-xs font-black text-amber-600 mt-0.5">${this.getValidScrappedPosts().length} 개</div>
           </div>
           <div>
             <div class="text-[10px] text-slate-400 font-bold">내 활동글</div>
@@ -5341,7 +5372,12 @@ class DodamCommunityApp {
   // 8. 스크랩북 & 토스트 알림 관리
   // ==========================================
   loadScraps() {
-    return ['post-01'];
+    return [];
+  }
+
+  getValidScrappedPosts() {
+    const validIds = new Set((this.scraps || []).filter((id) => id && id !== 'post-01'));
+    return (this.data?.posts || []).filter((p) => p && validIds.has(p.id));
   }
 
   toggleScrap(postId) {
@@ -5363,7 +5399,7 @@ class DodamCommunityApp {
 
   updateScrapBadge() {
     const b = document.getElementById('scrap-count-badge');
-    if (b) b.textContent = this.scraps.length;
+    if (b) b.textContent = this.getValidScrappedPosts().length;
   }
 
   openScrapModal() {
@@ -5371,14 +5407,14 @@ class DodamCommunityApp {
     const listEl = document.getElementById('scrap-list-container');
     if (!modal || !listEl) return;
 
-    const scrappedPosts = this.data.posts.filter((p) => this.scraps.includes(p.id));
+    const scrappedPosts = this.getValidScrappedPosts();
     if (scrappedPosts.length === 0) {
       listEl.innerHTML = `<div class="p-4 text-center text-xs text-slate-400">스크랩한 게시글이 없습니다.</div>`;
     } else {
       listEl.innerHTML = scrappedPosts
         .map(
           (p) => `
-          <div onclick="app.openPostDetailModal('${p.id}'); app.document.getElementById('scrap-modal').classList.add('hidden')" class="p-3 rounded-2xl bg-stone-50 border border-stone-200 space-y-1 cursor-pointer hover:border-amber-300">
+          <div onclick="app.openPostDetailModal('${p.id}'); document.getElementById('scrap-modal').classList.add('hidden')" class="p-3 rounded-2xl bg-stone-50 border border-stone-200 space-y-1 cursor-pointer hover:border-amber-300">
             <div class="text-xs font-extrabold text-slate-900">${p.title}</div>
             <div class="text-[11px] text-slate-500">작성자: ${p.author.nickname} · 공감 ${p.reactions.like} · 댓글 ${p.comments.length}</div>
           </div>

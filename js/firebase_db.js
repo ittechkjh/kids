@@ -54,8 +54,8 @@ class DodamFirebaseService {
 
       this.purgeLegacyLocalStorage();
 
-      const cfg = window.DODAM_FIREBASE_CONFIG;
-      if (!cfg || !cfg.enabled || !cfg.apiKey || cfg.apiKey.includes('YOUR_')) {
+      const cfg = window.DODAM_FIREBASE_CONFIG || window.FIREBASE_CONFIG;
+      if (!cfg || cfg.enabled === false || !cfg.apiKey || cfg.apiKey.includes('YOUR_')) {
         console.warn('[Dodam Firestore] Firebase 설정을 확인해주세요.');
         return;
       }

@@ -10,6 +10,7 @@
  * * API 키가 비어있거나 기본값인 경우, 자동으로 로컬 시드 및 LocalStorage 캐시 모드로 안전하게 작동합니다.
  */
 window.FIREBASE_CONFIG = {
+  enabled: true,
   apiKey: "AIzaSyCBxlyDlmi1VfARWvrznSxT-2mXurEkdBE",
   authDomain: "kids-912f5.firebaseapp.com",
   projectId: "kids-912f5",
@@ -18,6 +19,8 @@ window.FIREBASE_CONFIG = {
   appId: "1:1033753749126:web:20d0b759ad94629b599307",
   measurementId: "G-7KJ2DVGW87"
 };
+
+window.DODAM_FIREBASE_CONFIG = window.FIREBASE_CONFIG;
 
 /**
  * Firebase 설정 유효성 검사 헬퍼
