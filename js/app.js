@@ -871,14 +871,21 @@ class DodamCommunityApp {
     window.addEventListener('message', (e) => {
       if (e.data && e.data.type === 'NAVER_OAUTH_TOKEN' && e.data.token) {
         this.fetchNaverProfile(e.data.token);
+      } else if (e.data && e.data.type === 'NAVER_OAUTH_ERROR') {
+        const errMsg = e.data.errorDescription || e.data.error || '인증 취소 또는 도메인 설정 확인 필요';
+        this.showToast(`⚠️ 네이버 로그인 안내: ${errMsg}`);
       }
     });
 
     // 현재 창 자체가 Naver OAuth redirect 또는 팝업 콜백으로 열린 경우
-    if (window.location.hash && window.location.hash.includes('access_token')) {
-      const hash = window.location.hash.substring(1);
-      const params = new URLSearchParams(hash);
+    const hashStr = window.location.hash ? window.location.hash.substring(1) : '';
+    const searchStr = window.location.search ? window.location.search.substring(1) : '';
+    if (hashStr.includes('access_token') || hashStr.includes('error=') || searchStr.includes('error=')) {
+      const params = new URLSearchParams(hashStr.includes('access_token') || hashStr.includes('error=') ? hashStr : searchStr);
       const token = params.get('access_token');
+      const err = params.get('error');
+      const errDesc = params.get('error_description');
+
       if (token) {
         if (window.opener && !window.opener.closed) {
           try {
@@ -890,6 +897,16 @@ class DodamCommunityApp {
         // 단독 창 리다이렉트인 경우
         this.fetchNaverProfile(token);
         history.replaceState(null, null, window.location.pathname + window.location.search);
+      } else if (err) {
+        if (window.opener && !window.opener.closed) {
+          try {
+            window.opener.postMessage({ type: 'NAVER_OAUTH_ERROR', error: err, errorDescription: errDesc }, '*');
+            window.close();
+            return;
+          } catch (e) {}
+        }
+        this.showToast(`⚠️ 네이버 로그인 안내: ${errDesc || err}`);
+        history.replaceState(null, null, window.location.pathname);
       }
     }
   }
@@ -1083,12 +1100,18 @@ class DodamCommunityApp {
       return;
     }
 
-    try {
-      const callbackUrl = encodeURIComponent(window.DODAM_SOCIAL_CONFIG.naverCallbackUrl || (window.location.origin + window.location.pathname));
-      const state = Math.random().toString(36).substring(2, 15);
-      sessionStorage.setItem('naver_oauth_state', state);
+    this.initNaverSdk();
 
-      const naverAuthUrl = `https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}`;
+    try {
+      let naverAuthUrl = '';
+      if (this.naverLogin && typeof this.naverLogin.generateAuthorizeUrl === 'function') {
+        naverAuthUrl = this.naverLogin.generateAuthorizeUrl();
+      } else {
+        const callbackUrl = encodeURIComponent(window.DODAM_SOCIAL_CONFIG.naverCallbackUrl || (window.location.origin + window.location.pathname));
+        const state = Math.random().toString(36).substring(2, 15);
+        sessionStorage.setItem('naver_oauth_state', state);
+        naverAuthUrl = `https://nid.naver.com/oauth2.0/authorize?response_type=token&client_id=${clientId}&redirect_uri=${callbackUrl}&state=${state}&version=js-2.0.1`;
+      }
 
       const width = 500;
       const height = 650;
@@ -1102,44 +1125,97 @@ class DodamCommunityApp {
     }
   }
 
+  applyNaverUserLogin(userObj) {
+    const realNick =
+      userObj.nickname ||
+      (typeof userObj.getNickName === 'function' && userObj.getNickName()) ||
+      userObj.name ||
+      (typeof userObj.getName === 'function' && userObj.getName()) ||
+      (userObj.email ? userObj.email.split('@')[0] : '') ||
+      (typeof userObj.getEmail === 'function' && userObj.getEmail() ? userObj.getEmail().split('@')[0] : '') ||
+      '네이버회원';
+    const realPhoto =
+      userObj.profile_image ||
+      (typeof userObj.getProfileImage === 'function' && userObj.getProfileImage()) ||
+      '';
+    const id =
+      userObj.id ||
+      (typeof userObj.getId === 'function' && userObj.getId()) ||
+      ('naver_' + Date.now());
+
+    this.currentUser = {
+      id: 'naver_' + id,
+      username: 'naver_' + id,
+      nickname: realNick,
+      provider: 'naver',
+      profileImage: realPhoto,
+      role: 'member',
+      authenticated: true
+    };
+
+    this.profile.nickname = realNick;
+    if (realPhoto) this.profile.profileImage = realPhoto;
+    this.profile.provider = 'naver';
+
+    this.saveCurrentUserSession();
+    this.saveProfileData();
+
+    this.closeLoginModal();
+    this.renderAuthHeader();
+    this.renderProfileWidget();
+    this.showToast(`🟢 네이버 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
+
+    if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
+      setTimeout(() => this.openProfileModal(), 500);
+    }
+  }
+
   fetchNaverProfile(accessToken) {
     if (!accessToken) return;
+    if (!this.naverLogin) {
+      this.initNaverSdk();
+    }
+
     if (this.naverLogin) {
+      this.naverLogin.accessToken = { accessToken: accessToken };
       this.naverLogin.getLoginStatus((status) => {
-        if (status) {
-          const user = this.naverLogin.user;
-          const realNick = user.getNickName() || user.getName() || '네이버회원';
-          const realPhoto = user.getProfileImage() || '';
-          const id = user.getId() || ('naver_' + Date.now());
-
-          this.currentUser = {
-            id: 'naver_' + id,
-            username: 'naver_' + id,
-            nickname: realNick,
-            provider: 'naver',
-            profileImage: realPhoto,
-            role: 'member',
-            authenticated: true
-          };
-
-          this.profile.nickname = realNick;
-          if (realPhoto) this.profile.profileImage = realPhoto;
-          this.profile.provider = 'naver';
-
-          this.saveCurrentUserSession();
-          this.saveProfileData();
-
-          this.closeLoginModal();
-          this.renderAuthHeader();
-          this.renderProfileWidget();
-          this.showToast(`🟢 네이버 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
-
-          if (this.profile.babyName === '도담이' && !this.profile.isCustomized) {
-            setTimeout(() => this.openProfileModal(), 500);
-          }
+        if (status && this.naverLogin.user) {
+          this.applyNaverUserLogin(this.naverLogin.user);
+        } else {
+          this.fetchNaverProfileJsonp(accessToken);
         }
       });
+    } else {
+      this.fetchNaverProfileJsonp(accessToken);
     }
+  }
+
+  fetchNaverProfileJsonp(accessToken) {
+    const cbName = '_dodam_naver_jsonp_' + Math.round(100000 * Math.random());
+    const script = document.createElement('script');
+    const parent = document.head || document.body;
+
+    window[cbName] = (res) => {
+      try {
+        if (res && res.resultcode === '00' && res.response) {
+          this.applyNaverUserLogin(res.response);
+        } else {
+          this.showToast('⚠️ 네이버 프로필 조회에 실패했습니다.');
+        }
+      } finally {
+        delete window[cbName];
+        if (script.parentNode) script.parentNode.removeChild(script);
+      }
+    };
+
+    script.onerror = () => {
+      delete window[cbName];
+      if (script.parentNode) script.parentNode.removeChild(script);
+      this.showToast('⚠️ 네이버 프로필 서버 연결에 실패했습니다.');
+    };
+
+    script.src = `https://openapi.naver.com/v1/nid/me?access_token=${encodeURIComponent(accessToken)}&oauth_callback=${cbName}`;
+    parent.appendChild(script);
   }
 
   // ==========================================

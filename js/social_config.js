@@ -11,7 +11,7 @@
 
 window.DODAM_SOCIAL_CONFIG = {
   kakaoJavascriptKey: "8dbfdfbebf899cf44aa5f31f50185023", // 공식 카카오 JavaScript 키 기본 탑재
-  naverClientId: "",      // 네이버 Client ID (Cloud Firestore에서 자동 동기화)
+  naverClientId: "B4R4ujaUW6HomoMMDBrO",                  // 공식 네이버 Client ID 기본 탑재
   naverCallbackUrl: (function() {
     try {
       return window.location.origin + window.location.pathname;
