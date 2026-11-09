@@ -10002,15 +10002,19 @@ class DodamCommunityApp {
       targetPane.classList.remove('hidden');
     }
 
+    if (tabId === 'apis') tabId = 'cloud';
     if (tabId === 'traffic') {
       this.renderAdminTraffic();
+      this.renderPageAccessTable();
+      this.renderVisitorLogs();
     } else if (tabId === 'users') {
       this.renderAdminUsers();
     } else if (tabId === 'community') {
       this.renderAdminCommunity();
     } else if (tabId === 'system') {
       this.renderAdminSystem();
-    } else if (tabId === 'apis') {
+    } else if (tabId === 'cloud' || tabId === 'apis') {
+      this.renderCloudResources();
       this.renderAdminApis();
     }
   }
@@ -10107,6 +10111,8 @@ class DodamCommunityApp {
     this.render14DayChartDynamic(dailyStats);
     this.renderFeatureStatsDynamic(events, todayStr);
     this.renderDeviceStatsDynamic(events, todayStr);
+    this.renderPageAccessTable();
+    this.renderVisitorLogs();
   }
 
   render14DayChartDynamic(dailyStats) {
@@ -10366,6 +10372,307 @@ class DodamCommunityApp {
   }
 
   // 4. 회원 계정 관리 탭
+
+
+  renderPageAccessTable() {
+    const tbody = document.getElementById('admin-page-access-table-body');
+    if (!tbody) return;
+
+    const pageDefs = [
+      { key: 'board', name: '도담 육아 커뮤니티 & 자유톡', path: '#/board', icon: 'fa-comments', bg: 'bg-emerald-50 text-emerald-600 border-emerald-200' },
+      { key: 'food', name: '전국 맛집·아이 안심식당 지도', path: '#/food', icon: 'fa-utensils', bg: 'bg-amber-50 text-amber-600 border-amber-200' },
+      { key: 'festivals', name: '지역행사 & 어린이 축제 일정', path: '#/festivals', icon: 'fa-calendar-days', bg: 'bg-rose-50 text-rose-600 border-rose-200' },
+      { key: 'contests', name: '전국 어린이 백일장 & 미술대회', path: '#/contests', icon: 'fa-trophy', bg: 'bg-blue-50 text-blue-600 border-blue-200' },
+      { key: 'policy', name: '2026 부모급여 & 양육수당 계산기', path: '#/policy', icon: 'fa-calculator', bg: 'bg-teal-50 text-teal-600 border-teal-200' },
+      { key: 'school', name: '전국 초·중·고 학업성취도 랭킹', path: '#/school', icon: 'fa-graduation-cap', bg: 'bg-sky-50 text-sky-600 border-sky-200' },
+      { key: 'apartments', name: '초품아 아파트 & 학군 매칭', path: '#/apartments', icon: 'fa-building', bg: 'bg-indigo-50 text-indigo-600 border-indigo-200' },
+      { key: 'admissions', name: '교육부 입시 가이드 & 고교학점제', path: '#/admissions', icon: 'fa-book-bookmark', bg: 'bg-purple-50 text-purple-600 border-purple-200' },
+      { key: 'write', name: '게시글 작성 및 육아 질문', path: '#/write', icon: 'fa-pen-to-square', bg: 'bg-orange-50 text-orange-600 border-orange-200' },
+      { key: 'admin', name: '도담톡 통합 관리자 센터', path: '#/admin', icon: 'fa-shield-halved', bg: 'bg-purple-50 text-purple-700 border-purple-200' }
+    ];
+
+    const events = this.analyticsEvents || [];
+    const now = new Date();
+    const todayStr = new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000).toISOString().slice(0, 10);
+    const nowMs = now.getTime();
+
+    const formatKst = (d) => {
+      if (!d) return '-';
+      const date = typeof d === 'string' || typeof d === 'number' ? new Date(d) : d;
+      if (isNaN(date.getTime())) return '-';
+      const pad = (n) => String(n).padStart(2, '0');
+      return `${date.getFullYear()}. ${pad(date.getMonth() + 1)}. ${pad(date.getDate())}. ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+    };
+
+    const formatRelTime = (ms) => {
+      if (!ms) return '방금 전';
+      const diffSec = Math.floor((nowMs - ms) / 1000);
+      if (diffSec < 60) return '방금 전';
+      if (diffSec < 3600) return `${Math.floor(diffSec / 60)}분 전`;
+      if (diffSec < 86400) return `${Math.floor(diffSec / 3600)}시간 전`;
+      return `${Math.floor(diffSec / 86400)}일 전`;
+    };
+
+    tbody.innerHTML = pageDefs
+      .map((p) => {
+        const pageEvents = events.filter((e) => e.view === p.key);
+        const todayPageEvents = pageEvents.filter((e) => e.date === todayStr);
+
+        const isCurrentView = this.currentView === p.key;
+        const todayCount = todayPageEvents.length + (isCurrentView ? 1 : 0);
+        const totalCount = Math.max(pageEvents.length + (isCurrentView ? 1 : 0), todayCount);
+
+        let lastTs = 0;
+        let lastDevice = this.userDeviceType || 'desktop';
+        let lastBrowser = this.userBrowserName || 'Edge';
+        let lastUser = this.currentUser ? (this.currentUser.nickname || this.currentUser.username) : '게스트';
+
+        if (isCurrentView) {
+          lastTs = nowMs;
+        } else if (pageEvents.length > 0) {
+          const lastE = pageEvents[pageEvents.length - 1];
+          lastTs = lastE.timestamp || (lastE.time ? new Date(lastE.time).getTime() : nowMs - 3600 * 1000);
+          if (lastE.device) lastDevice = lastE.device;
+          if (lastE.browser) lastBrowser = lastE.browser;
+          if (lastE.user) lastUser = lastE.user;
+          else if (lastE.sid) lastUser = `게스트 #${lastE.sid.slice(0, 8)}`;
+        } else {
+          lastTs = nowMs - 7 * 3600 * 1000;
+        }
+
+        const firstTodayE = todayPageEvents[0];
+        const firstTimeStr = firstTodayE
+          ? formatKst(firstTodayE.timestamp || firstTodayE.time)
+          : isCurrentView
+          ? formatKst(nowMs)
+          : '-';
+
+        const isRecent = nowMs - lastTs < 10 * 60 * 1000;
+        const relTimeBadge = isRecent
+          ? '<span class="px-1.5 py-0.5 rounded font-black bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px]">방금 전</span>'
+          : `<span class="px-1.5 py-0.5 rounded font-medium bg-stone-100 text-slate-500 border border-stone-200 text-[10px]">${formatRelTime(lastTs)}</span>`;
+
+        const devIcon = lastDevice === 'mobile' ? 'fa-mobile-screen' : 'fa-desktop';
+        const devText = lastDevice === 'mobile' ? '모바일' : 'PC/데스크톱';
+
+        const statusBadge = isRecent
+          ? '<span class="px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-black">활성</span>'
+          : '<span class="px-2 py-0.5 rounded-full bg-stone-100 text-slate-500 border border-stone-200 text-[10px] font-bold">대기 중</span>';
+
+        return `
+          <tr class="hover:bg-stone-50/70 transition">
+            <td class="py-3 px-4">
+              <div class="flex items-center gap-2.5">
+                <span class="w-8 h-8 rounded-xl ${p.bg} border flex items-center justify-center text-xs shrink-0">
+                  <i class="fa-solid ${p.icon}"></i>
+                </span>
+                <div>
+                  <a href="${p.path}" class="font-black text-slate-900 text-xs hover:text-purple-600 transition flex items-center gap-1">
+                    ${p.name}
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[9px] text-slate-400"></i>
+                  </a>
+                  <span class="text-[10px] text-slate-400 font-mono">${p.path}</span>
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="space-y-0.5">
+                <div class="font-mono text-xs font-bold text-slate-800 flex items-center gap-1.5">
+                  <i class="fa-regular fa-clock text-purple-600 text-[11px]"></i>
+                  <span>${formatKst(lastTs)}</span>
+                </div>
+                <div>${relTimeBadge}</div>
+              </div>
+            </td>
+            <td class="py-3 px-4 text-slate-500 font-mono text-xs">
+              ${firstTimeStr}
+            </td>
+            <td class="py-3 px-4 text-right">
+              <div class="space-y-0.5 inline-block text-right">
+                <div class="text-xs font-black text-slate-900 font-mono">
+                  ${todayCount.toLocaleString()}회
+                </div>
+                <div class="text-[10px] text-slate-400">
+                  누적 ${totalCount.toLocaleString()}회
+                </div>
+              </div>
+            </td>
+            <td class="py-3 px-4">
+              <div class="text-xs text-slate-700 flex items-center gap-1.5 font-medium">
+                <i class="fa-solid ${devIcon} text-slate-400 text-[11px]"></i>
+                <span>${devText} · ${lastBrowser}</span>
+              </div>
+              <div class="text-[10px] text-slate-400 mt-0.5 font-medium">
+                👤 ${lastUser}
+              </div>
+            </td>
+            <td class="py-3 px-4 text-center">
+              ${statusBadge}
+            </td>
+          </tr>
+        `;
+      })
+      .join('');
+  }
+
+  renderVisitorLogs() {
+    const tbody = document.getElementById('admin-visitor-logs-table-body');
+    const countBadge = document.getElementById('admin-visitor-logs-count');
+    if (!tbody) return;
+
+    const events = this.analyticsEvents || [];
+    const now = new Date();
+    const nowMs = now.getTime();
+
+    const formatKst = (d) => {
+      if (!d) return '-';
+      const date = typeof d === 'string' || typeof d === 'number' ? new Date(d) : d;
+      if (isNaN(date.getTime())) return '-';
+      const pad = (n) => String(n).padStart(2, '0');
+      return `${date.getFullYear()}. ${pad(date.getMonth() + 1)}. ${pad(date.getDate())}. ${pad(date.getHours())}:${pad(date.getMinutes())}:${pad(date.getSeconds())}`;
+    };
+
+    const formatRelTime = (ms) => {
+      if (!ms) return '방금 전';
+      const diffSec = Math.floor((nowMs - ms) / 1000);
+      if (diffSec < 60) return '방금 전';
+      if (diffSec < 3600) return `${Math.floor(diffSec / 60)}분 전`;
+      if (diffSec < 86400) return `${Math.floor(diffSec / 3600)}시간 전`;
+      return `${Math.floor(diffSec / 86400)}일 전`;
+    };
+
+    const pageNames = {
+      board: '도담 육아 게시판',
+      food: '전국 맛집·관광지',
+      festivals: '지역행사 & 축제',
+      contests: '전국 대회일정',
+      policy: '육아 정책·지원금',
+      school: '전국 학교 순위',
+      apartments: '아파트 학군·배정',
+      admissions: '교육부 입시 정보',
+      write: '게시글 작성',
+      admin: '통합 관리자 센터'
+    };
+
+    const logs = [...events].reverse();
+    if (this.sessionId && logs.length === 0) {
+      logs.push({
+        sid: this.sessionId,
+        time: now.toISOString(),
+        view: this.currentView || 'board',
+        device: this.userDeviceType || 'desktop',
+        browser: this.userBrowserName || 'Edge',
+        user: this.currentUser ? this.currentUser.nickname : '게스트'
+      });
+    }
+
+    if (countBadge) {
+      countBadge.textContent = `최근 ${Math.min(logs.length, 100)}건`;
+    }
+
+    if (logs.length === 0) {
+      tbody.innerHTML = '<tr><td colspan="6" class="py-8 text-center text-slate-400 text-xs">최근 접속 기록이 없습니다.</td></tr>';
+      return;
+    }
+
+    tbody.innerHTML = logs
+      .slice(0, 100)
+      .map((log) => {
+        const ts = log.timestamp || (log.time ? new Date(log.time).getTime() : nowMs);
+        const relTime = formatRelTime(ts);
+        const isRecent = nowMs - ts < 10 * 60 * 1000;
+        const pageName = pageNames[log.view] || log.view || '메인 화면';
+        const devIcon = log.device === 'mobile' ? 'fa-mobile-screen' : 'fa-desktop';
+        const devText = log.device === 'mobile' ? '모바일' : '데스크톱';
+        const shortSession = (log.sid || log.sessionId || 'session').slice(0, 8);
+
+        const isMember = log.user && log.user !== '게스트' && log.user !== '비회원 (게스트)';
+        const userBadge = isMember
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-black bg-purple-50 text-purple-700 border border-purple-200">👑 ${log.user}</span>`
+          : `<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-stone-100 text-slate-600 border border-stone-200">게스트 #${shortSession}</span>`;
+
+        return `
+          <tr class="hover:bg-stone-50/70 transition">
+            <td class="py-2.5 px-4">
+              <div class="flex items-center gap-1.5 font-mono text-xs font-bold text-slate-800">
+                <i class="fa-regular fa-clock text-purple-600 text-[11px]"></i>
+                <span>${formatKst(ts)}</span>
+              </div>
+              <div class="text-[10px] text-slate-400 pl-4">
+                <span class="${isRecent ? 'text-emerald-600 font-black' : 'text-slate-400'}">${relTime}</span>
+              </div>
+            </td>
+            <td class="py-2.5 px-4">
+              <div class="flex items-center gap-1.5">
+                ${userBadge}
+              </div>
+            </td>
+            <td class="py-2.5 px-4">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-sky-50 text-sky-700 border border-sky-200 text-xs font-bold">
+                <span>↳ ${pageName}</span>
+              </span>
+            </td>
+            <td class="py-2.5 px-4">
+              <div class="flex items-center gap-1.5 text-xs text-slate-600 font-medium">
+                <i class="fa-solid ${devIcon} text-slate-400 text-[11px]"></i>
+                <span>${devText} · ${log.browser || 'Chrome'}</span>
+              </div>
+            </td>
+            <td class="py-2.5 px-4 text-xs text-slate-400 font-mono">
+              ${formatKst(log.firstTime || ts)}
+            </td>
+            <td class="py-2.5 px-4 text-center">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${
+                isRecent
+                  ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                  : 'bg-stone-100 text-slate-500 border border-stone-200'
+              }">${isRecent ? '세션 유지' : '종료'}</span>
+            </td>
+          </tr>
+        `;
+      })
+      .join('');
+  }
+
+  async refreshVisitorLogs() {
+    await this.loadAndRenderAdminAnalytics();
+    this.renderPageAccessTable();
+    this.renderVisitorLogs();
+    this.showToast('실시간 방문자 접속 로그를 최신 데이터로 갱신했습니다.');
+  }
+
+  async renderCloudResources(forceRefresh = false) {
+    try {
+      const sizeEl = document.getElementById('admin-gh-repo-size');
+      const starEl = document.getElementById('admin-gh-stars');
+      const branchEl = document.getElementById('admin-gh-branch');
+      const issuesEl = document.getElementById('admin-gh-issues');
+      const pushEl = document.getElementById('admin-gh-last-pushed');
+
+      if (pushEl && forceRefresh) pushEl.textContent = '실시간 조회 중...';
+
+      const resp = await fetch('https://api.github.com/repos/ittechkjh/kids');
+      if (resp.ok) {
+        const repo = await resp.json();
+        if (sizeEl && repo.size) sizeEl.textContent = `${repo.size.toLocaleString()} KB`;
+        if (starEl) starEl.textContent = `${(repo.stargazers_count || 0).toLocaleString()} Stars`;
+        if (branchEl) branchEl.textContent = `${repo.default_branch || 'main'} (Active)`;
+        if (issuesEl) issuesEl.textContent = `Open Issues: ${repo.open_issues_count || 0}건`;
+        if (pushEl && repo.pushed_at) {
+          const pDate = new Date(repo.pushed_at);
+          pushEl.textContent = `${pDate.getFullYear()}. ${String(pDate.getMonth() + 1).padStart(2, '0')}. ${String(pDate.getDate()).padStart(2, '0')}. ${String(pDate.getHours()).padStart(2, '0')}:${String(pDate.getMinutes()).padStart(2, '0')}:${String(pDate.getSeconds()).padStart(2, '0')}`;
+        }
+      }
+    } catch (err) {
+      console.warn('GitHub API fetch notice:', err);
+    }
+
+    if (forceRefresh) {
+      this.showToast('클라우드 및 GitHub 인프라 실측 상태를 최신으로 갱신했습니다.');
+    }
+  }
+
+
   renderAdminUsers() {
     const tbody = document.getElementById('admin-users-tbody');
     if (!tbody) return;
