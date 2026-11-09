@@ -210,17 +210,26 @@ class DodamCommunityApp {
     this.initKakaoSdk();
     this.initNaverSdk();
     this.initOAuthListeners();
-    // URL Hash Routing Support (#board, #festivals, #contests, #food, #policy)
-    const initHash = (window.location.hash || '').replace('#', '');
-    if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'].includes(initHash)) {
-      this.switchMainView(initHash);
+    // URL Hash Routing Support (#/admin, #/board, #admin, etc.)
+    const initRoute = this.getRouteFromHash(window.location.hash);
+    if (initRoute) {
+      this.switchMainView(initRoute);
     }
     window.addEventListener('hashchange', () => {
-      const h = (window.location.hash || '').replace('#', '');
-      if (['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'].includes(h)) {
-        this.switchMainView(h);
+      const hRoute = this.getRouteFromHash(window.location.hash);
+      if (hRoute && hRoute !== this.currentView) {
+        this.switchMainView(hRoute);
       }
     });
+  }
+
+  getRouteFromHash(hash) {
+    if (!hash) return '';
+    const clean = String(hash).replace(/^#\/?/, '').replace(/\/.*$/, '').trim().toLowerCase();
+    const valid = ['board', 'festivals', 'contests', 'food', 'policy', 'school', 'apartments', 'admissions', 'write', 'admin'];
+    if (clean === 'feed') return 'board';
+    if (clean === 'events') return 'festivals';
+    return valid.includes(clean) ? clean : '';
   }
 
   renderUpdateBadges() {
@@ -482,6 +491,10 @@ class DodamCommunityApp {
         this.renderProfileWidget();
         this.renderGrowthSection();
         this.renderLevelSection();
+
+        if (this.isAdmin() && this.getRouteFromHash(window.location.hash) === 'admin' && this.currentView !== 'admin') {
+          this.switchMainView('admin');
+        }
       });
     }
 
@@ -1997,6 +2010,17 @@ class DodamCommunityApp {
     if (viewId === 'feed') viewId = 'board';
     if (viewId === 'events') viewId = 'festivals';
     this.currentView = viewId;
+
+    try {
+      const targetHash = '#/' + viewId;
+      if (window.location.hash !== targetHash && window.location.hash !== '#' + viewId) {
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', targetHash);
+        } else {
+          window.location.hash = targetHash;
+        }
+      }
+    } catch (e) {}
 
     if (viewId === 'board') {
       const listWrap = document.getElementById('board-list-container');
