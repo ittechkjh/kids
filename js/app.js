@@ -888,10 +888,23 @@ class DodamCommunityApp {
         },
         fail: (err) => {
           console.error('Kakao auth login failed:', err);
-          if (err.error === 'access_denied') {
+          const errDesc = err?.error_description || err?.msg || '';
+          if (err?.error === 'access_denied') {
             this.showToast('카카오 로그인이 취소되었습니다.');
+          } else if (errDesc.includes('Javascript env validation failed') || err?.error === 'misconfigured') {
+            this.showToast(`⚠️ 카카오 개발자센터 [플랫폼 > Web 사이트 도메인]에 ${window.location.origin} 주소를 추가해주세요!`);
+            alert(
+              `[카카오 도메인 등록 안내 (10초 완료)]\n\n` +
+              `현재 카카오 키(8dbfdfbebf899cf44aa5f31f50185023)에는 기존 주소(https://ittechkjh.github.io)만 등록되어 있고, 새로 연결하신 도메인(${window.location.origin})이 아직 등록되지 않아 카카오 서버에서 차단(Javascript env validation failed)했습니다.\n\n` +
+              `✅ 해결 방법:\n` +
+              `1. 카카오 개발자센터(developers.kakao.com) 접속\n` +
+              `2. [내 애플리케이션] > [앱 설정] > [플랫폼] 클릭\n` +
+              `3. [Web 플랫폼 수정] > [사이트 도메인] 칸에 아래 두 줄을 추가 후 저장:\n` +
+              `   https://dodamtalk.com\n` +
+              `   https://www.dodamtalk.com`
+            );
           } else {
-            this.showToast('⚠️ 카카오 로그인 실패: ' + (err.error_description || err.msg || '인증 실패'));
+            this.showToast('⚠️ 카카오 로그인 실패: ' + (errDesc || '인증 실패'));
           }
         }
       });
