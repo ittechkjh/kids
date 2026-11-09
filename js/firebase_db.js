@@ -162,6 +162,10 @@ class DodamFirebaseService {
       isQuestion: Boolean(post.isQuestion),
       isSolved: Boolean(post.isSolved),
       isAiReport: Boolean(post.isAiReport),
+      isYoutubeSummary: Boolean(post.isYoutubeSummary),
+      youtubeVideoId: post.youtubeVideoId || null,
+      youtubeUrl: post.youtubeUrl || null,
+      contentHtml: post.contentHtml ? String(post.contentHtml).slice(0, 4800) : null,
       isEdited: Boolean(post.isEdited),
       origId: String(post.id || docId)
     };
@@ -225,6 +229,7 @@ class DodamFirebaseService {
     return {
       ...rawDoc,
       ...extraMeta,
+      content: extraMeta.contentHtml || rawDoc.content,
       id: extraMeta.origId || rawDoc.id,
       comments: cleanComments
     };

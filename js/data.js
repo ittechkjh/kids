@@ -199,14 +199,14 @@ window.DODAM_COMMUNITY_DATA = {
       isSolved: false,
       isHot: true,
       isAiReport: true,
-      title: '[AI 육아가이드] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 분석 리포트',
+      title: '[육아가이드] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 분석 리포트',
       content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
         <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%); padding: 16px 20px; border-radius: 16px; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
           <div style="display: flex; align-items: center; gap: 10px;">
             <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px;">🤖</div>
             <div>
-              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM AI CARE-LAB RESEARCH BRIEF</div>
-              <div style="font-size: 15px; font-weight: 900;">도담 AI 육아가이드 전문 심층 리포트</div>
+              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM CARE-LAB RESEARCH BRIEF</div>
+              <div style="font-size: 15px; font-weight: 900;">도담 육아가이드 전문 심층 리포트</div>
             </div>
           </div>
           <div style="display: flex; items-center; gap: 6px;">
@@ -235,7 +235,7 @@ window.DODAM_COMMUNITY_DATA = {
           3. 💡 시기별 맞춤 실천 솔루션 &amp; 부모 행동 가이드
         </h4>
         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 16px; margin: 12px 0;">
-          <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 8px;">📋 도담 AI 권장: 성공적인 통잠을 위한 4단계 프로토콜</h5>
+          <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 8px;">📋 도담 권장: 성공적인 통잠을 위한 4단계 프로토콜</h5>
           <ol style="padding-left: 20px; line-height: 1.8; color: #334155;">
             <li><strong>1단계 환경 통제 (19:30):</strong> 실내온도 20~22℃, 습도 50~60%, 웜톤 간접조명만 켜기</li>
             <li><strong>2단계 진정 루틴 (20:00):</strong> 미온수 목욕 → 보습 마사지 → 잠옷 교체 (촉각 안정)</li>
@@ -257,15 +257,15 @@ window.DODAM_COMMUNITY_DATA = {
         </div>
 
         <div style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border: 1px solid #f0abfc; border-left: 4px solid #c026d3; border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #701a75;">
-          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 AI 케어랩 종합 조언</div>
+          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 케어랩 종합 조언</div>
           <p style="font-size: 13.5px; line-height: 1.8; margin: 0;">육아는 정답을 맞히는 시험이 아니라 아이와 부모가 서로를 알아가는 아름다운 여정입니다. 도담도담이 대한민국 모든 부모님의 행복한 육아를 응원합니다 🍼</p>
         </div>
       </div>`,
       images: [],
       author: {
-        nickname: '도담 AI 육아연구소',
+        nickname: '도담 육아연구소',
         level: '👑 공식 리포트',
-        childBadge: '🤖 소아전문 AI 케어랩',
+        childBadge: '🤖 소아전문 케어랩',
         avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
       },
       createdAt: '2026.11.07',
@@ -296,14 +296,14 @@ window.DODAM_COMMUNITY_DATA = {
       isSolved: false,
       isHot: true,
       isAiReport: true,
-      title: '[AI 육아가이드] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션',
+      title: '[육아가이드] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션',
       content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
         <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #db2777 100%); padding: 16px 20px; border-radius: 16px; color: #ffffff; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
           <div style="display: flex; align-items: center; gap: 10px;">
             <div style="width: 38px; height: 38px; border-radius: 12px; background: rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; font-size: 18px;">🤖</div>
             <div>
-              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM AI CARE-LAB RESEARCH BRIEF</div>
-              <div style="font-size: 15px; font-weight: 900;">도담 AI 육아가이드 전문 심층 리포트</div>
+              <div style="font-size: 11px; font-weight: 800; opacity: 0.9; letter-spacing: 0.5px;">DODAM CARE-LAB RESEARCH BRIEF</div>
+              <div style="font-size: 15px; font-weight: 900;">도담 육아가이드 전문 심층 리포트</div>
             </div>
           </div>
           <div style="display: flex; items-center; gap: 6px;">
@@ -335,15 +335,15 @@ window.DODAM_COMMUNITY_DATA = {
         </div>
 
         <div style="background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%); border: 1px solid #f0abfc; border-left: 4px solid #c026d3; border-radius: 14px; padding: 18px 20px; margin: 24px 0; color: #701a75;">
-          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 AI 케어랩 종합 조언</div>
+          <div style="font-weight: 900; font-size: 14.5px; margin-bottom: 6px;">🌈 도담 케어랩 종합 조언</div>
           <p style="font-size: 13.5px; line-height: 1.8; margin: 0;">감정을 읽어주되 행동의 한계는 명확히 세우는 따뜻하고 단호한 양육이 아이의 평생 정서적 자존감을 결정합니다 💖</p>
         </div>
       </div>`,
       images: [],
       author: {
-        nickname: '도담 AI 육아연구소',
+        nickname: '도담 육아연구소',
         level: '👑 공식 리포트',
-        childBadge: '🤖 아동심리 AI 케어랩',
+        childBadge: '🤖 아동심리 케어랩',
         avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
       },
       createdAt: '2026.11.06',
