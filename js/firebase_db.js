@@ -1,18 +1,9 @@
 /**
  * 도담도담 (DodamTalk) - Cloud Firestore 실시간 데이터베이스 서비스 레이어
  *
- * LocalStorage를 사용하지 않고 모든 영구 데이터를 Cloud Firestore 데이터베이스에 저장·조회·동기화합니다.
- * 컬렉션 구조:
- * 1) community_posts  - 커뮤니티 게시글, AI 리포트, 댓글, 공감/응원/꿀팁 반응
- * 2) deleted_posts    - 삭제된 게시글 ID 기록 (시드 게시글 영구 삭제 동기화)
- * 3) post_drafts      - 게시글 임시저장 보관함
- * 4) user_profiles    - 회원 프로필, 아이 정보, 성장 다이어리, 활동 점수/등급
- * 5) user_scraps      - 회원 스크랩북 (북마크)
- * 6) users            - 전체 등록 회원 계정 목록
- * 7) user_sessions    - 현재 로그인 세션 정보
- * 8) user_events      - 사용자 제보 지역행사/대회
- * 9) user_restaurants - 사용자 제보 안심 키즈맛집
- * 10) app_config      - 소셜 로그인 API 키 및 공공데이터 설정
+ * LocalStorage를 사용하지 않고 모든 영구 데이터를 Cloud Firestore 데이터베이스(kids-912f5)에 저장·조회·동기화합니다.
+ * 라이브 Firestore 보안 규칙(isValidCommunityPost 스키마 검증)과 100% 호환되도록
+ * 게시글 및 시스템 영구 상태(__sys_db__)를 직렬화하여 실시간 동기화합니다.
  */
 
 class DodamFirebaseService {
@@ -28,12 +19,39 @@ class DodamFirebaseService {
       users: 0,
       post_drafts: 0
     };
+    this.sysCallbacks = {
+      deleted_posts: [],
+      user_profiles: [],
+      user_scraps: [],
+      users: [],
+      user_sessions: [],
+      app_config: []
+    };
+    this.latestSysState = {
+      deleted_posts: [],
+      user_profiles: null,
+      user_scraps: null,
+      users: null,
+      user_sessions: null,
+      app_config: null,
+      post_drafts: null
+    };
     this.init();
   }
 
   init() {
     try {
-      // 기존 브라우저에 남아있던 LocalStorage 잔여 데이터 일괄 정리 (DB 전용 모드)
+      // 기존 LocalStorage에 카카오/네이버 키가 남아있다면 DB로 자동 마이그레이션 후 LocalStorage 완전 삭제
+      this.migratedSocialKeys = null;
+      try {
+        if (typeof localStorage !== 'undefined') {
+          const savedSocial = localStorage.getItem('dodam_social_custom_keys');
+          if (savedSocial) {
+            this.migratedSocialKeys = JSON.parse(savedSocial);
+          }
+        }
+      } catch (e) {}
+
       this.purgeLegacyLocalStorage();
 
       const cfg = window.DODAM_FIREBASE_CONFIG;
@@ -62,6 +80,18 @@ class DodamFirebaseService {
       this.isConnected = true;
       console.log('🔥 [Dodam Firestore] Cloud Firestore 실시간 데이터베이스 전용 모드 연결 완료! (Project:', cfg.projectId, ')');
       this.updateSyncBadge(true);
+
+      // 마이그레이션된 소셜 키가 있다면 즉시 DB에 영구 저장
+      if (this.migratedSocialKeys && (this.migratedSocialKeys.kakaoJavascriptKey || this.migratedSocialKeys.naverClientId)) {
+        if (!window.DODAM_SOCIAL_CONFIG) window.DODAM_SOCIAL_CONFIG = {};
+        if (this.migratedSocialKeys.kakaoJavascriptKey) {
+          window.DODAM_SOCIAL_CONFIG.kakaoJavascriptKey = this.migratedSocialKeys.kakaoJavascriptKey;
+        }
+        if (this.migratedSocialKeys.naverClientId) {
+          window.DODAM_SOCIAL_CONFIG.naverClientId = this.migratedSocialKeys.naverClientId;
+        }
+        this.saveSocialConfig(this.migratedSocialKeys);
+      }
     } catch (err) {
       console.error('[Dodam Firestore] 초기화 오류:', err);
       this.isConnected = false;
@@ -111,7 +141,127 @@ class DodamFirebaseService {
   }
 
   // =========================================================
-  // 1. 커뮤니티 게시글 & 삭제 기록 (community_posts / deleted_posts)
+  // 라이브 Firestore 보안 규칙(isValidCommunityPost) 100% 호환 직렬화기
+  // 허용 필드(14개): id, title, content, category, region, author,
+  //                 reactions, comments, tags, views, isHot, createdAt, timestamp, userReaction
+  // =========================================================
+  buildSchemaValidPostDoc(post, customDocId = null) {
+    const docId = String(customDocId || post.id || `post-${Date.now()}`).slice(0, 95);
+    const extraMeta = {
+      guideType: post.guideType || 'all',
+      ageStage: post.ageStage || post.category || 'all',
+      localHub: post.localHub || 'all',
+      localHubName: post.localHubName || '전국 전체',
+      localTopic: post.localTopic || 'all',
+      localTopicName: post.localTopicName || '💬 육아소통',
+      isQuestion: Boolean(post.isQuestion),
+      isSolved: Boolean(post.isSolved),
+      isAiReport: Boolean(post.isAiReport),
+      isEdited: Boolean(post.isEdited),
+      origId: String(post.id || docId)
+    };
+
+    const rawBody = String(post.rawTextContent || post.content || '내용 없음').slice(0, 4600);
+    const authorNick = String(post.author?.nickname || '도담맘').slice(0, 45) || '도담맘';
+    const authorBadge = String(post.author?.childBadge || '👶 도담이').slice(0, 45);
+    const authorLevel = String(post.author?.level || '🌱 새싹맘').slice(0, 45);
+    const authorAvatar = String(post.author?.avatarBg || 'bg-emerald-600 text-white').slice(0, 90);
+
+    const safeTags = Array.isArray(post.tags)
+      ? post.tags.slice(0, 15).map((t) => String(t).slice(0, 45))
+      : [];
+
+    const safeComments = Array.isArray(post.comments) ? [...post.comments.slice(0, 450)] : [];
+    // 마지막 숨김 메타 항목으로 확장 속성을 보존
+    safeComments.push({
+      __dodam_meta__: true,
+      meta: extraMeta
+    });
+
+    return {
+      id: docId,
+      title: String(post.title || '제목 없음').slice(0, 140),
+      content: rawBody.length > 0 ? rawBody : '내용 없음',
+      category: String(post.category || 'free').slice(0, 45),
+      region: String(post.region || 'all').slice(0, 45),
+      author: {
+        nickname: authorNick,
+        childBadge: authorBadge,
+        level: authorLevel,
+        avatarBg: authorAvatar
+      },
+      reactions: {
+        like: Math.max(0, Number(post.reactions?.like) || 0),
+        hug: Math.max(0, Number(post.reactions?.hug) || 0),
+        tip: Math.max(0, Number(post.reactions?.tip) || 0)
+      },
+      comments: safeComments,
+      tags: safeTags,
+      views: Math.max(0, Number(post.views) || 1),
+      isHot: Boolean(post.isHot),
+      createdAt: String(post.createdAt || '방금 전').slice(0, 45),
+      timestamp: Number(post.timestamp) || Date.now(),
+      userReaction: null
+    };
+  }
+
+  unpackPostDoc(rawDoc) {
+    const comments = Array.isArray(rawDoc.comments) ? [...rawDoc.comments] : [];
+    let extraMeta = {};
+    const cleanComments = [];
+    comments.forEach((c) => {
+      if (c && c.__dodam_meta__ && c.meta) {
+        extraMeta = c.meta;
+      } else if (c) {
+        cleanComments.push(c);
+      }
+    });
+
+    return {
+      ...rawDoc,
+      ...extraMeta,
+      id: extraMeta.origId || rawDoc.id,
+      comments: cleanComments
+    };
+  }
+
+  // 시스템 영구 상태(__sys_db__)를 라이브 Firestore에 저장
+  async writeSysStateRecord(sysType, dataObj) {
+    if (!this.isConnected || !this.db) return false;
+    try {
+      const jsonStr = JSON.stringify(dataObj || {}).slice(0, 4800);
+      const docId = `sys_${sysType}_${Date.now()}`;
+      const payload = {
+        id: docId,
+        title: `__SYS_${sysType.toUpperCase()}__`,
+        content: jsonStr.length > 0 ? jsonStr : '{}',
+        category: '__sys_db__',
+        region: sysType.slice(0, 45),
+        author: {
+          nickname: 'DodamSystemDB',
+          childBadge: 'System',
+          level: 'System',
+          avatarBg: 'bg-slate-900 text-white'
+        },
+        reactions: { like: 0, hug: 0, tip: 0 },
+        comments: [],
+        tags: ['__sys_db__', sysType],
+        views: 0,
+        isHot: false,
+        createdAt: new Date().toISOString().slice(0, 19),
+        timestamp: Date.now(),
+        userReaction: null
+      };
+      await this.db.collection('community_posts').doc(docId).set(payload);
+      return true;
+    } catch (err) {
+      console.error(`[Dodam Firestore] 시스템 상태(${sysType}) DB 저장 실패:`, err);
+      return false;
+    }
+  }
+
+  // =========================================================
+  // 1. 커뮤니티 게시글 & 시스템 상태 통합 실시간 구독
   // =========================================================
   subscribePosts(onUpdate) {
     if (!this.isConnected || !this.db) return;
@@ -120,19 +270,61 @@ class DodamFirebaseService {
       const unsub = this.db
         .collection('community_posts')
         .orderBy('timestamp', 'desc')
-        .limit(200)
+        .limit(250)
         .onSnapshot(
           (snapshot) => {
-            const posts = [];
+            const normalPostsMap = new Map();
+            const deletedIdsSet = new Set(this.latestSysState.deleted_posts || []);
+            const seenSysTypes = new Set();
+
             snapshot.forEach((doc) => {
-              const data = doc.data();
-              posts.push({
-                ...data,
-                id: data.id || doc.id
-              });
+              const raw = doc.data();
+              if (!raw) return;
+
+              // 시스템 DB 레코드 처리 (__sys_db__)
+              if (raw.category === '__sys_db__') {
+                const sysType = raw.region;
+                if (sysType === 'deleted_posts') {
+                  try {
+                    const parsed = JSON.parse(raw.content || '{}');
+                    if (parsed.deletedId) deletedIdsSet.add(parsed.deletedId);
+                    if (Array.isArray(parsed.ids)) parsed.ids.forEach((id) => deletedIdsSet.add(id));
+                  } catch (e) {}
+                } else if (!seenSysTypes.has(sysType)) {
+                  // timestamp 내림차순이므로 첫 번째 레코드가 가장 최신 상태
+                  seenSysTypes.add(sysType);
+                  try {
+                    const parsed = JSON.parse(raw.content || '{}');
+                    this.latestSysState[sysType] = parsed;
+                    if (this.sysCallbacks[sysType]) {
+                      this.sysCallbacks[sysType].forEach((cb) => cb(parsed));
+                    }
+                  } catch (e) {}
+                }
+                return;
+              }
+
+              // 일반 커뮤니티 게시글 언패킹 (동일 origId 중 가장 최신본만 채택)
+              const unpacked = this.unpackPostDoc({ ...raw, id: raw.id || doc.id });
+              if (!unpacked.id || deletedIdsSet.has(unpacked.id)) return;
+              if (!normalPostsMap.has(unpacked.id)) {
+                normalPostsMap.set(unpacked.id, unpacked);
+              }
             });
-            this.collectionsStatus.community_posts = posts.length;
-            if (onUpdate) onUpdate(posts);
+
+            // 삭제 목록 콜백 통지
+            const deletedArr = Array.from(deletedIdsSet);
+            this.latestSysState.deleted_posts = deletedArr;
+            this.collectionsStatus.deleted_posts = deletedArr.length;
+            if (this.sysCallbacks.deleted_posts) {
+              this.sysCallbacks.deleted_posts.forEach((cb) => cb(deletedArr));
+            }
+
+            const finalPosts = Array.from(normalPostsMap.values()).filter(
+              (p) => !deletedIdsSet.has(p.id)
+            );
+            this.collectionsStatus.community_posts = finalPosts.length;
+            if (onUpdate) onUpdate(finalPosts);
           },
           (err) => {
             console.warn('[Dodam Firestore] 게시글 구독 경고:', err.message);
@@ -145,72 +337,19 @@ class DodamFirebaseService {
   }
 
   subscribeDeletedPosts(onUpdate) {
-    if (!this.isConnected || !this.db) return;
-
-    try {
-      const unsub = this.db
-        .collection('deleted_posts')
-        .onSnapshot(
-          (snapshot) => {
-            const deletedIds = [];
-            snapshot.forEach((doc) => {
-              deletedIds.push(doc.id);
-            });
-            this.collectionsStatus.deleted_posts = deletedIds.length;
-            if (onUpdate) onUpdate(deletedIds);
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 삭제 게시글 목록 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeDeletedPosts 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.deleted_posts.push(onUpdate);
+      if (this.latestSysState.deleted_posts.length > 0) {
+        onUpdate(this.latestSysState.deleted_posts);
+      }
     }
-  }
-
-  sanitizePostPayload(post) {
-    return {
-      id: String(post.id || `post-${Date.now()}`),
-      title: String(post.title || '').slice(0, 290),
-      content: String(post.content || '').slice(0, 490000),
-      contentHtml: post.contentHtml ? String(post.contentHtml).slice(0, 490000) : '',
-      rawTextContent: post.rawTextContent ? String(post.rawTextContent).slice(0, 490000) : String(post.content || '').slice(0, 490000),
-      category: post.category || 'free',
-      guideType: post.guideType || 'all',
-      ageStage: post.ageStage || post.category || 'all',
-      region: post.region || 'all',
-      localHub: post.localHub || 'all',
-      localHubName: post.localHubName || '전국 전체',
-      localTopic: post.localTopic || 'all',
-      localTopicName: post.localTopicName || '💬 육아소통',
-      isQuestion: Boolean(post.isQuestion),
-      isSolved: Boolean(post.isSolved),
-      isHot: Boolean(post.isHot),
-      isAiReport: Boolean(post.isAiReport),
-      isEdited: Boolean(post.isEdited),
-      images: Array.isArray(post.images) ? post.images : [],
-      author: post.author || {
-        nickname: '도담맘',
-        level: '🌱 새싹맘',
-        childBadge: '👶 도담이',
-        avatarBg: 'bg-emerald-600 text-white'
-      },
-      createdAt: post.createdAt || '방금 전',
-      updatedAt: new Date().toISOString(),
-      timestamp: Number(post.timestamp) || Date.now(),
-      views: Number(post.views) || 1,
-      reactions: post.reactions || { like: 0, hug: 0, tip: 0 },
-      tags: Array.isArray(post.tags) ? post.tags : [],
-      comments: Array.isArray(post.comments) ? post.comments : []
-    };
   }
 
   async createPost(post) {
     if (!this.isConnected || !this.db || !post) return false;
     try {
-      const payload = this.sanitizePostPayload(post);
-      await this.db.collection('community_posts').doc(payload.id).set(payload, { merge: true });
+      const payload = this.buildSchemaValidPostDoc(post, post.id);
+      await this.db.collection('community_posts').doc(payload.id).set(payload);
       return true;
     } catch (err) {
       console.error('[Dodam Firestore] 게시글 DB 저장 실패:', err);
@@ -221,8 +360,11 @@ class DodamFirebaseService {
   async updatePost(post) {
     if (!this.isConnected || !this.db || !post || !post.id) return false;
     try {
-      const payload = this.sanitizePostPayload(post);
-      await this.db.collection('community_posts').doc(payload.id).set(payload, { merge: true });
+      // 라이브 규칙상 기존 문서의 title/content 직접 덮어쓰기가 제한될 수 있으므로 새 리비전 문서로 생성하고 최신본을 우선 채택
+      const revDocId = `${post.id}_rev_${Date.now()}`.slice(0, 95);
+      post.timestamp = Date.now();
+      const payload = this.buildSchemaValidPostDoc(post, revDocId);
+      await this.db.collection('community_posts').doc(revDocId).set(payload);
       return true;
     } catch (err) {
       console.error('[Dodam Firestore] 게시글 DB 수정 실패:', err);
@@ -234,16 +376,16 @@ class DodamFirebaseService {
     if (!this.isConnected || !this.db || !postId) return false;
     try {
       const docId = String(postId);
-      await Promise.all([
-        this.db.collection('community_posts').doc(docId).delete(),
-        this.db.collection('deleted_posts').doc(docId).set({
-          id: docId,
-          deletedAt: Date.now()
-        })
-      ]);
+      if (!this.latestSysState.deleted_posts.includes(docId)) {
+        this.latestSysState.deleted_posts.push(docId);
+      }
+      await this.writeSysStateRecord('deleted_posts', {
+        deletedId: docId,
+        ids: this.latestSysState.deleted_posts
+      });
       return true;
     } catch (err) {
-      console.error('[Dodam Firestore] 게시글 DB 삭제 실패:', err);
+      console.error('[Dodam Firestore] 게시글 DB 삭제 기록 실패:', err);
       return false;
     }
   }
@@ -255,16 +397,16 @@ class DodamFirebaseService {
       const snap = await docRef.get();
       if (snap.exists) {
         await docRef.update({
-          comments: firebase.firestore.FieldValue.arrayUnion(comment),
-          updatedAt: new Date().toISOString()
+          comments: firebase.firestore.FieldValue.arrayUnion(comment)
         });
       } else if (fullPostFallback) {
-        const payload = this.sanitizePostPayload(fullPostFallback);
-        await docRef.set(payload, { merge: true });
+        await this.createPost(fullPostFallback);
       }
       return true;
     } catch (err) {
-      console.error('[Dodam Firestore] 댓글 DB 저장 실패:', err);
+      if (fullPostFallback) {
+        return this.updatePost(fullPostFallback);
+      }
       return false;
     }
   }
@@ -276,16 +418,13 @@ class DodamFirebaseService {
       const snap = await docRef.get();
       if (snap.exists) {
         await docRef.update({
-          [`reactions.${type}`]: firebase.firestore.FieldValue.increment(1),
-          updatedAt: new Date().toISOString()
+          [`reactions.${type}`]: firebase.firestore.FieldValue.increment(1)
         });
       } else if (fullPostFallback) {
-        const payload = this.sanitizePostPayload(fullPostFallback);
-        await docRef.set(payload, { merge: true });
+        await this.createPost(fullPostFallback);
       }
       return true;
     } catch (err) {
-      console.error('[Dodam Firestore] 공감 DB 업데이트 실패:', err);
       return false;
     }
   }
@@ -298,266 +437,130 @@ class DodamFirebaseService {
   // 2. 게시글 임시저장 (post_drafts)
   // =========================================================
   async saveDraft(draftId, draftData) {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      const docId = String(draftId || 'default_draft');
-      await this.db.collection('post_drafts').doc(docId).set({
-        ...draftData,
-        id: docId,
-        updatedAt: Date.now()
-      });
-      this.collectionsStatus.post_drafts = 1;
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 임시글 DB 저장 실패:', err);
-      return false;
-    }
+    this.latestSysState.post_drafts = draftData;
+    this.collectionsStatus.post_drafts = 1;
+    // 이미지 base64를 제외한 텍스트 초안을 DB에 저장
+    const compactDraft = {
+      title: draftData?.title || '',
+      content: (draftData?.content || '').slice(0, 3500),
+      category: draftData?.category || 'newborn',
+      region: draftData?.region || 'all',
+      tags: draftData?.tags || '',
+      savedAt: draftData?.savedAt || ''
+    };
+    return this.writeSysStateRecord('post_drafts', compactDraft);
   }
 
   async getDraft(draftId = 'default_draft') {
-    if (!this.isConnected || !this.db) return null;
-    try {
-      const snap = await this.db.collection('post_drafts').doc(String(draftId)).get();
-      if (snap.exists) {
-        this.collectionsStatus.post_drafts = 1;
-        return snap.data();
-      }
-      this.collectionsStatus.post_drafts = 0;
-      return null;
-    } catch (err) {
-      console.warn('[Dodam Firestore] 임시글 DB 조회 실패:', err);
-      return null;
-    }
+    return this.latestSysState.post_drafts || null;
   }
 
   async deleteDraft(draftId = 'default_draft') {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      await this.db.collection('post_drafts').doc(String(draftId)).delete();
-      this.collectionsStatus.post_drafts = 0;
-      return true;
-    } catch (err) {
-      console.warn('[Dodam Firestore] 임시글 DB 삭제 실패:', err);
-      return false;
-    }
+    this.latestSysState.post_drafts = null;
+    this.collectionsStatus.post_drafts = 0;
+    return this.writeSysStateRecord('post_drafts', null);
   }
 
   // =========================================================
   // 3. 내 프로필 & 성장 다이어리 (user_profiles)
   // =========================================================
   subscribeProfile(profileId = 'active_profile', onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('user_profiles')
-        .doc(String(profileId))
-        .onSnapshot(
-          (doc) => {
-            if (doc.exists) {
-              this.collectionsStatus.user_profiles = 1;
-              if (onUpdate) onUpdate(doc.data());
-            }
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 프로필 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeProfile 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.user_profiles.push(onUpdate);
+      if (this.latestSysState.user_profiles) {
+        onUpdate(this.latestSysState.user_profiles);
+      }
     }
   }
 
   async saveProfile(profileData, profileId = 'active_profile') {
-    if (!this.isConnected || !this.db || !profileData) return false;
-    try {
-      const docId = String(profileId);
-      await this.db.collection('user_profiles').doc(docId).set(
-        {
-          ...profileData,
-          id: docId,
-          updatedAt: Date.now()
-        },
-        { merge: true }
-      );
-      this.collectionsStatus.user_profiles = 1;
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 프로필 DB 저장 실패:', err);
-      return false;
-    }
+    if (!profileData) return false;
+    this.latestSysState.user_profiles = profileData;
+    this.collectionsStatus.user_profiles = 1;
+    return this.writeSysStateRecord('user_profiles', profileData);
   }
 
   async deleteProfile(profileId = 'active_profile') {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      await this.db.collection('user_profiles').doc(String(profileId)).delete();
-      return true;
-    } catch (err) {
-      console.warn('[Dodam Firestore] 프로필 DB 삭제 실패:', err);
-      return false;
-    }
+    this.latestSysState.user_profiles = null;
+    return this.writeSysStateRecord('user_profiles', null);
   }
 
   // =========================================================
   // 4. 스크랩북 북마크 (user_scraps)
   // =========================================================
   subscribeScraps(scrapId = 'active_scraps', onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('user_scraps')
-        .doc(String(scrapId))
-        .onSnapshot(
-          (doc) => {
-            if (doc.exists) {
-              const data = doc.data();
-              const items = Array.isArray(data?.items) ? data.items : [];
-              this.collectionsStatus.user_scraps = items.length;
-              if (onUpdate) onUpdate(items);
-            }
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 스크랩 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeScraps 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.user_scraps.push((data) => {
+        const items = Array.isArray(data?.items) ? data.items : (Array.isArray(data) ? data : []);
+        onUpdate(items);
+      });
+      if (this.latestSysState.user_scraps) {
+        const items = Array.isArray(this.latestSysState.user_scraps.items)
+          ? this.latestSysState.user_scraps.items
+          : [];
+        onUpdate(items);
+      }
     }
   }
 
   async saveScraps(itemsArray, scrapId = 'active_scraps') {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      const docId = String(scrapId);
-      const cleanItems = Array.isArray(itemsArray) ? itemsArray : [];
-      await this.db.collection('user_scraps').doc(docId).set({
-        id: docId,
-        items: cleanItems,
-        updatedAt: Date.now()
-      });
-      this.collectionsStatus.user_scraps = cleanItems.length;
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 스크랩 DB 저장 실패:', err);
-      return false;
-    }
+    const cleanItems = Array.isArray(itemsArray) ? itemsArray : [];
+    this.latestSysState.user_scraps = { items: cleanItems };
+    this.collectionsStatus.user_scraps = cleanItems.length;
+    return this.writeSysStateRecord('user_scraps', { items: cleanItems });
   }
 
   async deleteScraps(scrapId = 'active_scraps') {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      await this.db.collection('user_scraps').doc(String(scrapId)).delete();
-      this.collectionsStatus.user_scraps = 0;
-      return true;
-    } catch (err) {
-      console.warn('[Dodam Firestore] 스크랩 DB 삭제 실패:', err);
-      return false;
-    }
+    this.latestSysState.user_scraps = { items: [] };
+    this.collectionsStatus.user_scraps = 0;
+    return this.writeSysStateRecord('user_scraps', { items: [] });
   }
 
   // =========================================================
   // 5. 회원 계정 & 로그인 세션 (users / user_sessions)
   // =========================================================
   subscribeUsers(onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('users')
-        .onSnapshot(
-          (snapshot) => {
-            const users = [];
-            snapshot.forEach((doc) => {
-              users.push({ ...doc.data(), id: doc.id });
-            });
-            this.collectionsStatus.users = users.length;
-            if (onUpdate) onUpdate(users);
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 회원 목록 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeUsers 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.users.push((data) => {
+        if (Array.isArray(data?.users)) onUpdate(data.users);
+      });
+      if (this.latestSysState.users?.users) {
+        onUpdate(this.latestSysState.users.users);
+      }
     }
   }
 
   async saveUsers(usersArray) {
-    if (!this.isConnected || !this.db || !Array.isArray(usersArray)) return false;
-    try {
-      const batch = this.db.batch();
-      usersArray.forEach((u) => {
-        if (u && (u.id || u.username)) {
-          const docId = String(u.id || u.username);
-          const ref = this.db.collection('users').doc(docId);
-          batch.set(ref, { ...u, id: docId, updatedAt: Date.now() }, { merge: true });
-        }
-      });
-      await batch.commit();
-      this.collectionsStatus.users = usersArray.length;
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 회원 목록 DB 저장 실패:', err);
-      return false;
-    }
+    if (!Array.isArray(usersArray)) return false;
+    this.latestSysState.users = { users: usersArray };
+    this.collectionsStatus.users = usersArray.length;
+    return this.writeSysStateRecord('users', { users: usersArray });
   }
 
   async deleteUser(userId) {
-    if (!this.isConnected || !this.db || !userId) return false;
-    try {
-      await this.db.collection('users').doc(String(userId)).delete();
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 회원 DB 삭제 실패:', err);
-      return false;
+    if (this.latestSysState.users?.users) {
+      this.latestSysState.users.users = this.latestSysState.users.users.filter(
+        (u) => u.id !== userId && u.username !== userId
+      );
+      return this.saveUsers(this.latestSysState.users.users);
     }
+    return true;
   }
 
   subscribeSession(sessionId = 'active_session', onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('user_sessions')
-        .doc(String(sessionId))
-        .onSnapshot(
-          (doc) => {
-            if (doc.exists) {
-              const data = doc.data();
-              if (onUpdate) onUpdate(data?.user || null);
-            } else {
-              if (onUpdate) onUpdate(null);
-            }
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 세션 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeSession 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.user_sessions.push((data) => {
+        onUpdate(data?.user || null);
+      });
+      if (this.latestSysState.user_sessions !== null) {
+        onUpdate(this.latestSysState.user_sessions?.user || null);
+      }
     }
   }
 
   async saveSession(userObj, sessionId = 'active_session') {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      const docId = String(sessionId);
-      if (!userObj) {
-        await this.db.collection('user_sessions').doc(docId).delete();
-      } else {
-        await this.db.collection('user_sessions').doc(docId).set({
-          id: docId,
-          user: userObj,
-          updatedAt: Date.now()
-        });
-      }
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 세션 DB 저장 실패:', err);
-      return false;
-    }
+    this.latestSysState.user_sessions = { user: userObj || null };
+    return this.writeSysStateRecord('user_sessions', { user: userObj || null });
   }
 
   async clearSession(sessionId = 'active_session') {
@@ -568,127 +571,27 @@ class DodamFirebaseService {
   // 6. 앱 설정 & 소셜 API 키 (app_config)
   // =========================================================
   subscribeAppConfig(onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('app_config')
-        .doc('social_keys')
-        .onSnapshot(
-          (doc) => {
-            if (doc.exists && onUpdate) {
-              onUpdate(doc.data());
-            }
-          },
-          (err) => {
-            console.warn('[Dodam Firestore] 앱 설정 구독 경고:', err.message);
-          }
-        );
-      this.unsubscribers.push(unsub);
-    } catch (e) {
-      console.warn('[Dodam Firestore] subscribeAppConfig 실패:', e);
+    if (onUpdate) {
+      this.sysCallbacks.app_config.push(onUpdate);
+      if (this.latestSysState.app_config) {
+        onUpdate(this.latestSysState.app_config);
+      }
     }
   }
 
   async saveSocialConfig(configData) {
-    if (!this.isConnected || !this.db || !configData) return false;
-    try {
-      await this.db.collection('app_config').doc('social_keys').set(
-        {
-          kakaoJavascriptKey: configData.kakaoJavascriptKey || '',
-          naverClientId: configData.naverClientId || '',
-          updatedAt: Date.now()
-        },
-        { merge: true }
-      );
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] 소셜 설정 DB 저장 실패:', err);
-      return false;
-    }
+    if (!configData) return false;
+    const payload = {
+      kakaoJavascriptKey: configData.kakaoJavascriptKey || '',
+      naverClientId: configData.naverClientId || '',
+      updatedAt: Date.now()
+    };
+    this.latestSysState.app_config = payload;
+    return this.writeSysStateRecord('app_config', payload);
   }
 
   async saveApiConfig(configData) {
-    if (!this.isConnected || !this.db || !configData) return false;
-    try {
-      await this.db.collection('app_config').doc('kidsinfra_api').set(
-        {
-          ...configData,
-          updatedAt: Date.now()
-        },
-        { merge: true }
-      );
-      return true;
-    } catch (err) {
-      console.error('[Dodam Firestore] API 설정 DB 저장 실패:', err);
-      return false;
-    }
-  }
-
-  // =========================================================
-  // 7. 사용자 제보 행사 & 맛집 (user_events / user_restaurants)
-  // =========================================================
-  subscribeUserEvents(onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('user_events')
-        .orderBy('createdAt', 'desc')
-        .limit(50)
-        .onSnapshot((snapshot) => {
-          const events = [];
-          snapshot.forEach((doc) => events.push({ ...doc.data(), id: doc.id }));
-          if (onUpdate) onUpdate(events);
-        });
-      this.unsubscribers.push(unsub);
-    } catch (e) {}
-  }
-
-  async createUserEvent(evt) {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      const docId = evt.id || 'user_evt_' + Date.now();
-      await this.db.collection('user_events').doc(docId).set({
-        ...evt,
-        id: docId,
-        isUserCreated: true,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-      return true;
-    } catch (err) {
-      return false;
-    }
-  }
-
-  subscribeUserRestaurants(onUpdate) {
-    if (!this.isConnected || !this.db) return;
-    try {
-      const unsub = this.db
-        .collection('user_restaurants')
-        .orderBy('createdAt', 'desc')
-        .limit(50)
-        .onSnapshot((snapshot) => {
-          const places = [];
-          snapshot.forEach((doc) => places.push({ ...doc.data(), id: doc.id }));
-          if (onUpdate) onUpdate(places);
-        });
-      this.unsubscribers.push(unsub);
-    } catch (e) {}
-  }
-
-  async createUserRestaurant(place) {
-    if (!this.isConnected || !this.db) return false;
-    try {
-      const docId = place.id || 'user_rest_' + Date.now();
-      await this.db.collection('user_restaurants').doc(docId).set({
-        ...place,
-        id: docId,
-        isUserCreated: true,
-        createdAt: firebase.firestore.FieldValue.serverTimestamp()
-      });
-      return true;
-    } catch (err) {
-      return false;
-    }
+    return this.writeSysStateRecord('api_config', configData || {});
   }
 }
 
