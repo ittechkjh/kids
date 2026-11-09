@@ -51,7 +51,7 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css?v=20261109_v21" />
+  <link rel="stylesheet" href="css/styles.css?v=20261109_v22" />
 </head>
 <body class="min-h-screen flex flex-col">
 
@@ -3183,12 +3183,12 @@
             </form>
           </div>
 
-          <!-- 소셜 계정 상태 안내 (카카오/네이버 계정일 경우 표시) -->
+          <!-- 소셜 계정 상태 안내 (카카오 계정일 경우 표시) -->
           <div id="acc-social-section" class="hidden bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-2.5">
             <div class="flex items-center justify-between">
               <span class="font-black text-slate-800 text-xs flex items-center gap-1.5">
                 <i class="fa-solid fa-shield-halved text-emerald-500"></i>
-                <span>소셜 공식 계정 연동 보호</span>
+                <span>카카오 공식 계정 연동 보호</span>
               </span>
               <button
                 type="button"
@@ -3200,7 +3200,7 @@
               </button>
             </div>
             <p class="text-[11px] text-slate-600 leading-relaxed font-medium">
-              카카오/네이버 공식 OAuth 2.0으로 안전하게 로그인되어 비밀번호 없이 간편하게 이용 중입니다.
+              카카오 공식 OAuth 2.0으로 안전하게 로그인되어 비밀번호 없이 간편하게 이용 중입니다.
             </p>
           </div>
 
@@ -3234,7 +3234,7 @@
 
 
   <!-- ==========================================
-       MODAL 10: 소셜 로그인(카카오·네이버) 공식 API 키 연동 설정 모달
+       MODAL 10: 카카오 공식 API 키 연동 설정 모달
        ========================================== -->
   <div id="social-config-modal" class="hidden fixed inset-0 z-[60] bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
     <div class="bg-white rounded-3xl max-w-lg w-full p-5 sm:p-6 shadow-2xl border border-stone-200 space-y-4 animate-in fade-in zoom-in-95 duration-150 relative max-h-[90vh] overflow-y-auto">
@@ -3245,8 +3245,8 @@
             <i class="fa-solid fa-key"></i>
           </div>
           <div>
-            <h3 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">카카오·네이버 정식 계정 인증 안내</h3>
-            <p class="text-xs text-slate-500 font-medium mt-0.5">실제 카카오·네이버 로그인 창을 띄우려면 개발자 키가 필요합니다</p>
+            <h3 class="text-base sm:text-lg font-black text-slate-900 tracking-tight">카카오 정식 계정 인증 안내</h3>
+            <p class="text-xs text-slate-500 font-medium mt-0.5">실제 카카오 로그인 창을 띄우려면 개발자 키가 필요합니다</p>
           </div>
         </div>
         <button type="button" onclick="app.closeSocialConfigModal()" class="text-slate-400 hover:text-slate-600 transition p-1 cursor-pointer">
@@ -3258,11 +3258,11 @@
       <div class="bg-amber-50/70 border border-amber-200 rounded-2xl p-4 space-y-2 text-xs">
         <div class="flex items-center gap-2 font-black text-amber-900">
           <i class="fa-solid fa-circle-info text-amber-600"></i>
-          <span>카카오 & 네이버 공식 인증이란?</span>
+          <span>카카오 공식 인증이란?</span>
         </div>
         <p class="text-slate-700 leading-relaxed font-medium">
-          실제 카카오톡 계정 선택 팝업이나 네이버 로그인 창을 열어 본인의 실제 닉네임과 프로필 사진을 가져오려면,
-          <strong>카카오/네이버 개발자센터(100% 무료)</strong>에서 발급받은 키를 1회 등록하셔야 합니다.
+          실제 카카오톡 계정 선택 팝업을 열어 본인의 실제 닉네임과 프로필 사진을 가져오려면,
+          <strong>카카오 개발자센터(100% 무료)</strong>에서 발급받은 키를 등록하셔야 합니다.
         </p>
       </div>
 
@@ -3294,33 +3294,6 @@
             * 등록 방법: developers.kakao.com 접속 > [내 애플리케이션 추가] > [앱 키]에서 'JavaScript 키' 복사
           </p>
         </div>
-
-        <!-- 네이버 Client ID -->
-        <div class="border border-stone-200 rounded-2xl p-3.5 space-y-2 bg-stone-50/50">
-          <div class="flex items-center justify-between">
-            <label class="font-black text-xs text-slate-800 flex items-center gap-1.5">
-              <span class="w-4 h-4 rounded-full bg-[#03C75A] text-white flex items-center justify-center text-[10px] font-black">N</span>
-              <span>네이버 Client ID</span>
-            </label>
-            <a
-              href="https://developers.naver.com/apps/#/register"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-[11px] font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1 underline"
-            >
-              <span>네이버 개발자센터 ↗</span>
-            </a>
-          </div>
-          <input
-            id="cfg-naver-id"
-            type="text"
-            placeholder="네이버 Client ID 입력 (예: aBcDeFg12345...)"
-            class="w-full px-3 py-2 bg-white border border-stone-300 rounded-xl text-xs font-mono focus:border-emerald-500 focus:outline-none"
-          />
-          <p class="text-[10px] text-slate-500">
-            * 등록 방법: developers.naver.com > [애플리케이션 등록] > 네이버 로그인 API 선택 후 Client ID 복사
-          </p>
-        </div>
       </div>
 
       <!-- 액션 버튼 -->
@@ -3331,7 +3304,7 @@
           class="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
         >
           <i class="fa-solid fa-floppy-disk text-amber-400"></i>
-          <span id="cfg-submit-btn-text">키 저장 및 실제 소셜 인증 시작</span>
+          <span id="cfg-submit-btn-text">키 저장 및 실제 카카오 인증 시작</span>
         </button>
 
         <div class="flex items-center gap-2">
@@ -3568,23 +3541,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/data.js?v=20261109_v21"></script>
-  <!-- 카카오 & 네이버 공식 인증 SDK 및 설정 -->
+  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/data.js?v=20261109_v22"></script>
+  <!-- 카카오 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js" charset="utf-8"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261109_v21"></script>
-  <script charset="utf-8" src="js/app.js?v=20261109_v21"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/app.js?v=20261109_v22"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달
@@ -3762,7 +3734,7 @@
         </button>
       </div>
 
-      <!-- 카카오 & 네이버 1초 간편 로그인 -->
+      <!-- 카카오 1초 간편 로그인 -->
       <div class="space-y-2 pt-1">
         <button
           type="button"
@@ -3775,23 +3747,11 @@
           <span>카카오로 1초 만에 시작하기</span>
         </button>
 
-        <button
-          type="button"
-          onclick="app.loginWithNaver()"
-          class="w-full py-2.5 px-3 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-2xs transition flex items-center justify-center gap-2 cursor-pointer border border-[#029B46]"
-        >
-          <span class="w-4 h-4 rounded-xs bg-white text-[#03C75A] font-black text-[11px] flex items-center justify-center leading-none shrink-0">N</span>
-          <span>네이버로 시작하기</span>
-        </button>
-
-        <!-- 네이버 SDK 숨김 렌더링 엘리먼트 -->
-        <div id="naverIdLogin" class="hidden"></div>
-
         <!-- 공식 OAuth 인증 안내 및 키 등록 바 -->
         <div class="flex items-center justify-between text-[11px] text-slate-400 px-1 pt-0.5">
           <span class="flex items-center gap-1 font-bold text-slate-500">
             <i class="fa-solid fa-shield-halved text-emerald-500"></i>
-            <span>공식 OAuth 2.0 연동</span>
+            <span>카카오 공식 OAuth 2.0 연동</span>
           </span>
           <button
             type="button"
