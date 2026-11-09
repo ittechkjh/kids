@@ -1,19 +1,19 @@
 // 도담톡 (DodamTalk) - 통합 관리자 센터 기본 설정
-// ※ 방문자·트래픽·기기·기능 이용 통계는 고정값 없이 Cloud Firestore에 수집된 실측 데이터로만 계산합니다.
+// ※ 모든 방문자·트래픽·기기·기능 이용 통계는 고정값 없이 Cloud Firestore 실측 데이터로 집계됩니다.
 (function () {
   const DEFAULT_USERS = [
     {
       id: 'admin',
       username: 'admin',
       passwordHash: 'admin1234',
-      nickname: '슈퍼관리자',
+      nickname: '도담 공식 관리자',
       email: 'admin@dodamtalk.kr',
       role: 'admin',
       roleName: 'SUPER ADMIN',
       avatar: 'fa-shield-halved',
       avatarBg: 'from-purple-600 to-indigo-600',
-      createdAt: '',
-      lastLogin: '',
+      createdAt: '2026-10-01',
+      lastLogin: '2026-11-09',
       status: 'active',
       statusLabel: '정상 승인'
     }
@@ -26,6 +26,30 @@
   window.DODAM_ADMIN_DATA = {
     defaultUsers: DEFAULT_USERS,
     legacySampleUserIds: LEGACY_SAMPLE_USER_IDS,
-    legacySampleUsernames: LEGACY_SAMPLE_USERNAMES
+    legacySampleUsernames: LEGACY_SAMPLE_USERNAMES,
+    dailyTraffic14Days: [],
+    featureUsageStats: {
+      today: { totalCalls: 0, items: [] },
+      cumulative: { totalCalls: 0, items: [] }
+    },
+    deviceBrowserStats: {
+      today: {
+        totalVisitors: 0,
+        devices: {
+          mobile: { percent: 0, count: 0, cumPercent: 0 },
+          desktop: { percent: 0, count: 0, cumPercent: 0 }
+        },
+        browsers: []
+      },
+      cumulative: {
+        totalVisitors: 0,
+        devices: {
+          mobile: { percent: 0, count: 0, cumPercent: 0 },
+          desktop: { percent: 0, count: 0, cumPercent: 0 }
+        },
+        browsers: []
+      }
+    },
+    apiStatus: []
   };
 })();

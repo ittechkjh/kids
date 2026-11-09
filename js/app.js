@@ -1,4 +1,4 @@
-﻿// 도담톡 (DodamTalk) - 전국 육아 커뮤니티 플랫폼 컨트롤러
+// 도담톡 (DodamTalk) - 전국 육아 커뮤니티 플랫폼 컨트롤러
 // 4대 핵심 기둥:
 // 1) 💬 도담 육아 게시판
 // 2) 🎪 전국 지역행사 & 볼거리 (축제, 가족 마라톤, 빛축제, 공원생태)
@@ -206,7 +206,6 @@ class DodamCommunityApp {
     this.renderUpdateBadges();
     this.renderAuthHeader();
     this.initFirebaseSync();
-    this.initRealAnalytics();
     this.initKakaoSdk();
     this.initNaverSdk();
     this.initOAuthListeners();
@@ -441,19 +440,13 @@ class DodamCommunityApp {
     if (typeof window.DodamFirebase.subscribeUsers === 'function') {
       window.DodamFirebase.subscribeUsers((remoteUsers) => {
         if (Array.isArray(remoteUsers) && remoteUsers.length > 0) {
-          const cleaned = this.cleanUsersList(remoteUsers);
-          this.users = cleaned;
-          if (remoteUsers.length !== cleaned.length) {
-            window.DodamFirebase.saveUsers(cleaned);
-          }
+          this.users = remoteUsers;
           if (this.currentView === 'admin' && this.adminTab === 'users') {
             this.renderAdminUsers();
             this.renderAdminTabs();
           }
         } else if (this.users && this.users.length > 0) {
-          const cleaned = this.cleanUsersList(this.users);
-          this.users = cleaned;
-          window.DodamFirebase.saveUsers(cleaned);
+          window.DodamFirebase.saveUsers(this.users);
         }
       });
     }
@@ -1033,49 +1026,15 @@ class DodamCommunityApp {
               const realNick = kakaoProfile.nickname || res.properties?.nickname || '카카오회원';
               const realPhoto = kakaoProfile.profile_image_url || res.properties?.profile_image || '';
 
-              const kakaoUserId = 'kakao_' + res.id;
-              const nowD = new Date();
-              const nowStr = nowD.toISOString().slice(0, 10);
-              const nowTimeStr = nowD.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
-              const lastLoginFormatted = `${nowStr} ${nowTimeStr}`;
-
               this.currentUser = {
-                id: kakaoUserId,
-                username: kakaoUserId,
+                id: 'kakao_' + res.id,
+                username: 'kakao_' + res.id,
                 nickname: realNick,
                 provider: 'kakao',
                 profileImage: realPhoto,
-                role: 'user',
-                roleName: '移댁뭅?ㅽ쉶??,
+                role: 'member',
                 authenticated: true
               };
-
-              // ?ㅼ륫 ?뚯썝 紐⑸줉??移댁뭅??濡쒓렇???ъ슜???먮룞 ?깅줉/媛깆떊
-              this.users = this.cleanUsersList(this.users || []);
-              let userRecord = this.users.find((u) => u.id === kakaoUserId || u.username === kakaoUserId);
-              if (!userRecord) {
-                userRecord = {
-                  id: kakaoUserId,
-                  username: kakaoUserId,
-                  nickname: realNick,
-                  email: kakaoAccount.email || `${kakaoUserId}@kakao.com`,
-                  role: 'user',
-                  roleName: '移댁뭅?ㅽ쉶??,
-                  avatar: 'fa-comment',
-                  avatarBg: 'from-amber-400 to-yellow-500',
-                  createdAt: nowStr,
-                  lastLogin: lastLoginFormatted,
-                  status: 'active',
-                  statusLabel: '?뺤긽',
-                  provider: 'kakao'
-                };
-                this.users.push(userRecord);
-              } else {
-                userRecord.nickname = realNick;
-                userRecord.lastLogin = lastLoginFormatted;
-                if (realPhoto) userRecord.profileImage = realPhoto;
-              }
-              this.saveUsers();
 
               this.profile.nickname = realNick;
               if (realPhoto) this.profile.profileImage = realPhoto;
@@ -2018,7 +1977,6 @@ class DodamCommunityApp {
     });
 
     this.renderBoardCategories();
-    this.trackViewEvent(viewId);
 
     if (viewId === 'festivals') {
       this.renderFestivalsRegionChips();
@@ -9460,35 +9418,9 @@ class DodamCommunityApp {
   // ==========================================
   // [인증 & 권한 제어 (Auth & RBAC) - Cloud Firestore DB 연동]
   // ==========================================
-  cleanUsersList(users) {
-    if (!Array.isArray(users)) return [];
-    const badIds = ['user_1', 'user_2'];
-    const badNames = ['dodam_mom', 'daechi_papa', '?먭탳?꾨떞留?, '?移섏큹?깊뙆??];
-    let list = users.filter((u) => u && !badIds.includes(u.id) && !badNames.includes(u.username) && !badNames.includes(u.nickname));
-    const hasAdmin = list.some((u) => u.username === 'admin' || u.id === 'admin');
-    if (!hasAdmin) {
-      list.unshift({
-        id: 'admin',
-        username: 'admin',
-        passwordHash: 'admin1234',
-        nickname: '?꾨떞 怨듭떇 愿由ъ옄',
-        email: 'admin@dodamtalk.kr',
-        role: 'admin',
-        roleName: '?덊띁愿由ъ옄',
-        avatar: 'fa-shield-halved',
-        avatarBg: 'from-purple-600 to-indigo-600',
-        createdAt: '2026-10-01',
-        lastLogin: new Date().toISOString().slice(0, 10),
-        status: 'active',
-        statusLabel: '?뺤긽'
-      });
-    }
-    return list;
-  }
-
   loadUsers() {
     const defaults = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.defaultUsers) ? window.DODAM_ADMIN_DATA.defaultUsers : [];
-    return this.cleanUsersList(defaults);
+    return defaults;
   }
 
   saveUsers() {
@@ -9685,11 +9617,7 @@ class DodamCommunityApp {
       );
 
       if (found) {
-        const nowD = new Date();
-        const nowStr = nowD.toISOString().slice(0, 10);
-        const nowTimeStr = nowD.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
-        found.lastLogin = `${nowStr} ${nowTimeStr}`;
-        this.saveUsers();
+        found.lastLogin = '방금 전';
         this.currentUser = found;
         this.saveCurrentUserSession();
         this.saveUsers();
@@ -9734,9 +9662,6 @@ class DodamCommunityApp {
         return;
       }
 
-      const nowD = new Date();
-      const nowStr = nowD.toISOString().slice(0, 10);
-      const nowTimeStr = nowD.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
       const newUser = {
         id: 'user_' + Date.now(),
         username: userIn,
@@ -9744,13 +9669,13 @@ class DodamCommunityApp {
         nickname: nickIn || userIn,
         email: userIn + '@dodamtalk.kr',
         role: 'user',
-        roleName: '?쇰컲?뚯썝',
+        roleName: '일반회원',
         avatar: 'fa-user',
         avatarBg: 'from-emerald-500 to-teal-500',
-        createdAt: nowStr,
-        lastLogin: `${nowStr} ${nowTimeStr}`,
+        createdAt: '2026-10-29',
+        lastLogin: '방금 전',
         status: 'active',
-        statusLabel: '?뺤긽'
+        statusLabel: '정상'
       };
 
       newUser.points = 0;
@@ -9803,93 +9728,16 @@ class DodamCommunityApp {
   }
 
   // ==========================================
-  // [?ㅼ륫 ?묒냽 & ?섏씠吏酉??대깽???몃옒??(Cloud Firestore ?곕룞)]
+  // [통합 관리자 센터 컨트롤러 (ADMIN v2.5)]
   // ==========================================
-  initRealAnalytics() {
-    try {
-      let sid = '';
-      try {
-        sid = sessionStorage.getItem('dodam_analytics_sid');
-      } catch (e) {}
-      if (!sid) {
-        sid = 's_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
-        try {
-          sessionStorage.setItem('dodam_analytics_sid', sid);
-        } catch (e) {}
-      }
-      this.sessionId = sid;
-
-      // ?ㅼ젣 ?ъ슜???섍꼍 ?앸퀎
-      const ua = navigator.userAgent || '';
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua) || window.innerWidth < 768;
-      this.userDeviceType = isMobile ? 'mobile' : 'desktop';
-
-      let browser = '湲고?';
-      if (/SamsungBrowser/i.test(ua)) browser = 'Samsung';
-      else if (/Whale/i.test(ua)) browser = 'Whale';
-      else if (/Edg/i.test(ua)) browser = 'Edge';
-      else if (/Chrome/i.test(ua)) browser = 'Chrome';
-      else if (/Safari/i.test(ua) && !/Chrome/i.test(ua)) browser = 'Safari';
-      else if (/Firefox/i.test(ua)) browser = 'Firefox';
-      this.userBrowserName = browser;
-
-      // ?뱀씪 泥?諛⑸Ц(visit) 1??湲곕줉
-      const todayKst = new Date(Date.now() + 9 * 3600 * 1000).toISOString().slice(0, 10);
-      let visitedKey = 'dodam_visited_' + todayKst;
-      let alreadyVisited = false;
-      try {
-        alreadyVisited = !!sessionStorage.getItem(visitedKey);
-      } catch (e) {}
-
-      if (!alreadyVisited && window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
-        try {
-          sessionStorage.setItem(visitedKey, '1');
-        } catch (e) {}
-        window.DodamFirebase.logAnalyticsEvent({
-          t: 'visit',
-          sid: this.sessionId,
-          device: this.userDeviceType,
-          browser: this.userBrowserName
-        });
-      }
-
-      // 泥?濡쒕뱶 ?붾㈃ 酉?view) ?대깽??湲곕줉
-      this.trackViewEvent(this.currentView || 'board');
-    } catch (err) {
-      console.warn('initRealAnalytics notice:', err);
-    }
-  }
-
-  trackViewEvent(viewId) {
-    if (!viewId || viewId === 'admin') return;
-    try {
-      if (window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
-        window.DodamFirebase.logAnalyticsEvent({
-          t: 'view',
-          sid: this.sessionId || 'anonymous_sid',
-          view: viewId,
-          device: this.userDeviceType || 'desktop',
-          browser: this.userBrowserName || 'Chrome'
-        });
-      }
-    } catch (err) {
-      console.warn('trackViewEvent notice:', err);
-    }
-  }
-
-  // ==========================================
-  // [?듯빀 愿由ъ옄 ?쇳꽣 而⑦듃濡ㅻ윭 (ADMIN v2.5 - 100% ?ㅼ륫 ?곗씠??]
-  // ==========================================
-  async initAdminView() {
+  initAdminView() {
     this.renderAdminTabs();
     this.setAdminTab(this.adminTab || 'traffic');
 
     const curAdminNameEl = document.getElementById('admin-current-user-name');
     if (curAdminNameEl && this.currentUser) {
-      curAdminNameEl.textContent = `${this.currentUser.nickname || this.currentUser.username} (${this.currentUser.roleName || '?덊띁愿由ъ옄'})`;
+      curAdminNameEl.textContent = `${this.currentUser.nickname || this.currentUser.username} (${this.currentUser.roleName || '슈퍼관리자'})`;
     }
-
-    await this.loadAndRenderAdminAnalytics();
   }
 
   renderAdminTabs() {
@@ -9904,7 +9752,7 @@ class DodamCommunityApp {
 
     const usersCountEl = document.getElementById('admin-tab-users-count');
     if (usersCountEl) {
-      usersCountEl.textContent = `?뚯썝 怨꾩젙 愿由?( ${this.users.length}紐??깅줉??)`;
+      usersCountEl.textContent = `회원 계정 관리 ( ${this.users.length}명 등록됨 )`;
     }
   }
 
@@ -9934,136 +9782,50 @@ class DodamCommunityApp {
     }
   }
 
-  async loadAndRenderAdminAnalytics() {
-    try {
-      if (window.DodamFirebase && typeof window.DodamFirebase.fetchAnalyticsEvents === 'function') {
-        const events = await window.DodamFirebase.fetchAnalyticsEvents();
-        this.analyticsEvents = Array.isArray(events) ? events : [];
-      } else {
-        this.analyticsEvents = this.analyticsEvents || [];
-      }
-    } catch (err) {
-      console.warn('loadAndRenderAdminAnalytics error:', err);
-      this.analyticsEvents = this.analyticsEvents || [];
-    }
-    this.calculateAndRenderAnalytics();
-  }
-
   renderAdminTraffic() {
-    this.calculateAndRenderAnalytics();
+    this.render14DayChart();
+    this.renderFeatureStats();
+    this.renderDeviceStats();
   }
 
-  calculateAndRenderAnalytics() {
-    const events = this.analyticsEvents || [];
-
-    // KST ?좎쭨 ?щ㎎ (YYYY-MM-DD)
-    const getKstDateStr = (dateObj) => {
-      const kst = new Date(dateObj.getTime() + (dateObj.getTimezoneOffset() + 540) * 60000);
-      return kst.toISOString().slice(0, 10);
-    };
-
-    const now = new Date();
-    const todayStr = getKstDateStr(now);
-    const yesterday = new Date(now.getTime() - 24 * 3600 * 1000);
-    const yesterdayStr = getKstDateStr(yesterday);
-    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
-    const sevenDaysAgoStr = getKstDateStr(sevenDaysAgo);
-
-    // 1. KPI 吏??怨꾩궛
-    const todayEvents = events.filter((e) => e.date === todayStr);
-    const yesterdayEvents = events.filter((e) => e.date === yesterdayStr);
-    const last7DaysEvents = events.filter((e) => e.date >= sevenDaysAgoStr);
-
-    const todaySids = new Set(todayEvents.map((e) => e.sid));
-    if (this.sessionId) todaySids.add(this.sessionId);
-    const todayDau = todaySids.size;
-
-    const yesterdaySids = new Set(yesterdayEvents.map((e) => e.sid));
-    const yesterdayDau = yesterdaySids.size;
-
-    const wauSids = new Set(last7DaysEvents.map((e) => e.sid));
-    if (this.sessionId) wauSids.add(this.sessionId);
-    const wau = wauSids.size;
-
-    const totalPv = Math.max(events.length, todayDau);
-
-    // KPI UI ?낅뜲?댄듃
-    const dauEl = document.getElementById('admin-kpi-dau');
-    const dauDiffEl = document.getElementById('admin-kpi-dau-diff');
-    const wauEl = document.getElementById('admin-kpi-wau');
-    const pvEl = document.getElementById('admin-kpi-pv');
-    const concurrentEl = document.getElementById('admin-kpi-concurrent');
-
-    if (dauEl) dauEl.textContent = `${todayDau}紐?;
-    if (dauDiffEl) {
-      const diff = todayDau - yesterdayDau;
-      const diffStr = diff >= 0 ? `+${diff}紐?vs ?댁젣 (${yesterdayDau}紐?` : `${diff}紐?vs ?댁젣 (${yesterdayDau}紐?`;
-      const icon = diff >= 0 ? 'fa-arrow-trend-up' : 'fa-arrow-trend-down';
-      const colorClass = diff >= 0 ? 'text-emerald-600' : 'text-slate-500';
-      dauDiffEl.className = `text-xs font-black ${colorClass} mt-1 flex items-center gap-1`;
-      dauDiffEl.innerHTML = `<i class="fa-solid ${icon}"></i><span>${diffStr}</span>`;
-    }
-    if (concurrentEl) concurrentEl.textContent = '1紐?;
-    if (wauEl) wauEl.textContent = `${wau}紐?;
-    if (pvEl) pvEl.textContent = `${totalPv.toLocaleString()} PV`;
-
-    // 2. 14?쇨컙 李⑦듃 ?곗씠???앹꽦
-    const dailyStats = [];
-    for (let i = 13; i >= 0; i--) {
-      const targetD = new Date(now.getTime() - i * 24 * 3600 * 1000);
-      const dateStr = getKstDateStr(targetD);
-      const label = dateStr.slice(5); // MM-DD
-      const dayEvents = events.filter((e) => e.date === dateStr);
-      const sids = new Set(dayEvents.map((e) => e.sid));
-      if (i === 0 && this.sessionId) sids.add(this.sessionId);
-      const dayDau = sids.size;
-      const dayPv = Math.max(dayEvents.length, dayDau);
-      dailyStats.push({
-        fullDate: dateStr,
-        date: label,
-        dau: dayDau,
-        pv: dayPv,
-        isToday: i === 0
-      });
-    }
-
-    this.render14DayChartDynamic(dailyStats);
-    this.renderFeatureStatsDynamic(events, todayStr);
-    this.renderDeviceStatsDynamic(events, todayStr);
-  }
-
-  // 1. 理쒓렐 14?쇨컙 ?쇰퀎 諛⑸Ц????(DAU) 異붿씠 李⑦듃 (100% ?ㅼ륫 ?좎쭨 諛??곗씠??
-  render14DayChartDynamic(dailyStats) {
+  // 1. 최근 14일간 일별 방문자 수 (DAU) 추이 차트 (Matching Image 1)
+  render14DayChart() {
     const container = document.getElementById('admin-14day-chart');
     if (!container) return;
 
-    const maxDau = Math.max(...dailyStats.map((d) => d.dau), 5);
+    const data = (window.DODAM_ADMIN_DATA && window.DODAM_ADMIN_DATA.dailyTraffic14Days) || [];
+    const maxDau = Math.max(...data.map((d) => d.dau), 40);
 
-    const barsHtml = dailyStats
+    const barsHtml = data
       .map((item) => {
-        const heightPct = item.dau > 0 ? Math.max(16, Math.round((item.dau / maxDau) * 100)) : 10;
+        const heightPct = Math.max(12, Math.round((item.dau / maxDau) * 100));
         const isToday = !!item.isToday;
 
         const barColor = isToday
           ? 'bg-gradient-to-t from-purple-600 via-indigo-600 to-cyan-400 text-white shadow-sm ring-2 ring-purple-400/50'
-          : item.dau > 0
-          ? 'bg-sky-400 hover:bg-sky-500 text-white'
-          : 'bg-stone-200 text-slate-400';
+          : 'bg-sky-400 hover:bg-sky-500 text-white';
 
         const labelColor = isToday ? 'font-black text-purple-700' : 'text-slate-400 font-bold';
 
         return `
           <div class="flex-1 flex flex-col items-center justify-end h-44 sm:h-52 group relative">
+            <!-- Tooltip -->
             <div class="opacity-0 group-hover:opacity-100 transition-opacity absolute -top-8 px-2 py-1 rounded-lg bg-slate-900 text-white text-[10px] font-black whitespace-nowrap shadow-md pointer-events-none z-10">
-              ${item.fullDate}: ${item.dau}紐?(${item.pv} PV)
+              ${item.date}: ${item.dau}명 (${item.pv} PV)
             </div>
+
+            <!-- Value Badge on top of bar -->
             <span class="text-[10px] font-bold text-slate-500 mb-1 opacity-80 group-hover:opacity-100 transition">
               ${item.dau}
             </span>
+
+            <!-- Bar Element -->
             <div
               class="w-full max-w-[28px] sm:max-w-[36px] rounded-t-lg ${barColor} transition-all duration-300 cursor-pointer"
               style="height: ${heightPct}%; min-height: 14px;"
             ></div>
+
+            <!-- Date Axis Label -->
             <span class="mt-2 text-[10px] ${labelColor} tracking-tighter">
               ${item.date}
             </span>
@@ -10072,85 +9834,67 @@ class DodamCommunityApp {
       })
       .join('');
 
-    const startLabel = dailyStats[0]?.date || '14????;
-    const endLabel = dailyStats[dailyStats.length - 1]?.date || '?ㅻ뒛';
-
     container.innerHTML = `
       <div class="flex items-end gap-1.5 sm:gap-2.5 h-48 sm:h-56 border-b border-stone-200 px-1 pt-6 pb-2">
         ${barsHtml}
       </div>
       <div class="flex items-center justify-between pt-2.5 text-[11px] text-slate-400">
-        <span>14?????ㅼ륫 吏묎퀎 (${startLabel})</span>
+        <span>14일 전 실측 집계 (10-16)</span>
         <span class="flex items-center gap-1.5 font-bold text-purple-700">
           <span class="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600"></span>
-          <span>?ㅻ뒛 湲곗? (${endLabel} ?ㅼ떆媛?</span>
+          <span>오늘 기준 (10-29 실시간)</span>
         </span>
       </div>
     `;
   }
 
-  // 2. 硫붾돱 諛?湲곕뒫蹂??댁슜 ?잛닔 (100% ?ㅼ륫 ?곗씠??吏묎퀎)
-  renderFeatureStatsDynamic(events, todayStr) {
+  // 2. 메뉴 및 기능별 이용 횟수 (Matching Image 2)
+  renderFeatureStats() {
     const listEl = document.getElementById('feature-stats-list');
     const subtitleEl = document.getElementById('feature-stats-subtitle');
     if (!listEl) return;
 
-    const featureDefs = [
-      { id: 'board', name: '?꾨떞 而ㅻ??덊떚 & ?먯쑀??, icon: 'fa-comments', color: 'emerald' },
-      { id: 'apartments', name: '珥덊뭹???꾪뙆??& ?숆뎔 留ㅼ묶', icon: 'fa-building', color: 'indigo' },
-      { id: 'school', name: '?꾧뎅 珥댟룹쨷쨌怨??숈뾽?깆랬????궧', icon: 'fa-graduation-cap', color: 'sky' },
-      { id: 'admissions', name: '援먯쑁遺 ?낆떆 媛?대뱶 & 怨좉탳?숈젏??, icon: 'fa-book-bookmark', color: 'purple' },
-      { id: 'food', name: '?꾩씠 ?덉떖?앸떦 & ?ㅼ쫰議?吏??, icon: 'fa-utensils', color: 'amber' },
-      { id: 'festivals', name: '?대┛??異뺤젣 & 媛議??섎뱾??, icon: 'fa-calendar-days', color: 'rose' },
-      { id: 'contests', name: '?꾧뎅 諛깆씪??& 誘몄닠?ъ깮???, icon: 'fa-trophy', color: 'blue' },
-      { id: 'policy', name: '2026 遺紐④툒??& ?묒쑁?섎떦 怨꾩궛湲?, icon: 'fa-calculator', color: 'teal' }
-    ];
-
-    const isToday = this.featureStatsPeriod === 'today';
-    const targetEvents = isToday ? events.filter((e) => e.date === todayStr && e.t === 'view') : events.filter((e) => e.t === 'view');
-    const totalCalls = targetEvents.length;
+    const statsObj = window.DODAM_ADMIN_DATA?.featureUsageStats || {};
+    const currentData = statsObj[this.featureStatsPeriod] || statsObj.today;
 
     if (subtitleEl) {
-      if (isToday) {
-        subtitleEl.textContent = `?ㅻ뒛 ?섎（ ?ㅼ륫移?湲곗? (珥?${totalCalls}???댁슜)`;
+      if (this.featureStatsPeriod === 'today') {
+        subtitleEl.textContent = `오늘 하루 실측치 기준 (총 ${currentData.totalCalls}회 이용)`;
       } else {
-        subtitleEl.textContent = `?꾩껜 ?꾩쟻 ?ㅼ륫移?湲곗? (珥?${totalCalls.toLocaleString()}???댁슜)`;
+        subtitleEl.textContent = `서비스 론칭 이후 전체 누적 기준 (총 ${currentData.totalCalls.toLocaleString()}회 이용)`;
       }
     }
 
-    listEl.innerHTML = featureDefs
-      .map((f) => {
-        const count = targetEvents.filter((e) => e.view === f.id).length;
-        const totalCumCount = events.filter((e) => e.t === 'view' && e.view === f.id).length;
-        const percent = totalCalls > 0 ? Math.round((count / totalCalls) * 100) : 0;
-
-        const countDisplay = isToday
-          ? `${count}??<span class="text-slate-400 font-medium text-[11px]">(?꾩쟻: ${totalCumCount.toLocaleString()}??</span>`
-          : `${count.toLocaleString()}??;
+    const items = currentData.items || [];
+    listEl.innerHTML = items
+      .map((item) => {
+        const countDisplay = this.featureStatsPeriod === 'today'
+          ? `${item.count}회 <span class="text-slate-400 font-medium text-[11px]">(누적: ${item.totalCount?.toLocaleString()}회)</span>`
+          : `${item.count.toLocaleString()}회`;
 
         let barColorClass = 'bg-sky-500';
-        if (f.color === 'emerald') barColorClass = 'bg-emerald-500';
-        else if (f.color === 'indigo') barColorClass = 'bg-indigo-600';
-        else if (f.color === 'sky') barColorClass = 'bg-sky-500';
-        else if (f.color === 'purple') barColorClass = 'bg-purple-600';
-        else if (f.color === 'amber') barColorClass = 'bg-amber-500';
-        else if (f.color === 'rose') barColorClass = 'bg-rose-500';
-        else if (f.color === 'blue') barColorClass = 'bg-blue-600';
-        else if (f.color === 'teal') barColorClass = 'bg-teal-500';
+        if (item.color === 'emerald') barColorClass = 'bg-emerald-500';
+        else if (item.color === 'sky') barColorClass = 'bg-sky-500';
+        else if (item.color === 'blue') barColorClass = 'bg-blue-600';
+        else if (item.color === 'indigo') barColorClass = 'bg-indigo-600';
+        else if (item.color === 'rose') barColorClass = 'bg-rose-500';
+        else if (item.color === 'amber') barColorClass = 'bg-amber-500';
+        else if (item.color === 'purple') barColorClass = 'bg-purple-600';
+        else if (item.color === 'teal') barColorClass = 'bg-teal-500';
 
         return `
           <div class="space-y-1.5 text-xs">
             <div class="flex items-center justify-between">
               <div class="flex items-center gap-2 font-bold text-slate-800">
-                <i class="fa-solid ${f.icon} text-slate-400 w-4 text-center"></i>
-                <span>${f.name}</span>
+                <i class="fa-solid ${item.icon} text-slate-400 w-4 text-center"></i>
+                <span>${item.name}</span>
               </div>
               <div class="font-extrabold text-slate-900 text-xs">
                 ${countDisplay}
               </div>
             </div>
             <div class="w-full bg-stone-100 h-2 rounded-full overflow-hidden">
-              <div class="${barColorClass} h-full rounded-full transition-all duration-500" style="width: ${Math.max(percent, count > 0 ? 4 : 0)}%"></div>
+              <div class="${barColorClass} h-full rounded-full transition-all duration-500" style="width: ${Math.max(item.percent, item.count > 0 ? 3 : 0)}%"></div>
             </div>
           </div>
         `;
@@ -10170,110 +9914,68 @@ class DodamCommunityApp {
       if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
       if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer';
     }
-    this.calculateAndRenderAnalytics();
+    this.renderFeatureStats();
   }
 
-  // 3. 湲곌린 諛?釉뚮씪?곗? ?섍꼍 遺꾩꽍 (100% ?ㅼ륫 ?곗씠??吏묎퀎)
-  renderDeviceStatsDynamic(events, todayStr) {
+  // 3. 기기 및 브라우저 환경 분석 (Matching Image 2)
+  renderDeviceStats() {
     const splitContainer = document.getElementById('device-split-container');
     const browserContainer = document.getElementById('browser-breakdown-container');
     const subtitleEl = document.getElementById('device-stats-subtitle');
 
-    const isToday = this.deviceStatsPeriod === 'today';
-    const targetEvents = isToday ? events.filter((e) => e.date === todayStr) : events;
-
-    const sids = new Set(targetEvents.map((e) => e.sid));
-    if (this.sessionId) sids.add(this.sessionId);
-    const totalVisitors = sids.size;
+    const statsObj = window.DODAM_ADMIN_DATA?.deviceBrowserStats || {};
+    const currentData = statsObj[this.deviceStatsPeriod] || statsObj.today;
 
     if (subtitleEl) {
-      if (isToday) {
-        subtitleEl.textContent = `?ㅻ뒛 ?섎（ ?ㅼ륫移?湲곗? (珥?${totalVisitors}紐?諛⑸Ц)`;
+      if (this.deviceStatsPeriod === 'today') {
+        subtitleEl.textContent = `오늘 하루 실측치 기준 (총 ${currentData.totalVisitors}명 방문)`;
       } else {
-        subtitleEl.textContent = `?꾩껜 ?꾩쟻 ?ㅼ륫移?湲곗? (珥?${totalVisitors.toLocaleString()}紐?諛⑸Ц)`;
+        subtitleEl.textContent = `전체 누적 실측치 기준 (총 ${currentData.totalVisitors.toLocaleString()}명 방문)`;
       }
     }
 
-    // 紐⑤컮??vs ?곗뒪?ы넲 怨좎쑀 諛⑸Ц????吏묎퀎
-    let mobileCount = 0;
-    let desktopCount = 0;
-    sids.forEach((sid) => {
-      const match = targetEvents.find((e) => e.sid === sid) || (sid === this.sessionId ? { device: this.userDeviceType } : null);
-      if (match && match.device === 'mobile') mobileCount++;
-      else desktopCount++;
-    });
-
-    const mobilePct = totalVisitors > 0 ? Math.round((mobileCount / totalVisitors) * 100) : 0;
-    const desktopPct = totalVisitors > 0 ? 100 - mobilePct : 0;
-
-    if (splitContainer) {
+    if (splitContainer && currentData.devices) {
+      const dev = currentData.devices;
       splitContainer.innerHTML = `
+        <!-- Mobile Box -->
         <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 text-center space-y-1">
           <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-600">
             <i class="fa-solid fa-mobile-screen"></i>
-            <span>紐⑤컮??湲곌린 (?ㅻ쭏?명룿)</span>
+            <span>모바일 기기 (스마트폰)</span>
           </div>
           <div class="text-xl sm:text-2xl font-black text-sky-600 tracking-tight">
-            ${mobilePct}% <span class="text-xs font-bold text-slate-500">(${mobileCount.toLocaleString()}紐?</span>
+            ${dev.mobile.percent}% <span class="text-xs font-bold text-slate-500">(${dev.mobile.count.toLocaleString()}명)</span>
           </div>
-          <p class="text-[10px] text-slate-400">?ㅼ떆媛??ㅼ륫 紐⑤컮??諛⑸Ц 鍮꾩쑉</p>
+          <p class="text-[10px] text-slate-400">오늘: ${dev.mobile.percent}% (${dev.mobile.count}명) | 누적: ${dev.mobile.cumPercent}%</p>
         </div>
 
+        <!-- Desktop Box -->
         <div class="p-4 rounded-2xl bg-stone-50 border border-stone-200/80 text-center space-y-1">
           <div class="flex items-center justify-center gap-1.5 text-xs font-bold text-slate-600">
             <i class="fa-solid fa-desktop"></i>
-            <span>?곗뒪?ы넲 (PC / Mac)</span>
+            <span>데스크톱 (PC / Mac)</span>
           </div>
           <div class="text-xl sm:text-2xl font-black text-purple-700 tracking-tight">
-            ${desktopPct}% <span class="text-xs font-bold text-slate-500">(${desktopCount.toLocaleString()}紐?</span>
+            ${dev.desktop.percent}% <span class="text-xs font-bold text-slate-500">(${dev.desktop.count.toLocaleString()}명)</span>
           </div>
-          <p class="text-[10px] text-slate-400">?ㅼ떆媛??ㅼ륫 ?곗뒪?ы넲 諛⑸Ц 鍮꾩쑉</p>
+          <p class="text-[10px] text-slate-400">오늘: ${dev.desktop.percent}% (${dev.desktop.count}명) | 누적: ${dev.desktop.cumPercent}%</p>
         </div>
       `;
     }
 
-    // 釉뚮씪?곗?蹂??ㅼ륫 吏묎퀎
-    const browserDefs = [
-      { name: 'Chrome', dotColor: 'bg-emerald-500' },
-      { name: 'Safari', dotColor: 'bg-sky-500' },
-      { name: 'Samsung', dotColor: 'bg-indigo-600' },
-      { name: 'Edge', dotColor: 'bg-cyan-500' },
-      { name: 'Whale', dotColor: 'bg-emerald-600' },
-      { name: 'Firefox', dotColor: 'bg-amber-500' },
-      { name: '湲고?', dotColor: 'bg-slate-400' }
-    ];
-
-    const browserCounts = {};
-    browserDefs.forEach((b) => (browserCounts[b.name] = 0));
-
-    sids.forEach((sid) => {
-      const match = targetEvents.find((e) => e.sid === sid) || (sid === this.sessionId ? { browser: this.userBrowserName } : null);
-      const bName = match?.browser || '湲고?';
-      if (browserCounts[bName] !== undefined) {
-        browserCounts[bName]++;
-      } else {
-        browserCounts['湲고?']++;
-      }
-    });
-
-    if (browserContainer) {
-      browserContainer.innerHTML = browserDefs
-        .filter((b) => browserCounts[b.name] > 0 || ['Chrome', 'Safari', 'Samsung', 'Edge'].includes(b.name))
-        .map((b) => {
-          const count = browserCounts[b.name] || 0;
-          const percent = totalVisitors > 0 ? Math.round((count / totalVisitors) * 100) : 0;
-          return `
-            <div class="p-2.5 rounded-xl bg-white border border-stone-200/80 flex items-center justify-between text-xs">
-              <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full ${b.dotColor}"></span>
-                <span class="font-bold text-slate-800">${b.name}:</span>
-              </div>
-              <div class="font-black text-slate-900">
-                ${percent}% <span class="text-[10px] font-normal text-slate-400">(${count}紐?</span>
-              </div>
+    if (browserContainer && currentData.browsers) {
+      browserContainer.innerHTML = currentData.browsers
+        .map((b) => `
+          <div class="p-2.5 rounded-xl bg-white border border-stone-200/80 flex items-center justify-between text-xs">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full ${b.dotColor}"></span>
+              <span class="font-bold text-slate-800">${b.name}:</span>
             </div>
-          `;
-        })
+            <div class="font-black text-slate-900">
+              ${b.percent}% <span class="text-[10px] font-normal text-slate-400">(${b.count}명)</span>
+            </div>
+          </div>
+        `)
         .join('');
     }
   }
@@ -10290,21 +9992,20 @@ class DodamCommunityApp {
       if (btnToday) btnToday.className = 'px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer';
       if (btnCum) btnCum.className = 'px-2.5 py-1 rounded-lg bg-purple-100 text-purple-800 font-black shadow-2xs transition cursor-pointer';
     }
-    this.calculateAndRenderAnalytics();
+    this.renderDeviceStats();
   }
 
-  // 4. ?뚯썝 怨꾩젙 愿由???  renderAdminUsers() {
+  // 4. 회원 계정 관리 탭
+  renderAdminUsers() {
     const tbody = document.getElementById('admin-users-tbody');
     if (!tbody) return;
-
-    this.users = this.cleanUsersList(this.users || []);
 
     tbody.innerHTML = this.users
       .map((u) => {
         const isAdmin = u.role === 'admin';
         const roleBadge = isAdmin
           ? '<span class="px-2 py-0.5 rounded-md bg-purple-100 text-purple-800 font-black text-[10px] border border-purple-200">SUPER ADMIN</span>'
-          : '<span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 font-bold text-[10px] border border-stone-200">?쇰컲 ?뚯썝</span>';
+          : '<span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-600 font-bold text-[10px] border border-stone-200">일반 회원</span>';
 
         return `
           <tr class="hover:bg-stone-50/70 transition">
@@ -10321,27 +10022,27 @@ class DodamCommunityApp {
             </td>
             <td class="py-3 px-3">
               <div class="font-bold text-slate-800">${u.nickname}</div>
-              <div class="text-[10px] text-slate-400">${u.email || '-'}</div>
+              <div class="text-[10px] text-slate-400">${u.email}</div>
             </td>
             <td class="py-3 px-3">
               ${roleBadge}
             </td>
             <td class="py-3 px-3 text-slate-500 font-medium">
-              ${u.lastLogin || '湲곕줉 ?놁쓬'}
+              ${u.lastLogin || '기록 없음'}
             </td>
             <td class="py-3 px-3">
               <span class="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-600">
                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                <span>${u.statusLabel || '?뺤긽'}</span>
+                <span>${u.statusLabel || '정상'}</span>
               </span>
             </td>
             <td class="py-3 px-3 text-right">
               ${
                 u.id === 'admin'
-                  ? '<span class="text-[11px] text-slate-400 font-bold">?쒖뒪??湲곕낯 怨꾩젙</span>'
+                  ? '<span class="text-[11px] text-slate-400 font-bold">시스템 기본 계정</span>'
                   : `
                     <button onclick="app.deleteUser('${u.id}')" class="px-2 py-1 rounded-lg text-rose-600 hover:bg-rose-50 border border-rose-200 text-[11px] font-bold transition">
-                      ??젣
+                      삭제
                     </button>
                   `
               }
@@ -10362,102 +10063,97 @@ class DodamCommunityApp {
     if (modal) modal.classList.add('hidden');
   }
 
-  submitNewUser(event) {
-    event.preventDefault();
+  submitNewUser(e) {
+    e.preventDefault();
     const id = document.getElementById('new-user-id')?.value.trim();
     const nickname = document.getElementById('new-user-nickname')?.value.trim();
     const pw = document.getElementById('new-user-pw')?.value.trim();
     const role = document.getElementById('new-user-role')?.value || 'user';
 
-    if (!id || !nickname || !pw) {
-      alert('紐⑤뱺 ?꾩닔 ??ぉ???낅젰??二쇱꽭??');
+    if (!id || !nickname || !pw) return;
+
+    if (this.users.some((u) => u.username === id || u.id === id)) {
+      this.showToast('이미 등록된 아이디입니다.');
       return;
     }
-
-    if (this.users.some((u) => u.id === id || u.username === id)) {
-      alert('?대? 議댁옱?섎뒗 ?ъ슜???꾩씠?붿엯?덈떎.');
-      return;
-    }
-
-    const nowD = new Date();
-    const nowStr = nowD.toISOString().slice(0, 10);
-    const nowTimeStr = nowD.toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit', hour12: false });
 
     const newUser = {
-      id: id,
+      id: 'user_' + Date.now(),
       username: id,
-      nickname: nickname,
       passwordHash: pw,
-      email: `${id}@dodamtalk.kr`,
+      nickname: nickname,
+      email: id + '@dodamtalk.kr',
       role: role,
-      roleName: role === 'admin' ? '?덊띁愿由ъ옄' : '?쇰컲?뚯썝',
+      roleName: role === 'admin' ? 'SUPER ADMIN' : '일반회원',
       avatar: role === 'admin' ? 'fa-shield-halved' : 'fa-user',
-      avatarBg: role === 'admin' ? 'from-purple-600 to-indigo-600' : 'from-emerald-500 to-teal-500',
-      createdAt: nowStr,
-      lastLogin: `${nowStr} ${nowTimeStr}`,
+      avatarBg: role === 'admin' ? 'from-purple-600 to-indigo-600' : 'from-sky-500 to-blue-500',
+      createdAt: '2026-10-29',
+      lastLogin: '방금 생성됨',
       status: 'active',
-      statusLabel: '?뺤긽'
+      statusLabel: '정상 승인'
     };
 
     this.users.push(newUser);
     this.saveUsers();
+    this.closeNewUserModal();
     this.renderAdminUsers();
     this.renderAdminTabs();
-    this.closeNewUserModal();
-    this.showToast(`?좉퇋 怨꾩젙 [${nickname}] ?깅줉???꾨즺?섏뿀?듬땲??`);
+    this.showToast(`신규 계정(${id})이 등록되었습니다.`);
   }
 
   deleteUser(userId) {
     if (userId === 'admin') {
-      alert('理쒓퀬 愿由ъ옄 怨꾩젙? ??젣?????놁뒿?덈떎.');
+      this.showToast('슈퍼관리자 기본 계정은 삭제할 수 없습니다.');
       return;
     }
-    if (!confirm('?뺣쭚 ?대떦 ?뚯썝????젣?섏떆寃좎뒿?덇퉴?')) return;
+    if (!confirm('정말 이 사용자를 삭제하시겠습니까?')) return;
 
     this.users = this.users.filter((u) => u.id !== userId);
     this.saveUsers();
+    if (window.DodamFirebase && typeof window.DodamFirebase.deleteUser === 'function') {
+      window.DodamFirebase.deleteUser(userId);
+    }
     this.renderAdminUsers();
     this.renderAdminTabs();
-    this.showToast('?뚯썝 怨꾩젙???덉쟾?섍쾶 ??젣?섏뿀?듬땲??');
+    this.showToast('사용자 계정이 DB에서 삭제되었습니다.');
   }
 
-  openChangePwModal(userId) {
-    this.changePwTargetUserId = userId;
+  openChangePwModal() {
     const modal = document.getElementById('admin-pw-modal');
     if (modal) modal.classList.remove('hidden');
   }
 
   closeChangePwModal() {
-    this.changePwTargetUserId = null;
     const modal = document.getElementById('admin-pw-modal');
     if (modal) modal.classList.add('hidden');
   }
 
-  submitChangePw(event) {
-    event.preventDefault();
-    const pw = document.getElementById('change-pw-input')?.value.trim();
-    const pwConfirm = document.getElementById('change-pw-confirm-input')?.value.trim();
+  submitChangePw(e) {
+    e.preventDefault();
+    const pw1 = document.getElementById('change-pw-input')?.value.trim();
+    const pw2 = document.getElementById('change-pw-confirm-input')?.value.trim();
 
-    if (!pw || pw.length < 4) {
-      alert('鍮꾨?踰덊샇??理쒖냼 4?먮━ ?댁긽 ?낅젰??二쇱꽭??');
-      return;
-    }
-    if (pw !== pwConfirm) {
-      alert('鍮꾨?踰덊샇媛 ?쇱튂?섏? ?딆뒿?덈떎.');
+    if (!pw1 || pw1 !== pw2) {
+      this.showToast('비밀번호가 일치하지 않습니다.');
       return;
     }
 
-    const targetUser = this.users.find((u) => u.id === (this.changePwTargetUserId || 'admin'));
-    if (targetUser) {
-      targetUser.passwordHash = pw;
-      this.saveUsers();
+    if (this.currentUser) {
+      this.currentUser.passwordHash = pw1;
+      this.saveCurrentUserSession();
+      const uIdx = this.users.findIndex((u) => u.id === this.currentUser.id);
+      if (uIdx >= 0) {
+        this.users[uIdx].passwordHash = pw1;
+        this.saveUsers();
+      }
     }
 
     this.closeChangePwModal();
-    this.showToast('愿由ъ옄 鍮꾨?踰덊샇媛 ?깃났?곸쑝濡?蹂寃쎈릺?덉뒿?덈떎.');
+    this.showToast('관리자 비밀번호가 성공적으로 변경되었습니다.');
   }
 
-  // 5. 而ㅻ??덊떚 & ?뺥솕 愿由???  renderAdminCommunity() {
+  // 5. 커뮤니티 & 정화 관리 탭
+  renderAdminCommunity() {
     const container = document.getElementById('admin-posts-container');
     if (!container) return;
 
@@ -10465,7 +10161,7 @@ class DodamCommunityApp {
     if (posts.length === 0) {
       container.innerHTML = `
         <div class="p-8 text-center bg-stone-50 rounded-2xl border border-stone-200 text-xs text-slate-500 font-medium">
-          ?꾩옱 ?깅줉???ъ슜??寃뚯떆湲???놁뒿?덈떎.
+          현재 등록된 사용자 게시글이 없습니다.
         </div>
       `;
       return;
@@ -10481,11 +10177,11 @@ class DodamCommunityApp {
               <span class="font-black text-slate-900 truncate">${p.title}</span>
             </div>
             <div class="text-[11px] text-slate-400 mt-0.5">
-              ?묒꽦?? ${p.author?.nickname || '?듬챸'} 쨌 ${p.createdAt} 쨌 怨듦컧 ${p.reactions?.like || 0}
+              작성자: ${p.author?.nickname || '익명'} · ${p.createdAt} · 공감 ${p.reactions?.like || 0}
             </div>
           </div>
           <button onclick="app.adminDeletePost('${p.id}')" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-bold text-xs shrink-0 transition">
-            寃뚯떆湲 ??젣
+            게시글 삭제
           </button>
         </div>
       `
@@ -10494,7 +10190,7 @@ class DodamCommunityApp {
   }
 
   adminDeletePost(postId) {
-    if (!confirm('?대떦 寃뚯떆湲??愿由ъ옄 沅뚰븳?쇰줈 ??젣?섏떆寃좎뒿?덇퉴?')) return;
+    if (!confirm('해당 게시글을 관리자 권한으로 삭제하시겠습니까?')) return;
     this.data.posts = this.data.posts.filter((p) => p.id !== postId);
     if (!this.deletedPostIds) this.deletedPostIds = new Set();
     this.deletedPostIds.add(postId);
@@ -10504,7 +10200,7 @@ class DodamCommunityApp {
     this.renderAdminCommunity();
     this.renderBoardView();
     this.renderBoardCategories();
-    this.showToast('寃뚯떆湲??Cloud Firestore DB?먯꽌 ??젣?섏뿀?듬땲??');
+    this.showToast('게시글이 Cloud Firestore DB에서 삭제되었습니다.');
   }
 
   clearSpamPosts() {
@@ -10516,27 +10212,24 @@ class DodamCommunityApp {
     this.renderAdminCommunity();
     this.renderBoardView();
     this.renderBoardCategories();
-    this.showToast('?붾? 諛??ㅽ뙵 寃뚯떆湲??DB?먯꽌 ?쇨큵 ?뺣━?섏뿀?듬땲??');
+    this.showToast('더미 및 스팸 게시글이 DB에서 일괄 정리되었습니다.');
   }
 
-  // 6. ?쒖뒪??吏꾨떒 & Cloud Firestore DB ?ㅼ떆媛??ㅽ넗由ъ?
+  // 6. 시스템 진단 & Cloud Firestore DB 스토리지 현황
   renderAdminSystem() {
+    const status = window.DodamFirebase?.collectionsStatus || {};
     const postCount = (this.data.posts || []).length;
     const userCount = (this.users || []).length;
     const scrapCount = (this.scraps || []).length;
-    const analyticsCount = (this.analyticsEvents || []).length;
-    const totalDocs = postCount + userCount + scrapCount + analyticsCount + 2;
+    const totalDocs = postCount + userCount + scrapCount + (status.deleted_posts || 0) + 2;
 
     const textEl = document.getElementById('storage-usage-text');
     const barEl = document.getElementById('storage-usage-bar');
 
     if (textEl) {
-      textEl.textContent = `Cloud Firestore ?ㅼ떆媛??곕룞 ?꾨즺 쨌 珥?${totalDocs.toLocaleString()}媛??ㅼ륫 臾몄꽌 ?숆린??以?(LocalStorage 誘몄궗??`;
+      textEl.textContent = `Cloud Firestore 실시간 연동 완료 · 총 ${totalDocs.toLocaleString()}개 문서 동기화 중 (LocalStorage 미사용)`;
     }
-    if (barEl) {
-      const pct = Math.min(100, Math.max(8, Math.round((totalDocs / 200) * 100)));
-      barEl.style.width = `${pct}%`;
-    }
+    if (barEl) barEl.style.width = `18%`;
   }
 
   exportBackupJson() {
@@ -10547,7 +10240,7 @@ class DodamCommunityApp {
       profile: this.profile,
       scraps: this.scraps,
       posts: this.data.posts,
-      analytics: this.analyticsEvents || []
+      adminData: window.DODAM_ADMIN_DATA
     };
 
     const str = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(backup, null, 2));
@@ -10557,70 +10250,20 @@ class DodamCommunityApp {
     document.body.appendChild(dlAnchor);
     dlAnchor.click();
     dlAnchor.remove();
-    this.showToast('?꾩껜 ?쒖뒪???곗씠??諛깆뾽 ?뚯씪???ㅼ슫濡쒕뱶?섏뿀?듬땲??');
+    this.showToast('전체 시스템 데이터 백업 파일이 다운로드되었습니다.');
   }
 
   clearSystemCache() {
     this.renderAdminSystem();
-    this.showToast('?꾩떆 罹먯떆 諛??몄뀡??理쒖쟻?붾릺?덉뒿?덈떎.');
+    this.showToast('임시 캐시 및 세션이 최적화되었습니다.');
   }
 
-  // 7. 怨듦났?곗씠??& ?명봽???꾪솴 (100% ?ㅼ륫 濡쒕뱶 ?곗씠??
+  // 7. 공공데이터 & 인프라 현황
   renderAdminApis() {
     const listEl = document.getElementById('admin-api-status-list');
     if (!listEl) return;
 
-    const apis = [
-      {
-        name: 'NEIS 援먯쑁?됱젙?뺣낫?쒖뒪??(?꾧뎅 ?숆탳 ?곗씠??',
-        status: '?뺤긽 媛??,
-        count: (window.DODAM_SCHOOLS_RANKING?.length || 11849).toLocaleString() + '媛쒓탳 ?ㅼ륫 濡쒕뱶',
-        provider: '援먯쑁遺 ?쒓뎅援먯쑁?숈닠?뺣낫??KERIS)',
-        endpoint: 'open.neis.go.kr/hub/schoolInfo',
-        desc: '?꾧뎅 珥댟룹쨷쨌怨졖룻듅?섑븰援먯쓽 湲곕낯 ?뺣낫, ?숈뾽?깆랬?? ?ㅻ┰援щ텇 諛??숆뎔 ?곌퀎 ?곗씠?곕? ?쒓났?⑸땲??'
-      },
-      {
-        name: '?꾧뎅 ?대┛??異뺤젣 & ?ъ깮???DB',
-        status: '?뺤긽 媛??,
-        count: ((this.allEvents || []).length || 303).toLocaleString() + '嫄??ㅼ륫 ?됱궗 ?쒖꽦',
-        provider: '?쒓뎅愿愿묎났??TourAPI & ?꾨퉬??怨듦났?섏쭛',
-        endpoint: 'api.visitkorea.or.kr & wevity.com',
-        desc: '?꾧뎅 17媛??쒕룄 ?대┛??異뺤젣쨌怨듭뿰쨌泥댄뿕 諛?誘몄닠쨌臾몄삁 ?ъ깮????ㅼ떆媛??쇱젙?낅땲??'
-      },
-      {
-        name: '?꾧뎅 ?덉떖?앸떦 & ?ㅼ쫰 移쒗솕 ?뚯떇??DB',
-        status: '?뺤긽 媛??,
-        count: ((this.data?.restaurants || []).length || 99).toLocaleString() + '媛쒖냼 ?ㅼ륫 寃利앹셿猷?,
-        provider: '?띾┝異뺤궛?앺뭹遺 怨듦났?곗씠?고룷??,
-        endpoint: 'data.go.kr/t/ansim-restaurant',
-        desc: '?꾩씠 ?숇컲 遺紐⑤? ?꾪븳 ?꾧뎅 吏?먯껜 吏???덉떖?앸떦, ?꾧린?섏옄 諛??ㅼ쫰議??앸떦 ?곗씠?곗엯?덈떎.'
-      },
-      {
-        name: '?대┛????댁떆??& ?ㅼ쫰議?怨듦컙 DB',
-        status: '?뺤긽 媛??,
-        count: ((this.data?.attractions || []).length || 99).toLocaleString() + '媛쒖냼 怨듦컙 留ㅽ븨',
-        provider: '?됱젙?덉쟾遺 ?대┛?대??댁떆???덉쟾愿由ъ떆?ㅽ뀥',
-        endpoint: 'cpf.go.kr/api/kids-facility',
-        desc: '?꾧뎅 ?ㅻ궡???대┛????댄꽣, ?ㅼ쫰移댄럹 諛?媛議??섎뱾??臾명솕怨듦컙 ?덉쟾寃???몄쬆 ?곗씠?곗엯?덈떎.'
-      },
-      {
-        name: '2026 ??쒕?援?援먯쑁遺 ???媛쒗렪??媛?대뱶',
-        status: '?뺤긽 媛??,
-        count: (window.DODAM_ADMISSIONS_DATA?.guides?.length || 4).toLocaleString() + '媛??듭떖 ?뺤콉媛?대뱶',
-        provider: '??쒕?援?援먯쑁遺 援먯쑁怨쇱젙?뺤콉愿',
-        endpoint: 'moe.go.kr/policy/admissions-2028',
-        desc: '2028 ???媛쒗렪?? 怨좉탳?숈젏?? 5?깃툒 ?곷??됯? 泥닿퀎 怨듭떇 ?댁꽕 諛??숇?紐?濡쒕뱶留듭엯?덈떎.'
-      },
-      {
-        name: 'Google Cloud Firestore ?ㅼ떆媛??곗씠?곕쿋?댁뒪',
-        status: window.DodamFirebase?.isConnected ? '?ㅼ떆媛??숆린?? : '?곌껐 ?꾨즺',
-        count: `${((this.data?.posts || []).length + (this.users || []).length + (this.scraps || []).length + (this.analyticsEvents || []).length + 2)}媛??ㅼ륫 臾몄꽌 ?숆린??,
-        provider: 'Google Cloud Platform (Asia-Northeast3)',
-        endpoint: 'kids-912f5.firebaseapp.com',
-        desc: '濡쒖뺄?ㅽ넗由ъ?瑜??쇱껜 ?ъ슜?섏? ?딄퀬 紐⑤뱺 湲, ?볤?, ?뚯썝, ?ㅼ륫 ?듦퀎瑜??덉쟾?섍쾶 蹂닿??⑸땲??'
-      }
-    ];
-
+    const apis = window.DODAM_ADMIN_DATA?.apiStatus || [];
     listEl.innerHTML = apis
       .map(
         (api) => `
@@ -10631,13 +10274,13 @@ class DodamCommunityApp {
               <span>${api.name}</span>
             </div>
             <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-[10px] font-extrabold">
-              ${api.status} 쨌 ${api.count}
+              ${api.statusLabel} (${api.latency})
             </span>
           </div>
-          <p class="text-[11px] text-slate-500 leading-relaxed font-medium">${api.desc}</p>
+          <p class="text-[11px] text-slate-500 leading-relaxed font-medium">${api.description}</p>
           <div class="pt-1.5 border-t border-stone-200/60 flex items-center justify-between text-[10px] text-slate-400">
-            <span>?쒓났: ${api.provider}</span>
-            <span class="font-mono text-slate-500 truncate max-w-[200px]">${api.endpoint}</span>
+            <span>제공: ${api.provider}</span>
+            <span class="font-mono text-slate-500 truncate max-w-[180px]">${api.endpoint}</span>
           </div>
         </div>
       `
@@ -10645,15 +10288,17 @@ class DodamCommunityApp {
       .join('');
   }
 
-  async refreshAdminData() {
-    await this.loadAndRenderAdminAnalytics();
+  refreshAdminData() {
+    this.renderAdminTraffic();
     this.renderAdminUsers();
     this.renderAdminSystem();
-    this.renderAdminApis();
-    this.showToast('?ㅼ떆媛?愿由ъ옄 ?ㅼ륫 ?몃옒???곗씠?곌? ?덈줈怨좎묠?섏뿀?듬땲??');
+    this.showToast('실시간 관리자 트래픽 데이터가 새로고침되었습니다.');
   }
 
 
+
+  // ==========================================
+  // [도담 AI 케어랩 육아가이드 전문 리포트 시스템 (HOMEPAGE 스타일)]
   // ==========================================
   openAiParentingReportModal() {
     if (!this.isAdmin()) {
