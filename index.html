@@ -2462,7 +2462,7 @@
               </button>
               <button onclick="app.setAdminTab('users')" data-tab="users" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
                 <i class="fa-solid fa-users text-[11px]"></i>
-                <span id="admin-tab-users-count">회원 계정 관리 ( 3명 등록됨 )</span>
+                <span id="admin-tab-users-count">회원 계정 관리 ( 1명 등록됨 )</span>
               </button>
               <button onclick="app.setAdminTab('community')" data-tab="community" class="admin-tab-btn inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-stone-50 whitespace-nowrap transition cursor-pointer">
                 <i class="fa-solid fa-shield text-[11px]"></i>
@@ -2492,10 +2492,10 @@
                   </div>
                 </div>
                 <div class="mt-3">
-                  <div class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight" id="admin-kpi-dau">18명</div>
-                  <p class="text-xs font-black text-emerald-600 mt-1 flex items-center gap-1">
+                  <div class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight" id="admin-kpi-dau">0명</div>
+                  <p class="text-xs font-black text-emerald-600 mt-1 flex items-center gap-1" id="admin-kpi-dau-diff">
                     <i class="fa-solid fa-arrow-trend-up"></i>
-                    <span>+33.3% vs 어제 (13명)</span>
+                    <span>실시간 실측 집계 중</span>
                   </p>
                 </div>
               </div>
@@ -2510,8 +2510,8 @@
                 </div>
                 <div class="mt-3">
                   <div class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight flex items-baseline gap-2">
-                    <span>1명</span>
-                    <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">(실제 접속자)</span>
+                    <span id="admin-kpi-concurrent">1명</span>
+                    <span class="text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md">(현재 접속 중)</span>
                   </div>
                   <p class="text-xs text-slate-400 font-medium mt-1">라이브 세션 활성 모니터링 중</p>
                 </div>
@@ -2526,7 +2526,7 @@
                   </div>
                 </div>
                 <div class="mt-3">
-                  <div class="text-2xl sm:text-3xl font-black text-purple-700 tracking-tight" id="admin-kpi-wau">142명</div>
+                  <div class="text-2xl sm:text-3xl font-black text-purple-700 tracking-tight" id="admin-kpi-wau">0명</div>
                   <p class="text-xs text-slate-400 font-medium mt-1">최근 7일간의 순 방문자 실측 합계</p>
                 </div>
               </div>
@@ -2540,8 +2540,8 @@
                   </div>
                 </div>
                 <div class="mt-3">
-                  <div class="text-2xl sm:text-3xl font-black text-amber-600 tracking-tight" id="admin-kpi-pv">8,920 PV</div>
-                  <p class="text-xs text-slate-400 font-medium mt-1">Cloudflare 웹 분석 누적 실측치</p>
+                  <div class="text-2xl sm:text-3xl font-black text-amber-600 tracking-tight" id="admin-kpi-pv">0 PV</div>
+                  <p class="text-xs text-slate-400 font-medium mt-1">도담톡 페이지뷰 실측치 합계</p>
                 </div>
               </div>
             </div>
@@ -2579,7 +2579,7 @@
                     <button type="button" onclick="app.setFeaturePeriod('cumulative')" id="btn-feature-cum" class="px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer">전체 누적</button>
                   </div>
                 </div>
-                <p class="text-xs text-slate-500 font-medium" id="feature-stats-subtitle">오늘 하루 실측치 기준 (총 38회 이용)</p>
+                <p class="text-xs text-slate-500 font-medium" id="feature-stats-subtitle">실측 데이터 집계 중...</p>
                 <div class="space-y-3.5" id="feature-stats-list">
                   <!-- Rendered by app.renderFeatureStats() -->
                 </div>
@@ -2597,7 +2597,7 @@
                     <button type="button" onclick="app.setDevicePeriod('cumulative')" id="btn-device-cum" class="px-2.5 py-1 rounded-lg text-slate-500 hover:text-slate-800 transition cursor-pointer">전체 누적</button>
                   </div>
                 </div>
-                <p class="text-xs text-slate-500 font-medium" id="device-stats-subtitle">오늘 하루 실측치 기준 (총 18명 방문)</p>
+                <p class="text-xs text-slate-500 font-medium" id="device-stats-subtitle">실측 데이터 집계 중...</p>
 
                 <!-- Device Split Cards (Matching Image 2) -->
                 <div class="grid grid-cols-2 gap-3" id="device-split-container">
@@ -3541,22 +3541,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/data.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/data.js?v=20261109_v23"></script>
   <!-- 카카오 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261109_v22"></script>
-  <script charset="utf-8" src="js/app.js?v=20261109_v22"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/app.js?v=20261109_v23"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달

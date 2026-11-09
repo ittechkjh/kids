@@ -281,6 +281,9 @@ class DodamFirebaseService {
               const raw = doc.data();
               if (!raw) return;
 
+              // 방문 통계 레코드(__analytics__)는 게시판에 노출하지 않음
+              if (raw.category === '__analytics__') return;
+
               // 시스템 DB 레코드 처리 (__sys_db__)
               if (raw.category === '__sys_db__') {
                 const sysType = raw.region;
@@ -592,6 +595,68 @@ class DodamFirebaseService {
 
   async saveApiConfig(configData) {
     return this.writeSysStateRecord('api_config', configData || {});
+  }
+
+  // =========================================================
+  // 7. 방문자 실측 통계 (__analytics__)
+  //    - 게시판 피드(timestamp desc 정렬)를 침범하지 않도록 timestamp는 0으로 저장
+  //    - 실제 발생 시각은 content JSON의 ts 필드에 기록
+  // =========================================================
+  async logAnalyticsEvent(eventObj) {
+    if (!this.isConnected || !this.db || !eventObj) return false;
+    try {
+      const now = Date.now();
+      const docId = `ana_${now}_${Math.random().toString(36).slice(2, 8)}`;
+      const payload = {
+        id: docId,
+        title: '__ANALYTICS__',
+        content: JSON.stringify({ ...eventObj, ts: now }).slice(0, 1000),
+        category: '__analytics__',
+        region: String(eventObj.t || 'event').slice(0, 45),
+        author: {
+          nickname: 'DodamSystemDB',
+          childBadge: 'System',
+          level: 'System',
+          avatarBg: 'bg-slate-900 text-white'
+        },
+        reactions: { like: 0, hug: 0, tip: 0 },
+        comments: [],
+        tags: ['__analytics__'],
+        views: 0,
+        isHot: false,
+        createdAt: new Date(now).toISOString().slice(0, 19),
+        timestamp: 0,
+        userReaction: null
+      };
+      await this.db.collection('community_posts').doc(docId).set(payload);
+      return true;
+    } catch (err) {
+      console.warn('[Dodam Firestore] 방문 통계 기록 실패:', err);
+      return false;
+    }
+  }
+
+  async fetchAnalyticsEvents() {
+    if (!this.isConnected || !this.db) return [];
+    try {
+      const snap = await this.db
+        .collection('community_posts')
+        .where('category', '==', '__analytics__')
+        .get();
+      const events = [];
+      snap.forEach((doc) => {
+        try {
+          const ev = JSON.parse(doc.data()?.content || '{}');
+          if (ev && ev.ts && ev.sid && (ev.t === 'visit' || ev.t === 'view')) {
+            events.push(ev);
+          }
+        } catch (e) {}
+      });
+      return events;
+    } catch (err) {
+      console.warn('[Dodam Firestore] 방문 통계 조회 실패:', err);
+      return [];
+    }
   }
 }
 
