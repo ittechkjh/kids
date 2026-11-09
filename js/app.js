@@ -516,23 +516,89 @@ class DodamCommunityApp {
   }
 
   calculateLevel(points = 0, helps = 0) {
-    if (points >= 1000 && helps >= 15) {
-      return { name: '👑 Lv.5 멘토맘·대디', shortName: '멘토', levelNum: 5, badgeClass: 'bg-purple-600 text-white', nextPoints: 1000, nextName: '최고 등급', progress: 100, neededPoints: 0 };
+    const buildNextInfo = (targetPoints, targetHelps, basePoints, nextName) => {
+      const neededPoints = Math.max(0, targetPoints - points);
+      const neededHelps = Math.max(0, targetHelps - helps);
+      const spanPoints = Math.max(1, targetPoints - basePoints);
+      const ptRatio = Math.min(1, Math.max(0, (points - basePoints) / spanPoints));
+      const helpRatio = targetHelps > 0 ? Math.min(1, helps / targetHelps) : 1;
+      const progress = Math.min(99, Math.round((ptRatio * 0.7 + helpRatio * 0.3) * 100));
+
+      const condParts = [];
+      if (neededPoints > 0) condParts.push(`${neededPoints.toLocaleString()}P`);
+      if (neededHelps > 0) condParts.push(`도움 ${neededHelps}회`);
+      const nextConditionText = condParts.length > 0
+        ? `다음 [${nextName}]까지 ${condParts.join(' · ')} 남음`
+        : `[${nextName}] 승급 조건 달성!`;
+
+      return { neededPoints, neededHelps, progress, nextConditionText };
+    };
+
+    if (points >= 7000 && helps >= 50) {
+      return {
+        name: '👑 Lv.5 멘토맘·대디',
+        shortName: '멘토',
+        levelNum: 5,
+        badgeClass: 'bg-purple-600 text-white',
+        nextPoints: 7000,
+        nextName: '최고 등급',
+        progress: 100,
+        neededPoints: 0,
+        neededHelps: 0,
+        nextConditionText: '🎉 도담톡 최고 등급 [Lv.5 멘토맘·대디] 달성!',
+        currentPerk: '퍼플 크라운 VIP 멘토 배지 · 게시판 상단 [명예 멘토 칼럼] 고정 노출 · VIP 체험단 & 공연 무료 초청권 1순위 배정'
+      };
     }
-    if (points >= 600 && helps >= 7) {
-      const p = Math.min(100, Math.round(((points - 600) / 400) * 100));
-      return { name: '🍎 Lv.4 열매맘·대디', shortName: '열매', levelNum: 4, badgeClass: 'bg-rose-500 text-white', nextPoints: 1000, nextName: 'Lv.5 멘토맘·대디', progress: p, neededPoints: 1000 - points };
+    if (points >= 3000 && helps >= 25) {
+      const next = buildNextInfo(7000, 50, 3000, 'Lv.5 멘토맘·대디');
+      return {
+        name: '🍎 Lv.4 열매맘·대디',
+        shortName: '열매',
+        levelNum: 4,
+        badgeClass: 'bg-rose-500 text-white',
+        nextPoints: 7000,
+        nextName: 'Lv.5 멘토맘·대디',
+        ...next,
+        currentPerk: '열매 스페셜 배지 & 프로필 하이라이트 · 우리 동네 명예 운영위원 위촉 · 작성글 [인기 추천] 우선 선정'
+      };
+    }
+    if (points >= 1000 && helps >= 10) {
+      const next = buildNextInfo(3000, 25, 1000, 'Lv.4 열매맘·대디');
+      return {
+        name: '🌷 Lv.3 꽃봉오리맘·대디',
+        shortName: '꽃봉오리',
+        levelNum: 3,
+        badgeClass: 'bg-indigo-600 text-white',
+        nextPoints: 3000,
+        nextName: 'Lv.4 열매맘·대디',
+        ...next,
+        currentPerk: '꽃봉오리 배지 · 작성 질문글 상단 우선 노출(추천 가중치) · 도담 AI 심층 발달 리포트 열람 · 지역 체험단 신청 자격'
+      };
     }
     if (points >= 300 && helps >= 3) {
-      const p = Math.min(100, Math.round(((points - 300) / 300) * 100));
-      return { name: '🌷 Lv.3 꽃봉오리맘·대디', shortName: '꽃봉오리', levelNum: 3, badgeClass: 'bg-indigo-600 text-white', nextPoints: 600, nextName: 'Lv.4 열매맘·대디', progress: p, neededPoints: 600 - points };
+      const next = buildNextInfo(1000, 10, 300, 'Lv.3 꽃봉오리맘·대디');
+      return {
+        name: '🌿 Lv.2 줄기맘·대디',
+        shortName: '줄기',
+        levelNum: 2,
+        badgeClass: 'bg-emerald-600 text-white',
+        nextPoints: 1000,
+        nextName: 'Lv.3 꽃봉오리맘·대디',
+        ...next,
+        currentPerk: '초록 줄기 인증 배지 · 우리 동네 나눔장터 및 공동육아 소모임 개설 권한 · 스크랩북 무제한 저장'
+      };
     }
-    if (points >= 100 && helps >= 1) {
-      const p = Math.min(100, Math.round(((points - 100) / 200) * 100));
-      return { name: '🌿 Lv.2 줄기맘·대디', shortName: '줄기', levelNum: 2, badgeClass: 'bg-emerald-600 text-white', nextPoints: 300, nextName: 'Lv.3 꽃봉오리맘·대디', progress: p, neededPoints: 300 - points };
-    }
-    const p = Math.min(100, Math.round((points / 100) * 100));
-    return { name: '🌱 Lv.1 새싹맘·대디', shortName: '새싹', levelNum: 1, badgeClass: 'bg-slate-700 text-white', nextPoints: 100, nextName: 'Lv.2 줄기맘·대디', progress: p, neededPoints: 100 - points };
+    const next = buildNextInfo(300, 3, 0, 'Lv.2 줄기맘·대디');
+    return {
+      name: '🌱 Lv.1 새싹맘·대디',
+      shortName: '새싹',
+      levelNum: 1,
+      badgeClass: 'bg-slate-700 text-white',
+      nextPoints: 300,
+      nextName: 'Lv.2 줄기맘·대디',
+      ...next,
+      currentPerk: '전 게시판 열람·글쓰기, 전국 행사·안심식당·학군·지원금 무제한 조회, 아이 성장 다이어리 이용'
+    };
   }
 
   renderProfileWidget() {
@@ -617,7 +683,7 @@ class DodamCommunityApp {
               class="px-3 py-1.5 rounded-xl ${this.profile.checkedInToday ? 'bg-emerald-50 text-emerald-800 border border-emerald-200' : 'bg-rose-500 hover:bg-rose-600 text-white'} font-black text-xs shadow-2xs transition flex items-center gap-1.5 cursor-pointer"
             >
               <i class="fa-solid ${this.profile.checkedInToday ? 'fa-check text-emerald-600' : 'fa-calendar-check'}"></i>
-              <span>${this.profile.checkedInToday ? '출석 완료' : '출석체크 (+50P)'}</span>
+              <span>${this.profile.checkedInToday ? '출석 완료' : '출석체크 (+10P)'}</span>
             </button>
             <button
               type="button"
@@ -653,7 +719,7 @@ class DodamCommunityApp {
         <!-- 3행: 다음 등급 진행도 바 -->
         <div class="space-y-1">
           <div class="flex items-center justify-between text-[11px] font-bold">
-            <span class="text-slate-500">${lvl.neededPoints > 0 ? `다음 [${lvl.nextName}]까지 ${lvl.neededPoints}P 남음` : '최고 등급 달성!'}</span>
+            <span class="text-slate-500">${lvl.nextConditionText || '최고 등급 달성!'}</span>
             <span class="text-rose-600 font-black">${lvl.progress}%</span>
           </div>
           <div class="w-full h-2 bg-stone-200 rounded-full overflow-hidden">
@@ -670,11 +736,12 @@ class DodamCommunityApp {
       return;
     }
     this.profile.checkedInToday = true;
-    this.profile.points = (this.profile.points || 0) + 50;
+    this.profile.points = (this.profile.points || 0) + 10;
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderLevelSection();
     this.renderAuthHeader();
-    this.showToast('🎉 오늘의 육아 출석체크 완료! +50 포인트가 적립되었습니다.');
+    this.showToast('🎉 오늘의 육아 출석체크 완료! +10 포인트가 적립되었습니다.');
   }
 
   // ==========================================
@@ -1401,7 +1468,7 @@ class DodamCommunityApp {
       memo: memo || '건강하게 쑥쑥 크는 중!'
     });
 
-    this.profile.points = (this.profile.points || 0) + 10;
+    this.profile.points = (this.profile.points || 0) + 5;
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
 
@@ -1415,7 +1482,7 @@ class DodamCommunityApp {
     if (wInput) wInput.value = '';
     if (mInput) mInput.value = '';
 
-    this.showToast('🎉 아이 성장 기록이 등록되었습니다! (+10P 활동 점수 적립)');
+    this.showToast('🎉 아이 성장 기록이 등록되었습니다! (+5P 활동 점수 적립)');
   }
 
   deleteGrowthRecord(recordId) {
@@ -1443,6 +1510,9 @@ class DodamCommunityApp {
     const nickEl = document.getElementById('level-display-nickname');
     if (nickEl) nickEl.textContent = `${this.profile.nickname} 님`;
 
+    const perkEl = document.getElementById('level-current-perk');
+    if (perkEl && lvl.currentPerk) perkEl.textContent = lvl.currentPerk;
+
     const pointsEl = document.getElementById('level-display-points');
     if (pointsEl) pointsEl.textContent = `${(this.profile.points || 0).toLocaleString()} P`;
 
@@ -1451,9 +1521,7 @@ class DodamCommunityApp {
 
     const nextInfoEl = document.getElementById('level-next-info');
     if (nextInfoEl) {
-      nextInfoEl.textContent = lvl.neededPoints > 0
-        ? `다음 [${lvl.nextName}]까지 ${lvl.neededPoints}P 남음`
-        : '최고 등급 달성 완료!';
+      nextInfoEl.textContent = lvl.nextConditionText || '최고 등급 달성 완료!';
     }
 
     const pctEl = document.getElementById('level-progress-pct');
@@ -1468,7 +1536,7 @@ class DodamCommunityApp {
         attBtn.innerHTML = `<i class="fa-solid fa-check text-emerald-300"></i><span>출석 완료</span>`;
         attBtn.className = 'px-3 py-1.5 rounded-xl bg-emerald-700 text-white font-black text-[11px] shadow-sm';
       } else {
-        attBtn.innerHTML = `<i class="fa-solid fa-calendar-check"></i><span>오늘 출석체크 (+50P)</span>`;
+        attBtn.innerHTML = `<i class="fa-solid fa-calendar-check"></i><span>오늘 출석체크 (+10P)</span>`;
         attBtn.className = 'px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-[11px] shadow-sm transition cursor-pointer flex items-center gap-1';
       }
     }
@@ -1478,15 +1546,16 @@ class DodamCommunityApp {
   // 도움 감사하기 (채택 시스템)
   // ==========================================
   giveHelpThanks(authorName) {
-    this.profile.points = (this.profile.points || 0) + 20;
+    this.profile.points = (this.profile.points || 0) + 25;
     this.profile.helpsCount = (this.profile.helpsCount || 0) + 1;
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
 
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderLevelSection();
     this.renderAuthHeader();
-    this.showToast(`💡 ${authorName || '작성자'}님의 답변에 감사를 전했습니다! (+20P & 도움 +1회 적립)`);
+    this.showToast(`💡 ${authorName || '작성자'}님의 답변에 감사를 전했습니다! (+25P & 도움 +1회 적립)`);
   }
 
   // ==========================================
@@ -1976,17 +2045,19 @@ class DodamCommunityApp {
       window.DodamFirebase.createPost(newPost);
     }
 
-    this.profile.points = (this.profile.points || 0) + 15;
+    this.profile.points = (this.profile.points || 0) + 10;
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderLevelSection();
+    this.renderAuthHeader();
 
     if (titleEl) titleEl.value = '';
     this.boardPage = 1;
     this.renderBoardCategories();
     this.renderBoardView();
-    this.showToast('🎉 글이 등록되었습니다! (+15P 적립)');
+    this.showToast('🎉 글이 등록되었습니다! (+10P 적립)');
   }
 
   selectBoardCategory(catId) {
@@ -3213,7 +3284,7 @@ class DodamCommunityApp {
                   title="답변이 도움되었을 때 채택하고 포인트를 선물합니다"
                 >
                   <i class="fa-solid fa-thumbs-up text-[9px]"></i>
-                  <span>도움이 됐어요 (+20P)</span>
+                  <span>도움이 됐어요 (+25P)</span>
                 </button>
               </div>
             </div>
@@ -3286,14 +3357,16 @@ class DodamCommunityApp {
       window.DodamFirebase.addComment(post.id, newComment, post);
     }
 
-    this.profile.points = (this.profile.points || 0) + 10;
+    this.profile.points = (this.profile.points || 0) + 5;
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderLevelSection();
+    this.renderAuthHeader();
 
     this.renderPostDetailComments(post);
-    this.showToast('💬 댓글이 등록되었습니다! (+10P 적립)');
+    this.showToast('💬 댓글이 등록되었습니다! (+5P 적립)');
   }
 
   insertQuickComment(text) {
@@ -3751,11 +3824,13 @@ class DodamCommunityApp {
       window.DodamFirebase.createPost(newPost);
     }
 
-    this.profile.points = (this.profile.points || 0) + 30;
+    this.profile.points = (this.profile.points || 0) + 15;
     const lvl = this.calculateLevel(this.profile.points, this.profile.helpsCount);
     this.profile.level = lvl.name;
     this.saveProfileData();
     this.renderProfileWidget();
+    this.renderLevelSection();
+    this.renderAuthHeader();
 
     if (titleEl) titleEl.value = '';
     if (contentEl) contentEl.value = '';
@@ -3777,7 +3852,7 @@ class DodamCommunityApp {
     this.renderBoardCategories();
     this.renderBoardView();
     this.openPostDetailModal(newPost.id);
-    this.showToast('🎉 게시글이 성공적으로 등록되었습니다! (+30P 활동점수 적립)');
+    this.showToast('🎉 게시글이 성공적으로 등록되었습니다! (+15P 활동점수 적립)');
   }
 
   setBoardPageSize(size) {
@@ -9008,18 +9083,18 @@ class DodamCommunityApp {
           <button
             type="button"
             onclick="app.openProfileModal()"
-            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100/70 border border-rose-200/80 rounded-xl text-xs font-bold text-rose-900 transition cursor-pointer shadow-2xs"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-rose-50 hover:bg-rose-100/70 border border-rose-200/80 rounded-xl text-xs font-bold text-rose-900 transition cursor-pointer shadow-2xs shrink-0 whitespace-nowrap"
             title="내 프로필, 성장기록 & 등급 관리"
           >
-            <span class="w-5 h-5 rounded-full coral-badge-gradient text-white flex items-center justify-center text-[10px] font-black">${nick.slice(0, 1)}</span>
-            <span>${nick}님</span>
-            <span class="px-1.5 py-0.2 rounded-full ${lvl.badgeClass} text-[9px] font-black">${lvl.shortName}</span>
-            <span class="text-rose-600 font-black text-[11px]">${(this.profile.points || 0).toLocaleString()}P</span>
+            <span class="w-5 h-5 rounded-full coral-badge-gradient text-white flex items-center justify-center text-[10px] font-black shrink-0">${nick.slice(0, 1)}</span>
+            <span class="max-w-[96px] truncate">${nick}님</span>
+            <span class="px-1.5 py-0.2 rounded-full ${lvl.badgeClass} text-[9px] font-black shrink-0">${lvl.shortName}</span>
+            <span class="text-rose-600 font-black text-[11px] shrink-0">${(this.profile.points || 0).toLocaleString()}P</span>
           </button>
           <button
             type="button"
             onclick="app.logout()"
-            class="px-2.5 py-1.5 rounded-xl border border-stone-200 hover:bg-stone-50 text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer"
+            class="px-2.5 py-1.5 rounded-xl border border-stone-200 hover:bg-stone-50 text-xs font-bold text-slate-600 hover:text-slate-900 transition cursor-pointer shrink-0 whitespace-nowrap"
           >
             로그아웃
           </button>
