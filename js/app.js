@@ -220,15 +220,58 @@ class DodamCommunityApp {
     this.initNaverSdk();
     this.initOAuthListeners();
     this.initPwa();
-    // URL Hash Routing Support (#/admin, #/board, #admin, etc.)
-    const initRoute = this.getRouteFromHash(window.location.hash);
-    if (initRoute) {
-      this.switchMainView(initRoute);
+    // ==========================================
+    // SPA 뒤로가기/앞으로가기 브라우저 히스토리 라우팅 완벽 지원
+    // ==========================================
+    const initialHash = window.location.hash || '';
+    let initialPostId = null;
+    let initRoute = 'board';
+
+    if (initialHash.startsWith('#/board/post/')) {
+      initialPostId = initialHash.replace('#/board/post/', '').trim();
+      initRoute = 'board';
+    } else {
+      initRoute = this.getRouteFromHash(initialHash) || 'board';
     }
+
+    // 초기 루트 히스토리 상태 설정 (최초 진입 시 브라우저 히스토리 스택의 기준점 확립)
+    try {
+      if (window.history) {
+        const rootHash = initialPostId ? `#/board/post/${initialPostId}` : `#/${initRoute}`;
+        const rootState = initialPostId
+          ? { type: 'post_detail', postId: initialPostId, view: 'board' }
+          : { type: 'view', view: initRoute };
+        window.history.replaceState(rootState, '', rootHash);
+      }
+    } catch (e) {}
+
+    if (initRoute && initRoute !== 'board') {
+      this.switchMainView(initRoute, true);
+    }
+    if (initialPostId) {
+      setTimeout(() => {
+        this.openPostDetailModal(initialPostId, true);
+      }, 100);
+    }
+
+    // 브라우저 뒤로가기 / 앞으로가기 (popstate) 이벤트 핸들러 연결
+    window.addEventListener('popstate', (e) => {
+      this.handlePopState(e.state);
+    });
+
     window.addEventListener('hashchange', () => {
-      const hRoute = this.getRouteFromHash(window.location.hash);
-      if (hRoute && hRoute !== this.currentView) {
-        this.switchMainView(hRoute);
+      if (this._handlingPopState) return;
+      const h = window.location.hash || '';
+      if (h.startsWith('#/board/post/')) {
+        const pId = h.replace('#/board/post/', '').trim();
+        if (pId && this.activePostDetailId !== pId) {
+          this.openPostDetailModal(pId, true);
+        }
+      } else {
+        const hRoute = this.getRouteFromHash(h);
+        if (hRoute && hRoute !== this.currentView) {
+          this.switchMainView(hRoute, true);
+        }
       }
     });
   }
@@ -240,6 +283,100 @@ class DodamCommunityApp {
     if (clean === 'feed') return 'board';
     if (clean === 'events') return 'festivals';
     return valid.includes(clean) ? clean : '';
+  }
+
+  // ==========================================
+  // [브라우저 히스토리 매니저] SPA 뒤로가기/앞으로가기 통합 제어
+  // ==========================================
+  pushModalHistoryState(modalId, closeFnName) {
+    try {
+      if (window.history && window.history.pushState) {
+        window.history.pushState({ type: 'modal', modalId, closeFnName, view: this.currentView }, '', window.location.hash);
+      }
+    } catch (e) {}
+  }
+
+  handlePopState(state) {
+    this._handlingPopState = true;
+    setTimeout(() => { this._handlingPopState = false; }, 80);
+
+    // 1단계: 열려 있는 오버레이 모달이 있다면 뒤로가기 시 해당 모달을 먼저 닫음
+    const openModals = [
+      { id: 'naver-blog-copy-modal', close: () => this.closeNaverBlogCopyModal(true) },
+      { id: 'ai-parenting-report-modal', close: () => this.closeAiParentingReportModal(true) },
+      { id: 'event-detail-modal', close: () => this.closeEventDetailModal(true) },
+      { id: 'school-detail-modal', close: () => this.closeSchoolModal(true) },
+      { id: 'school-grade-modal', close: () => this.closeSchoolGradeModal(true) },
+      { id: 'admission-detail-modal', close: () => this.closeAdmissionDetailModal(true) },
+      { id: 'login-modal', close: () => this.closeLoginModal(true) },
+      { id: 'scrap-modal', close: () => this.closeScrapModal(true) },
+      { id: 'profile-modal', close: () => this.closeProfileModal(true) },
+      { id: 'admin-pw-modal', close: () => this.closeChangePwModal(true) },
+      { id: 'admin-user-modal', close: () => this.closeNewUserModal(true) },
+      { id: 'social-config-modal', close: () => this.closeSocialConfigModal(true) },
+      { id: 'pwa-install-modal', close: () => this.closePwaInstallModal(true) }
+    ];
+
+    let closedAnyModal = false;
+    for (const m of openModals) {
+      const el = document.getElementById(m.id);
+      if (el && !el.classList.contains('hidden')) {
+        m.close();
+        closedAnyModal = true;
+      }
+    }
+
+    if (closedAnyModal && (!state || state.type !== 'modal')) {
+      // 모달만 닫고 현재 뷰는 그대로 유지
+      return;
+    }
+
+    // 2단계: 게시글 상세 화면(board-detail-view) 뒤로가기 처리
+    const detailWrap = document.getElementById('board-detail-view');
+    const isDetailOpen = detailWrap && !detailWrap.classList.contains('hidden');
+
+    if (state && state.type === 'post_detail') {
+      if (this.activePostDetailId !== state.postId || !isDetailOpen) {
+        this.openPostDetailModal(state.postId, true);
+      }
+      return;
+    } else if (isDetailOpen) {
+      this.closePostDetailModal(true);
+    }
+
+    // 3단계: 글쓰기 화면(view-write) 뒤로가기 처리
+    if (state && state.type === 'write') {
+      if (this.currentView !== 'write') {
+        this.openWritePage(state.catId, true);
+      }
+      return;
+    } else if (this.currentView === 'write' && (!state || state.type !== 'write')) {
+      const backView = state?.view || 'board';
+      this.switchMainView(backView, true);
+      return;
+    }
+
+    // 4단계: 메인 탭/뷰(view) 전환 뒤로가기/앞으로가기 처리
+    if (state && state.type === 'view') {
+      if (this.currentView !== state.view) {
+        this.switchMainView(state.view, true);
+      }
+      return;
+    }
+
+    // 5단계: state가 없는 경우 URL 해시로부터 안전 복원
+    const curHash = window.location.hash || '';
+    if (curHash.startsWith('#/board/post/')) {
+      const pId = curHash.replace('#/board/post/', '').trim();
+      if (pId && this.activePostDetailId !== pId) {
+        this.openPostDetailModal(pId, true);
+        return;
+      }
+    }
+    const fallbackRoute = this.getRouteFromHash(curHash) || 'board';
+    if (this.currentView !== fallbackRoute) {
+      this.switchMainView(fallbackRoute, true);
+    }
   }
 
   renderUpdateBadges() {
@@ -1402,7 +1539,10 @@ class DodamCommunityApp {
     });
   }
 
-  openProfileModal(targetTab = 'info') {
+  openProfileModal(targetTab = 'info', isHistoryNavigation = false) {
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('profile-modal', 'closeProfileModal');
+    }
     const nickInput = document.getElementById('prof-nickname');
     if (nickInput) nickInput.value = this.profile.nickname || '판교도담맘';
     const regionInput = document.getElementById('prof-region');
@@ -1420,9 +1560,12 @@ class DodamCommunityApp {
     if (modal) modal.classList.remove('hidden');
   }
 
-  closeProfileModal() {
+  closeProfileModal(isHistoryNavigation = false) {
     const modal = document.getElementById('profile-modal');
     if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'profile-modal') {
+      window.history.back();
+    }
   }
 
   syncChildrenDraftFromDom() {
@@ -2102,18 +2245,23 @@ class DodamCommunityApp {
   // ==========================================
   // 2. 메인 뷰 전환 (게시판 / 지역행사 / 대회일정 / 맛집맵)
   // ==========================================
-  switchMainView(viewId) {
+  switchMainView(viewId, isHistoryNavigation = false) {
     if (viewId === 'feed') viewId = 'board';
     if (viewId === 'events') viewId = 'festivals';
+    const prevView = this.currentView;
     this.currentView = viewId;
 
     try {
       const targetHash = '#/' + viewId;
-      if (window.location.hash !== targetHash && window.location.hash !== '#' + viewId) {
-        if (window.history && window.history.replaceState) {
-          window.history.replaceState(null, '', targetHash);
+      if (!isHistoryNavigation && prevView !== viewId) {
+        if (window.history && window.history.pushState) {
+          window.history.pushState({ type: 'view', view: viewId }, '', targetHash);
         } else {
           window.location.hash = targetHash;
+        }
+      } else if (window.location.hash !== targetHash && window.location.hash !== '#' + viewId) {
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState({ type: 'view', view: viewId }, '', targetHash);
         }
       }
     } catch (e) {}
@@ -2696,10 +2844,19 @@ class DodamCommunityApp {
     ];
   }
 
-  openNoticeDetailModal(noticeId) {
+  openNoticeDetailModal(noticeId, isHistoryNavigation = false) {
     const notice = this.getPinnedNotices().find((n) => n.id === noticeId);
     if (!notice) return;
     this.activePostDetailId = noticeId;
+
+    if (!isHistoryNavigation) {
+      try {
+        const postHash = '#/board/post/' + noticeId;
+        if (window.history && window.history.pushState) {
+          window.history.pushState({ type: 'post_detail', postId: noticeId, view: 'board' }, '', postHash);
+        }
+      } catch (e) {}
+    }
 
     const listWrap = document.getElementById('board-list-container');
     const detailWrap = document.getElementById('board-detail-view');
@@ -3690,14 +3847,20 @@ class DodamCommunityApp {
     this.showToast('📋 네이버 블로그 맞춤 서식과 이미지가 복사되었습니다! (Ctrl+V)');
   }
 
-  openNaverBlogCopyModal() {
+  openNaverBlogCopyModal(isHistoryNavigation = false) {
     const modal = document.getElementById('naver-blog-copy-modal');
     if (modal) modal.classList.remove('hidden');
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('naver-blog-copy-modal', 'closeNaverBlogCopyModal');
+    }
   }
 
-  closeNaverBlogCopyModal() {
+  closeNaverBlogCopyModal(isHistoryNavigation = false) {
     const modal = document.getElementById('naver-blog-copy-modal');
     if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'naver-blog-copy-modal') {
+      window.history.back();
+    }
   }
 
   async reCopyNaverBlog(mode) {
@@ -3758,7 +3921,7 @@ class DodamCommunityApp {
     win.document.close();
   }
 
-  openPostDetailModal(postId) {
+  openPostDetailModal(postId, isHistoryNavigation = false) {
     const post = this.data.posts.find((p) => p.id === postId);
     if (!post) return;
     this.activePostDetailId = postId;
@@ -3766,7 +3929,16 @@ class DodamCommunityApp {
     post.views += 1;
 
     if (this.currentView !== 'board') {
-      this.switchMainView('board');
+      this.switchMainView('board', isHistoryNavigation);
+    }
+
+    if (!isHistoryNavigation) {
+      try {
+        const postHash = '#/board/post/' + postId;
+        if (window.history && window.history.pushState) {
+          window.history.pushState({ type: 'post_detail', postId: postId, view: 'board' }, '', postHash);
+        }
+      } catch (e) {}
     }
 
     const listWrap = document.getElementById('board-list-container');
@@ -3878,7 +4050,7 @@ class DodamCommunityApp {
     }
   }
 
-  closePostDetailModal() {
+  closePostDetailModal(isHistoryNavigation = false) {
     this.activePostDetailId = null;
     const listWrap = document.getElementById('board-list-container');
     const detailWrap = document.getElementById('board-detail-view');
@@ -3886,6 +4058,20 @@ class DodamCommunityApp {
     if (listWrap) listWrap.classList.remove('hidden');
     const modal = document.getElementById('post-detail-modal');
     if (modal) modal.classList.add('hidden');
+
+    if (!isHistoryNavigation) {
+      // 사용자가 화면 내 [← 돌아가기] 버튼을 직접 눌렀을 때 히스토리 뒤로가기 실행
+      if (window.history && window.history.state && window.history.state.type === 'post_detail') {
+        window.history.back();
+        return;
+      } else {
+        try {
+          if (window.history && window.history.replaceState) {
+            window.history.replaceState({ type: 'view', view: 'board' }, '', '#/board');
+          }
+        } catch (e) {}
+      }
+    }
     this.renderBoardView();
   }
 
@@ -4027,7 +4213,7 @@ class DodamCommunityApp {
   // ==========================================
   // [네이버 스마트에디터 스타일 카페 글쓰기 컨트롤러 (풀페이지)]
   // ==========================================
-  openWritePage(catId) {
+  openWritePage(catId, isHistoryNavigation = false) {
     this.editingPostId = null;
     const titleHeaderEl = document.getElementById('write-page-title');
     if (titleHeaderEl) titleHeaderEl.textContent = '카페 글쓰기';
@@ -4103,7 +4289,14 @@ class DodamCommunityApp {
       }
     }
 
-    this.switchMainView('write');
+    if (!isHistoryNavigation) {
+      try {
+        if (window.history && window.history.pushState) {
+          window.history.pushState({ type: 'write', catId: targetCat, view: 'board' }, '', '#/write');
+        }
+      } catch (e) {}
+    }
+    this.switchMainView('write', true);
   }
 
   registerMyPostId(postId) {
@@ -4221,12 +4414,16 @@ class DodamCommunityApp {
     this.showToast('✏️ 게시글 수정 모드로 전환되었습니다.');
   }
 
-  cancelWriteOrEdit() {
+  cancelWriteOrEdit(isHistoryNavigation = false) {
     const prevEditId = this.editingPostId;
     this.editingPostId = null;
-    this.switchMainView('board');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'write') {
+      window.history.back();
+      return;
+    }
+    this.switchMainView('board', isHistoryNavigation);
     if (prevEditId) {
-      this.openPostDetailModal(prevEditId);
+      this.openPostDetailModal(prevEditId, isHistoryNavigation);
     }
   }
 
@@ -5747,13 +5944,16 @@ class DodamCommunityApp {
   }
 
   // 모달 제어 (지역행사 & 대회일정 공용)
-  openEventDetailModal(eventId) {
+  openEventDetailModal(eventId, isHistoryNavigation = false) {
     const evt = (this.allEvents || []).find((e) => e.id === eventId);
     if (!evt) return;
     this.activeEventDetailId = eventId;
 
     const modal = document.getElementById('event-detail-modal');
     if (!modal) return;
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('event-detail-modal', 'closeEventDetailModal');
+    }
 
     document.getElementById('evt-modal-badge').textContent = evt.badge;
     document.getElementById('evt-modal-source').textContent = evt.sourceLabel;
@@ -5812,10 +6012,13 @@ class DodamCommunityApp {
     return evt.url;
   }
 
-  closeEventDetailModal() {
+  closeEventDetailModal(isHistoryNavigation = false) {
     this.activeEventDetailId = null;
     const modal = document.getElementById('event-detail-modal');
     if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'event-detail-modal') {
+      window.history.back();
+    }
   }
 
   renderSidebarWidgets() {
@@ -5907,10 +6110,21 @@ class DodamCommunityApp {
     if (b) b.textContent = this.getValidScrappedPosts().length;
   }
 
-  openScrapModal() {
+  closeScrapModal(isHistoryNavigation = false) {
+    const modal = document.getElementById('scrap-modal');
+    if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'scrap-modal') {
+      window.history.back();
+    }
+  }
+
+  openScrapModal(isHistoryNavigation = false) {
     const modal = document.getElementById('scrap-modal');
     const listEl = document.getElementById('scrap-list-container');
     if (!modal || !listEl) return;
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('scrap-modal', 'closeScrapModal');
+    }
 
     const scrappedPosts = this.getValidScrappedPosts();
     if (scrappedPosts.length === 0) {
@@ -7700,12 +7914,15 @@ class DodamCommunityApp {
     }).join('');
   }
 
-  openAdmissionDetailModal(guideId) {
+  openAdmissionDetailModal(guideId, isHistoryNavigation = false) {
     const allGuides = window.DODAM_ADMISSIONS_DATA?.guides || [];
     const guide = allGuides.find((g) => g.id === guideId);
     if (!guide) return;
 
     const modalEl = document.getElementById('admission-detail-modal');
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('admission-detail-modal', 'closeAdmissionDetailModal');
+    }
     const headerEl = document.getElementById('admission-modal-header');
     const bodyEl = document.getElementById('admission-modal-body');
     const linksEl = document.getElementById('admission-modal-links');
@@ -7789,9 +8006,12 @@ class DodamCommunityApp {
     modalEl.classList.remove('hidden');
   }
 
-  closeAdmissionDetailModal() {
+  closeAdmissionDetailModal(isHistoryNavigation = false) {
     const modalEl = document.getElementById('admission-detail-modal');
     if (modalEl) modalEl.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'admission-detail-modal') {
+      window.history.back();
+    }
   }
 
   // ==========================================
@@ -9548,7 +9768,7 @@ class DodamCommunityApp {
   // ==========================================
   // 리치고 학교 상세 심층 모달 컨트롤러
   // ==========================================
-  openSchoolModal(schoolId) {
+  openSchoolModal(schoolId, isHistoryNavigation = false) {
     const schools = window.DODAM_SCHOOLS_DATA?.schools || [];
     const school = schools.find((s) => String(s.id) === String(schoolId));
     if (!school) return;
@@ -9558,15 +9778,21 @@ class DodamCommunityApp {
 
     const modal = document.getElementById('school-detail-modal');
     if (!modal) return;
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('school-detail-modal', 'closeSchoolModal');
+    }
 
     this.renderSchoolModalContent(school);
     modal.classList.remove('hidden');
   }
 
-  closeSchoolModal() {
+  closeSchoolModal(isHistoryNavigation = false) {
     const modal = document.getElementById('school-detail-modal');
     if (modal) modal.classList.add('hidden');
     this.activeModalSchoolId = null;
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'school-detail-modal') {
+      window.history.back();
+    }
   }
 
   setModalSchoolTab(tabName) {
@@ -10085,9 +10311,12 @@ class DodamCommunityApp {
     }
   }
 
-  openLoginModal(targetRole = '') {
+  openLoginModal(targetRole = '', isHistoryNavigation = false) {
     const modal = document.getElementById('login-modal');
     if (!modal) return;
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('login-modal', 'closeLoginModal');
+    }
     this.setLoginTab('login');
 
     const alertMsg = document.getElementById('login-alert-msg');
@@ -10105,9 +10334,12 @@ class DodamCommunityApp {
     modal.classList.remove('hidden');
   }
 
-  closeLoginModal() {
+  closeLoginModal(isHistoryNavigation = false) {
     const modal = document.getElementById('login-modal');
     if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'login-modal') {
+      window.history.back();
+    }
   }
 
   setLoginTab(tab) {
@@ -11668,7 +11900,7 @@ class DodamCommunityApp {
     return m ? m[1] : null;
   }
 
-  openAiParentingReportModal() {
+  openAiParentingReportModal(isHistoryNavigation = false) {
     if (!this.isAdmin() && sessionStorage.getItem('dodam_admin_authenticated') !== '1') {
       this.showToast('⚠️ 영상 요약 리포트 발행은 관리자 권한이 필요합니다. 관리자로 로그인해 주세요.');
       this.openLoginModal('admin');
@@ -11677,6 +11909,9 @@ class DodamCommunityApp {
     const modal = document.getElementById('ai-parenting-report-modal');
     if (!modal) return;
     modal.classList.remove('hidden');
+    if (!isHistoryNavigation) {
+      this.pushModalHistoryState('ai-parenting-report-modal', 'closeAiParentingReportModal');
+    }
 
     // 현재 보고 있는 가이드 서브 분야가 있으면 자동 프리셋
     let presetSub = 'sleep';
@@ -11778,9 +12013,12 @@ class DodamCommunityApp {
     }
   }
 
-  closeAiParentingReportModal() {
+  closeAiParentingReportModal(isHistoryNavigation = false) {
     const modal = document.getElementById('ai-parenting-report-modal');
     if (modal) modal.classList.add('hidden');
+    if (!isHistoryNavigation && window.history && window.history.state && window.history.state.type === 'modal' && window.history.state.modalId === 'ai-parenting-report-modal') {
+      window.history.back();
+    }
   }
 
   async fetchYoutubeMetadata(videoId) {
