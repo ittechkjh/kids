@@ -3746,15 +3746,11 @@ class DodamCommunityApp {
         post.rawTextContent = generated.plainText;
       }
 
-      const imgMatches = fullHtml.match(/src=["'](data:image\/svg\+xml;utf8,[^"']+)["']/g) || [];
-      imgMatches.forEach((m) => {
-        const uri = m.replace(/^src=["']/, '').replace(/["']$/, '');
-        try {
-          const decodedSvg = decodeURIComponent(uri.replace('data:image/svg+xml;utf8,', ''));
-          this.currentPostDetailImages.push(decodedSvg);
-        } catch (e) {
-          this.currentPostDetailImages.push(uri);
-        }
+      const parsedDoc = new DOMParser().parseFromString(fullHtml, 'text/html');
+      const allImgs = Array.from(parsedDoc.querySelectorAll('img'));
+      allImgs.forEach((img) => {
+        const src = img.getAttribute('src');
+        if (src) this.currentPostDetailImages.push(src);
       });
 
       const dlLabel = document.getElementById('btn-download-all-images-label');
@@ -3967,8 +3963,72 @@ class DodamCommunityApp {
     }
   }
 
+  convertImageSrcToPngDataUrl(src, defaultWidth = 800, defaultHeight = 460) {
+    return new Promise((resolve) => {
+      if (!src) return resolve('');
+      if (typeof src === 'string' && (src.startsWith('data:image/png') || src.startsWith('data:image/jpeg'))) {
+        return resolve(src);
+      }
+      let imageSrc = src;
+      let explicitW = defaultWidth;
+      let explicitH = defaultHeight;
+
+      if (typeof imageSrc === 'string' && imageSrc.includes('data:image/svg+xml')) {
+        try {
+          const decoded = decodeURIComponent(imageSrc.replace(/^data:image\/svg\+xml;(utf8|base64),/, ''));
+          const vb = decoded.match(/viewBox=["']\s*0\s+0\s+(\d+)\s+(\d+)\s*["']/);
+          if (vb) {
+            explicitW = parseInt(vb[1], 10) || defaultWidth;
+            explicitH = parseInt(vb[2], 10) || defaultHeight;
+          }
+          let fixedSvg = decoded;
+          if (!fixedSvg.includes(`width="${explicitW}"`)) {
+            fixedSvg = fixedSvg.replace('<svg ', `<svg width="${explicitW}" height="${explicitH}" `);
+          }
+          imageSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(fixedSvg);
+        } catch (e) {
+          console.warn('SVG fixup warn:', e);
+        }
+      } else if (typeof imageSrc === 'string' && imageSrc.trim().startsWith('<svg')) {
+        imageSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(imageSrc.trim());
+      }
+
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          const scale = 2; // High-DPI 2x retina for ultra-crisp blog images
+          const w = (img.naturalWidth && img.naturalWidth >= 400 ? img.naturalWidth : explicitW) * scale;
+          const h = (img.naturalHeight && img.naturalHeight >= 200 ? img.naturalHeight : explicitH) * scale;
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = 'high';
+          ctx.fillStyle = '#0b1120';
+          ctx.fillRect(0, 0, w, h);
+          ctx.drawImage(img, 0, 0, w, h);
+          resolve(canvas.toDataURL('image/png'));
+        } catch (err) {
+          console.warn('convertImageSrcToPngDataUrl canvas error:', err);
+          resolve(src);
+        }
+      };
+      img.onerror = (e) => {
+        console.warn('convertImageSrcToPngDataUrl load error:', e);
+        resolve(src);
+      };
+      img.src = imageSrc;
+    });
+  }
+
   convertImageSrcToPngBlob(src, width = 1680, height = 920) {
     return new Promise((resolve, reject) => {
+      let imageSrc = src;
+      if (typeof imageSrc === 'string' && imageSrc.trim().startsWith('<svg')) {
+        imageSrc = 'data:image/svg+xml;utf8,' + encodeURIComponent(imageSrc.trim());
+      }
       const img = new Image();
       img.crossOrigin = 'anonymous';
       img.onload = () => {
@@ -3989,7 +4049,7 @@ class DodamCommunityApp {
         }
       };
       img.onerror = (e) => reject(e);
-      img.src = src;
+      img.src = imageSrc;
     });
   }
 
@@ -4061,9 +4121,38 @@ class DodamCommunityApp {
     this.lastCopiedPost = post;
     const shareUrl = `${window.location.origin}${window.location.pathname}#board`;
 
+    this.showToast('📋 네이버 블로그 스마트에디터 호환용(PNG 변환) 복사 중...');
+
     // 1. 네이버 블로그 스마트에디터 ONE 전용 완벽 인라인 서식 HTML 생성
-    // 원본 contentHtml에 포함된 5장의 인포그래픽 이미지와 소제목 구조를 100% 보존
     let bodyContent = post.contentHtml || post.content || '';
+
+    // 네이버 스마트에디터 ONE은 SVG data URI를 차단하므로, 모든 SVG를 고화질 PNG data URI로 자동 변환하여 복사합니다.
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = bodyContent;
+    const imgElements = Array.from(tempDiv.querySelectorAll('img'));
+    
+    if (imgElements.length > 0) {
+      await Promise.all(imgElements.map(async (img) => {
+        const src = img.getAttribute('src');
+        if (src && (src.includes('data:image/svg+xml') || src.trim().startsWith('<svg'))) {
+          try {
+            const pngDataUrl = await this.convertImageSrcToPngDataUrl(src);
+            if (pngDataUrl && pngDataUrl.startsWith('data:image/png;base64,')) {
+              img.setAttribute('src', pngDataUrl);
+            }
+          } catch (e) {
+            console.warn('Failed to convert SVG to PNG for Naver copy:', e);
+          }
+        }
+        // 네이버 블로그 에디터 전용 반응형 스타일 적용
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+        img.style.display = 'block';
+        img.style.margin = '20px auto';
+        img.style.borderRadius = '12px';
+      }));
+      bodyContent = tempDiv.innerHTML;
+    }
 
     // If it's an AI report, ensure img styles are blog-friendly
     const blogStyledHtml = `
@@ -4107,8 +4196,12 @@ class DodamCommunityApp {
       }
     } catch (e) {
       console.warn('Clipboard write warning:', e);
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(plainText);
+      try {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(plainText);
+        }
+      } catch (err2) {
+        console.warn('writeText fallback warning:', err2);
       }
     }
 
@@ -4116,10 +4209,10 @@ class DodamCommunityApp {
     const charCountEl = document.getElementById('naver-copy-char-count');
     const imgCountEl = document.getElementById('naver-copy-img-count');
     if (charCountEl) charCountEl.textContent = `${charCount.toLocaleString()}자 (공백 포함)`;
-    if (imgCountEl) imgCountEl.textContent = `이미지 ${Math.max(imgMatches, 1)}장 포함`;
+    if (imgCountEl) imgCountEl.textContent = `PNG 이미지 ${Math.max(imgMatches, 1)}장 포함`;
 
     this.openNaverBlogCopyModal();
-    this.showToast('📋 네이버 블로그 맞춤 서식과 이미지가 복사되었습니다! (Ctrl+V)');
+    this.showToast('📋 네이버 블로그 스마트에디터 호환 서식과 PNG 이미지 5장이 복사되었습니다! (Ctrl+V)');
   }
 
   openNaverBlogCopyModal(isHistoryNavigation = false) {
@@ -12306,29 +12399,30 @@ class DodamCommunityApp {
     if (dupPost) {
       alertBox.classList.remove('hidden');
       alertBox.innerHTML = `
-        <div class="mt-2.5 p-3.5 rounded-xl bg-rose-50 border border-rose-300 text-rose-800 text-xs space-y-2 shadow-sm">
-          <div class="flex items-center gap-2 font-black text-rose-700">
-            <i class="fa-solid fa-triangle-exclamation text-rose-600 text-base"></i>
-            <span class="text-xs sm:text-sm">이미 리포트가 발행된 영상입니다 (중복 생성 불가)</span>
+        <div class="mt-2.5 p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs space-y-2 shadow-sm">
+          <div class="flex items-center gap-2 font-black text-amber-800">
+            <i class="fa-solid fa-triangle-exclamation text-amber-600 text-base"></i>
+            <span class="text-xs sm:text-sm">이미 리포트가 발행된 영상입니다 (재실행 가능)</span>
           </div>
-          <div class="text-[11px] text-rose-700 bg-white/80 p-2 rounded-lg border border-rose-200 truncate font-semibold">
-            기존 발행 글: <strong>` + dupPost.title + `</strong>
+          <div class="text-[11px] text-amber-800 bg-white/80 p-2 rounded-lg border border-amber-200 truncate font-semibold">
+            기존 발행 글: <strong>` + this.escapeSvgXml(dupPost.title) + `</strong>
           </div>
-          <div class="pt-1 flex items-center gap-2">
+          <div class="pt-1 flex items-center justify-between flex-wrap gap-2">
             <button
               type="button"
               onclick="app.closeAiParentingReportModal(); app.openPostDetailModal('` + dupPost.id + `')"
-              class="px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-black text-xs inline-flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+              class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-black text-xs inline-flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
             >
               <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i>
               <span>기존 발행된 리포트 바로보기</span>
             </button>
+            <span class="text-[11px] text-amber-700 font-medium">※ 새로 생성을 원하시면 아래 [실행하기]를 그대로 누르시면 됩니다.</span>
           </div>
         </div>
       `;
       if (runBtn) {
-        runBtn.disabled = true;
-        runBtn.classList.add('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        runBtn.disabled = false;
+        runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       }
     } else {
       alertBox.classList.add('hidden');
@@ -12888,7 +12982,7 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
       return;
     }
 
-    // 중복 체크: 이미 리포트가 발행된 영상인지 확인
+    // 중복 체크: 이미 리포트가 발행된 영상인 경우 안내 토스트만 표시하고 계속 실행
     const dupPost = (this.data.posts || []).find((p) => {
       if (p.youtubeVideoId && p.youtubeVideoId === videoId) return true;
       if (p.youtubeUrl && this.extractYoutubeId(p.youtubeUrl) === videoId) return true;
@@ -12897,10 +12991,7 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
     });
 
     if (dupPost) {
-      alert(`⚠️ 이미 리포트가 발행된 영상입니다!\n\n[기존 글 제목]\n${dupPost.title}\n\n중복 작성을 방지하기 위해 해당 리포트로 이동합니다.`);
-      this.closeAiParentingReportModal();
-      this.openPostDetailModal(dupPost.id);
-      return;
+      this.showToast('ℹ️ 이미 리포트가 존재하는 영상이지만 사용자 요청에 따라 새 리포트 생성을 진행합니다.');
     }
 
     // Selected guide sub-category from radio cards

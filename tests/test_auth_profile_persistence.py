@@ -328,6 +328,7 @@ def run_tests():
         # ---------------------------------------------------------
         print("\n--- Testing Scenario C: Page Reload Session & Profile Retention ---")
         page.reload(wait_until="networkidle")
+        page.wait_for_function("() => window.app && window.app.currentUser")
         time.sleep(1)
 
         reload_state = page.evaluate("() => ({ currentUser: window.app.currentUser?.id, babyName: window.app.profile.babyName, months: window.app.profile.months, region: window.app.profile.region, isCustomized: window.app.profile.isCustomized })")

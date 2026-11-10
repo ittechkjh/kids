@@ -4653,22 +4653,32 @@
           <span>네이버 블로그 열기 (스마트에디터에 Ctrl+V)</span>
         </a>
 
-        <div class="grid grid-cols-2 gap-2 pt-1">
+        <div class="grid grid-cols-3 gap-2 pt-1">
           <button
             type="button"
             onclick="app.reCopyNaverBlog('rich')"
-            class="py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-800 font-bold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer"
+            class="py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-800 font-bold text-xs transition flex items-center justify-center gap-1 cursor-pointer"
+            title="스마트에디터에 Ctrl+V로 붙여넣는 서식+PNG 복사"
           >
             <i class="fa-regular fa-copy"></i>
-            <span>서식+이미지 다시 복사</span>
+            <span>서식+PNG 복사</span>
+          </button>
+          <button
+            type="button"
+            onclick="app.downloadAllPostImages()"
+            class="py-2.5 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 font-bold text-xs transition flex items-center justify-center gap-1 cursor-pointer"
+            title="고화질 PNG 이미지 5장을 PC로 일괄 다운로드"
+          >
+            <i class="fa-solid fa-download"></i>
+            <span>PNG 5장 다운</span>
           </button>
           <button
             type="button"
             onclick="app.reCopyNaverBlog('plain')"
-            class="py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-800 font-bold text-xs transition flex items-center justify-center gap-1.5 cursor-pointer"
+            class="py-2.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 font-bold text-xs transition flex items-center justify-center gap-1 cursor-pointer"
           >
             <i class="fa-solid fa-font"></i>
-            <span>순수 텍스트만 복사</span>
+            <span>텍스트만 복사</span>
           </button>
         </div>
       </div>
