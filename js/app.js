@@ -11614,6 +11614,16 @@ class DodamCommunityApp {
     if (!modal) return;
     modal.classList.remove('hidden');
 
+    // 현재 보고 있는 가이드 서브 분야가 있으면 자동 프리셋
+    let presetSub = 'sleep';
+    if (this.boardLoungeMode === 'guide' && this.guideSubCategory) {
+      presetSub = this.guideSubCategory;
+    }
+    const catRadio = document.querySelector(`input[name="youtube-summary-cat"][value="${presetSub}"]`);
+    if (catRadio) {
+      catRadio.checked = true;
+    }
+
     const urlInput = document.getElementById('youtube-summary-url');
     if (urlInput) {
       urlInput.value = '';
@@ -11782,27 +11792,34 @@ class DodamCommunityApp {
     ];
 
     if (title.includes('잠') || title.includes('수면') || category === 'sleep') {
-      themeBadge = '🌙 영유아 수면교육 & 밤잠 루틴 가이드';
+      themeBadge = '🍼 영유아 수면교육 & 밤잠 루틴 가이드';
       highlights = [
         '월령별 적정 깨어있는 시간(Wake Window)과 수면 압력 관리 비법',
         '밤잠 입면 의식(수면 루틴) 4단계 프로토콜과 눕혀 재우기 성공 팁',
         '새벽 각성과 원더윅스 시기 부모가 지켜야 할 일관성 있는 반응 규칙'
       ];
-    } else if (title.includes('이유식') || title.includes('식사') || category === 'nutrition') {
+    } else if (title.includes('건강') || title.includes('병원') || title.includes('열') || title.includes('감기') || category === 'health') {
+      themeBadge = '🏥 소아 건강 관리 & 병원·예방접종 가이드';
+      highlights = [
+        '소아 다빈도 질환(열감기, 장염, 수족구)의 초기 증상과 가정 내 대처법',
+        '해열제 교차 복용 수칙과 반드시 응급실/병원에 가야 하는 위험 징후(Red Flags)',
+        '월령별 국가필수예방접종 일정과 영유아 건강검진 핵심 체크포인트'
+      ];
+    } else if (title.includes('이유식') || title.includes('식사') || category === 'food' || category === 'nutrition') {
       themeBadge = '🥣 이유식 영양 밸런스 & 자기주도 식사 솔루션';
       highlights = [
         '초기·중기·후기 이유식 입자 크기 조절과 알레르기 유발 식품 안전 도입법',
         '식판 거부와 편식을 줄이는 핑거푸드 활용 및 즐거운 식사 환경 구성',
         '철분, 아연 등 영유아 뇌 발달에 필수적인 핵심 영양소 맞춤 식단'
       ];
-    } else if (title.includes('훈육') || title.includes('떼') || title.includes('분리') || category === 'play') {
+    } else if (title.includes('훈육') || title.includes('떼') || title.includes('분리') || category === 'growth' || category === 'play') {
       themeBadge = '🎨 긍정 훈육 & 아동 심리 발달 솔루션';
       highlights = [
         '울고 떼쓰는 순간 뇌에서 일어나는 감정 폭풍(아미그달라) 완화법',
         '안 되는 이유를 길게 설명하지 않고 짧고 단호하게 전달하는 한계 설정',
         '마음 읽어주기와 행동 멈추기를 분리하는 3단계 감정 코칭 대화법'
       ];
-    } else if (title.includes('학군') || title.includes('초등') || title.includes('공부') || category === 'school') {
+    } else if (title.includes('학군') || title.includes('초등') || title.includes('공부') || title.includes('학습') || category === 'edu' || category === 'school') {
       themeBadge = '🏫 학군 분석 & 초·중·고 자기주도 학습 로드맵';
       highlights = [
         '초등 입학 전 반드시 다져야 할 문해력과 기초 연산 공부 습관',
@@ -11977,9 +11994,28 @@ ${timelineText}
       return;
     }
 
-    // Selected category from radio cards
+    // Selected guide sub-category from radio cards
     const catRadio = document.querySelector('input[name="youtube-summary-cat"]:checked');
-    const targetCategory = catRadio ? catRadio.value : 'info';
+    const selectedGuideType = catRadio ? catRadio.value : 'sleep';
+
+    // Normalize to standard guideType ('sleep', 'food', 'growth', 'health', 'edu', 'all')
+    const guideType = (
+      selectedGuideType === 'nutrition' ? 'food' :
+      selectedGuideType === 'play' ? 'growth' :
+      selectedGuideType === 'school' ? 'edu' :
+      selectedGuideType === 'guide' ? 'all' :
+      selectedGuideType || 'all'
+    );
+
+    const guideMeta = {
+      sleep: { name: '수면 가이드', badge: '🍼 수면', ageStage: 'newborn' },
+      food: { name: '이유식 레시피', badge: '🥣 이유식', ageStage: 'toddler_early' },
+      growth: { name: '훈육 & 발달', badge: '👶 훈육', ageStage: 'toddler' },
+      health: { name: '소아 건강 & 케어', badge: '🏥 건강', ageStage: 'all' },
+      edu: { name: '학습 & 학교/입시', badge: '🎒 학습', ageStage: 'school' },
+      all: { name: '종합 육아가이드', badge: '📖 종합가이드', ageStage: 'all' }
+    };
+    const guideInfo = guideMeta[guideType] || guideMeta['all'];
 
     const progressEl = document.getElementById('youtube-summary-progress');
     const progressText = document.getElementById('youtube-summary-progress-text');
@@ -11997,52 +12033,25 @@ ${timelineText}
       const meta = await this.fetchYoutubeMetadata(videoId);
 
       // 2. Build structured summary
-      const { html, plainText } = this.buildYoutubeSummaryContent(videoId, meta, targetCategory);
+      const { html, plainText } = this.buildYoutubeSummaryContent(videoId, meta, guideType);
 
-      // Category tags
-      const catMap = {
-        talk: '자유소통',
-        info: '육아팁',
-        sleep: '수면가이드',
-        nutrition: '이유식레시피',
-        play: '훈육발달',
-        school: '학군입시',
-        review: '용품리뷰',
-        guide: '육아가이드'
-      };
-      const catName = catMap[targetCategory] || '육아가이드';
       const cleanAuthorTag = (meta.authorName || '전문멘토')
         .replace(/유튜브|youtube/gi, '')
         .replace(/[^a-zA-Z0-9가-힣]/g, '')
         .slice(0, 15) || '전문가';
-      const tags = ['육아가이드', '핵심요약', catName, cleanAuthorTag].filter(Boolean);
+      const tags = ['육아가이드', guideInfo.badge, guideInfo.name, cleanAuthorTag].filter(Boolean);
 
       const cleanVideoTitle = (meta.title || '영상 핵심 가이드')
         .replace(/\[?유튜브\]?/gi, '')
         .trim();
-      const postTitle = `[육아가이드] ${cleanVideoTitle}`;
-
-      const guideTypeMap = {
-        sleep: 'sleep',
-        nutrition: 'food',
-        play: 'growth',
-        school: 'edu',
-        health: 'health',
-        info: 'info',
-        guide: 'all'
-      };
-      const guideType = guideTypeMap[targetCategory] || (
-        cleanVideoTitle.includes('잠') || cleanVideoTitle.includes('수면') ? 'sleep' :
-        cleanVideoTitle.includes('이유식') || cleanVideoTitle.includes('식단') ? 'food' :
-        cleanVideoTitle.includes('훈육') || cleanVideoTitle.includes('떼') ? 'growth' :
-        cleanVideoTitle.includes('학습') || cleanVideoTitle.includes('초등') ? 'edu' : 'all'
-      );
+      const postTitle = `[${guideInfo.badge}] ${cleanVideoTitle}`;
 
       const newPost = {
         id: `custom-post-${Date.now()}`,
-        category: targetCategory,
-        guideType,
-        ageStage: targetCategory === 'sleep' ? 'newborn' : targetCategory === 'nutrition' ? 'toddler_early' : targetCategory === 'play' ? 'toddler' : targetCategory === 'school' ? 'school' : 'all',
+        category: 'guide',               // AI 리포트는 항상 가이드 게시판에 등록
+        guideType,                       // 가이드 세부 카테고리 (sleep, food, growth, health, edu, all)
+        isGuidePost: true,
+        ageStage: guideInfo.ageStage,
         region: 'all',
         localHub: 'all',
         localHubName: '전국 전체',
@@ -12060,7 +12069,7 @@ ${timelineText}
         images: [meta.thumbnailUrl],
         author: {
           userId: this.currentUser?.id || 'admin',
-          nickname: this.currentUser?.nickname || '도담 관리자',
+          nickname: this.currentUser?.nickname || '도담 공식 가이드',
           level: '👑 공식 리포트',
           childBadge: `📖 도담 가이드 (${cleanAuthorTag})`,
           avatarBg: 'bg-purple-600 text-white'
@@ -12084,10 +12093,12 @@ ${timelineText}
       }
 
       this.closeAiParentingReportModal();
-      this.showToast(`🎉 영상 요약 가이드 글이 [${catName}]에 성공적으로 발행되었습니다!`);
+      this.showToast(`🎉 [가이드 > ${guideInfo.name}]에 영상 요약 리포트가 성공적으로 발행되었습니다!`);
 
-      // Switch to board view and open post detail modal
-      this.currentCategory = targetCategory;
+      // Switch to guide board and select that exact subcategory
+      this.boardLoungeMode = 'guide';
+      this.guideSubCategory = guideType;
+      this.currentCategory = 'guide';
       this.currentAgeStage = 'all';
       this.boardPage = 1;
       this.switchMainView('board');
