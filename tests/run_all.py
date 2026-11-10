@@ -12,7 +12,12 @@ import threading
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-TESTS = ["test_smoke.py", "test_auth_profile_persistence.py", "test_naver_copy_and_dup.py"]
+TESTS = [
+    "test_smoke.py",
+    "test_auth_profile_persistence.py",
+    "test_naver_copy_and_dup.py",
+    "test_user_activity_and_schools.py"
+]
 
 
 def main():

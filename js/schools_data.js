@@ -567,6 +567,9 @@
         science: '2.5%',
         foreign: '6.8%',
         autonomous: '12.4%',
+        scienceHigh: '과학고 2.5%',
+        foreignHigh: '외고·국제고 6.8%',
+        privateHigh: '자사고 12.4%',
         totalSpecial: rateStr
       };
       nearbyHigh = [

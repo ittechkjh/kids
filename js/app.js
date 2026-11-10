@@ -1202,9 +1202,9 @@ class DodamCommunityApp {
             <div class="text-[10px] text-slate-400 font-bold">스크랩한 글</div>
             <div class="text-xs font-black text-amber-600 mt-0.5">${this.getValidScrappedPosts().length} 개</div>
           </div>
-          <div>
+          <div class="cursor-pointer hover:bg-stone-50 rounded-lg p-0.5 transition" onclick="app.filterMyWrittenPosts()" title="내가 작성한 활동글 보기">
             <div class="text-[10px] text-slate-400 font-bold">내 활동글</div>
-            <div class="text-xs font-black text-emerald-600 mt-0.5">${(this.data?.posts || []).length} 건</div>
+            <div class="text-xs font-black text-emerald-600 mt-0.5">${this.getMyWrittenPosts().length} 건</div>
           </div>
         </div>
 
@@ -6470,6 +6470,50 @@ class DodamCommunityApp {
     return (this.data?.posts || []).filter((p) => p && validIds.has(p.id));
   }
 
+  getMyWrittenPosts() {
+    const myId = this.currentUser?.id || this.currentUser?.username;
+    const myNick = (this.currentUser?.nickname || this.profile?.nickname || '').trim();
+    if (!myId && !myNick && (!this.myPostIds || this.myPostIds.size === 0) && !this.sessionId) {
+      return [];
+    }
+    return (this.data?.posts || []).filter((post) => {
+      if (!post) return false;
+      // 1. 시스템 기본 시드 게시글 및 공식 가이드는 사용자의 직접 작성 활동글에서 제외
+      if (post.isSeed || (post.id && String(post.id).startsWith('seed-post-')) || (post.id && String(post.id).startsWith('guide-seed-'))) {
+        return false;
+      }
+      // 2. 현재 세션에서 등록한 글
+      if (this.myPostIds && this.myPostIds.has(post.id)) {
+        return true;
+      }
+      const authorUserId = post.author?.userId || post.author?.id;
+      const authorNick = (post.author?.nickname || '').trim();
+      // 3. 회원 계정 ID 일치
+      if (myId && authorUserId && authorUserId === myId) {
+        return true;
+      }
+      // 4. 닉네임 일치
+      if (myId && !authorUserId && authorNick && myNick && authorNick === myNick) {
+        return true;
+      }
+      // 5. 게스트 세션 ID 일치
+      if (!myId && this.sessionId && (post.author?.sessionId === this.sessionId || post.sessionId === this.sessionId)) {
+        return true;
+      }
+      return false;
+    });
+  }
+
+  filterMyWrittenPosts() {
+    const myPosts = this.getMyWrittenPosts();
+    if (myPosts.length === 0) {
+      this.showToast('📝 아직 직접 작성하신 활동글이 없습니다. [글쓰기] 버튼으로 첫 글을 등록해 보세요!');
+      return;
+    }
+    this.switchTab('board');
+    this.showToast(`📝 내가 작성한 글 ${myPosts.length}건을 확인합니다.`);
+  }
+
   toggleScrap(postId) {
     const idx = this.scraps.indexOf(postId);
     if (idx > -1) {
@@ -9631,12 +9675,12 @@ class DodamCommunityApp {
               <div class="p-2.5 rounded-xl bg-gradient-to-r from-emerald-50 via-teal-50 to-white border border-emerald-100 text-xs space-y-1">
                 <div class="flex items-center justify-between font-black text-emerald-900 text-[11px]">
                   <span>🏆 특목·자사고 합산 진학률</span>
-                  <strong class="text-emerald-700 font-black">${s.admissionRates.totalSpecial}</strong>
+                  <strong class="text-emerald-700 font-black">${s.admissionRates.totalSpecial || s.rate || s.rateStr || '25.0%'}</strong>
                 </div>
-                <div class="flex items-center gap-1.5 text-[10px] text-slate-600 flex-wrap pt-0.5">
-                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.privateHigh}</span>
-                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.scienceHigh}</span>
-                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">${s.admissionRates.foreignHigh}</span>
+                <div class="flex items-center gap-1.5 text-[10px] text-slate-600 flex-wrap pt-0.5 font-medium">
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">과학·영재고 ${s.admissionRates.science || '2.5%'}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">외고·국제고 ${s.admissionRates.foreign || '6.8%'}</span>
+                  <span class="px-1.5 py-0.5 rounded bg-white border border-slate-200">자율사립고 ${s.admissionRates.autonomous || '12.4%'}</span>
                 </div>
               </div>
             `
