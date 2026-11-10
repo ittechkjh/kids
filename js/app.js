@@ -4290,14 +4290,8 @@ class DodamCommunityApp {
       }
     }
 
-    // Update modal counts and show modal
-    const charCountEl = document.getElementById('naver-copy-char-count');
-    const imgCountEl = document.getElementById('naver-copy-img-count');
-    if (charCountEl) charCountEl.textContent = `${charCount.toLocaleString()}자 (공백 포함)`;
-    if (imgCountEl) imgCountEl.textContent = `PNG 이미지 ${Math.max(imgMatches, 1)}장 포함`;
-
-    this.openNaverBlogCopyModal();
-    this.showToast('📋 네이버 블로그 맞춤 본문 서식이 복사되었습니다! (스마트에디터에 Ctrl+V)');
+    // 팝업 모달 없이 즉시 클립보드 복사 완료 안내 (유저 요청: 원클릭 즉시 복사)
+    this.showToast('📋 본문 서식이 복사되었습니다! 네이버 블로그 스마트에디터에 바로 붙여넣기(Ctrl+V) 하세요.');
   }
 
   openNaverBlogCopyModal(isHistoryNavigation = false) {
