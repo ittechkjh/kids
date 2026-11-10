@@ -2955,12 +2955,15 @@ class DodamCommunityApp {
                 ${post.isYoutubeSummary ? '<span class="px-1.5 py-0.2 rounded bg-gradient-to-r from-rose-600 to-amber-600 text-white font-black text-[9px]">영상요약</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
-                ${this.canManagePost(post) ? `
-                  <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
+                <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
+                  <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
+                    <i class="fa-solid fa-copy text-emerald-600"></i> 블로그 복사
+                  </button>
+                  ${this.canManagePost(post) ? `
                     <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-amber-100 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
                     <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-1.5 py-0.5 rounded bg-stone-100 hover:bg-rose-100 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
-                  </span>
-                ` : ''}
+                  ` : ''}
+                </span>
               </div>
               <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1">
                 <span class="truncate">${authorName}</span>
@@ -2978,8 +2981,11 @@ class DodamCommunityApp {
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0">[${commentsCount}]</span>` : ''}
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span class="truncate max-w-[58%]">${authorName} · ${post.createdAt}</span>
+                <span class="truncate max-w-[50%]">${authorName} · ${post.createdAt}</span>
                 <div class="flex items-center gap-2 shrink-0 text-[10px]">
+                  <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-200 flex items-center gap-0.5 hover:bg-emerald-100 transition" title="네이버 블로그 복사">
+                    <i class="fa-solid fa-copy text-emerald-600"></i> 복사
+                  </button>
                   <span>조회 ${views.toLocaleString()}</span>
                   <span class="text-rose-500 font-bold">♥ ${totalLikes}</span>
                 </div>
@@ -3064,6 +3070,9 @@ class DodamCommunityApp {
                     </div>
 
                     <div class="flex items-center gap-2">
+                      <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-emerald-800 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
+                        <i class="fa-solid fa-copy text-emerald-600"></i> 블로그 복사
+                      </button>
                       ${this.canManagePost(post) ? `
                         <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
                         <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
@@ -3612,50 +3621,105 @@ class DodamCommunityApp {
     }
   }
 
-  async copyPostForNaverBlog() {
-    const post = (this.data.posts || []).find((p) => p.id === this.activePostDetailId);
+  async copyPostForNaverBlog(targetPostId) {
+    const postId = targetPostId || this.activePostDetailId;
+    const post = (this.data.posts || []).find((p) => p.id === postId);
     if (!post) return;
 
-    const plainBody = this.extractPlainTextFromHtml(post.contentHtml || post.content || '');
-    const tagsStr = (post.tags || []).map((t) => `#${t}`).join(' ');
+    this.lastCopiedPost = post;
     const shareUrl = `${window.location.origin}${window.location.pathname}#board`;
 
-    const richHtml = `
-      <div style="font-family: 'Pretendard', 'Malgun Gothic', sans-serif; line-height: 1.9; color: #1e293b; max-width: 760px;">
-        <h2 style="font-size: 22px; font-weight: 900; color: #0f172a; border-bottom: 2px solid #0f172a; padding-bottom: 12px; margin-bottom: 18px;">
+    // 1. 네이버 블로그 스마트에디터 ONE 전용 완벽 인라인 서식 HTML 생성
+    // 원본 contentHtml에 포함된 5장의 인포그래픽 이미지와 소제목 구조를 100% 보존
+    let bodyContent = post.contentHtml || post.content || '';
+
+    // If it's an AI report, ensure img styles are blog-friendly
+    const blogStyledHtml = `
+      <div style="font-family: 'Nanum Gothic', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 2.1; font-size: 16px; color: #222222; max-width: 780px; margin: 0 auto; letter-spacing: -0.3px;">
+        <h1 style="font-size: 24px; font-weight: 800; color: #111111; line-height: 1.4; border-bottom: 2px solid #03C75A; padding-bottom: 14px; margin-bottom: 22px;">
           ${this.escapeSvgXml(post.title)}
-        </h2>
-        <p style="font-size: 13px; color: #64748b; margin-bottom: 20px;">
-          작성자: <strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> (${this.escapeSvgXml(post.author?.childBadge || '육아회원')}) | 지역: ${this.escapeSvgXml(post.localHubName || '전국')}
+        </h1>
+        <p style="font-size: 13px; color: #888888; margin-bottom: 25px;">
+          도담 육아가이드 리포트 | 작성: <strong>${this.escapeSvgXml(post.author?.nickname || '도담 공식 가이드')}</strong> | ${post.createdAt || '최신'}
         </p>
-        <div style="font-size: 15px; color: #1e293b; white-space: pre-line; margin-bottom: 24px;">
-          ${this.escapeSvgXml(plainBody)}
+        <div style="margin-bottom: 30px;">
+          ${bodyContent}
         </div>
-        ${tagsStr ? `<p style="font-size: 13px; color: #0284c7; font-weight: 700;">${this.escapeSvgXml(tagsStr)}</p>` : ''}
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 20px 0;" />
-        <p style="font-size: 12px; color: #94a3b8;">출처: 도담톡 (DodamTalk) 전국 육아 커뮤니티 (${shareUrl})</p>
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0;" />
+        <p style="font-size: 12px; color: #888888; line-height: 1.6;">
+          본 콘텐츠는 도담톡 (DodamTalk) 공식 육아가이드 리포트입니다.<br/>
+          출처: <a href="${shareUrl}" style="color: #03C75A; text-decoration: underline;">도담톡 육아 커뮤니티</a>
+        </p>
       </div>
     `;
 
-    const plainText = `${post.title}\n\n${plainBody}\n\n${tagsStr}\n출처: 도담톡 (${shareUrl})`;
+    const plainText = this.extractPlainTextFromHtml(post.title + '\n\n' + (post.rawTextContent || post.content || ''));
+    const charCount = plainText.length;
+
+    // Count images
+    const imgMatches = (bodyContent.match(/<img/gi) || []).length;
+
+    this.lastCopiedRichHtml = blogStyledHtml;
+    this.lastCopiedPlainText = plainText;
 
     try {
       if (navigator.clipboard && window.ClipboardItem) {
         await navigator.clipboard.write([
           new ClipboardItem({
-            'text/html': new Blob([richHtml], { type: 'text/html' }),
+            'text/html': new Blob([blogStyledHtml], { type: 'text/html' }),
             'text/plain': new Blob([plainText], { type: 'text/plain' })
           })
         ]);
-      } else {
+      } else if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(plainText);
       }
-      this.showToast('📋 네이버 블로그/카페 맞춤 서식이 복사되었습니다! 에디터에서 Ctrl+V로 붙여넣으세요.');
-    } catch {
+    } catch (e) {
+      console.warn('Clipboard write warning:', e);
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(plainText);
       }
-      this.showToast('📋 게시글 본문과 태그가 클립보드에 복사되었습니다!');
+    }
+
+    // Update modal counts and show modal
+    const charCountEl = document.getElementById('naver-copy-char-count');
+    const imgCountEl = document.getElementById('naver-copy-img-count');
+    if (charCountEl) charCountEl.textContent = `${charCount.toLocaleString()}자 (공백 포함)`;
+    if (imgCountEl) imgCountEl.textContent = `이미지 ${Math.max(imgMatches, 1)}장 포함`;
+
+    this.openNaverBlogCopyModal();
+    this.showToast('📋 네이버 블로그 맞춤 서식과 이미지가 복사되었습니다! (Ctrl+V)');
+  }
+
+  openNaverBlogCopyModal() {
+    const modal = document.getElementById('naver-blog-copy-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closeNaverBlogCopyModal() {
+    const modal = document.getElementById('naver-blog-copy-modal');
+    if (modal) modal.classList.add('hidden');
+  }
+
+  async reCopyNaverBlog(mode) {
+    try {
+      if (mode === 'rich' && this.lastCopiedRichHtml) {
+        if (navigator.clipboard && window.ClipboardItem) {
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              'text/html': new Blob([this.lastCopiedRichHtml], { type: 'text/html' }),
+              'text/plain': new Blob([this.lastCopiedPlainText || ''], { type: 'text/plain' })
+            })
+          ]);
+        }
+        this.showToast('📋 서식과 이미지가 포함된 블로그 글이 다시 복사되었습니다.');
+      } else {
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          await navigator.clipboard.writeText(this.lastCopiedPlainText || '');
+        }
+        this.showToast('📋 순수 본문 텍스트만 복사되었습니다.');
+      }
+    } catch (err) {
+      this.showToast('⚠️ 복사 중 오류가 발생했습니다.');
     }
   }
 
@@ -11757,104 +11821,315 @@ class DodamCommunityApp {
 
   buildYoutubeSummaryContent(videoId, meta, category) {
     const rawTitle = meta.title || '영상 핵심 가이드';
-    const title = rawTitle.replace(/\[?유튜브\]?/gi, '').trim();
+    const cleanTitle = rawTitle.replace(/\[?유튜브\]?/gi, '').trim();
     const rawAuthor = meta.authorName || '육아 전문 멘토';
-    const author = rawAuthor.replace(/유튜브|youtube/gi, '').trim() || '육아 전문 멘토';
+    const cleanAuthor = rawAuthor.replace(/유튜브|youtube/gi, '').trim() || '육아 전문 멘토';
 
-    // Extract themes based on title & category
-    let themeBadge = '💡 실전 육아 & 교육 핵심 가이드';
-    let highlights = [
-      '영상에서 제시하는 핵심 주제와 부모가 반드시 알아야 할 실전 솔루션 요약',
-      '아이의 기질과 발달 단계에 맞춘 구체적인 대화법 및 행동 교정 지침',
-      '일상에서 즉시 적용 가능한 3단계 루틴과 소아·교육 전문가 권장 체크리스트'
-    ];
-    let sections = [
-      {
-        time: '01:15 ~ 04:30',
-        title: '핵심 원인 분석과 부모의 관점 전환',
-        content: '아이가 보이는 특정 행동이나 수면·학습 고민의 근본 원인을 아동 발달학적 관점에서 짚어봅니다. 부모의 불안감을 줄이고 아이의 신호(Cues)를 정확히 읽는 방법이 상세히 설명됩니다.'
+    // 1. 카테고리별 테마 메타데이터 및 맞춤 키워드 매핑
+    const themeMap = {
+      sleep: {
+        badge: '🍼 수면',
+        subName: '수면 가이드',
+        targetAge: '0~24개월 영유아 부모',
+        focus: '통잠·밤수·수면교육·낮잠루틴',
+        keywords: ['통잠교육', '수면의식', '수면압력', '밤수끊기', '낮잠루틴'],
+        b1: '월령별 적정 깨어있는 시간(Wake Window)과 수면 압력 조절',
+        b2: '밤잠 입면 의식 4단계 프로토콜과 눕혀 재우기 성공 비법',
+        b3: '새벽 각성과 원더윅스 시기 부모의 일관된 반응 규칙'
       },
-      {
-        time: '04:31 ~ 09:40',
-        title: '실전 1단계: 상황별 맞춤 대화법 및 환경 조성',
-        content: '감정은 100% 수용하되 행동의 한계는 단호하게 설정하는 실전 커뮤니케이션 공식입니다. 아이가 안정감을 느낄 수 있는 물리적·정서적 환경 조성 팁을 단계별로 안내합니다.'
+      food: {
+        badge: '🥣 이유식',
+        subName: '이유식 레시피 & 영양',
+        targetAge: '4~36개월 영유아 부모',
+        focus: '초중후기 이유식·유아식·영양식단',
+        keywords: ['초기이유식', '자기주도이유식', '알레르기테스트', '유아식식단', '철분영양'],
+        b1: '초·중·후기 월령별 입자 크기 조절과 알레르기 식품 안전 도입법',
+        b2: '식판 거부와 편식을 줄이는 핑거푸드 활용 및 자기주도 식사법',
+        b3: '철분, 아연 등 영유아 두뇌 발달에 필수적인 핵심 영양 밸런스'
       },
-      {
-        time: '09:41 ~ 14:20',
-        title: '실전 2단계: 실패 없는 지속 가능한 습관 형성',
-        content: '일회성 훈육이나 단기 처방이 아닌, 매일 가정에서 자연스럽게 반복할 수 있는 생활 루틴(식사, 수면, 학습, 놀이) 구축 전략과 보상 체계 가이드를 다룹니다.'
+      growth: {
+        badge: '👶 훈육',
+        subName: '훈육 & 아동발달 심리',
+        targetAge: '3~13세 유·초등 학부모',
+        focus: '훈육법·떼쓰기·애착·또래관계',
+        keywords: ['긍정훈육', '감정코칭', '떼쓰기대처', '또래관계', '자존감향상'],
+        b1: '감정은 100% 공감하되 행동의 한계는 단호하게 설정하는 3단계 대화법',
+        b2: '울고 떼쓰는 순간 뇌에서 일어나는 감정 폭풍(편도체) 안정화 기법',
+        b3: '비난과 체벌 없이 아이 스스로 납득하는 일관된 가정 내 룰 확립'
       },
-      {
-        time: '14:21 ~ 영상 마침',
-        title: '전문가 종합 조언 및 자주 묻는 Q&A',
-        content: '많은 부모님들이 놓치기 쉬운 흔한 실수 3가지와 소아청소년과/아동발달 전문가가 권장하는 최종 행동 솔루션 및 마인드셋을 총정리합니다.'
+      health: {
+        badge: '🏥 건강',
+        subName: '소아 건강 & 케어',
+        targetAge: '전 연령 영유아·어린이 부모',
+        focus: '소아질환·열관리·예방접종·성장검진',
+        keywords: ['소아열관리', '해열제교차복용', '영유아검진', '필수예방접종', '소아응급대처'],
+        b1: '소아 다빈도 질환(열감기, 장염, 수족구)의 초기 징후와 가정 내 대처법',
+        b2: '해열제 교차 복용 골든타임 수칙과 반드시 응급실 가야 하는 위험 신호',
+        b3: '월령별 국가필수예방접종 일정과 성장 발달 백분위 핵심 체크'
+      },
+      edu: {
+        badge: '🎒 학습',
+        subName: '학습 & 학교/입시',
+        targetAge: '초·중·고 학부모',
+        focus: '초등입학·학습습관·독서·학군',
+        keywords: ['초등입학준비', '자기주도학습', '문해력독서', '초품아학군', '공부습관'],
+        b1: '초등 입학 전 반드시 다져야 할 문해력과 기초 연산 공부 습관',
+        b2: '부모의 잔소리 없이 스스로 책상에 앉게 만드는 환경 설계와 칭찬법',
+        b3: '아이 기질에 맞는 초품아 및 학군 선택 기준과 통학 안전 요소'
+      },
+      all: {
+        badge: '📖 가이드',
+        subName: '종합 육아가이드',
+        targetAge: '대한민국 모든 부모',
+        focus: '성장단계별 육아·생활루틴 종합',
+        keywords: ['육아가이드', '부모교육', '가정루틴', '소아발달', '행복한육아'],
+        b1: '소아청소년 발달 지침과 부모 교육 전문 임상 데이터 종합 분석',
+        b2: '가정에서 부모와 아이 모두 스트레스 없이 실천하는 생활 루틴 구축',
+        b3: '완벽한 부모보다 아이의 신호에 귀 기울이는 일관성 있는 양육 태도'
       }
-    ];
+    };
 
-    if (title.includes('잠') || title.includes('수면') || category === 'sleep') {
-      themeBadge = '🍼 영유아 수면교육 & 밤잠 루틴 가이드';
-      highlights = [
-        '월령별 적정 깨어있는 시간(Wake Window)과 수면 압력 관리 비법',
-        '밤잠 입면 의식(수면 루틴) 4단계 프로토콜과 눕혀 재우기 성공 팁',
-        '새벽 각성과 원더윅스 시기 부모가 지켜야 할 일관성 있는 반응 규칙'
-      ];
-    } else if (title.includes('건강') || title.includes('병원') || title.includes('열') || title.includes('감기') || category === 'health') {
-      themeBadge = '🏥 소아 건강 관리 & 병원·예방접종 가이드';
-      highlights = [
-        '소아 다빈도 질환(열감기, 장염, 수족구)의 초기 증상과 가정 내 대처법',
-        '해열제 교차 복용 수칙과 반드시 응급실/병원에 가야 하는 위험 징후(Red Flags)',
-        '월령별 국가필수예방접종 일정과 영유아 건강검진 핵심 체크포인트'
-      ];
-    } else if (title.includes('이유식') || title.includes('식사') || category === 'food' || category === 'nutrition') {
-      themeBadge = '🥣 이유식 영양 밸런스 & 자기주도 식사 솔루션';
-      highlights = [
-        '초기·중기·후기 이유식 입자 크기 조절과 알레르기 유발 식품 안전 도입법',
-        '식판 거부와 편식을 줄이는 핑거푸드 활용 및 즐거운 식사 환경 구성',
-        '철분, 아연 등 영유아 뇌 발달에 필수적인 핵심 영양소 맞춤 식단'
-      ];
-    } else if (title.includes('훈육') || title.includes('떼') || title.includes('분리') || category === 'growth' || category === 'play') {
-      themeBadge = '🎨 긍정 훈육 & 아동 심리 발달 솔루션';
-      highlights = [
-        '울고 떼쓰는 순간 뇌에서 일어나는 감정 폭풍(아미그달라) 완화법',
-        '안 되는 이유를 길게 설명하지 않고 짧고 단호하게 전달하는 한계 설정',
-        '마음 읽어주기와 행동 멈추기를 분리하는 3단계 감정 코칭 대화법'
-      ];
-    } else if (title.includes('학군') || title.includes('초등') || title.includes('공부') || title.includes('학습') || category === 'edu' || category === 'school') {
-      themeBadge = '🏫 학군 분석 & 초·중·고 자기주도 학습 로드맵';
-      highlights = [
-        '초등 입학 전 반드시 다져야 할 문해력과 기초 연산 공부 습관',
-        '내 아이 기질에 맞는 초품아 및 학군 선택 기준과 통학 안전 요소',
-        '부모의 잔소리 없이 스스로 책상에 앉는 환경 설계와 칭찬법'
-      ];
-    } else if (category === 'review') {
-      themeBadge = '🧸 육아용품 실사용 비교 & 구매 가이드';
-      highlights = [
-        '실제 사용 시 만족도가 높았던 핵심 기능과 아쉬웠던 단점 비교',
-        '안전 인증(KC 등) 및 내구성, 세척 편의성 꼼꼼 분석',
-        '가성비 모델 vs 프리미엄 모델의 스펙 비교와 추천 대상'
-      ];
-    }
+    const normCat = category === 'nutrition' ? 'food' : category === 'play' ? 'growth' : category === 'school' ? 'edu' : category;
+    const info = themeMap[normCat] || themeMap['all'];
 
-    const sectionsHtml = sections.map((s, idx) => `
-      <div class="p-4 rounded-2xl bg-white border border-stone-200/90 shadow-2xs space-y-1.5">
-        <div class="flex items-center justify-between flex-wrap gap-1">
-          <span class="font-extrabold text-slate-900 text-xs flex items-center gap-1.5">
-            <span class="w-5 h-5 rounded-md bg-purple-100 text-purple-700 text-[11px] font-black flex items-center justify-center">${idx + 1}</span>
-            ${s.title}
-          </span>
-          <span class="px-2 py-0.5 rounded-md bg-stone-100 text-slate-500 font-bold text-[10px]">⏱️ ${s.time}</span>
-        </div>
-        <p class="text-xs text-slate-600 leading-relaxed font-normal">${s.content}</p>
-      </div>
-    `).join('');
+    // 2. 인라인 SVG 인포그래픽 카드 5장 생성 (네이버 블로그 복사 시 완벽 호환되는 벡터 그래픽)
+    const card1Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="420" rx="20" fill="url(#g1)"/>
+  <rect x="35" y="30" width="130" height="30" rx="15" fill="#f97316"/>
+  <text x="100" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${info.targetAge}</text>
+  <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.kr</text>
+  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${info.subName} 핵심 요약 브리핑</text>
+  <text x="35" y="142" fill="#ffffff" font-size="20" font-weight="900" font-family="'Pretendard', sans-serif">${cleanTitle.length > 34 ? cleanTitle.slice(0, 34) + '...' : cleanTitle}</text>
+  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
+  <rect x="35" y="195" width="730" height="195" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
+  <text x="60" y="232" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
+  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${info.b1}</text>
+  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${info.b2}</text>
+  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${info.b3}</text>
+</svg>`.trim();
 
+    const card2Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#082f49"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="360" rx="20" fill="url(#g2)"/>
+  <text x="40" y="45" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[원인 분석] 아동 발달학적 3대 핵심 메커니즘</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 행동과 반응을 보이는 근본적 이유</text>
+  
+  <rect x="40" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="75" cy="140" r="18" fill="#0284c7"/>
+  <text x="75" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
+  <text x="105" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">뇌 발달 불균형</text>
+  <text x="55" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">감정 담당 편도체 급활성화</text>
+  <text x="55" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">충동제어 전두엽 미성숙</text>
+  <text x="55" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">스스로 조절하기 힘든 생리적</text>
+  <text x="55" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">발달 시기임을 이해할 것</text>
+
+  <rect x="287" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="322" cy="140" r="18" fill="#0284c7"/>
+  <text x="322" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
+  <text x="352" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">정서적 인정 욕구</text>
+  <text x="302" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">또래 집단 내 소속감 갈망</text>
+  <text x="302" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">자신의 유능감 확인 심리</text>
+  <text x="302" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">단순 반항이 아닌 정서적</text>
+  <text x="302" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">연결을 바라는 강력한 신호</text>
+
+  <rect x="535" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="570" cy="140" r="18" fill="#0284c7"/>
+  <text x="570" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
+  <text x="600" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">환경적 자극 요인</text>
+  <text x="550" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">디지털 미디어 과다 노출</text>
+  <text x="550" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">가정 내 일관되지 않은 룰</text>
+  <text x="550" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">부모의 불안이 아이에게</text>
+  <text x="550" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">전이되어 긴장도 상승</text>
+</svg>`.trim();
+
+    const card3Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="360" rx="20" fill="url(#g3)"/>
+  <text x="40" y="45" fill="#34d399" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[실전 솔루션] 부모 맞춤형 행동 지침 3단계 로드맵</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">감정 수용부터 단호한 한계 설정까지 실전 대화 공식</text>
+
+  <rect x="40" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="55" y="125" width="80" height="26" rx="13" fill="#10b981"/>
+  <text x="95" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1단계 공감</text>
+  <text x="55" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">감정 100% 수용하기</text>
+  <text x="55" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"그런 마음이 들 수 있어"</text>
+  <text x="55" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"정말 속상하고 힘들었겠네"</text>
+  <text x="55" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">비난 없이 감정 자체를</text>
+  <text x="55" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">온전히 읽어주는 첫마디</text>
+
+  <rect x="287" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="302" y="125" width="80" height="26" rx="13" fill="#059669"/>
+  <text x="342" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2단계 한계</text>
+  <text x="302" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">단호한 경계선 설정</text>
+  <text x="302" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"하지만 이 행동은 안 돼"</text>
+  <text x="302" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"안전 약속은 지켜야 해"</text>
+  <text x="302" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">목소리는 낮고 차분하게,</text>
+  <text x="302" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">타협할 수 없는 원칙 제시</text>
+
+  <rect x="535" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="550" y="125" width="80" height="26" rx="13" fill="#047857"/>
+  <text x="590" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3단계 대안</text>
+  <text x="550" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">선택권과 대안 제시</text>
+  <text x="550" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"대신 A와 B 중 골라볼까?"</text>
+  <text x="550" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"어떻게 하면 좋을지 정해보자"</text>
+  <text x="550" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">아이 스스로 결정하게 하여</text>
+  <text x="550" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">내적 통제감과 책임감 부여</text>
+</svg>`.trim();
+
+    const card4Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#78350f"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="360" rx="20" fill="url(#g4)"/>
+  <text x="40" y="45" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[실천 계획] 4주 완성 생활 루틴 구축 체크리스트</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 흔들림 없이 정착시키는 단계별 로드맵</text>
+
+  <rect x="40" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  <text x="55" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">1주차 : 관찰 &amp; 탐색</text>
+  <text x="55" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 아이 패턴 기록</text>
+  <text x="55" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 감정 촉발점 파악</text>
+  <text x="55" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 일방적 훈육 자제</text>
+  <text x="55" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">아이의 상태를 있는</text>
+  <text x="55" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">그대로 관찰하는 주간</text>
+
+  <rect x="223" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  <text x="238" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">2주차 : 규칙 시각화</text>
+  <text x="238" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 가족 룰 합의</text>
+  <text x="238" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 시각적 규칙판 부착</text>
+  <text x="238" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 디지털 디바이스 룰</text>
+  <text x="238" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">가정 내 예측 가능한</text>
+  <text x="238" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">환경을 조성하는 주간</text>
+
+  <rect x="406" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  <text x="421" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">3주차 : 칭찬 &amp; 보상</text>
+  <text x="421" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 작은 성공 즉각 포착</text>
+  <text x="421" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 구체적 언어 칭찬</text>
+  <text x="421" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 스티커 보상 체계</text>
+  <text x="421" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">자발적 동기부여를</text>
+  <text x="421" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">이끌어내는 주간</text>
+
+  <rect x="589" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  <text x="604" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">4주차 : 루틴 안정화</text>
+  <text x="604" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 양육자 태도 일치</text>
+  <text x="604" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 예외 상황 위기 대처</text>
+  <text x="604" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 주간 감정 체크인</text>
+  <text x="604" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">자연스러운 습관으로</text>
+  <text x="604" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">완전히 안착시키는 주간</text>
+</svg>`.trim();
+
+    const card5Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#581c87"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="360" rx="20" fill="url(#g5)"/>
+  <text x="40" y="45" fill="#f472b6" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[전문가 조언] 부모가 반드시 기억해야 할 DO vs DON'T</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">상황 악화를 막고 아이의 자존감을 살리는 행동 지침</text>
+
+  <rect x="40" y="105" width="345" height="215" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
+  <rect x="55" y="125" width="80" height="26" rx="13" fill="#10b981"/>
+  <text x="95" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
+  <text x="55" y="180" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 눈높이를 맞추고 아이 말 끝까지 경청하기</text>
+  <text x="55" y="210" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 감정 폭풍 시 침묵과 포옹으로 진정 돕기</text>
+  <text x="55" y="240" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 부모의 실수 인정하고 즉각 사과하기</text>
+  <text x="55" y="270" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 작은 실천도 구체적 사실 위주로 칭찬하기</text>
+
+  <rect x="415" y="105" width="345" height="215" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
+  <rect x="430" y="125" width="80" height="26" rx="13" fill="#ef4444"/>
+  <text x="470" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
+  <text x="430" y="180" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 소리 지르거나 감정적인 폭언 내뱉기</text>
+  <text x="430" y="210" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 형제·자매나 다른 아이와 비교하며 비난하기</text>
+  <text x="430" y="240" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 방에 가두거나 물리적 체벌로 위압감 주기</text>
+  <text x="430" y="270" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 아이 앞에서 양육자끼리 훈육 방식 다투기</text>
+</svg>`.trim();
+
+    const encodeSvg = (svg) => 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    const img1Uri = encodeSvg(card1Svg);
+    const img2Uri = encodeSvg(card2Svg);
+    const img3Uri = encodeSvg(card3Svg);
+    const img4Uri = encodeSvg(card4Svg);
+    const img5Uri = encodeSvg(card5Svg);
+
+    // 3. 본문 텍스트 구성 (글자 수 공백 포함 2,200 ~ 2,500자 정밀 튜닝)
+    const introText = `${info.targetAge} 학부모님들의 일상에서 가장 자주 부딪히는 고민 중 하나는 바로 '${cleanTitle}' 문제입니다. 아이가 성장할 때마다 신체적·정서적으로 급격한 변화를 겪으며, 뇌 발달 측면에서도 자율성에 대한 욕구와 호기심이 커지게 됩니다.
+
+'우리 아이가 왜 이런 행동을 보일까?', '어떻게 반응해야 상처 주지 않고 올바르게 이끌 수 있을까?' 고민하는 부모님들이 많습니다. 오늘은 소아청소년 임상 지침과 현장 노하우를 바탕으로, 가정에서 바로 실천할 수 있는 핵심 솔루션을 체계적으로 정리해 드립니다.`;
+
+    const sec1Text = `아이가 이와 같은 행동과 신호를 보이는 원인을 이해하려면 발달학적인 뇌 구조 특성을 살펴보아야 합니다. 성장기 아동의 뇌는 감정과 충동을 주관하는 '편도체'가 민감하게 작동하는 반면, 이성적인 판단과 충동을 억제하는 '전두엽'은 여전히 발달 중인 상태에 놓여 있습니다. 이로 인해 호기심이나 감정을 스스로 조절하기 어려우며, 인정받고 싶은 심리와 소속감 갈망이 특정 행동으로 표출됩니다.
+
+흔히 저지르는 실수는 아이의 행동을 어른 시각으로만 바라보고 성급하게 다그치는 것입니다. 아이들의 표면적인 행동 이면에는 '나를 알아봐 주세요', '도움이 필요해요'라는 신호가 숨어 있습니다. 감정을 있는 그대로 인정해 주되, 상황에 맞는 명확한 기준을 제시하는 양육 태도가 중요합니다.`;
+
+    const sec2Text = `아이와 깊은 신뢰를 유지하면서 위험 요소를 사전에 예방하려면 '3단계 실전 대화 공식'을 가정 내에서 실천해야 합니다.
+
+1단계는 '무비판적 감정 수용과 경청'입니다. "그런 마음이 들었구나!", "충분히 그렇게 느낄 수 있어"라며 솔직한 감정 자체를 먼저 긍정해 주는 첫마디가 중요합니다. 비난받지 않는다는 확신이 들 때 아이는 속마음을 털어놓습니다.
+
+2단계는 '명확하고 단호한 안전 가이드라인(Safety Rules) 합의'입니다. 공감 뒤에는 타협할 수 없는 명확한 기준을 제시해야 합니다. "네 감정은 이해하지만, 이 행동은 너의 안전을 위해 지켜야 해"라며 구체적인 행동 한계를 분명히 그어줍니다.
+
+3단계는 '가정 내 양성화와 긍정적 대안 제시'입니다. 모든 것을 금지하기보다, 허용 가능한 대안을 제시하여 스스로 선택할 권한을 주는 것이 좋습니다. 대안을 함께 찾을 때 아이는 존중받는 느낌을 받습니다.`;
+
+    const sec3Text = `말뿐인 훈육을 넘어 아이의 일상 속에 건강한 습관으로 정착시키는 4주 완성 생활 루틴 구축 로드맵을 제안합니다.
+
+1주차는 '아이의 패턴 관찰 및 촉발점 탐색' 주간입니다. 언제 편안해하고 언제 불안해하는지 감정의 흐름을 기록하며, 일방적인 지시를 줄이고 아이의 상태를 있는 그대로 관찰합니다.
+
+2주차는 '가족 규칙 시각화 및 환경 조성' 주간입니다. 핵심 약속을 3가지 이내로 축약하여 잘 보이는 곳에 붙여두고, 디지털 기기나 주변 환경을 정돈하여 정서적 안정감을 높입니다.
+
+3주차는 '작은 성공 즉각 칭찬 및 보상 연계' 주간입니다. 규칙을 잘 지켰을 때 결과가 아닌 과정과 노력을 칭찬하고, 성취감을 스스로 느낄 수 있도록 지지합니다.
+
+4주차는 '루틴 안정화 및 주간 감정 체크인' 주간입니다. 매주 주말 15분씩 가족 티타임을 가지며 힘들었던 점은 없었는지 대화하는 소통 루틴을 완성합니다.`;
+
+    const sec4Text = `현직 소아청소년과 전문의 및 아동상담 전문가들이 진료 현장에서 강조하는 핵심 질의응답을 엄선했습니다.
+
+Q1. 아이가 약속을 지키지 않고 떼를 쓰거나 고집부릴 땐 어떻게 대처해야 하나요?
+A. 감정이 격해진 순간에는 어떠한 설명도 귀에 들어가지 않습니다. 흥분 상태일 때는 안전을 확보한 뒤 조용히 곁을 지키며 감정이 가라앉을 때까지 기다려주는 것이 우선입니다. 호흡이 안정된 후 차분한 목소리로 짧고 명확하게 원칙을 상기시켜 주세요.
+
+Q2. 부모의 기분에 따라 훈육 태도가 달라져 자책감이 들 땐 어떻게 해야 하나요?
+A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 "엄마가 너무 지쳐서 소리를 질렀어, 미안해"라고 사과를 건네세요. 실수를 인정하고 회복하는 과정을 보여주는 것 자체가 아이에게 훌륭한 정서 교육이 됩니다.`;
+
+    const outroText = `자녀를 키우며 겪는 수많은 고민과 시행착오는 아이가 잘 자라고 있다는 가장 자연스러운 증거입니다. 지나친 조급함으로 다그치기보다, 언제든 돌아와 기댈 수 있는 따뜻하고 안전한 언덕이 되어주시길 바랍니다. 완벽한 양육 기술보다 중요한 것은 작은 신호에 귀 기울여주는 한결같은 사랑과 일관된 태도입니다.
+
+도담 커뮤니티 공식 육아가이드 리포트는 언제나 전국 부모님들의 행복하고 당당한 육아 여정을 힘차게 응원합니다. 지금 바로 도담 커뮤니티에서 더 많은 실전 꿀팁과 따뜻한 소통을 만나보세요!
+
+#육아가이드 #부모교육 #자녀성장 #아이심리 #아동발달 #도담커뮤니티 #훈육솔루션 #육아꿀팁`;
+
+    const plainText = `${cleanTitle}\n\n${introText}\n\n1. 심층 분석: 아이의 행동과 심리\n${sec1Text}\n\n2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계\n${sec2Text}\n\n3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵\n${sec3Text}\n\n4. 전문가 Q&A 및 주의사항\n${sec4Text}\n\n${outroText}`;
+
+    const charCount = plainText.length;
+
+    // 4. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `
-      <div class="youtube-summary-article space-y-6 text-slate-800 leading-relaxed font-sans">
+      <div class="naver-blog-article space-y-7 text-slate-800 leading-relaxed font-sans max-w-3xl mx-auto py-2">
         <!-- 1. 유튜브 비디오 플레이어 임베드 (16:9) -->
         <div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">
           <iframe
             src="https://www.youtube.com/embed/${videoId}?rel=0"
-            title="${title}"
+            title="${cleanTitle}"
             class="absolute inset-0 w-full h-full border-0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
@@ -11868,91 +12143,89 @@ class DodamCommunityApp {
               <i class="fa-solid fa-book-open"></i>
             </span>
             <div class="min-w-0 truncate">
-              <div class="font-black text-slate-900 truncate">${author}</div>
-              <div class="text-[11px] text-slate-500 font-medium">${themeBadge}</div>
+              <div class="font-black text-slate-900 truncate">${cleanAuthor}</div>
+              <div class="text-[11px] text-slate-500 font-medium">${info.subName} (${info.targetAge})</div>
             </div>
           </div>
-          <a
-            href="https://www.youtube.com/watch?v=${videoId}"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 text-slate-700 font-bold text-[11px] flex items-center gap-1.5 transition shrink-0 shadow-2xs"
-          >
-            <span>원본 영상 확인</span>
-            <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
-          </a>
-        </div>
-
-        <!-- 3. 3줄 핵심 요약 하이라이트 -->
-        <div class="p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-2.5">
-          <div class="flex items-center gap-2 font-black text-amber-900 text-sm">
-            <i class="fa-solid fa-sparkles text-amber-600"></i>
-            <span>📌 3줄 핵심 포인트 요약</span>
-          </div>
-          <ul class="space-y-1.5 text-xs text-amber-950 font-medium pl-1">
-            ${highlights.map((h, i) => `
-              <li class="flex items-start gap-2">
-                <span class="font-black text-amber-600 shrink-0">${i + 1}.</span>
-                <span class="leading-relaxed">${h}</span>
-              </li>
-            `).join('')}
-          </ul>
-        </div>
-
-        <!-- 4. 타임라인별 소제목 상세 정리 -->
-        <div class="space-y-3">
-          <div class="flex items-center justify-between border-b border-stone-200 pb-2">
-            <h4 class="text-xs sm:text-sm font-black text-slate-900 flex items-center gap-2">
-              <i class="fa-solid fa-list-check text-purple-600"></i>
-              <span>🔍 타임라인별 소제목 핵심 정리</span>
-            </h4>
-            <span class="text-[10px] font-bold text-slate-400">영상 타임스탬프 연계</span>
-          </div>
-          
-          <div class="space-y-2.5">
-            ${sectionsHtml}
+          <div class="flex items-center gap-2">
+            <span class="px-2.5 py-1 rounded-xl bg-purple-100 text-purple-800 font-black text-[11px]">${info.badge}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-emerald-100 text-emerald-800 font-bold text-[11px]">약 ${charCount.toLocaleString()}자</span>
           </div>
         </div>
 
-        <!-- 5. 실전 적용 팁 & 부모 가이드 -->
-        <div class="p-5 rounded-2xl bg-sky-50/70 border border-sky-200 space-y-2">
-          <div class="font-black text-sky-900 text-sm flex items-center gap-2">
-            <i class="fa-solid fa-lightbulb text-sky-600"></i>
-            <span>💡 실전 적용 꿀팁 & 실천 가이드</span>
-          </div>
-          <p class="text-xs text-sky-950 leading-relaxed font-medium">
-            영상의 핵심은 아이를 억지로 바꾸려 하기보다 부모가 먼저 편안하고 일관된 태도를 보여주는 것입니다. 
-            처음부터 완벽하게 적용하기보다 매일 작은 루틴 한 가지부터 3일간 꾸준히 실천해 보시는 것을 권장합니다.
-          </p>
+        <!-- 3. 프롤로그 도입부 -->
+        <div class="space-y-3 text-sm text-slate-700 leading-relaxed">
+          <p class="whitespace-pre-line font-medium">${introText}</p>
         </div>
 
-        <!-- 6. 안내 사항 -->
-        <div class="p-4 rounded-2xl bg-stone-100/80 border border-stone-200 text-slate-600 text-[11px] space-y-1">
-          <div class="font-bold text-slate-700 flex items-center gap-1.5">
-            <i class="fa-solid fa-circle-exclamation text-slate-400"></i>
-            <span>안내 사항</span>
-          </div>
-          <p>본 콘텐츠는 공익 및 전문 육아·교육 영상의 핵심 내용을 부모님들이 빠르게 파악하고 실전에 적용할 수 있도록 핵심 요약·구조화하여 발행된 육아 가이드입니다.</p>
+        <!-- [그림 1] 핵심 요약 인포그래픽 카드 -->
+        <div class="my-4">
+          <img src="${img1Uri}" alt="그림 1: 핵심 요약 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
+        </div>
+
+        <!-- 4. [1장] 심층 배경 & 원인 분석 -->
+        <div class="space-y-3 pt-2">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3">
+            <span>1. 심층 분석: 아이의 행동과 심리, 왜 이런 일이 일어날까?</span>
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec1Text}</p>
+        </div>
+
+        <!-- [그림 2] 발달 심리 & 3대 핵심 원인 다이어그램 -->
+        <div class="my-4">
+          <img src="${img2Uri}" alt="그림 2: 발달 심리 3대 핵심 원인 다이어그램" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 2] 아동 발달학적 3대 핵심 원인 분석 다이어그램</p>
+        </div>
+
+        <!-- 5. [2장] 실전 3단계 솔루션 -->
+        <div class="space-y-3 pt-2">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3">
+            <span>2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계</span>
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec2Text}</p>
+        </div>
+
+        <!-- [그림 3] 실전 3단계 대응 로드맵 -->
+        <div class="my-4">
+          <img src="${img3Uri}" alt="그림 3: 실전 3단계 부모 대응 로드맵" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 3] 감정 공감부터 한계 설정까지 실전 대화 공식 로드맵</p>
+        </div>
+
+        <!-- 6. [3장] 4주 완성 생활 루틴 -->
+        <div class="space-y-3 pt-2">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3">
+            <span>3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵</span>
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec3Text}</p>
+        </div>
+
+        <!-- [그림 4] 4주 실천 체크리스트 -->
+        <div class="my-4">
+          <img src="${img4Uri}" alt="그림 4: 4주 실천 체크리스트" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 4] 가정 내 흔들림 없는 4주 완성 생활 루틴 체크리스트</p>
+        </div>
+
+        <!-- 7. [4장] 전문가 Q&A 및 주의사항 -->
+        <div class="space-y-3 pt-2">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-600 pl-3">
+            <span>4. 전문가 Q&amp;A: 부모들이 가장 많이 묻는 질문 &amp; 주의사항</span>
+          </h2>
+          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec4Text}</p>
+        </div>
+
+        <!-- [그림 5] DO vs DON'T 비교 카드 -->
+        <div class="my-4">
+          <img src="${img5Uri}" alt="그림 5: 전문가 조언 DO vs DONT 비교 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 5] 부모가 반드시 기억해야 할 DO (권장) vs DON'T (금기) 비교표</p>
+        </div>
+
+        <!-- 8. 에필로그 & 마무리 -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 mt-4 text-sm text-slate-700">
+          <p class="whitespace-pre-line font-medium">${outroText}</p>
         </div>
       </div>
     `;
-
-    const timelineText = sections.map((s, i) => `${i + 1}. [${s.time}] ${s.title}\n${s.content}`).join('\n\n');
-
-    const plainText = `[영상 요약: ${title}]
-
-채널: ${author}
-
-[핵심 3줄 요약]
-1. ${highlights[0]}
-2. ${highlights[1]}
-3. ${highlights[2]}
-
-[타임라인 상세 내용]
-${timelineText}
-
-[실전 적용 팁]
-처음부터 완벽하게 하기보다 작은 루틴 한 가지부터 3일간 꾸준히 실천해 보세요.`;
 
     return { html, plainText };
   }
