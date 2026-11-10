@@ -259,9 +259,9 @@
                   onclick="app.openAiParentingReportModal()"
                   id="btn-admin-ai-report-top"
                   class="hidden inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap"
-                  title="관리자 전용: 유튜브 영상 요약 리포트를 즉시 발행합니다"
+                  title="관리자 전용: 영상 요약 가이드 리포트를 즉시 발행합니다"
                 >
-                  <i class="fa-brands fa-youtube text-white text-[12px]"></i>
+                  <i class="fa-solid fa-bolt text-white text-[12px]"></i>
                   <span>⚡ 영상 요약 리포트 (관리자)</span>
                 </button>
                 <button
@@ -351,7 +351,7 @@
                   onclick="app.openAiParentingReportModal()"
                   class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-[11px] transition cursor-pointer"
                 >
-                  <i class="fa-brands fa-youtube text-rose-600 text-[11px]"></i>
+                  <i class="fa-solid fa-bolt text-rose-600 text-[11px]"></i>
                   <span>⚡ 영상 요약 리포트 (관리자)</span>
                 </button>
               </div>
@@ -4060,7 +4060,7 @@
               <h3 class="font-black text-slate-900 text-base sm:text-lg tracking-tight">⚡ 영상 요약 리포트 수동 생성</h3>
               <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-purple-100 text-purple-700">관리자 전용</span>
             </div>
-            <p class="text-xs text-slate-500 font-medium mt-0.5">정기 스케줄 없이 관리자가 원할 때 즉시 유튜브 영상 기반 분석 글을 발행합니다.</p>
+            <p class="text-xs text-slate-500 font-medium mt-0.5">정기 스케줄 없이 관리자가 원할 때 즉시 전문 영상 기반 핵심 가이드 리포트를 발행합니다.</p>
           </div>
         </div>
         <button type="button" onclick="app.closeAiParentingReportModal()" class="w-8 h-8 rounded-full hover:bg-stone-100 text-slate-400 hover:text-slate-700 flex items-center justify-center transition cursor-pointer">
@@ -4145,17 +4145,19 @@
           </div>
         </div>
 
-        <!-- 2. 분석할 유튜브 영상 URL 입력 (첨부 이미지 1:1 매칭) -->
+        <!-- 2. 분석할 영상 URL 입력 (첨부 이미지 1:1 매칭) -->
         <div class="p-4 sm:p-5 rounded-2xl border border-sky-200 bg-sky-50/30 space-y-2.5">
-          <label class="block font-black text-slate-900 text-xs sm:text-sm">분석할 유튜브 영상 URL 입력</label>
+          <label class="block font-black text-slate-900 text-xs sm:text-sm">분석할 영상 URL 입력</label>
           <div class="relative">
             <input
               type="url"
               id="youtube-summary-url"
+              oninput="app.checkYoutubeUrlDuplicate(this.value)"
               placeholder="https://www.youtube.com/watch?v=... 또는 https://youtu.be/..."
               class="w-full bg-white border border-sky-300 rounded-xl px-3.5 py-2.5 text-xs font-bold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400/50 shadow-2xs"
             />
           </div>
+          <div id="youtube-summary-duplicate-alert" class="hidden"></div>
           <p class="text-[11px] text-slate-500 leading-relaxed">
             영상 내용과 핵심 수치를 정밀 분석하여 소제목별 요약, 실전 팁 및 영상 플레이어가 포함된 정밀 요약 글을 자동 발행합니다.
           </p>
@@ -4199,12 +4201,12 @@
           <div class="flex items-center justify-between flex-wrap gap-1">
             <div class="flex items-center gap-1.5 font-black text-slate-900 text-xs">
               <i class="fa-solid fa-chart-line text-emerald-600"></i>
-              <span>실시간 유튜브 영상 분석 & 요약 엔진</span>
+              <span>실시간 영상 분석 & 가이드 요약 엔진</span>
             </div>
             <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-purple-100 text-purple-700">실시간 즉시 발행</span>
           </div>
           <p class="text-[11px] text-slate-600 leading-relaxed">
-            버튼을 누르면 유튜브 영상 메타데이터와 핵심 내용을 분석하고, 소제목별 요약·실전 팁 및 비디오 플레이어가 포함된 새 글을 선택한 게시판에 즉시 등록합니다.
+            버튼을 누르면 영상 메타데이터와 핵심 내용을 분석하고, 소제목별 요약·실전 팁 및 영상 플레이어가 포함된 새 글을 선택한 게시판에 즉시 등록합니다.
           </p>
         </div>
 
@@ -4212,7 +4214,7 @@
         <div id="youtube-summary-progress" class="hidden p-4 rounded-2xl bg-purple-50 border border-purple-200 text-center space-y-2">
           <div class="inline-flex items-center gap-2 font-black text-purple-700 text-xs">
             <i class="fa-solid fa-spinner fa-spin text-purple-600 text-sm"></i>
-            <span id="youtube-summary-progress-text">유튜브 영상 정보 수집 및 요약 글 작성 중...</span>
+            <span id="youtube-summary-progress-text">영상 정보 수집 및 요약 글 작성 중...</span>
           </div>
           <div class="w-full bg-purple-200 rounded-full h-1.5 overflow-hidden">
             <div class="bg-gradient-to-r from-purple-600 to-indigo-600 h-1.5 rounded-full animate-pulse w-3/4"></div>

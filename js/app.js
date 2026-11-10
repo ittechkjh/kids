@@ -2776,8 +2776,17 @@ class DodamCommunityApp {
         titleEl.textContent = `📍 ${hubObj.shortName} 동네 맘카페`;
       } else if (this.boardLoungeMode === 'qa') {
         titleEl.textContent = '❓ 육아 질문·고민';
-      } else if (this.boardLoungeMode === 'guide') {
-        titleEl.textContent = '📖 도담 육아가이드 리포트';
+      } else if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
+        const subNames = {
+          all: '전체',
+          sleep: '수면',
+          food: '이유식',
+          growth: '훈육',
+          health: '건강',
+          edu: '학습'
+        };
+        const subText = this.guideSubCategory && this.guideSubCategory !== 'all' ? ' [' + (subNames[this.guideSubCategory] || this.guideSubCategory) + ']' : '';
+        titleEl.textContent = '📖 도담 육아가이드 리포트' + subText;
       } else if (catObj && catObj.id !== 'all') {
         titleEl.textContent = catObj.name;
       } else {
@@ -3706,8 +3715,8 @@ class DodamCommunityApp {
     const catBadge = document.getElementById('post-detail-category-badge');
     if (catBadge) {
       if (post.isYoutubeSummary) {
-        catBadge.textContent = '🎬 유튜브 영상 요약';
-        catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-rose-600 to-amber-600 text-white shadow-2xs';
+        catBadge.textContent = '📖 도담 육아가이드 리포트';
+        catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xs';
       } else if (post.isAiReport) {
         catBadge.textContent = '💡 도담 육아가이드';
         catBadge.className = 'px-3 py-1 rounded-full text-xs font-black bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-2xs';
@@ -11473,12 +11482,88 @@ class DodamCommunityApp {
       urlInput.value = '';
       setTimeout(() => urlInput.focus(), 150);
     }
+    const alertBox = document.getElementById('youtube-summary-duplicate-alert');
+    if (alertBox) {
+      alertBox.classList.add('hidden');
+      alertBox.innerHTML = '';
+    }
     const progress = document.getElementById('youtube-summary-progress');
     if (progress) progress.classList.add('hidden');
     const runBtn = document.getElementById('btn-run-youtube-summary');
     if (runBtn) {
       runBtn.disabled = false;
+      runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
       runBtn.innerHTML = '<span>▷ 지금 즉시 실행하기</span>';
+    }
+  }
+
+  checkYoutubeUrlDuplicate(rawUrl) {
+    const alertBox = document.getElementById('youtube-summary-duplicate-alert');
+    const runBtn = document.getElementById('btn-run-youtube-summary');
+    if (!alertBox) return;
+
+    if (!rawUrl || !rawUrl.trim()) {
+      alertBox.classList.add('hidden');
+      alertBox.innerHTML = '';
+      if (runBtn) {
+        runBtn.disabled = false;
+        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+      return;
+    }
+
+    const videoId = this.extractYoutubeId(rawUrl.trim());
+    if (!videoId) {
+      alertBox.classList.add('hidden');
+      alertBox.innerHTML = '';
+      if (runBtn) {
+        runBtn.disabled = false;
+        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
+      return;
+    }
+
+    const dupPost = (this.data.posts || []).find((p) => {
+      if (p.youtubeVideoId && p.youtubeVideoId === videoId) return true;
+      if (p.youtubeUrl && this.extractYoutubeId(p.youtubeUrl) === videoId) return true;
+      if (p.content && (p.content.includes(videoId) || p.content.includes(`embed/${videoId}`))) return true;
+      return false;
+    });
+
+    if (dupPost) {
+      alertBox.classList.remove('hidden');
+      alertBox.innerHTML = `
+        <div class="mt-2 p-3 rounded-xl bg-rose-50 border border-rose-300 text-rose-800 text-xs space-y-1.5 shadow-2xs">
+          <div class="flex items-center gap-2 font-black text-rose-700">
+            <i class="fa-solid fa-triangle-exclamation text-rose-500 text-sm"></i>
+            <span>이미 리포트가 발행된 영상입니다 (중복 생성 불가)</span>
+          </div>
+          <div class="text-[11px] text-rose-600 truncate font-medium">
+            기존 글: <strong>` + dupPost.title + `</strong>
+          </div>
+          <div class="pt-1 flex items-center gap-2">
+            <button
+              type="button"
+              onclick="app.closeAiParentingReportModal(); app.openPostDetailModal('` + dupPost.id + `')"
+              class="px-2.5 py-1 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-black text-[11px] inline-flex items-center gap-1.5 transition cursor-pointer"
+            >
+              <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i>
+              <span>기존 발행된 리포트 바로보기</span>
+            </button>
+          </div>
+        </div>
+      `;
+      if (runBtn) {
+        runBtn.disabled = true;
+        runBtn.classList.add('opacity-50', 'cursor-not-allowed');
+      }
+    } else {
+      alertBox.classList.add('hidden');
+      alertBox.innerHTML = '';
+      if (runBtn) {
+        runBtn.disabled = false;
+        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      }
     }
   }
 
@@ -11489,7 +11574,7 @@ class DodamCommunityApp {
 
   async fetchYoutubeMetadata(videoId) {
     let title = '';
-    let authorName = '유튜브 공식 채널';
+    let authorName = '전문 육아 채널';
     let thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
 
     // 1. Try noembed.com (CORS friendly)
@@ -11517,15 +11602,17 @@ class DodamCommunityApp {
     }
 
     if (!title) {
-      title = `유익한 육아·교육 유튜브 핵심 요약 강연 (#${videoId})`;
+      title = `유익한 육아·교육 핵심 요약 가이드 (#${videoId})`;
     }
 
     return { title, authorName, thumbnailUrl };
   }
 
   buildYoutubeSummaryContent(videoId, meta, category) {
-    const title = meta.title || '영상 핵심 요약';
-    const author = meta.authorName || '유튜브 크리에이터';
+    const rawTitle = meta.title || '영상 핵심 가이드';
+    const title = rawTitle.replace(/\[?유튜브\]?/gi, '').trim();
+    const rawAuthor = meta.authorName || '육아 전문 멘토';
+    const author = rawAuthor.replace(/유튜브|youtube/gi, '').trim() || '육아 전문 멘토';
 
     // Extract themes based on title & category
     let themeBadge = '💡 실전 육아 & 교육 핵심 가이드';
@@ -11623,8 +11710,8 @@ class DodamCommunityApp {
         <!-- 2. 채널 메타 정보 바 -->
         <div class="p-3.5 bg-stone-50 rounded-2xl border border-stone-200/80 flex items-center justify-between flex-wrap gap-2 text-xs">
           <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-8 h-8 rounded-full bg-rose-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
-              <i class="fa-brands fa-youtube"></i>
+            <span class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
+              <i class="fa-solid fa-book-open"></i>
             </span>
             <div class="min-w-0 truncate">
               <div class="font-black text-slate-900 truncate">${author}</div>
@@ -11637,7 +11724,7 @@ class DodamCommunityApp {
             rel="noopener noreferrer"
             class="px-3 py-1.5 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 text-slate-700 font-bold text-[11px] flex items-center gap-1.5 transition shrink-0 shadow-2xs"
           >
-            <span>유튜브에서 원본 보기</span>
+            <span>원본 영상 확인</span>
             <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
           </a>
         </div>
@@ -11691,7 +11778,7 @@ class DodamCommunityApp {
             <i class="fa-solid fa-circle-exclamation text-slate-400"></i>
             <span>안내 사항</span>
           </div>
-          <p>본 콘텐츠는 유튜브 공익/전문 영상의 핵심 내용을 부모님들이 빠르게 파악하고 실전에 적용할 수 있도록 핵심 요약·구조화하여 발행된 정보글입니다.</p>
+          <p>본 콘텐츠는 공익 및 전문 육아·교육 영상의 핵심 내용을 부모님들이 빠르게 파악하고 실전에 적용할 수 있도록 핵심 요약·구조화하여 발행된 육아 가이드입니다.</p>
         </div>
       </div>
     `;
@@ -11733,8 +11820,23 @@ ${timelineText}
 
     const videoId = this.extractYoutubeId(rawUrl);
     if (!videoId) {
-      this.showToast('⚠️ 올바른 유튜브 영상 URL이 아닙니다. (youtube.com 또는 youtu.be 주소를 확인해 주세요)');
+      this.showToast('⚠️ 올바른 영상 URL이 아닙니다. (영상 주소를 확인해 주세요)');
       if (urlInput) urlInput.focus();
+      return;
+    }
+
+    // 중복 체크: 이미 리포트가 발행된 영상인지 확인
+    const dupPost = (this.data.posts || []).find((p) => {
+      if (p.youtubeVideoId && p.youtubeVideoId === videoId) return true;
+      if (p.youtubeUrl && this.extractYoutubeId(p.youtubeUrl) === videoId) return true;
+      if (p.content && (p.content.includes(videoId) || p.content.includes(`embed/${videoId}`))) return true;
+      return false;
+    });
+
+    if (dupPost) {
+      alert(`⚠️ 이미 리포트가 발행된 영상입니다!\n\n[기존 글 제목]\n${dupPost.title}\n\n중복 작성을 방지하기 위해 해당 리포트로 이동합니다.`);
+      this.closeAiParentingReportModal();
+      this.openPostDetailModal(dupPost.id);
       return;
     }
 
@@ -11763,22 +11865,46 @@ ${timelineText}
       // Category tags
       const catMap = {
         talk: '자유소통',
-        info: '육아꿀팁',
-        sleep: '수면교육',
-        nutrition: '이유식영양',
+        info: '육아팁',
+        sleep: '수면가이드',
+        nutrition: '이유식레시피',
         play: '훈육발달',
         school: '학군입시',
         review: '용품리뷰',
-        guide: '전문가이드'
+        guide: '육아가이드'
       };
-      const catName = catMap[targetCategory] || '육아정보';
-      const cleanAuthorTag = (meta.authorName || '유튜브').replace(/[^a-zA-Z0-9가-힣]/g, '').slice(0, 15);
-      const tags = ['영상요약', '유튜브', catName, cleanAuthorTag].filter(Boolean);
+      const catName = catMap[targetCategory] || '육아가이드';
+      const cleanAuthorTag = (meta.authorName || '전문멘토')
+        .replace(/유튜브|youtube/gi, '')
+        .replace(/[^a-zA-Z0-9가-힣]/g, '')
+        .slice(0, 15) || '전문가';
+      const tags = ['육아가이드', '핵심요약', catName, cleanAuthorTag].filter(Boolean);
 
-      const postTitle = `[영상 요약] ${meta.title}`;
+      const cleanVideoTitle = (meta.title || '영상 핵심 가이드')
+        .replace(/\[?유튜브\]?/gi, '')
+        .trim();
+      const postTitle = `[육아가이드] ${cleanVideoTitle}`;
+
+      const guideTypeMap = {
+        sleep: 'sleep',
+        nutrition: 'food',
+        play: 'growth',
+        school: 'edu',
+        health: 'health',
+        info: 'info',
+        guide: 'all'
+      };
+      const guideType = guideTypeMap[targetCategory] || (
+        cleanVideoTitle.includes('잠') || cleanVideoTitle.includes('수면') ? 'sleep' :
+        cleanVideoTitle.includes('이유식') || cleanVideoTitle.includes('식단') ? 'food' :
+        cleanVideoTitle.includes('훈육') || cleanVideoTitle.includes('떼') ? 'growth' :
+        cleanVideoTitle.includes('학습') || cleanVideoTitle.includes('초등') ? 'edu' : 'all'
+      );
+
       const newPost = {
         id: `custom-post-${Date.now()}`,
         category: targetCategory,
+        guideType,
         ageStage: targetCategory === 'sleep' ? 'newborn' : targetCategory === 'nutrition' ? 'toddler_early' : targetCategory === 'play' ? 'toddler' : targetCategory === 'school' ? 'school' : 'all',
         region: 'all',
         localHub: 'all',
@@ -11786,6 +11912,7 @@ ${timelineText}
         isQuestion: false,
         isSolved: false,
         isHot: true,
+        isAiReport: true,
         isYoutubeSummary: true,
         youtubeVideoId: videoId,
         youtubeUrl: rawUrl,
@@ -11797,9 +11924,9 @@ ${timelineText}
         author: {
           userId: this.currentUser?.id || 'admin',
           nickname: this.currentUser?.nickname || '도담 관리자',
-          level: '👑 공식 에디터',
-          childBadge: `🎬 영상 분석 (${meta.authorName})`,
-          avatarBg: 'bg-rose-600 text-white'
+          level: '👑 공식 리포트',
+          childBadge: `📖 도담 가이드 (${cleanAuthorTag})`,
+          avatarBg: 'bg-purple-600 text-white'
         },
         createdAt: '방금 전',
         timestamp: Date.now(),
@@ -11820,7 +11947,7 @@ ${timelineText}
       }
 
       this.closeAiParentingReportModal();
-      this.showToast(`🎉 유튜브 영상 요약 글이 [${catName}]에 성공적으로 발행되었습니다!`);
+      this.showToast(`🎉 영상 요약 가이드 글이 [${catName}]에 성공적으로 발행되었습니다!`);
 
       // Switch to board view and open post detail modal
       this.currentCategory = targetCategory;
