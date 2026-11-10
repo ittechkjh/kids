@@ -37,6 +37,15 @@
   }
   </script>
 
+  <!-- PWA & Mobile App Settings -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#03C75A" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="도담톡" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%2303C75A'/%3E%3Cpath d='M256 120c-75 0-136 54-136 120 0 38 20 71 52 93l-13 47 52-26c14 4 29 6 45 6 75 0 136-54 136-120s-61-120-136-120z' fill='%23ffffff'/%3E%3Cpath d='M225 210c-14-17-37-20-53-7-15 13-18 36-6 51 32 40 85 86 90 90 3 3 7 4 10 4s7-1 10-4c5-4 58-50 90-90 12-15 9-38-6-51-16-13-39-10-53 7l-31 38-31-38z' fill='%23ff4d79'/%3E%3C/svg%3E" />
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -90,6 +99,10 @@
 
           <!-- 모바일 액션 버튼 -->
           <div class="flex items-center gap-1.5 lg:hidden">
+            <button onclick="app.promptPwaInstall()" class="inline-flex items-center gap-1 px-2 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-[#03C75A] font-black text-xs transition shrink-0" title="모바일 어플 등록 / 홈 화면에 앱 추가">
+              <i class="fa-solid fa-mobile-screen text-xs"></i>
+              <span>앱설치</span>
+            </button>
             <button onclick="app.openLoginModal()" id="mobile-auth-btn" class="p-2 rounded-xl border border-stone-200 text-slate-700 hover:bg-stone-50 transition shrink-0" title="로그인 / 관리자">
               <i class="fa-solid fa-lock text-xs"></i>
             </button>
@@ -157,6 +170,12 @@
             <i class="fa-solid fa-bookmark text-amber-500"></i>
             <span>스크랩</span>
             <span id="scrap-count-badge" class="px-1.5 py-0.2 rounded-full bg-amber-100 text-amber-800 text-[11px] font-extrabold">0</span>
+          </button>
+
+          <!-- 모바일 어플 등록 버튼 (데스크톱/모바일 공통 지원) -->
+          <button onclick="app.promptPwaInstall()" id="btn-pwa-install-header" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-500 to-[#03C75A] hover:from-emerald-600 hover:to-[#02b350] text-white font-extrabold text-xs shadow-2xs transition shrink-0 cursor-pointer whitespace-nowrap" title="도담톡 모바일 어플 설치 및 홈 화면 등록">
+            <i class="fa-solid fa-mobile-screen-button text-xs"></i>
+            <span>📱 모바일 앱 설치</span>
           </button>
 
           <!-- 로그인 / 회원 / 관리자 버튼 (데스크톱 전용) -->
@@ -365,28 +384,7 @@
             </div>
           </div>
 
-          <!-- 2. 심플 간편 질문·수다 바 (한 줄 입력 또는 접이식) -->
-          <div class="bg-white rounded-2xl border border-stone-200 shadow-2xs p-2 sm:p-2.5 overflow-hidden w-full max-w-full">
-            <div class="flex items-center gap-1.5 sm:gap-2 w-full min-w-0">
-              <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-50 text-[#03C75A] flex items-center justify-center font-black text-xs shrink-0">
-                <i class="fa-solid fa-comment-dots"></i>
-              </div>
-              <input
-                id="quick-post-title"
-                type="text"
-                placeholder="궁금한 육아 고민이나 동네 이야기를 남겨보세요..."
-                onkeydown="if(event.key==='Enter') app.submitQuickSimplePost()"
-                class="w-0 min-w-0 flex-1 bg-stone-50 hover:bg-stone-100/80 focus:bg-white border border-stone-200 rounded-xl px-2.5 sm:px-3 py-1.5 sm:py-2 text-xs font-medium text-slate-800 focus:outline-none focus:border-[#03C75A] transition"
-              />
-              <button
-                type="button"
-                onclick="app.submitQuickSimplePost()"
-                class="shrink-0 px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-black text-xs transition cursor-pointer shadow-2xs whitespace-nowrap"
-              >
-                등록
-              </button>
-            </div>
-          </div>
+
 
           <!-- 3. 컨트롤 바: 전체 글 수, 정렬(최신/공감), 뷰 전환, 검색 (한 줄로 간결화) -->
           <div class="flex items-center justify-between gap-2 px-1 text-xs">
@@ -740,18 +738,32 @@
                 <div>
                   <select id="post-form-category" class="w-full bg-white border border-stone-200 rounded-lg px-3.5 py-2 font-bold text-slate-800 focus:border-[#03C75A] focus:outline-none transition">
                     <option value="">게시판을 선택해 주세요.</option>
-                    <option value="preg">🤰 임신·출산준비</option>
-                    <option value="newborn" selected>🍼 신생아·영아(0~12m)</option>
-                    <option value="toddler_early">🚼 걸음마·두돌(13~36m)</option>
-                    <option value="toddler">🧒 유아·유치원(4~7세)</option>
-                    <option value="school">🎒 초등 저학년(1~3학년)</option>
-                    <option value="elem_high">📚 초등 고학년(4~6학년)</option>
-                    <option value="middle">🏫 중딩맘 라운지</option>
-                    <option value="high">🎓 고딩·입시맘 라운지</option>
-                    <option value="working">💼 워킹맘·대디</option>
-                    <option value="talk">🗣️ 속풀이·일상수다</option>
-                    <option value="tips">💡 육아꿀팁·레시피</option>
-                    <option value="guide">📖 육아가이드</option>
+                    <optgroup label="💬 도담 커뮤니티 게시판">
+                      <option value="talk">💬 자유소통·일상수다</option>
+                      <option value="tips">💡 육아 팁·정보</option>
+                      <option value="qa">❓ 육아 고민 & 질문</option>
+                      <option value="review">🧸 육아용품 솔직리뷰</option>
+                      <option value="local">📍 우리동네 맘카페 소통</option>
+                    </optgroup>
+                    <optgroup label="📖 도담 육아가이드 분야">
+                      <option value="guide">📖 육아가이드 (종합)</option>
+                      <option value="sleep">🍼 수면 가이드 (통잠·수유)</option>
+                      <option value="nutrition">🥣 이유식 & 레시피 (식단·영양)</option>
+                      <option value="play">🧒 훈육 & 발달 (심리·놀이)</option>
+                      <option value="health">🏥 소아 건강 & 병원</option>
+                      <option value="school">🎒 학군 & 입시 (초등·학습)</option>
+                    </optgroup>
+                    <optgroup label="👶 월령·연령별 또래방">
+                      <option value="preg">🤰 임신·출산준비</option>
+                      <option value="newborn">🍼 신생아·영아 (0~12개월)</option>
+                      <option value="toddler_early">🚼 걸음마·두돌 (13~36개월)</option>
+                      <option value="toddler">🧒 유아·유치원 (4~7세)</option>
+                      <option value="school">🎒 초등 저학년 (1~3학년)</option>
+                      <option value="elem_high">📚 초등 고학년 (4~6학년)</option>
+                      <option value="middle">🏫 중학생 라운지</option>
+                      <option value="high">🎓 고등·입시 라운지</option>
+                      <option value="working">💼 워킹맘·대디</option>
+                    </optgroup>
                   </select>
                 </div>
 
@@ -3259,6 +3271,7 @@
           <span>문의 및 제보: contact@dodamtalk.com</span>
         </div>
         <div class="flex items-center gap-3 font-bold text-slate-500">
+          <button onclick="app.promptPwaInstall()" class="hover:text-emerald-600 transition flex items-center gap-1 text-[11px] font-bold text-emerald-600"><i class="fa-solid fa-mobile-screen text-xs"></i>모바일 어플 등록</button>
           <button onclick="app.openAdminView()" class="hover:text-purple-600 transition flex items-center gap-1 text-[11px]"><i class="fa-solid fa-shield-halved text-slate-400"></i>관리자</button>
           <button onclick="app.openLoginModal()" id="footer-auth-btn" class="hover:text-sky-600 transition flex items-center gap-1 text-[11px]"><i class="fa-solid fa-lock text-slate-400"></i>로그인</button>
           <button onclick="app.openWritePage()" class="hover:text-rose-500 text-[11px]">글쓰기</button>
@@ -3312,7 +3325,22 @@
       <div class="flex-1 overflow-y-auto space-y-4 pr-1 text-xs">
         
         <!-- [TAB 1] 아이 & 부모 정보 입력 -->
-        <div id="prof-tab-info" class="space-y-3.5">
+        <div class="p-3 rounded-2xl bg-gradient-to-r from-emerald-50 to-teal-50 border border-emerald-200 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <div class="w-8 h-8 rounded-xl bg-[#03C75A] text-white flex items-center justify-center font-black text-sm shadow-2xs shrink-0">
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <div class="min-w-0 truncate">
+                <div class="font-black text-slate-900 text-xs truncate">도담톡 모바일 어플 등록</div>
+                <div class="text-[10px] text-slate-500 truncate">홈 화면에 추가하여 앱처럼 빠르게 실행하세요</div>
+              </div>
+            </div>
+            <button type="button" onclick="app.promptPwaInstall()" class="px-3 py-1.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs transition cursor-pointer shadow-2xs shrink-0 whitespace-nowrap">
+              앱 등록
+            </button>
+          </div>
+
+          <div id="prof-tab-info" class="space-y-3.5">
           <form onsubmit="app.saveProfile(event)" class="space-y-3.5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
@@ -4480,5 +4508,94 @@
   >
     <i class="fa-solid fa-arrow-up"></i>
   </button>
+  <!-- ==========================================
+       MODAL: 도담톡 모바일 어플 등록 (PWA 앱 설치 안내)
+       ========================================== -->
+  <div id="pwa-install-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 animate-in fade-in duration-150">
+    <div class="bg-white rounded-3xl max-w-md w-full border border-stone-200 shadow-2xl overflow-hidden flex flex-col p-5 sm:p-6 space-y-4">
+      <!-- 헤더 -->
+      <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 rounded-2xl bg-[#03C75A] text-white flex items-center justify-center font-black text-lg shadow-sm">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <div>
+            <h3 class="font-black text-slate-900 text-base">도담톡 모바일 어플 등록</h3>
+            <p class="text-xs text-slate-500 font-medium">스마트폰 홈 화면에 바로가기 앱을 설치합니다</p>
+          </div>
+        </div>
+        <button type="button" onclick="app.closePwaInstallModal()" class="w-8 h-8 rounded-full hover:bg-stone-100 text-slate-400 hover:text-slate-700 flex items-center justify-center transition cursor-pointer">
+          <i class="fa-solid fa-xmark text-lg"></i>
+        </button>
+      </div>
+
+      <!-- 특장점 안내 -->
+      <div class="p-3.5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-emerald-950 text-xs space-y-2">
+        <div class="font-extrabold text-emerald-800 flex items-center gap-1.5">
+          <i class="fa-solid fa-sparkles text-emerald-600"></i>
+          <span>모바일 어플 등록 혜택</span>
+        </div>
+        <ul class="text-[11px] space-y-1 text-emerald-900 font-medium list-disc list-inside">
+          <li>브라우저 주소창 없이 전체화면 네이티브 앱으로 쾌적하게 실행</li>
+          <li>내 아이 또래방 & 우리동네 맘카페 원터치 1초 바로가기</li>
+          <li>안정적인 로그인 세션 및 실시간 육아 소통 지원</li>
+        </ul>
+      </div>
+
+      <!-- 원클릭 설치 버튼 (안드로이드/데스크톱 브라우저 지원 시) -->
+      <div id="pwa-native-install-box">
+        <button
+          type="button"
+          onclick="app.triggerNativePwaInstall()"
+          class="w-full py-3 rounded-2xl bg-gradient-to-r from-emerald-500 to-[#03C75A] hover:from-emerald-600 hover:to-[#02b350] text-white font-black text-sm shadow-md transition flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <i class="fa-solid fa-download text-sm"></i>
+          <span>지금 바로 홈 화면에 앱 설치하기</span>
+        </button>
+      </div>
+
+      <!-- 기기별 수동 가이드 -->
+      <div class="space-y-2 text-xs">
+        <div class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+          <i class="fa-solid fa-circle-question text-slate-400"></i>
+          <span>기기별 홈 화면 등록 방법</span>
+        </div>
+
+        <!-- iOS 사파리 안내 -->
+        <div class="p-3 rounded-xl bg-stone-50 border border-stone-200 space-y-1 text-[11px]">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-brands fa-apple text-slate-900 text-xs"></i>
+            <span>아이폰 / 아이패드 (Safari 브라우저)</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            화면 하단의 <strong>[공유] (<i class="fa-solid fa-arrow-up-from-bracket text-sky-600"></i>)</strong> 아이콘을 누른 후, <strong>'홈 화면에 추가'</strong>를 선택하시면 모바일 앱으로 즉시 등록됩니다.
+          </p>
+        </div>
+
+        <!-- 안드로이드 안내 -->
+        <div class="p-3 rounded-xl bg-stone-50 border border-stone-200 space-y-1 text-[11px]">
+          <div class="font-bold text-slate-800 flex items-center gap-1.5">
+            <i class="fa-brands fa-android text-emerald-600 text-xs"></i>
+            <span>안드로이드 갤럭시 / 크롬 (Chrome 브라우저)</span>
+          </div>
+          <p class="text-slate-600 leading-relaxed">
+            상단 버튼을 누르거나, 우측 상단 메뉴(<strong>⋮</strong>) ➔ <strong>'앱 설치'</strong> 또는 <strong>'홈 화면에 추가'</strong>를 누르시면 바탕화면에 어플 아이콘이 생성됩니다.
+          </p>
+        </div>
+      </div>
+
+      <!-- 닫기 -->
+      <div class="pt-2 flex justify-end">
+        <button
+          type="button"
+          onclick="app.closePwaInstallModal()"
+          class="px-4 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-slate-700 font-bold text-xs transition cursor-pointer"
+        >
+          닫기
+        </button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

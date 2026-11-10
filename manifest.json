@@ -1,0 +1,26 @@
+{
+  "name": "도담톡 (DodamTalk) - 우리 아이 맞춤 육아 커뮤니티",
+  "short_name": "도담톡",
+  "description": "개월수 동기방, 동네 공동육아, 육아가이드 및 실시간 육아 소통 커뮤니티",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#03C75A",
+  "orientation": "portrait",
+  "categories": ["lifestyle", "social"],
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%2303C75A'/%3E%3Cpath d='M256 120c-75 0-136 54-136 120 0 38 20 71 52 93l-13 47 52-26c14 4 29 6 45 6 75 0 136-54 136-120s-61-120-136-120z' fill='%23ffffff'/%3E%3Cpath d='M225 210c-14-17-37-20-53-7-15 13-18 36-6 51 32 40 85 86 90 90 3 3 7 4 10 4s7-1 10-4c5-4 58-50 90-90 12-15 9-38-6-51-16-13-39-10-53 7l-31 38-31-38z' fill='%23ff4d79'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='128' fill='%2303C75A'/%3E%3Cpath d='M256 120c-75 0-136 54-136 120 0 38 20 71 52 93l-13 47 52-26c14 4 29 6 45 6 75 0 136-54 136-120s-61-120-136-120z' fill='%23ffffff'/%3E%3Cpath d='M225 210c-14-17-37-20-53-7-15 13-18 36-6 51 32 40 85 86 90 90 3 3 7 4 10 4s7-1 10-4c5-4 58-50 90-90 12-15 9-38-6-51-16-13-39-10-53 7l-31 38-31-38z' fill='%23ff4d79'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

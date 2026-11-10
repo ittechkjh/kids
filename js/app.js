@@ -219,6 +219,7 @@ class DodamCommunityApp {
     this.initKakaoSdk();
     this.initNaverSdk();
     this.initOAuthListeners();
+    this.initPwa();
     // URL Hash Routing Support (#/admin, #/board, #admin, etc.)
     const initRoute = this.getRouteFromHash(window.location.hash);
     if (initRoute) {
@@ -3975,18 +3976,55 @@ class DodamCommunityApp {
     const contentEl = document.getElementById('post-form-content');
     const tagsEl = document.getElementById('post-form-tags');
     const prefixEl = document.getElementById('post-form-prefix');
+    const regionEl = document.getElementById('post-form-region');
     if (titleEl) titleEl.value = '';
     if (contentEl) contentEl.value = '';
     if (tagsEl) tagsEl.value = '';
     if (prefixEl) prefixEl.value = '';
     this.attachedImages = [];
 
-    if (catId && document.getElementById('post-form-category')) {
-      document.getElementById('post-form-category').value = catId;
-    } else if (this.currentCategory && this.currentCategory !== 'all' && this.currentCategory !== 'hot') {
-      const catSelect = document.getElementById('post-form-category');
-      if (catSelect) catSelect.value = this.currentCategory;
+    // 1. 현재 접속해 있는 게시판/라운지/서브필터 상태를 감지하여 글쓰기 게시판 자동 선택
+    let targetCat = catId || '';
+    if (!targetCat) {
+      if (this.boardLoungeMode === 'qa' || this.currentCategory === 'qa') {
+        targetCat = 'qa';
+        if (prefixEl) prefixEl.value = '질문';
+      } else if (this.boardLoungeMode === 'local' || (this.currentLocalHub && this.currentLocalHub !== 'all')) {
+        targetCat = 'local';
+        if (regionEl && this.profile?.region) {
+          regionEl.value = this.profile.region;
+        }
+      } else if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
+        if (this.guideSubCategory && this.guideSubCategory !== 'all') {
+          const guideMap = {
+            sleep: 'sleep',
+            food: 'nutrition',
+            growth: 'play',
+            health: 'health',
+            edu: 'school'
+          };
+          targetCat = guideMap[this.guideSubCategory] || 'guide';
+        } else {
+          targetCat = 'guide';
+        }
+        if (prefixEl) prefixEl.value = '정보';
+      } else if (this.boardLoungeMode === 'age' || (this.currentAgeStage && this.currentAgeStage !== 'all')) {
+        targetCat = this.currentAgeStage !== 'all' ? this.currentAgeStage : (this.profile?.ageStage || 'newborn');
+      } else if (this.currentCategory && this.currentCategory !== 'all' && this.currentCategory !== 'hot') {
+        targetCat = this.currentCategory;
+      } else {
+        targetCat = 'talk';
+      }
     }
+
+    const catSelect = document.getElementById('post-form-category');
+    if (catSelect && targetCat) {
+      catSelect.value = targetCat;
+      if (!catSelect.value && catSelect.options.length > 1) {
+        catSelect.selectedIndex = 1;
+      }
+    }
+
     this.switchMainView('write');
   }
 
@@ -4367,7 +4405,7 @@ class DodamCommunityApp {
     const prefix = prefixEl ? prefixEl.value.trim() : '';
     const title = prefix ? `[${prefix}] ${rawTitle}` : rawTitle;
 
-    const category = categoryEl ? categoryEl.value : 'newborn';
+    const category = categoryEl ? categoryEl.value : 'talk';
     const region = regionEl ? regionEl.value : 'all';
     const rawTags = tagsEl ? tagsEl.value.trim() : '';
     const tags = rawTags
@@ -4376,6 +4414,26 @@ class DodamCommunityApp {
 
     const myHub = this.getLocalHubFromProfileRegion(this.profile?.region);
     const hubObj = (this.data.localHubs || []).find((h) => h.id === myHub);
+
+    const isQa = category === 'qa' || prefix === '질문' || rawTitle.includes('?');
+    const isGuidePost = ['guide', 'sleep', 'nutrition', 'play', 'health', 'school'].includes(category);
+    const guideType = isGuidePost ? (
+      category === 'sleep' ? 'sleep' :
+      category === 'nutrition' ? 'food' :
+      category === 'play' ? 'growth' :
+      category === 'health' ? 'health' :
+      category === 'school' ? 'edu' : 'all'
+    ) : null;
+
+    const targetAgeStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
+      ? category
+      : category === 'middle' || category === 'high'
+      ? 'middle_high'
+      : this.getChildAgeStageFromMonths(this.profile?.months);
+
+    const postRegion = category === 'local' && region === 'all'
+      ? (this.profile?.region || 'seoul')
+      : region;
 
     if (this.editingPostId) {
       const existingPost = (this.data.posts || []).find((p) => p.id === this.editingPostId);
@@ -4436,18 +4494,15 @@ class DodamCommunityApp {
 
     const newPost = {
       id: `custom-post-${Date.now()}`,
-      category,
-      ageStage: ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
-        ? category
-        : category === 'middle' || category === 'high'
-        ? 'middle_high'
-        : this.getChildAgeStageFromMonths(this.profile?.months),
-      region,
-      localHub: region === 'all' ? 'all' : myHub,
-      localHubName: region === 'all' ? '전국 전체' : (hubObj ? hubObj.shortName : (this.profile?.region || '우리 동네')),
+      category: isGuidePost ? 'guide' : category,
+      guideType,
+      ageStage: targetAgeStage,
+      region: postRegion,
+      localHub: postRegion === 'all' ? 'all' : myHub,
+      localHubName: postRegion === 'all' ? '전국 전체' : (hubObj ? hubObj.shortName : (this.profile?.region || '우리 동네')),
       localTopic: prefix === '질문' ? 'hospital' : prefix === '나눔' ? 'share' : 'all',
       localTopicName: prefix ? `💬 ${prefix}` : '💬 육아소통',
-      isQuestion: prefix === '질문' || title.includes('?'),
+      isQuestion: isQa,
       isSolved: false,
       title,
       content,
@@ -4502,6 +4557,21 @@ class DodamCommunityApp {
     if (loadBtn) loadBtn.classList.add('hidden');
 
     this.switchMainView('board');
+    // 사용자가 글을 작성한 해당 게시판/라운지로 자동 전환
+    if (isQa) {
+      this.boardLoungeMode = 'qa';
+    } else if (category === 'local') {
+      this.boardLoungeMode = 'local';
+    } else if (isGuidePost) {
+      this.boardLoungeMode = 'guide';
+      this.guideSubCategory = guideType || 'all';
+    } else if (['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high', 'middle', 'high', 'working'].includes(category)) {
+      this.boardLoungeMode = 'age';
+      this.currentAgeStage = category;
+    } else {
+      this.boardLoungeMode = 'all';
+      this.currentCategory = category;
+    }
     this.renderBoardCategories();
     this.renderBoardView();
     this.openPostDetailModal(newPost.id);
@@ -11969,7 +12039,72 @@ ${timelineText}
     }
   }
 
+  // ==========================================
+  // [모바일 어플 PWA 등록 및 설치 지원 시스템]
+  // ==========================================
+  initPwa() {
+    this.deferredPwaPrompt = null;
 
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch((err) => {
+          console.log('[SW Registration Error]', err);
+        });
+      });
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      this.deferredPwaPrompt = e;
+      const headerBtn = document.getElementById('btn-pwa-install-header');
+      if (headerBtn) headerBtn.classList.remove('hidden');
+    });
+
+    window.addEventListener('appinstalled', () => {
+      this.deferredPwaPrompt = null;
+      this.showToast('🎉 도담톡 모바일 어플이 성공적으로 설치되었습니다!');
+      this.closePwaInstallModal();
+    });
+  }
+
+  promptPwaInstall() {
+    if (this.deferredPwaPrompt) {
+      this.deferredPwaPrompt.prompt();
+      this.deferredPwaPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          this.showToast('📲 도담톡 모바일 어플 설치를 진행합니다.');
+        }
+        this.deferredPwaPrompt = null;
+      });
+      return;
+    }
+    this.openPwaInstallModal();
+  }
+
+  triggerNativePwaInstall() {
+    if (this.deferredPwaPrompt) {
+      this.deferredPwaPrompt.prompt();
+      this.deferredPwaPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          this.showToast('📲 도담톡 모바일 어플 설치를 진행합니다.');
+        }
+        this.deferredPwaPrompt = null;
+      });
+      this.closePwaInstallModal();
+    } else {
+      this.showToast('💡 기기 안내에 따라 브라우저 메뉴에서 [홈 화면에 추가]를 눌러주세요!');
+    }
+  }
+
+  openPwaInstallModal() {
+    const modal = document.getElementById('pwa-install-modal');
+    if (modal) modal.classList.remove('hidden');
+  }
+
+  closePwaInstallModal() {
+    const modal = document.getElementById('pwa-install-modal');
+    if (modal) modal.classList.add('hidden');
+  }
 }
 
 window.addEventListener('DOMContentLoaded', () => {
