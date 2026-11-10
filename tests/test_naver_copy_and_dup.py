@@ -52,24 +52,27 @@ with sync_playwright() as p:
     assert dup_res['btnHasDisabledClass'] is False
     print("   -> Duplicate check kept run button enabled! PASS")
     
-    # 2. Test copyPostForNaverBlog converts SVGs to PNGs
+    # 2. Test copyPostForNaverBlog produces clean, <5MB HTML with clear image placeholders
     copy_res = page.evaluate('''async () => {
-      await window.app.copyPostForNaverBlog('test-dup-post-1');
+      await window.app.copyPostForNaverBlog('official-ai-report-growth-1');
       
       const richHtml = window.app.lastCopiedRichHtml || '';
-      const pngCount = (richHtml.match(/src="data:image\\/png;base64,/g) || []).length;
-      const svgCount = (richHtml.match(/src="data:image\\/svg\\+xml/g) || []).length;
+      const placeholderCount = (richHtml.match(/업로드 위치/g) || []).length;
+      const hasBase64 = richHtml.includes('data:image/');
+      const sizeBytes = new Blob([richHtml]).size;
       
       return {
-        richHtmlLength: richHtml.length,
-        pngCount: pngCount,
-        svgCount: svgCount
+        sizeBytes: sizeBytes,
+        isUnder5MB: sizeBytes < 5 * 1024 * 1024,
+        placeholderCount: placeholderCount,
+        hasBase64: hasBase64
       };
     }''')
     print("2. Naver Copy Result:", copy_res)
-    assert copy_res['pngCount'] == 5
-    assert copy_res['svgCount'] == 0
-    print("   -> All 5 SVG cards converted to PNG data URLs! PASS")
+    assert copy_res['isUnder5MB'] is True, f"Must be under 5MB, got {copy_res['sizeBytes']} bytes"
+    assert copy_res['placeholderCount'] == 5, f"Must have 5 image placeholders, got {copy_res['placeholderCount']}"
+    assert copy_res['hasBase64'] is False, "Must not contain base64 image blobs"
+    print(f"   -> Copied HTML is safely under 5MB ({copy_res['sizeBytes']} bytes, 5 placeholders)! PASS")
     
     # 3. Test Kakao account existence
     user_res = page.evaluate('''() => {

@@ -4158,35 +4158,34 @@ class DodamCommunityApp {
     // 1. 네이버 블로그 스마트에디터 ONE 전용 완벽 인라인 서식 HTML 생성
     let bodyContent = post.contentHtml || post.content || '';
 
-    // 네이버 스마트에디터 ONE은 SVG data URI를 차단하므로, 모든 SVG를 고화질 PNG data URI로 자동 변환하여 복사합니다.
+    // 네이버 스마트에디터 ONE은 클립보드 붙여넣기 시 5MB 용량 제한이 있으며,
+    // HTML 내부의 대용량 base64 이미지 데이터를 감지하면 '본문 붙여넣기는 최대 5MB까지 가능합니다' 오류 또는 '허용되지 않는 형식'으로 차단합니다.
+    // 따라서 본문 서식 복사 시 이미지를 깔끔한 15KB 미만의 '인포그래픽 사진 첨부 위치' 가이드 박스로 대체하여
+    // 5MB 용량 초과 오류 없이 제목, 소제목, 본문 스타일, 체크리스트, Q&A 서식이 100% 즉시 붙여넣어지도록 처리합니다.
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = bodyContent;
     // 화면 표시용 이미지 개별 복사/다운로드 버튼 바 제거 (블로그 본문 오염 방지)
     tempDiv.querySelectorAll('.post-image-action-bar').forEach((el) => el.remove());
-    const imgElements = Array.from(tempDiv.querySelectorAll('img'));
     
-    if (imgElements.length > 0) {
-      await Promise.all(imgElements.map(async (img) => {
-        const src = img.getAttribute('src');
-        if (src && (src.includes('data:image/svg+xml') || src.trim().startsWith('<svg'))) {
-          try {
-            const pngDataUrl = await this.convertImageSrcToPngDataUrl(src);
-            if (pngDataUrl && pngDataUrl.startsWith('data:image/png;base64,')) {
-              img.setAttribute('src', pngDataUrl);
-            }
-          } catch (e) {
-            console.warn('Failed to convert SVG to PNG for Naver copy:', e);
-          }
-        }
-        // 네이버 블로그 에디터 전용 반응형 스타일 적용
-        img.style.maxWidth = '100%';
-        img.style.height = 'auto';
-        img.style.display = 'block';
-        img.style.margin = '20px auto';
-        img.style.borderRadius = '12px';
-      }));
-      bodyContent = tempDiv.innerHTML;
-    }
+    const imgElements = Array.from(tempDiv.querySelectorAll('img'));
+    imgElements.forEach((img, idx) => {
+      const alt = img.getAttribute('alt') || `도담 인포그래픽 카드 #${idx + 1}`;
+      const placeholder = document.createElement('div');
+      placeholder.setAttribute('style', 'margin: 24px auto; padding: 18px 14px; background-color: #f0fdf4; border: 2px dashed #03C75A; border-radius: 12px; text-align: center; color: #1e293b; max-width: 680px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;');
+      placeholder.innerHTML = `
+        <div style="font-size: 14px; font-weight: 800; color: #15803d; margin-bottom: 4px;">
+          📷 [인포그래픽 사진 #${idx + 1} 업로드 위치]
+        </div>
+        <div style="font-size: 12px; color: #334155; font-weight: 600; margin-bottom: 4px;">
+          ${this.escapeSvgXml(alt)}
+        </div>
+        <div style="font-size: 11px; color: #64748b;">
+          💡 네이버 상단 [사진] 메뉴로 다운로드한 PNG를 등록하시거나, 도담 사이트에서 [이 사진 복사] 후 여기에 Ctrl+V 하세요.
+        </div>
+      `;
+      img.replaceWith(placeholder);
+    });
+    bodyContent = tempDiv.innerHTML;
 
     // If it's an AI report, ensure img styles are blog-friendly
     const blogStyledHtml = `
@@ -4246,7 +4245,7 @@ class DodamCommunityApp {
     if (imgCountEl) imgCountEl.textContent = `PNG 이미지 ${Math.max(imgMatches, 1)}장 포함`;
 
     this.openNaverBlogCopyModal();
-    this.showToast('📋 네이버 블로그 스마트에디터 호환 서식과 PNG 이미지 5장이 복사되었습니다! (Ctrl+V)');
+    this.showToast('📋 네이버 블로그 맞춤 본문 서식이 복사되었습니다! (스마트에디터에 Ctrl+V)');
   }
 
   openNaverBlogCopyModal(isHistoryNavigation = false) {
@@ -4276,7 +4275,7 @@ class DodamCommunityApp {
             })
           ]);
         }
-        this.showToast('📋 서식과 이미지가 포함된 블로그 글이 다시 복사되었습니다.');
+        this.showToast('📋 5MB 용량 초과 없는 스마트에디터 맞춤 본문 서식이 복사되었습니다. (Ctrl+V)');
       } else {
         if (navigator.clipboard && navigator.clipboard.writeText) {
           await navigator.clipboard.writeText(this.lastCopiedPlainText || '');
