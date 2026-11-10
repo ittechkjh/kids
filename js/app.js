@@ -232,17 +232,19 @@ class DodamCommunityApp {
         }
         if (p.author) {
           p.author.childBadge = '📖 도담 육아가이드';
-          if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(p.author.nickname)) p.author.nickname = '운영자';
-          if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
+          if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin', '도담 육아연구소', '도담연구소'].includes(p.author.nickname)) p.author.nickname = '운영자';
+          if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin' || p.author.nickname === '운영자') {
             p.author.avatarBg = 'bg-emerald-600 text-white';
           }
         }
+        if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
+        if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
         // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
         if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
           const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
           const meta = {
             title: rawTitle,
-            authorName: '도담 육아연구소'
+            authorName: '운영자'
           };
           const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
           p.contentHtml = generated.html;
@@ -587,17 +589,19 @@ class DodamCommunityApp {
             }
             if (p.author) {
               p.author.childBadge = '📖 도담 육아가이드';
-              if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(p.author.nickname)) p.author.nickname = '운영자';
-              if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
+              if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin', '도담 육아연구소', '도담연구소'].includes(p.author.nickname)) p.author.nickname = '운영자';
+              if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin' || p.author.nickname === '운영자') {
                 p.author.avatarBg = 'bg-emerald-600 text-white';
               }
             }
+            if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
+            if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
             // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
             if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
               const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
               const meta = {
                 title: rawTitle,
-                authorName: '도담 육아연구소'
+                authorName: '운영자'
               };
               const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
               p.contentHtml = generated.html;
@@ -3232,17 +3236,25 @@ class DodamCommunityApp {
       return true;
     });
 
-    if (this.boardSort === 'popular') {
-      filtered.sort(
-        (a, b) =>
-          (b.reactions?.like || 0) + (b.reactions?.hug || 0) + (b.reactions?.tip || 0) -
-          ((a.reactions?.like || 0) + (a.reactions?.hug || 0) + (a.reactions?.tip || 0))
-      );
-    } else if (this.boardSort === 'comments') {
-      filtered.sort((a, b) => (b.comments?.length || 0) - (a.comments?.length || 0));
-    } else {
-      filtered.sort((a, b) => (b.timestamp || 0) - (a.timestamp || 0));
-    }
+    filtered.sort((a, b) => {
+      // 1. [더미 글 하위 노출] 실제 사용자/관리자 작성 글을 더미/시드 글보다 무조건 항상 상위에 우선 노출
+      const isDummyA = this.isDummyPost(a);
+      const isDummyB = this.isDummyPost(b);
+      if (!isDummyA && isDummyB) return -1;
+      if (isDummyA && !isDummyB) return 1;
+
+      // 2. 동일 그룹(사용자 글끼리, 더미 글끼리) 내에서 정렬 기준 적용
+      if (this.boardSort === 'popular') {
+        const scoreB = (b.reactions?.like || 0) + (b.reactions?.hug || 0) + (b.reactions?.tip || 0);
+        const scoreA = (a.reactions?.like || 0) + (a.reactions?.hug || 0) + (a.reactions?.tip || 0);
+        if (scoreB !== scoreA) return scoreB - scoreA;
+      } else if (this.boardSort === 'comments') {
+        const commB = b.comments?.length || 0;
+        const commA = a.comments?.length || 0;
+        if (commB !== commA) return commB - commA;
+      }
+      return (b.timestamp || 0) - (a.timestamp || 0);
+    });
 
     if (countEl) countEl.textContent = `${filtered.length}개`;
 
@@ -3737,7 +3749,7 @@ class DodamCommunityApp {
         const rawTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '');
         const meta = {
           title: rawTitle,
-          authorName: '도담 육아연구소'
+          authorName: '운영자'
         };
         const generated = this.buildYoutubeSummaryContent(vId, meta, post.guideType || 'growth');
         fullHtml = generated.html;
@@ -4767,6 +4779,14 @@ class DodamCommunityApp {
     try {
       sessionStorage.setItem('dodam_my_post_ids', JSON.stringify(Array.from(this.myPostIds)));
     } catch (e) {}
+  }
+
+  isDummyPost(post) {
+    if (!post) return false;
+    if (post.isSeed || post.isSeedPost || post.isDummy) return true;
+    const pid = String(post.id || '');
+    if (pid.startsWith('seed-post') || pid.startsWith('guide-seed') || pid.startsWith('c-seed')) return true;
+    return false;
   }
 
   canManagePost(post) {
@@ -6486,7 +6506,13 @@ class DodamCommunityApp {
     const hotListEl = document.getElementById('sidebar-hot-posts');
     if (hotListEl) {
       const topPosts = [...this.data.posts]
-        .sort((a, b) => b.reactions.like - a.reactions.like)
+        .sort((a, b) => {
+          const isDummyA = this.isDummyPost(a);
+          const isDummyB = this.isDummyPost(b);
+          if (!isDummyA && isDummyB) return -1;
+          if (isDummyA && !isDummyB) return 1;
+          return (b.reactions?.like || 0) - (a.reactions?.like || 0);
+        })
         .slice(0, 5);
 
       hotListEl.innerHTML = topPosts
@@ -12691,7 +12717,7 @@ class DodamCommunityApp {
   buildYoutubeSummaryContent(videoId, meta, category) {
     const rawTitle = meta.title || '육아 핵심 가이드';
     const cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
-    const cleanAuthor = '도담 육아연구소';
+    const cleanAuthor = '운영자';
 
     // 1. 카테고리별 테마 메타데이터 및 맞춤 키워드 매핑
     const themeMap = {

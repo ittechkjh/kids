@@ -262,16 +262,17 @@ window.DODAM_COMMUNITY_DATA = {
         </div>
       </div>`,
       images: [],
+      isSeedPost: true,
       author: {
-        nickname: '도담 육아연구소',
+        nickname: '운영자',
         level: '👑 공식 리포트',
-        childBadge: '🤖 소아전문 케어랩',
-        avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+        childBadge: '📖 도담 육아가이드',
+        avatarBg: 'bg-emerald-600 text-white'
       },
       createdAt: '2026.11.07',
       timestamp: 1762500000000,
-      views: 1250,
-      reactions: { like: 88, hug: 34, tip: 95 },
+      views: 18,
+      reactions: { like: 2, hug: 1, tip: 1 },
       tags: ['수면교육', '원더윅스', '통잠', '수면의식', '도담AI가이드'],
       comments: [
         {
@@ -340,16 +341,17 @@ window.DODAM_COMMUNITY_DATA = {
         </div>
       </div>`,
       images: [],
+      isSeedPost: true,
       author: {
-        nickname: '도담 육아연구소',
+        nickname: '운영자',
         level: '👑 공식 리포트',
-        childBadge: '🤖 아동심리 케어랩',
-        avatarBg: 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white'
+        childBadge: '📖 도담 육아가이드',
+        avatarBg: 'bg-emerald-600 text-white'
       },
       createdAt: '2026.11.06',
       timestamp: 1762450000000,
-      views: 940,
-      reactions: { like: 62, hug: 28, tip: 71 },
+      views: 14,
+      reactions: { like: 1, hug: 0, tip: 1 },
       tags: ['훈육가이드', '감정코칭', '떼쓰기', '분리불안', '도담AI가이드'],
       comments: []
     },
