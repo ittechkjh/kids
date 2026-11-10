@@ -510,14 +510,42 @@ class DodamFirebaseService {
     }
   }
 
+  async getProfile(profileId = 'active_profile') {
+    if (!this.isConnected || !this.db || !profileId) return null;
+    try {
+      const snap = await this.db.collection('user_profiles').doc(String(profileId)).get();
+      if (snap.exists) return snap.data();
+    } catch (e) {}
+    return null;
+  }
+
   async saveProfile(profileData, profileId = 'active_profile') {
     if (!profileData) return false;
-    this.latestSysState.user_profiles = profileData;
-    this.collectionsStatus.user_profiles = 1;
-    return this.writeSysStateRecord('user_profiles', profileData);
+    const docId = String(profileId || 'active_profile');
+    try {
+      if (this.isConnected && this.db) {
+        await this.db.collection('user_profiles').doc(docId).set({
+          ...profileData,
+          id: docId,
+          updatedAt: Date.now()
+        }, { merge: true });
+      }
+    } catch (e) {}
+    if (docId === 'active_profile') {
+      this.latestSysState.user_profiles = profileData;
+      this.collectionsStatus.user_profiles = 1;
+      return this.writeSysStateRecord('user_profiles', profileData);
+    }
+    return true;
   }
 
   async deleteProfile(profileId = 'active_profile') {
+    const docId = String(profileId || 'active_profile');
+    try {
+      if (this.isConnected && this.db) {
+        await this.db.collection('user_profiles').doc(docId).delete();
+      }
+    } catch (e) {}
     this.latestSysState.user_profiles = null;
     return this.writeSysStateRecord('user_profiles', null);
   }
