@@ -3750,7 +3750,39 @@ class DodamCommunityApp {
       const allImgs = Array.from(parsedDoc.querySelectorAll('img'));
       allImgs.forEach((img) => {
         const src = img.getAttribute('src');
-        if (src) this.currentPostDetailImages.push(src);
+        if (src) {
+          const imgIdx = this.currentPostDetailImages.length;
+          this.currentPostDetailImages.push(src);
+
+          const actionDiv = parsedDoc.createElement('div');
+          actionDiv.className = 'post-image-action-bar flex items-center justify-center gap-2 pt-2.5 pb-1 flex-wrap';
+          actionDiv.innerHTML = `
+            <button
+              type="button"
+              onclick="app.copyPostImageToClipboard(${imgIdx})"
+              class="px-3.5 py-1.5 rounded-xl bg-sky-50 hover:bg-sky-100 border border-sky-200 text-sky-900 font-extrabold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+              title="클립보드에 PNG로 복사하여 네이버 에디터에서 바로 Ctrl+V 붙여넣기"
+            >
+              <i class="fa-regular fa-copy text-sky-600"></i>
+              <span>이 사진 복사 (네이버 Ctrl+V용)</span>
+            </button>
+            <button
+              type="button"
+              onclick="app.downloadPostImageAsPng(${imgIdx})"
+              class="px-3.5 py-1.5 rounded-xl bg-white hover:bg-stone-50 border border-stone-200 text-slate-700 font-bold text-xs flex items-center gap-1.5 shadow-2xs transition cursor-pointer"
+              title="고화질 PNG 파일로 다운로드"
+            >
+              <i class="fa-solid fa-download text-slate-500 text-[11px]"></i>
+              <span>PNG 다운로드</span>
+            </button>
+          `;
+
+          if (img.parentElement) {
+            img.parentElement.appendChild(actionDiv);
+          } else {
+            img.insertAdjacentElement('afterend', actionDiv);
+          }
+        }
       });
 
       const dlLabel = document.getElementById('btn-download-all-images-label');
@@ -3759,7 +3791,7 @@ class DodamCommunityApp {
       }
 
       // 유튜브 영상 플레이어(iframe) 및 유튜브 관련 잔여 링크 완벽 제거
-      let cleanHtml = fullHtml
+      let cleanHtml = parsedDoc.body.innerHTML
         .replace(/<!--\s*1\.\s*유튜브 비디오 플레이어[\s\S]*?<\/iframe>\s*<\/div>\s*<\/div>/gi, '')
         .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
         .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
@@ -4129,6 +4161,8 @@ class DodamCommunityApp {
     // 네이버 스마트에디터 ONE은 SVG data URI를 차단하므로, 모든 SVG를 고화질 PNG data URI로 자동 변환하여 복사합니다.
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = bodyContent;
+    // 화면 표시용 이미지 개별 복사/다운로드 버튼 바 제거 (블로그 본문 오염 방지)
+    tempDiv.querySelectorAll('.post-image-action-bar').forEach((el) => el.remove());
     const imgElements = Array.from(tempDiv.querySelectorAll('img'));
     
     if (imgElements.length > 0) {
@@ -11042,6 +11076,9 @@ class DodamCommunityApp {
         alreadyVisited = !!sessionStorage.getItem(visitedKey);
       } catch (e) {}
 
+      const currentUser = this.currentUser;
+      const currentUserName = currentUser ? (currentUser.nickname || currentUser.username || (currentUser.id && currentUser.id.startsWith('kakao_') ? '카카오회원' : null)) : null;
+
       if (!alreadyVisited && window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
         try {
           sessionStorage.setItem(visitedKey, '1');
@@ -11050,7 +11087,9 @@ class DodamCommunityApp {
           t: 'visit',
           sid: this.sessionId,
           device: this.userDeviceType,
-          browser: this.userBrowserName
+          browser: this.userBrowserName,
+          user: currentUserName,
+          userId: currentUser?.id || null
         });
       }
 
@@ -11077,13 +11116,18 @@ class DodamCommunityApp {
 
       if (isKnownAdmin) return;
 
+      const currentUser = this.currentUser;
+      const currentUserName = currentUser ? (currentUser.nickname || currentUser.username || (currentUser.id && currentUser.id.startsWith('kakao_') ? '카카오회원' : null)) : null;
+
       if (window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
         window.DodamFirebase.logAnalyticsEvent({
           t: 'view',
           sid: this.sessionId || 'anonymous_sid',
           view: viewId,
           device: this.userDeviceType || 'desktop',
-          browser: this.userBrowserName || 'Chrome'
+          browser: this.userBrowserName || 'Chrome',
+          user: currentUserName,
+          userId: currentUser?.id || null
         });
       }
     } catch (err) {
@@ -11843,9 +11887,20 @@ class DodamCommunityApp {
         const rawSid = log.sid || log.sessionId || 'session';
         const shortSession = rawSid.includes('_') ? rawSid.split('_').pop() : rawSid.slice(-6);
 
-        const isMember = log.user && log.user !== '게스트' && log.user !== '비회원 (게스트)';
+        let userName = log.user;
+        if (!userName && log.userId) {
+          const matchedUser = (this.users || []).find((u) => u.id === log.userId || u.username === log.userId);
+          if (matchedUser) {
+            userName = matchedUser.nickname || matchedUser.username;
+          }
+        }
+        if (!userName && this.sessionId && log.sid === this.sessionId && this.currentUser) {
+          userName = this.currentUser.nickname || this.currentUser.username || '카카오회원';
+        }
+
+        const isMember = userName && userName !== '게스트' && userName !== '비회원 (게스트)';
         const userBadge = isMember
-          ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">👑 ${log.user}</span>`
+          ? `<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-purple-50 text-purple-700 border border-purple-200">👑 ${this.escapeSvgXml(userName)}</span>`
           : `<span class="px-2 py-0.5 rounded text-[10px] font-medium bg-stone-100 text-slate-600 border border-stone-200">게스트 #${shortSession}</span>`;
 
         return `
