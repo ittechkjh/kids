@@ -3990,7 +3990,21 @@ class DodamCommunityApp {
         targetCat = 'qa';
         if (prefixEl) prefixEl.value = '질문';
       } else if (this.boardLoungeMode === 'local' || (this.currentLocalHub && this.currentLocalHub !== 'all')) {
-        targetCat = 'local';
+        if (this.currentLocalTopic === 'hospital') {
+          targetCat = 'local_hospital';
+          if (prefixEl) prefixEl.value = '소아과';
+        } else if (this.currentLocalTopic === 'daycare') {
+          targetCat = 'local_daycare';
+          if (prefixEl) prefixEl.value = '어린이집';
+        } else if (this.currentLocalTopic === 'share') {
+          targetCat = 'local_share';
+          if (prefixEl) prefixEl.value = '무료나눔';
+        } else if (this.currentLocalTopic === 'place') {
+          targetCat = 'local_place';
+          if (prefixEl) prefixEl.value = '키즈맛집';
+        } else {
+          targetCat = 'local';
+        }
         if (regionEl && this.profile?.region) {
           regionEl.value = this.profile.region;
         }
@@ -4417,6 +4431,7 @@ class DodamCommunityApp {
 
     const isQa = category === 'qa' || prefix === '질문' || rawTitle.includes('?');
     const isGuidePost = ['guide', 'sleep', 'nutrition', 'play', 'health', 'school'].includes(category);
+    const isLocalPost = category.startsWith('local');
     const guideType = isGuidePost ? (
       category === 'sleep' ? 'sleep' :
       category === 'nutrition' ? 'food' :
@@ -4425,13 +4440,31 @@ class DodamCommunityApp {
       category === 'school' ? 'edu' : 'all'
     ) : null;
 
+    let targetLocalTopic = 'all';
+    let targetLocalTopicName = '💬 일상수다';
+    if (category === 'local_hospital' || prefix === '소아과') {
+      targetLocalTopic = 'hospital';
+      targetLocalTopicName = '🏥 소아과';
+    } else if (category === 'local_daycare' || prefix === '어린이집') {
+      targetLocalTopic = 'daycare';
+      targetLocalTopicName = '🏫 어린이집';
+    } else if (category === 'local_share' || prefix === '무료나눔' || prefix === '나눔') {
+      targetLocalTopic = 'share';
+      targetLocalTopicName = '🥕 무료나눔';
+    } else if (category === 'local_place' || prefix === '키즈맛집') {
+      targetLocalTopic = 'place';
+      targetLocalTopicName = '☕ 키즈맛집';
+    } else if (prefix) {
+      targetLocalTopicName = `💬 ${prefix}`;
+    }
+
     const targetAgeStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
       ? category
       : category === 'middle' || category === 'high'
       ? 'middle_high'
       : this.getChildAgeStageFromMonths(this.profile?.months);
 
-    const postRegion = category === 'local' && region === 'all'
+    const postRegion = isLocalPost && region === 'all'
       ? (this.profile?.region || 'seoul')
       : region;
 
@@ -4494,14 +4527,14 @@ class DodamCommunityApp {
 
     const newPost = {
       id: `custom-post-${Date.now()}`,
-      category: isGuidePost ? 'guide' : category,
+      category: isGuidePost ? 'guide' : isLocalPost ? 'local' : category,
       guideType,
       ageStage: targetAgeStage,
       region: postRegion,
       localHub: postRegion === 'all' ? 'all' : myHub,
       localHubName: postRegion === 'all' ? '전국 전체' : (hubObj ? hubObj.shortName : (this.profile?.region || '우리 동네')),
-      localTopic: prefix === '질문' ? 'hospital' : prefix === '나눔' ? 'share' : 'all',
-      localTopicName: prefix ? `💬 ${prefix}` : '💬 육아소통',
+      localTopic: targetLocalTopic,
+      localTopicName: targetLocalTopicName,
       isQuestion: isQa,
       isSolved: false,
       title,
@@ -4560,8 +4593,9 @@ class DodamCommunityApp {
     // 사용자가 글을 작성한 해당 게시판/라운지로 자동 전환
     if (isQa) {
       this.boardLoungeMode = 'qa';
-    } else if (category === 'local') {
+    } else if (isLocalPost) {
       this.boardLoungeMode = 'local';
+      this.currentLocalTopic = targetLocalTopic !== 'all' ? targetLocalTopic : 'all';
     } else if (isGuidePost) {
       this.boardLoungeMode = 'guide';
       this.guideSubCategory = guideType || 'all';
@@ -9752,6 +9786,7 @@ class DodamCommunityApp {
   isAdminSession(sid) {
     if (!sid) return false;
     try {
+      if (localStorage.getItem('dodam_is_admin_device') === '1') return true;
       const s1 = sessionStorage.getItem('dodam_admin_sid');
       if (s1 && s1 === sid) return true;
       if (this.sessionId && this.sessionId === sid) {
@@ -10219,6 +10254,14 @@ class DodamCommunityApp {
       else if (/Firefox/i.test(ua)) browser = 'Firefox';
       this.userBrowserName = browser;
 
+      const hostname = window.location.hostname || '';
+      if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0' || hostname.endsWith('.local')) {
+        return; // 로컬 테스트/개발 환경은 실측 통계에서 전면 배제
+      }
+      if (localStorage.getItem('dodam_is_admin_device') === '1') {
+        return; // 관리자 기기는 방문자 통계에서 전면 배제
+      }
+
       const hash = window.location.hash || '';
       const isOpeningAdmin = hash.startsWith('#/admin');
       const isKnownAdmin = this.isAdmin() ||
@@ -10261,6 +10304,13 @@ class DodamCommunityApp {
   trackViewEvent(viewId) {
     if (!viewId || viewId === 'admin') return;
     try {
+      const hostname = window.location.hostname || '';
+      if (hostname === 'localhost' || hostname === '127.0.0.1' || hostname === '0.0.0.0' || hostname.endsWith('.local')) {
+        return;
+      }
+      if (localStorage.getItem('dodam_is_admin_device') === '1') {
+        return;
+      }
       const isKnownAdmin = this.isAdmin() ||
         (this.currentUser && this.currentUser.role === 'admin') ||
         sessionStorage.getItem('dodam_admin_authenticated') === '1' ||
@@ -10374,8 +10424,9 @@ class DodamCommunityApp {
         window.DodamFirebase.saveSession(adminUser, 'active_session');
       }
 
-      // 현재 브라우저 탭 세션만 기록 (로컬스토리지 사용 배제)
+      // 관리자 기기 식별 및 세션 기록 (관리자 접속 수치 집계 원천 제외)
       try {
+        localStorage.setItem('dodam_is_admin_device', '1');
         sessionStorage.setItem('dodam_admin_authenticated', '1');
         sessionStorage.setItem('dodam_current_user', JSON.stringify(adminUser));
         if (this.sessionId) {
@@ -10713,7 +10764,6 @@ class DodamCommunityApp {
     const targetEvents = isToday ? events.filter((e) => e.date === todayStr) : events;
 
     const sids = new Set(targetEvents.map((e) => e.sid));
-    if (this.sessionId) sids.add(this.sessionId);
     const totalVisitors = sids.size;
 
     if (subtitleEl) {
@@ -11079,6 +11129,23 @@ class DodamCommunityApp {
         `;
       })
       .join('');
+  }
+
+    async resetAdminAnalytics() {
+    if (!confirm('현재까지의 테스트 및 누적 방문자 수치를 초기화(0으로 리셋)하시겠습니까?\n(실제 외부 방문자 유입 시 새로 정상 카운트됩니다)')) {
+      return;
+    }
+    try {
+      if (window.DodamFirebase && typeof window.DodamFirebase.resetAnalyticsEvents === 'function') {
+        await window.DodamFirebase.resetAnalyticsEvents();
+      }
+      this.analyticsEvents = [];
+      this.calculateAndRenderAnalytics();
+      this.showToast('🧹 테스트 방문자 수치가 깨끗하게 0으로 초기화되었습니다.');
+    } catch (err) {
+      console.warn('resetAdminAnalytics error:', err);
+      this.showToast('⚠️ 통계 초기화 중 오류가 발생했습니다.');
+    }
   }
 
   async refreshVisitorLogs() {

@@ -743,7 +743,13 @@
                       <option value="tips">💡 육아 팁·정보</option>
                       <option value="qa">❓ 육아 고민 & 질문</option>
                       <option value="review">🧸 육아용품 솔직리뷰</option>
-                      <option value="local">📍 우리동네 맘카페 소통</option>
+                    </optgroup>
+                    <optgroup label="📍 우리동네 맘카페 소통 & 동네 정보">
+                      <option value="local">📍 우리동네 소통 (전체·일상)</option>
+                      <option value="local_hospital">🏥 우리동네 소아과·어린이병원</option>
+                      <option value="local_daycare">🏫 우리동네 어린이집·유치원</option>
+                      <option value="local_share">🥕 우리동네 무료나눔·직거래</option>
+                      <option value="local_place">☕ 우리동네 키즈맛집·키즈카페</option>
                     </optgroup>
                     <optgroup label="📖 도담 육아가이드 분야">
                       <option value="guide">📖 육아가이드 (종합)</option>
@@ -770,6 +776,10 @@
                 <div>
                   <select id="post-form-prefix" class="w-full bg-white border border-stone-200 rounded-lg px-3.5 py-2 font-bold text-slate-800 focus:border-[#03C75A] focus:outline-none transition">
                     <option value="">말머리 선택</option>
+                    <option value="소아과">[소아과]</option>
+                    <option value="어린이집">[어린이집]</option>
+                    <option value="무료나눔">[무료나눔]</option>
+                    <option value="키즈맛집">[키즈맛집]</option>
                     <option value="질문">[질문]</option>
                     <option value="정보">[정보]</option>
                     <option value="후기">[후기]</option>
@@ -2500,6 +2510,10 @@
                   <i class="fa-solid fa-key text-[11px]"></i>
                   <span>비밀번호 변경</span>
                 </button>
+                <button type="button" onclick="app.resetAdminAnalytics()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200/80 font-black text-xs transition cursor-pointer shadow-2xs" title="개발 및 테스트 누적 방문자 수치를 0으로 리셋합니다">
+                  <i class="fa-solid fa-trash-can text-[11px]"></i>
+                  <span>방문자 수치 리셋</span>
+                </button>
                 <button type="button" onclick="app.refreshAdminData()" class="p-2 rounded-xl border border-stone-200 hover:bg-stone-50 text-slate-600 hover:text-slate-900 transition cursor-pointer" title="실시간 새로고침">
                   <i class="fa-solid fa-rotate-right text-xs"></i>
                 </button>
@@ -2716,6 +2730,10 @@
                   <p class="text-xs text-slate-500 font-medium mt-0.5">외부 방문자가 사이트에 접속한 상세 타임스탬프와 접속 경로, 활동 현황을 실시간으로 기록합니다.</p>
                 </div>
                 <div class="flex items-center gap-2">
+                  <button type="button" onclick="app.resetAdminAnalytics()" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 border border-rose-200 text-xs font-bold text-rose-700 transition flex items-center gap-1.5 cursor-pointer shadow-2xs">
+                    <i class="fa-solid fa-trash-can text-xs"></i>
+                    <span>통계 초기화 (0으로 리셋)</span>
+                  </button>
                   <button type="button" onclick="app.refreshVisitorLogs()" class="px-3.5 py-1.5 rounded-xl bg-stone-50 hover:bg-stone-100 border border-stone-200 text-xs font-bold text-slate-700 transition flex items-center gap-1.5 cursor-pointer shadow-2xs">
                     <i class="fa-solid fa-rotate-right text-xs"></i>
                     <span>실시간 새로고침</span>

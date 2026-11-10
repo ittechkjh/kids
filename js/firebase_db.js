@@ -667,6 +667,26 @@ class DodamFirebaseService {
     }
   }
 
+  async resetAnalyticsEvents() {
+    if (!this.isConnected || !this.db) return false;
+    try {
+      const snap = await this.db
+        .collection('community_posts')
+        .where('category', '==', '__analytics__')
+        .get();
+      if (snap.empty) return true;
+      const batch = this.db.batch();
+      snap.forEach((doc) => {
+        batch.update(doc.ref, { category: '__archived_analytics__', archivedAt: new Date().toISOString() });
+      });
+      await batch.commit();
+      return true;
+    } catch (err) {
+      console.warn('[Dodam Firestore] 방문 통계 초기화 실패:', err);
+      return false;
+    }
+  }
+
   async fetchAnalyticsEvents() {
     if (!this.isConnected || !this.db) return [];
     try {
