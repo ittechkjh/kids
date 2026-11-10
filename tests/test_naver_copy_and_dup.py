@@ -57,7 +57,7 @@ with sync_playwright() as p:
       await window.app.copyPostForNaverBlog('official-ai-report-growth-1');
       
       const richHtml = window.app.lastCopiedRichHtml || '';
-      const placeholderCount = (richHtml.match(/업로드 위치/g) || []).length;
+      const placeholderCount = (richHtml.match(/첨부 위치/g) || []).length;
       const hasBase64 = richHtml.includes('data:image/');
       const sizeBytes = new Blob([richHtml]).size;
       

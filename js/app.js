@@ -4158,51 +4158,103 @@ class DodamCommunityApp {
     // 1. 네이버 블로그 스마트에디터 ONE 전용 완벽 인라인 서식 HTML 생성
     let bodyContent = post.contentHtml || post.content || '';
 
-    // 네이버 스마트에디터 ONE은 클립보드 붙여넣기 시 5MB 용량 제한이 있으며,
-    // HTML 내부의 대용량 base64 이미지 데이터를 감지하면 '본문 붙여넣기는 최대 5MB까지 가능합니다' 오류 또는 '허용되지 않는 형식'으로 차단합니다.
-    // 따라서 본문 서식 복사 시 이미지를 깔끔한 15KB 미만의 '인포그래픽 사진 첨부 위치' 가이드 박스로 대체하여
-    // 5MB 용량 초과 오류 없이 제목, 소제목, 본문 스타일, 체크리스트, Q&A 서식이 100% 즉시 붙여넣어지도록 처리합니다.
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = bodyContent;
     // 화면 표시용 이미지 개별 복사/다운로드 버튼 바 제거 (블로그 본문 오염 방지)
     tempDiv.querySelectorAll('.post-image-action-bar').forEach((el) => el.remove());
-    
-    const imgElements = Array.from(tempDiv.querySelectorAll('img'));
-    imgElements.forEach((img, idx) => {
+
+    // 1. .my-4 컨테이너(이미지 + 캡션)를 깔끔한 일체형 네이버 인포그래픽 가이드 박스로 교체 (하단 잔여 캡션 분리 방지)
+    const my4Containers = Array.from(tempDiv.querySelectorAll('.my-4'));
+    if (my4Containers.length > 0) {
+      my4Containers.forEach((wrapper, idx) => {
+        const img = wrapper.querySelector('img');
+        const captionEl = wrapper.querySelector('p');
+        const rawCaption = captionEl ? captionEl.textContent : '';
+        const cleanCaption = rawCaption.replace(/^[▲▼■]\s*(\[그림\s*\d+\])?\s*/, '').trim() || (img ? img.getAttribute('alt') : '') || `인포그래픽 카드 #${idx + 1}`;
+        
+        const cardBox = document.createElement('div');
+        cardBox.setAttribute('style', 'margin: 26px auto; padding: 20px 16px; background-color: #f0fdf4; border: 2px dashed #059669; border-radius: 14px; text-align: center; max-width: 680px; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
+        cardBox.innerHTML = `
+          <div style="font-size: 15px; font-weight: 900; color: #047857; margin-bottom: 5px;">
+            📷 [인포그래픽 카드 #${idx + 1} 첨부 위치]
+          </div>
+          <div style="font-size: 13.5px; color: #1e293b; font-weight: 700; margin-bottom: 6px;">
+            ${this.escapeSvgXml(cleanCaption)}
+          </div>
+          <div style="font-size: 11.5px; color: #64748b; font-weight: 500;">
+            💡 <strong>[PNG 5장 다운로드]</strong> 후 네이버 상단 [사진] 메뉴로 등록하시거나, 도담 사이트에서 <strong>[이 사진 복사]</strong> 후 여기에 Ctrl+V 하세요.
+          </div>
+        `;
+        wrapper.replaceWith(cardBox);
+      });
+    }
+
+    // 2. 단독으로 남아있는 img 태그 치환
+    const remainingImgs = Array.from(tempDiv.querySelectorAll('img'));
+    remainingImgs.forEach((img, idx) => {
       const alt = img.getAttribute('alt') || `도담 인포그래픽 카드 #${idx + 1}`;
-      const placeholder = document.createElement('div');
-      placeholder.setAttribute('style', 'margin: 24px auto; padding: 18px 14px; background-color: #f0fdf4; border: 2px dashed #03C75A; border-radius: 12px; text-align: center; color: #1e293b; max-width: 680px; font-family: -apple-system, BlinkMacSystemFont, sans-serif;');
-      placeholder.innerHTML = `
-        <div style="font-size: 14px; font-weight: 800; color: #15803d; margin-bottom: 4px;">
-          📷 [인포그래픽 사진 #${idx + 1} 업로드 위치]
+      const cardBox = document.createElement('div');
+      cardBox.setAttribute('style', 'margin: 26px auto; padding: 20px 16px; background-color: #f0fdf4; border: 2px dashed #059669; border-radius: 14px; text-align: center; max-width: 680px; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
+      cardBox.innerHTML = `
+        <div style="font-size: 15px; font-weight: 900; color: #047857; margin-bottom: 5px;">
+          📷 [인포그래픽 카드 #${idx + 1} 첨부 위치]
         </div>
-        <div style="font-size: 12px; color: #334155; font-weight: 600; margin-bottom: 4px;">
+        <div style="font-size: 13.5px; color: #1e293b; font-weight: 700; margin-bottom: 6px;">
           ${this.escapeSvgXml(alt)}
         </div>
-        <div style="font-size: 11px; color: #64748b;">
-          💡 네이버 상단 [사진] 메뉴로 다운로드한 PNG를 등록하시거나, 도담 사이트에서 [이 사진 복사] 후 여기에 Ctrl+V 하세요.
+        <div style="font-size: 11.5px; color: #64748b; font-weight: 500;">
+          💡 네이버 상단 <strong>[사진]</strong> 도구로 등록하시거나 [이 사진 복사] 후 여기에 Ctrl+V 하세요.
         </div>
       `;
-      img.replaceWith(placeholder);
+      img.replaceWith(cardBox);
     });
+
+    // 3. Section H2 인라인 서식 보장 (네이버 에디터에서 왼쪽 컬러 바 100% 렌더링)
+    const sectionColors = ['#0284c7', '#059669', '#d97706', '#9333ea', '#e11d48'];
+    tempDiv.querySelectorAll('h2').forEach((h2, i) => {
+      const barColor = sectionColors[i % sectionColors.length];
+      h2.setAttribute('style', `font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid ${barColor}; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif; letter-spacing: -0.3px;`);
+    });
+
+    // 4. 상단 공식 리포트 브리핑 카드 인라인 서식 보장
+    const topCard = tempDiv.querySelector('.naver-blog-article > div:first-child');
+    if (topCard) {
+      topCard.setAttribute('style', 'background-color: #ecfdf5; border: 1.5px solid #86efac; border-radius: 14px; padding: 14px 18px; margin: 18px 0 24px 0; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
+    }
+
+    // 5. 하단 에필로그 카드 인라인 서식 보장
+    const outroCard = tempDiv.querySelector('.naver-blog-article > div:last-child');
+    if (outroCard) {
+      outroCard.setAttribute('style', 'background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-left: 5px solid #10b981; border-radius: 14px; padding: 20px 22px; margin: 34px 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
+    }
+
+    // 6. 모든 일반 <p> 태그의 가독성 및 줄바꿈 인라인 서식 보장
+    tempDiv.querySelectorAll('p').forEach((p) => {
+      if (!p.getAttribute('style')) {
+        p.setAttribute('style', 'font-size: 15.5px; line-height: 1.95; color: #334155; margin: 0 0 16px 0; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
+      }
+    });
+
     bodyContent = tempDiv.innerHTML;
 
-    // If it's an AI report, ensure img styles are blog-friendly
+    // 네이버 블로그 최적화 래퍼 (중복 타이틀 제거 및 클린 헤더 구성)
     const blogStyledHtml = `
-      <div style="font-family: 'Nanum Gothic', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 2.1; font-size: 16px; color: #222222; max-width: 780px; margin: 0 auto; letter-spacing: -0.3px;">
-        <h1 style="font-size: 24px; font-weight: 800; color: #111111; line-height: 1.4; border-bottom: 2px solid #03C75A; padding-bottom: 14px; margin-bottom: 22px;">
-          ${this.escapeSvgXml(post.title)}
-        </h1>
-        <p style="font-size: 13px; color: #888888; margin-bottom: 25px;">
-          도담 육아가이드 리포트 | 작성: <strong>${this.escapeSvgXml(post.author?.nickname || '도담 공식 가이드')}</strong> | ${post.createdAt || '최신'}
-        </p>
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; line-height: 1.95; font-size: 16px; color: #334155; max-width: 780px; margin: 0 auto; letter-spacing: -0.3px;">
+        <div style="margin-bottom: 22px; padding-bottom: 14px; border-bottom: 2px solid #03C75A;">
+          <h1 style="font-size: 21px; font-weight: 900; color: #111827; line-height: 1.45; margin: 0 0 8px 0; letter-spacing: -0.4px;">
+            ${this.escapeSvgXml(post.title)}
+          </h1>
+          <p style="font-size: 12.5px; color: #64748b; margin: 0; font-weight: 500;">
+            도담 육아가이드 공식 리포트 &nbsp;|&nbsp; 작성: <strong style="color: #03C75A;">${this.escapeSvgXml(post.author?.nickname || '운영자')}</strong> &nbsp;|&nbsp; 아동심리·소아청소년 임상 지침
+          </p>
+        </div>
         <div style="margin-bottom: 30px;">
           ${bodyContent}
         </div>
-        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 30px 0;" />
-        <p style="font-size: 12px; color: #888888; line-height: 1.6;">
-          본 콘텐츠는 도담톡 (DodamTalk) 공식 육아가이드 리포트입니다.<br/>
-          출처: <a href="${shareUrl}" style="color: #03C75A; text-decoration: underline;">도담톡 육아 커뮤니티</a>
+        <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 34px 0 20px 0;" />
+        <p style="font-size: 12px; color: #888888; line-height: 1.7; margin: 0;">
+          본 콘텐츠는 도담 커뮤니티 (DodamTalk) 공식 육아가이드 리포트입니다.<br/>
+          출처: <a href="${shareUrl}" style="color: #03C75A; font-weight: bold; text-decoration: underline;">도담톡 육아 커뮤니티 (dodamtalk.com)</a>
         </p>
       </div>
     `;
@@ -12961,96 +13013,112 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
 
     const charCount = plainText.length;
 
+    const formatParagraphs = (text) => {
+      return text
+        .split('\n\n')
+        .map((p) => p.trim())
+        .filter(Boolean)
+        .map((p) => `<p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium" style="font-size: 15.5px; line-height: 1.95; color: #334155; margin: 0 0 16px 0; letter-spacing: -0.3px;">${p.replace(/\n/g, '<br/>')}</p>`)
+        .join('');
+    };
+
+    const introHtml = formatParagraphs(introText);
+    const sec1Html = formatParagraphs(sec1Text);
+    const sec2Html = formatParagraphs(sec2Text);
+    const sec3Html = formatParagraphs(sec3Text);
+    const sec4Html = formatParagraphs(sec4Text);
+    const outroHtml = formatParagraphs(outroText);
+
     // 4. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `<!-- dodam-report-v3 -->
       <div class="naver-blog-article space-y-7 text-slate-800 leading-relaxed font-sans max-w-3xl mx-auto py-2">
         <!-- 1. 공식 육아 가이드 브리핑 헤더 바 (유튜브 영상 플레이어 및 외부 채널 정보 완전 제거) -->
-        <div class="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs">
-          <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
-              <i class="fa-solid fa-file-shield"></i>
+        <div class="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs" style="background-color: #ecfdf5; border: 1.5px solid #86efac; border-radius: 14px; padding: 14px 18px; margin: 18px 0 24px 0; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
+          <div class="flex items-center gap-2.5 min-w-0" style="display: flex; align-items: center; gap: 10px;">
+            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs" style="display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border-radius: 50%; background-color: #059669; color: #ffffff; font-size: 16px;">
+              🛡️
             </span>
             <div class="min-w-0">
-              <div class="font-black text-slate-900 truncate">도담 공식 육아가이드 심층 리포트</div>
-              <div class="text-[11px] text-emerald-800 font-medium">${info.subName} · ${info.targetAge}</div>
+              <div class="font-black text-slate-900 truncate" style="font-size: 15px; font-weight: 900; color: #064e3b; line-height: 1.3; margin: 0;">도담 공식 육아가이드 심층 리포트</div>
+              <div class="text-[11px] text-emerald-800 font-medium" style="font-size: 12px; color: #047857; margin-top: 2px; font-weight: 600;">${info.subName} · ${info.targetAge}</div>
             </div>
           </div>
-          <div class="flex items-center gap-1.5">
-            <span class="px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black text-[11px]">${info.badge}</span>
-            <span class="px-2.5 py-1 rounded-xl bg-white border border-emerald-300 text-emerald-800 font-bold text-[11px]">전문가 검증</span>
+          <div class="flex items-center gap-1.5" style="display: flex; align-items: center; gap: 6px;">
+            <span class="px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black text-[11px]" style="display: inline-block; padding: 4px 10px; border-radius: 9999px; background-color: #059669; color: #ffffff; font-size: 11px; font-weight: 800;">${info.badge}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-white border border-emerald-300 text-emerald-800 font-bold text-[11px]" style="display: inline-block; padding: 4px 10px; border-radius: 9999px; background-color: #ffffff; border: 1px solid #86efac; color: #047857; font-size: 11px; font-weight: 700;">전문가 검증</span>
           </div>
         </div>
 
         <!-- 3. 프롤로그 도입부 -->
-        <div class="space-y-3 text-sm text-slate-700 leading-relaxed">
-          <p class="whitespace-pre-line font-medium">${introText}</p>
+        <div class="space-y-3 text-sm text-slate-700 leading-relaxed" style="margin: 20px 0 24px 0;">
+          ${introHtml}
         </div>
 
         <!-- [그림 1] 핵심 요약 인포그래픽 카드 -->
-        <div class="my-4">
-          <img src="${img1Uri}" alt="그림 1: 핵심 요약 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
+        <div class="my-4" style="margin: 24px 0;">
+          <img src="${img1Uri}" alt="그림 1: 핵심 요약 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
         </div>
 
         <!-- 4. [1장] 심층 배경 & 원인 분석 -->
         <div class="space-y-3 pt-2">
-          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
             <span>1. 심층 분석: 아이의 행동과 심리, 왜 이런 일이 일어날까?</span>
           </h2>
-          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec1Text}</p>
+          ${sec1Html}
         </div>
 
         <!-- [그림 2] 발달 심리 & 3대 핵심 원인 다이어그램 -->
-        <div class="my-4">
-          <img src="${img2Uri}" alt="그림 2: 발달 심리 3대 핵심 원인 다이어그램" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 2] 아동 발달학적 3대 핵심 원인 분석 다이어그램</p>
+        <div class="my-4" style="margin: 24px 0;">
+          <img src="${img2Uri}" alt="그림 2: 발달 심리 3대 핵심 원인 다이어그램" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] 아동 발달학적 3대 핵심 원인 분석 다이어그램</p>
         </div>
 
         <!-- 5. [2장] 실전 3단계 솔루션 -->
         <div class="space-y-3 pt-2">
-          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #059669; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
             <span>2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계</span>
           </h2>
-          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec2Text}</p>
+          ${sec2Html}
         </div>
 
         <!-- [그림 3] 실전 3단계 대응 로드맵 -->
-        <div class="my-4">
-          <img src="${img3Uri}" alt="그림 3: 실전 3단계 부모 대응 로드맵" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 3] 감정 공감부터 한계 설정까지 실전 대화 공식 로드맵</p>
+        <div class="my-4" style="margin: 24px 0;">
+          <img src="${img3Uri}" alt="그림 3: 실전 3단계 부모 대응 로드맵" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] 감정 공감부터 한계 설정까지 실전 대화 공식 로드맵</p>
         </div>
 
         <!-- 6. [3장] 4주 완성 생활 루틴 -->
         <div class="space-y-3 pt-2">
-          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #d97706; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
             <span>3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵</span>
           </h2>
-          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec3Text}</p>
+          ${sec3Html}
         </div>
 
         <!-- [그림 4] 4주 실천 체크리스트 -->
-        <div class="my-4">
-          <img src="${img4Uri}" alt="그림 4: 4주 실천 체크리스트" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 4] 가정 내 흔들림 없는 4주 완성 생활 루틴 체크리스트</p>
+        <div class="my-4" style="margin: 24px 0;">
+          <img src="${img4Uri}" alt="그림 4: 4주 실천 체크리스트" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] 가정 내 흔들림 없는 4주 완성 생활 루틴 체크리스트</p>
         </div>
 
         <!-- 7. [4장] 전문가 Q&A 및 주의사항 -->
         <div class="space-y-3 pt-2">
-          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-600 pl-3">
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-600 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #9333ea; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
             <span>4. 전문가 Q&amp;A: 부모들이 가장 많이 묻는 질문 &amp; 주의사항</span>
           </h2>
-          <p class="text-sm text-slate-700 leading-relaxed whitespace-pre-line font-medium">${sec4Text}</p>
+          ${sec4Html}
         </div>
 
         <!-- [그림 5] DO vs DON'T 비교 카드 -->
-        <div class="my-4">
-          <img src="${img5Uri}" alt="그림 5: 전문가 조언 DO vs DONT 비교 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium">▲ [그림 5] 부모가 반드시 기억해야 할 DO (권장) vs DON'T (금기) 비교표</p>
+        <div class="my-4" style="margin: 24px 0;">
+          <img src="${img5Uri}" alt="그림 5: 전문가 조언 DO vs DONT 비교 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] 부모가 반드시 기억해야 할 DO (권장) vs DON'T (금기) 비교표</p>
         </div>
 
         <!-- 8. 에필로그 & 마무리 -->
-        <div class="p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 mt-4 text-sm text-slate-700">
-          <p class="whitespace-pre-line font-medium">${outroText}</p>
+        <div class="p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 mt-4 text-sm text-slate-700" style="background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-left: 5px solid #10b981; border-radius: 14px; padding: 20px 22px; margin: 34px 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
+          ${outroHtml}
         </div>
       </div>
     `;
