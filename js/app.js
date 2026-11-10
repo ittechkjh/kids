@@ -224,19 +224,21 @@ class DodamCommunityApp {
     (this.data.posts || []).forEach((p) => {
       if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
         const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
-        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
+        const curBadge = '[육아가이드] ';
         const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        if (p.isAiReport || p.isYoutubeSummary) p.title = curBadge + rawTitle;
         if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
           p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
         }
         if (p.author) {
           p.author.childBadge = '📖 도담 육아가이드';
+          if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(p.author.nickname)) p.author.nickname = '운영자';
           if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
             p.author.avatarBg = 'bg-emerald-600 text-white';
           }
         }
         // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
-        if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('viewBox="0 0 800 340"')) {
+        if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
           const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
           const meta = {
             title: rawTitle,
@@ -577,19 +579,21 @@ class DodamCommunityApp {
         (this.data.posts || []).forEach((p) => {
           if (p && (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생'))))) {
             const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
-            const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
+            const curBadge = '[육아가이드] ';
             const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        if (p.isAiReport || p.isYoutubeSummary) p.title = curBadge + rawTitle;
             if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
               p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
             }
             if (p.author) {
               p.author.childBadge = '📖 도담 육아가이드';
+              if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(p.author.nickname)) p.author.nickname = '운영자';
               if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
                 p.author.avatarBg = 'bg-emerald-600 text-white';
               }
             }
             // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
-            if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('viewBox="0 0 800 340"')) {
+            if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
               const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
               const meta = {
                 title: rawTitle,
@@ -3305,10 +3309,7 @@ class DodamCommunityApp {
           let badgeText = '자유';
           let badgeClass = 'bg-stone-100 text-slate-600';
 
-          if (post.isYoutubeSummary) {
-            badgeText = '🎬 영상요약';
-            badgeClass = 'bg-rose-100 text-rose-800 font-black border border-rose-200';
-          } else if (post.isAiReport) {
+          if (post.isYoutubeSummary || post.isAiReport) {
             badgeText = '📖 육아가이드';
             badgeClass = 'bg-purple-100 text-purple-800 font-black border border-purple-200';
           } else if (post.category === 'guide') {
@@ -3337,7 +3338,6 @@ class DodamCommunityApp {
               </div>
               <div class="col-span-6 font-medium text-slate-900 group-hover:text-[#03C75A] truncate flex items-center gap-1.5">
                 ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
-                ${post.isYoutubeSummary ? '<span class="px-1.5 py-0.2 rounded bg-gradient-to-r from-rose-600 to-amber-600 text-white font-black text-[9px]">영상요약</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
                 <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
@@ -3600,7 +3600,7 @@ class DodamCommunityApp {
           <rect width="160" height="32" rx="8" fill="#0b1322" stroke="#0284c7" stroke-width="1.4"/>
           <circle cx="18" cy="16" r="4.5" fill="#0284c7"/>
           <circle cx="18" cy="16" r="2" fill="#38bdf8"/>
-          <text x="90" y="21" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', monospace, sans-serif" letter-spacing="0.5" text-anchor="middle">dodamtalk.kr</text>
+          <text x="90" y="21" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', monospace, sans-serif" letter-spacing="0.5" text-anchor="middle">dodamtalk.com</text>
         </g>
       </g>
 
@@ -3665,7 +3665,7 @@ class DodamCommunityApp {
         <circle cx="450" cy="6" r="4.5" fill="#f59e0b"/>
         <rect y="14" width="840" height="34" fill="#060911" fill-opacity="0.95"/>
         <text x="34" y="35" fill="#94a3b8" font-size="11.5" font-weight="700" font-family="'Pretendard', -apple-system, sans-serif">▶ 기준: 2026 실전 육아 가이드 · 팩트 기반 맞춤형 전략</text>
-        <text x="806" y="35" fill="#38bdf8" font-size="12" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="end">🌐 dodamtalk.kr | 실전 육아 백서</text>
+        <text x="806" y="35" fill="#38bdf8" font-size="12" font-weight="900" font-family="'Pretendard', -apple-system, sans-serif" text-anchor="end">🌐 dodamtalk.com | 실전 육아 백서</text>
       </g>
     </svg>`;
 
@@ -3732,7 +3732,7 @@ class DodamCommunityApp {
     // ==========================================
     if (rawContent.includes('naver-blog-article') || post.isYoutubeSummary || post.isAiReport) {
       let fullHtml = rawContent;
-      if (fullHtml.length < 15000 || !fullHtml.includes('viewBox="0 0 800 340"')) {
+      if (fullHtml.length < 15000 || !fullHtml.includes('dodam-report-v3')) {
         const vId = post.youtubeVideoId || this.extractYoutubeId(post.youtubeUrl) || 'cWGKAxSiaHY';
         const rawTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '');
         const meta = {
@@ -4245,12 +4245,14 @@ class DodamCommunityApp {
     if (post.isYoutubeSummary || post.isAiReport || (post.title && (post.title.includes('|') || post.title.includes('초등학생')))) {
       if (post.title && (post.title.includes('|') || post.title.includes('이시훈') || post.title.includes('Q&A'))) {
         const badgeMatch = (post.title || '').match(/^\[([^\]]+)\]\s*/);
-        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
+        const curBadge = '[육아가이드] ';
         const rawTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        if (post.isAiReport || post.isYoutubeSummary) post.title = curBadge + rawTitle;
         post.title = curBadge + this.generateCleanArticleTitle(rawTitle, post.guideType || 'growth');
       }
       if (post.author) {
         post.author.childBadge = '📖 도담 육아가이드';
+        if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(post.author.nickname)) post.author.nickname = '운영자';
       }
     }
 
@@ -12519,6 +12521,8 @@ class DodamCommunityApp {
 
     const normCat = category === 'nutrition' ? 'food' : category === 'play' ? 'growth' : category === 'school' ? 'edu' : category;
     const info = themeMap[normCat] || themeMap['all'];
+    // SVG(XML) 텍스트 노드용 이스케이프: '&' 등이 있으면 이미지 전체가 깨지므로 반드시 변환
+    const xe = (v) => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
     // 2. 인라인 SVG 인포그래픽 카드 5장 생성 (네이버 블로그 복사 시 완벽 호환되는 벡터 그래픽)
     const card1Svg = `
@@ -12531,17 +12535,17 @@ class DodamCommunityApp {
   </defs>
   <rect width="800" height="420" rx="20" fill="url(#g1)"/>
   <rect x="35" y="30" width="130" height="30" rx="15" fill="#f97316"/>
-  <text x="100" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${info.targetAge}</text>
+  <text x="100" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(info.targetAge)}</text>
   <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-  <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.kr</text>
-  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${info.subName} 핵심 요약 브리핑</text>
-  <text x="35" y="142" fill="#ffffff" font-size="20" font-weight="900" font-family="'Pretendard', sans-serif">${cleanTitle.length > 34 ? cleanTitle.slice(0, 34) + '...' : cleanTitle}</text>
+  <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
+  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${xe(info.subName)} 핵심 요약 브리핑</text>
+  <text x="35" y="142" fill="#ffffff" font-size="20" font-weight="900" font-family="'Pretendard', sans-serif">${xe(cleanTitle.length > 34 ? cleanTitle.slice(0, 34) + '...' : cleanTitle)}</text>
   <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
   <rect x="35" y="195" width="730" height="195" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
   <text x="60" y="232" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
-  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${info.b1}</text>
-  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${info.b2}</text>
-  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${info.b3}</text>
+  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${xe(info.b1)}</text>
+  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${xe(info.b2)}</text>
+  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${xe(info.b3)}</text>
 </svg>`.trim();
 
     const card2Svg = `
@@ -12698,7 +12702,22 @@ class DodamCommunityApp {
   <text x="430" y="270" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 아이 앞에서 양육자끼리 훈육 방식 다투기</text>
 </svg>`.trim();
 
-    const encodeSvg = (svg) => 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가 (배경 사각형 높이도 함께 확장)
+    const withFooter = (svg) => {
+      const m = svg.match(/viewBox="0 0 800 (\d+)"/);
+      if (!m) return svg;
+      const h = parseInt(m[1], 10);
+      const nh = h + 44;
+      return svg
+        .replace(`viewBox="0 0 800 ${h}"`, `viewBox="0 0 800 ${nh}"`)
+        .replace(`<rect width="800" height="${h}" rx="20"`, `<rect width="800" height="${nh}" rx="20"`)
+        .replace(
+          '</svg>',
+          `<line x1="40" y1="${h + 4}" x2="760" y2="${h + 4}" stroke="#334155" stroke-width="1"/>` +
+          `<text x="400" y="${h + 30}" fill="#38bdf8" font-size="15" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">🌐 도담톡 육아 커뮤니티 · dodamtalk.com</text></svg>`
+        );
+    };
+    const encodeSvg = (svg) => 'data:image/svg+xml;utf8,' + encodeURIComponent(withFooter(svg));
     const img1Uri = encodeSvg(card1Svg);
     const img2Uri = encodeSvg(card2Svg);
     const img3Uri = encodeSvg(card3Svg);
@@ -12751,7 +12770,7 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
     const charCount = plainText.length;
 
     // 4. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
-    const html = `
+    const html = `<!-- dodam-report-v3 -->
       <div class="naver-blog-article space-y-7 text-slate-800 leading-relaxed font-sans max-w-3xl mx-auto py-2">
         <!-- 1. 공식 육아 가이드 브리핑 헤더 바 (유튜브 영상 플레이어 및 외부 채널 정보 완전 제거) -->
         <div class="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs">
@@ -12929,7 +12948,7 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
       const tags = ['육아가이드', guideInfo.badge, guideInfo.name, '도담육아연구소'];
 
       const refinedTitle = this.generateCleanArticleTitle(meta.title, guideType);
-      const postTitle = `[${guideInfo.badge}] ${refinedTitle}`;
+      const postTitle = `[육아가이드] ${refinedTitle}`;
 
       const newPost = {
         id: `custom-post-${Date.now()}`,
@@ -12954,7 +12973,7 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
         images: [],
         author: {
           userId: this.currentUser?.id || 'admin',
-          nickname: this.currentUser?.nickname || '도담 공식 가이드',
+          nickname: '운영자',
           level: '👑 공식 리포트',
           childBadge: '📖 도담 육아가이드',
           avatarBg: 'bg-emerald-600 text-white'

@@ -339,6 +339,27 @@ def run_tests():
         assert reload_state['isCustomized'] == True, f"isCustomized false after reload! Got: {reload_state['isCustomized']}"
         print("✅ Scenario C PASSED!")
 
+        print("\n--- Cleaning up test artifacts ---")
+        page.evaluate(f"""async () => {{
+            const app = window.app;
+            const fb = window.DodamFirebase;
+            const testIds = ['{test_user}', '{kakao_id}'];
+            if (app.users) {{
+                app.users = app.users.filter(u => !testIds.includes(u.id) && !testIds.includes(u.username));
+                if (fb && typeof fb.saveUsers === 'function') {{
+                    await fb.saveUsers(app.users);
+                }}
+            }}
+            sessionStorage.clear();
+            localStorage.clear();
+            if (fb) {{
+                await fb.clearSession('active_session');
+                await fb.deleteProfile('{test_user}');
+                await fb.deleteProfile('{kakao_id}');
+            }}
+        }}""")
+        print("Teardown complete: test accounts cleaned up from DB.")
+
         print("\n🎉 ALL TESTS PASSED COMPLETELY! Page errors:", len(errors))
         browser.close()
 
