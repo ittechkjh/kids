@@ -220,6 +220,27 @@ class DodamCommunityApp {
     this.initNaverSdk();
     this.initOAuthListeners();
     this.initPwa();
+    // 기존 생성된 AI 리포트 게시글의 제목 및 유튜브 흔적 일괄 정제
+    (this.data.posts || []).forEach((p) => {
+      if (p.isYoutubeSummary || p.isAiReport || (p.title && p.title.includes('|'))) {
+        const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
+        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '';
+        const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
+          p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
+        }
+        if (p.author && p.author.childBadge && p.author.childBadge.includes('(')) {
+          p.author.childBadge = '📖 도담 육아가이드';
+        }
+        if (p.contentHtml) {
+          p.contentHtml = p.contentHtml
+            .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
+            .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
+            .replace(/<a\s+href="https:\/\/www\.youtube\.com\/watch\?v=[^"]*"[\s\S]*?<\/a>/gi, '');
+        }
+      }
+    });
+
     // ==========================================
     // SPA 뒤로가기/앞으로가기 브라우저 히스토리 라우팅 완벽 지원
     // ==========================================
@@ -3496,6 +3517,39 @@ class DodamCommunityApp {
     if (!contentEl) return;
 
     this.currentPostDetailImages = [];
+    const rawContent = post.contentHtml || post.content || '';
+
+    // ==========================================
+    // [네이버 블로그형 AI 리포트 전용 렌더링]
+    // 5장의 인포그래픽 이미지 및 서식을 100% 원본 HTML로 직접 렌더링 (이스케이프 및 중복 다크 카드 방지)
+    // ==========================================
+    if (rawContent.includes('naver-blog-article') || post.isYoutubeSummary || post.isAiReport) {
+      const imgMatches = rawContent.match(/src=["'](data:image\/svg\+xml;utf8,[^"']+)["']/g) || [];
+      imgMatches.forEach((m) => {
+        const uri = m.replace(/^src=["']/, '').replace(/["']$/, '');
+        try {
+          const decodedSvg = decodeURIComponent(uri.replace('data:image/svg+xml;utf8,', ''));
+          this.currentPostDetailImages.push(decodedSvg);
+        } catch (e) {
+          this.currentPostDetailImages.push(uri);
+        }
+      });
+
+      const dlLabel = document.getElementById('btn-download-all-images-label');
+      if (dlLabel) {
+        dlLabel.textContent = `총 ${Math.max(this.currentPostDetailImages.length, 5)}장 일괄 다운로드`;
+      }
+
+      // 유튜브 영상 플레이어(iframe) 및 유튜브 관련 잔여 링크 완벽 제거
+      let cleanHtml = rawContent
+        .replace(/<!--\s*1\.\s*유튜브 비디오 플레이어[\s\S]*?<\/iframe>\s*<\/div>\s*<\/div>/gi, '')
+        .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
+        .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
+        .replace(/<a\s+href="https:\/\/www\.youtube\.com\/watch\?v=[^"]*"[\s\S]*?<\/a>/gi, '');
+
+      contentEl.innerHTML = cleanHtml;
+      return;
+    }
     const stObj = (this.data.ageStages || []).find((s) => s.id === (post.ageStage || post.category));
     const cat = (this.data.categories || []).find((c) => c.id === post.category);
     const categoryLabel = (stObj && stObj.id !== 'all' ? stObj.shortName : cat?.name || '도담 육아 가이드').replace(/^[^\w가-힣]+/, '').trim();
@@ -3505,7 +3559,6 @@ class DodamCommunityApp {
       ? `${post.localHubName} 양육 가정`
       : (stObj && stObj.id !== 'all' ? `${stObj.shortName} 자녀 부모` : '전국 영유아·초등 학부모');
 
-    const rawContent = post.contentHtml || post.content || '';
     const isRichHtml = rawContent.includes('<h4') || rawContent.includes('ai-parenting-report-article');
 
     let renderedHtml = '';
@@ -12057,11 +12110,76 @@ class DodamCommunityApp {
     return { title, authorName, thumbnailUrl };
   }
 
+  // ==========================================
+  // [AI 리포트 스마트 제목 생성기]
+  // 유튜브 채널명, 인명, 파이프(|), 키워드 나열을 정제하여 세련된 네이버 블로그형 제목 생성
+  // ==========================================
+  generateCleanArticleTitle(rawTitle, guideType = 'growth') {
+    if (!rawTitle) return '육아 핵심 가이드';
+
+    // 1. 유튜브, 방송, 클립, 화질 등 불필요한 태그 및 해시태그 제거
+    let text = rawTitle
+      .replace(/\[?(?:유튜브|youtube|풀영상|다시보기|하이라이트|클립|ENG\s*sub|자막|공식|HOT)\]?/gi, '')
+      .replace(/#[^\s#]+/g, '')
+      .trim();
+
+    // 2. 파이프(|), 슬래시(/), 대시(-), 가운데점(·) 등 구분자로 분리
+    const rawParts = text
+      .split(/[|/·—–\-]/)
+      .map((p) => p.replace(/\[[^\]]*\]|\([^)]*\)/g, '').trim())
+      .filter(Boolean);
+
+    // 3. 채널명, 인명, 단순 키워드 필터링
+    const channelJunk = /^(?:삐뽀삐뽀\s*119(?:\s*소아과)?|오은영의\s*버킷리스트|닥터프렌즈|세바시|스브스뉴스|ebs|kbs|mbc|sbs|ytn|tv|클립|특강|뉴스|상담소|연구소)$/i;
+    const nameJunk = /^(?:이시훈|오은영|하정훈|김수연|최민준|금쪽이|정우열|서천석)(?:\s*(?:원장|교수|박사|선생님))?$/i;
+    const keywordSpam = /^(?:성교육|자녀교육|부모교육|초등학생|중학생|고등학생|유아|영유아|육아|Q&A|꿀팁|추천)$/i;
+
+    const scored = [];
+    for (const p of rawParts) {
+      if (channelJunk.test(p) || nameJunk.test(p) || keywordSpam.test(p)) continue;
+      if (p.length < 4) continue;
+      let score = p.length;
+      if (/이유식|수면|통잠|훈육|떼쓰기|분리불안|이성교제|성교육|스마트폰|발달|대화법|솔루션|원인|대처|식단|영양/i.test(p)) {
+        score += 30;
+      }
+      if (/Q&A|조언|방법|비결|특징|이유/i.test(p)) {
+        score += 10;
+      }
+      scored.append ? null : scored.push({ score, text: p });
+    }
+
+    scored.sort((a, b) => b.score - a.score);
+
+    let finalTitle = '';
+    if (scored.length > 0) {
+      const best = scored[0].text.replace(/^[\"'‘“\[(]+|[)\"'’”\]]+$/g, '').trim();
+      if (scored.length > 1 && scored[1].score >= 15) {
+        const secondary = scored[1].text.replace(/Q&A|조언|꿀팁|특강/gi, '').trim();
+        const secondaryWords = secondary.split(/\s+/).filter((w) => w.length >= 2 && !best.includes(w));
+        if (secondaryWords.length > 0 && (best.length + secondaryWords.join(' ').length) <= 38) {
+          finalTitle = `${best} (${secondaryWords.join(' ')} 솔루션)`;
+        } else {
+          finalTitle = best;
+        }
+      } else {
+        finalTitle = best;
+      }
+    } else {
+      finalTitle = text;
+    }
+
+    finalTitle = finalTitle.replace(/[,:;\-]+$/, '').trim();
+    if (finalTitle.length > 48) {
+      finalTitle = finalTitle.slice(0, 48).trim();
+    }
+
+    return finalTitle || '육아 전문 가이드 솔루션';
+  }
+
   buildYoutubeSummaryContent(videoId, meta, category) {
-    const rawTitle = meta.title || '영상 핵심 가이드';
-    const cleanTitle = rawTitle.replace(/\[?유튜브\]?/gi, '').trim();
-    const rawAuthor = meta.authorName || '육아 전문 멘토';
-    const cleanAuthor = rawAuthor.replace(/유튜브|youtube/gi, '').trim() || '육아 전문 멘토';
+    const rawTitle = meta.title || '육아 핵심 가이드';
+    const cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
+    const cleanAuthor = '도담 육아연구소';
 
     // 1. 카테고리별 테마 메타데이터 및 맞춤 키워드 매핑
     const themeMap = {
@@ -12316,7 +12434,7 @@ class DodamCommunityApp {
     const img5Uri = encodeSvg(card5Svg);
 
     // 3. 본문 텍스트 구성 (글자 수 공백 포함 2,200 ~ 2,500자 정밀 튜닝)
-    const introText = `${info.targetAge} 학부모님들의 일상에서 가장 자주 부딪히는 고민 중 하나는 바로 '${cleanTitle}' 문제입니다. 아이가 성장할 때마다 신체적·정서적으로 급격한 변화를 겪으며, 뇌 발달 측면에서도 자율성에 대한 욕구와 호기심이 커지게 됩니다.
+    const introText = `${info.targetAge}의 일상에서 가장 자주 부딪히는 고민 중 하나는 바로 '${cleanTitle}' 문제입니다. 아이가 성장할 때마다 신체적·정서적으로 급격한 변화를 겪으며, 뇌 발달 측면에서도 자율성에 대한 욕구와 호기심이 커지게 됩니다.
 
 '우리 아이가 왜 이런 행동을 보일까?', '어떻게 반응해야 상처 주지 않고 올바르게 이끌 수 있을까?' 고민하는 부모님들이 많습니다. 오늘은 소아청소년 임상 지침과 현장 노하우를 바탕으로, 가정에서 바로 실천할 수 있는 핵심 솔루션을 체계적으로 정리해 드립니다.`;
 
@@ -12336,7 +12454,7 @@ class DodamCommunityApp {
 
 1주차는 '아이의 패턴 관찰 및 촉발점 탐색' 주간입니다. 언제 편안해하고 언제 불안해하는지 감정의 흐름을 기록하며, 일방적인 지시를 줄이고 아이의 상태를 있는 그대로 관찰합니다.
 
-2주차는 '가족 규칙 시각화 및 환경 조성' 주간입니다. 핵심 약속을 3가지 이내로 축약하여 잘 보이는 곳에 붙여두고, 디지털 기기나 주변 환경을 정돈하여 정서적 안정감을 높입니다.
+2주차는 '가족 규칙 시각화 및 환경 조성' 주간입니다. 핵심 약속을 3가지 이내로 축약하여 잘 보이는 곳에 붙여두고, 주변 환경을 정돈하여 정서적 안정감을 높입니다.
 
 3주차는 '작은 성공 즉각 칭찬 및 보상 연계' 주간입니다. 규칙을 잘 지켰을 때 결과가 아닌 과정과 노력을 칭찬하고, 성취감을 스스로 느낄 수 있도록 지지합니다.
 
@@ -12348,7 +12466,7 @@ Q1. 아이가 약속을 지키지 않고 떼를 쓰거나 고집부릴 땐 어�
 A. 감정이 격해진 순간에는 어떠한 설명도 귀에 들어가지 않습니다. 흥분 상태일 때는 안전을 확보한 뒤 조용히 곁을 지키며 감정이 가라앉을 때까지 기다려주는 것이 우선입니다. 호흡이 안정된 후 차분한 목소리로 짧고 명확하게 원칙을 상기시켜 주세요.
 
 Q2. 부모의 기분에 따라 훈육 태도가 달라져 자책감이 들 땐 어떻게 해야 하나요?
-A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 "엄마가 너무 지쳐서 소리를 질렀어, 미안해"라고 사과를 건네세요. 실수를 인정하고 회복하는 과정을 보여주는 것 자체가 아이에게 훌륭한 정서 교육이 됩니다.`;
+A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사과를 건네세요. 실수를 인정하고 회복하는 과정을 보여주는 것 자체가 아이에게 훌륭한 정서 교육이 됩니다.`;
 
     const outroText = `자녀를 키우며 겪는 수많은 고민과 시행착오는 아이가 잘 자라고 있다는 가장 자연스러운 증거입니다. 지나친 조급함으로 다그치기보다, 언제든 돌아와 기댈 수 있는 따뜻하고 안전한 언덕이 되어주시길 바랍니다. 완벽한 양육 기술보다 중요한 것은 작은 신호에 귀 기울여주는 한결같은 사랑과 일관된 태도입니다.
 
@@ -12363,31 +12481,20 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 "�
     // 4. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `
       <div class="naver-blog-article space-y-7 text-slate-800 leading-relaxed font-sans max-w-3xl mx-auto py-2">
-        <!-- 1. 유튜브 비디오 플레이어 임베드 (16:9) -->
-        <div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">
-          <iframe
-            src="https://www.youtube.com/embed/${videoId}?rel=0"
-            title="${cleanTitle}"
-            class="absolute inset-0 w-full h-full border-0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <!-- 2. 채널 메타 정보 바 -->
-        <div class="p-3.5 bg-stone-50 rounded-2xl border border-stone-200/80 flex items-center justify-between flex-wrap gap-2 text-xs">
+        <!-- 1. 공식 육아 가이드 브리핑 헤더 바 (유튜브 영상 플레이어 및 외부 채널 정보 완전 제거) -->
+        <div class="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs">
           <div class="flex items-center gap-2.5 min-w-0">
-            <span class="w-8 h-8 rounded-full bg-purple-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
-              <i class="fa-solid fa-book-open"></i>
+            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs">
+              <i class="fa-solid fa-file-shield"></i>
             </span>
-            <div class="min-w-0 truncate">
-              <div class="font-black text-slate-900 truncate">${cleanAuthor}</div>
-              <div class="text-[11px] text-slate-500 font-medium">${info.subName} (${info.targetAge})</div>
+            <div class="min-w-0">
+              <div class="font-black text-slate-900 truncate">도담 공식 육아가이드 심층 리포트</div>
+              <div class="text-[11px] text-emerald-800 font-medium">${info.subName} · ${info.targetAge}</div>
             </div>
           </div>
-          <div class="flex items-center gap-2">
-            <span class="px-2.5 py-1 rounded-xl bg-purple-100 text-purple-800 font-black text-[11px]">${info.badge}</span>
-            <span class="px-2.5 py-1 rounded-xl bg-emerald-100 text-emerald-800 font-bold text-[11px]">약 ${charCount.toLocaleString()}자</span>
+          <div class="flex items-center gap-1.5">
+            <span class="px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black text-[11px]">${info.badge}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-white border border-emerald-300 text-emerald-800 font-bold text-[11px]">전문가 검증</span>
           </div>
         </div>
 
