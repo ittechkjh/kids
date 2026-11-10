@@ -4039,22 +4039,22 @@
   <!-- Firebase App & Cloud Firestore SDK (Compat v9 CDN) -->
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
-  <script charset="utf-8" src="js/firebase_config.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/firebase_db.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/events_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/restaurants_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/attractions_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/policies_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/neis_schools_map.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/schools_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/richgo_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/admissions_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/admin_data.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/data.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/firebase_config.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/firebase_db.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/events_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/restaurants_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/attractions_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/policies_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/neis_schools_map.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/schools_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/richgo_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/admissions_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/admin_data.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/data.js?v=20261110_v24"></script>
   <!-- 카카오 공식 인증 SDK 및 설정 -->
   <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
-  <script charset="utf-8" src="js/social_config.js?v=20261109_v23"></script>
-  <script charset="utf-8" src="js/app.js?v=20261109_v23"></script>
+  <script charset="utf-8" src="js/social_config.js?v=20261110_v24"></script>
+  <script charset="utf-8" src="js/app.js?v=20261110_v24"></script>
   
   <!-- ==========================================
        MODAL 8: 교육부 입시 정보 상세 심층 모달
@@ -4184,6 +4184,9 @@
               type="url"
               id="youtube-summary-url"
               oninput="app.checkYoutubeUrlDuplicate(this.value)"
+              onpaste="setTimeout(() => app.checkYoutubeUrlDuplicate(this.value), 50)"
+              onchange="app.checkYoutubeUrlDuplicate(this.value)"
+              onkeyup="app.checkYoutubeUrlDuplicate(this.value)"
               placeholder="https://www.youtube.com/watch?v=... 또는 https://youtu.be/..."
               class="w-full bg-white border border-sky-300 rounded-xl px-3.5 py-2.5 text-xs font-bold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400/50 shadow-2xs"
             />

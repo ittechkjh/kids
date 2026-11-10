@@ -220,17 +220,32 @@ class DodamCommunityApp {
     this.initNaverSdk();
     this.initOAuthListeners();
     this.initPwa();
-    // 기존 생성된 AI 리포트 게시글의 제목 및 유튜브 흔적 일괄 정제
+    // 기존 생성된 AI 리포트 게시글의 제목, 2463자 본문, 5개 SVG 카드 및 유튜브 흔적 일괄 정제 & 복원
     (this.data.posts || []).forEach((p) => {
-      if (p.isYoutubeSummary || p.isAiReport || (p.title && p.title.includes('|'))) {
+      if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
         const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
-        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '';
+        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
         const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
         if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
           p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
         }
-        if (p.author && p.author.childBadge && p.author.childBadge.includes('(')) {
+        if (p.author) {
           p.author.childBadge = '📖 도담 육아가이드';
+          if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
+            p.author.avatarBg = 'bg-emerald-600 text-white';
+          }
+        }
+        // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
+        if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('viewBox="0 0 800 340"')) {
+          const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
+          const meta = {
+            title: rawTitle,
+            authorName: '도담 육아연구소'
+          };
+          const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
+          p.contentHtml = generated.html;
+          p.content = generated.html;
+          p.rawTextContent = generated.plainText;
         }
         if (p.contentHtml) {
           p.contentHtml = p.contentHtml
@@ -557,6 +572,42 @@ class DodamCommunityApp {
           merged.push(p);
         });
         this.data.posts = merged;
+
+        // AI 리포트 원격 로드 시 제목 정제, 2,463자 본문 및 5개 SVG 카드 즉시 치유 & 동기화
+        (this.data.posts || []).forEach((p) => {
+          if (p && (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생'))))) {
+            const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
+            const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
+            const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
+            if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
+              p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
+            }
+            if (p.author) {
+              p.author.childBadge = '📖 도담 육아가이드';
+              if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin') {
+                p.author.avatarBg = 'bg-emerald-600 text-white';
+              }
+            }
+            // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
+            if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('viewBox="0 0 800 340"')) {
+              const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
+              const meta = {
+                title: rawTitle,
+                authorName: '도담 육아연구소'
+              };
+              const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
+              p.contentHtml = generated.html;
+              p.content = generated.html;
+              p.rawTextContent = generated.plainText;
+            }
+            if (p.contentHtml) {
+              p.contentHtml = p.contentHtml
+                .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
+                .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
+                .replace(/<a\s+href="https:\/\/www\.youtube\.com\/watch\?v=[^"]*"[\s\S]*?<\/a>/gi, '');
+            }
+          }
+        });
 
         if (this.currentView === 'board') {
           this.renderBoardCategories();
@@ -3524,7 +3575,22 @@ class DodamCommunityApp {
     // 5장의 인포그래픽 이미지 및 서식을 100% 원본 HTML로 직접 렌더링 (이스케이프 및 중복 다크 카드 방지)
     // ==========================================
     if (rawContent.includes('naver-blog-article') || post.isYoutubeSummary || post.isAiReport) {
-      const imgMatches = rawContent.match(/src=["'](data:image\/svg\+xml;utf8,[^"']+)["']/g) || [];
+      let fullHtml = rawContent;
+      if (fullHtml.length < 15000 || !fullHtml.includes('viewBox="0 0 800 340"')) {
+        const vId = post.youtubeVideoId || this.extractYoutubeId(post.youtubeUrl) || 'cWGKAxSiaHY';
+        const rawTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        const meta = {
+          title: rawTitle,
+          authorName: '도담 육아연구소'
+        };
+        const generated = this.buildYoutubeSummaryContent(vId, meta, post.guideType || 'growth');
+        fullHtml = generated.html;
+        post.contentHtml = fullHtml;
+        post.content = fullHtml;
+        post.rawTextContent = generated.plainText;
+      }
+
+      const imgMatches = fullHtml.match(/src=["'](data:image\/svg\+xml;utf8,[^"']+)["']/g) || [];
       imgMatches.forEach((m) => {
         const uri = m.replace(/^src=["']/, '').replace(/["']$/, '');
         try {
@@ -3541,7 +3607,7 @@ class DodamCommunityApp {
       }
 
       // 유튜브 영상 플레이어(iframe) 및 유튜브 관련 잔여 링크 완벽 제거
-      let cleanHtml = rawContent
+      let cleanHtml = fullHtml
         .replace(/<!--\s*1\.\s*유튜브 비디오 플레이어[\s\S]*?<\/iframe>\s*<\/div>\s*<\/div>/gi, '')
         .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
         .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
@@ -4017,6 +4083,18 @@ class DodamCommunityApp {
         if (post.localTopicName) labelParts.push(post.localTopicName);
         catBadge.textContent = labelParts.join(' · ') || '💡 도담 육아팁';
         catBadge.className = 'px-3 py-1 rounded-full text-xs font-extrabold bg-sky-50 text-sky-700 border border-sky-200';
+      }
+    }
+
+    if (post.isYoutubeSummary || post.isAiReport || (post.title && (post.title.includes('|') || post.title.includes('초등학생')))) {
+      if (post.title && (post.title.includes('|') || post.title.includes('이시훈') || post.title.includes('Q&A'))) {
+        const badgeMatch = (post.title || '').match(/^\[([^\]]+)\]\s*/);
+        const curBadge = badgeMatch ? `[${badgeMatch[1]}] ` : '[👶 훈육] ';
+        const rawTitle = (post.title || '').replace(/^\[[^\]]+\]\s*/, '');
+        post.title = curBadge + this.generateCleanArticleTitle(rawTitle, post.guideType || 'growth');
+      }
+      if (post.author) {
+        post.author.childBadge = '📖 도담 육아가이드';
       }
     }
 
@@ -11949,6 +12027,7 @@ class DodamCommunityApp {
   extractYoutubeId(url) {
     if (!url) return null;
     const str = String(url).trim();
+    if (/^[a-zA-Z0-9_-]{11}$/.test(str)) return str;
     const m = str.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
     return m ? m[1] : null;
   }
@@ -11991,7 +12070,7 @@ class DodamCommunityApp {
     const runBtn = document.getElementById('btn-run-youtube-summary');
     if (runBtn) {
       runBtn.disabled = false;
-      runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+      runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       runBtn.innerHTML = '<span>▷ 지금 즉시 실행하기</span>';
     }
   }
@@ -12006,7 +12085,7 @@ class DodamCommunityApp {
       alertBox.innerHTML = '';
       if (runBtn) {
         runBtn.disabled = false;
-        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       }
       return;
     }
@@ -12017,7 +12096,7 @@ class DodamCommunityApp {
       alertBox.innerHTML = '';
       if (runBtn) {
         runBtn.disabled = false;
-        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       }
       return;
     }
@@ -12032,19 +12111,19 @@ class DodamCommunityApp {
     if (dupPost) {
       alertBox.classList.remove('hidden');
       alertBox.innerHTML = `
-        <div class="mt-2 p-3 rounded-xl bg-rose-50 border border-rose-300 text-rose-800 text-xs space-y-1.5 shadow-2xs">
+        <div class="mt-2.5 p-3.5 rounded-xl bg-rose-50 border border-rose-300 text-rose-800 text-xs space-y-2 shadow-sm">
           <div class="flex items-center gap-2 font-black text-rose-700">
-            <i class="fa-solid fa-triangle-exclamation text-rose-500 text-sm"></i>
-            <span>이미 리포트가 발행된 영상입니다 (중복 생성 불가)</span>
+            <i class="fa-solid fa-triangle-exclamation text-rose-600 text-base"></i>
+            <span class="text-xs sm:text-sm">이미 리포트가 발행된 영상입니다 (중복 생성 불가)</span>
           </div>
-          <div class="text-[11px] text-rose-600 truncate font-medium">
-            기존 글: <strong>` + dupPost.title + `</strong>
+          <div class="text-[11px] text-rose-700 bg-white/80 p-2 rounded-lg border border-rose-200 truncate font-semibold">
+            기존 발행 글: <strong>` + dupPost.title + `</strong>
           </div>
           <div class="pt-1 flex items-center gap-2">
             <button
               type="button"
               onclick="app.closeAiParentingReportModal(); app.openPostDetailModal('` + dupPost.id + `')"
-              class="px-2.5 py-1 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-black text-[11px] inline-flex items-center gap-1.5 transition cursor-pointer"
+              class="px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-black text-xs inline-flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
             >
               <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i>
               <span>기존 발행된 리포트 바로보기</span>
@@ -12054,14 +12133,14 @@ class DodamCommunityApp {
       `;
       if (runBtn) {
         runBtn.disabled = true;
-        runBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        runBtn.classList.add('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       }
     } else {
       alertBox.classList.add('hidden');
       alertBox.innerHTML = '';
       if (runBtn) {
         runBtn.disabled = false;
-        runBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
       }
     }
   }
@@ -12653,16 +12732,11 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
       // 2. Build structured summary
       const { html, plainText } = this.buildYoutubeSummaryContent(videoId, meta, guideType);
 
-      const cleanAuthorTag = (meta.authorName || '전문멘토')
-        .replace(/유튜브|youtube/gi, '')
-        .replace(/[^a-zA-Z0-9가-힣]/g, '')
-        .slice(0, 15) || '전문가';
-      const tags = ['육아가이드', guideInfo.badge, guideInfo.name, cleanAuthorTag].filter(Boolean);
+      const cleanAuthorTag = '도담 육아가이드';
+      const tags = ['육아가이드', guideInfo.badge, guideInfo.name, '도담육아연구소'];
 
-      const cleanVideoTitle = (meta.title || '영상 핵심 가이드')
-        .replace(/\[?유튜브\]?/gi, '')
-        .trim();
-      const postTitle = `[${guideInfo.badge}] ${cleanVideoTitle}`;
+      const refinedTitle = this.generateCleanArticleTitle(meta.title, guideType);
+      const postTitle = `[${guideInfo.badge}] ${refinedTitle}`;
 
       const newPost = {
         id: `custom-post-${Date.now()}`,
@@ -12684,13 +12758,13 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
         content: html,
         rawTextContent: plainText,
         contentHtml: html,
-        images: [meta.thumbnailUrl],
+        images: [],
         author: {
           userId: this.currentUser?.id || 'admin',
           nickname: this.currentUser?.nickname || '도담 공식 가이드',
           level: '👑 공식 리포트',
-          childBadge: `📖 도담 가이드 (${cleanAuthorTag})`,
-          avatarBg: 'bg-purple-600 text-white'
+          childBadge: '📖 도담 육아가이드',
+          avatarBg: 'bg-emerald-600 text-white'
         },
         createdAt: '방금 전',
         timestamp: Date.now(),

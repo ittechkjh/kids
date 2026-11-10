@@ -152,6 +152,8 @@ class DodamFirebaseService {
   // =========================================================
   buildSchemaValidPostDoc(post, customDocId = null) {
     const docId = String(customDocId || post.id || `post-${Date.now()}`).slice(0, 95);
+    const fullContentHtml = post.contentHtml || null;
+    const fullContent = fullContentHtml || post.content || post.rawTextContent || '내용 없음';
     const extraMeta = {
       guideType: post.guideType || 'all',
       ageStage: post.ageStage || post.category || 'all',
@@ -165,12 +167,10 @@ class DodamFirebaseService {
       isYoutubeSummary: Boolean(post.isYoutubeSummary),
       youtubeVideoId: post.youtubeVideoId || null,
       youtubeUrl: post.youtubeUrl || null,
-      contentHtml: post.contentHtml ? String(post.contentHtml).slice(0, 4800) : null,
       isEdited: Boolean(post.isEdited),
       origId: String(post.id || docId)
     };
 
-    const rawBody = String(post.rawTextContent || post.content || '내용 없음').slice(0, 4600);
     const authorNick = String(post.author?.nickname || '도담맘').slice(0, 45) || '도담맘';
     const authorBadge = String(post.author?.childBadge || '👶 도담이').slice(0, 45);
     const authorLevel = String(post.author?.level || '🌱 새싹맘').slice(0, 45);
@@ -187,12 +187,18 @@ class DodamFirebaseService {
       meta: extraMeta
     });
 
-    return {
+    const doc = {
       id: docId,
-      title: String(post.title || '제목 없음').slice(0, 140),
-      content: rawBody.length > 0 ? rawBody : '내용 없음',
+      title: String(post.title || '제목 없음').slice(0, 250),
+      content: fullContent,
       category: String(post.category || 'free').slice(0, 45),
       region: String(post.region || 'all').slice(0, 45),
+      guideType: post.guideType || 'all',
+      ageStage: post.ageStage || post.category || 'all',
+      isAiReport: Boolean(post.isAiReport),
+      isYoutubeSummary: Boolean(post.isYoutubeSummary),
+      youtubeVideoId: post.youtubeVideoId || null,
+      youtubeUrl: post.youtubeUrl || null,
       author: {
         nickname: authorNick,
         childBadge: authorBadge,
@@ -212,6 +218,14 @@ class DodamFirebaseService {
       timestamp: Number(post.timestamp) || Date.now(),
       userReaction: null
     };
+
+    if (fullContentHtml) {
+      doc.contentHtml = fullContentHtml;
+    }
+    if (post.rawTextContent) {
+      doc.rawTextContent = String(post.rawTextContent);
+    }
+    return doc;
   }
 
   unpackPostDoc(rawDoc) {
@@ -226,11 +240,21 @@ class DodamFirebaseService {
       }
     });
 
+    const fullContentHtml = rawDoc.contentHtml || extraMeta.contentHtml || null;
+    const resolvedContent = fullContentHtml || rawDoc.content || '내용 없음';
+
     return {
       ...rawDoc,
       ...extraMeta,
-      content: extraMeta.contentHtml || rawDoc.content,
-      id: extraMeta.origId || rawDoc.id,
+      contentHtml: fullContentHtml,
+      content: resolvedContent,
+      rawTextContent: rawDoc.rawTextContent || extraMeta.rawTextContent || null,
+      youtubeVideoId: rawDoc.youtubeVideoId || extraMeta.youtubeVideoId || null,
+      youtubeUrl: rawDoc.youtubeUrl || extraMeta.youtubeUrl || null,
+      guideType: rawDoc.guideType || extraMeta.guideType || 'all',
+      isAiReport: Boolean(rawDoc.isAiReport || extraMeta.isAiReport),
+      isYoutubeSummary: Boolean(rawDoc.isYoutubeSummary || extraMeta.isYoutubeSummary),
+      id: rawDoc.id || extraMeta.origId,
       comments: cleanComments
     };
   }
