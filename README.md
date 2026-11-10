@@ -47,3 +47,9 @@
 
 - ë¡œì»¬ì—ì„œ [index.html](file:///e:/kids/index.html) íŒŒì¼ì„ ë¸Œë¼ìš°ì €ë¡œ ì—´ë©´ ëª¨ë“  ì»¤ë®¤ë‹ˆí‹° ê¸°ëŠ¥ì´ ì¦‰ì‹œ ì‘ë™í•©ë‹ˆë‹¤.
 - GitHub ì €ì¥ì†Œ(`https://github.com/ittechkjh/kids`)ì˜ `main` ë¸Œëœì¹˜ë¥¼ í†µí•´ GitHub Pages(`https://ittechkjh.github.io/kids/`)ì— ë°°í¬ë©ë‹ˆë‹¤.
+
+## Å×½ºÆ®
+```bash
+uv run --with playwright python tests/run_all.py
+``` 
+(ÀÚÃ¼ ¼­¹ö¸¦ ¶ç¿ö smoke + ·Î±×ÀÎ/ÇÁ·ÎÇÊ À¯Áö Å×½ºÆ®¸¦ ÇÑ ¹ø¿¡ ½ÇÇàÇÕ´Ï´Ù.)

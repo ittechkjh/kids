@@ -595,11 +595,19 @@ class DodamFirebaseService {
     }
   }
 
+  // users/session 문서는 content 4800자 제한이 있으므로 개인 프로필은 user_profiles/{id}에만 저장
+  stripHeavyUserFields(u) {
+    if (!u || typeof u !== 'object') return u;
+    const { profile, savedProfile, children, ...rest } = u;
+    return rest;
+  }
+
   async saveUsers(usersArray) {
     if (!Array.isArray(usersArray)) return false;
-    this.latestSysState.users = { users: usersArray };
-    this.collectionsStatus.users = usersArray.length;
-    return this.writeSysStateRecord('users', { users: usersArray });
+    const slim = usersArray.map((u) => this.stripHeavyUserFields(u));
+    this.latestSysState.users = { users: slim };
+    this.collectionsStatus.users = slim.length;
+    return this.writeSysStateRecord('users', { users: slim });
   }
 
   async deleteUser(userId) {
@@ -630,8 +638,9 @@ class DodamFirebaseService {
       targetUser = sessionId;
       targetSessionId = userObj;
     }
-    this.latestSysState.user_sessions = { user: targetUser || null };
-    return this.writeSysStateRecord('user_sessions', { user: targetUser || null });
+    const slimUser = targetUser ? this.stripHeavyUserFields(targetUser) : null;
+    this.latestSysState.user_sessions = { user: slimUser };
+    return this.writeSysStateRecord('user_sessions', { user: slimUser });
   }
 
   async clearSession(sessionId = 'active_session') {

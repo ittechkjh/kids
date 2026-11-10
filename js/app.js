@@ -840,6 +840,47 @@ class DodamCommunityApp {
     };
   }
 
+  isCustomProfile(p) {
+    return !!(p && (p.isCustomized || (p.babyName && p.babyName !== '도담이')));
+  }
+
+  readCachedProfile(userId) {
+    if (!userId) return null;
+    try {
+      const raw = localStorage.getItem('dodam_profile_' + userId);
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  cacheUserProfile(userId, profile) {
+    if (!userId || !profile) return;
+    try {
+      localStorage.setItem('dodam_profile_' + userId, JSON.stringify(profile));
+    } catch (e) {}
+  }
+
+  // 다른 기기/브라우저에서 로그인한 경우 Cloud Firestore(user_profiles/{id})에서 프로필 복원
+  async hydrateUserProfile(userId) {
+    if (!userId || !window.DodamFirebase || typeof window.DodamFirebase.getProfile !== 'function') return;
+    try {
+      const remote = await window.DodamFirebase.getProfile(userId);
+      if (!remote || !this.isCustomProfile(remote)) return;
+      if (!this.currentUser || this.currentUser.id !== userId) return;
+      if (this.isCustomProfile(this.profile) && this.profile.babyName !== '도담이') return;
+      const { id, updatedAt, ...clean } = remote;
+      this.profile = { ...this.getDefaultProfile(), ...clean, isCustomized: true };
+      this.cacheUserProfile(userId, this.profile);
+      this.currentUser.profile = { ...this.profile };
+      this.saveCurrentUserSession();
+      this.renderProfileWidget();
+      this.renderGrowthSection();
+      this.renderLevelSection();
+      this.renderAuthHeader();
+    } catch (e) {}
+  }
+
   loadProfile() {
     const cur = this.loadCurrentUser();
     if (cur) {
@@ -858,6 +899,7 @@ class DodamCommunityApp {
   saveProfileData() {
     this.ensureChildrenArray();
     const userId = this.currentUser?.id || 'active_profile';
+    if (this.currentUser?.id) this.cacheUserProfile(this.currentUser.id, this.profile);
     if (window.DodamFirebase && typeof window.DodamFirebase.saveProfile === 'function') {
       window.DodamFirebase.saveProfile(this.profile, userId);
     }
@@ -1392,7 +1434,7 @@ class DodamCommunityApp {
 
               this.users = this.cleanUsersList(this.users || []);
               let userRecord = this.users.find((u) => u.id === kakaoUserId || u.username === kakaoUserId);
-              const savedProf = userRecord?.profile || userRecord?.savedProfile;
+              const savedProf = userRecord?.profile || userRecord?.savedProfile || this.readCachedProfile(kakaoUserId);
               const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
 
               if (hasCustomProfile) {
@@ -1460,10 +1502,11 @@ class DodamCommunityApp {
               this.renderProfileWidget();
               this.renderGrowthSection();
               this.renderLevelSection();
+              this.hydrateUserProfile(kakaoUserId);
               this.showToast(`🟡 카카오 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
 
               if (!this.profile.isCustomized) {
-                setTimeout(() => this.openProfileModal(), 500);
+                setTimeout(() => { if (!this.profile.isCustomized) this.openProfileModal(); }, 1500);
               }
             },
             fail: (err) => {
@@ -1565,7 +1608,7 @@ class DodamCommunityApp {
 
     this.users = this.cleanUsersList(this.users || []);
     let userRecord = this.users.find((u) => u.id === naverUserId || u.username === naverUserId);
-    const savedProf = userRecord?.profile || userRecord?.savedProfile;
+    const savedProf = userRecord?.profile || userRecord?.savedProfile || this.readCachedProfile(naverUserId);
     const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
 
     if (hasCustomProfile) {
@@ -1633,10 +1676,11 @@ class DodamCommunityApp {
     this.renderProfileWidget();
     this.renderGrowthSection();
     this.renderLevelSection();
+    this.hydrateUserProfile(naverUserId);
     this.showToast(`🟢 네이버 공식 계정으로 인증 완료되었습니다! 환영합니다, ${realNick}님!`);
 
     if (!this.profile.isCustomized) {
-      setTimeout(() => this.openProfileModal(), 500);
+      setTimeout(() => { if (!this.profile.isCustomized) this.openProfileModal(); }, 1500);
     }
   }
 
@@ -10660,7 +10704,7 @@ class DodamCommunityApp {
         }
 
         // Restore personal profile attached to this user!
-        const savedProf = found.profile || found.savedProfile;
+        const savedProf = found.profile || found.savedProfile || this.readCachedProfile(found.id);
         const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
         if (hasCustomProfile) {
           this.profile = {
@@ -10699,6 +10743,7 @@ class DodamCommunityApp {
         this.renderProfileWidget();
         this.renderGrowthSection();
         this.renderLevelSection();
+        this.hydrateUserProfile(found.id);
         this.showToast(`${found.nickname || found.username}님, 환영합니다!`);
 
         if (found.role === 'admin') {
