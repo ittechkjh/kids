@@ -309,6 +309,16 @@
                 </button>
                 <button
                   type="button"
+                  onclick="app.toggleMyPostsFilter()"
+                  id="btn-my-posts-filter"
+                  class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-extrabold text-xs transition cursor-pointer shrink-0 whitespace-nowrap"
+                  title="내가 작성한 활동글만 모아봅니다"
+                >
+                  <i class="fa-solid fa-file-lines text-amber-600 text-[11px]"></i>
+                  <span id="btn-my-posts-filter-label">내가 쓴 글</span>
+                </button>
+                <button
+                  type="button"
                   onclick="app.openWritePage()"
                   class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap ml-auto sm:ml-0"
                 >
@@ -3329,23 +3339,27 @@
         </button>
       </div>
 
-      <!-- 4대 탭: [아이&부모 프로필] / [성장 다이어리] / [활동점수 & 등업] / [계정·탈퇴 관리] -->
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs font-bold shrink-0">
+      <!-- 5대 탭: [아이&부모 프로필] / [성장 다이어리] / [활동점수 & 등업] / [내가 쓴 글] / [계정·탈퇴 관리] -->
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-1.5 p-1 rounded-2xl bg-stone-100 border border-stone-200 text-xs font-bold shrink-0">
         <button type="button" onclick="app.setProfileTab('info')" id="tab-prof-info-btn" class="py-2 rounded-xl bg-white text-slate-900 font-black shadow-2xs transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-user-pen text-rose-500"></i>
-          <span>아이&부모 프로필</span>
+          <span>아이&부모</span>
         </button>
         <button type="button" onclick="app.setProfileTab('growth')" id="tab-prof-growth-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-ruler-combined text-indigo-500"></i>
-          <span>성장 다이어리</span>
+          <span>성장일기</span>
         </button>
         <button type="button" onclick="app.setProfileTab('level')" id="tab-prof-level-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-award text-amber-500"></i>
-          <span>활동점수·등업</span>
+          <span>활동·등업</span>
+        </button>
+        <button type="button" onclick="app.setProfileTab('my-posts')" id="tab-prof-my-posts-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
+          <i class="fa-solid fa-file-lines text-emerald-600"></i>
+          <span>내가 쓴 글</span>
         </button>
         <button type="button" onclick="app.setProfileTab('account')" id="tab-prof-account-btn" class="py-2 rounded-xl text-slate-600 hover:text-slate-900 transition cursor-pointer flex items-center justify-center gap-1.5">
           <i class="fa-solid fa-user-gear text-slate-600"></i>
-          <span>계정·탈퇴 관리</span>
+          <span>계정 관리</span>
         </button>
       </div>
 
@@ -3599,7 +3613,31 @@
           </div>
         </div>
 
-        <!-- [TAB 4] 계정 정보 수정 & 회원 탈퇴 -->
+        <!-- [TAB 4] 내가 쓴 글 이력 및 관리 -->
+        <div id="prof-tab-my-posts" class="hidden space-y-3.5">
+          <div class="flex items-center justify-between pb-2 border-b border-stone-100">
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-slate-800 text-xs flex items-center gap-1.5">
+                <i class="fa-solid fa-file-lines text-emerald-600"></i>
+                <span>내가 작성한 글 목록</span>
+              </span>
+              <span id="prof-my-posts-count-badge" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-100 text-emerald-700">0건</span>
+            </div>
+            <button
+              type="button"
+              onclick="app.closeProfileModal(); app.openWritePage();"
+              class="px-2.5 py-1 rounded-lg bg-[#03C75A] hover:bg-[#02b350] text-white text-[11px] font-bold shadow-2xs transition cursor-pointer flex items-center gap-1"
+            >
+              <i class="fa-solid fa-pen-nib text-[10px]"></i>
+              <span>새 글 쓰기</span>
+            </button>
+          </div>
+          <div id="prof-my-posts-list" class="space-y-2">
+            <!-- 자바스크립트 동적 렌더링 -->
+          </div>
+        </div>
+
+        <!-- [TAB 5] 계정 정보 수정 & 회원 탈퇴 -->
         <div id="prof-tab-account" class="hidden space-y-3.5">
           <!-- 계정 기본 상태 카드 -->
           <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 space-y-3">

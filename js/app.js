@@ -181,6 +181,7 @@ class DodamCommunityApp {
     this.loadSavedPosts();
     this.deletedPostIds = new Set();
     this.myPostIds = new Set();
+    this.myPostsOnlyFilter = false;
     try {
       const rawMy = sessionStorage.getItem('dodam_my_post_ids') || localStorage.getItem('dodam_my_post_ids');
       if (rawMy) {
@@ -221,62 +222,27 @@ class DodamCommunityApp {
     this.initOAuthListeners();
     this.initPwa();
     // 기존 생성된 AI 리포트 게시글의 제목, 2463자 본문, 5개 SVG 카드 및 유튜브 흔적 일괄 정제 & 복원
+    // 오직 공식 가이드 시드 게시글만 정제하며, 사용자가 작성한 일반 게시글은 절대 수정하지 않음!
     (this.data.posts || []).forEach((p) => {
       if (!p) return;
       if (p.views < 50) {
         p.isHot = false;
       }
-      if (p.title && (p.title.includes('신종호') || p.title.includes('공부 호기심') || p.title.includes('이 질문'))) {
+      const isOfficialGuideSeed = p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1' || p.id === 'guide-seed-2' || p.id === 'custom-post-1794357137086';
+      if (isOfficialGuideSeed && p.id === 'custom-post-1794357137086') {
         p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
         p.guideType = 'edu';
         p.ageStage = 'school';
         p.isHot = false;
-        if (!p.contentHtml || !p.contentHtml.includes('학습 민첩성') || p.contentHtml.includes('편도체') || p.contentHtml.includes('이성교제')) {
-          const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
-          const generated = this.buildYoutubeSummaryContent(vId, { title: p.title }, 'edu');
-          p.contentHtml = generated.html;
-          p.content = generated.html;
-          p.rawTextContent = generated.plainText;
-        }
       }
-      if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
-        const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
-        const curBadge = '[육아가이드] ';
-        const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
-        if (p.isAiReport || p.isYoutubeSummary) p.title = curBadge + rawTitle;
-        if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
-          p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
-        }
+      if (isOfficialGuideSeed && (p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1')) {
+        p.title = "[육아가이드] 초등학생 자녀의 이성교제, 방치하면 후회하는 결정적 이유";
+        p.guideType = 'growth';
+        p.ageStage = 'school';
         if (p.author) {
+          p.author.nickname = '운영자';
           p.author.childBadge = '📖 도담 육아가이드';
-          if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin', '도담 육아연구소', '도담연구소'].includes(p.author.nickname)) p.author.nickname = '운영자';
-          if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin' || p.author.nickname === '운영자') {
-            p.author.avatarBg = 'bg-emerald-600 text-white';
-          }
-        }
-        if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
-        if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
-        if (p.id === 'official-ai-report-growth-1' && p.views > 10) {
-          p.views = 0;
-          p.reactions = { like: 0, hug: 0, tip: 0 };
-        }
-        // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
-        if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
-          const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
-          const meta = {
-            title: rawTitle,
-            authorName: '운영자'
-          };
-          const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
-          p.contentHtml = generated.html;
-          p.content = generated.html;
-          p.rawTextContent = generated.plainText;
-        }
-        if (p.contentHtml) {
-          p.contentHtml = p.contentHtml
-            .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
-            .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
-            .replace(/<a\s+href="https:\/\/www\.youtube\.com\/watch\?v=[^"]*"[\s\S]*?<\/a>/gi, '');
+          p.author.avatarBg = 'bg-emerald-600 text-white';
         }
       }
     });
@@ -617,63 +583,27 @@ class DodamCommunityApp {
         });
         this.data.posts = merged;
 
-        // AI 리포트 원격 로드 시 제목 정제, 2,463자 본문 및 5개 SVG 카드 즉시 치유 & 동기화
+        // 오직 공식 가이드 시드 게시글만 정제하며, 사용자가 작성한 일반 게시글은 절대 수정하지 않음!
         (this.data.posts || []).forEach((p) => {
           if (!p) return;
           if (p.views < 50) {
             p.isHot = false;
           }
-          if (p.title && (p.title.includes('신종호') || p.title.includes('공부 호기심') || p.title.includes('이 질문'))) {
+          const isOfficialGuideSeed = p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1' || p.id === 'guide-seed-2' || p.id === 'custom-post-1794357137086';
+          if (isOfficialGuideSeed && p.id === 'custom-post-1794357137086') {
             p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
             p.guideType = 'edu';
             p.ageStage = 'school';
             p.isHot = false;
-            if (!p.contentHtml || !p.contentHtml.includes('학습 민첩성') || p.contentHtml.includes('편도체') || p.contentHtml.includes('이성교제')) {
-              const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
-              const generated = this.buildYoutubeSummaryContent(vId, { title: p.title }, 'edu');
-              p.contentHtml = generated.html;
-              p.content = generated.html;
-              p.rawTextContent = generated.plainText;
-            }
           }
-          if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
-            const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
-            const curBadge = '[육아가이드] ';
-            const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
-        if (p.isAiReport || p.isYoutubeSummary) p.title = curBadge + rawTitle;
-            if (rawTitle.includes('|') || rawTitle.includes('이시훈') || rawTitle.includes('Q&A') || rawTitle.includes('방치하면')) {
-              p.title = curBadge + this.generateCleanArticleTitle(rawTitle, p.guideType || 'growth');
-            }
+          if (isOfficialGuideSeed && (p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1')) {
+            p.title = "[육아가이드] 초등학생 자녀의 이성교제, 방치하면 후회하는 결정적 이유";
+            p.guideType = 'growth';
+            p.ageStage = 'school';
             if (p.author) {
+              p.author.nickname = '운영자';
               p.author.childBadge = '📖 도담 육아가이드';
-              if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin', '도담 육아연구소', '도담연구소'].includes(p.author.nickname)) p.author.nickname = '운영자';
-              if (p.author.nickname === '도담 공식 가이드' || p.author.nickname === 'admin' || p.author.nickname === '운영자') {
-                p.author.avatarBg = 'bg-emerald-600 text-white';
-              }
-            }
-            if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
-            if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
-            if (p.id === 'official-ai-report-growth-1' && p.views > 10) {
-              p.views = 0;
-              p.reactions = { like: 0, hug: 0, tip: 0 };
-            }
-            // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
-            if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
-              const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
-              const meta = {
-                title: rawTitle,
-                authorName: '운영자'
-              };
-              const generated = this.buildYoutubeSummaryContent(vId, meta, p.guideType || 'growth');
-              p.contentHtml = generated.html;
-              p.content = generated.html;
-              p.rawTextContent = generated.plainText;
-            }
-            if (p.contentHtml) {
-              p.contentHtml = p.contentHtml
-                .replace(/<iframe[\s\S]*?<\/iframe>/gi, '')
-                .replace(/<div class="relative w-full overflow-hidden rounded-2xl shadow-sm border border-stone-200 bg-black aspect-video">[\s\S]*?<\/div>/gi, '')
-                .replace(/<a\s+href="https:\/\/www\.youtube\.com\/watch\?v=[^"]*"[\s\S]*?<\/a>/gi, '');
+              p.author.avatarBg = 'bg-emerald-600 text-white';
             }
           }
         });
@@ -951,6 +881,8 @@ class DodamCommunityApp {
       this.profile = { ...this.getDefaultProfile(), ...clean, isCustomized: true };
       this.cacheUserProfile(userId, this.profile);
       this.currentUser.profile = { ...this.profile };
+      this.currentUser.savedProfile = { ...this.profile };
+      if (clean.nickname) this.currentUser.nickname = clean.nickname;
       this.saveCurrentUserSession();
       this.renderProfileWidget();
       this.renderGrowthSection();
@@ -998,6 +930,8 @@ class DodamCommunityApp {
       window.DodamFirebase.saveProfile(this.profile, userId);
     }
     if (this.currentUser && typeof this.currentUser === 'object') {
+      if (this.profile.nickname) this.currentUser.nickname = this.profile.nickname;
+      if (this.profile.region) this.currentUser.region = this.profile.region;
       this.currentUser.profile = { ...this.profile };
       this.currentUser.savedProfile = { ...this.profile };
       this.saveCurrentUserSession();
@@ -1553,11 +1487,15 @@ class DodamCommunityApp {
               } catch (e) {}
               const existingCustom = currentCustom || (this.isCustomProfile(guestCached) ? guestCached : null);
 
+              const effectiveNick = (savedProf?.nickname && savedProf.nickname !== '카카오회원')
+                ? savedProf.nickname
+                : (realNick !== '카카오회원' ? realNick : (savedProf?.nickname || '카카오회원'));
+
               if (hasCustomProfile) {
                 this.profile = {
                   ...this.getDefaultProfile(),
                   ...savedProf,
-                  nickname: realNick || savedProf.nickname,
+                  nickname: effectiveNick,
                   isCustomized: true
                 };
               } else if (existingCustom) {
@@ -1565,13 +1503,13 @@ class DodamCommunityApp {
                 this.profile = {
                   ...this.getDefaultProfile(),
                   ...existingCustom,
-                  nickname: realNick || existingCustom.nickname,
+                  nickname: effectiveNick,
                   isCustomized: true
                 };
               } else {
                 this.profile = {
                   ...this.getDefaultProfile(),
-                  nickname: realNick,
+                  nickname: effectiveNick,
                   isCustomized: false
                 };
               }
@@ -1581,7 +1519,7 @@ class DodamCommunityApp {
               this.currentUser = {
                 id: kakaoUserId,
                 username: kakaoUserId,
-                nickname: realNick,
+                nickname: effectiveNick,
                 provider: 'kakao',
                 profileImage: realPhoto,
                 role: 'user',
@@ -1595,7 +1533,7 @@ class DodamCommunityApp {
                 userRecord = {
                   id: kakaoUserId,
                   username: kakaoUserId,
-                  nickname: realNick,
+                  nickname: effectiveNick,
                   email: kakaoAccount.email || `${kakaoUserId}@kakao.com`,
                   role: 'user',
                   roleName: '카카오회원',
@@ -1611,7 +1549,7 @@ class DodamCommunityApp {
                 };
                 this.users.push(userRecord);
               } else {
-                userRecord.nickname = realNick;
+                userRecord.nickname = effectiveNick;
                 userRecord.lastLogin = lastLoginFormatted;
                 if (realPhoto) userRecord.profileImage = realPhoto;
                 userRecord.profile = { ...this.profile };
@@ -1770,24 +1708,28 @@ class DodamCommunityApp {
     } catch (e) {}
     const existingCustom = currentCustom || (this.isCustomProfile(guestCached) ? guestCached : null);
 
+    const effectiveNick = (savedProf?.nickname && savedProf.nickname !== '네이버회원')
+      ? savedProf.nickname
+      : (realNick !== '네이버회원' ? realNick : (savedProf?.nickname || '네이버회원'));
+
     if (hasCustomProfile) {
       this.profile = {
         ...this.getDefaultProfile(),
         ...savedProf,
-        nickname: realNick || savedProf.nickname,
+        nickname: effectiveNick,
         isCustomized: true
       };
     } else if (existingCustom) {
       this.profile = {
         ...this.getDefaultProfile(),
         ...existingCustom,
-        nickname: realNick || existingCustom.nickname,
+        nickname: effectiveNick,
         isCustomized: true
       };
     } else {
       this.profile = {
         ...this.getDefaultProfile(),
-        nickname: realNick,
+        nickname: effectiveNick,
         isCustomized: false
       };
     }
@@ -1797,7 +1739,7 @@ class DodamCommunityApp {
     this.currentUser = {
       id: naverUserId,
       username: naverUserId,
-      nickname: realNick,
+      nickname: effectiveNick,
       provider: 'naver',
       profileImage: realPhoto,
       role: 'member',
@@ -1811,7 +1753,7 @@ class DodamCommunityApp {
       userRecord = {
         id: naverUserId,
         username: naverUserId,
-        nickname: realNick,
+        nickname: effectiveNick,
         email: userObj.email || `${naverUserId}@naver.com`,
         role: 'member',
         roleName: '네이버회원',
@@ -1827,7 +1769,7 @@ class DodamCommunityApp {
       };
       this.users.push(userRecord);
     } else {
-      userRecord.nickname = realNick;
+      userRecord.nickname = effectiveNick;
       userRecord.lastLogin = lastLoginFormatted;
       if (realPhoto) userRecord.profileImage = realPhoto;
       userRecord.profile = { ...this.profile };
@@ -1931,7 +1873,10 @@ class DodamCommunityApp {
       }
       this.renderGrowthSection();
     }
-    const tabs = ['info', 'growth', 'level', 'account'];
+    if (tabName === 'my-posts') {
+      this.renderMyPostsTab();
+    }
+    const tabs = ['info', 'growth', 'level', 'my-posts', 'account'];
     tabs.forEach((t) => {
       const el = document.getElementById(`prof-tab-${t}`);
       const btn = document.getElementById(`tab-prof-${t}-btn`);
@@ -1951,15 +1896,16 @@ class DodamCommunityApp {
       this.pushModalHistoryState('profile-modal', 'closeProfileModal');
     }
     const nickInput = document.getElementById('prof-nickname');
-    if (nickInput) nickInput.value = this.profile.nickname || '판교도담맘';
+    if (nickInput) nickInput.value = this.profile.nickname || this.currentUser?.nickname || '판교도담맘';
     const regionInput = document.getElementById('prof-region');
-    if (regionInput) regionInput.value = this.profile.region || '경기 성남 분당';
+    if (regionInput) regionInput.value = this.profile.region || this.currentUser?.region || '경기 성남 분당';
 
     this.editingChildren = JSON.parse(JSON.stringify(this.ensureChildrenArray()));
     this.renderChildrenFormRows();
     this.renderInterestChips();
     this.renderGrowthSection();
     this.renderLevelSection();
+    this.renderMyPostsTab();
     this.renderAccountSection();
 
     this.setProfileTab(targetTab);
@@ -2371,8 +2317,14 @@ class DodamCommunityApp {
       ? this.editingChildren
       : this.ensureChildrenArray();
 
-    if (nick) this.profile.nickname = nick;
-    if (region) this.profile.region = region;
+    if (nick) {
+      this.profile.nickname = nick;
+      if (this.currentUser) this.currentUser.nickname = nick;
+    }
+    if (region) {
+      this.profile.region = region;
+      if (this.currentUser) this.currentUser.region = region;
+    }
 
     this.profile.children = children.map((c, idx) => {
       const m = parseInt(c.months !== undefined ? c.months : 24, 10);
@@ -2787,6 +2739,21 @@ class DodamCommunityApp {
           : 'inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-black text-xs transition cursor-pointer shadow-2xs';
     }
 
+    // Update "내가 쓴 글" button label and style
+    const myPostsBtn = document.getElementById('btn-my-posts-filter');
+    const myPostsBtnLabel = document.getElementById('btn-my-posts-filter-label');
+    const myPostsCount = this.getMyWrittenPosts().length;
+    if (myPostsBtnLabel) {
+      myPostsBtnLabel.innerHTML = this.myPostsOnlyFilter
+        ? `<span class="sm:hidden">✓ 내가쓴글</span><span class="hidden sm:inline">✓ 내가 쓴 글 (${myPostsCount})</span>`
+        : `<span class="sm:hidden">내가쓴글</span><span class="hidden sm:inline">내가 쓴 글 (${myPostsCount})</span>`;
+    }
+    if (myPostsBtn) {
+      myPostsBtn.className = this.myPostsOnlyFilter
+        ? 'inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500 text-white border border-amber-600 font-black text-xs transition cursor-pointer shadow-sm shrink-0 whitespace-nowrap'
+        : 'inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 font-extrabold text-xs transition cursor-pointer shrink-0 whitespace-nowrap';
+    }
+
     this.renderBoardLoungeTabs();
     this.renderBoardAgeLounge();
     this.renderBoardLocalMomCafe();
@@ -3083,6 +3050,23 @@ class DodamCommunityApp {
     this.showToast(`👶 ${this.profile?.babyName || '아이'}(${this.profile?.ageBadge || '24개월'}) 또래글 모아보기 적용!`);
   }
 
+  toggleMyPostsFilter() {
+    this.myPostsOnlyFilter = !this.myPostsOnlyFilter;
+    this.boardPage = 1;
+    if (this.myPostsOnlyFilter) {
+      this.boardLoungeMode = 'all';
+      this.currentCategory = 'all';
+    }
+    this.renderBoardCategories();
+    this.renderBoardView();
+    if (this.myPostsOnlyFilter) {
+      const myCount = this.getMyWrittenPosts().length;
+      this.showToast(`📝 내가 작성한 글 (${myCount}건) 모아보기 적용!`);
+    } else {
+      this.showToast('전체 글 보기로 전환되었습니다.');
+    }
+  }
+
   renderBoardLocalMomCafe() {
     const selEl = document.getElementById('board-local-hub-select');
     if (selEl) selEl.value = this.currentLocalHub;
@@ -3194,6 +3178,7 @@ class DodamCommunityApp {
     this.currentAgeStage = 'all';
     this.currentLocalHub = 'all';
     this.currentLocalTopic = 'all';
+    this.myPostsOnlyFilter = false;
     this.boardPage = 1;
     this.renderBoardCategories();
     this.renderBoardView();
@@ -3469,6 +3454,13 @@ class DodamCommunityApp {
       return true;
     });
 
+    if (this.myPostsOnlyFilter) {
+      if (titleEl) {
+        titleEl.textContent = '📝 내가 작성한 글';
+      }
+      filtered = this.getMyWrittenPosts();
+    }
+
     filtered.sort((a, b) => {
       // 1. [더미 글 하위 노출] 실제 사용자/관리자 작성 글을 더미/시드 글보다 무조건 항상 상위에 우선 노출
       const isDummyA = this.isDummyPost(a);
@@ -3492,6 +3484,23 @@ class DodamCommunityApp {
     if (countEl) countEl.textContent = `${filtered.length}개`;
 
     if (filtered.length === 0) {
+      if (this.myPostsOnlyFilter) {
+        listEl.innerHTML = `
+          <div class="p-8 text-center space-y-3 bg-white rounded-2xl border border-stone-200 shadow-2xs">
+            <div class="w-12 h-12 mx-auto rounded-full bg-amber-50 text-amber-500 flex items-center justify-center text-lg">
+              <i class="fa-solid fa-file-circle-plus"></i>
+            </div>
+            <div class="text-sm font-black text-slate-800">아직 직접 작성하신 활동글이 없습니다.</div>
+            <p class="text-xs text-slate-400">자녀와의 일상, 육아 고민, 우리 동네 정보를 자유롭게 이야기해 보세요!</p>
+            <button onclick="app.openWritePage()" class="mt-2 px-4 py-2 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-xs font-bold text-white transition cursor-pointer shadow-xs inline-flex items-center gap-1.5">
+              <i class="fa-solid fa-pen-nib text-[11px]"></i>
+              <span>첫 게시글 작성하기</span>
+            </button>
+          </div>
+        `;
+        if (paginationEl) paginationEl.innerHTML = '';
+        return;
+      }
       listEl.innerHTML = `
         <div class="p-8 text-center space-y-3 bg-white rounded-2xl border border-stone-200 shadow-2xs">
           <div class="w-12 h-12 mx-auto rounded-full bg-stone-100 text-slate-400 flex items-center justify-center text-lg">
@@ -5781,6 +5790,8 @@ class DodamCommunityApp {
         existingPost.tags = tags;
         existingPost.images = [...this.attachedImages];
         existingPost.isEdited = true;
+        existingPost.isAiReport = false;
+        existingPost.isYoutubeSummary = false;
 
         this.saveCustomPosts();
         if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
@@ -5926,6 +5937,7 @@ class DodamCommunityApp {
     this.currentRegion = 'all';
     this.guideSubCategory = 'all';
     this.qaFilterStatus = 'all';
+    this.myPostsOnlyFilter = false;
     this.boardSearchKeyword = '';
     this.boardPage = 1;
 
@@ -7122,7 +7134,7 @@ class DodamCommunityApp {
     return (this.data?.posts || []).filter((post) => {
       if (!post) return false;
       // 1. 시스템 기본 시드 게시글 및 공식 가이드는 사용자의 직접 작성 활동글에서 제외
-      if (post.isSeed || (post.id && String(post.id).startsWith('seed-post-')) || (post.id && String(post.id).startsWith('guide-seed-'))) {
+      if (post.isSeed || post.isAiReport || (post.id && String(post.id).startsWith('seed-post-')) || (post.id && String(post.id).startsWith('guide-seed-')) || post.id === 'official-ai-report-growth-1') {
         return false;
       }
       // 2. 현재 세션에서 등록한 글
@@ -7148,13 +7160,116 @@ class DodamCommunityApp {
   }
 
   filterMyWrittenPosts() {
+    this.myPostsOnlyFilter = true;
+    this.boardPage = 1;
+    this.switchMainView('board');
+    this.renderBoardCategories();
+    this.renderBoardView();
+    const myCount = this.getMyWrittenPosts().length;
+    this.showToast(`📝 내가 작성한 글 (${myCount}건) 모아보기가 적용되었습니다.`);
+  }
+
+  getCategoryBadgeText(post) {
+    if (!post) return { text: '자유', class: 'bg-stone-100 text-slate-600' };
+    if (post.isYoutubeSummary || post.isAiReport) {
+      return { text: '📖 육아가이드', class: 'bg-purple-100 text-purple-800 font-bold border border-purple-200' };
+    }
+    if (post.category === 'guide') {
+      return { text: '📖 육아가이드', class: 'bg-rose-100 text-rose-800 font-bold border border-rose-200' };
+    }
+    if (post.localHubName && post.localHubName !== '전국 전체') {
+      return { text: '📍 ' + post.localHubName.split('·')[0], class: 'bg-emerald-50 text-emerald-700 font-bold border border-emerald-200' };
+    }
+    if (post.ageStage && post.ageStage !== 'all') {
+      const stObj = (this.data.ageStages || []).find((s) => s.id === post.ageStage);
+      return { text: stObj ? stObj.shortName : post.ageStage, class: 'bg-amber-50 text-amber-800 font-bold border border-amber-200' };
+    }
+    if (post.isQuestion || post.category === 'qa') {
+      return { text: '❓ 질문', class: 'bg-sky-50 text-sky-700 font-bold border border-sky-200' };
+    }
+    return { text: '자유', class: 'bg-stone-100 text-slate-600' };
+  }
+
+  renderMyPostsTab() {
+    const listEl = document.getElementById('prof-my-posts-list');
+    const badgeEl = document.getElementById('prof-my-posts-count-badge');
+    if (!listEl) return;
+
     const myPosts = this.getMyWrittenPosts();
+    if (badgeEl) badgeEl.textContent = `${myPosts.length}건`;
+
     if (myPosts.length === 0) {
-      this.showToast('📝 아직 직접 작성하신 활동글이 없습니다. [글쓰기] 버튼으로 첫 글을 등록해 보세요!');
+      listEl.innerHTML = `
+        <div class="p-8 text-center bg-stone-50 rounded-2xl border border-dashed border-stone-200 space-y-3">
+          <div class="w-12 h-12 mx-auto rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl">
+            <i class="fa-solid fa-file-circle-plus"></i>
+          </div>
+          <div>
+            <div class="font-bold text-slate-700 text-xs">아직 직접 작성하신 게시글이 없습니다</div>
+            <div class="text-[11px] text-slate-400 mt-1">우리 동네 소식, 또래 육아 이야기, 궁금한 점을 편하게 나누어 보세요!</div>
+          </div>
+          <button
+            type="button"
+            onclick="app.closeProfileModal(); app.openWritePage();"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#03C75A] hover:bg-[#02b350] text-white text-xs font-bold transition shadow-2xs cursor-pointer"
+          >
+            <i class="fa-solid fa-pen-nib text-[10px]"></i>
+            <span>첫 게시글 쓰기</span>
+          </button>
+        </div>
+      `;
       return;
     }
-    this.switchTab('board');
-    this.showToast(`📝 내가 작성한 글 ${myPosts.length}건을 확인합니다.`);
+
+    listEl.innerHTML = myPosts.map(post => {
+      const catBadge = this.getCategoryBadgeText(post);
+      const commentsCount = (post.comments?.length || 0);
+      const views = post.views !== undefined ? post.views : 0;
+      return `
+        <div class="p-3 bg-white border border-stone-200/80 hover:border-emerald-300 rounded-2xl transition space-y-2 group shadow-2xs">
+          <div class="flex items-start justify-between gap-2">
+            <div class="flex items-center gap-1.5 flex-wrap min-w-0">
+              <span class="px-2 py-0.5 rounded text-[10px] font-bold ${catBadge.class}">${catBadge.text}</span>
+              <button
+                type="button"
+                onclick="app.closeProfileModal(); app.openPostDetailModal('${post.id}')"
+                class="font-black text-slate-900 hover:text-[#03C75A] text-xs text-left truncate transition cursor-pointer max-w-[280px] sm:max-w-[340px]"
+              >
+                ${post.title}
+              </button>
+              ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[10px]">[${commentsCount}]</span>` : ''}
+            </div>
+            <div class="flex items-center gap-1 shrink-0">
+              <button
+                type="button"
+                onclick="app.closeProfileModal(); app.openPostDetailModal('${post.id}')"
+                class="px-2 py-0.5 rounded bg-stone-100 hover:bg-stone-200 text-slate-600 text-[10px] font-bold transition"
+                title="글 보기"
+              >보기</button>
+              <button
+                type="button"
+                onclick="app.closeProfileModal(); app.openEditPostModal('${post.id}')"
+                class="px-2 py-0.5 rounded bg-amber-50 hover:bg-amber-100 text-amber-800 text-[10px] font-bold transition"
+                title="수정하기"
+              >수정</button>
+              <button
+                type="button"
+                onclick="app.deleteCurrentPost('${post.id}'); app.renderMyPostsTab();"
+                class="px-2 py-0.5 rounded bg-rose-50 hover:bg-rose-100 text-rose-700 text-[10px] font-bold transition"
+                title="삭제하기"
+              >삭제</button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between text-[10px] text-slate-400 pt-1 border-t border-stone-100">
+            <span>📅 ${post.createdAt || '방금 전'}</span>
+            <div class="flex items-center gap-2">
+              <span>조회 ${views.toLocaleString()}</span>
+              <span>댓글 ${commentsCount}</span>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join('');
   }
 
   toggleScrap(postId) {
