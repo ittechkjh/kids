@@ -3,8 +3,8 @@
 window.DODAM_ADMISSIONS_DATA = {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-11-08",
-    "totalCount": 56,
+    "lastUpdated": "2026-11-10",
+    "totalCount": 64,
     "todayCollectedCount": 20,
     "officialSources": [
       {
@@ -77,6 +77,166 @@ window.DODAM_ADMISSIONS_DATA = {
   ],
   "guides": [
     {
+      "id": "moe-107612",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「유아교육법 시행령」 일부개정령안 국무회의 통과",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.10",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 「유아교육법 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「유아교육법 시행령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.10</p>\n<p>교육부 홍보담당관 공식 발표 - 「유아교육법 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107612&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107612&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107611",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「영유아보육법 시행령」 일부개정령안 국무회의 통과",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.10",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 「영유아보육법 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「영유아보육법 시행령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.10</p>\n<p>교육부 홍보담당관 공식 발표 - 「영유아보육법 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107611&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107611&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107610",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「교육공무원 임용령」 일부개정령안 국무회의 통과",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.10",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 「교육공무원 임용령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「교육공무원 임용령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.10</p>\n<p>교육부 홍보담당관 공식 발표 - 「교육공무원 임용령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107610&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107610&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107609",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "너랑 나랑 다 같이, 한국어로 하나 되는 세계 청소년",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.10",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 너랑 나랑 다 같이, 한국어로 하나 되는 세계 청소년. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>너랑 나랑 다 같이, 한국어로 하나 되는 세계 청소년</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.10</p>\n<p>교육부 홍보담당관 공식 발표 - 너랑 나랑 다 같이, 한국어로 하나 되는 세계 청소년. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107609&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107609&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107600",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "스마트 안경 관련 내신평가 부정행위 전수조사 결과",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.09",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 스마트 안경 관련 내신평가 부정행위 전수조사 결과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>스마트 안경 관련 내신평가 부정행위 전수조사 결과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.09</p>\n<p>교육부 홍보담당관 공식 발표 - 스마트 안경 관련 내신평가 부정행위 전수조사 결과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107600&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107600&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107599",
+      "category": "suneung",
+      "categoryId": "suneung",
+      "categoryName": "수능·평가원",
+      "title": "수능 수험생 여러분, 전자기기 가져오지 마세요!",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.09",
+      "badge": "평가원 공시",
+      "badgeColor": "bg-purple-600 text-white",
+      "target": "고3 수험생 및 N수생",
+      "summary": "교육부 홍보담당관 공식 발표 - 수능 수험생 여러분, 전자기기 가져오지 마세요!. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
+        "킬러문항 배제 및 EBS 연계 체감도 원칙",
+        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
+      ],
+      "content": "<h3>수능 수험생 여러분, 전자기기 가져오지 마세요!</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.09</p>\n<p>교육부 홍보담당관 공식 발표 - 수능 수험생 여러분, 전자기기 가져오지 마세요!. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107599&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107599&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107598",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "교육부-일본 문부과학성, 교육행정 교류로 상호이해와 협력 강화",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.09",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 교육부-일본 문부과학성, 교육행정 교류로 상호이해와 협력 강화. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>교육부-일본 문부과학성, 교육행정 교류로 상호이해와 협력 강화</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.09</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부-일본 문부과학성, 교육행정 교류로 상호이해와 협력 강화. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107598&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107598&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107597",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "교육부, 맞춤형 현장 자문으로 학생 마음건강 안전망 강화",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.09",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 교육부, 맞춤형 현장 자문으로 학생 마음건강 안전망 강화. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>교육부, 맞춤형 현장 자문으로 학생 마음건강 안전망 강화</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.09</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부, 맞춤형 현장 자문으로 학생 마음건강 안전망 강화. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107597&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107597&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
       "id": "moe-107592",
       "category": "policy",
       "categoryId": "policy",
@@ -115,166 +275,6 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>강의실을 넘어 세계로, 반도체·인공지능(AI) 인재 한자리에 모이다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.06</p>\n<p>교육부 홍보담당관 공식 발표 - 강의실을 넘어 세계로, 반도체·인공지능(AI) 인재 한자리에 모이다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107573&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107573&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107566",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.05",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.05</p>\n<p>교육부 홍보담당관 공식 발표 - 로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107566&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107566&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107565",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "2026년 직업계고 졸업자 취업통계조사 결과 발표",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.05",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 2026년 직업계고 졸업자 취업통계조사 결과 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>2026년 직업계고 졸업자 취업통계조사 결과 발표</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.05</p>\n<p>교육부 홍보담당관 공식 발표 - 2026년 직업계고 졸업자 취업통계조사 결과 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107565&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107565&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107561",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.04",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107560",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.04",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107562",
-      "category": "college",
-      "categoryId": "college",
-      "categoryName": "수시·정시 전형",
-      "title": "의대 신설 지역/대학 선정 및 정원 배정",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.04",
-      "badge": "대입 가이드",
-      "badgeColor": "bg-indigo-600 text-white",
-      "target": "수험생 및 고등학생 학부모",
-      "summary": "교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "대학 입학 전형 시행계획 및 모집요강 가이드라인",
-        "학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시",
-        "대교협 대학어디가(ADIGA) 포털 연동 안내"
-      ],
-      "content": "<h3>의대 신설 지역/대학 선정 및 정원 배정</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>대학 입학 전형 시행계획 및 모집요강 가이드라인</li>\n  <li>학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시</li>\n  <li>대교협 대학어디가(ADIGA) 포털 연동 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107547",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.03",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107546",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.03",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107537",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "2026년 전국 학교예술교육 축제 개최",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.02",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>2026년 전국 학교예술교육 축제 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.02</p>\n<p>교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107584",
@@ -475,6 +475,166 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (반부패청렴담당관) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 반부패청렴담당관 공식 발표 - 2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107566",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.05",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.05</p>\n<p>교육부 홍보담당관 공식 발표 - 로봇 기업 인사 담당자가 직접 부트캠프 학생의 취업 상담에 나선다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107566&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107566&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107565",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 직업계고 졸업자 취업통계조사 결과 발표",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.05",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2026년 직업계고 졸업자 취업통계조사 결과 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 직업계고 졸업자 취업통계조사 결과 발표</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.05</p>\n<p>교육부 홍보담당관 공식 발표 - 2026년 직업계고 졸업자 취업통계조사 결과 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107565&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107565&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107561",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 제23회 대한민국 평생학습대상 시상식 및 2026년 평생학습도시 동판 수여식 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107561&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107560",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 경제협력개발기구(OECD) 가입 30주년, 한국 교육의 성과와 미래 방향 조명. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107560&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107562",
+      "category": "college",
+      "categoryId": "college",
+      "categoryName": "수시·정시 전형",
+      "title": "의대 신설 지역/대학 선정 및 정원 배정",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.04",
+      "badge": "대입 가이드",
+      "badgeColor": "bg-indigo-600 text-white",
+      "target": "수험생 및 고등학생 학부모",
+      "summary": "교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "대학 입학 전형 시행계획 및 모집요강 가이드라인",
+        "학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시",
+        "대교협 대학어디가(ADIGA) 포털 연동 안내"
+      ],
+      "content": "<h3>의대 신설 지역/대학 선정 및 정원 배정</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.04</p>\n<p>교육부 홍보담당관 공식 발표 - 의대 신설 지역/대학 선정 및 정원 배정. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>대학 입학 전형 시행계획 및 모집요강 가이드라인</li>\n  <li>학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시</li>\n  <li>대교협 대학어디가(ADIGA) 포털 연동 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107562&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107547",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.03",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 지역 교육의 새로운 도약, 43개 교육혁신선도지역 시동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107547&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107546",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.03",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.03</p>\n<p>교육부 홍보담당관 공식 발표 - 디지털 미디어 문해교육, 학교 현장에서 새롭게 만들어 가다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107546&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107537",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026년 전국 학교예술교육 축제 개최",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.02",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026년 전국 학교예술교육 축제 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.02</p>\n<p>교육부 홍보담당관 공식 발표 - 2026년 전국 학교예술교육 축제 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107537&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107533",
