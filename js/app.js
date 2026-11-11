@@ -2669,8 +2669,8 @@ class DodamCommunityApp {
       const ageBadge = this.profile?.ageBadge || '24개월';
       const isMyStage = this.currentAgeStage === targetMyStage;
       myAgeBtnLabel.innerHTML = isMyStage
-        ? `<span class="sm:hidden">✓ 또래글 중</span><span class="hidden sm:inline">✓ ${babyName}(${ageBadge}) 또래글 보기 중</span>`
-        : `<span class="sm:hidden">내 아이 또래</span><span class="hidden sm:inline">내 아이(${babyName}·${ageBadge}) 또래글</span>`;
+        ? `<span class="sm:hidden">✓ 또래 필터</span><span class="hidden sm:inline">✓ 내 아이또래 (${ageBadge})</span>`
+        : `<span class="sm:hidden">내 아이또래</span><span class="hidden sm:inline">👶 내 아이 또래</span>`;
     }
     if (myAgeBtn) {
       myAgeBtn.className =
@@ -3259,7 +3259,7 @@ class DodamCommunityApp {
       } else if (this.boardLoungeMode === 'local') {
         titleEl.textContent = hubObj && hubObj.id !== 'all' ? `📍 ${hubObj.shortName} 동네 맘카페` : '📍 우리동네 전체';
       } else if (this.boardLoungeMode === 'qa' || this.currentCategory === 'qa') {
-        titleEl.textContent = '❓ 육아 질문·고민';
+        titleEl.textContent = '❓ 고민·질문';
       } else if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
         const subNames = {
           all: '전체',
@@ -3294,16 +3294,19 @@ class DodamCommunityApp {
         return true;
       }
 
-      // 2. 고민·질문 라운지 모드
+      // 2. 고민·질문 라운지 모드 (육아가이드 및 AI 리포트 완전 제외 & 실제 질문·고민글만 필터링)
       if (this.boardLoungeMode === 'qa' || this.currentCategory === 'qa') {
-        const isQa = p.isQuestion || p.category === 'qa' || (p.title && (p.title.includes('?') || p.title.includes('질문') || p.title.includes('추천') || p.title.includes('고민')));
+        if (p.category === 'guide' || p.isAiReport || p.isGuidePost) return false;
+        const isQa = p.category === 'qa' ||
+          p.isQuestion === true ||
+          (p.title && (p.title.startsWith('[질문]') || p.title.includes('?') || p.title.includes('고민') || p.title.includes('궁금') || p.title.includes('조언') || p.title.includes('여쭤')));
         if (!isQa) return false;
         return true;
       }
 
       // 3. 또래방 라운지 모드
       if (this.boardLoungeMode === 'age') {
-        if (p.category === 'guide' || p.isAiReport) return false;
+        if (p.category === 'guide' || p.isAiReport || p.isGuidePost) return false;
         if (this.currentAgeStage !== 'all') {
           const matchStage =
             p.ageStage === this.currentAgeStage ||
@@ -3425,15 +3428,17 @@ class DodamCommunityApp {
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${n.date.slice(5)}</div>
               <div class="col-span-1 text-center text-slate-400 text-[11px]">${(n.views || 0).toLocaleString()}</div>
             </div>
-            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-3.5 py-2.5 bg-rose-50/50 border-b border-rose-100 hover:bg-rose-100/60 cursor-pointer transition text-xs space-y-1 overflow-hidden">
-              <div class="flex items-start gap-1.5 min-w-0">
-                <span class="px-1.5 py-0.5 rounded bg-rose-500 text-white font-black text-[10px] shrink-0">${n.tag}</span>
-                <span class="font-bold text-slate-900 line-clamp-2 break-keep min-w-0 flex-1 text-xs leading-snug">${n.title}</span>
-                <span class="text-rose-500 font-bold text-[11px] shrink-0">[${n.commentsCount || 42}]</span>
+            <div onclick="app.openNoticeDetailModal('${n.id}')" class="sm:hidden px-3.5 py-3 bg-rose-50/40 border-b border-rose-100 hover:bg-rose-100/50 active:bg-rose-100 cursor-pointer transition text-xs space-y-1.5 overflow-hidden">
+              <div class="flex items-start gap-1.5 min-w-0 w-full">
+                <span class="px-1.5 py-0.5 rounded bg-rose-500 text-white font-black text-[10px] shrink-0 leading-tight mt-0.5">${n.tag}</span>
+                <div class="min-w-0 flex-1 font-bold text-slate-900 text-[13px] leading-snug break-words break-all">
+                  <span>${n.title}</span>
+                  <span class="text-rose-500 font-bold text-[11px] ml-1 shrink-0">[${n.commentsCount || 42}]</span>
+                </div>
               </div>
-              <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span class="truncate max-w-[60%]">${n.author} · ${n.date.slice(5)}</span>
-                <span class="shrink-0">조회 ${(n.views || 0).toLocaleString()}</span>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 pt-0.5">
+                <span class="truncate max-w-[60%] font-medium text-slate-600">${n.author} · ${n.date.slice(5)}</span>
+                <span class="shrink-0 text-[11px] text-slate-400">조회 ${(n.views || 0).toLocaleString()}</span>
               </div>
             </div>
           `
@@ -3460,9 +3465,16 @@ class DodamCommunityApp {
             const stObj = (this.data.ageStages || []).find((s) => s.id === post.ageStage);
             badgeText = stObj ? stObj.shortName : post.ageStage;
             badgeClass = 'bg-amber-50 text-amber-800 font-bold border border-amber-200';
-          } else if (post.isQuestion) {
+          } else if (post.isQuestion || post.category === 'qa') {
             badgeText = '❓ 질문';
             badgeClass = 'bg-sky-50 text-sky-700 font-bold border border-sky-200';
+          }
+
+          let displayTitle = post.title || '';
+          if (displayTitle.startsWith('[육아가이드]') && badgeText.includes('육아가이드')) {
+            displayTitle = displayTitle.replace(/^\[육아가이드\]\s*/, '');
+          } else if (displayTitle.startsWith('[질문]') && badgeText.includes('질문')) {
+            displayTitle = displayTitle.replace(/^\[질문\]\s*/, '');
           }
 
           const commentsCount = (post.comments?.length || 0);
@@ -3472,12 +3484,12 @@ class DodamCommunityApp {
           return `
             <div onclick="app.openPostDetailModal('${post.id}')" class="hidden sm:grid grid-cols-12 gap-2 px-4 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50/80 cursor-pointer transition items-center text-xs group">
               <div class="col-span-2 text-center">
-                <span class="px-2 py-0.5 rounded-md ${badgeClass} text-[10px] truncate max-w-full inline-block">${badgeText}</span>
+                <span class="px-2 py-0.5 rounded-md ${badgeClass} text-[10px] truncate max-w-full inline-block font-semibold">${badgeText}</span>
               </div>
-              <div class="col-span-6 font-medium text-slate-900 group-hover:text-[#03C75A] truncate flex items-center gap-1.5">
-                ${this.isPostHot(post) ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
-                <span class="truncate">${post.title}</span>
-                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
+              <div class="col-span-6 font-medium text-slate-900 group-hover:text-[#03C75A] truncate flex items-center gap-1.5 min-w-0">
+                ${this.isPostHot(post) ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
+                <span class="truncate min-w-0 flex-1">${displayTitle}</span>
+                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0 ml-0.5">[${commentsCount}]</span>` : ''}
                 ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
                   <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
@@ -3489,32 +3501,34 @@ class DodamCommunityApp {
                   ` : ''}
                 </span>
               </div>
-              <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1">
+              <div class="col-span-2 text-center text-slate-600 truncate flex items-center justify-center gap-1 min-w-0">
                 <span class="truncate">${authorName}</span>
-                ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px]" title="공식 리포트"></i>' : ''}
+                ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px] shrink-0" title="공식 리포트"></i>' : ''}
               </div>
-              <div class="col-span-1 text-center text-slate-400 text-[11px]">${post.createdAt || '방금'}</div>
-              <div class="col-span-1 text-center text-slate-400 text-[11px]">${views.toLocaleString()}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px] shrink-0 whitespace-nowrap">${post.createdAt || '방금'}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px] shrink-0 whitespace-nowrap">${views.toLocaleString()}</div>
             </div>
-            <!-- 모바일 2줄 카페 목록 (가독성 & 중복 뱃지 최적화) -->
-            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-3.5 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1 overflow-hidden">
+            <!-- 모바일 카페 목록 (가독성 최적화 & 글자 삐져나옴/줄바꿈 완벽 해결) -->
+            <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-3.5 py-3 bg-white border-b border-stone-100 hover:bg-stone-50/80 active:bg-stone-100 cursor-pointer transition text-xs space-y-1.5 overflow-hidden">
               <div class="flex items-start gap-1.5 min-w-0 w-full">
-                <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold">${badgeText}</span>
-                ${this.isPostHot(post) ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
-                <span class="line-clamp-2 break-keep min-w-0 flex-1 font-bold text-slate-900 text-xs leading-snug">
-                  ${post.title}
+                <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold leading-tight mt-0.5">${badgeText}</span>
+                ${this.isPostHot(post) ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0 leading-tight mt-0.5">HOT</span>' : ''}
+                <div class="min-w-0 flex-1 font-bold text-slate-900 text-[13px] leading-snug break-words break-all">
+                  <span>${displayTitle}</span>
+                  ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] ml-1 shrink-0">[${commentsCount}]</span>` : ''}
                   ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
-                </span>
-                ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0">[${commentsCount}]</span>` : ''}
+                </div>
               </div>
-              <div class="flex items-center justify-between text-[11px] text-slate-400">
-                <span class="truncate max-w-[50%]">${authorName} · ${post.createdAt}</span>
-                <div class="flex items-center gap-2 shrink-0 text-[10px]">
-                  <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-1.5 py-0.5 rounded bg-emerald-50 text-emerald-800 font-bold border border-emerald-200 flex items-center gap-0.5 hover:bg-emerald-100 transition" title="네이버 블로그 복사">
-                    <i class="fa-solid fa-copy text-emerald-600"></i> 복사
-                  </button>
+              <div class="flex items-center justify-between text-[11px] text-slate-400 pt-0.5">
+                <div class="flex items-center gap-1.5 min-w-0 truncate text-slate-500 text-[11px]">
+                  <span class="truncate font-medium max-w-[120px]">${authorName}</span>
+                  ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px] shrink-0" title="공식 리포트"></i>' : ''}
+                  <span class="text-stone-300">·</span>
+                  <span class="shrink-0 text-slate-400">${post.createdAt || '방금'}</span>
+                </div>
+                <div class="flex items-center gap-2 shrink-0 text-[11px] text-slate-400">
                   <span>조회 ${views.toLocaleString()}</span>
-                  <span class="text-rose-500 font-bold">♥ ${totalLikes}</span>
+                  ${totalLikes > 0 ? `<span class="text-rose-500 font-bold">♥ ${totalLikes}</span>` : ''}
                 </div>
               </div>
             </div>

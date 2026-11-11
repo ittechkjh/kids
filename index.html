@@ -62,7 +62,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css?v=20261109_v22" />
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="min-h-screen flex flex-col overflow-x-hidden">
 
   <!-- 상단 공지 & 오늘의 육아 응원 배너 (모바일 1줄 슬림화) -->
   <div class="bg-slate-900 text-slate-300 text-xs py-1.5 px-3 sm:px-4 border-b border-slate-800">
@@ -83,34 +83,31 @@
     <div class="max-w-7xl mx-auto px-4 py-3">
       <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-3">
         <!-- 로고 + 모바일 우측 버튼 -->
-        <div class="flex items-center justify-between">
-          <a href="#" onclick="app.switchMainView('feed'); return false;" class="flex items-center gap-2.5 group">
-            <div class="w-10 h-10 rounded-2xl coral-badge-gradient flex items-center justify-center text-white shadow-md shadow-rose-500/20 group-hover:scale-105 transition">
-              <i class="fa-solid fa-heart text-lg"></i>
+        <div class="flex items-center justify-between min-w-0">
+          <a href="#" onclick="app.switchMainView('feed'); return false;" class="flex items-center gap-2 group shrink-0">
+            <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl sm:rounded-2xl coral-badge-gradient flex items-center justify-center text-white shadow-md shadow-rose-500/20 group-hover:scale-105 transition">
+              <i class="fa-solid fa-heart text-base sm:text-lg"></i>
             </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="font-black text-xl tracking-tight text-slate-900">도담톡</span>
-                <span class="text-[11px] font-extrabold px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">DodamTalk</span>
-              </div>
-              <p class="hidden xl:block text-xs text-slate-500">개월수 동기방 · 동네 공동육아 · 실시간 육아 수다</p>
+            <div class="flex items-center gap-1.5">
+              <span class="font-black text-lg sm:text-xl tracking-tight text-slate-900">도담톡</span>
+              <span class="hidden sm:inline-block text-[10px] font-extrabold px-1.5 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">DodamTalk</span>
             </div>
           </a>
 
-          <!-- 모바일 액션 버튼 -->
-          <div class="flex items-center gap-1.5 lg:hidden">
-            <button onclick="app.promptPwaInstall()" class="inline-flex items-center gap-1 px-2 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-[#03C75A] font-black text-xs transition shrink-0" title="모바일 어플 등록 / 홈 화면에 앱 추가">
+          <!-- 모바일 액션 버튼 (375px 모바일 완벽 핏) -->
+          <div class="flex items-center gap-1 lg:hidden shrink-0">
+            <button onclick="app.promptPwaInstall()" class="inline-flex items-center gap-0.5 px-2 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-[#03C75A] font-extrabold text-[11px] transition shrink-0" title="모바일 어플 등록 / 홈 화면에 앱 추가">
               <i class="fa-solid fa-mobile-screen text-xs"></i>
-              <span>앱설치</span>
+              <span>앱</span>
             </button>
-            <button onclick="app.openLoginModal()" id="mobile-auth-btn" class="p-2 rounded-xl border border-stone-200 text-slate-700 hover:bg-stone-50 transition shrink-0" title="로그인 / 관리자">
+            <button onclick="app.openLoginModal()" id="mobile-auth-btn" class="p-1.5 rounded-xl border border-stone-200 text-slate-700 hover:bg-stone-50 transition shrink-0" title="로그인 / 관리자">
               <i class="fa-solid fa-lock text-xs"></i>
             </button>
             <button onclick="app.openWritePage()" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl coral-badge-gradient text-white text-xs font-black shadow-sm shrink-0 whitespace-nowrap">
               <i class="fa-solid fa-pen text-[11px]"></i>
               <span>글쓰기</span>
             </button>
-            <button onclick="app.openProfileModal()" class="p-2 rounded-xl border border-stone-200 text-slate-700 shrink-0" title="내 정보">
+            <button onclick="app.openProfileModal()" class="p-1.5 rounded-xl border border-stone-200 text-slate-700 shrink-0" title="내 정보">
               <i class="fa-solid fa-baby text-xs"></i>
             </button>
           </div>
@@ -271,23 +268,24 @@
                 </button>
               </div>
 
-              <!-- 우측: 내 아이 맞춤 토글 & 카페 글쓰기 (모바일 1줄 정렬) -->
-              <div class="flex items-center justify-between sm:justify-end gap-2 w-full sm:w-auto">
+              <!-- 우측: 내 아이 맞춤 토글 & 카페 글쓰기 (모바일 1줄 정렬 & 넘침 방지) -->
+              <div class="flex items-center justify-between sm:justify-end gap-1.5 sm:gap-2 w-full sm:w-auto">
                 <button
                   type="button"
                   onclick="app.openAiParentingReportModal()"
                   id="btn-admin-ai-report-top"
-                  class="hidden inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-black text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap"
+                  class="hidden inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-amber-300 border border-slate-700 font-extrabold text-xs shadow-2xs transition cursor-pointer shrink-0 whitespace-nowrap"
                   title="관리자 전용: 영상 요약 가이드 리포트를 즉시 발행합니다"
                 >
-                  <i class="fa-solid fa-bolt text-white text-[12px]"></i>
-                  <span>⚡ 영상 요약 리포트 (관리자)</span>
+                  <i class="fa-solid fa-bolt text-amber-300 text-[11px]"></i>
+                  <span class="hidden md:inline">영상 요약 리포트 (관리자)</span>
+                  <span class="md:hidden">요약 리포트</span>
                 </button>
                 <button
                   type="button"
                   onclick="app.filterByMyChildAge()"
                   id="btn-my-age-match"
-                  class="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-extrabold text-xs transition cursor-pointer shrink-0 whitespace-nowrap"
+                  class="inline-flex items-center gap-1 px-2.5 sm:px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-200 font-extrabold text-xs transition cursor-pointer shrink-0 whitespace-nowrap"
                   title="내 프로필에 등록된 아이 또래글만 모아봅니다"
                 >
                   <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-[11px]"></i>
