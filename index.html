@@ -375,13 +375,6 @@
                 </button>
               </div>
             </div>
-            <!-- 서브 D: 질문·고민 서브필터 (모바일 래핑 지원) -->
-            <div id="board-subfilter-qa" class="hidden flex items-center gap-1.5 flex-wrap pt-1 border-t border-stone-100 text-xs">
-              <span class="text-slate-400 font-bold shrink-0 text-[11px] mr-0.5">분류:</span>
-              <button onclick="app.filterQaStatus('all')" class="px-2 py-1 rounded-lg font-black bg-slate-900 text-white shrink-0 text-[11px] whitespace-nowrap">전체</button>
-              <button onclick="app.filterQaStatus('waiting')" class="px-2 py-1 rounded-lg font-bold bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 shrink-0 text-[11px] whitespace-nowrap">🙋‍♀️ 답변대기</button>
-              <button onclick="app.filterQaStatus('solved')" class="px-2 py-1 rounded-lg font-bold bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 shrink-0 text-[11px] whitespace-nowrap">✅ 해결완료</button>
-            </div>
           </div>
 
 
@@ -4193,6 +4186,20 @@
             />
           </div>
           <div id="youtube-summary-duplicate-alert" class="hidden"></div>
+          
+          <div class="space-y-1 pt-1 border-t border-sky-200/60">
+            <label class="block font-bold text-slate-700 text-xs flex items-center justify-between">
+              <span>영상 핵심 내용 / 자막 요약 메모 (선택 입력)</span>
+              <span class="text-[10px] text-sky-700 font-bold">★ 입력 시 영상 내용 100% 충실 반영</span>
+            </label>
+            <textarea
+              id="youtube-summary-notes"
+              rows="3"
+              placeholder="영상의 실제 강연 내용이나 핵심 포인트, 자막 요약이 있다면 적어주세요. 입력된 내용을 최우선으로 분석하여 인위적인 왜곡 없이 영상과 일치하는 맞춤 리포트를 작성합니다. (비워둘 시 영상 제목·주제 기반 정밀 분석)"
+              class="w-full bg-white border border-sky-200 rounded-xl p-2.5 text-xs text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-400/50 shadow-2xs resize-none"
+            ></textarea>
+          </div>
+
           <p class="text-[11px] text-slate-500 leading-relaxed">
             영상 내용을 정밀 분석하여 유튜브 링크와 외부 채널 정보를 제거하고, 네이버 블로그에 최적화된 2,400자 심층 가이드와 인포그래픽 5장을 자동 발행합니다.
           </p>

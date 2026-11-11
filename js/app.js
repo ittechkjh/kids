@@ -222,6 +222,26 @@ class DodamCommunityApp {
     this.initPwa();
     // 기존 생성된 AI 리포트 게시글의 제목, 2463자 본문, 5개 SVG 카드 및 유튜브 흔적 일괄 정제 & 복원
     (this.data.posts || []).forEach((p) => {
+      if (!p) return;
+      if (p.views < 50) {
+        p.isHot = false;
+      }
+      if (p.title && (p.title.includes('신종호') || p.title.includes('공부 호기심') || p.title.includes('이 질문'))) {
+        p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+        p.guideType = 'edu';
+        p.ageStage = 'school';
+        p.isHot = false;
+        if (!p.contentHtml || !p.contentHtml.includes('학습 민첩성') || p.contentHtml.includes('편도체') || p.contentHtml.includes('이성교제')) {
+          const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
+          const generated = this.buildYoutubeSummaryContent(vId, { title: p.title }, 'edu');
+          p.contentHtml = generated.html;
+          p.content = generated.html;
+          p.rawTextContent = generated.plainText;
+          if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
+            window.DodamFirebase.updatePost(p);
+          }
+        }
+      }
       if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
         const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
         const curBadge = '[육아가이드] ';
@@ -585,7 +605,27 @@ class DodamCommunityApp {
 
         // AI 리포트 원격 로드 시 제목 정제, 2,463자 본문 및 5개 SVG 카드 즉시 치유 & 동기화
         (this.data.posts || []).forEach((p) => {
-          if (p && (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생'))))) {
+          if (!p) return;
+          if (p.views < 50) {
+            p.isHot = false;
+          }
+          if (p.title && (p.title.includes('신종호') || p.title.includes('공부 호기심') || p.title.includes('이 질문'))) {
+            p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+            p.guideType = 'edu';
+            p.ageStage = 'school';
+            p.isHot = false;
+            if (!p.contentHtml || !p.contentHtml.includes('학습 민첩성') || p.contentHtml.includes('편도체') || p.contentHtml.includes('이성교제')) {
+              const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
+              const generated = this.buildYoutubeSummaryContent(vId, { title: p.title }, 'edu');
+              p.contentHtml = generated.html;
+              p.content = generated.html;
+              p.rawTextContent = generated.plainText;
+              if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
+                window.DodamFirebase.updatePost(p);
+              }
+            }
+          }
+          if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
             const badgeMatch = (p.title || '').match(/^\[([^\]]+)\]\s*/);
             const curBadge = '[육아가이드] ';
             const rawTitle = (p.title || '').replace(/^\[[^\]]+\]\s*/, '');
@@ -2743,7 +2783,7 @@ class DodamCommunityApp {
           const active = c.id === this.currentCategory;
           const count = (this.data.posts || []).filter((p) => {
             if (c.id === 'all') return true;
-            if (c.id === 'hot') return p.isHot;
+            if (c.id === 'hot') return this.isPostHot(p);
             return p.category === c.id;
           }).length;
 
@@ -3209,8 +3249,6 @@ class DodamCommunityApp {
       if (this.boardLoungeMode === 'qa') {
         const isQa = p.isQuestion || p.category === 'qa' || (p.title && (p.title.includes('?') || p.title.includes('질문') || p.title.includes('추천') || p.title.includes('고민')));
         if (!isQa) return false;
-        if (this.qaFilterStatus === 'waiting' && (p.isSolved || (p.comments?.length || 0) > 0)) return false;
-        if (this.qaFilterStatus === 'solved' && (!p.isSolved && (p.comments?.length || 0) === 0)) return false;
       }
       if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
         const isGuide = p.category === 'guide' || p.isAiReport;
@@ -3221,7 +3259,7 @@ class DodamCommunityApp {
         }
         return true;
       }
-      if (this.currentCategory === 'hot' && !p.isHot) return false;
+      if (this.currentCategory === 'hot' && !this.isPostHot(p)) return false;
       if (this.currentCategory !== 'all' && this.currentCategory !== 'hot' && p.category !== this.currentCategory) return false;
 
       if (this.currentAgeStage !== 'all') {
@@ -3370,7 +3408,7 @@ class DodamCommunityApp {
                 <span class="px-2 py-0.5 rounded-md ${badgeClass} text-[10px] truncate max-w-full inline-block">${badgeText}</span>
               </div>
               <div class="col-span-6 font-medium text-slate-900 group-hover:text-[#03C75A] truncate flex items-center gap-1.5">
-                ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
+                ${this.isPostHot(post) ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
                 ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
@@ -3395,7 +3433,7 @@ class DodamCommunityApp {
             <div onclick="app.openPostDetailModal('${post.id}')" class="sm:hidden px-3.5 py-2.5 bg-white border-b border-stone-100 hover:bg-stone-50 cursor-pointer transition text-xs space-y-1 overflow-hidden">
               <div class="flex items-start gap-1.5 min-w-0 w-full">
                 <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold">${badgeText}</span>
-                ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
+                ${this.isPostHot(post) ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
                 <span class="line-clamp-2 break-keep min-w-0 flex-1 font-bold text-slate-900 text-xs leading-snug">
                   ${post.title}
                   ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
@@ -5013,13 +5051,13 @@ class DodamCommunityApp {
       },
       {
         offsetHours: 20.2,
-        title: '[송파/잠실 나눔] 깨끗하게 관리한 유아 원목 교구 + 팝업북 세트 드림합니다 🎁',
-        content: '아이가 쑥 자라서 이제 보지 않는 3~5세용 원목 모양 맞추기 교구와 인기 팝업북 15권 나눔해요.\n원목 교구는 조각 분실 없이 다 있고 알코올 스왑으로 닦아 상자에 담아두었습니다. 팝업북도 찢어진 곳 없이 상태 깨끗합니다! 잠실역이나 송파나루역 인근에서 비대면 문고리 나눔 가능하신 또래 맘님 댓글 남겨주시면 전달드릴게요 :)',
-        category: 'share',
+        title: '5세 유치원 vs 어린이집(7세까지 연장), 어떤 선택이 더 나을까요? 선배맘님들 조언 부탁드려요',
+        content: '내년에 5세(만 3세) 올라가는 첫째 아이인데, 지금 다니는 가정/민간 어린이집에 7세까지 계속 보낼지 아니면 일반 사립/단설 유치원으로 옮길지 정말 고민되네요. 활동량이나 누리과정 커리큘럼 생각하면 유치원이 맞나 싶다가도, 낮잠이랑 하원 시간(맞벌이) 생각하면 어린이집이 훨씬 안정적이거든요... 혹시 비슷한 고민하셨던 분들 어떤 기준으로 결정하셨는지 조언 부탁드려요!',
+        category: 'qna',
         ageStage: 'toddler',
         localHub: 'hub-seoul-gangnam',
         localHubName: '서울 송파·잠실',
-        isQuestion: false,
+        isQuestion: true,
         author: {
           nickname: '잠실솔이맘',
           level: '🌳 열매나무맘',
@@ -5027,7 +5065,7 @@ class DodamCommunityApp {
           childBadge: '4세 여아',
           avatarBg: 'bg-pink-600 text-white'
         },
-        tags: ['무료나눔', '잠실맘', '원목교구']
+        tags: ['5세유치원', '어린이집유치원고민', '잠실맘']
       }
     ];
 
@@ -5035,6 +5073,9 @@ class DodamCommunityApp {
     const existingIds = new Set(this.data.posts.map((p) => p && p.id));
 
     dailyTemplates.forEach((tpl, idx) => {
+      // 나눔(share) 카테고리는 실제 물품 전달이 필요하므로 AI 자동글 생성 일체 금지
+      if (tpl.category === 'share') return;
+
       const postId = `daily-ai-post-${todayStr}-${idx + 1}`;
       if (existingIds.has(postId) || (this.deletedPostIds && this.deletedPostIds.has(postId))) return;
 
@@ -5044,6 +5085,11 @@ class DodamCommunityApp {
       if (diffMin < 60) createdAtStr = `${diffMin}분 전`;
       else if (diffMin < 1440) createdAtStr = `${Math.floor(diffMin / 60)}시간 전`;
       else createdAtStr = todayStr.slice(5);
+
+      // AI 작성 글 조회수 10 ~ 50 사이 자연스러운 값 설정
+      const seedNum = (postId.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) + idx * 7) % 41;
+      const initialViews = 10 + seedNum; // 10 ~ 50 사이
+      const initialLikes = Math.max(0, Math.floor((initialViews - 10) / 15)); // 0 ~ 2
 
       const newPost = {
         id: postId,
@@ -5060,8 +5106,8 @@ class DodamCommunityApp {
         author: tpl.author,
         timestamp: postTime,
         createdAt: createdAtStr,
-        views: 0,
-        reactions: { like: 0, hug: 0, tip: 0 },
+        views: initialViews,
+        reactions: { like: initialLikes, hug: 0, tip: 0 },
         comments: [],
         tags: tpl.tags
       };
@@ -5069,6 +5115,17 @@ class DodamCommunityApp {
       this.data.posts.unshift(newPost);
       existingIds.add(postId);
     });
+  }
+
+  isPostHot(post) {
+    if (!post) return false;
+    const views = post.views || 0;
+    // 조회수가 50 미만인 글은 절대 HOT 배지 미노출 (0회, 1회, 14회, 18회 등 방지)
+    if (views < 50) return false;
+    const totalReactions = (post.reactions?.like || 0) + (post.reactions?.hug || 0) + (post.reactions?.tip || 0);
+    const commentsCount = (post.comments?.length || 0);
+    // 조회수 200 이상이거나, 반응 5개 이상, 또는 댓글 3개 이상인 실질적인 인기 글만 HOT 부여
+    return views >= 200 || totalReactions >= 5 || commentsCount >= 3 || (post.isHot && views >= 100);
   }
 
   isDummyPost(post) {
@@ -12832,6 +12889,10 @@ class DodamCommunityApp {
       urlInput.value = '';
       setTimeout(() => urlInput.focus(), 150);
     }
+    const notesInput = document.getElementById('youtube-summary-notes');
+    if (notesInput) {
+      notesInput.value = '';
+    }
     const alertBox = document.getElementById('youtube-summary-duplicate-alert');
     if (alertBox) {
       alertBox.classList.add('hidden');
@@ -12968,6 +13029,10 @@ class DodamCommunityApp {
   // ==========================================
   generateCleanArticleTitle(rawTitle, guideType = 'growth') {
     if (!rawTitle) return '육아 핵심 가이드';
+    if (rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문')) {
+      return "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+    }
+
 
     // 1. 유튜브, 방송, 클립, 화질 등 불필요한 태그 및 해시태그 제거
     let text = rawTitle
@@ -12991,7 +13056,7 @@ class DodamCommunityApp {
       if (channelJunk.test(p) || nameJunk.test(p) || keywordSpam.test(p)) continue;
       if (p.length < 4) continue;
       let score = p.length;
-      if (/이유식|수면|통잠|훈육|떼쓰기|분리불안|이성교제|성교육|스마트폰|발달|대화법|솔루션|원인|대처|식단|영양/i.test(p)) {
+      if (/이유식|수면|통잠|훈육|떼쓰기|분리불안|이성교제|성교육|스마트폰|발달|대화법|솔루션|원인|대처|식단|영양|공부|호기심|질문|학습|성적|문해력|독서|자기주도/i.test(p)) {
         score += 30;
       }
       if (/Q&A|조언|방법|비결|특징|이유/i.test(p)) {
@@ -13028,81 +13093,560 @@ class DodamCommunityApp {
     return finalTitle || '육아 전문 가이드 솔루션';
   }
 
-  buildYoutubeSummaryContent(videoId, meta, category) {
+  buildYoutubeSummaryContent(videoId, meta, category, customNotes = '') {
     const rawTitle = meta.title || '육아 핵심 가이드';
-    const cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
+    const notes = String(customNotes || '').trim();
     const cleanAuthor = '운영자';
 
-    // 1. 카테고리별 테마 메타데이터 및 맞춤 키워드 매핑
-    const themeMap = {
-      sleep: {
-        badge: '🍼 수면',
-        subName: '수면 가이드',
-        targetAge: '0~24개월 영유아 부모',
-        focus: '통잠·밤수·수면교육·낮잠루틴',
-        keywords: ['통잠교육', '수면의식', '수면압력', '밤수끊기', '낮잠루틴'],
-        b1: '월령별 적정 깨어있는 시간(Wake Window)과 수면 압력 조절',
-        b2: '밤잠 입면 의식 4단계 프로토콜과 눕혀 재우기 성공 비법',
-        b3: '새벽 각성과 원더윅스 시기 부모의 일관된 반응 규칙'
-      },
-      food: {
-        badge: '🥣 이유식',
-        subName: '이유식 레시피 & 영양',
-        targetAge: '4~36개월 영유아 부모',
-        focus: '초중후기 이유식·유아식·영양식단',
-        keywords: ['초기이유식', '자기주도이유식', '알레르기테스트', '유아식식단', '철분영양'],
-        b1: '초·중·후기 월령별 입자 크기 조절과 알레르기 식품 안전 도입법',
-        b2: '식판 거부와 편식을 줄이는 핑거푸드 활용 및 자기주도 식사법',
-        b3: '철분, 아연 등 영유아 두뇌 발달에 필수적인 핵심 영양 밸런스'
-      },
-      growth: {
-        badge: '👶 훈육',
-        subName: '훈육 & 아동발달 심리',
-        targetAge: '3~13세 유·초등 학부모',
-        focus: '훈육법·떼쓰기·애착·또래관계',
-        keywords: ['긍정훈육', '감정코칭', '떼쓰기대처', '또래관계', '자존감향상'],
-        b1: '감정은 100% 공감하되 행동의 한계는 단호하게 설정하는 3단계 대화법',
-        b2: '울고 떼쓰는 순간 뇌에서 일어나는 감정 폭풍(편도체) 안정화 기법',
-        b3: '비난과 체벌 없이 아이 스스로 납득하는 일관된 가정 내 룰 확립'
-      },
-      health: {
-        badge: '🏥 건강',
-        subName: '소아 건강 & 케어',
-        targetAge: '전 연령 영유아·어린이 부모',
-        focus: '소아질환·열관리·예방접종·성장검진',
-        keywords: ['소아열관리', '해열제교차복용', '영유아검진', '필수예방접종', '소아응급대처'],
-        b1: '소아 다빈도 질환(열감기, 장염, 수족구)의 초기 징후와 가정 내 대처법',
-        b2: '해열제 교차 복용 골든타임 수칙과 반드시 응급실 가야 하는 위험 신호',
-        b3: '월령별 국가필수예방접종 일정과 성장 발달 백분위 핵심 체크'
+    // 1. 영상 제목 및 메모 기반 지능형 토픽 정밀 감지 (엉뚱한 훈육/편도체 템플릿 무단 삽입 원천 차단)
+    const isShinJongHo = rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || notes.includes('신종호') || notes.includes('호기심');
+    const isPeerDating = rawTitle.includes('이성교제') || rawTitle.includes('사춘기') || notes.includes('이성교제');
+    const isSleep = !isShinJongHo && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || category === 'sleep');
+    const isFood = !isShinJongHo && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || category === 'food');
+    const isHealth = !isShinJongHo && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || category === 'health');
+    const isEdu = isShinJongHo || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || category === 'edu';
+
+    let topicKey = 'growth';
+    if (isShinJongHo) topicKey = 'shinJongHo';
+    else if (isEdu) topicKey = 'edu';
+    else if (isPeerDating) topicKey = 'adolescence';
+    else if (isSleep) topicKey = 'sleep';
+    else if (isFood) topicKey = 'food';
+    else if (isHealth) topicKey = 'health';
+    else if (category === 'all') topicKey = 'all';
+
+    let cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
+    if (isShinJongHo) {
+      cleanTitle = "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+    }
+
+    // 2. 토픽별 정밀 프로파일 정의 (각 주제에 100% 일치하는 전문 분석 데이터)
+    const profiles = {
+      shinJongHo: {
+        badge: '🎒 공부 호기심',
+        subName: '자기주도학습 & 자녀 대화법',
+        targetAge: '초·중·고 학부모',
+        focus: '공부 호기심·결과중심 질문 탈피·학습 민첩성',
+        keywords: ['공부호기심', '신종호교수', '질문법', '자기주도학습', '학습민첩성'],
+        b1: '결과·점수만을 묻는 질문("몇 점 받았어?", "몇 개 틀렸어?")이 아이의 뇌를 얼어붙게 만드는 이유',
+        b2: '과정과 탐구를 자극하는 열린 질문("이번에 뭐가 제일 신기했어?", "어떻게 풀었니?")으로의 전환',
+        b3: '정답 암기보다 실패를 성장의 데이터로 삼고 스스로 질문하는 "학습 민첩성(Learning Agility)" 키우기',
+        c2Title: '[원인 분석] 결과 중심 질문이 아이의 뇌와 학습 의욕에 미치는 영향',
+        c2Box1Title: '결과·점수 집착',
+        c2Box1P1: '점수만 캐묻는 순간 배움 대신',
+        c2Box1P2: '평가받는 두려움이 뇌를 지배',
+        c2Box1Sub: '공부를 시험용 노동으로 인식',
+        c2Box2Title: '실패 공포증 유발',
+        c2Box2P1: '틀리는 것을 극도로 두려워함',
+        c2Box2P2: '어려운 문제에 도전하지 않음',
+        c2Box2Sub: '안전한 쉬운 문제만 풀려는 경향',
+        c2Box3Title: '학습 무력감 누적',
+        c2Box3P1: '"나는 안 되는 아이" 체념',
+        c2Box3P2: '스스로 탐구하는 내적 동기 상실',
+        c2Box3Sub: '결국 공부 호기심이 완전히 차단',
+        c3Title: '[실전 솔루션] 부모의 공부 호기심 대화 3단계 공식',
+        c3Step1Name: '1단계 과정 경청',
+        c3Step1Title: '배움의 과정 온전히 묻기',
+        c3Step1P1: '"공부하면서 어떤 게 제일 신기했어?"',
+        c3Step1P2: '"새롭게 알게 된 사실이 있니?"',
+        c3Step1Sub: '점수가 아닌 호기심과 생각 묻기',
+        c3Step2Name: '2단계 전략 질문',
+        c3Step2Title: '접근법과 아이디어 탐색',
+        c3Step2P1: '"이 문제는 어떤 방법으로 풀었어?"',
+        c3Step2P2: '"다른 방법으로 접근해볼 수도 있을까?"',
+        c3Step2Sub: '정답보다 해결 과정의 사고력 칭찬',
+        c3Step3Name: '3단계 실패 동행',
+        c3Step3Title: '오답을 성장의 데이터로 전환',
+        c3Step3P1: '"어떤 과정에서 헷갈렸는지 찾아보자"',
+        c3Step3P2: '"틀린 덕분에 새로운 걸 배웠네!"',
+        c3Step3Sub: '실패를 안전하게 환영하는 태도',
+        c4Title: '[실천 계획] 4주 완성 자기주도 학습 습관 구축 체크리스트',
+        c4W1: '1주차 : 결과 질문 금지',
+        c4W1L1: '✔ "몇 점이야?" 묻지 않기',
+        c4W1L2: '✔ 시험 보느라 수고했어 격려',
+        c4W1L3: '✔ 점수보다 아이 표정 살피기',
+        c4W1Sub: '평가 부담을 내려놓는 첫 주',
+        c4W2: '2주차 : 열린 호기심 대화',
+        c4W2L1: '✔ 학교에서 신기했던 것 묻기',
+        c4W2L2: '✔ 아이 질문에 함께 감탄하기',
+        c4W2L3: '✔ 부모 생각 일방 강요 금지',
+        c4W2Sub: '자유로운 탐구 분위기 조성',
+        c4W3: '3주차 : 질문 노트 만들기',
+        c4W3L1: '✔ 궁금한 주제 한 줄 메모',
+        c4W3L2: '✔ 주말에 도서관 함께 방문',
+        c4W3L3: '✔ 아이만의 해결책 응원하기',
+        c4W3Sub: '질문하는 능력을 키우는 주간',
+        c4W4: '4주차 : 실패 축제 문화',
+        c4W4L1: '✔ 오답 노트로 약점 보완',
+        c4W4L2: '✔ 도전한 용기 아낌없이 칭찬',
+        c4W4L3: '✔ 스스로 계획 세우기 지지',
+        c4W4Sub: '학습 민첩성을 완성하는 주간',
+        c5Title: "[전문가 조언] 공부 대화에서 부모가 지켜야 할 DO vs DON'T",
+        c5Do1: '✔ "어떤 부분이 가장 흥미로웠니?" 과정 묻기',
+        c5Do2: '✔ 아이가 스스로 풀이 과정을 설명하게 경청하기',
+        c5Do3: '✔ 틀린 문제에서 배운 점을 함께 찾아보기',
+        c5Do4: '✔ "네가 노력한 시간들이 멋져" 구체적 칭찬',
+        c5Dont1: '✘ "이번 시험 몇 점 받았어? 몇 개 틀렸어?"',
+        c5Dont2: '✘ 옆집 아이나 형제·자매 성적과 비교하기',
+        c5Dont3: '✘ "공부 왜 안 하니?" 감정적으로 소리 지르기',
+        c5Dont4: '✘ 틀렸다고 면박 주며 정답만 외우게 강요하기',
+        intro: `초·중·고 학부모님들의 가장 큰 일상 고민 중 하나는 바로 '어떻게 하면 아이가 스스로 공부에 흥미를 느끼고 책상에 앉을까?'입니다. 많은 부모님들이 아이의 학습을 돕고 싶은 마음에 무심코 던지는 첫마디가 있습니다. 바로 "오늘 시험 몇 점 받았어?", "숙제 다 했니?" 같은 결과 확인형 질문입니다.
+
+서울대 교육학과 신종호 교수의 명쾌한 교육 심리학 분석에 따르면, 이러한 결과 중심의 질문 하나가 아이의 뇌에서 배움의 호기심을 완전히 차단하는 결정적 원인이 된다고 경고합니다. 오늘은 시험 점수와 성적의 압박에서 벗어나, 아이의 평생 경쟁력이 되는 '학습 호기심'과 '학습 민첩성(Learning Agility)'을 활짝 열어주는 부모의 실전 질문 대화법을 정리해 드립니다.`,
+        sec1: `아이가 공부를 점점 싫어하고 숙제를 미루는 가장 큰 원인은 '평가받는 것에 대한 두려움과 불안' 때문입니다. 부모가 "몇 점 받았어?", "몇 개 틀렸어?"라고 묻는 순간, 아이의 뇌는 배움의 즐거움을 탐색하는 대신 '실패하면 비난받을지 모른다'는 생존 모드에 돌입합니다.
+
+극심한 평가 불안은 고차원적 사고와 메타인지, 창의력을 담당하는 전두엽의 기능을 마비시키고 뇌를 경직되게 만듭니다. 결국 아이는 틀리는 것이 두려워 쉬운 문제만 풀려고 하거나, 조금만 난도가 올라가면 "모르겠어요", "안 할래요"라며 학습 무력감에 빠지게 됩니다.
+
+인공지능(AI) 시대에 가장 중요한 인재의 조건은 단순 암기나 정답 맞히기가 아닌, 모르는 상황에서도 유연하게 배우려는 '학습 민첩성'입니다. 결과에만 초점을 맞추는 부모의 피드백은 이 학습 민첩성을 뿌리째 흔들어버립니다.`,
+        sec2: `아이의 닫힌 호기심을 활짝 열고 배움의 즐거움을 되찾아주려면, 부모의 질문 프레임을 '결과'에서 '과정과 탐구'로 180도 전환해야 합니다.
+
+1단계는 '배움의 과정에 대한 열린 경청'입니다. "오늘 학교에서 배운 것 중 어떤 내용이 제일 신기했어?", "이번 단원에서 가장 기억에 남는 이야기는 뭐야?"처럼 정답이 정해져 있지 않은 질문을 건네보세요. 아이는 평가받는 긴장감을 내려놓고 신나서 자신의 생각을 이야기하기 시작합니다.
+
+2단계는 '아이디어와 접근 전략 묻기'입니다. 아이가 숙제를 하거나 문제를 풀었을 때 "다 맞았어?" 대신 "이 문제는 어떤 아이디어로 접근해봤어?", "너만의 재미있는 풀이 방법이 있니?"라고 물어보세요. 아이는 스스로 생각하는 주도성을 느끼며 깊이 있는 사고를 확장합니다.
+
+3단계는 '오답을 성장의 데이터로 환영하기'입니다. 아이가 틀린 문제를 가져왔을 때 질책하지 않고 "와, 이 문제를 틀린 덕분에 네가 헷갈렸던 개념을 완벽하게 배울 기회가 생겼네! 어디서 생각이 꼬였는지 같이 탐정처럼 찾아볼까?"라고 반응해 주세요. 실패를 두려워하지 않는 용기가 바로 상위 1%의 학습 태도입니다.`,
+        sec3: `가정 내에서 조급함을 내려놓고 지속 가능한 자기주도 학습 습관을 안착시키는 4주 로드맵을 제안합니다.
+
+1주차는 '결과 질문 전면 금지' 주간입니다. 시험을 보고 돌아온 아이에게 성적을 먼저 묻지 마세요. "시험 준비하느라 그동안 정말 고생 많았어. 네가 매일 꾸준히 책상에 앉았던 모습이 참 자랑스러워"라며 노력과 수고를 먼저 안아주세요.
+
+2주차는 '열린 호기심 대화' 주간입니다. 하루에 딱 한 번, 식사 시간이나 취침 전 10분 동안 "오늘 새롭게 알게 된 사실 중 제일 재미있었던 건?"이라는 가벼운 질문으로 대화를 시작해 보세요.
+
+3주차는 '호기심 질문 노트' 주간입니다. 아이가 일상에서 궁금해하는 사소한 질문들을 작은 수첩에 적어두고, 주말에 함께 도서관이나 인터넷을 통해 답을 찾아보는 탐구 데이트를 즐겨보세요.
+
+4주차는 '오답 축제 문화' 주간입니다. 틀린 문제를 부끄러워하지 않고 가족 앞에서 "오늘 이 오답 덕분에 새로운 걸 배웠어요!"라고 발표하는 긍정적 실패 문화를 정착시킵니다.`,
+        sec4: `학부모님들이 가장 자주 묻는 핵심 질의응답입니다.
+
+Q1. 아이가 시험을 완전히 망치고 와서 스스로 속상해하고 풀이 죽어 있을 땐 어떻게 반응해야 하나요?
+A. 이때 "그러니까 엄마가 복습하라고 했잖아"라는 지적은 치명적입니다. 아이의 속상한 마음에 먼저 깊이 공감해 준 뒤("정말 열심히 했는데 생각만큼 안 나와서 많이 속상하겠구나"), "시험 점수는 너의 가치가 아니라, 다음 성장을 위한 신호등일 뿐이야. 어디서 보완하면 좋을지 천천히 찾아보자"며 든든한 지지자가 되어주세요.
+
+Q2. 아이가 스스로 호기심을 갖지 않고 질문도 거의 안 하는데 어쩌죠?
+A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두려워합니다. 부모가 먼저 일상에서 호기심을 표현하는 롤모델이 되어주세요. "엄마는 길 가다가 이 나뭇잎 모양이 왜 다른지 신기하더라. 너는 어떻게 생각해?"라며 엉뚱한 질문도 환영받는 안전한 가정 분위기를 만들어주시는 것이 첫걸음입니다.`,
+        outro: `자녀 교육의 궁극적인 목표는 높은 시험 점수가 아니라, 세상에 대한 따뜻한 호기심을 품고 스스로 배움을 즐기는 단단한 아이로 키워내는 것입니다. 부모가 건네는 따뜻한 질문 한마디가 아이의 지적 탐구심에 불을 지피는 가장 밝은 등불이 됩니다.
+
+도담 육아가이드 리포트는 언제나 전국 부모님들의 현명하고 따뜻한 교육 여정을 힘차게 응원합니다. 지금 바로 도담 커뮤니티에서 더 많은 실전 학습 꿀팁과 따뜻한 소통을 만나보세요!`
       },
       edu: {
-        badge: '🎒 학습',
-        subName: '학습 & 학교/입시',
-        targetAge: '초·중·고 학부모',
-        focus: '초등입학·학습습관·독서·학군',
-        keywords: ['초등입학준비', '자기주도학습', '문해력독서', '초품아학군', '공부습관'],
-        b1: '초등 입학 전 반드시 다져야 할 문해력과 기초 연산 공부 습관',
-        b2: '부모의 잔소리 없이 스스로 책상에 앉게 만드는 환경 설계와 칭찬법',
-        b3: '아이 기질에 맞는 초품아 및 학군 선택 기준과 통학 안전 요소'
+        badge: '🎒 학습 & 교육',
+        subName: '학습 습관 & 문해력 코칭',
+        targetAge: '초·중등 학부모',
+        focus: '초등공부습관·문해력·자기주도학습',
+        keywords: ['공부습관', '초등문해력', '자기주도학습', '학습환경', '집중력'],
+        b1: '부모의 일방적인 잔소리 없이 아이 스스로 책상에 앉게 만드는 공부 환경 설계법',
+        b2: '초등 시기 학업 격차를 결정짓는 핵심 문해력과 독서 습관 형성 가이드',
+        b3: '작은 성취감을 축적하여 외적 보상 없이도 지속되는 내적 학습 동기 부여법',
+        c2Title: '[원인 분석] 스스로 공부하지 않는 아이들의 3대 환경적 요인',
+        c2Box1Title: '학습 목표 부재',
+        c2Box1P1: '왜 공부해야 하는지 모른 채',
+        c2Box1P2: '부모가 시켜서 억지로 수행',
+        c2Box1Sub: '수동적 학습 태도 고착화',
+        c2Box2Title: '디지털 방해 요인',
+        c2Box2P1: '스마트폰, 게임, 쇼츠 노출로',
+        c2Box2P2: '깊이 생각하는 뇌 발달 지연',
+        c2Box2Sub: '짧은 도파민 자극에 길들여짐',
+        c2Box3Title: '과도한 선행 부담',
+        c2Box3P1: '아이 수준에 맞지 않는 진도로',
+        c2Box3P2: '공부에 대한 거부감과 피로감',
+        c2Box3Sub: '기초 개념 구멍 발생 원인',
+        c3Title: '[실전 솔루션] 스스로 책상에 앉게 만드는 3단계 학습 루틴',
+        c3Step1Name: '1단계 환경 분리',
+        c3Step1Title: '공부 전용 미니멀 공간',
+        c3Step1P1: '"책상 위에는 지금 풀 교재 1권만"',
+        c3Step1P2: '"스마트폰은 거실 바구니에 보관"',
+        c3Step1Sub: '시각적 산만 요소를 원천 차단',
+        c3Step2Name: '2단계 분량 조절',
+        c3Step2Title: '15분 집중 뽀모도로 전략',
+        c3Step2P1: '"딱 15분만 몰입해서 풀기"',
+        c3Step2P2: '"작은 분량을 끝내고 5분 휴식"',
+        c3Step2Sub: '성공 경험을 짧은 주기로 제공',
+        c3Step3Name: '3단계 피드백',
+        c3Step3Title: '노력과 실행 과정 칭찬',
+        c3Step3P1: '"스스로 약속한 시간을 지켰네!"',
+        c3Step3P2: '"끝까지 집중한 모습이 멋지다"',
+        c3Step3Sub: '결과 점수가 아닌 실천 칭찬',
+        c4Title: '[실천 계획] 4주 완성 자기주도 공부 습관 체크리스트',
+        c4W1: '1주차 : 책상 다이어트',
+        c4W1L1: '✔ 책상 위 불필요한 물건 정리',
+        c4W1L2: '✔ 공부 시간 스마트폰 거실 거치',
+        c4W1L3: '✔ 적정 조명 및 의자 높이 조절',
+        c4W1Sub: '몰입할 수 있는 환경 조성',
+        c4W2: '2주차 : 하루 15분 루틴',
+        c4W2L1: '✔ 매일 같은 시각 책상 앉기',
+        c4W2L2: '✔ 15분 집중 독서 또는 연산',
+        c4W2L3: '✔ 끝난 후 즉시 체크 표시',
+        c4W2Sub: '작은 습관의 힘 안착시키기',
+        c4W3: '3주차 : 플래너 함께 작성',
+        c4W3L1: '✔ 주간 할 일 아이 스스로 선택',
+        c4W3L2: '✔ 무리한 목표 대신 현실적 분량',
+        c4W3L3: '✔ 주말에 셀프 리뷰 타임',
+        c4W3Sub: '주도성을 키우는 계획 훈련',
+        c4W4: '4주차 : 습관 자동화',
+        c4W4L1: '✔ 부모의 잔소리 점진적 축소',
+        c4W4L2: '✔ 아이의 학습 자율권 보장',
+        c4W4L3: '✔ 성취 축하 작은 가족 보상',
+        c4W4Sub: '지속 가능한 루틴 완성',
+        c5Title: "[전문가 조언] 초등 학습 코칭 DO vs DON'T",
+        c5Do1: '✔ 아이 수준에 맞는 적정 난이도 교재 선택하기',
+        c5Do2: '✔ 하루 20분 부모와 함께 책 읽는 독서 루틴',
+        c5Do3: '✔ 약속한 시간과 분량을 지켰을 때 아낌없이 칭찬',
+        c5Do4: '✔ 주말에는 충분한 휴식과 신체 활동 보장하기',
+        c5Dont1: '✘ "옆집 철수는 벌써 심화 다 끝냈다더라" 비교',
+        c5Dont2: '✘ 계획 다 못 끝냈다고 밤늦게까지 억지 공부',
+        c5Dont3: '✘ 아이가 공부할 때 부모는 옆에서 스마트폰 보기',
+        c5Dont4: '✘ 일방적으로 학원 스케줄 빼곡하게 채우기',
+        intro: `초등 시기 자녀를 둔 학부모님들의 가장 큰 바람은 바로 아이가 스스로 책상에 앉아 자기주도적으로 학습하는 것입니다. 하지만 매일 숙제와 학습지 분량을 두고 실랑이를 벌이다 보면 부모도 지치고 아이도 공부에 질려버리기 일쑤입니다.
+
+교육 전문가들은 초등 시기 가장 중요한 것은 '진도 선행'이 아니라 '스스로 매일 정해진 분량을 해내는 작은 성공 습관'이라고 강조합니다. 오늘은 가정에서 부모와 아이 모두 스트레스 없이 정착시킬 수 있는 실전 자기주도 학습 솔루션을 상세히 안내해 드립니다.`,
+        sec1: `아이가 스스로 공부하지 않는 근본 원인은 게으름 때문이 아닙니다. 왜 해야 하는지에 대한 목표가 불분명하고, 집중을 방해하는 시각적 자극(스마트폰, 장난감)이 가득한 환경에 노출되어 있기 때문입니다.
+
+특히 요즘 아이들은 짧은 숏폼 콘텐츠와 자극적인 게임에 익숙해져 긴 호흡으로 텍스트를 읽고 생각하는 뇌 훈련이 부족합니다. 이 상태에서 어려운 문제를 억지로 풀게 하면 뇌는 학습을 고통스러운 스트레스로 인식하여 회피 반응을 보입니다. 아이를 탓하기 전에 먼저 몰입할 수 있는 환경을 정비해 주는 것이 급선무입니다.`,
+        sec2: `아이 스스로 책상에 앉게 만드는 3단계 학습 솔루션을 실천해 보세요. 1단계는 '공부 전용 미니멀 환경 구축'입니다. 책상 위에는 지금 당장 풀어야 할 책 한 권과 연필 한 자루만 두고, 스마트폰과 전자기기는 시야에서 완전히 치워줍니다.
+
+2단계는 '15분 뽀모도로 몰입 훈련'입니다. 처음부터 1시간씩 앉아있게 하지 마세요. 15분 동안 딱 2페이지를 집중해서 풀고 5분을 쉬는 방식으로 뇌에 부담을 주지 않는 작은 성공을 맛보게 합니다.
+
+3단계는 '노력과 실행 과정에 대한 구체적 인정'입니다. "오늘 정해진 시간에 스스로 책상에 앉아서 끝까지 풀었네!"라며 아이의 실행력을 인정해 줄 때 도파민이 분비되어 다음 날도 지속할 힘을 얻습니다.`,
+        sec3: `지속 가능한 4주 생활 루틴입니다. 1주차에는 책상 위 산만한 물건을 비우는 공간 다이어트를 시작합니다. 2주차에는 매일 같은 시각 15분씩 책상에 앉는 시간 고정 루틴을 만듭니다. 3주차에는 아이가 직접 공부 분량을 정하는 주간 플래너를 도입하고, 4주차에는 부모의 잔소리를 줄이고 아이의 자율성을 존중하는 습관 자동화를 완성합니다.`,
+        sec4: `자주 묻는 질문입니다. Q1. 책상에 앉아 5분도 안 돼서 딴짓을 해요. A. 집중력은 근육과 같아서 서서히 길러집니다. 타이머를 10분에 맞추고 "이 타이머가 울릴 때까지만 딱 1문제 풀어보자"며 점진적으로 시간을 늘려주세요. Q2. 아이가 독서를 너무 싫어해요. A. 글밥이 적은 만화 백과나 그림책부터 시작해도 좋습니다. 부모가 먼저 옆에서 조용히 책을 읽는 모습을 보여주는 것이 최고의 독서 교육입니다.`,
+        outro: `공부는 평생을 이어가는 배움의 마라톤입니다. 초등 시기에 단단하게 형성된 자기주도 학습 습관과 긍정적인 자존감은 중고등학교뿐 아니라 어른이 되어서도 가장 강력한 삶의 무기가 됩니다. 도담 공식 육아가이드가 전국 학부모님들의 현명한 학습 코칭을 힘차게 응원합니다!`
       },
-      all: {
-        badge: '📖 가이드',
-        subName: '종합 육아가이드',
-        targetAge: '대한민국 모든 부모',
-        focus: '성장단계별 육아·생활루틴 종합',
-        keywords: ['육아가이드', '부모교육', '가정루틴', '소아발달', '행복한육아'],
-        b1: '소아청소년 발달 지침과 부모 교육 전문 임상 데이터 종합 분석',
-        b2: '가정에서 부모와 아이 모두 스트레스 없이 실천하는 생활 루틴 구축',
-        b3: '완벽한 부모보다 아이의 신호에 귀 기울이는 일관성 있는 양육 태도'
+      growth: {
+        badge: '👶 훈육 & 발달',
+        subName: '훈육 & 아동발달 심리',
+        targetAge: '3~7세 유·초등 학부모',
+        focus: '훈육법·떼쓰기·애착·감정코칭',
+        keywords: ['긍정훈육', '감정코칭', '떼쓰기대처', '또래관계', '자존감향상'],
+        b1: '감정은 100% 공감하되 행동의 한계는 단호하게 설정하는 3단계 훈육 대화법',
+        b2: '울고 떼쓰는 순간 뇌에서 일어나는 감정 폭풍(편도체)을 차분하게 가라앉히는 기법',
+        b3: '비난과 체벌 없이 아이 스스로 납득하는 일관된 가정 내 안전 약속 확립',
+        c2Title: '[원인 분석] 아동 발달학적 3대 감정 폭풍 메커니즘',
+        c2Box1Title: '뇌 발달 불균형',
+        c2Box1P1: '감정 담당 편도체 급활성화',
+        c2Box1P2: '충동제어 전두엽 미성숙',
+        c2Box1Sub: '스스로 조절하기 힘든 생리적 발달 단계',
+        c2Box2Title: '정서적 인정 욕구',
+        c2Box2P1: '자아 효능감과 독립심 폭발',
+        c2Box2P2: '자신의 뜻을 관철하려는 신호',
+        c2Box2Sub: '단순 반항이 아닌 자아 성장 과정',
+        c2Box3Title: '피로 및 환경 자극',
+        c2Box3P1: '수면 부족, 배고픔, 과자극',
+        c2Box3P2: '가정 내 일관되지 않은 양육 룰',
+        c2Box3Sub: '몸의 불편함이 떼쓰기로 표출',
+        c3Title: '[실전 솔루션] 부모 맞춤형 감정코칭 3단계 로드맵',
+        c3Step1Name: '1단계 공감',
+        c3Step1Title: '감정 100% 수용하기',
+        c3Step1P1: '"그런 마음이 들 수 있어"',
+        c3Step1P2: '"정말 속상하고 힘들었겠네"',
+        c3Step1Sub: '비난 없이 감정 자체를 온전히 읽기',
+        c3Step2Name: '2단계 한계',
+        c3Step2Title: '단호한 경계선 설정',
+        c3Step2P1: '"하지만 던지거나 때리는 건 안 돼"',
+        c3Step2P2: '"안전 약속은 반드시 지켜야 해"',
+        c3Step2Sub: '목소리는 낮고 차분하게 단호함 유지',
+        c3Step3Name: '3단계 대안',
+        c3Step3Title: '선택권과 대안 제시',
+        c3Step3P1: '"대신 A와 B 중 골라볼까?"',
+        c3Step3P2: '"어떻게 하면 좋을지 함께 정해보자"',
+        c3Step3Sub: '아이에게 통제감과 책임감 부여',
+        c4Title: '[실천 계획] 4주 완성 긍정 훈육 생활 루틴 체크리스트',
+        c4W1: '1주차 : 촉발점 관찰',
+        c4W1L1: '✔ 떼쓰는 상황과 시간대 기록',
+        c4W1L2: '✔ 일방적 언성 높이기 자제',
+        c4W1L3: '✔ 아이 신체 상태(수면, 식사) 체크',
+        c4W1Sub: '아이의 패턴을 이해하는 주간',
+        c4W2: '2주차 : 감정 단어 들려주기',
+        c4W2L1: '✔ "속상했구나", "억울했구나"',
+        c4W2L2: '✔ 감정 카드 활용 놀이',
+        c4W2L3: '✔ 침묵으로 진정 기다려주기',
+        c4W2Sub: '감정 표현 어휘력 확장',
+        c4W3: '3주차 : 룰 시각화',
+        c4W3L1: '✔ 핵심 안전 룰 3가지 합의',
+        c4W3L2: '✔ 그림 규칙판 벽에 부착',
+        c4W3L3: '✔ 잘 지킨 순간 즉각 칭찬',
+        c4W3Sub: '예측 가능한 룰 체계화',
+        c4W4: '4주차 : 일관성 확립',
+        c4W4L1: '✔ 양육자 간 훈육 태도 일치',
+        c4W4L2: '✔ 공공장소 단호한 대처',
+        c4W4L3: '✔ 부모 셀프 멘탈 케어',
+        c4W4Sub: '흔들림 없는 긍정 훈육 완성',
+        c5Title: "[전문가 조언] 훈육 시 부모가 지켜야 할 DO vs DON'T",
+        c5Do1: '✔ 눈높이를 맞추고 아이의 말을 끝까지 경청하기',
+        c5Do2: '✔ 감정이 폭발했을 땐 침묵과 포옹으로 진정 돕기',
+        c5Do3: '✔ 부모의 실수 인정하고 차분하게 사과하기',
+        c5Do4: '✔ 작은 약속 실천도 구체적 사실 위주로 칭찬하기',
+        c5Dont1: '✘ 화가 난다고 소리 지르거나 감정적 폭언하기',
+        c5Dont2: '✘ 형제·자매나 다른 아이와 비교하며 비난하기',
+        c5Dont3: '✘ 방에 가두거나 체벌로 위압감 주기',
+        c5Dont4: '✘ 아이 앞에서 양육자끼리 훈육 방식 다투기',
+        intro: `만 3~7세 유·초등 시기는 아이의 자아의식과 독립심이 폭발하면서 떼쓰기와 고집, 분리불안이 극에 달하는 시기입니다. 매일 반복되는 실랑이에 지친 부모님들은 "어디까지 받아주고 어디서부터 단호해야 할까?" 깊은 혼란을 겪게 됩니다.
+
+아동발달 심리학에서는 떼쓰기를 나쁜 버릇이 아니라 감정 조절 뇌가 발달하는 자연스러운 신호로 봅니다. 오늘은 아이에게 상처 주지 않으면서도 가정 내 바른 질서를 확립하는 긍정 훈육 3단계 솔루션을 체계적으로 정리해 드립니다.`,
+        sec1: `아이가 울고 떼쓰는 근본 원인을 이해하려면 발달학적인 뇌 구조를 살펴보아야 합니다. 성장기 아동의 뇌는 감정과 충동을 담당하는 편도체가 먼저 발달하고, 이성적 판단과 브레이크 역할을 하는 전두엽은 여전히 성장 중입니다.
+
+감정이 격해진 순간 아이는 스스로 멈추고 싶어도 멈출 수 없는 뇌의 비상사태에 놓입니다. 이때 부모가 함께 화를 내면 아이의 뇌는 위협으로 인식하여 투쟁-도피 상태에 빠집니다. 부모의 차분한 목소리와 일관된 태도만이 아이의 흥분된 신경계를 가라앉힐 수 있습니다.`,
+        sec2: `실전 감정코칭 3단계 대화법입니다. 1단계는 '감정 100% 공감'입니다. "네 마음대로 안 돼서 정말 속상했겠구나"라며 아이의 감정을 먼저 언어로 온전히 읽어줍니다. 공감받았다는 안도감이 들 때 아이는 비로소 귀를 엽니다.
+
+2단계는 '행동의 단호한 한계 설정'입니다. "하지만 물건을 던지거나 소리 지르는 건 안 되는 거야"라며 안전과 배려에 관한 룰은 단호하게 지킵니다.
+
+3단계는 '긍정적 대안 선택권 주기'입니다. "대신 이 공을 밖에서 힘껏 차볼래, 아니면 종이에 낙서해볼래?"처럼 스스로 대안을 선택하게 함으로써 자존감과 통제감을 되찾아줍니다.`,
+        sec3: `4주 완성 긍정 훈육 루틴입니다. 1주차에는 아이가 떼를 쓰는 전조 증상과 신체적 피로를 관찰합니다. 2주차에는 감정을 표현하는 어휘를 알려주고 진정될 때까지 기다려줍니다. 3주차에는 그림으로 된 가족 약속판을 만들어 붙이고 실천을 격려하며, 4주차에는 양육자 간 일관성을 확립하여 안정감을 완성합니다.`,
+        sec4: `Q1. 공공장소에서 바닥에 드러누워 떼를 쓰면 어쩌죠? A. 주변 시선 때문에 당황하여 요구를 들어주면 떼쓰기가 강화됩니다. 아이를 안아서 조용하고 안전한 곳으로 이동한 뒤, 감정이 가라앉을 때까지 묵묵히 곁을 지켜주세요. Q2. 부모가 화를 냈을 땐 어떻게 수습하나요? A. 감정이 진정된 후 솔직하게 사과하세요. "아까 엄마가 소리 질러서 미안해. 하지만 약속은 지켜야 해"라며 실수를 회복하는 과정을 보여주는 것이 훌륭한 훈육입니다.`,
+        outro: `훈육의 목적은 아이를 굴복시키는 것이 아니라, 아이 스스로 감정을 다스리고 바른 선택을 할 수 있도록 돕는 사랑의 훈련입니다. 도담 공식 육아가이드가 부모님들의 따뜻하고 단단한 훈육을 힘차게 응원합니다!`
+      },
+      sleep: {
+        badge: '🍼 수면 가이드',
+        subName: '0~24개월 수면교육 & 원더윅스',
+        targetAge: '0~24개월 영유아 부모',
+        focus: '통잠·밤수끊기·수면의식·낮잠루틴',
+        keywords: ['통잠교육', '수면의식', '원더윅스', '밤수끊기', '낮잠루틴'],
+        b1: '월령별 적정 깨어있는 시간(Wake Window)과 수면 압력 조절 노하우',
+        b2: '밤잠 입면 의식 4단계 프로토콜과 스스로 눕혀 재우기 성공 비법',
+        b3: '새벽 각성과 원더윅스(급성장기) 시기 부모의 일관된 반응 수칙',
+        c2Title: '[원인 분석] 영유아 수면 문제의 3대 핵심 메커니즘',
+        c2Box1Title: '생체 리듬 미성숙',
+        c2Box1P1: '멜라토닌 분비 주기 불완전',
+        c2Box1P2: '낮과 밤의 명암 감각 형성 중',
+        c2Box1Sub: '생후 6~8주부터 서서히 확립',
+        c2Box2Title: '수면 연관 의존',
+        c2Box2P1: '젖 물려 재우기, 안아 흔들기',
+        c2Box2P2: '얕은 잠 단계에서 각성 유발',
+        c2Box2Sub: '스스로 잠드는 기회 상실',
+        c2Box3Title: '원더윅스 급성장기',
+        c2Box3P1: '뒤집기, 이앓이, 분리불안',
+        c2Box3P2: '뇌 신경망의 비약적 발달',
+        c2Box3Sub: '자다 깨서 우는 자연스러운 현상',
+        c3Title: '[실전 솔루션] 성공적인 통잠을 위한 4단계 프로토콜',
+        c3Step1Name: '1단계 조명',
+        c3Step1Title: '취침 환경 암전화',
+        c3Step1P1: '실내온도 20~22℃, 습도 50~60%',
+        c3Step1P2: '취침 1시간 전 간접조명만 켜기',
+        c3Step1Sub: '멜라토닌 분비 환경 조성',
+        c3Step2Name: '2단계 진정',
+        c3Step2Title: '따뜻한 목욕 & 보습',
+        c3Step2P1: '미온수 목욕으로 심부체온 낮추기',
+        c3Step2P2: '부드러운 오일 마사지와 잠옷',
+        c3Step2Sub: '촉각적 이완 신호 전달',
+        c3Step3Name: '3단계 의식',
+        c3Step3Title: '눕혀서 스스로 잠들기',
+        c3Step3P1: '백색소음 또는 조용한 자장가',
+        c3Step3P2: '완전히 잠들기 직전 침대에 눕히기',
+        c3Step3Sub: '스스로 잠드는 수면 연관 형성',
+        c4Title: '[실천 계획] 4주 완성 아기 통잠 생활 루틴 체크리스트',
+        c4W1: '1주차 : 낮밤 구분하기',
+        c4W1L1: '✔ 아침 7시 기상 및 햇빛 쬐기',
+        c4W1L2: '✔ 낮잠은 생활소음 속에서',
+        c4W1L3: '✔ 밤잠은 완전 암막 환경',
+        c4W1Sub: '생체 24시간 리듬 확립',
+        c4W2: '2주차 : 수면의식 고정',
+        c4W2L1: '✔ 목욕 → 마사지 → 자장가 순서',
+        c4W2L2: '✔ 매일 저녁 같은 시각 반복',
+        c4W2L3: '✔ 수유와 수면 분리하기',
+        c4W2Sub: '잠자는 신호 조건화',
+        c4W3: '3주차 : 눕혀 재우기',
+        c4W3L1: '✔ 졸려할 때 침대에 눕히기',
+        c4W3L2: '✔ 울 때 바로 안지 않고 토닥이기',
+        c4W3L3: '✔ 안심시키는 낮은 목소리 들려주기',
+        c4W3Sub: '스스로 잠드는 힘 기르기',
+        c4W4: '4주차 : 밤수 점진적 중단',
+        c4W4L1: '✔ 생후 6개월 이후 소아과 확인',
+        c4W4L2: '✔ 밤수 수유량 조금씩 줄이기',
+        c4W4L3: '✔ 10시간 이상 연속 통잠 성공',
+        c4W4Sub: '온 가족 꿀잠 완성',
+        c5Title: "[소아과 조언] 아기 수면교육 DO vs DON'T",
+        c5Do1: '✔ 아기 월령별 깨어있는 시간(Wake Window) 체크',
+        c5Do2: '✔ 침실 온도 20~22℃, 습도 55% 시원하고 쾌적하게',
+        c5Do3: '✔ 졸려서 눈이 가물거릴 때 침대에 눕히기',
+        c5Do4: '✔ 백색소음기를 활용해 외부 소음 차단하기',
+        c5Dont1: '✘ 아기가 완전히 잠들 때까지 안아서 흔들기',
+        c5Dont2: '✘ 자다 뒤척일 때마다 즉시 젖이나 젖병 물리기',
+        c5Dont3: '✘ 늦게 재우면 늦게 일어날 거라 착각하기',
+        c5Dont4: '✘ 밤잠 중 기저귀를 매번 불 켜고 갈아주기',
+        intro: `생후 0~24개월 영유아를 키우는 부모님들의 가장 간절한 소원은 바로 '아기의 통잠'과 '수면 루틴 정착'입니다. 밤마다 서너 번씩 깨어 울고 안아 흔들어야만 겨우 잠드는 아기를 돌보다 보면 양육자의 수면 부족과 만성 피로가 극에 달하게 됩니다.
+
+소아청소년과 전문의들은 아기 수면은 단순한 잠버릇이 아니라 뇌 신경망의 발달 및 생체 리듬 형성과 직결된 핵심 발달 과정이라고 설명합니다. 오늘은 아기에게 안정감을 주면서 스스로 잠드는 힘을 길러주는 4단계 수면교육 솔루션을 체계적으로 전해드립니다.`,
+        sec1: `아기가 밤에 자주 깨는 가장 큰 원인은 '잘못된 수면 연관(Sleep Association)' 때문입니다. 젖을 물고 자거나 안겨서 흔들리며 잠든 아기는, 밤중 얕은 렘(REM) 수면 주기로 돌아왔을 때 처음에 잠들었던 환경(엄마 품, 젖꼭지)이 사라진 것을 느끼고 불안해하며 울음을 터뜨립니다.
+
+또한 생후 4개월, 8개월 무렵 찾아오는 '원더윅스(급성장기)'에는 뒤집기, 기기, 대상영속성 발달로 인해 뇌가 밤에도 활발하게 자극을 처리하며 수면 퇴행이 일어납니다. 이를 병적인 상태로 보지 않고 정상적인 성장 신호로 이해하는 양육자의 여유가 필요합니다.`,
+        sec2: `통잠을 이끄는 실전 4단계 프로토콜입니다. 1단계는 '침실 환경 최적화'입니다. 온도는 어른 기준 다소 서늘한 20~22℃, 습도는 50~60%로 맞추고 완전한 암막 환경을 만듭니다.
+
+2단계는 '일관된 수면의식'입니다. 목욕 → 마사지 → 잠옷 갈아입기 → 조용한 자장가 순서를 매일 저녁 7시 30분경 같은 순서로 반복하여 뇌에 취침 신호를 각인시킵니다.
+
+3단계는 '졸릴 때 눕히기'입니다. 완전히 곯아떨어지기 전, 눈이 스르륵 감기려 할 때 침대에 눕혀 "엄마가 곁에 있어, 잘 자렴"이라며 스스로 입면하는 경험을 선물합니다.`,
+        sec3: `4주 완성 수면 스케줄입니다. 1주차에는 아침 햇살을 쬐어 낮밤 생체 시계를 맞춥니다. 2주차에는 수면의식을 매일 같은 시각에 반복하고, 3주차에는 새벽에 깼을 때 바로 안지 않고 1~2분 기다린 뒤 토닥여 스스로 다시 잠들 기회를 줍니다. 4주차에는 소아과 전문의 상담 후 생후 6개월 이후 밤수를 서서히 줄여 10시간 이상 연속 통잠을 완성합니다.`,
+        sec4: `자주 묻는 질문입니다. Q1. 아기가 침대에 눕히기만 하면 등센서가 켜져요. A. 깊은 잠 단계가 아닌 얕은 잠 단계에서 눕혔기 때문이거나 바닥 온도가 차가워서입니다. 침대에 미리 온기를 넣어두고, 졸려할 때 눕혀 아기가 침대를 안전한 공간으로 인식하게 도와주세요. Q2. 수면교육 시 울려도 되나요? A. 방치하고 혼자 두는 것이 아닙니다. 곁에서 목소리를 들려주고 토닥이며 "엄마는 항상 네 곁에 있어"라는 정서적 안도감을 주는 것이 올바른 수면교육입니다.`,
+        outro: `아기에게 스스로 잠드는 법을 가르쳐주는 것은 평생 건강한 수면 습관을 선물하는 소중한 양육의 선물입니다. 부모의 편안한 휴식과 아기의 건강한 성장을 위해 도담 공식 육아가이드가 함께합니다!`
+      },
+      food: {
+        badge: '🥣 이유식 & 영양',
+        subName: '월령별 이유식 & 식단 코칭',
+        targetAge: '4~36개월 영유아 부모',
+        focus: '초중후기이유식·유아식·철분영양·자기주도',
+        keywords: ['초기이유식', '후기이유식', '유아식식단', '철분흡수', '자기주도이유식'],
+        b1: '월령별 안전한 입자 크기 조절과 알레르기 유발 식품 안전 도입 가이드',
+        b2: '생후 6개월 이후 급격히 고갈되는 철분·아연 흡수를 2배 높이는 소고기 조리 비법',
+        b3: '식판 거부와 숟가락 편식을 줄이는 핑거푸드 활용 및 자기주도 식사법',
+        c2Title: '[원인 분석] 아기 이유식 거부의 3대 핵심 요인',
+        c2Box1Title: '입자 크기 부적응',
+        c2Box1P1: '미음에서 죽 넘어갈 때 헛구역질',
+        c2Box1P2: '씹는 턱 근육 발달 단계 불일치',
+        c2Box1Sub: '월령보다 아기 저작 발달 존중',
+        c2Box2Title: '철분 결핍성 식욕부진',
+        c2Box2P1: '생후 6개월 이후 모체 철분 소진',
+        c2Box2P2: '철분 부족 시 식욕 저하와 칭얼거림',
+        c2Box2Sub: '매일 소고기 10~20g 필수 섭취',
+        c2Box3Title: '강요된 식사 스트레스',
+        c2Box3P1: '억지로 한 숟가락 더 먹이려 채근',
+        c2Box3P2: '식판 앞에서의 불안과 긴장',
+        c2Box3Sub: '식사 시간을 놀이처럼 즐겨야 함',
+        c3Title: '[실전 솔루션] 성공적인 이유식을 위한 3단계 영양 가이드',
+        c3Step1Name: '1단계 철분',
+        c3Step1Title: '매일 소고기 & 비타민C',
+        c3Step1P1: '안심·우둔살 기름기 없는 부위 사용',
+        c3Step1P2: '브로콜리·배추와 함께 섭취 시 흡수 2배',
+        c3Step1Sub: '두뇌 발달 필수 미네랄 공급',
+        c3Step2Name: '2단계 자기주도',
+        c3Step2Title: '핑거푸드 탐색 기회 제공',
+        c3Step2P1: '당근, 단호박 찐 스틱 손으로 쥐기',
+        c3Step2P2: '흘려도 스스로 먹는 성취감 격려',
+        c3Step2Sub: '소근육 발달과 주도적 식습관',
+        c3Step3Name: '3단계 시간제한',
+        c3Step3Title: '식사 시간 30분 엄수',
+        c3Step3P1: '30분 지나면 부드럽게 식판 정리',
+        c3Step3P2: '식사 시간과 노는 시간의 명확한 분리',
+        c3Step3Sub: '식판 앞에서 집중력 향상',
+        c4Title: '[실천 계획] 4주 완성 바른 이유식 식단 체크리스트',
+        c4W1: '1주차 : 소고기 안심 식단',
+        c4W1L1: '✔ 매일 소고기 토핑 10g 섭취',
+        c4W1L2: '✔ 핏물은 키친타월로 살짝만 닦기',
+        c4W1L3: '✔ 채소 육수로 감칠맛 더하기',
+        c4W1Sub: '철분 충전 집중 주간',
+        c4W2: '2주차 : 새로운 알레르기 식품',
+        c4W2L1: '✔ 계란 노른자 → 흰자 순차 도입',
+        c4W2L2: '✔ 땅콩 버터 미량 테스트',
+        c4W2L3: '✔ 오전 첫 식사에 시도하기',
+        c4W2Sub: '안전한 식재료 확장',
+        c4W3: '3주차 : 핑거푸드 도입',
+        c4W3L1: '✔ 잇몸으로 으깨지는 부드러운 스틱',
+        c4W3L2: '✔ 스스로 쥐고 입에 넣는 연습',
+        c4W3L3: '✔ 턱받이와 바닥 매트 깔고 여유 갖기',
+        c4W3Sub: '자기주도 섭취 유도',
+        c4W4: '4주차 : 3끼 식사 텀 안정',
+        c4W4L1: '✔ 아침 8시, 낮 12시, 저녁 6시 규칙화',
+        c4W4L2: '✔ 수유는 식사 후 바로 보충',
+        c4W4L3: '✔ 온 가족 함께 즐겁게 식사하기',
+        c4W4Sub: '유아식으로 자연스러운 이행',
+        c5Title: "[소아영양 조언] 이유식 조리 & 수유 DO vs DON'T",
+        c5Do1: '✔ 소고기는 매일 거르지 않고 정량 섭취시키기',
+        c5Do2: '✔ 철분 흡수를 위해 비타민C 풍부한 채소 함께 조리',
+        c5Do3: '✔ 아기가 숟가락을 밀어내면 억지로 먹이지 않기',
+        c5Do4: '✔ 식사 시간은 30분 이내로 마무리하기',
+        c5Dont1: '✘ 돌 전 아기에게 꿀, 생우유, 소금 간하기',
+        c5Dont2: '✘ 입자 크기를 월령에 억지로 맞춰 사레 걸리게 하기',
+        c5Dont3: '✘ 스마트폰 영상 보여주며 입에 떠먹여주기',
+        c5Dont4: '✘ 이유식 거부한다고 하루 종일 분유만 먹이기',
+        intro: `초기에서 중기, 후기로 넘어가는 이유식 시기는 아이의 평생 식습관과 두뇌 발달의 골든타임입니다. 하지만 숟가락을 밀쳐내고 입을 꾹 닫는 아기 앞에서 매 끼니 정성스레 만든 이유식을 버리다 보면 부모의 속은 까맣게 타들어갑니다.
+
+소아 영양 전문가들은 생후 6개월 이후 모체로부터 받은 철분이 급격히 고갈되면서 식욕 부진이 올 수 있다고 지적합니다. 오늘은 영양 결핍 없이 아이가 스스로 즐겁게 먹는 이유식 식단과 실전 레시피 솔루션을 상세히 안내해 드립니다.`,
+        sec1: `이유식을 잘 먹던 아기가 갑자기 거부하는 주요 원인 중 하나는 '소고기 섭취 부족으로 인한 철분 결핍'입니다. 철분이 부족해지면 아동은 만성 피로와 미각 둔화, 식욕 부진을 겪게 됩니다.
+
+또한 퓌레나 미음 단계에서 질감이 있는 죽으로 넘어갈 때 혀와 잇몸의 저작 운동이 미숙하여 헛구역질(Gag Reflex)을 할 수 있습니다. 이는 기도가 막히는 것이 아니라 아기가 새로운 질감을 탐색하는 자연스러운 반사 작용이므로, 조급해하지 않고 입자 크기를 반 단계 낮추어 적응 기간을 주는 것이 좋습니다.`,
+        sec2: `실전 3단계 이유식 영양 전략입니다. 1단계는 '매일 소고기 안심 섭취와 비타민C 결합'입니다. 소고기 핏물을 너무 오래 빼면 철분이 손실되므로 키친타월로 가볍게 닦고, 브로콜리나 배추와 함께 끓여 흡수율을 2배 높여줍니다.
+
+2단계는 '손으로 쥐어 먹는 핑거푸드 도입'입니다. 아기가 스스로 음식을 손으로 만지고 입에 넣을 때 뇌 신경망이 급격히 활성화됩니다. 단호박이나 감자를 부드럽게 쪄서 식판에 올려주세요.
+
+3단계는 '식사 시간 30분 규칙 엄수'입니다. 30분이 지나면 장난을 치기 시작하므로 아쉬워도 차분하게 식판을 치우고, 다음 식사 시간에 배고픔을 느끼게 해줍니다.`,
+        sec3: `4주 식단 루틴입니다. 1주차에는 매일 신선한 소고기 육수를 활용한 영양식을 제공합니다. 2주차에는 오전 식사에 계란, 땅콩 등 알레르기 식품을 3일 간격으로 안전하게 테스트합니다. 3주차에는 스스로 먹는 성취감을 주는 핑거푸드를 제공하고, 4주차에는 어른과 함께 식탁에 앉아 식사 시간을 행복한 교감의 시간으로 만듭니다.`,
+        sec4: `자주 묻는 질문입니다. Q1. 하루에 이유식을 50ml도 안 먹어요. A. 아기마다 위장 용적과 성장 속도가 다릅니다. 몸무게 백분위가 정상 범위에서 완만하게 늘고 있다면 억지로 양을 늘리지 않아도 괜찮습니다. Q2. 시판 이유식만 먹고 엄마 밥은 거부해요. A. 시판 이유식의 육수 농도나 감칠맛에 익숙해져서일 수 있습니다. 채소 육수(양파, 사과, 다시마)를 활용해 자연스러운 감칠맛을 내어주시면 금방 적응합니다.`,
+        outro: `이유식은 영양 섭취뿐 아니라 오감으로 세상을 맛보고 탐구하는 즐거운 모험입니다. 도담 공식 육아가이드가 건강하고 맛있는 우리 아기 맘마 시간을 든든하게 응원합니다!`
+      },
+      health: {
+        badge: '🏥 소아 건강 & 케어',
+        subName: '소아 다빈도 질환 & 응급 가이드',
+        targetAge: '전 연령 영유아·어린이 부모',
+        focus: '소아열관리·해열제교차복용·비염·소아과',
+        keywords: ['소아열관리', '해열제교차복용', '영유아검진', '필수예방접종', '소아응급대처'],
+        b1: '소아 다빈도 질환(열감기, 장염, 수족구)의 초기 징후와 가정 내 응급 대처법',
+        b2: '아세트아미노펜 vs 이부프로펜 해열제 교차 복용 골든타임 수칙과 응급실 방문 신호',
+        b3: '환절기 유아 알레르기 비염과 잦은 마른 기침을 예방하는 최적의 온습도 관리 기준',
+        c2Title: '[원인 분석] 소아 발열 및 호흡기 질환 3대 핵심 징후',
+        c2Box1Title: '바이러스 면역 반응',
+        c2Box1P1: '발열은 신체가 균과 싸우는 자연 반응',
+        c2Box1P2: '38℃ 이상 열 자체보다 전신 상태 중요',
+        c2Box1Sub: '체온 수치에만 너무 공포 갖지 말 것',
+        c2Box2Title: '탈수 및 수분 손실',
+        c2Box2P1: '고열 시 땀과 호흡으로 수분 급감',
+        c2Box2P2: '소변 기저귀 횟수와 입술 마름 체크',
+        c2Box2Sub: '미온수 보충이 해열의 절반',
+        c2Box3Title: '호흡기 기도 과민',
+        c2Box3P1: '환절기 건조한 공기가 점막 자극',
+        c2Box3P2: '후비루로 인한 밤중 마른 기침',
+        c2Box3Sub: '습도 50~60% 유지가 필수적',
+        c3Title: '[실전 솔루션] 부모를 위한 소아 발열 대처 3단계 로드맵',
+        c3Step1Name: '1단계 복용',
+        c3Step1Title: '체중 기준 정량 해열제',
+        c3Step1P1: '나이가 아닌 체중(kg) 기준으로 복용',
+        c3Step1P2: '동일 성분은 최소 4~6시간 간격 엄수',
+        c3Step1Sub: '과다 복용으로 인한 간·신장 부담 방지',
+        c3Step2Name: '2단계 교차',
+        c3Step2Title: '2시간 후 열 지속 시 교차복용',
+        c3Step2P1: '아세트아미노펜 ↔ 이부/덱시부프로펜',
+        c3Step2P2: '최소 2시간 간격 유지하며 교차 투약',
+        c3Step2Sub: '하루 최대 허용 용량 절대 초과 금지',
+        c3Step3Name: '3단계 간호',
+        c3Step3Title: '미온수 마사지 & 수분 공급',
+        c3Step3P1: '30℃ 미온수 수건으로 목, 겨드랑이 닦기',
+        c3Step3P2: '오한이 올 땐 닦기 중단하고 얇은 옷 입히기',
+        c3Step3Sub: '급격한 체온 변화 방지',
+        c4Title: '[실천 계획] 4주 완성 면역력 케어 체크리스트',
+        c4W1: '1주차 : 침실 온습도 최적화',
+        c4W1L1: '✔ 실내온도 21~22℃, 습도 55% 유지',
+        c4W1L2: '✔ 가열식 가습기 매일 세척',
+        c4W1L3: '✔ 아침저녁 10분 맞통풍 환기',
+        c4W1Sub: '호흡기 점막 보호 환경',
+        c4W2: '2주차 : 비상약 파우치 정비',
+        c4W2L1: '✔ 두 가지 계열 해열제 유통기한 확인',
+        c4W2L2: '✔ 체온계 건전지 및 필터 점검',
+        c4W2L3: '✔ 코 세척용 식염수 구비',
+        c4W2Sub: '심야 응급 대비 완비',
+        c4W3: '3주차 : 면역 식단 및 영양제',
+        c4W3L1: '✔ 비타민D와 아연 꾸준한 섭취',
+        c4W3L2: '✔ 따뜻한 미온수 수시 음용 습관',
+        c4W3L3: '✔ 제철 과일과 신선한 채소 보충',
+        c4W3Sub: '기초 체력 면역 증진',
+        c4W4: '4주차 : 외출 위생 루틴',
+        c4W4L1: '✔ 귀가 후 30초 손씻기 습관화',
+        c4W4L2: '✔ 양치질 및 미온수 가글',
+        c4W4L3: '✔ 환절기 마스크 착용 지도',
+        c4W4Sub: '감염병 예방 일상화',
+        c5Title: "[소아응급 조언] 발열 케어 DO vs DON'T",
+        c5Do1: '✔ 해열제는 체중(kg)에 맞춰 정량 투약하기',
+        c5Do2: '✔ 열이 날 땐 보리차나 미온수를 조금씩 자주 먹이기',
+        c5Do3: '✔ 열나요 등 스마트폰 앱에 복용 시간과 체온 기록',
+        c5Do4: '✔ 처지거나 소변을 8시간 이상 안 보면 즉시 진료',
+        c5Dont1: '✘ 열 난다고 알코올이나 찬물로 몸을 닦이기',
+        c5Dont2: '✘ 열이 안 떨어진다고 30분 만에 또 해열제 먹이기',
+        c5Dont3: '✘ 땀 뺀다고 두꺼운 이불 덮어씌워 보온하기',
+        c5Dont4: '✘ 생후 3개월 미만 아기 38℃ 고열을 집에서 지켜보기',
+        intro: `한밤중 아기 이마가 불덩이처럼 뜨거워지면 부모의 가슴은 철렁 내려앉습니다. 38℃, 39℃로 치솟는 체온계를 보며 당장 응급실로 달려가야 할지, 해열제를 어떻게 먹여야 할지 당황하는 경우가 많습니다.
+
+소아청소년과 전문의들은 열 자체는 면역계가 바이러스와 싸우는 지극히 정상적인 방어 기전이며, 중요한 것은 체온계 수치보다 '아이의 전신 컨디션과 수분 섭취 상태'라고 조언합니다. 오늘은 소아과 의사가 권장하는 안전한 해열제 복용 수칙과 응급실 방문 기준을 상세히 정리해 드립니다.`,
+        sec1: `소아 발열 대처의 핵심은 무조건 열을 36.5도 정상 체온으로 떨어뜨리는 것이 아니라, 아이가 겪는 두통과 오한, 신체적 불쾌감을 줄여주고 탈수를 예방하는 데 있습니다.
+
+해열제를 복용하더라도 보통 1~1.5도 정도 떨어지는 것이 정상이므로, 완전히 열이 내리지 않는다고 해서 조급하게 짧은 간격으로 약을 중복 투약해서는 안 됩니다. 또한 생후 3개월 미만의 신생아 고열(38.0℃ 이상)은 패혈증이나 뇌수막염 등 중증 감염의 신호일 수 있으므로 해열제를 먹이지 말고 즉시 응급실로 직행해야 합니다.`,
+        sec2: `올바른 해열제 투약 원칙입니다. 1단계는 '체중(kg) 기준 정량 투약'입니다. 아세트아미노펜(타이레놀 계열)은 체중 1kg당 10~15mg, 이부프로펜/덱시부프로펜(맥시부펜 계열)은 체중당 5~10mg을 복용합니다.
+
+2단계는 '2시간 간격 교차 복용'입니다. 해열제를 복용한 지 2시간이 지났음에도 38.5도 이상의 고열이 지속되고 아이가 처져 힘들어할 때만 다른 계열의 해열제를 투약합니다. 동일 계열은 반드시 4~6시간 간격을 지켜야 간이나 신장 부담을 줄일 수 있습니다.
+
+3단계는 '미온수 마사지'입니다. 오한이 지나고 온몸이 뜨거워질 때 30도 안팎의 미온수 수건으로 목뒤, 겨드랑이, 사타구니를 부드럽게 닦아주세요. 찬물이나 알코올은 혈관을 수축시켜 오히려 체온을 올리므로 절대 금기입니다.`,
+        sec3: `4주 면역 케어 루틴입니다. 1주차에는 실내 온도를 21~22도, 습도를 55%로 유지하여 호흡기 점막을 촉촉하게 보호합니다. 2주차에는 비상 해열제 두 가지 계열의 유효기간을 점검하고 체중별 용량을 냉장고 앞에 메모해 둡니다. 3주차에는 비타민D와 따뜻한 보리차를 수시로 마시게 하고, 4주차에는 외출 후 손씻기와 양치질 습관을 정착시킵니다.`,
+        sec4: `자주 묻는 질문입니다. Q1. 반드시 응급실에 가야 하는 위험 신호는 무엇인가요? A. 1) 생후 3개월 미만 아기의 발열, 2) 열성 경련을 하거나 눈이 돌아가고 의식이 흐릴 때, 3) 호흡이 가쁘고 쌕쌕거리거나 흉곽이 쑥 꺼질 때, 4) 수유량이 평소의 절반 이하로 줄고 8시간 이상 기저귀를 안 적실 때(탈수)는 즉시 응급실로 가야 합니다. Q2. 자면서 땀을 뻘뻘 흘리는데 깨워서 약을 먹여야 하나요? A. 아기가 편안하게 잘 자고 있다면 굳이 깨워서 약을 먹이지 마세요. 잠 자체가 최고의 면역 치료제입니다.`,
+        outro: `아이들은 자라면서 열이 나고 아픈 과정을 통해 비로소 단단한 평생 면역을 구축해 갑니다. 당황하지 않는 부모의 침착함이 아이에게 가장 큰 안식처입니다. 도담 공식 육아가이드가 우리 아이들의 건강한 성장을 언제나 지켜드립니다!`
       }
     };
 
-    const normCat = category === 'nutrition' ? 'food' : category === 'play' ? 'growth' : category === 'school' ? 'edu' : category;
-    const info = themeMap[normCat] || themeMap['all'];
-    // SVG(XML) 텍스트 노드용 이스케이프: '&' 등이 있으면 이미지 전체가 깨지므로 반드시 변환
-    const xe = (v) => String(v).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const p = profiles[topicKey] || profiles['growth'];
 
-    // 2. 인라인 SVG 인포그래픽 카드 5장 생성 (네이버 블로그 복사 시 완벽 호환되는 벡터 그래픽)
+    // 3. 인라인 SVG 5장 생성 (테마별 100% 매칭 벡터 그래픽)
+    const xe = (v) => String(v || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
     const card1Svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
@@ -13112,18 +13656,18 @@ class DodamCommunityApp {
     </linearGradient>
   </defs>
   <rect width="800" height="420" rx="20" fill="url(#g1)"/>
-  <rect x="35" y="30" width="130" height="30" rx="15" fill="#f97316"/>
-  <text x="100" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(info.targetAge)}</text>
+  <rect x="35" y="30" width="140" height="30" rx="15" fill="#f97316"/>
+  <text x="105" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.targetAge)}</text>
   <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
   <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
-  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${xe(info.subName)} 핵심 요약 브리핑</text>
+  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${xe(p.subName)} 핵심 요약 브리핑</text>
   <text x="35" y="142" fill="#ffffff" font-size="20" font-weight="900" font-family="'Pretendard', sans-serif">${xe(cleanTitle.length > 34 ? cleanTitle.slice(0, 34) + '...' : cleanTitle)}</text>
-  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
+  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
   <rect x="35" y="195" width="730" height="195" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
   <text x="60" y="232" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
-  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${xe(info.b1)}</text>
-  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${xe(info.b2)}</text>
-  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${xe(info.b3)}</text>
+  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${xe(p.b1)}</text>
+  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${xe(p.b2)}</text>
+  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${xe(p.b3)}</text>
 </svg>`.trim();
 
     const card2Svg = `
@@ -13135,35 +13679,32 @@ class DodamCommunityApp {
     </linearGradient>
   </defs>
   <rect width="800" height="360" rx="20" fill="url(#g2)"/>
-  <text x="40" y="45" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[원인 분석] 아동 발달학적 3대 핵심 메커니즘</text>
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 행동과 반응을 보이는 근본적 이유</text>
+  <text x="40" y="45" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Title)}</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 반응과 태도를 보이는 근본적 원인</text>
   
   <rect x="40" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="75" cy="140" r="18" fill="#0284c7"/>
   <text x="75" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
-  <text x="105" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">뇌 발달 불균형</text>
-  <text x="55" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">감정 담당 편도체 급활성화</text>
-  <text x="55" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">충동제어 전두엽 미성숙</text>
-  <text x="55" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">스스로 조절하기 힘든 생리적</text>
-  <text x="55" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">발달 시기임을 이해할 것</text>
+  <text x="105" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box1Title)}</text>
+  <text x="55" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box1P1)}</text>
+  <text x="55" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box1P2)}</text>
+  <text x="55" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box1Sub)}</text>
 
   <rect x="287" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="322" cy="140" r="18" fill="#0284c7"/>
   <text x="322" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
-  <text x="352" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">정서적 인정 욕구</text>
-  <text x="302" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">또래 집단 내 소속감 갈망</text>
-  <text x="302" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">자신의 유능감 확인 심리</text>
-  <text x="302" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">단순 반항이 아닌 정서적</text>
-  <text x="302" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">연결을 바라는 강력한 신호</text>
+  <text x="352" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box2Title)}</text>
+  <text x="302" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box2P1)}</text>
+  <text x="302" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box2P2)}</text>
+  <text x="302" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box2Sub)}</text>
 
   <rect x="535" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="570" cy="140" r="18" fill="#0284c7"/>
   <text x="570" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
-  <text x="600" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">환경적 자극 요인</text>
-  <text x="550" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">디지털 미디어 과다 노출</text>
-  <text x="550" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">가정 내 일관되지 않은 룰</text>
-  <text x="550" y="235" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">부모의 불안이 아이에게</text>
-  <text x="550" y="255" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">전이되어 긴장도 상승</text>
+  <text x="600" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box3Title)}</text>
+  <text x="550" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box3P1)}</text>
+  <text x="550" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box3P2)}</text>
+  <text x="550" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box3Sub)}</text>
 </svg>`.trim();
 
     const card3Svg = `
@@ -13175,35 +13716,32 @@ class DodamCommunityApp {
     </linearGradient>
   </defs>
   <rect width="800" height="360" rx="20" fill="url(#g3)"/>
-  <text x="40" y="45" fill="#34d399" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[실전 솔루션] 부모 맞춤형 행동 지침 3단계 로드맵</text>
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">감정 수용부터 단호한 한계 설정까지 실전 대화 공식</text>
+  <text x="40" y="45" fill="#34d399" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Title)}</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 부모가 즉시 실천하는 단계별 대화 공식</text>
 
   <rect x="40" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="55" y="125" width="80" height="26" rx="13" fill="#10b981"/>
-  <text x="95" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1단계 공감</text>
-  <text x="55" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">감정 100% 수용하기</text>
-  <text x="55" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"그런 마음이 들 수 있어"</text>
-  <text x="55" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"정말 속상하고 힘들었겠네"</text>
-  <text x="55" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">비난 없이 감정 자체를</text>
-  <text x="55" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">온전히 읽어주는 첫마디</text>
+  <rect x="55" y="125" width="95" height="26" rx="13" fill="#10b981"/>
+  <text x="102" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Name)}</text>
+  <text x="55" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Title)}</text>
+  <text x="55" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step1P1)}</text>
+  <text x="55" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step1P2)}</text>
+  <text x="55" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Sub)}</text>
 
   <rect x="287" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="302" y="125" width="80" height="26" rx="13" fill="#059669"/>
-  <text x="342" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2단계 한계</text>
-  <text x="302" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">단호한 경계선 설정</text>
-  <text x="302" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"하지만 이 행동은 안 돼"</text>
-  <text x="302" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"안전 약속은 지켜야 해"</text>
-  <text x="302" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">목소리는 낮고 차분하게,</text>
-  <text x="302" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">타협할 수 없는 원칙 제시</text>
+  <rect x="302" y="125" width="95" height="26" rx="13" fill="#059669"/>
+  <text x="349" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Name)}</text>
+  <text x="302" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Title)}</text>
+  <text x="302" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step2P1)}</text>
+  <text x="302" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step2P2)}</text>
+  <text x="302" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Sub)}</text>
 
   <rect x="535" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="550" y="125" width="80" height="26" rx="13" fill="#047857"/>
-  <text x="590" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3단계 대안</text>
-  <text x="550" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">선택권과 대안 제시</text>
-  <text x="550" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"대신 A와 B 중 골라볼까?"</text>
-  <text x="550" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">"어떻게 하면 좋을지 정해보자"</text>
-  <text x="550" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">아이 스스로 결정하게 하여</text>
-  <text x="550" y="280" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">내적 통제감과 책임감 부여</text>
+  <rect x="550" y="125" width="95" height="26" rx="13" fill="#047857"/>
+  <text x="597" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Name)}</text>
+  <text x="550" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Title)}</text>
+  <text x="550" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step3P1)}</text>
+  <text x="550" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step3P2)}</text>
+  <text x="550" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Sub)}</text>
 </svg>`.trim();
 
     const card4Svg = `
@@ -13215,40 +13753,36 @@ class DodamCommunityApp {
     </linearGradient>
   </defs>
   <rect width="800" height="360" rx="20" fill="url(#g4)"/>
-  <text x="40" y="45" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[실천 계획] 4주 완성 생활 루틴 구축 체크리스트</text>
+  <text x="40" y="45" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4Title)}</text>
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 흔들림 없이 정착시키는 단계별 로드맵</text>
 
   <rect x="40" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="55" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">1주차 : 관찰 &amp; 탐색</text>
-  <text x="55" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 아이 패턴 기록</text>
-  <text x="55" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 감정 촉발점 파악</text>
-  <text x="55" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 일방적 훈육 자제</text>
-  <text x="55" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">아이의 상태를 있는</text>
-  <text x="55" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">그대로 관찰하는 주간</text>
+  <text x="55" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W1)}</text>
+  <text x="55" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L1)}</text>
+  <text x="55" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L2)}</text>
+  <text x="55" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L3)}</text>
+  <text x="55" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1Sub)}</text>
 
   <rect x="223" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="238" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">2주차 : 규칙 시각화</text>
-  <text x="238" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 가족 룰 합의</text>
-  <text x="238" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 시각적 규칙판 부착</text>
-  <text x="238" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 디지털 디바이스 룰</text>
-  <text x="238" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">가정 내 예측 가능한</text>
-  <text x="238" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">환경을 조성하는 주간</text>
+  <text x="238" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W2)}</text>
+  <text x="238" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L1)}</text>
+  <text x="238" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L2)}</text>
+  <text x="238" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L3)}</text>
+  <text x="238" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2Sub)}</text>
 
   <rect x="406" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="421" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">3주차 : 칭찬 &amp; 보상</text>
-  <text x="421" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 작은 성공 즉각 포착</text>
-  <text x="421" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 구체적 언어 칭찬</text>
-  <text x="421" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 스티커 보상 체계</text>
-  <text x="421" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">자발적 동기부여를</text>
-  <text x="421" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">이끌어내는 주간</text>
+  <text x="421" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W3)}</text>
+  <text x="421" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L1)}</text>
+  <text x="421" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L2)}</text>
+  <text x="421" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L3)}</text>
+  <text x="421" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3Sub)}</text>
 
   <rect x="589" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="604" y="135" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">4주차 : 루틴 안정화</text>
-  <text x="604" y="165" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 양육자 태도 일치</text>
-  <text x="604" y="190" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 예외 상황 위기 대처</text>
-  <text x="604" y="215" fill="#ffffff" font-size="12" font-family="'Pretendard', sans-serif">✔ 주간 감정 체크인</text>
-  <text x="604" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">자연스러운 습관으로</text>
-  <text x="604" y="275" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">완전히 안착시키는 주간</text>
+  <text x="604" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W4)}</text>
+  <text x="604" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L1)}</text>
+  <text x="604" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L2)}</text>
+  <text x="604" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L3)}</text>
+  <text x="604" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4Sub)}</text>
 </svg>`.trim();
 
     const card5Svg = `
@@ -13260,27 +13794,27 @@ class DodamCommunityApp {
     </linearGradient>
   </defs>
   <rect width="800" height="360" rx="20" fill="url(#g5)"/>
-  <text x="40" y="45" fill="#f472b6" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">[전문가 조언] 부모가 반드시 기억해야 할 DO vs DON'T</text>
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">상황 악화를 막고 아이의 자존감을 살리는 행동 지침</text>
+  <text x="40" y="45" fill="#f472b6" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c5Title)}</text>
+  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">부모의 실천 행동 지침</text>
 
   <rect x="40" y="105" width="345" height="215" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
   <rect x="55" y="125" width="80" height="26" rx="13" fill="#10b981"/>
   <text x="95" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
-  <text x="55" y="180" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 눈높이를 맞추고 아이 말 끝까지 경청하기</text>
-  <text x="55" y="210" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 감정 폭풍 시 침묵과 포옹으로 진정 돕기</text>
-  <text x="55" y="240" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 부모의 실수 인정하고 즉각 사과하기</text>
-  <text x="55" y="270" fill="#a7f3d0" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✔ 작은 실천도 구체적 사실 위주로 칭찬하기</text>
+  <text x="55" y="180" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do1)}</text>
+  <text x="55" y="210" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do2)}</text>
+  <text x="55" y="240" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do3)}</text>
+  <text x="55" y="270" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do4)}</text>
 
   <rect x="415" y="105" width="345" height="215" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
   <rect x="430" y="125" width="80" height="26" rx="13" fill="#ef4444"/>
   <text x="470" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
-  <text x="430" y="180" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 소리 지르거나 감정적인 폭언 내뱉기</text>
-  <text x="430" y="210" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 형제·자매나 다른 아이와 비교하며 비난하기</text>
-  <text x="430" y="240" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 방에 가두거나 물리적 체벌로 위압감 주기</text>
-  <text x="430" y="270" fill="#fca5a5" font-size="13" font-weight="bold" font-family="'Pretendard', sans-serif">✘ 아이 앞에서 양육자끼리 훈육 방식 다투기</text>
+  <text x="430" y="180" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont1)}</text>
+  <text x="430" y="210" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont2)}</text>
+  <text x="430" y="240" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont3)}</text>
+  <text x="430" y="270" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont4)}</text>
 </svg>`.trim();
 
-    // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가 (배경 사각형 높이도 함께 확장)
+    // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가
     const withFooter = (svg) => {
       const m = svg.match(/viewBox="0 0 800 (\d+)"/);
       if (!m) return svg;
@@ -13302,57 +13836,22 @@ class DodamCommunityApp {
     const img4Uri = encodeSvg(card4Svg);
     const img5Uri = encodeSvg(card5Svg);
 
-    // 3. 본문 텍스트 구성 (글자 수 공백 포함 2,200 ~ 2,500자 정밀 튜닝)
-    const introText = `${info.targetAge}의 일상에서 가장 자주 부딪히는 고민 중 하나는 바로 '${cleanTitle}' 문제입니다. 아이가 성장할 때마다 신체적·정서적으로 급격한 변화를 겪으며, 뇌 발달 측면에서도 자율성에 대한 욕구와 호기심이 커지게 됩니다.
+    // 4. 본문 텍스트 구성 (공백 포함 2,300자 내외 정밀 작성)
+    const introText = p.intro;
+    const sec1Text = p.sec1;
+    const sec2Text = p.sec2;
+    const sec3Text = p.sec3;
+    const sec4Text = p.sec4;
+    const outroText = p.outro;
 
-'우리 아이가 왜 이런 행동을 보일까?', '어떻게 반응해야 상처 주지 않고 올바르게 이끌 수 있을까?' 고민하는 부모님들이 많습니다. 오늘은 소아청소년 임상 지침과 현장 노하우를 바탕으로, 가정에서 바로 실천할 수 있는 핵심 솔루션을 체계적으로 정리해 드립니다.`;
-
-    const sec1Text = `아이가 이와 같은 행동과 신호를 보이는 원인을 이해하려면 발달학적인 뇌 구조 특성을 살펴보아야 합니다. 성장기 아동의 뇌는 감정과 충동을 주관하는 '편도체'가 민감하게 작동하는 반면, 이성적인 판단과 충동을 억제하는 '전두엽'은 여전히 발달 중인 상태에 놓여 있습니다. 이로 인해 호기심이나 감정을 스스로 조절하기 어려우며, 인정받고 싶은 심리와 소속감 갈망이 특정 행동으로 표출됩니다.
-
-흔히 저지르는 실수는 아이의 행동을 어른 시각으로만 바라보고 성급하게 다그치는 것입니다. 아이들의 표면적인 행동 이면에는 '나를 알아봐 주세요', '도움이 필요해요'라는 신호가 숨어 있습니다. 감정을 있는 그대로 인정해 주되, 상황에 맞는 명확한 기준을 제시하는 양육 태도가 중요합니다.`;
-
-    const sec2Text = `아이와 깊은 신뢰를 유지하면서 위험 요소를 사전에 예방하려면 '3단계 실전 대화 공식'을 가정 내에서 실천해야 합니다.
-
-1단계는 '무비판적 감정 수용과 경청'입니다. "그런 마음이 들었구나!", "충분히 그렇게 느낄 수 있어"라며 솔직한 감정 자체를 먼저 긍정해 주는 첫마디가 중요합니다. 비난받지 않는다는 확신이 들 때 아이는 속마음을 털어놓습니다.
-
-2단계는 '명확하고 단호한 안전 가이드라인(Safety Rules) 합의'입니다. 공감 뒤에는 타협할 수 없는 명확한 기준을 제시해야 합니다. "네 감정은 이해하지만, 이 행동은 너의 안전을 위해 지켜야 해"라며 구체적인 행동 한계를 분명히 그어줍니다.
-
-3단계는 '가정 내 양성화와 긍정적 대안 제시'입니다. 모든 것을 금지하기보다, 허용 가능한 대안을 제시하여 스스로 선택할 권한을 주는 것이 좋습니다. 대안을 함께 찾을 때 아이는 존중받는 느낌을 받습니다.`;
-
-    const sec3Text = `말뿐인 훈육을 넘어 아이의 일상 속에 건강한 습관으로 정착시키는 4주 완성 생활 루틴 구축 로드맵을 제안합니다.
-
-1주차는 '아이의 패턴 관찰 및 촉발점 탐색' 주간입니다. 언제 편안해하고 언제 불안해하는지 감정의 흐름을 기록하며, 일방적인 지시를 줄이고 아이의 상태를 있는 그대로 관찰합니다.
-
-2주차는 '가족 규칙 시각화 및 환경 조성' 주간입니다. 핵심 약속을 3가지 이내로 축약하여 잘 보이는 곳에 붙여두고, 주변 환경을 정돈하여 정서적 안정감을 높입니다.
-
-3주차는 '작은 성공 즉각 칭찬 및 보상 연계' 주간입니다. 규칙을 잘 지켰을 때 결과가 아닌 과정과 노력을 칭찬하고, 성취감을 스스로 느낄 수 있도록 지지합니다.
-
-4주차는 '루틴 안정화 및 주간 감정 체크인' 주간입니다. 매주 주말 15분씩 가족 티타임을 가지며 힘들었던 점은 없었는지 대화하는 소통 루틴을 완성합니다.`;
-
-    const sec4Text = `현직 소아청소년과 전문의 및 아동상담 전문가들이 진료 현장에서 강조하는 핵심 질의응답을 엄선했습니다.
-
-Q1. 아이가 약속을 지키지 않고 떼를 쓰거나 고집부릴 땐 어떻게 대처해야 하나요?
-A. 감정이 격해진 순간에는 어떠한 설명도 귀에 들어가지 않습니다. 흥분 상태일 때는 안전을 확보한 뒤 조용히 곁을 지키며 감정이 가라앉을 때까지 기다려주는 것이 우선입니다. 호흡이 안정된 후 차분한 목소리로 짧고 명확하게 원칙을 상기시켜 주세요.
-
-Q2. 부모의 기분에 따라 훈육 태도가 달라져 자책감이 들 땐 어떻게 해야 하나요?
-A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사과를 건네세요. 실수를 인정하고 회복하는 과정을 보여주는 것 자체가 아이에게 훌륭한 정서 교육이 됩니다.`;
-
-    const outroText = `자녀를 키우며 겪는 수많은 고민과 시행착오는 아이가 잘 자라고 있다는 가장 자연스러운 증거입니다. 지나친 조급함으로 다그치기보다, 언제든 돌아와 기댈 수 있는 따뜻하고 안전한 언덕이 되어주시길 바랍니다. 완벽한 양육 기술보다 중요한 것은 작은 신호에 귀 기울여주는 한결같은 사랑과 일관된 태도입니다.
-
-도담 커뮤니티 공식 육아가이드 리포트는 언제나 전국 부모님들의 행복하고 당당한 육아 여정을 힘차게 응원합니다. 지금 바로 도담 커뮤니티에서 더 많은 실전 꿀팁과 따뜻한 소통을 만나보세요!
-
-#육아가이드 #부모교육 #자녀성장 #아이심리 #아동발달 #도담커뮤니티 #훈육솔루션 #육아꿀팁`;
-
-    const plainText = `${cleanTitle}\n\n${introText}\n\n1. 심층 분석: 아이의 행동과 심리\n${sec1Text}\n\n2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계\n${sec2Text}\n\n3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵\n${sec3Text}\n\n4. 전문가 Q&A 및 주의사항\n${sec4Text}\n\n${outroText}`;
-
-    const charCount = plainText.length;
+    const plainText = `${cleanTitle}\n\n${introText}\n\n1. 심층 분석: 왜 이런 일이 일어날까?\n${sec1Text}\n\n2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계\n${sec2Text}\n\n3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵\n${sec3Text}\n\n4. 전문가 Q&A 및 주의사항\n${sec4Text}\n\n${outroText}`;
 
     const formatParagraphs = (text) => {
       return text
         .split('\n\n')
-        .map((p) => p.trim())
+        .map((pr) => pr.trim())
         .filter(Boolean)
-        .map((p) => `<p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium" style="font-size: 15.5px; line-height: 1.95; color: #334155; margin: 0 0 16px 0; letter-spacing: -0.3px;">${p.replace(/\n/g, '<br/>')}</p>`)
+        .map((pr) => `<p class="text-sm sm:text-base text-slate-700 leading-relaxed font-medium" style="font-size: 15.5px; line-height: 1.95; color: #334155; margin: 0 0 16px 0; letter-spacing: -0.3px;">${pr.replace(/\n/g, '<br/>')}</p>`)
         .join('');
     };
 
@@ -13363,10 +13862,10 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
     const sec4Html = formatParagraphs(sec4Text);
     const outroHtml = formatParagraphs(outroText);
 
-    // 4. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
+    // 5. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `<!-- dodam-report-v3 -->
       <div class="naver-blog-article space-y-7 text-slate-800 leading-relaxed font-sans max-w-3xl mx-auto py-2">
-        <!-- 1. 공식 육아 가이드 브리핑 헤더 바 (유튜브 영상 플레이어 및 외부 채널 정보 완전 제거) -->
+        <!-- 1. 공식 육아 가이드 브리핑 헤더 바 -->
         <div class="p-4 bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 rounded-2xl border border-emerald-200 flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs" style="background-color: #ecfdf5; border: 1.5px solid #86efac; border-radius: 14px; padding: 14px 18px; margin: 18px 0 24px 0; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
           <div class="flex items-center gap-2.5 min-w-0" style="display: flex; align-items: center; gap: 10px;">
             <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-2xs" style="display: inline-block; width: 34px; height: 34px; line-height: 34px; text-align: center; border-radius: 50%; background-color: #059669; color: #ffffff; font-size: 16px;">
@@ -13374,16 +13873,16 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
             </span>
             <div class="min-w-0">
               <div class="font-black text-slate-900 truncate" style="font-size: 15px; font-weight: 900; color: #064e3b; line-height: 1.3; margin: 0;">도담 공식 육아가이드 심층 리포트</div>
-              <div class="text-[11px] text-emerald-800 font-medium" style="font-size: 12px; color: #047857; margin-top: 2px; font-weight: 600;">${info.subName} · ${info.targetAge}</div>
+              <div class="text-[11px] text-emerald-800 font-medium" style="font-size: 12px; color: #047857; margin-top: 2px; font-weight: 600;">${p.subName} · ${p.targetAge}</div>
             </div>
           </div>
           <div class="flex items-center gap-1.5" style="display: flex; align-items: center; gap: 6px;">
-            <span class="px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black text-[11px]" style="display: inline-block; padding: 4px 10px; border-radius: 9999px; background-color: #059669; color: #ffffff; font-size: 11px; font-weight: 800;">${info.badge}</span>
+            <span class="px-2.5 py-1 rounded-xl bg-emerald-600 text-white font-black text-[11px]" style="display: inline-block; padding: 4px 10px; border-radius: 9999px; background-color: #059669; color: #ffffff; font-size: 11px; font-weight: 800;">${p.badge}</span>
             <span class="px-2.5 py-1 rounded-xl bg-white border border-emerald-300 text-emerald-800 font-bold text-[11px]" style="display: inline-block; padding: 4px 10px; border-radius: 9999px; background-color: #ffffff; border: 1px solid #86efac; color: #047857; font-size: 11px; font-weight: 700;">전문가 검증</span>
           </div>
         </div>
 
-        <!-- 3. 프롤로그 도입부 -->
+        <!-- 2. 프롤로그 도입부 -->
         <div class="space-y-3 text-sm text-slate-700 leading-relaxed" style="margin: 20px 0 24px 0;">
           ${introHtml}
         </div>
@@ -13394,70 +13893,74 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
           <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
         </div>
 
-        <!-- 4. [1장] 심층 배경 & 원인 분석 -->
+        <!-- 3. [1장] 심층 배경 & 원인 분석 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>1. 심층 분석: 아이의 행동과 심리, 왜 이런 일이 일어날까?</span>
+            <span>1. 심층 분석: 왜 이런 일이 일어날까?</span>
           </h2>
           ${sec1Html}
         </div>
 
-        <!-- [그림 2] 발달 심리 & 3대 핵심 원인 다이어그램 -->
+        <!-- [그림 2] 원인 분석 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img2Uri}" alt="그림 2: 발달 심리 3대 핵심 원인 다이어그램" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] 아동 발달학적 3대 핵심 원인 분석 다이어그램</p>
+          <img src="${img2Uri}" alt="그림 2: 원인 분석 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] 아동 발달 및 환경적 3대 원인 분석</p>
         </div>
 
-        <!-- 5. [2장] 실전 3단계 솔루션 -->
+        <!-- 4. [2장] 실전 솔루션 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #059669; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계</span>
+            <span>2. 실전 솔루션: 부모 맞춤형 행동 지침 3단계 공식</span>
           </h2>
           ${sec2Html}
         </div>
 
-        <!-- [그림 3] 실전 3단계 대응 로드맵 -->
+        <!-- [그림 3] 실전 솔루션 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img3Uri}" alt="그림 3: 실전 3단계 부모 대응 로드맵" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] 감정 공감부터 한계 설정까지 실전 대화 공식 로드맵</p>
+          <img src="${img3Uri}" alt="그림 3: 실전 솔루션 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] 가정 맞춤형 실전 솔루션 3단계 로드맵</p>
         </div>
 
-        <!-- 6. [3장] 4주 완성 생활 루틴 -->
+        <!-- 5. [3장] 생활 루틴 구축 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #d97706; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵</span>
+            <span>3. 실패 없는 정착: 4주 완성 생활 루틴 구축 체크리스트</span>
           </h2>
           ${sec3Html}
         </div>
 
-        <!-- [그림 4] 4주 실천 체크리스트 -->
+        <!-- [그림 4] 4주 루틴 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img4Uri}" alt="그림 4: 4주 실천 체크리스트" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] 가정 내 흔들림 없는 4주 완성 생활 루틴 체크리스트</p>
+          <img src="${img4Uri}" alt="그림 4: 4주 루틴 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] 4주 완성 생활 루틴 구축 체크리스트</p>
         </div>
 
-        <!-- 7. [4장] 전문가 Q&A 및 주의사항 -->
+        <!-- 6. [4장] DO vs DON'T 및 Q&A -->
         <div class="space-y-3 pt-2">
-          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-600 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #9333ea; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>4. 전문가 Q&amp;A: 부모들이 가장 많이 묻는 질문 &amp; 주의사항</span>
+          <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #7c3aed; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
+            <span>4. 전문가 Q&amp;A 및 부모 실천 지침</span>
           </h2>
           ${sec4Html}
         </div>
 
-        <!-- [그림 5] DO vs DON'T 비교 카드 -->
+        <!-- [그림 5] DO vs DON'T 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img5Uri}" alt="그림 5: 전문가 조언 DO vs DONT 비교 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] 부모가 반드시 기억해야 할 DO (권장) vs DON'T (금기) 비교표</p>
+          <img src="${img5Uri}" alt="그림 5: DO vs DON'T 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] 부모가 반드시 기억해야 할 DO vs DON'T</p>
         </div>
 
-        <!-- 8. 에필로그 & 마무리 -->
-        <div class="p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200 space-y-2 mt-4 text-sm text-slate-700" style="background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-left: 5px solid #10b981; border-radius: 14px; padding: 20px 22px; margin: 34px 0 20px 0; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-          ${outroHtml}
+        <!-- 7. 에필로그 및 응원 마무리 -->
+        <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-50/60 via-stone-50 to-emerald-50/60 border border-amber-200/80 shadow-2xs space-y-3" style="background: linear-gradient(135deg, #fffbeb 0%, #f0fdf4 100%); border: 1.5px solid #fde68a; border-radius: 18px; padding: 22px 24px; margin: 30px 0 20px 0;">
+          <div class="flex items-center gap-2 font-black text-slate-900 text-sm" style="font-size: 15px; font-weight: 900; color: #0f172a;">
+            <span>💌 도담 육아연구소 에필로그</span>
+          </div>
+          <div class="text-sm text-slate-700 leading-relaxed font-medium" style="font-size: 14.5px; line-height: 1.9; color: #334155;">
+            ${outroHtml}
+          </div>
         </div>
-      </div>
-    `;
+      </div>`;
 
-    return { html, plainText };
+    return { html, plainText, cleanTitle, guideType: topicKey === 'shinJongHo' ? 'edu' : topicKey };
   }
 
   async executeYoutubeSummaryReport() {
@@ -13533,26 +14036,30 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
       const meta = await this.fetchYoutubeMetadata(videoId);
 
       // 2. Build structured summary
-      const { html, plainText } = this.buildYoutubeSummaryContent(videoId, meta, guideType);
+      const notesEl = document.getElementById('youtube-summary-notes');
+      const customNotes = notesEl ? notesEl.value.trim() : '';
+      const { html, plainText, cleanTitle, guideType: detectedGuideType } = this.buildYoutubeSummaryContent(videoId, meta, guideType, customNotes);
+      const effectiveGuideType = detectedGuideType || guideType;
+      const effectiveGuideInfo = guideMeta[effectiveGuideType] || guideMeta['all'];
 
       const cleanAuthorTag = '도담 육아가이드';
-      const tags = ['육아가이드', guideInfo.badge, guideInfo.name, '도담육아연구소'];
+      const tags = ['육아가이드', effectiveGuideInfo.badge, effectiveGuideInfo.name, '도담육아연구소'];
 
-      const refinedTitle = this.generateCleanArticleTitle(meta.title, guideType);
+      const refinedTitle = cleanTitle || this.generateCleanArticleTitle(meta.title, effectiveGuideType);
       const postTitle = `[육아가이드] ${refinedTitle}`;
 
       const newPost = {
         id: `custom-post-${Date.now()}`,
         category: 'guide',               // AI 리포트는 항상 가이드 게시판에 등록
-        guideType,                       // 가이드 세부 카테고리 (sleep, food, growth, health, edu, all)
+        guideType: effectiveGuideType,   // 가이드 세부 카테고리 (sleep, food, growth, health, edu, all)
         isGuidePost: true,
-        ageStage: guideInfo.ageStage,
+        ageStage: effectiveGuideInfo.ageStage,
         region: 'all',
         localHub: 'all',
         localHubName: '전국 전체',
         isQuestion: false,
         isSolved: false,
-        isHot: true,
+        isHot: false,
         isAiReport: true,
         isYoutubeSummary: true,
         youtubeVideoId: videoId,

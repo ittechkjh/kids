@@ -197,7 +197,7 @@ window.DODAM_COMMUNITY_DATA = {
       localHubName: '전국 전체',
       isQuestion: false,
       isSolved: false,
-      isHot: true,
+      isHot: false,
       isAiReport: true,
       title: '[육아가이드] 0~12개월 통잠 수면교육 & 원더윅스 완벽 대처 종합 분석 리포트',
       content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
@@ -295,7 +295,7 @@ window.DODAM_COMMUNITY_DATA = {
       localHubName: '전국 전체',
       isQuestion: false,
       isSolved: false,
-      isHot: true,
+      isHot: false,
       isAiReport: true,
       title: '[육아가이드] 3~7세 떼쓰기·분리불안 심리 분석 & 긍정 훈육 솔루션',
       content: `<div class="ai-parenting-report-article" style="font-family: -apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif; line-height: 1.85; color: #1e293b;">
