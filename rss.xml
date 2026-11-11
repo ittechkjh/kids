@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>도담톡 (DodamTalk) - 대한민국 육아·출산지원금·학군 통합 플랫폼</title>
+    <link>https://dodamtalk.com/</link>
+    <description>출생 개월수별 육아 소통방, 전국 가족 축제 일정, 유모차 안심 나들이 맵, 부모급여·출산지원금 계산기, 초중고 학군 분석</description>
+    <language>ko-KR</language>
+    <pubDate>Wed, 11 Nov 2026 13:30:00 +0900</pubDate>
+    <lastBuildDate>Wed, 11 Nov 2026 13:30:00 +0900</lastBuildDate>
+    <atom:link href="https://dodamtalk.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>도담톡 - 대한민국 엄마·아빠를 위한 육아·정책·학군 통합 플랫폼</title>
+      <link>https://dodamtalk.com/</link>
+      <description>개월수 동기방, 동네 공동육아, 육아가이드 및 실시간 육아 소통 커뮤니티</description>
+      <pubDate>Wed, 11 Nov 2026 13:00:00 +0900</pubDate>
+      <guid>https://dodamtalk.com/#home</guid>
+    </item>
+    <item>
+      <title>도담톡 육아·출산정책·교육 심층 가이드 백과</title>
+      <link>https://dodamtalk.com/guides.html</link>
+      <description>0~12개월 신생아 통잠 수면교육, 초기·중기·후기 이유식 식단표, 영유아 발달검진, 2026 부모급여·출산지원금 총정리</description>
+      <pubDate>Wed, 11 Nov 2026 13:00:00 +0900</pubDate>
+      <guid>https://dodamtalk.com/guides.html</guid>
+    </item>
+    <item>
+      <title>[육아가이드] 초등학생 자녀의 이성교제, 방치하면 후회하는 결정적 이유</title>
+      <link>https://dodamtalk.com/?post=official-ai-report-growth-1</link>
+      <description>3~13세 유·초등 학부모를 위한 성교육 및 이성교제 심층 솔루션 리포트</description>
+      <pubDate>Wed, 11 Nov 2026 09:00:00 +0900</pubDate>
+      <guid>https://dodamtalk.com/?post=official-ai-report-growth-1</guid>
+    </item>
+    <item>
+      <title>[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)</title>
+      <link>https://dodamtalk.com/?post=custom-post-1794357137086</link>
+      <description>서울대 교육학과 신종호 교수가 밝히는 자녀의 자기주도적 학습 호기심을 깨우는 대화법</description>
+      <pubDate>Wed, 11 Nov 2026 10:00:00 +0900</pubDate>
+      <guid>https://dodamtalk.com/?post=custom-post-1794357137086</guid>
+    </item>
+  </channel>
+</rss>
