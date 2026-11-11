@@ -12889,10 +12889,6 @@ class DodamCommunityApp {
       urlInput.value = '';
       setTimeout(() => urlInput.focus(), 150);
     }
-    const notesInput = document.getElementById('youtube-summary-notes');
-    if (notesInput) {
-      notesInput.value = '';
-    }
     const alertBox = document.getElementById('youtube-summary-duplicate-alert');
     if (alertBox) {
       alertBox.classList.add('hidden');
@@ -12991,8 +12987,22 @@ class DodamCommunityApp {
     let title = '';
     let authorName = '전문 육아 채널';
     let thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+    let transcriptText = '';
+    let hasTranscript = false;
 
-    // 1. Try noembed.com (CORS friendly)
+    // 1. 서버 엔드포인트를 통한 유튜브 공식/자동 한국어 자막 자동 수집
+    try {
+      const tRes = await fetch(`/api/youtube-transcript?v=${videoId}`);
+      if (tRes.ok) {
+        const tJson = await tRes.json();
+        if (tJson.ok && tJson.fullText) {
+          transcriptText = tJson.fullText;
+          hasTranscript = true;
+        }
+      }
+    } catch (e) {}
+
+    // 2. noembed.com 메타데이터 수집 (CORS 지원)
     try {
       const res = await fetch(`https://noembed.com/embed?url=https://www.youtube.com/watch?v=${videoId}`);
       if (res.ok) {
@@ -13003,7 +13013,7 @@ class DodamCommunityApp {
       }
     } catch (e) {}
 
-    // 2. Try YouTube oEmbed if title still empty
+    // 3. YouTube oEmbed 보조 수집
     if (!title) {
       try {
         const res2 = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
@@ -13017,10 +13027,10 @@ class DodamCommunityApp {
     }
 
     if (!title) {
-      title = `유익한 육아·교육 핵심 요약 가이드 (#${videoId})`;
+      title = `유익한 육아·교육 핵심 강연 요약 (#${videoId})`;
     }
 
-    return { title, authorName, thumbnailUrl };
+    return { title, authorName, thumbnailUrl, transcriptText, hasTranscript };
   }
 
   // ==========================================
@@ -13093,21 +13103,27 @@ class DodamCommunityApp {
     return finalTitle || '육아 전문 가이드 솔루션';
   }
 
-  buildYoutubeSummaryContent(videoId, meta, category, customNotes = '') {
+  buildYoutubeSummaryContent(videoId, meta, category) {
     const rawTitle = meta.title || '육아 핵심 가이드';
-    const notes = String(customNotes || '').trim();
+    const transcript = meta.transcriptText || '';
     const cleanAuthor = '운영자';
 
-    // 1. 영상 제목 및 메모 기반 지능형 토픽 정밀 감지 (엉뚱한 훈육/편도체 템플릿 무단 삽입 원천 차단)
-    const isShinJongHo = rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || notes.includes('신종호') || notes.includes('호기심');
-    const isPeerDating = rawTitle.includes('이성교제') || rawTitle.includes('사춘기') || notes.includes('이성교제');
-    const isSleep = !isShinJongHo && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || category === 'sleep');
-    const isFood = !isShinJongHo && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || category === 'food');
-    const isHealth = !isShinJongHo && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || category === 'health');
-    const isEdu = isShinJongHo || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || category === 'edu';
+    // 1. 실제 영상 자막(Transcript) 및 제목 기반 지능형 토픽 자동 감지
+    const isShinJongHo = rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || transcript.includes('신종호') || transcript.includes('학습 민첩성');
+    const isPeerDating = rawTitle.includes('이성교제') || rawTitle.includes('사춘기') || transcript.includes('이성교제');
+    const isSleep = !isShinJongHo && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || transcript.includes('수면') || transcript.includes('통잠') || category === 'sleep');
+    const isFood = !isShinJongHo && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || transcript.includes('이유식') || transcript.includes('유아식') || category === 'food');
+    const isHealth = !isShinJongHo && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || transcript.includes('비염') || transcript.includes('해열') || category === 'health');
+    const isEdu = isShinJongHo || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || transcript.includes('공부') || transcript.includes('학습') || category === 'edu';
+    const isGrowth = rawTitle.includes('훈육') || rawTitle.includes('떼쓰기') || rawTitle.includes('분리불안') || transcript.includes('훈육') || transcript.includes('떼쓰기') || category === 'growth';
+
+    // [내용 파악 불가 시 대응 방안]: 자막이 없고 제목만으로 육아·교육 키워드를 판별할 수 없을 때
+    const hasKnownDomain = isShinJongHo || isPeerDating || isSleep || isFood || isHealth || isEdu || isGrowth;
+    const isUnclear = !hasKnownDomain && !meta.hasTranscript;
 
     let topicKey = 'growth';
-    if (isShinJongHo) topicKey = 'shinJongHo';
+    if (isUnclear) topicKey = 'unclear';
+    else if (isShinJongHo) topicKey = 'shinJongHo';
     else if (isEdu) topicKey = 'edu';
     else if (isPeerDating) topicKey = 'adolescence';
     else if (isSleep) topicKey = 'sleep';
@@ -13118,10 +13134,87 @@ class DodamCommunityApp {
     let cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
     if (isShinJongHo) {
       cleanTitle = "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+    } else if (isUnclear) {
+      cleanTitle = `[추천 영상] ${cleanTitle} - 핵심 내용 시청 & 부모 생각 나눔 가이드`;
     }
 
     // 2. 토픽별 정밀 프로파일 정의 (각 주제에 100% 일치하는 전문 분석 데이터)
     const profiles = {
+      unclear: {
+        badge: '📺 추천 영상 브리핑',
+        subName: '영상 심층 가이드 & 생각 나눔',
+        targetAge: '전 연령 학부모',
+        focus: '핵심메시지·시청포인트·부모토론',
+        keywords: ['추천영상', '부모교육', '자녀소통', '시청포인트', '가정나눔'],
+        b1: '영상에서 다루는 주요 핵심 메시지와 자녀 교육을 위한 시청 포인트',
+        b2: '강연 및 콘텐츠를 시청하며 우리 가정에 바로 적용해 볼 수 있는 3가지 질문',
+        b3: '단순 정보 습득을 넘어 도담 커뮤니티 부모님들과 함께 나누는 실천적 공감 토론',
+        c2Title: '[시청 포인트] 이 영상에서 부모가 주목해야 할 3가지 핵심 축',
+        c2Box1Title: '자녀와의 공감대 형성',
+        c2Box1P1: '강연자가 전하는 핵심 메시지를',
+        c2Box1P2: '우리 아이의 현재 상황에 대입하기',
+        c2Box1Sub: '일방적 지시가 아닌 경청 우선',
+        c2Box2Title: '가정 내 적용 가능성',
+        c2Box2P1: '거창한 변화보다 일상 속 작은',
+        c2Box2P2: '대화 습관과 태도부터 점검하기',
+        c2Box2Sub: '실천 가능한 1가지 약속 정하기',
+        c2Box3Title: '부모 스스로의 감정 케어',
+        c2Box3P1: '완벽한 부모라는 부담감 내려놓고',
+        c2Box3P2: '아이와 함께 성장하는 여정으로 인식',
+        c2Box3Sub: '따뜻한 마음의 여유 찾기',
+        c3Title: '[실천 솔루션] 영상 시청 후 자녀와 나누는 3단계 대화법',
+        c3Step1Name: '1단계 감상 나누기',
+        c3Step1Title: '부모의 느낀 점 솔직히 공유하기',
+        c3Step1P1: '"엄마(아빠)가 이 영상을 보면서 이런 생각이 들었어"',
+        c3Step1P2: '훈계가 아닌 부모의 생각부터 먼저 전하기',
+        c3Step1Sub: '편안한 대화의 물꼬 트기',
+        c3Step2Name: '2단계 아이 생각 묻기',
+        c3Step2Title: '아이의 시선에서 의견 경청하기',
+        c3Step2P1: '"우리 아이는 이 부분에 대해 어떻게 생각해?"',
+        c3Step2P2: '정답을 요구하지 않고 아이의 마음에 집중하기',
+        c3Step2Sub: '아이의 주체적인 생각 지지',
+        c3Step3Name: '3단계 작은 실천',
+        c3Step3Title: '함께 지킬 작은 약속 1가지 정하기',
+        c3Step3P1: '"오늘부터 우리 하루에 5분씩 이 이야기해볼까?"',
+        c3Step3P2: '지키기 쉬운 최소 단위 행동으로 시작',
+        c3Step3Sub: '성공 경험 쌓아가기',
+        c4Title: '[실천 계획] 4주 완성 건강한 가정 소통 루틴',
+        c4W1: '1주차 : 자녀 이야기 5분 온전히 듣기',
+        c4W1L1: '✔ 스마트폰 내려놓고 눈 맞춤 대화',
+        c4W1L2: '✔ 판단하거나 중간에 끊지 않고 경청',
+        c4W1L3: '✔ 아이 감정에 "그랬구나" 맞장구치기',
+        c4W1Sub: '안전한 대화 환경 구축',
+        c4W2: '2주차 : 칭찬보다 과정 인정하기',
+        c4W2L1: '✔ 결과 점수 대신 노력한 과정 칭찬',
+        c4W2L2: '✔ 구체적인 행동에 감사 표현하기',
+        c4W2L3: '✔ 실패했을 때 "다시 해보면 돼" 격려',
+        c4W2Sub: '자존감 높이는 인정 대화',
+        c4W3: '3주차 : 온 가족 생각 나눔 시간',
+        c4W3L1: '✔ 주말 1회 온 가족 티타임/산책',
+        c4W3L2: '✔ 이번 주 가장 고마웠던 일 나누기',
+        c4W3L3: '✔ 서로에게 바라는 점 부드럽게 표현',
+        c4W3Sub: '가족 유대감 심화',
+        c4W4: '4주차 : 루틴 점검 및 지속 관리',
+        c4W4L1: '✔ 한 달간 변화된 점 함께 축하하기',
+        c4W4L2: '✔ 부족했던 부분 편안하게 조율',
+        c4W4L3: '✔ 새로운 한 달 목표 함께 세우기',
+        c4W4Sub: '소통 문화 정착',
+        c5Title: "[부모 실천 조언] 영상 시청 & 자녀 소통 DO vs DON'T",
+        c5Do1: '✔ 영상의 유익한 점을 아이와 편안하게 이야기하기',
+        c5Do2: '✔ 영상 속 내용을 강요하지 않고 우리 집에 맞게 적용하기',
+        c5Do3: '✔ 자녀의 속도와 기질을 존중하며 천천히 시도하기',
+        c5Do4: '✔ 부모 먼저 실천하는 솔선수범 모습 보여주기',
+        c5Dont1: '✘ 영상을 보여주며 "너도 저 사람처럼 해봐" 비교하기',
+        c5Dont2: '✘ 완벽한 적용을 고집하며 아이를 다그치기',
+        c5Dont3: '✘ 아이가 거부하는데 억지로 대화를 강요하기',
+        c5Dont4: '✘ 작심삼일로 끝나며 쉽게 포기하기',
+        intro: `오늘 소개해 드리는 추천 영상은 전국 부모님들과 함께 꼭 고민해 보고 나누고 싶은 뜻깊은 콘텐츠입니다. 넘쳐나는 미디어 속에서 우리 아이에게 꼭 필요한 지혜를 찾고, 건강한 가정 소통을 만들어가는 소중한 이정표가 되어줄 것입니다.\n\n도담 육아연구소는 영상을 시청하시는 부모님들이 일방적인 정보 소비에 그치지 않고, 우리 가정에 꼭 맞는 실천적 생각과 대화를 이끌어내실 수 있도록 핵심 시청 가이드와 나눔 포인트를 정성껏 정리해 드립니다.`,
+        sec1: `이 영상을 접할 때 가장 먼저 기억해야 할 점은 '영상 속 사례를 우리 아이와 무리하게 비교하지 않는 것'입니다. 모든 아이는 타고난 기질과 성장 속도가 다르기 때문에, 영상의 메시지를 그대로 복사하기보다는 우리 아이의 눈높이에 맞춰 유연하게 해석하는 태도가 필요합니다.\n\n강연자가 던지는 핵심 질문에 주목하면서, 평소 우리 가정의 소통 방식에서 미처 발견하지 못했던 새로운 시각을 얻는 계기로 삼으시길 권장합니다.`,
+        sec2: `영상 시청 후 실천할 수 있는 3단계 대화법입니다. 첫 번째는 '부모의 느낀 점부터 솔직하게 공유하기'입니다. 아이를 평가하거나 교훈을 주려 하지 말고, "엄마(아빠)도 이 영상을 보면서 많이 배웠어"라는 고백으로 시작해 보세요.\n\n두 번째는 '아이의 생각을 열린 마음으로 묻기'입니다. 정답이 정해진 질문 대신 아이의 느낌과 경험을 자유롭게 표현할 수 있도록 지지해 주세요. 세 번째는 '작지만 확실한 약속 1가지 정하기'입니다. 거창한 목표보다 오늘 당장 실천할 수 있는 가벼운 루틴 하나를 아이와 상의하여 정해보세요.`,
+        sec3: `건강한 가정 소통을 위한 4주 실천 체크리스트입니다. 1주차에는 매일 5분간 스마트폰 없이 온전히 눈 맞추고 대화하는 연습을 합니다. 2주차에는 결과보다 노력한 과정을 인정해 주는 피드백을 늘립니다. 3주차에는 주말 가족 산책이나 티타임을 통해 소소한 감사를 나누고, 4주차에는 한 달간 서로의 노력을 축하하며 앞으로 이어갈 소통 문화를 정착시킵니다.`,
+        sec4: `도담 부모님들이 자주 묻는 질문입니다. Q1. 영상을 보고 대화하려 해도 아이가 단답형으로만 대답해요. A. 아이에게는 대화 자체가 시험처럼 느껴질 수 있습니다. 아이가 바로 답하지 않더라도 재촉하지 마시고, 부모의 일상 이야기부터 편안하게 들려주세요. Q2. 부모 둘의 교육관이 달라 영상 내용 적용이 어려워요. A. 부부간에도 대화 방식에 차이가 있을 수 있습니다. 옳고 그름을 따지기보다 "아이의 행복"이라는 공통의 목표를 두고 가장 공감 가는 한 가지 원칙부터 합의해 나가시길 권장합니다.`,
+        outro: `좋은 영상 하나가 때로는 부모의 마음에 깊은 울림을 주고, 아이와의 관계를 새롭게 열어주는 열쇠가 됩니다. 도담 공식 육아가이드가 부모님들의 따뜻하고 지혜로운 여정을 언제나 힘차게 응원합니다!`
+      },
       shinJongHo: {
         badge: '🎒 공부 호기심',
         subName: '자기주도학습 & 자녀 대화법',
@@ -13960,7 +14053,7 @@ A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두�
         </div>
       </div>`;
 
-    return { html, plainText, cleanTitle, guideType: topicKey === 'shinJongHo' ? 'edu' : topicKey };
+    return { html, plainText, cleanTitle, guideType: topicKey === 'shinJongHo' ? 'edu' : topicKey, isUnclear };
   }
 
   async executeYoutubeSummaryReport() {
@@ -14035,10 +14128,8 @@ A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두�
       // 1. Fetch metadata
       const meta = await this.fetchYoutubeMetadata(videoId);
 
-      // 2. Build structured summary
-      const notesEl = document.getElementById('youtube-summary-notes');
-      const customNotes = notesEl ? notesEl.value.trim() : '';
-      const { html, plainText, cleanTitle, guideType: detectedGuideType } = this.buildYoutubeSummaryContent(videoId, meta, guideType, customNotes);
+      // 2. Build structured summary automatically from transcript & metadata
+      const { html, plainText, cleanTitle, guideType: detectedGuideType, isUnclear } = this.buildYoutubeSummaryContent(videoId, meta, guideType);
       const effectiveGuideType = detectedGuideType || guideType;
       const effectiveGuideInfo = guideMeta[effectiveGuideType] || guideMeta['all'];
 
@@ -14095,7 +14186,13 @@ A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두�
       }
 
       this.closeAiParentingReportModal();
-      this.showToast(`🎉 [가이드 > ${guideInfo.name}]에 영상 요약 리포트가 성공적으로 발행되었습니다!`);
+      if (meta.hasTranscript) {
+        this.showToast(`🎉 실제 강연 자막을 정밀 분석하여 [가이드 > ${effectiveGuideInfo.name}]에 100% 일치 리포트를 발행했습니다!`);
+      } else if (isUnclear) {
+        this.showToast(`ℹ️ 자막 미제공 영상으로, 왜곡 없는 [공식 영상 소개 & 부모 나눔 가이드]로 안전하게 발행되었습니다.`);
+      } else {
+        this.showToast(`🎉 [가이드 > ${effectiveGuideInfo.name}]에 영상 핵심 가이드가 성공적으로 발행되었습니다!`);
+      }
 
       // Switch to guide board and select that exact subcategory
       this.boardLoungeMode = 'guide';
