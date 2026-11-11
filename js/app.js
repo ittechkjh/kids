@@ -2860,19 +2860,40 @@ class DodamCommunityApp {
     this.boardLoungeMode = mode || 'all';
     this.boardPage = 1;
     if (mode === 'all') {
+      this.currentCategory = 'all';
       this.currentAgeStage = 'all';
       this.currentLocalHub = 'all';
       this.currentLocalTopic = 'all';
-      this.currentCategory = 'all';
-    } else if (mode === 'age' && this.currentAgeStage === 'all') {
-      this.currentCategory = 'all';
-    } else if (mode === 'local' && this.currentLocalHub === 'all') {
-      this.currentCategory = 'all';
-    } else if (mode === 'qa') {
+      this.guideSubCategory = 'all';
       this.qaFilterStatus = 'all';
+    } else if (mode === 'age') {
+      this.currentCategory = 'all';
+      this.currentAgeStage = 'all';
+      this.currentLocalHub = 'all';
+      this.currentLocalTopic = 'all';
+      this.guideSubCategory = 'all';
+      this.qaFilterStatus = 'all';
+    } else if (mode === 'local') {
+      this.currentCategory = 'all';
+      this.currentLocalHub = 'all';
+      this.currentLocalTopic = 'all';
+      this.currentAgeStage = 'all';
+      this.guideSubCategory = 'all';
+      this.qaFilterStatus = 'all';
+    } else if (mode === 'qa') {
+      this.currentCategory = 'qa';
+      this.qaFilterStatus = 'all';
+      this.currentAgeStage = 'all';
+      this.currentLocalHub = 'all';
+      this.currentLocalTopic = 'all';
+      this.guideSubCategory = 'all';
     } else if (mode === 'guide') {
       this.currentCategory = 'guide';
       this.guideSubCategory = 'all';
+      this.currentAgeStage = 'all';
+      this.currentLocalHub = 'all';
+      this.currentLocalTopic = 'all';
+      this.qaFilterStatus = 'all';
     }
     this.renderBoardCategories();
     this.renderBoardView();
@@ -3058,12 +3079,13 @@ class DodamCommunityApp {
   }
 
   selectBoardCategory(catId) {
-    this.currentCategory = catId;
-    if (catId === 'all') {
-      this.boardLoungeMode = 'all';
-      this.guideSubCategory = 'all';
-      this.qaFilterStatus = 'all';
-    }
+    this.boardLoungeMode = 'all';
+    this.currentCategory = catId || 'all';
+    this.guideSubCategory = 'all';
+    this.qaFilterStatus = 'all';
+    this.currentAgeStage = 'all';
+    this.currentLocalHub = 'all';
+    this.currentLocalTopic = 'all';
     this.boardPage = 1;
     this.renderBoardCategories();
     this.renderBoardView();
@@ -3232,11 +3254,11 @@ class DodamCommunityApp {
 
     // Title label
     if (titleEl) {
-      if (this.boardLoungeMode === 'age' && stageObj && stageObj.id !== 'all') {
-        titleEl.textContent = `👶 ${stageObj.shortName} 라운지`;
-      } else if (this.boardLoungeMode === 'local' && hubObj && hubObj.id !== 'all') {
-        titleEl.textContent = `📍 ${hubObj.shortName} 동네 맘카페`;
-      } else if (this.boardLoungeMode === 'qa') {
+      if (this.boardLoungeMode === 'age') {
+        titleEl.textContent = stageObj && stageObj.id !== 'all' ? `👶 ${stageObj.shortName} 라운지` : '👶 또래방 전체';
+      } else if (this.boardLoungeMode === 'local') {
+        titleEl.textContent = hubObj && hubObj.id !== 'all' ? `📍 ${hubObj.shortName} 동네 맘카페` : '📍 우리동네 전체';
+      } else if (this.boardLoungeMode === 'qa' || this.currentCategory === 'qa') {
         titleEl.textContent = '❓ 육아 질문·고민';
       } else if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
         const subNames = {
@@ -3257,37 +3279,71 @@ class DodamCommunityApp {
     }
 
     let filtered = (this.data.posts || []).filter((p) => {
-      if (this.boardLoungeMode === 'qa') {
-        const isQa = p.isQuestion || p.category === 'qa' || (p.title && (p.title.includes('?') || p.title.includes('질문') || p.title.includes('추천') || p.title.includes('고민')));
-        if (!isQa) return false;
-      }
+      // 1. 가이드 전용 라운지 모드
       if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
-        const isGuide = p.category === 'guide' || p.isAiReport;
+        const isGuide = p.category === 'guide' || p.isAiReport || p.isGuidePost;
         if (!isGuide) return false;
         if (this.guideSubCategory !== 'all') {
-          const subMatch = (p.guideType === this.guideSubCategory) || (p.tags && p.tags.includes(this.guideSubCategory));
+          const subMatch = (p.guideType === this.guideSubCategory) ||
+            (p.tags && p.tags.includes(this.guideSubCategory)) ||
+            (this.guideSubCategory === 'growth' && (p.guideType === 'play' || (p.tags && p.tags.includes('훈육')))) ||
+            (this.guideSubCategory === 'food' && (p.guideType === 'nutrition' || (p.tags && p.tags.includes('이유식')))) ||
+            (this.guideSubCategory === 'edu' && (p.guideType === 'school' || (p.tags && p.tags.includes('학습'))));
           if (!subMatch) return false;
         }
         return true;
       }
-      if (this.currentCategory === 'hot' && !this.isPostHot(p)) return false;
-      if (this.currentCategory !== 'all' && this.currentCategory !== 'hot' && p.category !== this.currentCategory) return false;
 
-      if (this.currentAgeStage !== 'all') {
-        const matchStage =
-          p.ageStage === this.currentAgeStage ||
-          p.category === this.currentAgeStage ||
-          (this.currentAgeStage === 'middle_high' && (p.category === 'middle' || p.category === 'high' || p.ageStage === 'middle_high'));
-        if (!matchStage) return false;
+      // 2. 고민·질문 라운지 모드
+      if (this.boardLoungeMode === 'qa' || this.currentCategory === 'qa') {
+        const isQa = p.isQuestion || p.category === 'qa' || (p.title && (p.title.includes('?') || p.title.includes('질문') || p.title.includes('추천') || p.title.includes('고민')));
+        if (!isQa) return false;
+        return true;
       }
 
-      if (this.currentLocalHub !== 'all') {
-        const matchHub = p.localHub === this.currentLocalHub || (hubObj && p.region === hubObj.region && p.localHub === 'all');
-        if (!matchHub) return false;
+      // 3. 또래방 라운지 모드
+      if (this.boardLoungeMode === 'age') {
+        if (p.category === 'guide' || p.isAiReport) return false;
+        if (this.currentAgeStage !== 'all') {
+          const matchStage =
+            p.ageStage === this.currentAgeStage ||
+            p.category === this.currentAgeStage ||
+            (this.currentAgeStage === 'middle_high' && (p.category === 'middle' || p.category === 'high' || p.ageStage === 'middle_high'));
+          if (!matchStage) return false;
+        } else {
+          const isAgeRelevant = (p.ageStage && p.ageStage !== 'all') ||
+            ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high', 'middle_high', 'middle', 'high'].includes(p.category) ||
+            (p.author?.childBadge && p.author.childBadge.length > 0);
+          if (!isAgeRelevant) return false;
+        }
+        return true;
       }
 
-      if (this.currentLocalTopic !== 'all') {
-        if (p.localTopic !== this.currentLocalTopic) return false;
+      // 4. 우리동네 라운지 모드
+      if (this.boardLoungeMode === 'local') {
+        if (p.category === 'guide' || p.isAiReport) return false;
+        if (this.currentLocalHub !== 'all') {
+          const matchHub = p.localHub === this.currentLocalHub || (hubObj && p.region === hubObj.region && p.localHub === 'all');
+          if (!matchHub) return false;
+        } else {
+          const isLocalRelevant = p.category === 'local' ||
+            p.category === 'share' ||
+            (p.localHub && p.localHub !== 'all') ||
+            (p.region && p.region !== 'all') ||
+            (p.localTopic && p.localTopic !== 'all');
+          if (!isLocalRelevant) return false;
+        }
+        if (this.currentLocalTopic !== 'all') {
+          if (p.localTopic !== this.currentLocalTopic) return false;
+        }
+        return true;
+      }
+
+      // 5. 전체 커뮤니티 모드 (this.boardLoungeMode === 'all')
+      if (this.currentCategory === 'hot') {
+        if (!this.isPostHot(p)) return false;
+      } else if (this.currentCategory !== 'all') {
+        if (p.category !== this.currentCategory) return false;
       }
 
       if (this.boardSearchKeyword) {
@@ -5530,14 +5586,14 @@ class DodamCommunityApp {
     const hubObj = (this.data.localHubs || []).find((h) => h.id === myHub);
 
     const isQa = category === 'qa' || prefix === '질문' || rawTitle.includes('?');
-    const isGuidePost = ['guide', 'sleep', 'nutrition', 'play', 'health', 'school'].includes(category);
+    const isGuidePost = ['guide', 'sleep', 'nutrition', 'play', 'growth', 'health', 'school', 'edu'].includes(category);
     const isLocalPost = category.startsWith('local');
     const guideType = isGuidePost ? (
       category === 'sleep' ? 'sleep' :
-      category === 'nutrition' ? 'food' :
-      category === 'play' ? 'growth' :
+      (category === 'nutrition' || category === 'food') ? 'food' :
+      (category === 'play' || category === 'growth') ? 'growth' :
       category === 'health' ? 'health' :
-      category === 'school' ? 'edu' : 'all'
+      (category === 'school' || category === 'edu') ? 'edu' : 'all'
     ) : null;
 
     let targetLocalTopic = 'all';
@@ -5558,7 +5614,7 @@ class DodamCommunityApp {
       targetLocalTopicName = `💬 ${prefix}`;
     }
 
-    const targetAgeStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
+    const targetAgeStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high', 'middle_high'].includes(category)
       ? category
       : category === 'middle' || category === 'high'
       ? 'middle_high'
@@ -5585,7 +5641,7 @@ class DodamCommunityApp {
         existingPost.rawTextContent = content;
         existingPost.contentHtml = null;
         existingPost.category = category;
-        existingPost.ageStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high'].includes(category)
+        existingPost.ageStage = ['preg', 'newborn', 'toddler_early', 'toddler', 'school', 'elem_high', 'middle_high'].includes(category)
           ? category
           : category === 'middle' || category === 'high'
           ? 'middle_high'
