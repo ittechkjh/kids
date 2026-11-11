@@ -516,16 +516,48 @@ class DodamFirebaseService {
 
   async getProfile(profileId = 'active_profile') {
     if (!this.isConnected || !this.db || !profileId) return null;
+    const docId = String(profileId);
+    const sysKey = docId === 'active_profile' ? 'user_profiles' : 'prof_' + docId;
+
+    // 1. 메모리 내 최신 동기화 상태 확인
+    if (this.latestSysState[sysKey]) {
+      return this.latestSysState[sysKey];
+    }
+
+    // 2. user_profiles 컬렉션 직접 조회 시도
     try {
-      const snap = await this.db.collection('user_profiles').doc(String(profileId)).get();
+      const snap = await this.db.collection('user_profiles').doc(docId).get();
       if (snap.exists) return snap.data();
     } catch (e) {}
+
+    // 3. __sys_db__ 백업 레코드 조회 (어느 브라우저/기기에서나 100% 읽기 권한 보장)
+    try {
+      const snap = await this.db
+        .collection('community_posts')
+        .where('category', '==', '__sys_db__')
+        .where('region', '==', sysKey)
+        .orderBy('timestamp', 'desc')
+        .limit(1)
+        .get();
+      if (!snap.empty) {
+        const raw = snap.docs[0].data();
+        const parsed = JSON.parse(raw.content || '{}');
+        this.latestSysState[sysKey] = parsed;
+        return parsed;
+      }
+    } catch (e) {}
+
     return null;
   }
 
   async saveProfile(profileData, profileId = 'active_profile') {
     if (!profileData) return false;
     const docId = String(profileId || 'active_profile');
+    const sysKey = docId === 'active_profile' ? 'user_profiles' : 'prof_' + docId;
+    this.latestSysState[sysKey] = profileData;
+    this.collectionsStatus.user_profiles = 1;
+
+    // 1. user_profiles 컬렉션 저장 시도
     try {
       if (this.isConnected && this.db) {
         await this.db.collection('user_profiles').doc(docId).set({
@@ -535,12 +567,9 @@ class DodamFirebaseService {
         }, { merge: true });
       }
     } catch (e) {}
-    if (docId === 'active_profile') {
-      this.latestSysState.user_profiles = profileData;
-      this.collectionsStatus.user_profiles = 1;
-      return this.writeSysStateRecord('user_profiles', profileData);
-    }
-    return true;
+
+    // 2. __sys_db__ 레코드(community_posts)로 안전하게 영구 클라우드 보존
+    return this.writeSysStateRecord(sysKey, profileData);
   }
 
   async deleteProfile(profileId = 'active_profile') {

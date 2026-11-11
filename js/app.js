@@ -1514,7 +1514,7 @@ class DodamCommunityApp {
         success: (authObj) => {
           window.Kakao.API.request({
             url: '/v2/user/me',
-            success: (res) => {
+            success: async (res) => {
               const kakaoAccount = res.kakao_account || {};
               const kakaoProfile = kakaoAccount.profile || {};
               const realNick = kakaoProfile.nickname || res.properties?.nickname || '카카오회원';
@@ -1528,7 +1528,20 @@ class DodamCommunityApp {
 
               this.users = this.cleanUsersList(this.users || []);
               let userRecord = this.users.find((u) => u.id === kakaoUserId || u.username === kakaoUserId);
-              const savedProf = userRecord?.profile || userRecord?.savedProfile || this.readCachedProfile(kakaoUserId);
+
+              // [중요] 브라우저나 기기가 바뀌어 로컬 캐시가 비어있어도, Cloud Firestore(user_profiles)에서 저장된 프로필을 최우선 복원!
+              let remoteProf = null;
+              if (window.DodamFirebase && typeof window.DodamFirebase.getProfile === 'function') {
+                try {
+                  remoteProf = await window.DodamFirebase.getProfile(kakaoUserId);
+                } catch (e) {}
+              }
+
+              const savedProf = (remoteProf && this.isCustomProfile(remoteProf) ? remoteProf : null) ||
+                                (userRecord?.profile && this.isCustomProfile(userRecord.profile) ? userRecord.profile : null) ||
+                                (userRecord?.savedProfile && this.isCustomProfile(userRecord.savedProfile) ? userRecord.savedProfile : null) ||
+                                this.readCachedProfile(kakaoUserId) ||
+                                remoteProf;
               const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
 
               // 사용자가 로그인 전 브라우저/게스트 상태에서 수정한 자녀 및 지역 프로필 확인
@@ -1706,7 +1719,7 @@ class DodamCommunityApp {
     }
   }
 
-  applyNaverUserLogin(userObj) {
+  async applyNaverUserLogin(userObj) {
     const realNick =
       userObj.nickname ||
       (typeof userObj.getNickName === 'function' && userObj.getNickName()) ||
@@ -1732,7 +1745,20 @@ class DodamCommunityApp {
 
     this.users = this.cleanUsersList(this.users || []);
     let userRecord = this.users.find((u) => u.id === naverUserId || u.username === naverUserId);
-    const savedProf = userRecord?.profile || userRecord?.savedProfile || this.readCachedProfile(naverUserId);
+
+    // [중요] 브라우저나 기기가 바뀌어 로컬 캐시가 비어있어도, Cloud Firestore(user_profiles)에서 저장된 프로필을 최우선 복원!
+    let remoteProf = null;
+    if (window.DodamFirebase && typeof window.DodamFirebase.getProfile === 'function') {
+      try {
+        remoteProf = await window.DodamFirebase.getProfile(naverUserId);
+      } catch (e) {}
+    }
+
+    const savedProf = (remoteProf && this.isCustomProfile(remoteProf) ? remoteProf : null) ||
+                      (userRecord?.profile && this.isCustomProfile(userRecord.profile) ? userRecord.profile : null) ||
+                      (userRecord?.savedProfile && this.isCustomProfile(userRecord.savedProfile) ? userRecord.savedProfile : null) ||
+                      this.readCachedProfile(naverUserId) ||
+                      remoteProf;
     const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
 
     // 사용자가 로그인 전 브라우저/게스트 상태에서 수정한 자녀 및 지역 프로필 확인
@@ -11425,7 +11451,7 @@ class DodamCommunityApp {
     if (pwIn) pwIn.value = 'admin1234';
   }
 
-  handleAuthSubmit(event) {
+  async handleAuthSubmit(event) {
     event.preventDefault();
     const userIn = document.getElementById('auth-username-input')?.value.trim();
     const pwIn = document.getElementById('auth-password-input')?.value.trim();
@@ -11459,8 +11485,20 @@ class DodamCommunityApp {
           } catch (e) {}
         }
 
+        // [중요] 브라우저나 기기가 바뀌어 로컬 캐시가 비어있어도, Cloud Firestore(user_profiles)에서 저장된 프로필을 최우선 복원!
+        let remoteProf = null;
+        if (window.DodamFirebase && typeof window.DodamFirebase.getProfile === 'function') {
+          try {
+            remoteProf = await window.DodamFirebase.getProfile(found.id);
+          } catch (e) {}
+        }
+
         // Restore personal profile attached to this user!
-        const savedProf = found.profile || found.savedProfile || this.readCachedProfile(found.id);
+        const savedProf = (remoteProf && this.isCustomProfile(remoteProf) ? remoteProf : null) ||
+                          (found.profile && this.isCustomProfile(found.profile) ? found.profile : null) ||
+                          (found.savedProfile && this.isCustomProfile(found.savedProfile) ? found.savedProfile : null) ||
+                          this.readCachedProfile(found.id) ||
+                          remoteProf;
         const hasCustomProfile = !!(savedProf && (savedProf.isCustomized || (savedProf.babyName && savedProf.babyName !== '도담이')));
 
         const currentCustom = this.isCustomProfile(this.profile) ? this.profile : null;
