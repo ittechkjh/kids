@@ -459,7 +459,7 @@ window.DODAM_COMMUNITY_DATA = {
       isHot: true,
       title: '[무료드림/목동·마포] 상태 깨끗한 유아 그림책 전집 40권 + 원목 교구 세트 나눔합니다 🎁',
       content: '아이가 이제 7세 올라가면서 한글 읽기 독립을 해서, 3~5세 때 정말 잘 보던 프뢰벨·돌잡이 보드북 전집 40권이랑 원목 자석교구 세트 무료로 드림해요! 찢어진 곳 거의 없고 알코올 스왑으로 한 번 닦아두었습니다. 목동역이나 마포역 근처 직거래 가능하신 또래 맘님 댓글 남겨주세요 :)',
-      images: ['https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80'],
+      images: [],
       author: {
         nickname: '목동책육아맘',
         level: '👑 도담멘토',
@@ -586,7 +586,7 @@ window.DODAM_COMMUNITY_DATA = {
       isHot: true,
       title: '[부산 해운대·센텀] 유모차 끌고 가기 편하고 아기의자 깨끗한 가족 외식 맛집 4곳 내돈내산 후기 🍽️',
       content: '두돌 아기 데리고 주말마다 외식할 곳 찾는 게 일이라 직접 다녀보고 정말 편했던 곳들만 모아봤어요!\n\n1. 센텀 신세계몰 가족식당가 (수유실 최고, 유모차 대여 쾌적)\n2. 해운대 달맞이길 숲속 브런치카페 (잔디마당 있어서 아기 뛰어놀기 최고)\n3. 마린시티 솥밥 정식집 (아기용 무염 국물 무료 제공!)\n4. 기장 대형 베이커리 카페 (키즈케어존 분리)\n\n부산 맘님들 나들이 갈 때 참고하세요!',
-      images: ['https://images.unsplash.com/photo-1594998893017-36147cbcae05?w=600&auto=format&fit=crop&q=80'],
+      images: [],
       author: {
         nickname: '해운대윤우맘',
         level: '🌳 열매나무맘',
@@ -734,7 +734,7 @@ window.DODAM_COMMUNITY_DATA = {
       isHot: false,
       title: '[광주·전남/제주] 아기랑 주말에 다녀온 담양 메타세콰이어길 & 키즈카페 코스 너무 좋았어요 🌿',
       content: '날씨가 선선해서 유모차 끌고 담양 산책로 한 바퀴 돌고, 근처 잔디밭 있는 베이커리 카페에서 아기랑 비눗방울 놀이 실컷 하고 왔더니 저녁 8시 칼육퇴 성공했습니다!! 다들 오늘 육퇴 무사히 하셨나요? 육퇴 후 시원한 탄산수 한 잔 마시며 도담톡 구경 중이에요 ㅎㅎ',
-      images: ['https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=600&auto=format&fit=crop&q=80'],
+      images: [],
       author: {
         nickname: '수완지구햇살맘',
         level: '🌷 꽃봉오리맘',
@@ -919,7 +919,7 @@ window.DODAM_COMMUNITY_DATA = {
       isHot: true,
       title: '이유식 거부하던 아기가 입 쩍쩍 벌리는 소고기 배추 감자죽 & 철분 흡수 2배 비법 🥣',
       content: '초기·중기 넘어갈 때 입 꾹 닫고 숟가락 밀어내던 아기가 이 레시피로 바꾸고 한 그릇 120ml 뚝딱 비웠어요!\n\n💡 핵심 포인트:\n1. 육수는 양파+사과 2조각을 넣고 끓인 채소수를 써서 자연스러운 단맛 내기\n2. 소고기 안심 핏물을 너무 오래 빼면 철분이 빠져나가므로 키친타월로 톡톡 닦아 바로 데치기\n3. 비타민C가 풍부한 브로콜리나 배추를 소고기와 함께 먹이면 철분 흡수율이 2배 올라갑니다!',
-      images: ['https://images.unsplash.com/photo-1594998893017-36147cbcae05?w=600&auto=format&fit=crop&q=80'],
+      images: [],
       author: {
         nickname: '이유식요리왕맘',
         level: '👑 도담멘토',

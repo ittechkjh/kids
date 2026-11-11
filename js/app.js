@@ -239,6 +239,10 @@ class DodamCommunityApp {
         }
         if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
         if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
+        if (p.id === 'official-ai-report-growth-1' && p.views > 10) {
+          p.views = 0;
+          p.reactions = { like: 0, hug: 0, tip: 0 };
+        }
         // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
         if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
           const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
@@ -259,6 +263,8 @@ class DodamCommunityApp {
         }
       }
     });
+
+    this.ensureDailyActivePosts();
 
     // ==========================================
     // SPA 뒤로가기/앞으로가기 브라우저 히스토리 라우팅 완벽 지원
@@ -596,6 +602,10 @@ class DodamCommunityApp {
             }
             if (p.id === 'guide-seed-1' && p.views > 50) p.views = 18;
             if (p.id === 'guide-seed-2' && p.views > 50) p.views = 14;
+            if (p.id === 'official-ai-report-growth-1' && p.views > 10) {
+              p.views = 0;
+              p.reactions = { like: 0, hug: 0, tip: 0 };
+            }
             // 본문이 4800자로 잘려있거나 5장 SVG 카드가 유실된 경우 2,463자 원본 + 5장 카드로 복원
             if (!p.contentHtml || p.contentHtml.length < 15000 || !p.contentHtml.includes('dodam-report-v3')) {
               const vId = p.youtubeVideoId || this.extractYoutubeId(p.youtubeUrl) || 'cWGKAxSiaHY';
@@ -616,6 +626,8 @@ class DodamCommunityApp {
             }
           }
         });
+
+        this.ensureDailyActivePosts();
 
         if (this.currentView === 'board') {
           this.renderBoardCategories();
@@ -2965,9 +2977,9 @@ class DodamCommunityApp {
       },
       createdAt: '방금 전',
       timestamp: Date.now(),
-      views: 1,
+      views: 0,
       isHot: false,
-      reactions: { like: 1, hug: 0, tip: 0 },
+      reactions: { like: 0, hug: 0, tip: 0 },
       tags: ['육아소통', localHubName.split('·')[0]],
       comments: []
     };
@@ -2996,6 +3008,11 @@ class DodamCommunityApp {
 
   selectBoardCategory(catId) {
     this.currentCategory = catId;
+    if (catId === 'all') {
+      this.boardLoungeMode = 'all';
+      this.guideSubCategory = 'all';
+      this.qaFilterStatus = 'all';
+    }
     this.boardPage = 1;
     this.renderBoardCategories();
     this.renderBoardView();
@@ -3260,11 +3277,15 @@ class DodamCommunityApp {
 
     if (filtered.length === 0) {
       listEl.innerHTML = `
-        <div class="p-8 text-center space-y-2 bg-white rounded-2xl border border-stone-200">
-          <div class="text-sm font-black text-slate-800">등록된 글이 없습니다.</div>
-          <p class="text-xs text-slate-400">상단 검색창이나 입력창에서 첫 번째 이야기를 남겨보세요!</p>
-          <button onclick="app.resetBoardFilter()" class="mt-2 px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-xs font-bold text-slate-700 transition cursor-pointer">
-            전체글 보기
+        <div class="p-8 text-center space-y-3 bg-white rounded-2xl border border-stone-200 shadow-2xs">
+          <div class="w-12 h-12 mx-auto rounded-full bg-stone-100 text-slate-400 flex items-center justify-center text-lg">
+            <i class="fa-solid fa-filter-circle-xmark"></i>
+          </div>
+          <div class="text-sm font-black text-slate-800">선택한 조건에 맞는 게시글이 없습니다.</div>
+          <p class="text-xs text-slate-400">카테고리, 연령, 지역 필터를 초기화하여 전체 글을 확인해보세요.</p>
+          <button onclick="app.resetBoardFilter()" class="mt-2 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-xs font-bold text-white transition cursor-pointer shadow-xs inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-rotate-left text-[11px]"></i>
+            <span>전체글 보기 (필터 초기화)</span>
           </button>
         </div>
       `;
@@ -3340,7 +3361,7 @@ class DodamCommunityApp {
           }
 
           const commentsCount = (post.comments?.length || 0);
-          const views = post.views || 1;
+          const views = post.views !== undefined ? post.views : 0;
           const authorName = post.author?.nickname || '도담맘';
 
           return `
@@ -3352,6 +3373,7 @@ class DodamCommunityApp {
                 ${post.isHot ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px]">HOT</span>' : ''}
                 <span class="truncate">${post.title}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px]">[${commentsCount}]</span>` : ''}
+                ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
                   <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
                     <i class="fa-solid fa-copy text-emerald-600"></i> 블로그 복사
@@ -3374,7 +3396,10 @@ class DodamCommunityApp {
               <div class="flex items-start gap-1.5 min-w-0 w-full">
                 <span class="px-1.5 py-0.5 rounded ${badgeClass} text-[10px] shrink-0 font-bold">${badgeText}</span>
                 ${post.isHot ? '<span class="px-1 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
-                <span class="line-clamp-2 break-keep min-w-0 flex-1 font-bold text-slate-900 text-xs leading-snug">${post.title}</span>
+                <span class="line-clamp-2 break-keep min-w-0 flex-1 font-bold text-slate-900 text-xs leading-snug">
+                  ${post.title}
+                  ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
+                </span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0">[${commentsCount}]</span>` : ''}
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400">
@@ -3428,6 +3453,7 @@ class DodamCommunityApp {
                         ${(post.author?.nickname || '도')[0]}
                       </span>
                       <span class="font-black text-slate-900">${post.author?.nickname || '도담맘'}</span>
+                      ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                       ${hubText ? `<span class="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 text-[10px] font-bold">${hubText}</span>` : ''}
                       ${ageText ? `<span class="text-slate-400 text-[11px] font-medium hidden sm:inline">(${ageText})</span>` : ''}
                       <span class="text-slate-300">·</span>
@@ -3474,7 +3500,7 @@ class DodamCommunityApp {
                         <button type="button" onclick="event.stopPropagation(); app.openEditPostModal('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-amber-50 text-slate-600 hover:text-amber-800 text-[10px] font-bold transition">수정</button>
                         <button type="button" onclick="event.stopPropagation(); app.deleteCurrentPost('${post.id}')" class="px-2 py-0.5 rounded bg-stone-100 hover:bg-rose-50 text-slate-500 hover:text-rose-600 text-[10px] font-bold transition">삭제</button>
                       ` : ''}
-                      <span class="text-slate-400">조회 ${post.views || 1}</span>
+                      <span class="text-slate-400">조회 ${(post.views !== undefined ? post.views : 0).toLocaleString()}</span>
                     </div>
                   </div>
                 </article>
@@ -3820,6 +3846,31 @@ class DodamCommunityApp {
     const targetBadge = post.localHubName && post.localHubName !== '전국 전체'
       ? `${post.localHubName} 양육 가정`
       : (stObj && stObj.id !== 'all' ? `${stObj.shortName} 자녀 부모` : '전국 영유아·초등 학부모');
+
+    const isGuidePost = post.isYoutubeSummary || post.isAiReport || post.category === 'guide' || (post.title && post.title.startsWith('[육아가이드]'));
+
+    if (!isGuidePost) {
+      // [육아가이드 제외한 모든 일반 커뮤니티 글]: 인포그래픽 이미지/요약 카드 일체 없이 순수 본문 텍스트만 깔끔하게 렌더링
+      const paragraphs = String(rawContent || '')
+        .split(/\n+/)
+        .map((p) => p.trim())
+        .filter(Boolean);
+
+      const formattedParagraphs = paragraphs.length > 0
+        ? paragraphs.map((p) => `<p class="text-sm sm:text-[15px] leading-8 text-slate-800">${this.escapeSvgXml(p)}</p>`).join('')
+        : `<p class="text-sm sm:text-[15px] leading-8 text-slate-800">${this.escapeSvgXml(rawContent || '')}</p>`;
+
+      contentEl.innerHTML = `
+        <div class="space-y-4 pb-4">
+          ${formattedParagraphs}
+        </div>
+      `;
+      if (imgBox) {
+        imgBox.classList.add('hidden');
+        imgBox.innerHTML = '';
+      }
+      return;
+    }
 
     const isRichHtml = rawContent.includes('<h4') || rawContent.includes('ai-parenting-report-article');
 
@@ -4368,7 +4419,7 @@ class DodamCommunityApp {
       <body class="bg-stone-100 text-slate-900 p-4 sm:p-10">
         <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
           <div class="flex items-center justify-between text-xs text-slate-500">
-            <span><strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> · ${this.escapeSvgXml(post.createdAt || '')} · 조회수 ${(post.views || 1).toLocaleString()}</span>
+            <span><strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> · ${this.escapeSvgXml(post.createdAt || '')} · 조회수 ${(post.views !== undefined ? post.views : 0).toLocaleString()}</span>
             <button onclick="window.print()" class="px-3 py-1.5 rounded-lg border border-stone-200 font-bold text-slate-700 hover:bg-stone-50 cursor-pointer">🖨️ 인쇄 / PDF 저장</button>
           </div>
           <h1 class="text-2xl font-black text-slate-900 pb-4 border-b-2 border-slate-800">${this.escapeSvgXml(post.title)}</h1>
@@ -4384,7 +4435,7 @@ class DodamCommunityApp {
     const post = this.data.posts.find((p) => p.id === postId);
     if (!post) return;
     this.activePostDetailId = postId;
-    if (!post.views) post.views = 120;
+    if (typeof post.views !== 'number') post.views = 0;
     post.views += 1;
 
     if (this.currentView !== 'board') {
@@ -4436,7 +4487,17 @@ class DodamCommunityApp {
       }
       if (post.author) {
         post.author.childBadge = '📖 도담 육아가이드';
-        if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin'].includes(post.author.nickname)) post.author.nickname = '운영자';
+        if (['슈퍼관리자', '도담 공식 가이드', '도담 공식 관리자', 'admin', '도담 육아연구소', '도담연구소'].includes(post.author.nickname)) post.author.nickname = '운영자';
+      }
+    }
+
+    const adminAiBadge = document.getElementById('post-detail-admin-ai-badge');
+    if (adminAiBadge) {
+      if (this.isAdmin() && post.isAiGenerated) {
+        adminAiBadge.classList.remove('hidden');
+        adminAiBadge.className = 'px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 border border-purple-300 font-bold text-xs inline-flex items-center gap-1';
+      } else {
+        adminAiBadge.classList.add('hidden');
       }
     }
 
@@ -4445,7 +4506,7 @@ class DodamCommunityApp {
     document.getElementById('post-detail-author-badge').textContent = post.author?.childBadge ? `(${post.author.childBadge})` : '';
     document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
     document.getElementById('post-detail-date').textContent = post.createdAt;
-    document.getElementById('post-detail-views').textContent = (post.views || 1).toLocaleString();
+    document.getElementById('post-detail-views').textContent = (post.views !== undefined ? post.views : 0).toLocaleString();
 
     const avatarEl = document.getElementById('post-detail-avatar');
     if (avatarEl) {
@@ -4779,6 +4840,235 @@ class DodamCommunityApp {
     try {
       sessionStorage.setItem('dodam_my_post_ids', JSON.stringify(Array.from(this.myPostIds)));
     } catch (e) {}
+  }
+
+  ensureDailyActivePosts() {
+    const todayStr = this.getKstDateStr(Date.now());
+    const todayStartMs = this.getKstTodayStartMs();
+    const nowMs = Date.now();
+
+    // 일일 10개 커뮤니티 활성 게시글 템플릿 (실제 부모님들의 진솔한 일상 고민, 학령기, 이유식, 동네 정보)
+    const dailyTemplates = [
+      {
+        offsetHours: 8.5,
+        title: '초3 수학 사고력 학원 vs 교과 심화, 지금 시기에 어떤 게 더 맞을까요?',
+        content: '현재 아이가 초등학교 3학년 올라가면서 수학 학원 고민이 깊어지고 있어요. 연산이랑 교과 기본은 혼자서 곧잘 따라오는데, 3학년부터는 심화나 사고력을 병행해 줘야 할지 고민입니다. 동네 엄마들은 벌써 사고력 대형 학원 보내던데 너무 달리는 건 아닐까 걱정도 되고요... 혹시 비슷한 시기 거치신 선배 맘님들 어떤 방향이 아이에게 더 좋았는지 소중한 경험 나눠주시면 감사하겠습니다!',
+        category: 'qna',
+        ageStage: 'child',
+        localHub: 'hub-gyeonggi-south',
+        localHubName: '경기 판교·분당',
+        isQuestion: true,
+        author: {
+          nickname: '판교워킹맘',
+          level: '🌿 줄기맘·대디',
+          region: '경기 성남시 분당구',
+          childBadge: '초3 여아',
+          avatarBg: 'bg-emerald-600 text-white'
+        },
+        tags: ['초등수학', '학원고민', '판교맘']
+      },
+      {
+        offsetHours: 9.75,
+        title: '10개월 후기 이유식 하루 3번 스케줄이랑 수유 텀 어떻게 맞추고 계신가요?',
+        content: '중기에서 후기로 넘어가면서 하루 세 끼 먹이기 시작했는데 스케줄 맞추기가 정말 쉽지 않네요 ㅠㅠ 기상 후 첫 수유하고 2시간 뒤 첫 이유식 주면 잘 안 먹고 칭얼대요. 이유식 먹이고 바로 보충 수유를 해야 할지, 아니면 1~2시간 텀을 둬야 할지 헷갈립니다. 선배맘님들은 후기 이유식 때 식사 3번이랑 분유 텀 어떻게 운영하셨는지 조언 부탁드려요!',
+        category: 'qna',
+        ageStage: 'infant',
+        localHub: 'hub-seoul-gangnam',
+        localHubName: '서울 강남·서초',
+        isQuestion: true,
+        author: {
+          nickname: '송파둥이맘',
+          level: '🌱 새싹맘·대디',
+          region: '서울 송파구',
+          childBadge: '10개월 남아',
+          avatarBg: 'bg-rose-500 text-white'
+        },
+        tags: ['후기이유식', '수유텀', '10개월아기']
+      },
+      {
+        offsetHours: 11.0,
+        title: '주말에 5~6세 아이랑 나들이 가기 좋은 실내 박물관·체험관 추천드려요 🏛️',
+        content: '날씨 상관없이 아이랑 유익하게 다녀올 수 있는 수도권 실내 체험 명소 몇 군데 정리해봤어요!\n1. 국립어린이과학관 (대학로): 예약 필수지만 체험형 전시가 정말 알차요.\n2. 경기도어린이박물관 (용인): 활동량이 많은 5~7세 아이들이 하루 종일 신나게 뜁니다.\n3. 서울백제어린이박물관 (송파): 올림픽공원 산책 겸 묶어서 다녀오기 딱 좋아요.\n이번 주말 나들이 계획 중이신 분들 참고해보세요!',
+        category: 'info',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-gangbuk',
+        localHubName: '서울 마포·용산',
+        isQuestion: false,
+        author: {
+          nickname: '마포책육아맘',
+          level: '🌳 열매나무맘',
+          region: '서울 마포구',
+          childBadge: '5세 남아',
+          avatarBg: 'bg-amber-600 text-white'
+        },
+        tags: ['주말나들이', '실내박물관', '유아체험']
+      },
+      {
+        offsetHours: 12.3,
+        title: '초1 입학 준비, 알림장 확인과 스스로 책가방 챙기기 연습 꿀팁',
+        content: '첫째 아이 초1 입학하고 1년 동안 겪으면서 가장 중요하다고 느낀 건 자기 물건 챙기는 습관이었어요.\n냉장고나 아이 책상 앞에 체크리스트 보드를 자석으로 붙여두고, 알림장 보면서 필통, 알림장, 물통, 실내화 가방 체크하게 했더니 1학기 지나고 나서는 혼자서도 척척 챙기더라고요. 처음엔 답답해도 부모가 대신 챙겨주지 않고 옆에서 지켜봐 주는 게 제일 큰 도움이 되었습니다 ㅎㅎ',
+        category: 'info',
+        ageStage: 'child',
+        localHub: 'hub-gyeonggi-south',
+        localHubName: '수원 광교·영통',
+        isQuestion: false,
+        author: {
+          nickname: '광교현서맘',
+          level: '🌿 줄기맘·대디',
+          region: '수원 영통구',
+          childBadge: '초1 여아',
+          avatarBg: 'bg-sky-600 text-white'
+        },
+        tags: ['초1입학', '자기주도습관', '초등준비']
+      },
+      {
+        offsetHours: 13.8,
+        title: '오늘 드디어 3세 떼쓰기 고비 넘기고 칼육퇴 성공했습니다 ㅠㅠ',
+        content: '요즘 싫어, 내가 할 거야 병에 걸려서 외출 한번 하려면 30분씩 실랑이하느라 진이 다 빠졌는데, 오늘은 마음 내려놓고 선택권을 두 개 줬더니 순순히 따라주네요 (파란 양말 신을래? 노란 양말 신을래?).\n샤워하고 밥 먹이고 동화책 3권 읽어주니 8시에 스르륵 잠들었습니다. 육퇴 후 마시는 따뜻한 루이보스 티 한 잔이 이렇게 행복할 수가 없네요. 다들 오늘 육아 고생 많으셨습니다, 모두 평안한 밤 되세요!',
+        category: 'lounge',
+        ageStage: 'toddler',
+        localHub: 'hub-gyeonggi-north',
+        localHubName: '경기 일산·고양',
+        isQuestion: false,
+        author: {
+          nickname: '일산둥이아빠',
+          level: '🌱 새싹맘·대디',
+          region: '경기 고양시 일산서구',
+          childBadge: '3세 쌍둥이',
+          avatarBg: 'bg-indigo-600 text-white'
+        },
+        tags: ['육퇴완료', '3세육아', '훈육공감']
+      },
+      {
+        offsetHours: 15.2,
+        title: '해운대·센텀 쪽 유모차 진입 편하고 수유실 깨끗한 아기 동반 식당 공유해요',
+        content: '돌 전후 아기 데리고 외식할 때마다 유모차 둘 공간이나 아기의자 있는지 매번 전화로 물어봤었는데요, 최근 다녀온 곳 중에 정말 만족스러웠던 3곳입니다.\n1. 센텀 신세계 식당가: 가족 휴게실/수유실 청결도 전국 최고 수준.\n2. 마린시티 해변 산책로 솥밥집: 아기용 숭늉과 미역국 무료 서비스.\n3. 기장 힐튼 아난티타운 브런치: 휠체어/유모차 경사로가 완벽해서 이동이 정말 편해요.\n부산 맘님들 아기랑 외식하실 때 참고하세요!',
+        category: 'info',
+        ageStage: 'infant',
+        localHub: 'hub-busan',
+        localHubName: '부산 해운대·센텀',
+        isQuestion: false,
+        author: {
+          nickname: '해운대윤우맘',
+          level: '🌷 꽃봉오리맘',
+          region: '부산 해운대구',
+          childBadge: '11개월 남아',
+          avatarBg: 'bg-teal-600 text-white'
+        },
+        tags: ['부산맘', '아기동반식당', '해운대센텀']
+      },
+      {
+        offsetHours: 16.5,
+        title: '두돌 지난 아이 밤에 자다 깨서 우는 야경증/야제증 겪어보신 분 계신가요?',
+        content: '생후 25개월 된 아이인데 요즘 일주일에 서너 번은 새벽 2시쯤 자지러지게 울면서 깨요. 안아줘도 밀쳐내고 눈은 감은 채로 발버둥을 치는데 혹시 이게 야경증일까요? 15분 정도 지나면 언제 그랬냐는 듯 다시 잠들긴 하는데 매일 밤마다 너무 안쓰럽고 가족들도 잠을 못 자서 피로가 누적되네요 ㅠㅠ 성장통인지 낮 동안 자극이 많아서인지... 비슷한 경험 극복하신 분 조언 부탁드립니다.',
+        category: 'qna',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-southwest',
+        localHubName: '서울 동작·관악',
+        isQuestion: true,
+        author: {
+          nickname: '보라매하은맘',
+          level: '🌱 새싹맘·대디',
+          region: '서울 동작구',
+          childBadge: '25개월 여아',
+          avatarBg: 'bg-rose-600 text-white'
+        },
+        tags: ['야경증', '수면고민', '두돌아기']
+      },
+      {
+        offsetHours: 17.8,
+        title: '초등 고학년 스마트폰 첫 개통 시 규칙과 스크린타임 설정 팁',
+        content: '초등 5학년 올라가면서 학원 동선 때문에 스마트폰을 개통해 줬는데, 시작부터 규칙을 정하는 게 중요하다고 해서 온 가족이 둘러앉아 스마트폰 서약서를 썼습니다.\n1. 잠잘 때는 거실 충전 스테이션에 거치하기\n2. 숙제나 학원 공부 중에는 서랍에 넣어두기\n3. 하루 유튜브/게임 사용 시간은 최대 1시간으로 패밀리링크 설정\n아이도 본인이 직접 약속 서명하니 반발 없이 잘 지키고 있어요. 스마트폰 개통 고민 중이신 부모님들께 도움 되길 바랍니다!',
+        category: 'info',
+        ageStage: 'high',
+        localHub: 'hub-daegu',
+        localHubName: '대구 수성·달서',
+        isQuestion: false,
+        author: {
+          nickname: '대구수성맘',
+          level: '🌷 꽃봉오리맘',
+          region: '대구 수성구',
+          childBadge: '초5 남아',
+          avatarBg: 'bg-amber-600 text-white'
+        },
+        tags: ['스마트폰규칙', '초5학부모', '패밀리링크']
+      },
+      {
+        offsetHours: 19.0,
+        title: '환절기 유아 비염 마른 기침, 저희 집에서 효과 본 온습도 관리법 💧',
+        content: '아침저녁 일교차 커지면 아이 코막힘이랑 마른 기침이 심해져서 소아과 약만 달고 살았는데요, 생활 환경 바꾸고 확 좋아졌어요.\n1. 침실 온도는 21~22도, 습도는 가열식 가습기로 55~60% 철저히 유지\n2. 아침에 일어나자마자 미온수 한 컵 마시게 하고 식염수 코 세척\n3. 자기 전 베개 커버 매일 털고 3일에 한 번 60도 온수 세탁\n작은 습관이지만 알레르기 비염 있는 아이들에게 정말 큰 차이를 만들어주는 것 같아요!',
+        category: 'info',
+        ageStage: 'child',
+        localHub: 'hub-chungcheong',
+        localHubName: '세종·대전',
+        isQuestion: false,
+        author: {
+          nickname: '세종나래맘',
+          level: '🌿 줄기맘·대디',
+          region: '세종시 나성동',
+          childBadge: '초2 여아',
+          avatarBg: 'bg-emerald-600 text-white'
+        },
+        tags: ['환절기비염', '온습도관리', '유아건강']
+      },
+      {
+        offsetHours: 20.2,
+        title: '[송파/잠실 나눔] 깨끗하게 관리한 유아 원목 교구 + 팝업북 세트 드림합니다 🎁',
+        content: '아이가 쑥 자라서 이제 보지 않는 3~5세용 원목 모양 맞추기 교구와 인기 팝업북 15권 나눔해요.\n원목 교구는 조각 분실 없이 다 있고 알코올 스왑으로 닦아 상자에 담아두었습니다. 팝업북도 찢어진 곳 없이 상태 깨끗합니다! 잠실역이나 송파나루역 인근에서 비대면 문고리 나눔 가능하신 또래 맘님 댓글 남겨주시면 전달드릴게요 :)',
+        category: 'share',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-gangnam',
+        localHubName: '서울 송파·잠실',
+        isQuestion: false,
+        author: {
+          nickname: '잠실솔이맘',
+          level: '🌳 열매나무맘',
+          region: '서울 송파구 잠실동',
+          childBadge: '4세 여아',
+          avatarBg: 'bg-pink-600 text-white'
+        },
+        tags: ['무료나눔', '잠실맘', '원목교구']
+      }
+    ];
+
+    if (!Array.isArray(this.data.posts)) this.data.posts = [];
+    const existingIds = new Set(this.data.posts.map((p) => p && p.id));
+
+    dailyTemplates.forEach((tpl, idx) => {
+      const postId = `daily-ai-post-${todayStr}-${idx + 1}`;
+      if (existingIds.has(postId) || (this.deletedPostIds && this.deletedPostIds.has(postId))) return;
+
+      const postTime = Math.min(todayStartMs + Math.round(tpl.offsetHours * 3600 * 1000), nowMs);
+      const diffMin = Math.max(1, Math.floor((nowMs - postTime) / 60000));
+      let createdAtStr = '방금 전';
+      if (diffMin < 60) createdAtStr = `${diffMin}분 전`;
+      else if (diffMin < 1440) createdAtStr = `${Math.floor(diffMin / 60)}시간 전`;
+      else createdAtStr = todayStr.slice(5);
+
+      const newPost = {
+        id: postId,
+        title: tpl.title,
+        content: tpl.content,
+        category: tpl.category,
+        ageStage: tpl.ageStage,
+        localHub: tpl.localHub,
+        localHubName: tpl.localHubName,
+        localTopic: 'general',
+        isQuestion: !!tpl.isQuestion,
+        isAiGenerated: true,
+        images: [],
+        author: tpl.author,
+        timestamp: postTime,
+        createdAt: createdAtStr,
+        views: 0,
+        reactions: { like: 0, hug: 0, tip: 0 },
+        comments: [],
+        tags: tpl.tags
+      };
+
+      this.data.posts.unshift(newPost);
+      existingIds.add(postId);
+    });
   }
 
   isDummyPost(post) {
@@ -5293,9 +5583,9 @@ class DodamCommunityApp {
       },
       createdAt: '방금 전',
       timestamp: Date.now(),
-      views: 1,
+      views: 0,
       isHot: false,
-      reactions: { like: 1, hug: 0, tip: 0 },
+      reactions: { like: 0, hug: 0, tip: 0 },
       tags,
       comments: []
     };
@@ -5388,6 +5678,8 @@ class DodamCommunityApp {
     this.currentLocalHub = 'all';
     this.currentLocalTopic = 'all';
     this.currentRegion = 'all';
+    this.guideSubCategory = 'all';
+    this.qaFilterStatus = 'all';
     this.boardSearchKeyword = '';
     this.boardPage = 1;
 
@@ -11157,6 +11449,7 @@ class DodamCommunityApp {
         window.DodamFirebase.logAnalyticsEvent({
           t: 'visit',
           sid: this.sessionId,
+          date: todayKst,
           device: this.userDeviceType,
           browser: this.userBrowserName,
           user: currentUserName,
@@ -11190,10 +11483,12 @@ class DodamCommunityApp {
       const currentUser = this.currentUser;
       const currentUserName = currentUser ? (currentUser.nickname || currentUser.username || (currentUser.id && currentUser.id.startsWith('kakao_') ? '카카오회원' : null)) : null;
 
+      const todayKst = this.getKstDateStr(Date.now());
       if (window.DodamFirebase && typeof window.DodamFirebase.logAnalyticsEvent === 'function') {
         window.DodamFirebase.logAnalyticsEvent({
           t: 'view',
           sid: this.sessionId || 'anonymous_sid',
+          date: todayKst,
           view: viewId,
           device: this.userDeviceType || 'desktop',
           browser: this.userBrowserName || 'Chrome',
@@ -11387,31 +11682,42 @@ class DodamCommunityApp {
     this.calculateAndRenderAnalytics();
   }
 
+  getKstDateStr(tsOrDate) {
+    const ts = typeof tsOrDate === 'number' ? tsOrDate : (tsOrDate ? new Date(tsOrDate).getTime() : Date.now());
+    if (isNaN(ts) || ts <= 0) return '';
+    const kst = new Date(ts + 9 * 3600 * 1000);
+    return kst.toISOString().slice(0, 10);
+  }
+
+  getKstTodayStartMs() {
+    const now = Date.now();
+    const kst = new Date(now + 9 * 3600 * 1000);
+    const y = kst.getUTCFullYear();
+    const m = kst.getUTCMonth();
+    const d = kst.getUTCDate();
+    return Date.UTC(y, m, d) - 9 * 3600 * 1000; // Exact 00:00:00 KST
+  }
+
   calculateAndRenderAnalytics() {
     const rawEvents = this.analyticsEvents || [];
 
-    const getKstDateStr = (dateObj) => {
-      const kst = new Date(dateObj.getTime() + (dateObj.getTimezoneOffset() + 540) * 60000);
-      return kst.toISOString().slice(0, 10);
-    };
+    // [00:00:00 KST 기준 일일 방문자 카운트]
+    const todayStartMs = this.getKstTodayStartMs();
+    const todayEndMs = todayStartMs + 24 * 3600 * 1000;
+    const yesterdayStartMs = todayStartMs - 24 * 3600 * 1000;
+    const yesterdayEndMs = todayStartMs;
+    const sevenDaysStartMs = todayStartMs - 6 * 24 * 3600 * 1000;
 
-    const now = new Date();
-    const todayStr = getKstDateStr(now);
-    const yesterday = new Date(now.getTime() - 24 * 3600 * 1000);
-    const yesterdayStr = getKstDateStr(yesterday);
-    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
-    const sevenDaysAgoStr = getKstDateStr(sevenDaysAgo);
-    const nowMs = now.getTime();
+    const todayStr = this.getKstDateStr(todayStartMs);
+    const yesterdayStr = this.getKstDateStr(yesterdayStartMs);
+    const sevenDaysAgoStr = this.getKstDateStr(sevenDaysStartMs);
+    const nowMs = Date.now();
 
     // 순수 외부 방문자 이벤트만 필터링 (관리자 세션/접속/뷰 완전 제외)
     const events = rawEvents
       .map((e) => {
         const ts = e.timestamp || e.ts || (e.time ? new Date(e.time).getTime() : 0);
-        let date = e.date;
-        if (!date && ts) {
-          const kst = new Date(ts + 9 * 3600 * 1000);
-          date = kst.toISOString().slice(0, 10);
-        }
+        const date = e.date || this.getKstDateStr(ts);
         return {
           ...e,
           timestamp: ts,
@@ -11420,9 +11726,10 @@ class DodamCommunityApp {
       })
       .filter((e) => !this.isAdminEvent(e));
 
-    const todayEvents = events.filter((e) => e.date === todayStr);
-    const yesterdayEvents = events.filter((e) => e.date === yesterdayStr);
-    const last7DaysEvents = events.filter((e) => e.date >= sevenDaysAgoStr);
+    // 00:00:00 KST 자정 기준 오늘 하루 실측 이벤트
+    const todayEvents = events.filter((e) => e.timestamp >= todayStartMs && e.timestamp < todayEndMs);
+    const yesterdayEvents = events.filter((e) => e.timestamp >= yesterdayStartMs && e.timestamp < yesterdayEndMs);
+    const last7DaysEvents = events.filter((e) => e.timestamp >= sevenDaysStartMs && e.timestamp < todayEndMs);
 
     // 순수 외부 방문자 실측 DAU
     const todaySids = new Set(todayEvents.map((e) => e.sid));
@@ -11431,7 +11738,7 @@ class DodamCommunityApp {
     const yesterdaySids = new Set(yesterdayEvents.map((e) => e.sid));
     const yesterdayDau = yesterdaySids.size;
 
-    // 순수 외부 방문자 실측 WAU
+    // 순수 외부 방문자 실측 WAU (최근 7일 0시 기준)
     const wauSids = new Set(last7DaysEvents.map((e) => e.sid));
     const wau = wauSids.size;
 
@@ -11467,10 +11774,11 @@ class DodamCommunityApp {
 
     const dailyStats = [];
     for (let i = 13; i >= 0; i--) {
-      const targetD = new Date(now.getTime() - i * 24 * 3600 * 1000);
-      const dateStr = getKstDateStr(targetD);
+      const dayStart = todayStartMs - i * 24 * 3600 * 1000;
+      const dayEnd = dayStart + 24 * 3600 * 1000;
+      const dateStr = this.getKstDateStr(dayStart);
       const label = dateStr.slice(5);
-      const dayEvents = events.filter((e) => e.date === dateStr);
+      const dayEvents = events.filter((e) => e.timestamp >= dayStart && e.timestamp < dayEnd);
       const sids = new Set(dayEvents.map((e) => e.sid));
       const dayDau = sids.size;
       const dayPv = Math.max(dayEvents.length, dayDau);
@@ -11484,9 +11792,9 @@ class DodamCommunityApp {
     }
 
     this.render14DayChartDynamic(dailyStats);
-    this.renderFeatureStatsDynamic(events, todayStr);
-    this.renderDeviceStatsDynamic(events, todayStr);
-    this.renderPageAccessTable(events, todayStr, nowMs);
+    this.renderFeatureStatsDynamic(events, todayStr, todayStartMs);
+    this.renderDeviceStatsDynamic(events, todayStr, todayStartMs);
+    this.renderPageAccessTable(events, todayStr, nowMs, todayStartMs);
     this.renderVisitorLogs(events, nowMs);
   }
 
@@ -11546,7 +11854,7 @@ class DodamCommunityApp {
     `;
   }
 
-  renderFeatureStatsDynamic(events, todayStr) {
+  renderFeatureStatsDynamic(events, todayStr, todayStartMs) {
     const listEl = document.getElementById('feature-stats-list');
     const subtitleEl = document.getElementById('feature-stats-subtitle');
     if (!listEl) return;
@@ -11563,7 +11871,10 @@ class DodamCommunityApp {
     ];
 
     const isToday = this.featureStatsPeriod === 'today';
-    const targetEvents = isToday ? events.filter((e) => e.date === todayStr && e.t === 'view') : events.filter((e) => e.t === 'view');
+    const startMs = todayStartMs || this.getKstTodayStartMs();
+    const targetEvents = isToday
+      ? events.filter((e) => e.timestamp >= startMs && e.timestamp < startMs + 86400000 && e.t === 'view')
+      : events.filter((e) => e.t === 'view');
     const totalCalls = targetEvents.length;
 
     if (subtitleEl) {
@@ -11629,13 +11940,16 @@ class DodamCommunityApp {
     this.calculateAndRenderAnalytics();
   }
 
-  renderDeviceStatsDynamic(events, todayStr) {
+  renderDeviceStatsDynamic(events, todayStr, todayStartMs) {
     const splitContainer = document.getElementById('device-split-container');
     const browserContainer = document.getElementById('browser-breakdown-container');
     const subtitleEl = document.getElementById('device-stats-subtitle');
 
     const isToday = this.deviceStatsPeriod === 'today';
-    const targetEvents = isToday ? events.filter((e) => e.date === todayStr) : events;
+    const startMs = todayStartMs || this.getKstTodayStartMs();
+    const targetEvents = isToday
+      ? events.filter((e) => e.timestamp >= startMs && e.timestamp < startMs + 86400000)
+      : events;
 
     const sids = new Set(targetEvents.map((e) => e.sid));
     const totalVisitors = sids.size;
@@ -11748,7 +12062,7 @@ class DodamCommunityApp {
   // 4. 회원 계정 관리 탭
 
 
-  renderPageAccessTable(filteredEvents, targetDateStr, currentMs) {
+  renderPageAccessTable(filteredEvents, targetDateStr, currentMs, todayStartMs) {
     const tbody = document.getElementById('admin-page-access-table-body');
     if (!tbody) return;
 
@@ -11764,9 +12078,9 @@ class DodamCommunityApp {
       { key: 'write', name: '게시글 작성 및 육아 질문', path: '#/write', icon: 'fa-pen-to-square', bg: 'bg-orange-50 text-orange-600 border-orange-200' }
     ];
 
-    const now = new Date();
-    const todayStr = targetDateStr || new Date(now.getTime() + (now.getTimezoneOffset() + 540) * 60000).toISOString().slice(0, 10);
-    const nowMs = currentMs || now.getTime();
+    const startMs = todayStartMs || this.getKstTodayStartMs();
+    const endMs = startMs + 24 * 3600 * 1000;
+    const nowMs = currentMs || Date.now();
     const rawList = filteredEvents || (this.analyticsEvents || []);
     const events = rawList
       .map((e) => {
@@ -11795,7 +12109,7 @@ class DodamCommunityApp {
     tbody.innerHTML = pageDefs
       .map((p) => {
         const pageEvents = events.filter((e) => e.view === p.key);
-        const todayPageEvents = pageEvents.filter((e) => e.date === todayStr);
+        const todayPageEvents = pageEvents.filter((e) => e.timestamp >= startMs && e.timestamp < endMs);
 
         const todayCount = todayPageEvents.length;
         const totalCount = pageEvents.length;
@@ -13257,8 +13571,8 @@ A. 완벽한 부모는 없습니다. 화를 냈다면 솔직하게 다가가 사
         },
         createdAt: '방금 전',
         timestamp: Date.now(),
-        views: 1,
-        reactions: { like: 3, hug: 0, tip: 1 },
+        views: 0,
+        reactions: { like: 0, hug: 0, tip: 0 },
         tags,
         comments: []
       };
