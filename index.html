@@ -2734,10 +2734,10 @@
                 <div>
                   <div class="flex items-center gap-2">
                     <i class="fa-solid fa-clock-rotate-left text-purple-600"></i>
-                    <h3 class="text-sm font-black text-slate-900">실시간 방문자 접속 시간 및 활동 로그</h3>
+                    <h3 class="text-sm font-black text-slate-900">실시간 방문자 페이지 열람 및 활동 흐름 로그</h3>
                     <span id="admin-visitor-logs-count" class="px-2 py-0.5 rounded-full text-[10px] font-black bg-purple-50 text-purple-700 border border-purple-200">최근 100건</span>
                   </div>
-                  <p class="text-xs text-slate-500 font-medium mt-0.5">외부 방문자가 사이트에 접속한 상세 타임스탬프와 접속 경로, 활동 현황을 실시간으로 기록합니다.</p>
+                  <p class="text-xs text-slate-500 font-medium mt-0.5">방문자가 페이지를 이동할 때마다 이동 경로가 순차적으로 기록되는 활동 타임라인입니다. (동일 세션의 이동 기록은 하나의 사용자로 통합 표기됩니다)</p>
                 </div>
                 <div class="flex items-center gap-2">
                   <button type="button" onclick="app.resetAdminAnalytics()" class="px-3 py-1.5 rounded-xl bg-rose-50 hover:bg-rose-100 border border-rose-200 text-xs font-bold text-rose-700 transition flex items-center gap-1.5 cursor-pointer shadow-2xs">
@@ -2755,12 +2755,12 @@
                 <table class="w-full text-left border-collapse text-xs">
                   <thead>
                     <tr class="bg-stone-50/80 text-slate-500 text-[11px] font-black border-b border-stone-200 uppercase tracking-wider">
-                      <th class="py-3 px-4">접속 시간 (KST)</th>
-                      <th class="py-3 px-4">방문자 구분</th>
-                      <th class="py-3 px-4">접속한 페이지</th>
-                      <th class="py-3 px-4">접속 환경 (기기/브라우저)</th>
-                      <th class="py-3 px-4">사이트 최초 진입 시각</th>
-                      <th class="py-3 px-4 text-center">세션 상태</th>
+                      <th class="py-3 px-4">활동 시각 (KST)</th>
+                      <th class="py-3 px-4">방문자 (세션 식별)</th>
+                      <th class="py-3 px-4">열람 페이지 / 활동</th>
+                      <th class="py-3 px-4">접속 기기 / 브라우저</th>
+                      <th class="py-3 px-4">세션 최초 유입 시각</th>
+                      <th class="py-3 px-4 text-center">진행 상태</th>
                     </tr>
                   </thead>
                   <tbody id="admin-visitor-logs-table-body" class="divide-y divide-stone-100 font-medium">
