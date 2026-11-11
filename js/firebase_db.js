@@ -341,11 +341,15 @@ class DodamFirebaseService {
                 return;
               }
 
-              // 일반 커뮤니티 게시글 언패킹 (동일 origId 중 가장 최신본만 채택)
-              const unpacked = this.unpackPostDoc({ ...raw, id: raw.id || doc.id });
-              if (!unpacked.id || deletedIdsSet.has(unpacked.id)) return;
-              if (!normalPostsMap.has(unpacked.id)) {
-                normalPostsMap.set(unpacked.id, unpacked);
+              // 일반 커뮤니티 게시글 언패킹 (동일 origId/baseId 및 동일 유튜브 영상 중 가장 최신본만 1건 채택)
+              const baseId = (raw.origId || doc.id.split('_rev_')[0] || raw.id || doc.id).trim();
+              const unpacked = this.unpackPostDoc({ ...raw, id: baseId });
+              if (!unpacked.id || deletedIdsSet.has(unpacked.id) || deletedIdsSet.has(doc.id)) return;
+
+              // 중복 게시글 원천 차단 (동일 유튜브 영상 ID 또는 동일 베이스 ID)
+              const dedupKey = unpacked.youtubeVideoId ? `yt_${unpacked.youtubeVideoId}` : baseId;
+              if (!normalPostsMap.has(dedupKey)) {
+                normalPostsMap.set(dedupKey, unpacked);
               }
             });
 
@@ -397,11 +401,11 @@ class DodamFirebaseService {
   async updatePost(post) {
     if (!this.isConnected || !this.db || !post || !post.id) return false;
     try {
-      // 라이브 규칙상 기존 문서의 title/content 직접 덮어쓰기가 제한될 수 있으므로 새 리비전 문서로 생성하고 최신본을 우선 채택
-      const revDocId = `${post.id}_rev_${Date.now()}`.slice(0, 95);
+      const cleanId = post.id.split('_rev_')[0];
+      post.id = cleanId;
       post.timestamp = Date.now();
-      const payload = this.buildSchemaValidPostDoc(post, revDocId);
-      await this.db.collection('community_posts').doc(revDocId).set(payload);
+      const payload = this.buildSchemaValidPostDoc(post, cleanId);
+      await this.db.collection('community_posts').doc(cleanId).set(payload, { merge: true });
       return true;
     } catch (err) {
       console.error('[Dodam Firestore] 게시글 DB 수정 실패:', err);

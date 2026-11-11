@@ -237,9 +237,6 @@ class DodamCommunityApp {
           p.contentHtml = generated.html;
           p.content = generated.html;
           p.rawTextContent = generated.plainText;
-          if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
-            window.DodamFirebase.updatePost(p);
-          }
         }
       }
       if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
@@ -590,15 +587,32 @@ class DodamCommunityApp {
         });
 
         const seenIds = new Set();
+        const seenYoutubeIds = new Set();
         const merged = [];
+
         validRemote.forEach((p) => {
-          if (!p || !p.id || seenIds.has(p.id)) return;
-          seenIds.add(p.id);
+          if (!p || !p.id) return;
+          const baseId = p.id.split('_rev_')[0];
+          p.id = baseId;
+          if (seenIds.has(baseId) || this.deletedPostIds.has(baseId)) return;
+          if (p.youtubeVideoId) {
+            if (seenYoutubeIds.has(p.youtubeVideoId)) return;
+            seenYoutubeIds.add(p.youtubeVideoId);
+          }
+          seenIds.add(baseId);
           merged.push(p);
         });
+
         (this.data.posts || []).forEach((p) => {
-          if (!p || !p.id || seenIds.has(p.id) || this.deletedPostIds.has(p.id)) return;
-          seenIds.add(p.id);
+          if (!p || !p.id) return;
+          const baseId = p.id.split('_rev_')[0];
+          p.id = baseId;
+          if (seenIds.has(baseId) || this.deletedPostIds.has(baseId)) return;
+          if (p.youtubeVideoId) {
+            if (seenYoutubeIds.has(p.youtubeVideoId)) return;
+            seenYoutubeIds.add(p.youtubeVideoId);
+          }
+          seenIds.add(baseId);
           merged.push(p);
         });
         this.data.posts = merged;
@@ -620,9 +634,6 @@ class DodamCommunityApp {
               p.contentHtml = generated.html;
               p.content = generated.html;
               p.rawTextContent = generated.plainText;
-              if (window.DodamFirebase && typeof window.DodamFirebase.updatePost === 'function') {
-                window.DodamFirebase.updatePost(p);
-              }
             }
           }
           if (p.isYoutubeSummary || p.isAiReport || (p.title && (p.title.includes('|') || p.title.includes('초등학생')))) {
