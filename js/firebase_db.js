@@ -474,6 +474,26 @@ class DodamFirebaseService {
     return this.incrementReaction(postId, 'like', fullPostFallback);
   }
 
+  async incrementViews(postId, fullPostFallback = null) {
+    if (!this.isConnected || !this.db || !postId) return false;
+    try {
+      const docRef = this.db.collection('community_posts').doc(String(postId));
+      const snap = await docRef.get();
+      if (snap.exists) {
+        await docRef.update({
+          views: firebase.firestore.FieldValue.increment(1)
+        });
+      } else if (fullPostFallback) {
+        const copy = { ...fullPostFallback, views: Math.max(1, (fullPostFallback.views || 0) + 1) };
+        await this.createPost(copy);
+      }
+      return true;
+    } catch (err) {
+      console.warn('[FirebaseDB] incrementViews error:', err);
+      return false;
+    }
+  }
+
   // =========================================================
   // 2. 게시글 임시저장 (post_drafts)
   // =========================================================
