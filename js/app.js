@@ -7231,7 +7231,7 @@ class DodamCommunityApp {
         return true;
       }
       // 5. 카카오 계정 / 성공 닉네임 특화 매칭 (사용자 본인이 작성한 '성공' 닉네임 글 매칭)
-      if ((myId === 'kakao_5171001975' || myNick === '성공') && (authorNick === '성공' || post.id === 'custom-post-1794387362348')) {
+      if ((myId === 'kakao_5171001975' || myNick === '성공') && (authorNick === '성공' || post.id === 'custom-post-1794385676339')) {
         return true;
       }
       // 6. 게스트 세션 ID 일치

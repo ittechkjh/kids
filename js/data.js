@@ -191,18 +191,18 @@ window.DODAM_COMMUNITY_DATA = {
         "isYoutubeSummary": false,
         "isHot": false,
         "author": {
-            "childBadge": "초등 고학년 · 분당",
-            "userId": "kakao_5171001975",
-            "avatarBg": "bg-emerald-600 text-white",
+            "childBadge": "초등 4~6학년 · 분당",
+            "userId": "kakao_other_user",
+            "avatarBg": "bg-[#03C75A] text-white",
             "level": "🌱 Lv.1 새싹맘·대디",
-            "nickname": "성공"
+            "nickname": "카카오회원"
         },
         "youtubeVideoId": null,
         "timestamp": 1794387362348,
         "tags": [],
         "userReaction": null,
         "views": 3,
-        "rawTextContent": "초등학생 아이가 요즘 이사에 대해 고민이 많아요. 좋은 조언 부탁드립니다.",
+        "rawTextContent": "초등학생 아이가 요즘 성격과 교우관계에 대해 고민이 많아요. 좋은 조언 부탁드립니다.",
         "comments": [],
         "createdAt": "2026.11.11",
         "reactions": {
@@ -211,8 +211,8 @@ window.DODAM_COMMUNITY_DATA = {
             "like": 0
         },
         "guideType": "all",
-        "ageStage": "toddler_early",
-        "content": "초등학생 아이가 요즘 이사에 대해 고민이 많아요. 좋은 조언 부탁드립니다.",
+        "ageStage": "elem_high",
+        "content": "초등학생 아이가 요즘 성격과 교우관계에 대해 고민이 많아요. 좋은 조언 부탁드립니다.",
         "isAiReport": false,
         "region": "all",
         "category": "talk",
@@ -235,7 +235,7 @@ window.DODAM_COMMUNITY_DATA = {
             {
                 "level": "🌱 Lv.1 새싹맘·대디",
                 "createdAt": "2026.11.11 18:05",
-                "author": "성공",
+                "author": "카카오회원",
                 "id": "c-1794387918527",
                 "childBadge": "초등 고학년",
                 "content": "저희 애들도 이사 때문에 고민이 많습니다. 애들한테 물어보면 요즘 가장 큰 고민은 이사라고 할 정도네요..ㅠㅠ"
@@ -253,9 +253,9 @@ window.DODAM_COMMUNITY_DATA = {
         "youtubeVideoId": null,
         "author": {
             "childBadge": "초등 4~6학년 · 분당",
-            "nickname": "카카오회원",
-            "userId": "kakao_other_user",
-            "avatarBg": "bg-[#03C75A] text-white",
+            "nickname": "성공",
+            "userId": "kakao_5171001975",
+            "avatarBg": "bg-emerald-600 text-white",
             "level": "🌱 Lv.1 새싹맘·대디"
         },
         "content": "초등학생 자녀를 둔 학부모입니다. 이번에 이사를 고민 중인데 학교 전학이나 학군 적응 문제로 고민이 많네요. 경험 있으신 선배맘님들의 현실적인 조언과 경험담 부탁드립니다!",
