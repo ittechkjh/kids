@@ -13682,20 +13682,22 @@ class DodamCommunityApp {
 
     // 1. 실제 영상 자막(Transcript) 및 제목 기반 지능형 토픽 자동 감지
     const isShinJongHo = rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || transcript.includes('신종호') || transcript.includes('학습 민첩성');
+    const isKimSoYeon = !isShinJongHo && (rawTitle.includes('김소연') || transcript.includes('김소연') || rawTitle.includes('대치동') || transcript.includes('알았다는데 모르는 아이들') || transcript.includes('문장제') || transcript.includes('조건 추출'));
     const isPeerDating = rawTitle.includes('이성교제') || rawTitle.includes('사춘기') || transcript.includes('이성교제');
-    const isSleep = !isShinJongHo && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || transcript.includes('수면') || transcript.includes('통잠') || category === 'sleep');
-    const isFood = !isShinJongHo && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || transcript.includes('이유식') || transcript.includes('유아식') || category === 'food');
-    const isHealth = !isShinJongHo && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || transcript.includes('비염') || transcript.includes('해열') || category === 'health');
-    const isEdu = isShinJongHo || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || transcript.includes('공부') || transcript.includes('학습') || category === 'edu';
+    const isSleep = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || transcript.includes('수면') || transcript.includes('통잠') || category === 'sleep');
+    const isFood = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || transcript.includes('이유식') || transcript.includes('유아식') || category === 'food');
+    const isHealth = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || transcript.includes('비염') || transcript.includes('해열') || category === 'health');
+    const isEdu = isShinJongHo || isKimSoYeon || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || transcript.includes('공부') || transcript.includes('학습') || category === 'edu';
     const isGrowth = rawTitle.includes('훈육') || rawTitle.includes('떼쓰기') || rawTitle.includes('분리불안') || transcript.includes('훈육') || transcript.includes('떼쓰기') || category === 'growth';
 
     // [내용 파악 불가 시 대응 방안]: 자막이 없고 제목만으로 육아·교육 키워드를 판별할 수 없을 때
-    const hasKnownDomain = isShinJongHo || isPeerDating || isSleep || isFood || isHealth || isEdu || isGrowth;
+    const hasKnownDomain = isShinJongHo || isKimSoYeon || isPeerDating || isSleep || isFood || isHealth || isEdu || isGrowth;
     const isUnclear = !hasKnownDomain && !meta.hasTranscript;
 
     let topicKey = 'growth';
     if (isUnclear) topicKey = 'unclear';
     else if (isShinJongHo) topicKey = 'shinJongHo';
+    else if (isKimSoYeon) topicKey = 'kimSoYeon';
     else if (isEdu) topicKey = 'edu';
     else if (isPeerDating) topicKey = 'adolescence';
     else if (isSleep) topicKey = 'sleep';
@@ -13706,6 +13708,8 @@ class DodamCommunityApp {
     let cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
     if (isShinJongHo) {
       cleanTitle = "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+    } else if (isKimSoYeon) {
+      cleanTitle = "이건 무조건 가르치세요! 26년 차 대치동 전문가가 강조하는 수학·과학 문해력 (김소연 작가 강연 요약)";
     } else if (isUnclear) {
       cleanTitle = `[추천 영상] ${cleanTitle} - 핵심 내용 시청 & 부모 생각 나눔 가이드`;
     }
@@ -13887,6 +13891,105 @@ A. 이때 "그러니까 엄마가 복습하라고 했잖아"라는 지적은 치
 Q2. 아이가 스스로 호기심을 갖지 않고 질문도 거의 안 하는데 어쩌죠?
 A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두려워합니다. 부모가 먼저 일상에서 호기심을 표현하는 롤모델이 되어주세요. "엄마는 길 가다가 이 나뭇잎 모양이 왜 다른지 신기하더라. 너는 어떻게 생각해?"라며 엉뚱한 질문도 환영받는 안전한 가정 분위기를 만들어주시는 것이 첫걸음입니다.`,
         outro: `자녀 교육의 궁극적인 목표는 높은 시험 점수가 아니라, 세상에 대한 따뜻한 호기심을 품고 스스로 배움을 즐기는 단단한 아이로 키워내는 것입니다. 부모가 건네는 따뜻한 질문 한마디가 아이의 지적 탐구심에 불을 지피는 가장 밝은 등불이 됩니다.
+
+도담 육아가이드 리포트는 언제나 전국 부모님들의 현명하고 따뜻한 교육 여정을 힘차게 응원합니다. 지금 바로 도담 커뮤니티에서 더 많은 실전 학습 꿀팁과 따뜻한 소통을 만나보세요!`
+      },
+      kimSoYeon: {
+        badge: '📐 수학·과학 문해력',
+        subName: '대치동 26년 학습 코칭 & 문장제 문제 정복',
+        targetAge: '초·중등 학부모',
+        focus: '문장제 문제 분석·조건 추출력·과학 인과관계',
+        keywords: ['수학문해력', '김소연작가', '대치동학습코칭', '문장제문제', '조건추출'],
+        b1: '계산만 빠른 아이가 서술형·문장제 문제에서 무너지는 근본 원인: "글자만 읽고 분석하지 않는 습관"',
+        b2: '최상위권과 중하위권의 결정적 차이: 문제를 보자마자 달려들지 않고 "조건을 추출하는 힘"',
+        b3: '부모의 성급한 재촉("왜 멍 때리니?")을 멈추고, 하루 1문제라도 스스로 사고하고 설명하게 하는 코칭법',
+        c2Title: '[원인 분석] 계산은 잘하는데 문장제 문제를 못 푸는 3대 원인',
+        c2Box1Title: '단순 계산 집착',
+        c2Box1P1: '문제를 보자마자 숫자만 보고',
+        c2Box1P2: '계산부터 달려드는 잘못된 습관',
+        c2Box1Sub: '문제의 본질과 구조를 보지 못함',
+        c2Box2Title: '조건 추출력 부재',
+        c2Box2P1: '문제 속 주어진 조건과 구하는 것을',
+        c2Box2P2: '분석하고 분류하는 훈련 부족',
+        c2Box2Sub: '글자만 읽고 뇌로 사고하지 않음',
+        c2Box3Title: '부모의 조급한 재촉',
+        c2Box3P1: '생각하고 고민하는 아이에게',
+        c2Box3P2: '"왜 멍 때려, 빨리 풀어" 압박',
+        c2Box3Sub: '깊이 있는 사고 과정을 방해',
+        c3Title: '[실전 솔루션] 대치동 26년 전문가의 초등 문해력 3단계 코칭 공식',
+        c3Step1Name: '1단계 조건 추출',
+        c3Step1Title: '문제 속 조건과 구하는 것 밑줄 긋기',
+        c3Step1P1: '"이 문제에서 알려준 조건은 뭐니?"',
+        c3Step1P2: '"최종적으로 구해야 하는 것은 뭐니?"',
+        c3Step1Sub: '계산 전 문제를 분석하는 힘 기르기',
+        c3Step2Name: '2단계 설명하기',
+        c3Step2Title: '아이 자신의 언어로 문제 설명해 보기',
+        c3Step2P1: '"네가 이해한 내용을 엄마(아빠)에게 들려줄래?"',
+        c3Step2P2: '설명할 수 있어야 진짜 아는 것',
+        c3Step2Sub: '메타인지와 서술형 사고력 확장',
+        c3Step3Name: '3단계 하루 1문제',
+        c3Step3Title: '양보다 질! 깊이 있는 1문제 완벽 정복',
+        c3Step3P1: '무리한 분량 숙제보다 1문제 깊이 파고들기',
+        c3Step3P2: '티끌 모아 태산! 작은 성공의 누적',
+        c3Step3Sub: '평생 가는 최상위권 분석 습관 완성',
+        c4Title: '[실천 계획] 4주 완성 수학·과학 문해력 습관 체크리스트',
+        c4W1: '1주차 : 계산 재촉 금지',
+        c4W1L1: '✔ "빨리 풀어"라는 말 하지 않기',
+        c4W1L2: '✔ 고민하고 생각하는 시간 온전히 기다려주기',
+        c4W1L3: '✔ 멍 때리는 것이 아니라 사고하는 과정임을 인정',
+        c4W1Sub: '사고하는 시간 확보 주간',
+        c4W2: '2주차 : 조건 밑줄 긋기',
+        c4W2L1: '✔ 문제의 주어진 조건 1, 2 찾기',
+        c4W2L2: '✔ 구해야 하는 질문에 동그라미 치기',
+        c4W2L3: '✔ 바로 식 쓰지 않고 구조 파악하기',
+        c4W2Sub: '조건 추출 습관 정착',
+        c4W3: '3주차 : 설명하는 공부법',
+        c4W3L1: '✔ 하루 1문제 풀이 과정 소리 내어 말하기',
+        c4W3L2: '✔ 왜 그렇게 식을 세웠는지 이유 질문하기',
+        c4W3L3: '✔ 정답보다 풀이 접근법 아낌없이 칭찬',
+        c4W3Sub: '메타인지 표현력 강화',
+        c4W4: '4주차 : 오답 분석 루틴',
+        c4W4L1: '✔ "단순 실수"로 치부하지 않고 오답 원인 분석',
+        c4W4L2: '✔ 조건을 잘못 읽었는지 개념이 부족했는지 확인',
+        c4W4L3: '✔ 스스로 다시 풀어보는 자기효능감 고취',
+        c4W4Sub: '최상위권 분석력 완성',
+        c5Title: "[전문가 조언] 수학 문해력 코칭 DO vs DON'T",
+        c5Do1: '✔ 문제를 보자마자 조건을 꼼꼼히 뜯어보는 시간 주기',
+        c5Do2: '✔ 아이가 푼 방식을 자신의 언어로 설명하게 들어주기',
+        c5Do3: '✔ 하루 단 1문제라도 완벽하게 분석하는 작은 성공 경험',
+        c5Do4: '✔ "고민하고 파악하는 모습이 정말 멋지다" 과정 칭찬',
+        c5Dont1: '✘ "왜 이렇게 멍 때려? 빨리빨리 계산부터 해야지!"',
+        c5Dont2: '✘ 읽고 틀렸을 때 "다 아는 걸 왜 실수했니?" 다그치기',
+        c5Dont3: '✘ 많은 양의 문제집만 강요하며 기계적 계산 반복시키기',
+        c5Dont4: '✘ 풀이 과정을 볼 시간도 없이 정답 점수만 체크하기',
+        intro: `초등 시기 자녀를 둔 학부모님들의 가장 큰 고민 중 하나는 "단순 연산이나 계산은 곧잘 하는데, 서술형 문장제 문제만 나오면 손도 못 대고 틀린다"는 것입니다. 아이는 "분명히 다 읽었는데 왜 틀렸는지 모르겠다"며 억울해하고, 부모는 "쉬운 문제를 왜 또 실수했냐"며 답답해하는 악순환이 반복됩니다.
+
+26년 동안 대치동 최전선에서 수많은 최상위권과 중하위권 아이들을 밀착 코칭해 온 김소연 작가('알았다는데 모르는 아이들' 저자)는 단언합니다. 아이가 문장제 문제를 못 푸는 이유는 머리가 나쁘거나 수학적 감각이 부족해서가 아니라, '문제를 분석하고 조건을 추출하는 수학·과학 문해력'이 훈련되지 않았기 때문입니다.
+
+오늘은 대치동 26년 차 전문가가 강력히 권고하는 초등 문장제 문제 정복 솔루션과, 평생의 학습 격차를 가르는 '조건 추출 및 문제 분석 습관' 형성법을 정리해 드립니다.`,
+        sec1: `계산은 빠른데 문장제 문제에서 무너지는 결정적 이유는 아이들이 '문제를 읽어야 하는데 글자만 읽고 있기 때문'입니다.
+
+부모님들은 아이가 문제를 보자마자 달려들어 빠르게 계산식을 쓰는 것을 '수학을 잘하는 것'으로 착각하기 쉽습니다. 하지만 서술형·문장제 문제에서는 문제 속에 숨겨진 조건(주어진 데이터)과 구하고자 하는 핵심 목표를 분리하여 파악하는 '분석력'이 필수입니다.
+
+아이가 문제를 읽고 가만히 고민하고 있으면, 많은 부모님들이 "왜 멍 때리고 있니? 빨리 풀어야지!"라며 재촉합니다. 그러나 이 시간은 아이의 뇌가 문제를 파악하고 사고하는 가장 중요한 골든타임입니다. 부모의 성급한 재촉은 아이의 사고 과정을 차단하고, 결국 기계적으로 숫자만 조합해 풀다가 치명적인 오답과 자신감 하락으로 이어지게 만듭니다.
+
+대치동에서 26년간 관찰한 최상위권 아이들의 결정적 차이는 문제 풀이의 속도가 아니라, '문제를 끝까지 분석하고 조건을 연결하는 힘을 습관적으로 오래 꾸준히 발휘한다'는 점입니다.`,
+        sec2: `아이의 수학·과학 문해력을 키우고 문장제 문제를 확실하게 정복하는 3단계 실천 공식입니다.
+
+1단계는 '조건 추출 훈련 (밑줄 긋기)'입니다. 문제를 풀기 전, 반드시 형광펜이나 연필로 문제에 주어진 '조건 1, 조건 2'에 밑줄을 긋고, '최종적으로 구해야 하는 것'에 동그라미를 치게 하세요. 무작정 계산에 달려들던 습관이 멈추고 문제의 구조가 눈에 들어오기 시작합니다.
+
+2단계는 '설명하는 공부법 (메타인지 확장)'입니다. 아이가 문제를 푼 후 "네가 이 문제를 어떻게 이해했고 왜 이렇게 식을 세웠는지 엄마(아빠)에게 1분만 설명해 줄래?"라고 요청해 보세요. 자신이 이해한 내용을 말로 설명할 수 있을 때 비로소 진정한 자신의 지식이 됩니다.
+
+3단계는 '양보다 질, 하루 1문제 깊이 파기'입니다. 많은 양의 문제집을 풀리려는 욕심을 내려놓으세요. 하루에 단 1문제라도 조건을 꼼꼼히 뜯어보고 다양한 방법으로 접근해 보는 경험이 쌓여야 합니다. 티끌 모아 태산이 되듯, 이 작은 성공이 누적되면 아이는 스스로 어려운 응용 문제도 거뜬히 해결하는 자신감을 얻게 됩니다.`,
+        sec3: `수학·과학 문해력을 체계적으로 완성하는 4주 로드맵입니다. 1주차에는 계산을 재촉하지 않고 아이가 문제 앞에서 고민하는 시간을 온전히 기다려줍니다. 2주차에는 조건 밑줄 긋기를 통해 문제 분석 습관을 들입니다. 3주차에는 하루 1문제 설명하기를 통해 풀이의 인과관계를 스스로 점검하게 하며, 4주차에는 틀린 문제를 단순 실수로 넘기지 않고 어디서 조건이 꼬였는지 탐색하는 오답 분석 문화를 구축합니다.`,
+        sec4: `학부모님들이 가장 자주 묻는 핵심 질의응답입니다.
+
+Q1. 아이가 책을 많이 읽는데도 수학 문장제 문제를 어려워해요.
+A. 일반 문학 도서 독서와 '수학·과학 텍스트의 독해'는 뇌에서 작동하는 방식이 다릅니다. 일반 독서는 맥락을 유추하며 읽지만, 수학·과학은 단어 하나, 기호 하나의 조건과 인과관계를 정밀하게 분석해야 합니다. 문제 속 조건을 분석하는 특화된 독해 훈련이 별도로 필요합니다.
+
+Q2. 하루 1문제만 풀면 진도가 너무 늦지 않을까요?
+A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게 1문제를 분석하는 틀을 갖추는 것이 훨씬 중요합니다. 이 분석 습관이 형성된 아이는 중·고등학교에 진학했을 때 복합 응용 문제를 압도적인 속도로 소화해 냅니다.`,
+        outro: `대치동 26년 차 전문가가 강조하듯, 초등 시기의 공부는 정답을 빠르게 찍어내는 기계를 만드는 것이 아니라 깊이 있게 생각하고 스스로 분석하는 힘을 길러주는 여정입니다. 부모의 따뜻한 기다림과 올바른 코칭이 아이의 평생 공부 그릇을 만듭니다.
 
 도담 육아가이드 리포트는 언제나 전국 부모님들의 현명하고 따뜻한 교육 여정을 힘차게 응원합니다. 지금 바로 도담 커뮤니티에서 더 많은 실전 학습 꿀팁과 따뜻한 소통을 만나보세요!`
       },
@@ -14699,7 +14802,7 @@ A. 그동안 정답만을 요구받았던 아이들은 질문하는 것을 두�
         </div>
       </div>`;
 
-    return { html, plainText, cleanTitle, guideType: topicKey === 'shinJongHo' ? 'edu' : topicKey, isUnclear };
+    return { html, plainText, cleanTitle, guideType: (topicKey === 'shinJongHo' || topicKey === 'kimSoYeon') ? 'edu' : topicKey, isUnclear };
   }
 
   async executeYoutubeSummaryReport() {
