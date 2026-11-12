@@ -322,11 +322,17 @@ class DodamFirebaseService {
               if (raw.category === '__sys_db__') {
                 const sysType = raw.region;
                 if (sysType === 'deleted_posts') {
-                  try {
-                    const parsed = JSON.parse(raw.content || '{}');
-                    if (parsed.deletedId) deletedIdsSet.add(parsed.deletedId);
-                    if (Array.isArray(parsed.ids)) parsed.ids.forEach((id) => deletedIdsSet.add(id));
-                  } catch (e) {}
+                  if (!seenSysTypes.has('deleted_posts')) {
+                    seenSysTypes.add('deleted_posts');
+                    try {
+                      const parsed = JSON.parse(raw.content || '{}');
+                      if (Array.isArray(parsed.ids)) {
+                        parsed.ids.forEach((id) => deletedIdsSet.add(id));
+                      } else if (parsed.deletedId) {
+                        deletedIdsSet.add(parsed.deletedId);
+                      }
+                    } catch (e) {}
+                  }
                 } else if (!seenSysTypes.has(sysType)) {
                   // timestamp 내림차순이므로 첫 번째 레코드가 가장 최신 상태
                   seenSysTypes.add(sysType);
@@ -427,6 +433,24 @@ class DodamFirebaseService {
       return true;
     } catch (err) {
       console.error('[Dodam Firestore] 게시글 DB 삭제 기록 실패:', err);
+      return false;
+    }
+  }
+
+  async undeletePost(postId) {
+    if (!this.isConnected || !this.db || !postId) return false;
+    try {
+      const docId = String(postId);
+      this.latestSysState.deleted_posts = (this.latestSysState.deleted_posts || []).filter(
+        (id) => id !== docId
+      );
+      await this.writeSysStateRecord('deleted_posts', {
+        undeletedId: docId,
+        ids: this.latestSysState.deleted_posts
+      });
+      return true;
+    } catch (err) {
+      console.error('[Dodam Firestore] 게시글 복원 실패:', err);
       return false;
     }
   }

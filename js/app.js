@@ -249,8 +249,8 @@ class DodamCommunityApp {
       }
     });
 
-    // 인위적인 자동 게시글 생성 및 중복 글 상단 노출 차단
-    this.data.posts = (this.data.posts || []).filter((p) => p && !String(p.id).startsWith('daily-ai-post-'));
+    // 시간대별 불규칙한 자연스러운 일일 글 점진적 발행 (현재 시각 이전 글만 순차 노출)
+    this.ensureDailyActivePosts();
 
     // ==========================================
     // SPA 뒤로가기/앞으로가기 브라우저 히스토리 라우팅 완벽 지원
@@ -619,6 +619,9 @@ class DodamCommunityApp {
             }
           }
         });
+
+        // 시간대별 불규칙한 자연스러운 일일 글 점진적 발행 (현재 시각 이전 글만 순차 노출)
+        this.ensureDailyActivePosts();
 
         if (this.currentView === 'board') {
           this.renderBoardCategories();
@@ -3632,7 +3635,7 @@ class DodamCommunityApp {
                 <span class="truncate">${authorName}</span>
                 ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px] shrink-0" title="공식 리포트"></i>' : ''}
               </div>
-              <div class="col-span-1 text-center text-slate-400 text-[11px] shrink-0 whitespace-nowrap">${post.createdAt || '방금'}</div>
+              <div class="col-span-1 text-center text-slate-400 text-[11px] shrink-0 whitespace-nowrap">${this.formatPostDate(post)}</div>
               <div class="col-span-1 text-center text-slate-400 text-[11px] shrink-0 whitespace-nowrap">${views.toLocaleString()}</div>
             </div>
             <!-- 모바일 카페 목록 (가독성 최적화 & 글자 삐져나옴/줄바꿈 완벽 해결) -->
@@ -3651,7 +3654,7 @@ class DodamCommunityApp {
                   <span class="truncate font-medium max-w-[120px]">${authorName}</span>
                   ${post.isAiReport ? '<i class="fa-solid fa-circle-check text-purple-600 text-[10px] shrink-0" title="공식 리포트"></i>' : ''}
                   <span class="text-stone-300">·</span>
-                  <span class="shrink-0 text-slate-400">${post.createdAt || '방금'}</span>
+                  <span class="shrink-0 text-slate-400">${this.formatPostDate(post)}</span>
                 </div>
                 <div class="flex items-center gap-2 shrink-0 text-[11px] text-slate-400">
                   <span>조회 ${views.toLocaleString()}</span>
@@ -3703,7 +3706,7 @@ class DodamCommunityApp {
                       ${hubText ? `<span class="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 text-[10px] font-bold">${hubText}</span>` : ''}
                       ${ageText ? `<span class="text-slate-400 text-[11px] font-medium hidden sm:inline">(${ageText})</span>` : ''}
                       <span class="text-slate-300">·</span>
-                      <span class="text-slate-400 text-[11px]">${post.createdAt}</span>
+                      <span class="text-slate-400 text-[11px]">${this.formatPostDate(post)}</span>
                     </div>
 
                     <button
@@ -4665,7 +4668,7 @@ class DodamCommunityApp {
       <body class="bg-stone-100 text-slate-900 p-4 sm:p-10">
         <div class="max-w-4xl mx-auto bg-white rounded-3xl border border-stone-200 p-6 sm:p-10 shadow-sm space-y-6">
           <div class="flex items-center justify-between text-xs text-slate-500">
-            <span><strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> · ${this.escapeSvgXml(post.createdAt || '')} · 조회수 ${(post.views !== undefined ? post.views : 0).toLocaleString()}</span>
+            <span><strong>${this.escapeSvgXml(post.author?.nickname || '도담맘')}</strong> · ${this.escapeSvgXml(this.formatPostDate(post))} · 조회수 ${(post.views !== undefined ? post.views : 0).toLocaleString()}</span>
             <button onclick="window.print()" class="px-3 py-1.5 rounded-lg border border-stone-200 font-bold text-slate-700 hover:bg-stone-50 cursor-pointer">🖨️ 인쇄 / PDF 저장</button>
           </div>
           <h1 class="text-2xl font-black text-slate-900 pb-4 border-b-2 border-slate-800">${this.escapeSvgXml(post.title)}</h1>
@@ -4769,7 +4772,7 @@ class DodamCommunityApp {
     document.getElementById('post-detail-author').textContent = post.author?.nickname || '도담회원';
     document.getElementById('post-detail-author-badge').textContent = post.author?.childBadge ? `(${post.author.childBadge})` : '';
     document.getElementById('post-detail-region').textContent = post.localHubName || (post.region === 'all' ? '전국' : post.region);
-    document.getElementById('post-detail-date').textContent = post.createdAt;
+    document.getElementById('post-detail-date').textContent = this.formatPostDate(post);
     document.getElementById('post-detail-views').textContent = (post.views !== undefined ? post.views : 0).toLocaleString();
 
     const avatarEl = document.getElementById('post-detail-avatar');
@@ -5107,8 +5110,254 @@ class DodamCommunityApp {
   }
 
   ensureDailyActivePosts() {
-    // 사용자 요청에 따라 인위적인 일일 자동 게시글 생성 및 임의 날짜 변경 상단 노출 전면 중단
-    return;
+    const todayStr = this.getKstDateStr(Date.now());
+    const todayStartMs = this.getKstTodayStartMs();
+    const nowMs = Date.now();
+
+    // 일일 10개 커뮤니티 활성 게시글 템플릿 (실제 부모님들의 진솔한 일상 고민, 학령기, 이유식, 동네 정보)
+    const dailyTemplates = [
+      {
+        baseHour: 7,
+        title: '초3 수학 사고력 학원 vs 교과 심화, 지금 시기에 어떤 게 더 맞을까요?',
+        content: '현재 아이가 초등학교 3학년 올라가면서 수학 학원 고민이 깊어지고 있어요. 연산이랑 교과 기본은 혼자서 곧잘 따라오는데, 3학년부터는 심화나 사고력을 병행해 줘야 할지 고민입니다. 동네 엄마들은 벌써 사고력 대형 학원 보내던데 너무 달리는 건 아닐까 걱정도 되고요... 혹시 비슷한 시기 거치신 선배 맘님들 어떤 방향이 아이에게 더 좋았는지 소중한 경험 나눠주시면 감사하겠습니다!',
+        category: 'qna',
+        ageStage: 'child',
+        localHub: 'hub-gyeonggi-south',
+        localHubName: '경기 판교·분당',
+        isQuestion: true,
+        author: {
+          nickname: '판교워킹맘',
+          level: '🌿 줄기맘·대디',
+          region: '경기 성남시 분당구',
+          childBadge: '초3 여아',
+          avatarBg: 'bg-emerald-600 text-white'
+        },
+        tags: ['초등수학', '학원고민', '판교맘']
+      },
+      {
+        baseHour: 8,
+        title: '10개월 후기 이유식 하루 3번 스케줄이랑 수유 텀 어떻게 맞추고 계신가요?',
+        content: '중기에서 후기로 넘어가면서 하루 세 끼 먹이기 시작했는데 스케줄 맞추기가 정말 쉽지 않네요 ㅠㅠ 기상 후 첫 수유하고 2시간 뒤 첫 이유식 주면 잘 안 먹고 칭얼대요. 이유식 먹이고 바로 보충 수유를 해야 할지, 아니면 1~2시간 텀을 둬야 할지 헷갈립니다. 선배맘님들은 후기 이유식 때 식사 3번이랑 분유 텀 어떻게 운영하셨는지 조언 부탁드려요!',
+        category: 'qna',
+        ageStage: 'infant',
+        localHub: 'hub-seoul-gangnam',
+        localHubName: '서울 강남·서초',
+        isQuestion: true,
+        author: {
+          nickname: '송파둥이맘',
+          level: '🌱 새싹맘·대디',
+          region: '서울 송파구',
+          childBadge: '10개월 남아',
+          avatarBg: 'bg-rose-500 text-white'
+        },
+        tags: ['후기이유식', '수유텀', '10개월아기']
+      },
+      {
+        baseHour: 10,
+        title: '주말에 5~6세 아이랑 나들이 가기 좋은 실내 박물관·체험관 추천드려요 🏛️',
+        content: '날씨 상관없이 아이랑 유익하게 다녀올 수 있는 수도권 실내 체험 명소 몇 군데 정리해봤어요!\n1. 국립어린이과학관 (대학로): 예약 필수지만 체험형 전시가 정말 알차요.\n2. 경기도어린이박물관 (용인): 활동량이 많은 5~7세 아이들이 하루 종일 신나게 뜁니다.\n3. 서울백제어린이박물관 (송파): 올림픽공원 산책 겸 묶어서 다녀오기 딱 좋아요.\n이번 주말 나들이 계획 중이신 분들 참고해보세요!',
+        category: 'info',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-gangbuk',
+        localHubName: '서울 마포·용산',
+        isQuestion: false,
+        author: {
+          nickname: '마포책육아맘',
+          level: '🌳 열매나무맘',
+          region: '서울 마포구',
+          childBadge: '5세 남아',
+          avatarBg: 'bg-amber-600 text-white'
+        },
+        tags: ['주말나들이', '실내박물관', '유아체험']
+      },
+      {
+        baseHour: 11,
+        title: '초1 입학 준비, 알림장 확인과 스스로 책가방 챙기기 연습 꿀팁',
+        content: '첫째 아이 초1 입학하고 1년 동안 겪으면서 가장 중요하다고 느낀 건 자기 물건 챙기는 습관이었어요.\n냉장고나 아이 책상 앞에 체크리스트 보드를 자석으로 붙여두고, 알림장 보면서 필통, 알림장, 물통, 실내화 가방 체크하게 했더니 1학기 지나고 나서는 혼자서도 척척 챙기더라고요. 처음엔 답답해도 부모가 대신 챙겨주지 않고 옆에서 지켜봐 주는 게 제일 큰 도움이 되었습니다 ㅎㅎ',
+        category: 'info',
+        ageStage: 'child',
+        localHub: 'hub-gyeonggi-south',
+        localHubName: '수원 광교·영통',
+        isQuestion: false,
+        author: {
+          nickname: '광교현서맘',
+          level: '🌿 줄기맘·대디',
+          region: '수원 영통구',
+          childBadge: '초1 여아',
+          avatarBg: 'bg-sky-600 text-white'
+        },
+        tags: ['초1입학', '자기주도습관', '초등준비']
+      },
+      {
+        baseHour: 13,
+        title: '오늘 드디어 3세 떼쓰기 고비 넘기고 칼육퇴 성공했습니다 ㅠㅠ',
+        content: '요즘 싫어, 내가 할 거야 병에 걸려서 외출 한번 하려면 30분씩 실랑이하느라 진이 다 빠졌는데, 오늘은 마음 내려놓고 선택권을 두 개 줬더니 순순히 따라주네요 (파란 양말 신을래? 노란 양말 신을래?).\n샤워하고 밥 먹이고 동화책 3권 읽어주니 8시에 스르륵 잠들었습니다. 육퇴 후 마시는 따뜻한 루이보스 티 한 잔이 이렇게 행복할 수가 없네요. 다들 오늘 육아 고생 많으셨습니다, 모두 평안한 밤 되세요!',
+        category: 'lounge',
+        ageStage: 'toddler',
+        localHub: 'hub-gyeonggi-north',
+        localHubName: '경기 일산·고양',
+        isQuestion: false,
+        author: {
+          nickname: '일산둥이아빠',
+          level: '🌱 새싹맘·대디',
+          region: '경기 고양시 일산서구',
+          childBadge: '3세 쌍둥이',
+          avatarBg: 'bg-indigo-600 text-white'
+        },
+        tags: ['육퇴완료', '3세육아', '훈육공감']
+      },
+      {
+        baseHour: 15,
+        title: '해운대·센텀 쪽 유모차 진입 편하고 수유실 깨끗한 아기 동반 식당 공유해요',
+        content: '돌 전후 아기 데리고 외식할 때마다 유모차 둘 공간이나 아기의자 있는지 매번 전화로 물어봤었는데요, 최근 다녀온 곳 중에 정말 만족스러웠던 3곳입니다.\n1. 센텀 신세계 식당가: 가족 휴게실/수유실 청결도 전국 최고 수준.\n2. 마린시티 해변 산책로 솥밥집: 아기용 숭늉과 미역국 무료 서비스.\n3. 기장 힐튼 아난티타운 브런치: 휠체어/유모차 경사로가 완벽해서 이동이 정말 편해요.\n부산 맘님들 아기랑 외식하실 때 참고하세요!',
+        category: 'info',
+        ageStage: 'infant',
+        localHub: 'hub-busan',
+        localHubName: '부산 해운대·센텀',
+        isQuestion: false,
+        author: {
+          nickname: '해운대윤우맘',
+          level: '🌷 꽃봉오리맘',
+          region: '부산 해운대구',
+          childBadge: '11개월 남아',
+          avatarBg: 'bg-teal-600 text-white'
+        },
+        tags: ['부산맘', '아기동반식당', '해운대센텀']
+      },
+      {
+        baseHour: 17,
+        title: '두돌 지난 아이 밤에 자다 깨서 우는 야경증/야제증 겪어보신 분 계신가요?',
+        content: '생후 25개월 된 아이인데 요즘 일주일에 서너 번은 새벽 2시쯤 자지러지게 울면서 깨요. 안아줘도 밀쳐내고 눈은 감은 채로 발버둥을 치는데 혹시 이게 야경증일까요? 15분 정도 지나면 언제 그랬냐는 듯 다시 잠들긴 하는데 매일 밤마다 너무 안쓰럽고 가족들도 잠을 못 자서 피로가 누적되네요 ㅠㅠ 성장통인지 낮 동안 자극이 많아서인지... 비슷한 경험 극복하신 분 조언 부탁드립니다.',
+        category: 'qna',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-southwest',
+        localHubName: '서울 동작·관악',
+        isQuestion: true,
+        author: {
+          nickname: '보라매하은맘',
+          level: '🌱 새싹맘·대디',
+          region: '서울 동작구',
+          childBadge: '25개월 여아',
+          avatarBg: 'bg-rose-600 text-white'
+        },
+        tags: ['야경증', '수면고민', '두돌아기']
+      },
+      {
+        baseHour: 18,
+        title: '초등 고학년 스마트폰 첫 개통 시 규칙과 스크린타임 설정 팁',
+        content: '초등 5학년 올라가면서 학원 동선 때문에 스마트폰을 개통해 줬는데, 시작부터 규칙을 정하는 게 중요하다고 해서 온 가족이 둘러앉아 스마트폰 서약서를 썼습니다.\n1. 잠잘 때는 거실 충전 스테이션에 거치하기\n2. 숙제나 학원 공부 중에는 서랍에 넣어두기\n3. 하루 유튜브/게임 사용 시간은 최대 1시간으로 패밀리링크 설정\n아이도 본인이 직접 약속 서명하니 반발 없이 잘 지키고 있어요. 스마트폰 개통 고민 중이신 부모님들께 도움 되길 바랍니다!',
+        category: 'info',
+        ageStage: 'high',
+        localHub: 'hub-daegu',
+        localHubName: '대구 수성·달서',
+        isQuestion: false,
+        author: {
+          nickname: '대구수성맘',
+          level: '🌷 꽃봉오리맘',
+          region: '대구 수성구',
+          childBadge: '초5 남아',
+          avatarBg: 'bg-amber-600 text-white'
+        },
+        tags: ['스마트폰규칙', '초5학부모', '패밀리링크']
+      },
+      {
+        baseHour: 20,
+        title: '환절기 유아 비염 마른 기침, 저희 집에서 효과 본 온습도 관리법 💧',
+        content: '아침저녁 일교차 커지면 아이 코막힘이랑 마른 기침이 심해져서 소아과 약만 달고 살았는데요, 생활 환경 바꾸고 확 좋아졌어요.\n1. 침실 온도는 21~22도, 습도는 가열식 가습기로 55~60% 철저히 유지\n2. 아침에 일어나자마자 미온수 한 컵 마시게 하고 식염수 코 세척\n3. 자기 전 베개 커버 매일 털고 3일에 한 번 60도 온수 세탁\n작은 습관이지만 알레르기 비염 있는 아이들에게 정말 큰 차이를 만들어주는 것 같아요!',
+        category: 'info',
+        ageStage: 'child',
+        localHub: 'hub-chungcheong',
+        localHubName: '세종·대전',
+        isQuestion: false,
+        author: {
+          nickname: '세종나래맘',
+          level: '🌿 줄기맘·대디',
+          region: '세종시 나성동',
+          childBadge: '초2 여아',
+          avatarBg: 'bg-emerald-600 text-white'
+        },
+        tags: ['환절기비염', '온습도관리', '유아건강']
+      },
+      {
+        baseHour: 21,
+        title: '5세 유치원 vs 어린이집(7세까지 연장), 어떤 선택이 더 나을까요? 선배맘님들 조언 부탁드려요',
+        content: '내년에 5세(만 3세) 올라가는 첫째 아이인데, 지금 다니는 가정/민간 어린이집에 7세까지 계속 보낼지 아니면 일반 사립/단설 유치원으로 옮길지 정말 고민되네요. 활동량이나 누리과정 커리큘럼 생각하면 유치원이 맞나 싶다가도, 낮잠이랑 하원 시간(맞벌이) 생각하면 어린이집이 훨씬 안정적이거든요... 혹시 비슷한 고민하셨던 분들 어떤 기준으로 결정하셨는지 조언 부탁드려요!',
+        category: 'qna',
+        ageStage: 'toddler',
+        localHub: 'hub-seoul-gangnam',
+        localHubName: '서울 송파·잠실',
+        isQuestion: true,
+        author: {
+          nickname: '잠실솔이맘',
+          level: '🌳 열매나무맘',
+          region: '서울 송파구 잠실동',
+          childBadge: '4세 여아',
+          avatarBg: 'bg-pink-600 text-white'
+        },
+        tags: ['5세유치원', '어린이집유치원고민', '잠실맘']
+      }
+    ];
+
+    if (!Array.isArray(this.data.posts)) this.data.posts = [];
+    const existingIds = new Set(this.data.posts.map((p) => p && p.id));
+
+    // 당일 날짜 기반 의사 난수 생성 함수 (새로고침 시 시간 변동 방지)
+    const getPseudoRandom = (seed) => {
+      const x = Math.sin(seed) * 10000;
+      return x - Math.floor(x);
+    };
+
+    const dateSeed = todayStr.split('-').reduce((acc, c) => acc * 31 + parseInt(c, 10), 0);
+
+    dailyTemplates.forEach((tpl, idx) => {
+      const postId = `daily-ai-post-${todayStr}-${idx + 1}`;
+      if (existingIds.has(postId) || (this.deletedPostIds && this.deletedPostIds.has(postId))) return;
+
+      // 매시간 정각이나 특정 분에 고정되지 않도록 3~53분 사이의 불규칙한 분과 초 계산
+      const randMin = Math.floor(getPseudoRandom(dateSeed + idx * 17 + 5) * 51) + 3;
+      const randSec = Math.floor(getPseudoRandom(dateSeed + idx * 31 + 13) * 60);
+
+      const postTime = todayStartMs + (tpl.baseHour * 3600 + randMin * 60 + randSec) * 1000;
+
+      // [사용자 요구사항]: 한 번에 다 올리지 않고, 현재 시간(nowMs)이 지난 글만 순차적으로 등장!
+      if (postTime > nowMs) return;
+
+      // 자연스러운 조회수 (15 ~ 35회)
+      const seedNum = (postId.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) + idx * 7) % 21;
+      const initialViews = 15 + seedNum;
+      const initialLikes = Math.max(0, Math.floor((initialViews - 15) / 10));
+
+      const newPost = {
+        id: postId,
+        title: tpl.title,
+        content: tpl.content,
+        category: tpl.category,
+        ageStage: tpl.ageStage,
+        localHub: tpl.localHub,
+        localHubName: tpl.localHubName,
+        localTopic: 'general',
+        isQuestion: !!tpl.isQuestion,
+        isAiGenerated: true, // 관리자에게만 🤖 AI 배지 표시용
+        images: [],
+        author: tpl.author,
+        timestamp: postTime,
+        createdAt: this.formatPostDate({ timestamp: postTime }),
+        views: initialViews,
+        reactions: { like: initialLikes, hug: 0, tip: 0 },
+        comments: [],
+        tags: tpl.tags
+      };
+
+      this.data.posts.push(newPost);
+      existingIds.add(postId);
+    });
+
+    // 최신순 정렬
+    this.data.posts.sort((a, b) => {
+      const tA = (a && a.timestamp) || 0;
+      const tB = (b && b.timestamp) || 0;
+      return tB - tA;
+    });
   }
 
   isPostHot(post) {
@@ -7057,7 +7306,7 @@ class DodamCommunityApp {
             </div>
           </div>
           <div class="flex items-center justify-between text-[10px] text-slate-400 pt-1 border-t border-stone-100">
-            <span>📅 ${post.createdAt || '방금 전'}</span>
+            <span>📅 ${this.formatPostDate(post)}</span>
             <div class="flex items-center gap-2">
               <span>조회 ${views.toLocaleString()}</span>
               <span>댓글 ${commentsCount}</span>
@@ -11914,6 +12163,33 @@ class DodamCommunityApp {
     const m = kst.getUTCMonth();
     const d = kst.getUTCDate();
     return Date.UTC(y, m, d) - 9 * 3600 * 1000; // Exact 00:00:00 KST
+  }
+
+  formatPostDate(post) {
+    if (!post) return '';
+    const ts = typeof post.timestamp === 'number' ? post.timestamp : null;
+    if (!ts || isNaN(ts) || ts <= 0) return post.createdAt || '';
+
+    const nowMs = Date.now();
+    const diffMs = nowMs - ts;
+    if (diffMs < 0) return post.createdAt || '방금 전';
+
+    const diffMin = Math.floor(diffMs / 60000);
+    if (diffMin < 2) return '방금 전';
+    if (diffMin < 60) return `${diffMin}분 전`;
+
+    const diffHours = Math.floor(diffMin / 60);
+    const todayStartMs = this.getKstTodayStartMs();
+    if (ts >= todayStartMs) {
+      return `${diffHours}시간 전`;
+    }
+
+    const yesterdayStartMs = todayStartMs - 24 * 3600 * 1000;
+    if (ts >= yesterdayStartMs) {
+      return '어제';
+    }
+
+    return this.getKstDateStr(ts).replace(/-/g, '.');
   }
 
   calculateAndRenderAnalytics() {
