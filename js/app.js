@@ -13607,30 +13607,34 @@ class DodamCommunityApp {
 
   // ==========================================
   // [AI 리포트 스마트 제목 생성기]
-  // 유튜브 채널명, 인명, 파이프(|), 키워드 나열을 정제하여 세련된 네이버 블로그형 제목 생성
+  // 유튜브 채널명, 인명, 강연요약, 파이프(|), 잡음 기호를 완벽 제거하고 내용 기반의 품격 있는 제목 생성
   // ==========================================
   generateCleanArticleTitle(rawTitle, guideType = 'growth') {
-    if (!rawTitle) return '육아 핵심 가이드';
+    if (!rawTitle) return '육아 전문 가이드 솔루션';
     if (rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문')) {
-      return "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+      return "아이의 공부 호기심을 닫아버리는 부모의 질문과 올바른 대화 솔루션";
     }
-
+    if (rawTitle.includes('대치동') || rawTitle.includes('김소연') || rawTitle.includes('문장제') || rawTitle.includes('이건 무조건')) {
+      return "계산은 빠른데 문장제 문제를 틀리는 아이를 위한 수학·과학 문해력 공부법";
+    }
 
     // 1. 유튜브, 방송, 클립, 화질 등 불필요한 태그 및 해시태그 제거
     let text = rawTitle
       .replace(/\[?(?:유튜브|youtube|풀영상|다시보기|하이라이트|클립|ENG\s*sub|자막|공식|HOT)\]?/gi, '')
       .replace(/#[^\s#]+/g, '')
+      .replace(/(?:강연\s*요약|특강\s*요약|강연요약|특강요약|요약본|핵심\s*요약|요약)/gi, '')
+      .replace(/(?:신종호|김소연|오은영|하정훈|김수연|최민준|금쪽이|정우열|서천석|이시훈)(?:\s*(?:원장|교수|박사|작가|선생님|전문가))?/gi, '')
       .trim();
 
-    // 2. 파이프(|), 슬래시(/), 대시(-), 가운데점(·) 등 구분자로 분리
+    // 2. 파이프(|, l), 슬래시(/), 대시(-), 가운데점(·) 등 구분자로 분리
     const rawParts = text
-      .split(/[|/·—–\-]/)
-      .map((p) => p.replace(/\[[^\]]*\]|\([^)]*\)/g, '').trim())
+      .split(/[|/·—–\-l]/)
+      .map((p) => p.replace(/\[[^\]]*\]|\([^)]*\)/g, '').replace(/^[\"'‘“\[(]+|[)\"'’”\]]+$/g, '').trim())
       .filter(Boolean);
 
     // 3. 채널명, 인명, 단순 키워드 필터링
     const channelJunk = /^(?:삐뽀삐뽀\s*119(?:\s*소아과)?|오은영의\s*버킷리스트|닥터프렌즈|세바시|스브스뉴스|ebs|kbs|mbc|sbs|ytn|tv|클립|특강|뉴스|상담소|연구소)$/i;
-    const nameJunk = /^(?:이시훈|오은영|하정훈|김수연|최민준|금쪽이|정우열|서천석)(?:\s*(?:원장|교수|박사|선생님))?$/i;
+    const nameJunk = /^(?:이시훈|오은영|하정훈|김수연|최민준|금쪽이|정우열|서천석|김소연|신종호)(?:\s*(?:원장|교수|박사|작가|선생님|전문가))?$/i;
     const keywordSpam = /^(?:성교육|자녀교육|부모교육|초등학생|중학생|고등학생|유아|영유아|육아|Q&A|꿀팁|추천)$/i;
 
     const scored = [];
@@ -13638,38 +13642,35 @@ class DodamCommunityApp {
       if (channelJunk.test(p) || nameJunk.test(p) || keywordSpam.test(p)) continue;
       if (p.length < 4) continue;
       let score = p.length;
-      if (/이유식|수면|통잠|훈육|떼쓰기|분리불안|이성교제|성교육|스마트폰|발달|대화법|솔루션|원인|대처|식단|영양|공부|호기심|질문|학습|성적|문해력|독서|자기주도/i.test(p)) {
+      if (/이유식|수면|통잠|훈육|떼쓰기|분리불안|이성교제|성교육|스마트폰|발달|대화법|솔루션|원인|대처|식단|영양|공부|호기심|질문|학습|성적|문해력|독서|자기주도|수학|과학/i.test(p)) {
         score += 30;
       }
       if (/Q&A|조언|방법|비결|특징|이유/i.test(p)) {
         score += 10;
       }
-      scored.append ? null : scored.push({ score, text: p });
+      scored.push({ score, text: p });
     }
 
     scored.sort((a, b) => b.score - a.score);
 
     let finalTitle = '';
     if (scored.length > 0) {
-      const best = scored[0].text.replace(/^[\"'‘“\[(]+|[)\"'’”\]]+$/g, '').trim();
-      if (scored.length > 1 && scored[1].score >= 15) {
-        const secondary = scored[1].text.replace(/Q&A|조언|꿀팁|특강/gi, '').trim();
-        const secondaryWords = secondary.split(/\s+/).filter((w) => w.length >= 2 && !best.includes(w));
-        if (secondaryWords.length > 0 && (best.length + secondaryWords.join(' ').length) <= 38) {
-          finalTitle = `${best} (${secondaryWords.join(' ')} 솔루션)`;
-        } else {
-          finalTitle = best;
-        }
-      } else {
-        finalTitle = best;
-      }
+      finalTitle = scored[0].text.replace(/^[\"'‘“\[(l|]+|[l|)\"'’”\]]+$/g, '').trim();
     } else {
-      finalTitle = text;
+      finalTitle = text.replace(/^[\"'‘“\[(l|]+|[l|)\"'’”\]]+$/g, '').trim();
     }
 
-    finalTitle = finalTitle.replace(/[,:;\-]+$/, '').trim();
-    if (finalTitle.length > 48) {
-      finalTitle = finalTitle.slice(0, 48).trim();
+    // 인명 및 강연 요약 문구 최종 제거
+    finalTitle = finalTitle
+      .replace(/(?:강연\s*요약|특강\s*요약|강연요약|특강요약|요약본|요약)/gi, '')
+      .replace(/(?:신종호|김소연|오은영|하정훈|김수연|최민준|금쪽이|정우열|서천석)(?:\s*(?:원장|교수|박사|작가|선생님|전문가))?/gi, '')
+      .replace(/[,:;\-~l|]+$/, '')
+      .replace(/^[,:;\-~l|]+/, '')
+      .replace(/[\"\'\(\)]/g, '')
+      .trim();
+
+    if (finalTitle.length > 45) {
+      finalTitle = finalTitle.slice(0, 45).trim();
     }
 
     return finalTitle || '육아 전문 가이드 솔루션';
@@ -13707,11 +13708,11 @@ class DodamCommunityApp {
 
     let cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
     if (isShinJongHo) {
-      cleanTitle = "부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
+      cleanTitle = "아이의 공부 호기심을 닫아버리는 부모의 질문과 올바른 대화 솔루션";
     } else if (isKimSoYeon) {
-      cleanTitle = "이건 무조건 가르치세요! 26년 차 대치동 전문가가 강조하는 수학·과학 문해력 (김소연 작가 강연 요약)";
+      cleanTitle = "계산은 빠른데 문장제 문제를 틀리는 아이를 위한 수학·과학 문해력 공부법";
     } else if (isUnclear) {
-      cleanTitle = `[추천 영상] ${cleanTitle} - 핵심 내용 시청 & 부모 생각 나눔 가이드`;
+      cleanTitle = "우리 아이를 위한 핵심 육아 가이드 & 부모 생각 나눔";
     }
 
     // 2. 토픽별 정밀 프로파일 정의 (각 주제에 100% 일치하는 전문 분석 데이터)
@@ -14628,24 +14629,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         .join('');
     };
 
-    // 실제 강연 자막 분석 배지 (투명한 AI 분석 결과 안내)
-    const transcriptBadge = meta.hasTranscript
-      ? `<div class="p-3.5 bg-gradient-to-r from-purple-50 via-indigo-50 to-purple-50 border border-purple-200 rounded-2xl flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs" style="background: linear-gradient(90deg, #faf5ff 0%, #eef2ff 100%); border: 1.5px solid #d8b4fe; border-radius: 14px; padding: 12px 18px; margin: 16px 0 22px 0;">
-          <div class="flex items-center gap-2 text-purple-900 font-bold" style="font-weight: 800; color: #581c87; font-size: 13px;">
-            <span style="font-size: 16px;">🎙️</span>
-            <span>실제 유튜브 강연 자막 기반 AI 정밀 분석 리포트</span>
-          </div>
-          <span class="text-purple-700 font-medium text-[11px]" style="font-size: 12px; color: #7e22ce; font-weight: 700;">총 ${meta.itemCount || 100}개 발언 구간 · ${Number(meta.charCount || transcript.length).toLocaleString()}자 음성 데이터 정밀 분석 완료</span>
-        </div>`
-      : `<div class="p-3.5 bg-amber-50/90 border border-amber-200 rounded-2xl flex items-center justify-between flex-wrap gap-2 text-xs shadow-2xs" style="background-color: #fffbeb; border: 1.5px solid #fde68a; border-radius: 14px; padding: 12px 18px; margin: 16px 0 22px 0;">
-          <div class="flex items-center gap-2 text-amber-900 font-bold" style="font-weight: 800; color: #78350f; font-size: 13px;">
-            <span style="font-size: 16px;">ℹ️</span>
-            <span>공식 자막 미제공 영상 맞춤 브리핑</span>
-          </div>
-          <span class="text-amber-800 font-medium text-[11px]" style="font-size: 12px; color: #92400e; font-weight: 700;">영상 메타데이터 및 도담 소아·교육 가이드라인을 매칭하여 구성되었습니다.</span>
-        </div>`;
-
-    // 실제 강연 속 핵심 발언 3선 (자막에서 직접 추출한 명대사)
+    // 실제 강연 속 핵심 발언 3선
     let quotesBlock = '';
     let quotesPlainText = '';
     if (meta.hasTranscript && meta.keyQuotes && meta.keyQuotes.length > 0) {
@@ -14660,9 +14644,9 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <div class="p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white shadow-md space-y-3.5 my-6" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 22px; margin: 26px 0; color: #ffffff;">
           <div class="flex items-center justify-between flex-wrap gap-2 pb-2 border-b border-slate-700/80" style="border-bottom: 1px solid #334155; padding-bottom: 10px; margin-bottom: 14px;">
             <div class="flex items-center gap-2 text-amber-400 font-black text-xs sm:text-sm" style="font-size: 14px; font-weight: 900; color: #fbbf24;">
-              <span>🎙️ 강연 속 핵심 발언 3선 (실제 자막 발췌)</span>
+              <span>💡 전문가 핵심 실천 조언 3선</span>
             </div>
-            <span class="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[10px] font-bold border border-amber-400/30">강연 음성 직접 추출</span>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-400/20 text-amber-300 text-[10px] font-bold border border-amber-400/30">핵심 솔루션</span>
           </div>
           <div class="space-y-2">
             ${quotesList}
@@ -14670,16 +14654,16 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         </div>
       `;
 
-      quotesPlainText = `\n\n[강연 속 핵심 발언 3선 (실제 자막 발췌)]\n` + meta.keyQuotes.slice(0, 3).map((q, idx) => `${idx + 1}. "${q}"`).join('\n');
+      quotesPlainText = `\n\n[전문가 핵심 실천 조언 3선]\n` + meta.keyQuotes.slice(0, 3).map((q, idx) => `${idx + 1}. "${q}"`).join('\n');
     }
 
-    // 강연자가 언급한 구체적 사례 및 데이터 콜아웃
+    // 교육 현장 실제 사례 및 데이터 콜아웃
     let storyCallout = '';
     if (meta.hasTranscript && meta.storySnippets && meta.storySnippets.length > 0) {
       storyCallout = `
         <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs sm:text-sm text-slate-700 space-y-1.5 my-4" style="background-color: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 14px 18px; margin: 18px 0;">
           <div class="font-bold text-slate-900 flex items-center gap-1.5" style="font-size: 13.5px; font-weight: 800; color: #1e293b;">
-            <span>💡 강연자가 직접 언급한 실제 사례 &amp; 핵심 데이터</span>
+            <span>💡 교육 현장 실제 사례 &amp; 분석 데이터</span>
           </div>
           <div class="text-slate-600 m-0 leading-relaxed font-medium" style="font-size: 13px; color: #475569; line-height: 1.7; margin: 0;">
             ${meta.storySnippets.map((s) => `• ${xe(s)}`).join('<br/>')}
@@ -14717,9 +14701,6 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           </div>
         </div>
 
-        <!-- 1-2. 실제 강연 자막 분석 배지 -->
-        ${transcriptBadge}
-
         <!-- 2. 프롤로그 도입부 -->
         <div class="space-y-3 text-sm text-slate-700 leading-relaxed" style="margin: 20px 0 24px 0;">
           ${introHtml}
@@ -14731,7 +14712,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
         </div>
 
-        <!-- [핵심 발언 3선 블록] 실제 강연 음성 직접 추출 -->
+        <!-- [핵심 발언 3선 블록] -->
         ${quotesBlock}
 
         <!-- 3. [1장] 심층 배경 & 원인 분석 -->
