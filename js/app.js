@@ -566,7 +566,6 @@ class DodamCommunityApp {
           const baseId = p.id.split('_rev_')[0];
           p.id = baseId;
           if (seenIds.has(baseId) || this.deletedPostIds.has(baseId)) return;
-          if (p.id.startsWith('daily-ai-post-')) return;
           if (p.youtubeVideoId) {
             if (seenYoutubeIds.has(p.youtubeVideoId)) return;
             seenYoutubeIds.add(p.youtubeVideoId);
@@ -585,7 +584,6 @@ class DodamCommunityApp {
           const baseId = p.id.split('_rev_')[0];
           p.id = baseId;
           if (seenIds.has(baseId) || this.deletedPostIds.has(baseId)) return;
-          if (p.id.startsWith('daily-ai-post-')) return;
           if (p.youtubeVideoId) {
             if (seenYoutubeIds.has(p.youtubeVideoId)) return;
             seenYoutubeIds.add(p.youtubeVideoId);
@@ -5127,247 +5125,1461 @@ class DodamCommunityApp {
   }
 
   ensureDailyActivePosts() {
-    const todayStr = this.getKstDateStr(Date.now());
-    const todayStartMs = this.getKstTodayStartMs();
-    const nowMs = Date.now();
-
-    // 일일 10개 커뮤니티 활성 게시글 템플릿 (실제 부모님들의 진솔한 일상 고민, 학령기, 이유식, 동네 정보)
-    const dailyTemplates = [
-      {
-        baseHour: 7,
-        title: '초3 수학 사고력 학원 vs 교과 심화, 지금 시기에 어떤 게 더 맞을까요?',
-        content: '현재 아이가 초등학교 3학년 올라가면서 수학 학원 고민이 깊어지고 있어요. 연산이랑 교과 기본은 혼자서 곧잘 따라오는데, 3학년부터는 심화나 사고력을 병행해 줘야 할지 고민입니다. 동네 엄마들은 벌써 사고력 대형 학원 보내던데 너무 달리는 건 아닐까 걱정도 되고요... 혹시 비슷한 시기 거치신 선배 맘님들 어떤 방향이 아이에게 더 좋았는지 소중한 경험 나눠주시면 감사하겠습니다!',
-        category: 'qna',
-        ageStage: 'child',
-        localHub: 'hub-gyeonggi-south',
-        localHubName: '경기 판교·분당',
-        isQuestion: true,
-        author: {
-          nickname: '판교워킹맘',
-          level: '🌿 줄기맘·대디',
-          region: '경기 성남시 분당구',
-          childBadge: '초3 여아',
-          avatarBg: 'bg-emerald-600 text-white'
-        },
-        tags: ['초등수학', '학원고민', '판교맘']
-      },
-      {
-        baseHour: 8,
-        title: '10개월 후기 이유식 하루 3번 스케줄이랑 수유 텀 어떻게 맞추고 계신가요?',
-        content: '중기에서 후기로 넘어가면서 하루 세 끼 먹이기 시작했는데 스케줄 맞추기가 정말 쉽지 않네요 ㅠㅠ 기상 후 첫 수유하고 2시간 뒤 첫 이유식 주면 잘 안 먹고 칭얼대요. 이유식 먹이고 바로 보충 수유를 해야 할지, 아니면 1~2시간 텀을 둬야 할지 헷갈립니다. 선배맘님들은 후기 이유식 때 식사 3번이랑 분유 텀 어떻게 운영하셨는지 조언 부탁드려요!',
-        category: 'qna',
-        ageStage: 'infant',
-        localHub: 'hub-seoul-gangnam',
-        localHubName: '서울 강남·서초',
-        isQuestion: true,
-        author: {
-          nickname: '송파둥이맘',
-          level: '🌱 새싹맘·대디',
-          region: '서울 송파구',
-          childBadge: '10개월 남아',
-          avatarBg: 'bg-rose-500 text-white'
-        },
-        tags: ['후기이유식', '수유텀', '10개월아기']
-      },
-      {
-        baseHour: 10,
-        title: '주말에 5~6세 아이랑 나들이 가기 좋은 실내 박물관·체험관 추천드려요 🏛️',
-        content: '날씨 상관없이 아이랑 유익하게 다녀올 수 있는 수도권 실내 체험 명소 몇 군데 정리해봤어요!\n1. 국립어린이과학관 (대학로): 예약 필수지만 체험형 전시가 정말 알차요.\n2. 경기도어린이박물관 (용인): 활동량이 많은 5~7세 아이들이 하루 종일 신나게 뜁니다.\n3. 서울백제어린이박물관 (송파): 올림픽공원 산책 겸 묶어서 다녀오기 딱 좋아요.\n이번 주말 나들이 계획 중이신 분들 참고해보세요!',
-        category: 'info',
-        ageStage: 'toddler',
-        localHub: 'hub-seoul-gangbuk',
-        localHubName: '서울 마포·용산',
-        isQuestion: false,
-        author: {
-          nickname: '마포책육아맘',
-          level: '🌳 열매나무맘',
-          region: '서울 마포구',
-          childBadge: '5세 남아',
-          avatarBg: 'bg-amber-600 text-white'
-        },
-        tags: ['주말나들이', '실내박물관', '유아체험']
-      },
-      {
-        baseHour: 11,
-        title: '초1 입학 준비, 알림장 확인과 스스로 책가방 챙기기 연습 꿀팁',
-        content: '첫째 아이 초1 입학하고 1년 동안 겪으면서 가장 중요하다고 느낀 건 자기 물건 챙기는 습관이었어요.\n냉장고나 아이 책상 앞에 체크리스트 보드를 자석으로 붙여두고, 알림장 보면서 필통, 알림장, 물통, 실내화 가방 체크하게 했더니 1학기 지나고 나서는 혼자서도 척척 챙기더라고요. 처음엔 답답해도 부모가 대신 챙겨주지 않고 옆에서 지켜봐 주는 게 제일 큰 도움이 되었습니다 ㅎㅎ',
-        category: 'info',
-        ageStage: 'child',
-        localHub: 'hub-gyeonggi-south',
-        localHubName: '수원 광교·영통',
-        isQuestion: false,
-        author: {
-          nickname: '광교현서맘',
-          level: '🌿 줄기맘·대디',
-          region: '수원 영통구',
-          childBadge: '초1 여아',
-          avatarBg: 'bg-sky-600 text-white'
-        },
-        tags: ['초1입학', '자기주도습관', '초등준비']
-      },
-      {
-        baseHour: 13,
-        title: '오늘 드디어 3세 떼쓰기 고비 넘기고 칼육퇴 성공했습니다 ㅠㅠ',
-        content: '요즘 싫어, 내가 할 거야 병에 걸려서 외출 한번 하려면 30분씩 실랑이하느라 진이 다 빠졌는데, 오늘은 마음 내려놓고 선택권을 두 개 줬더니 순순히 따라주네요 (파란 양말 신을래? 노란 양말 신을래?).\n샤워하고 밥 먹이고 동화책 3권 읽어주니 8시에 스르륵 잠들었습니다. 육퇴 후 마시는 따뜻한 루이보스 티 한 잔이 이렇게 행복할 수가 없네요. 다들 오늘 육아 고생 많으셨습니다, 모두 평안한 밤 되세요!',
-        category: 'lounge',
-        ageStage: 'toddler',
-        localHub: 'hub-gyeonggi-north',
-        localHubName: '경기 일산·고양',
-        isQuestion: false,
-        author: {
-          nickname: '일산둥이아빠',
-          level: '🌱 새싹맘·대디',
-          region: '경기 고양시 일산서구',
-          childBadge: '3세 쌍둥이',
-          avatarBg: 'bg-indigo-600 text-white'
-        },
-        tags: ['육퇴완료', '3세육아', '훈육공감']
-      },
-      {
-        baseHour: 15,
-        title: '해운대·센텀 쪽 유모차 진입 편하고 수유실 깨끗한 아기 동반 식당 공유해요',
-        content: '돌 전후 아기 데리고 외식할 때마다 유모차 둘 공간이나 아기의자 있는지 매번 전화로 물어봤었는데요, 최근 다녀온 곳 중에 정말 만족스러웠던 3곳입니다.\n1. 센텀 신세계 식당가: 가족 휴게실/수유실 청결도 전국 최고 수준.\n2. 마린시티 해변 산책로 솥밥집: 아기용 숭늉과 미역국 무료 서비스.\n3. 기장 힐튼 아난티타운 브런치: 휠체어/유모차 경사로가 완벽해서 이동이 정말 편해요.\n부산 맘님들 아기랑 외식하실 때 참고하세요!',
-        category: 'info',
-        ageStage: 'infant',
-        localHub: 'hub-busan',
-        localHubName: '부산 해운대·센텀',
-        isQuestion: false,
-        author: {
-          nickname: '해운대윤우맘',
-          level: '🌷 꽃봉오리맘',
-          region: '부산 해운대구',
-          childBadge: '11개월 남아',
-          avatarBg: 'bg-teal-600 text-white'
-        },
-        tags: ['부산맘', '아기동반식당', '해운대센텀']
-      },
-      {
-        baseHour: 17,
-        title: '두돌 지난 아이 밤에 자다 깨서 우는 야경증/야제증 겪어보신 분 계신가요?',
-        content: '생후 25개월 된 아이인데 요즘 일주일에 서너 번은 새벽 2시쯤 자지러지게 울면서 깨요. 안아줘도 밀쳐내고 눈은 감은 채로 발버둥을 치는데 혹시 이게 야경증일까요? 15분 정도 지나면 언제 그랬냐는 듯 다시 잠들긴 하는데 매일 밤마다 너무 안쓰럽고 가족들도 잠을 못 자서 피로가 누적되네요 ㅠㅠ 성장통인지 낮 동안 자극이 많아서인지... 비슷한 경험 극복하신 분 조언 부탁드립니다.',
-        category: 'qna',
-        ageStage: 'toddler',
-        localHub: 'hub-seoul-southwest',
-        localHubName: '서울 동작·관악',
-        isQuestion: true,
-        author: {
-          nickname: '보라매하은맘',
-          level: '🌱 새싹맘·대디',
-          region: '서울 동작구',
-          childBadge: '25개월 여아',
-          avatarBg: 'bg-rose-600 text-white'
-        },
-        tags: ['야경증', '수면고민', '두돌아기']
-      },
-      {
-        baseHour: 18,
-        title: '초등 고학년 스마트폰 첫 개통 시 규칙과 스크린타임 설정 팁',
-        content: '초등 5학년 올라가면서 학원 동선 때문에 스마트폰을 개통해 줬는데, 시작부터 규칙을 정하는 게 중요하다고 해서 온 가족이 둘러앉아 스마트폰 서약서를 썼습니다.\n1. 잠잘 때는 거실 충전 스테이션에 거치하기\n2. 숙제나 학원 공부 중에는 서랍에 넣어두기\n3. 하루 유튜브/게임 사용 시간은 최대 1시간으로 패밀리링크 설정\n아이도 본인이 직접 약속 서명하니 반발 없이 잘 지키고 있어요. 스마트폰 개통 고민 중이신 부모님들께 도움 되길 바랍니다!',
-        category: 'info',
-        ageStage: 'high',
-        localHub: 'hub-daegu',
-        localHubName: '대구 수성·달서',
-        isQuestion: false,
-        author: {
-          nickname: '대구수성맘',
-          level: '🌷 꽃봉오리맘',
-          region: '대구 수성구',
-          childBadge: '초5 남아',
-          avatarBg: 'bg-amber-600 text-white'
-        },
-        tags: ['스마트폰규칙', '초5학부모', '패밀리링크']
-      },
-      {
-        baseHour: 20,
-        title: '환절기 유아 비염 마른 기침, 저희 집에서 효과 본 온습도 관리법 💧',
-        content: '아침저녁 일교차 커지면 아이 코막힘이랑 마른 기침이 심해져서 소아과 약만 달고 살았는데요, 생활 환경 바꾸고 확 좋아졌어요.\n1. 침실 온도는 21~22도, 습도는 가열식 가습기로 55~60% 철저히 유지\n2. 아침에 일어나자마자 미온수 한 컵 마시게 하고 식염수 코 세척\n3. 자기 전 베개 커버 매일 털고 3일에 한 번 60도 온수 세탁\n작은 습관이지만 알레르기 비염 있는 아이들에게 정말 큰 차이를 만들어주는 것 같아요!',
-        category: 'info',
-        ageStage: 'child',
-        localHub: 'hub-chungcheong',
-        localHubName: '세종·대전',
-        isQuestion: false,
-        author: {
-          nickname: '세종나래맘',
-          level: '🌿 줄기맘·대디',
-          region: '세종시 나성동',
-          childBadge: '초2 여아',
-          avatarBg: 'bg-emerald-600 text-white'
-        },
-        tags: ['환절기비염', '온습도관리', '유아건강']
-      },
-      {
-        baseHour: 21,
-        title: '5세 유치원 vs 어린이집(7세까지 연장), 어떤 선택이 더 나을까요? 선배맘님들 조언 부탁드려요',
-        content: '내년에 5세(만 3세) 올라가는 첫째 아이인데, 지금 다니는 가정/민간 어린이집에 7세까지 계속 보낼지 아니면 일반 사립/단설 유치원으로 옮길지 정말 고민되네요. 활동량이나 누리과정 커리큘럼 생각하면 유치원이 맞나 싶다가도, 낮잠이랑 하원 시간(맞벌이) 생각하면 어린이집이 훨씬 안정적이거든요... 혹시 비슷한 고민하셨던 분들 어떤 기준으로 결정하셨는지 조언 부탁드려요!',
-        category: 'qna',
-        ageStage: 'toddler',
-        localHub: 'hub-seoul-gangnam',
-        localHubName: '서울 송파·잠실',
-        isQuestion: true,
-        author: {
-          nickname: '잠실솔이맘',
-          level: '🌳 열매나무맘',
-          region: '서울 송파구 잠실동',
-          childBadge: '4세 여아',
-          avatarBg: 'bg-pink-600 text-white'
-        },
-        tags: ['5세유치원', '어린이집유치원고민', '잠실맘']
-      }
-    ];
-
     if (!Array.isArray(this.data.posts)) this.data.posts = [];
     const existingIds = new Set(this.data.posts.map((p) => p && p.id));
+    const nowMs = Date.now();
+    const todayStartMs = this.getKstTodayStartMs();
 
-    // 당일 날짜 기반 의사 난수 생성 함수 (새로고침 시 시간 변동 방지)
+    // 3개 일자별 고유 템플릿 풀 (총 30개 일상·학령기·이유식·동네 질문/정보 글 및 각 2~3개 현실감 넘치는 댓글)
+    const dailyPools = [
+    [
+        {
+            "baseHour": 7,
+            "title": "초3 수학 사고력 학원 vs 교과 심화, 지금 시기에 어떤 게 더 맞을까요?",
+            "content": "현재 아이가 초등학교 3학년 올라가면서 수학 학원 고민이 깊어지고 있어요. 연산이랑 교과 기본은 혼자서 곧잘 따라오는데, 3학년부터는 심화나 사고력을 병행해 줘야 할지 고민입니다. 동네 엄마들은 벌써 사고력 대형 학원 보내던데 너무 달리는 건 아닐까 걱정도 되고요... 혹시 비슷한 시기 거치신 선배 맘님들 어떤 방향이 아이에게 더 좋았는지 소중한 경험 나눠주시면 감사하겠습니다!",
+            "category": "qna",
+            "ageStage": "child",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "경기 판교·분당",
+            "isQuestion": true,
+            "author": {
+                "nickname": "판교워킹맘",
+                "level": "🌿 줄기맘·대디",
+                "region": "경기 성남시 분당구",
+                "childBadge": "초3 여아",
+                "avatarBg": "bg-emerald-600 text-white"
+            },
+            "tags": [
+                "초등수학",
+                "학원고민",
+                "판교맘"
+            ],
+            "comments": [
+                {
+                    "author": "대치수학맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초5·중2 · 서울 강남",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "초3은 연산 속도보다 교과 심화(최상위수학 등)를 한 단원씩 깊게 파고드는 게 훨씬 도움 돼요. 사고력은 대형 학원 1년 정도 경험 삼아 보내보시고 아이가 재미를 붙이면 유지, 스트레스받으면 교과 심화에 집중하는 걸 추천드려요.",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "분당서현맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 초3 남아 · 성남 분당",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "저희 아이도 판교 쪽에서 사고력 보내다가 교과 심화로 돌렸는데, 서술형 문장제 문제 해석 능력이 늘면서 오히려 학교 수학은 훨씬 안정적으로 잘 따라가더라구요.",
+                    "delayMinutes": 45
+                },
+                {
+                    "author": "광교호수파파",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초4 여아 · 수원 영통",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "아이가 수학에 거부감이 없다면 주 1회 사고력도 괜찮아요. 다만 숙제 양이 너무 많아서 힘들어하면 바로 교과 위주로 조율해 주시는 게 좋습니다!",
+                    "delayMinutes": 82
+                }
+            ]
+        },
+        {
+            "baseHour": 8,
+            "title": "10개월 후기 이유식 하루 3번 스케줄이랑 수유 텀 어떻게 맞추고 계신가요?",
+            "content": "중기에서 후기로 넘어가면서 하루 세 끼 먹이기 시작했는데 스케줄 맞추기가 정말 쉽지 않네요 ㅠㅠ 기상 후 첫 수유하고 2시간 뒤 첫 이유식 주면 잘 안 먹고 칭얼대요. 이유식 먹이고 바로 보충 수유를 해야 할지, 아니면 1~2시간 텀을 둬야 할지 헷갈립니다. 선배맘님들은 후기 이유식 때 식사 3번이랑 분유 텀 어떻게 운영하셨는지 조언 부탁드려요!",
+            "category": "qna",
+            "ageStage": "infant",
+            "localHub": "hub-seoul-gangnam",
+            "localHubName": "서울 강남·서초",
+            "isQuestion": true,
+            "author": {
+                "nickname": "송파둥이맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "서울 송파구",
+                "childBadge": "10개월 남아",
+                "avatarBg": "bg-rose-500 text-white"
+            },
+            "tags": [
+                "후기이유식",
+                "수유텀",
+                "10개월아기"
+            ],
+            "comments": [
+                {
+                    "author": "잠실현우맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 12개월 남아 · 서울 송파",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "저희도 10개월 때 수유 텀 잡느라 애먹었는데요, 아침 7시 첫 수유하고 8시 반에 첫 이유식 줬더니 훨씬 잘 먹었어요! 이유식 먹고 바로 보충수유하기보다는 텀을 1시간 반 정도 두는 게 소화에도 좋더라구요.",
+                    "delayMinutes": 22
+                },
+                {
+                    "author": "마포둥이아빠",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🧒 14개월 남아 · 서울 마포",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "공감합니다 ㅠㅠ 저희는 8시/12시 반/18시 이렇게 어른 식사 시간이랑 맞추고 중간에 분유 두 번 간식처럼 줬더니 금방 적응했어요. 조금만 지나면 패턴 잡히실 거예요 힘내세요!",
+                    "delayMinutes": 51
+                },
+                {
+                    "author": "수지하린맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "🍼 11개월 여아 · 경기 용인",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "저도 첫째 때 똑같이 고민했었는데 결국 아기 배고파하는 신호 맞춰서 조금씩 당기거나 미는 게 정답이었어요! 너무 시간표에 얽매이지 않으셔도 괜찮습니다 ㅎㅎ",
+                    "delayMinutes": 95
+                }
+            ]
+        },
+        {
+            "baseHour": 10,
+            "title": "주말에 5~6세 아이랑 나들이 가기 좋은 실내 박물관·체험관 추천드려요 🏛️",
+            "content": "날씨 상관없이 아이랑 유익하게 다녀올 수 있는 수도권 실내 체험 명소 몇 군데 정리해봤어요!\n1. 국립어린이과학관 (대학로): 예약 필수지만 체험형 전시가 정말 알차요.\n2. 경기도어린이박물관 (용인): 활동량이 많은 5~7세 아이들이 하루 종일 신나게 뜁니다.\n3. 서울백제어린이박물관 (송파): 올림픽공원 산책 겸 묶어서 다녀오기 딱 좋아요.\n이번 주말 나들이 계획 중이신 분들 참고해보세요!",
+            "category": "info",
+            "ageStage": "toddler",
+            "localHub": "hub-seoul-gangbuk",
+            "localHubName": "서울 마포·용산",
+            "isQuestion": false,
+            "author": {
+                "nickname": "마포책육아맘",
+                "level": "🌳 열매나무맘",
+                "region": "서울 마포구",
+                "childBadge": "5세 남아",
+                "avatarBg": "bg-amber-600 text-white"
+            },
+            "tags": [
+                "주말나들이",
+                "실내박물관",
+                "유아체험"
+            ],
+            "comments": [
+                {
+                    "author": "위례소율맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👧 6세 여아 · 경기 성남",
+                    "avatarBg": "bg-pink-600 text-white",
+                    "content": "국립어린이과학관 진짜 강추예요! 2층 에너지숲이랑 감각놀이터에서만 1시간 넘게 놀더라구요. 주차는 창경궁 쪽에 대면 편해요.",
+                    "delayMinutes": 25
+                },
+                {
+                    "author": "용인동백맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🧒 5세 남아 · 용인 기흥",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "경기도어린이박물관 예약 팁 드리자면, 매월 첫째 주에 다음 달 주말 예약이 열리는데 취소표도 당일 아침에 꽤 잘 나오는 편이에요!",
+                    "delayMinutes": 60
+                },
+                {
+                    "author": "마포둥이맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "👶 5세 여아 · 서울 마포",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "좋은 정보 감사해요! 이번 주말 비 소식 있어서 고민이었는데 백제박물관 예약해 봐야겠어요 ㅎㅎ",
+                    "delayMinutes": 110
+                }
+            ]
+        },
+        {
+            "baseHour": 11,
+            "title": "초1 입학 준비, 알림장 확인과 스스로 책가방 챙기기 연습 꿀팁",
+            "content": "첫째 아이 초1 입학하고 1년 동안 겪으면서 가장 중요하다고 느낀 건 자기 물건 챙기는 습관이었어요.\n냉장고나 아이 책상 앞에 체크리스트 보드를 자석으로 붙여두고, 알림장 보면서 필통, 알림장, 물통, 실내화 가방 체크하게 했더니 1학기 지나고 나서는 혼자서도 척척 챙기더라고요. 처음엔 답답해도 부모가 대신 챙겨주지 않고 옆에서 지켜봐 주는 게 제일 큰 도움이 되었습니다 ㅎㅎ",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "수원 광교·영통",
+            "isQuestion": false,
+            "author": {
+                "nickname": "광교현서맘",
+                "level": "🌿 줄기맘·대디",
+                "region": "수원 영통구",
+                "childBadge": "초1 여아",
+                "avatarBg": "bg-sky-600 text-white"
+            },
+            "tags": [
+                "초1입학",
+                "자기주도습관",
+                "초등준비"
+            ],
+            "comments": [
+                {
+                    "author": "목동초등맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초3·초1 · 서울 양천",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "자석 체크리스트 진짜 좋은 팁이에요! 처음엔 신발주머니나 우산 깜빡하고 울상으로 올 때도 있는데 그것도 배움의 과정이더라구요.",
+                    "delayMinutes": 19
+                },
+                {
+                    "author": "송도도담맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "👧 초2 여아 · 인천 연수",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "스스로 가방 싸는 습관 들여놓으면 2학년 올라가서도 숙제나 준비물 스트레스가 절반으로 줄어요. 선배맘 글 완전 공감합니다!",
+                    "delayMinutes": 48
+                }
+            ]
+        },
+        {
+            "baseHour": 13,
+            "title": "오늘 드디어 3세 떼쓰기 고비 넘기고 칼육퇴 성공했습니다 ㅠㅠ",
+            "content": "요즘 싫어, 내가 할 거야 병에 걸려서 외출 한번 하려면 30분씩 실랑이하느라 진이 다 빠졌는데, 오늘은 마음 내려놓고 선택권을 두 개 줬더니 순순히 따라주네요 (파란 양말 신을래? 노란 양말 신을래?).\n샤워하고 밥 먹이고 동화책 3권 읽어주니 8시에 스르륵 잠들었습니다. 육퇴 후 마시는 따뜻한 루이보스 티 한 잔이 이렇게 행복할 수가 없네요. 다들 오늘 육아 고생 많으셨습니다, 모두 평안한 밤 되세요!",
+            "category": "lounge",
+            "ageStage": "toddler",
+            "localHub": "hub-gyeonggi-north",
+            "localHubName": "경기 일산·고양",
+            "isQuestion": false,
+            "author": {
+                "nickname": "일산둥이아빠",
+                "level": "🌱 새싹맘·대디",
+                "region": "경기 고양시 일산서구",
+                "childBadge": "3세 쌍둥이",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "육퇴완료",
+                "3세육아",
+                "훈육공감"
+            ],
+            "comments": [
+                {
+                    "author": "동탄준이맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 3세 남아 · 화성 동탄",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "선택권 두 개 주는 훈육법 저도 오은영 박사님 방송 보고 따라 해봤는데 마법처럼 통하더라구요 ㅋㅋㅋ 칼육퇴 축하드려요 티 타임 만끽하세요!!",
+                    "delayMinutes": 15
+                },
+                {
+                    "author": "강남윤아파파",
+                    "level": "🌱 새싹맘·대디",
+                    "childBadge": "👧 34개월 여아 · 서울 서초",
+                    "avatarBg": "bg-blue-600 text-white",
+                    "content": "육퇴 후 따뜻한 차 한 잔이 하루 중 최고의 힐링이죠... 오늘 하루 정말 고생 많으셨습니다 파이팅!",
+                    "delayMinutes": 40
+                },
+                {
+                    "author": "평촌다온맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👶 3세 남아 · 안양 동안",
+                    "avatarBg": "bg-purple-600 text-white",
+                    "content": "저희 집은 오늘 외출 떼쓰기로 1시간 씨름했는데 내일은 꼭 두 개 선택지 써먹어봐야겠어요 ㅠㅠ 부럽습니다!",
+                    "delayMinutes": 70
+                }
+            ]
+        },
+        {
+            "baseHour": 15,
+            "title": "해운대·센텀 쪽 유모차 진입 편하고 수유실 깨끗한 아기 동반 식당 공유해요",
+            "content": "돌 전후 아기 데리고 외식할 때마다 유모차 둘 공간이나 아기의자 있는지 매번 전화로 물어봤었는데요, 최근 다녀온 곳 중에 정말 만족스러웠던 3곳입니다.\n1. 센텀 신세계 식당가: 가족 휴게실/수유실 청결도 전국 최고 수준.\n2. 마린시티 해변 산책로 솥밥집: 아기용 숭늉과 미역국 무료 서비스.\n3. 기장 힐튼 아난티타운 브런치: 휠체어/유모차 경사로가 완벽해서 이동이 정말 편해요.\n부산 맘님들 아기랑 외식하실 때 참고하세요!",
+            "category": "info",
+            "ageStage": "infant",
+            "localHub": "hub-busan",
+            "localHubName": "부산 해운대·센텀",
+            "isQuestion": false,
+            "author": {
+                "nickname": "해운대윤우맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "부산 해운대구",
+                "childBadge": "11개월 남아",
+                "avatarBg": "bg-teal-600 text-white"
+            },
+            "tags": [
+                "부산맘",
+                "아기동반식당",
+                "해운대센텀"
+            ],
+            "comments": [
+                {
+                    "author": "센텀시엘맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🍼 10개월 여아 · 부산 해운대",
+                    "avatarBg": "bg-pink-500 text-white",
+                    "content": "신세계 센텀 가족수유실은 전자레인지랑 아기식탁의자까지 다 갖춰져 있어서 아기랑 가기 최고예요. 솥밥집도 메모해 둡니다!",
+                    "delayMinutes": 20
+                },
+                {
+                    "author": "명지수호맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🧒 15개월 남아 · 부산 강서",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "아난티타운 유모차 산책로 진짜 넓고 평지라 추천할 만해요. 날씨 좋을 때 야외 테라스 앉으면 엄마도 힐링되더라구요.",
+                    "delayMinutes": 55
+                }
+            ]
+        },
+        {
+            "baseHour": 17,
+            "title": "두돌 지난 아이 밤에 자다 깨서 우는 야경증/야제증 겪어보신 분 계신가요?",
+            "content": "생후 25개월 된 아이인데 요즘 일주일에 서너 번은 새벽 2시쯤 자지러지게 울면서 깨요. 안아줘도 밀쳐내고 눈은 감은 채로 발버둥을 치는데 혹시 이게 야경증일까요? 15분 정도 지나면 언제 그랬냐는 듯 다시 잠들긴 하는데 매일 밤마다 너무 안쓰럽고 가족들도 잠을 못 자서 피로가 누적되네요 ㅠㅠ 성장통인지 낮 동안 자극이 많아서인지... 비슷한 경험 극복하신 분 조언 부탁드립니다.",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-seoul-southwest",
+            "localHubName": "서울 동작·관악",
+            "isQuestion": true,
+            "author": {
+                "nickname": "보라매하은맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "서울 동작구",
+                "childBadge": "25개월 여아",
+                "avatarBg": "bg-rose-600 text-white"
+            },
+            "tags": [
+                "야경증",
+                "수면고민",
+                "두돌아기"
+            ],
+            "comments": [
+                {
+                    "author": "서초현서맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🧒 5세 남아 · 서울 서초",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "두돌 전후 야경증은 뇌 발달 단계에서 낮 동안 겪은 자극을 처리하면서 흔하게 나타나요. 억지로 깨우거나 불을 확 켜지 마시고, 다치지 않게 주변 위험한 물건만 치우고 차분한 목소리로 토닥여주시면 2~3달 뒤에 자연스럽게 사라집니다 힘내세요!",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "관악도윤맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "👶 28개월 남아 · 서울 관악",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "저희 아기도 24개월 때 딱 그랬어요 ㅠㅠ 낮에 낮잠 너무 늦게 자거나 스마트폰 영상 많이 본 날 심하더라구요. 잠자리 루틴 차분하게 바꿔보세요!",
+                    "delayMinutes": 46
+                },
+                {
+                    "author": "일산둥이아빠",
+                    "level": "🌱 새싹맘·대디",
+                    "childBadge": "🧒 3세 쌍둥이 · 경기 고양",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "저희 집도 야경증으로 한동안 고생했는데 온도를 21도로 조금 시원하게 해주고 자기 전 따뜻한 물로 목욕시키니 빈도가 확 줄었습니다.",
+                    "delayMinutes": 75
+                }
+            ]
+        },
+        {
+            "baseHour": 18,
+            "title": "초등 고학년 스마트폰 첫 개통 시 규칙과 스크린타임 설정 팁",
+            "content": "초등 5학년 올라가면서 학원 동선 때문에 스마트폰을 개통해 줬는데, 시작부터 규칙을 정하는 게 중요하다고 해서 온 가족이 둘러앉아 스마트폰 서약서를 썼습니다.\n1. 잠잘 때는 거실 충전 스테이션에 거치하기\n2. 숙제나 학원 공부 중에는 서랍에 넣어두기\n3. 하루 유튜브/게임 사용 시간은 최대 1시간으로 패밀리링크 설정\n아이도 본인이 직접 약속 서명하니 반발 없이 잘 지키고 있어요. 스마트폰 개통 고민 중이신 부모님들께 도움 되길 바랍니다!",
+            "category": "info",
+            "ageStage": "high",
+            "localHub": "hub-daegu",
+            "localHubName": "대구 수성·달서",
+            "isQuestion": false,
+            "author": {
+                "nickname": "대구수성맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "대구 수성구",
+                "childBadge": "초5 남아",
+                "avatarBg": "bg-amber-600 text-white"
+            },
+            "tags": [
+                "스마트폰규칙",
+                "초5학부모",
+                "패밀리링크"
+            ],
+            "comments": [
+                {
+                    "author": "노원학부모",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 중1·초5 · 서울 노원",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "잠잘 때 거실 충전 규칙이 정말 신의 한 수입니다. 방에 갖고 들어가기 시작하면 밤새 릴스나 유튜브 보느라 수면 패턴 다 망가지거든요.",
+                    "delayMinutes": 21
+                },
+                {
+                    "author": "수지동천맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 초6 남아 · 용인 수지",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "가족 서약서 작성 꿀팁 너무 좋네요. 일방적으로 금지하는 것보다 아이 의견 넣어서 만든 규칙이 훨씬 오래가더라구요.",
+                    "delayMinutes": 52
+                },
+                {
+                    "author": "송파워킹맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초5 여아 · 서울 송파",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "패밀리링크로 앱별 시간제한 걸어두는 거 완전 필수예요. 개통 앞두고 막막했는데 큰 도움 되었습니다!",
+                    "delayMinutes": 89
+                }
+            ]
+        },
+        {
+            "baseHour": 20,
+            "title": "환절기 유아 비염 마른 기침, 저희 집에서 효과 본 온습도 관리법 💧",
+            "content": "아침저녁 일교차 커지면 아이 코막힘이랑 마른 기침이 심해져서 소아과 약만 달고 살았는데요, 생활 환경 바꾸고 확 좋아졌어요.\n1. 침실 온도는 21~22도, 습도는 가열식 가습기로 55~60% 철저히 유지\n2. 아침에 일어나자마자 미온수 한 컵 마시게 하고 식염수 코 세척\n3. 자기 전 베개 커버 매일 털고 3일에 한 번 60도 온수 세탁\n작은 습관이지만 알레르기 비염 있는 아이들에게 정말 큰 차이를 만들어주는 것 같아요!",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-chungcheong",
+            "localHubName": "세종·대전",
+            "isQuestion": false,
+            "author": {
+                "nickname": "세종나래맘",
+                "level": "🌿 줄기맘·대디",
+                "region": "세종시 나성동",
+                "childBadge": "초2 여아",
+                "avatarBg": "bg-emerald-600 text-white"
+            },
+            "tags": [
+                "환절기비염",
+                "온습도관리",
+                "유아건강"
+            ],
+            "comments": [
+                {
+                    "author": "청라하진맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 6세 남아 · 인천 서구",
+                    "avatarBg": "bg-pink-600 text-white",
+                    "content": "식염수 코 세척이랑 60도 온수 베개 세탁 완전 공감해요!! 진드기 방지만 해줘도 아침 코막힘이 절반은 줄어들더라구요.",
+                    "delayMinutes": 16
+                },
+                {
+                    "author": "대전유성맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "👧 초1 여아 · 대전 유성",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "가열식 가습기 쓰니까 확실히 공기가 훈훈해서 기침이 덜하네요. 온습도 22도/55% 오늘부터 철저히 맞춰보겠습니다!",
+                    "delayMinutes": 45
+                }
+            ]
+        },
+        {
+            "baseHour": 21,
+            "title": "5세 유치원 vs 어린이집(7세까지 연장), 어떤 선택이 더 나을까요? 선배맘님들 조언 부탁드려요",
+            "content": "내년에 5세(만 3세) 올라가는 첫째 아이인데, 지금 다니는 가정/민간 어린이집에 7세까지 계속 보낼지 아니면 일반 사립/단설 유치원으로 옮길지 정말 고민되네요. 활동량이나 누리과정 커리큘럼 생각하면 유치원이 맞나 싶다가도, 낮잠이랑 하원 시간(맞벌이) 생각하면 어린이집이 훨씬 안정적이거든요... 혹시 비슷한 고민하셨던 분들 어떤 기준으로 결정하셨는지 조언 부탁드려요!",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-seoul-gangnam",
+            "localHubName": "서울 송파·잠실",
+            "isQuestion": true,
+            "author": {
+                "nickname": "잠실솔이맘",
+                "level": "🌳 열매나무맘",
+                "region": "서울 송파구 잠실동",
+                "childBadge": "4세 여아",
+                "avatarBg": "bg-pink-600 text-white"
+            },
+            "tags": [
+                "5세유치원",
+                "어린이집유치원고민",
+                "잠실맘"
+            ],
+            "comments": [
+                {
+                    "author": "잠실엘스맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초2·7세 · 서울 송파",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "워킹맘이시면 7세까지 어린이집 연장 완전 추천드려요! 방학 짧고 연장보육 안정적인 게 직장 다니면서 멘탈 지키는 데 엄청 커요. 7세 2학기에 초등 적응만 신경 써주시면 전혀 뒤처지지 않습니다.",
+                    "delayMinutes": 15
+                },
+                {
+                    "author": "송파가락맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 6세 남아 · 서울 송파",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "저희도 같은 고민하다가 활동량 많은 남아라 5세에 유치원 보냈는데 프로그램은 만족하지만 방학 때 돌봄 때문에 시댁/친정 도움 없으면 힘들긴 하더라구요 ㅠㅠ 상황 맞춰 결정하세요!",
+                    "delayMinutes": 42
+                },
+                {
+                    "author": "판교도담맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 4세 남아 · 성남 분당",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "저도 내년 5세라 정말 고민 중인 주제였는데 댓글 선배맘님들 조언 읽고 마음이 정리가 되네요. 글 남겨주셔서 감사합니다!",
+                    "delayMinutes": 73
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "baseHour": 7,
+            "title": "초등 저학년 맞춤법·받아쓰기 자주 틀릴 때 부모의 피드백 노하우",
+            "content": "초등학교 1~2학년 때 받아쓰기 연습하면서 아이가 받침이나 띄어쓰기 틀릴 때마다 지적하면 자신감이 확 떨어지더라구요. 그래서 빨간 펜으로 빗금 치는 대신, 맞은 단어에 큰 동그라미를 쳐주고 틀린 단어는 '비밀 암호 찾기'처럼 스스로 소리 내어 읽어보게 유도했더니 스트레스 없이 실수가 많이 줄었습니다. 혹시 아이 맞춤법 지도 고민이신 분들 참고해보세요!",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-seoul-southeast",
+            "localHubName": "서울 강동·송파",
+            "isQuestion": false,
+            "author": {
+                "nickname": "고덕하준맘",
+                "level": "🌳 열매나무맘",
+                "region": "서울 강동구 고덕동",
+                "childBadge": "초2 남아",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "초등맞춤법",
+                "받아쓰기연습",
+                "초등학습"
+            ],
+            "comments": [
+                {
+                    "author": "위례서우맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 초1 여아 · 성남 수정",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "비밀 암호 찾기 방식 너무 신선하고 좋네요! 맨날 틀린 것만 지적해서 아이가 주눅 들어 있었는데 오늘부터 바로 바꿔보겠습니다.",
+                    "delayMinutes": 25
+                },
+                {
+                    "author": "목동초등맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초3·초1 · 서울 양천",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "저학년 땐 글씨 쓰는 행위 자체가 손가락 소근육에 부담이라 칭찬 위주로 흥미만 지켜줘도 3학년 올라가서 어휘력과 함께 자연스럽게 잡히더라구요!",
+                    "delayMinutes": 55
+                }
+            ]
+        },
+        {
+            "baseHour": 8,
+            "title": "생후 4개월 침 흘리기 시작하고 주먹고기 빨기, 치발기 추천 부탁드려요",
+            "content": "120일 지난 아기인데 요즘 옷 앞섶이 다 젖을 정도로 침을 엄청 흘리고 주먹을 입에 통째로 넣고 빨아요. 잇몸이 간지러운지 치발기를 쥐여줘도 아직 손 힘이 없어서 자꾸 떨어뜨리네요 ㅠㅠ 손목에 끼우는 형태나 실리콘 치발기 중에 세척 편하고 아기가 잘 물었던 국민 치발기 있으면 추천 부탁드립니다!",
+            "category": "qna",
+            "ageStage": "infant",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "수원 영통·광교",
+            "isQuestion": true,
+            "author": {
+                "nickname": "광교초보맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "수원시 영통구",
+                "childBadge": "4개월 여아",
+                "avatarBg": "bg-pink-600 text-white"
+            },
+            "tags": [
+                "4개월아기",
+                "치발기추천",
+                "손목치발기"
+            ],
+            "comments": [
+                {
+                    "author": "동탄라온맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 8개월 남아 · 화성 동탄",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "모윰 손목치발기(포니)랑 마마스템 잼잼몬 강추해요! 손목에 밴드처럼 감아두면 떨어뜨릴 일 없어서 외출할 때도 진짜 효자템이었어요.",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "수지연우맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🍼 6개월 남아 · 용인 수지",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "냉장고에 살짝 넣어둬서 시원하게 주면 잇몸 열감 가라앉히는 데 최고예요! 열탕 소독 가능한 플래티넘 실리콘 재질로 확인하고 구매하세요.",
+                    "delayMinutes": 45
+                },
+                {
+                    "author": "송파둥이맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "👶 10개월 남아 · 서울 송파",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "턱받이도 하루에 서너 장씩 갈아주셔야 침독 안 올라요! 침 닦을 땐 문지르지 마시고 톡톡 두드려 닦아주세요 ㅎㅎ",
+                    "delayMinutes": 80
+                }
+            ]
+        },
+        {
+            "baseHour": 10,
+            "title": "판교·분당 주말 아이랑 가기 좋은 베이커리 잔디밭 카페 리스트 ☕",
+            "content": "답답한 실내 카페 대신 아이들 잔디밭에서 마음껏 뛰어놀 수 있고 빵도 맛있는 경기 남부 대형 카페 3곳 공유해봅니다.\n1. 모아니 (분당 금곡동): 자작나무 숲길 산책로와 루프탑 정원이 정말 힐링입니다.\n2. 어 로프 슬라이스 피스 (용인): 뜀동산과 넓은 잔디마당이 있어서 아이들 천국이에요.\n3. 고기리 몽르베: 계곡물 소리 들으면서 천연발효 빵 먹기 좋습니다.\n주말 가족 드라이브 겸 나들이 가실 때 들러보세요!",
+            "category": "info",
+            "ageStage": "toddler",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "경기 판교·분당",
+            "isQuestion": false,
+            "author": {
+                "nickname": "분당힐링맘",
+                "level": "🌳 열매나무맘",
+                "region": "성남시 분당구 정자동",
+                "childBadge": "5세·3세 남매",
+                "avatarBg": "bg-emerald-600 text-white"
+            },
+            "tags": [
+                "분당카페",
+                "아이랑카페",
+                "대형베이커리카페"
+            ],
+            "comments": [
+                {
+                    "author": "판교워킹맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초3 여아 · 분당 판교",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "모아니 노키즈존 구역이랑 키즈존 구역이 분리되어 있어서 눈치 안 보고 산책하기 좋더라구요! 주차 팁 감사합니다.",
+                    "delayMinutes": 24
+                },
+                {
+                    "author": "용인수지맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 4세 남아 · 용인 수지",
+                    "avatarBg": "bg-purple-600 text-white",
+                    "content": "어 로프 슬라이스 피스 뜀동산에서 저희 아들 2시간 뛰고 차 타자마자 기절했어요 ㅋㅋㅋ 완전 육아 구원투수입니다.",
+                    "delayMinutes": 50
+                }
+            ]
+        },
+        {
+            "baseHour": 11,
+            "title": "4세 배변훈련 밤기저귀 떼기 언제가 적당한가요? 선배맘님들 조언 부탁드려요",
+            "content": "낮에는 기저귀 완전히 떼고 팬티 입은 지 두 달쯤 되었는데요, 밤에는 아직 소변 실수를 종종 해서 밤기저귀는 채우고 재우고 있어요. 아침에 일어났을 때 기저귀가 말라 있는 날이 일주일 이상 지속될 때 밤기저귀를 떼야 한다고 들었는데, 억지로 떼려다 아이가 스트레스받을까 봐 조심스럽네요. 밤기저귀는 보통 몇 개월쯤 자연스럽게 떼셨나요?",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-incheon",
+            "localHubName": "인천 송도·연수",
+            "isQuestion": true,
+            "author": {
+                "nickname": "송도하윤맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "인천 연수구 송도동",
+                "childBadge": "38개월 여아",
+                "avatarBg": "bg-rose-500 text-white"
+            },
+            "tags": [
+                "배변훈련",
+                "밤기저귀떼기",
+                "4세육아"
+            ],
+            "comments": [
+                {
+                    "author": "일산호수맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 6세 남아 · 고양 일산",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "밤기저귀는 방광 괄약근과 뇌 호르몬 발달 문제라 훈련한다고 되는 게 아니더라구요! 5세 전후까지 편하게 채우셔도 아무 문제 없습니다. 조급해하지 마세요!",
+                    "delayMinutes": 20
+                },
+                {
+                    "author": "반포윤슬맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🚼 4세 여아 · 서울 서초",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "방수 매트 깔아두시고 저녁 7시 이후 물이나 우유 섭취량만 살짝 줄여주시면 일어났을 때 보송한 날이 점점 늘어날 거예요 ㅎㅎ",
+                    "delayMinutes": 52
+                },
+                {
+                    "author": "마포책육아맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 5세 남아 · 서울 마포",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "저희 첫째도 딱 42개월쯤 자기가 먼저 '팬티 입고 잘래' 하더니 스스로 뗐어요. 아이에게 주도권을 주는 게 제일 마음 편해요!",
+                    "delayMinutes": 88
+                }
+            ]
+        },
+        {
+            "baseHour": 13,
+            "title": "워킹맘 초1 돌봄교실 vs 방과후+학원 뺑뺑이 현실 조언 부탁드립니다",
+            "content": "내년에 초1 입학 앞둔 예비초 학부모인데 맞벌이라 하교 후 케어가 제일 막막하네요 ㅠㅠ 학교 돌봄교실에 당첨되면 5시까지는 안심인데 돌봄 교실 프로그램이 너무 정적이라는 얘기도 있고, 차라리 방과후 수업 1개 듣고 태권도/피아노/영어 학원 차 태워서 돌리는 게 나을지 선배 워킹맘님들 실제 경험담과 조언 듣고 싶습니다!",
+            "category": "qna",
+            "ageStage": "child",
+            "localHub": "hub-seoul-gangnam",
+            "localHubName": "서울 서초·강남",
+            "isQuestion": true,
+            "author": {
+                "nickname": "서초예비초맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "서울 서초구 서초동",
+                "childBadge": "7세 남아",
+                "avatarBg": "bg-blue-600 text-white"
+            },
+            "tags": [
+                "초1돌봄",
+                "맞벌이육아",
+                "예비초등"
+            ],
+            "comments": [
+                {
+                    "author": "잠실엘스맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초2·7세 · 서울 송파",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "초1 1학기까지는 무조건 학교 돌봄교실에 있는 게 안전해요! 아이가 학교 환경에 적응하는 것만으로도 피로도가 엄청납니다. 학원 셔틀은 2학기나 초2부터 시작해도 늦지 않아요.",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "분당수내맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "👧 초3 여아 · 성남 분당",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "저희는 '돌봄교실 3시 하교 -> 태권도 1시간 -> 피아노 1시간 -> 엄마 퇴근' 동선으로 짰더니 아이 체력도 안 지치고 딱 좋았습니다!",
+                    "delayMinutes": 48
+                },
+                {
+                    "author": "판교워킹맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초3 여아 · 성남 분당",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "맞벌이 필수 팁: 학교 알림장 앱이랑 키즈폰 위치추적 알림 설정 꼭 해두세요. 돌봄 선생님과 소통만 잘 되면 생각보다 돌봄교실 만족도 높습니다.",
+                    "delayMinutes": 85
+                }
+            ]
+        },
+        {
+            "baseHour": 15,
+            "title": "유아 카시트 거부 심할 때 극복했던 실전 꿀팁 공유합니다 🚗",
+            "content": "18개월 무렵부터 카시트에 앉히기만 하면 허리를 활처럼 꺾고 오열해서 차 탈 때마다 온 가족이 진땀을 뺐는데요, 이렇게 바꾸고 카시트 거부 완치했어요!\n1. 차 타기 전 집 거실에 카시트 두고 좋아하는 인형 앉히며 친숙해지기\n2. 카시트 헤드레스트 각도와 어깨끈 조임이 너무 답답하지 않은지 재조정\n3. 차에서만 볼 수 있는 특별한 스티커북과 좋아하는 동요 플레이리스트 준비\n카시트 거부로 고생 중이신 분들 포기하지 마시고 꼭 시도해보세요!",
+            "category": "info",
+            "ageStage": "toddler",
+            "localHub": "hub-daejeon",
+            "localHubName": "대전 유성·서구",
+            "isQuestion": false,
+            "author": {
+                "nickname": "대전도안파파",
+                "level": "🌿 줄기맘·대디",
+                "region": "대전 유성구 상대동",
+                "childBadge": "22개월 남아",
+                "avatarBg": "bg-teal-600 text-white"
+            },
+            "tags": [
+                "카시트거부",
+                "육아꿀팁",
+                "차량이동"
+            ],
+            "comments": [
+                {
+                    "author": "세종나래맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초2 여아 · 세종 나성동",
+                    "avatarBg": "bg-pink-600 text-white",
+                    "content": "차에서만 만질 수 있는 특별 장난감 바구니 두는 방법 진짜 효과 백점이에요!! 다른 데서는 안 주는 걸 주니까 카시트 타는 걸 기다리더라구요.",
+                    "delayMinutes": 22
+                },
+                {
+                    "author": "청주오창맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 19개월 여아 · 충북 청주",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "각도 조절도 진짜 중요해요. 약간 누운 각도로 해주니까 훨씬 덜 보채고 스르륵 잠들었어요. 좋은 글 감사합니다!",
+                    "delayMinutes": 55
+                }
+            ]
+        },
+        {
+            "baseHour": 17,
+            "title": "6세 파닉스 시작 시기, 엄마표 영어로 가능한가요?",
+            "content": "내년에 6세 되는 아이인데 주변에서 파닉스 학원이나 학습지 시작했다는 얘기가 많이 들려서 마음이 조급해지네요. 영어 노출은 지금까지 주로 그림책 읽어주기랑 유튜브 슈퍼심플송 음원 노출 위주로 해왔는데, 파닉스 규칙을 지금 시기에 집에서 엄마표로 가르쳐도 효과가 있을지 아니면 전문 학원을 보내는 게 나을지 궁금합니다. 엄마표 파닉스 교재나 영상 추천도 부탁드려요!",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-seoul-northwest",
+            "localHubName": "서울 은평·마포",
+            "isQuestion": true,
+            "author": {
+                "nickname": "상암도담맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "서울 마포구 상암동",
+                "childBadge": "5세 여아",
+                "avatarBg": "bg-purple-600 text-white"
+            },
+            "tags": [
+                "6세영어",
+                "엄마표파닉스",
+                "영어그림책"
+            ],
+            "comments": [
+                {
+                    "author": "목동책육아맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🧒 7세 여아 · 양천 목동",
+                    "avatarBg": "bg-amber-500 text-white",
+                    "content": "6세는 글자 파닉스보다 소리 음가(음소인식) 노출이 훨씬 중요한 시기예요! 알파블록스 영상 재미있게 보여주시고 옥스포드 리딩트리(ORT) 가볍게 소리 내어 읽어주시면 7세에 파닉스 룰 금방 깨우칩니다.",
+                    "delayMinutes": 19
+                },
+                {
+                    "author": "일산호수맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 6세 남아 · 고양 일산",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "노부영(노래 부르는 영어동화)이랑 사이트워드 카드 놀이로 충분해요! 학원 보내서 단어 시험 보면 영어 자체에 거부감 생길 수 있으니 천천히 가셔도 됩니다.",
+                    "delayMinutes": 49
+                },
+                {
+                    "author": "마포책육아맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 5세 남아 · 서울 마포",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "상암 맘님 반가워요! 저희도 집에서 알파블록스만 보는데 음가 저절로 따라 부르더라구요. 집에서 가볍게 시작해보세요 ㅎㅎ",
+                    "delayMinutes": 82
+                }
+            ]
+        },
+        {
+            "baseHour": 18,
+            "title": "대구 수성구 소아 안과 영유아 시력검진 꼼꼼한 곳 추천 부탁드려요",
+            "content": "만 3세 영유아 검진 때 시력 굴절 검사에서 난시 의심 소견이 나와서 대학병원이나 소아 안과 전문 병원에서 정밀 검사를 받아보려고 합니다. 아이가 아직 숫자를 완벽하게 인지하지 못해서 그림 시력표로 친절하게 검사 잘해주는 수성구/중구 쪽 소아 안과 추천해주실 수 있을까요? 진료 대기나 예약 팁도 함께 알려주시면 감사하겠습니다!",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-daegu",
+            "localHubName": "대구 수성·달서",
+            "isQuestion": true,
+            "author": {
+                "nickname": "범어동민준맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "대구 수성구 범어동",
+                "childBadge": "39개월 남아",
+                "avatarBg": "bg-rose-600 text-white"
+            },
+            "tags": [
+                "소아안과",
+                "영유아시력검진",
+                "대구맘"
+            ],
+            "comments": [
+                {
+                    "author": "대구수성맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👦 초5 남아 · 대구 수성",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "범어네거리 누네안과병원 소아사시센터나 메트로안과 추천드려요! 소아 전문 검사 선생님들이 장난감이랑 영상 틀어주면서 엄청 달래가며 검사해주십니다.",
+                    "delayMinutes": 21
+                },
+                {
+                    "author": "달서월성맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 5세 여아 · 대구 달서",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "조절마비제 안약 넣고 굴절검사 할 수도 있으니 선글라스나 챙 넓은 모자 꼭 챙겨가세요! 결과 잘 나오길 응원합니다.",
+                    "delayMinutes": 53
+                }
+            ]
+        },
+        {
+            "baseHour": 20,
+            "title": "아이 자존감 높여주는 칭찬의 기술 (결과보다 과정 칭찬하기) ✨",
+            "content": "아이에게 '100점 맞아서 똑똑하네', '그림 정말 잘 그렸네' 같은 결과 위주 칭찬만 하다가 오은영 박사님 책 읽고 칭찬 방식을 바꿨더니 아이 태도가 눈에 띄게 달라졌어요.\n1. '끝까지 포기하지 않고 지우개로 지워가며 완성했네! 그 끈기가 정말 멋지다.'\n2. '혼자서 신발 신어보려고 끝까지 애쓴 네 노력이 대단해.'\n결과가 아니라 아이가 쏟은 시간과 정성에 초점을 맞춰주니 실패를 두려워하지 않고 새로운 도전을 즐기게 되었습니다. 부모님들 모두 실천해보세요!",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-gyeonggi-north",
+            "localHubName": "경기 일산·파주",
+            "isQuestion": false,
+            "author": {
+                "nickname": "운정바른육아맘",
+                "level": "👑 도담멘토",
+                "region": "경기 파주시 목동동",
+                "childBadge": "초1 남아",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "자존감높이기",
+                "올바른칭찬법",
+                "감정코칭"
+            ],
+            "comments": [
+                {
+                    "author": "일산둥이아빠",
+                    "level": "🌱 새싹맘·대디",
+                    "childBadge": "🧒 3세 쌍둥이 · 경기 고양",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "과정을 구체적으로 묘사해 주는 칭찬이 진짜 중요하다는 걸 다시 한번 배우고 갑니다. 오늘 퇴근하고 아이 만날 때 바로 해봐야겠네요!",
+                    "delayMinutes": 17
+                },
+                {
+                    "author": "마포책육아맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 5세 남아 · 서울 마포",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "마음에 깊이 와닿는 글이네요. '노력'에 박수를 보내주는 부모가 되어야겠다고 다짐합니다. 감사해요!",
+                    "delayMinutes": 46
+                }
+            ]
+        },
+        {
+            "baseHour": 21,
+            "title": "주말 육아 탈출! 남편과 번갈아 온전한 3시간 자유시간 갖기 룰 정했습니다 ㅎㅎ",
+            "content": "독박육아나 주말 내내 둘 다 지쳐서 예민해지는 것보다 주말 하루는 토요일 오후 남편 3시간 자유시간, 일요일 오후 제 3시간 자유시간으로 룰을 정했어요.\n저는 카페 가서 밀린 책 읽고 혼자 커피 마시고 오고, 남편은 좋아하는 운동 다녀오는데 3시간만 온전히 쉬고 와도 육아 에너지가 200% 충전되네요!! 서로 육아 번아웃 오기 전에 부부끼리 합의해서 자유시간 시스템 만드는 거 정말 강력 추천합니다.",
+            "category": "lounge",
+            "ageStage": "infant",
+            "localHub": "hub-busan",
+            "localHubName": "부산 해운대·센텀",
+            "isQuestion": false,
+            "author": {
+                "nickname": "센텀행복맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "부산 해운대구 우동",
+                "childBadge": "14개월 여아",
+                "avatarBg": "bg-rose-500 text-white"
+            },
+            "tags": [
+                "육아휴식",
+                "부부육아동지",
+                "주말자유시간"
+            ],
+            "comments": [
+                {
+                    "author": "해운대윤우맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 11개월 남아 · 부산 해운대",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "와 진짜 부러운 룰이에요!! 주말에 둘 다 붙어있으면서 서로 지치는 것보다 한 사람씩 온전히 쉬는 게 훨씬 현명한 것 같아요. 오늘 남편이랑 협상 들어갑니다 ㅋㅋㅋ",
+                    "delayMinutes": 16
+                },
+                {
+                    "author": "동탄준이맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 3세 남아 · 화성 동탄",
+                    "avatarBg": "bg-purple-600 text-white",
+                    "content": "저희도 이 룰 1년째 유지 중인데 부부싸움이 80%는 줄었어요! 육아는 마라톤이라 엄마아빠 멘탈 충전이 제일 중요합니다 적극 추천!",
+                    "delayMinutes": 44
+                },
+                {
+                    "author": "수지하린맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "🍼 11개월 여아 · 경기 용인",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "혼자 카페에서 마시는 커피 한 잔이 진짜 천국이죠... 현명한 부부 육아 팁 공유 감사합니다 😊",
+                    "delayMinutes": 75
+                }
+            ]
+        }
+    ],
+    [
+        {
+            "baseHour": 7,
+            "title": "초등 2학년 자기주도 독서 습관 잡기 (학습만화에서 줄글책으로 넘어가기)",
+            "content": "초1 때 학습만화(Why 시리즈, 흔한남매 등)에 푹 빠져서 줄글책은 아예 쳐다도 안 봐서 걱정이었는데요, 이렇게 해서 줄글 동화책으로 성공적으로 유도했어요.\n1. 매일 밤 잠자리에서 부모가 먼저 줄글책 앞 2~3장만 흥미진진하게 읽어주고 '그다음은 내일 스스로 읽어볼까?' 하고 덮기\n2. 글밥 적고 삽화 많은 얇은 챕터북(만복이네 떡집, 고양이 해결사 깜냥)부터 시작하기\n3. 도서관에서 아이가 직접 골라온 책은 만화든 그림책이든 절대 잔소리하지 않기\n지금은 스스로 자기 전 줄글책 30분씩 읽고 잡니다. 독서 고민이신 분들 참고해보세요!",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-seoul-north",
+            "localHubName": "서울 노원·도봉",
+            "isQuestion": false,
+            "author": {
+                "nickname": "중계동책마을맘",
+                "level": "👑 도담멘토",
+                "region": "서울 노원구 중계동",
+                "childBadge": "초2 여아",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "초등독서",
+                "줄글책전환",
+                "초2학부모"
+            ],
+            "comments": [
+                {
+                    "author": "목동초등맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 초3·초1 · 서울 양천",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "앞 2~3장만 읽어주고 덮는 밀당 독서법 진짜 특효약이에요 ㅋㅋㅋ 다음 내용 궁금해서 아이가 먼저 책 들고 오더라구요!",
+                    "delayMinutes": 20
+                },
+                {
+                    "author": "대구수성맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👦 초5 남아 · 대구 수성",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "깜냥 시리즈랑 만복이네 떡집은 진짜 마법의 징검다리 책이죠. 완전 공감하고 갑니다.",
+                    "delayMinutes": 48
+                }
+            ]
+        },
+        {
+            "baseHour": 8,
+            "title": "7개월 중기 이유식 핑거푸드 자기주도 시작해보신 분 계신가요?",
+            "content": "이유식 숟가락으로 떠먹여 줄 때 자꾸 숟가락을 뺏으려고 하고 입을 앙 다물어서 자기주도 이유식을 병행해 볼까 합니다. 7개월 아기 첫 핑거푸드로 찐 당근 스틱이나 브로콜리, 단호박 큐브 정도가 무난할까요? 목에 걸릴까 봐 너무 걱정되는데 매시드 형태로 주는 게 나을지, 선배맘님들은 자기주도 이유식 초기 때 어떤 식재료로 안전하게 시작하셨는지 조언 부탁드립니다!",
+            "category": "qna",
+            "ageStage": "infant",
+            "localHub": "hub-seoul-gangnam",
+            "localHubName": "서울 송파·잠실",
+            "isQuestion": true,
+            "author": {
+                "nickname": "잠실도담맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "서울 송파구 신천동",
+                "childBadge": "7개월 남아",
+                "avatarBg": "bg-rose-500 text-white"
+            },
+            "tags": [
+                "중기이유식",
+                "자기주도이유식",
+                "핑거푸드"
+            ],
+            "comments": [
+                {
+                    "author": "이유식요리왕맘",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🍼 9개월 여아 · 전국",
+                    "avatarBg": "bg-amber-500 text-white",
+                    "content": "엄마 손가락으로 눌렀을 때 으깨질 정도로 푹 찐 바나나 스틱이나 단호박 스틱 추천드려요! 잇몸으로 오물오물 씹는 연습에 딱 좋습니다.",
+                    "delayMinutes": 22
+                },
+                {
+                    "author": "송파둥이맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "👶 10개월 남아 · 서울 송파",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "턱받이는 실리콘 포켓 넓은 걸로 필수 착용하시고 바닥에 신문지나 방수매트 깔고 맘 비우고 시작하세요 ㅎㅎ 뒤처리는 힘들어도 아기 소근육 발달에는 최고예요!",
+                    "delayMinutes": 54
+                },
+                {
+                    "author": "수지연우맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🍼 6개월 남아 · 경기 용인",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "켁켁거리는 구역반사(Gag reflex)는 자연스러운 방어기제니까 바로 안아 올리지 마시고 차분히 지켜봐 주시는 게 중요해요!",
+                    "delayMinutes": 89
+                }
+            ]
+        },
+        {
+            "baseHour": 10,
+            "title": "송도 센트럴파크 아이랑 보트 타고 산책하기 좋은 코스 & 주차 팁 🚤",
+            "content": "주말에 날씨 좋아서 4세 아이 데리고 송도 센트럴파크 다녀왔는데 정말 완벽한 코스였어요!\n1. 이스트보트하우스에서 문보트 탑승: 30분 동안 아이가 운전대 잡고 물고기 구경하느라 초집중합니다.\n2. 사슴농장 & 토끼섬 산책길: 유모차 끌기 완벽한 평지 포장도로라 부모도 편해요.\n3. 주차 팁: 센트럴파크 지하주차장 종일권 5천 원으로 저렴하고 엘리베이터로 바로 공원 진입 가능합니다.\n이번 주말 가족 나들이 장소로 추천해요!",
+            "category": "info",
+            "ageStage": "toddler",
+            "localHub": "hub-incheon",
+            "localHubName": "인천 송도·연수",
+            "isQuestion": false,
+            "author": {
+                "nickname": "송도트리플맘",
+                "level": "🌳 열매나무맘",
+                "region": "인천 연수구 송도동",
+                "childBadge": "4세 남아",
+                "avatarBg": "bg-teal-600 text-white"
+            },
+            "tags": [
+                "송도센트럴파크",
+                "문보트",
+                "인천나들이"
+            ],
+            "comments": [
+                {
+                    "author": "송도하윤맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👧 38개월 여아 · 인천 연수",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "문보트 해질녘에 타면 송도 고층빌딩 야경이랑 어우러져서 사진 진짜 예쁘게 나와요! 주차 팁까지 꼼꼼한 정리 감사해요.",
+                    "delayMinutes": 25
+                },
+                {
+                    "author": "부천상동맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "🧒 5세 여아 · 경기 부천",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "사슴농장 쪽 당근 먹이주기는 금지되어 있으니 눈으로만 보게 해주시면 돼요 ㅎㅎ 이번 주말 가봐야겠네요!",
+                    "delayMinutes": 58
+                }
+            ]
+        },
+        {
+            "baseHour": 11,
+            "title": "어린이집 첫 등원 분리불안 한 달째 지속되는데 어떻게 해야 할까요 ㅠㅠ",
+            "content": "생후 20개월 아기인데 어린이집 입소한 지 한 달이 다 되어가는데도 아침마다 원문 앞에서 대성통곡을 하고 다리에 매달려요. 선생님께 안겨 들어가면 10분 뒤엔 울음 그치고 장난감 잘 가지고 논다고 사진 보내주시는데, 아침마다 헤어질 때 가슴이 찢어지고 제가 죄책감이 드네요... 분리불안 겪으셨던 선배맘님들 헤어질 때 어떤 인사말로 안심시켜 주셨나요?",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-seoul-southwest",
+            "localHubName": "서울 영등포·여의도",
+            "isQuestion": true,
+            "author": {
+                "nickname": "당산초보맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "서울 영등포구 당산동",
+                "childBadge": "20개월 여아",
+                "avatarBg": "bg-pink-600 text-white"
+            },
+            "tags": [
+                "어린이집등원",
+                "분리불안극복",
+                "20개월아기"
+            ],
+            "comments": [
+                {
+                    "author": "판교도담맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👶 20개월 남아 · 성남 분당",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "헤어질 때 미안한 표정 짓거나 망설이시면 아이가 더 불안해해요! '엄마 회사가서 일 열심히 하고 꿀잠 자고 간식 먹으면 꼭 데리러 올게!' 하고 밝은 미소로 단호하고 짧게 안아주고 돌아서셔야 적응이 빨라집니다.",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "마포책육아맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 5세 남아 · 서울 마포",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "엄마 손등에 하트 스티커, 아기 손등에 하트 스티커 붙여주고 '보고 싶을 때마다 하트 뽀뽀하자' 하면 불안감이 신기하게 확 줄어들어요!",
+                    "delayMinutes": 44
+                },
+                {
+                    "author": "동탄준이맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 3세 남아 · 화성 동탄",
+                    "avatarBg": "bg-purple-600 text-white",
+                    "content": "들어가서 잘 놀면 이미 절반 이상 성공한 거예요! 죄책감 갖지 마시고 하원할 때 온 힘 다해 꽉 안아주세요 힘내세요 엄마님!",
+                    "delayMinutes": 77
+                }
+            ]
+        },
+        {
+            "baseHour": 13,
+            "title": "초등 고학년 용돈 관리법 (체크카드 vs 현금, 얼마가 적당할까요?)",
+            "content": "초등학교 5학년 올라가는 아이인데 친구들이랑 편의점 가거나 문구점 갈 때 용돈을 어떻게 줘야 할지 기준이 서지 않네요. 주 단위로 현금 1만 원씩 주는 게 경제관념에 좋을지, 아니면 토스유스카드 같은 키즈 체크카드에 충전식으로 넣어주는 게 지출 내역 관리하기 편할까요? 선배 부모님들은 초등 고학년 용돈 액수와 주기 어떻게 운영하고 계시는지 궁금합니다!",
+            "category": "qna",
+            "ageStage": "high",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "수원 영통·광교",
+            "isQuestion": true,
+            "author": {
+                "nickname": "영통지후맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "수원시 영통구 매탄동",
+                "childBadge": "초5 남아",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "초등용돈",
+                "토스유스카드",
+                "경제교육"
+            ],
+            "comments": [
+                {
+                    "author": "대구수성맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "👦 초5 남아 · 대구 수성",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "초5면 토스유스카드나 카카오뱅크 미니 추천드려요! 주 1만 원씩 입금해주고 본인이 잔액 확인하면서 아껴 쓰는 습관이 저절로 생기더라구요. 부모 앱으로 결제 알림도 와서 안심입니다.",
+                    "delayMinutes": 21
+                },
+                {
+                    "author": "노원학부모",
+                    "level": "👑 도담멘토",
+                    "childBadge": "🎒 중1·초5 · 서울 노원",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "용돈 기입장 앱으로 일주일에 한 번씩 결산하고 남은 돈의 50%는 저축통장에 넣어주니 저축하는 재미를 금방 깨우쳤습니다!",
+                    "delayMinutes": 52
+                }
+            ]
+        },
+        {
+            "baseHour": 15,
+            "title": "겨울철 유아 보습 크림·밤 건조한 볼 발진 잡은 정착템 공유 🧴",
+            "content": "찬 바람 불기 시작하면 아이 양 볼이랑 턱 밑이 빨갛게 트고 거칠어져서 침독 크림부터 고보습 로션까지 안 써본 게 없는데요, 마침내 정착한 루틴입니다.\n1. 세안이나 목욕 후 3분 이내 아토팜 판테놀 크림 듬뿍 도포\n2. 외출 15분 전 에스트라 아토베리어 밤으로 얇게 피부 장벽 코팅\n3. 가습기 풀가동으로 침실 습도 55% 고정\n이 세 가지만 일주일 지켰는데 붉은기 다 가라앉고 보들보들한 꿀피부로 돌아왔어요!",
+            "category": "info",
+            "ageStage": "infant",
+            "localHub": "hub-chungcheong",
+            "localHubName": "세종·대전",
+            "isQuestion": false,
+            "author": {
+                "nickname": "세종보습맘",
+                "level": "🌿 줄기맘·대디",
+                "region": "세종시 아름동",
+                "childBadge": "15개월 여아",
+                "avatarBg": "bg-emerald-600 text-white"
+            },
+            "tags": [
+                "유아보습",
+                "침독크림",
+                "겨울철피부관리"
+            ],
+            "comments": [
+                {
+                    "author": "송파둥이맘",
+                    "level": "🌱 새싹맘",
+                    "childBadge": "👶 10개월 남아 · 서울 송파",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "외출 전 밤으로 보호막 씌워주는 게 진짜 핵심이더라구요! 찬 바람 맞아도 덜 빨개져요 꿀팁 감사합니다.",
+                    "delayMinutes": 23
+                },
+                {
+                    "author": "청라하진맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 6세 남아 · 인천 서구",
+                    "avatarBg": "bg-teal-600 text-white",
+                    "content": "아토팜 판테놀 크림 저희 집도 3통째 비우고 있는 정착템이에요 ㅎㅎ 환절기 필수품 인정합니다!",
+                    "delayMinutes": 56
+                }
+            ]
+        },
+        {
+            "baseHour": 17,
+            "title": "5세 미술학원 vs 레고 블록방, 어떤 게 창의력에 더 도움 될까요?",
+            "content": "아이가 평소에 집에서 끄적이기랑 블록 쌓기를 둘 다 좋아하는데, 주 1회 단과로 미술 퍼포먼스 학원(드로잉/물감놀이)을 보낼지 아니면 레고 창의 블록방을 보낼지 고민입니다. 5세에는 대근육/소근육 자극과 스트레스 해소에 어떤 활동이 더 효과적이었는지 경험자 선배맘님들 후기 부탁드려요!",
+            "category": "qna",
+            "ageStage": "toddler",
+            "localHub": "hub-gyeonggi-north",
+            "localHubName": "경기 일산·고양",
+            "isQuestion": true,
+            "author": {
+                "nickname": "일산별이맘",
+                "level": "🌷 꽃봉오리맘",
+                "region": "경기 고양시 일산동구",
+                "childBadge": "48개월 여아",
+                "avatarBg": "bg-purple-600 text-white"
+            },
+            "tags": [
+                "5세학원",
+                "퍼포먼스미술",
+                "창의레고"
+            ],
+            "comments": [
+                {
+                    "author": "마포책육아맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 5세 남아 · 서울 마포",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "5세에는 집에서 못 해주는 전신 물감 퍼포먼스 미술 강추해요! 스트레스 발산도 엄청나고 감각 자극에 최고였습니다. 블록은 6세부터 도면 보면서 해도 늦지 않아요.",
+                    "delayMinutes": 20
+                },
+                {
+                    "author": "용인수지맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 4세 남아 · 용인 수지",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "아이가 차분한 편이면 레고도 집중력 키우는 데 좋은데 5세는 보통 몸으로 노는 걸 더 좋아하더라구요 ㅎㅎ 미술 원데이 먼저 체험해보세요!",
+                    "delayMinutes": 51
+                }
+            ]
+        },
+        {
+            "baseHour": 18,
+            "title": "광주 상무지구 아기랑 안심하고 갈 수 있는 룸 식당 추천해주세요",
+            "content": "돌 지난 아기 데리고 부모님 모시고 주말 점심 식사할 가족 모임 장소 찾고 있어요. 아기가 아직 가만히 앉아있질 못해서 독립된 온돌 룸이나 아기의자 넉넉한 룸 식당이었으면 좋겠습니다. 상무지구 쪽 한정식이나 깔끔한 고깃집 중에 주차 편하고 친절했던 곳 추천 부탁드립니다!",
+            "category": "qna",
+            "ageStage": "infant",
+            "localHub": "hub-gwangju",
+            "localHubName": "광주 상무·수완",
+            "isQuestion": true,
+            "author": {
+                "nickname": "수완율이맘",
+                "level": "🌱 새싹맘·대디",
+                "region": "광주 광산구 수완동",
+                "childBadge": "13개월 남아",
+                "avatarBg": "bg-teal-600 text-white"
+            },
+            "tags": [
+                "광주맛집",
+                "상무지구룸식당",
+                "아기동반식당"
+            ],
+            "comments": [
+                {
+                    "author": "상무지구맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "🧒 4세 여아 · 광주 서구",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "상무지구 명지원이나 솔빛마루 한정식 추천드려요! 개별 룸 완벽하고 아기의자 세팅이랑 미역국 서비스까지 친절하게 잘 챙겨주십니다.",
+                    "delayMinutes": 19
+                },
+                {
+                    "author": "봉선동태양맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👶 15개월 남아 · 광주 남구",
+                    "avatarBg": "bg-amber-600 text-white",
+                    "content": "솔빛마루 주차장 넓고 음식 간이 자극적이지 않아서 어르신들이랑 아기 모두 만족했어요. 주말엔 룸 예약 필수입니다!",
+                    "delayMinutes": 47
+                }
+            ]
+        },
+        {
+            "baseHour": 20,
+            "title": "형제·자매 싸움 중재할 때 부모가 절대 하지 말아야 할 말 3가지",
+            "content": "연년생 키우면서 하루에도 열두 번씩 장난감 뺏고 소리 지르는 통에 화가 머리끝까지 날 때가 많았는데요, 상담 센터 다니면서 배운 절대 금기어입니다.\n1. '형/언니니까 양보해야지' (첫째에게 억울함과 책임감 과부하)\n2. '누가 먼저 그랬어?' (진실 공방하느라 서로 탓하는 습관 형성)\n3. '둘 다 똑같이 혼나' (억울한 아이의 감정을 완전히 묵살)\n대신 '장난감 하나로 둘 다 놀고 싶었구나' 하고 각자의 속상한 마음을 먼저 읽어주고, 타이머 맞춰서 순서 정하기를 시켰더니 싸우는 횟수가 절반으로 줄었습니다!",
+            "category": "info",
+            "ageStage": "child",
+            "localHub": "hub-seoul-gangbuk",
+            "localHubName": "서울 마포·은평",
+            "isQuestion": false,
+            "author": {
+                "nickname": "마포형제맘",
+                "level": "👑 도담멘토",
+                "region": "서울 마포구 공덕동",
+                "childBadge": "초1·5세 형제",
+                "avatarBg": "bg-indigo-600 text-white"
+            },
+            "tags": [
+                "형제싸움",
+                "부모교육",
+                "감정코칭"
+            ],
+            "comments": [
+                {
+                    "author": "일산둥이아빠",
+                    "level": "🌱 새싹맘·대디",
+                    "childBadge": "🧒 3세 쌍둥이 · 경기 고양",
+                    "avatarBg": "bg-sky-600 text-white",
+                    "content": "'누가 먼저 그랬어?' 맨날 제가 입버릇처럼 하던 말인데 뼈를 세게 맞았습니다... 각자 마음 먼저 읽어주는 타이머 훈육법 당장 실천해볼게요!",
+                    "delayMinutes": 18
+                },
+                {
+                    "author": "고덕하준맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "👦 초2 남아 · 서울 강동",
+                    "avatarBg": "bg-rose-500 text-white",
+                    "content": "첫째한테 '형이니까' 소리 안 하는 것만으로도 첫째가 동생을 훨씬 덜 미워하더라구요. 명문장입니다 스크랩해갑니다!",
+                    "delayMinutes": 49
+                },
+                {
+                    "author": "동탄준이맘",
+                    "level": "🌷 꽃봉오리맘",
+                    "childBadge": "🧒 3세 남아 · 화성 동탄",
+                    "avatarBg": "bg-purple-600 text-white",
+                    "content": "육아 멘토 글 감사해요. 타이머 알람 맞추면 아이들도 시각적으로 납득을 잘하더라구요 ㅎㅎ",
+                    "delayMinutes": 81
+                }
+            ]
+        },
+        {
+            "baseHour": 21,
+            "title": "워킹대디의 주말 10분 아빠놀이, 아이 반응 대박이었던 놀이법! 🦸‍♂️",
+            "content": "평일엔 야근 때문에 아이 얼굴 잠깐 보고 주말에 피곤해서 누워만 있다가 미안해서 딱 10분씩 집중해서 놀아줬는데 아이가 아빠 최고라고 난리 났어요!\n1. 이불 김밥 놀이: 이불에 아이 눕혀서 김밥 말듯이 돌돌 말고 김밥 썰기 콕콕!\n2. 인간 놀이기구: 다리 위에 아이 앉히고 비행기 이륙 놀이\n3. 풍선 배구: 바닥에 떨어뜨리지 않고 둘이서 50번 랠리 이어가기\n거창한 키즈카페 안 가도 10분 동안 온전히 몸으로 부대끼며 웃어주니 유대감이 팍팍 쌓입니다. 아빠들 주말 10분만 투자해보세요!",
+            "category": "lounge",
+            "ageStage": "toddler",
+            "localHub": "hub-gyeonggi-south",
+            "localHubName": "수원 광교·영통",
+            "isQuestion": false,
+            "author": {
+                "nickname": "광교슈퍼대디",
+                "level": "🌿 줄기맘·대디",
+                "region": "수원시 영통구 하동",
+                "childBadge": "4세 여아",
+                "avatarBg": "bg-blue-600 text-white"
+            },
+            "tags": [
+                "아빠놀이",
+                "몸놀이",
+                "워킹대디"
+            ],
+            "comments": [
+                {
+                    "author": "강남윤아파파",
+                    "level": "🌱 새싹맘·대디",
+                    "childBadge": "👧 34개월 여아 · 서울 서초",
+                    "avatarBg": "bg-indigo-600 text-white",
+                    "content": "이불 김밥 놀이 진짜 필살기죠 ㅋㅋㅋ 간지럼 태우면서 썰어주면 숨넘어가게 웃습니다. 아빠 놀이 팁 멋집니다!",
+                    "delayMinutes": 17
+                },
+                {
+                    "author": "잠실솔이맘",
+                    "level": "🌳 열매나무맘",
+                    "childBadge": "👧 4세 여아 · 서울 송파",
+                    "avatarBg": "bg-pink-600 text-white",
+                    "content": "이 글 저희 남편한테 꼭 보여줘야겠어요!! 거창한 것보다 10분 밀도 높은 아빠 놀이가 엄마한테도 아이한테도 최고의 선물입니다.",
+                    "delayMinutes": 45
+                },
+                {
+                    "author": "판교워킹맘",
+                    "level": "🌿 줄기맘·대디",
+                    "childBadge": "👧 초3 여아 · 성남 분당",
+                    "avatarBg": "bg-emerald-600 text-white",
+                    "content": "풍선 배구는 초등 저학년 때까지도 땀 뻘뻘 흘리며 좋아하는 놀이예요 ㅎㅎ 멋진 아빠십니다 최고!",
+                    "delayMinutes": 80
+                }
+            ]
+        }
+    ]
+];
+
+    // 날짜 및 인덱스 기반 일관된 의사 난수 생성 함수 (새로고침 시 시간/조회수 변동 방지)
     const getPseudoRandom = (seed) => {
       const x = Math.sin(seed) * 10000;
       return x - Math.floor(x);
     };
 
-    const dateSeed = todayStr.split('-').reduce((acc, c) => acc * 31 + parseInt(c, 10), 0);
+    // [사용자 요구사항]: 과거 글은 삭제하지 않고 누적 보존!
+    // 최초 접속자 및 캐시 초기화 시에도 최근 3일간의 활발한 활동 내역이 그대로 유지되도록
+    // dayOffset: 3일 전(3), 2일 전(2), 어제(1), 오늘(0) 순으로 순회
+    for (let dayOffset = 3; dayOffset >= 0; dayOffset--) {
+      const targetDayStartMs = todayStartMs - dayOffset * 24 * 3600 * 1000;
+      // KST 기준 날짜 문자열 계산 (09:00:00 추가하여 안전하게 날짜 계산)
+      const targetDateStr = this.getKstDateStr(targetDayStartMs + 9 * 3600 * 1000);
+      const daySeed = Math.abs(targetDateStr.split('-').reduce((acc, c) => acc * 31 + parseInt(c, 10), 0));
 
-    dailyTemplates.forEach((tpl, idx) => {
-      const postId = `daily-ai-post-${todayStr}-${idx + 1}`;
-      if (existingIds.has(postId) || (this.deletedPostIds && this.deletedPostIds.has(postId))) return;
+      // 날짜별로 서로 다른 풀을 순환 선택하여 매일 새로운 글이 생성됨
+      const pool = dailyPools[daySeed % dailyPools.length];
 
-      // 매시간 정각이나 특정 분에 고정되지 않도록 3~53분 사이의 불규칙한 분과 초 계산
-      const randMin = Math.floor(getPseudoRandom(dateSeed + idx * 17 + 5) * 51) + 3;
-      const randSec = Math.floor(getPseudoRandom(dateSeed + idx * 31 + 13) * 60);
+      pool.forEach((tpl, idx) => {
+        const postId = `daily-ai-post-${targetDateStr}-${idx + 1}`;
+        if (this.deletedPostIds && this.deletedPostIds.has(postId)) return;
 
-      const postTime = todayStartMs + (tpl.baseHour * 3600 + randMin * 60 + randSec) * 1000;
+        // 3~53분 사이의 자연스러운 불규칙한 시간 계산
+        const randMin = Math.floor(getPseudoRandom(daySeed + idx * 17 + 5) * 51) + 3;
+        const randSec = Math.floor(getPseudoRandom(daySeed + idx * 31 + 13) * 60);
+        const postTime = targetDayStartMs + (tpl.baseHour * 3600 + randMin * 60 + randSec) * 1000;
 
-      // [사용자 요구사항]: 한 번에 다 올리지 않고, 현재 시간(nowMs)이 지난 글만 순차적으로 등장!
-      if (postTime > nowMs) return;
+        // 오늘(dayOffset === 0) 글인 경우: 현재 시간(nowMs) 이전인 글만 순차적으로 등장!
+        if (dayOffset === 0 && postTime > nowMs) return;
 
-      // 자연스러운 조회수 (15 ~ 35회)
-      const seedNum = (postId.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) + idx * 7) % 21;
-      const initialViews = 15 + seedNum;
-      const initialLikes = Math.max(0, Math.floor((initialViews - 15) / 10));
+        // 이미 존재하는 글인 경우 댓글 점진적 잠금 해제 확인
+        if (existingIds.has(postId)) {
+          const existingPost = this.data.posts.find((p) => p && p.id === postId);
+          if (existingPost && Array.isArray(tpl.comments)) {
+            if (!Array.isArray(existingPost.comments)) existingPost.comments = [];
+            const existingCommentIds = new Set(existingPost.comments.map((c) => c && c.id));
+            tpl.comments.forEach((cTpl, cIdx) => {
+              const commentTime = postTime + (cTpl.delayMinutes || 15) * 60 * 1000;
+              if (dayOffset > 0 || commentTime <= nowMs) {
+                const commentId = `c-${postId}-${cIdx + 1}`;
+                if (!existingCommentIds.has(commentId)) {
+                  existingPost.comments.push({
+                    id: commentId,
+                    author: cTpl.author,
+                    level: cTpl.level,
+                    childBadge: cTpl.childBadge,
+                    avatarBg: cTpl.avatarBg,
+                    content: cTpl.content,
+                    text: cTpl.content,
+                    timestamp: commentTime,
+                    time: this.formatPostDate({ timestamp: commentTime }),
+                    createdAt: this.formatPostDate({ timestamp: commentTime })
+                  });
+                }
+              }
+            });
+          }
+          return;
+        }
 
-      const newPost = {
-        id: postId,
-        title: tpl.title,
-        content: tpl.content,
-        category: tpl.category,
-        ageStage: tpl.ageStage,
-        localHub: tpl.localHub,
-        localHubName: tpl.localHubName,
-        localTopic: 'general',
-        isQuestion: !!tpl.isQuestion,
-        isAiGenerated: true, // 관리자에게만 🤖 AI 배지 표시용
-        images: [],
-        author: tpl.author,
-        timestamp: postTime,
-        createdAt: this.formatPostDate({ timestamp: postTime }),
-        views: initialViews,
-        reactions: { like: initialLikes, hug: 0, tip: 0 },
-        comments: [],
-        tags: tpl.tags
-      };
+        // 자연스러운 조회수와 공감수 (과거 글일수록 조회수/공감 자연스럽게 증가)
+        const seedNum = (postId.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) + idx * 7) % 21;
+        const initialViews = 18 + dayOffset * 22 + seedNum;
+        const initialLikes = Math.max(dayOffset > 0 ? 1 : 0, Math.floor((initialViews - 15) / 12));
 
-      this.data.posts.push(newPost);
-      existingIds.add(postId);
-    });
+        // 해당 글의 2~3개 댓글 생성 (오늘 글은 시간 경과에 따라 잠금 해제, 과거 글은 전체 노출)
+        const comments = [];
+        if (Array.isArray(tpl.comments)) {
+          tpl.comments.forEach((cTpl, cIdx) => {
+            const commentTime = postTime + (cTpl.delayMinutes || 15) * 60 * 1000;
+            if (dayOffset > 0 || commentTime <= nowMs) {
+              comments.push({
+                id: `c-${postId}-${cIdx + 1}`,
+                author: cTpl.author,
+                level: cTpl.level,
+                childBadge: cTpl.childBadge,
+                avatarBg: cTpl.avatarBg,
+                content: cTpl.content,
+                text: cTpl.content,
+                timestamp: commentTime,
+                time: this.formatPostDate({ timestamp: commentTime }),
+                createdAt: this.formatPostDate({ timestamp: commentTime })
+              });
+            }
+          });
+        }
+
+        const newPost = {
+          id: postId,
+          title: tpl.title,
+          content: tpl.content,
+          category: tpl.category,
+          ageStage: tpl.ageStage,
+          localHub: tpl.localHub,
+          localHubName: tpl.localHubName,
+          localTopic: 'general',
+          isQuestion: !!tpl.isQuestion,
+          isAiGenerated: true, // 관리자에게만 🤖 AI 배지 표시용
+          images: [],
+          author: tpl.author,
+          timestamp: postTime,
+          createdAt: this.formatPostDate({ timestamp: postTime }),
+          views: initialViews,
+          reactions: { like: initialLikes, hug: 0, tip: 0 },
+          comments: comments,
+          tags: tpl.tags || []
+        };
+
+        this.data.posts.push(newPost);
+        existingIds.add(postId);
+      });
+    }
 
     // 최신순 정렬
     this.data.posts.sort((a, b) => {
@@ -5375,6 +6587,7 @@ class DodamCommunityApp {
       const tB = (b && b.timestamp) || 0;
       return tB - tA;
     });
+
     this.savePostsCache();
   }
 
@@ -6023,7 +7236,7 @@ class DodamCommunityApp {
       const cached = localStorage.getItem('dodam_posts_cache_v2');
       if (cached) {
         const parsed = JSON.parse(cached);
-        if (Array.isArray(parsed) && parsed.length >= 20) {
+        if (Array.isArray(parsed) && parsed.length >= 5) {
           this.data.posts = parsed;
         }
       }
