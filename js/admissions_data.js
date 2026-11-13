@@ -3,7 +3,7 @@
 window.DODAM_ADMISSIONS_DATA = {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-11-12",
+    "lastUpdated": "2026-11-13",
     "totalCount": 68,
     "todayCollectedCount": 20,
     "officialSources": [
