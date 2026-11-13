@@ -491,18 +491,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B8%80%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B8%80%EB%86%80%EC%9D%B4%ED%84%B0",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B8%80%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%9C%EA%B8%80%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%ED%95%9C%EA%B8%80%EB%B0%95%EB%AC%BC%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "국립한글박물관"
   },
   {
     "id": "attr-seoul-13",
@@ -743,18 +744,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90%20DDP%20%EB%94%94%EC%9E%90%EC%9D%B8%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.naver.com/p/search/%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90%20DDP%20%EB%94%94%EC%9E%90%EC%9D%B8%EB%86%80%EC%9D%B4%ED%84%B0",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90%20DDP%20%EB%94%94%EC%9E%90%EC%9D%B8%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.kakao.com/?q=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90%20DDP%20%EB%94%94%EC%9E%90%EC%9D%B8%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%99%EB%8C%80%EB%AC%B8%EB%94%94%EC%9E%90%EC%9D%B8%ED%94%8C%EB%9D%BC%EC%9E%90"
       }
-    }
+    },
+    "searchQuery": "동대문디자인플라자"
   },
   {
     "id": "attr-seoul-19",
@@ -2969,18 +2971,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0%20%EC%95%84%EB%9D%BC%EB%B1%83%EA%B8%B8%20%ED%81%AC%EB%A3%A8%EC%A6%88"
+        "url": "https://map.naver.com/p/search/%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0%20%EC%95%84%EB%9D%BC%EB%B1%83%EA%B8%B8%20%ED%81%AC%EB%A3%A8%EC%A6%88",
-        "directionsUrl": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0%20%EC%95%84%EB%9D%BC%EB%B1%83%EA%B8%B8%20%ED%81%AC%EB%A3%A8%EC%A6%88"
+        "url": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0%20%EC%95%84%EB%9D%BC%EB%B1%83%EA%B8%B8%20%ED%81%AC%EB%A3%A8%EC%A6%88"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%98%84%EB%8C%80%EC%9C%A0%EB%9E%8C%EC%84%A0"
       }
-    }
+    },
+    "searchQuery": "현대유람선"
   },
   {
     "id": "attr-ic-15",
@@ -3011,18 +3014,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%86%A1%EB%8F%84%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%ED%82%A4%EC%A6%88%EA%B0%80%EB%93%A0"
+        "url": "https://map.naver.com/p/search/%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EC%86%A1%EB%8F%84%EC%A0%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%86%A1%EB%8F%84%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%ED%82%A4%EC%A6%88%EA%B0%80%EB%93%A0",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%86%A1%EB%8F%84%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%ED%82%A4%EC%A6%88%EA%B0%80%EB%93%A0"
+        "url": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EC%86%A1%EB%8F%84%EC%A0%90",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EC%86%A1%EB%8F%84%EC%A0%90"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A1%EB%8F%84%20%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%ED%82%A4%EC%A6%88%EA%B0%80%EB%93%A0"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%98%84%EB%8C%80%ED%94%84%EB%A6%AC%EB%AF%B8%EC%97%84%EC%95%84%EC%9A%B8%EB%A0%9B%20%EC%86%A1%EB%8F%84%EC%A0%90"
       }
-    }
+    },
+    "searchQuery": "현대프리미엄아울렛 송도점"
   },
   {
     "id": "attr-gw-01",
@@ -4397,18 +4401,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%A3%8C%EC%8B%A4"
+        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%A3%8C%EC%8B%A4",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%A3%8C%EC%8B%A4"
+        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EC%B2%AD%EC%86%8C%EB%85%84%EC%9E%90%EB%A3%8C%EC%8B%A4"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%EC%84%B8%EC%A2%85%EB%8F%84%EC%84%9C%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "국립세종도서관"
   },
   {
     "id": "attr-sj-06",
@@ -5279,18 +5284,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%B6%A9%EC%A3%BC%20%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
+        "url": "https://map.naver.com/p/search/%EC%B6%A9%EC%A3%BC%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%B6%A9%EC%A3%BC%20%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%B6%A9%EC%A3%BC%20%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
+        "url": "https://map.kakao.com/?q=%EC%B6%A9%EC%A3%BC%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%B6%A9%EC%A3%BC%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EC%A3%BC%20%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%EC%A3%BC%EB%9D%BC%EB%B0%94%EB%9E%9C%EB%93%9C"
       }
-    }
+    },
+    "searchQuery": "충주라바랜드"
   },
   {
     "id": "attr-cb-06",
@@ -5741,18 +5747,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://map.naver.com/p/search/%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B0%A4%EB%9F%AC%EB%A6%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%EC%8B%9C%EB%A6%BD%EB%AF%B8%EC%88%A0%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "광주시립미술관"
   },
   {
     "id": "attr-gj-06",
@@ -5867,18 +5874,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90%20%EB%86%80%EC%9D%B4%EB%A7%88%EC%9D%84"
+        "url": "https://map.naver.com/p/search/%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90%20%EB%86%80%EC%9D%B4%EB%A7%88%EC%9D%84",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90%20%EB%86%80%EC%9D%B4%EB%A7%88%EC%9D%84"
+        "url": "https://map.kakao.com/?q=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90%20%EB%86%80%EC%9D%B4%EB%A7%88%EC%9D%84"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A4%91%EC%99%B8%EA%B3%B5%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "중외공원"
   },
   {
     "id": "attr-gj-09",
@@ -5909,18 +5917,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B4%91%EC%A3%BC%20%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C%20%EC%83%8C%EB%93%9C%ED%8C%8C%ED%81%AC"
+        "url": "https://map.naver.com/p/search/%EA%B4%91%EC%A3%BC%EA%B8%B0%EC%95%84%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%20%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C%20%EC%83%8C%EB%93%9C%ED%8C%8C%ED%81%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%20%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C%20%EC%83%8C%EB%93%9C%ED%8C%8C%ED%81%AC"
+        "url": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EA%B8%B0%EC%95%84%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%EA%B8%B0%EC%95%84%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%20%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C%20%EC%83%8C%EB%93%9C%ED%8C%8C%ED%81%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%EA%B8%B0%EC%95%84%EC%B1%94%ED%94%BC%EC%96%B8%EC%8A%A4%ED%95%84%EB%93%9C"
       }
-    }
+    },
+    "searchQuery": "광주기아챔피언스필드"
   },
   {
     "id": "attr-jb-01",
@@ -6833,18 +6842,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EB%B3%B4%EC%84%B1%20%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90%20%EB%85%B9%EC%B0%A8%EB%B0%AD"
+        "url": "https://map.naver.com/p/search/%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EB%B3%B4%EC%84%B1%20%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90%20%EB%85%B9%EC%B0%A8%EB%B0%AD",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%B3%B4%EC%84%B1%20%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90%20%EB%85%B9%EC%B0%A8%EB%B0%AD"
+        "url": "https://map.kakao.com/?q=%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B3%B4%EC%84%B1%20%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90%20%EB%85%B9%EC%B0%A8%EB%B0%AD"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8C%80%ED%95%9C%EB%8B%A4%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "대한다원"
   },
   {
     "id": "attr-jn-09",
@@ -7631,18 +7641,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EB%8C%80%EA%B5%AC%20%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC%20%ED%82%A4%EC%A6%88%EC%A1%B4"
+        "url": "https://map.naver.com/p/search/%EB%8C%80%EA%B5%AC%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%20%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC%20%ED%82%A4%EC%A6%88%EC%A1%B4",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%20%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC%20%ED%82%A4%EC%A6%88%EC%A1%B4"
+        "url": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8C%80%EA%B5%AC%20%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC%20%ED%82%A4%EC%A6%88%EC%A1%B4"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8C%80%EA%B5%AC%EC%82%BC%EC%84%B1%EB%9D%BC%EC%9D%B4%EC%98%A8%EC%A6%88%ED%8C%8C%ED%81%AC"
       }
-    }
+    },
+    "searchQuery": "대구삼성라이온즈파크"
   },
   {
     "id": "attr-dg-12",
@@ -18923,18 +18934,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.naver.com/p/search/%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://place.map.kakao.com/17577260",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://map.kakao.com/?q=%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC%20%EC%96%B4%EB%A6%B0%EC%9D%B4%EB%86%80%EC%9D%B4%ED%84%B0"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EA%B0%95%EC%9E%90%EC%97%B0%ED%9C%B4%EC%96%91%EB%A6%BC"
       }
-    }
+    },
+    "searchQuery": "금강자연휴양림"
   },
   {
     "id": "attr-forest-0159",
@@ -32748,14 +32760,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://place.map.kakao.com/312739954",
+        "url": "https://map.kakao.com/?q=%EC%9B%94%EC%95%84%EC%82%B0%EC%88%B2%EC%86%8D%EC%9D%98%EC%A7%84%EC%A3%BC%20%EC%B9%98%EC%9C%A0%EC%9D%98%EC%88%B2",
         "directionsUrl": "https://map.kakao.com/?q=%EC%9B%94%EC%95%84%EC%82%B0%EC%88%B2%EC%86%8D%EC%9D%98%EC%A7%84%EC%A3%BC%20%EC%B9%98%EC%9C%A0%EC%9D%98%EC%88%B2"
       },
       "google": {
         "rating": 4.6,
         "url": "https://www.google.com/maps/search/?api=1&query=%EC%9B%94%EC%95%84%EC%82%B0%EC%88%B2%EC%86%8D%EC%9D%98%EC%A7%84%EC%A3%BC%20%EC%B9%98%EC%9C%A0%EC%9D%98%EC%88%B2"
       }
-    }
+    },
+    "searchQuery": "월아산숲속의진주 치유의숲"
   },
   {
     "id": "attr-forest-0430",
@@ -38358,14 +38371,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://place.map.kakao.com/347546573",
+        "url": "https://map.kakao.com/?q=%EA%B5%AC%EB%AF%B8%EC%95%84%EC%9D%B4%EC%82%AC%EB%9E%91%EB%86%80%EC%9D%B4%ED%84%B0",
         "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AC%EB%AF%B8%EC%95%84%EC%9D%B4%EC%82%AC%EB%9E%91%EB%86%80%EC%9D%B4%ED%84%B0"
       },
       "google": {
         "rating": 4.6,
         "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AC%EB%AF%B8%EC%95%84%EC%9D%B4%EC%82%AC%EB%9E%91%EB%86%80%EC%9D%B4%ED%84%B0"
       }
-    }
+    },
+    "searchQuery": "구미아이사랑놀이터"
   },
   {
     "id": "attr-kidscafe-0088",
@@ -43356,14 +43370,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://place.map.kakao.com/1366324366",
+        "url": "https://map.kakao.com/?q=%EC%9D%B8%EC%B2%9C%ED%98%81%EC%8B%A0%EC%9C%A1%EC%95%84%EB%B3%B5%ED%95%A9%EC%84%BC%ED%84%B0",
         "directionsUrl": "https://map.kakao.com/?q=%EC%9D%B8%EC%B2%9C%ED%98%81%EC%8B%A0%EC%9C%A1%EC%95%84%EB%B3%B5%ED%95%A9%EC%84%BC%ED%84%B0"
       },
       "google": {
         "rating": 4.8,
         "url": "https://www.google.com/maps/search/?api=1&query=%EC%9D%B8%EC%B2%9C%ED%98%81%EC%8B%A0%EC%9C%A1%EC%95%84%EB%B3%B5%ED%95%A9%EC%84%BC%ED%84%B0"
       }
-    }
+    },
+    "searchQuery": "인천혁신육아복합센터"
   },
   {
     "id": "attr-kidscafe-0186",
@@ -50139,14 +50154,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://place.map.kakao.com/1818057568",
+        "url": "https://map.kakao.com/?q=%ED%8F%AC%ED%95%AD%EC%8B%9C%EC%95%84%EC%9D%B4%EB%88%84%EB%A6%AC%EC%84%BC%ED%84%B0",
         "directionsUrl": "https://map.kakao.com/?q=%ED%8F%AC%ED%95%AD%EC%8B%9C%EC%95%84%EC%9D%B4%EB%88%84%EB%A6%AC%EC%84%BC%ED%84%B0"
       },
       "google": {
         "rating": 4.6,
         "url": "https://www.google.com/maps/search/?api=1&query=%ED%8F%AC%ED%95%AD%EC%8B%9C%EC%95%84%EC%9D%B4%EB%88%84%EB%A6%AC%EC%84%BC%ED%84%B0"
       }
-    }
+    },
+    "searchQuery": "포항시아이누리센터"
   },
   {
     "id": "attr-kidscafe-0319",
@@ -54623,18 +54639,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
+        "url": "https://map.naver.com/p/search/%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://place.map.kakao.com/40785515",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
+        "url": "https://map.kakao.com/?q=%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%97%AC%EC%A3%BC%EA%B4%80%EA%B4%91%EC%82%B0%EC%82%BC%EB%86%8D%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "여주관광산삼농원"
   },
   {
     "id": "attr-farm-0015",
@@ -60543,14 +60560,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://place.map.kakao.com/26984442",
+        "url": "https://map.kakao.com/?q=%EC%B4%88%EB%A1%9D%EC%9D%B4%EB%AF%B8%EC%A7%80",
         "directionsUrl": "https://map.kakao.com/?q=%EC%B4%88%EB%A1%9D%EC%9D%B4%EB%AF%B8%EC%A7%80"
       },
       "google": {
         "rating": 4.7,
         "url": "https://www.google.com/maps/search/?api=1&query=%EC%B4%88%EB%A1%9D%EC%9D%B4%EB%AF%B8%EC%A7%80"
       }
-    }
+    },
+    "searchQuery": "초록이미지"
   },
   {
     "id": "attr-farm-0131",
@@ -61202,18 +61220,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
+        "url": "https://map.naver.com/p/search/%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://place.map.kakao.com/12177442",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
+        "url": "https://map.kakao.com/?q=%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%83%9C%EC%8B%A0%EB%AA%A9%EC%9E%A5"
       }
-    }
+    },
+    "searchQuery": "태신목장"
   },
   {
     "id": "attr-farm-0144",
@@ -70586,18 +70605,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
+        "url": "https://map.naver.com/p/search/%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://place.map.kakao.com/1833007341",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
+        "url": "https://map.kakao.com/?q=%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%20%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9E%90%EB%9E%80%EB%A7%8C%EA%B4%80%EA%B4%91%EB%86%8D%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "자란만관광농원"
   },
   {
     "id": "attr-farm-0328",
@@ -74954,18 +74974,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EA%B0%95%EB%82%A8%20%EB%A7%88%EC%9D%B4%EC%8A%A4%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC"
+        "url": "https://map.naver.com/p/search/%EC%BD%94%EC%97%91%EC%8A%A4"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EA%B0%95%EB%82%A8%20%EB%A7%88%EC%9D%B4%EC%8A%A4%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B0%95%EB%82%A8%20%EB%A7%88%EC%9D%B4%EC%8A%A4%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC"
+        "url": "https://map.kakao.com/?q=%EC%BD%94%EC%97%91%EC%8A%A4",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%BD%94%EC%97%91%EC%8A%A4"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B0%95%EB%82%A8%20%EB%A7%88%EC%9D%B4%EC%8A%A4%20%EA%B4%80%EA%B4%91%ED%8A%B9%EA%B5%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%BD%94%EC%97%91%EC%8A%A4"
       }
-    }
+    },
+    "searchQuery": "코엑스"
   },
   {
     "id": "attr-tour-713110",
@@ -75904,18 +75925,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%5BK%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%B4%AC%EC%98%81%EC%A7%80%5D%20%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://map.naver.com/p/search/%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%5BK%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%B4%AC%EC%98%81%EC%A7%80%5D%20%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%5BK%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%B4%AC%EC%98%81%EC%A7%80%5D%20%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://map.kakao.com/?q=%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%5BK%EB%93%9C%EB%9D%BC%EB%A7%88%20%EC%B4%AC%EC%98%81%EC%A7%80%5D%20%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B3%B5%EA%B7%BC%ED%98%9C%EA%B0%A4%EB%9F%AC%EB%A6%AC"
       }
-    }
+    },
+    "searchQuery": "공근혜갤러리"
   },
   {
     "id": "attr-tour-3085292",
@@ -76154,18 +76176,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%AD%EA%B3%B5%EB%8F%84%EC%84%9C%EA%B4%80"
+        "url": "https://map.naver.com/p/search/%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%AD%EA%B3%B5%EB%8F%84%EC%84%9C%EA%B4%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%AD%EA%B3%B5%EB%8F%84%EC%84%9C%EA%B4%80"
+        "url": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80%20%ED%95%AD%EA%B3%B5%EB%8F%84%EC%84%9C%EA%B4%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AD%EB%A6%BD%ED%95%AD%EA%B3%B5%EB%B0%95%EB%AC%BC%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "국립항공박물관"
   },
   {
     "id": "attr-tour-130355",
@@ -78004,18 +78027,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+        "url": "https://map.naver.com/p/search/%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+        "url": "https://map.kakao.com/?q=%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B6%9C%ED%8C%90%EB%8F%84%EC%8B%9C%20%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%99%9C%ED%8C%90%EC%9D%B8%EC%87%84%EB%B0%95%EB%AC%BC%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "활판인쇄박물관"
   },
   {
     "id": "attr-tour-2638584",
@@ -78104,18 +78128,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+        "url": "https://map.naver.com/p/search/93%EB%AE%A4%EC%A7%80%EC%97%84"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80",
-        "directionsUrl": "https://map.kakao.com/?q=93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+        "url": "https://map.kakao.com/?q=93%EB%AE%A4%EC%A7%80%EC%97%84",
+        "directionsUrl": "https://map.kakao.com/?q=93%EB%AE%A4%EC%A7%80%EC%97%84"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=93%EB%AE%A4%EC%A7%80%EC%97%84%EA%B0%80%EC%A1%B1%EB%AF%B8%EC%88%A0%EA%B4%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=93%EB%AE%A4%EC%A7%80%EC%97%84"
       }
-    }
+    },
+    "searchQuery": "93뮤지엄"
   },
   {
     "id": "attr-tour-3453292",
@@ -79154,18 +79179,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+        "url": "https://map.naver.com/p/search/%EC%9D%B8%EC%B2%9C%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+        "url": "https://map.kakao.com/?q=%EC%9D%B8%EC%B2%9C%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%9D%B8%EC%B2%9C%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B5%AC%20%EC%9D%BC%EB%B3%B8%EC%9A%B0%EC%84%A0%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%20%EC%9D%B8%EC%B2%9C%EC%A7%80%EC%A0%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9D%B8%EC%B2%9C%EC%95%84%ED%8A%B8%ED%94%8C%EB%9E%AB%ED%8F%BC"
       }
-    }
+    },
+    "searchQuery": "인천아트플랫폼"
   },
   {
     "id": "attr-tour-1114573",
@@ -79454,18 +79480,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90"
+        "url": "https://map.naver.com/p/search/%EB%82%9C%EC%A0%95%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%A0%95%EC%9B%90"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90"
+        "url": "https://map.kakao.com/?q=%EB%82%9C%EC%A0%95%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%A0%95%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%82%9C%EC%A0%95%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%A0%95%EC%9B%90"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%82%9C%EC%A0%95%EB%A6%AC%20%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EB%A7%88%EC%9D%84%20%EC%A0%95%EC%9B%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%82%9C%EC%A0%95%ED%95%B4%EB%B0%94%EB%9D%BC%EA%B8%B0%EC%A0%95%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "난정해바라기정원"
   },
   {
     "id": "attr-tour-2792631",
@@ -80004,18 +80031,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4%20%EA%B5%B0%EB%9D%BD%EC%A7%80"
+        "url": "https://map.naver.com/p/search/%EC%8B%AD%EB%A6%AC%ED%8F%AC%20%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4%20%EA%B5%B0%EB%9D%BD%EC%A7%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4%20%EA%B5%B0%EB%9D%BD%EC%A7%80"
+        "url": "https://map.kakao.com/?q=%EC%8B%AD%EB%A6%AC%ED%8F%AC%20%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%8B%AD%EB%A6%AC%ED%8F%AC%20%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4%20%EA%B5%B0%EB%9D%BD%EC%A7%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%8B%AD%EB%A6%AC%ED%8F%AC%20%EC%86%8C%EC%82%AC%EB%82%98%EB%AC%B4"
       }
-    }
+    },
+    "searchQuery": "십리포 소사나무"
   },
   {
     "id": "attr-tour-3098891",
@@ -80054,18 +80082,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EC%86%A1%EB%8F%84%EC%A0%90"
+        "url": "https://map.naver.com/p/search/%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EC%86%A1%EB%8F%84%EC%A0%90",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EC%86%A1%EB%8F%84%EC%A0%90"
+        "url": "https://map.kakao.com/?q=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8%20%EC%86%A1%EB%8F%84%EC%A0%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%8A%A4%EB%A8%B8%ED%94%84%EB%A7%A4%EC%A7%81%ED%8F%AC%EB%A0%88%EC%8A%A4%ED%8A%B8"
       }
-    }
+    },
+    "searchQuery": "스머프매직포레스트"
   },
   {
     "id": "attr-tour-128385",
@@ -80604,18 +80633,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://map.naver.com/p/search/%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EC%9C%A0%EC%A0%81%EC%A7%80"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://map.kakao.com/?q=%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EC%9C%A0%EC%A0%81%EC%A7%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EC%9C%A0%EC%A0%81%EC%A7%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B0%95%EC%9B%90%20%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%81%EC%9B%94%20%EA%B9%80%EC%82%BF%EA%B0%93%EC%9C%A0%EC%A0%81%EC%A7%80"
       }
-    }
+    },
+    "searchQuery": "영월 김삿갓유적지"
   },
   {
     "id": "attr-tour-125735",
@@ -81004,18 +81034,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EA%B3%A0%EC%84%B1%EA%B5%B0%20%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90"
+        "url": "https://map.naver.com/p/search/%EA%B3%A0%EC%84%B1%20%ED%99%94%EC%A7%84%ED%8F%AC"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EA%B3%A0%EC%84%B1%EA%B5%B0%20%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B3%A0%EC%84%B1%EA%B5%B0%20%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90"
+        "url": "https://map.kakao.com/?q=%EA%B3%A0%EC%84%B1%20%ED%99%94%EC%A7%84%ED%8F%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B3%A0%EC%84%B1%20%ED%99%94%EC%A7%84%ED%8F%AC"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B3%A0%EC%84%B1%EA%B5%B0%20%EC%A3%BD%EC%A0%95%EB%B6%84%EA%B5%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B3%A0%EC%84%B1%20%ED%99%94%EC%A7%84%ED%8F%AC"
       }
-    }
+    },
+    "searchQuery": "고성 화진포"
   },
   {
     "id": "attr-tour-2782911",
@@ -82604,18 +82635,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+        "url": "https://map.naver.com/p/search/%EA%B0%95%EB%A6%89%EB%8B%A8%EC%98%A4%EC%A0%9C%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+        "url": "https://map.kakao.com/?q=%EA%B0%95%EB%A6%89%EB%8B%A8%EC%98%A4%EC%A0%9C%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B0%95%EB%A6%89%EB%8B%A8%EC%98%A4%EC%A0%9C%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8B%A8%EC%98%A4%ED%83%80%EC%9A%B4%EC%A0%84%EC%8B%9C%EA%B4%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B0%95%EB%A6%89%EB%8B%A8%EC%98%A4%EC%A0%9C%EC%A0%84%EC%88%98%EA%B5%90%EC%9C%A1%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "강릉단오제전수교육관"
   },
   {
     "id": "attr-tour-3544745",
@@ -82654,18 +82686,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+        "url": "https://map.naver.com/p/search/%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8",
-        "directionsUrl": "https://map.kakao.com/?q=%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+        "url": "https://map.kakao.com/?q=%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%E3%88%9C%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%83%80%EC%9E%84%ED%8A%B8%EB%A0%88%EC%9D%B8"
       }
-    }
+    },
+    "searchQuery": "타임트레인"
   },
   {
     "id": "attr-tour-3539725",
@@ -83154,18 +83187,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+        "url": "https://map.naver.com/p/search/%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+        "url": "https://map.kakao.com/?q=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90%ED%98%91%EB%8F%99%EC%A1%B0%ED%95%A9"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%8C%8D%EB%A5%98%ED%8F%AC%EB%8F%84%EC%A0%95%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "쌍류포도정원"
   },
   {
     "id": "attr-tour-2717492",
@@ -84054,18 +84088,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+        "url": "https://map.naver.com/p/search/%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5",
-        "directionsUrl": "https://map.kakao.com/?q=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+        "url": "https://map.kakao.com/?q=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC%20%EC%96%91%EC%A1%B0%EC%9E%A5"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%95%9C%EC%82%B0%EC%86%8C%EA%B3%A1%EC%A3%BC"
       }
-    }
+    },
+    "searchQuery": "한산소곡주"
   },
   {
     "id": "attr-tour-128397",
@@ -84254,18 +84289,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80%EC%A7%80"
+        "url": "https://map.naver.com/p/search/%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80%EC%A7%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80%EC%A7%80"
+        "url": "https://map.kakao.com/?q=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80%EC%A7%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EB%B3%91%EC%98%A5%EB%B0%95%EC%82%AC%20%EC%83%9D%EA%B0%80"
       }
-    }
+    },
+    "searchQuery": "조병옥박사 생가"
   },
   {
     "id": "attr-tour-802420",
@@ -84304,18 +84340,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84%20%5B%EB%86%8D%EC%B4%8C%EC%A0%84%ED%86%B5%ED%85%8C%EB%A7%88%5D"
+        "url": "https://map.naver.com/p/search/%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84%20%5B%EB%86%8D%EC%B4%8C%EC%A0%84%ED%86%B5%ED%85%8C%EB%A7%88%5D",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84%20%5B%EB%86%8D%EC%B4%8C%EC%A0%84%ED%86%B5%ED%85%8C%EB%A7%88%5D"
+        "url": "https://map.kakao.com/?q=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84%20%5B%EB%86%8D%EC%B4%8C%EC%A0%84%ED%86%B5%ED%85%8C%EB%A7%88%5D"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B2%9C%EC%95%88%20%EB%91%90%EC%95%84%EB%9E%8C%EB%A7%88%EC%9D%84"
       }
-    }
+    },
+    "searchQuery": "천안 두아람마을"
   },
   {
     "id": "attr-tour-802358",
@@ -84354,18 +84391,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/%EC%95%84%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%EB%A7%88%EC%9D%84"
+        "url": "https://map.naver.com/p/search/%EC%95%84%EC%82%B0%20%EC%9C%A4%EB%B3%B4%EC%84%A0%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EC%83%9D%EA%B0%80"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=%EC%95%84%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%EB%A7%88%EC%9D%84",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%95%84%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%EB%A7%88%EC%9D%84"
+        "url": "https://map.kakao.com/?q=%EC%95%84%EC%82%B0%20%EC%9C%A4%EB%B3%B4%EC%84%A0%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EC%83%9D%EA%B0%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%95%84%EC%82%B0%20%EC%9C%A4%EB%B3%B4%EC%84%A0%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EC%83%9D%EA%B0%80"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%82%B0%20%EB%8C%80%ED%86%B5%EB%A0%B9%EB%A7%88%EC%9D%84"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%95%84%EC%82%B0%20%EC%9C%A4%EB%B3%B4%EC%84%A0%20%EB%8C%80%ED%86%B5%EB%A0%B9%20%EC%83%9D%EA%B0%80"
       }
-    }
+    },
+    "searchQuery": "아산 윤보선 대통령 생가"
   },
   {
     "id": "attr-tour-129642",
@@ -84404,18 +84442,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EB%B3%B4%EB%A0%B9%EC%84%B1%EA%B3%BD%C2%B7%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
+        "url": "https://map.naver.com/p/search/%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EB%B3%B4%EB%A0%B9%EC%84%B1%EA%B3%BD%C2%B7%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%B3%B4%EB%A0%B9%EC%84%B1%EA%B3%BD%C2%B7%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
+        "url": "https://map.kakao.com/?q=%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B3%B4%EB%A0%B9%EC%84%B1%EA%B3%BD%C2%B7%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B3%B4%EB%A0%B9%EA%B4%80%EC%95%84%EB%AC%B8"
       }
-    }
+    },
+    "searchQuery": "보령관아문"
   },
   {
     "id": "attr-tour-125925",
@@ -85204,18 +85243,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+        "url": "https://map.naver.com/p/search/%EC%A0%9C%EC%B2%9C%EB%8D%95%EC%A3%BC%EC%82%AC%20%EB%A7%88%EC%95%A0%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+        "url": "https://map.kakao.com/?q=%EC%A0%9C%EC%B2%9C%EB%8D%95%EC%A3%BC%EC%82%AC%20%EB%A7%88%EC%95%A0%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A0%9C%EC%B2%9C%EB%8D%95%EC%A3%BC%EC%82%AC%20%EB%A7%88%EC%95%A0%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8D%95%EC%A3%BC%EC%82%AC%20%EC%95%BD%EC%82%AC%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A0%9C%EC%B2%9C%EB%8D%95%EC%A3%BC%EC%82%AC%20%EB%A7%88%EC%95%A0%EC%97%AC%EB%9E%98%EC%9E%85%EC%83%81"
       }
-    }
+    },
+    "searchQuery": "제천덕주사 마애여래입상"
   },
   {
     "id": "attr-tour-127564",
@@ -85504,18 +85544,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%9D%8C%EC%84%B1%EA%B5%B0%20%EA%BD%83%EC%A0%88"
+        "url": "https://map.naver.com/p/search/%EB%B3%B4%EB%8D%95%EC%82%AC"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%9D%8C%EC%84%B1%EA%B5%B0%20%EA%BD%83%EC%A0%88",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%9D%8C%EC%84%B1%EA%B5%B0%20%EA%BD%83%EC%A0%88"
+        "url": "https://map.kakao.com/?q=%EB%B3%B4%EB%8D%95%EC%82%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%B3%B4%EB%8D%95%EC%82%AC"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9D%8C%EC%84%B1%EA%B5%B0%20%EA%BD%83%EC%A0%88"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B3%B4%EB%8D%95%EC%82%AC"
       }
-    }
+    },
+    "searchQuery": "보덕사"
   },
   {
     "id": "attr-tour-1114686",
@@ -85704,18 +85745,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+        "url": "https://map.naver.com/p/search/%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+        "url": "https://map.kakao.com/?q=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84%20%EB%8B%B4%EC%9E%A5%EB%B2%BD%ED%99%94"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%A7%A4%EC%82%B0%EB%A7%88%EC%9D%84"
       }
-    }
+    },
+    "searchQuery": "매산마을"
   },
   {
     "id": "attr-tour-756476",
@@ -86054,18 +86096,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%EB%A7%88%EC%9D%84"
+        "url": "https://map.naver.com/p/search/%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%ED%99%9C%EC%84%B1%ED%99%94%EC%84%BC%ED%84%B0"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%EB%A7%88%EC%9D%84",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%EB%A7%88%EC%9D%84"
+        "url": "https://map.kakao.com/?q=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%ED%99%9C%EC%84%B1%ED%99%94%EC%84%BC%ED%84%B0",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%ED%99%9C%EC%84%B1%ED%99%94%EC%84%BC%ED%84%B0"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%EB%A7%88%EC%9D%84"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%B0%B1%EB%A7%88%EA%B6%8C%EC%97%AD%ED%99%9C%EC%84%B1%ED%99%94%EC%84%BC%ED%84%B0"
       }
-    }
+    },
+    "searchQuery": "백마권역활성화센터"
   },
   {
     "id": "attr-tour-482195",
@@ -86204,18 +86247,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
+        "url": "https://map.naver.com/p/search/%EA%B4%B4%EC%82%B0%20%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EC%9D%B4%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
+        "url": "https://map.kakao.com/?q=%EA%B4%B4%EC%82%B0%20%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EC%9D%B4%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%B4%EC%82%B0%20%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EC%9D%B4%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%B4%EC%82%B0%20%EC%9B%90%ED%92%8D%EB%A6%AC%20%EB%A7%88%EC%95%A0%EC%9D%B4%EB%B6%88%EB%B3%91%EC%A2%8C%EC%83%81"
       }
-    }
+    },
+    "searchQuery": "괴산 원풍리 마애이불병좌상"
   },
   {
     "id": "attr-tour-337440",
@@ -86654,18 +86698,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0"
+        "url": "https://map.naver.com/p/search/%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0"
+        "url": "https://map.kakao.com/?q=%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%20%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4%20%EA%B5%B0"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%B6%A9%ED%9A%A8%EB%8F%99%20%EC%99%95%EB%B2%84%EB%93%A4"
       }
-    }
+    },
+    "searchQuery": "충효동 왕버들"
   },
   {
     "id": "attr-tour-1622537",
@@ -86904,18 +86949,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+        "url": "https://map.naver.com/p/search/%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+        "url": "https://map.kakao.com/?q=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90%C2%B7%EB%B9%99%EC%9B%94%EB%8B%B9"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9B%94%EB%B4%89%EC%84%9C%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "월봉서원"
   },
   {
     "id": "attr-tour-3510971",
@@ -87004,18 +87050,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+        "url": "https://map.naver.com/p/search/%EB%8D%94%EB%8B%B4%ED%9D%AC"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+        "url": "https://map.kakao.com/?q=%EB%8D%94%EB%8B%B4%ED%9D%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8D%94%EB%8B%B4%ED%9D%AC"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%9C%A0%ED%95%9C%ED%9A%8C%EC%82%AC%EB%8D%94%EB%8B%B4%ED%9D%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8D%94%EB%8B%B4%ED%9D%AC"
       }
-    }
+    },
+    "searchQuery": "더담희"
   },
   {
     "id": "attr-tour-130639",
@@ -87804,18 +87851,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+        "url": "https://map.naver.com/p/search/%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+        "url": "https://map.kakao.com/?q=%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%82%BC%EC%82%B0%EB%8F%84%EA%B0%80"
       }
-    }
+    },
+    "searchQuery": "삼산도가"
   },
   {
     "id": "attr-tour-1598258",
@@ -87904,18 +87952,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
+        "url": "https://map.naver.com/p/search/%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
+        "url": "https://map.kakao.com/?q=%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A1%B0%EC%95%84%EC%A7%80%EA%B5%AC"
       }
-    }
+    },
+    "searchQuery": "조아지구"
   },
   {
     "id": "attr-tour-1624140",
@@ -90954,18 +91003,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+        "url": "https://map.naver.com/p/search/%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+        "url": "https://map.kakao.com/?q=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80%20%EC%84%A0%EB%B9%84%EC%B2%B4%ED%97%98%EA%B4%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%A1%ED%95%B4%EA%B8%B0%EB%85%90%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "송해기념관"
   },
   {
     "id": "attr-tour-128119",
@@ -91454,18 +91504,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EB%8F%99%EA%B5%AC%20%EA%B2%BD%EA%B7%B9%EA%B3%A0%ED%83%9D"
+        "url": "https://map.naver.com/p/search/%EB%8C%80%EA%B5%AC%20%EC%98%BB%EA%B3%A8%EB%A7%88%EC%9D%84"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EB%8F%99%EA%B5%AC%20%EA%B2%BD%EA%B7%B9%EA%B3%A0%ED%83%9D",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%99%EA%B5%AC%20%EA%B2%BD%EA%B7%B9%EA%B3%A0%ED%83%9D"
+        "url": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%20%EC%98%BB%EA%B3%A8%EB%A7%88%EC%9D%84",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8C%80%EA%B5%AC%20%EC%98%BB%EA%B3%A8%EB%A7%88%EC%9D%84"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%99%EA%B5%AC%20%EA%B2%BD%EA%B7%B9%EA%B3%A0%ED%83%9D"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8C%80%EA%B5%AC%20%EC%98%BB%EA%B3%A8%EB%A7%88%EC%9D%84"
       }
-    }
+    },
+    "searchQuery": "대구 옻골마을"
   },
   {
     "id": "attr-tour-1761631",
@@ -92104,18 +92155,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+        "url": "https://map.naver.com/p/search/%EA%BF%80%EB%B2%8C%EC%9D%B8"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+        "url": "https://map.kakao.com/?q=%EA%BF%80%EB%B2%8C%EC%9D%B8",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%BF%80%EB%B2%8C%EC%9D%B8"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%86%8D%EC%97%85%ED%9A%8C%EC%82%AC%EB%B2%95%EC%9D%B8%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EA%BF%80%EB%B2%8C%EC%9D%B8"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%BF%80%EB%B2%8C%EC%9D%B8"
       }
-    }
+    },
+    "searchQuery": "꿀벌인"
   },
   {
     "id": "attr-tour-2614652",
@@ -92254,18 +92306,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90"
+        "url": "https://map.naver.com/p/search/%ED%83%9C%ED%95%98%ED%96%A5%EB%AA%A9%EA%B4%80%EA%B4%91%EB%AA%A8%EB%85%B8%EB%A0%88%EC%9D%BC"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90",
-        "directionsUrl": "https://map.kakao.com/?q=%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90"
+        "url": "https://map.kakao.com/?q=%ED%83%9C%ED%95%98%ED%96%A5%EB%AA%A9%EA%B4%80%EA%B4%91%EB%AA%A8%EB%85%B8%EB%A0%88%EC%9D%BC",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%83%9C%ED%95%98%ED%96%A5%EB%AA%A9%EA%B4%80%EA%B4%91%EB%AA%A8%EB%85%B8%EB%A0%88%EC%9D%BC"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%ED%83%9C%ED%95%98%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C%20%EB%B0%8F%20%EB%8C%80%ED%92%8D%EA%B0%90"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%83%9C%ED%95%98%ED%96%A5%EB%AA%A9%EA%B4%80%EA%B4%91%EB%AA%A8%EB%85%B8%EB%A0%88%EC%9D%BC"
       }
-    }
+    },
+    "searchQuery": "태하향목관광모노레일"
   },
   {
     "id": "attr-tour-264502",
@@ -92404,18 +92457,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://map.naver.com/p/search/%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C",
-        "directionsUrl": "https://map.kakao.com/?q=%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://map.kakao.com/?q=%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%ED%96%89%EB%82%A8%20%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A0%80%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       }
-    }
+    },
+    "searchQuery": "저동 해안산책로"
   },
   {
     "id": "attr-tour-2614583",
@@ -92454,18 +92508,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://map.naver.com/p/search/%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C",
-        "directionsUrl": "https://map.kakao.com/?q=%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://map.kakao.com/?q=%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%ED%96%89%EB%82%A8%20%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%84%EB%8F%99%20%ED%95%B4%EC%95%88%EC%82%B0%EC%B1%85%EB%A1%9C"
       }
-    }
+    },
+    "searchQuery": "도동 해안산책로"
   },
   {
     "id": "attr-tour-578999",
@@ -93954,18 +94009,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+        "url": "https://map.naver.com/p/search/%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+        "url": "https://map.kakao.com/?q=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84%20%EB%A8%B9%EA%B1%B0%EB%A6%AC%EC%B4%8C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B8%88%EC%A0%95%EC%82%B0%EC%84%B1%EB%A7%88%EC%9D%84"
       }
-    }
+    },
+    "searchQuery": "금정산성마을"
   },
   {
     "id": "attr-tour-2946508",
@@ -94254,18 +94310,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EA%B0%80%ED%86%A8%EB%A6%AD%20%ED%8A%B9%EC%84%B1%ED%99%94%20%EA%B1%B0%EB%A6%AC"
+        "url": "https://map.naver.com/p/search/%EC%98%A4%EB%A5%9C%EB%8C%80%20%ED%95%9C%EA%B5%AD%EC%88%9C%EA%B5%90%EC%9E%90%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EA%B0%80%ED%86%A8%EB%A6%AD%20%ED%8A%B9%EC%84%B1%ED%99%94%20%EA%B1%B0%EB%A6%AC",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B0%80%ED%86%A8%EB%A6%AD%20%ED%8A%B9%EC%84%B1%ED%99%94%20%EA%B1%B0%EB%A6%AC"
+        "url": "https://map.kakao.com/?q=%EC%98%A4%EB%A5%9C%EB%8C%80%20%ED%95%9C%EA%B5%AD%EC%88%9C%EA%B5%90%EC%9E%90%EB%B0%95%EB%AC%BC%EA%B4%80",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%98%A4%EB%A5%9C%EB%8C%80%20%ED%95%9C%EA%B5%AD%EC%88%9C%EA%B5%90%EC%9E%90%EB%B0%95%EB%AC%BC%EA%B4%80"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B0%80%ED%86%A8%EB%A6%AD%20%ED%8A%B9%EC%84%B1%ED%99%94%20%EA%B1%B0%EB%A6%AC"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EB%A5%9C%EB%8C%80%20%ED%95%9C%EA%B5%AD%EC%88%9C%EA%B5%90%EC%9E%90%EB%B0%95%EB%AC%BC%EA%B4%80"
       }
-    }
+    },
+    "searchQuery": "오륜대 한국순교자박물관"
   },
   {
     "id": "attr-tour-2708108",
@@ -94904,18 +94961,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.6,
-        "url": "https://map.naver.com/p/search/%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+        "url": "https://map.naver.com/p/search/%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0"
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://map.kakao.com/?q=%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80",
-        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+        "url": "https://map.kakao.com/?q=%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0"
       },
       "google": {
         "rating": 4.6,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%99%EC%84%9C%EB%8C%80%ED%95%99%EA%B5%90%20%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0%20%EC%8B%A0%ED%95%9C%EC%B9%B4%EB%93%9C%ED%99%80"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%86%8C%ED%96%A5%EC%94%A8%EC%96%B4%ED%84%B0"
       }
-    }
+    },
+    "searchQuery": "소향씨어터"
   },
   {
     "id": "attr-tour-1942314",
@@ -95704,18 +95762,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%E3%88%9C%20%ED%9D%AC%ED%92%88%EC%94%A8"
+        "url": "https://map.naver.com/p/search/%ED%9D%AC%ED%92%88%EC%94%A8"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%E3%88%9C%20%ED%9D%AC%ED%92%88%EC%94%A8",
-        "directionsUrl": "https://map.kakao.com/?q=%E3%88%9C%20%ED%9D%AC%ED%92%88%EC%94%A8"
+        "url": "https://map.kakao.com/?q=%ED%9D%AC%ED%92%88%EC%94%A8",
+        "directionsUrl": "https://map.kakao.com/?q=%ED%9D%AC%ED%92%88%EC%94%A8"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%E3%88%9C%20%ED%9D%AC%ED%92%88%EC%94%A8"
+        "url": "https://www.google.com/maps/search/?api=1&query=%ED%9D%AC%ED%92%88%EC%94%A8"
       }
-    }
+    },
+    "searchQuery": "희품씨"
   },
   {
     "id": "attr-tour-2650827",
@@ -95954,18 +96013,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+        "url": "https://map.naver.com/p/search/%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+        "url": "https://map.kakao.com/?q=%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A3%BC%EC%8B%9D%ED%9A%8C%EC%82%AC%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%8F%84%EC%8B%9C%EB%82%98%EB%AC%B4"
       }
-    }
+    },
+    "searchQuery": "도시나무"
   },
   {
     "id": "attr-tour-2507820",
@@ -96104,18 +96164,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.5,
-        "url": "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://map.naver.com/p/search/%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4"
       },
       "kakao": {
         "rating": 4.4,
-        "url": "https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D",
-        "directionsUrl": "https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4",
+        "directionsUrl": "https://map.kakao.com/?q=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4"
       },
       "google": {
         "rating": 4.5,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4%20%5B%EC%8A%AC%EB%A1%9C%EC%8B%9C%ED%8B%B0%5D"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EA%B2%BD%EB%82%A8%20%ED%95%98%EB%8F%99%20%EC%95%85%EC%96%91%EB%A9%B4"
       }
-    }
+    },
+    "searchQuery": "경남 하동 악양면"
   },
   {
     "id": "attr-tour-756585",
@@ -96554,18 +96615,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.4,
-        "url": "https://map.naver.com/p/search/%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+        "url": "https://map.naver.com/p/search/%EB%82%A8%ED%95%B4%20%EC%84%A4%EC%B2%9C%EB%A9%B4"
       },
       "kakao": {
         "rating": 4.3,
-        "url": "https://map.kakao.com/?q=%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+        "url": "https://map.kakao.com/?q=%EB%82%A8%ED%95%B4%20%EC%84%A4%EC%B2%9C%EB%A9%B4",
+        "directionsUrl": "https://map.kakao.com/?q=%EB%82%A8%ED%95%B4%20%EC%84%A4%EC%B2%9C%EB%A9%B4"
       },
       "google": {
         "rating": 4.4,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%84%A4%EC%B2%9C%20%EB%82%A8%ED%95%B4%ED%95%B4%EC%95%88%EB%8F%84%EB%A1%9C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EB%82%A8%ED%95%B4%20%EC%84%A4%EC%B2%9C%EB%A9%B4"
       }
-    }
+    },
+    "searchQuery": "남해 설천면"
   },
   {
     "id": "attr-tour-2652453",
@@ -96704,18 +96766,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.7,
-        "url": "https://map.naver.com/p/search/%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+        "url": "https://map.naver.com/p/search/%EC%A7%84%EC%96%91%ED%98%B8"
       },
       "kakao": {
         "rating": 4.6,
-        "url": "https://map.kakao.com/?q=%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+        "url": "https://map.kakao.com/?q=%EC%A7%84%EC%96%91%ED%98%B8",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%A7%84%EC%96%91%ED%98%B8"
       },
       "google": {
         "rating": 4.7,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A7%84%EC%96%91%ED%98%B8%20%EC%9D%BC%EC%A3%BC%EB%8F%84%EB%A1%9C"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%A7%84%EC%96%91%ED%98%B8"
       }
-    }
+    },
+    "searchQuery": "진양호"
   },
   {
     "id": "attr-tour-538455",
@@ -96754,18 +96817,19 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
     "sources": {
       "naver": {
         "rating": 4.8,
-        "url": "https://map.naver.com/p/search/%EC%98%A4%EC%B2%B4%ED%96%A5%EB%A7%88%EC%9D%84"
+        "url": "https://map.naver.com/p/search/%EC%98%A4%EC%B2%B4%ED%96%A5"
       },
       "kakao": {
         "rating": 4.7,
-        "url": "https://map.kakao.com/?q=%EC%98%A4%EC%B2%B4%ED%96%A5%EB%A7%88%EC%9D%84",
-        "directionsUrl": "https://map.kakao.com/?q=%EC%98%A4%EC%B2%B4%ED%96%A5%EB%A7%88%EC%9D%84"
+        "url": "https://map.kakao.com/?q=%EC%98%A4%EC%B2%B4%ED%96%A5",
+        "directionsUrl": "https://map.kakao.com/?q=%EC%98%A4%EC%B2%B4%ED%96%A5"
       },
       "google": {
         "rating": 4.8,
-        "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EC%B2%B4%ED%96%A5%EB%A7%88%EC%9D%84"
+        "url": "https://www.google.com/maps/search/?api=1&query=%EC%98%A4%EC%B2%B4%ED%96%A5"
       }
-    }
+    },
+    "searchQuery": "오체향"
   },
   {
     "id": "attr-tour-346658",
@@ -99958,14 +100022,15 @@ window.DODAM_NATIONWIDE_ATTRACTIONS = [
       },
       "kakao": {
         "rating": 4.5,
-        "url": "https://place.map.kakao.com/24873713",
+        "url": "https://map.kakao.com/?q=%ED%92%8D%EC%95%94%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90",
         "directionsUrl": "https://map.kakao.com/?q=%ED%92%8D%EC%95%94%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90"
       },
       "google": {
         "rating": 4.6,
         "url": "https://www.google.com/maps/search/?api=1&query=%ED%92%8D%EC%95%94%ED%98%B8%EC%88%98%EA%B3%B5%EC%9B%90"
       }
-    }
+    },
+    "searchQuery": "풍암호수공원"
   },
   {
     "id": "attr-gj-extra-014",

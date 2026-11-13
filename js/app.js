@@ -7461,9 +7461,69 @@ class DodamCommunityApp {
   }
 
   getCleanRestaurantQuery(r) {
+    if (!r) return '';
+    if (r.searchQuery && typeof r.searchQuery === 'string' && r.searchQuery.trim()) {
+      return r.searchQuery.trim();
+    }
+
     let q = (r.name || '').trim();
 
-    // 1. 전국 주요 대표 맛집 표준 상호 매핑 (공식 매장명 1:1 다이렉트 매칭)
+    // 1. 전국 주요 대표 관광지·부속 체험관 및 랜드마크 시설명 표준 상호 매핑 (공식 매장/기관명 1:1 다이렉트 매칭)
+    const exactVenueMap = {
+      '국립한글박물관 한글놀이터': '국립한글박물관',
+      '동대문디자인플라자 DDP 디자인놀이터': '동대문디자인플라자',
+      '송도 현대프리미엄아울렛 키즈가든': '현대프리미엄아울렛 송도점',
+      '현대유람선 아라뱃길 크루즈': '현대유람선',
+      '국립세종도서관 어린이청소년자료실': '국립세종도서관',
+      '중외공원 놀이마을': '중외공원',
+      '광주 챔피언스필드 샌드파크': '광주기아챔피언스필드',
+      '광주시립미술관 어린이갤러리': '광주시립미술관',
+      '보성 대한다원 녹차밭': '대한다원',
+      '대구 삼성라이온즈파크 키즈존': '대구삼성라이온즈파크',
+      '금강자연휴양림 어린이놀이터': '금강자연휴양림',
+      '충주 라바랜드': '충주라바랜드',
+      '국립항공박물관 항공도서관': '국립항공박물관',
+      '93뮤지엄가족미술관': '93뮤지엄',
+      '출판도시 활판인쇄박물관': '활판인쇄박물관',
+      '스머프매직포레스트 송도점': '스머프매직포레스트',
+      '강원 영월 김삿갓면 [슬로시티]': '영월 김삿갓유적지',
+      '천안 두아람마을 [농촌전통테마]': '천안 두아람마을',
+      '보령성곽·보령관아문': '보령관아문',
+      '덕주사 약사여래입상': '제천덕주사 마애여래입상',
+      '원풍리 마애불병좌상': '괴산 원풍리 마애이불병좌상',
+      '월봉서원·빙월당': '월봉서원',
+      '광주 충효동 왕버들 군': '충효동 왕버들',
+      '송해기념관 선비체험관': '송해기념관',
+      '행남 도동 해안산책로': '도동 해안산책로',
+      '행남 저동 해안산책로': '저동 해안산책로',
+      '동서대학교 소향씨어터 신한카드홀': '소향씨어터',
+      '진양호 일주도로': '진양호',
+      '조병옥박사 생가지': '조병옥박사 생가',
+      '한산소곡주 양조장': '한산소곡주',
+      '소사나무 군락지': '십리포 소사나무',
+      '단오타운전시관': '강릉단오제전수교육관',
+      '쌍류포도정원협동조합': '쌍류포도정원',
+      '아산 대통령마을': '아산 윤보선 대통령 생가',
+      '꽃절': '보덕사',
+      '매산마을 담장벽화': '매산마을',
+      '백마권역마을': '백마권역활성화센터',
+      '경극고택': '대구 옻골마을',
+      '금정산성마을 먹거리촌': '금정산성마을',
+      '가톨릭 특성화 거리': '오륜대 한국순교자박물관',
+      '설천 남해해안도로': '남해 설천면',
+      '오체향마을': '오체향',
+      '난정리 해바라기마을 정원': '난정해바라기정원',
+      '죽정분교': '고성 화진포',
+      '[K드라마 촬영지] 공근혜갤러리': '공근혜갤러리',
+      '강남 마이스 관광특구': '코엑스',
+      '구미아이사랑놀이터 (2026년 11월 예정)': '구미아이사랑놀이터',
+      '인천혁신육아복합센터 (2026년 12월 예정)': '인천혁신육아복합센터',
+      '월아산숲속의진주 치유의숲(2027년 예정)': '월아산숲속의진주 치유의숲',
+      '송추가마골 신관 (2027년 1월 예정)': '송추가마골 신관'
+    };
+    if (exactVenueMap[q]) return exactVenueMap[q];
+
+    // 2. 전국 주요 대표 맛집 표준 상호 매핑 (공식 매장명 1:1 다이렉트 매칭)
     if (q.includes('동화가든')) return '강릉 동화가든 짬뽕순두부 본점';
     if (q.includes('만석닭강정')) return '속초 만석닭강정 본점';
     if (q.includes('성심당')) {
@@ -7482,20 +7542,42 @@ class DodamCommunityApp {
     if (q.includes('역촌왕돈까스')) return '역촌왕돈까스';
     if (q.includes('만포면옥')) return '만포면옥 본점';
 
-    // 2. 이미 지점명(점, 본점)이 포함되어 있거나 고유 상호인 경우 상호명 그대로 100% 매칭
+    // 3. 이미 지점명(점, 본점)이 포함되어 있거나 고유 상호인 경우 상호명 그대로 100% 매칭
     if (/([가-힣0-9]+점|본점)$/.test(q)) {
       return q;
     }
 
-    // 3. '&' 뒤 부가 설명 및 괄호 제거
-    q = q.split('&')[0].replace(/\s*\([^)]*\)/g, '').trim();
+    // 4. 대괄호, 소괄호, 부가설명, 특수문자, 법인명 접두어 정제
+    q = q.replace(/\s*\[[^\]]*\]/g, '');
+    q = q.replace(/\s*\([^)]*\)/g, '');
+    q = q.split('&')[0];
+    q = q.replace(/㈜|\(주\)|유한회사|농업회사법인|주식회사/g, '');
+    if (q.includes('·')) {
+      q = q.split('·')[0];
+    }
+    q = q.trim();
 
-    // 4. 이미 고유 시설명(6글자 이상 관광지/명소)인 경우 원문 그대로 검색하여 정확도 100% 보장
-    if (r.type === 'attraction' && q.length >= 5 && !['아이사랑놀이터', '장난감도서관', '육아종합지원센터', '공동육아나눔터', '유아숲체험원'].includes(q)) {
-      return q;
+    // 정제 후 exactVenueMap 재확인
+    if (exactVenueMap[q]) return exactVenueMap[q];
+
+    // 5. 관광지 내부 부속시설 접미어 (놀이터, 키즈존, 자료실 등) 제거하여 등록된 본체 시설명으로 검색
+    if (r.type === 'attraction') {
+      const subfacilitySuffixes = [
+        '한글놀이터', '디자인놀이터', '어린이놀이터', '키즈가든', '키즈존', '샌드파크',
+        '항공도서관', '선비체험관', '어린이청소년자료실', '어린이갤러리', '관광특구',
+        '해안산책로', '일주도로', '해안도로', '해안길', '녹차밭', '크루즈'
+      ];
+      for (const sw of subfacilitySuffixes) {
+        if (q.endsWith(' ' + sw)) {
+          const cand = q.slice(0, -sw.length).trim();
+          if (cand.length >= 3) {
+            return cand;
+          }
+        }
+      }
     }
 
-    // 5. 단독 상호명인 경우에만 지역구 힌트 보강
+    // 6. 단독 상호명인 경우에만 지역구 힌트 보강
     const city = (r.district || '').split(' ')[0] || (r.regionName || '').slice(0, 2);
     if (city && !q.includes(city) && !q.includes((r.regionName || '').slice(0, 2))) {
       return `${city} ${q}`.trim();
@@ -7510,11 +7592,19 @@ class DodamCommunityApp {
     const src = r.sources || {};
     const ov = parseFloat(r.overallRating) || 4.2;
 
-    // 공식 포털 연동 URL: 등록된 검증 URL 우선 사용, 없을 시 최적 검색 쿼리 사용
-    const kakaoSearchUrl = src.kakao?.url || `https://map.kakao.com/?q=${query}`;
-    const kakaoDirectUrl = src.kakao?.directionsUrl || `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}`;
-    const naverSearchUrl = src.naver?.url || `https://map.naver.com/p/search/${query}`;
-    const googleSearchUrl = src.google?.url || `https://www.google.com/maps/search/?api=1&query=${query}`;
+    // 공식 포털 연동 URL:
+    // 1) 네이버: 고유 플레이스 ID 링크(place.naver.com 또는 /entry/place/)는 그대로 사용하고,
+    //    일반 검색 링크(/p/search/)인 경우 정제된 최신 쿼리(cleanName)를 적용하여 검색 실패 방지
+    const isNaverDirectPlace = src.naver?.url && (src.naver.url.includes('place.naver.com') || src.naver.url.includes('/entry/place/'));
+    const naverSearchUrl = isNaverDirectPlace ? src.naver.url : `https://map.naver.com/p/search/${query}`;
+
+    // 2) 카카오: 고유 카카오 ID 링크(place.map.kakao.com)는 그대로 사용하고, 일반 쿼리인 경우 정제된 최신 쿼리 적용
+    const isKakaoDirectPlace = src.kakao?.url && src.kakao.url.includes('place.map.kakao.com');
+    const kakaoSearchUrl = isKakaoDirectPlace ? src.kakao.url : `https://map.kakao.com/?q=${query}`;
+    const kakaoDirectUrl = src.kakao?.directionsUrl || (r.lat && r.lng ? `https://map.kakao.com/link/to/${query},${r.lat},${r.lng}` : `https://map.kakao.com/?q=${query}`);
+
+    // 3) 구글: 정제된 최신 쿼리 적용
+    const googleSearchUrl = `https://www.google.com/maps/search/?api=1&query=${query}`;
 
     return {
       cleanName,
