@@ -223,33 +223,8 @@ class DodamCommunityApp {
     this.initNaverSdk();
     this.initOAuthListeners();
     this.initPwa();
-    // 기존 생성된 AI 리포트 게시글의 제목, 2463자 본문, 5개 SVG 카드 및 유튜브 흔적 일괄 정제 & 복원
-    // 오직 공식 가이드 시드 게시글만 정제하며, 사용자가 작성한 일반 게시글은 절대 수정하지 않음!
-    (this.data.posts || []).forEach((p) => {
-      if (!p) return;
-      if (p.views < 50) {
-        p.isHot = false;
-      }
-      const isOfficialGuideSeed = p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1' || p.id === 'guide-seed-2' || p.id === 'custom-post-1794357137086';
-      if (isOfficialGuideSeed && p.id === 'custom-post-1794357137086') {
-        p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
-        p.guideType = 'edu';
-        p.ageStage = 'school';
-        p.isHot = false;
-      }
-      if (isOfficialGuideSeed && p.id === 'official-ai-report-growth-1') {
-        p.title = "[육아가이드] 초등학생 자녀의 이성교제, 방치하면 후회하는 결정적 이유";
-        p.guideType = 'growth';
-        p.ageStage = 'school';
-        p.createdAt = '2026.11.08';
-        p.timestamp = 1762563600000;
-        if (p.author) {
-          p.author.nickname = '운영자';
-          p.author.childBadge = '📖 도담 육아가이드';
-          p.author.avatarBg = 'bg-emerald-600 text-white';
-        }
-      }
-    });
+    // 특수 게시글(육아가이드, 성격 질문, 이사 고민 등)의 제목, 연령대, 및 내용과 100% 일치하는 고품질 댓글 정합성 보장
+    this.sanitizeSpecialPostsAndComments();
 
     // 시간대별 불규칙한 자연스러운 일일 글 점진적 발행 (현재 시각 이전 글만 순차 노출)
     this.ensureDailyActivePosts();
@@ -593,32 +568,8 @@ class DodamCommunityApp {
         });
         this.data.posts = merged;
 
-        // 오직 공식 가이드 시드 게시글만 정제하며, 사용자가 작성한 일반 게시글은 절대 수정하지 않음!
-        (this.data.posts || []).forEach((p) => {
-          if (!p) return;
-          if (p.views < 50) {
-            p.isHot = false;
-          }
-          const isOfficialGuideSeed = p.id === 'official-ai-report-growth-1' || p.id === 'guide-seed-1' || p.id === 'guide-seed-2' || p.id === 'custom-post-1794357137086';
-          if (isOfficialGuideSeed && p.id === 'custom-post-1794357137086') {
-            p.title = "[육아가이드] 부모의 '이 질문' 하나가 아이의 공부 호기심을 완전히 닫아버린다 (신종호 교수 강연 요약)";
-            p.guideType = 'edu';
-            p.ageStage = 'school';
-            p.isHot = false;
-          }
-          if (isOfficialGuideSeed && p.id === 'official-ai-report-growth-1') {
-            p.title = "[육아가이드] 초등학생 자녀의 이성교제, 방치하면 후회하는 결정적 이유";
-            p.guideType = 'growth';
-            p.ageStage = 'school';
-            p.createdAt = '2026.11.08';
-            p.timestamp = 1762563600000;
-            if (p.author) {
-              p.author.nickname = '운영자';
-              p.author.childBadge = '📖 도담 육아가이드';
-              p.author.avatarBg = 'bg-emerald-600 text-white';
-            }
-          }
-        });
+        // 특수 게시글(육아가이드, 성격 질문, 이사 고민 등)의 제목, 연령대, 및 내용과 100% 일치하는 고품질 댓글 정합성 보장
+        this.sanitizeSpecialPostsAndComments();
 
         // 시간대별 불규칙한 자연스러운 일일 글 점진적 발행 (현재 시각 이전 글만 순차 노출)
         this.ensureDailyActivePosts();
@@ -5122,6 +5073,227 @@ class DodamCommunityApp {
     try {
       sessionStorage.setItem('dodam_my_post_ids', JSON.stringify(Array.from(this.myPostIds)));
     } catch (e) {}
+  }
+
+  sanitizeSpecialPostsAndComments() {
+    (this.data.posts || []).forEach((p) => {
+      if (!p) return;
+      if (p.views < 50) {
+        p.isHot = false;
+      }
+
+      // 1. [일상] 초등학생 우리 아이 성격 질문: 성격/교우관계 관련 정합성 100% 일치 댓글 반영
+      if (p.id === 'custom-post-1794387362348') {
+        p.title = '[일상] 초등학생 우리 아이 성격 질문';
+        p.category = 'talk';
+        p.ageStage = 'school';
+        p.comments = [
+          {
+            id: 'c-personality-1',
+            author: '분당워킹맘',
+            level: '🌿 줄기맘·대디',
+            childBadge: '🧒 초4 남아 · 성남 분당',
+            avatarBg: 'bg-emerald-600 text-white',
+            content: '저희 아이도 초등 올라가면서 성격이 내향적이라 친구 사귀는 걸 어려워했는데요, 좋아하는 보드게임이나 운동 학원 하나 보내주니까 공통 관심사 있는 친구들과 자연스럽게 친해지더라구요. 아이 기질을 억지로 바꾸려 하기보다 공감해주시는 것만으로도 큰 힘이 됩니다 힘내세요!',
+            text: '저희 아이도 초등 올라가면서 성격이 내향적이라 친구 사귀는 걸 어려워했는데요, 좋아하는 보드게임이나 운동 학원 하나 보내주니까 공통 관심사 있는 친구들과 자연스럽게 친해지더라구요. 아이 기질을 억지로 바꾸려 하기보다 공감해주시는 것만으로도 큰 힘이 됩니다 힘내세요!',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794388000000
+          },
+          {
+            id: 'c-personality-2',
+            author: '도담 공식 관리자',
+            level: '👑 슈퍼관리자',
+            childBadge: '도담 육아멘토',
+            avatarBg: 'bg-indigo-600 text-white',
+            content: '초등학교 시기에는 교우관계와 자아정체성이 발달하면서 성격에 대한 고민이 자연스럽게 찾아옵니다. 아이의 이야기를 판단 없이 온전히 들어주시고, 가정에서 든든한 심리적 안전기지가 되어주시면 아이 스스로 지혜롭게 풀어갈 수 있을 거예요. 언제든 편하게 질문 남겨주세요! 😊',
+            text: '초등학교 시기에는 교우관계와 자아정체성이 발달하면서 성격에 대한 고민이 자연스럽게 찾아옵니다. 아이의 이야기를 판단 없이 온전히 들어주시고, 가정에서 든든한 심리적 안전기지가 되어주시면 아이 스스로 지혜롭게 풀어갈 수 있을 거예요. 언제든 편하게 질문 남겨주세요! 😊',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794389000000
+          }
+        ];
+      }
+
+      // 2. [일상] 초등학생 자녀 이사 고민: 이사/전학 적응 관련 정합성 100% 일치 댓글 반영
+      if (p.id === 'custom-post-1794385676339') {
+        p.title = '[일상] 초등학생 자녀 이사 고민';
+        p.category = 'talk';
+        p.ageStage = 'school';
+        p.comments = [
+          {
+            id: 'c-moving-1',
+            author: '성공',
+            level: '🌱 새싹맘·대디',
+            childBadge: '🎒 초등 고학년',
+            avatarBg: 'bg-amber-600 text-white',
+            content: '저희 애들도 이사 때문에 고민이 많았습니다. 애들한테 물어보면 요즘 가장 큰 고민은 이사라고 할 정도네요..ㅠㅠ 그래도 한 학기 지나니까 새 친구들 사귀고 금방 적응하더라구요. 너무 큰 부담 갖지 않으셔도 괜찮습니다!',
+            text: '저희 애들도 이사 때문에 고민이 많았습니다. 애들한테 물어보면 요즘 가장 큰 고민은 이사라고 할 정도네요..ㅠㅠ 그래도 한 학기 지나니까 새 친구들 사귀고 금방 적응하더라구요. 너무 큰 부담 갖지 않으셔도 괜찮습니다!',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794386000000
+          },
+          {
+            id: 'c-moving-2',
+            author: '도담 공식 관리자',
+            level: '👑 슈퍼관리자',
+            childBadge: '도담 육아멘토',
+            avatarBg: 'bg-indigo-600 text-white',
+            content: '초등학생 자녀 전학 시에는 전학 첫 주에 담임 선생님과 상담을 통해 아이 성향을 미리 공유해주시고, 방과 후 학교나 동네 놀이터에서 친구들과 자연스럽게 어울릴 기회를 만들어주시면 적응이 훨씬 빠릅니다. 응원합니다!',
+            text: '초등학생 자녀 전학 시에는 전학 첫 주에 담임 선생님과 상담을 통해 아이 성향을 미리 공유해주시고, 방과 후 학교나 동네 놀이터에서 친구들과 자연스럽게 어울릴 기회를 만들어주시면 적응이 훨씬 빠릅니다. 응원합니다!',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794387000000
+          }
+        ];
+      }
+
+      // 3. [육아가이드] 신종호 교수 질문법 및 공부 호기심 리포트
+      if (p.id === 'custom-post-1794453985244' || p.id === 'custom-post-1794357137086') {
+        p.title = "[육아가이드] 아이의 공부 호기심을 닫아버리는 부모의 질문과 올바른 대화 솔루션";
+        p.guideType = 'edu';
+        p.ageStage = 'school';
+        p.isHot = false;
+        p.comments = [
+          {
+            id: 'c-edu-q-1',
+            author: '대치수학맘',
+            level: '👑 도담멘토',
+            childBadge: '🎒 초5·중2 · 서울 강남',
+            avatarBg: 'bg-indigo-600 text-white',
+            content: "‘오늘 시험 몇 점 맞았어?’ 대신 ‘오늘 학교에서 제일 신기했던 질문은 뭐였어?’라고 묻는 것만으로도 아이 대화 태도가 확 달라지더라구요. 강연 요약 리포트 핵심을 명쾌하게 짚어주셔서 감사해요!",
+            text: "‘오늘 시험 몇 점 맞았어?’ 대신 ‘오늘 학교에서 제일 신기했던 질문은 뭐였어?’라고 묻는 것만으로도 아이 대화 태도가 확 달라지더라구요. 강연 요약 리포트 핵심을 명쾌하게 짚어주셔서 감사해요!",
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794360000000
+          },
+          {
+            id: 'c-edu-q-2',
+            author: '목동초등맘',
+            level: '🌳 열매나무맘',
+            childBadge: '🧒 초3 남아 · 서울 양천',
+            avatarBg: 'bg-emerald-600 text-white',
+            content: '질문 하나가 아이의 탐구심을 닫을 수도, 열 수도 있다는 말이 정말 크게 와닿네요. 지시나 평가 위주 대화에서 호기심을 이끌어내는 열린 질문으로 오늘 저녁부터 바로 바꿔보겠습니다.',
+            text: '질문 하나가 아이의 탐구심을 닫을 수도, 열 수도 있다는 말이 정말 크게 와닿네요. 지시나 평가 위주 대화에서 호기심을 이끌어내는 열린 질문으로 오늘 저녁부터 바로 바꿔보겠습니다.',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794361000000
+          }
+        ];
+      }
+
+      // 4. [육아가이드] 수학·과학 문해력 공부법 리포트
+      if (p.id === 'custom-post-1794452876508') {
+        p.title = "[육아가이드] 계산은 빠른데 문장제 문제를 틀리는 아이를 위한 수학·과학 문해력 공부법";
+        p.guideType = 'edu';
+        p.ageStage = 'school';
+        p.isHot = false;
+        p.comments = [
+          {
+            id: 'c-math-lit-1',
+            author: '분당서현맘',
+            level: '🌳 열매나무맘',
+            childBadge: '🧒 초3 남아 · 성남 분당',
+            avatarBg: 'bg-emerald-600 text-white',
+            content: '연산만 계속 시켰더니 문장제 서술형 문제에서 뭘 구하라는지 몰라 헤매던 아이였는데, 문제의 핵심 조건을 밑줄 치고 그림으로 구조화하는 문해력 훈련법이 정말 큰 도움이 되었어요!',
+            text: '연산만 계속 시켰더니 문장제 서술형 문제에서 뭘 구하라는지 몰라 헤매던 아이였는데, 문제의 핵심 조건을 밑줄 치고 그림으로 구조화하는 문해력 훈련법이 정말 큰 도움이 되었어요!',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794362000000
+          },
+          {
+            id: 'c-math-lit-2',
+            author: '광교호수파파',
+            level: '🌿 줄기맘·대디',
+            childBadge: '👧 초4 여아 · 수원 영통',
+            avatarBg: 'bg-sky-600 text-white',
+            content: '수학도 결국 읽고 이해하는 문해력이 바탕이 되어야 한다는 점에 100% 공감합니다. 초등 중학년 이상 자녀 둔 부모님들께 필독 가이드네요. 좋은 리포트 감사합니다.',
+            text: '수학도 결국 읽고 이해하는 문해력이 바탕이 되어야 한다는 점에 100% 공감합니다. 초등 중학년 이상 자녀 둔 부모님들께 필독 가이드네요. 좋은 리포트 감사합니다.',
+            createdAt: '어제',
+            time: '어제',
+            timestamp: 1794363000000
+          }
+        ];
+      }
+
+      // 5. [육아가이드] 통잠 수면교육 리포트 (guide-seed-1)
+      if (p.id === 'guide-seed-1') {
+        p.comments = [
+          {
+            id: 'c-seed-ai-1',
+            author: '분당맘',
+            level: '🌷 꽃봉오리맘',
+            childBadge: '👶 10개월 여아',
+            avatarBg: 'bg-pink-600 text-white',
+            content: '소아과 방문 기준과 4단계 프로토콜이 너무 명쾌하네요! 오늘 밤부터 바로 적용해봅니다.',
+            text: '소아과 방문 기준과 4단계 프로토콜이 너무 명쾌하네요! 오늘 밤부터 바로 적용해봅니다.',
+            createdAt: '2025.11.07',
+            time: '2025.11.07',
+            timestamp: 1762485000000
+          },
+          {
+            id: 'c-seed-ai-1-2',
+            author: '반포윤슬맘',
+            level: '🌷 꽃봉오리맘',
+            childBadge: '👶 8개월 남아',
+            avatarBg: 'bg-rose-500 text-white',
+            content: '원더윅스 올 때마다 밤잠 설쳐서 멘탈 바사삭이었는데 4단계 수면 루틴 따라 하니까 5일 만에 8시간 통잠 성공했어요 ㅠㅠ 초보 부모님들께 구원투수 같은 리포트입니다!',
+            text: '원더윅스 올 때마다 밤잠 설쳐서 멘탈 바사삭이었는데 4단계 수면 루틴 따라 하니까 5일 만에 8시간 통잠 성공했어요 ㅠㅠ 초보 부모님들께 구원투수 같은 리포트입니다!',
+            createdAt: '2025.11.07',
+            time: '2025.11.07',
+            timestamp: 1762486000000
+          }
+        ];
+      }
+
+      // 6. [육아가이드] 떼쓰기·분리불안 가이드 (guide-seed-2)
+      if (p.id === 'guide-seed-2') {
+        p.comments = [
+          {
+            id: 'c-seed-201',
+            author: '송파둥이맘',
+            level: '🌱 새싹맘',
+            childBadge: '👶 10개월 남아',
+            avatarBg: 'bg-rose-500 text-white',
+            content: '아이 떼쓸 때 무조건 안 돼라고 소리치기보다 감정 먼저 읽어주고 단호하게 한계 정해주는 긍정 훈육이 진짜 효과가 있더라구요. 리포트 보고 큰 위로와 배움 얻고 갑니다!',
+            text: '아이 떼쓸 때 무조건 안 돼라고 소리치기보다 감정 먼저 읽어주고 단호하게 한계 정해주는 긍정 훈육이 진짜 효과가 있더라구요. 리포트 보고 큰 위로와 배움 얻고 갑니다!',
+            createdAt: '30분 전',
+            time: '30분 전',
+            timestamp: 1762430000000
+          },
+          {
+            id: 'c-seed-202',
+            author: '일산호수맘',
+            level: '🌿 줄기맘·대디',
+            childBadge: '🧒 4세 여아',
+            avatarBg: 'bg-emerald-600 text-white',
+            content: '등원할 때 분리불안 심했는데 하트 스티커 방법이랑 안심 루틴 적용하고 나서 한결 수월해졌어요. 좋은 가이드 감사합니다.',
+            text: '등원할 때 분리불안 심했는데 하트 스티커 방법이랑 안심 루틴 적용하고 나서 한결 수월해졌어요. 좋은 가이드 감사합니다.',
+            createdAt: '15분 전',
+            time: '15분 전',
+            timestamp: 1762432000000
+          }
+        ];
+      }
+
+      // 7. [지역/추천] seed-post-10 담양 나들이 코스 댓글 정합성 보장
+      if (p.id === 'seed-post-10') {
+        p.comments = [
+          {
+            id: 'c-seed-1001',
+            author: '제주애월맘',
+            level: '🌷 꽃봉오리맘',
+            childBadge: '🧒 5세 여아',
+            avatarBg: 'bg-teal-600 text-white',
+            content: '담양 메타세콰이어길 아기 유모차 끌기에도 길 너무 잘 되어 있죠! 야외에서 비눗방울 놀이하고 피톤치드 듬뿍 마셔서 8시 칼육퇴하셨나 봐요 ㅎㅎ 저희도 이번 주말에 다녀와야겠어요 🌿',
+            text: '담양 메타세콰이어길 아기 유모차 끌기에도 길 너무 잘 되어 있죠! 야외에서 비눗방울 놀이하고 피톤치드 듬뿍 마셔서 8시 칼육퇴하셨나 봐요 ㅎㅎ 저희도 이번 주말에 다녀와야겠어요 🌿',
+            createdAt: '5시간 전',
+            time: '5시간 전',
+            timestamp: 1762415000000
+          }
+        ];
+      }
+    });
   }
 
   ensureDailyActivePosts() {

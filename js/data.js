@@ -497,7 +497,24 @@ window.DODAM_COMMUNITY_DATA = {
       views: 14,
       reactions: { like: 1, hug: 0, tip: 1 },
       tags: ['훈육가이드', '감정코칭', '떼쓰기', '분리불안', '도담AI가이드'],
-      comments: []
+      comments: [
+        {
+          id: 'c-seed-201',
+          author: '송파둥이맘',
+          level: '🌱 새싹맘',
+          childBadge: '👶 10개월 남아',
+          content: '아이 떼쓸 때 무조건 안 돼라고 소리치기보다 감정 먼저 읽어주고 단호하게 한계 정해주는 긍정 훈육이 진짜 효과가 있더라구요. 리포트 보고 큰 위로와 배움 얻고 갑니다!',
+          createdAt: '30분 전'
+        },
+        {
+          id: 'c-seed-202',
+          author: '일산호수맘',
+          level: '🌿 줄기맘·대디',
+          childBadge: '🧒 4세 여아',
+          content: '등원할 때 분리불안 심했는데 하트 스티커 방법이랑 안심 루틴 적용하고 나서 한결 수월해졌어요. 좋은 가이드 감사합니다.',
+          createdAt: '15분 전'
+        }
+      ]
     },
     {
       id: 'seed-post-1',
@@ -896,7 +913,7 @@ window.DODAM_COMMUNITY_DATA = {
           author: '제주애월맘',
           level: '🌷 꽃봉오리맘',
           childBadge: '🧒 5세 여아',
-          content: '8시 칼육퇴 너무 부럽습니다!! 오늘 하루도 육아 고생 많으셨어요 편안한 밤 보내세요 🌙',
+          content: '담양 메타세콰이어길 아기 유모차 끌기에도 길 너무 잘 되어 있죠! 야외에서 비눗방울 놀이하고 피톤치드 듬뿍 마셔서 8시 칼육퇴하셨나 봐요 ㅎㅎ 저희도 이번 주말에 다녀와야겠어요 🌿',
           createdAt: '5시간 전'
         }
       ]
