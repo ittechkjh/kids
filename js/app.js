@@ -541,6 +541,9 @@ class DodamCommunityApp {
           const baseId = p.id.split('_rev_')[0];
           p.id = baseId;
           if (seenIds.has(baseId) || this.deletedPostIds.has(baseId)) return;
+          if (p.id.startsWith('daily-ai-post-') || p.id.startsWith('official-ai-') || (p.origId && p.origId.startsWith('daily-ai-post-'))) {
+            p.isAiGenerated = true;
+          }
           if (p.youtubeVideoId) {
             if (seenYoutubeIds.has(p.youtubeVideoId)) return;
             seenYoutubeIds.add(p.youtubeVideoId);
@@ -549,6 +552,9 @@ class DodamCommunityApp {
           const localMatch = (this.data.posts || []).find((x) => x && x.id === baseId);
           if (localMatch && typeof localMatch.views === 'number' && localMatch.views > (p.views || 0)) {
             p.views = localMatch.views;
+          }
+          if (localMatch && localMatch.isAiGenerated) {
+            p.isAiGenerated = true;
           }
           seenIds.add(baseId);
           merged.push(p);
@@ -3586,7 +3592,7 @@ class DodamCommunityApp {
                 ${this.isPostHot(post) ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
                 <span class="truncate min-w-0 flex-1">${displayTitle}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0 ml-0.5">[${commentsCount}]</span>` : ''}
-                ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
+                ${this.isAdmin() && this.isAiGeneratedPost(post) ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
                   <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
                     <i class="fa-solid fa-copy text-emerald-600"></i> 블로그 복사
@@ -3612,7 +3618,7 @@ class DodamCommunityApp {
                 <div class="min-w-0 flex-1 font-bold text-slate-900 text-[13px] leading-snug break-words break-all">
                   <span>${displayTitle}</span>
                   ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] ml-1 shrink-0">[${commentsCount}]</span>` : ''}
-                  ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
+                  ${this.isAdmin() && this.isAiGeneratedPost(post) ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 </div>
               </div>
               <div class="flex items-center justify-between text-[11px] text-slate-400 pt-0.5">
@@ -3668,7 +3674,7 @@ class DodamCommunityApp {
                         ${(post.author?.nickname || '도')[0]}
                       </span>
                       <span class="font-black text-slate-900">${post.author?.nickname || '도담맘'}</span>
-                      ${this.isAdmin() && post.isAiGenerated ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
+                      ${this.isAdmin() && this.isAiGeneratedPost(post) ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                       ${hubText ? `<span class="px-1.5 py-0.2 rounded bg-emerald-50 text-emerald-800 text-[10px] font-bold">${hubText}</span>` : ''}
                       ${ageText ? `<span class="text-slate-400 text-[11px] font-medium hidden sm:inline">(${ageText})</span>` : ''}
                       <span class="text-slate-300">·</span>
@@ -4726,7 +4732,7 @@ class DodamCommunityApp {
 
     const adminAiBadge = document.getElementById('post-detail-admin-ai-badge');
     if (adminAiBadge) {
-      if (this.isAdmin() && post.isAiGenerated) {
+      if (this.isAdmin() && this.isAiGeneratedPost(post)) {
         adminAiBadge.classList.remove('hidden');
         adminAiBadge.className = 'px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 border border-purple-300 font-bold text-xs inline-flex items-center gap-1';
       } else {
@@ -12977,6 +12983,18 @@ class DodamCommunityApp {
         if (parsed && (parsed.role === 'admin' || parsed.username === 'admin' || parsed.nickname === '슈퍼관리자')) return true;
       }
     } catch (e) {}
+    return false;
+  }
+
+  isAiGeneratedPost(post) {
+    if (!post) return false;
+    if (post.isAiGenerated === true) return true;
+    if (post.id && typeof post.id === 'string' && (post.id.startsWith('daily-ai-post-') || post.id.startsWith('official-ai-'))) {
+      return true;
+    }
+    if (post.origId && typeof post.origId === 'string' && post.origId.startsWith('daily-ai-post-')) {
+      return true;
+    }
     return false;
   }
 
