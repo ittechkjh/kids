@@ -1,11 +1,11 @@
 // 전국 17개 시도 지역행사 & 대회일정 데이터셋
 window.DODAM_EVENTS_METADATA = {
-  "lastUpdated": "2026-11-14",
-  "totalEvents": 2876,
+  "lastUpdated": "2026-11-15",
+  "totalEvents": 2850,
   "festivalsCount": 1866,
-  "contestsCount": 1010,
+  "contestsCount": 984,
   "todayCollectedFestivals": 1850,
-  "todayCollectedContests": 1005,
+  "todayCollectedContests": 979,
   "isTourApiIntegrated": true,
   "isSeoulApiIntegrated": true,
   "isGyeonggiApiIntegrated": true,
@@ -15,104 +15,104 @@ window.DODAM_EVENTS_METADATA = {
     "seoul": {
       "name": "서울특별시",
       "festivals": 646,
-      "contests": 84,
-      "total": 730
+      "contests": 82,
+      "total": 728
     },
     "incheon": {
       "name": "인천광역시",
       "festivals": 52,
-      "contests": 45,
-      "total": 97
+      "contests": 44,
+      "total": 96
     },
     "daejeon": {
       "name": "대전광역시",
       "festivals": 27,
-      "contests": 63,
-      "total": 90
+      "contests": 61,
+      "total": 88
     },
     "daegu": {
       "name": "대구광역시",
       "festivals": 32,
-      "contests": 49,
-      "total": 81
+      "contests": 48,
+      "total": 80
     },
     "gwangju": {
       "name": "광주광역시",
       "festivals": 1,
-      "contests": 40,
-      "total": 41
+      "contests": 39,
+      "total": 40
     },
     "busan": {
       "name": "부산광역시",
       "festivals": 87,
-      "contests": 72,
-      "total": 159
+      "contests": 71,
+      "total": 158
     },
     "ulsan": {
       "name": "울산광역시",
       "festivals": 24,
-      "contests": 37,
-      "total": 61
+      "contests": 36,
+      "total": 60
     },
     "sejong": {
       "name": "세종특별자치시",
       "festivals": 10,
-      "contests": 41,
-      "total": 51
+      "contests": 40,
+      "total": 50
     },
     "gyeonggi": {
       "name": "경기도",
       "festivals": 368,
-      "contests": 115,
-      "total": 483
+      "contests": 111,
+      "total": 479
     },
     "gangwon": {
       "name": "강원특별자치도",
       "festivals": 112,
-      "contests": 62,
-      "total": 174
+      "contests": 61,
+      "total": 173
     },
     "chungbuk": {
       "name": "충청북도",
       "festivals": 44,
-      "contests": 52,
-      "total": 96
+      "contests": 50,
+      "total": 94
     },
     "chungnam": {
       "name": "충청남도",
       "festivals": 70,
-      "contests": 56,
-      "total": 126
+      "contests": 55,
+      "total": 125
     },
     "jeonbuk": {
       "name": "전북특별자치도",
       "festivals": 64,
-      "contests": 53,
-      "total": 117
+      "contests": 52,
+      "total": 116
     },
     "jeonnam": {
       "name": "전라남도",
       "festivals": 110,
-      "contests": 60,
-      "total": 170
+      "contests": 58,
+      "total": 168
     },
     "gyeongbuk": {
       "name": "경상북도",
       "festivals": 89,
-      "contests": 64,
-      "total": 153
+      "contests": 62,
+      "total": 151
     },
     "gyeongnam": {
       "name": "경상남도",
       "festivals": 85,
-      "contests": 67,
-      "total": 152
+      "contests": 66,
+      "total": 151
     },
     "jeju": {
       "name": "제주특별자치도",
       "festivals": 45,
-      "contests": 50,
-      "total": 95
+      "contests": 48,
+      "total": 93
     }
   },
   "sources": [
@@ -144,14 +144,14 @@ window.DODAM_EVENTS_METADATA = {
     {
       "key": "wevity_contest",
       "name": "공모전 전문 플랫폼 실시간 전국대회",
-      "count": 1005
+      "count": 979
     }
   ]
 };
 
 window.DODAM_NATIONWIDE_EVENTS = [
   {
-    "id": "gg-fest-5409058707485247045",
+    "id": "gg-fest-2167450467974361948",
     "boardType": "festivals",
     "title": "제1회 상록수문화제",
     "category": "festival_culture",
@@ -182,7 +182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6015182044014829882",
+    "id": "gg-fest-3950251625481102111",
     "boardType": "festivals",
     "title": "2014 안양 아줌마축제",
     "category": "festival_performance",
@@ -213,7 +213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6245239685119087879",
+    "id": "gg-fest-5916732995499944328",
     "boardType": "festivals",
     "title": "2014 안양시민축제",
     "category": "expo_science",
@@ -244,7 +244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3338127044750793820",
+    "id": "gg-fest-1541839550918934690",
     "boardType": "festivals",
     "title": "제2회 상록수문화제",
     "category": "festival_culture",
@@ -275,7 +275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1783658721184496492",
+    "id": "gg-fest-7324585756999534051",
     "boardType": "festivals",
     "title": "제15회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -306,7 +306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5899820526302709229",
+    "id": "gg-fest-4437185509380774328",
     "boardType": "festivals",
     "title": "2015 안양 아줌마축제",
     "category": "festival_performance",
@@ -337,7 +337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2608870789772807673",
+    "id": "gg-fest-5883056953156488904",
     "boardType": "festivals",
     "title": "제3회 상록수문화제",
     "category": "festival_culture",
@@ -368,7 +368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5037465324686771103",
+    "id": "gg-fest-2637413496800681194",
     "boardType": "festivals",
     "title": "2015 안양 시민축제",
     "category": "expo_science",
@@ -399,7 +399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8543949075505570291",
+    "id": "gg-fest-4217748614219434140",
     "boardType": "festivals",
     "title": "제15회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -430,7 +430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7726810218300075566",
+    "id": "gg-fest-2177081186394581992",
     "boardType": "festivals",
     "title": "제16회 구리한강 유채꽃 축제",
     "category": "festival_season",
@@ -461,7 +461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7092776460142683444",
+    "id": "gg-fest-3851184343511930001",
     "boardType": "festivals",
     "title": "2016 안양 아줌마축제",
     "category": "festival_food",
@@ -523,7 +523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-579771114266922132",
+    "id": "gg-fest-6129272169346148344",
     "boardType": "festivals",
     "title": "여르미오페스티벌",
     "category": "festival_performance",
@@ -554,7 +554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-802099086099414351",
+    "id": "gg-fest-2231965720364281524",
     "boardType": "festivals",
     "title": "2016 광복기념음악회",
     "category": "festival_performance",
@@ -585,7 +585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4408500810896057684",
+    "id": "gg-fest-8043293066213916284",
     "boardType": "festivals",
     "title": "제4회 상록수문화제",
     "category": "festival_culture",
@@ -616,7 +616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-587421321215128622",
+    "id": "gg-fest-8473365133814568240",
     "boardType": "festivals",
     "title": "제16회 구리 코스모스 축제",
     "category": "festival_culture",
@@ -647,7 +647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3291058239180359818",
+    "id": "gg-fest-8680208431399437019",
     "boardType": "festivals",
     "title": "2016 안양 시민축제",
     "category": "expo_science",
@@ -678,7 +678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1056045875463746000",
+    "id": "gg-fest-2517632014533887156",
     "boardType": "festivals",
     "title": "2016 제5회 안양공공예술프로젝트",
     "category": "expo_science",
@@ -709,7 +709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-447494320627439959",
+    "id": "gg-fest-3588401772064306752",
     "boardType": "festivals",
     "title": "2017 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -740,7 +740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6876834108220624297",
+    "id": "gg-fest-126802795685153436",
     "boardType": "festivals",
     "title": "제17회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -771,7 +771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1669011597392307035",
+    "id": "gg-fest-4028235633036911537",
     "boardType": "festivals",
     "title": "2017 안양 아줌마축제",
     "category": "festival_performance",
@@ -802,7 +802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3268356471304257518",
+    "id": "gg-fest-7929031574426036002",
     "boardType": "festivals",
     "title": "2017 광복기념음악회",
     "category": "festival_performance",
@@ -833,7 +833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3335231332196108969",
+    "id": "gg-fest-3133917644248058817",
     "boardType": "festivals",
     "title": "2017 안양 시민축제",
     "category": "expo_science",
@@ -864,7 +864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1658856223969220961",
+    "id": "gg-fest-6830604589723223814",
     "boardType": "festivals",
     "title": "제5회 상록수문화제",
     "category": "festival_culture",
@@ -895,7 +895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2533329762934282748",
+    "id": "gg-fest-4089563728937824446",
     "boardType": "festivals",
     "title": "제17회 구리 코스모스 축제",
     "category": "festival_season",
@@ -926,7 +926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6501545738360701381",
+    "id": "gg-fest-1487795719630347618",
     "boardType": "festivals",
     "title": "2018 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -957,7 +957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4459813535938247905",
+    "id": "gg-fest-7772332384568597370",
     "boardType": "festivals",
     "title": "제18회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -988,7 +988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1285140584933000627",
+    "id": "gg-fest-4953356426829066410",
     "boardType": "festivals",
     "title": "2018 안양여성축제",
     "category": "festival_performance",
@@ -1019,7 +1019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7369139689189028799",
+    "id": "gg-fest-963289069807677181",
     "boardType": "festivals",
     "title": "2018 광복기념음악회",
     "category": "festival_performance",
@@ -1050,7 +1050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-191353755232490640",
+    "id": "gg-fest-9157914738962222239",
     "boardType": "festivals",
     "title": "2018 안양 시민축제",
     "category": "expo_science",
@@ -1081,7 +1081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2258690654248146594",
+    "id": "gg-fest-603834224093723237",
     "boardType": "festivals",
     "title": "제6회 상록수문화제",
     "category": "festival_culture",
@@ -1112,7 +1112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5269607319180430669",
+    "id": "gg-fest-5896148480152049924",
     "boardType": "festivals",
     "title": "제18회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1143,7 +1143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4367515898563915457",
+    "id": "gg-fest-4025291439524271909",
     "boardType": "festivals",
     "title": "2019 안양충훈벚꽃축제",
     "category": "sports_marathon",
@@ -1174,7 +1174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1755376532106641974",
+    "id": "gg-fest-4338316374136920116",
     "boardType": "festivals",
     "title": "제19회 구리 유채꽃 축제",
     "category": "festival_season",
@@ -1205,7 +1205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1596252784700875249",
+    "id": "gg-fest-1314196187845527816",
     "boardType": "festivals",
     "title": "2019 안양여성축제",
     "category": "festival_performance",
@@ -1236,7 +1236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2502331688173651438",
+    "id": "gg-fest-2603865355318132559",
     "boardType": "festivals",
     "title": "2019 광복기념음악회",
     "category": "festival_performance",
@@ -1267,7 +1267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3492261399288809572",
+    "id": "gg-fest-3069913894884649384",
     "boardType": "festivals",
     "title": "2019 안양 시민축제",
     "category": "expo_science",
@@ -1298,7 +1298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9061154136193889649",
+    "id": "gg-fest-5616366766565302177",
     "boardType": "festivals",
     "title": "제19회 구리 코스모스 축제",
     "category": "festival_season",
@@ -1329,7 +1329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-324124028980999401",
+    "id": "gg-fest-5536971961571557410",
     "boardType": "festivals",
     "title": "제7회 상록수문화제",
     "category": "expo_science",
@@ -1360,7 +1360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8078095196573618775",
+    "id": "gg-fest-3718054404173853689",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1391,7 +1391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8336329054413986531",
+    "id": "gg-fest-8194132124276862320",
     "boardType": "festivals",
     "title": "제8회 상록수문화제",
     "category": "festival_performance",
@@ -1450,10 +1450,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-5717346866354961221",
+    "id": "gg-fest-4590227636900552555",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;lt;우선멈춤&amp;gt;",
     "category": "festival_culture",
@@ -1484,7 +1484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7890954830291388125",
+    "id": "gg-fest-8472866874442327144",
     "boardType": "festivals",
     "title": "제9회 상록수문화제",
     "category": "expo_science",
@@ -1543,7 +1543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S221208131717851016",
@@ -1574,10 +1574,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-412"
+    "dday": "D-411"
   },
   {
-    "id": "gg-fest-2606061056478216397",
+    "id": "gg-fest-6504405687015088397",
     "boardType": "festivals",
     "title": "제24회 양평단월고로쇠축제",
     "category": "festival_culture",
@@ -1608,7 +1608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5635184354116711329",
+    "id": "gg-fest-1362722990948374410",
     "boardType": "festivals",
     "title": "제20회 양평산수유한우축제",
     "category": "festival_season",
@@ -1639,7 +1639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1320990720762986739",
+    "id": "gg-fest-8756327554303641239",
     "boardType": "festivals",
     "title": "2023 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1670,7 +1670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8603583698608460454",
+    "id": "gg-fest-538114207371308444",
     "boardType": "festivals",
     "title": "제13회 양평 용문산 산나물축제",
     "category": "festival_performance",
@@ -1701,7 +1701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8099575249714508703",
+    "id": "gg-fest-8585829760545886649",
     "boardType": "festivals",
     "title": "2023 구리 유채꽃 한강예술제",
     "category": "festival_season",
@@ -1732,7 +1732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1003247495497513355",
+    "id": "gg-fest-6253567726458709928",
     "boardType": "festivals",
     "title": "2023 광복78주년 광복기념음악회",
     "category": "festival_performance",
@@ -1763,7 +1763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-480008035974929855",
+    "id": "gg-fest-4795716060043946039",
     "boardType": "festivals",
     "title": "2023 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -1794,7 +1794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-9006925916751375641",
+    "id": "gg-fest-8028366441698822897",
     "boardType": "festivals",
     "title": "제10회 상록수문화제",
     "category": "expo_science",
@@ -1825,7 +1825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8336603147300425036",
+    "id": "gg-fest-7636003264122291172",
     "boardType": "festivals",
     "title": "제4회 양평부추축제",
     "category": "festival_food",
@@ -1856,7 +1856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6698981548588692224",
+    "id": "gg-fest-3516365158351856243",
     "boardType": "festivals",
     "title": "2023 구리 코스모스 한강예술제",
     "category": "festival_season",
@@ -1887,7 +1887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1052936676498299339",
+    "id": "gg-fest-1186032011300067420",
     "boardType": "festivals",
     "title": "제19회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -1918,7 +1918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6652406075764817305",
+    "id": "gg-fest-9143298388802552663",
     "boardType": "festivals",
     "title": "2024 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -1949,7 +1949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7367520451508201677",
+    "id": "gg-fest-4087618918864234747",
     "boardType": "festivals",
     "title": "2024 구리 유채꽃 축제",
     "category": "festival_season",
@@ -2008,10 +2008,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-3368296305363464238",
+    "id": "gg-fest-5943687594295493091",
     "boardType": "festivals",
     "title": "2024 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -2042,7 +2042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5284021059042609480",
+    "id": "gg-fest-6999131702148701396",
     "boardType": "festivals",
     "title": "2024 구리 코스모스 축제",
     "category": "festival_season",
@@ -2073,7 +2073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7595757462726996406",
+    "id": "gg-fest-1462988477750394866",
     "boardType": "festivals",
     "title": "제27회 포천 산정호수 명성산 억새꽃 축제",
     "category": "festival_season",
@@ -2104,7 +2104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1995732119510365965",
+    "id": "gg-fest-5929821577719682567",
     "boardType": "festivals",
     "title": "제11회 상록수문화제",
     "category": "festival_performance",
@@ -2135,7 +2135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7955362241049120776",
+    "id": "gg-fest-3130345657054853129",
     "boardType": "festivals",
     "title": "2024 제2회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -2166,7 +2166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7278018522025422463",
+    "id": "gg-fest-6824891489920485574",
     "boardType": "festivals",
     "title": "제20회 포천백운계곡 동장군 축제",
     "category": "expo_science",
@@ -2256,10 +2256,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-7739253565334014008",
+    "id": "gg-fest-2121198667239050502",
     "boardType": "festivals",
     "title": "광명등문화축제",
     "category": "expo_science",
@@ -2290,7 +2290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2533753775050829889",
+    "id": "gg-fest-4235293264438769739",
     "boardType": "festivals",
     "title": "2025 안양충훈벚꽃축제",
     "category": "festival_season",
@@ -2321,7 +2321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2377493662339232300",
+    "id": "gg-fest-2136899694817403598",
     "boardType": "festivals",
     "title": "안산 벚꽃놀이터",
     "category": "festival_season",
@@ -2352,7 +2352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1158684438896447291",
+    "id": "gg-fest-1898919911853536342",
     "boardType": "festivals",
     "title": "2025 포천 한탄강 가든페스타",
     "category": "festival_season",
@@ -2383,7 +2383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5810810237388119125",
+    "id": "gg-fest-1627374660605127676",
     "boardType": "festivals",
     "title": "2025 구리 유채꽃 축제",
     "category": "festival_season",
@@ -2414,7 +2414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5167534175680536494",
+    "id": "gg-fest-2309293326644879007",
     "boardType": "festivals",
     "title": "제33회 오리문화제",
     "category": "festival_performance",
@@ -2445,7 +2445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2564002994690775993",
+    "id": "gg-fest-3690399629223138461",
     "boardType": "festivals",
     "title": "의정부음악극축제",
     "category": "park_eco",
@@ -2476,7 +2476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6062118164260174658",
+    "id": "gg-fest-69948254918825160",
     "boardType": "festivals",
     "title": "제37회 고양행주문화제",
     "category": "festival_light",
@@ -2507,7 +2507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7309140101859639008",
+    "id": "gg-fest-2820875893126867629",
     "boardType": "festivals",
     "title": "오(oh)장미빛축제",
     "category": "festival_light",
@@ -2569,7 +2569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1340892837533110752",
+    "id": "gg-fest-1806086257157171962",
     "boardType": "festivals",
     "title": "2025 제8회 양주 회암사지 왕실 축제",
     "category": "festival_tradition",
@@ -2600,7 +2600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8652573616842670921",
+    "id": "gg-fest-4959131028674090789",
     "boardType": "festivals",
     "title": "동두천락페스티벌",
     "category": "festival_performance",
@@ -2631,7 +2631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3392040204654166158",
+    "id": "gg-fest-1167210735065663629",
     "boardType": "festivals",
     "title": "남한산성문화제",
     "category": "festival_tradition",
@@ -2662,7 +2662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1739659761884817449",
+    "id": "gg-fest-1612218085805368596",
     "boardType": "festivals",
     "title": "구름산예술제",
     "category": "expo_science",
@@ -2721,10 +2721,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "gg-fest-40698593478500719",
+    "id": "gg-fest-404992778920522216",
     "boardType": "festivals",
     "title": "2025 구리 코스모스 축제",
     "category": "festival_season",
@@ -2755,7 +2755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2401530133665333835",
+    "id": "gg-fest-7338807940006414757",
     "boardType": "festivals",
     "title": "2025년 제7회 양주 천만송이 천일홍 축제",
     "category": "festival_season",
@@ -2786,7 +2786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6579369830031635641",
+    "id": "gg-fest-5600909829069355459",
     "boardType": "festivals",
     "title": "2025 안양춤축제 ANYANG DANCE FESTIVAL",
     "category": "expo_science",
@@ -2817,7 +2817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2307328408110888652",
+    "id": "gg-fest-2341438608558345311",
     "boardType": "festivals",
     "title": "2025 고양호수예술축제",
     "category": "festival_performance",
@@ -2848,7 +2848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5332512944827865356",
+    "id": "gg-fest-7167449041818020866",
     "boardType": "festivals",
     "title": "회룡문화제",
     "category": "festival_culture",
@@ -2879,7 +2879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5083724370698167135",
+    "id": "gg-fest-780897526651496287",
     "boardType": "festivals",
     "title": "제12회 상록수문화제",
     "category": "expo_science",
@@ -2910,7 +2910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5329021996397693051",
+    "id": "gg-fest-3280382547312179894",
     "boardType": "festivals",
     "title": "의왕백운호수축제",
     "category": "festival_tradition",
@@ -2941,7 +2941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7684550595058643153",
+    "id": "gg-fest-5049634835970706352",
     "boardType": "festivals",
     "title": "동두천시 자원봉사 축제",
     "category": "festival_culture",
@@ -2972,7 +2972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-429380640469867509",
+    "id": "gg-fest-8838125981362604603",
     "boardType": "festivals",
     "title": "2025 페스티벌 광명",
     "category": "festival_performance",
@@ -3003,7 +3003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4916005926260456354",
+    "id": "gg-fest-2614291569372551758",
     "boardType": "festivals",
     "title": "천사데이기념행사",
     "category": "sports_marathon",
@@ -3034,7 +3034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3985181125216302892",
+    "id": "gg-fest-2920948433225219006",
     "boardType": "festivals",
     "title": "2025 제3회 안양일번가 넘버원 페스티벌",
     "category": "festival_performance",
@@ -3065,7 +3065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2357080234222534250",
+    "id": "gg-fest-1612206637637717817",
     "boardType": "festivals",
     "title": "제22회 자라섬 재즈페스티벌",
     "category": "festival_performance",
@@ -3096,7 +3096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6870936313219780099",
+    "id": "gg-fest-4770406701087417842",
     "boardType": "festivals",
     "title": "2025 구리 빛 축제",
     "category": "festival_light",
@@ -3127,7 +3127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3647924849081014513",
+    "id": "gg-fest-5408916548386139125",
     "boardType": "festivals",
     "title": "왕방산 국제MTB대회",
     "category": "festival_tradition",
@@ -3189,7 +3189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2745062800377986079",
+    "id": "gg-fest-1651616442168639708",
     "boardType": "festivals",
     "title": "광명동굴빛축제",
     "category": "festival_light",
@@ -3220,7 +3220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8303881453719940843",
+    "id": "gg-fest-3009304889064767715",
     "boardType": "festivals",
     "title": "동두천 청소년 별자리과학 축제",
     "category": "festival_culture",
@@ -3251,7 +3251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-75731760316140206",
+    "id": "gg-fest-9042479412648782867",
     "boardType": "festivals",
     "title": "도심재생 야간축제",
     "category": "festival_culture",
@@ -3871,7 +3871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2431791597072778438",
+    "id": "gg-fest-4256837477637334839",
     "boardType": "festivals",
     "title": "2025 동두천무형문화대축제",
     "category": "festival_performance",
@@ -4054,7 +4054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-3049823",
@@ -4240,7 +4240,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-2786391",
@@ -4271,7 +4271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-1506389",
@@ -4333,7 +4333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-292961",
@@ -4364,7 +4364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-2809535",
@@ -4395,7 +4395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-3107059",
@@ -4426,7 +4426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S251024140943450780",
@@ -4457,7 +4457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S251229135612718733",
@@ -4488,7 +4488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S251211152049329500",
@@ -4519,10 +4519,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-2202463996561230672",
+    "id": "gg-fest-7055233138853001770",
     "boardType": "festivals",
     "title": "2026년 판교마당바위 해맞이축제",
     "category": "park_eco",
@@ -4581,7 +4581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S251118151942565695",
@@ -4612,7 +4612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-2433596",
@@ -4643,7 +4643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-3075387",
@@ -4736,10 +4736,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-6915578123405413289",
+    "id": "gg-fest-8821679010496293771",
     "boardType": "festivals",
     "title": "의왕왕송호수 겨울축제(날짜미정)",
     "category": "festival_tradition",
@@ -4768,37 +4768,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가족나들이"
     ],
     "dday": "접수마감"
-  },
-  {
-    "id": "seoul-res-S260110114252691169",
-    "boardType": "festivals",
-    "title": "서울식물원 프로그램 현장결제",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "서울식물원",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 서울식물원",
-    "startDate": "2026-01-11",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-01-11",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": " 제한없음",
-    "fee": "유료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260110114252691169",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1768013068804HJIOPXJQ9RML56UG717WOJAJA",
-    "description": "서울식물원 프로그램 현장결제 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "공원탐방",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-47"
   },
   {
     "id": "tourapi-fest-1765272",
@@ -5018,6 +4987,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "seoul-res-S260219110747674175",
+    "boardType": "festivals",
+    "title": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오후3시",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "무악재 일대",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 무악재 일대",
+    "startDate": "2026-02-01",
+    "endDate": "2026-11-29",
+    "applyStartDate": "2026-02-01",
+    "applyEndDate": "2026-11-29",
+    "status": "applying",
+    "targetAudience": " 제한없음",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219110747674175",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466895764T1DBQ9O37SD99S0SPGQSOFFPD",
+    "description": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오후3시 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "문화행사",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-14"
+  },
+  {
     "id": "seoul-res-S251231101302003815",
     "boardType": "festivals",
     "title": "한강 생태 유아 놀이 프로그램 모집",
@@ -5046,131 +5046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
-  },
-  {
-    "id": "seoul-res-S260219110239284010",
-    "boardType": "festivals",
-    "title": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오전10시",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "무악재 일대",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 무악재 일대",
-    "startDate": "2026-02-01",
-    "endDate": "2026-11-29",
-    "applyStartDate": "2026-02-01",
-    "applyEndDate": "2026-11-29",
-    "status": "applying",
-    "targetAudience": " 제한없음",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219110239284010",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466585767ELLZ0TQSEWMBY2K7ZH804R9IH",
-    "description": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오전10시 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "문화행사",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-15"
-  },
-  {
-    "id": "seoul-res-S260219101249709810",
-    "boardType": "festivals",
-    "title": "[서대문 도보여행] (1코스) 독립의 열망을 품은 길, 의주로 -토,일",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "충정로 일대",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 충정로 일대",
-    "startDate": "2026-02-01",
-    "endDate": "2026-11-29",
-    "applyStartDate": "2026-02-01",
-    "applyEndDate": "2026-11-29",
-    "status": "applying",
-    "targetAudience": " 제한없음(초등생이상 ※미취학 아동 참여 불가)",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219101249709810",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771463856139H3HLUVQ66SUF3BXT258TT779M",
-    "description": "[서대문 도보여행] (1코스) 독립의 열망을 품은 길, 의주로 -토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "문화행사",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-15"
-  },
-  {
-    "id": "seoul-res-S260219105240053113",
-    "boardType": "festivals",
-    "title": "[서대문도보여행] (3코스) 신촌 응답하라 7080 - 토,일",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "신촌 일대",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 신촌 일대",
-    "startDate": "2026-02-01",
-    "endDate": "2026-11-29",
-    "applyStartDate": "2026-02-01",
-    "applyEndDate": "2026-11-29",
-    "status": "applying",
-    "targetAudience": " 제한없음(초등생 이상 ※미취학 아동 참여 불가)",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219105240053113",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=17714660059159W31CRCV2X53FF7T9BQYZH33J",
-    "description": "[서대문도보여행] (3코스) 신촌 응답하라 7080 - 토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "문화행사",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-15"
-  },
-  {
-    "id": "seoul-res-S260219105939817351",
-    "boardType": "festivals",
-    "title": "[서대문도보여행] (4코스) 젊음의 도시 신촌 대학탐방 - 토,일",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "신촌 일대",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 신촌 일대",
-    "startDate": "2026-02-01",
-    "endDate": "2026-11-29",
-    "applyStartDate": "2026-02-01",
-    "applyEndDate": "2026-11-29",
-    "status": "applying",
-    "targetAudience": " 제한없음(초등생 이상 ※미취학 아동 참여 불가)",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219105939817351",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466410975H0Q0M4C9F0E8JVTG6TARKZC6X",
-    "description": "[서대문도보여행] (4코스) 젊음의 도시 신촌 대학탐방 - 토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "문화행사",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-15"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S260219103325998584",
@@ -5201,12 +5077,12 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-res-S260219110747674175",
+    "id": "seoul-res-S260219110239284010",
     "boardType": "festivals",
-    "title": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오후3시",
+    "title": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오전10시",
     "category": "park_eco",
     "categoryName": "숲·공원 생태체험",
     "badge": "🌿 숲·공원 생태체험",
@@ -5223,16 +5099,109 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "status": "applying",
     "targetAudience": " 제한없음",
     "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219110747674175",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466895764T1DBQ9O37SD99S0SPGQSOFFPD",
-    "description": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오후3시 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219110239284010",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466585767ELLZ0TQSEWMBY2K7ZH804R9IH",
+    "description": "[서대문 도보여행] (5코스) 안산자락길 나만의 힐링로드 - (수) 오전10시 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
     "tags": [
       "서울공공예약",
       "문화행사",
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
+  },
+  {
+    "id": "seoul-res-S260219101249709810",
+    "boardType": "festivals",
+    "title": "[서대문 도보여행] (1코스) 독립의 열망을 품은 길, 의주로 -토,일",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "충정로 일대",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 충정로 일대",
+    "startDate": "2026-02-01",
+    "endDate": "2026-11-29",
+    "applyStartDate": "2026-02-01",
+    "applyEndDate": "2026-11-29",
+    "status": "applying",
+    "targetAudience": " 제한없음(초등생이상 ※미취학 아동 참여 불가)",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219101249709810",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771463856139H3HLUVQ66SUF3BXT258TT779M",
+    "description": "[서대문 도보여행] (1코스) 독립의 열망을 품은 길, 의주로 -토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "문화행사",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-14"
+  },
+  {
+    "id": "seoul-res-S260219105240053113",
+    "boardType": "festivals",
+    "title": "[서대문도보여행] (3코스) 신촌 응답하라 7080 - 토,일",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "신촌 일대",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 신촌 일대",
+    "startDate": "2026-02-01",
+    "endDate": "2026-11-29",
+    "applyStartDate": "2026-02-01",
+    "applyEndDate": "2026-11-29",
+    "status": "applying",
+    "targetAudience": " 제한없음(초등생 이상 ※미취학 아동 참여 불가)",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219105240053113",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=17714660059159W31CRCV2X53FF7T9BQYZH33J",
+    "description": "[서대문도보여행] (3코스) 신촌 응답하라 7080 - 토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "문화행사",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-14"
+  },
+  {
+    "id": "seoul-res-S260219105939817351",
+    "boardType": "festivals",
+    "title": "[서대문도보여행] (4코스) 젊음의 도시 신촌 대학탐방 - 토,일",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "신촌 일대",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 신촌 일대",
+    "startDate": "2026-02-01",
+    "endDate": "2026-11-29",
+    "applyStartDate": "2026-02-01",
+    "applyEndDate": "2026-11-29",
+    "status": "applying",
+    "targetAudience": " 제한없음(초등생 이상 ※미취학 아동 참여 불가)",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260219105939817351",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1771466410975H0Q0M4C9F0E8JVTG6TARKZC6X",
+    "description": "[서대문도보여행] (4코스) 젊음의 도시 신촌 대학탐방 - 토,일 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "문화행사",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S251230111810028700",
@@ -5263,7 +5232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S260119094803988526",
@@ -5294,7 +5263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S260121103540996855",
@@ -5325,7 +5294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-391883",
@@ -5387,7 +5356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S260221121628918043",
@@ -5418,7 +5387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-1892201",
@@ -5635,7 +5604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S260303142341628373",
@@ -5666,7 +5635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S260303143426529360",
@@ -5697,7 +5666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "tourapi-fest-3479057",
@@ -5790,7 +5759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-3488655",
@@ -5821,7 +5790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-27"
+    "dday": "D-26"
   },
   {
     "id": "tourapi-fest-3488421",
@@ -5852,7 +5821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-42"
+    "dday": "D-41"
   },
   {
     "id": "tourapi-fest-506398",
@@ -5945,7 +5914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-4062064",
@@ -6224,7 +6193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S260327162305644088",
@@ -6255,7 +6224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260327164415079205",
@@ -6286,7 +6255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-3110031",
@@ -6565,7 +6534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-999659",
@@ -6689,7 +6658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-19"
+    "dday": "D-18"
   },
   {
     "id": "seoul-res-S260327145232997620",
@@ -6720,7 +6689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260327154204488439",
@@ -6751,7 +6720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260327162312620249",
@@ -6782,7 +6751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260202111818860854",
@@ -6813,10 +6782,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-18"
+    "dday": "D-17"
   },
   {
-    "id": "gg-fest-8429201577533593742",
+    "id": "gg-fest-1284634429335066602",
     "boardType": "festivals",
     "title": "제20회 수진공원 벌터산한마당축제",
     "category": "expo_science",
@@ -6937,7 +6906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "seoul-res-S260311093142176195",
@@ -6968,7 +6937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
     "id": "seoul-res-S260401232604128376",
@@ -6999,7 +6968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S260401234945597399",
@@ -7030,7 +6999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "seoul-res-S260402000743231740",
@@ -7061,7 +7030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "seoul-res-S260402002451370399",
@@ -7092,7 +7061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "tourapi-fest-3483727",
@@ -7805,7 +7774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-142186",
@@ -8115,7 +8084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S260403180419368663",
@@ -8146,10 +8115,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "gg-fest-8132267421438150506",
+    "id": "gg-fest-8775603702215037489",
     "boardType": "festivals",
     "title": "이천체험문화축제",
     "category": "festival_food",
@@ -8208,7 +8177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S260407001609457081",
@@ -8239,7 +8208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S260407145352686404",
@@ -8270,7 +8239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S260403165331136521",
@@ -8301,7 +8270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "tourapi-fest-2615461",
@@ -8425,7 +8394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-26"
+    "dday": "D-25"
   },
   {
     "id": "tourapi-fest-2541370",
@@ -8924,7 +8893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8056216115450276708",
+    "id": "gg-fest-8675197693082387942",
     "boardType": "festivals",
     "title": "2026 김포 벚꽃축제",
     "category": "festival_season",
@@ -9234,7 +9203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3421566388733509725",
+    "id": "gg-fest-6041810598943749017",
     "boardType": "festivals",
     "title": "하남뮤직페스티벌",
     "category": "festival_performance",
@@ -9355,7 +9324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-31"
+    "dday": "D-30"
   },
   {
     "id": "tourapi-fest-3113152",
@@ -9482,7 +9451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6277679942909946167",
+    "id": "gg-fest-3519690267208829553",
     "boardType": "festivals",
     "title": "군포철쭉축제",
     "category": "expo_science",
@@ -9541,7 +9510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-2953055",
@@ -10006,7 +9975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "tourapi-fest-2766000",
@@ -10319,37 +10288,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-res-S260424104437486798",
-    "boardType": "festivals",
-    "title": "중구 반려식물 클리닉",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "중구정원지원센터",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 중구정원지원센터",
-    "startDate": "2026-04-28",
-    "endDate": "2026-12-31",
-    "applyStartDate": "2026-04-28",
-    "applyEndDate": "2026-12-31",
-    "status": "applying",
-    "targetAudience": " 제한없음",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260424104437486798",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1776995077234JZW0JPIELWX9UXH9G4H1CR064",
-    "description": "중구 반려식물 클리닉 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "교육체험",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-47"
-  },
-  {
     "id": "tourapi-fest-4062805",
     "boardType": "festivals",
     "title": "충북 괴산 우주특별시：별별탐사대",
@@ -10378,7 +10316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "가족나들이"
     ],
-    "dday": "D-22"
+    "dday": "D-21"
   },
   {
     "id": "tourapi-fest-506473",
@@ -10440,7 +10378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-2597638",
@@ -10905,7 +10843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-2974166",
@@ -11125,7 +11063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6137898214512930068",
+    "id": "gg-fest-4707329252429954708",
     "boardType": "festivals",
     "title": "여주도자기축제",
     "category": "expo_science",
@@ -11466,7 +11404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-376241726278113975",
+    "id": "gg-fest-3558873353186465185",
     "boardType": "festivals",
     "title": "제41회 부천복사골예술제",
     "category": "expo_science",
@@ -11838,7 +11776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-931672606138131978",
+    "id": "gg-fest-867575086373569581",
     "boardType": "festivals",
     "title": "성남 어린이날 행사",
     "category": "festival_performance",
@@ -11897,7 +11835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-715421",
@@ -12303,7 +12241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8196407117490293626",
+    "id": "gg-fest-4775504404820377903",
     "boardType": "festivals",
     "title": "제16회 화성시 가족사랑축제",
     "category": "festival_culture",
@@ -12334,7 +12272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5815657885252474112",
+    "id": "gg-fest-8765436263346014483",
     "boardType": "festivals",
     "title": "지구촌 어울림 축제",
     "category": "festival_food",
@@ -12520,7 +12458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6825899353806724958",
+    "id": "gg-fest-1091311597655761215",
     "boardType": "festivals",
     "title": "식품안전의 날 행사",
     "category": "festival_culture",
@@ -12923,7 +12861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2284234872169347276",
+    "id": "gg-fest-8512846162063120112",
     "boardType": "festivals",
     "title": "화성시 연등 음악 축제",
     "category": "festival_culture",
@@ -13264,7 +13202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7238384647388384349",
+    "id": "gg-fest-844501424805252407",
     "boardType": "festivals",
     "title": "제15회 화성 뱃놀이 축제",
     "category": "festival_performance",
@@ -13295,7 +13233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7875953786747194013",
+    "id": "gg-fest-3262425040099431032",
     "boardType": "festivals",
     "title": "화성뱃놀이축제",
     "category": "festival_culture",
@@ -13509,7 +13447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-1804113",
@@ -13726,7 +13664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-4082595",
@@ -13757,7 +13695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-1835137",
@@ -13850,7 +13788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260224102109201335",
@@ -13881,7 +13819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260224102837558949",
@@ -13912,7 +13850,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260224104301208605",
@@ -13943,7 +13881,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260224103058044167",
@@ -13974,7 +13912,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-3386681",
@@ -15434,7 +15372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-606362147098061428",
+    "id": "gg-fest-1113978329320104176",
     "boardType": "festivals",
     "title": "2026 김포 아라마린페스티벌",
     "category": "festival_culture",
@@ -15837,7 +15775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2183427139354909086",
+    "id": "gg-fest-3290756973212921148",
     "boardType": "festivals",
     "title": "6월 마토예술제",
     "category": "festival_performance",
@@ -15896,7 +15834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "가족나들이"
     ],
-    "dday": "D-42"
+    "dday": "D-41"
   },
   {
     "id": "tourapi-fest-1801011",
@@ -17480,7 +17418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4128132221150070540",
+    "id": "gg-fest-5203783459144958705",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;전국밴드경연대회",
     "category": "contest_general",
@@ -17942,7 +17880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-2539802",
@@ -18438,7 +18376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "가족나들이"
     ],
-    "dday": "D-27"
+    "dday": "D-26"
   },
   {
     "id": "tourapi-fest-4097098",
@@ -18903,7 +18841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S260818092119674769",
@@ -18934,7 +18872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S260818141816127844",
@@ -18965,7 +18903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S260707150755426291",
@@ -18996,7 +18934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "tourapi-fest-2843892",
@@ -19492,7 +19430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-35"
+    "dday": "D-34"
   },
   {
     "id": "tourapi-fest-4109448",
@@ -19585,7 +19523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260331094059820862",
@@ -19616,7 +19554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260331095645441301",
@@ -19647,7 +19585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260331101020237744",
@@ -19678,7 +19616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260331102728499826",
@@ -19709,10 +19647,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "gg-fest-126700570862218955",
+    "id": "gg-fest-3251064188214513682",
     "boardType": "festivals",
     "title": "2026 파크콘서트",
     "category": "festival_performance",
@@ -19895,7 +19833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "tourapi-fest-506523",
@@ -20332,7 +20270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7541228804201867042",
+    "id": "gg-fest-8151322254750263683",
     "boardType": "festivals",
     "title": "사회복지페스티벌",
     "category": "festival_culture",
@@ -20515,7 +20453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-2560161",
@@ -20580,7 +20518,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5037719260571948764",
+    "id": "gg-fest-94923634572254679",
     "boardType": "festivals",
     "title": "2026년 파주포크페스티벌",
     "category": "festival_performance",
@@ -20611,7 +20549,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5781772260073112135",
+    "id": "gg-fest-190475190821132600",
     "boardType": "festivals",
     "title": "화성송산포도축제",
     "category": "farm_harvest",
@@ -20952,7 +20890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8721310004390483905",
+    "id": "gg-fest-6754263109282435973",
     "boardType": "festivals",
     "title": "제18회 DMZ 국제다큐멘터리 영화제",
     "category": "festival_performance",
@@ -21851,7 +21789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4472925938506280498",
+    "id": "gg-fest-8128672391766209966",
     "boardType": "festivals",
     "title": "제13회 노을동요제",
     "category": "festival_performance",
@@ -22220,7 +22158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-25"
+    "dday": "D-24"
   },
   {
     "id": "tourapi-fest-2728613",
@@ -22967,7 +22905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7807843470820738918",
+    "id": "gg-fest-8093146876998037363",
     "boardType": "festivals",
     "title": "제20회 시흥갯골축제",
     "category": "festival_performance",
@@ -22998,7 +22936,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5683284161234788541",
+    "id": "gg-fest-4600984476890111152",
     "boardType": "festivals",
     "title": "2026 과천공연예술축제",
     "category": "festival_performance",
@@ -23029,7 +22967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-374391986907518599",
+    "id": "gg-fest-1470252544350298922",
     "boardType": "festivals",
     "title": "부천국제만화제",
     "category": "festival_culture",
@@ -23866,7 +23804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7266625966999570232",
+    "id": "gg-fest-1589011092554050835",
     "boardType": "festivals",
     "title": "하남이성산성문화축제",
     "category": "festival_food",
@@ -23897,7 +23835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3855489291569892820",
+    "id": "gg-fest-3025745914887612725",
     "boardType": "festivals",
     "title": "제3회 도농 어울림 축제",
     "category": "festival_culture",
@@ -24266,7 +24204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "tourapi-fest-4080078",
@@ -24545,7 +24483,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1932440",
@@ -24576,7 +24514,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-130109",
@@ -24607,7 +24545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1615946",
@@ -24638,7 +24576,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2733119",
@@ -24669,7 +24607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2932047",
@@ -24700,7 +24638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1939058",
@@ -24731,7 +24669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3030422",
@@ -24762,7 +24700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3006834",
@@ -24793,7 +24731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-4154720",
@@ -24824,7 +24762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-4154672",
@@ -24855,7 +24793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2760939",
@@ -24886,7 +24824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-130972",
@@ -24917,7 +24855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2465130",
@@ -24948,7 +24886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1753474",
@@ -24979,7 +24917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1754836",
@@ -25010,7 +24948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-4153922",
@@ -25041,7 +24979,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-4153759",
@@ -25072,7 +25010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2714794",
@@ -25103,7 +25041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2379222",
@@ -25134,7 +25072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1753572",
@@ -25165,7 +25103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3006865",
@@ -25196,7 +25134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3075454",
@@ -25227,7 +25165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3081404",
@@ -25258,7 +25196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-1623934",
@@ -25289,7 +25227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-2779116",
@@ -25320,7 +25258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-4151544",
@@ -25351,7 +25289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-397572",
@@ -25382,7 +25320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-407057",
@@ -25413,7 +25351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-433042",
@@ -25444,7 +25382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-509267",
@@ -25475,7 +25413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-553448",
@@ -25506,7 +25444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-560097",
@@ -25537,7 +25475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-578875",
@@ -25568,7 +25506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-589639",
@@ -25599,7 +25537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-590097",
@@ -25630,7 +25568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-590237",
@@ -25661,7 +25599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "세종특별자치시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-590415",
@@ -25692,7 +25630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-594065",
@@ -25723,7 +25661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-596964",
@@ -25754,7 +25692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-597562",
@@ -25785,7 +25723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-613661",
@@ -25816,7 +25754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-631003",
@@ -25847,7 +25785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-631011",
@@ -25878,7 +25816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-631278",
@@ -25909,7 +25847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-631881",
@@ -25940,7 +25878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-634337",
@@ -25971,7 +25909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-638913",
@@ -26002,7 +25940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-638976",
@@ -26033,7 +25971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-644085",
@@ -26064,7 +26002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-646954",
@@ -26095,7 +26033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-650997",
@@ -26126,7 +26064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-652305",
@@ -26157,7 +26095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-654645",
@@ -26188,7 +26126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-654770",
@@ -26219,7 +26157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-660640",
@@ -26250,7 +26188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-660722",
@@ -26281,7 +26219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-661980",
@@ -26312,7 +26250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-662127",
@@ -26343,7 +26281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-690984",
@@ -26374,7 +26312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-696841",
@@ -26405,7 +26343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-697787",
@@ -26436,7 +26374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-705052",
@@ -26467,7 +26405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-705088",
@@ -26498,7 +26436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-719514",
@@ -26529,7 +26467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-731454",
@@ -26560,7 +26498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-731520",
@@ -26591,7 +26529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-735013",
@@ -26622,7 +26560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-736422",
@@ -26653,7 +26591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-736620",
@@ -26684,7 +26622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-742784",
@@ -26715,7 +26653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-742820",
@@ -26746,7 +26684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-748186",
@@ -26777,7 +26715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-749479",
@@ -26808,7 +26746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-749557",
@@ -26839,7 +26777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-749895",
@@ -26870,7 +26808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-750105",
@@ -26901,7 +26839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-750126",
@@ -26932,7 +26870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-751881",
@@ -26963,7 +26901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-753941",
@@ -26994,7 +26932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-753972",
@@ -27025,7 +26963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-759595",
@@ -27056,7 +26994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-759866",
@@ -27087,7 +27025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-770557",
@@ -27118,7 +27056,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-775041",
@@ -27149,7 +27087,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-778140",
@@ -27180,7 +27118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-790195",
@@ -27211,7 +27149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-790937",
@@ -27242,7 +27180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-795012",
@@ -27273,7 +27211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-798017",
@@ -27304,7 +27242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-799358",
@@ -27335,7 +27273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-799885",
@@ -27366,7 +27304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-800315",
@@ -27397,7 +27335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-804318",
@@ -27428,7 +27366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-815197",
@@ -27459,7 +27397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-819583",
@@ -27490,7 +27428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-852304",
@@ -27521,7 +27459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-864987",
@@ -27552,7 +27490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-915371",
@@ -27583,7 +27521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-915509",
@@ -27614,7 +27552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-968389",
@@ -27645,7 +27583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-969963",
@@ -27676,7 +27614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-987769",
@@ -27707,7 +27645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-988207",
@@ -27738,7 +27676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3357395",
@@ -27769,7 +27707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3362945",
@@ -27800,7 +27738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3363297",
@@ -27831,7 +27769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3367584",
@@ -27862,7 +27800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3369652",
@@ -27893,7 +27831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3369859",
@@ -27924,7 +27862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3379937",
@@ -27955,7 +27893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3397707",
@@ -27986,7 +27924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3401583",
@@ -28017,7 +27955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3401691",
@@ -28048,7 +27986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3402620",
@@ -28079,7 +28017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3402813",
@@ -28110,7 +28048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3403317",
@@ -28141,7 +28079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3408892",
@@ -28172,7 +28110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3410658",
@@ -28203,7 +28141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3411281",
@@ -28234,7 +28172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3423015",
@@ -28265,7 +28203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3424100",
@@ -28296,7 +28234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3425093",
@@ -28327,7 +28265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3426935",
@@ -28358,7 +28296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3427223",
@@ -28389,7 +28327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3427294",
@@ -28420,7 +28358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3427637",
@@ -28451,7 +28389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3427800",
@@ -28482,7 +28420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428131",
@@ -28513,7 +28451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428156",
@@ -28544,7 +28482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428325",
@@ -28575,7 +28513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428354",
@@ -28606,7 +28544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428546",
@@ -28637,7 +28575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3428697",
@@ -28668,7 +28606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3429810",
@@ -28699,7 +28637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3432261",
@@ -28730,7 +28668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3432445",
@@ -28761,7 +28699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3433217",
@@ -28792,7 +28730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3440333",
@@ -28823,7 +28761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3440381",
@@ -28854,7 +28792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3440631",
@@ -28885,7 +28823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3441464",
@@ -28916,7 +28854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3442528",
@@ -28947,7 +28885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3442973",
@@ -28978,7 +28916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3443660",
@@ -29009,7 +28947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3447831",
@@ -29040,7 +28978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3447845",
@@ -29071,7 +29009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3448385",
@@ -29102,7 +29040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3448404",
@@ -29133,7 +29071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-cul-3448679",
@@ -29164,7 +29102,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3441328",
@@ -29195,7 +29133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3448401",
@@ -29226,7 +29164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-126119",
@@ -29257,7 +29195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-126490",
@@ -29288,7 +29226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130143",
@@ -29319,7 +29257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130191",
@@ -29350,7 +29288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130825",
@@ -29381,7 +29319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130826",
@@ -29412,7 +29350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1105980",
@@ -29443,7 +29381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1125312",
@@ -29474,7 +29412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1177980",
@@ -29505,7 +29443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1627481",
@@ -29536,7 +29474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1694495",
@@ -29567,7 +29505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1908192",
@@ -29598,7 +29536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2371001",
@@ -29629,7 +29567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2493039",
@@ -29660,7 +29598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2507011",
@@ -29691,7 +29629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2545920",
@@ -29722,7 +29660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2551413",
@@ -29753,7 +29691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2608977",
@@ -29784,7 +29722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2610168",
@@ -29815,7 +29753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2660545",
@@ -29846,7 +29784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2662902",
@@ -29877,7 +29815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2714225",
@@ -29908,7 +29846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2742225",
@@ -29939,7 +29877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2742316",
@@ -29970,7 +29908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2742469",
@@ -30001,7 +29939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2752336",
@@ -30032,7 +29970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2753854",
@@ -30063,7 +30001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2755676",
@@ -30094,7 +30032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2756153",
@@ -30125,7 +30063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2766536",
@@ -30156,7 +30094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3080928",
@@ -30187,7 +30125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3082317",
@@ -30218,7 +30156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "세종특별자치시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3341251",
@@ -30249,7 +30187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3351144",
@@ -30280,7 +30218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3353336",
@@ -30311,7 +30249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2773287",
@@ -30342,7 +30280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2733981",
@@ -30373,7 +30311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2753103",
@@ -30404,7 +30342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2743740",
@@ -30435,7 +30373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1605877",
@@ -30466,7 +30404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130827",
@@ -30497,7 +30435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128989",
@@ -30528,7 +30466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130778",
@@ -30559,7 +30497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2863914",
@@ -30590,7 +30528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2752942",
@@ -30621,7 +30559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2754482",
@@ -30652,7 +30590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2781860",
@@ -30683,7 +30621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2742194",
@@ -30714,7 +30652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1885110",
@@ -30745,7 +30683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131187",
@@ -30776,7 +30714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-407172",
@@ -30807,7 +30745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-587289",
@@ -30838,7 +30776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3454469",
@@ -30869,7 +30807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130854",
@@ -30900,7 +30838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131136",
@@ -30931,7 +30869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131137",
@@ -30962,7 +30900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131138",
@@ -30993,7 +30931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131139",
@@ -31024,7 +30962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131143",
@@ -31055,7 +30993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131145",
@@ -31086,7 +31024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131150",
@@ -31117,7 +31055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131222",
@@ -31148,7 +31086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131408",
@@ -31179,7 +31117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131447",
@@ -31210,7 +31148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131451",
@@ -31241,7 +31179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131455",
@@ -31272,7 +31210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131456",
@@ -31303,7 +31241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131474",
@@ -31334,7 +31272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131513",
@@ -31365,7 +31303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131633",
@@ -31396,7 +31334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131640",
@@ -31427,7 +31365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131644",
@@ -31458,7 +31396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131686",
@@ -31489,7 +31427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131696",
@@ -31520,7 +31458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131824",
@@ -31551,7 +31489,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131847",
@@ -31582,7 +31520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131885",
@@ -31613,7 +31551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1117178",
@@ -31644,7 +31582,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1622322",
@@ -31675,7 +31613,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1623708",
@@ -31706,7 +31644,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1884337",
@@ -31737,7 +31675,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1896625",
@@ -31768,7 +31706,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1939121",
@@ -31799,7 +31737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1971317",
@@ -31830,7 +31768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1973361",
@@ -31861,7 +31799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2392565",
@@ -31892,7 +31830,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2465032",
@@ -31923,7 +31861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2673827",
@@ -31954,7 +31892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2737317",
@@ -31985,7 +31923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2762808",
@@ -32016,7 +31954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2818337",
@@ -32047,7 +31985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2740098",
@@ -32078,7 +32016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131188",
@@ -32109,7 +32047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1613631",
@@ -32140,7 +32078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4104487",
@@ -32171,7 +32109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-131476",
@@ -32202,7 +32140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129344",
@@ -32233,7 +32171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2606231",
@@ -32264,7 +32202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128916",
@@ -32295,7 +32233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129044",
@@ -32326,7 +32264,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129027",
@@ -32357,7 +32295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-634243",
@@ -32388,7 +32326,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-635928",
@@ -32419,7 +32357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3357398",
@@ -32450,7 +32388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3441847",
@@ -32481,7 +32419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3442423",
@@ -32512,7 +32450,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3444315",
@@ -32543,7 +32481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3447439",
@@ -32574,7 +32512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3453166",
@@ -32605,7 +32543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3453929",
@@ -32636,7 +32574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3455504",
@@ -32667,7 +32605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3456754",
@@ -32698,7 +32636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-126293",
@@ -32729,7 +32667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128494",
@@ -32760,7 +32698,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128562",
@@ -32791,7 +32729,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128568",
@@ -32822,7 +32760,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128618",
@@ -32853,7 +32791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129018",
@@ -32884,7 +32822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130548",
@@ -32915,7 +32853,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130696",
@@ -32946,7 +32884,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130908",
@@ -32977,7 +32915,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130938",
@@ -33008,7 +32946,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1032289",
@@ -33039,7 +32977,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1081744",
@@ -33070,7 +33008,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1082315",
@@ -33101,7 +33039,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1091608",
@@ -33132,7 +33070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1349796",
@@ -33163,7 +33101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1351017",
@@ -33194,7 +33132,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1351418",
@@ -33225,7 +33163,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1553067",
@@ -33256,7 +33194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1690085",
@@ -33287,7 +33225,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1904774",
@@ -33318,7 +33256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1907645",
@@ -33349,7 +33287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1916945",
@@ -33380,7 +33318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1938433",
@@ -33411,7 +33349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1938450",
@@ -33442,7 +33380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1944709",
@@ -33473,7 +33411,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2007772",
@@ -33504,7 +33442,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2020734",
@@ -33535,7 +33473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2357470",
@@ -33566,7 +33504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2366217",
@@ -33597,7 +33535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2393927",
@@ -33628,7 +33566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2436435",
@@ -33659,7 +33597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-128218",
@@ -33690,7 +33628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129785",
@@ -33721,7 +33659,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130148",
@@ -33752,7 +33690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130712",
@@ -33783,7 +33721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1054895",
@@ -33814,7 +33752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1798541",
@@ -33845,7 +33783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1838591",
@@ -33876,7 +33814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1838602",
@@ -33907,7 +33845,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1850672",
@@ -33938,7 +33876,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1956986",
@@ -33969,7 +33907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2007117",
@@ -34000,7 +33938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2033294",
@@ -34031,7 +33969,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2379568",
@@ -34062,7 +34000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2385666",
@@ -34093,7 +34031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2469139",
@@ -34124,7 +34062,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2514062",
@@ -34155,7 +34093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2515791",
@@ -34186,7 +34124,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2613272",
@@ -34217,7 +34155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2615319",
@@ -34248,7 +34186,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2623664",
@@ -34279,7 +34217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2648106",
@@ -34310,7 +34248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2654508",
@@ -34341,7 +34279,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2655877",
@@ -34372,7 +34310,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2663368",
@@ -34403,7 +34341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2676283",
@@ -34434,7 +34372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2718735",
@@ -34465,7 +34403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2736727",
@@ -34496,7 +34434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2766538",
@@ -34527,7 +34465,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2778182",
@@ -34558,7 +34496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2753817",
@@ -34589,7 +34527,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2745731",
@@ -34620,7 +34558,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2470024",
@@ -34651,7 +34589,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-130606",
@@ -34682,7 +34620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-1689699",
@@ -34713,7 +34651,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2759936",
@@ -34744,7 +34682,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2782811",
@@ -34775,7 +34713,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3376308",
@@ -34806,7 +34744,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2514714",
@@ -34837,7 +34775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3581398",
@@ -34868,7 +34806,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3340253",
@@ -34899,7 +34837,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3000522",
@@ -34930,7 +34868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4060676",
@@ -34961,7 +34899,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3578788",
@@ -34992,7 +34930,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3534509",
@@ -35023,7 +34961,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2470406",
@@ -35054,7 +34992,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3456777",
@@ -35085,7 +35023,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4044033",
@@ -35116,7 +35054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129703",
@@ -35147,7 +35085,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129772",
@@ -35178,7 +35116,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129773",
@@ -35209,7 +35147,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129774",
@@ -35240,7 +35178,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129778",
@@ -35271,7 +35209,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129779",
@@ -35302,7 +35240,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129780",
@@ -35333,7 +35271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129781",
@@ -35364,7 +35302,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129782",
@@ -35395,7 +35333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129783",
@@ -35426,7 +35364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129784",
@@ -35457,7 +35395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129786",
@@ -35488,7 +35426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129787",
@@ -35519,7 +35457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129789",
@@ -35550,7 +35488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129792",
@@ -35581,7 +35519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129796",
@@ -35612,7 +35550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129797",
@@ -35643,7 +35581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129810",
@@ -35674,7 +35612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129815",
@@ -35705,7 +35643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129817",
@@ -35736,7 +35674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129818",
@@ -35767,7 +35705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-129819",
@@ -35798,7 +35736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4157931",
@@ -35829,7 +35767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2369352",
@@ -35860,7 +35798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4155788",
@@ -35891,7 +35829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-753850",
@@ -35922,7 +35860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2451912",
@@ -35953,7 +35891,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2778914",
@@ -35984,7 +35922,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4133718",
@@ -36015,7 +35953,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2734820",
@@ -36046,7 +35984,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2747505",
@@ -36077,7 +36015,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-946271",
@@ -36108,7 +36046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2980474",
@@ -36139,7 +36077,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2744422",
@@ -36170,7 +36108,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2743251",
@@ -36201,7 +36139,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2734219",
@@ -36232,7 +36170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2745701",
@@ -36263,7 +36201,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2753098",
@@ -36294,7 +36232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2762882",
@@ -36325,7 +36263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3306903",
@@ -36356,7 +36294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3057020",
@@ -36387,7 +36325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3305837",
@@ -36418,7 +36356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3305883",
@@ -36449,7 +36387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3306317",
@@ -36480,7 +36418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3307741",
@@ -36511,7 +36449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4026181",
@@ -36542,7 +36480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4026182",
@@ -36573,7 +36511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4026184",
@@ -36604,7 +36542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4026465",
@@ -36635,7 +36573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4027370",
@@ -36666,7 +36604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3083429",
@@ -36697,7 +36635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3069551",
@@ -36728,7 +36666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2931803",
@@ -36759,7 +36697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3060803",
@@ -36790,7 +36728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3114823",
@@ -36821,7 +36759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2910530",
@@ -36852,7 +36790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "제주특별자치도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2914258",
@@ -36883,7 +36821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2930391",
@@ -36914,7 +36852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3060930",
@@ -36945,7 +36883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2910520",
@@ -36976,7 +36914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2915352",
@@ -37007,7 +36945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2924615",
@@ -37038,7 +36976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-2931477",
@@ -37069,7 +37007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3306421",
@@ -37100,7 +37038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3306766",
@@ -37131,7 +37069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-3307662",
@@ -37162,7 +37100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4008284",
@@ -37193,7 +37131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4011069",
@@ -37224,7 +37162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-kw-4011152",
@@ -37255,7 +37193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "공공데이터포털"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "seoul-res-S261001095049851872",
@@ -37286,7 +37224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261001095928739036",
@@ -37317,10 +37255,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "gg-fest-3974285761369782695",
+    "id": "gg-fest-8128962328314317638",
     "boardType": "festivals",
     "title": "제5회 정자동 놀터축제 및 작품발표회",
     "category": "expo_science",
@@ -37351,7 +37289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-804941633653639665",
+    "id": "gg-fest-2434559159776515581",
     "boardType": "festivals",
     "title": "2026 모두모여모란",
     "category": "festival_performance",
@@ -37382,7 +37320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8700710893718510385",
+    "id": "gg-fest-3778618483144251488",
     "boardType": "festivals",
     "title": "튼튼쑥쑥 걷기대회",
     "category": "sports_marathon",
@@ -37413,7 +37351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6272823515511830280",
+    "id": "gg-fest-3100181661228727386",
     "boardType": "festivals",
     "title": "식품제조 홍보 및 판매관",
     "category": "festival_culture",
@@ -37472,7 +37410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "평택시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41590-00177",
@@ -37503,7 +37441,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "화성시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41390-00014",
@@ -37534,7 +37472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "시흥시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41480-00049",
@@ -37565,7 +37503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "파주시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41390-00196",
@@ -37596,7 +37534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "시흥시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41480-00111",
@@ -37627,7 +37565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "파주시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41210-00075",
@@ -37658,7 +37596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "광명시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "gg-park-41480-00050",
@@ -37689,10 +37627,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "파주시",
       "주말피크닉"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "rss-gg-1062348718952056509",
+    "id": "rss-gg-3787397315677280183",
     "boardType": "festivals",
     "title": "2021 안양시민축제&amp;amp;lt;우선멈춤&amp;amp;gt;",
     "category": "park_eco",
@@ -37719,10 +37657,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기데이터드림",
       "경기도"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "rss-gg-4584553199414520905",
+    "id": "rss-gg-1287511208184300382",
     "boardType": "festivals",
     "title": "2022 안양시민축제&amp;amp;lt;우선멈춤&amp;amp;gt;",
     "category": "park_eco",
@@ -37749,10 +37687,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기데이터드림",
       "경기도"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "rss-gg-8681515099078262642",
+    "id": "rss-gg-3938757043317122521",
     "boardType": "contests",
     "title": "제16회 평택뮤직페스티벌&amp;amp;전국밴드경연대회",
     "category": "contest_general",
@@ -37779,7 +37717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기데이터드림",
       "경기도"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-140799",
@@ -38340,7 +38278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6046246632188871493",
+    "id": "gg-fest-5105857646108990921",
     "boardType": "festivals",
     "title": "안성맞춤 남사당바우덕이축제",
     "category": "festival_culture",
@@ -38371,7 +38309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2898103561009423359",
+    "id": "gg-fest-2746747930172828951",
     "boardType": "festivals",
     "title": "2026 헤이리 판 페스티벌",
     "category": "expo_science",
@@ -39053,7 +38991,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1150487769133208503",
+    "id": "gg-fest-3560915905772542034",
     "boardType": "festivals",
     "title": "정조효문화제 및 정조대왕능행차 공동재현",
     "category": "festival_tradition",
@@ -39084,7 +39022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-2409529245480666951",
+    "id": "gg-fest-5652459868219266030",
     "boardType": "festivals",
     "title": "용인시민의 날 연계 축제 행사",
     "category": "festival_culture",
@@ -39115,7 +39053,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-848715260778068978",
+    "id": "gg-fest-2396219546178276923",
     "boardType": "festivals",
     "title": "2026 수원화성 미디어아트",
     "category": "festival_light",
@@ -39208,7 +39146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3713217777039232673",
+    "id": "gg-fest-4488251213704636803",
     "boardType": "festivals",
     "title": "2026 정조대왕 능행차 공동재현",
     "category": "festival_tradition",
@@ -39239,7 +39177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-4801359719931794185",
+    "id": "gg-fest-423126489208987424",
     "boardType": "festivals",
     "title": "제63회 수원화성문화제",
     "category": "festival_tradition",
@@ -39673,7 +39611,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1741491938290320003",
+    "id": "gg-fest-2937880557403563750",
     "boardType": "festivals",
     "title": "제18회 시민어울림한마당",
     "category": "festival_culture",
@@ -40476,10 +40414,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
-    "id": "gg-fest-318401207007999760",
+    "id": "gg-fest-218581156222630428",
     "boardType": "festivals",
     "title": "제26회 복사골청소년예술제",
     "category": "festival_culture",
@@ -40510,7 +40448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-6706297897216973689",
+    "id": "gg-fest-1152564698082592928",
     "boardType": "festivals",
     "title": "제3회 파주페어_북앤컬처",
     "category": "expo_science",
@@ -40941,7 +40879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
     "id": "tourapi-fest-4099133",
@@ -41003,7 +40941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-3011280",
@@ -41158,7 +41096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "TourAPI"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-293084",
@@ -41344,10 +41282,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "wevity-6991052443945396854",
+    "id": "wevity-3320479701600123382",
     "boardType": "contests",
     "title": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS",
     "category": "contest_music",
@@ -41364,11 +41302,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111880",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261023134933_ac9625af.jpg",
     "description": "제5회 한국여성작가 회화공모전 & K-WOMEN IN PARIS - 여성신문 / (사)여성문화네트워크 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -41378,7 +41316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2829401006128067758",
+    "id": "wevity-8169998111582854862",
     "boardType": "contests",
     "title": "제1회 중앙일보 어린이 미술대회",
     "category": "contest_music",
@@ -41395,11 +41333,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=111838",
-    "imageUrl": "https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261021164936_747a31d5.jpg",
     "description": "제1회 중앙일보 어린이 미술대회 - 중앙일보 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 예체능/미술/음악, 기타",
     "tags": [
       "전국대회",
@@ -41409,7 +41347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7668155554972126704",
+    "id": "wevity-1356699541793986000",
     "boardType": "contests",
     "title": "제14회 한옥디자인 국제 공모전",
     "category": "contest_music",
@@ -41426,11 +41364,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=109966",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20260810170215_9b2ad3eb.jpg",
     "description": "제14회 한옥디자인 국제 공모전 - 사단법인 한옥건축학회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰, 건축/건설/인테리어, 예체능/미술/음악",
     "tags": [
       "전국대회",
@@ -41440,7 +41378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7709889715468755025",
+    "id": "wevity-3507604269935589326",
     "boardType": "contests",
     "title": "2027 영암 왕인문화축제 홍보물 디자인 공모전",
     "category": "contest_art",
@@ -41457,11 +41395,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112350",
-    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261113163235_2a388645.jpg",
     "description": "2027 영암 왕인문화축제 홍보물 디자인 공모전 - 영암문화관광재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41471,7 +41409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2185206864983926568",
+    "id": "wevity-4923499466307260886",
     "boardType": "contests",
     "title": "전국 어린이 에너지절약 그림 포스터 공모전",
     "category": "contest_art",
@@ -41488,11 +41426,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112347",
-    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261113162753_73e3dc70.jpg",
     "description": "전국 어린이 에너지절약 그림 포스터 공모전 - 한국전력공사 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41502,7 +41440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7378158556379344403",
+    "id": "wevity-7447693941597661040",
     "boardType": "contests",
     "title": "2027 춘천마임축제 메인포스터 디자인 공모전",
     "category": "contest_art",
@@ -41519,7 +41457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112331",
@@ -41533,7 +41471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4767960535381524318",
+    "id": "wevity-6708334100065277101",
     "boardType": "contests",
     "title": "쉽고 바른 정보통신기술(ICT) 공공언어 웹툰 공모전",
     "category": "contest_art",
@@ -41550,11 +41488,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112325",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261112140625_50314e43.jpg",
     "description": "쉽고 바른 정보통신기술(ICT) 공공언어 웹툰 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41564,7 +41502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8442612498621342151",
+    "id": "wevity-5136194008938039755",
     "boardType": "contests",
     "title": "광명상생플랫폼 로고 공모전",
     "category": "contest_art",
@@ -41581,7 +41519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112279",
@@ -41595,7 +41533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3291877776843031472",
+    "id": "wevity-1236141533148239562",
     "boardType": "contests",
     "title": "폰트 출시 기념 ㅂㅇㅅㅁ 디자인 공모전",
     "category": "contest_art",
@@ -41612,11 +41550,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112262",
-    "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261109181003_00584828.jpg",
     "description": "폰트 출시 기념 ㅂㅇㅅㅁ 디자인 공모전 - 밝은성모안과의원 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41626,7 +41564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8146681305930685260",
+    "id": "wevity-6504743269738266966",
     "boardType": "contests",
     "title": "제57회 대원 수퍼만화 대상",
     "category": "contest_art",
@@ -41643,11 +41581,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112246",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261109160620_b2944c7f.jpg",
     "description": "제57회 대원 수퍼만화 대상 - 대원씨아이(주) 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41657,7 +41595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8776466437738812381",
+    "id": "wevity-6810639561750807796",
     "boardType": "contests",
     "title": "건학 50주년 기념 동명대학교 캐릭터 공모전",
     "category": "contest_art",
@@ -41674,11 +41612,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112233",
-    "imageUrl": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261112000256_a66ab820.jpg",
     "description": "건학 50주년 기념 동명대학교 캐릭터 공모전 - 동명대학교 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41688,7 +41626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6834471600844376899",
+    "id": "wevity-3636569967352100373",
     "boardType": "contests",
     "title": "한국연구재단 창립 50주년 기념 대국민 엠블럼 공모전",
     "category": "contest_art",
@@ -41705,11 +41643,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112229",
-    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261111232324_e0903a85.jpg",
     "description": "한국연구재단 창립 50주년 기념 대국민 엠블럼 공모전 - 한국연구재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41719,7 +41657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9170872146263772996",
+    "id": "wevity-3346353584592584976",
     "boardType": "contests",
     "title": "유랑 사회적협동조합 로고 디자인 공모전",
     "category": "contest_art",
@@ -41736,11 +41674,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112215",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261110225513_6c4dac5e.jpg",
     "description": "유랑 사회적협동조합 로고 디자인 공모전 - 유랑 사회적협동조합 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41750,7 +41688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1664109628488635042",
+    "id": "wevity-184116800876096925",
     "boardType": "contests",
     "title": "생성형 AI를 활용한 평택시청소년재단 캐릭터(마스코트) 공모전",
     "category": "contest_art",
@@ -41767,7 +41705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112204",
@@ -41781,7 +41719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4359248019650886401",
+    "id": "wevity-6140574311953868656",
     "boardType": "contests",
     "title": "Tree Eco 파충류 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -41798,11 +41736,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=1&ix=112177",
-    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261105160531_bcad7332.jpg",
     "description": "Tree Eco 파충류 캐릭터 디자인 공모전 - 트리에코 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41812,7 +41750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5328421817420722672",
+    "id": "wevity-5538722998902223783",
     "boardType": "contests",
     "title": "2026 미미홈 꾸미기 콘테스트 (미미홈꾸)",
     "category": "contest_art",
@@ -41829,11 +41767,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=112034",
-    "imageUrl": "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261030173241_8a6ce0b5.jpg",
     "description": "2026 미미홈 꾸미기 콘테스트 (미미홈꾸) - (주)미미월드 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41843,7 +41781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7377477491964415164",
+    "id": "wevity-1522406800372358353",
     "boardType": "contests",
     "title": "제9회 만화일러스트 공모전",
     "category": "contest_art",
@@ -41860,11 +41798,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=112016",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261029184000_dd79ab33.jpg",
     "description": "제9회 만화일러스트 공모전 - 서울시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41874,7 +41812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6850331933244555827",
+    "id": "wevity-4825868946214252946",
     "boardType": "contests",
     "title": "2026 부산 지역어 알리기 한 장 만화 공모전",
     "category": "contest_art",
@@ -41891,11 +41829,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111983",
-    "imageUrl": "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261028175356_0cd1f45a.jpg",
     "description": "2026 부산 지역어 알리기 한 장 만화 공모전 - 문화체육관광부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41905,7 +41843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4609416694443797831",
+    "id": "wevity-1161478725519021026",
     "boardType": "contests",
     "title": "2026 아름다운 우리말 달력 만들기 공모전",
     "category": "contest_art",
@@ -41922,11 +41860,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111979",
-    "imageUrl": "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261028174640_b8a264d9.jpg",
     "description": "2026 아름다운 우리말 달력 만들기 공모전 - 문화체육관광부·부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41936,7 +41874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9018052186967032614",
+    "id": "wevity-7504957908984636418",
     "boardType": "contests",
     "title": "서울미래인재재단 대표 캐릭터 공모전 (서울의 미래, 새로운 얼굴)",
     "category": "contest_art",
@@ -41953,11 +41891,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111977",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261028174123_ded8b8fe.jpg",
     "description": "서울미래인재재단 대표 캐릭터 공모전 (서울의 미래, 새로운 얼굴) - 서울미래인재재단 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41967,7 +41905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2515587478470802897",
+    "id": "wevity-1241490159069104035",
     "boardType": "contests",
     "title": "강남구중독관리통합지원센터 캐릭터 공모전",
     "category": "contest_art",
@@ -41984,11 +41922,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111942",
-    "imageUrl": "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261030202317_6668cd20.jpg",
     "description": "강남구중독관리통합지원센터 캐릭터 공모전 - 강남구중독관리통합지원센터 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -41998,7 +41936,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7510256141419165204",
+    "id": "wevity-5601085275156124200",
     "boardType": "contests",
     "title": "타구·바쿠와 함께하는 신규 캐릭터 기념품 디자인 공모전",
     "category": "contest_art",
@@ -42015,11 +41953,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111939",
-    "imageUrl": "https://images.unsplash.com/photo-1560421683-6856ea585c78?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261030193034_4f29d5bf.jpg",
     "description": "타구·바쿠와 함께하는 신규 캐릭터 기념품 디자인 공모전 - 대구교통공사 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42029,7 +41967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-400718660034884334",
+    "id": "wevity-3779791269173239322",
     "boardType": "contests",
     "title": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전",
     "category": "contest_stem",
@@ -42046,11 +41984,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111776",
-    "imageUrl": "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261022141651_06182d9a.jpg",
     "description": "6G Vision Fest 2026 어린이 미래 상상 그림 공모전 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42060,7 +41998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3420650498220192278",
+    "id": "wevity-5599417025379807716",
     "boardType": "contests",
     "title": "2026 레진성인공모전",
     "category": "contest_art",
@@ -42077,11 +42015,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111586",
-    "imageUrl": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261014035003_87f0bb60.jpg",
     "description": "2026 레진성인공모전 - 레진엔터테인먼트 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42091,7 +42029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7084269850383353880",
+    "id": "wevity-2692501179291430851",
     "boardType": "contests",
     "title": "제 27회 청소년만화축제 만화작품 공모전",
     "category": "contest_art",
@@ -42108,11 +42046,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111516",
-    "imageUrl": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261007163409_85328c9f.jpg",
     "description": "제 27회 청소년만화축제 만화작품 공모전 - 부산광역시 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42122,7 +42060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4339771487308880491",
+    "id": "wevity-3920305545081437754",
     "boardType": "contests",
     "title": "2026 제23회 고양호수만화축제 청소년만화 공모전",
     "category": "contest_art",
@@ -42139,11 +42077,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111498",
-    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261013021651_ab802b6f.jpg",
     "description": "2026 제23회 고양호수만화축제 청소년만화 공모전 - 한국청소년문화연대 조인핸드 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42153,7 +42091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7573825472591385002",
+    "id": "wevity-452882427766605046",
     "boardType": "contests",
     "title": "2026 4TH 메타툰 여성향 성인 단편 노블코믹스 작화 모집 공모전",
     "category": "contest_art",
@@ -42170,11 +42108,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111403",
-    "imageUrl": "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261001192743_4cc7ebf1.jpg",
     "description": "2026 4TH 메타툰 여성향 성인 단편 노블코믹스 작화 모집 공모전 - 주식회사 메타툰 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42184,7 +42122,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7826408417385861023",
+    "id": "wevity-4961627666775689090",
     "boardType": "contests",
     "title": "2026 대한민국 국제 어린이 미술 대회",
     "category": "contest_art",
@@ -42201,11 +42139,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111394",
-    "imageUrl": "https://images.unsplash.com/photo-1567427017947-545c5f8d16ad?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20261003014022_9ef40469.jpg",
     "description": "2026 대한민국 국제 어린이 미술 대회 - 국제 파인 아트 디자인 협회 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42215,7 +42153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3109796458918017319",
+    "id": "wevity-320473236960399533",
     "boardType": "contests",
     "title": "CREPET AWARDS 2026 반려용품 디자인 공모전",
     "category": "contest_art",
@@ -42232,7 +42170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=111351",
@@ -42246,7 +42184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7315404691560148733",
+    "id": "wevity-1882848488285957302",
     "boardType": "contests",
     "title": "제6회 플라이하이 AI 패션 디자인 고교 콘테스트",
     "category": "contest_coding",
@@ -42263,11 +42201,11 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=2&ix=110817",
-    "imageUrl": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600&auto=format&fit=crop&q=80",
+    "imageUrl": "https://www.wevity.com/upload/contest/20260911001237_5f334724.jpg",
     "description": "제6회 플라이하이 AI 패션 디자인 고교 콘테스트 - 라사라패션교육개발 주최 전국 공모전 및 경진대회입니다. 분야 : 디자인/캐릭터/웹툰",
     "tags": [
       "전국대회",
@@ -42277,7 +42215,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4568702890995220175",
+    "id": "wevity-7617009128130076774",
     "boardType": "contests",
     "title": "2026 의정부시 Sign-Up 간판 디자인 공모전",
     "category": "contest_art",
@@ -42294,7 +42232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=110566",
@@ -42308,7 +42246,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4865796024604016880",
+    "id": "wevity-6209017009577305712",
     "boardType": "contests",
     "title": "2026 순천 IP 창·제작 지원사업 참여 기업 모집 공고",
     "category": "contest_art",
@@ -42325,7 +42263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=112168",
@@ -42339,7 +42277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1891177333360610986",
+    "id": "wevity-5900410030812628326",
     "boardType": "contests",
     "title": "아시아 창업엑스포 FLY ASIA 심벌마크 디자인 공모",
     "category": "contest_art",
@@ -42356,7 +42294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=112083",
@@ -42370,7 +42308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-136735874134981628",
+    "id": "wevity-8375946272480882974",
     "boardType": "contests",
     "title": "드골2: 자유의 시대 포스터·굿즈 공모전",
     "category": "contest_art",
@@ -42387,7 +42325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111868",
@@ -42401,7 +42339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9051327676116938694",
+    "id": "wevity-8504239108733866146",
     "boardType": "contests",
     "title": "2026 한국공항보안(주) AI 디지털 이미지 공모전",
     "category": "contest_art",
@@ -42418,7 +42356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111785",
@@ -42432,7 +42370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7148704818521003571",
+    "id": "wevity-5428994664493222692",
     "boardType": "contests",
     "title": "2026 부천시 웹툰융합 공모전",
     "category": "contest_art",
@@ -42449,7 +42387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111749",
@@ -42463,7 +42401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4389331988223837947",
+    "id": "wevity-2534529681794431751",
     "boardType": "contests",
     "title": "2026년 부산항만공사 청소년 인권존중 포스터 공모전",
     "category": "contest_art",
@@ -42480,7 +42418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111710",
@@ -42494,7 +42432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7749080619837719385",
+    "id": "wevity-5850773114162051869",
     "boardType": "contests",
     "title": "2026년 경상남도 어린이 불조심 포스터 공모전",
     "category": "contest_art",
@@ -42511,7 +42449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111684",
@@ -42525,7 +42463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4163624165366656827",
+    "id": "wevity-2233045126304341838",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 기념우표 디자인 공모전",
     "category": "contest_art",
@@ -42542,7 +42480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111663",
@@ -42556,7 +42494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8837918739982104446",
+    "id": "wevity-7390926476692034616",
     "boardType": "contests",
     "title": "세계중요농업유산 등재 광양섬진강재첩 공동브랜드 디자인 공모전",
     "category": "contest_art",
@@ -42573,7 +42511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111662",
@@ -42587,7 +42525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4185642133200762229",
+    "id": "wevity-4802656800556399164",
     "boardType": "contests",
     "title": "2026 국가유산형 드론콘텐츠 디자인 공모전",
     "category": "contest_art",
@@ -42604,7 +42542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111654",
@@ -42618,7 +42556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5608631598658912668",
+    "id": "wevity-8816697402903927356",
     "boardType": "contests",
     "title": "2026년 서울특별시 어린이·청소년 시민발언대 청소년이 바꾸는 서울 인스타툰 공모전",
     "category": "contest_art",
@@ -42635,7 +42573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111579",
@@ -42649,7 +42587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5852211888001411864",
+    "id": "wevity-2047029826304737098",
     "boardType": "contests",
     "title": "에너지산업 수도 울진 BI 디자인 대국민 공모전",
     "category": "contest_art",
@@ -42666,7 +42604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111537",
@@ -42680,7 +42618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7035736140439904764",
+    "id": "wevity-590599654014720434",
     "boardType": "contests",
     "title": "부산 동구 북항 상어 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -42697,7 +42635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111471",
@@ -42711,7 +42649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3221451901019496147",
+    "id": "wevity-6675159964093130922",
     "boardType": "contests",
     "title": "2026년 용산구시설관리공단 캐릭터 공모전",
     "category": "contest_art",
@@ -42728,7 +42666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=3&ix=111456",
@@ -42742,7 +42680,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-76997919429537290",
+    "id": "wevity-4296887122108454064",
     "boardType": "contests",
     "title": "청주페이 카드 디자인 공모전",
     "category": "contest_art",
@@ -42759,7 +42697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111416",
@@ -42773,7 +42711,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4284629552969428481",
+    "id": "wevity-43312887292344194",
     "boardType": "contests",
     "title": "2028 세계디자인수도 부산 파빌리온 디자인 국제공모전",
     "category": "contest_art",
@@ -42790,7 +42728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111400",
@@ -42804,7 +42742,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3322577667391171749",
+    "id": "wevity-6159341402265915821",
     "boardType": "contests",
     "title": "2026 팬트리픽 마스코트 일러스트 공모전",
     "category": "contest_art",
@@ -42821,7 +42759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111293",
@@ -42835,7 +42773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7974563548321829283",
+    "id": "wevity-8517265111489129059",
     "boardType": "contests",
     "title": "2026 제6회 필(必)환경 캠페인 공모전",
     "category": "contest_art",
@@ -42852,7 +42790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111277",
@@ -42866,7 +42804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3101730600608606560",
+    "id": "wevity-3141714442494846605",
     "boardType": "contests",
     "title": "제2회 K-슈즈 메이킹 챌린지",
     "category": "contest_art",
@@ -42883,7 +42821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111243",
@@ -42897,7 +42835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-806477867020109757",
+    "id": "wevity-6873084791214675389",
     "boardType": "contests",
     "title": "전남광주 업고 튀어",
     "category": "contest_art",
@@ -42914,7 +42852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111232",
@@ -42928,7 +42866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5717501150076735757",
+    "id": "wevity-3012006306472527903",
     "boardType": "contests",
     "title": "전국우주항공경진대회-AI 활용 우주 SF 웹툰 대회",
     "category": "contest_stem",
@@ -42945,7 +42883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111199",
@@ -42959,7 +42897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4633628010455964020",
+    "id": "wevity-1958979250051678900",
     "boardType": "contests",
     "title": "2026년 초등학생 달빛어린이병원 그림 공모전",
     "category": "contest_art",
@@ -42976,7 +42914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111175",
@@ -42990,7 +42928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5917476589513119068",
+    "id": "wevity-8747708959966508441",
     "boardType": "contests",
     "title": "[디자인-부산2026] 디자인 해커톤 1기 공개모집",
     "category": "contest_coding",
@@ -43007,7 +42945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111171",
@@ -43021,7 +42959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3122849440566172623",
+    "id": "wevity-3393961153757593319",
     "boardType": "contests",
     "title": "부산의 수돗물 순수365 홍보디자인 공모전",
     "category": "contest_art",
@@ -43038,7 +42976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111170",
@@ -43052,7 +42990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8923085937326045654",
+    "id": "wevity-2948246511833976296",
     "boardType": "contests",
     "title": "[동두천양주교육지원청] 동양 RAS PICK 캐릭터 디자인 공모전",
     "category": "contest_art",
@@ -43069,7 +43007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111145",
@@ -43083,7 +43021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7898970770096032988",
+    "id": "wevity-6303513965807194004",
     "boardType": "contests",
     "title": "2027 국악누리 표지 그림 공모전",
     "category": "contest_art",
@@ -43100,7 +43038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111136",
@@ -43114,7 +43052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3984354074114334934",
+    "id": "wevity-5800797857031875322",
     "boardType": "contests",
     "title": "피란수도 부산유산 BI공모전",
     "category": "contest_art",
@@ -43131,7 +43069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111119",
@@ -43145,7 +43083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7009208761610885493",
+    "id": "wevity-972192264453300469",
     "boardType": "contests",
     "title": "제6회 필(必)환경 캠페인 공모전",
     "category": "contest_art",
@@ -43162,7 +43100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111112",
@@ -43176,7 +43114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7514270852513074440",
+    "id": "wevity-5214688022044327313",
     "boardType": "contests",
     "title": "경상남도교육청 동부학생안전체험원 심벌마크(BI) 공모전",
     "category": "contest_art",
@@ -43193,7 +43131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=4&ix=111068",
@@ -43207,7 +43145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-97334943687403032",
+    "id": "wevity-1417056630677559054",
     "boardType": "contests",
     "title": "제7회 당진시 지방세 홍보 포스터 공모전",
     "category": "contest_art",
@@ -43224,7 +43162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=111048",
@@ -43238,7 +43176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4330141881648142427",
+    "id": "wevity-7010440208779942501",
     "boardType": "contests",
     "title": "제6회 원주DB 프로농구단 시티유니폼 디자인 공모전",
     "category": "contest_art",
@@ -43255,7 +43193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=111042",
@@ -43269,7 +43207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5756206783635176548",
+    "id": "wevity-4991714460542146017",
     "boardType": "contests",
     "title": "무안군 굿즈 디자인 경진대회",
     "category": "contest_art",
@@ -43286,7 +43224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=111002",
@@ -43300,7 +43238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1365775762770506517",
+    "id": "wevity-1542068549317166161",
     "boardType": "contests",
     "title": "제39회 빙그레 어린이 그림 잔치",
     "category": "contest_art",
@@ -43317,7 +43255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110999",
@@ -43331,7 +43269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7217827896713307373",
+    "id": "wevity-8572621886091798535",
     "boardType": "contests",
     "title": "디자인 잇 어워드 챌린지 2026",
     "category": "contest_art",
@@ -43348,7 +43286,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110977",
@@ -43362,7 +43300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8326917491349632385",
+    "id": "wevity-6612974363853056061",
     "boardType": "contests",
     "title": "유원커버(U1 COVER) 유원대학교 2027학년도 정시모집요강 표지디자인 공모전",
     "category": "contest_art",
@@ -43379,7 +43317,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110961",
@@ -43393,7 +43331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-68842104963699288",
+    "id": "wevity-6948791048298614310",
     "boardType": "contests",
     "title": "2026 하남시안전체험장 신규 로고 공모전",
     "category": "contest_art",
@@ -43410,7 +43348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110944",
@@ -43424,7 +43362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7241423836289133236",
+    "id": "wevity-1430706455729318290",
     "boardType": "contests",
     "title": "제3회 게임문화 그림일기 및 광고 포스터 공모전",
     "category": "contest_coding",
@@ -43441,7 +43379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110935",
@@ -43455,7 +43393,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3666096138128015209",
+    "id": "wevity-330436749964512820",
     "boardType": "contests",
     "title": "제20회 월간 아이러브캐릭터 캐릭터 공모전",
     "category": "contest_art",
@@ -43472,7 +43410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110910",
@@ -43486,7 +43424,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-571300212242515889",
+    "id": "wevity-821779958070470592",
     "boardType": "contests",
     "title": "The Pattern 2026 콘테스트 : 오픈소스 패션 모델링 어워드",
     "category": "contest_music",
@@ -43503,7 +43441,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110905",
@@ -43517,7 +43455,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-87341373039703117",
+    "id": "wevity-2935548389841954182",
     "boardType": "contests",
     "title": "부천을 굿즈하다 관광기념품 공모전",
     "category": "contest_art",
@@ -43534,7 +43472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110798",
@@ -43548,7 +43486,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6075258970145952314",
+    "id": "wevity-7323684042471102932",
     "boardType": "contests",
     "title": "2026 K-디자인콘서트 공모전",
     "category": "contest_art",
@@ -43565,7 +43503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110788",
@@ -43579,7 +43517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7089424871755482947",
+    "id": "wevity-6738286377881675290",
     "boardType": "contests",
     "title": "2027 우체국 연하카드·연하엽서 디자인 공모전",
     "category": "contest_art",
@@ -43596,7 +43534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110786",
@@ -43610,7 +43548,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4574793243540126127",
+    "id": "wevity-2188736514142031958",
     "boardType": "contests",
     "title": "서대문장애인종합복지관 개관 28주년 기념 마스코트 공모전",
     "category": "contest_art",
@@ -43627,7 +43565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110778",
@@ -43641,7 +43579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8274086191477830481",
+    "id": "wevity-2821875743316623645",
     "boardType": "contests",
     "title": "관악구 청소년과 함께하는 흡연예방 스토리 포스터 공모전",
     "category": "contest_art",
@@ -43658,7 +43596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=5&ix=110739",
@@ -43672,7 +43610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3495987161511600545",
+    "id": "wevity-7302095628720611014",
     "boardType": "contests",
     "title": "2026년 제41회 디자인 & 일러스트레이션 국제공모전",
     "category": "contest_art",
@@ -43689,7 +43627,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110709",
@@ -43703,7 +43641,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7740311110382101881",
+    "id": "wevity-3562219039039544056",
     "boardType": "contests",
     "title": "2026년 정신건강의 날 기념 정신건강 캐릭터 공모전",
     "category": "contest_art",
@@ -43720,7 +43658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110684",
@@ -43734,7 +43672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6532685621605445350",
+    "id": "wevity-5031717234448732348",
     "boardType": "contests",
     "title": "2026 제12회 동편제국악축제 포스터 디자인 공모전",
     "category": "contest_art",
@@ -43751,7 +43689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110634",
@@ -43765,7 +43703,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3417406784555443871",
+    "id": "wevity-8912798158305371917",
     "boardType": "contests",
     "title": "2026년 국립공원 재난안전 콘텐츠 대국민 공모전",
     "category": "contest_art",
@@ -43782,7 +43720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110616",
@@ -43796,7 +43734,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5000491391675370812",
+    "id": "wevity-5961180351848545266",
     "boardType": "contests",
     "title": "제14회 대한민국 어린이제품 디자인 공모전",
     "category": "contest_art",
@@ -43813,7 +43751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110599",
@@ -43827,7 +43765,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4366902027780248169",
+    "id": "wevity-1480882683240933063",
     "boardType": "contests",
     "title": "제17회 현대 주얼리 디자인 공모전",
     "category": "contest_art",
@@ -43844,7 +43782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110591",
@@ -43858,7 +43796,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7227357520114779802",
+    "id": "wevity-3118093862179238977",
     "boardType": "contests",
     "title": "2026 제12회 한국 AI 신발 디자인 공모전",
     "category": "contest_art",
@@ -43875,7 +43813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110590",
@@ -43889,7 +43827,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2033740415016997501",
+    "id": "wevity-6350641602070678136",
     "boardType": "contests",
     "title": "2026 서대문구청소년상담복지센터 캐릭터 공모전",
     "category": "contest_art",
@@ -43906,7 +43844,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110579",
@@ -43920,7 +43858,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7895720646642874432",
+    "id": "wevity-6737149930447519384",
     "boardType": "contests",
     "title": "2026 광명업사이클아트센터 업사이클 브릭아트 공모전",
     "category": "contest_art",
@@ -43937,7 +43875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110571",
@@ -43951,7 +43889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5256901895538753785",
+    "id": "wevity-3873570789555110322",
     "boardType": "contests",
     "title": "2026 경남 3D 웹툰배경 활용 단편웹툰 공모전",
     "category": "contest_art",
@@ -43968,7 +43906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110490",
@@ -43982,7 +43920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7518474231192341637",
+    "id": "wevity-4998725773109925898",
     "boardType": "contests",
     "title": "기관 캐릭터 활용 안전·재난 포스터 공모전",
     "category": "contest_art",
@@ -43999,7 +43937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110473",
@@ -44013,7 +43951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4564096134267779796",
+    "id": "wevity-2147072884766365552",
     "boardType": "contests",
     "title": "제1회 평창군 청소년 예방 그림 공모전",
     "category": "contest_art",
@@ -44030,7 +43968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110436",
@@ -44044,7 +43982,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1068114240030499828",
+    "id": "wevity-1956806270966615406",
     "boardType": "contests",
     "title": "2026년 부산교통공사 AI 이미지 공모전",
     "category": "contest_art",
@@ -44061,7 +43999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110404",
@@ -44075,7 +44013,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2520343078427306565",
+    "id": "wevity-8258710319183809821",
     "boardType": "contests",
     "title": "2026년 장애인식개선 캠페인 우리, 함께 걷는 풍경 일러스트 공모전",
     "category": "contest_art",
@@ -44092,7 +44030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110403",
@@ -44106,7 +44044,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-429769683276007552",
+    "id": "wevity-3706302423635507513",
     "boardType": "contests",
     "title": "통영시 청년센터 캐릭터 공모전",
     "category": "contest_art",
@@ -44123,7 +44061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=6&ix=110399",
@@ -44137,7 +44075,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7314667686360043603",
+    "id": "wevity-2897399027913617863",
     "boardType": "contests",
     "title": "2026년 대전광역시 어린이 교통안전 그림공모전",
     "category": "contest_art",
@@ -44154,7 +44092,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110389",
@@ -44168,7 +44106,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3219744860221920817",
+    "id": "wevity-2366987313729894194",
     "boardType": "contests",
     "title": "2026년 서울시 어린이 소방안전 포스터 공모전",
     "category": "contest_art",
@@ -44185,7 +44123,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110382",
@@ -44199,7 +44137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1966616998035963456",
+    "id": "wevity-5366934022184803893",
     "boardType": "contests",
     "title": "붉은 동백의 순간 MOMENTO 와인라벨 아트웍 공모전 (참가비 있음)",
     "category": "contest_art",
@@ -44216,7 +44154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110380",
@@ -44230,7 +44168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1498660181098932142",
+    "id": "wevity-5390827253665298619",
     "boardType": "contests",
     "title": "빠나나AI 캐릭터 챌린지",
     "category": "contest_art",
@@ -44247,7 +44185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110377",
@@ -44261,7 +44199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1072670786692235333",
+    "id": "wevity-7573533447350527248",
     "boardType": "contests",
     "title": "2026년 중독예방 포스터 공모전",
     "category": "contest_art",
@@ -44278,7 +44216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110375",
@@ -44292,7 +44230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1056937426357087199",
+    "id": "wevity-9090095184713938985",
     "boardType": "contests",
     "title": "pixiv 한국 학생 일러스트 공모전 2026",
     "category": "contest_art",
@@ -44309,7 +44247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110271",
@@ -44323,7 +44261,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6758876657877363955",
+    "id": "wevity-7169740225833058362",
     "boardType": "contests",
     "title": "2026 제7회 한국드로잉 공모대전",
     "category": "contest_art",
@@ -44340,7 +44278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110228",
@@ -44354,7 +44292,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4078078209720769853",
+    "id": "wevity-7730075257390332445",
     "boardType": "contests",
     "title": "2026 IDAWARD 제14회 대구인쇄출판 디자인공모전",
     "category": "contest_art",
@@ -44371,7 +44309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110193",
@@ -44385,7 +44323,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5012767835619583122",
+    "id": "wevity-1723275290452102299",
     "boardType": "contests",
     "title": "2026 인제대학교•(재)김해FC All-City Campus 웹툰•캐릭터 공모전",
     "category": "contest_art",
@@ -44402,7 +44340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110118",
@@ -44416,7 +44354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-398636764078840334",
+    "id": "wevity-8401322728613218479",
     "boardType": "contests",
     "title": "제17회 서울인쇄대상",
     "category": "contest_art",
@@ -44433,7 +44371,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110112",
@@ -44447,7 +44385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3598126769732116879",
+    "id": "wevity-3591732009634905843",
     "boardType": "contests",
     "title": "제3회 대현도서관 웹툰 공모전",
     "category": "contest_reading",
@@ -44464,7 +44402,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110091",
@@ -44478,7 +44416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5430453308223662684",
+    "id": "wevity-3461820901009363106",
     "boardType": "contests",
     "title": "2026 부천문화재단 청렴시민커뮤니케이터 청렴포스터 공모전",
     "category": "contest_art",
@@ -44495,7 +44433,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110038",
@@ -44509,7 +44447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4176801128910258842",
+    "id": "wevity-1699156856698466369",
     "boardType": "contests",
     "title": "제17회 한국패션디자인학회 공모전 (기간연장)",
     "category": "contest_art",
@@ -44526,7 +44464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110019",
@@ -44540,7 +44478,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6320433060058029592",
+    "id": "wevity-4801413874922595981",
     "boardType": "contests",
     "title": "[대통령직속 빛의 위원회] 빛의 혁명 상징 디자인 공모전",
     "category": "contest_music",
@@ -44557,7 +44495,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=110012",
@@ -44571,7 +44509,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9119921722180220676",
+    "id": "wevity-4788356191461286266",
     "boardType": "contests",
     "title": "민선 9기 완도군 브랜드 디자인 공모전",
     "category": "contest_art",
@@ -44588,7 +44526,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=19&gbn=view&gp=7&ix=109994",
@@ -44602,7 +44540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3401511175917814347",
+    "id": "wevity-4123370099686506849",
     "boardType": "contests",
     "title": "농민신문 제31회 신춘문예 작품 공모",
     "category": "contest_music",
@@ -44619,7 +44557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112349",
@@ -44633,7 +44571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3738036484905582836",
+    "id": "wevity-9012653264855690814",
     "boardType": "contests",
     "title": "공모전 준비 중이라면? AI 교정 서비스 [교정의 신]과 함께!",
     "category": "contest_music",
@@ -44650,7 +44588,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=111812",
@@ -44664,7 +44602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8055826889179003876",
+    "id": "wevity-1992778805379721462",
     "boardType": "contests",
     "title": "제4회 현대문학x미래엔 청소년문학상 공모전",
     "category": "contest_music",
@@ -44681,7 +44619,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=109996",
@@ -44695,7 +44633,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8461288648375115298",
+    "id": "wevity-2174976244666696968",
     "boardType": "contests",
     "title": "문익환 목사 창작희곡 공모전",
     "category": "contest_writing",
@@ -44712,7 +44650,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112327",
@@ -44726,7 +44664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5346836147196309103",
+    "id": "wevity-7186806007216277514",
     "boardType": "contests",
     "title": "2027 광주일보 신춘문예",
     "category": "contest_writing",
@@ -44743,7 +44681,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112286",
@@ -44757,7 +44695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-121137964770179189",
+    "id": "wevity-1393377410846287003",
     "boardType": "contests",
     "title": "2027 전북도민일보 신춘문예 공모",
     "category": "contest_writing",
@@ -44774,7 +44712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112284",
@@ -44788,7 +44726,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1775408533515320227",
+    "id": "wevity-4785841988859951832",
     "boardType": "contests",
     "title": "제1회 ALONA 웹소설 공모전",
     "category": "contest_writing",
@@ -44805,7 +44743,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112240",
@@ -44819,7 +44757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1566325767894326847",
+    "id": "wevity-7428105038866253713",
     "boardType": "contests",
     "title": "GoodNovel 제2회 대형 웹소설 공모전",
     "category": "contest_writing",
@@ -44836,7 +44774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112237",
@@ -44850,7 +44788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1915806310490253774",
+    "id": "wevity-1327504354465315200",
     "boardType": "contests",
     "title": "필전 2026 조선 백일장",
     "category": "contest_writing",
@@ -44867,7 +44805,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112226",
@@ -44881,7 +44819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6619759692870002474",
+    "id": "wevity-7025098263804386094",
     "boardType": "contests",
     "title": "2027 강원일보 신춘문예 작품공모",
     "category": "contest_writing",
@@ -44898,7 +44836,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112222",
@@ -44912,7 +44850,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6054716468189824373",
+    "id": "wevity-4997576778231452041",
     "boardType": "contests",
     "title": "웅진식품 50주년 기념 문학공모전",
     "category": "contest_writing",
@@ -44929,7 +44867,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112216",
@@ -44943,7 +44881,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5185308501806614016",
+    "id": "wevity-2599170439779194452",
     "boardType": "contests",
     "title": "제1회 Daum AI 숏드라마 시나리오 공모전 (내용 수정)",
     "category": "contest_writing",
@@ -44960,7 +44898,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112212",
@@ -44974,7 +44912,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7295704279700280437",
+    "id": "wevity-860701676728304925",
     "boardType": "contests",
     "title": "2026 세명 대학언론상 공모전",
     "category": "contest_writing",
@@ -44991,7 +44929,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112201",
@@ -45005,7 +44943,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2678288945366123116",
+    "id": "wevity-3910603878641471881",
     "boardType": "contests",
     "title": "2026 전국 우리쌤 자랑대회",
     "category": "contest_writing",
@@ -45022,7 +44960,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112191",
@@ -45036,7 +44974,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6487788076325101200",
+    "id": "wevity-445353660184481864",
     "boardType": "contests",
     "title": "제25회 전국여성환경백일장",
     "category": "contest_writing",
@@ -45053,7 +44991,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=1&ix=112182",
@@ -45067,7 +45005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8129715520564710595",
+    "id": "wevity-7763408993388252668",
     "boardType": "contests",
     "title": "2027년 경향신문 신춘문예",
     "category": "contest_writing",
@@ -45084,7 +45022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112178",
@@ -45098,7 +45036,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6683272704394790684",
+    "id": "wevity-3165413804786488816",
     "boardType": "contests",
     "title": "2027 영남일보 신춘문예 공모",
     "category": "contest_writing",
@@ -45115,7 +45053,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112176",
@@ -45129,7 +45067,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1365239633250875864",
+    "id": "wevity-2812885112898257256",
     "boardType": "contests",
     "title": "2027 동아신춘문예",
     "category": "contest_writing",
@@ -45146,7 +45084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112175",
@@ -45160,7 +45098,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4055428447057207119",
+    "id": "wevity-8353043489788046479",
     "boardType": "contests",
     "title": "2027년 조선일보 신춘문예",
     "category": "contest_writing",
@@ -45177,7 +45115,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112174",
@@ -45191,7 +45129,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7860691473837734448",
+    "id": "wevity-4613242102030582173",
     "boardType": "contests",
     "title": "2027년 문화일보 신춘문예",
     "category": "contest_writing",
@@ -45208,7 +45146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112172",
@@ -45222,7 +45160,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5264819649308296391",
+    "id": "wevity-3238824401349160189",
     "boardType": "contests",
     "title": "2027 전북일보 신춘문예 공모",
     "category": "contest_writing",
@@ -45239,7 +45177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112170",
@@ -45253,7 +45191,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7649006731188402687",
+    "id": "wevity-5079859612145418966",
     "boardType": "contests",
     "title": "제1회 동물사랑 디카시 공모전",
     "category": "contest_writing",
@@ -45270,7 +45208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112148",
@@ -45284,7 +45222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7191979641372527449",
+    "id": "wevity-5072737643051830788",
     "boardType": "contests",
     "title": "제11회 디멘시아문학상 공모전",
     "category": "contest_writing",
@@ -45301,7 +45239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112089",
@@ -45315,7 +45253,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7665642602999630894",
+    "id": "wevity-9056819603872350158",
     "boardType": "contests",
     "title": "2027 부산일보 신춘문예",
     "category": "contest_writing",
@@ -45332,7 +45270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112068",
@@ -45346,7 +45284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6843862900473782332",
+    "id": "wevity-4244564880134942882",
     "boardType": "contests",
     "title": "2027 경인일보 신춘문예",
     "category": "contest_writing",
@@ -45363,7 +45301,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112067",
@@ -45377,7 +45315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8380462673777595889",
+    "id": "wevity-1548700431530569691",
     "boardType": "contests",
     "title": "2027 경남신문 신춘문예 작품 공모",
     "category": "contest_writing",
@@ -45394,7 +45332,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112062",
@@ -45408,7 +45346,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5759344785168594761",
+    "id": "wevity-1313324446845186415",
     "boardType": "contests",
     "title": "제23회 세계문학상",
     "category": "contest_writing",
@@ -45425,7 +45363,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112061",
@@ -45439,7 +45377,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7378902591322999307",
+    "id": "wevity-8159046396869873404",
     "boardType": "contests",
     "title": "2027 한국일보 신춘문예 공모",
     "category": "contest_writing",
@@ -45456,7 +45394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112052",
@@ -45470,7 +45408,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2581972597057150278",
+    "id": "wevity-1778694471620235342",
     "boardType": "contests",
     "title": "2027 서울신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45487,7 +45425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112051",
@@ -45501,7 +45439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4466504464518621819",
+    "id": "wevity-4759985715063629298",
     "boardType": "contests",
     "title": "제18회 손바닥문학상",
     "category": "contest_writing",
@@ -45518,7 +45456,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=2&ix=112050",
@@ -45532,7 +45470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6178481833193952051",
+    "id": "wevity-2363452176661311959",
     "boardType": "contests",
     "title": "2027 매일신춘문예 공모",
     "category": "contest_writing",
@@ -45549,7 +45487,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111917",
@@ -45563,7 +45501,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5150777853134885327",
+    "id": "wevity-3898749641283415210",
     "boardType": "contests",
     "title": "2026 충남 문화예술후원사업 문화CF 스타상 (청년예술부문) 공모",
     "category": "contest_writing",
@@ -45580,7 +45518,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111916",
@@ -45594,7 +45532,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1839532781582818595",
+    "id": "wevity-5620325528632065786",
     "boardType": "contests",
     "title": "2027 국제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45611,7 +45549,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111860",
@@ -45625,7 +45563,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3584436123348967988",
+    "id": "wevity-8598887602388211462",
     "boardType": "contests",
     "title": "세계일보 2027 신춘문예 공모",
     "category": "contest_writing",
@@ -45642,7 +45580,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111859",
@@ -45656,7 +45594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1575324542665200942",
+    "id": "wevity-7678325995084660547",
     "boardType": "contests",
     "title": "2027년 현대경제신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45673,7 +45611,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111857",
@@ -45687,7 +45625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2281014168956119054",
+    "id": "wevity-4113417719622448365",
     "boardType": "contests",
     "title": "2027 광남일보 한국문학대상",
     "category": "contest_writing",
@@ -45704,7 +45642,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111856",
@@ -45718,7 +45656,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2467181068906680230",
+    "id": "wevity-7826106856812415840",
     "boardType": "contests",
     "title": "2026 광명시 올해의 책 독후감 공모전",
     "category": "contest_reading",
@@ -45735,7 +45673,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111796",
@@ -45749,7 +45687,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-331469866053143473",
+    "id": "wevity-8698004239825524849",
     "boardType": "contests",
     "title": "제39회 무등일보 신춘문예 공모",
     "category": "contest_writing",
@@ -45766,7 +45704,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111791",
@@ -45780,7 +45718,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5638261106228209778",
+    "id": "wevity-1182855291791323343",
     "boardType": "contests",
     "title": "제2회 연세국제창작공모전",
     "category": "contest_writing",
@@ -45797,7 +45735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111781",
@@ -45811,7 +45749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1865911593077534834",
+    "id": "wevity-6844619206276705163",
     "boardType": "contests",
     "title": "제1회 우리학교 청소년 문학상 공모",
     "category": "contest_writing",
@@ -45828,7 +45766,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111773",
@@ -45842,7 +45780,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4277761713352773266",
+    "id": "wevity-2179307055738083908",
     "boardType": "contests",
     "title": "제1회 웨이노벨 웹소설 공모전 FIRST STORY CHALLENGE 2026",
     "category": "contest_writing",
@@ -45859,7 +45797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111762",
@@ -45873,7 +45811,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3738813108987872486",
+    "id": "wevity-5210105790863329609",
     "boardType": "contests",
     "title": "제1회 꿈꾸미닷컴 꿈 수필 공모전",
     "category": "contest_writing",
@@ -45890,7 +45828,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111739",
@@ -45904,7 +45842,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7254144794300658039",
+    "id": "wevity-5280589717141084076",
     "boardType": "contests",
     "title": "실상문학 신인문학상 작품 모집",
     "category": "contest_writing",
@@ -45921,7 +45859,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111655",
@@ -45935,7 +45873,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5780554638546518499",
+    "id": "wevity-425435395461384486",
     "boardType": "contests",
     "title": "2027 불교신문 신춘문예 공모",
     "category": "contest_writing",
@@ -45952,7 +45890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111618",
@@ -45966,7 +45904,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4987435606786786022",
+    "id": "wevity-5107339707062261368",
     "boardType": "contests",
     "title": "포스텍 2027 SF 어워드",
     "category": "contest_writing",
@@ -45983,7 +45921,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=3&ix=111608",
@@ -45997,7 +45935,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-349975695408598432",
+    "id": "wevity-5965007647696490269",
     "boardType": "contests",
     "title": "제2회 블루카이트 창작 글쓰기 대회 (참가비 있음)",
     "category": "contest_writing",
@@ -46014,7 +45952,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111594",
@@ -46028,7 +45966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4946331610724909500",
+    "id": "wevity-3968929651675956291",
     "boardType": "contests",
     "title": "2026 광주콘텐츠코리아랩 웹소설 원천 스토리 공모전",
     "category": "contest_writing",
@@ -46045,7 +45983,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111531",
@@ -46059,7 +45997,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2632027898179380669",
+    "id": "wevity-2829356669011220120",
     "boardType": "contests",
     "title": "제5회 전국 고교생 웹소설 공모전",
     "category": "contest_writing",
@@ -46076,7 +46014,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111510",
@@ -46090,7 +46028,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6739178763529302600",
+    "id": "wevity-4227712407145465983",
     "boardType": "contests",
     "title": "2027 제3회 소원문학상",
     "category": "contest_writing",
@@ -46107,7 +46045,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111492",
@@ -46121,7 +46059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6326207617228837124",
+    "id": "wevity-3955896255640191923",
     "boardType": "contests",
     "title": "2027 오펜 공모전 (스토리텔러)",
     "category": "contest_writing",
@@ -46138,7 +46076,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111477",
@@ -46152,7 +46090,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4801761851377359530",
+    "id": "wevity-3555590876352143226",
     "boardType": "contests",
     "title": "제28회 문학축제 한양의시선(舊 시이어짓기대회)",
     "category": "contest_writing",
@@ -46169,7 +46107,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111470",
@@ -46183,7 +46121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7481760802618523228",
+    "id": "wevity-7353802450521156635",
     "boardType": "contests",
     "title": "제2회 AI전자그림책 공모전 - AI 이야기 숲",
     "category": "contest_reading",
@@ -46200,7 +46138,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111449",
@@ -46214,7 +46152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4456041079576773997",
+    "id": "wevity-3026686586908783777",
     "boardType": "contests",
     "title": "제36회 시장경제칼럼 공모전",
     "category": "contest_writing",
@@ -46231,7 +46169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111388",
@@ -46245,7 +46183,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1918181598997671903",
+    "id": "wevity-8271433095238310788",
     "boardType": "contests",
     "title": "2027년 경남도민신문 신춘문예 공모",
     "category": "contest_writing",
@@ -46262,7 +46200,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111381",
@@ -46276,7 +46214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7737675501162221154",
+    "id": "wevity-3320680893847589832",
     "boardType": "contests",
     "title": "2027 영주신문 제4회 신춘문예 및 학생(학교밖청소년) 백일장 응모",
     "category": "contest_writing",
@@ -46293,7 +46231,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111374",
@@ -46307,7 +46245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3472999520191699736",
+    "id": "wevity-7947323604611561420",
     "boardType": "contests",
     "title": "제5회 중부광역신문 신춘문예",
     "category": "contest_writing",
@@ -46324,7 +46262,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111372",
@@ -46338,7 +46276,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1569711681918806423",
+    "id": "wevity-3619733971104768418",
     "boardType": "contests",
     "title": "제9회 박상륭상 응모원고 모집",
     "category": "contest_writing",
@@ -46355,7 +46293,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111371",
@@ -46369,7 +46307,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6352912018073192520",
+    "id": "wevity-7801743873218662366",
     "boardType": "contests",
     "title": "제17회 천강문학상 작품 공모",
     "category": "contest_writing",
@@ -46386,7 +46324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111333",
@@ -46400,7 +46338,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4001524664136831343",
+    "id": "wevity-7093310166376700214",
     "boardType": "contests",
     "title": "2026 제3회 리아북스 그림책 공모전",
     "category": "contest_writing",
@@ -46417,7 +46355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=4&ix=111309",
@@ -46431,7 +46369,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5076652297931434763",
+    "id": "wevity-7282841980543848042",
     "boardType": "contests",
     "title": "2027년 시산맥 신춘문예 공모",
     "category": "contest_writing",
@@ -46448,7 +46386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=111292",
@@ -46462,7 +46400,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-520749166002236816",
+    "id": "wevity-747935317773941919",
     "boardType": "contests",
     "title": "제25회 사계절문학상 공모",
     "category": "contest_writing",
@@ -46479,7 +46417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=111023",
@@ -46493,7 +46431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1594834411821706871",
+    "id": "wevity-7171753809310848250",
     "boardType": "contests",
     "title": "제5회 책읽는곰 어린이책 공모전",
     "category": "contest_writing",
@@ -46510,7 +46448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=110884",
@@ -46524,7 +46462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8535206776478999940",
+    "id": "wevity-2520405820770668423",
     "boardType": "contests",
     "title": "2026 밀리로드 출간 공모전 시즌 4",
     "category": "contest_writing",
@@ -46541,7 +46479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=110768",
@@ -46555,7 +46493,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-963405172663245674",
+    "id": "wevity-6460339211656797732",
     "boardType": "contests",
     "title": "제15회 제주4·3평화문학상 공모",
     "category": "contest_writing",
@@ -46572,7 +46510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109884",
@@ -46586,7 +46524,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8658940251149479836",
+    "id": "wevity-3531696342797575548",
     "boardType": "contests",
     "title": "2027 창비 청소년 문학상 공모",
     "category": "contest_writing",
@@ -46603,7 +46541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109881",
@@ -46617,7 +46555,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5815202760688910633",
+    "id": "wevity-325712273080011474",
     "boardType": "contests",
     "title": "제1회 자갈치문학상 공모",
     "category": "contest_writing",
@@ -46634,7 +46572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109195",
@@ -46648,7 +46586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-630032725889833586",
+    "id": "wevity-7839851707778359170",
     "boardType": "contests",
     "title": "제 2회 창비교육 동화 공모전 이야기친구상",
     "category": "contest_writing",
@@ -46665,7 +46603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=109126",
@@ -46679,7 +46617,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5008478507960670425",
+    "id": "wevity-1361339125549159825",
     "boardType": "contests",
     "title": "제1회 해냄 청소년 인문 사회 도서 공모전",
     "category": "contest_writing",
@@ -46696,7 +46634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=108740",
@@ -46710,7 +46648,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5245308288356023796",
+    "id": "wevity-3646686442701162514",
     "boardType": "contests",
     "title": "소소한설 공모전",
     "category": "contest_writing",
@@ -46727,7 +46665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=107059",
@@ -46741,7 +46679,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2780021686532028912",
+    "id": "wevity-2397961939083450639",
     "boardType": "contests",
     "title": "2026 전북학생 문학상 공모전",
     "category": "contest_writing",
@@ -46758,7 +46696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=112228",
@@ -46772,7 +46710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8550065706591903454",
+    "id": "wevity-2409907040618763656",
     "boardType": "contests",
     "title": "2026 강원일보 시니어문학상",
     "category": "contest_writing",
@@ -46789,7 +46727,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=112059",
@@ -46803,7 +46741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-764827413390628004",
+    "id": "wevity-6380766063092048865",
     "boardType": "contests",
     "title": "2026 제1회 창원 마산국화축제 홍보 현장 디카시백일장",
     "category": "contest_writing",
@@ -46820,7 +46758,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=111909",
@@ -46834,7 +46772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1441383065697272864",
+    "id": "wevity-2999553270621396999",
     "boardType": "contests",
     "title": "2026 국립한밭대학교 포토에세이 공모전",
     "category": "contest_writing",
@@ -46851,7 +46789,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=111883",
@@ -46865,7 +46803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5244035270024277627",
+    "id": "wevity-5926167127701352183",
     "boardType": "contests",
     "title": "한층 업그레이드된 책쓰기 프로젝트 59기 모집｜1인1권 출간보장/6주과정/인세지급",
     "category": "contest_music",
@@ -46882,7 +46820,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=5&ix=111881",
@@ -46896,7 +46834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5161419235155993792",
+    "id": "wevity-6341061782975145186",
     "boardType": "contests",
     "title": "제26회 국립순천대학교 청소년 문예백일장",
     "category": "contest_writing",
@@ -46913,7 +46851,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111795",
@@ -46927,7 +46865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6894774096140345773",
+    "id": "wevity-3672518393429508766",
     "boardType": "contests",
     "title": "2026 부산 국제 한국디카시 공모전",
     "category": "contest_writing",
@@ -46944,7 +46882,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111789",
@@ -46958,7 +46896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-17175955152673405",
+    "id": "wevity-3852033520591512025",
     "boardType": "contests",
     "title": "6G 서비스 시나리오 공모전",
     "category": "contest_writing",
@@ -46975,7 +46913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111775",
@@ -46989,7 +46927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3440418961751036653",
+    "id": "wevity-5767797091479816530",
     "boardType": "contests",
     "title": "2026 함안복합문학관 디카시 공모전",
     "category": "contest_writing",
@@ -47006,7 +46944,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111645",
@@ -47020,7 +46958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3185926239336172413",
+    "id": "wevity-8348106404157130971",
     "boardType": "contests",
     "title": "제4회 춘천 한 문장 봄내글판 전국 공모전",
     "category": "contest_writing",
@@ -47037,7 +46975,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111644",
@@ -47051,7 +46989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1328817858229943900",
+    "id": "wevity-7127465105335232619",
     "boardType": "contests",
     "title": "2026년 겨울편 서울꿈새김판 문안 공모전",
     "category": "contest_writing",
@@ -47068,7 +47006,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111631",
@@ -47082,7 +47020,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4708159351146356537",
+    "id": "wevity-790476945332505638",
     "boardType": "contests",
     "title": "(4주) 신춘문예 작가님에게 글쓰기를 배워보세요! 참여자 모집 중",
     "category": "contest_music",
@@ -47099,7 +47037,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111610",
@@ -47113,7 +47051,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4372619790912377051",
+    "id": "wevity-99984091662329545",
     "boardType": "contests",
     "title": "2026년 나라사랑 글짓기 대회",
     "category": "contest_writing",
@@ -47130,7 +47068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111600",
@@ -47144,7 +47082,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3756502433448256237",
+    "id": "wevity-8029098488217705941",
     "boardType": "contests",
     "title": "제15회 구상한강백일장",
     "category": "contest_writing",
@@ -47161,7 +47099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111501",
@@ -47175,7 +47113,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6260550621939421706",
+    "id": "wevity-6141367741128009961",
     "boardType": "contests",
     "title": "서울SEOUL디카시 공모대전",
     "category": "contest_writing",
@@ -47192,7 +47130,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111476",
@@ -47206,7 +47144,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3917768376313634569",
+    "id": "wevity-5070833988538409663",
     "boardType": "contests",
     "title": "오늘, 내 삶의 이름은 영천(영천시 생활인구 수기, 시, 사진 공모전)",
     "category": "contest_writing",
@@ -47223,7 +47161,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111472",
@@ -47237,7 +47175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5173578579110613340",
+    "id": "wevity-2454444377209594496",
     "boardType": "contests",
     "title": "제2회 강남구 세계청소년 백일장",
     "category": "contest_writing",
@@ -47254,7 +47192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111436",
@@ -47268,7 +47206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6380073075772828931",
+    "id": "wevity-7316296617667541562",
     "boardType": "contests",
     "title": "제18회 포항소재 문학작품 공모전",
     "category": "contest_writing",
@@ -47285,7 +47223,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111428",
@@ -47299,7 +47237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7886034751700001293",
+    "id": "wevity-6927366502395608015",
     "boardType": "contests",
     "title": "제30회 우암문화제 우암전국백일장대회 참가자 모집",
     "category": "contest_writing",
@@ -47316,7 +47254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111420",
@@ -47330,7 +47268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-731659909694062286",
+    "id": "wevity-4249249426620371805",
     "boardType": "contests",
     "title": "[광주 신세계안과] 제47회 빛창공모전 겨울편 공모",
     "category": "contest_writing",
@@ -47347,7 +47285,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=6&ix=111406",
@@ -47361,7 +47299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1422170697001434402",
+    "id": "wevity-3571141166481120692",
     "boardType": "contests",
     "title": "제4회 만추문예",
     "category": "contest_writing",
@@ -47378,7 +47316,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111332",
@@ -47392,7 +47330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6884648846337402634",
+    "id": "wevity-6129688616931794613",
     "boardType": "contests",
     "title": "제65회 율곡제 백일장",
     "category": "contest_writing",
@@ -47409,7 +47347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111316",
@@ -47423,7 +47361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-33072761429708421",
+    "id": "wevity-7789285790991713702",
     "boardType": "contests",
     "title": "제31회 전국안양시낭송대회 예선 참가자 모집",
     "category": "contest_writing",
@@ -47440,7 +47378,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111300",
@@ -47454,7 +47392,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4586731136999468451",
+    "id": "wevity-6924709461095503315",
     "boardType": "contests",
     "title": "직장인 사연 공모전 (제2회 쉐어잇 빡춘문예)",
     "category": "contest_writing",
@@ -47471,7 +47409,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111217",
@@ -47485,7 +47423,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6762124802395740784",
+    "id": "wevity-3049398655829414827",
     "boardType": "contests",
     "title": "제31회 사랑의 편지쓰기 공모",
     "category": "contest_writing",
@@ -47502,7 +47440,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111147",
@@ -47516,7 +47454,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7334944752782981160",
+    "id": "wevity-8908483871631918792",
     "boardType": "contests",
     "title": "제18회 가람시조문학신인상 공모",
     "category": "contest_writing",
@@ -47533,7 +47471,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111144",
@@ -47547,7 +47485,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5256341557576486745",
+    "id": "wevity-6510562701991361110",
     "boardType": "contests",
     "title": "함께 읽어요 2026 경남의 책 독후감 공모전",
     "category": "contest_reading",
@@ -47564,7 +47502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111098",
@@ -47578,7 +47516,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6271325452114565244",
+    "id": "wevity-2870275222467696055",
     "boardType": "contests",
     "title": "[강동숲속도서관] 청소년 글쓰기 공모전",
     "category": "contest_reading",
@@ -47595,7 +47533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111069",
@@ -47609,7 +47547,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9099568398404578955",
+    "id": "wevity-2435331794012304978",
     "boardType": "contests",
     "title": "제1회 송강문학 전국 시(詩) 공모전",
     "category": "contest_writing",
@@ -47626,7 +47564,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111067",
@@ -47640,7 +47578,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6266944142656147648",
+    "id": "wevity-2747024633592417231",
     "boardType": "contests",
     "title": "제580회 한글날 기념 시애틀한국교육원 공모전",
     "category": "contest_writing",
@@ -47657,7 +47595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111036",
@@ -47671,7 +47609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4847290241646339890",
+    "id": "wevity-3572392412378019712",
     "boardType": "contests",
     "title": "제7회 사계절어린이문학상 공모",
     "category": "contest_writing",
@@ -47688,7 +47626,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111025",
@@ -47702,7 +47640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8552267333227637701",
+    "id": "wevity-915549701423500130",
     "boardType": "contests",
     "title": "2026년 제29회 김삿갓문화제 전국 일반백일장",
     "category": "contest_writing",
@@ -47719,7 +47657,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111019",
@@ -47733,7 +47671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2587858387363033253",
+    "id": "wevity-5198594940036331289",
     "boardType": "contests",
     "title": "2026년 제32회 제주신인문학상 공모",
     "category": "contest_writing",
@@ -47750,7 +47688,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=111018",
@@ -47764,7 +47702,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-250071208002325726",
+    "id": "wevity-9147473124266264276",
     "boardType": "contests",
     "title": "2026 제6회생육신 추모 함안 전국디카시공모전",
     "category": "contest_writing",
@@ -47781,7 +47719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=23&gbn=view&gp=7&ix=110989",
@@ -47795,7 +47733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3820716848748254278",
+    "id": "wevity-577079149192970965",
     "boardType": "contests",
     "title": "2026 제천시장배 전국 e-스포츠 대회",
     "category": "contest_coding",
@@ -47812,7 +47750,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=112329",
@@ -47826,7 +47764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2421808453216161686",
+    "id": "wevity-6755085076406674284",
     "boardType": "contests",
     "title": "디어비 글로벌 런칭 공모전",
     "category": "contest_coding",
@@ -47843,7 +47781,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=112313",
@@ -47857,7 +47795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5390598450732867511",
+    "id": "wevity-2953763729634498506",
     "boardType": "contests",
     "title": "2026 saaskr 게임 어워드 - AI로 만든 웹게임 연말 시상",
     "category": "contest_coding",
@@ -47874,7 +47812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=112277",
@@ -47888,7 +47826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-664729247289917931",
+    "id": "wevity-8780442185214015746",
     "boardType": "contests",
     "title": "2026 조달청 AI 게임·콘텐츠 공모전",
     "category": "contest_coding",
@@ -47905,7 +47843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111628",
@@ -47919,7 +47857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2048554922027073250",
+    "id": "wevity-9093167800141153385",
     "boardType": "contests",
     "title": "제1회 한아전 게임 시나리오·그래픽 공모전",
     "category": "contest_coding",
@@ -47936,7 +47874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110305",
@@ -47950,7 +47888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5505816706756605189",
+    "id": "wevity-6093819393419487524",
     "boardType": "contests",
     "title": "[코리아 인디게임 쇼케이스] 2026 인디게임 서포터즈 모집",
     "category": "contest_coding",
@@ -47967,7 +47905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=112015",
@@ -47981,7 +47919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8274032031261951570",
+    "id": "wevity-7008780664368422641",
     "boardType": "contests",
     "title": "2026 청도 바이브코딩 해커톤 with 해커그라운드",
     "category": "contest_coding",
@@ -47998,7 +47936,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111884",
@@ -48012,7 +47950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2061773151719489171",
+    "id": "wevity-8822702014760702468",
     "boardType": "contests",
     "title": "2026 대경권 캠퍼스 IR 챔피언십 (창업 공모전)",
     "category": "contest_coding",
@@ -48029,7 +47967,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111768",
@@ -48043,7 +47981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7712752267587684783",
+    "id": "wevity-7919065752834154407",
     "boardType": "contests",
     "title": "2026 충북글로벌게임센터 AI 게임 개발 공모전",
     "category": "contest_coding",
@@ -48060,7 +47998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111767",
@@ -48074,7 +48012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5510673937890558174",
+    "id": "wevity-3947554764681023391",
     "boardType": "contests",
     "title": "2026 제8회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -48091,7 +48029,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111685",
@@ -48105,7 +48043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2858758222623832553",
+    "id": "wevity-1717480915762347426",
     "boardType": "contests",
     "title": "2026 대전 콘텐츠페어 이스포츠 대전 브롤스타즈 참가자 모집",
     "category": "contest_coding",
@@ -48122,7 +48060,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111359",
@@ -48136,7 +48074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1136293308494630842",
+    "id": "wevity-6629107481219090373",
     "boardType": "contests",
     "title": "2026 CWNU SW-DNA² 챌린지 대학생 AI·SW 경진대회",
     "category": "contest_coding",
@@ -48153,7 +48091,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111346",
@@ -48167,7 +48105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1772901378951251337",
+    "id": "wevity-4630329356358317459",
     "boardType": "contests",
     "title": "제4회 경남 AI·SW 경진대회",
     "category": "contest_coding",
@@ -48184,7 +48122,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=111062",
@@ -48198,7 +48136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3507401267363724464",
+    "id": "wevity-1469274353185990134",
     "boardType": "contests",
     "title": "2026 제5회 오픈소스 SW개발 경진대회",
     "category": "contest_coding",
@@ -48215,7 +48153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110981",
@@ -48229,7 +48167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4366841924419993448",
+    "id": "wevity-844724924155111116",
     "boardType": "contests",
     "title": "2026년 충청권 인디게임 공모전 인디유(indie·U)",
     "category": "contest_coding",
@@ -48246,7 +48184,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=1&ix=110962",
@@ -48260,7 +48198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7848550528582866584",
+    "id": "wevity-3144590851106721516",
     "boardType": "contests",
     "title": "쿵야 IP를 활용한 로블록스(Roblox) 게임 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -48277,7 +48215,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110895",
@@ -48291,7 +48229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4807321552543772393",
+    "id": "wevity-4505484115447108221",
     "boardType": "contests",
     "title": "2026 대학생 프로그래밍 경시대회",
     "category": "contest_coding",
@@ -48308,7 +48246,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110767",
@@ -48322,7 +48260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1193031625126034627",
+    "id": "wevity-2932431940303718327",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 제3회 미래융합인재 발굴 소프트웨어 챌린지",
     "category": "contest_coding",
@@ -48339,7 +48277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110675",
@@ -48353,7 +48291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2882046662192588308",
+    "id": "wevity-2429609402890067302",
     "boardType": "contests",
     "title": "[무계로 세계로 블루마블] 리그 오브 레전드 무작위 총력전 : 아수라장 - 선수 모집",
     "category": "contest_coding",
@@ -48370,7 +48308,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110653",
@@ -48384,7 +48322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2265083066276573420",
+    "id": "wevity-8530933046034205131",
     "boardType": "contests",
     "title": "[무료] [CJ올리브네트웍스] AI 서비스 기획자 교육 과정 참여자 모집 (L.L.M. 아카데미)",
     "category": "contest_coding",
@@ -48401,7 +48339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110623",
@@ -48415,7 +48353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5420350093883859508",
+    "id": "wevity-3022231738800586440",
     "boardType": "contests",
     "title": "2026년 제6회 K-인공지능(AI) 제조데이터 분석 경진대회",
     "category": "contest_coding",
@@ -48432,7 +48370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110622",
@@ -48446,7 +48384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6567265909873901645",
+    "id": "wevity-3258445858902835556",
     "boardType": "contests",
     "title": "[ZEP School] 메타버스 교과 콘텐츠 제작 공모전",
     "category": "contest_coding",
@@ -48463,7 +48401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110498",
@@ -48477,7 +48415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4539417431217144304",
+    "id": "wevity-5940725858746030448",
     "boardType": "contests",
     "title": "제6회 경북 대학생 e스포츠 대회",
     "category": "contest_coding",
@@ -48494,7 +48432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110419",
@@ -48508,7 +48446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3576020184996592658",
+    "id": "wevity-4891577598897199383",
     "boardType": "contests",
     "title": "제5회 세명컴퓨터고 중학생 SW 아이디어 공모전",
     "category": "contest_coding",
@@ -48525,7 +48463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110223",
@@ -48539,7 +48477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6927062688760073174",
+    "id": "wevity-6705498771893401324",
     "boardType": "contests",
     "title": "오픈AI 게임 빌더스 서울",
     "category": "contest_coding",
@@ -48556,7 +48494,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110121",
@@ -48570,7 +48508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3750173322220088297",
+    "id": "wevity-2953420951666752754",
     "boardType": "contests",
     "title": "제5회 2026 대한민국 고등학생 AI·SW 개발 공모전",
     "category": "contest_coding",
@@ -48587,7 +48525,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=110065",
@@ -48601,7 +48539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8215616548073524547",
+    "id": "wevity-6615206988526719137",
     "boardType": "contests",
     "title": "제17회 LH 국토기술대전",
     "category": "contest_coding",
@@ -48618,7 +48556,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109568",
@@ -48632,7 +48570,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3749478876432667166",
+    "id": "wevity-2216920237770800455",
     "boardType": "contests",
     "title": "2026년 국립서울현충원 제6회 나라사랑 보드게임 대회",
     "category": "contest_coding",
@@ -48649,7 +48587,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109315",
@@ -48663,7 +48601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5995199219398830806",
+    "id": "wevity-4059269168221135522",
     "boardType": "contests",
     "title": "2026 서든어택 무기 스킨 아이디어 공모전",
     "category": "contest_coding",
@@ -48680,7 +48618,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109265",
@@ -48694,7 +48632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8152089344405301762",
+    "id": "wevity-6914935665281925342",
     "boardType": "contests",
     "title": "[KB국민은행] 제 8회 KB A.I Challenge",
     "category": "contest_coding",
@@ -48711,7 +48649,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=2&ix=109141",
@@ -48725,7 +48663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5220564088235100451",
+    "id": "wevity-7393536502241637544",
     "boardType": "contests",
     "title": "제5회 게임제너레이션 게임비평공모전",
     "category": "contest_coding",
@@ -48742,7 +48680,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=109003",
@@ -48756,7 +48694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2730595569745493137",
+    "id": "wevity-3585134508715948686",
     "boardType": "contests",
     "title": "제19회 경상북도 아마추어 e스포츠 대회 참가 모집",
     "category": "contest_coding",
@@ -48773,7 +48711,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108981",
@@ -48787,7 +48725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1958355628812778796",
+    "id": "wevity-3726537582957974130",
     "boardType": "contests",
     "title": "화성상공회의소 2026 컴활 2급 경시대회",
     "category": "contest_coding",
@@ -48804,7 +48742,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108733",
@@ -48818,7 +48756,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-263057641232486162",
+    "id": "wevity-95571222836203476",
     "boardType": "contests",
     "title": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술)",
     "category": "contest_coding",
@@ -48835,7 +48773,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108707",
@@ -48849,7 +48787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2094763974831704297",
+    "id": "wevity-2295860078264932891",
     "boardType": "contests",
     "title": "2026년 제4회 전북 청년 AI·빅데이터 경진대회",
     "category": "contest_coding",
@@ -48866,7 +48804,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108495",
@@ -48880,7 +48818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3783655627877450094",
+    "id": "wevity-874262391875549593",
     "boardType": "contests",
     "title": "2026 큐챔스 CUBE CHAMPIONS LEAGUE",
     "category": "contest_coding",
@@ -48897,7 +48835,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108415",
@@ -48911,7 +48849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3539932096658221949",
+    "id": "wevity-1597986932676404341",
     "boardType": "contests",
     "title": "2026년 임업통계 활용 경진대회",
     "category": "contest_coding",
@@ -48928,7 +48866,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108288",
@@ -48942,7 +48880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8048286192579681002",
+    "id": "wevity-8228584639061904201",
     "boardType": "contests",
     "title": "제4회 대한민국 청년 인재양성 프로젝트 참가자 모집",
     "category": "contest_coding",
@@ -48959,7 +48897,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108287",
@@ -48973,7 +48911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8712226948794026070",
+    "id": "wevity-8837511778424845703",
     "boardType": "contests",
     "title": "2026 강원 콘텐츠 페스타 - 강원 중·고교 e-스포츠 대항전",
     "category": "contest_coding",
@@ -48990,7 +48928,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108263",
@@ -49004,7 +48942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4193232985059636670",
+    "id": "wevity-5510879210190577240",
     "boardType": "contests",
     "title": "[SCPC2026] 제12회 삼성전자 대학생 프로그래밍 챌린지 (내용 수정)",
     "category": "contest_coding",
@@ -49021,7 +48959,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108225",
@@ -49035,7 +48973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7725897307306788200",
+    "id": "wevity-5819053865477829910",
     "boardType": "contests",
     "title": "2026 동남권 정보보호 사이버공방전 (SECTOR) 참가자 모집",
     "category": "contest_coding",
@@ -49052,7 +48990,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108224",
@@ -49066,7 +49004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3177262223839490574",
+    "id": "wevity-1465332712487581601",
     "boardType": "contests",
     "title": "2026 글로벌 인디 게임제작 경진대회(GIGDC2026)",
     "category": "contest_coding",
@@ -49083,7 +49021,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108154",
@@ -49097,7 +49035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8446040206385466556",
+    "id": "wevity-6024455944505902271",
     "boardType": "contests",
     "title": "2026 GNGC GAME JAM",
     "category": "contest_coding",
@@ -49114,7 +49052,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108067",
@@ -49128,7 +49066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2973656881672365113",
+    "id": "wevity-3269786574705723520",
     "boardType": "contests",
     "title": "제 1회 일상뒤집기 ai 어플 개발 공모전",
     "category": "contest_coding",
@@ -49145,7 +49083,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=3&ix=108046",
@@ -49159,7 +49097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2187030642430038985",
+    "id": "wevity-4742400222895416007",
     "boardType": "contests",
     "title": "[넥슨] 메이플스토리 글로벌 개발 콘테스트 (MapleStory Global Creator Challenge)",
     "category": "contest_coding",
@@ -49176,7 +49114,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107956",
@@ -49190,7 +49128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3670294459753417000",
+    "id": "wevity-5336566426179656551",
     "boardType": "contests",
     "title": "넥슨 영 프로그래머스 컵 (NEXON Young Programmers Cup)",
     "category": "contest_coding",
@@ -49207,7 +49145,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107947",
@@ -49221,7 +49159,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3575825426104057015",
+    "id": "wevity-7260356862236020315",
     "boardType": "contests",
     "title": "2026 인천 e스포츠 챌린지 (리그 오브 레전드, 발로란트, 이터널 리턴, FC 온라인, 브롤스타즈)",
     "category": "contest_coding",
@@ -49238,7 +49176,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107818",
@@ -49252,7 +49190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6384174574573622095",
+    "id": "wevity-6573227716772692040",
     "boardType": "contests",
     "title": "서울 디자인 AI 영상 공모전",
     "category": "contest_coding",
@@ -49269,7 +49207,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107650",
@@ -49283,7 +49221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8376252472250176729",
+    "id": "wevity-5421894305161122252",
     "boardType": "contests",
     "title": "2026 전국 청소년 AI에이전트 코딩 경진대회 (참가비 있음)",
     "category": "contest_coding",
@@ -49300,7 +49238,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107632",
@@ -49314,7 +49252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9198670052330366679",
+    "id": "wevity-8634625984564410443",
     "boardType": "contests",
     "title": "스마일게이트멤버십 인디게임 부문 18기 모집",
     "category": "contest_coding",
@@ -49331,7 +49269,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107466",
@@ -49345,7 +49283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1593783704789914757",
+    "id": "wevity-671557716701606125",
     "boardType": "contests",
     "title": "[국립아시아문화전당] 2026 ACC 민주·인권·평화 영상(+AI) 콘텐츠 공모전",
     "category": "contest_coding",
@@ -49362,7 +49300,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107427",
@@ -49376,7 +49314,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2952054152616545191",
+    "id": "wevity-4717028126341723625",
     "boardType": "contests",
     "title": "2026 부산광역시 공공데이터•AI 활용 창업경진대회",
     "category": "contest_coding",
@@ -49393,7 +49331,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107424",
@@ -49407,7 +49345,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8139424268415486538",
+    "id": "wevity-8401807689500526224",
     "boardType": "contests",
     "title": "2026 SW미래채움 고교 AI·SW 챌린지 대회",
     "category": "contest_coding",
@@ -49424,7 +49362,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107260",
@@ -49438,7 +49376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8756841263643196664",
+    "id": "wevity-523414271232427988",
     "boardType": "contests",
     "title": "2026년 AI·가상융합(XR) 서비스 개발자 경진대회",
     "category": "contest_coding",
@@ -49455,7 +49393,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107244",
@@ -49469,7 +49407,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8498041108054402338",
+    "id": "wevity-692259026137551842",
     "boardType": "contests",
     "title": "2026년 제4회 AI프로그래밍(무인이동체제어) 민간기능경기대회",
     "category": "contest_coding",
@@ -49486,7 +49424,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107195",
@@ -49500,7 +49438,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5947927177467654676",
+    "id": "wevity-8792741891208391001",
     "boardType": "contests",
     "title": "2026 우주항공·제조 산업 현장 AI 적용 아이디어 공모전",
     "category": "contest_coding",
@@ -49517,7 +49455,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107157",
@@ -49531,7 +49469,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5220628667100288533",
+    "id": "wevity-8943322780915567101",
     "boardType": "contests",
     "title": "2026 제조AI 경진대회",
     "category": "contest_coding",
@@ -49548,7 +49486,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107156",
@@ -49562,7 +49500,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5787580218281603661",
+    "id": "wevity-8782290198022071685",
     "boardType": "contests",
     "title": "제24회 임베디드SW경진대회",
     "category": "contest_coding",
@@ -49579,7 +49517,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=107135",
@@ -49593,7 +49531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7272473734236399621",
+    "id": "wevity-2755299343224221265",
     "boardType": "contests",
     "title": "제4회 문화체육관광 인공지능·데이터 활용 공모전",
     "category": "contest_coding",
@@ -49610,7 +49548,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=4&ix=106965",
@@ -49624,7 +49562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5505777357299620852",
+    "id": "wevity-2576526910906237801",
     "boardType": "contests",
     "title": "[넥슨] 메이플스토리 해커톤, 2026 메커톤",
     "category": "contest_coding",
@@ -49641,7 +49579,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106801",
@@ -49655,7 +49593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6718774461409041094",
+    "id": "wevity-7170055692846091223",
     "boardType": "contests",
     "title": "2026 현대오토에버 배리어프리 앱 개발 콘테스트 공모전",
     "category": "contest_coding",
@@ -49672,7 +49610,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106687",
@@ -49686,7 +49624,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3924645428818213751",
+    "id": "wevity-8363721044134879371",
     "boardType": "contests",
     "title": "2026년 전주MBC K-하이테크 플랫폼 제2회 가상현실 공간 창작 공모전",
     "category": "contest_coding",
@@ -49703,7 +49641,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106656",
@@ -49717,7 +49655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7170215919360520665",
+    "id": "wevity-8232866237419064621",
     "boardType": "contests",
     "title": "제 1회 서울 플레이업 AI 게임 챌린지",
     "category": "contest_coding",
@@ -49734,7 +49672,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106572",
@@ -49748,7 +49686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1916419181849522063",
+    "id": "wevity-7084702385363080586",
     "boardType": "contests",
     "title": "크래프톤 X 넵튠 글로벌 캐주얼 게임 공모전",
     "category": "contest_coding",
@@ -49765,7 +49703,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106570",
@@ -49779,7 +49717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7596981838358985098",
+    "id": "wevity-4956459957697777425",
     "boardType": "contests",
     "title": "제16회 e-ICON 세계대회 참가자 모집",
     "category": "contest_coding",
@@ -49796,7 +49734,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106562",
@@ -49810,7 +49748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4106842249954588502",
+    "id": "wevity-1419579039472141479",
     "boardType": "contests",
     "title": "대한민국 대표 인디게임 축제 2026 인디크래프트 출품작 모집",
     "category": "contest_coding",
@@ -49827,7 +49765,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106359",
@@ -49841,7 +49779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4821886190555419490",
+    "id": "wevity-1229954403995384282",
     "boardType": "contests",
     "title": "[LoL/리그오브레전드] 제2회 국제 아마추어 E-스포츠 대회 (인제대 총장배) 참가자 모집",
     "category": "contest_coding",
@@ -49858,7 +49796,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106357",
@@ -49872,7 +49810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7426776507906576741",
+    "id": "wevity-495039032254578255",
     "boardType": "contests",
     "title": "유니티 스튜디오 챌린지",
     "category": "contest_coding",
@@ -49889,7 +49827,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106353",
@@ -49903,7 +49841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4054140126764394437",
+    "id": "wevity-6046008804341939406",
     "boardType": "contests",
     "title": "[과학기술정보통신부] 2026 글로벌 피우다프로젝트 (SW개발 경진대회)",
     "category": "contest_coding",
@@ -49920,7 +49858,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106194",
@@ -49934,7 +49872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5635676179193434081",
+    "id": "wevity-1433674521862433632",
     "boardType": "contests",
     "title": "2026. 독립운동GO! 모바일게임 제작 기획단 모집",
     "category": "contest_coding",
@@ -49951,7 +49889,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106152",
@@ -49965,7 +49903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8193219929255493659",
+    "id": "wevity-3140806539177147541",
     "boardType": "contests",
     "title": "제2회 올담 데이터 활용 해커톤 모집",
     "category": "contest_coding",
@@ -49982,7 +49920,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=106069",
@@ -49996,7 +49934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7987204391218795942",
+    "id": "wevity-9208707415073623398",
     "boardType": "contests",
     "title": "Verse8 × YGG Play | Casual Degen Game Hackathon",
     "category": "contest_coding",
@@ -50013,7 +49951,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105926",
@@ -50027,7 +49965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1505559007510549795",
+    "id": "wevity-857434423756068316",
     "boardType": "contests",
     "title": "2026 스마일게이트 인디게임 창작 공모전 (IndieGo)",
     "category": "contest_coding",
@@ -50044,7 +49982,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=5&ix=105914",
@@ -50058,7 +49996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2310593595963952448",
+    "id": "wevity-8445413337383638487",
     "boardType": "contests",
     "title": "​[하나금융그룹] 하나 청년 금융인재 양성 프로젝트 참가자 모집",
     "category": "contest_coding",
@@ -50075,7 +50013,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105706",
@@ -50089,7 +50027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3547943832571478470",
+    "id": "wevity-7593657883429816966",
     "boardType": "contests",
     "title": "2026 생활 속 목재이용 국민참여 공모전 (목재 공감(共感) 키트)",
     "category": "contest_coding",
@@ -50106,7 +50044,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105705",
@@ -50120,7 +50058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1706108012117126316",
+    "id": "wevity-5289588648394880615",
     "boardType": "contests",
     "title": "파주슈필 2026 어린이 보드게임 작가 모집",
     "category": "contest_coding",
@@ -50137,7 +50075,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105255",
@@ -50151,7 +50089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6528887106625663656",
+    "id": "wevity-814109661216793136",
     "boardType": "contests",
     "title": "퀄컴 AI 이노베이터 프로그램 (QAIPI) 2026-APAC",
     "category": "contest_coding",
@@ -50168,7 +50106,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105067",
@@ -50182,7 +50120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4886386916717090479",
+    "id": "wevity-765825211644581518",
     "boardType": "contests",
     "title": "2026 충남글로벌게임센터 인디게임파크 인큐베이팅 사업 인디게임팀 모집",
     "category": "contest_coding",
@@ -50199,7 +50137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=105066",
@@ -50213,7 +50151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3783759213170640705",
+    "id": "wevity-4329301192621034650",
     "boardType": "contests",
     "title": "2026년 제4회 IT 코딩 발명 아이디어 및 에세이 경진대회",
     "category": "contest_coding",
@@ -50230,7 +50168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104997",
@@ -50244,7 +50182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8238584629191104530",
+    "id": "wevity-2526031355934313115",
     "boardType": "contests",
     "title": "제2회 히트 게임즈 보드게임 공모전",
     "category": "contest_coding",
@@ -50261,7 +50199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104952",
@@ -50275,7 +50213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5943021994644401666",
+    "id": "wevity-2900162695406161897",
     "boardType": "contests",
     "title": "2026 제6회 청소년 IT경시대회",
     "category": "contest_coding",
@@ -50292,7 +50230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104916",
@@ -50306,7 +50244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-812145171885277143",
+    "id": "wevity-7027910004276251093",
     "boardType": "contests",
     "title": "제1회 메가스터디 게임 개발 공모전",
     "category": "contest_coding",
@@ -50323,7 +50261,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104817",
@@ -50337,7 +50275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8716222687577607080",
+    "id": "wevity-3897995700658112414",
     "boardType": "contests",
     "title": "제3회 잼S 메이커스 코딩 페스티발",
     "category": "contest_robot",
@@ -50354,7 +50292,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104221",
@@ -50368,7 +50306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7162644836009093362",
+    "id": "wevity-7084054501322114348",
     "boardType": "contests",
     "title": "AI 에이전트 서비스 개발 공모전 참가자 모집",
     "category": "contest_coding",
@@ -50385,7 +50323,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=104025",
@@ -50399,7 +50337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5681592246425536900",
+    "id": "wevity-915961021650685932",
     "boardType": "contests",
     "title": "카카오 PlayMCP 개발 공모전 (MCP Player 10)",
     "category": "contest_coding",
@@ -50416,7 +50354,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103990",
@@ -50430,7 +50368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1672848545677431719",
+    "id": "wevity-1197174654934269896",
     "boardType": "contests",
     "title": "[CONX x 컴투스홀딩스] 놈 아레나 : 글로벌 게임 개발 공모전",
     "category": "contest_coding",
@@ -50447,7 +50385,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103973",
@@ -50461,7 +50399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3799508444668789152",
+    "id": "wevity-3555210254160601392",
     "boardType": "contests",
     "title": "BIPAxVerse8 AI 게임 창작 콘테스트",
     "category": "contest_coding",
@@ -50478,7 +50416,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103883",
@@ -50492,7 +50430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1730714675540894011",
+    "id": "wevity-4262093125870196628",
     "boardType": "contests",
     "title": "SEMO 챌린지",
     "category": "contest_coding",
@@ -50509,7 +50447,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=6&ix=103706",
@@ -50523,7 +50461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-833345174620191952",
+    "id": "wevity-8048776069541708167",
     "boardType": "contests",
     "title": "2025 제천시장배 전국 e스포츠 대회 (리그 오브 레전드, 발로란트, 이터널 리턴)",
     "category": "contest_coding",
@@ -50540,7 +50478,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103666",
@@ -50554,7 +50492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7498621009762891675",
+    "id": "wevity-999847779229226814",
     "boardType": "contests",
     "title": "춘천MBC 2025 강원도내 직장인 FC온라인 대회",
     "category": "contest_coding",
@@ -50571,7 +50509,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103608",
@@ -50585,7 +50523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8553072989853320366",
+    "id": "wevity-3970164947336158235",
     "boardType": "contests",
     "title": "제 2회 NC AI VARCO Vocie 활용 게임 제작 공모전",
     "category": "contest_coding",
@@ -50602,7 +50540,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103547",
@@ -50616,7 +50554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8361979952059353347",
+    "id": "wevity-825628763919796240",
     "boardType": "contests",
     "title": "2025 화성특례시장배 전국 E스포츠 대회 (리그 오브 레전드, FC 온라인)",
     "category": "contest_coding",
@@ -50633,7 +50571,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103528",
@@ -50647,7 +50585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-272305820966156811",
+    "id": "wevity-6003565810080141661",
     "boardType": "contests",
     "title": "[울산정보산업진흥원] 2025년 울산 게임 기획 공모전",
     "category": "contest_coding",
@@ -50664,7 +50602,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103393",
@@ -50678,7 +50616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5872828552986939230",
+    "id": "wevity-6366706584568534060",
     "boardType": "contests",
     "title": "[Supercent] AI Creator Challenge",
     "category": "contest_coding",
@@ -50695,7 +50633,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103112",
@@ -50709,7 +50647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6928128778670925993",
+    "id": "wevity-5393579039753662617",
     "boardType": "contests",
     "title": "코리아 인디게임 쇼케이스 인디게임 서포터즈 모집",
     "category": "contest_coding",
@@ -50726,7 +50664,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=103039",
@@ -50740,7 +50678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7278177288181597542",
+    "id": "wevity-5430121946049771818",
     "boardType": "contests",
     "title": "엔카닷컴 2025 AI 개발/기획 공모전",
     "category": "contest_coding",
@@ -50757,7 +50695,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102950",
@@ -50771,7 +50709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7686310584063273087",
+    "id": "wevity-7000064028818357291",
     "boardType": "contests",
     "title": "2025 이스포츠 대학리그 결선진출전",
     "category": "contest_coding",
@@ -50788,7 +50726,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102931",
@@ -50802,7 +50740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2343390942437881899",
+    "id": "wevity-3798354358851267831",
     "boardType": "contests",
     "title": "루키 게임 콘테스트",
     "category": "contest_coding",
@@ -50819,7 +50757,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102920",
@@ -50833,7 +50771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1592357669987701872",
+    "id": "wevity-3061909840928367661",
     "boardType": "contests",
     "title": "2025 강원콘텐츠페스타 - 강원고교 e스포츠 발로란트 대항전",
     "category": "contest_coding",
@@ -50850,7 +50788,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102906",
@@ -50864,7 +50802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6186439836604397972",
+    "id": "wevity-4261569964748584118",
     "boardType": "contests",
     "title": "부산광역시장배 2025 브레나 베스트 플레이어 직장부 최강자전",
     "category": "contest_coding",
@@ -50881,7 +50819,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102864",
@@ -50895,7 +50833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5792352816379058067",
+    "id": "wevity-2343003248895234758",
     "boardType": "contests",
     "title": "제7회 TS 보안 허점을 찾아라 공모전",
     "category": "contest_coding",
@@ -50912,7 +50850,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102754",
@@ -50926,7 +50864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-373970560665517622",
+    "id": "wevity-170197181730063536",
     "boardType": "contests",
     "title": "2025 일상을 바꿀 생성형 AI 및 대화형 GPT 기술 활용 공모전",
     "category": "contest_coding",
@@ -50943,7 +50881,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102745",
@@ -50957,7 +50895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3314386246489314434",
+    "id": "wevity-5827747305186146660",
     "boardType": "contests",
     "title": "2025 관악 e스포츠 페스티벌 - 발로란트",
     "category": "contest_coding",
@@ -50974,7 +50912,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=21&gbn=view&gp=7&ix=102669",
@@ -50988,7 +50926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3704790016203650746",
+    "id": "wevity-8253750791088130793",
     "boardType": "contests",
     "title": "농업가치 확산을 위한 농심천심 대학(원)생 논문 공모전",
     "category": "contest_music",
@@ -51005,7 +50943,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111899",
@@ -51019,7 +50957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3108662907068647928",
+    "id": "wevity-3122824140740551944",
     "boardType": "contests",
     "title": "한국공학한림원 공학의 가치 숏폼 콘테스트",
     "category": "contest_stem",
@@ -51036,7 +50974,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111941",
@@ -51050,7 +50988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7321577872474242125",
+    "id": "wevity-7645473703337104914",
     "boardType": "contests",
     "title": "2026 신한 스퀘어브릿지 대학생 창업 공모전 HERO IR",
     "category": "contest_music",
@@ -51067,7 +51005,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111647",
@@ -51081,7 +51019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6539138895509341742",
+    "id": "wevity-4600692963456253863",
     "boardType": "contests",
     "title": "2026 로보틱스 작품공모전",
     "category": "contest_stem",
@@ -51098,7 +51036,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111592",
@@ -51112,7 +51050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5998410527640734019",
+    "id": "wevity-824654425094811121",
     "boardType": "contests",
     "title": "우리 모두의 R&D 공모전",
     "category": "contest_stem",
@@ -51129,7 +51067,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111493",
@@ -51143,7 +51081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5612742672361713178",
+    "id": "wevity-8184101829551703696",
     "boardType": "contests",
     "title": "2026 양자내성암호 전환 경진대회·해커톤",
     "category": "contest_coding",
@@ -51160,7 +51098,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111368",
@@ -51174,7 +51112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9049209328920476885",
+    "id": "wevity-3858981652272630419",
     "boardType": "contests",
     "title": "2026 POSTECH OIBC 빅데이터 경진대회",
     "category": "contest_stem",
@@ -51191,7 +51129,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111314",
@@ -51205,7 +51143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4211441432669633150",
+    "id": "wevity-974807512419551626",
     "boardType": "contests",
     "title": "제 4회 청소년과학오디션",
     "category": "contest_stem",
@@ -51222,7 +51160,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111231",
@@ -51236,7 +51174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3057797835499850351",
+    "id": "wevity-5082837131566041085",
     "boardType": "contests",
     "title": "2027 전국 대학생 자작 미래자동차 경진대회",
     "category": "contest_stem",
@@ -51253,7 +51191,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111192",
@@ -51267,7 +51205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7031701597229719674",
+    "id": "wevity-6463801728841614319",
     "boardType": "contests",
     "title": "N.O.V.A. 2026 대화형 의료 진단 AI 에이전트 대회",
     "category": "contest_stem",
@@ -51284,7 +51222,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111155",
@@ -51298,7 +51236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6691472724143835230",
+    "id": "wevity-2101064532547375907",
     "boardType": "contests",
     "title": "[SK에코플랜트] 2026년 ConTech Meet-up Day",
     "category": "contest_stem",
@@ -51315,7 +51253,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111045",
@@ -51329,7 +51267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3360792402064872454",
+    "id": "wevity-1908801528135713913",
     "boardType": "contests",
     "title": "2026 스페이스 해커톤",
     "category": "contest_coding",
@@ -51346,7 +51284,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=111009",
@@ -51360,7 +51298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4192798935996396965",
+    "id": "wevity-6766285409363687050",
     "boardType": "contests",
     "title": "청소년 로봇대회 제2회 유스올림피아드",
     "category": "contest_robot",
@@ -51377,7 +51315,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=110995",
@@ -51391,7 +51329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4021447046069280705",
+    "id": "wevity-2311393381341569794",
     "boardType": "contests",
     "title": "2026 수성구 로보틱스컵 대회",
     "category": "contest_stem",
@@ -51408,7 +51346,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=1&ix=110978",
@@ -51422,7 +51360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3041759261809940859",
+    "id": "wevity-3272523675191269975",
     "boardType": "contests",
     "title": "2026 충남권역 모빌리티 자율주행 경진대회",
     "category": "contest_stem",
@@ -51439,7 +51377,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110929",
@@ -51453,7 +51391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7776927625682617769",
+    "id": "wevity-6491437180846697856",
     "boardType": "contests",
     "title": "[2026년 J-STEM Challenge] 전북 청소년 미래공학 경진대회",
     "category": "contest_stem",
@@ -51470,7 +51408,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110691",
@@ -51484,7 +51422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5266340532679266892",
+    "id": "wevity-2340971026349308591",
     "boardType": "contests",
     "title": "2026 연암대학교 스마트원예 전공 경진대회 (전국 고등학생)",
     "category": "contest_music",
@@ -51501,7 +51439,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110655",
@@ -51515,7 +51453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8504299062462158928",
+    "id": "wevity-5463369869549094800",
     "boardType": "contests",
     "title": "2026 전북지역 중·고등학교여학생 공학탐구 경진대회",
     "category": "contest_stem",
@@ -51532,7 +51470,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110646",
@@ -51546,7 +51484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9041590216859218411",
+    "id": "wevity-3559069211766054241",
     "boardType": "contests",
     "title": "International ICT Innovative Services Awards 2026",
     "category": "contest_stem",
@@ -51563,7 +51501,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110342",
@@ -51577,7 +51515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8131366659274217800",
+    "id": "wevity-4699861384551599619",
     "boardType": "contests",
     "title": "2026 DATA·AI 분석 경진대회",
     "category": "contest_stem",
@@ -51594,7 +51532,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110023",
@@ -51608,7 +51546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-900773392748793313",
+    "id": "wevity-3735938076804943324",
     "boardType": "contests",
     "title": "2026년 지능형 과학실 ON 연계 공동탐구 전국대회",
     "category": "contest_stem",
@@ -51625,7 +51563,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=110005",
@@ -51639,7 +51577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8842896969210934379",
+    "id": "wevity-2071300741477693007",
     "boardType": "contests",
     "title": "[NST] 대한민국 AI Native R&D를 함께 만드는 NAIS AI 해커톤",
     "category": "contest_coding",
@@ -51656,7 +51594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109953",
@@ -51670,7 +51608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5213173265033460254",
+    "id": "wevity-5614120549041994926",
     "boardType": "contests",
     "title": "2026 전국 중학생 바이오안전성·바이오산업 탐구력 캠프",
     "category": "contest_stem",
@@ -51687,7 +51625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109695",
@@ -51701,7 +51639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4052634030795898175",
+    "id": "wevity-3359769122765703284",
     "boardType": "contests",
     "title": "제8회 안양시 학생 창의과학 경진대회",
     "category": "contest_stem",
@@ -51718,7 +51656,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109649",
@@ -51732,7 +51670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3936289277184714719",
+    "id": "wevity-7438535831485348186",
     "boardType": "contests",
     "title": "2026 KOMIPO 혁신 50대 과제 대국민 아이디어 공모",
     "category": "contest_stem",
@@ -51749,7 +51687,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=2&ix=109527",
@@ -51763,7 +51701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1202362497489070938",
+    "id": "wevity-946532384944012499",
     "boardType": "contests",
     "title": "[삼성E&A, 삼성물산 건설부문, 삼성중공업] 2026 콘테크 공모전",
     "category": "contest_stem",
@@ -51780,7 +51718,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109263",
@@ -51794,7 +51732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-822742696460265906",
+    "id": "wevity-7706740777870235159",
     "boardType": "contests",
     "title": "2026년 고양특례시 빅데이터 공모전",
     "category": "contest_stem",
@@ -51811,7 +51749,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109155",
@@ -51825,7 +51763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-270491131380539414",
+    "id": "wevity-8579689877863866899",
     "boardType": "contests",
     "title": "2026 COSS 차세대반도체 Microcontroller(MCU) 응용경진대회",
     "category": "contest_stem",
@@ -51842,7 +51780,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109050",
@@ -51856,7 +51794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7656125704011902029",
+    "id": "wevity-6077157955975435225",
     "boardType": "contests",
     "title": "2026 제5회 청소년 메이커 경진대회",
     "category": "contest_robot",
@@ -51873,7 +51811,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109030",
@@ -51887,7 +51825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3871427386032666474",
+    "id": "wevity-7921510653136478261",
     "boardType": "contests",
     "title": "제7회 국립재활원 보조기기 해커톤 참가자 모집",
     "category": "contest_coding",
@@ -51904,7 +51842,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=109010",
@@ -51918,7 +51856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1646542974603404591",
+    "id": "wevity-7402630180517109386",
     "boardType": "contests",
     "title": "2026년 보훈 공공데이터·AI 활용 아이디어 공모전",
     "category": "contest_stem",
@@ -51935,7 +51873,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108932",
@@ -51949,7 +51887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7122669815620589394",
+    "id": "wevity-8905472214925108827",
     "boardType": "contests",
     "title": "제7회 초소형(큐브) 위성 경연대회",
     "category": "contest_stem",
@@ -51966,7 +51904,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108646",
@@ -51980,7 +51918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4542681830108713533",
+    "id": "wevity-1472392548881105294",
     "boardType": "contests",
     "title": "2026년 미래여성경제인육성사업 창업아이디어 멘토링•IP권리화 프로그램 참가자 모집",
     "category": "contest_stem",
@@ -51997,7 +51935,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108592",
@@ -52011,7 +51949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1968670351175870946",
+    "id": "wevity-2611841141125268056",
     "boardType": "contests",
     "title": "2026 호남IS해커톤",
     "category": "contest_coding",
@@ -52028,7 +51966,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108513",
@@ -52042,7 +51980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-326263169961779417",
+    "id": "wevity-1469378413147311000",
     "boardType": "contests",
     "title": "2026 스마트농업 AI 경진대회",
     "category": "contest_stem",
@@ -52059,7 +51997,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108329",
@@ -52073,7 +52011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4134557556677842533",
+    "id": "wevity-5721324976275785381",
     "boardType": "contests",
     "title": "2026년 전국 고교생 기술대회",
     "category": "contest_stem",
@@ -52090,7 +52028,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=3&ix=108307",
@@ -52104,7 +52042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3738019216282211711",
+    "id": "wevity-6362768118660239305",
     "boardType": "contests",
     "title": "2026년 국민체육진흥공단 공공데이터 활용 경진대회",
     "category": "contest_stem",
@@ -52121,7 +52059,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108240",
@@ -52135,7 +52073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5442610474131030479",
+    "id": "wevity-5937455843239578323",
     "boardType": "contests",
     "title": "[과학대회] 제13회 전국 무한상상 과학탐구 서바이벌 대전",
     "category": "contest_stem",
@@ -52152,7 +52090,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108140",
@@ -52166,7 +52104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-628311507002855716",
+    "id": "wevity-3432815139290016637",
     "boardType": "contests",
     "title": "2026년 3d 디자인 공모전",
     "category": "contest_stem",
@@ -52183,7 +52121,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108117",
@@ -52197,7 +52135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8795300459547048560",
+    "id": "wevity-5806975302000829252",
     "boardType": "contests",
     "title": "기상·기후 AI 해커톤 경진대회",
     "category": "contest_coding",
@@ -52214,7 +52152,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=108093",
@@ -52228,7 +52166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-369762491685099030",
+    "id": "wevity-1243775330127399691",
     "boardType": "contests",
     "title": "제 4회 청소년 과학 오디션",
     "category": "contest_stem",
@@ -52245,7 +52183,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107871",
@@ -52259,7 +52197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3444306482129709124",
+    "id": "wevity-8622171159748251264",
     "boardType": "contests",
     "title": "AI·네트워크 응용분야 아이디어 공모 K-디지털 챌린지 : 넷 챌린지 캠프 시즌13",
     "category": "contest_stem",
@@ -52276,7 +52214,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107754",
@@ -52290,7 +52228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6806846143638717297",
+    "id": "wevity-1619442915959342127",
     "boardType": "contests",
     "title": "2026 가명정보 활용 경진대회",
     "category": "contest_stem",
@@ -52307,7 +52245,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107702",
@@ -52321,7 +52259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6561271247521132432",
+    "id": "wevity-2561116911140403087",
     "boardType": "contests",
     "title": "2026 룬샷 경진대회 난제 해결방안 제안서 공모",
     "category": "contest_stem",
@@ -52338,7 +52276,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107544",
@@ -52352,7 +52290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1070785165028908290",
+    "id": "wevity-1209915065837669026",
     "boardType": "contests",
     "title": "제4회 방사선 기술 활용 창의ㆍ융합 아이디어 경진대회",
     "category": "contest_stem",
@@ -52369,7 +52307,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107443",
@@ -52383,7 +52321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7703832112093421229",
+    "id": "wevity-6135073392553651860",
     "boardType": "contests",
     "title": "Y-MAS Project 오프라인 경진대회",
     "category": "contest_stem",
@@ -52400,7 +52338,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107435",
@@ -52414,7 +52352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7696281014766335011",
+    "id": "wevity-5689939732665836046",
     "boardType": "contests",
     "title": "2026 한국수력원자력 기업이미지 공모전",
     "category": "contest_music",
@@ -52431,7 +52369,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107426",
@@ -52445,7 +52383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8573165184568954414",
+    "id": "wevity-7260156034714343524",
     "boardType": "contests",
     "title": "2026 한국수력원자력 유튜브 짧은영상 공모전",
     "category": "contest_music",
@@ -52462,7 +52400,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107425",
@@ -52476,7 +52414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7471210592037042655",
+    "id": "wevity-6318305168303735512",
     "boardType": "contests",
     "title": "2026 데이터+AI 크리에이터 캠프",
     "category": "contest_stem",
@@ -52493,7 +52431,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=4&ix=107323",
@@ -52507,7 +52445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8123694186221937546",
+    "id": "wevity-3019217757248399334",
     "boardType": "contests",
     "title": "제4회 업사이클링 해양과학 메이커톤 발명대회",
     "category": "contest_robot",
@@ -52524,7 +52462,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107294",
@@ -52538,7 +52476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5891760232230469843",
+    "id": "wevity-5019463418976123532",
     "boardType": "contests",
     "title": "2026 제10회 DfAM 경진대회",
     "category": "contest_stem",
@@ -52555,7 +52493,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107290",
@@ -52569,7 +52507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5438910940680368874",
+    "id": "wevity-4849272133172129908",
     "boardType": "contests",
     "title": "SK이노베이션 AI 임팩트 솔루션 공모전",
     "category": "contest_stem",
@@ -52586,7 +52524,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107256",
@@ -52600,7 +52538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4033681690987637564",
+    "id": "wevity-6364146327531781280",
     "boardType": "contests",
     "title": "2026년 제9회 프로토타입모델링(항공드론제작) 민간기능경기대회",
     "category": "contest_stem",
@@ -52617,7 +52555,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=107194",
@@ -52631,7 +52569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2423468856874820662",
+    "id": "wevity-9107367811806307684",
     "boardType": "contests",
     "title": "2026 DRB Space Challenge",
     "category": "contest_stem",
@@ -52648,7 +52586,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106936",
@@ -52662,7 +52600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8848664362864923084",
+    "id": "wevity-7160198605779806021",
     "boardType": "contests",
     "title": "Ansys Simulation Challenge 2026 참가자 모집",
     "category": "contest_stem",
@@ -52679,7 +52617,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106880",
@@ -52693,7 +52631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3692917979365274533",
+    "id": "wevity-3504075929090022663",
     "boardType": "contests",
     "title": "2026 대학생 논문경진대회 장애의 재해석 공모전",
     "category": "contest_writing",
@@ -52710,7 +52648,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106850",
@@ -52724,7 +52662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6644024384433566876",
+    "id": "wevity-8578428830591184160",
     "boardType": "contests",
     "title": "2026 제2회 스마트양식 도전해(海) AI 경진대회",
     "category": "contest_stem",
@@ -52741,7 +52679,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106849",
@@ -52755,7 +52693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1756005770139827572",
+    "id": "wevity-6016387801406789044",
     "boardType": "contests",
     "title": "2026 날씨 빅데이터 콘테스트",
     "category": "contest_stem",
@@ -52772,7 +52710,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106844",
@@ -52786,7 +52724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3343954327828196659",
+    "id": "wevity-943627718551752397",
     "boardType": "contests",
     "title": "2026 전국 대학생 UAM 올림피아드 공모전",
     "category": "contest_math",
@@ -52803,7 +52741,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106623",
@@ -52817,7 +52755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9038366801874438908",
+    "id": "wevity-2052121637170565347",
     "boardType": "contests",
     "title": "2026년 청소년 우주과학 경진대회 HIS Youth 참가자 모집",
     "category": "contest_stem",
@@ -52834,7 +52772,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=5&ix=106576",
@@ -52848,7 +52786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4988926480546417059",
+    "id": "wevity-4890753623328576661",
     "boardType": "contests",
     "title": "제1회 튜닝 아이디어 경진대회",
     "category": "contest_stem",
@@ -52865,7 +52803,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106563",
@@ -52879,7 +52817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-916293945637171542",
+    "id": "wevity-3890985235947924748",
     "boardType": "contests",
     "title": "[HD건설기계] 퓨처 건설기계 챌린지 - 2026 대학생 공모전",
     "category": "contest_stem",
@@ -52896,7 +52834,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106442",
@@ -52910,7 +52848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1540599370483225832",
+    "id": "wevity-8405148332181729790",
     "boardType": "contests",
     "title": "2026년 캠퍼스 특허 유니버시아드 대회",
     "category": "contest_stem",
@@ -52927,7 +52865,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106387",
@@ -52941,7 +52879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2708077206148428119",
+    "id": "wevity-4228054601512624595",
     "boardType": "contests",
     "title": "대전사이언스 페스티벌 흑백과학자2",
     "category": "contest_stem",
@@ -52958,7 +52896,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106328",
@@ -52972,7 +52910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2853801876704286370",
+    "id": "wevity-2964758089381399619",
     "boardType": "contests",
     "title": "[국가데이터처] 2026년 국가데이터 활용대회",
     "category": "contest_stem",
@@ -52989,7 +52927,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106304",
@@ -53003,7 +52941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4756140370883509012",
+    "id": "wevity-1072948292672351077",
     "boardType": "contests",
     "title": "2026 전국기능경기대회 대국민 과제 공모전",
     "category": "contest_stem",
@@ -53020,7 +52958,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106249",
@@ -53034,7 +52972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5031805782869723727",
+    "id": "wevity-6775862379029381381",
     "boardType": "contests",
     "title": "2026년 인공지능 루키 대회",
     "category": "contest_stem",
@@ -53051,7 +52989,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106091",
@@ -53065,7 +53003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2222333227799707797",
+    "id": "wevity-7009490170659763640",
     "boardType": "contests",
     "title": "인공지능 챔피언 대회",
     "category": "contest_stem",
@@ -53082,7 +53020,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=106089",
@@ -53096,7 +53034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-484503307065177132",
+    "id": "wevity-2107264939968523480",
     "boardType": "contests",
     "title": "2026년도 제31회 경기도 건축문화상 공모전 (계획작품 부문 / 사용승인 건축물 부문)",
     "category": "contest_music",
@@ -53113,7 +53051,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105948",
@@ -53127,7 +53065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4744721441296154197",
+    "id": "wevity-3799534193758996036",
     "boardType": "contests",
     "title": "대학생 나노기술 공모전 나노영챌린지(Nano Young Challenge) 2026",
     "category": "contest_stem",
@@ -53144,7 +53082,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105790",
@@ -53158,7 +53096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2332285397147774294",
+    "id": "wevity-5530523103278314212",
     "boardType": "contests",
     "title": "[국립중앙과학관] AI Hack Camp 2026 참가자 모집",
     "category": "contest_stem",
@@ -53175,7 +53113,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105766",
@@ -53189,7 +53127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7515484368607265351",
+    "id": "wevity-2595130886013890186",
     "boardType": "contests",
     "title": "2026 Esri Map Contest",
     "category": "contest_stem",
@@ -53206,7 +53144,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105707",
@@ -53220,7 +53158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8683896279595433261",
+    "id": "wevity-4307829228310568078",
     "boardType": "contests",
     "title": "제13회 산업안전보건 조사자료 논문 경진대회",
     "category": "contest_stem",
@@ -53237,7 +53175,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=6&ix=105566",
@@ -53251,7 +53189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3193247520707559093",
+    "id": "wevity-4243070607747515787",
     "boardType": "contests",
     "title": "2026년 제13회 광융합 기술사업화 아이디어 및 제품디자인 공모전",
     "category": "contest_stem",
@@ -53268,7 +53206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105561",
@@ -53282,7 +53220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8514289586003021895",
+    "id": "wevity-8112759815960092488",
     "boardType": "contests",
     "title": "제7기 과기정통부 LMO SAFETY 기자단 모집",
     "category": "contest_stem",
@@ -53299,7 +53237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105517",
@@ -53313,7 +53251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4304522651489498503",
+    "id": "wevity-2551096005873352405",
     "boardType": "contests",
     "title": "제43회 《문명 그 화려한 역설》 69개의 표지비밀 풀기 프로젝트 공모 (1억고료 문학상 수상작)",
     "category": "contest_writing",
@@ -53330,7 +53268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105410",
@@ -53344,7 +53282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1204300990256086405",
+    "id": "wevity-6151721604708379486",
     "boardType": "contests",
     "title": "2026 대한민국 드론 공방전 대회",
     "category": "contest_stem",
@@ -53361,7 +53299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105384",
@@ -53375,7 +53313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-279404258219841830",
+    "id": "wevity-3958159277423303465",
     "boardType": "contests",
     "title": "[산업통상부] 2026 엔지니어링산업 경진대회",
     "category": "contest_stem",
@@ -53392,7 +53330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105361",
@@ -53406,7 +53344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4641782521588443641",
+    "id": "wevity-2806105158490284124",
     "boardType": "contests",
     "title": "제15회 에너지·환경 탐구대회",
     "category": "contest_stem",
@@ -53423,7 +53361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=105231",
@@ -53437,7 +53375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4349317541500955028",
+    "id": "wevity-7225456594954896760",
     "boardType": "contests",
     "title": "2026 대한토목학회 Civil Talks - 미래 토목인이 들려주는 새로운 상상",
     "category": "contest_stem",
@@ -53454,7 +53392,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104735",
@@ -53468,7 +53406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7775722434716073356",
+    "id": "wevity-3845201200974220782",
     "boardType": "contests",
     "title": "2026 대한토목학회 토목구조물 모형 경진대회",
     "category": "contest_stem",
@@ -53485,7 +53423,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104731",
@@ -53499,7 +53437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3409969639968392648",
+    "id": "wevity-3073297307020252833",
     "boardType": "contests",
     "title": "대웅그룹 이노베어 공모전 5기 모집",
     "category": "contest_stem",
@@ -53516,7 +53454,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104322",
@@ -53530,7 +53468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2769621521347187214",
+    "id": "wevity-3050172926283096257",
     "boardType": "contests",
     "title": "2026년 제1회 물리대회",
     "category": "contest_stem",
@@ -53547,7 +53485,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=104056",
@@ -53561,7 +53499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-319993110538883123",
+    "id": "wevity-1176970429907582209",
     "boardType": "contests",
     "title": "K-문샷 프로젝트 대국민 공모전",
     "category": "contest_stem",
@@ -53578,7 +53516,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103888",
@@ -53592,7 +53530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7280101315687410683",
+    "id": "wevity-5313459777928781933",
     "boardType": "contests",
     "title": "제주·AWS 글로벌 챌린지 해커톤",
     "category": "contest_coding",
@@ -53609,7 +53547,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103712",
@@ -53623,7 +53561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4103496749265764661",
+    "id": "wevity-2732028941159663928",
     "boardType": "contests",
     "title": "2026 포스텍 SF 어워드 (SF 단편소설 공모전)",
     "category": "contest_writing",
@@ -53640,7 +53578,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103705",
@@ -53654,7 +53592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1641691356014558324",
+    "id": "wevity-3550491155401755405",
     "boardType": "contests",
     "title": "2026 지역 창업 솔버톤 대회 참가자 모집",
     "category": "contest_stem",
@@ -53671,7 +53609,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103632",
@@ -53685,7 +53623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1290819830192023606",
+    "id": "wevity-206853172737510558",
     "boardType": "contests",
     "title": "나노팹데이터플랫폼 서비스 아이디어 도출 경진대회",
     "category": "contest_stem",
@@ -53702,7 +53640,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=22&gbn=view&gp=7&ix=103492",
@@ -53716,7 +53654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5344656987466930005",
+    "id": "wevity-1793568377958114415",
     "boardType": "contests",
     "title": "VIVID RE:PLAY 6개 IP로 만드는 AI영상 공모전",
     "category": "contest_music",
@@ -53733,7 +53671,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=112343",
@@ -53747,7 +53685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5907161858506853114",
+    "id": "wevity-4692799192783970968",
     "boardType": "contests",
     "title": "[제3회] 매경 AI 광고 공모전 대한민국 AI 광고대상",
     "category": "contest_music",
@@ -53764,7 +53702,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=112073",
@@ -53778,7 +53716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2548376036115634210",
+    "id": "wevity-384289375660703473",
     "boardType": "contests",
     "title": "건강보험심사평가원 광고 온에어 기념 이벤트",
     "category": "contest_music",
@@ -53795,7 +53733,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=112063",
@@ -53809,7 +53747,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6753960758197555945",
+    "id": "wevity-534014218518308092",
     "boardType": "contests",
     "title": "2026 대한건축사협회 대학(원)생 모듈러건축 공모전",
     "category": "contest_music",
@@ -53826,7 +53764,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=110885",
@@ -53840,7 +53778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9219341929864560859",
+    "id": "wevity-4070036818031634798",
     "boardType": "contests",
     "title": "2026 제1회 KIBE 융합디자인 공모전",
     "category": "contest_music",
@@ -53857,7 +53795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=110826",
@@ -53871,7 +53809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8974124305005266908",
+    "id": "wevity-1077649831950240394",
     "boardType": "contests",
     "title": "7th Da-Ho Award Asian International Short Film Competition(단편영화 공모전)",
     "category": "contest_music",
@@ -53888,7 +53826,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=110179",
@@ -53902,7 +53840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3009514830174767089",
+    "id": "wevity-2415651670584071717",
     "boardType": "contests",
     "title": "제27회 전국국악동요경연대회",
     "category": "contest_music",
@@ -53919,7 +53857,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=112365",
@@ -53933,7 +53871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4664283941765534169",
+    "id": "wevity-1170166404628763010",
     "boardType": "contests",
     "title": "2027 아티스타트 참여 작가 모집",
     "category": "contest_music",
@@ -53950,7 +53888,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=1&ix=112311",
@@ -53964,7 +53902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2179975160071279408",
+    "id": "wevity-7201519054883642275",
     "boardType": "contests",
     "title": "제10회 해봉 국악 경연대회",
     "category": "contest_music",
@@ -53981,7 +53919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=112256",
@@ -53995,7 +53933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9060947081228412308",
+    "id": "wevity-7656389296434378174",
     "boardType": "contests",
     "title": "WWF 판다 그림그리기 대회",
     "category": "contest_music",
@@ -54012,7 +53950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=112242",
@@ -54026,7 +53964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8530470682072746177",
+    "id": "wevity-390855663762895817",
     "boardType": "contests",
     "title": "2026년 제5회 석포마을 공모전",
     "category": "contest_music",
@@ -54043,7 +53981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=112214",
@@ -54057,7 +53995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1090934924165445303",
+    "id": "wevity-1765987793653486459",
     "boardType": "contests",
     "title": "뚝닭 댄스 챌린지",
     "category": "contest_music",
@@ -54074,7 +54012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=112192",
@@ -54088,7 +54026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2084401925156610427",
+    "id": "wevity-3769891298824030434",
     "boardType": "contests",
     "title": "2026 대한민국 국제음악콩쿠르",
     "category": "contest_music",
@@ -54105,7 +54043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=112139",
@@ -54119,7 +54057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4807631711303824626",
+    "id": "wevity-4748597082748973556",
     "boardType": "contests",
     "title": "귀 쫑긋! 우리 활용 공모전",
     "category": "contest_music",
@@ -54136,7 +54074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111931",
@@ -54150,7 +54088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4369277094494403171",
+    "id": "wevity-5844064386575153502",
     "boardType": "contests",
     "title": "제 4회 산업기술 R&D 어린이 그림 그리기 공모전",
     "category": "contest_music",
@@ -54167,7 +54105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111907",
@@ -54181,7 +54119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-267269237173986856",
+    "id": "wevity-5904142456848817711",
     "boardType": "contests",
     "title": "제57회 경상북도 산업디자인 전람회",
     "category": "contest_music",
@@ -54198,7 +54136,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111890",
@@ -54212,7 +54150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5610100857021787366",
+    "id": "wevity-1195311718650881538",
     "boardType": "contests",
     "title": "2026년 전남자치경찰 홍보 콘텐츠 공모전",
     "category": "contest_music",
@@ -54229,7 +54167,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111846",
@@ -54243,7 +54181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-637952052272910336",
+    "id": "wevity-2497895481123981922",
     "boardType": "contests",
     "title": "2026년 희귀질환 극복수기·사진 공모전",
     "category": "contest_music",
@@ -54260,7 +54198,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111836",
@@ -54274,7 +54212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3881937574569387889",
+    "id": "wevity-4895185778525188079",
     "boardType": "contests",
     "title": "[곽재선문화재단x할리스 제5회 아트공모전] 몽실 아트공모전",
     "category": "contest_music",
@@ -54291,7 +54229,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111827",
@@ -54305,7 +54243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4753095571183330002",
+    "id": "wevity-3259187513470077910",
     "boardType": "contests",
     "title": "제10회 동아뮤지컬콩쿠르",
     "category": "contest_music",
@@ -54322,7 +54260,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111824",
@@ -54336,7 +54274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3549307280459795737",
+    "id": "wevity-4484011968429341996",
     "boardType": "contests",
     "title": "2026 이스타항공 기내식 레시피 공모전",
     "category": "contest_music",
@@ -54353,7 +54291,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111820",
@@ -54367,7 +54305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5634497672440388533",
+    "id": "wevity-5398526842027937576",
     "boardType": "contests",
     "title": "[서천군지속가능발전협의회] 2026 내가 꿈꾸는 서천의 미래 K-SDGs 포스터 공모전",
     "category": "contest_music",
@@ -54384,7 +54322,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111817",
@@ -54398,7 +54336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7297981636311270450",
+    "id": "wevity-4347263274526727682",
     "boardType": "contests",
     "title": "2026 광주비엔날레 미디어파사드 신진 미디어아트 공모전",
     "category": "contest_music",
@@ -54415,7 +54353,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=2&ix=111671",
@@ -54429,7 +54367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6009342640942128741",
+    "id": "wevity-9204290271042260819",
     "boardType": "contests",
     "title": "[서울특별시] 2026 서울라이트 광화문 미디어파사드 작품 공모전",
     "category": "contest_music",
@@ -54446,7 +54384,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111591",
@@ -54460,7 +54398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6662821139466081662",
+    "id": "wevity-141071851639682842",
     "boardType": "contests",
     "title": "[MORE VISION] Chord Banditz - Open Call: BAND MEMBERS (모어비전 밴드 오디션)",
     "category": "contest_music",
@@ -54477,7 +54415,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111380",
@@ -54491,7 +54429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-440219684382158132",
+    "id": "wevity-3412422872533185704",
     "boardType": "contests",
     "title": "을숙도 대지·생태예술 국제공모",
     "category": "contest_music",
@@ -54508,7 +54446,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111176",
@@ -54522,7 +54460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-399150632560226754",
+    "id": "wevity-7543459148123834796",
     "boardType": "contests",
     "title": "2026 아주국제미술대전",
     "category": "contest_music",
@@ -54539,7 +54477,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111032",
@@ -54553,7 +54491,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4191505622078309099",
+    "id": "wevity-6865664873909655754",
     "boardType": "contests",
     "title": "2026 어린이조선일보 글로벌 미술대회&루브르 박물관 전시대회 (접수기간 연장)",
     "category": "contest_music",
@@ -54570,7 +54508,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=110620",
@@ -54584,7 +54522,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-276062243112448388",
+    "id": "wevity-2982849446867858960",
     "boardType": "contests",
     "title": "2026 뇌전증 인식개선 공모전",
     "category": "contest_music",
@@ -54601,7 +54539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=110549",
@@ -54615,7 +54553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-474569655045490739",
+    "id": "wevity-7862494279467333449",
     "boardType": "contests",
     "title": "제3회 긍정의 힘 마라톤",
     "category": "contest_music",
@@ -54632,7 +54570,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=110362",
@@ -54646,7 +54584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1174594942206446456",
+    "id": "wevity-1120849188791223790",
     "boardType": "contests",
     "title": "2026 코리아시즌 레이스",
     "category": "contest_music",
@@ -54663,7 +54601,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=110359",
@@ -54677,7 +54615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8725215157610133984",
+    "id": "wevity-7558371592950988905",
     "boardType": "contests",
     "title": "2026년 품바재생예술체험촌 새활용·리폼 콘테스트",
     "category": "contest_music",
@@ -54694,7 +54632,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=110095",
@@ -54708,7 +54646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2558395516799183561",
+    "id": "wevity-159160209811880039",
     "boardType": "contests",
     "title": "2026 하남 미사 호수 에너지런",
     "category": "contest_music",
@@ -54725,7 +54663,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=109818",
@@ -54739,7 +54677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8008618313074432536",
+    "id": "wevity-5506574388952670784",
     "boardType": "contests",
     "title": "[국제공모전] IN:SENSE Design Award 2027 (참가비 있음)",
     "category": "contest_music",
@@ -54756,7 +54694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=109741",
@@ -54770,7 +54708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7780090246354501645",
+    "id": "wevity-4592745430710302726",
     "boardType": "contests",
     "title": "2027 청주국제공예공모전",
     "category": "contest_music",
@@ -54787,7 +54725,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=109564",
@@ -54801,7 +54739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5506204720442559037",
+    "id": "wevity-3379932103851567383",
     "boardType": "contests",
     "title": "2026 체리블라썸 뮤직콘서트 인 윈터 BAND IN BLOOM 전국 밴드 경연대회",
     "category": "contest_music",
@@ -54818,7 +54756,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=112085",
@@ -54832,7 +54770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7277823180063972794",
+    "id": "wevity-4561951500620616034",
     "boardType": "contests",
     "title": "제7회 KMA 시니어모델선발대회",
     "category": "contest_music",
@@ -54849,7 +54787,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111969",
@@ -54863,7 +54801,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-567663754270647623",
+    "id": "wevity-468910836558620566",
     "boardType": "contests",
     "title": "2026년 횡성 숨은 매력 찾기 공모전",
     "category": "contest_music",
@@ -54880,7 +54818,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=3&ix=111948",
@@ -54894,7 +54832,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4920016972663748634",
+    "id": "wevity-3761279145928635632",
     "boardType": "contests",
     "title": "2026 힐로웨이브 아트 프로젝트 (결을 읽는 사람들) 참여 작가 공모",
     "category": "contest_music",
@@ -54911,7 +54849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111937",
@@ -54925,7 +54863,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3868412853752650881",
+    "id": "wevity-4120150180393687026",
     "boardType": "contests",
     "title": "2026 강동문화재단 GAC Creative Bridge (아트 굿즈 창작지원 프로젝트)",
     "category": "contest_music",
@@ -54942,7 +54880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111923",
@@ -54956,7 +54894,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2720499392894968828",
+    "id": "wevity-2536001923456597513",
     "boardType": "contests",
     "title": "모두의 KISA 공모 - KISA에게 바란다 모두의 KISA",
     "category": "contest_music",
@@ -54973,7 +54911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111918",
@@ -54987,7 +54925,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4789383448643165560",
+    "id": "wevity-1053843065097046838",
     "boardType": "contests",
     "title": "2026 순창 코리아 떡볶이 페스타 – 전국 떡볶이 플래시몹 경연대회 참가자 모집",
     "category": "contest_music",
@@ -55004,7 +54942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111911",
@@ -55018,7 +54956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3410961110492645150",
+    "id": "wevity-1323114956369705339",
     "boardType": "contests",
     "title": "2026 모두의 노동 손그림 공모전",
     "category": "contest_music",
@@ -55035,7 +54973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111878",
@@ -55049,7 +54987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5306972923592589914",
+    "id": "wevity-7064408425222067430",
     "boardType": "contests",
     "title": "2026 서울시여성가족재단 다목적라운지 전시 작품 공모",
     "category": "contest_music",
@@ -55066,7 +55004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111876",
@@ -55080,7 +55018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4513369889375935703",
+    "id": "wevity-8916421045597440455",
     "boardType": "contests",
     "title": "2026 주얼리 예술제 참가자 모집",
     "category": "contest_music",
@@ -55097,7 +55035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111858",
@@ -55111,7 +55049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5443896427666800382",
+    "id": "wevity-3214006632597743092",
     "boardType": "contests",
     "title": "제2회 손상예방의날 기념 경북권 손상 예방 포스터 공모전",
     "category": "contest_music",
@@ -55128,7 +55066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111835",
@@ -55142,7 +55080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-431743117770905770",
+    "id": "wevity-2684148379718829784",
     "boardType": "contests",
     "title": "우리집 아침밥 레시피 SNS 공모전",
     "category": "contest_music",
@@ -55159,7 +55097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111832",
@@ -55173,7 +55111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4027870836534423798",
+    "id": "wevity-1837502757697354285",
     "boardType": "contests",
     "title": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 스포츠 경연대회 참가자 모집",
     "category": "contest_music",
@@ -55190,7 +55128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111831",
@@ -55204,7 +55142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-143905494599136081",
+    "id": "wevity-4236866253978446411",
     "boardType": "contests",
     "title": "제1회 스포츠가치센터 청소년동아리축제 스포츠로 다 같이, 다(多) 가치 참여 청소년동아리 예술 경연대회 참가자 모집",
     "category": "contest_music",
@@ -55221,7 +55159,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111830",
@@ -55235,7 +55173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5442969169673384125",
+    "id": "wevity-4907384238030715913",
     "boardType": "contests",
     "title": "제1회 스크린인쇄어워즈",
     "category": "contest_music",
@@ -55252,7 +55190,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111816",
@@ -55266,7 +55204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5762574178077307226",
+    "id": "wevity-7299757268883985436",
     "boardType": "contests",
     "title": "[산사람 x AI-Kive] 진짜 오타쿠 AI MV 챌린지",
     "category": "contest_music",
@@ -55283,7 +55221,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111810",
@@ -55297,7 +55235,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3068572649834363640",
+    "id": "wevity-1876279780951994941",
     "boardType": "contests",
     "title": "광안리 M 드론라이트쇼 너의 꿈을 그려봐 그림 공모전",
     "category": "contest_music",
@@ -55314,7 +55252,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=4&ix=111803",
@@ -55328,7 +55266,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6710084837284618178",
+    "id": "wevity-3054077200836250565",
     "boardType": "contests",
     "title": "2026 별빛미술관 신진작가 공모전시 참여작가 모집",
     "category": "contest_music",
@@ -55345,7 +55283,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111801",
@@ -55359,7 +55297,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1401355349315969841",
+    "id": "wevity-6492180708235037395",
     "boardType": "contests",
     "title": "플랫폼 미묘(mimio) 인천아트쇼2026 참여 작가 공모",
     "category": "contest_music",
@@ -55376,7 +55314,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111780",
@@ -55390,7 +55328,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3366668440398973463",
+    "id": "wevity-939823866541943428",
     "boardType": "contests",
     "title": "2026 영암 월출산 달빛뮤직페스티벌 달빛가요제 참가자 모집",
     "category": "contest_music",
@@ -55407,7 +55345,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111753",
@@ -55421,7 +55359,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6664433703897379570",
+    "id": "wevity-2540172868806629635",
     "boardType": "contests",
     "title": "선샤인 TIME TRAVEL 숏폼 영상 공모전",
     "category": "contest_music",
@@ -55438,7 +55376,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111750",
@@ -55452,7 +55390,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5554723929213392025",
+    "id": "wevity-9166034827917555821",
     "boardType": "contests",
     "title": "2026 경북 영양군 밤하늘 사진·음원 공모전",
     "category": "contest_music",
@@ -55469,7 +55407,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111727",
@@ -55483,7 +55421,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5583265941605522458",
+    "id": "wevity-8081690163301278775",
     "boardType": "contests",
     "title": "2026년 단양 유네스코 세계지질공원 학생 홍보콘텐츠 공모전",
     "category": "contest_music",
@@ -55500,7 +55438,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111720",
@@ -55514,7 +55452,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8814318251442011838",
+    "id": "wevity-8618041491442920847",
     "boardType": "contests",
     "title": "﻿[2026서울한국춤페스티벌] 춤을 그리는 젊은이들 청년 안무가 작품 공모전",
     "category": "contest_music",
@@ -55531,7 +55469,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111719",
@@ -55545,7 +55483,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2563876825704462146",
+    "id": "wevity-5746525492846768348",
     "boardType": "contests",
     "title": "[통영시] 고양이섬 조각공모전",
     "category": "contest_music",
@@ -55562,7 +55500,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111711",
@@ -55576,7 +55514,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5711459151680494049",
+    "id": "wevity-3618735607034948028",
     "boardType": "contests",
     "title": "2026 고립·은둔청년 인식개선 공모전",
     "category": "contest_music",
@@ -55593,7 +55531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111691",
@@ -55607,7 +55545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5434465974906877564",
+    "id": "wevity-2124812706806306128",
     "boardType": "contests",
     "title": "2026 화성특례시 AI CF 공모전 - 제6회 별별화성 Awards",
     "category": "contest_music",
@@ -55624,7 +55562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111674",
@@ -55638,7 +55576,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8716331116642254126",
+    "id": "wevity-3180198467904065968",
     "boardType": "contests",
     "title": "경상남도교통문화연수원 2026 어린이 교통안전 포스터 공모전",
     "category": "contest_music",
@@ -55655,7 +55593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111661",
@@ -55669,7 +55607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1097906739369138347",
+    "id": "wevity-7976580199928485648",
     "boardType": "contests",
     "title": "2026년 세종사이버대 한국어학과 한글날 기념 공모전 (AI를 활용한 한국어 교육용 노래 만들기)",
     "category": "contest_music",
@@ -55686,7 +55624,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111646",
@@ -55700,7 +55638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1228545034285093563",
+    "id": "wevity-464729340795110402",
     "boardType": "contests",
     "title": "2026년 제3회 소무의도 그림 그리기 대회",
     "category": "contest_music",
@@ -55717,7 +55655,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111635",
@@ -55731,7 +55669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2193719567737559192",
+    "id": "wevity-385096628991490769",
     "boardType": "contests",
     "title": "2026 아티코드 그림 공모전 - 당신의 마음이 쉬어가는 곳",
     "category": "contest_music",
@@ -55748,7 +55686,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=5&ix=111633",
@@ -55762,7 +55700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6594763742934866352",
+    "id": "wevity-3163179009536022705",
     "boardType": "contests",
     "title": "2026 우리과일 요리경연대회",
     "category": "contest_music",
@@ -55779,7 +55717,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111632",
@@ -55793,7 +55731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3238626958804859609",
+    "id": "wevity-3554453489422052933",
     "boardType": "contests",
     "title": "2026 제주 다문화 미래세대 SDGs 드림챌린지",
     "category": "contest_coding",
@@ -55810,7 +55748,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111619",
@@ -55824,7 +55762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1919388573035328364",
+    "id": "wevity-212498021683196426",
     "boardType": "contests",
     "title": "2026년 양산시 인구정책 콘텐츠 공모전",
     "category": "contest_music",
@@ -55841,7 +55779,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111598",
@@ -55855,7 +55793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3992100338954811763",
+    "id": "wevity-7856998249094469311",
     "boardType": "contests",
     "title": "2026 울산시립미술관 미디어 스크린 시민 공모 프로젝트",
     "category": "contest_music",
@@ -55872,7 +55810,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111596",
@@ -55886,7 +55824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5883536468815901923",
+    "id": "wevity-9016187117629047383",
     "boardType": "contests",
     "title": "2026년 제2회 AMT AI 작곡대회",
     "category": "contest_music",
@@ -55903,7 +55841,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111593",
@@ -55917,7 +55855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4529383560345613199",
+    "id": "wevity-597072839200860287",
     "boardType": "contests",
     "title": "2026 영등포 어린이 미술대전",
     "category": "contest_music",
@@ -55934,7 +55872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111590",
@@ -55948,7 +55886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1194290663015606587",
+    "id": "wevity-4747790529992128355",
     "boardType": "contests",
     "title": "2026 연연지회 청소년 문화 경연대회 참가자 모집",
     "category": "contest_music",
@@ -55965,7 +55903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111578",
@@ -55979,7 +55917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8717551880338260883",
+    "id": "wevity-5619665250340556707",
     "boardType": "contests",
     "title": "2026 우리 임산물 숲푸드 콘텐츠 공모전",
     "category": "contest_music",
@@ -55996,7 +55934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111572",
@@ -56010,7 +55948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2931519768956554328",
+    "id": "wevity-252966814587255654",
     "boardType": "contests",
     "title": "용인어린이상상의숲 상상 아트마켓 참여 예술가 공모",
     "category": "contest_music",
@@ -56027,7 +55965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111563",
@@ -56041,7 +55979,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3086604383336330712",
+    "id": "wevity-5604040670889135254",
     "boardType": "contests",
     "title": "2026 제14회 계란요리경연대회 & 제2회 알&닭 펫푸드경연대회",
     "category": "contest_music",
@@ -56058,7 +55996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111549",
@@ -56072,7 +56010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8134207902871680129",
+    "id": "wevity-3174542966335194832",
     "boardType": "contests",
     "title": "전국 한미 버거 콘테스트 송탄의 버거 맛을 찾아라 참가자 모집",
     "category": "contest_music",
@@ -56089,7 +56027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111519",
@@ -56103,7 +56041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4474906593118867894",
+    "id": "wevity-3809699608439432316",
     "boardType": "contests",
     "title": "2026 화성 루나빛축제 어린이 드론 그림 공모전",
     "category": "contest_music",
@@ -56120,7 +56058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111480",
@@ -56134,7 +56072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8393717062822946205",
+    "id": "wevity-5490298784755799786",
     "boardType": "contests",
     "title": "2026년 장애인 권리증진 콘텐츠 공모전",
     "category": "contest_music",
@@ -56151,7 +56089,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111474",
@@ -56165,7 +56103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3547616607274176684",
+    "id": "wevity-7977412708333006323",
     "boardType": "contests",
     "title": "제1회 KEA FOUNDATION 신진작가 공모",
     "category": "contest_music",
@@ -56182,7 +56120,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=6&ix=111469",
@@ -56196,7 +56134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-862696261289228917",
+    "id": "wevity-7321960116129295142",
     "boardType": "contests",
     "title": "4.16생명안전비엔날레 생명안전 그림그리기 대회",
     "category": "contest_music",
@@ -56213,7 +56151,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111462",
@@ -56227,7 +56165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1259945444377975664",
+    "id": "wevity-1754299040531520117",
     "boardType": "contests",
     "title": "롯데몰 벨리타운 청량리 - AI 뮤직 공모전",
     "category": "contest_music",
@@ -56244,7 +56182,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111455",
@@ -56258,7 +56196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-247923631303396829",
+    "id": "wevity-8958850287330833218",
     "boardType": "contests",
     "title": "제 2회 롯데몰 동부산점 어린이 미술대회",
     "category": "contest_music",
@@ -56275,7 +56213,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111453",
@@ -56289,7 +56227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7015681211436881235",
+    "id": "wevity-4996830695556520208",
     "boardType": "contests",
     "title": "2026 효성과 함께하는 제4회 올해의 작가상 공모",
     "category": "contest_music",
@@ -56306,7 +56244,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111434",
@@ -56320,7 +56258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3959752512277006285",
+    "id": "wevity-8801931726144620541",
     "boardType": "contests",
     "title": "2026 벨리곰 SPIN-OFF 디자인 공모전 (내용 및 일정 수정)",
     "category": "contest_music",
@@ -56337,7 +56275,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111432",
@@ -56351,7 +56289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7741338960218125387",
+    "id": "wevity-8866333153405483120",
     "boardType": "contests",
     "title": "제30회 우암문화제 우암전통예술경연대회",
     "category": "contest_music",
@@ -56368,7 +56306,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111424",
@@ -56382,7 +56320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4389428303357401462",
+    "id": "wevity-8081822287013640973",
     "boardType": "contests",
     "title": "제29회 우리은행 미술대회 (우리 아트콘)",
     "category": "contest_music",
@@ -56399,7 +56337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111411",
@@ -56413,7 +56351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1601355922137130841",
+    "id": "wevity-5207582642629563625",
     "boardType": "contests",
     "title": "TU Enter-Music Festa 중·고교(청소년) 시네마틱 뮤직비디오(M/V) 제작 공모전",
     "category": "contest_music",
@@ -56430,7 +56368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111405",
@@ -56444,7 +56382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4844963363804683513",
+    "id": "wevity-624212974530591436",
     "boardType": "contests",
     "title": "제11회 한아전 웹툰·일러스트·포스터·영상 공모전",
     "category": "contest_music",
@@ -56461,7 +56399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111398",
@@ -56475,7 +56413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7475736469314442201",
+    "id": "wevity-519780126040008128",
     "boardType": "contests",
     "title": "제4회 전국공모 양산미술대전",
     "category": "contest_music",
@@ -56492,7 +56430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111382",
@@ -56506,7 +56444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-164610819491653512",
+    "id": "wevity-6966911667485337094",
     "boardType": "contests",
     "title": "제40회 충남 산업디자인 대전 디자이너 모집",
     "category": "contest_music",
@@ -56523,7 +56461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111379",
@@ -56537,7 +56475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1827384440117356488",
+    "id": "wevity-6347223126665743729",
     "boardType": "contests",
     "title": "2026 한국외식산업연구원 외식경영스타 아이디어 공모전",
     "category": "contest_music",
@@ -56554,7 +56492,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111378",
@@ -56568,7 +56506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6699830728435893666",
+    "id": "wevity-2742187944798643056",
     "boardType": "contests",
     "title": "2026 stART 코레일유통 미디어아트 청년작가 공모전",
     "category": "contest_music",
@@ -56585,7 +56523,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111373",
@@ -56599,7 +56537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-310773795565816168",
+    "id": "wevity-5525027937915020761",
     "boardType": "contests",
     "title": "2026 태권도 의류형 굿즈 · 체험형 굿즈 아이디어 공모전",
     "category": "contest_music",
@@ -56616,7 +56554,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111367",
@@ -56630,7 +56568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3477041442055126556",
+    "id": "wevity-1119676900462080201",
     "boardType": "contests",
     "title": "모두의 보스 온라인 가요제",
     "category": "contest_music",
@@ -56647,7 +56585,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=26&gbn=view&gp=7&ix=111358",
@@ -56661,7 +56599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1671641129150854871",
+    "id": "wevity-4361602464121538629",
     "boardType": "contests",
     "title": "2026년 산림복지 국민제안 공모전",
     "category": "contest_general",
@@ -56678,7 +56616,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112363",
@@ -56692,7 +56630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2051358496495567758",
+    "id": "wevity-8892968505138979927",
     "boardType": "contests",
     "title": "포항시 지역사회 문제 해결을 위한 AI 솔루션 아이디어 경진대회",
     "category": "contest_general",
@@ -56709,7 +56647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112316",
@@ -56723,7 +56661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2417750227030361553",
+    "id": "wevity-9102853655780674098",
     "boardType": "contests",
     "title": "전남광주통합특별시의회 정책아이디어 공모전",
     "category": "contest_general",
@@ -56740,7 +56678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112270",
@@ -56754,7 +56692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5807114649952033864",
+    "id": "wevity-4399588016633009017",
     "boardType": "contests",
     "title": "2040 여수혁신제안 공모전",
     "category": "contest_general",
@@ -56771,7 +56709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112250",
@@ -56785,7 +56723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4470774081179288324",
+    "id": "wevity-7327768200187152525",
     "boardType": "contests",
     "title": "2026년 제2회 구리시 정책제안 공모전",
     "category": "contest_general",
@@ -56802,7 +56740,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112220",
@@ -56816,7 +56754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8028496720176950442",
+    "id": "wevity-2677251405186603337",
     "boardType": "contests",
     "title": "[포천도시공사] 2026년 저출생·인구감소 대응 아이디어 공모전",
     "category": "contest_general",
@@ -56833,7 +56771,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112217",
@@ -56847,7 +56785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5186961171318285447",
+    "id": "wevity-8821653150227650532",
     "boardType": "contests",
     "title": "LG 어나더 캠퍼스 아이디어 콘테스트",
     "category": "contest_general",
@@ -56864,7 +56802,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112206",
@@ -56878,7 +56816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8173511020010712459",
+    "id": "wevity-1859054903935280872",
     "boardType": "contests",
     "title": "제1회 하나증권 청년 금융 아이디어 공모전",
     "category": "contest_general",
@@ -56895,7 +56833,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112195",
@@ -56909,7 +56847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6883579588763595266",
+    "id": "wevity-883559844553836938",
     "boardType": "contests",
     "title": "2026년 K-Petro 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -56926,7 +56864,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112194",
@@ -56940,7 +56878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2283210399730540508",
+    "id": "wevity-6408686874685259251",
     "boardType": "contests",
     "title": "2026년 경상북도 도민 대상 규제개선 공모전",
     "category": "contest_general",
@@ -56957,7 +56895,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112193",
@@ -56971,7 +56909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1056196310691046600",
+    "id": "wevity-74964705331119251",
     "boardType": "contests",
     "title": "2026 청년의 시간(성남 청년 참여 예산제) 참가팀 모집",
     "category": "contest_general",
@@ -56988,7 +56926,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112181",
@@ -57002,7 +56940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-292403038783900949",
+    "id": "wevity-3254655885331192745",
     "boardType": "contests",
     "title": "대전지역 대학생과 함께하는 시민체감 교통 아이디어 공모전",
     "category": "contest_general",
@@ -57019,7 +56957,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=1&ix=112147",
@@ -57033,7 +56971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2818894046355838800",
+    "id": "wevity-1089736667260789192",
     "boardType": "contests",
     "title": "[강원특별자치도] 2026년 톡톡 Idea 공모전",
     "category": "contest_general",
@@ -57050,7 +56988,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112084",
@@ -57064,7 +57002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1550783717386838233",
+    "id": "wevity-7272606201521672220",
     "boardType": "contests",
     "title": "제2회 Nitto Open Innovation Challenge",
     "category": "contest_general",
@@ -57081,7 +57019,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112082",
@@ -57095,7 +57033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2650580832601784424",
+    "id": "wevity-7477080093971392321",
     "boardType": "contests",
     "title": "국회 미래세대 미래의제 공모전",
     "category": "contest_general",
@@ -57112,7 +57050,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112078",
@@ -57126,7 +57064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1295861284695027743",
+    "id": "wevity-4031305192268175673",
     "boardType": "contests",
     "title": "[한국산업기술기획평가원] 2026 KEIT 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57143,7 +57081,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112076",
@@ -57157,7 +57095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6045259320433028923",
+    "id": "wevity-8377966843638942986",
     "boardType": "contests",
     "title": "제1회 메치니코프 신제품 공모전",
     "category": "contest_general",
@@ -57174,7 +57112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112072",
@@ -57188,7 +57126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2856900228150366759",
+    "id": "wevity-7640134556960350666",
     "boardType": "contests",
     "title": "제1회 홍제천 상상더하기 공모전",
     "category": "contest_general",
@@ -57205,7 +57143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112055",
@@ -57219,7 +57157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3444712230318484987",
+    "id": "wevity-8168589179471495670",
     "boardType": "contests",
     "title": "2026년 대국민 재정교육 아이디어 공모전",
     "category": "contest_general",
@@ -57236,7 +57174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=112031",
@@ -57250,7 +57188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7890379952073490925",
+    "id": "wevity-8003515846256809150",
     "boardType": "contests",
     "title": "2026 해양 창업아이디어 공모전 Spark-up 1876",
     "category": "contest_general",
@@ -57267,7 +57205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111964",
@@ -57281,7 +57219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-809594602973967160",
+    "id": "wevity-3738942160398132001",
     "boardType": "contests",
     "title": "[완도군] 2026년 지방소멸 대응 아이디어 공모전",
     "category": "contest_general",
@@ -57298,7 +57236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111935",
@@ -57312,7 +57250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9077722329352390238",
+    "id": "wevity-6788886940543701815",
     "boardType": "contests",
     "title": "국가무형유산 상설공연 창작 콘텐츠 개발을 위한 대국민 아이디어 발굴대회",
     "category": "contest_coding",
@@ -57329,7 +57267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111934",
@@ -57343,7 +57281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7606763554126903373",
+    "id": "wevity-6845653008190859288",
     "boardType": "contests",
     "title": "현대모비스 창립 50주년 굿즈 아이디어 공모전",
     "category": "contest_general",
@@ -57360,7 +57298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111865",
@@ -57374,7 +57312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6604949991954481498",
+    "id": "wevity-809481534888386598",
     "boardType": "contests",
     "title": "제6회 인천공항 여행 공모전 (내가 만드는 한국여행)",
     "category": "contest_general",
@@ -57391,7 +57329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111863",
@@ -57405,7 +57343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1706511271197344437",
+    "id": "wevity-2769086075757324135",
     "boardType": "contests",
     "title": "2026년 체육관련 규제개선 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -57422,7 +57360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111861",
@@ -57436,7 +57374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1651351870071639156",
+    "id": "wevity-7140635387166493180",
     "boardType": "contests",
     "title": "2026 사회보장 데이터를 활용한 AI 혁신 아이디어 경진대회",
     "category": "contest_general",
@@ -57453,7 +57391,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111847",
@@ -57467,7 +57405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2935061697024777849",
+    "id": "wevity-2394301813560727192",
     "boardType": "contests",
     "title": "2026년 한국정책분석평가학회 대학생 정책아이디어공모전",
     "category": "contest_general",
@@ -57484,7 +57422,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=2&ix=111756",
@@ -57498,7 +57436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1981143706613505415",
+    "id": "wevity-1124892151289590263",
     "boardType": "contests",
     "title": "[한국도로공사] AI 활용 아이디어 공모전",
     "category": "contest_general",
@@ -57515,7 +57453,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111666",
@@ -57529,7 +57467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3780908215462690370",
+    "id": "wevity-7451934841850976809",
     "boardType": "contests",
     "title": "2026년 신규 MICE 행사 아이디어 공모전",
     "category": "contest_general",
@@ -57546,7 +57484,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111597",
@@ -57560,7 +57498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1335449571994343515",
+    "id": "wevity-7520948701870857948",
     "boardType": "contests",
     "title": "서울특별시 행정서식, 뚝딱뚝딱! 개선 아이디어 공모전",
     "category": "contest_general",
@@ -57577,7 +57515,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111574",
@@ -57591,7 +57529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4031239941065338931",
+    "id": "wevity-7527293869120673448",
     "boardType": "contests",
     "title": "2026년 2차 외국발 허위정보 대응 대학생 아이디어 공모전",
     "category": "contest_stem",
@@ -57608,7 +57546,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111506",
@@ -57622,7 +57560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-925212471786910546",
+    "id": "wevity-1337042051756194378",
     "boardType": "contests",
     "title": "상주시 대표축제 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -57639,7 +57577,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=110750",
@@ -57653,7 +57591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-233450634735236102",
+    "id": "wevity-3525467997999940157",
     "boardType": "contests",
     "title": "2026 스마트시티(지식서비스산업) 아이디어 경진대회",
     "category": "contest_general",
@@ -57670,7 +57608,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=112054",
@@ -57684,7 +57622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7769061579017030503",
+    "id": "wevity-2986783076806940341",
     "boardType": "contests",
     "title": "2026 AI 활용 전국 대학생 창업 해커톤 참가자 모집",
     "category": "contest_coding",
@@ -57701,7 +57639,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111965",
@@ -57715,7 +57653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1190566594745241413",
+    "id": "wevity-588271161197662799",
     "boardType": "contests",
     "title": "2026 부여 솔버톤 - 지역문제해결 아이디어 발굴 참가자 모집",
     "category": "contest_general",
@@ -57732,7 +57670,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111933",
@@ -57746,7 +57684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2511751020574507186",
+    "id": "wevity-7252115265996917369",
     "boardType": "contests",
     "title": "2026년 한국전력기술 미래사업 과제 발굴을 위한 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57763,7 +57701,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111932",
@@ -57777,7 +57715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-389535720738989397",
+    "id": "wevity-1255999517982248157",
     "boardType": "contests",
     "title": "국가생명윤리정책원 2026년 ESG 대국민 아이디어 공모전",
     "category": "contest_general",
@@ -57794,7 +57732,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111905",
@@ -57808,7 +57746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7969434829296073065",
+    "id": "wevity-8156330466856873127",
     "boardType": "contests",
     "title": "제1회 배경데이터 활용 콘텐츠개발 아이디어 공모전",
     "category": "contest_coding",
@@ -57825,7 +57763,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111885",
@@ -57839,7 +57777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5342758419055451787",
+    "id": "wevity-1603939727838920098",
     "boardType": "contests",
     "title": "2026년 서울중구시설관리공단 ESG혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57856,7 +57794,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111877",
@@ -57870,7 +57808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4671081779787835936",
+    "id": "wevity-4270281380793021208",
     "boardType": "contests",
     "title": "[해양수산과학기술진흥원] 2026년도 KIMST ESG경영·혁신 아이디어 공모전",
     "category": "contest_stem",
@@ -57887,7 +57825,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111855",
@@ -57901,7 +57839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5501945467501483756",
+    "id": "wevity-4939850955827338137",
     "boardType": "contests",
     "title": "텐퍼센트커피 커스텀 레시피 콘테스트",
     "category": "contest_general",
@@ -57918,7 +57856,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=3&ix=111844",
@@ -57932,7 +57870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2345416561194171536",
+    "id": "wevity-7391129736517154068",
     "boardType": "contests",
     "title": "2026 NIA 탄소중립 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -57949,7 +57887,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111841",
@@ -57963,7 +57901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7595443011062358111",
+    "id": "wevity-3877025956984199827",
     "boardType": "contests",
     "title": "2026 경북 로컬 관광자원 혁신 콘텐츠 공모전",
     "category": "contest_general",
@@ -57980,7 +57918,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111839",
@@ -57994,7 +57932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5166464623699928634",
+    "id": "wevity-2497073221989489306",
     "boardType": "contests",
     "title": "보령시 웰니스 정책 제안 공모전",
     "category": "contest_general",
@@ -58011,7 +57949,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111805",
@@ -58025,7 +57963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3312211015294368520",
+    "id": "wevity-3381545089810288745",
     "boardType": "contests",
     "title": "[노사발전재단] 취약노동자 지원 네트워크 이름짓기 공모전",
     "category": "contest_general",
@@ -58042,7 +57980,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111798",
@@ -58056,7 +57994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2752310329124646681",
+    "id": "wevity-7836246186321808770",
     "boardType": "contests",
     "title": "[강릉시] 시민의 생각으로 여는 민선9기 강릉 2026년 시민 아이디어 공모전",
     "category": "contest_general",
@@ -58073,7 +58011,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111788",
@@ -58087,7 +58025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1653068189239024861",
+    "id": "wevity-3767038687192529535",
     "boardType": "contests",
     "title": "2026 세종 청년의 내일 일자리 아이디어 공모전",
     "category": "contest_general",
@@ -58104,7 +58042,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111777",
@@ -58118,7 +58056,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5097231428453076329",
+    "id": "wevity-5580887873118659436",
     "boardType": "contests",
     "title": "초량천~산복도로 스토리텔링 공모전",
     "category": "contest_general",
@@ -58135,7 +58073,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111755",
@@ -58149,7 +58087,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6907050943012170889",
+    "id": "wevity-2790480069412631980",
     "boardType": "contests",
     "title": "[한국주택금융공사] 2026년도 HF 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -58166,7 +58104,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111712",
@@ -58180,7 +58118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5729900931010234780",
+    "id": "wevity-324275944205779258",
     "boardType": "contests",
     "title": "2026 부산관광 아이디어 공모전",
     "category": "contest_general",
@@ -58197,7 +58135,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111709",
@@ -58211,7 +58149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3006266570517313735",
+    "id": "wevity-1580784220596630462",
     "boardType": "contests",
     "title": "2026 종로구 아이디어 공모전",
     "category": "contest_general",
@@ -58228,7 +58166,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111701",
@@ -58242,7 +58180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-334656362537151534",
+    "id": "wevity-8687356565907046539",
     "boardType": "contests",
     "title": "2026년 함안지방공사 ESG·혁신 경영 아이디어 공모전",
     "category": "contest_general",
@@ -58259,7 +58197,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111698",
@@ -58273,7 +58211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8987832370464847007",
+    "id": "wevity-5320668380835429081",
     "boardType": "contests",
     "title": "천안 관광코스 공모전",
     "category": "contest_general",
@@ -58290,7 +58228,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111695",
@@ -58304,7 +58242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1392148954710797792",
+    "id": "wevity-9044826845080142251",
     "boardType": "contests",
     "title": "2026년 한국산림복지진흥원 지식재산 아이디어 경진대회",
     "category": "contest_general",
@@ -58321,7 +58259,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=4&ix=111675",
@@ -58335,7 +58273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2999723063482655566",
+    "id": "wevity-1759728551606594674",
     "boardType": "contests",
     "title": "2026년 안산시 시민 아이디어 공모전",
     "category": "contest_general",
@@ -58352,7 +58290,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111673",
@@ -58366,7 +58304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5474780104648110790",
+    "id": "wevity-2187932611455422919",
     "boardType": "contests",
     "title": "2026년 영도구 정책제안 공모전",
     "category": "contest_general",
@@ -58383,7 +58321,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111668",
@@ -58397,7 +58335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8042214699728743379",
+    "id": "wevity-8357615230438812271",
     "boardType": "contests",
     "title": "[국토안전관리원] 위험현장 사고조사를 위한 첨단기술 활용 아이디어 공모전",
     "category": "contest_general",
@@ -58414,7 +58352,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111667",
@@ -58428,7 +58366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2653484125993258018",
+    "id": "wevity-4538370430088766090",
     "boardType": "contests",
     "title": "2026년 함께학교 정책제안 공모전",
     "category": "contest_general",
@@ -58445,7 +58383,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111652",
@@ -58459,7 +58397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-510731782741839335",
+    "id": "wevity-2322644241084425041",
     "boardType": "contests",
     "title": "도민과 함께 만드는 경남교육 비전 공모전",
     "category": "contest_general",
@@ -58476,7 +58414,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111641",
@@ -58490,7 +58428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8671678283067879360",
+    "id": "wevity-7728548654176820144",
     "boardType": "contests",
     "title": "2026년 청년정책 공모전",
     "category": "contest_general",
@@ -58507,7 +58445,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111640",
@@ -58521,7 +58459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5743972101101698128",
+    "id": "wevity-6258323593113310506",
     "boardType": "contests",
     "title": "2026 양천구 아이디어 공모전",
     "category": "contest_general",
@@ -58538,7 +58476,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111634",
@@ -58552,7 +58490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-247463863429840798",
+    "id": "wevity-998081938776708827",
     "boardType": "contests",
     "title": "한미일 미래협력 아이디어 챌린지 공모전",
     "category": "contest_general",
@@ -58569,7 +58507,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111624",
@@ -58583,7 +58521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1354060527593534997",
+    "id": "wevity-5383958454630221756",
     "boardType": "contests",
     "title": "2027년도 새만금 정책연구과제 아이디어 공모",
     "category": "contest_coding",
@@ -58600,7 +58538,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111620",
@@ -58614,7 +58552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8012815026318078785",
+    "id": "wevity-6497057066418299654",
     "boardType": "contests",
     "title": "2026 충남 로컬메이드 제품개발 공모전",
     "category": "contest_coding",
@@ -58631,7 +58569,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111614",
@@ -58645,7 +58583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1089226266638856259",
+    "id": "wevity-5801601291226966149",
     "boardType": "contests",
     "title": "[건강보험심사평가원] 우리 동네 병원과 가까워지는 한마디 슬로건 공모전",
     "category": "contest_general",
@@ -58662,7 +58600,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111612",
@@ -58676,7 +58614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6025387760571414049",
+    "id": "wevity-3568381074950136777",
     "boardType": "contests",
     "title": "[의성군] AI활용 서비스 개선 공모제안 경진대회",
     "category": "contest_general",
@@ -58693,7 +58631,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111611",
@@ -58707,7 +58645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5087133732547837810",
+    "id": "wevity-6214833807069212895",
     "boardType": "contests",
     "title": "[대전광역시 사회혁신센터] 시민생활·관계 개선 아이디어 공모전",
     "category": "contest_general",
@@ -58724,7 +58662,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111573",
@@ -58738,7 +58676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5983117019458484693",
+    "id": "wevity-5103007444635021585",
     "boardType": "contests",
     "title": "2026 초·중·고 AI 디지털콘텐츠 경진대회",
     "category": "contest_general",
@@ -58755,7 +58693,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=5&ix=111550",
@@ -58769,7 +58707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7848977364375199305",
+    "id": "wevity-1225684124022886066",
     "boardType": "contests",
     "title": "2026 글로컬 부산관광 트래블톤 공모전",
     "category": "contest_general",
@@ -58786,7 +58724,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111518",
@@ -58800,7 +58738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8445943575082006270",
+    "id": "wevity-1061693482572077271",
     "boardType": "contests",
     "title": "2026년 경산시 시정발전 아이디어 공모전",
     "category": "contest_general",
@@ -58817,7 +58755,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111499",
@@ -58831,7 +58769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6751236505231539348",
+    "id": "wevity-8237403750434291521",
     "boardType": "contests",
     "title": "2026 충남이라 누리는 정책체험·생활수기 공모전",
     "category": "contest_general",
@@ -58848,7 +58786,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111491",
@@ -58862,7 +58800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5986236801606802575",
+    "id": "wevity-9090335282138793654",
     "boardType": "contests",
     "title": "[한국장애인고용공단] 2026 KEAD 기업 규제개선 아이디어 공모전",
     "category": "contest_general",
@@ -58879,7 +58817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111484",
@@ -58893,7 +58831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5831911191392574011",
+    "id": "wevity-34601161278413496",
     "boardType": "contests",
     "title": "2026년 동작구 정책 아이디어 공모전",
     "category": "contest_general",
@@ -58910,7 +58848,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111482",
@@ -58924,7 +58862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2313410966923627642",
+    "id": "wevity-6858993365017575878",
     "boardType": "contests",
     "title": "2026년 익산시 시정발전 아이디어 공모전",
     "category": "contest_general",
@@ -58941,7 +58879,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111481",
@@ -58955,7 +58893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1076757715618127275",
+    "id": "wevity-7319516325410153467",
     "boardType": "contests",
     "title": "도심 쓰레기 처방전 공모전",
     "category": "contest_general",
@@ -58972,7 +58910,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111466",
@@ -58986,7 +58924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5386764504974557177",
+    "id": "wevity-3041670861370280771",
     "boardType": "contests",
     "title": "[무주군] 신규사업 발굴 군민 아이디어 공모전",
     "category": "contest_general",
@@ -59003,7 +58941,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111465",
@@ -59017,7 +58955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6442028518293907566",
+    "id": "wevity-287266956688985148",
     "boardType": "contests",
     "title": "전국대학생 FTA 활용 비즈니스 경진대회",
     "category": "contest_general",
@@ -59034,7 +58972,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111460",
@@ -59048,7 +58986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5403115971763845737",
+    "id": "wevity-2804483043681783863",
     "boardType": "contests",
     "title": "2026 KSMS 추계 인천국제공항공사 대학생 아이디어 경진대회",
     "category": "contest_general",
@@ -59065,7 +59003,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111459",
@@ -59079,7 +59017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7034888027916284540",
+    "id": "wevity-6989952986403373332",
     "boardType": "contests",
     "title": "2026년 새로한난 대국민 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -59096,7 +59034,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111447",
@@ -59110,7 +59048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5350416961607825749",
+    "id": "wevity-8822748467475165424",
     "boardType": "contests",
     "title": "2026년 파주시정 혁신 아이디어 공모전",
     "category": "contest_general",
@@ -59127,7 +59065,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111441",
@@ -59141,7 +59079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-227631549718240549",
+    "id": "wevity-7069733669942250959",
     "boardType": "contests",
     "title": "2026년 성남시 탄소중립 아이디어 공모전",
     "category": "contest_general",
@@ -59158,7 +59096,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111408",
@@ -59172,7 +59110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5430413127961904212",
+    "id": "wevity-3813298411521502384",
     "boardType": "contests",
     "title": "특별한 강원 우리의 변화 공모전",
     "category": "contest_general",
@@ -59189,7 +59127,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111407",
@@ -59203,7 +59141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8382748823414817087",
+    "id": "wevity-1765415472239659553",
     "boardType": "contests",
     "title": "인천광역시 일자리사업 시민제안 공모전",
     "category": "contest_general",
@@ -59220,7 +59158,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=6&ix=111397",
@@ -59234,7 +59172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-584991199124705082",
+    "id": "wevity-2503634908903654307",
     "boardType": "contests",
     "title": "2026 K-MEDI AI 혁신 아이디어 챌린지 공모전",
     "category": "contest_general",
@@ -59251,7 +59189,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111390",
@@ -59265,7 +59203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5656731962014083755",
+    "id": "wevity-4466130369051888531",
     "boardType": "contests",
     "title": "문화·관광·콘텐츠 분야 대국민 연구 아이디어 공모",
     "category": "contest_general",
@@ -59282,7 +59220,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111386",
@@ -59296,7 +59234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-967486730241294300",
+    "id": "wevity-3185172854146293563",
     "boardType": "contests",
     "title": "2026년 시흥시 규제혁신 아이디어 공모",
     "category": "contest_general",
@@ -59313,7 +59251,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111365",
@@ -59327,7 +59265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1859803073487974678",
+    "id": "wevity-1678955558676861333",
     "boardType": "contests",
     "title": "2026년 K-푸드테크 해커톤 대회",
     "category": "contest_coding",
@@ -59344,7 +59282,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111363",
@@ -59358,7 +59296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3586531082958952066",
+    "id": "wevity-8605095424849149702",
     "boardType": "contests",
     "title": "[감사원] 2026년 국민제안 감사 아이디어 공모",
     "category": "contest_general",
@@ -59375,7 +59313,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111352",
@@ -59389,7 +59327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5851580643639014549",
+    "id": "wevity-2282426672186278459",
     "boardType": "contests",
     "title": "해양바이오뱅크 산업·연구 활용 아이디어 발굴 공모전",
     "category": "contest_general",
@@ -59406,7 +59344,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111350",
@@ -59420,7 +59358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5261819722667045333",
+    "id": "wevity-7844680552224709247",
     "boardType": "contests",
     "title": "2026년 제4회 안성시 시정발전 제안공모전",
     "category": "contest_general",
@@ -59437,7 +59375,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111330",
@@ -59451,7 +59389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8936353064517822206",
+    "id": "wevity-4391833652218016624",
     "boardType": "contests",
     "title": "[기후에너지환경부] 제13회 대학생 물환경 정책·기술 공모전",
     "category": "contest_general",
@@ -59468,7 +59406,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111329",
@@ -59482,7 +59420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7888805716286200313",
+    "id": "wevity-6179299819780282969",
     "boardType": "contests",
     "title": "통합 라디오 애플리케이션 대국민 아이디어 공모",
     "category": "contest_general",
@@ -59499,7 +59437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111326",
@@ -59513,7 +59451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5534815089937698128",
+    "id": "wevity-486648058791076529",
     "boardType": "contests",
     "title": "2026년 강북구 청소년 사회적경제 아이디어 공모전",
     "category": "contest_general",
@@ -59530,7 +59468,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111323",
@@ -59544,7 +59482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3545107303302260018",
+    "id": "wevity-8314484821661197456",
     "boardType": "contests",
     "title": "[행정안전부] 제7차 열린정부 실행계획 국민제안공모",
     "category": "contest_general",
@@ -59561,7 +59499,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111320",
@@ -59575,7 +59513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5403458797753369673",
+    "id": "wevity-8062743756318710217",
     "boardType": "contests",
     "title": "[국가철도공단] 철도산업 규제ㆍ애로 개선제안 공모",
     "category": "contest_general",
@@ -59592,7 +59530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111319",
@@ -59606,7 +59544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-841421994345958431",
+    "id": "wevity-5183320934524178160",
     "boardType": "contests",
     "title": "2026년 인천광역시의회 정책아이디어 공모전",
     "category": "contest_general",
@@ -59623,7 +59561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111307",
@@ -59637,7 +59575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5347795447958664200",
+    "id": "wevity-3318625612385071772",
     "boardType": "contests",
     "title": "2026년 강서구 아이디어 공모전",
     "category": "contest_general",
@@ -59654,7 +59592,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=1&gbn=view&gp=7&ix=111304",
@@ -59668,7 +59606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8042532888094300998",
+    "id": "wevity-1710242284373823152",
     "boardType": "contests",
     "title": "2027 서울국제정원박람회 작가정원 국제공모",
     "category": "contest_general",
@@ -59685,7 +59623,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=112219",
@@ -59699,7 +59637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1176720243645918423",
+    "id": "wevity-1159335667446175020",
     "boardType": "contests",
     "title": "양천구 건축공간디자인상 공모",
     "category": "contest_art",
@@ -59716,7 +59654,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111887",
@@ -59730,7 +59668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2543004544470518278",
+    "id": "wevity-1065477011559495773",
     "boardType": "contests",
     "title": "제5회 LH가든(수원당수) 주민참여정원 아이디어공모",
     "category": "contest_general",
@@ -59747,7 +59685,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111853",
@@ -59761,7 +59699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4678282159702652842",
+    "id": "wevity-9197748384615332885",
     "boardType": "contests",
     "title": "제5회 LH가든(수원당수) 학생참여정원 아이디어공모",
     "category": "contest_general",
@@ -59778,7 +59716,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111851",
@@ -59792,7 +59730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7235871354390467270",
+    "id": "wevity-3202687232800943889",
     "boardType": "contests",
     "title": "용산국제업무지구 AI 스마트도시 아이디어 공모",
     "category": "contest_general",
@@ -59809,7 +59747,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111726",
@@ -59823,7 +59761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7227296153165344137",
+    "id": "wevity-2351490183914460735",
     "boardType": "contests",
     "title": "제21회 2026년 한국공간디자인 전국공모전",
     "category": "contest_art",
@@ -59840,7 +59778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111703",
@@ -59854,7 +59792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8833822677392085690",
+    "id": "wevity-8543410413043472344",
     "boardType": "contests",
     "title": "2026 제43회 골든스케일디자인어워드",
     "category": "contest_art",
@@ -59871,7 +59809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111166",
@@ -59885,7 +59823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7487188053399901446",
+    "id": "wevity-6488211868803483062",
     "boardType": "contests",
     "title": "2026 에어-비트 시티 건축디자인 공모전",
     "category": "contest_art",
@@ -59902,7 +59840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=110383",
@@ -59916,7 +59854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4119407916480221559",
+    "id": "wevity-2986257065586304476",
     "boardType": "contests",
     "title": "2026 (다시, 다리다) 유휴공간 활성화 아이디어 공모전",
     "category": "contest_general",
@@ -59933,7 +59871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111976",
@@ -59947,7 +59885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2665267043651194152",
+    "id": "wevity-1877576768103678928",
     "boardType": "contests",
     "title": "2026년 도시정책 시민계획단 및 청소년계획단 모집",
     "category": "contest_general",
@@ -59964,7 +59902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111464",
@@ -59978,7 +59916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7403183521876174393",
+    "id": "wevity-3516405827921657123",
     "boardType": "contests",
     "title": "2026 시민참여 건축콘텐츠 전 사진, 영상 공모전",
     "category": "contest_general",
@@ -59995,7 +59933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111443",
@@ -60009,7 +59947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7964541778596857362",
+    "id": "wevity-4746252499879089597",
     "boardType": "contests",
     "title": "2026 제주국제건축문화제 건축문화대상 건축사진 공모전",
     "category": "contest_general",
@@ -60026,7 +59964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=1&ix=111360",
@@ -60040,7 +59978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3004756634606495363",
+    "id": "wevity-7850989364447699195",
     "boardType": "contests",
     "title": "2026년 제24회 김해 건축대상제 작품공모",
     "category": "contest_general",
@@ -60057,7 +59995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110968",
@@ -60071,7 +60009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7678815641474522438",
+    "id": "wevity-2413539008947600917",
     "boardType": "contests",
     "title": "혹한기(겨울철) 현장근로자 안전사고 예방에 대한 슬로건 공모전",
     "category": "contest_general",
@@ -60088,7 +60026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110936",
@@ -60102,7 +60040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-756297549902075235",
+    "id": "wevity-3389818977091378909",
     "boardType": "contests",
     "title": "제2회 양평군 건축문화상",
     "category": "contest_general",
@@ -60119,7 +60057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110839",
@@ -60133,7 +60071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-991343892410290837",
+    "id": "wevity-2396187978962785543",
     "boardType": "contests",
     "title": "2026년 고양시 좋은 간판 공모전",
     "category": "contest_general",
@@ -60150,7 +60088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110838",
@@ -60164,7 +60102,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9210077326135677363",
+    "id": "wevity-5990067165732752392",
     "boardType": "contests",
     "title": "NEXT SPACE DESIGN AWARD 2026",
     "category": "contest_general",
@@ -60181,7 +60119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110815",
@@ -60195,7 +60133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1355673445358094935",
+    "id": "wevity-1015014129021908827",
     "boardType": "contests",
     "title": "제2회 직스캐드 AX 경진대회 - 설계 및 영상 공모전 (건축, 인테리어, 제조, 영상, CAD)",
     "category": "contest_general",
@@ -60212,7 +60150,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110589",
@@ -60226,7 +60164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8699012868986641252",
+    "id": "wevity-7639328557513473212",
     "boardType": "contests",
     "title": "2026년 제2회 건축 동아리(개인) 공모전",
     "category": "contest_general",
@@ -60243,7 +60181,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110513",
@@ -60257,7 +60195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3277347070804515964",
+    "id": "wevity-955773045284623384",
     "boardType": "contests",
     "title": "2026 LOWCA 건축 아이디어 공모전",
     "category": "contest_general",
@@ -60274,7 +60212,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110341",
@@ -60288,7 +60226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7843621483448324951",
+    "id": "wevity-8825287490854247321",
     "boardType": "contests",
     "title": "제6회 그린리모델링 챌린지 대학생 해커톤",
     "category": "contest_coding",
@@ -60305,7 +60243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110319",
@@ -60319,7 +60257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7242463701415730083",
+    "id": "wevity-283583405343607488",
     "boardType": "contests",
     "title": "2026 남도K-가든 페스티벌 시민참여정원 공모",
     "category": "contest_general",
@@ -60336,7 +60274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110238",
@@ -60350,7 +60288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1209863438720662439",
+    "id": "wevity-5889526068564085801",
     "boardType": "contests",
     "title": "화명 야이수영장 국제 디자인 경쟁공모",
     "category": "contest_art",
@@ -60367,7 +60305,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110105",
@@ -60381,7 +60319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7680338464436443642",
+    "id": "wevity-2422881811953922770",
     "boardType": "contests",
     "title": "제3회 제주 그린스팟 혼디해요 공모전",
     "category": "contest_general",
@@ -60398,7 +60336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110092",
@@ -60412,7 +60350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8730892916010484148",
+    "id": "wevity-111733734861477556",
     "boardType": "contests",
     "title": "2026 영산강 가족정원 페스티벌 시민 참여정원 공모",
     "category": "contest_general",
@@ -60429,7 +60367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110088",
@@ -60443,7 +60381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4386786036362593390",
+    "id": "wevity-6136458273100981894",
     "boardType": "contests",
     "title": "국토안전관리원 2026년 국토안전 AI 콘텐츠 공모전",
     "category": "contest_general",
@@ -60460,7 +60398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=2&ix=110081",
@@ -60474,7 +60412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-769859561298166790",
+    "id": "wevity-8648032928883102130",
     "boardType": "contests",
     "title": "2026 강남구 아름다운 감성경관 공모전",
     "category": "contest_general",
@@ -60491,7 +60429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109963",
@@ -60505,7 +60443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7353225975144554394",
+    "id": "wevity-5887388455362298339",
     "boardType": "contests",
     "title": "2026년 부산 가든쇼 큰손바닥정원 공모전",
     "category": "contest_general",
@@ -60522,7 +60460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109924",
@@ -60536,7 +60474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3640779696005160235",
+    "id": "wevity-7083054445723910543",
     "boardType": "contests",
     "title": "2026 대한민국 국토대전",
     "category": "contest_general",
@@ -60553,7 +60491,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109894",
@@ -60567,7 +60505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2191297573455132697",
+    "id": "wevity-2029849278495670175",
     "boardType": "contests",
     "title": "2026 제9회 세종건축문화제 대학생 공모전",
     "category": "contest_general",
@@ -60584,7 +60522,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109800",
@@ -60598,7 +60536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5597797524136524266",
+    "id": "wevity-6921944951159597771",
     "boardType": "contests",
     "title": "2026 수성 건축·조경 시각작품 국제 공모전",
     "category": "contest_general",
@@ -60615,7 +60553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109684",
@@ -60629,7 +60567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3800560231829195150",
+    "id": "wevity-6846853545765085623",
     "boardType": "contests",
     "title": "제2회 AI HOME 인테리어 디자인 컨테스트",
     "category": "contest_art",
@@ -60646,7 +60584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109647",
@@ -60660,7 +60598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7381045659233361604",
+    "id": "wevity-5462110813905981431",
     "boardType": "contests",
     "title": "2026 제62회 경기건축대전",
     "category": "contest_general",
@@ -60677,7 +60615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109613",
@@ -60691,7 +60629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1329592175377229383",
+    "id": "wevity-8106721971428961603",
     "boardType": "contests",
     "title": "2026년 아산시 브랜드 자산활용 관·학 협력 공공디자인 공모전 참여대학 모집",
     "category": "contest_art",
@@ -60708,7 +60646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109352",
@@ -60722,7 +60660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3199202389656397890",
+    "id": "wevity-2489572572370275982",
     "boardType": "contests",
     "title": "2026년 KICOX 산단안전 제도개선 공모전",
     "category": "contest_general",
@@ -60739,7 +60677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109165",
@@ -60753,7 +60691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-381759668022042763",
+    "id": "wevity-3777151961985405429",
     "boardType": "contests",
     "title": "2026 서귀포시 아름다운 간판상 공모전",
     "category": "contest_general",
@@ -60770,7 +60708,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109084",
@@ -60784,7 +60722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-836165905102976616",
+    "id": "wevity-1157666723431119066",
     "boardType": "contests",
     "title": "제15회 서울시 좋은빛상 공모전",
     "category": "contest_general",
@@ -60801,7 +60739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=109019",
@@ -60815,7 +60753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2423292723350073772",
+    "id": "wevity-5576091142525641791",
     "boardType": "contests",
     "title": "2026 동아시아문화도시 안동 정원문화교류전 시민 참여정원 작품 공모전",
     "category": "contest_writing",
@@ -60832,7 +60770,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108988",
@@ -60846,7 +60784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8773416825128509343",
+    "id": "wevity-1283689064255335023",
     "boardType": "contests",
     "title": "2026 SH 스마트 건설기술 경진대회",
     "category": "contest_coding",
@@ -60863,7 +60801,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108925",
@@ -60877,7 +60815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1651529141652839916",
+    "id": "wevity-6334179506991663553",
     "boardType": "contests",
     "title": "서울출입국･외국인청 신축청사 건축물 미술작품 제작 및 설치 공모",
     "category": "contest_art",
@@ -60894,7 +60832,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=3&ix=108809",
@@ -60908,7 +60846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4967957382902991827",
+    "id": "wevity-833215133621983326",
     "boardType": "contests",
     "title": "LH미래 : 도시공원 학생공모전",
     "category": "contest_general",
@@ -60925,7 +60863,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108806",
@@ -60939,7 +60877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6289801911214072074",
+    "id": "wevity-7079722671894366215",
     "boardType": "contests",
     "title": "2026 제2회 서울한옥 미래상(Future of Seoul Hanok) 디자인 아이디어 공모",
     "category": "contest_art",
@@ -60956,7 +60894,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108755",
@@ -60970,7 +60908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8135596412348168816",
+    "id": "wevity-4052732672211064434",
     "boardType": "contests",
     "title": "LH 케이블타워 CT 디자인 아이디어 공모",
     "category": "contest_art",
@@ -60987,7 +60925,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108663",
@@ -61001,7 +60939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5978498818242988369",
+    "id": "wevity-4654934764309895779",
     "boardType": "contests",
     "title": "제38회 대한민국 실내건축대전",
     "category": "contest_general",
@@ -61018,7 +60956,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108562",
@@ -61032,7 +60970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6143451283631642630",
+    "id": "wevity-1839515169495158321",
     "boardType": "contests",
     "title": "2026 한국도로공사 정원디자인 공모전",
     "category": "contest_art",
@@ -61049,7 +60987,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108499",
@@ -61063,7 +61001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3072687781608493530",
+    "id": "wevity-2493498810279020509",
     "boardType": "contests",
     "title": "제7회 좋은데이 미술대전",
     "category": "contest_music",
@@ -61080,7 +61018,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108461",
@@ -61094,7 +61032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2303071093993163973",
+    "id": "wevity-220801345372149738",
     "boardType": "contests",
     "title": "2026 대한민국 영월 정원산업박람회 학생참여정원 작품 공모",
     "category": "contest_general",
@@ -61111,7 +61049,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108448",
@@ -61125,7 +61063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3784961922939492723",
+    "id": "wevity-267458138681598423",
     "boardType": "contests",
     "title": "2026년 제2회 전주시 도시재생 공간디자인 공모전",
     "category": "contest_art",
@@ -61142,7 +61080,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108435",
@@ -61156,7 +61094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8577004436943307996",
+    "id": "wevity-6755979042383512361",
     "boardType": "contests",
     "title": "2026 경기도 도시재생 경진대회",
     "category": "contest_general",
@@ -61173,7 +61111,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108365",
@@ -61187,7 +61125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4185511972697108690",
+    "id": "wevity-9016001876721580352",
     "boardType": "contests",
     "title": "제11회 우리동네 좋은집 찾기 공모전",
     "category": "contest_general",
@@ -61204,7 +61142,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108299",
@@ -61218,7 +61156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-596535471921178205",
+    "id": "wevity-3677332231705790440",
     "boardType": "contests",
     "title": "2026년 제18회 충남 공공디자인 공모전",
     "category": "contest_art",
@@ -61235,7 +61173,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108250",
@@ -61249,7 +61187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-415950774701739116",
+    "id": "wevity-146212752744279787",
     "boardType": "contests",
     "title": "제10회 진주시 도시·공공디자인 작품공모전",
     "category": "contest_art",
@@ -61266,7 +61204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=108052",
@@ -61280,7 +61218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4197197862989813802",
+    "id": "wevity-704931046265627917",
     "boardType": "contests",
     "title": "제8회 시흥시 도시·건축드로잉 공모전",
     "category": "contest_general",
@@ -61297,7 +61235,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107965",
@@ -61311,7 +61249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7043127701478348637",
+    "id": "wevity-3318004787824353519",
     "boardType": "contests",
     "title": "2026년 제20회 빛공해 공모전",
     "category": "contest_general",
@@ -61328,7 +61266,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107928",
@@ -61342,7 +61280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1607469041058593965",
+    "id": "wevity-7144484000226176535",
     "boardType": "contests",
     "title": "2026 제11회 전국대학생 CM 시공 · 경진대회",
     "category": "contest_general",
@@ -61359,7 +61297,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=4&ix=107924",
@@ -61373,7 +61311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8277316086954429511",
+    "id": "wevity-3627511292955111654",
     "boardType": "contests",
     "title": "2026 울산조선해양축제 - 기발한 배 콘테스트 (참가비 있음)",
     "category": "contest_general",
@@ -61390,7 +61328,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107792",
@@ -61404,7 +61342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3265818212914628764",
+    "id": "wevity-6664892814421474888",
     "boardType": "contests",
     "title": "2026 호반그룹×서울창업허브 오픈이노베이션_[2026 호반혁신기술공모전]",
     "category": "contest_general",
@@ -61421,7 +61359,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107788",
@@ -61435,7 +61373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5826419565209087207",
+    "id": "wevity-1953930129102406905",
     "boardType": "contests",
     "title": "2026 HiKR MEDIA ART(하이커 미디어 아트) 공모전",
     "category": "contest_music",
@@ -61452,7 +61390,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107781",
@@ -61466,7 +61404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4489470174759424158",
+    "id": "wevity-2798197199246680564",
     "boardType": "contests",
     "title": "BIGFIELDS STUDENTS PRIZE 2026 (참가비 있음)",
     "category": "contest_general",
@@ -61483,7 +61421,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107760",
@@ -61497,7 +61435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5986844426585096544",
+    "id": "wevity-9176233979682471212",
     "boardType": "contests",
     "title": "2026 구조물 내진설계 경진대회",
     "category": "contest_general",
@@ -61514,7 +61452,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107723",
@@ -61528,7 +61466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6490996511775380927",
+    "id": "wevity-6402011718850362622",
     "boardType": "contests",
     "title": "제7회 계룡장학재단 건축 아이디어 공모전",
     "category": "contest_music",
@@ -61545,7 +61483,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107651",
@@ -61559,7 +61497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6280975431781034623",
+    "id": "wevity-6759106886834984136",
     "boardType": "contests",
     "title": "2026 경기정원문화박람회 작가정원 작품공모",
     "category": "contest_general",
@@ -61576,7 +61514,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107563",
@@ -61590,7 +61528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-961760233263932450",
+    "id": "wevity-2770444131513631038",
     "boardType": "contests",
     "title": "2026 경기정원문화박람회 상상정원 작품공모",
     "category": "contest_general",
@@ -61607,7 +61545,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107557",
@@ -61621,7 +61559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8469084279565320273",
+    "id": "wevity-1164361754445838736",
     "boardType": "contests",
     "title": "2026 충남 건축문화제 대학생 설계공모전",
     "category": "contest_general",
@@ -61638,7 +61576,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107522",
@@ -61652,7 +61590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1107045683714296740",
+    "id": "wevity-8458765968418186539",
     "boardType": "contests",
     "title": "제11회 전라남도 친환경·범용디자인 공모전",
     "category": "contest_art",
@@ -61669,7 +61607,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107445",
@@ -61683,7 +61621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7134135831843990457",
+    "id": "wevity-6625828033176489592",
     "boardType": "contests",
     "title": "2026년 제23회 김해시 도시경관디자인 작품공모전",
     "category": "contest_art",
@@ -61700,7 +61638,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107289",
@@ -61714,7 +61652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5806309350597568086",
+    "id": "wevity-8567300408960526262",
     "boardType": "contests",
     "title": "2026년 함께 디자인하는 미래학교 공간 공모전",
     "category": "contest_art",
@@ -61731,7 +61669,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107272",
@@ -61745,7 +61683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3136913989141783531",
+    "id": "wevity-2830275200635195407",
     "boardType": "contests",
     "title": "2026 제44회 서울특별시 건축상 공모",
     "category": "contest_general",
@@ -61762,7 +61700,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107204",
@@ -61776,7 +61714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7996783683866717089",
+    "id": "wevity-7967239849877703119",
     "boardType": "contests",
     "title": "2026년 화성특례시 민간정원 공모전",
     "category": "contest_general",
@@ -61793,7 +61731,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107144",
@@ -61807,7 +61745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4994579985580336396",
+    "id": "wevity-2703315515129010287",
     "boardType": "contests",
     "title": "2026 광주_아시아국제건축공모전",
     "category": "contest_general",
@@ -61824,7 +61762,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=5&ix=107086",
@@ -61838,7 +61776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2717809446819194988",
+    "id": "wevity-4809190872119782420",
     "boardType": "contests",
     "title": "2026 안양시 건축문화상 작품 공모(아름다운 건축물 부문/계획작품 부문)",
     "category": "contest_general",
@@ -61855,7 +61793,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=107074",
@@ -61869,7 +61807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5473291599066782521",
+    "id": "wevity-3388378982788425060",
     "boardType": "contests",
     "title": "2026 IPARK 기술제안 공모전",
     "category": "contest_coding",
@@ -61886,7 +61824,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=107009",
@@ -61900,7 +61838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8287231880433516090",
+    "id": "wevity-786796584068277207",
     "boardType": "contests",
     "title": "제16회 제주 공공디자인 공모전",
     "category": "contest_art",
@@ -61917,7 +61855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106767",
@@ -61931,7 +61869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4939176457688950359",
+    "id": "wevity-4737419472659520092",
     "boardType": "contests",
     "title": "2026년 스마트건설 얼라이언스 기술실증 지원사업 공고 안내",
     "category": "contest_general",
@@ -61948,7 +61886,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106622",
@@ -61962,7 +61900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5299973067591140812",
+    "id": "wevity-3464574884882372775",
     "boardType": "contests",
     "title": "제7회 해양경찰 함정설계 공모전",
     "category": "contest_general",
@@ -61979,7 +61917,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106565",
@@ -61993,7 +61931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8577140623548294983",
+    "id": "wevity-1553744218605778324",
     "boardType": "contests",
     "title": "2026 강원건축문화제 학생작품 전국 공모",
     "category": "contest_general",
@@ -62010,7 +61948,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106532",
@@ -62024,7 +61962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8376155034139490040",
+    "id": "wevity-207240583625649495",
     "boardType": "contests",
     "title": "제5회 우덕미래건축가상 공모전",
     "category": "contest_general",
@@ -62041,7 +61979,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106343",
@@ -62055,7 +61993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6130299076681166119",
+    "id": "wevity-5827772862329378811",
     "boardType": "contests",
     "title": "제18회 대한민국 도시숲 설계공모대전",
     "category": "contest_general",
@@ -62072,7 +62010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106294",
@@ -62086,7 +62024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4922875966057897098",
+    "id": "wevity-4348661970190105077",
     "boardType": "contests",
     "title": "2026년 근현대건축 문화유산 활성화 공모전",
     "category": "contest_general",
@@ -62103,7 +62041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106243",
@@ -62117,7 +62055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4403580376540129495",
+    "id": "wevity-6560919727923714758",
     "boardType": "contests",
     "title": "2026 한국리모델링건축대전",
     "category": "contest_general",
@@ -62134,7 +62072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106174",
@@ -62148,7 +62086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4899924228319279304",
+    "id": "wevity-4263570322240597173",
     "boardType": "contests",
     "title": "2026 대구 도시디자인 공모전",
     "category": "contest_art",
@@ -62165,7 +62103,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106157",
@@ -62179,7 +62117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8154992948606820433",
+    "id": "wevity-2691129678212456962",
     "boardType": "contests",
     "title": "제2회 국산목재이용기술 대상(大賞) 공모",
     "category": "contest_general",
@@ -62196,7 +62134,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106084",
@@ -62210,7 +62148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8447937427430838682",
+    "id": "wevity-7168434536329623939",
     "boardType": "contests",
     "title": "2026 진주 정원박람회 시민참여정원 작품 공모",
     "category": "contest_general",
@@ -62227,7 +62165,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=106007",
@@ -62241,7 +62179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1916109397795456807",
+    "id": "wevity-4245715590048737348",
     "boardType": "contests",
     "title": "2026 제6회 청주 파빌리온 아이디어 공모전",
     "category": "contest_general",
@@ -62258,7 +62196,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=6&ix=105969",
@@ -62272,7 +62210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5933590689725230860",
+    "id": "wevity-3518340840108097702",
     "boardType": "contests",
     "title": "2026년 경기도 공공디자인 공모전",
     "category": "contest_art",
@@ -62289,7 +62227,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105881",
@@ -62303,7 +62241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4754839163086207049",
+    "id": "wevity-5613007165497627697",
     "boardType": "contests",
     "title": "2026 제24회 대한민국목조건축대전 공모전",
     "category": "contest_general",
@@ -62320,7 +62258,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105822",
@@ -62334,7 +62272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8073765592089810617",
+    "id": "wevity-3877621991043957281",
     "boardType": "contests",
     "title": "제23회 2026 인천건축학생공모전",
     "category": "contest_general",
@@ -62351,7 +62289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105762",
@@ -62365,7 +62303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8644399387890338283",
+    "id": "wevity-2029672917447519072",
     "boardType": "contests",
     "title": "제18회 대학생 공작기계 창의 아이디어 공모전",
     "category": "contest_general",
@@ -62382,7 +62320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105600",
@@ -62396,7 +62334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2986207011899868285",
+    "id": "wevity-418976441556478711",
     "boardType": "contests",
     "title": "[공모전] 중간주택의 탐색-아파트단지와 다세대주택 사이",
     "category": "contest_general",
@@ -62413,7 +62351,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105567",
@@ -62427,7 +62365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9065333799389129930",
+    "id": "wevity-762296777333583633",
     "boardType": "contests",
     "title": "제3회 대구광역시 동구 공공디자인 공모전",
     "category": "contest_art",
@@ -62444,7 +62382,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105502",
@@ -62458,7 +62396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6310326688499652788",
+    "id": "wevity-6834521282420800681",
     "boardType": "contests",
     "title": "2026 다육 가드닝 전국대회 참가자 모집",
     "category": "contest_general",
@@ -62475,7 +62413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105427",
@@ -62489,7 +62427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3634821267681570060",
+    "id": "wevity-1409975485091573619",
     "boardType": "contests",
     "title": "2026년 제13회 유닛로드시스템 창의성 공모전",
     "category": "contest_general",
@@ -62506,7 +62444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105364",
@@ -62520,7 +62458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6355139380132176789",
+    "id": "wevity-820089296922534579",
     "boardType": "contests",
     "title": "제7회 서울식물원 식재설계(Planting Design) 공모전",
     "category": "contest_general",
@@ -62537,7 +62475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105349",
@@ -62551,7 +62489,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8888977614412129858",
+    "id": "wevity-2388918216384418210",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 제5회 서울대공원 학생정원 작품공모",
     "category": "contest_general",
@@ -62568,7 +62506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105235",
@@ -62582,7 +62520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8558318609790434833",
+    "id": "wevity-645437422883187841",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 제5회 서울대공원 시민정원 작품공모",
     "category": "contest_general",
@@ -62599,7 +62537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=24&gbn=view&gp=7&ix=105234",
@@ -62613,7 +62551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2691960486939693090",
+    "id": "wevity-2235147035020510422",
     "boardType": "contests",
     "title": "저상 좌석버스 네이밍·아이콘 공모전",
     "category": "contest_general",
@@ -62630,7 +62568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112362",
@@ -62644,7 +62582,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2232236194379067254",
+    "id": "wevity-6886283093698526649",
     "boardType": "contests",
     "title": "스타트업 원스톱 지원센터 슬로건 공모전",
     "category": "contest_general",
@@ -62661,7 +62599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112281",
@@ -62675,7 +62613,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7795045295352709618",
+    "id": "wevity-6924570572716470927",
     "boardType": "contests",
     "title": "2027년 도서관의 날 및 도서관주간 전국민 대상 공식주제 공모전",
     "category": "contest_reading",
@@ -62692,7 +62630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112247",
@@ -62706,7 +62644,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5649794568552501547",
+    "id": "wevity-995276935416571161",
     "boardType": "contests",
     "title": "우체국물류지원단 공식 캐릭터 네이밍 공모전",
     "category": "contest_art",
@@ -62723,7 +62661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112235",
@@ -62737,7 +62675,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3481333252488345303",
+    "id": "wevity-7799561470000081208",
     "boardType": "contests",
     "title": "2026년 장애인식개선 표어공모전 (다름의 가치를 잇다)",
     "category": "contest_general",
@@ -62754,7 +62692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112223",
@@ -62768,7 +62706,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7083892373883692881",
+    "id": "wevity-6169084039079403784",
     "boardType": "contests",
     "title": "2027 KUSF 대학스포츠를 대표하는 U-리그 / 클럽챔피언십 슬로건 공모전",
     "category": "contest_general",
@@ -62785,7 +62723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112196",
@@ -62799,7 +62737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8805971282263615331",
+    "id": "wevity-9158008577474902518",
     "boardType": "contests",
     "title": "고령군 소식지 네이밍 공모",
     "category": "contest_general",
@@ -62816,7 +62754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112189",
@@ -62830,7 +62768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1651562227374610453",
+    "id": "wevity-4401995607422929578",
     "boardType": "contests",
     "title": "AI·융합교육 신규 통합 플랫폼 네이밍 공모전",
     "category": "contest_stem",
@@ -62847,7 +62785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112155",
@@ -62861,7 +62799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5974611825887660204",
+    "id": "wevity-625589451240550319",
     "boardType": "contests",
     "title": "안산 4·16세월호참사 추모시설 명칭 공모전",
     "category": "contest_general",
@@ -62878,7 +62816,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112056",
@@ -62892,7 +62830,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2673331212052209010",
+    "id": "wevity-2379076700610159250",
     "boardType": "contests",
     "title": "한국해외인프라도시개발지원공사(KIND) 뉴 슬로건 공모전",
     "category": "contest_coding",
@@ -62909,7 +62847,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111992",
@@ -62923,7 +62861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2171739256007232612",
+    "id": "wevity-8508052009742497003",
     "boardType": "contests",
     "title": "2027 KSPO 스포츠가치센터 슬로건 공모전",
     "category": "contest_general",
@@ -62940,7 +62878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111945",
@@ -62954,7 +62892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5669439404924937446",
+    "id": "wevity-1679551545029326018",
     "boardType": "contests",
     "title": "국립청주해양과학관 개관 기념 대국민 슬로건 공모전",
     "category": "contest_stem",
@@ -62971,7 +62909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111940",
@@ -62985,7 +62923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7652065592453734776",
+    "id": "wevity-1850554434863245348",
     "boardType": "contests",
     "title": "완주군 피지컬AI 실증단지 명칭 공모전",
     "category": "contest_robot",
@@ -63002,7 +62940,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111938",
@@ -63016,7 +62954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5580913421718043773",
+    "id": "wevity-7856745898420915539",
     "boardType": "contests",
     "title": "경남통합복지플랫폼 브랜드 네이밍 공모",
     "category": "contest_general",
@@ -63033,7 +62971,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=112077",
@@ -63047,7 +62985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8991549387160544300",
+    "id": "wevity-7806732298485438596",
     "boardType": "contests",
     "title": "한국노동연구원 캐릭터 네이밍 공모전",
     "category": "contest_art",
@@ -63064,7 +63002,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=1&ix=111866",
@@ -63078,7 +63016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1282921493646716247",
+    "id": "wevity-7805578072556797732",
     "boardType": "contests",
     "title": "2026년 한전KDN 슬로건 공모전",
     "category": "contest_general",
@@ -63095,7 +63033,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111748",
@@ -63109,7 +63047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2917863413751899200",
+    "id": "wevity-5810357842648566075",
     "boardType": "contests",
     "title": "2026년 전북 경력단절예방 실천 한 줄 공모전",
     "category": "contest_general",
@@ -63126,7 +63064,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111512",
@@ -63140,7 +63078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4801467413180038138",
+    "id": "wevity-2868250776851385805",
     "boardType": "contests",
     "title": "경남교육의 가치를 담은 브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63157,7 +63095,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111509",
@@ -63171,7 +63109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1784773446993016782",
+    "id": "wevity-3614104216294088312",
     "boardType": "contests",
     "title": "맑은물에 두유 네이밍 공모전",
     "category": "contest_general",
@@ -63188,7 +63126,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111507",
@@ -63202,7 +63140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6304992514362407009",
+    "id": "wevity-8976888946370325971",
     "boardType": "contests",
     "title": "(가칭) 트래디라운지 명칭 추가(연장) 공모",
     "category": "contest_general",
@@ -63219,7 +63157,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111504",
@@ -63233,7 +63171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8409079301376478173",
+    "id": "wevity-8614368241190428362",
     "boardType": "contests",
     "title": "제21회 건설사업관리(CM) 표어 온라인 공모전",
     "category": "contest_general",
@@ -63250,7 +63188,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111452",
@@ -63264,7 +63202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4677228211408760588",
+    "id": "wevity-6545246349556468451",
     "boardType": "contests",
     "title": "소상공인의 날 기념 N행시 대학생 공모전",
     "category": "contest_general",
@@ -63281,7 +63219,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111451",
@@ -63295,7 +63233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5746540328910293179",
+    "id": "wevity-8351716654841911972",
     "boardType": "contests",
     "title": "강릉시 청년센터 명칭 공모",
     "category": "contest_general",
@@ -63312,7 +63250,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111437",
@@ -63326,7 +63264,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1251457252578254213",
+    "id": "wevity-8454647306710964407",
     "boardType": "contests",
     "title": "완도 대표축제 명칭 공모전",
     "category": "contest_general",
@@ -63343,7 +63281,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111429",
@@ -63357,7 +63295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2053833423175868181",
+    "id": "wevity-1357776466256258030",
     "boardType": "contests",
     "title": "국립군산대학교 개교80주년 기념 슬로건 공모전",
     "category": "contest_general",
@@ -63374,7 +63312,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111412",
@@ -63388,7 +63326,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2291119413285057925",
+    "id": "wevity-6460026137290298995",
     "boardType": "contests",
     "title": "대국민 체육시설 안전 공동 슬로건 공모전",
     "category": "contest_general",
@@ -63405,7 +63343,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111387",
@@ -63419,7 +63357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5927301345885959302",
+    "id": "wevity-6532584423168980065",
     "boardType": "contests",
     "title": "강원특별자치도교육청 홍보브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63436,7 +63374,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111303",
@@ -63450,7 +63388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1092327948535998251",
+    "id": "wevity-1098622334677956300",
     "boardType": "contests",
     "title": "쉐라톤 제주 호텔 마스코트 네이밍 공모전",
     "category": "contest_general",
@@ -63467,7 +63405,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111210",
@@ -63481,7 +63419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5016783871292024929",
+    "id": "wevity-7103220003500114968",
     "boardType": "contests",
     "title": "정찰제 후불제상조 회사 이름 공모전",
     "category": "contest_general",
@@ -63498,7 +63436,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=2&ix=111207",
@@ -63512,7 +63450,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8972164874402047678",
+    "id": "wevity-2322494158628467822",
     "boardType": "contests",
     "title": "[경찰청] 제81주년 경찰의 날 기념식 슬로건(고정) 공모전",
     "category": "contest_general",
@@ -63529,7 +63467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=111187",
@@ -63543,7 +63481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4043187130744139614",
+    "id": "wevity-6262374040513945728",
     "boardType": "contests",
     "title": "서울YWCA와 함께 하는 환대의 말 공모전",
     "category": "contest_general",
@@ -63560,7 +63498,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=111154",
@@ -63574,7 +63512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-58880403059232954",
+    "id": "wevity-6435894659423742096",
     "boardType": "contests",
     "title": "제63회 무역의 날 슬로건 공모전",
     "category": "contest_general",
@@ -63591,7 +63529,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=111134",
@@ -63605,7 +63543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8949593776164196793",
+    "id": "wevity-2285929770530248891",
     "boardType": "contests",
     "title": "전국민 AI 역량 강화 정책 브랜드 공모전",
     "category": "contest_stem",
@@ -63622,7 +63560,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=111006",
@@ -63636,7 +63574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7967344895989799197",
+    "id": "wevity-8911940876297946302",
     "boardType": "contests",
     "title": "검단구 구정소식지 명칭 공모",
     "category": "contest_general",
@@ -63653,7 +63591,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110997",
@@ -63667,7 +63605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3765395270990656004",
+    "id": "wevity-2605086890123116671",
     "boardType": "contests",
     "title": "[화성시정신건강복지센터] 2026년 정신건강 슬로건 공모전",
     "category": "contest_general",
@@ -63684,7 +63622,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110937",
@@ -63698,7 +63636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3755561142299743475",
+    "id": "wevity-3446295745643827447",
     "boardType": "contests",
     "title": "[매머드커피] NEW! 브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -63715,7 +63653,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110808",
@@ -63729,7 +63667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2781290237841669713",
+    "id": "wevity-6144399413920121737",
     "boardType": "contests",
     "title": "2026 IFWF 인권주간 제2회 인권 표어 공모전",
     "category": "contest_general",
@@ -63746,7 +63684,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110769",
@@ -63760,7 +63698,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3235258421560140197",
+    "id": "wevity-7888405627824526431",
     "boardType": "contests",
     "title": "솥밥 프랜차이즈 음식점 네이밍 공모전",
     "category": "contest_general",
@@ -63777,7 +63715,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110594",
@@ -63791,7 +63729,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8338654789581335230",
+    "id": "wevity-9114986217408778659",
     "boardType": "contests",
     "title": "함안군 제7회 함안애(愛)복지박람회 슬로건 공모전",
     "category": "contest_general",
@@ -63808,7 +63746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110545",
@@ -63822,7 +63760,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7623368858355540870",
+    "id": "wevity-3981518712297797675",
     "boardType": "contests",
     "title": "파주 상생경제 플랫폼의 이름을 지어주세요! 명칭 공모전",
     "category": "contest_general",
@@ -63839,7 +63777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110527",
@@ -63853,7 +63791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-515036718327074498",
+    "id": "wevity-3346193356492122548",
     "boardType": "contests",
     "title": "여성경제활동 지원센터(새일센터) 새 이름 공모전",
     "category": "contest_general",
@@ -63870,7 +63808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110523",
@@ -63884,7 +63822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3322585269401964268",
+    "id": "wevity-2249394065219309811",
     "boardType": "contests",
     "title": "제주 디지털 통합 신원인증 앱 명칭 공모",
     "category": "contest_coding",
@@ -63901,7 +63839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110505",
@@ -63915,7 +63853,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3755754906785524770",
+    "id": "wevity-1345213588760335258",
     "boardType": "contests",
     "title": "제6회 장애인 구강건강인식개선 캠페인 Smile Slogan! 모두의 미소를 위한 한 줄 슬로건 공모전",
     "category": "contest_general",
@@ -63932,7 +63870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110444",
@@ -63946,7 +63884,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-541079676317074161",
+    "id": "wevity-3151011943241479876",
     "boardType": "contests",
     "title": "안산공동체복합시설 명칭 공모",
     "category": "contest_general",
@@ -63963,7 +63901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=3&ix=110422",
@@ -63977,7 +63915,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7367692129623910178",
+    "id": "wevity-1219959650018398202",
     "boardType": "contests",
     "title": "봉화군 농산물 공동브랜드 네이밍 공모전",
     "category": "contest_general",
@@ -63994,7 +63932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110409",
@@ -64008,7 +63946,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6789563387827014375",
+    "id": "wevity-2923690386561507604",
     "boardType": "contests",
     "title": "봉화군 도시재생 거점시설 네이밍 공모전",
     "category": "contest_general",
@@ -64025,7 +63963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110387",
@@ -64039,7 +63977,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8161778863710393684",
+    "id": "wevity-4319181077662073825",
     "boardType": "contests",
     "title": "2026년 청소년운영위원회 미소 청소년전용카페 애칭 공모전",
     "category": "contest_writing",
@@ -64056,7 +63994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110385",
@@ -64070,7 +64008,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6741988366110523563",
+    "id": "wevity-163810465081766168",
     "boardType": "contests",
     "title": "무주반디뮤지엄 일원 시설 명칭 공모",
     "category": "contest_general",
@@ -64087,7 +64025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110240",
@@ -64101,7 +64039,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4212824744186919608",
+    "id": "wevity-3440008714101724052",
     "boardType": "contests",
     "title": "[전남광주통합특별시 광산구] 하남동 청소년 자율공간 명칭 공모",
     "category": "contest_general",
@@ -64118,7 +64056,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110213",
@@ -64132,7 +64070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6007420191698610067",
+    "id": "wevity-5319941093646722854",
     "boardType": "contests",
     "title": "장성군 신규 공공체육시설(3개소) 명칭 공모전",
     "category": "contest_general",
@@ -64149,7 +64087,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110198",
@@ -64163,7 +64101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3981105041807422227",
+    "id": "wevity-2802552613864923237",
     "boardType": "contests",
     "title": "﻿2026 경기도 청년참여기구 명칭 공모",
     "category": "contest_general",
@@ -64180,7 +64118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110136",
@@ -64194,7 +64132,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2068103077418197007",
+    "id": "wevity-2904271315454924044",
     "boardType": "contests",
     "title": "2026년 한국해양수산연수원 개인정보보호 표어 공모전",
     "category": "contest_general",
@@ -64211,7 +64149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110110",
@@ -64225,7 +64163,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-662747312581035116",
+    "id": "wevity-7683520320381683830",
     "boardType": "contests",
     "title": "충청권 운수종사자 대상 교통안전 슬로건 공모전",
     "category": "contest_general",
@@ -64242,7 +64180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110086",
@@ -64256,7 +64194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4788823604564309799",
+    "id": "wevity-6555680405819038079",
     "boardType": "contests",
     "title": "김천시 시민운동 슬로건 리뉴얼 공모전",
     "category": "contest_general",
@@ -64273,7 +64211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110064",
@@ -64287,7 +64225,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-829871683469239928",
+    "id": "wevity-420979706212835700",
     "boardType": "contests",
     "title": "가마지천 반려공존 하천문화공간 반려견 놀이터 명칭 공모",
     "category": "contest_general",
@@ -64304,7 +64242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=110063",
@@ -64318,7 +64256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6149935540225627419",
+    "id": "wevity-6061313983259722557",
     "boardType": "contests",
     "title": "(가칭)열린도서관 명칭 공모 공고",
     "category": "contest_reading",
@@ -64335,7 +64273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109982",
@@ -64349,7 +64287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2983203026252563098",
+    "id": "wevity-5245592389936152163",
     "boardType": "contests",
     "title": "동서트레일 명칭 및 숲길정책 국민 아이디어 공모",
     "category": "contest_general",
@@ -64366,7 +64304,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109981",
@@ -64380,7 +64318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2482130793609240307",
+    "id": "wevity-3459307058042409049",
     "boardType": "contests",
     "title": "북항 프롬나드 코스 네이밍 공모전",
     "category": "contest_general",
@@ -64397,7 +64335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109848",
@@ -64411,7 +64349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7162610085426471822",
+    "id": "wevity-4079734090726513257",
     "boardType": "contests",
     "title": "하천계곡 관리시스템 명칭 공모",
     "category": "contest_general",
@@ -64428,7 +64366,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=4&ix=109598",
@@ -64442,7 +64380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1455567534533751115",
+    "id": "wevity-6187457708094623538",
     "boardType": "contests",
     "title": "경기도 1인가구 지원 사업 명칭(네이밍) 공모",
     "category": "contest_general",
@@ -64459,7 +64397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109410",
@@ -64473,7 +64411,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8010421547443481309",
+    "id": "wevity-4424871076931945690",
     "boardType": "contests",
     "title": "의왕시 부곡커뮤니티센터 내 공공도서관 명칭 공모",
     "category": "contest_reading",
@@ -64490,7 +64428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109401",
@@ -64504,7 +64442,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8356844272602208753",
+    "id": "wevity-8440235663318122953",
     "boardType": "contests",
     "title": "2026년 도로전광표지(VMS) 교통안전 표어 공모전",
     "category": "contest_general",
@@ -64521,7 +64459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109362",
@@ -64535,7 +64473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-16250007662896273",
+    "id": "wevity-1529075157879946764",
     "boardType": "contests",
     "title": "천하제일 영등포구 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -64552,7 +64490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109272",
@@ -64566,7 +64504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5256790884277201607",
+    "id": "wevity-2623443404666450349",
     "boardType": "contests",
     "title": "[부산광역시 연제구] 구민과 함께하는 반부패·청렴 표어 공모전",
     "category": "contest_general",
@@ -64583,7 +64521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109271",
@@ -64597,7 +64535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5375888094238386193",
+    "id": "wevity-3599331709132577975",
     "boardType": "contests",
     "title": "마음대로(大路) 한 책 N행시 공모전",
     "category": "contest_reading",
@@ -64614,7 +64552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109245",
@@ -64628,7 +64566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3506109706759660985",
+    "id": "wevity-7440082381808788199",
     "boardType": "contests",
     "title": "순천시 민선9기 시정의 패러다임 大전환 시민주권 시대 슬로건 공모전",
     "category": "contest_general",
@@ -64645,7 +64583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=109143",
@@ -64659,7 +64597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2182442698339329310",
+    "id": "wevity-7327837850347445915",
     "boardType": "contests",
     "title": "2026 군인권보호관 슬로건 공모전",
     "category": "contest_general",
@@ -64676,7 +64614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108885",
@@ -64690,7 +64628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5563874877511304467",
+    "id": "wevity-2815073400195122994",
     "boardType": "contests",
     "title": "한국농촌경제연구원 마스코트 네이밍 공모전",
     "category": "contest_general",
@@ -64707,7 +64645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108749",
@@ -64721,7 +64659,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1790378319669997475",
+    "id": "wevity-758996312632965630",
     "boardType": "contests",
     "title": "제10대 마포구의회 슬로건 공모전",
     "category": "contest_general",
@@ -64738,7 +64676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108645",
@@ -64752,7 +64690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4035484547888946605",
+    "id": "wevity-9172462745780194774",
     "boardType": "contests",
     "title": "조달청 BEST 혁신기업 현판 네이밍 공모전",
     "category": "contest_general",
@@ -64769,7 +64707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108641",
@@ -64783,7 +64721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3291570002451157668",
+    "id": "wevity-4399062868411572417",
     "boardType": "contests",
     "title": "2026 국내재취업 브랜드 네이밍 & 캐치프레이즈 공모전",
     "category": "contest_general",
@@ -64800,7 +64738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108598",
@@ -64814,7 +64752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1905892403334296917",
+    "id": "wevity-6878733473837532801",
     "boardType": "contests",
     "title": "경산시 아동돌봄 통합 플랫폼 명칭 공모전",
     "category": "contest_general",
@@ -64831,7 +64769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108555",
@@ -64845,7 +64783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5117964577396644534",
+    "id": "wevity-2223393494218510993",
     "boardType": "contests",
     "title": "2027 청주독서대전 슬로건 공모전",
     "category": "contest_reading",
@@ -64862,7 +64800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108500",
@@ -64876,7 +64814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6406219001183991910",
+    "id": "wevity-5155963778298226188",
     "boardType": "contests",
     "title": "직업계고 채용연계형 직무교육과정 지원사업 브랜드 네이밍&슬로건 공모전",
     "category": "contest_general",
@@ -64893,7 +64831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=5&ix=108494",
@@ -64907,7 +64845,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2763192761610267234",
+    "id": "wevity-553604560668678879",
     "boardType": "contests",
     "title": "2026년 청렴 표어 공모전",
     "category": "contest_reading",
@@ -64924,7 +64862,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=108324",
@@ -64938,7 +64876,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9118541131733932166",
+    "id": "wevity-1806180773518167290",
     "boardType": "contests",
     "title": "2026 국제종자박람회 10주년 기념 슬로건 대국민 공모전",
     "category": "contest_general",
@@ -64955,7 +64893,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=108293",
@@ -64969,7 +64907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3100067879325341117",
+    "id": "wevity-1460053559564857135",
     "boardType": "contests",
     "title": "우리가 만드는 청렴 교실 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -64986,7 +64924,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=108280",
@@ -65000,7 +64938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2937227820145568775",
+    "id": "wevity-308943881993538058",
     "boardType": "contests",
     "title": "광주ㆍ전남 통합 관광브랜드 슬로건 공모전",
     "category": "contest_general",
@@ -65017,7 +64955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=108215",
@@ -65031,7 +64969,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9155785623652159867",
+    "id": "wevity-722093821474577450",
     "boardType": "contests",
     "title": "여수해양경찰서 함정 승조원 지원시설 명칭 공모",
     "category": "contest_general",
@@ -65048,7 +64986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=108128",
@@ -65062,7 +65000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1410127588056715493",
+    "id": "wevity-6921734267635131939",
     "boardType": "contests",
     "title": "[시흥시청소년수련관] 2026년 징검다리'와 함께하는 자율이용공간 네이밍 공모전",
     "category": "contest_general",
@@ -65079,7 +65017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107948",
@@ -65093,7 +65031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1788174530237809176",
+    "id": "wevity-8401192063091246958",
     "boardType": "contests",
     "title": "전북특별자치도청년미래센터 위기청년(가족돌봄, 고립은둔) 응원 슬로건 공모전",
     "category": "contest_general",
@@ -65110,7 +65048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107926",
@@ -65124,7 +65062,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-757441193806643329",
+    "id": "wevity-9203747158738735114",
     "boardType": "contests",
     "title": "2026년 중앙사회서비스원 대국민 슬로건 공모전",
     "category": "contest_general",
@@ -65141,7 +65079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107873",
@@ -65155,7 +65093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8063375090510391402",
+    "id": "wevity-6027479163835310937",
     "boardType": "contests",
     "title": "서울특별시교육청정독도서관 개관 50주년 기념 슬로건 공모전",
     "category": "contest_reading",
@@ -65172,7 +65110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107812",
@@ -65186,7 +65124,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3991413820828329099",
+    "id": "wevity-4540690222169660996",
     "boardType": "contests",
     "title": "대구평생학습플랫폼 디지털 배지(Digital Badges) 명칭 공모전",
     "category": "contest_general",
@@ -65203,7 +65141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107749",
@@ -65217,7 +65155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5813213590727758522",
+    "id": "wevity-5543930744908033789",
     "boardType": "contests",
     "title": "[산업통상부/KIAT] K-Girls' Day 리브랜딩 네이밍 공모전",
     "category": "contest_general",
@@ -65234,7 +65172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107691",
@@ -65248,7 +65186,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4483008310113175368",
+    "id": "wevity-5532691577040252329",
     "boardType": "contests",
     "title": "2026년 장애아동지원센터 별칭 공모전",
     "category": "contest_coding",
@@ -65265,7 +65203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107639",
@@ -65279,7 +65217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9099522231428725601",
+    "id": "wevity-5411255171467129511",
     "boardType": "contests",
     "title": "2026년 에너지절감 슬로건 공모전",
     "category": "contest_general",
@@ -65296,7 +65234,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107518",
@@ -65310,7 +65248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7683331041141127267",
+    "id": "wevity-6855847204092902433",
     "boardType": "contests",
     "title": "단양 다누리 어린이 실내놀이터 이름 공모전",
     "category": "contest_general",
@@ -65327,7 +65265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107366",
@@ -65341,7 +65279,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2800634369261011152",
+    "id": "wevity-4481463501931153896",
     "boardType": "contests",
     "title": "2026 기본사회위원회 슬로건 국민 공모전",
     "category": "contest_general",
@@ -65358,7 +65296,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=6&ix=107251",
@@ -65372,7 +65310,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-119765822392079028",
+    "id": "wevity-1894208990287804577",
     "boardType": "contests",
     "title": "건강도시 안산 슬로건 공모전",
     "category": "contest_general",
@@ -65389,7 +65327,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=107181",
@@ -65403,7 +65341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6061765405291277500",
+    "id": "wevity-2739857140684887576",
     "boardType": "contests",
     "title": "2026년 관악 사회적경제 주민 어울림 한마당 브랜드 네이밍 공모전",
     "category": "contest_general",
@@ -65420,7 +65358,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=107143",
@@ -65434,7 +65372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4764006495544601019",
+    "id": "wevity-6353883319817679157",
     "boardType": "contests",
     "title": "(가칭) 원주 AI 교육센터 명칭 공모",
     "category": "contest_general",
@@ -65451,7 +65389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=107140",
@@ -65465,7 +65403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5439061752516452434",
+    "id": "wevity-1954843223812840908",
     "boardType": "contests",
     "title": "[식품의약품안전처] 의약외품 바로 알기 슬로건 공모전",
     "category": "contest_general",
@@ -65482,7 +65420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106945",
@@ -65496,7 +65434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7056422111302619870",
+    "id": "wevity-1735625416863421306",
     "boardType": "contests",
     "title": "대한변리사회 창립 80주년 기념 슬로건 공모전",
     "category": "contest_general",
@@ -65513,7 +65451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106927",
@@ -65527,7 +65465,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6882761566976444735",
+    "id": "wevity-4017344013033479560",
     "boardType": "contests",
     "title": "2027학년도 신설 공립학교 교명 공모",
     "category": "contest_general",
@@ -65544,7 +65482,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106919",
@@ -65558,7 +65496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-364341785604833833",
+    "id": "wevity-8732592933806139891",
     "boardType": "contests",
     "title": "국립공주대-충남대 통합대학 교명 공모",
     "category": "contest_general",
@@ -65575,7 +65513,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106898",
@@ -65589,7 +65527,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5148443560984115221",
+    "id": "wevity-7111061837459125563",
     "boardType": "contests",
     "title": "노모어피자 캐릭터 네이밍 공모전",
     "category": "contest_art",
@@ -65606,7 +65544,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106864",
@@ -65620,7 +65558,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3576485698274220852",
+    "id": "wevity-4827504016402937067",
     "boardType": "contests",
     "title": "2026년 고성군 청렴 슬로건 공모전",
     "category": "contest_general",
@@ -65637,7 +65575,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106819",
@@ -65651,7 +65589,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8762243466923193220",
+    "id": "wevity-7286907469414750435",
     "boardType": "contests",
     "title": "2026년 제46회 장애인의 날 기념 장애인식개선 캠페인 이름 공모전",
     "category": "contest_general",
@@ -65668,7 +65606,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106774",
@@ -65682,7 +65620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-835330151298148926",
+    "id": "wevity-6750886855329831355",
     "boardType": "contests",
     "title": "2026년 장애인학대 예방의 날 첫 시행기념 학대예방의 날 슬로건 공모전",
     "category": "contest_general",
@@ -65699,7 +65637,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106724",
@@ -65713,7 +65651,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1244495319196984385",
+    "id": "wevity-6706077383191243923",
     "boardType": "contests",
     "title": "평화·통일·민주시민교육 기구 명칭 공모전",
     "category": "contest_general",
@@ -65730,7 +65668,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106699",
@@ -65744,7 +65682,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6035136103713540453",
+    "id": "wevity-4904947031046632602",
     "boardType": "contests",
     "title": "청담 우리들병원 44주년 개원기념일 기념 캐치프레이즈 공모전",
     "category": "contest_general",
@@ -65761,7 +65699,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106604",
@@ -65775,7 +65713,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-326256767052234205",
+    "id": "wevity-1341394385290524276",
     "boardType": "contests",
     "title": "경남진주혁신도시 복합문화도서관 복합문화관 명칭 공모",
     "category": "contest_reading",
@@ -65792,7 +65730,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106556",
@@ -65806,7 +65744,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-57976235543157915",
+    "id": "wevity-7009255964947374030",
     "boardType": "contests",
     "title": "부천여성청소년센터 센터 캐릭터 이름 공모전",
     "category": "contest_art",
@@ -65823,7 +65761,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=25&gbn=view&gp=7&ix=106528",
@@ -65837,7 +65775,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2099404696908395458",
+    "id": "wevity-337845799975612625",
     "boardType": "contests",
     "title": "26년 하반기 이랜드크루즈 Z세대 서포터즈 모집",
     "category": "contest_general",
@@ -65854,7 +65792,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112314",
@@ -65868,7 +65806,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-985747249082087908",
+    "id": "wevity-2417228128772057164",
     "boardType": "contests",
     "title": "[한국건설기술인협회] 제2기 청년홍보대사 모집",
     "category": "contest_general",
@@ -65885,7 +65823,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112312",
@@ -65899,7 +65837,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3387953145209493682",
+    "id": "wevity-5264508148865668099",
     "boardType": "contests",
     "title": "수원시 2027 e수원뉴스 시민기자 모집",
     "category": "contest_general",
@@ -65916,7 +65854,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112309",
@@ -65930,7 +65868,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-896146521553278169",
+    "id": "wevity-1315592466759479656",
     "boardType": "contests",
     "title": "2027 남이섬세계책나라축제 대학생 홍보 서포터즈 모집 (아임나미)",
     "category": "contest_general",
@@ -65947,7 +65885,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112301",
@@ -65961,7 +65899,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-336399891281133545",
+    "id": "wevity-5631982008935717550",
     "boardType": "contests",
     "title": "큐어소나 대학생 인스타그램 서포터즈 6기 모집",
     "category": "contest_general",
@@ -65978,7 +65916,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112298",
@@ -65992,7 +65930,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9150411151342592914",
+    "id": "wevity-4640908182817667931",
     "boardType": "contests",
     "title": "Show Your Charming 자민경 글로벌 서포터즈 1기 모집",
     "category": "contest_general",
@@ -66009,7 +65947,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112260",
@@ -66023,7 +65961,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9134791963397309783",
+    "id": "wevity-863999365732223761",
     "boardType": "contests",
     "title": "2026 아라뱃길 시민 서포터즈 모집",
     "category": "contest_general",
@@ -66040,7 +65978,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112161",
@@ -66054,7 +65992,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8109347153990329570",
+    "id": "wevity-1335513973024948644",
     "boardType": "contests",
     "title": "국회의원 주진우 청년 명예보좌관 4기 모집",
     "category": "contest_general",
@@ -66071,7 +66009,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112149",
@@ -66085,7 +66023,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5209733223618496553",
+    "id": "wevity-6738945783212535570",
     "boardType": "contests",
     "title": "[식품의약품안전처] 제15기 누리소통기자단 모집",
     "category": "contest_general",
@@ -66102,7 +66040,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=112136",
@@ -66116,7 +66054,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2020369546131137273",
+    "id": "wevity-1497535354304608396",
     "boardType": "contests",
     "title": "제 19기 기상청 국민정책기자단 모집",
     "category": "contest_general",
@@ -66133,7 +66071,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111953",
@@ -66147,7 +66085,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1420921574382947619",
+    "id": "wevity-2456895804831491411",
     "boardType": "contests",
     "title": "미래에셋금융서비스 TAMS 글로벌금융인양성과정 17기 모집",
     "category": "contest_general",
@@ -66164,7 +66102,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=111546",
@@ -66178,7 +66116,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-806866984077810995",
+    "id": "wevity-7136291598300919662",
     "boardType": "contests",
     "title": "[CCOMA] 여성 패션 브랜드 꼼마 앰버서더·서포터즈 모집",
     "category": "contest_general",
@@ -66195,7 +66133,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=110894",
@@ -66209,7 +66147,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3677978247418546085",
+    "id": "wevity-1568643610849651777",
     "boardType": "contests",
     "title": "[THUMB] 남성 패션 브랜드 덤 앰버서더·서포터즈 모집",
     "category": "contest_general",
@@ -66226,7 +66164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=110893",
@@ -66240,7 +66178,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8959794130937439842",
+    "id": "wevity-1720227014248275901",
     "boardType": "contests",
     "title": "2026 더불어민주당 은평구(을) 대학생위원회 모집",
     "category": "contest_general",
@@ -66257,7 +66195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=1&ix=110141",
@@ -66271,7 +66209,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3320572523498731869",
+    "id": "wevity-4623438951074218570",
     "boardType": "contests",
     "title": "2026 도외 유튜버 대상 제주 장기체류 콘텐츠 제작 지원",
     "category": "contest_general",
@@ -66288,7 +66226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=109446",
@@ -66302,7 +66240,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1364102685484747592",
+    "id": "wevity-6754013728184325950",
     "boardType": "contests",
     "title": "2026 더불어민주당 노원구(갑) 대학생위원회 신규위원 모집",
     "category": "contest_general",
@@ -66319,7 +66257,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=109310",
@@ -66333,7 +66271,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9963444977206152",
+    "id": "wevity-226535398611041565",
     "boardType": "contests",
     "title": "2026 새마을운동 청년홍보단 새럽 6기 모집",
     "category": "contest_general",
@@ -66350,7 +66288,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=108343",
@@ -66364,7 +66302,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7984367488666537612",
+    "id": "wevity-4013172402298138393",
     "boardType": "contests",
     "title": "2026년 건설안전 국민감시단 모집",
     "category": "contest_general",
@@ -66381,7 +66319,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=106515",
@@ -66395,7 +66333,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5257137546382111885",
+    "id": "wevity-2806034247867376764",
     "boardType": "contests",
     "title": "[부산과학기술대학교·KNN] 2026 B-LiFE 블로그 서포터즈 모집",
     "category": "contest_stem",
@@ -66412,7 +66350,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=112165",
@@ -66426,7 +66364,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5854723605004906932",
+    "id": "wevity-1277487713017136526",
     "boardType": "contests",
     "title": "SOOP프레스 8기 모집",
     "category": "contest_general",
@@ -66443,7 +66381,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=112035",
@@ -66457,7 +66395,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6373695546057705172",
+    "id": "wevity-2519018953924963104",
     "boardType": "contests",
     "title": "SNS 홍보단 모집(상조+가전제품 결합상품 소비자 피해예방 캠페인)",
     "category": "contest_general",
@@ -66474,7 +66412,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=112025",
@@ -66488,7 +66426,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3107177760141497399",
+    "id": "wevity-8757625778836320536",
     "boardType": "contests",
     "title": "2026 사회적기업 국제포럼 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -66505,7 +66443,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111927",
@@ -66519,7 +66457,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2114030605200207816",
+    "id": "wevity-5058708427187780772",
     "boardType": "contests",
     "title": "2026 농림식품기술기획평가원 iPET 농플루언서 모집",
     "category": "contest_general",
@@ -66536,7 +66474,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111922",
@@ -66550,7 +66488,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2749861645267136735",
+    "id": "wevity-1837552672081196803",
     "boardType": "contests",
     "title": "2026 농림식품기술기획평가원 iPET 서포터즈 5기 모집",
     "category": "contest_general",
@@ -66567,7 +66505,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111921",
@@ -66581,7 +66519,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-936146360319338613",
+    "id": "wevity-6311156317362498200",
     "boardType": "contests",
     "title": "2026년 KISA 제8기 국민소통 청년참여단 모집",
     "category": "contest_general",
@@ -66598,7 +66536,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111908",
@@ -66612,7 +66550,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3814773523998053703",
+    "id": "wevity-2299482834917034360",
     "boardType": "contests",
     "title": "2027년 공주시 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -66629,7 +66567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111904",
@@ -66643,7 +66581,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9136058609914372993",
+    "id": "wevity-460913945030355118",
     "boardType": "contests",
     "title": "[강남 아이즈 윈터 크루] 2026 강남 아이즈 미디어 윈터 페스타 공식 서포터즈 모집 공고",
     "category": "contest_general",
@@ -66660,7 +66598,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111889",
@@ -66674,7 +66612,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9033619191400518592",
+    "id": "wevity-830672525199999487",
     "boardType": "contests",
     "title": "[한국관광공사] 공주·부여 C-투어버스 DRT 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -66691,7 +66629,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111886",
@@ -66705,7 +66643,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1500401511539058012",
+    "id": "wevity-2553018472508734922",
     "boardType": "contests",
     "title": "비클 서포터즈 비클럽 9기 모집",
     "category": "contest_general",
@@ -66722,7 +66660,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=2&ix=111882",
@@ -66736,7 +66674,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5124242598646811647",
+    "id": "wevity-2643416296859343976",
     "boardType": "contests",
     "title": "누크커피, 이모생각(분식) 방문형 블로그 서포터즈 모집",
     "category": "contest_general",
@@ -66753,7 +66691,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111862",
@@ -66767,7 +66705,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8744199998528190021",
+    "id": "wevity-612166404463451564",
     "boardType": "contests",
     "title": "2026년 장애인 분야 해커톤 대회 (장애 플러스 기술) 시민평가단 모집",
     "category": "contest_coding",
@@ -66784,7 +66722,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111854",
@@ -66798,7 +66736,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7352055332088903792",
+    "id": "wevity-5092853676097068072",
     "boardType": "contests",
     "title": "글로벌 Youth 앰버서더 오디션 2026",
     "category": "contest_general",
@@ -66815,7 +66753,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111828",
@@ -66829,7 +66767,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7369724600976165428",
+    "id": "wevity-2288615654488348846",
     "boardType": "contests",
     "title": "제6기 북극케어 대학생 서포터즈 모집",
     "category": "contest_coding",
@@ -66846,7 +66784,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111807",
@@ -66860,7 +66798,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-966602671115156009",
+    "id": "wevity-5848076160803018785",
     "boardType": "contests",
     "title": "2026년 11월 생활무전기 정책홍보단 모집",
     "category": "contest_general",
@@ -66877,7 +66815,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111783",
@@ -66891,7 +66829,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7845687942918954718",
+    "id": "wevity-5694493879895257136",
     "boardType": "contests",
     "title": "교촌치킨 서포터즈 K-스피커스 13기 모집",
     "category": "contest_general",
@@ -66908,7 +66846,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111771",
@@ -66922,7 +66860,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6566789674683738102",
+    "id": "wevity-292593225595919861",
     "boardType": "contests",
     "title": "풀무원샘물 하루귀리 대학생 서포터즈 2기 모집",
     "category": "contest_general",
@@ -66939,7 +66877,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111766",
@@ -66953,7 +66891,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3737729908350180652",
+    "id": "wevity-965796285255538491",
     "boardType": "contests",
     "title": "시슐랭 프렌즈 1기 모집",
     "category": "contest_general",
@@ -66970,7 +66908,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111757",
@@ -66984,7 +66922,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7427743061810768724",
+    "id": "wevity-6305246647606578657",
     "boardType": "contests",
     "title": "[서울특별시] 2026년 하반기 시민 서포터즈 모집",
     "category": "contest_general",
@@ -67001,7 +66939,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111699",
@@ -67015,7 +66953,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2397262497886106815",
+    "id": "wevity-8316801771969870326",
     "boardType": "contests",
     "title": "[잠실크루] 롯데월드타워·몰 서포터즈 2기 모집",
     "category": "contest_general",
@@ -67032,7 +66970,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111678",
@@ -67046,7 +66984,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1534532565248436915",
+    "id": "wevity-1247886303094316709",
     "boardType": "contests",
     "title": "2026 천안시마을공동체지원센터 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -67063,7 +67001,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111659",
@@ -67077,7 +67015,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1852774188262780143",
+    "id": "wevity-3097207684777073995",
     "boardType": "contests",
     "title": "2027년 서대문구 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -67094,7 +67032,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=3&ix=111658",
@@ -67108,7 +67046,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6285907846944719957",
+    "id": "wevity-6728651768144587447",
     "boardType": "contests",
     "title": "[현대자동차] H스타일리스트 14기 모집",
     "category": "contest_general",
@@ -67125,7 +67063,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111583",
@@ -67139,7 +67077,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3304245376880186801",
+    "id": "wevity-1520984596378696130",
     "boardType": "contests",
     "title": "2026 서울 한강 걷기대회 서포터즈 모집",
     "category": "contest_general",
@@ -67156,7 +67094,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111580",
@@ -67170,7 +67108,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8144731482660964092",
+    "id": "wevity-8112808015107453785",
     "boardType": "contests",
     "title": "[OPERA] 오페라 7기 서포터즈 모집",
     "category": "contest_general",
@@ -67187,7 +67125,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111555",
@@ -67201,7 +67139,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-18461735467277753",
+    "id": "wevity-6853162627456088850",
     "boardType": "contests",
     "title": "[러블리페이퍼] 손수레 정비봉사단 러블리페어 모집",
     "category": "contest_general",
@@ -67218,7 +67156,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111533",
@@ -67232,7 +67170,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2637716634546090128",
+    "id": "wevity-3868865983733001350",
     "boardType": "contests",
     "title": "[인디에프] BIND 서포터즈 1기 모집",
     "category": "contest_general",
@@ -67249,7 +67187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111485",
@@ -67263,7 +67201,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-834268770084704265",
+    "id": "wevity-4096722845569383899",
     "boardType": "contests",
     "title": "서울리거피부과 아임서울(더마코스메틱) 아임러버 서포터즈12기 모집",
     "category": "contest_general",
@@ -67280,7 +67218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111475",
@@ -67294,7 +67232,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4418126669843322258",
+    "id": "wevity-935332504862051251",
     "boardType": "contests",
     "title": "2026 USF 울산스타트업페스타 서포터즈 모집",
     "category": "contest_general",
@@ -67311,7 +67249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111450",
@@ -67325,7 +67263,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8185596633027831760",
+    "id": "wevity-3092346239140739824",
     "boardType": "contests",
     "title": "[dejavu] 데자뷰 7기 서포터즈 모집",
     "category": "contest_general",
@@ -67342,7 +67280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111410",
@@ -67356,7 +67294,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3537236002231974658",
+    "id": "wevity-8875695082937313662",
     "boardType": "contests",
     "title": "[기후부/한국생태관광협회] 제13기 생태관광 영리더스클럽 서포터즈 모집",
     "category": "contest_general",
@@ -67373,7 +67311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111391",
@@ -67387,7 +67325,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5335541160457641165",
+    "id": "wevity-4033982805638416105",
     "boardType": "contests",
     "title": "LG 대국민 미소 사진 공모전 - 스마일 모먼트",
     "category": "contest_music",
@@ -67404,7 +67342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111311",
@@ -67418,7 +67356,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6364068716157492270",
+    "id": "wevity-7357255293734562225",
     "boardType": "contests",
     "title": "[타라티피에스] 툴디 서포터즈 14기 모집",
     "category": "contest_general",
@@ -67435,7 +67373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111297",
@@ -67449,7 +67387,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8877411748828778332",
+    "id": "wevity-1453229537099404059",
     "boardType": "contests",
     "title": "퓨어무브 대학생 서포터즈 １기 모집",
     "category": "contest_general",
@@ -67466,7 +67404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111288",
@@ -67480,7 +67418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3722230258999423873",
+    "id": "wevity-5886972725059902556",
     "boardType": "contests",
     "title": "HAEMO(해모) 라이프스타일 서포터즈 1기 모집",
     "category": "contest_general",
@@ -67497,7 +67435,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111256",
@@ -67511,7 +67449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6532958004812167119",
+    "id": "wevity-1685719427511409693",
     "boardType": "contests",
     "title": "ICNX 2026 공식 서포터즈(대학생 기자단) 모집",
     "category": "contest_general",
@@ -67528,7 +67466,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111200",
@@ -67542,7 +67480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3439334988312867596",
+    "id": "wevity-5727242010746933264",
     "boardType": "contests",
     "title": "벨르랑코 서포터즈 8기 모집",
     "category": "contest_general",
@@ -67559,7 +67497,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=4&ix=111197",
@@ -67573,7 +67511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1398660335090234258",
+    "id": "wevity-7767553401687185045",
     "boardType": "contests",
     "title": "2026 제9회 대한민국패럴스마트폰영화제 대학생기자단 제7기 모집",
     "category": "contest_general",
@@ -67590,7 +67528,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111189",
@@ -67604,7 +67542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7905164319267958148",
+    "id": "wevity-8334440892415159827",
     "boardType": "contests",
     "title": "2026 한동 국제 뽱 페스티벌을 알릴 뽱 크루 서포터즈 모집",
     "category": "contest_general",
@@ -67621,7 +67559,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111150",
@@ -67635,7 +67573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9145732453812631888",
+    "id": "wevity-6980050451412924796",
     "boardType": "contests",
     "title": "스파크업 : 모두의 에너지 (에너지 창업 경연대회)",
     "category": "contest_music",
@@ -67652,7 +67590,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111148",
@@ -67666,7 +67604,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2753483329903948589",
+    "id": "wevity-4382520775377554695",
     "boardType": "contests",
     "title": "[아름다운 가게] 위아자 나눔위크 2026 지구체육관 서포터즈(STAFF) 모집",
     "category": "contest_general",
@@ -67683,7 +67621,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111139",
@@ -67697,7 +67635,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5753248381697870654",
+    "id": "wevity-3770957573277965323",
     "boardType": "contests",
     "title": "2026년 중앙행정기관 청년정책평가단 모집",
     "category": "contest_general",
@@ -67714,7 +67652,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111117",
@@ -67728,7 +67666,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2602977628871401121",
+    "id": "wevity-3823878739399966158",
     "boardType": "contests",
     "title": "2026 진주국제재즈페스티벌 서포터즈 JJ프렌즈 모집",
     "category": "contest_general",
@@ -67745,7 +67683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111063",
@@ -67759,7 +67697,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-919506010922808798",
+    "id": "wevity-3906844488778089311",
     "boardType": "contests",
     "title": "아동·청소년 온라인 성착취 예방을 위한 대학생 안심온지킴이 서포터즈 모집",
     "category": "contest_general",
@@ -67776,7 +67714,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111057",
@@ -67790,7 +67728,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8806894198977778540",
+    "id": "wevity-2901147668101721911",
     "boardType": "contests",
     "title": "한국지식재산보호원 서포터즈 IP 서폿 2기 모집",
     "category": "contest_general",
@@ -67807,7 +67745,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111056",
@@ -67821,7 +67759,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8349533485207081591",
+    "id": "wevity-4933295941463976759",
     "boardType": "contests",
     "title": "2026 바이오미래포럼 대학생 서포터즈 모집",
     "category": "contest_stem",
@@ -67838,7 +67776,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111054",
@@ -67852,7 +67790,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1777583047181102019",
+    "id": "wevity-3783728464281993018",
     "boardType": "contests",
     "title": "언니의파우치 서포터즈 14기 모집",
     "category": "contest_general",
@@ -67869,7 +67807,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111049",
@@ -67883,7 +67821,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5455897776854841939",
+    "id": "wevity-5536552410608802448",
     "boardType": "contests",
     "title": "2026 대한민국 관광기념품 박람회 서포터즈 모집",
     "category": "contest_general",
@@ -67900,7 +67838,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=111040",
@@ -67914,7 +67852,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9169672912180536902",
+    "id": "wevity-2598582436326197304",
     "boardType": "contests",
     "title": "[KOTMI] 한국섬유기계융합연구원 대학생 서포터즈 1기 KOTMATE 모집",
     "category": "contest_general",
@@ -67931,7 +67869,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110987",
@@ -67945,7 +67883,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5609357487906148796",
+    "id": "wevity-6937077419380932959",
     "boardType": "contests",
     "title": "대구경북 청년노동인권사업단 서포터즈 YoungLaborClub 1기 모집",
     "category": "contest_general",
@@ -67962,7 +67900,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110979",
@@ -67976,7 +67914,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7045351466631264257",
+    "id": "wevity-5835469904946627923",
     "boardType": "contests",
     "title": "2026 제2기 가축위생방역지원본부 서포터즈 모집",
     "category": "contest_general",
@@ -67993,7 +67931,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=5&ix=110972",
@@ -68007,7 +67945,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-790345642797237237",
+    "id": "wevity-4759181436450911573",
     "boardType": "contests",
     "title": "펑크린 대학생 서포터즈 펑~크린에이터 2기 모집",
     "category": "contest_general",
@@ -68024,7 +67962,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110967",
@@ -68038,7 +67976,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4379707703673877933",
+    "id": "wevity-6265293690331721257",
     "boardType": "contests",
     "title": "SPONUVA 대학생 서포터즈 스포터즈 1기 모집",
     "category": "contest_general",
@@ -68055,7 +67993,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110949",
@@ -68069,7 +68007,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4384863649916483999",
+    "id": "wevity-7910494789485876238",
     "boardType": "contests",
     "title": "에픽민트 서포터즈 EPIC CREW 1기 모집",
     "category": "contest_general",
@@ -68086,7 +68024,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110947",
@@ -68100,7 +68038,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4696057582649260317",
+    "id": "wevity-6220683675173172709",
     "boardType": "contests",
     "title": "2026 한글주간 한글 지킴이 한글주간 누리꾼 4기 모집",
     "category": "contest_general",
@@ -68117,7 +68055,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110928",
@@ -68131,7 +68069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8769738842934682902",
+    "id": "wevity-7783840616207989646",
     "boardType": "contests",
     "title": "제15회 이데일리 W페스타 서포터즈 모집",
     "category": "contest_general",
@@ -68148,7 +68086,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110860",
@@ -68162,7 +68100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8427705679804178632",
+    "id": "wevity-3210123467566017608",
     "boardType": "contests",
     "title": "자원순환실천인증 단체 대항전 챌린지",
     "category": "contest_general",
@@ -68179,7 +68117,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110852",
@@ -68193,7 +68131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3637741370735093566",
+    "id": "wevity-7411351171095678601",
     "boardType": "contests",
     "title": "2026 킹콩크랩 서포터즈 모집",
     "category": "contest_general",
@@ -68210,7 +68148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110851",
@@ -68224,7 +68162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5893366629835892927",
+    "id": "wevity-1426481933019999958",
     "boardType": "contests",
     "title": "[우체국물류지원단] 공정채용 강화를 위한 대국민 채용전형 모니터링단 모집",
     "category": "contest_general",
@@ -68241,7 +68179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110827",
@@ -68255,7 +68193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3770111481193504124",
+    "id": "wevity-8957251206659195202",
     "boardType": "contests",
     "title": "한국도로공사 대구경북본부 온라인 고객 패널 로드톡 1기 모집",
     "category": "contest_general",
@@ -68272,7 +68210,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110790",
@@ -68286,7 +68224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5900527116888805284",
+    "id": "wevity-224699964635001489",
     "boardType": "contests",
     "title": "제8기 FiPA 시민참여혁신단 공개 모집",
     "category": "contest_general",
@@ -68303,7 +68241,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110764",
@@ -68317,7 +68255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8808360233475023947",
+    "id": "wevity-3113038665009839885",
     "boardType": "contests",
     "title": "2026년 강원랜드 국민혁신단 모집 공고",
     "category": "contest_general",
@@ -68334,7 +68272,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110728",
@@ -68348,7 +68286,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3273920776578689157",
+    "id": "wevity-6782264466947016727",
     "boardType": "contests",
     "title": "HYUNDAI MOTORSTUDIO BUSAN 대학생 서포터즈 모집",
     "category": "contest_general",
@@ -68365,7 +68303,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110718",
@@ -68379,7 +68317,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7385841276034406045",
+    "id": "wevity-3667539060973460150",
     "boardType": "contests",
     "title": "2026 포항국제음악제 POCO 서포터즈 모집",
     "category": "contest_music",
@@ -68396,7 +68334,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110717",
@@ -68410,7 +68348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1800732356848949656",
+    "id": "wevity-7053119024516305288",
     "boardType": "contests",
     "title": "2026 SBIC 서포터즈 모집",
     "category": "contest_general",
@@ -68427,7 +68365,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110715",
@@ -68441,7 +68379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3171077688319452709",
+    "id": "wevity-5074532222998027002",
     "boardType": "contests",
     "title": "[아모레퍼시픽] 바이탈뷰티 SUPER CREW 모집",
     "category": "contest_general",
@@ -68458,7 +68396,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=6&ix=110714",
@@ -68472,7 +68410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6355377105290287206",
+    "id": "wevity-4645060940217764324",
     "boardType": "contests",
     "title": "컨디션 대학생 서포터즈, 컨디션 C.R.E.W 2기 모집",
     "category": "contest_general",
@@ -68489,7 +68427,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110712",
@@ -68503,7 +68441,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4333893193033263799",
+    "id": "wevity-5461870040354022428",
     "boardType": "contests",
     "title": "2026 한국석유관리원 시민참여혁신단 모집",
     "category": "contest_general",
@@ -68520,7 +68458,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110708",
@@ -68534,7 +68472,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1679516522191662126",
+    "id": "wevity-7387135566868463527",
     "boardType": "contests",
     "title": "제28회 부천국제애니메이션페스티벌(BIAF2026) 관객심사단 애니비(AniB) 모집",
     "category": "contest_general",
@@ -68551,7 +68489,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110680",
@@ -68565,7 +68503,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2393993172383060560",
+    "id": "wevity-3120797331659018217",
     "boardType": "contests",
     "title": "2026년 스포츠토토 숏폼 공모전",
     "category": "contest_music",
@@ -68582,7 +68520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110678",
@@ -68596,7 +68534,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6784490148077656448",
+    "id": "wevity-6796130388415431016",
     "boardType": "contests",
     "title": "[윌라] 대학생 서포터즈 윌프렌즈 4기 모집",
     "category": "contest_general",
@@ -68613,7 +68551,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110645",
@@ -68627,7 +68565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2805053335845301843",
+    "id": "wevity-8541806468629185749",
     "boardType": "contests",
     "title": "[문화체육관광부×한국문화정보원] 문화데이터 활용 영상 제작 AI 챌린지",
     "category": "contest_music",
@@ -68644,7 +68582,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110633",
@@ -68658,7 +68596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7785892593306208525",
+    "id": "wevity-3780020150901288479",
     "boardType": "contests",
     "title": "[2026 안성시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집",
     "category": "contest_general",
@@ -68675,7 +68613,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110605",
@@ -68689,7 +68627,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6734165006341360964",
+    "id": "wevity-8395174875608111822",
     "boardType": "contests",
     "title": "[2026 용인시 AI 어노테이터] AI 학습용 데이터 라벨링 가공 참여자 모집",
     "category": "contest_general",
@@ -68706,7 +68644,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110604",
@@ -68720,7 +68658,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6048668234779747500",
+    "id": "wevity-4487614999894598334",
     "boardType": "contests",
     "title": "이장군족발보쌈 서포터즈 이장군PD 1기 모집",
     "category": "contest_general",
@@ -68737,7 +68675,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110603",
@@ -68751,7 +68689,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4682525831932642467",
+    "id": "wevity-1575008059338450855",
     "boardType": "contests",
     "title": "i-FORUM 2026 서포터즈 모집",
     "category": "contest_general",
@@ -68768,7 +68706,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110595",
@@ -68782,7 +68720,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-17110966249129494",
+    "id": "wevity-7114002451176941937",
     "boardType": "contests",
     "title": "선불식 결합상품 소비자 피해예방 정보제공 SNS 서포터즈 모집",
     "category": "contest_general",
@@ -68799,7 +68737,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110548",
@@ -68813,7 +68751,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1568912548083505944",
+    "id": "wevity-3150630160909846739",
     "boardType": "contests",
     "title": "2026 NRF 서포터즈 모집",
     "category": "contest_general",
@@ -68830,7 +68768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110519",
@@ -68844,7 +68782,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2593027868336821200",
+    "id": "wevity-880458634587784085",
     "boardType": "contests",
     "title": "2026 아브뉴프랑 어린이 가족 미술제 대학생 서포터즈 모집",
     "category": "contest_art",
@@ -68861,7 +68799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110512",
@@ -68875,7 +68813,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5150947280821746745",
+    "id": "wevity-1780209172860615364",
     "boardType": "contests",
     "title": "2026 케미스트릿 강남역 푸드위크 SEASON 2 체험단 모집",
     "category": "contest_general",
@@ -68892,7 +68830,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110503",
@@ -68906,7 +68844,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6354331534731802601",
+    "id": "wevity-2117604731936201255",
     "boardType": "contests",
     "title": "아모레퍼시픽 공식 서포터즈 A-마케터 3기 모집",
     "category": "contest_general",
@@ -68923,7 +68861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=27&gbn=view&gp=7&ix=110502",
@@ -68937,7 +68875,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-621537636676439244",
+    "id": "wevity-3162172284317686618",
     "boardType": "contests",
     "title": "2026 서울관광 프롬프톤",
     "category": "contest_general",
@@ -68954,7 +68892,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112294",
@@ -68968,7 +68906,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7775750308578026815",
+    "id": "wevity-7458816713265395381",
     "boardType": "contests",
     "title": "세종사이버대학교 전국민 AI 공모전 (AI 불씨)",
     "category": "contest_general",
@@ -68985,7 +68923,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112285",
@@ -68999,7 +68937,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-198140219516553450",
+    "id": "wevity-632338410235526538",
     "boardType": "contests",
     "title": "2026 대구 로컬AI그라운드 - 지역문제 해결형 AI활용 경진대회",
     "category": "contest_general",
@@ -69016,7 +68954,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112236",
@@ -69030,7 +68968,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-612335073861982226",
+    "id": "wevity-8122116296735534710",
     "boardType": "contests",
     "title": "[한국체육산업개발(주)] 공공데이터 활용 경진대회",
     "category": "contest_coding",
@@ -69047,7 +68985,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112160",
@@ -69061,7 +68999,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5608529083608596817",
+    "id": "wevity-1522236545912024048",
     "boardType": "contests",
     "title": "AI 달인의 꿀팁 챌린지 시즌4",
     "category": "contest_stem",
@@ -69078,7 +69016,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112049",
@@ -69092,7 +69030,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2690301851912231242",
+    "id": "wevity-2998904576787144230",
     "boardType": "contests",
     "title": "2026 성평등 AI 벤치마크 챌린지 참가팀 모집",
     "category": "contest_general",
@@ -69109,7 +69047,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=112029",
@@ -69123,7 +69061,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2195776711166279926",
+    "id": "wevity-4519992766151982955",
     "boardType": "contests",
     "title": "제2회 2026 대한민국 AI 창조공모대전",
     "category": "contest_art",
@@ -69140,7 +69078,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111837",
@@ -69154,7 +69092,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7980644654366958322",
+    "id": "wevity-2448703660727745255",
     "boardType": "contests",
     "title": "현대자동차그룹 차량용 앱 개발 공모전",
     "category": "contest_coding",
@@ -69171,7 +69109,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111802",
@@ -69185,7 +69123,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6702074262413497781",
+    "id": "wevity-7557541969209275779",
     "boardType": "contests",
     "title": "2026 AI 플레이 콘텐츠 제작 공모전",
     "category": "contest_general",
@@ -69202,7 +69140,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111800",
@@ -69216,7 +69154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7211428888269623933",
+    "id": "wevity-6676170147365243056",
     "boardType": "contests",
     "title": "[세종사이버대학교 AI실무활용학과] 한국 고전 설화 또는 전래동화 캐릭터의 재해석 공모전",
     "category": "contest_art",
@@ -69233,7 +69171,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111797",
@@ -69247,7 +69185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3245479113665535864",
+    "id": "wevity-2350821681064847121",
     "boardType": "contests",
     "title": "2026 대구광역시 기후·환경·탄소중립 공공 데이터 AI 활용대회",
     "category": "contest_general",
@@ -69264,7 +69202,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=1&ix=111567",
@@ -69278,7 +69216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3774264427130407740",
+    "id": "wevity-1821578989443568161",
     "boardType": "contests",
     "title": "LOTTE AX CHALLENGE 2026",
     "category": "contest_general",
@@ -69295,7 +69233,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=112027",
@@ -69309,7 +69247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1611990482865866667",
+    "id": "wevity-8990761973595358064",
     "boardType": "contests",
     "title": "[CJ제일제당] 햇반 30주년 AI 공모전 (갓 지은 AI디어)",
     "category": "contest_general",
@@ -69326,7 +69264,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111912",
@@ -69340,7 +69278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9219522075696382636",
+    "id": "wevity-3460213456964998116",
     "boardType": "contests",
     "title": "2026년도 대한민국 SW기술대상 및 IT 아키텍처대상",
     "category": "contest_coding",
@@ -69357,7 +69295,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111850",
@@ -69371,7 +69309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5711910061431627972",
+    "id": "wevity-1996161681864193157",
     "boardType": "contests",
     "title": "2026 한림 G-Lab@동해 AI활용 지역문제해결 해커톤",
     "category": "contest_coding",
@@ -69388,7 +69326,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111843",
@@ -69402,7 +69340,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9074844537347774348",
+    "id": "wevity-3829178411178925013",
     "boardType": "contests",
     "title": "2026 K-AWARDS DIGITAL EXCELLENCE AWARDS",
     "category": "contest_general",
@@ -69419,7 +69357,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111765",
@@ -69433,7 +69371,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8053015479764274480",
+    "id": "wevity-8684911647704257691",
     "boardType": "contests",
     "title": "2026 AI 해킹 방어 대회(ACDC) 참가자 모집",
     "category": "contest_stem",
@@ -69450,7 +69388,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111752",
@@ -69464,7 +69402,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8570404187162112568",
+    "id": "wevity-4134056913562600712",
     "boardType": "contests",
     "title": "AI 달인의 꿀팁 챌린지 시즌3",
     "category": "contest_stem",
@@ -69481,7 +69419,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111747",
@@ -69495,7 +69433,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5723761938000089932",
+    "id": "wevity-483633242693410846",
     "boardType": "contests",
     "title": "2026 동해시 AI 활용 해커톤 대회",
     "category": "contest_coding",
@@ -69512,7 +69450,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111734",
@@ -69526,7 +69464,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-84014057737333005",
+    "id": "wevity-7437412826147727826",
     "boardType": "contests",
     "title": "화이트햇 2026 국방 사이버보안 콘테스트",
     "category": "contest_general",
@@ -69543,7 +69481,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=2&ix=111682",
@@ -69557,7 +69495,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7679707782503547414",
+    "id": "wevity-7158162138674153914",
     "boardType": "contests",
     "title": "나랏돈 50조 찾기 프로젝트 - 나라장터 해커톤",
     "category": "contest_coding",
@@ -69574,7 +69512,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111588",
@@ -69588,7 +69526,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3112523415409188209",
+    "id": "wevity-8569964164425785205",
     "boardType": "contests",
     "title": "[서울대학교 창업지원단·H1R AI] 2026 SNU X Croche AI 앱 해커톤",
     "category": "contest_coding",
@@ -69605,7 +69543,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111322",
@@ -69619,7 +69557,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5493881213545913941",
+    "id": "wevity-2082378936855419486",
     "boardType": "contests",
     "title": "충청북도 과학여행 이야기 AI 이미지‧영상 공모전",
     "category": "contest_stem",
@@ -69636,7 +69574,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111279",
@@ -69650,7 +69588,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4763881271609929113",
+    "id": "wevity-9143239893394627717",
     "boardType": "contests",
     "title": "과학기술문화 활동가 AI콘텐츠 경진대회",
     "category": "contest_stem",
@@ -69667,7 +69605,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111278",
@@ -69681,7 +69619,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7005648178370455309",
+    "id": "wevity-7712505691664363052",
     "boardType": "contests",
     "title": "SK하이닉스 AI 해커톤 2026",
     "category": "contest_coding",
@@ -69698,7 +69636,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111265",
@@ -69712,7 +69650,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6579763964064005169",
+    "id": "wevity-5310406591030891633",
     "boardType": "contests",
     "title": "[방송미디어통신위원회] 생성형 AI 위험성 찾기 이벤트 시즌3",
     "category": "contest_general",
@@ -69729,7 +69667,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111185",
@@ -69743,7 +69681,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1699609155475454138",
+    "id": "wevity-6965176544203681312",
     "boardType": "contests",
     "title": "2026 고용24 국민참여 AI 고용서비스 발굴 온라인 해커톤",
     "category": "contest_coding",
@@ -69760,7 +69698,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111124",
@@ -69774,7 +69712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1349075908788841139",
+    "id": "wevity-8408759620925736847",
     "boardType": "contests",
     "title": "2026년 국립강원전문과학관 AI경진대회 (동화책 만들기, 4컷 과학만화 만들기)",
     "category": "contest_stem",
@@ -69791,7 +69729,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111122",
@@ -69805,7 +69743,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1324657426354370148",
+    "id": "wevity-4538836230403481265",
     "boardType": "contests",
     "title": "한국택견협회 X 반크(VANK) 택견 AI 콘텐츠 발굴 대회",
     "category": "contest_general",
@@ -69822,7 +69760,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=111047",
@@ -69836,7 +69774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-317675091756561620",
+    "id": "wevity-3730695245420844877",
     "boardType": "contests",
     "title": "공공 웹사이트 불법광고 탐지 도구 개발 공모전",
     "category": "contest_coding",
@@ -69853,7 +69791,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110998",
@@ -69867,7 +69805,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-203763681141416048",
+    "id": "wevity-7684920380911012279",
     "boardType": "contests",
     "title": "2026 KoMaP AI 경진대회",
     "category": "contest_general",
@@ -69884,7 +69822,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110953",
@@ -69898,7 +69836,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1408164389607966520",
+    "id": "wevity-1223585097040598589",
     "boardType": "contests",
     "title": "SDU COSS와 함께하는 소개딩 (소프트웨어 개발보안 시큐어코딩 경진대회)",
     "category": "contest_coding",
@@ -69915,7 +69853,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110836",
@@ -69929,7 +69867,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1602516044126079015",
+    "id": "wevity-3592859790729828869",
     "boardType": "contests",
     "title": "2026 추계학술대회 대학생 ERP 아이디어 공모전",
     "category": "contest_general",
@@ -69946,7 +69884,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=3&ix=110710",
@@ -69960,7 +69898,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2617164316196449172",
+    "id": "wevity-1384130175903571346",
     "boardType": "contests",
     "title": "2026 데이터+AI 혁신챌린지 데이터안심구역 경진대회",
     "category": "contest_stem",
@@ -69977,7 +69915,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110659",
@@ -69991,7 +69929,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3368857091199023769",
+    "id": "wevity-7171892826593071438",
     "boardType": "contests",
     "title": "2026 0924영상제 영상 공모전",
     "category": "contest_music",
@@ -70008,7 +69946,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110585",
@@ -70022,7 +69960,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7192725512484518092",
+    "id": "wevity-7979586511766911624",
     "boardType": "contests",
     "title": "제2회 성남 x KAIST AI경진대회 참가자 모집",
     "category": "contest_general",
@@ -70039,7 +69977,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110576",
@@ -70053,7 +69991,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4074700702820998632",
+    "id": "wevity-3636044393849537806",
     "boardType": "contests",
     "title": "(iM뱅크) 2026 AI Blookchain 경진대회",
     "category": "contest_general",
@@ -70070,7 +70008,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110360",
@@ -70084,7 +70022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7403112125543364255",
+    "id": "wevity-608834201243753889",
     "boardType": "contests",
     "title": "제6회 우리은행 모의해킹 경진대회",
     "category": "contest_general",
@@ -70101,7 +70039,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110355",
@@ -70115,7 +70053,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6765899725809189844",
+    "id": "wevity-2533598720278804308",
     "boardType": "contests",
     "title": "AI 달인 100 챌린지",
     "category": "contest_stem",
@@ -70132,7 +70070,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110273",
@@ -70146,7 +70084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7759617978979394865",
+    "id": "wevity-3377672023852096818",
     "boardType": "contests",
     "title": "제1회 AI금융빅데이터플랫폼 소비데이터 활용 아이디어 공모전",
     "category": "contest_general",
@@ -70163,7 +70101,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110264",
@@ -70177,7 +70115,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3101715541692794430",
+    "id": "wevity-8407018534322915360",
     "boardType": "contests",
     "title": "2026 청소년 AI 콘텐츠 경진대회 YACOF",
     "category": "contest_general",
@@ -70194,7 +70132,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110070",
@@ -70208,7 +70146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4879451753385806639",
+    "id": "wevity-6391063866353562290",
     "boardType": "contests",
     "title": "2026 AI로 금산 창작물 공모전",
     "category": "contest_general",
@@ -70225,7 +70163,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110053",
@@ -70239,7 +70177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9088585378672366594",
+    "id": "wevity-7013225723430758355",
     "boardType": "contests",
     "title": "2026 전남광주 청년(YOUTH) AI 솔버톤",
     "category": "contest_general",
@@ -70256,7 +70194,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=4&ix=110040",
@@ -70270,7 +70208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6397820095251041955",
+    "id": "wevity-1152896146679238906",
     "boardType": "contests",
     "title": "모두의 AI 실험실 AI 서비스 경진대회",
     "category": "contest_stem",
@@ -70287,7 +70225,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=110003",
@@ -70301,7 +70239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-367791964626199598",
+    "id": "wevity-9016901857702455136",
     "boardType": "contests",
     "title": "KB스타즈 여자프로농구단 대학생 홍보대사 16기 모집",
     "category": "contest_music",
@@ -70318,7 +70256,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109974",
@@ -70332,7 +70270,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2709357456855161925",
+    "id": "wevity-7279234330949865748",
     "boardType": "contests",
     "title": "2026년 안양시 공공데이터・AI 활용 대학생 경진대회",
     "category": "contest_general",
@@ -70349,7 +70287,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109958",
@@ -70363,7 +70301,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3612293687232513910",
+    "id": "wevity-7802469791167144139",
     "boardType": "contests",
     "title": "2026년 공무원연금공단 AI•공공데이터 대국민 시각화 경진대회",
     "category": "contest_general",
@@ -70380,7 +70318,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109956",
@@ -70394,7 +70332,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4637325682675548502",
+    "id": "wevity-3695790978618562322",
     "boardType": "contests",
     "title": "국립광주과학관 2026 마이AI랩 AI-이음 프로젝트 공모전",
     "category": "contest_stem",
@@ -70411,7 +70349,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109905",
@@ -70425,7 +70363,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4146169144711880839",
+    "id": "wevity-5030704970819798924",
     "boardType": "contests",
     "title": "2026 한국관광 데이터랩 활용 경진대회",
     "category": "contest_general",
@@ -70442,7 +70380,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109888",
@@ -70456,7 +70394,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6235368829291654096",
+    "id": "wevity-2715325493974716163",
     "boardType": "contests",
     "title": "제8회 오티콘챌린지 공모전",
     "category": "contest_art",
@@ -70473,7 +70411,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109883",
@@ -70487,7 +70425,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5664960729469960719",
+    "id": "wevity-771497044248608527",
     "boardType": "contests",
     "title": "[국가정보원] 2026 사이버공격방어대회 참가자 모집",
     "category": "contest_general",
@@ -70504,7 +70442,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109851",
@@ -70518,7 +70456,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5514229297998447345",
+    "id": "wevity-4534242025225352288",
     "boardType": "contests",
     "title": "2026 판타지아대구페스타 AI 콘텐츠 공모전",
     "category": "contest_general",
@@ -70535,7 +70473,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109792",
@@ -70549,7 +70487,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3550832120267147103",
+    "id": "wevity-4497638560115340365",
     "boardType": "contests",
     "title": "지능형 홈(AI@Home) matter AX Sprint 2026(개발자 해커톤)",
     "category": "contest_coding",
@@ -70566,7 +70504,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109674",
@@ -70580,7 +70518,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8694723139522490653",
+    "id": "wevity-8157185285304225482",
     "boardType": "contests",
     "title": "일상을 바꾸는 한 줄 SKT 모두의 promp.T 공모전",
     "category": "contest_general",
@@ -70597,7 +70535,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109554",
@@ -70611,7 +70549,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1192370318689334809",
+    "id": "wevity-6906728253713517799",
     "boardType": "contests",
     "title": "[NHN] 게임 X AI 해커톤 (NAN2026)",
     "category": "contest_coding",
@@ -70628,7 +70566,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109182",
@@ -70642,7 +70580,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-393854776622195986",
+    "id": "wevity-1473554036875419436",
     "boardType": "contests",
     "title": "[방송미디어통신위원회] 더나은 생성형 AI 서비스 만들기 경진대회 시즌1",
     "category": "contest_general",
@@ -70659,7 +70597,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=5&ix=109174",
@@ -70673,7 +70611,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-925083321250322318",
+    "id": "wevity-1610380591078323367",
     "boardType": "contests",
     "title": "2026 HACKSIUM BUSAN (동남권 특화산업 시나리오 기반 해킹방어대회)",
     "category": "contest_writing",
@@ -70690,7 +70628,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=109162",
@@ -70704,7 +70642,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2231597292169170469",
+    "id": "wevity-8704642788184574439",
     "boardType": "contests",
     "title": "제2회 매일유업 대학생 AI 영상 공모전",
     "category": "contest_music",
@@ -70721,7 +70659,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=109144",
@@ -70735,7 +70673,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5123805157427101139",
+    "id": "wevity-6738818252618454838",
     "boardType": "contests",
     "title": "2026 대전 AI 영상 공모전",
     "category": "contest_music",
@@ -70752,7 +70690,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=109142",
@@ -70766,7 +70704,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4060473804599125525",
+    "id": "wevity-8001869377957083289",
     "boardType": "contests",
     "title": "2026 관광데이터 활용 공모전(웹ㆍ앱 구현 부문)",
     "category": "contest_coding",
@@ -70783,7 +70721,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=109032",
@@ -70797,7 +70735,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3111937892619894187",
+    "id": "wevity-283353484895894620",
     "boardType": "contests",
     "title": "2026 D-Robotics Innovation Contest",
     "category": "contest_general",
@@ -70814,7 +70752,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108984",
@@ -70828,7 +70766,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6048645127656384901",
+    "id": "wevity-8403956115125377784",
     "boardType": "contests",
     "title": "제4회 NAVER OGQ마켓 AI Competition 대회",
     "category": "contest_general",
@@ -70845,7 +70783,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108830",
@@ -70859,7 +70797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2486325902916276352",
+    "id": "wevity-3998126125461411901",
     "boardType": "contests",
     "title": "2026 호남 IS 코딩챌린지",
     "category": "contest_coding",
@@ -70876,7 +70814,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108794",
@@ -70890,7 +70828,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2711945252528966222",
+    "id": "wevity-7122162553793856600",
     "boardType": "contests",
     "title": "제4회 스마트축산 AI 경진대회",
     "category": "contest_general",
@@ -70907,7 +70845,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108767",
@@ -70921,7 +70859,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2882201776407604386",
+    "id": "wevity-4323113865782692410",
     "boardType": "contests",
     "title": "SNU AI Challenge 2026",
     "category": "contest_general",
@@ -70938,7 +70876,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108754",
@@ -70952,7 +70890,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-105699420227642993",
+    "id": "wevity-6384908341390602363",
     "boardType": "contests",
     "title": "제2회 한국수목원정원관리원 AI 활용 콘텐츠 공모전",
     "category": "contest_general",
@@ -70969,7 +70907,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108752",
@@ -70983,7 +70921,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2111201947520262956",
+    "id": "wevity-3395880337526124285",
     "boardType": "contests",
     "title": "MOVE AI CHALLENGE 2026 - 물류 AI 아이디어 구현 해커톤",
     "category": "contest_coding",
@@ -71000,7 +70938,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108702",
@@ -71014,7 +70952,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1781316738892858930",
+    "id": "wevity-3015955567782930206",
     "boardType": "contests",
     "title": "코웨이 비렉스 AI 영상 광고 · 숏폼 공모전",
     "category": "contest_music",
@@ -71031,7 +70969,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108662",
@@ -71045,7 +70983,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2657938217748489481",
+    "id": "wevity-6828008067207870134",
     "boardType": "contests",
     "title": "2026 Big Data 활용 대회 참가자 모집",
     "category": "contest_general",
@@ -71062,7 +71000,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=6&ix=108653",
@@ -71076,7 +71014,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-8120516804266588345",
+    "id": "wevity-3571097161660250228",
     "boardType": "contests",
     "title": "2026년 제8회 K-디지털 트레이닝 해커톤",
     "category": "contest_coding",
@@ -71093,7 +71031,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108567",
@@ -71107,7 +71045,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-4357515790384721914",
+    "id": "wevity-4625342270862166209",
     "boardType": "contests",
     "title": "2026 장애 공감 공모전",
     "category": "contest_music",
@@ -71124,7 +71062,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108549",
@@ -71138,7 +71076,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-1758433665010347304",
+    "id": "wevity-3408210981211016149",
     "boardType": "contests",
     "title": "제13회 전국 ICT융합 AI 공모전",
     "category": "contest_stem",
@@ -71155,7 +71093,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108544",
@@ -71169,7 +71107,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7408890387069869841",
+    "id": "wevity-8888319806967828450",
     "boardType": "contests",
     "title": "제3회 KRC AI 디지털 혁신 공모전",
     "category": "contest_general",
@@ -71186,7 +71124,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108519",
@@ -71200,7 +71138,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9016303977569482743",
+    "id": "wevity-5927155366956084648",
     "boardType": "contests",
     "title": "제 5회 그린이니셔티브 60초 영화제 공모전",
     "category": "contest_music",
@@ -71217,7 +71155,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108509",
@@ -71231,7 +71169,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-591071867682325419",
+    "id": "wevity-3181217443967695213",
     "boardType": "contests",
     "title": "2026년 시민·공무원 AI 공모전",
     "category": "contest_general",
@@ -71248,7 +71186,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108490",
@@ -71262,7 +71200,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6132903630336363005",
+    "id": "wevity-1912883742560396738",
     "boardType": "contests",
     "title": "제5회 경운대학교 지능형 모빌리티 SW경진대회",
     "category": "contest_coding",
@@ -71279,7 +71217,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108424",
@@ -71293,7 +71231,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-6648673722818248209",
+    "id": "wevity-518915177945330383",
     "boardType": "contests",
     "title": "2026 CHAI 대학생 AI 광고 공모전",
     "category": "contest_general",
@@ -71310,7 +71248,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108417",
@@ -71324,7 +71262,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7735967193880213050",
+    "id": "wevity-9171354483693276005",
     "boardType": "contests",
     "title": "2026년 물류데이터·AI 활용 및 분석 아이디어 공모전",
     "category": "contest_general",
@@ -71341,7 +71279,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108323",
@@ -71355,7 +71293,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2625618374680175718",
+    "id": "wevity-3780283839621226924",
     "boardType": "contests",
     "title": "2026 성평등 영상 콘텐츠 공모전",
     "category": "contest_music",
@@ -71372,7 +71310,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108289",
@@ -71386,7 +71324,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-296517279581810049",
+    "id": "wevity-7938798703498381835",
     "boardType": "contests",
     "title": "제주 바이오 AX 해커톤: AI로 설계하는 제주 바이오의 미래 참가팀 모집",
     "category": "contest_coding",
@@ -71403,7 +71341,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108247",
@@ -71417,7 +71355,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-7171474726872178029",
+    "id": "wevity-4989874060245277758",
     "boardType": "contests",
     "title": "2026년 춘천시 데이터 활용 해커톤 대회",
     "category": "contest_coding",
@@ -71434,7 +71372,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&cidx=20&gbn=view&gp=7&ix=108156",
@@ -71448,7 +71386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2591518280654145295",
+    "id": "wevity-7241796089168245309",
     "boardType": "contests",
     "title": "2026년 제주시 안전문화운동 우수사례 공모전",
     "category": "contest_general",
@@ -71465,7 +71403,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=1&ix=111676",
@@ -71479,7 +71417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9139246673540277046",
+    "id": "wevity-7690919675158084632",
     "boardType": "contests",
     "title": "유니세프 한국위원회 2027 사회정서학습 수업사례 공모전",
     "category": "contest_general",
@@ -71496,7 +71434,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=1&ix=111402",
@@ -71510,7 +71448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-5270886988743790537",
+    "id": "wevity-3426037922951485138",
     "boardType": "contests",
     "title": "2026 제7회 평화통일 사진 & 동영상 공모전",
     "category": "contest_general",
@@ -71527,7 +71465,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111898",
@@ -71541,7 +71479,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-2856277196522059396",
+    "id": "wevity-7214222383642316926",
     "boardType": "contests",
     "title": "2027년 연희문학창작촌 입주작가 정기공모",
     "category": "contest_writing",
@@ -71558,7 +71496,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111737",
@@ -71572,7 +71510,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-3938026739002895758",
+    "id": "wevity-7482682915269012765",
     "boardType": "contests",
     "title": "2026 레트로 퓨처 페스티벌 G1 멘토 스테이지 암기왕 대회 발표자 모집",
     "category": "contest_stem",
@@ -71589,7 +71527,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111321",
@@ -71603,7 +71541,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-9145463350764112751",
+    "id": "wevity-2769391185383218091",
     "boardType": "contests",
     "title": "양주시 2026년 GREEN(그린) 스마트 그린도시 탄소중립 그림 공모전",
     "category": "contest_music",
@@ -71620,7 +71558,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111260",
@@ -71634,7 +71572,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-401083962852939300",
+    "id": "wevity-8741870525764067533",
     "boardType": "contests",
     "title": "한국공항보안 어린이 그림그리기 대회",
     "category": "contest_music",
@@ -71651,7 +71589,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111248",
@@ -71665,7 +71603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     ]
   },
   {
-    "id": "wevity-364392026037954665",
+    "id": "wevity-6906860209486925183",
     "boardType": "contests",
     "title": "제15회 조계사 어린이 미술대회 (나는 화가다)",
     "category": "contest_music",
@@ -71682,7 +71620,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "applyStartDate": "2026-10-15",
     "applyEndDate": "2026-11-30",
     "status": "applying",
-    "dday": "D-16",
+    "dday": "D-15",
     "targetAudience": "전국 유·초·중·고등학생 및 청소년",
     "fee": "무료 (온라인 접수)",
     "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=2&ix=111211",
@@ -71693,812 +71631,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "공모전",
       "어린이 공모",
       "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-3296742537875819137",
-    "boardType": "contests",
-    "title": "2026년 제9회 대전 세계태양광총회 어린이 그림 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "대전관광공사",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111159",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260923035749_66b0b34f.jpg",
-    "description": "2026년 제9회 대전 세계태양광총회 어린이 그림 공모전 - 대전관광공사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-2713350041757670475",
-    "boardType": "contests",
-    "title": "지역사회-학교 기반 알레르기질환 예방·관리 우수사례 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "질병관리청",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daegu",
-    "regionName": "대구광역시",
-    "location": "대구광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111113",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260921163933_79610c62.jpg",
-    "description": "지역사회-학교 기반 알레르기질환 예방·관리 우수사례 공모전 - 질병관리청 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "대구광역시"
-    ]
-  },
-  {
-    "id": "wevity-6915536436346147384",
-    "boardType": "contests",
-    "title": "제1회 강서운전면허시험장 어린이 교통안전 창작 그림 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "한국도로교통공단 강서운전면허시험장",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "ulsan",
-    "regionName": "울산광역시",
-    "location": "울산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=111064",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260920025747_f8d7ae3c.jpg",
-    "description": "제1회 강서운전면허시험장 어린이 교통안전 창작 그림 공모전 - 한국도로교통공단 강서운전면허시험장 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "울산광역시"
-    ]
-  },
-  {
-    "id": "wevity-7057430749666339580",
-    "boardType": "contests",
-    "title": "[식품의약품안전처] 제2차 안전한 어린이 의약정보 영상 콘텐츠 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "식품의약품안전처",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongnam",
-    "regionName": "경상남도",
-    "location": "경상남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110942",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260915000941_3b3d27a3.jpg",
-    "description": "[식품의약품안전처] 제2차 안전한 어린이 의약정보 영상 콘텐츠 공모전 - 식품의약품안전처 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경상남도"
-    ]
-  },
-  {
-    "id": "wevity-681824927738104551",
-    "boardType": "contests",
-    "title": "제4회 전국 어린이 글짓기 대회(새만금)",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "국립새만금간척박물관",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110934",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260911131125_211f16d1.jpg",
-    "description": "제4회 전국 어린이 글짓기 대회(새만금) - 국립새만금간척박물관 주최 전국 공모전 및 경진대회입니다. 분야 : 문학/글/시나리오",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경상북도"
-    ]
-  },
-  {
-    "id": "wevity-2838739369381171054",
-    "boardType": "contests",
-    "title": "제17회 화성시동요대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "화성신문사",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110927",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260910232243_2deb4c30.jpg",
-    "description": "제17회 화성시동요대회 - 화성신문사 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-5425967752436109456",
-    "boardType": "contests",
-    "title": "제 14회 경기어린이 건축물 그리기 대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "경기도건축사회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110876",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260911213743_ca7d0ebe.jpg",
-    "description": "제 14회 경기어린이 건축물 그리기 대회 - 경기도건축사회 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-8283353423405229356",
-    "boardType": "contests",
-    "title": "2026년 제7회 아동 안전사고예방 아이디어 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "한국아동단체협의회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gwangju",
-    "regionName": "광주광역시",
-    "location": "광주광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110824",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260908165826_88aab094.jpg",
-    "description": "2026년 제7회 아동 안전사고예방 아이디어 공모전 - 한국아동단체협의회 주최 전국 공모전 및 경진대회입니다. 분야 : 기획/아이디어",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "광주광역시"
-    ]
-  },
-  {
-    "id": "wevity-3510711615377059103",
-    "boardType": "contests",
-    "title": "2026년 제4회 서울아이 뛰움 체조 경연대회",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "서울특별시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110822",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260911010738_9ac558dd.jpg",
-    "description": "2026년 제4회 서울아이 뛰움 체조 경연대회 - 서울특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-5084699459623972085",
-    "boardType": "contests",
-    "title": "제4회 남동 어린이 자원순환 포스터 공모전",
-    "category": "contest_music",
-    "categoryName": "동요·음악경연",
-    "badge": "🎵 동요·음악경연",
-    "organizer": "남동구",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonbuk",
-    "regionName": "전북특별자치도",
-    "location": "전북특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%96%B4%EB%A6%B0%EC%9D%B4&gbn=view&gp=3&ix=110785",
-    "imageUrl": "https://www.wevity.com/upload/contest/20260908224916_46734e6f.jpg",
-    "description": "제4회 남동 어린이 자원순환 포스터 공모전 - 남동구 주최 전국 공모전 및 경진대회입니다. 분야 : 예체능/미술/음악",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "어린이 공모",
-      "전북특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-3817337381539870869",
-    "boardType": "contests",
-    "title": "2026 은평구 청소년 환경숏폼 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "은평구청",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112359",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261113172506_1c2dc613.jpg",
-    "description": "2026 은평구 청소년 환경숏폼 공모전 - 은평구청 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "전라남도"
-    ]
-  },
-  {
-    "id": "wevity-6680673790992500459",
-    "boardType": "contests",
-    "title": "재능공유프로젝트 꼼지락 6기 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "시립마포청소년센터",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112355",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261113164638_f89f7671.jpg",
-    "description": "재능공유프로젝트 꼼지락 6기 모집 - 시립마포청소년센터 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "제주특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-7228858899865157724",
-    "boardType": "contests",
-    "title": "2027년 부산광역시일시청소년쉼터(고정형) 제19기 아웃리치자원봉사단 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "부산광역시일시청소년쉼터(고정형)",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "busan",
-    "regionName": "부산광역시",
-    "location": "부산광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112335",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261112204152_4ee658ac.jpg",
-    "description": "2027년 부산광역시일시청소년쉼터(고정형) 제19기 아웃리치자원봉사단 모집 - 부산광역시일시청소년쉼터(고정형) 주최 전국 공모전 및 경진대회입니다. 분야 : 봉사활동",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "부산광역시"
-    ]
-  },
-  {
-    "id": "wevity-8890940319098753402",
-    "boardType": "contests",
-    "title": "영동군청소년상담복지센터 2026년 제 12회 UCC공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "영동군청소년상담복지센터",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112292",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261114002541_632dc6f3.jpg",
-    "description": "영동군청소년상담복지센터 2026년 제 12회 UCC공모전 - 영동군청소년상담복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "충청북도"
-    ]
-  },
-  {
-    "id": "wevity-8642828245146529660",
-    "boardType": "contests",
-    "title": "[심곡동종합사회복지관] 청소년 중독 예방 숏폼 공모전 '마.블 숏폼 어워즈' 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "심곡동종합사회복지관",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112259",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261109175522_8840fbc0.jpg",
-    "description": "[심곡동종합사회복지관] 청소년 중독 예방 숏폼 공모전 '마.블 숏폼 어워즈' 공모전 - 심곡동종합사회복지관 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진, 봉사활동",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "서울특별시"
-    ]
-  },
-  {
-    "id": "wevity-555846452491570717",
-    "boardType": "contests",
-    "title": "시안장학회 2027년 장학생 모집 공고",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "금강주택",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112245",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261109155428_0f148bed.jpg",
-    "description": "시안장학회 2027년 장학생 모집 공고 - 금강주택 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-5067222036405200387",
-    "boardType": "contests",
-    "title": "수원YWCA 2027 겨울방학 런앤런 교육봉사자 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "수원YWCA",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeonggi",
-    "regionName": "경기도",
-    "location": "경기도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112243",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261109154900_15acafdf.jpg",
-    "description": "수원YWCA 2027 겨울방학 런앤런 교육봉사자 모집 - 수원YWCA 주최 전국 공모전 및 경진대회입니다. 분야 : 봉사활동",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "경기도"
-    ]
-  },
-  {
-    "id": "wevity-5616206887395835221",
-    "boardType": "contests",
-    "title": "2027년 서산문화복지센터 청소년수련관 자치기구 및 동아리 참여 청소년 모집",
-    "category": "contest_writing",
-    "categoryName": "전국 백일장·글짓기",
-    "badge": "📚 전국 백일장",
-    "organizer": "서산문화복지센터",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungnam",
-    "regionName": "충청남도",
-    "location": "충청남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112188",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261105180007_6eb8791f.jpg",
-    "description": "2027년 서산문화복지센터 청소년수련관 자치기구 및 동아리 참여 청소년 모집 - 서산문화복지센터 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "충청남도"
-    ]
-  },
-  {
-    "id": "wevity-3453837601540888922",
-    "boardType": "contests",
-    "title": "사랑의 열매 공모사업 마음한켠 또토링 멘토 모집",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "월곡청소년센터",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "incheon",
-    "regionName": "인천광역시",
-    "location": "인천광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112112",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261103155143_d47eb2f1.jpg",
-    "description": "사랑의 열매 공모사업 마음한켠 또토링 멘토 모집 - 월곡청소년센터 주최 전국 공모전 및 경진대회입니다. 분야 : 봉사활동",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "인천광역시"
-    ]
-  },
-  {
-    "id": "wevity-932545751939590692",
-    "boardType": "contests",
-    "title": "2026 제17회 국제 청소년 평화 휴머니즘 영상 공모제",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "사단법인 미래사회와종교성연구원",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gangwon",
-    "regionName": "강원특별자치도",
-    "location": "강원특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112079",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261102131229_1efdde35.jpg",
-    "description": "2026 제17회 국제 청소년 평화 휴머니즘 영상 공모제 - 사단법인 미래사회와종교성연구원 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "강원특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-3053377649345583083",
-    "boardType": "contests",
-    "title": "제18회 3·15 청소년 영상제 UCC 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "(사)3·15의거기념사업회",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "daejeon",
-    "regionName": "대전광역시",
-    "location": "대전광역시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=1&ix=112048",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261102180628_79428b74.jpg",
-    "description": "제18회 3·15 청소년 영상제 UCC 공모전 - (사)3·15의거기념사업회 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "대전광역시"
-    ]
-  },
-  {
-    "id": "wevity-1346462739462136161",
-    "boardType": "contests",
-    "title": "2026 경산시 AI 미디어 콘텐츠 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "경산시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "gyeongbuk",
-    "regionName": "경상북도",
-    "location": "경상북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=112022",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261030154358_16c8c52c.jpg",
-    "description": "2026 경산시 AI 미디어 콘텐츠 공모전 - 경산시 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "경상북도"
-    ]
-  },
-  {
-    "id": "wevity-1323340242710906212",
-    "boardType": "contests",
-    "title": "2026 자립준비청년 디벨롭 숏폼콘테스트",
-    "category": "contest_stem",
-    "categoryName": "과학탐구·창의발명",
-    "badge": "💡 과학·창의발명",
-    "organizer": "과학기술정보통신부",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "sejong",
-    "regionName": "세종특별자치시",
-    "location": "세종특별자치시 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111999",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261029175844_4b9d28e6.jpg",
-    "description": "2026 자립준비청년 디벨롭 숏폼콘테스트 - 과학기술정보통신부 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "세종특별자치시"
-    ]
-  },
-  {
-    "id": "wevity-7660697862369858613",
-    "boardType": "contests",
-    "title": "2026 제주 청소년 AI 리터러시 영상 공모전",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "제주콘텐츠진흥원",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeju",
-    "regionName": "제주특별자치도",
-    "location": "제주특별자치도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111924",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261026172853_d20f2a3f.jpg",
-    "description": "2026 제주 청소년 AI 리터러시 영상 공모전 - 제주콘텐츠진흥원 주최 전국 공모전 및 경진대회입니다. 분야 : 영상/UCC/사진",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "제주특별자치도"
-    ]
-  },
-  {
-    "id": "wevity-4474180567325583573",
-    "boardType": "contests",
-    "title": "제11회 장기려봉사상 청소년·대학생 자원봉사 체험수기 발표대회",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "성산장기려기념사업회 블루크로스의료봉사단",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "chungbuk",
-    "regionName": "충청북도",
-    "location": "충청북도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111879",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261023134236_363f2d24.jpg",
-    "description": "제11회 장기려봉사상 청소년·대학생 자원봉사 체험수기 발표대회 - 성산장기려기념사업회 블루크로스의료봉사단 주최 전국 공모전 및 경진대회입니다. 분야 : 봉사활동",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "충청북도"
-    ]
-  },
-  {
-    "id": "wevity-2395303290754648665",
-    "boardType": "contests",
-    "title": "2026 디지털아트 컬처랩 – 유스랩 온라인 미디어아트 교육 프로그램",
-    "category": "contest_general",
-    "categoryName": "종합 아이디어공모",
-    "badge": "🏆 종합공모전",
-    "organizer": "전남광주통합특별시",
-    "sourceType": "wevity_contest",
-    "sourceLabel": "공모전 전문플랫폼 연동",
-    "region": "jeonnam",
-    "regionName": "전라남도",
-    "location": "전라남도 및 전국 온라인 접수",
-    "startDate": "2026-10-15",
-    "endDate": "2026-12-15",
-    "applyStartDate": "2026-10-15",
-    "applyEndDate": "2026-11-30",
-    "status": "applying",
-    "dday": "D-16",
-    "targetAudience": "전국 유·초·중·고등학생 및 청소년",
-    "fee": "무료 (온라인 접수)",
-    "url": "https://www.wevity.com/?c=find&s=1&gub=1&sp=contents&sw=%EC%B2%AD%EC%86%8C%EB%85%84&gbn=view&gp=2&ix=111708",
-    "imageUrl": "https://www.wevity.com/upload/contest/20261017020404_3f44a736.jpg",
-    "description": "2026 디지털아트 컬처랩 – 유스랩 온라인 미디어아트 교육 프로그램 - 전남광주통합특별시 주최 전국 공모전 및 경진대회입니다. 분야 : 기타",
-    "tags": [
-      "전국대회",
-      "공모전",
-      "청소년 공모",
-      "전라남도"
     ]
   },
   {
@@ -72685,7 +71817,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-22"
+    "dday": "D-21"
   },
   {
     "id": "tourapi-fest-2862358",
@@ -73975,7 +73107,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-10-17",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 초등학생(1~6학년)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261001102345064773",
@@ -73987,10 +73119,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7369507843611006961",
+    "id": "gg-fest-2350067494828398744",
     "boardType": "festivals",
     "title": "2026 김포 라베니체축제",
     "category": "festival_light",
@@ -74021,7 +73153,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-5682179004986374547",
+    "id": "gg-fest-4143018666051851251",
     "boardType": "festivals",
     "title": "제40회 정약용문화제",
     "category": "festival_tradition",
@@ -74111,7 +73243,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-3468240",
@@ -74142,7 +73274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-4117084",
@@ -74204,7 +73336,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261017154157517698",
@@ -74235,7 +73367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261017154559128737",
@@ -74266,7 +73398,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261017153137502899",
@@ -74297,7 +73429,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S260921164238542215",
@@ -74316,7 +73448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-10-18",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 유아",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S260921164238542215",
@@ -74328,7 +73460,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-4116994",
@@ -74421,7 +73553,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성곽야경",
       "가족산책"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "fest-gyeongbuk-01",
@@ -74452,7 +73584,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가을경주",
       "가족피크닉"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261020160014299910",
@@ -74471,7 +73603,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-10-20",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 초등학생(초등학교4학년 이상 성인까지)",
     "fee": "유료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020160014299910",
@@ -74483,7 +73615,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261020161744096983",
@@ -74514,7 +73646,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261020163009239965",
@@ -74545,7 +73677,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-825295",
@@ -74607,7 +73739,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-2558866",
@@ -75060,7 +74192,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-10-23",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=2026%20%EB%82%A8%EC%82%B0%20%EB%82%98%EC%9D%B4%ED%8A%B8%20%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
@@ -75072,7 +74204,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-3340301",
@@ -75196,7 +74328,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261023162433921661",
@@ -75227,7 +74359,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
     "id": "tourapi-fest-2867300",
@@ -75723,7 +74855,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-4115205",
@@ -75878,7 +75010,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261024153833916581",
@@ -75909,7 +75041,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261024154354557455",
@@ -75940,7 +75072,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261024162658645277",
@@ -75971,10 +75103,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "gg-fest-5331349322660215645",
+    "id": "gg-fest-4019876890132190125",
     "boardType": "festivals",
     "title": "반려동물 문화행사(페스티벌)",
     "category": "festival_culture",
@@ -76005,7 +75137,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7760116298973884601",
+    "id": "gg-fest-9218212017106710491",
     "boardType": "festivals",
     "title": "2025 화성 학생동아리 축제",
     "category": "expo_science",
@@ -76036,7 +75168,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-3506562199947448987",
+    "id": "gg-fest-2973225985713522473",
     "boardType": "festivals",
     "title": "2026 김포 선셋 페스타",
     "category": "festival_food",
@@ -76067,7 +75199,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8014228305246945192",
+    "id": "gg-fest-7081540546136692280",
     "boardType": "festivals",
     "title": "제21회 광릉숲축제",
     "category": "sports_marathon",
@@ -76098,7 +75230,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-1065830360636651985",
+    "id": "gg-fest-5481888025702984937",
     "boardType": "festivals",
     "title": "10월 마토예술제",
     "category": "festival_performance",
@@ -76157,7 +75289,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가을단풍",
       "자연체험"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
     "id": "fest-daegu-01",
@@ -76188,7 +75320,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "놀이공원",
       "야경나들이"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "fest-gwangju-01",
@@ -76281,7 +75413,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261022084712709564",
@@ -76312,7 +75444,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261022085720796151",
@@ -76343,7 +75475,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261020112156217559",
@@ -76374,7 +75506,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "seoul-res-S261025144201836459",
@@ -76405,7 +75537,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261025144658556467",
@@ -76436,7 +75568,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261025145159460906",
@@ -76467,7 +75599,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261024181933934352",
@@ -76498,7 +75630,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-3370452",
@@ -76529,7 +75661,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대구광역시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261027134826532625",
@@ -76560,7 +75692,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261027135256403587",
@@ -76591,7 +75723,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261027135525178666",
@@ -76622,7 +75754,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S260524094756230350",
@@ -76653,7 +75785,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-4128786",
@@ -76746,7 +75878,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-4134331",
@@ -76777,7 +75909,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-4106717",
@@ -77335,7 +76467,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
     "id": "tourapi-fest-3306590",
@@ -77431,7 +76563,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-7662454142495585217",
+    "id": "gg-fest-6513004250899039971",
     "boardType": "festivals",
     "title": "제3회 화성 루나 빛 축제",
     "category": "festival_light",
@@ -77462,7 +76594,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-395747630789663835",
+    "id": "gg-fest-8823301083440889597",
     "boardType": "festivals",
     "title": "2026 김포 해병대문화축제",
     "category": "expo_science",
@@ -77493,7 +76625,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "gg-fest-8307460426970526463",
+    "id": "gg-fest-3870947861043548007",
     "boardType": "festivals",
     "title": "2026년 제8회 운정호수공원 불꽃축제",
     "category": "festival_light",
@@ -77521,10 +76653,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "운정호수공원",
       "가족나들이"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "gg-fest-7660712169142116557",
+    "id": "gg-fest-5336259990551895669",
     "boardType": "festivals",
     "title": "2026년 가을걷이 한마당",
     "category": "expo_science",
@@ -77614,7 +76746,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서귀포체험",
       "제주가족여행"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
     "id": "seoul-res-S261020095302613204",
@@ -77645,7 +76777,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261019162431094888",
@@ -77676,7 +76808,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261023104443869949",
@@ -77707,7 +76839,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261019100650260236",
@@ -77738,7 +76870,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-29"
+    "dday": "D-28"
   },
   {
     "id": "seoul-res-S261020153617240018",
@@ -77769,7 +76901,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S261020154713924145",
@@ -77800,7 +76932,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261020155946338582",
@@ -77831,7 +76963,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "seoul-res-S261020161116202700",
@@ -77862,7 +76994,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261020161827972696",
@@ -77893,7 +77025,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261020162345931987",
@@ -77924,7 +77056,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
+  },
+  {
+    "id": "seoul-res-S261020143713857487",
+    "boardType": "festivals",
+    "title": "(수)몽글몽글 OO피어나는 꿈의숲",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "북서울꿈의숲",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 북서울꿈의숲",
+    "startDate": "2026-11-01",
+    "endDate": "2026-11-18",
+    "applyStartDate": "2026-11-01",
+    "applyEndDate": "2026-11-18",
+    "status": "applying",
+    "targetAudience": " 장애인(장애인 단체)",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020143713857487",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=1792475029346109TB7T66H7EZOW9LIEAC3PEE",
+    "description": "(수)몽글몽글 OO피어나는 꿈의숲 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "공원탐방",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-3"
   },
   {
     "id": "seoul-res-S261020162947096360",
@@ -77955,7 +77118,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261020164104857464",
@@ -77986,7 +77149,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "seoul-res-S261020165534268995",
@@ -78017,7 +77180,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S261022143513143625",
@@ -78048,7 +77211,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261022151433716156",
@@ -78079,7 +77242,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261013131754492985",
@@ -78110,7 +77273,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261026124034071831",
@@ -78141,10 +77304,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "gg-fest-8943626892096347126",
+    "id": "gg-fest-366169771254902730",
     "boardType": "festivals",
     "title": "우리가족 꼬마영웅 올림픽",
     "category": "festival_culture",
@@ -78172,7 +77335,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "탄천종합운동장",
       "가족나들이"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-2622167",
@@ -78234,7 +77397,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261027113023649004",
@@ -78265,7 +77428,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261102100634309493",
@@ -78296,7 +77459,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261023164430409038",
@@ -78327,7 +77490,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "seoul-res-S261006111141567707",
@@ -78358,7 +77521,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261103101155924156",
@@ -78389,7 +77552,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261103103220841744",
@@ -78420,7 +77583,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261103105322721507",
@@ -78451,7 +77614,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261029165342525826",
@@ -78482,7 +77645,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261030162206565781",
@@ -78513,7 +77676,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261014153413994620",
@@ -78544,7 +77707,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
     "id": "seoul-res-S261014162257150216",
@@ -78575,7 +77738,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
     "id": "seoul-res-S261014162958609201",
@@ -78606,7 +77769,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
     "id": "seoul-res-S261014163939026108",
@@ -78637,7 +77800,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
     "id": "seoul-res-S261014165841503147",
@@ -78668,7 +77831,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
     "id": "tourapi-fest-921212",
@@ -78792,7 +77955,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S261012160724552720",
@@ -78823,7 +77986,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261014172018451608",
@@ -78854,7 +78017,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261014172755049980",
@@ -78885,7 +78048,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261014173201716503",
@@ -78916,7 +78079,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261014173638391162",
@@ -78947,7 +78110,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261014174110331169",
@@ -78978,7 +78141,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S261019093633370452",
@@ -79009,7 +78172,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "seoul-res-S261019094123527396",
@@ -79040,7 +78203,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "fest-gangwon-01",
@@ -79102,7 +78265,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가을등불",
       "남강야경"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
     "id": "tourapi-fest-2754421",
@@ -79198,7 +78361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3908971799329794745",
+    "id": "seoul-culture-5095371876112581005",
     "boardType": "festivals",
     "title": "[서울시립 서서울미술관] 2026 서서울미술관 뉴미디어 신진작가전 《탈피하지 못하는 뱀은》",
     "category": "expo_science",
@@ -79226,7 +78389,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "금천구",
       "가족나들이"
     ],
-    "dday": "D-106"
+    "dday": "D-105"
   },
   {
     "id": "seoul-res-S261018162728779790",
@@ -79257,38 +78420,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-5"
-  },
-  {
-    "id": "seoul-res-S261020160117728476",
-    "boardType": "festivals",
-    "title": "11월 백련산숲속치유센터 [백련이음]",
-    "category": "park_eco",
-    "categoryName": "숲·공원 생태체험",
-    "badge": "🌿 숲·공원 생태체험",
-    "organizer": "백련산숲속치유센터",
-    "sourceType": "seoul_open_data",
-    "sourceLabel": "서울열린데이터광장 공공예약",
-    "region": "seoul",
-    "regionName": "서울특별시",
-    "location": "서울특별시 백련산숲속치유센터",
-    "startDate": "2026-11-05",
-    "endDate": "2026-11-26",
-    "applyStartDate": "2026-11-05",
-    "applyEndDate": "2026-11-26",
-    "status": "applying",
-    "targetAudience": " 성인",
-    "fee": "무료",
-    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020160117728476",
-    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=179247980007420U85GI57TW7ZELD0SWFLRF5Q",
-    "description": "11월 백련산숲속치유센터 [백련이음] - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
-    "tags": [
-      "서울공공예약",
-      "산림여가",
-      "어린이체험",
-      "가족예약"
-    ],
-    "dday": "D-12"
+    "dday": "D-4"
   },
   {
     "id": "fest-seoul-03",
@@ -79319,7 +78451,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "가을야경",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "fest-gg-02",
@@ -79663,7 +78795,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5372490702860620716",
+    "id": "seoul-culture-8460365560488007535",
     "boardType": "festivals",
     "title": "[서울생활사박물관] 육아 가족의 성장",
     "category": "expo_science",
@@ -79691,10 +78823,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "노원구",
       "가족나들이"
     ],
-    "dday": "D-134"
+    "dday": "D-133"
   },
   {
-    "id": "seoul-culture-1618078910214438272",
+    "id": "seoul-culture-121313314545298843",
     "boardType": "festivals",
     "title": "[주석모음집] 전시를 만드는 일에 대하여",
     "category": "expo_science",
@@ -79722,10 +78854,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-3982521544296036405",
+    "id": "seoul-culture-591101334631448914",
     "boardType": "festivals",
     "title": "[한성백제박물관] 박물관에서 함께 보는 영화 그리고 이야기 [박물관 무비톡]",
     "category": "expo_science",
@@ -79753,10 +78885,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-6167741750032556261",
+    "id": "seoul-culture-3132835867043378340",
     "boardType": "festivals",
     "title": "제18회 언리미티드 에디션 - 서울아트북페어 2026",
     "category": "expo_science",
@@ -79787,7 +78919,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8995579558681133300",
+    "id": "seoul-culture-170291195448506070",
     "boardType": "festivals",
     "title": "국립무용단 [2026 안무가 프로젝트]",
     "category": "festival_culture",
@@ -79818,7 +78950,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8130643352979605917",
+    "id": "seoul-culture-513695702150181428",
     "boardType": "festivals",
     "title": "국제 프리스타일 축구 월드 챔피언쉽 [2026 KILL THAT BALL: SEOUL]",
     "category": "festival_performance",
@@ -79849,7 +78981,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5361410523656259433",
+    "id": "seoul-culture-829284043287378128",
     "boardType": "festivals",
     "title": "공연단체 걸작들의 신작 공연 [넘는 몸들]",
     "category": "festival_performance",
@@ -79880,7 +79012,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2111174579164559642",
+    "id": "seoul-culture-7073120439238555431",
     "boardType": "festivals",
     "title": "강아솔 [안부인사]",
     "category": "festival_culture",
@@ -79911,7 +79043,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8238542215255662281",
+    "id": "seoul-culture-7387776950943442707",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 서초9 시리즈 7 [피아노 듀엣으로 만나는 베토벤 교향곡 운명과 환희]",
     "category": "festival_tradition",
@@ -79942,7 +79074,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8022237335162220313",
+    "id": "seoul-culture-3633111571167635722",
     "boardType": "festivals",
     "title": "[서울백제어린이박물관] 영유아 예술체험 프로그램 [동그라미 세모 네모]",
     "category": "expo_science",
@@ -79973,7 +79105,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-1040949872589752269",
+    "id": "seoul-culture-7881406129816968802",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 양천문화회관",
     "category": "festival_culture",
@@ -80032,7 +79164,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "seoul-res-S261006125850384915",
@@ -80063,7 +79195,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "seoul-res-S261022160053218513",
@@ -80094,7 +79226,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "fest-incheon-02",
@@ -80435,7 +79567,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-106"
+    "dday": "D-105"
   },
   {
     "id": "tourapi-fest-235076",
@@ -80562,7 +79694,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6597289446976400875",
+    "id": "seoul-culture-130859697706728430",
     "boardType": "festivals",
     "title": "[서울시어울림플라자] 보고, 느끼고, 함께 그리는 우리 가족 1박 2일 [어울림 아트캠프]",
     "category": "festival_culture",
@@ -80590,10 +79722,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강서구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-3714458451680725092",
+    "id": "seoul-culture-6631630285544619631",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/영유아 [엄마 아빠, 책이랑 놀자!]",
     "category": "festival_culture",
@@ -80621,10 +79753,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-5101704912509022931",
+    "id": "seoul-culture-4916256852539832959",
     "boardType": "festivals",
     "title": "연극 [점프x컷]",
     "category": "festival_tradition",
@@ -80652,10 +79784,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-7937696687995392920",
+    "id": "seoul-culture-3778162770102916220",
     "boardType": "festivals",
     "title": "2026 스페이스세컨뷰의 김지혜 초대 개인전 [오래 피는 마음]",
     "category": "festival_culture",
@@ -80683,10 +79815,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-1589695726553063103",
+    "id": "seoul-culture-8352495597852701181",
     "boardType": "festivals",
     "title": "제2회 호호랑 친구들 - 수집가마켓",
     "category": "festival_culture",
@@ -80717,7 +79849,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8264138898887149019",
+    "id": "seoul-culture-4031372733248100331",
     "boardType": "festivals",
     "title": "제27회 은평구 청강정철호 국악제",
     "category": "festival_performance",
@@ -80748,7 +79880,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5075881256982145743",
+    "id": "seoul-culture-8211486928701257177",
     "boardType": "festivals",
     "title": "2026 코리아발레스타즈 [호두까기인형]",
     "category": "park_eco",
@@ -80779,7 +79911,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8918465383418956856",
+    "id": "seoul-culture-5642163984316561412",
     "boardType": "festivals",
     "title": "[성동구청] 2026 성동 미래직업체험 & 온마을체험학습 축제",
     "category": "park_eco",
@@ -80810,7 +79942,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7843522788991734283",
+    "id": "seoul-culture-2351242963230410030",
     "boardType": "festivals",
     "title": "[고려대학교] 2026 모두의 AI·AX 캠프(초·중·고 대상)",
     "category": "park_eco",
@@ -80841,7 +79973,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4346861640460510020",
+    "id": "seoul-culture-1170008243614283364",
     "boardType": "festivals",
     "title": "[서울시어울림플라자] 행복을 선물하는 가족뮤지컬 [우리 가족]",
     "category": "festival_performance",
@@ -80872,7 +80004,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-790369683506201767",
+    "id": "seoul-culture-1200907328054153170",
     "boardType": "festivals",
     "title": "[동작문화재단] 11/7(토), 단 4시간만 열리는 사당의 지하낙원으로 초대합니다!",
     "category": "festival_tradition",
@@ -80903,7 +80035,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-450545326855444879",
+    "id": "seoul-culture-663467839402537290",
     "boardType": "festivals",
     "title": "[운현궁] 2026 서울 운현궁 「운현궁 한옥콘서트」",
     "category": "festival_tradition",
@@ -80934,7 +80066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8745681357717791955",
+    "id": "seoul-culture-4413433109980161475",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 은평 월간 다문화 미등록 [이주아동 이야기 은유 작가님과 함께하는 북토크]",
     "category": "festival_culture",
@@ -80965,7 +80097,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5413069554958414214",
+    "id": "seoul-culture-4959803385399561882",
     "boardType": "festivals",
     "title": "박희수의 정가 [설화(說花)] 말은 입김이 되어 눈꽃처럼 흩어진다",
     "category": "festival_season",
@@ -80996,7 +80128,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6926830841702921502",
+    "id": "seoul-culture-4900024571325433987",
     "boardType": "festivals",
     "title": "2026 서리풀 청소년축제",
     "category": "park_eco",
@@ -81055,7 +80187,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "seoul-res-S261022090324550293",
@@ -81074,7 +80206,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 가족",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261022090324550293",
@@ -81086,7 +80218,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261016003303769269",
@@ -81105,7 +80237,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 성인(우드 액자속의 시들지 않는 꽃)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261016003303769269",
@@ -81117,7 +80249,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261016005603726920",
@@ -81136,7 +80268,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 가족(공원에서 들리는 숲의 소리 : 잠자리 나무 피리 만들기)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261016005603726920",
@@ -81148,7 +80280,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261020102008521065",
@@ -81167,7 +80299,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 제한없음",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020102008521065",
@@ -81179,7 +80311,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261015144358861438",
@@ -81198,7 +80330,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 유아(가족동반필수)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261015144358861438",
@@ -81210,7 +80342,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261015152915185746",
@@ -81229,7 +80361,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-07",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 유아(가족동반필수)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261015152915185746",
@@ -81241,7 +80373,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261022152652278145",
@@ -81272,7 +80404,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261006130931956977",
@@ -81303,10 +80435,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-4977648924261100267",
+    "id": "seoul-culture-4871098057865802257",
     "boardType": "festivals",
     "title": "[서울시립과학관] 어른이 과학놀이터",
     "category": "expo_science",
@@ -81334,10 +80466,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "노원구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-3125208685723579577",
+    "id": "seoul-culture-8131868752285886607",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이메이킹 [행복맘껏time] (두 번째 일요일은 해봄공간 오픈데이)",
     "category": "festival_season",
@@ -81368,7 +80500,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2310643049761129697",
+    "id": "seoul-culture-6256098041808131286",
     "boardType": "festivals",
     "title": "[성동 한장] 엽서와 라디오로 성동의 이야기를 모으는 하루",
     "category": "park_eco",
@@ -81399,7 +80531,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6698201288526446209",
+    "id": "seoul-culture-500173236518771392",
     "boardType": "festivals",
     "title": "장우리 첼로 독주회",
     "category": "festival_culture",
@@ -81430,7 +80562,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5566513219926958037",
+    "id": "seoul-culture-3175988620196028961",
     "boardType": "festivals",
     "title": "상괭이에 관한 짧은 다큐와 추자도 항해기 [기록되지 않았던 바다]",
     "category": "festival_culture",
@@ -81461,7 +80593,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2211968735577898446",
+    "id": "seoul-culture-1816765994450629994",
     "boardType": "festivals",
     "title": "2026 삼일로창고극장 [창고포럼 Live Talk : 배우 박정자와 주호성이 함께하는 토크콘서트]",
     "category": "festival_culture",
@@ -81492,6 +80624,37 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
+    "id": "seoul-res-S261023100452828477",
+    "boardType": "festivals",
+    "title": "(일)창포원의 새 만나기",
+    "category": "park_eco",
+    "categoryName": "숲·공원 생태체험",
+    "badge": "🌿 숲·공원 생태체험",
+    "organizer": "서울창포원",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 서울창포원",
+    "startDate": "2026-11-08",
+    "endDate": "2026-11-15",
+    "applyStartDate": "2026-11-08",
+    "applyEndDate": "2026-11-15",
+    "status": "applying",
+    "targetAudience": " 가족",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261023100452828477",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=17927176098066H7DBAZEMH47U1ZLZ616SOV1P",
+    "description": "(일)창포원의 새 만나기 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "공원탐방",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-Day (오늘마감)"
+  },
+  {
     "id": "seoul-res-S261016011211851401",
     "boardType": "festivals",
     "title": "(일) 숲 속 친구들의 겨울준비 (가족숲체험)",
@@ -81520,7 +80683,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261022145836044855",
@@ -81551,10 +80714,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-7366241782884974391",
+    "id": "seoul-culture-8986695392542552337",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 서울시민대학 [웰니스 학습라운지 다감] 개관 및 시범 프로그램 운영",
     "category": "festival_culture",
@@ -81582,10 +80745,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "관악구",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
-    "id": "seoul-culture-7402298014299047229",
+    "id": "seoul-culture-2493080249575291637",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀청년아트갤러리 전시 [그 장면은 내 눈앞에서 고무처럼 늘어났다]",
     "category": "expo_science",
@@ -81613,10 +80776,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-2830455905170496157",
+    "id": "seoul-culture-7670785198556776828",
     "boardType": "festivals",
     "title": "연극 [지금 정리할게요]",
     "category": "festival_performance",
@@ -81644,10 +80807,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-3495897638130456411",
+    "id": "seoul-culture-1011934568404906812",
     "boardType": "festivals",
     "title": "[운현궁] 2026 기획전시 [궁, 시간을 수 놓다]",
     "category": "expo_science",
@@ -81675,10 +80838,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-5934006242455744212",
+    "id": "seoul-culture-2405771474699909303",
     "boardType": "festivals",
     "title": "제6회 ㅊㅊ-하다 페스티벌",
     "category": "festival_culture",
@@ -81709,7 +80872,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4457087525799713527",
+    "id": "seoul-culture-9013760907587118466",
     "boardType": "festivals",
     "title": "2026 서울시민 생활음악 심포니 페스티벌 [음악으로 사람을 잇다]",
     "category": "festival_culture",
@@ -81740,7 +80903,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2229264662300147421",
+    "id": "seoul-culture-1925624296009560397",
     "boardType": "festivals",
     "title": "덜미2 - 어둠 속의 불빛이 우리를",
     "category": "festival_light",
@@ -81771,7 +80934,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4154378252437056797",
+    "id": "seoul-culture-6752006384602526379",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 우리동네 실내악 - 서울여자대학교",
     "category": "festival_culture",
@@ -81802,7 +80965,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2471212415384597272",
+    "id": "seoul-culture-5081354004960992835",
     "boardType": "festivals",
     "title": "제52회 신악회 작곡발표회 : 신라 향가, 현대의 가락으로 다시 살아나다.",
     "category": "festival_culture",
@@ -81833,7 +80996,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-2780014608370670949",
+    "id": "seoul-culture-978885668419861872",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 클래식 with 대전시립교향악단",
     "category": "expo_science",
@@ -81864,7 +81027,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-731247167754686328",
+    "id": "seoul-culture-3701291296158907799",
     "boardType": "festivals",
     "title": "[서울디자인재단] 2026 서울디자인런 포럼",
     "category": "festival_culture",
@@ -81895,7 +81058,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8559959854505314493",
+    "id": "seoul-culture-3952397061245897592",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 마포 배리어프리 콘서트 [다른 음색, 하나의 울림] 유망 청년 예술가 초청 음악회",
     "category": "festival_tradition",
@@ -81985,7 +81148,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261110132116561579",
@@ -82016,7 +81179,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-35"
+    "dday": "D-34"
   },
   {
     "id": "seoul-res-S261103085810600557",
@@ -82047,10 +81210,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-192129502947489041",
+    "id": "seoul-culture-5516114578284896225",
     "boardType": "festivals",
     "title": "해요 개인전 [Duologue]",
     "category": "festival_culture",
@@ -82078,10 +81241,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
-    "id": "seoul-culture-6899737447663261134",
+    "id": "seoul-culture-2809400655443176032",
     "boardType": "festivals",
     "title": "[그루브재즈데이] Groove in November",
     "category": "festival_performance",
@@ -82109,10 +81272,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
-    "id": "seoul-culture-5902722946247444656",
+    "id": "seoul-culture-3736514137550812194",
     "boardType": "festivals",
     "title": "아트에디션 아트페어 2026",
     "category": "festival_culture",
@@ -82140,10 +81303,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-6257442166997404939",
+    "id": "seoul-culture-1212232193922249300",
     "boardType": "festivals",
     "title": "[2026공연봄날 공식선정작] 호두까기인형",
     "category": "festival_season",
@@ -82174,7 +81337,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7024171976483775791",
+    "id": "seoul-culture-8472670762360974993",
     "boardType": "festivals",
     "title": "[강북문화재단] 마티네 콘서트 [From Italy to Spain]",
     "category": "festival_tradition",
@@ -82205,7 +81368,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8903596321821291721",
+    "id": "seoul-culture-5132355174234518855",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Remembering Bud Powell]",
     "category": "festival_tradition",
@@ -82236,7 +81399,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6992203736854790399",
+    "id": "seoul-culture-4701549954205007136",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 인공지능 시대 교육에 던지는 엉뚱하고 당연한 질문 - 채희태 작가님과 함께하는 북토크",
     "category": "festival_culture",
@@ -82267,7 +81430,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6565000769378407060",
+    "id": "seoul-culture-9162789035688427772",
     "boardType": "festivals",
     "title": "[성동문화재단] 세계 영화 상영회 9회차 '이탈리아 영화' [비발디와 나]",
     "category": "festival_tradition",
@@ -82298,7 +81461,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3235836514836235962",
+    "id": "seoul-culture-1004461270240971947",
     "boardType": "festivals",
     "title": "[성동구립도서관] 문화가 있는 날 [김헌 작가와의 만남]",
     "category": "festival_culture",
@@ -82357,7 +81520,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-4142164",
@@ -82376,7 +81539,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-12",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=%EC%96%91%EB%8F%99%20%EB%B0%B1%ED%88%AC%EB%8D%94%20%EC%9E%A5%28BACK%20TO%20THE%20%EC%9E%A5%29%20%ED%99%8D%ED%83%81%ED%8E%98%EC%8A%A4%ED%83%80",
@@ -82388,10 +81551,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-1471873641575057980",
+    "id": "seoul-culture-8143659845220145253",
     "boardType": "festivals",
     "title": "[보시기에 좋았더라 ···KI TOV]  조미경 초대 개인전",
     "category": "festival_culture",
@@ -82419,10 +81582,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
-    "id": "seoul-culture-1472756061694799646",
+    "id": "seoul-culture-628957594250963157",
     "boardType": "festivals",
     "title": "2026 복작복작 오늘전통축제",
     "category": "festival_tradition",
@@ -82450,10 +81613,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-537140929761059261",
+    "id": "seoul-culture-5646305049606447807",
     "boardType": "festivals",
     "title": "김대중의 망명일기와 기록물 특별전 '내면의 기록' 연계 강연 및 토크콘서트",
     "category": "expo_science",
@@ -82484,7 +81647,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7123550728942471449",
+    "id": "seoul-culture-3427548800096439673",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/도서관초대석 (김영찬 작가) [가르치지 않을 용기]",
     "category": "festival_culture",
@@ -82515,7 +81678,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-1470437087283758346",
+    "id": "seoul-culture-3687051507613651775",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 개관 11주년 기념 북토크 [사랑과 결함] 예소연 저자와의 만남",
     "category": "festival_culture",
@@ -82546,7 +81709,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-7965616563999243062",
+    "id": "seoul-culture-2952480999626723718",
     "boardType": "festivals",
     "title": "[서울디자인창업센터] 서울디자인런 2026 - 팔지 않고 사게 만든다",
     "category": "festival_culture",
@@ -82605,7 +81768,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
     "id": "seoul-res-S261022145000186680",
@@ -82636,7 +81799,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "fest-chungbuk-01",
@@ -82698,7 +81861,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-2769990",
@@ -82729,10 +81892,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-6634138482506381925",
+    "id": "seoul-culture-2139047660744515519",
     "boardType": "festivals",
     "title": "[서울식물원] 전시온실 야간개장",
     "category": "expo_science",
@@ -82760,10 +81923,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강서구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-4649287860546463542",
+    "id": "seoul-culture-8725678805629354379",
     "boardType": "festivals",
     "title": "[영등포문화재단] 2026 창의예술주간 둥둥제",
     "category": "festival_tradition",
@@ -82791,10 +81954,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영등포구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-4905427235468064106",
+    "id": "seoul-culture-6577477267129714646",
     "boardType": "festivals",
     "title": "[마포문화재단] 2026 M 초이스 연극 [투신 Two Scenes]",
     "category": "festival_tradition",
@@ -82822,10 +81985,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-7100892839820655085",
+    "id": "seoul-culture-9196885298437378717",
     "boardType": "festivals",
     "title": "붙잡을 수 없는 환영을 지나, 보이지 않는 진실을 향해 나아간다",
     "category": "festival_culture",
@@ -82853,10 +82016,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
-    "id": "seoul-culture-1348256987434992112",
+    "id": "seoul-culture-5652299413137368442",
     "boardType": "festivals",
     "title": "[세종문화회관] CHANGMO : MONOLITH",
     "category": "festival_culture",
@@ -82884,10 +82047,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-377573510223490296",
+    "id": "seoul-culture-3069532180950966279",
     "boardType": "festivals",
     "title": "hnei(이석희) 작곡발표회 [비누, 비노, 배누, 비눌, 비널 그리고 사분]",
     "category": "festival_culture",
@@ -82903,7 +82066,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-13",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "누구나(만 7세 이상)",
     "fee": "전석 30,000원 / 1차 예매 20,000원 / 2차 예매 25,000원 / 예술인패스 25,000원",
     "url": "https://nol.yanolja.com/ticket/products/26015252",
@@ -82915,10 +82078,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6064121844620749605",
+    "id": "seoul-culture-2456995038761388133",
     "boardType": "festivals",
     "title": "[운현궁] 2026 별 헤는 밤 운현궁(11월)",
     "category": "farm_harvest",
@@ -82949,7 +82112,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3268803230648987643",
+    "id": "seoul-culture-988971121873451685",
     "boardType": "festivals",
     "title": "2026 강북창업포럼 [AI가 바꾸는 창업의 미래] (NCI 민/관/학 창업포럼)",
     "category": "festival_culture",
@@ -82980,7 +82143,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3584681281428159229",
+    "id": "seoul-culture-3314860573042976797",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 서초9 시리즈8 [소프라노 송강이 리사이틀]",
     "category": "festival_tradition",
@@ -83011,7 +82174,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3855122724490151489",
+    "id": "seoul-culture-241742643586900360",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 행복한 음악회, 함께! II",
     "category": "festival_culture",
@@ -83042,7 +82205,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8628779307221067577",
+    "id": "seoul-culture-3033046715036700179",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (차우진) 관점은 동사다; 무엇에 귀 기울이고 무엇을 보아야 할까",
     "category": "festival_culture",
@@ -83073,7 +82236,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8098146762424856785",
+    "id": "seoul-culture-6719702824045380634",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 SPO Day",
     "category": "festival_culture",
@@ -83104,7 +82267,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-1192322783872535092",
+    "id": "seoul-culture-2891702390074220829",
     "boardType": "festivals",
     "title": "[구로천왕도서관] 은유 작가와의 만남 [해방의 밤]",
     "category": "farm_harvest",
@@ -83135,7 +82298,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6761824049092495414",
+    "id": "seoul-culture-6666414001513548703",
     "boardType": "festivals",
     "title": "[운현궁] 「달빛 밀행-사라진 옥새의 행방을 밝혀라!」 1차",
     "category": "festival_light",
@@ -83166,7 +82329,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6372020875594172696",
+    "id": "seoul-culture-156385180976490159",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 & 작가와의 대화]",
     "category": "expo_science",
@@ -83197,7 +82360,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "dday": "접수마감"
   },
   {
-    "id": "rss-seoul-6315857699452730620",
+    "id": "rss-seoul-8168899914953318308",
     "boardType": "festivals",
     "title": "제31회 한무숙문학상 수상자 구병모 소설가와 함께하는 [소설 읽는 시간 &amp; 작가와의 대화]",
     "category": "expo_science",
@@ -83255,7 +82418,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-4147845",
@@ -83274,7 +82437,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=%EC%88%9C%EC%B2%9C%20%EC%98%AC%EB%9E%91%EA%B0%80%20%EC%9D%BC%EC%9D%BC%EB%A7%88%EC%BC%93",
@@ -83286,7 +82449,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-4113301",
@@ -83317,7 +82480,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-3557873",
@@ -83348,7 +82511,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "충청남도",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-4115096",
@@ -83367,7 +82530,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=%EB%8B%AC%EB%A0%A4%EB%9D%BC%EB%B6%80%EC%82%B0%20%EB%9F%AC%EB%8B%9D%ED%8E%98%EC%8A%A4%ED%8B%B0%EB%B2%8C",
@@ -83379,7 +82542,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-4137577",
@@ -83398,7 +82561,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "전국 가족 관광객 / 어린이 동반 가족",
     "fee": "상세 문의 (현장 안내)",
     "url": "https://search.naver.com/search.naver?query=2026%20%EA%B5%AD%EB%AF%BC%EA%B1%B4%EA%B0%95%20%EB%A6%AC%EB%B6%80%ED%8A%B8%20%EB%A7%88%EC%9D%8C%EA%B1%B4%EA%B0%95%20%EA%B1%B7%EA%B8%B0%EB%8C%80%ED%9A%8C",
@@ -83410,7 +82573,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "세종특별자치시",
       "TourAPI"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-4115275",
@@ -83441,10 +82604,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-22"
+    "dday": "D-21"
   },
   {
-    "id": "seoul-culture-1257154217562949359",
+    "id": "seoul-culture-490763939292533420",
     "boardType": "festivals",
     "title": "[성북문화예술교육센터] 2026 성북문화예술교육센터 [오늘도 예술로 겨울시즌]",
     "category": "festival_culture",
@@ -83472,10 +82635,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성북구",
       "가족나들이"
     ],
-    "dday": "D-35"
+    "dday": "D-34"
   },
   {
-    "id": "seoul-culture-788558825154796635",
+    "id": "seoul-culture-1250687421404307654",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 화염",
     "category": "festival_tradition",
@@ -83503,10 +82666,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-22"
+    "dday": "D-21"
   },
   {
-    "id": "seoul-culture-3973486701406283633",
+    "id": "seoul-culture-2120628527272371307",
     "boardType": "festivals",
     "title": "두 개의 숲, 하나의 기억_SPACE 302 2026 기획전",
     "category": "park_eco",
@@ -83534,10 +82697,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-9"
+    "dday": "D-8"
   },
   {
-    "id": "seoul-culture-6294722037490252631",
+    "id": "seoul-culture-4483063496620357625",
     "boardType": "festivals",
     "title": "2026 K-콘텐츠 서울여행주간",
     "category": "festival_culture",
@@ -83565,10 +82728,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "구로구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-1629532364999525158",
+    "id": "seoul-culture-6238894078744100600",
     "boardType": "festivals",
     "title": "제2회 [별빛내린 도림천] 생태공예문화 페스타",
     "category": "festival_light",
@@ -83596,10 +82759,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "구로구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-2772023313817913991",
+    "id": "seoul-culture-207880300777560440",
     "boardType": "festivals",
     "title": "[서울갤러리] 런치 스테이지 [기타리스트 HOOON]",
     "category": "festival_performance",
@@ -83615,7 +82778,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "누구나",
     "fee": "상세 안내 참조",
     "url": "https://www.seoul.go.kr/seoulgallery/www/program/view.do?key=2509020016&prgmSn=189",
@@ -83627,10 +82790,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8186731782654136599",
+    "id": "seoul-culture-5492385616770410064",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이메이킹 해봄이웃집Maker [그림책으로 만나는 슈링클스 키캡 만들기]",
     "category": "festival_season",
@@ -83646,7 +82809,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "해봄이로 등록한 초등학교 1-3학년 12명",
     "fee": "상세 안내 참조",
     "url": "https://mplib.mapo.go.kr/sglib/MENU1199/PGM3028/eventDetail.do?currentPageNo=1&eventSn=13569",
@@ -83658,10 +82821,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6044521522500476760",
+    "id": "seoul-culture-1742554454815015099",
     "boardType": "festivals",
     "title": "[중랑문화재단] 2026 망우, 쓰다 성과 공유회 [중랑, 박인환을 읽고 쓰다]",
     "category": "festival_season",
@@ -83677,7 +82840,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "제한 없음",
     "fee": "상세 안내 참조",
     "url": "https://www.jnfac.or.kr/app/show/view/17605",
@@ -83689,10 +82852,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중랑구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8303161621233277616",
+    "id": "seoul-culture-8215353638110693132",
     "boardType": "festivals",
     "title": "[강동문화재단] 최태지의 발레 오픈 리허설 Ⅱ",
     "category": "festival_tradition",
@@ -83708,7 +82871,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "8세 이상",
     "fee": "전석 40,000원",
     "url": "https://www.gdfac.or.kr/product/ko/performance/258502",
@@ -83720,10 +82883,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-6840918463215106756",
+    "id": "seoul-culture-4350653031410981929",
     "boardType": "festivals",
     "title": "문예북흥 No.73 - 『꿈을 꾸게 하는 꿈이 있다』. 생각을 생각하게 하는 시인 이문재가 있다.",
     "category": "festival_culture",
@@ -83739,7 +82902,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "누구나",
     "fee": "5,000원",
     "url": "https://lbch.kr/event_info/event/event_info_view.php?board_id=139&sh=&sl=&shca=&page=1",
@@ -83751,10 +82914,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "은평구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3462726141428705775",
+    "id": "seoul-culture-3335113665144852212",
     "boardType": "contests",
     "title": "조선왕릉 톺아보기: 조선왕릉 골든벨",
     "category": "contest_reading",
@@ -83770,7 +82933,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "초등학생 고학년, 외국인",
     "fee": "상세 안내 참조",
     "url": "https://www.instagram.com/p/Desm5bzkrsQ/?utm_source=ig_web_copy_link&mdxt=MzRlODBiNWFlZA==&srtk=MzRlODBiNWFlZA==",
@@ -83782,10 +82945,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-4612474759249449343",
+    "id": "seoul-culture-1664182918307921188",
     "boardType": "festivals",
     "title": "2026년 제28회 백범 문화 강좌",
     "category": "expo_science",
@@ -83801,7 +82964,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "누구나",
     "fee": "상세 안내 참조",
     "url": "https://www.kimkoomuseum.org/cul/cul_3_3_view.asp?Div=07&Idx=1033",
@@ -83813,10 +82976,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "용산구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-3031441514239693727",
+    "id": "seoul-culture-3934616967758574767",
     "boardType": "festivals",
     "title": "[성동구립도서관] 하반기 원어민 특강 [Here To Hero]",
     "category": "festival_culture",
@@ -83832,7 +82995,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "어린이 (6~10세)",
     "fee": "상세 안내 참조",
     "url": "https://www.sdlib.or.kr/SD/edusat/view.do?edu_idx=2578",
@@ -83844,10 +83007,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-8960614825724297228",
+    "id": "seoul-culture-1281264061984791796",
     "boardType": "festivals",
     "title": "[구립증산도서관] 보드게임과 함께하는 어린이 투자교실 [용돈을 부탁해!]",
     "category": "festival_culture",
@@ -83863,7 +83026,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "초등 1~2학년 어린이와 보호자 8팀",
     "fee": "상세 안내 참조",
     "url": "https://www.eplib.or.kr/jslib/menu/10457/program/30028/eventLectureDetail.do?currentPageNo=1&lectureIdx=233891&manageCd=MB&searchTarget=&searchStatus=OPEN",
@@ -83875,10 +83038,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "은평구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
-    "id": "seoul-culture-5232118762658813440",
+    "id": "seoul-culture-2238941216952458671",
     "boardType": "festivals",
     "title": "[성동문화재단] 제 4회 성동 꿈의 무용단 정기공연",
     "category": "festival_tradition",
@@ -83894,7 +83057,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": "누구나",
     "fee": "상세 안내 참조",
     "url": "https://www.sdfac.or.kr/kor/sdfac/performance/plan_view.do?p_idx=1691",
@@ -83906,7 +83069,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261018163053363435",
@@ -83925,7 +83088,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 가족",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261018163053363435",
@@ -83937,7 +83100,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261020175829154016",
@@ -83956,7 +83119,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 초등학생(초등생포함 가족)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020175829154016",
@@ -83968,7 +83131,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "seoul-res-S261019171056737010",
@@ -83999,7 +83162,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261019091819811392",
@@ -84030,7 +83193,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261020134515924253",
@@ -84061,7 +83224,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
     "id": "seoul-res-S261110102125329332",
@@ -84092,7 +83255,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
     "id": "seoul-res-S261020175342317264",
@@ -84111,7 +83274,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 초등학생(초등학생포함 가족)",
     "fee": "무료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261020175342317264",
@@ -84123,7 +83286,38 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
+  },
+  {
+    "id": "seoul-res-S261114151242133072",
+    "boardType": "festivals",
+    "title": "2026 더 임팩트 청년예술인 공모전시 [흐르는 호수처럼] 미술전시해설 도슨트 프로그램",
+    "category": "expo_science",
+    "categoryName": "박물관·과학·전시",
+    "badge": "🏛️ 박물관·과학·전시",
+    "organizer": "문화실험공간 호수",
+    "sourceType": "seoul_open_data",
+    "sourceLabel": "서울열린데이터광장 공공예약",
+    "region": "seoul",
+    "regionName": "서울특별시",
+    "location": "서울특별시 문화실험공간 호수",
+    "startDate": "2026-11-14",
+    "endDate": "2026-12-06",
+    "applyStartDate": "2026-11-14",
+    "applyEndDate": "2026-12-06",
+    "status": "applying",
+    "targetAudience": " 제한없음",
+    "fee": "무료",
+    "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261114151242133072",
+    "imageUrl": "https://yeyak.seoul.go.kr/web/common/file/FileDown.do?file_id=17946369469464USK8HRCJDRMB8THVROWMLK13",
+    "description": "2026 더 임팩트 청년예술인 공모전시 [흐르는 호수처럼] 미술전시해설 도슨트 프로그램 - 서울시 공공서비스예약 공식 가족 문화/생태 체험 프로그램입니다.",
+    "tags": [
+      "서울공공예약",
+      "전시/관람",
+      "어린이체험",
+      "가족예약"
+    ],
+    "dday": "D-21"
   },
   {
     "id": "seoul-res-S261019094458645028",
@@ -84154,7 +83348,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261017133308636022",
@@ -84173,7 +83367,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
     "endDate": "2026-11-14",
     "applyStartDate": "2026-11-14",
     "applyEndDate": "2026-11-14",
-    "status": "applying",
+    "status": "closed",
     "targetAudience": " 제한없음",
     "fee": "유료",
     "url": "https://yeyak.seoul.go.kr/web/reservation/selectReservView.do?rsv_svc_id=S261017133308636022",
@@ -84185,7 +83379,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-Day (오늘마감)"
+    "dday": "접수마감"
   },
   {
     "id": "tourapi-fest-3016659",
@@ -84216,7 +83410,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-4115201",
@@ -84247,10 +83441,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "대전광역시",
       "TourAPI"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-1500794658706951735",
+    "id": "seoul-culture-7204283159396325943",
     "boardType": "festivals",
     "title": "라 리저브 : 케이티 조지, 루시 예기아자리안, 마리아 킴",
     "category": "festival_culture",
@@ -84278,10 +83472,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-3461947100561737354",
+    "id": "seoul-culture-8058475903537790197",
     "boardType": "festivals",
     "title": "[한국문화의집 KOUS] 전선미·오정희 [이화(二花)-두 개의 꽃]",
     "category": "festival_season",
@@ -84309,10 +83503,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-796462987991064009",
+    "id": "seoul-culture-7635084078299900144",
     "boardType": "festivals",
     "title": "2026 서울경기춤페스타",
     "category": "festival_tradition",
@@ -84340,10 +83534,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
-    "id": "seoul-culture-8042708620686648223",
+    "id": "seoul-culture-7930168804619621795",
     "boardType": "festivals",
     "title": "플루트의 아침 산책 [K-Flutes 유지연 플루트 독주회]",
     "category": "festival_culture",
@@ -84371,7 +83565,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "seoul-res-S261022093139575716",
@@ -84402,7 +83596,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261021093100934128",
@@ -84433,10 +83627,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-36"
+    "dday": "D-35"
   },
   {
-    "id": "seoul-culture-4647226315237849858",
+    "id": "seoul-culture-2539132215300838379",
     "boardType": "festivals",
     "title": "[문래예술공장] Who Cares? - 누가 신경쓰지?",
     "category": "festival_culture",
@@ -84464,10 +83658,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영등포구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-6742381187096943272",
+    "id": "seoul-culture-1289719450187253267",
     "boardType": "festivals",
     "title": "[2026공연봄날 공식선정작] 어둑시니",
     "category": "festival_season",
@@ -84495,10 +83689,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "동작구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-8042545150878103821",
+    "id": "seoul-culture-1651295543134506041",
     "boardType": "festivals",
     "title": "[서울역사박물관] 다시 모은 조각들, 인사동의 시간",
     "category": "expo_science",
@@ -84526,10 +83720,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-134"
+    "dday": "D-133"
   },
   {
-    "id": "seoul-culture-8413720547565276262",
+    "id": "seoul-culture-54731797984036401",
     "boardType": "festivals",
     "title": "[서울백제어린이박물관] 특별전시 [DIMA: 아기 매머드 디마와 함께하는 빙하기 탐험]",
     "category": "expo_science",
@@ -84557,10 +83751,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-113"
+    "dday": "D-112"
   },
   {
-    "id": "seoul-culture-4474048707991649033",
+    "id": "seoul-culture-5475233398395731032",
     "boardType": "festivals",
     "title": "2026 제3회 아트노마드 아트페어(ARTNOMAD ARTFAIR)",
     "category": "festival_tradition",
@@ -84588,10 +83782,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-5286650652731105363",
+    "id": "seoul-culture-4855043131746479288",
     "boardType": "festivals",
     "title": "SJF at the Theater 2026 - 백예린X윤석철",
     "category": "festival_culture",
@@ -84619,10 +83813,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-7414606161236520171",
+    "id": "seoul-culture-7732636716696665873",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 동남권캠퍼스 문화의계절 시리즈 [겨울, 설렘을 노래하는 뮤지컬]",
     "category": "festival_performance",
@@ -84650,10 +83844,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-3"
+    "dday": "D-2"
   },
   {
-    "id": "seoul-culture-2170966054654599732",
+    "id": "seoul-culture-2527086799593142506",
     "boardType": "festivals",
     "title": "[서초문화재단] 고음악 오디세이 [음악의 언어_Rhetoric(수사학)]",
     "category": "festival_tradition",
@@ -84681,10 +83875,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-3"
+    "dday": "D-2"
   },
   {
-    "id": "seoul-culture-2449965601280839968",
+    "id": "seoul-culture-583664458276493288",
     "boardType": "festivals",
     "title": "[3기] 서울아트책보고 북클럽 X 현대문학 : 네 번째 시간 『백조와 박쥐』 읽기 / 한이 소설가 · 편집자",
     "category": "festival_culture",
@@ -84712,10 +83906,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "구로구",
       "가족나들이"
     ],
-    "dday": "D-3"
+    "dday": "D-2"
   },
   {
-    "id": "seoul-culture-7557893008469565885",
+    "id": "seoul-culture-8117010988650993440",
     "boardType": "festivals",
     "title": "2026 서울국제예술포럼(SAFT)",
     "category": "festival_culture",
@@ -84743,10 +83937,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-3"
+    "dday": "D-2"
   },
   {
-    "id": "seoul-culture-6780642797837141124",
+    "id": "seoul-culture-921020682849642088",
     "boardType": "festivals",
     "title": "[성동문화재단] 제15회 성동구립 꿈의 오케스트라 정기연주회",
     "category": "festival_tradition",
@@ -84774,10 +83968,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-3"
+    "dday": "D-2"
   },
   {
-    "id": "seoul-culture-3983458937769650580",
+    "id": "seoul-culture-8048660960580870291",
     "boardType": "festivals",
     "title": "2026 청와대 사랑채 국민화합 체험형 문화프로그램 [배우와 함께하는 참여형 전시 투어]",
     "category": "expo_science",
@@ -84805,10 +83999,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-29"
+    "dday": "D-28"
   },
   {
-    "id": "seoul-culture-7921138071343182954",
+    "id": "seoul-culture-8395248120403884026",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11-12월/성인메이킹 [오일파스텔로 그리는 따뜻한 하루] / Book Cx클래스",
     "category": "festival_culture",
@@ -84836,10 +84030,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-25"
+    "dday": "D-24"
   },
   {
-    "id": "seoul-culture-6594468807383442462",
+    "id": "seoul-culture-3982336835521779462",
     "boardType": "festivals",
     "title": "클래식 스테이지 온 스크린 [아레나 디 베로나 오페라 페스티벌 : 라보엠]",
     "category": "festival_performance",
@@ -84867,10 +84061,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "광진구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-8054761124681342632",
+    "id": "seoul-culture-2337790033049246274",
     "boardType": "festivals",
     "title": "2026 동국대학교 한류융합학술원 하반기 컨퍼런스 [한국이 놓치고 있는 관광의 ‘K’] K-관광 3천만 시대의 한류 인프라",
     "category": "expo_science",
@@ -84898,10 +84092,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "용산구",
       "가족나들이"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
-    "id": "seoul-culture-3429298520283100433",
+    "id": "seoul-culture-521906159278185638",
     "boardType": "festivals",
     "title": "[서울갤러리] 런치 스테이지 [첼리스트 빅바플]",
     "category": "festival_performance",
@@ -84929,10 +84123,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
-    "id": "seoul-culture-3145373480426469299",
+    "id": "seoul-culture-1800183941584202401",
     "boardType": "festivals",
     "title": "허익수 거문고 독주회",
     "category": "festival_culture",
@@ -84960,7 +84154,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
     "id": "seoul-res-S261019092339078747",
@@ -84991,7 +84185,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
     "id": "seoul-res-S261020095632644011",
@@ -85022,7 +84216,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "seoul-res-S260923093116580869",
@@ -85053,7 +84247,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-4"
+    "dday": "D-3"
   },
   {
     "id": "seoul-res-S261110084916264991",
@@ -85084,7 +84278,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-3360113",
@@ -85115,7 +84309,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-588175",
@@ -85146,10 +84340,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "TourAPI"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-5143805609114965218",
+    "id": "seoul-culture-9176511143863589315",
     "boardType": "festivals",
     "title": "연극 [사랑은 마치]",
     "category": "festival_performance",
@@ -85177,10 +84371,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성북구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-6797649010291834200",
+    "id": "seoul-culture-6347965510060020467",
     "boardType": "festivals",
     "title": "[세종문화회관] 26 세종시즌 [트리플 빌 올 포 한스 판 마넨]",
     "category": "festival_culture",
@@ -85208,10 +84402,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-944102868343349018",
+    "id": "seoul-culture-3934633942659770560",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 한누 린투의 프로코피예프 ‘로미오와 줄리엣’ ① ②",
     "category": "festival_culture",
@@ -85239,10 +84433,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-2737037963232575322",
+    "id": "seoul-culture-2683783269341382586",
     "boardType": "festivals",
     "title": "2026 안애순컴퍼니 신작 [이콘 eikon 아이콘]",
     "category": "festival_culture",
@@ -85270,10 +84464,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-8059896488779882420",
+    "id": "seoul-culture-4309992636239185293",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/일반강좌 [찾아가는 서울국제노인영화제_품격 있는 나이듦을 위한 인문학]",
     "category": "festival_performance",
@@ -85301,10 +84495,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "seoul-culture-9208758304598809348",
+    "id": "seoul-culture-2120638044590033415",
     "boardType": "festivals",
     "title": "재능 혜화 마티네",
     "category": "festival_culture",
@@ -85332,10 +84526,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "seoul-culture-6966200586903088013",
+    "id": "seoul-culture-5264689726620783214",
     "boardType": "festivals",
     "title": "[성동구립도서관] 김금희 작가와 함께하는 2026 성동구 구립도서관 하반기 북 콘서트",
     "category": "festival_culture",
@@ -85363,10 +84557,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "seoul-culture-5413579353299274843",
+    "id": "seoul-culture-4535437663518626087",
     "boardType": "festivals",
     "title": "국회 개방 정오의 콘서트 [11월 국회 버스킹]",
     "category": "festival_performance",
@@ -85394,10 +84588,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영등포구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "seoul-culture-6164962542999825906",
+    "id": "seoul-culture-7820367592323399130",
     "boardType": "festivals",
     "title": "[살롱클래식] 예 트리오 - Moonlight Across Time",
     "category": "festival_culture",
@@ -85425,10 +84619,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
-    "id": "seoul-culture-6795008135836497158",
+    "id": "seoul-culture-7997994872212029482",
     "boardType": "festivals",
     "title": "[서울책보고] 큐레이션 토크 with 라곰 [남의 불행을 먹고 사는 사람들] 이동원 PD",
     "category": "festival_culture",
@@ -85456,7 +84650,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-5"
+    "dday": "D-4"
   },
   {
     "id": "tourapi-fest-4151220",
@@ -85487,7 +84681,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "tourapi-fest-4151221",
@@ -85518,7 +84712,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-2854855",
@@ -85549,7 +84743,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-3301415",
@@ -85580,7 +84774,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-1129018",
@@ -85611,7 +84805,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-4101384",
@@ -85642,10 +84836,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-134"
+    "dday": "D-133"
   },
   {
-    "id": "seoul-culture-9072418569671924588",
+    "id": "seoul-culture-7887759060353529669",
     "boardType": "festivals",
     "title": "[역삼푸른솔도서관] 작가힙톡(Hip-Talk) [지금, 삶을 쓰다]",
     "category": "festival_culture",
@@ -85673,10 +84867,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-717328475448753538",
+    "id": "seoul-culture-984204670987645384",
     "boardType": "festivals",
     "title": "epic; 서사시",
     "category": "festival_culture",
@@ -85704,10 +84898,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8410263125946887639",
+    "id": "seoul-culture-1424961432882851859",
     "boardType": "festivals",
     "title": "[성북문화재단] 브런치콘서트 [11시11분] - 비바 바르셀로나",
     "category": "festival_light",
@@ -85735,10 +84929,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성북구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-1357582869279312719",
+    "id": "seoul-culture-389980291021855757",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 서초9 시리즈9 [마태수난곡 하이라이트]",
     "category": "festival_light",
@@ -85766,10 +84960,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-3082161494551114076",
+    "id": "seoul-culture-4576952562635625765",
     "boardType": "festivals",
     "title": "리틀엔젤스예술단 정기공연 [HARMONY]",
     "category": "festival_performance",
@@ -85797,10 +84991,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "광진구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
-    "id": "seoul-culture-5417615855453722877",
+    "id": "seoul-culture-5617040414262419880",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (백영선) 우리 일과 삶을 확장시키는 관계의 기획 '커뮤니티 빌딩'",
     "category": "festival_culture",
@@ -85828,7 +85022,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-6"
+    "dday": "D-5"
   },
   {
     "id": "fest-gg-01",
@@ -85890,7 +85084,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "에코트레킹",
       "제주힐링"
     ],
-    "dday": "D-1"
+    "dday": "D-Day (오늘마감)"
   },
   {
     "id": "tourapi-fest-3315407",
@@ -85921,7 +85115,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-4151224",
@@ -85952,7 +85146,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-3395188",
@@ -85983,7 +85177,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전북특별자치도",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-3470738",
@@ -86014,7 +85208,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상남도",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "tourapi-fest-2410727",
@@ -86045,7 +85239,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "tourapi-fest-3368470",
@@ -86076,10 +85270,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-530246048560882660",
+    "id": "seoul-culture-6536565010414151904",
     "boardType": "festivals",
     "title": "[서울시어울림플라자] 문화예술 북토크 《마주 바라보기》",
     "category": "festival_performance",
@@ -86107,10 +85301,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강서구",
       "가족나들이"
     ],
-    "dday": "D-28"
+    "dday": "D-27"
   },
   {
-    "id": "seoul-culture-3642397935681236319",
+    "id": "seoul-culture-1661108975064766200",
     "boardType": "festivals",
     "title": "[서울문화재단] 서울 청년예술창업 페스타 2026",
     "category": "festival_tradition",
@@ -86138,10 +85332,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서대문구",
       "가족나들이"
     ],
-    "dday": "D-10"
+    "dday": "D-9"
   },
   {
-    "id": "seoul-culture-5680866742646615811",
+    "id": "seoul-culture-1651771996714225900",
     "boardType": "festivals",
     "title": "송파구립소년소녀합창단 제10회 정기연주회 합창뮤지컬 [하늘을 나는 양탄자]",
     "category": "festival_performance",
@@ -86169,10 +85363,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-3146983732505410248",
+    "id": "seoul-culture-4665247511650367463",
     "boardType": "festivals",
     "title": "[살롱클래식] 트리오 폰테스 - 낭만의 여정",
     "category": "festival_culture",
@@ -86200,10 +85394,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-2890989136700523479",
+    "id": "seoul-culture-5277312743326537605",
     "boardType": "festivals",
     "title": "파르티타 살롱콘서트: 에르마노",
     "category": "festival_culture",
@@ -86231,10 +85425,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-3140214179102165325",
+    "id": "seoul-culture-6810965923171068058",
     "boardType": "festivals",
     "title": "[서울시평생교육진흥원] 11월 모두공연장 [마법 같은 영화음악  아카펠라 콘서트]",
     "category": "festival_performance",
@@ -86262,10 +85456,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "금천구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-5421557060900181830",
+    "id": "seoul-culture-7256770768102495507",
     "boardType": "festivals",
     "title": "[동작문화재단] 본동어울마당 아트홀 '본동 세레나데' 11회차 [아트컴퍼니 행복자의 3인극 종이아빠]",
     "category": "festival_tradition",
@@ -86293,10 +85487,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "동작구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-3888480027398362064",
+    "id": "seoul-culture-8662477417353606078",
     "boardType": "festivals",
     "title": "[구로기적 X 다산북스] 고통의 세계에서 나로 살아가는 법: 니체 초인 수업",
     "category": "festival_culture",
@@ -86324,10 +85518,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "구로구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-6298370182808726702",
+    "id": "seoul-culture-1452027978790693006",
     "boardType": "festivals",
     "title": "제18회 서울문학축제 [2026 문학의 도시 서울]",
     "category": "festival_culture",
@@ -86355,10 +85549,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-9050556936679290790",
+    "id": "seoul-culture-6274549356963723604",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 11.21(토) 개관 11주년 기념행사에 초대합니다! (동아리 한마당)",
     "category": "festival_culture",
@@ -86386,10 +85580,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "은평구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-6693359727191648894",
+    "id": "seoul-culture-1592445481845748045",
     "boardType": "festivals",
     "title": "[구산동도서관마을] 개관 11주년 기념 행사에 초대합니다! (공연 한마당)",
     "category": "festival_performance",
@@ -86417,10 +85611,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "은평구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-4743211999571509451",
+    "id": "seoul-culture-8381396117093874232",
     "boardType": "festivals",
     "title": "[용산역사박물관] 월간청음회_11월 청음회",
     "category": "expo_science",
@@ -86448,10 +85642,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "용산구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-2979696386591581725",
+    "id": "seoul-culture-6693556601344791507",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이 [해봄+ing 미래를 달리다! 자율주행 코딩 챌린지]",
     "category": "festival_season",
@@ -86479,10 +85673,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-5921318263307450676",
+    "id": "seoul-culture-654149766470920392",
     "boardType": "festivals",
     "title": "[서울갤러리] 런치 스테이지 [싱어송라이터 사운드힐즈]",
     "category": "festival_performance",
@@ -86510,10 +85704,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-5502942340482800359",
+    "id": "seoul-culture-710174638788311262",
     "boardType": "festivals",
     "title": "[서울남산국악당] 불세출 [일상풍류방]",
     "category": "festival_culture",
@@ -86541,10 +85735,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-8202943700123083009",
+    "id": "seoul-culture-8213344319913226103",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 체임버 클래식스 VI: 대한민국",
     "category": "festival_culture",
@@ -86572,10 +85766,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
-    "id": "seoul-culture-7432802482171088330",
+    "id": "seoul-culture-6061789873560905420",
     "boardType": "festivals",
     "title": "[서울시청] 반짝반짝 남산밤길",
     "category": "farm_harvest",
@@ -86603,7 +85797,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-7"
+    "dday": "D-6"
   },
   {
     "id": "seoul-res-S261022092448493036",
@@ -86634,7 +85828,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261106113301822114",
@@ -86665,10 +85859,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-42"
+    "dday": "D-41"
   },
   {
-    "id": "seoul-culture-7511424902675773861",
+    "id": "seoul-culture-973921130239554876",
     "boardType": "festivals",
     "title": "김정휘 피아노 리사이틀",
     "category": "festival_culture",
@@ -86696,10 +85890,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-1657667264451619199",
+    "id": "seoul-culture-5117067898237143581",
     "boardType": "festivals",
     "title": "[성동구립도서관] 11월 영어스토리텔링 수업",
     "category": "festival_culture",
@@ -86727,7 +85921,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261019092644140076",
@@ -86758,7 +85952,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
     "id": "seoul-res-S261103111211287896",
@@ -86789,10 +85983,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-8"
+    "dday": "D-7"
   },
   {
-    "id": "seoul-culture-3428696872554021437",
+    "id": "seoul-culture-3133291805109533784",
     "boardType": "festivals",
     "title": "[구립증산도서관] 유아 미술 책놀이 [냠냠 그림책 미술놀이]",
     "category": "festival_culture",
@@ -86820,10 +86014,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "은평구",
       "가족나들이"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
-    "id": "seoul-culture-2226881488478467489",
+    "id": "seoul-culture-4028076510528498973",
     "boardType": "festivals",
     "title": "[역삼푸른솔도서관] 웹툰 「삵의 발톱」 손영완 작가와의 만남",
     "category": "festival_culture",
@@ -86851,10 +86045,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-9"
+    "dday": "D-8"
   },
   {
-    "id": "seoul-culture-2318382509115137240",
+    "id": "seoul-culture-8942634268419991605",
     "boardType": "festivals",
     "title": "기획공연 [소년의 외침은 파도로 번져]",
     "category": "festival_performance",
@@ -86882,10 +86076,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "광진구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-7125157647229722912",
+    "id": "seoul-culture-4617537227356430602",
     "boardType": "festivals",
     "title": "[금천문화재단] 10월 문화가 있는 날 [공연에서 살아남기]",
     "category": "festival_tradition",
@@ -86913,10 +86107,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "금천구",
       "가족나들이"
     ],
-    "dday": "D-46"
+    "dday": "D-45"
   },
   {
-    "id": "seoul-culture-4015442939379923249",
+    "id": "seoul-culture-2953387614721193693",
     "boardType": "festivals",
     "title": "디자인코리아 2026",
     "category": "festival_culture",
@@ -86944,10 +86138,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-592083496327325866",
+    "id": "seoul-culture-3640385998416343499",
     "boardType": "festivals",
     "title": "가야금병창 콘서트 [여기,대목 II]",
     "category": "festival_culture",
@@ -86975,10 +86169,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "동대문구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-3444256546412095244",
+    "id": "seoul-culture-433123549415001812",
     "boardType": "festivals",
     "title": "[서초문화원] 서초인문학 아카데미 [전쟁사로 보는 인문학] 임용한 역사학자",
     "category": "festival_tradition",
@@ -87006,10 +86200,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-5240279382483177073",
+    "id": "seoul-culture-237441860570568186",
     "boardType": "festivals",
     "title": "[서울갤러리] 런치 스테이지 [싱어송라이터 이훈주]",
     "category": "festival_performance",
@@ -87037,10 +86231,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-1963882319374120249",
+    "id": "seoul-culture-185402608141674857",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 서리풀 재즈페스타 [Timeless Jazz]",
     "category": "festival_tradition",
@@ -87068,10 +86262,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-8028841617811886250",
+    "id": "seoul-culture-7128379260628302327",
     "boardType": "festivals",
     "title": "[서울로봇인공지능과학관] 강연/라임 콜로키엄 [2026년 제8회_예술가의 인공지능 유랑기]",
     "category": "expo_science",
@@ -87099,10 +86293,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "도봉구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-4850898964271255710",
+    "id": "seoul-culture-4298770645802214901",
     "boardType": "festivals",
     "title": "2026년 국토발전전시관 정기강연 [이 땅 위에 우리 이야기]",
     "category": "expo_science",
@@ -87130,10 +86324,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-1926822411512838712",
+    "id": "seoul-culture-789577774867448738",
     "boardType": "festivals",
     "title": "[마포문화재단] M 마티네 [2026 MAC 모닝 콘서트 ＃9]",
     "category": "festival_tradition",
@@ -87161,10 +86355,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
-    "id": "seoul-culture-8167996991113013182",
+    "id": "seoul-culture-155594397141905867",
     "boardType": "festivals",
     "title": "웅산 Here's to life",
     "category": "festival_culture",
@@ -87192,7 +86386,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-11"
+    "dday": "D-10"
   },
   {
     "id": "tourapi-fest-3437916",
@@ -87223,7 +86417,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "가족나들이"
     ],
-    "dday": "D-41"
+    "dday": "D-40"
   },
   {
     "id": "tourapi-fest-3396705",
@@ -87254,7 +86448,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-2853386",
@@ -87285,10 +86479,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-6731185408634968166",
+    "id": "seoul-culture-1942631018888406421",
     "boardType": "festivals",
     "title": "언폴드엑스 2026 [리얼리티체크(Reality Check)]",
     "category": "festival_culture",
@@ -87316,10 +86510,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-25"
+    "dday": "D-24"
   },
   {
-    "id": "seoul-culture-3299887851296731819",
+    "id": "seoul-culture-9126309237815229312",
     "boardType": "festivals",
     "title": "[서울시립교향악단] 2026 서울시향 얍 판 츠베덴의 말러 교향곡 4번 ① ②",
     "category": "festival_culture",
@@ -87347,10 +86541,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-326614854100540230",
+    "id": "seoul-culture-6362034638874327308",
     "boardType": "festivals",
     "title": "[꿈의숲아트센터] 창작음악극 [가명]",
     "category": "park_eco",
@@ -87378,10 +86572,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강북구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
-    "id": "seoul-culture-578066705300153533",
+    "id": "seoul-culture-8478106243708706006",
     "boardType": "festivals",
     "title": "DK x SDF 국제 컨퍼런스",
     "category": "festival_culture",
@@ -87409,10 +86603,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8852134576694398624",
+    "id": "seoul-culture-7837889158565224057",
     "boardType": "festivals",
     "title": "문종인 프로젝트 : '작곡가의 방 시리즈' Composer IV. 지성민",
     "category": "festival_culture",
@@ -87440,7 +86634,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "seoul-res-S261016135413702382",
@@ -87471,7 +86665,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
     "id": "tourapi-fest-3578130",
@@ -87502,7 +86696,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "울산광역시",
       "가족나들이"
     ],
-    "dday": "D-42"
+    "dday": "D-41"
   },
   {
     "id": "tourapi-fest-3367339",
@@ -87533,10 +86727,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-5496654113328076643",
+    "id": "seoul-culture-268551122569520870",
     "boardType": "festivals",
     "title": "파인캐릭터 2026 (FineCharacter 2026)",
     "category": "festival_culture",
@@ -87564,10 +86758,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-8214057954382067452",
+    "id": "seoul-culture-3381404404032816183",
     "boardType": "festivals",
     "title": "[금천문화재단] 이머시브 뮤지컬 [와이 헌터스: 위대한 숏맨과 북몬스터]",
     "category": "festival_tradition",
@@ -87595,10 +86789,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "금천구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-1558890786226147866",
+    "id": "seoul-culture-1257930257836929633",
     "boardType": "festivals",
     "title": "[성동문화재단] 오페레타 [유쾌한 미망인]",
     "category": "festival_tradition",
@@ -87626,10 +86820,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "성동구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-1900976095392687238",
+    "id": "seoul-culture-3403468345744676348",
     "boardType": "festivals",
     "title": "[마포구립서강도서관] 11월/어린이 강좌 [소녀돌봄약국]",
     "category": "festival_season",
@@ -87657,10 +86851,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "seoul-culture-7775555314457582806",
+    "id": "seoul-culture-586872369790414544",
     "boardType": "festivals",
     "title": "[서울도서관] 11월 작가힙톡(Hip-Talk) - (한국편집기자협회) 뉴스의 편집과 AI",
     "category": "festival_culture",
@@ -87688,10 +86882,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-13"
+    "dday": "D-12"
   },
   {
-    "id": "gg-fest-5002373060316906787",
+    "id": "gg-fest-2101162010148827583",
     "boardType": "festivals",
     "title": "제30회 파주장단콩축제",
     "category": "expo_science",
@@ -87719,7 +86913,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "임진각광장",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "tourapi-fest-2048902",
@@ -87750,10 +86944,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-57"
+    "dday": "D-56"
   },
   {
-    "id": "seoul-culture-3464117192889874342",
+    "id": "seoul-culture-3015909296375778365",
     "boardType": "festivals",
     "title": "[서울시어울림플라자] 책 속 상상의 세계를 함께 여행하는 가족뮤지컬 「난 책이 좋아요」",
     "category": "festival_performance",
@@ -87781,10 +86975,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강서구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-1968633887989828561",
+    "id": "seoul-culture-7636198467275494520",
     "boardType": "festivals",
     "title": "2026 민간 국악행사 지원사업 [도깨비와 함께 신화 여행]",
     "category": "festival_culture",
@@ -87812,10 +87006,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "관악구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-5691003030486300960",
+    "id": "seoul-culture-7536942891134173587",
     "boardType": "festivals",
     "title": "[서울갤러리] 런치 스테이지 [하모니시스트 이한결]",
     "category": "festival_performance",
@@ -87843,10 +87037,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
-    "id": "seoul-culture-5718044336499638838",
+    "id": "seoul-culture-3030089703625273652",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 꿈나무오케스트라 정기연주회",
     "category": "festival_performance",
@@ -87874,7 +87068,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "seoul-res-S261106061453386657",
@@ -87905,7 +87099,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-14"
+    "dday": "D-13"
   },
   {
     "id": "tourapi-fest-3545306",
@@ -87936,10 +87130,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경기도",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-5675815815038011738",
+    "id": "seoul-culture-7412565489348840446",
     "boardType": "festivals",
     "title": "[마포문화재단] 체홉 4대 장막 낭독극 [공놀이클럽의 사계절 체홉: 갈매기]",
     "category": "festival_tradition",
@@ -87967,10 +87161,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "마포구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-6998543744362625369",
+    "id": "seoul-culture-3025299774665464072",
     "boardType": "festivals",
     "title": "[서울시립과학관] 과학북토크: 달작한 사이언스 (11월) [미술관에 간 물리학자]",
     "category": "expo_science",
@@ -87998,10 +87192,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "노원구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-7646474424245688840",
+    "id": "seoul-culture-2313954550963004187",
     "boardType": "festivals",
     "title": "심삼종 색소폰 독주회",
     "category": "festival_culture",
@@ -88029,10 +87223,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-1474862997394979181",
+    "id": "seoul-culture-537289699220992312",
     "boardType": "festivals",
     "title": "양수연 가야금 독주회 [기록: 가즌회상]",
     "category": "festival_culture",
@@ -88060,7 +87254,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
     "id": "seoul-res-S261022093911479096",
@@ -88091,10 +87285,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-15"
+    "dday": "D-14"
   },
   {
-    "id": "seoul-culture-3545901264281578718",
+    "id": "seoul-culture-5330278103945863893",
     "boardType": "festivals",
     "title": "활동가 실무 역량강화 교육 [노션으로 홈페이지 만들기]",
     "category": "festival_culture",
@@ -88122,10 +87316,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-18"
+    "dday": "D-17"
   },
   {
-    "id": "seoul-culture-8758511608587297736",
+    "id": "seoul-culture-3189812985979447508",
     "boardType": "festivals",
     "title": "제58회 한국오페라연구회 정기연주회 [Ensemble d'Opera Festa]",
     "category": "festival_performance",
@@ -88153,7 +87347,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영등포구",
       "가족나들이"
     ],
-    "dday": "D-16"
+    "dday": "D-15"
   },
   {
     "id": "tourapi-fest-4153641",
@@ -88184,10 +87378,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "경상북도",
       "가족나들이"
     ],
-    "dday": "D-57"
+    "dday": "D-56"
   },
   {
-    "id": "seoul-culture-7230377102781529908",
+    "id": "seoul-culture-6353837408657567102",
     "boardType": "festivals",
     "title": "임준형의 대금 독주회 [영산會上]",
     "category": "festival_culture",
@@ -88215,10 +87409,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-17"
+    "dday": "D-16"
   },
   {
-    "id": "seoul-culture-5425132103269170001",
+    "id": "seoul-culture-4687236889808714063",
     "boardType": "festivals",
     "title": "[세종문화회관] 2026 누구나 클래식 with 원주시립교향악단",
     "category": "festival_culture",
@@ -88246,10 +87440,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-17"
+    "dday": "D-16"
   },
   {
-    "id": "seoul-culture-7383803688421005401",
+    "id": "seoul-culture-6203773762873158597",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026 심산영화관 [러브스토리]",
     "category": "festival_tradition",
@@ -88277,10 +87471,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-17"
+    "dday": "D-16"
   },
   {
-    "id": "seoul-culture-5577425864013604779",
+    "id": "seoul-culture-1777723952121530016",
     "boardType": "festivals",
     "title": "문빈 해금 독주회 [상령상풀이,자진한잎]",
     "category": "festival_culture",
@@ -88308,7 +87502,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-19"
+    "dday": "D-18"
   },
   {
     "id": "seoul-res-S260313172048070052",
@@ -88339,7 +87533,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-19"
+    "dday": "D-18"
   },
   {
     "id": "tourapi-fest-3522322",
@@ -88370,10 +87564,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "인천광역시",
       "가족나들이"
     ],
-    "dday": "D-36"
+    "dday": "D-35"
   },
   {
-    "id": "seoul-culture-6651255248546455453",
+    "id": "seoul-culture-4334120497832540581",
     "boardType": "festivals",
     "title": "[강동문화재단] 리트플레이 [겨울나그네]",
     "category": "festival_tradition",
@@ -88401,7 +87595,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
     "id": "tourapi-fest-4108260",
@@ -88432,10 +87626,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
-    "id": "seoul-culture-9116984221296717033",
+    "id": "seoul-culture-5832337275726670238",
     "boardType": "festivals",
     "title": "아이와 함께 듣는 겨울의 클래식 동화 [비발디에서 디즈니까지]",
     "category": "festival_culture",
@@ -88463,10 +87657,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "송파구",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
-    "id": "seoul-culture-4092971758722779804",
+    "id": "seoul-culture-673752349446680802",
     "boardType": "festivals",
     "title": "제3회 오르비스 플루트 앙상블 정기연주회 [향수 : REWIND]",
     "category": "festival_culture",
@@ -88494,10 +87688,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "양천구",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
-    "id": "seoul-culture-7016722668209421198",
+    "id": "seoul-culture-8156813658484727924",
     "boardType": "festivals",
     "title": "[서초문화재단] 서리풀 고음악 시리즈 [바로크 노엘]",
     "category": "festival_tradition",
@@ -88525,7 +87719,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-21"
+    "dday": "D-20"
   },
   {
     "id": "tourapi-fest-4095478",
@@ -88556,10 +87750,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "부산광역시",
       "TourAPI"
     ],
-    "dday": "D-22"
+    "dday": "D-21"
   },
   {
-    "id": "seoul-culture-163882337618671847",
+    "id": "seoul-culture-7596785621357173507",
     "boardType": "festivals",
     "title": "앙상블 피츠 창단연주회",
     "category": "festival_culture",
@@ -88587,10 +87781,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-23"
+    "dday": "D-22"
   },
   {
-    "id": "seoul-culture-6944592031833655823",
+    "id": "seoul-culture-8695861965773306537",
     "boardType": "festivals",
     "title": "[서울돈화문국악당] 오드리 [세 대의 가야금, 하나의 장면]",
     "category": "festival_culture",
@@ -88618,7 +87812,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-25"
+    "dday": "D-24"
   },
   {
     "id": "seoul-res-S261015152624527779",
@@ -88649,7 +87843,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "어린이체험",
       "가족예약"
     ],
-    "dday": "D-25"
+    "dday": "D-24"
   },
   {
     "id": "tourapi-fest-3035607",
@@ -88680,7 +87874,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-57"
+    "dday": "D-56"
   },
   {
     "id": "tourapi-fest-1095732",
@@ -88711,7 +87905,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-78"
+    "dday": "D-77"
   },
   {
     "id": "tourapi-fest-2785797",
@@ -88742,10 +87936,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "TourAPI"
     ],
-    "dday": "D-47"
+    "dday": "D-46"
   },
   {
-    "id": "seoul-culture-3508001457219275643",
+    "id": "seoul-culture-2753614530517137059",
     "boardType": "festivals",
     "title": "2026 광화문마켓",
     "category": "park_eco",
@@ -88773,10 +87967,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-57"
+    "dday": "D-56"
   },
   {
-    "id": "seoul-culture-6467676209468464351",
+    "id": "seoul-culture-6363707934463996769",
     "boardType": "festivals",
     "title": "소프라노 이은미 리사이틀 : NONOSTANTE",
     "category": "festival_culture",
@@ -88804,7 +87998,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강남구",
       "가족나들이"
     ],
-    "dday": "D-29"
+    "dday": "D-28"
   },
   {
     "id": "tourapi-fest-4115260",
@@ -88835,10 +88029,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-43"
+    "dday": "D-42"
   },
   {
-    "id": "seoul-culture-7203358769610015487",
+    "id": "seoul-culture-6517664841109214564",
     "boardType": "festivals",
     "title": "[쿼드, 연극의 질문들] 서안화차",
     "category": "festival_tradition",
@@ -88866,10 +88060,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-43"
+    "dday": "D-42"
   },
   {
-    "id": "seoul-culture-802907091497145240",
+    "id": "seoul-culture-6296165497277964809",
     "boardType": "festivals",
     "title": "2026 제11회 서화·공예 명장대전",
     "category": "expo_science",
@@ -88897,10 +88091,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "종로구",
       "가족나들이"
     ],
-    "dday": "D-37"
+    "dday": "D-36"
   },
   {
-    "id": "seoul-culture-3190915653736495504",
+    "id": "seoul-culture-1879350150981124454",
     "boardType": "festivals",
     "title": "[강동문화재단] 마티네 콘서트Ⅴ: 윈터 마티네(Winter Matinee) 송영훈의 4 첼리스트",
     "category": "festival_tradition",
@@ -88928,10 +88122,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-32"
+    "dday": "D-31"
   },
   {
-    "id": "seoul-culture-6036891423151916755",
+    "id": "seoul-culture-8593078240591299153",
     "boardType": "festivals",
     "title": "클래식 스테이지 온 스크린 [빈 국립 발레 : 호두까기 인형]",
     "category": "park_eco",
@@ -88959,10 +88153,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "광진구",
       "가족나들이"
     ],
-    "dday": "D-12"
+    "dday": "D-11"
   },
   {
-    "id": "seoul-culture-8608174760668121770",
+    "id": "seoul-culture-7478848781560642461",
     "boardType": "festivals",
     "title": "[서울시청] 서울광장 스케이트장",
     "category": "festival_culture",
@@ -88990,10 +88184,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "중구",
       "가족나들이"
     ],
-    "dday": "D-87"
+    "dday": "D-86"
   },
   {
-    "id": "seoul-culture-3331938444847305350",
+    "id": "seoul-culture-4557516453614923478",
     "boardType": "festivals",
     "title": "[강동문화재단] 이자람 판소리 갈라 시리즈 [바탕]",
     "category": "festival_tradition",
@@ -89021,10 +88215,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-35"
+    "dday": "D-34"
   },
   {
-    "id": "seoul-culture-14837358422501233",
+    "id": "seoul-culture-3744868851034476372",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-지브리, 재즈를 만나다-(서울)",
     "category": "festival_performance",
@@ -89052,10 +88246,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "영등포구",
       "가족나들이"
     ],
-    "dday": "D-38"
+    "dday": "D-37"
   },
   {
-    "id": "seoul-culture-4585156333557499389",
+    "id": "seoul-culture-9092215244618517766",
     "boardType": "festivals",
     "title": "[서초문화재단] 2026서리풀 어울림 콘서트 [바이올리니스트 김지선의 Dia:logue-graph]",
     "category": "festival_tradition",
@@ -89083,7 +88277,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서초구",
       "가족나들이"
     ],
-    "dday": "D-38"
+    "dday": "D-37"
   },
   {
     "id": "tourapi-fest-2630385",
@@ -89114,10 +88308,10 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-91"
+    "dday": "D-90"
   },
   {
-    "id": "seoul-culture-3631295587333514955",
+    "id": "seoul-culture-5454349911747457447",
     "boardType": "festivals",
     "title": "2026 카즈미 타테이시 트리오 내한공연-크리스마스, 재즈를 만나다-(서울)",
     "category": "festival_performance",
@@ -89145,7 +88339,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강동구",
       "가족나들이"
     ],
-    "dday": "D-40"
+    "dday": "D-39"
   },
   {
     "id": "tourapi-fest-386053",
@@ -89176,7 +88370,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "가족나들이"
     ],
-    "dday": "D-78"
+    "dday": "D-77"
   },
   {
     "id": "tourapi-fest-507599",
@@ -89207,7 +88401,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "가족나들이"
     ],
-    "dday": "D-78"
+    "dday": "D-77"
   },
   {
     "id": "tourapi-fest-1882134",
@@ -89238,7 +88432,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "강원특별자치도",
       "TourAPI"
     ],
-    "dday": "D-92"
+    "dday": "D-91"
   },
   {
     "id": "tourapi-fest-3367405",
@@ -89269,7 +88463,7 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "서울특별시",
       "가족나들이"
     ],
-    "dday": "D-181"
+    "dday": "D-180"
   },
   {
     "id": "tourapi-fest-2614198",
@@ -89300,6 +88494,6 @@ window.DODAM_NATIONWIDE_EVENTS = [
       "전라남도",
       "가족나들이"
     ],
-    "dday": "D-316"
+    "dday": "D-315"
   }
 ];
