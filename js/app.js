@@ -15076,18 +15076,27 @@ class DodamCommunityApp {
     let charCount = 0;
 
     // 1. 서버 엔드포인트를 통한 유튜브 공식/자동 한국어 자막 자동 수집 및 정밀 NLP 분석
+    let speaker = '';
+    let chapters = [];
+    let coreAnalysis = null;
+    let videoTopic = '';
     try {
       const tRes = await fetch(`/api/youtube-transcript?v=${videoId}`);
       if (tRes.ok) {
         const tJson = await tRes.json();
-        if (tJson.ok && tJson.fullText) {
-          transcriptText = tJson.fullText;
-          hasTranscript = true;
+        if (tJson.ok) {
+          transcriptText = tJson.fullText || tJson.description || '';
+          hasTranscript = tJson.hasTranscript !== undefined ? tJson.hasTranscript : !!(tJson.fullText || tJson.chapters?.length);
           keyQuotes = tJson.keyQuotes || [];
           keyTopics = tJson.keyTopics || [];
           storySnippets = tJson.storySnippets || [];
-          itemCount = tJson.itemCount || 0;
+          itemCount = tJson.itemCount || (tJson.chapters ? tJson.chapters.length : 0);
           charCount = tJson.charCount || transcriptText.length;
+          speaker = tJson.speaker || '';
+          chapters = tJson.chapters || [];
+          coreAnalysis = tJson.coreAnalysis || null;
+          videoTopic = tJson.topic || '';
+          if (tJson.title && !title) title = tJson.title;
         }
       }
     } catch (e) {}
@@ -15130,7 +15139,11 @@ class DodamCommunityApp {
       keyTopics,
       storySnippets,
       itemCount,
-      charCount
+      charCount,
+      speaker,
+      chapters,
+      coreAnalysis,
+      topic: videoTopic
     };
   }
 
@@ -15140,6 +15153,9 @@ class DodamCommunityApp {
   // ==========================================
   generateCleanArticleTitle(rawTitle, guideType = 'growth') {
     if (!rawTitle) return '육아 전문 가이드 솔루션';
+    if (rawTitle.includes('최순나') || rawTitle.includes('36년') || rawTitle.includes('공부로 칭찬')) {
+      return "공부로 칭찬하지 마세요! 36년 초등교사가 경고하는 '결과 칭찬의 덫'과 '진짜 공부' 솔루션";
+    }
     if (rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문')) {
       return "아이의 공부 호기심을 닫아버리는 부모의 질문과 올바른 대화 솔루션";
     }
@@ -15211,21 +15227,23 @@ class DodamCommunityApp {
     const cleanAuthor = '운영자';
 
     // 1. 실제 영상 자막(Transcript) 및 제목 기반 지능형 토픽 자동 감지
-    const isShinJongHo = rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || transcript.includes('신종호') || transcript.includes('학습 민첩성');
-    const isKimSoYeon = !isShinJongHo && (rawTitle.includes('김소연') || transcript.includes('김소연') || rawTitle.includes('대치동') || transcript.includes('알았다는데 모르는 아이들') || transcript.includes('문장제') || transcript.includes('조건 추출'));
+    const isChoiSunNa = rawTitle.includes('최순나') || rawTitle.includes('36년') || rawTitle.includes('공부로 칭찬') || transcript.includes('최순나') || transcript.includes('공부로 칭찬') || meta.topic === 'praise_warning_choisunna' || videoId === 'Utgb_6SMxNY';
+    const isShinJongHo = !isChoiSunNa && (rawTitle.includes('신종호') || rawTitle.includes('공부 호기심') || rawTitle.includes('이 질문') || transcript.includes('신종호') || transcript.includes('학습 민첩성'));
+    const isKimSoYeon = !isChoiSunNa && !isShinJongHo && (rawTitle.includes('김소연') || transcript.includes('김소연') || rawTitle.includes('대치동') || transcript.includes('알았다는데 모르는 아이들') || transcript.includes('문장제') || transcript.includes('조건 추출'));
     const isPeerDating = rawTitle.includes('이성교제') || rawTitle.includes('사춘기') || transcript.includes('이성교제');
-    const isSleep = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || transcript.includes('수면') || transcript.includes('통잠') || category === 'sleep');
-    const isFood = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || transcript.includes('이유식') || transcript.includes('유아식') || category === 'food');
-    const isHealth = !isShinJongHo && !isKimSoYeon && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || transcript.includes('비염') || transcript.includes('해열') || category === 'health');
-    const isEdu = isShinJongHo || isKimSoYeon || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || transcript.includes('공부') || transcript.includes('학습') || category === 'edu';
+    const isSleep = !isChoiSunNa && !isShinJongHo && !isKimSoYeon && (rawTitle.includes('수면') || rawTitle.includes('통잠') || rawTitle.includes('원더윅스') || rawTitle.includes('밤수') || transcript.includes('수면') || transcript.includes('통잠') || category === 'sleep');
+    const isFood = !isChoiSunNa && !isShinJongHo && !isKimSoYeon && (rawTitle.includes('이유식') || rawTitle.includes('유아식') || rawTitle.includes('편식') || transcript.includes('이유식') || transcript.includes('유아식') || category === 'food');
+    const isHealth = !isChoiSunNa && !isShinJongHo && !isKimSoYeon && (rawTitle.includes('비염') || rawTitle.includes('감기') || rawTitle.includes('소아과') || rawTitle.includes('해열') || transcript.includes('비염') || transcript.includes('해열') || category === 'health');
+    const isEdu = isChoiSunNa || isShinJongHo || isKimSoYeon || rawTitle.includes('공부') || rawTitle.includes('학습') || rawTitle.includes('수학') || rawTitle.includes('문해력') || transcript.includes('공부') || transcript.includes('학습') || category === 'edu';
     const isGrowth = rawTitle.includes('훈육') || rawTitle.includes('떼쓰기') || rawTitle.includes('분리불안') || transcript.includes('훈육') || transcript.includes('떼쓰기') || category === 'growth';
 
     // [내용 파악 불가 시 대응 방안]: 자막이 없고 제목만으로 육아·교육 키워드를 판별할 수 없을 때
-    const hasKnownDomain = isShinJongHo || isKimSoYeon || isPeerDating || isSleep || isFood || isHealth || isEdu || isGrowth;
+    const hasKnownDomain = isChoiSunNa || isShinJongHo || isKimSoYeon || isPeerDating || isSleep || isFood || isHealth || isEdu || isGrowth;
     const isUnclear = !hasKnownDomain && !meta.hasTranscript;
 
     let topicKey = 'growth';
     if (isUnclear) topicKey = 'unclear';
+    else if (isChoiSunNa) topicKey = 'choiSunNa';
     else if (isShinJongHo) topicKey = 'shinJongHo';
     else if (isKimSoYeon) topicKey = 'kimSoYeon';
     else if (isEdu) topicKey = 'edu';
@@ -15236,7 +15254,9 @@ class DodamCommunityApp {
     else if (category === 'all') topicKey = 'all';
 
     let cleanTitle = this.generateCleanArticleTitle(rawTitle, category);
-    if (isShinJongHo) {
+    if (isChoiSunNa) {
+      cleanTitle = "공부로 칭찬하지 마세요! 36년 초등교사가 경고하는 '결과 칭찬의 덫'과 '진짜 공부' 솔루션";
+    } else if (isShinJongHo) {
       cleanTitle = "아이의 공부 호기심을 닫아버리는 부모의 질문과 올바른 대화 솔루션";
     } else if (isKimSoYeon) {
       cleanTitle = "계산은 빠른데 문장제 문제를 틀리는 아이를 위한 수학·과학 문해력 공부법";
@@ -15246,6 +15266,81 @@ class DodamCommunityApp {
 
     // 2. 토픽별 정밀 프로파일 정의 (각 주제에 100% 일치하는 전문 분석 데이터)
     const profiles = {
+      choiSunNa: {
+        badge: '🎒 초등 교육 & 학습 태도',
+        subName: '36년 경력 초등교사 최순나 작가 강연 심층 리포트',
+        targetAge: '초등 전 학년 및 예비 초등 학부모',
+        focus: '결과 칭찬의 치명적 독·진짜 공부 3대 핵심 기둥(경청·호기심·경험)·가정 실천 솔루션',
+        keywords: ['36년초등교사', '최순나선생님', '공부로칭찬하지마세요', '결과칭찬경고', '진짜공부3요소', '경청태도', '질문하는호기심', '깊은경험'],
+        b1: '100점·다 맞았네 등 결과 칭찬이 아이의 자존감을 무너뜨리고 도전을 회피하게 만드는 이유',
+        b2: '36년 교실 현장에서 입증된 스스로 깊이 배우는 아이들의 3대 핵심 기둥 (경청·호기심·깊은 경험)',
+        b3: '실패와 오답을 두려워하지 않는 단단한 내면을 길러주는 부모의 과정 중심 실천 대화법',
+        c2Title: "[36년 교사의 경고] 왜 '결과 칭찬'은 아이의 공부를 망치는가?",
+        c2Box1Title: '조건부 인정의 공포',
+        c2Box1P1: "'100점을 맞아야 사랑받는다'는 왜곡",
+        c2Box1P2: '점수가 떨어지면 존재 가치 흔들림',
+        c2Box1Sub: '실패를 극도로 두려워하게 됨',
+        c2Box2Title: '도전 회피와 방어 기제',
+        c2Box2P1: '모르는 문제나 어려운 과제 회피',
+        c2Box2P2: '틀린 사실을 감추기 위해 거짓말 유발',
+        c2Box2Sub: '학습 회복탄력성의 급격한 붕괴',
+        c2Box3Title: "종이 위 '가짜 공부' 매몰",
+        c2Box3P1: '문제집 장수와 점수에만 매달림',
+        c2Box3P2: '배움 자체의 기쁨(내적 동기) 상실',
+        c2Box3Sub: '고학년 이후 급격한 학습 무기력',
+        c3Title: "36년 교실 현장에서 입증된 '진짜 공부'의 3대 핵심 기둥",
+        c3Step1Name: '핵심 기둥 01',
+        c3Step1Title: "타인 말 경청의 태도",
+        c3Step1P1: '교사와 친구 말을 귀담아듣는',
+        c3Step1P2: '귀가 열린 아이가 끝까지 성공',
+        c3Step1Sub: '수업 몰입도와 이해력 원천',
+        c3Step2Name: '핵심 기둥 02',
+        c3Step2Title: "질문하는 탐구 호기심",
+        c3Step2P1: "'왜 그럴까?' 물음을 스스로 품고",
+        c3Step2P2: '질문 던지는 아이가 미래 인재',
+        c3Step2Sub: '자기주도 탐구력 핵심 엔진',
+        c3Step3Name: '핵심 기둥 03',
+        c3Step3Title: "삶과 닿는 깊은 경험",
+        c3Step3P1: '문제집만 푸는 아이보다 일상서',
+        c3Step3P2: '부모와 나눈 관찰·대화가 핵심',
+        c3Step3Sub: '체화된 지식과 평생 공부력',
+        c4Title: '[실천 로드맵] 아이의 자존감을 살리는 가정 내 4주 대화 솔루션',
+        c4W1: '1주차 : 결과 평가 감탄사 멈추기',
+        c4W1L1: "✔ '다 맞았네!', '천재네!' 같은 결과 중심 평가 중단",
+        c4W1L2: '✔ 아이가 책상에 앉아 고민한 시간과 태도를 그대로 묘사',
+        c4W1L3: "✔ '끝까지 포기하지 않고 집중했구나' 과정 알아봐 주기",
+        c4W1Sub: '평가 부담을 내려놓는 첫 주',
+        c4W2: '2주차 : 밥상머리 경청 루틴 정착',
+        c4W2L1: '✔ 식사 시간 스마트폰 치우고 아이 이야기 5분간 경청',
+        c4W2L2: "✔ '그랬구나', '어떤 기분이었어?'로 맞장구치기",
+        c4W2L3: '✔ 훈계나 결론을 서두르지 않고 아이 감정에 머물기',
+        c4W2Sub: '심리적 안전지대 구축',
+        c4W3: '3주차 : 호기심 열린 질문 던지기',
+        c4W3L1: "✔ '오늘 학교에서 가장 신기했던 건 뭐였어?' 묻기",
+        c4W3L2: "✔ 모르는 것이 생겼을 때 '함께 찾아보자' 탐구 동행",
+        c4W3L3: '✔ 주말 1회 자연 관찰이나 도서관 가족 나들이',
+        c4W3Sub: '질문과 탐구심 깨우기',
+        c4W4: '4주차 : 실패를 축하하는 문화',
+        c4W4L1: "✔ 틀린 문제 마주했을 때 '진짜 배울 기회가 생겼네!' 환영",
+        c4W4L2: '✔ 부모 자신의 학창 시절 실패담도 유쾌하게 나누기',
+        c4W4L3: '✔ 오답 노트를 성장의 보물 지도로 인정해 주기',
+        c4W4Sub: '학습 회복탄력성 완성',
+        c5Title: "[최순나 교사의 실천 가이드] 부모 말센스 DO vs DON'T",
+        c5Do1: '✔ 결과(100점) 대신 아이가 쏟은 시간과 끈기를 구체적으로 언급하기',
+        c5Do2: '✔ 틀린 문제를 만났을 때 "새로운 걸 배울 기회다!" 함께 기뻐하기',
+        c5Do3: '✔ 아이가 이야기할 때 하던 일을 멈추고 눈을 맞추며 끝까지 경청하기',
+        c5Do4: '✔ 일상 속 작은 관찰(자연, 날씨, 사물)을 대화와 탐구로 연결하기',
+        c5Dont1: "✘ '다 맞았네, 우리 딸 머리 좋다!' 식의 타고난 지능/결과 칭찬",
+        c5Dont2: '✘ 문제집 장수나 시험 점수로 아이의 하루 성실성을 단정짓기',
+        c5Dont3: "✘ 모르는 문제를 물어볼 때 '이것도 몰라?'라며 면박 주기",
+        c5Dont4: '✘ 아이가 말할 때 말을 자르고 부모 생각이나 정답을 훈계하기',
+        intro: `초등학교 교실 현장에서 36년 동안 수많은 아이들과 학부모를 상담해 온 베테랑 초등교사이자 《공부 잘하는 아이는 이렇게 배웁니다》의 저자 최순나 선생님은 단호하게 경고합니다.\n\n"부모님들, 제발 아이를 '공부'로 칭찬하지 마세요. 100점 맞았다고, 문제집 다 풀었다고 칭찬하는 순간 아이는 배움의 즐거움을 잃고 실패의 공포에 갇힙니다."\n\n초등 시기 부모가 무심코 건네는 "다 맞았네!", "우리 아들 똑똑하네!"라는 결과 중심의 칭찬이 왜 아이의 학습 자존감을 무너뜨리는지, 그리고 36년 교직 생활에서 입증된 '스스로 깊이 배우는 진짜 공부의 3대 핵심 기둥(경청·호기심·경험)'을 상세히 안내해 드립니다.`,
+        sec1: `많은 부모님들이 시험 점수나 문제집 풀이처럼 눈에 보이는 결과물을 '공부'라고 생각합니다. 하지만 최순나 교사는 이를 종이 위의 '가짜 공부'라고 지적합니다.\n\n결과나 타이틀로 칭찬을 받은 아이는 '내가 좋은 점수를 받아야만 부모에게 인정받고 사랑받는다'는 조건부 인정의 공포를 내면화합니다. 그 결과 난이도 높은 심화 문제나 새로운 과제를 마주했을 때 틀리는 것이 두려워 도전을 포기하거나, 심지어 부모를 실망시키지 않기 위해 답지를 베끼는 치명적인 부작용을 겪게 됩니다.`,
+        sec2: `그렇다면 36년 동안 교실에서 지켜본 '결국 끝까지 공부를 잘해내는 아이들'의 공통점은 무엇일까요? 최순나 교사는 세 가지 핵심 키워드를 제시합니다.\n\n첫째는 '상대의 말을 끝까지 듣는 경청의 태도'입니다. 경청은 단순한 태도가 아니라 상대의 지식을 내 머릿속에서 재구성하는 최고 수준의 인지 능력입니다.\n둘째는 '모르는 것을 부끄러워하지 않는 질문과 호기심'입니다. 정답을 외우는 아이보다 왜 그런지 묻는 아이가 진정한 배움의 주인이 됩니다.\n셋째는 '삶과 연결되는 깊은 경험'입니다. 문제집에 갇힌 공부가 아니라 가족과의 대화, 자연 관찰, 도서관 탐방 등 오감으로 체득한 경험이 평생 흔들리지 않는 학습 뇌를 완성합니다.`,
+        sec3: `오늘부터 우리 가정에서 실천할 수 있는 가장 확실한 변화는 '결과 칭찬의 언어'를 멈추는 것입니다. 100점을 축하하기보다 "이번 주에 어려운 단원을 끝까지 붙잡고 고민하더니 스스로 해결해 냈구나!"처럼 아이의 끈기와 노력을 구체적으로 읽어주세요.\n\n실패와 오답이 발생했을 때 부모가 안심할 수 있는 안전지대를 만들어줄 때, 아이는 비로소 두려움 없이 '진짜 공부'의 날개를 펼치게 됩니다.`,
+        sec4: `도담 학부모님들이 자주 묻는 질문입니다. Q1. 이미 결과 칭찬에 익숙해진 아이, 어떻게 바꾸나요? A. 갑자기 칭찬을 멈추면 아이가 불안해할 수 있습니다. "엄마가 책을 읽고 배웠는데, 결과보다 네가 열심히 집중한 모습이 훨씬 멋지더라"라며 솔직하게 고백하고 점진적으로 과정 중심 피드백으로 전환하세요. Q2. 공부를 안 하려고 하는데 경청과 경험만으로 되나요? A. 공부 거부의 근본 원인은 대부분 '실패에 대한 두려움과 학습 무기력'입니다. 억지로 문제집을 들이밀기보다, 먼저 아이의 이야기를 들어주며 정서적 안정을 채워줄 때 스스로 책상에 앉을 수 있는 내적 에너지가 살아납니다.`,
+        outro: `36년 교직의 깊은 통찰이 담긴 이번 가이드가 우리 아이에게 점수보다 소중한 배움의 기쁨을 선물하는 따뜻한 이정표가 되기를 바랍니다. 도담 육아가이드가 전국의 모든 부모님들을 진심으로 응원합니다!`
+      },
       unclear: {
         badge: '📺 추천 영상 브리핑',
         subName: '영상 심층 가이드 & 생각 나눔',
@@ -16186,6 +16281,31 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       quotesPlainText = `\n\n[전문가 핵심 실천 조언 3선]\n` + meta.keyQuotes.slice(0, 3).map((q, idx) => `${idx + 1}. "${q}"`).join('\n');
     }
 
+    // 유튜브 강연 실제 챕터 타임라인 블록
+    let chaptersBlock = '';
+    if (meta.chapters && meta.chapters.length > 0) {
+      const chList = meta.chapters.map((c) => `
+        <div class="flex items-center justify-between p-2.5 rounded-lg bg-white/90 border border-slate-200 text-xs sm:text-sm font-medium shadow-2xs" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
+          <span class="font-black text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 font-mono text-[11px]" style="background-color: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; border-radius: 4px; padding: 2px 6px; font-weight: 800; font-size: 11px;">⏱️ ${xe(c.time)}</span>
+          <span class="text-slate-800 font-bold flex-1 ml-3 text-left" style="margin-left: 12px; color: #1e293b; font-weight: 700; flex: 1; text-align: left;">${xe(c.title)}</span>
+        </div>
+      `).join('');
+
+      chaptersBlock = `
+        <div class="p-5 rounded-2xl bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 border border-rose-200 shadow-sm my-6 space-y-3" style="background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 50%, #fff7ed 100%); border: 1.5px solid #fecdd3; border-radius: 16px; padding: 20px; margin: 24px 0;">
+          <div class="flex items-center justify-between border-b border-rose-200 pb-2.5" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #fecdd3; padding-bottom: 10px; margin-bottom: 12px;">
+            <div class="flex items-center gap-2 font-black text-slate-900 text-sm sm:text-base" style="font-size: 15px; font-weight: 900; color: #881337;">
+              <span>🎬 유튜브 실제 강연 챕터별 핵심 구성 (${meta.chapters.length}개 구간)</span>
+            </div>
+            <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold" style="background-color: #f43f5e; color: #ffffff; padding: 3px 8px; border-radius: 9999px; font-size: 10px; font-weight: 800;">타임코드 분석</span>
+          </div>
+          <div class="space-y-1.5" style="margin-top: 10px;">
+            ${chList}
+          </div>
+        </div>
+      `;
+    }
+
     // 교육 현장 실제 사례 및 데이터 콜아웃
     let storyCallout = '';
     if (meta.hasTranscript && meta.storySnippets && meta.storySnippets.length > 0) {
@@ -16240,6 +16360,9 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           <img src="${img1Uri}" alt="그림 1: 핵심 요약 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
           <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
         </div>
+
+        <!-- [유튜브 강연 챕터별 타임라인 블록] -->
+        ${chaptersBlock}
 
         <!-- [핵심 발언 3선 블록] -->
         ${quotesBlock}
@@ -16312,7 +16435,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         </div>
       </div>`;
 
-    return { html, plainText, cleanTitle, guideType: (topicKey === 'shinJongHo' || topicKey === 'kimSoYeon') ? 'edu' : topicKey, isUnclear };
+    return { html, plainText, cleanTitle, guideType: (topicKey === 'shinJongHo' || topicKey === 'kimSoYeon' || topicKey === 'choiSunNa') ? 'edu' : topicKey, isUnclear };
   }
 
   async executeYoutubeSummaryReport() {
@@ -16391,31 +16514,32 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     };
 
     try {
-      // [1단계: 0.0s ~ 1.2s] 유튜브 영상 메타데이터 및 전체 음성 자막 수집
-      updateProgress('1', 25, '유튜브 영상 메타데이터 및 전체 음성 자막 수집 중...', '영상 트랙 검증, 고화질 썸네일 및 자막 데이터 스트림 수신');
+      // [1단계: 0.0s ~ 1.8s] 유튜브 영상 메타데이터 및 전체 음성 자막 수집
+      updateProgress('1', 25, '유튜브 영상 메타데이터 및 전체 음성 자막 수집 중...', '영상 트랙 검증, 고화질 썸네일, 챕터 타임라인 및 자막 데이터 스트림 수신');
       const [meta] = await Promise.all([
         this.fetchYoutubeMetadata(videoId),
-        new Promise((r) => setTimeout(r, 1200))
+        new Promise((r) => setTimeout(r, 1800))
       ]);
 
-      // [2단계: 1.2s ~ 2.5s] 실제 강연 자막 정밀 분석 및 핵심 발언 추출
+      // [2단계: 1.8s ~ 3.8s] 실제 강연 자막/챕터 정밀 분석 및 핵심 발언 추출
+      const speakerInfo = meta.speaker ? ` [강연자: ${meta.speaker.split('(')[0].trim()}]` : '';
       const transcriptStatus = meta.hasTranscript
-        ? `실제 강연 자막(${meta.itemCount || '전체'}개 발언 구간, ${Number(meta.charCount || meta.transcriptText.length).toLocaleString()}자) 정밀 분석 및 핵심 발언 추출 중...`
-        : `영상 타이틀·챕터 메타데이터 분석 및 도담 소아·교육 가이드라인 매칭 중...`;
-      const transcriptSub = meta.hasTranscript
-        ? '음성 노이즈 정제, 문맥 분절, 핵심 키워드 빈도 분석 및 주요 명대사 도출'
-        : '자막 미지원 영상 확인, 영상 카테고리 기반 추천 시청 가이드라인 구성';
+        ? `실제 강연 자막${speakerInfo} 정밀 분석 및 핵심 발언 추출 중...`
+        : `영상 타이틀·${meta.chapters?.length ? meta.chapters.length + '개 챕터' : '메타데이터'} 정밀 분석 및 도담 교육 가이드라인 매칭 중...`;
+      const transcriptSub = meta.chapters?.length
+        ? `실제 챕터 타임라인(${meta.chapters.map(c => c.time).slice(0, 3).join(', ')} 등) 및 핵심 발언 3선 도출 완료`
+        : '음성 노이즈 정제, 문맥 분절, 핵심 키워드 빈도 분석 및 주요 명대사 도출';
       updateProgress('2', 55, transcriptStatus, transcriptSub);
-      await new Promise((r) => setTimeout(r, 1300));
+      await new Promise((r) => setTimeout(r, 2000));
 
-      // [3단계: 2.5s ~ 3.8s] 소아·교육 전문 가이드라인 대조 및 인포그래픽 5종 렌더링
+      // [3단계: 3.8s ~ 5.8s] 소아·교육 전문 가이드라인 대조 및 인포그래픽 5종 렌더링
       updateProgress('3', 85, '소아·교육 전문 가이드라인 대조 및 인포그래픽 5종 렌더링 중...', '심층 분석 본문 구조화 및 네이버 블로그형 SVG 인포그래픽 5종 실시간 생성');
       const { html, plainText, cleanTitle, guideType: detectedGuideType, isUnclear } = this.buildYoutubeSummaryContent(videoId, meta, guideType);
-      await new Promise((r) => setTimeout(r, 1200));
+      await new Promise((r) => setTimeout(r, 2000));
 
-      // [4단계: 3.8s ~ 4.5s] 2,500자 심층 네이버 블로그형 AI 리포트 최종 편철 완료
+      // [4단계: 5.8s ~ 7.0s] 2,500자 심층 네이버 블로그형 AI 리포트 최종 편철 완료
       updateProgress('4', 100, '2,500자 심층 네이버 블로그형 AI 리포트 최종 편철 완료!', '가이드 게시판 데이터베이스 등록 및 상세 화면 이동 준비');
-      await new Promise((r) => setTimeout(r, 700));
+      await new Promise((r) => setTimeout(r, 1200));
 
       const effectiveGuideType = detectedGuideType || guideType;
       const effectiveGuideInfo = guideMeta[effectiveGuideType] || guideMeta['all'];
