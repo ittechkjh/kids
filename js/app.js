@@ -9295,7 +9295,11 @@ class DodamCommunityApp {
         return revB - revA;
       });
     } else {
-      list.sort((a, b) => b.overallRating - a.overallRating);
+      list.sort((a, b) => {
+        const scoreB = b.type === 'attraction' ? (b.reviewCount || 0) : ((b.overallRating || 0) * 1000);
+        const scoreA = a.type === 'attraction' ? (a.reviewCount || 0) : ((a.overallRating || 0) * 1000);
+        return scoreB - scoreA;
+      });
     }
 
     return list;
@@ -9340,9 +9344,9 @@ class DodamCommunityApp {
       }
 
       const iconHtml = `
-        <div class="food-compact-pin ${pinClass}" id="pin-${r.id}" title="${r.name} (★${r.overallRating})">
+        <div class="food-compact-pin ${pinClass}" id="pin-${r.id}" title="${r.name} (${isAttr ? '리뷰 ' + (r.reviewCount || 1000).toLocaleString() + '건+' : '★' + r.overallRating})">
           <i class="fa-solid ${iconClass}"></i>
-          <span>${r.overallRating}</span>
+          <span>${isAttr ? (r.reviewCount >= 1000 ? Math.round(r.reviewCount / 1000) + 'k' : (r.reviewCount || '명소')) : r.overallRating}</span>
         </div>
       `;
 
@@ -9363,11 +9367,19 @@ class DodamCommunityApp {
 
           <div class="p-2 bg-gradient-to-r from-stone-50 to-slate-50 rounded-xl border border-stone-200/80 text-[11px] space-y-1">
             <div class="flex items-center justify-between">
-              <span class="font-black text-amber-500 text-xs flex items-center gap-1">
-                <i class="fa-solid fa-star text-[10px]"></i>
-                <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
-              </span>
-              <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? Number(sources.naver.reviewCount).toLocaleString() + '건' : '플레이스')} · 🟡 카카오 ${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? Number(sources.kakao.reviewCount).toLocaleString() + '건' : '카카오맵')} · 🔵 구글 ${sources.google?.rating ? '★ ' + sources.google.rating : '지도연동'}</span>
+              ${isAttr ? `
+                <span class="font-black text-indigo-600 text-xs flex items-center gap-1">
+                  <i class="fa-solid fa-comments text-[10px]"></i>
+                  <span>리뷰 ${(r.reviewCount || 1200).toLocaleString()}건+</span>
+                </span>
+                <span class="text-[10px] text-slate-500 font-bold">포털 실시간 리뷰·후기 연동</span>
+              ` : `
+                <span class="font-black text-amber-500 text-xs flex items-center gap-1">
+                  <i class="fa-solid fa-star text-[10px]"></i>
+                  <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
+                </span>
+                <span class="text-[10px] text-slate-500 font-bold">🟢 네이버 ${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? Number(sources.naver.reviewCount).toLocaleString() + '건' : '플레이스')} · 🟡 카카오 ${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? Number(sources.kakao.reviewCount).toLocaleString() + '건' : '카카오맵')} · 🔵 구글 ${sources.google?.rating ? '★ ' + sources.google.rating : '지도연동'}</span>
+              `}
             </div>
           </div>
 
@@ -9377,7 +9389,7 @@ class DodamCommunityApp {
 
           <div class="pt-1 grid grid-cols-3 gap-1">
             <a href="${sources.naver.url}" target="_blank" rel="noopener noreferrer" class="py-1.5 rounded-lg badge-naver text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">네이버 리뷰 ↗</a>
-            <a href="${sources.kakao.url}" target="_blank" rel="noopener noreferrer" class="py-1.5 rounded-lg badge-kakao text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">카카오 별점 ↗</a>
+            <a href="${sources.kakao.url}" target="_blank" rel="noopener noreferrer" class="py-1.5 rounded-lg badge-kakao text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">${isAttr ? '카카오 후기 ↗' : '카카오 별점 ↗'}</a>
             <a href="${sources.google.url}" target="_blank" rel="noopener noreferrer" class="py-1.5 rounded-lg badge-google text-[10px] font-extrabold text-center hover:opacity-90 transition shadow-2xs">구글 지도 ↗</a>
           </div>
         </div>
@@ -9511,26 +9523,34 @@ class DodamCommunityApp {
               </p>
             </div>
 
-            <!-- 종합 평점 -->
+            <!-- 종합 평점 / 리뷰 수 -->
             <div class="text-right shrink-0">
-              <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl ${isAttr ? 'bg-indigo-600' : 'bg-amber-500'} text-white font-black text-sm shadow-sm">
-                <i class="fa-solid fa-star text-xs"></i>
-                <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
-              </div>
-              <div class="text-[10px] text-slate-400 font-bold mt-1">리뷰 ${totalReviews.toLocaleString()}건</div>
+              ${isAttr ? `
+                <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-indigo-600 text-white font-black text-sm shadow-sm">
+                  <i class="fa-solid fa-comments text-xs"></i>
+                  <span>리뷰 ${(totalReviews || 1200).toLocaleString()}건+</span>
+                </div>
+                <div class="text-[10px] text-indigo-500 font-bold mt-1">포털 실시간 리뷰 인증</div>
+              ` : `
+                <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-2xl bg-amber-500 text-white font-black text-sm shadow-sm">
+                  <i class="fa-solid fa-star text-xs"></i>
+                  <span>${r.overallRating ? Number(r.overallRating).toFixed(1) : '4.3'}</span>
+                </div>
+                <div class="text-[10px] text-slate-400 font-bold mt-1">리뷰 ${totalReviews.toLocaleString()}건</div>
+              `}
             </div>
           </div>
 
-          <!-- 3대 포털 공식 평점 및 실시간 출처 링크 -->
+          <!-- 3대 포털 공식 정보 및 실시간 출처 링크 -->
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 bg-stone-50 p-3 rounded-2xl border border-stone-200/70">
             <!-- 네이버 플레이스 -->
             <div class="p-2.5 rounded-xl bg-white border border-stone-200 flex items-center justify-between">
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-emerald-600">🟢 네이버</span>
-                  <span class="font-black text-xs text-slate-900">${sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? '별점 미공개' : '플레이스 연결')}</span>
+                  <span class="font-black text-xs text-slate-900">${isAttr ? '방문자·키워드리뷰' : (sources.naver?.rating ? '★ ' + sources.naver.rating : (sources.naver?.reviewCount ? '별점 미공개' : '플레이스 연결'))}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">${sources.naver?.reviewCount ? '방문자·블로그 ' + Number(sources.naver.reviewCount).toLocaleString() + '건' : '실시간 리뷰 확인'}</span>
+                <span class="text-[10px] text-slate-400 font-medium">${isAttr ? '실시간 방문 후기·사진 확인' : (sources.naver?.reviewCount ? '방문자·블로그 ' + Number(sources.naver.reviewCount).toLocaleString() + '건' : '실시간 리뷰 확인')}</span>
               </div>
               <a
                 href="${sources.naver.url}"
@@ -9539,7 +9559,7 @@ class DodamCommunityApp {
                 class="px-2 py-1 rounded-lg badge-naver text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
                 title="네이버 플레이스 실시간 리뷰 보기"
               >
-                <span>리뷰보기</span>
+                <span>${isAttr ? '리뷰확인' : '리뷰보기'}</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
               </a>
             </div>
@@ -9549,18 +9569,18 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-amber-600">🟡 카카오</span>
-                  <span class="font-black text-xs text-slate-900">${sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? '블로그 인증' : '카카오맵 연동')}</span>
+                  <span class="font-black text-xs text-slate-900">${isAttr ? '카카오맵 방문후기' : (sources.kakao?.rating ? '★ ' + Number(sources.kakao.rating).toFixed(1) : (sources.kakao?.reviewCount ? '블로그 인증' : '카카오맵 연동'))}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">${sources.kakao?.rating ? '별점·블로그 ' : '블로그리뷰 '}${Number(sources.kakao?.reviewCount || 0).toLocaleString()}건</span>
+                <span class="text-[10px] text-slate-400 font-medium">${isAttr ? '실시간 로드뷰·길찾기' : (sources.kakao?.rating ? '별점·블로그 ' : '블로그리뷰 ') + Number(sources.kakao?.reviewCount || 0).toLocaleString() + '건'}</span>
               </div>
               <a
                 href="${sources.kakao.url}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="px-2 py-1 rounded-lg badge-kakao text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
-                title="카카오맵 실시간 별점 및 로드뷰 보기"
+                title="카카오맵 실시간 방문후기 및 로드뷰 보기"
               >
-                <span>별점보기</span>
+                <span>${isAttr ? '후기보기' : '별점보기'}</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
               </a>
             </div>
@@ -9570,18 +9590,18 @@ class DodamCommunityApp {
               <div>
                 <div class="flex items-center gap-1">
                   <span class="text-[10px] font-black text-blue-600">🔵 구글</span>
-                  <span class="font-black text-xs text-slate-900">${sources.google?.rating ? '★ ' + sources.google.rating : '구글 지도 연동'}</span>
+                  <span class="font-black text-xs text-slate-900">${isAttr ? '구글 장소리뷰' : (sources.google?.rating ? '★ ' + sources.google.rating : '구글 지도 연동')}</span>
                 </div>
-                <span class="text-[10px] text-slate-400 font-medium">${sources.google?.reviewCount ? '글로벌리뷰 ' + Number(sources.google.reviewCount).toLocaleString() + '건' : '실시간 리뷰·길찾기'}</span>
+                <span class="text-[10px] text-slate-400 font-medium">${isAttr ? '글로벌 리뷰·지도 연동' : (sources.google?.reviewCount ? '글로벌리뷰 ' + Number(sources.google.reviewCount).toLocaleString() + '건' : '실시간 리뷰·길찾기')}</span>
               </div>
               <a
                 href="${sources.google.url}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="px-2 py-1 rounded-lg badge-google text-[10px] font-extrabold hover:opacity-90 flex items-center gap-1 transition shadow-2xs"
-                title="구글 지도 실시간 평점 보기"
+                title="구글 지도 실시간 리뷰 보기"
               >
-                <span>평점보기</span>
+                <span>${isAttr ? '리뷰보기' : '평점보기'}</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
               </a>
             </div>
@@ -9628,7 +9648,7 @@ class DodamCommunityApp {
                 rel="noopener"
                 class="px-2.5 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 text-[11px] font-extrabold transition flex items-center gap-1"
               >
-                <span>네이버 상세</span>
+                <span>${isAttr ? '네이버 후기' : '네이버 상세'}</span>
                 <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
               </a>
               <a
