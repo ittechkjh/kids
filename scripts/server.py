@@ -14,7 +14,7 @@ def load_gemini_api_key():
     for env_path in ['.env', os.path.expanduser('~/.env')]:
         if os.path.exists(env_path):
             try:
-                with open(env_path, 'r', encoding='utf-8') as f:
+                with open(env_path, 'r', encoding='utf-8-sig') as f:
                     for line in f:
                         line = line.strip()
                         if line.startswith('GEMINI_API_KEY='):
@@ -208,7 +208,7 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
 }}"""
 
     # Try calling Gemini API with YouTube fileUri first (native multimodal video understanding)
-    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={api_key}"
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
     parts = []
     if not transcript_text:
         parts.append({"fileData": {"mimeType": "video/mp4", "fileUri": youtube_url}})
@@ -228,7 +228,7 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
         headers={'Content-Type': 'application/json'}
     )
     try:
-        with urllib.request.urlopen(req, timeout=45) as resp:
+        with urllib.request.urlopen(req, timeout=90) as resp:
             res_json = json.loads(resp.read().decode('utf-8'))
         text_out = res_json['candidates'][0]['content']['parts'][0]['text']
         return {'ok': True, 'profile': json.loads(text_out)}
@@ -242,7 +242,7 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
                     data=json.dumps(body).encode('utf-8'),
                     headers={'Content-Type': 'application/json'}
                 )
-                with urllib.request.urlopen(req2, timeout=45) as resp2:
+                with urllib.request.urlopen(req2, timeout=90) as resp2:
                     res_json2 = json.loads(resp2.read().decode('utf-8'))
                 text_out2 = res_json2['candidates'][0]['content']['parts'][0]['text']
                 return {'ok': True, 'profile': json.loads(text_out2)}
