@@ -16599,30 +16599,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       quotesPlainText = `\n\n[전문가 핵심 실천 조언 3선]\n` + meta.keyQuotes.slice(0, 3).map((q, idx) => `${idx + 1}. "${q}"`).join('\n');
     }
 
-    // 유튜브 강연 실제 챕터 타임라인 블록
-    let chaptersBlock = '';
-    if (meta.chapters && meta.chapters.length > 0) {
-      const chList = meta.chapters.map((c) => `
-        <div class="flex items-center justify-between p-2.5 rounded-lg bg-white/90 border border-slate-200 text-xs sm:text-sm font-medium shadow-2xs" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px 14px; margin-bottom: 6px; display: flex; align-items: center; justify-content: space-between;">
-          <span class="font-black text-rose-600 bg-rose-50 px-2 py-0.5 rounded border border-rose-200 font-mono text-[11px]" style="background-color: #fff1f2; color: #e11d48; border: 1px solid #fecdd3; border-radius: 4px; padding: 2px 6px; font-weight: 800; font-size: 11px;">⏱️ ${xe(c.time)}</span>
-          <span class="text-slate-800 font-bold flex-1 ml-3 text-left" style="margin-left: 12px; color: #1e293b; font-weight: 700; flex: 1; text-align: left;">${xe(c.title)}</span>
-        </div>
-      `).join('');
-
-      chaptersBlock = `
-        <div class="p-5 rounded-2xl bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 border border-rose-200 shadow-sm my-6 space-y-3" style="background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 50%, #fff7ed 100%); border: 1.5px solid #fecdd3; border-radius: 16px; padding: 20px; margin: 24px 0;">
-          <div class="flex items-center justify-between border-b border-rose-200 pb-2.5" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #fecdd3; padding-bottom: 10px; margin-bottom: 12px;">
-            <div class="flex items-center gap-2 font-black text-slate-900 text-sm sm:text-base" style="font-size: 15px; font-weight: 900; color: #881337;">
-              <span>📖 핵심 주제별 강연 구성 (${meta.chapters.length}개 구간)</span>
-            </div>
-            <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold" style="background-color: #f43f5e; color: #ffffff; padding: 3px 8px; border-radius: 9999px; font-size: 10px; font-weight: 800;">구간별 핵심</span>
-          </div>
-          <div class="space-y-1.5" style="margin-top: 10px;">
-            ${chList}
-          </div>
-        </div>
-      `;
-    }
+    // 타임코드/구간별 구성 블록은 영상 출처 노출 방지를 위해 본문에 포함하지 않음
+    const chaptersBlock = '';
 
     // 교육 현장 실제 사례 및 데이터 콜아웃
     let storyCallout = '';
