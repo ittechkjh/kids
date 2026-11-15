@@ -741,6 +741,9 @@ class DodamCommunityApp {
               admin.passwordHash = this.remoteAdminPassword;
             }
           }
+          if (cfg.encryptedGeminiKey) {
+            this.syncAdminGeminiKeyFromCloud();
+          }
         }
       });
     }
@@ -13221,6 +13224,7 @@ class DodamCommunityApp {
             sessionStorage.setItem('dodam_admin_authenticated', '1');
             localStorage.setItem('dodam_admin_persistent', '1');
           } catch (e) {}
+          this.syncAdminGeminiKeyFromCloud(pwIn);
         }
 
         // [중요] 브라우저나 기기가 바뀌어 로컬 캐시가 비어있어도, Cloud Firestore(user_profiles)에서 저장된 프로필을 최우선 복원!
@@ -15001,36 +15005,121 @@ class DodamCommunityApp {
     timeEl.value = `${hh}:${min}`;
   }
 
+  async _deriveAdminAesKey(secretPass, saltBytes) {
+    const enc = new TextEncoder();
+    const baseKey = await crypto.subtle.importKey(
+      'raw',
+      enc.encode(String(secretPass || 'admin1234')),
+      { name: 'PBKDF2' },
+      false,
+      ['deriveKey']
+    );
+    return crypto.subtle.deriveKey(
+      { name: 'PBKDF2', salt: saltBytes, iterations: 100000, hash: 'SHA-256' },
+      baseKey,
+      { name: 'AES-GCM', length: 256 },
+      false,
+      ['encrypt', 'decrypt']
+    );
+  }
+
+  async encryptSecretForAdmin(plainText, secretPass) {
+    if (!window.crypto?.subtle || !plainText) return null;
+    const salt = crypto.getRandomValues(new Uint8Array(16));
+    const iv = crypto.getRandomValues(new Uint8Array(12));
+    const aesKey = await this._deriveAdminAesKey(secretPass, salt);
+    const cipherBuf = await crypto.subtle.encrypt(
+      { name: 'AES-GCM', iv },
+      aesKey,
+      new TextEncoder().encode(plainText)
+    );
+    const toB64 = (bytes) => btoa(String.fromCharCode(...new Uint8Array(bytes)));
+    return {
+      v: 1,
+      salt: toB64(salt),
+      iv: toB64(iv),
+      ct: toB64(cipherBuf)
+    };
+  }
+
+  async decryptSecretForAdmin(encObj, secretPass) {
+    if (!window.crypto?.subtle || !encObj?.ct || !encObj?.iv || !encObj?.salt) return '';
+    try {
+      const fromB64 = (b64) => Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+      const salt = fromB64(encObj.salt);
+      const iv = fromB64(encObj.iv);
+      const ct = fromB64(encObj.ct);
+      const aesKey = await this._deriveAdminAesKey(secretPass, salt);
+      const plainBuf = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, aesKey, ct);
+      return new TextDecoder().decode(plainBuf);
+    } catch (e) {
+      return '';
+    }
+  }
+
+  async syncAdminGeminiKeyFromCloud(passHint = '') {
+    const isAdminNow = this.isAdmin() || sessionStorage.getItem('dodam_admin_authenticated') === '1';
+    if (!isAdminNow) return false;
+    const existing = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    if (existing) return true;
+    const cfg = window.DodamFirebase?.latestSysState?.app_config;
+    if (!cfg?.encryptedGeminiKey) return false;
+    const pass = passHint || (typeof this.getAdminPassword === 'function' ? this.getAdminPassword() : 'admin1234');
+    const plain = await this.decryptSecretForAdmin(cfg.encryptedGeminiKey, pass);
+    if (plain) {
+      localStorage.setItem('dodam_gemini_api_key', plain);
+      this.updateYoutubeGeminiKeyStatus();
+      return true;
+    }
+    return false;
+  }
+
   updateYoutubeGeminiKeyStatus() {
     const statusEl = document.getElementById('youtube-gemini-key-status');
     const keyInput = document.getElementById('youtube-gemini-api-key-input');
     const saved = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    const hasCloud = !!window.DodamFirebase?.latestSysState?.app_config?.encryptedGeminiKey;
     if (keyInput && saved) keyInput.value = saved;
     if (!statusEl) return;
     if (saved) {
-      statusEl.textContent = '✅ 브라우저 키 저장됨';
+      statusEl.textContent = hasCloud ? '✅ 관리자 DB·브라우저 연동됨' : '✅ 브라우저 키 저장됨';
       statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700';
     } else if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
       statusEl.textContent = '🟢 로컬 서버(.env) 연동';
       statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-sky-100 text-sky-700';
     } else {
-      statusEl.textContent = '⚠️ 키 입력 필요';
+      statusEl.textContent = '⚠️ 키 입력 필요 (1회 저장 시 전 기기 자동연동)';
       statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700';
     }
   }
 
-  saveYoutubeGeminiKey() {
+  async saveYoutubeGeminiKey() {
     const keyInput = document.getElementById('youtube-gemini-api-key-input');
     const val = (keyInput?.value || '').trim();
     if (!val) {
       localStorage.removeItem('dodam_gemini_api_key');
+      if (window.DodamFirebase?.saveAppConfig) {
+        await window.DodamFirebase.saveAppConfig({ encryptedGeminiKey: null });
+      }
       this.updateYoutubeGeminiKeyStatus();
       this.showToast('Gemini API 키가 초기화되었습니다.');
       return;
     }
     localStorage.setItem('dodam_gemini_api_key', val);
+    let cloudSaved = false;
+    if (window.DodamFirebase?.saveAppConfig) {
+      const pass = typeof this.getAdminPassword === 'function' ? this.getAdminPassword() : 'admin1234';
+      const encObj = await this.encryptSecretForAdmin(val, pass);
+      if (encObj) {
+        cloudSaved = await window.DodamFirebase.saveAppConfig({ encryptedGeminiKey: encObj });
+      }
+    }
     this.updateYoutubeGeminiKeyStatus();
-    this.showToast('✅ Gemini API 키가 브라우저에 안전하게 저장되었습니다.');
+    this.showToast(
+      cloudSaved
+        ? '✅ Gemini API 키가 암호화되어 관리자 DB에 저장되었습니다. (이제 어느 기기에서든 관리자 로그인 시 자동 연동됩니다)'
+        : '✅ Gemini API 키가 브라우저에 저장되었습니다.'
+    );
   }
 
   async callGeminiYoutubeDirect(videoId, title, apiKey) {
@@ -15094,6 +15183,7 @@ class DodamCommunityApp {
     if (nowRadio) nowRadio.checked = true;
     this.toggleYoutubeScheduleInputs('now');
     this.updateYoutubeGeminiKeyStatus();
+    this.syncAdminGeminiKeyFromCloud().then(() => this.updateYoutubeGeminiKeyStatus());
 
     const urlInput = document.getElementById('youtube-summary-url');
     if (urlInput) {
