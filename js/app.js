@@ -16310,174 +16310,226 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       }
     }
 
-    // 3. 인라인 SVG 5장 생성 (테마별 100% 매칭 벡터 그래픽)
+    // 3. 인라인 SVG 5장 생성 (테마별 100% 매칭 벡터 그래픽 + 자동 줄바꿈/오버플로우 방지)
     const xe = (v) => String(v || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const charPx = (ch, fs) => {
+      if (ch === ' ') return fs * 0.34;
+      if (/[A-Za-z0-9.,:;!?'"()\[\]\-_\/]/.test(ch)) return fs * 0.56;
+      return fs * 0.98;
+    };
+    const wrapSvgLines = (str, maxPx, fs, maxLines = 2) => {
+      const raw = String(str || '').trim().replace(/\s+/g, ' ');
+      if (!raw) return [''];
+      const lines = [];
+      let cur = '';
+      let curW = 0;
+      let truncated = false;
+      for (let i = 0; i < raw.length; i++) {
+        const ch = raw[i];
+        const w = charPx(ch, fs);
+        if (curW + w > maxPx && cur.length > 0) {
+          if (lines.length + 1 >= maxLines) {
+            truncated = true;
+            break;
+          }
+          const lastSpace = cur.lastIndexOf(' ');
+          if (lastSpace > Math.floor(cur.length * 0.45)) {
+            lines.push(cur.slice(0, lastSpace).trimEnd());
+            cur = cur.slice(lastSpace + 1) + ch;
+          } else {
+            lines.push(cur.trimEnd());
+            cur = ch === ' ' ? '' : ch;
+          }
+          curW = [...cur].reduce((acc, c) => acc + charPx(c, fs), 0);
+        } else {
+          cur += ch;
+          curW += w;
+        }
+      }
+      if (cur.trim()) {
+        if (truncated && cur.length > 1) cur = cur.trimEnd().slice(0, -1) + '…';
+        lines.push(cur.trim());
+      } else if (truncated && lines.length > 0) {
+        const last = lines[lines.length - 1];
+        lines[lines.length - 1] = last.length > 1 ? last.slice(0, -1) + '…' : last;
+      }
+      return lines.length ? lines.slice(0, maxLines) : [''];
+    };
+    const svgText = (str, x, y, maxPx, fs, attrs = '', maxLines = 2, lineGap = null) => {
+      const lh = lineGap || Math.round(fs * 1.38);
+      const lines = wrapSvgLines(str, maxPx, fs, maxLines);
+      const tspans = lines.map((ln, idx) => idx === 0
+        ? `<tspan x="${x}">${xe(ln)}</tspan>`
+        : `<tspan x="${x}" dy="${lh}">${xe(ln)}</tspan>`
+      ).join('');
+      return `<text x="${x}" y="${y}" font-size="${fs}" font-family="'Pretendard', sans-serif" ${attrs}>${tspans}</text>`;
+    };
 
     const card1Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 445" width="100%" height="auto">
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e1b4b"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="420" rx="20" fill="url(#g1)"/>
-  <rect x="35" y="30" width="140" height="30" rx="15" fill="#f97316"/>
-  <text x="105" y="50" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.targetAge)}</text>
+  <rect width="800" height="445" rx="20" fill="url(#g1)"/>
+  <rect x="35" y="30" width="160" height="30" rx="15" fill="#f97316"/>
+  ${svgText(p.targetAge, 115, 50, 145, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
   <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
   <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
-  <text x="35" y="105" fill="#38bdf8" font-size="13" font-weight="800" font-family="'Pretendard', sans-serif">★ ${xe(p.subName)} 핵심 요약 브리핑</text>
-  <text x="35" y="142" fill="#ffffff" font-size="20" font-weight="900" font-family="'Pretendard', sans-serif">${xe(cleanTitle.length > 34 ? cleanTitle.slice(0, 34) + '...' : cleanTitle)}</text>
-  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
-  <rect x="35" y="195" width="730" height="195" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
-  <text x="60" y="232" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
-  <text x="60" y="272" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">1. ${xe(p.b1)}</text>
-  <text x="60" y="310" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">2. ${xe(p.b2)}</text>
-  <text x="60" y="348" fill="#f1f5f9" font-size="13" font-family="'Pretendard', sans-serif">3. ${xe(p.b3)}</text>
+  ${svgText('★ ' + p.subName + ' 핵심 요약 브리핑', 35, 102, 725, 13, 'fill="#38bdf8" font-weight="800"', 1)}
+  ${svgText(cleanTitle, 35, 138, 725, 19, 'fill="#ffffff" font-weight="900"', 1)}
+  <text x="35" y="168" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
+  <rect x="35" y="190" width="730" height="225" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
+  <text x="60" y="226" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
+  ${svgText('1. ' + p.b1, 60, 260, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
+  ${svgText('2. ' + p.b2, 60, 310, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
+  ${svgText('3. ' + p.b3, 60, 360, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
 </svg>`.trim();
 
     const card2Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
   <defs>
     <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#082f49"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="360" rx="20" fill="url(#g2)"/>
-  <text x="40" y="45" fill="#38bdf8" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Title)}</text>
+  <rect width="800" height="390" rx="20" fill="url(#g2)"/>
+  ${svgText(p.c2Title, 40, 45, 720, 13, 'fill="#38bdf8" font-weight="900"', 1)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 반응과 태도를 보이는 근본적 원인</text>
   
-  <rect x="40" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="75" cy="140" r="18" fill="#0284c7"/>
-  <text x="75" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
-  <text x="105" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box1Title)}</text>
-  <text x="55" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box1P1)}</text>
-  <text x="55" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box1P2)}</text>
-  <text x="55" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box1Sub)}</text>
+  <rect x="40" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="72" cy="138" r="16" fill="#0284c7"/>
+  <text x="72" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
+  ${svgText(p.c2Box1Title, 98, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
+  ${svgText(p.c2Box1P1, 55, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box1P2, 55, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box1Sub, 55, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
 
-  <rect x="287" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="322" cy="140" r="18" fill="#0284c7"/>
-  <text x="322" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
-  <text x="352" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box2Title)}</text>
-  <text x="302" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box2P1)}</text>
-  <text x="302" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box2P2)}</text>
-  <text x="302" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box2Sub)}</text>
+  <rect x="287" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="319" cy="138" r="16" fill="#0284c7"/>
+  <text x="319" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
+  ${svgText(p.c2Box2Title, 345, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
+  ${svgText(p.c2Box2P1, 302, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box2P2, 302, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box2Sub, 302, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
 
-  <rect x="535" y="105" width="225" height="215" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="570" cy="140" r="18" fill="#0284c7"/>
-  <text x="570" y="146" fill="#ffffff" font-size="14" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
-  <text x="600" y="146" fill="#38bdf8" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c2Box3Title)}</text>
-  <text x="550" y="180" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box3P1)}</text>
-  <text x="550" y="205" fill="#e0f2fe" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c2Box3P2)}</text>
-  <text x="550" y="238" fill="#94a3b8" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c2Box3Sub)}</text>
+  <rect x="535" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <circle cx="567" cy="138" r="16" fill="#0284c7"/>
+  <text x="567" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
+  ${svgText(p.c2Box3Title, 593, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
+  ${svgText(p.c2Box3P1, 550, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box3P2, 550, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
+  ${svgText(p.c2Box3Sub, 550, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
 </svg>`.trim();
 
     const card3Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
   <defs>
     <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#064e3b"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="360" rx="20" fill="url(#g3)"/>
-  <text x="40" y="45" fill="#34d399" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Title)}</text>
+  <rect width="800" height="390" rx="20" fill="url(#g3)"/>
+  ${svgText(p.c3Title, 40, 45, 720, 13, 'fill="#34d399" font-weight="900"', 1)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 부모가 즉시 실천하는 단계별 대화 공식</text>
 
-  <rect x="40" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="55" y="125" width="95" height="26" rx="13" fill="#10b981"/>
-  <text x="102" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Name)}</text>
-  <text x="55" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Title)}</text>
-  <text x="55" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step1P1)}</text>
-  <text x="55" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step1P2)}</text>
-  <text x="55" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step1Sub)}</text>
+  <rect x="40" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="55" y="123" width="105" height="24" rx="12" fill="#10b981"/>
+  ${svgText(p.c3Step1Name, 107, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${svgText(p.c3Step1Title, 55, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
+  ${svgText(p.c3Step1P1, 55, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step1P2, 55, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step1Sub, 55, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
 
-  <rect x="287" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="302" y="125" width="95" height="26" rx="13" fill="#059669"/>
-  <text x="349" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Name)}</text>
-  <text x="302" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Title)}</text>
-  <text x="302" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step2P1)}</text>
-  <text x="302" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step2P2)}</text>
-  <text x="302" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step2Sub)}</text>
+  <rect x="287" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="302" y="123" width="105" height="24" rx="12" fill="#059669"/>
+  ${svgText(p.c3Step2Name, 354, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${svgText(p.c3Step2Title, 302, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
+  ${svgText(p.c3Step2P1, 302, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step2P2, 302, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step2Sub, 302, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
 
-  <rect x="535" y="105" width="225" height="215" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="550" y="125" width="95" height="26" rx="13" fill="#047857"/>
-  <text x="597" y="142" fill="#ffffff" font-size="11" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Name)}</text>
-  <text x="550" y="178" fill="#a7f3d0" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Title)}</text>
-  <text x="550" y="205" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step3P1)}</text>
-  <text x="550" y="228" fill="#f0fdf4" font-size="12" font-family="'Pretendard', sans-serif">${xe(p.c3Step3P2)}</text>
-  <text x="550" y="260" fill="#cbd5e1" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c3Step3Sub)}</text>
+  <rect x="535" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="550" y="123" width="105" height="24" rx="12" fill="#047857"/>
+  ${svgText(p.c3Step3Name, 602, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${svgText(p.c3Step3Title, 550, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
+  ${svgText(p.c3Step3P1, 550, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step3P2, 550, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
+  ${svgText(p.c3Step3Sub, 550, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
 </svg>`.trim();
 
     const card4Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
     <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#78350f"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="360" rx="20" fill="url(#g4)"/>
-  <text x="40" y="45" fill="#fde047" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4Title)}</text>
+  <rect width="800" height="420" rx="20" fill="url(#g4)"/>
+  ${svgText(p.c4Title, 40, 45, 720, 13, 'fill="#fde047" font-weight="900"', 1)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 흔들림 없이 정착시키는 단계별 로드맵</text>
 
-  <rect x="40" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="55" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W1)}</text>
-  <text x="55" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L1)}</text>
-  <text x="55" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L2)}</text>
-  <text x="55" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1L3)}</text>
-  <text x="55" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W1Sub)}</text>
+  <rect x="40" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  ${svgText(p.c4W1, 53, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
+  ${svgText(p.c4W1L1, 53, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W1L2, 53, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W1L3, 53, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W1Sub, 53, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
 
-  <rect x="223" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="238" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W2)}</text>
-  <text x="238" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L1)}</text>
-  <text x="238" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L2)}</text>
-  <text x="238" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2L3)}</text>
-  <text x="238" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W2Sub)}</text>
+  <rect x="223" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  ${svgText(p.c4W2, 236, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
+  ${svgText(p.c4W2L1, 236, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W2L2, 236, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W2L3, 236, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W2Sub, 236, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
 
-  <rect x="406" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="421" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W3)}</text>
-  <text x="421" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L1)}</text>
-  <text x="421" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L2)}</text>
-  <text x="421" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3L3)}</text>
-  <text x="421" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W3Sub)}</text>
+  <rect x="406" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  ${svgText(p.c4W3, 419, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
+  ${svgText(p.c4W3L1, 419, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W3L2, 419, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W3L3, 419, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W3Sub, 419, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
 
-  <rect x="589" y="105" width="168" height="215" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  <text x="604" y="135" fill="#fde047" font-size="12" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c4W4)}</text>
-  <text x="604" y="165" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L1)}</text>
-  <text x="604" y="190" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L2)}</text>
-  <text x="604" y="215" fill="#ffffff" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4L3)}</text>
-  <text x="604" y="255" fill="#fef3c7" font-size="11" font-family="'Pretendard', sans-serif">${xe(p.c4W4Sub)}</text>
+  <rect x="589" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  ${svgText(p.c4W4, 602, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
+  ${svgText(p.c4W4L1, 602, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W4L2, 602, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W4L3, 602, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
+  ${svgText(p.c4W4Sub, 602, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
 </svg>`.trim();
 
     const card5Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 360" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
   <defs>
     <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#581c87"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="360" rx="20" fill="url(#g5)"/>
-  <text x="40" y="45" fill="#f472b6" font-size="13" font-weight="900" font-family="'Pretendard', sans-serif">${xe(p.c5Title)}</text>
+  <rect width="800" height="390" rx="20" fill="url(#g5)"/>
+  ${svgText(p.c5Title, 40, 45, 720, 13, 'fill="#f472b6" font-weight="900"', 1)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">부모의 실천 행동 지침</text>
 
-  <rect x="40" y="105" width="345" height="215" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
-  <rect x="55" y="125" width="80" height="26" rx="13" fill="#10b981"/>
-  <text x="95" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
-  <text x="55" y="180" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do1)}</text>
-  <text x="55" y="210" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do2)}</text>
-  <text x="55" y="240" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do3)}</text>
-  <text x="55" y="270" fill="#a7f3d0" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Do4)}</text>
+  <rect x="40" y="105" width="345" height="250" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
+  <rect x="55" y="123" width="80" height="26" rx="13" fill="#10b981"/>
+  <text x="95" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
+  ${svgText(p.c5Do1, 55, 178, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Do2, 55, 220, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Do3, 55, 262, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Do4, 55, 304, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
 
-  <rect x="415" y="105" width="345" height="215" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
-  <rect x="430" y="125" width="80" height="26" rx="13" fill="#ef4444"/>
-  <text x="470" y="142" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
-  <text x="430" y="180" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont1)}</text>
-  <text x="430" y="210" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont2)}</text>
-  <text x="430" y="240" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont3)}</text>
-  <text x="430" y="270" fill="#fca5a5" font-size="12" font-weight="bold" font-family="'Pretendard', sans-serif">${xe(p.c5Dont4)}</text>
+  <rect x="415" y="105" width="345" height="250" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
+  <rect x="430" y="123" width="85" height="26" rx="13" fill="#ef4444"/>
+  <text x="472" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
+  ${svgText(p.c5Dont1, 430, 178, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Dont2, 430, 220, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Dont3, 430, 262, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Dont4, 430, 304, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
 </svg>`.trim();
 
     // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가
