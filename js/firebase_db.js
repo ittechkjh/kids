@@ -167,6 +167,8 @@ class DodamFirebaseService {
       isYoutubeSummary: Boolean(post.isYoutubeSummary),
       youtubeVideoId: post.youtubeVideoId || null,
       youtubeUrl: post.youtubeUrl || null,
+      isScheduled: Boolean(post.isScheduled),
+      scheduledAt: post.scheduledAt || null,
       isEdited: Boolean(post.isEdited),
       origId: String(post.id || docId)
     };
@@ -199,6 +201,8 @@ class DodamFirebaseService {
       isYoutubeSummary: Boolean(post.isYoutubeSummary),
       youtubeVideoId: post.youtubeVideoId || null,
       youtubeUrl: post.youtubeUrl || null,
+      isScheduled: Boolean(post.isScheduled),
+      scheduledAt: post.scheduledAt || null,
       author: {
         nickname: authorNick,
         childBadge: authorBadge,
@@ -254,6 +258,8 @@ class DodamFirebaseService {
       guideType: rawDoc.guideType || extraMeta.guideType || 'all',
       isAiReport: Boolean(rawDoc.isAiReport || extraMeta.isAiReport),
       isYoutubeSummary: Boolean(rawDoc.isYoutubeSummary || extraMeta.isYoutubeSummary),
+      isScheduled: Boolean(rawDoc.isScheduled || extraMeta.isScheduled),
+      scheduledAt: rawDoc.scheduledAt || extraMeta.scheduledAt || null,
       id: rawDoc.id || extraMeta.origId,
       comments: cleanComments
     };

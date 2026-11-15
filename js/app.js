@@ -3358,7 +3358,9 @@ class DodamCommunityApp {
 
     let filtered = (this.data.posts || []).filter((p) => {
       // 0. 예약 발행 글 접근 제어: 지정된 공개 일시 전에는 관리자만 볼 수 있음
-      if (p.isScheduled && p.scheduledAt && new Date(p.scheduledAt).getTime() > Date.now()) {
+      const isPendingSchedule = (p.isScheduled && p.scheduledAt && new Date(p.scheduledAt).getTime() > Date.now()) ||
+        (String(p.createdAt || '').includes('예약') && Number(p.timestamp) > Date.now());
+      if (isPendingSchedule) {
         if (!this.isAdmin() && sessionStorage.getItem('dodam_admin_authenticated') !== '1') {
           return false;
         }
@@ -3599,6 +3601,7 @@ class DodamCommunityApp {
                 ${this.isPostHot(post) ? '<span class="px-1.5 py-0.2 rounded bg-rose-500 text-white font-black text-[9px] shrink-0">HOT</span>' : ''}
                 <span class="truncate min-w-0 flex-1">${displayTitle}</span>
                 ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] shrink-0 ml-0.5">[${commentsCount}]</span>` : ''}
+                ${((post.isScheduled && post.scheduledAt && new Date(post.scheduledAt).getTime() > Date.now()) || (String(post.createdAt || '').includes('예약') && Number(post.timestamp) > Date.now())) ? '<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-black text-[9px] border border-amber-300 shrink-0 inline-flex items-center gap-0.5 ml-1" title="예약 시간 전까지 일반 회원에게는 숨겨집니다 (관리자 전용 미리보기)">🔒 비공개 예약</span>' : ''}
                 ${this.isAdmin() && this.isAiGeneratedPost(post) ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 <span class="hidden group-hover:inline-flex items-center gap-1 ml-auto pl-2 shrink-0">
                   <button type="button" onclick="event.stopPropagation(); app.copyPostForNaverBlog('${post.id}')" class="px-2 py-0.5 rounded bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200 text-[10px] font-bold transition flex items-center gap-1" title="네이버 블로그 복사">
@@ -3625,6 +3628,7 @@ class DodamCommunityApp {
                 <div class="min-w-0 flex-1 font-bold text-slate-900 text-[13px] leading-snug break-words break-all">
                   <span>${displayTitle}</span>
                   ${commentsCount > 0 ? `<span class="text-[#03C75A] font-extrabold text-[11px] ml-1 shrink-0">[${commentsCount}]</span>` : ''}
+                  ${((post.isScheduled && post.scheduledAt && new Date(post.scheduledAt).getTime() > Date.now()) || (String(post.createdAt || '').includes('예약') && Number(post.timestamp) > Date.now())) ? '<span class="px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 font-black text-[9px] border border-amber-300 shrink-0 inline-flex items-center gap-0.5 ml-1">🔒 비공개 예약</span>' : ''}
                   ${this.isAdmin() && this.isAiGeneratedPost(post) ? '<span class="px-1.5 py-0.2 rounded bg-purple-100 text-purple-700 font-black text-[9px] border border-purple-200 shrink-0 inline-flex items-center gap-0.5 ml-1" title="관리자 전용: AI 자동 생성 글">🤖 AI</span>' : ''}
                 </div>
               </div>
@@ -14997,6 +15001,71 @@ class DodamCommunityApp {
     timeEl.value = `${hh}:${min}`;
   }
 
+  updateYoutubeGeminiKeyStatus() {
+    const statusEl = document.getElementById('youtube-gemini-key-status');
+    const keyInput = document.getElementById('youtube-gemini-api-key-input');
+    const saved = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    if (keyInput && saved) keyInput.value = saved;
+    if (!statusEl) return;
+    if (saved) {
+      statusEl.textContent = '✅ 브라우저 키 저장됨';
+      statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700';
+    } else if (location.hostname === 'localhost' || location.hostname === '127.0.0.1') {
+      statusEl.textContent = '🟢 로컬 서버(.env) 연동';
+      statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-sky-100 text-sky-700';
+    } else {
+      statusEl.textContent = '⚠️ 키 입력 필요';
+      statusEl.className = 'text-[10px] font-extrabold px-2 py-0.5 rounded-full bg-amber-100 text-amber-700';
+    }
+  }
+
+  saveYoutubeGeminiKey() {
+    const keyInput = document.getElementById('youtube-gemini-api-key-input');
+    const val = (keyInput?.value || '').trim();
+    if (!val) {
+      localStorage.removeItem('dodam_gemini_api_key');
+      this.updateYoutubeGeminiKeyStatus();
+      this.showToast('Gemini API 키가 초기화되었습니다.');
+      return;
+    }
+    localStorage.setItem('dodam_gemini_api_key', val);
+    this.updateYoutubeGeminiKeyStatus();
+    this.showToast('✅ Gemini API 키가 브라우저에 안전하게 저장되었습니다.');
+  }
+
+  async callGeminiYoutubeDirect(videoId, title, apiKey) {
+    if (!apiKey) return null;
+    const youtubeUrl = `https://www.youtube.com/watch?v=${videoId}`;
+    const prompt = `당신은 대한민국 최고의 소아청소년과 전문의 및 아동교육 전문가이자 네이버 육아 파워블로거입니다.
+첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
+필수 JSON 필드:
+{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"chapters":[{"time":"00:00","title":"구간주제"}],"c2Title":"[원인 분석] 제목","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[실천 로드맵] 4주 루틴","c4W1":"1주차","c4W1L1":"✔ 실천1","c4W1L2":"✔ 실천2","c4W1L3":"✔ 실천3","c4W1Sub":"핵심","c4W2":"2주차","c4W2L1":"✔ 실천1","c4W2L2":"✔ 실천2","c4W2L3":"✔ 실천3","c4W2Sub":"핵심","c4W3":"3주차","c4W3L1":"✔ 실천1","c4W3L2":"✔ 실천2","c4W3L3":"✔ 실천3","c4W3Sub":"핵심","c4W4":"4주차","c4W4L1":"✔ 실천1","c4W4L2":"✔ 실천2","c4W4L3":"✔ 실천3","c4W4Sub":"핵심","c5Title":"[부모 실천 조언] DO vs DON'T","c5Do1":"✔ 할것1","c5Do2":"✔ 할것2","c5Do3":"✔ 할것3","c5Do4":"✔ 할것4","c5Dont1":"✘ 피할것1","c5Dont2":"✘ 피할것2","c5Dont3":"✘ 피할것3","c5Dont4":"✘ 피할것4","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
+
+    try {
+      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          contents: [{
+            parts: [
+              { fileData: { mimeType: 'video/mp4', fileUri: youtubeUrl } },
+              { text: prompt }
+            ]
+          }],
+          generationConfig: { responseMimeType: 'application/json', temperature: 0.4 }
+        })
+      });
+      if (!res.ok) return null;
+      const data = await res.json();
+      const textOut = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (!textOut) return null;
+      return JSON.parse(textOut);
+    } catch (e) {
+      return null;
+    }
+  }
+
   openAiParentingReportModal(isHistoryNavigation = false) {
     if (!this.isAdmin() && sessionStorage.getItem('dodam_admin_authenticated') !== '1') {
       this.showToast('⚠️ 영상 요약 리포트 발행은 관리자 권한이 필요합니다. 관리자로 로그인해 주세요.');
@@ -15024,6 +15093,7 @@ class DodamCommunityApp {
     const nowRadio = document.querySelector('input[name="youtube-publish-mode"][value="now"]');
     if (nowRadio) nowRadio.checked = true;
     this.toggleYoutubeScheduleInputs('now');
+    this.updateYoutubeGeminiKeyStatus();
 
     const urlInput = document.getElementById('youtube-summary-url');
     if (urlInput) {
@@ -15213,6 +15283,19 @@ class DodamCommunityApp {
 
     if (!title) {
       title = `유익한 육아·교육 핵심 강연 요약 (#${videoId})`;
+    }
+
+    // 4. 정적 호스팅/백엔드 미응답 시 브라우저에서 직접 Gemini API로 영상 분석 (키가 저장된 경우)
+    if (!aiProfile && savedGeminiKey) {
+      const directProfile = await this.callGeminiYoutubeDirect(videoId, title, savedGeminiKey);
+      if (directProfile) {
+        aiProfile = directProfile;
+        hasGeminiKey = true;
+        hasTranscript = true;
+        if (directProfile.speaker && !speaker) speaker = directProfile.speaker;
+        if (Array.isArray(directProfile.keyQuotes) && !keyQuotes.length) keyQuotes = directProfile.keyQuotes;
+        if (Array.isArray(directProfile.chapters) && !chapters.length) chapters = directProfile.chapters;
+      }
     }
 
     return {
@@ -16649,6 +16732,21 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         this.fetchYoutubeMetadata(videoId),
         new Promise((r) => setTimeout(r, 1800))
       ]);
+
+      if (!meta.aiProfile && !meta.hasTranscript) {
+        const reason = meta.aiError
+          ? `AI 분석 오류: ${meta.aiError}`
+          : 'Gemini API 키가 설정되지 않았거나 백엔드 서버(/api/youtube-transcript)에 연결되지 않았습니다.';
+        this.showToast(`⚠️ 실제 유튜브 영상 요약 실패: ${reason}`);
+        if (progressEl) progressEl.classList.add('hidden');
+        if (runBtn) {
+          runBtn.disabled = false;
+          runBtn.innerHTML = publishMode === 'scheduled'
+            ? '<span>⏳ 예약 발행 등록하기</span>'
+            : '<span>▷ 지금 즉시 실행하기</span>';
+        }
+        return;
+      }
 
       // [2단계: 1.8s ~ 3.8s] 실제 강연 자막/챕터 정밀 분석 및 핵심 발언 추출
       const speakerInfo = meta.speaker ? ` [강연자: ${meta.speaker.split('(')[0].trim()}]` : '';
