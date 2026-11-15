@@ -3,19 +3,34 @@ import json
 import urllib.parse
 import urllib.request
 import re
+import os
 from collections import Counter
 
+def load_gemini_api_key():
+    """환경변수 또는 .env / ~/.env에서 GEMINI_API_KEY 안전하게 로드"""
+    key = os.environ.get('GEMINI_API_KEY', '').strip()
+    if key:
+        return key
+    for env_path in ['.env', os.path.expanduser('~/.env')]:
+        if os.path.exists(env_path):
+            try:
+                with open(env_path, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line.startswith('GEMINI_API_KEY='):
+                            return line.split('=', 1)[1].strip().strip('"').strip("'")
+            except Exception:
+                pass
+    return ''
+
 def analyze_transcript(raw_text):
-    # 1. Clean noise
     cleaned = re.sub(r'\[[^\]]+\]', ' ', raw_text)
     cleaned = re.sub(r'>>+', ' ', cleaned)
     cleaned = re.sub(r'\s+', ' ', cleaned).strip()
 
-    # 2. Sentence segmentation
     raw_sentences = re.split(r'(?<=[.?!])\s+|(?<=[다요죠])\s+', cleaned)
     sentences = [s.strip() for s in raw_sentences if len(s.strip()) >= 15]
 
-    # 3. Top keywords extraction
     words = re.findall(r'[가-힣]{2,}', cleaned)
     stopwords = {
         '있습니다', '합니다', '하지만', '때문에', '그렇기', '그리고', '이것이', '어떤', '우리가',
@@ -27,7 +42,6 @@ def analyze_transcript(raw_text):
     counter = Counter(filtered_words)
     top_keywords = [w for w, c in counter.most_common(12)]
 
-    # 4. Scored Key Quotes selection
     scored_quotes = []
     for s in sentences:
         score = 0
@@ -51,7 +65,6 @@ def analyze_transcript(raw_text):
         if len(final_quotes) >= 5:
             break
 
-    # 5. Concrete Facts / Stories / Examples extraction
     facts = []
     for s in sentences:
         if re.search(r'\d+년|\d+만|\d+명|\d+권|연구|실험|사례|인공지능|초등|교사|교실', s):
@@ -76,14 +89,12 @@ def fetch_youtube_page_details(video_id):
     }
     try:
         req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req, timeout=5) as resp:
+        with urllib.request.urlopen(req, timeout=8) as resp:
             html = resp.read().decode('utf-8')
         
-        # 1. Title
         title_m = re.search(r'<title>([^<]+)</title>', html)
         page_title = title_m.group(1).replace(' - YouTube', '').strip() if title_m else ''
 
-        # 2. Description
         desc = ''
         desc_m = re.search(r'\"attributedDescription\":\{\"content\":\"(.*?)\"\}', html)
         if desc_m:
@@ -92,7 +103,6 @@ def fetch_youtube_page_details(video_id):
             except Exception:
                 desc = desc_m.group(1)
 
-        # 3. Chapters
         raw_chapters = re.findall(r'\"title\":\{\"simpleText\":\"(.*?)\"\},\"timeRangeStartMillis\":(\d+)', html)
         chapters = []
         for ch_title, t in raw_chapters:
@@ -118,12 +128,135 @@ def fetch_youtube_page_details(video_id):
     except Exception as e:
         return {'ok': False, 'error': str(e)}
 
+def call_gemini_youtube_summary(api_key, video_id, title, description, chapters, transcript_text):
+    """Gemini API를 호출하여 유튜브 영상 실제 내용을 바탕으로 구조화된 육아가이드 JSON 생성"""
+    youtube_url = f"https://www.youtube.com/watch?v={video_id}"
+    chapters_str = "\n".join([f"- {c['time']} {c['title']}" for c in chapters]) if chapters else "없음"
+
+    prompt = f"""당신은 대한민국 최고의 육아·아동발달·초중등 교육 전문 에디터입니다.
+아래 유튜브 영상의 실제 내용(음성/자막/설명/챕터)을 철저하게 분석하여, 영상에 등장하는 실제 강연자·핵심 논점·사례·실천법을 100% 반영한 고품질 블로그 리포트 JSON을 작성해 주세요.
+절대로 영상 내용과 무관한 일반론이나 다른 주제를 지어내지 마세요. 반드시 이 영상({youtube_url})의 실제 내용을 요약해야 합니다.
+
+[영상 기본 정보]
+- 제목: {title}
+- 챕터 타임라인:
+{chapters_str}
+- 영상 설명란:
+{description[:1500]}
+- 추출된 자막/스크립트:
+{transcript_text[:6000] if transcript_text else "직접 영상 URL을 분석하여 내용을 추출하세요."}
+
+다음 JSON 스키마로만 정확히 응답하세요 (마크다운 코드블록 없이 순수 JSON):
+{{
+  "cleanTitle": "영상의 핵심 주제를 담은 품격 있는 제목 (25~45자)",
+  "speaker": "영상 속 강연자/전문가 이름 및 직함",
+  "badge": "이모지 포함 짧은 카테고리 배지 (예: 🎒 초등 교육)",
+  "subName": "강연자 및 주제 한 줄 소개",
+  "targetAge": "주요 대상 연령/학부모 (예: 예비 초등~초등 학부모)",
+  "focus": "핵심 키워드 3가지 (가운데점 · 구분)",
+  "keywords": ["키워드1", "키워드2", "키워드3", "키워드4", "키워드5"],
+  "b1": "영상 핵심 요약 포인트 1 (40~55자)",
+  "b2": "영상 핵심 요약 포인트 2 (40~55자)",
+  "b3": "영상 핵심 요약 포인트 3 (40~55자)",
+  "keyQuotes": ["강연자의 실제 핵심 발언/명대사 1", "강연자의 실제 핵심 발언/명대사 2", "강연자의 실제 핵심 발언/명대사 3"],
+  "chapters": [
+    {{"time": "00:00", "title": "실제 영상 흐름에 따른 구간별 주제"}}
+  ],
+  "c2Title": "[원인 분석] 영상에서 지적하는 핵심 문제/오해 제목",
+  "c2Box1Title": "원인1 제목(10자이내)",
+  "c2Box1P1": "원인1 설명 첫째줄(14자이내)",
+  "c2Box1P2": "원인1 설명 둘째줄(14자이내)",
+  "c2Box1Sub": "원인1 하단요약(14자이내)",
+  "c2Box2Title": "원인2 제목(10자이내)",
+  "c2Box2P1": "원인2 설명 첫째줄(14자이내)",
+  "c2Box2P2": "원인2 설명 둘째줄(14자이내)",
+  "c2Box2Sub": "원인2 하단요약(14자이내)",
+  "c2Box3Title": "원인3 제목(10자이내)",
+  "c2Box3P1": "원인3 설명 첫째줄(14자이내)",
+  "c2Box3P2": "원인3 설명 둘째줄(14자이내)",
+  "c2Box3Sub": "원인3 하단요약(14자이내)",
+  "c3Title": "[실전 솔루션] 영상에서 제시하는 3단계 해결책 제목",
+  "c3Step1Name": "1단계 핵심",
+  "c3Step1Title": "솔루션1 제목(12자이내)",
+  "c3Step1P1": "솔루션1 첫째줄(14자이내)",
+  "c3Step1P2": "솔루션1 둘째줄(14자이내)",
+  "c3Step1Sub": "솔루션1 하단요약(14자이내)",
+  "c3Step2Name": "2단계 핵심",
+  "c3Step2Title": "솔루션2 제목(12자이내)",
+  "c3Step2P1": "솔루션2 첫째줄(14자이내)",
+  "c3Step2P2": "솔루션2 둘째줄(14자이내)",
+  "c3Step2Sub": "솔루션2 하단요약(14자이내)",
+  "c3Step3Name": "3단계 핵심",
+  "c3Step3Title": "솔루션3 제목(12자이내)",
+  "c3Step3P1": "솔루션3 첫째줄(14자이내)",
+  "c3Step3P2": "솔루션3 둘째줄(14자이내)",
+  "c3Step3Sub": "솔루션3 하단요약(14자이내)",
+  "c4Title": "[실천 로드맵] 가정 내 4주 완성 실천 루틴",
+  "c4W1": "1주차 제목", "c4W1L1": "✔ 실천1", "c4W1L2": "✔ 실천2", "c4W1L3": "✔ 실천3", "c4W1Sub": "1주차 핵심",
+  "c4W2": "2주차 제목", "c4W2L1": "✔ 실천1", "c4W2L2": "✔ 실천2", "c4W2L3": "✔ 실천3", "c4W2Sub": "2주차 핵심",
+  "c4W3": "3주차 제목", "c4W3L1": "✔ 실천1", "c4W3L2": "✔ 실천2", "c4W3L3": "✔ 실천3", "c4W3Sub": "3주차 핵심",
+  "c4W4": "4주차 제목", "c4W4L1": "✔ 실천1", "c4W4L2": "✔ 실천2", "c4W4L3": "✔ 실천3", "c4W4Sub": "4주차 핵심",
+  "c5Title": "[부모 실천 조언] 영상 핵심 DO vs DON'T",
+  "c5Do1": "✔ 해야할것 1", "c5Do2": "✔ 해야할것 2", "c5Do3": "✔ 해야할것 3", "c5Do4": "✔ 해야할것 4",
+  "c5Dont1": "✘ 피해야할것 1", "c5Dont2": "✘ 피해야할것 2", "c5Dont3": "✘ 피해야할것 3", "c5Dont4": "✘ 피해야할것 4",
+  "intro": "영상 도입부 및 강연자 문제 제기 요약 (350자 이상, 문단 구분 \\n\\n)",
+  "sec1": "1장 심층 원인 분석: 영상에서 다룬 구체적 사례와 이유 (400자 이상, 문단 구분 \\n\\n)",
+  "sec2": "2장 실전 솔루션: 강연자가 제안한 구체적 방법론 상세 해설 (450자 이상, 문단 구분 \\n\\n)",
+  "sec3": "3장 가정 내 4주 적용 가이드 및 변화 포인트 (350자 이상, 문단 구분 \\n\\n)",
+  "sec4": "4장 부모 Q&A 2가지 (Q1, Q2 형태, 350자 이상)",
+  "outro": "따뜻한 에필로그 및 요약 마무리 (150자 이상)"
+}}"""
+
+    # Try calling Gemini API with YouTube fileUri first (native multimodal video understanding)
+    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent?key={api_key}"
+    parts = []
+    if not transcript_text:
+        parts.append({"fileData": {"mimeType": "video/mp4", "fileUri": youtube_url}})
+    parts.append({"text": prompt})
+
+    body = {
+        "contents": [{"parts": parts}],
+        "generationConfig": {
+            "responseMimeType": "application/json",
+            "temperature": 0.4
+        }
+    }
+
+    req = urllib.request.Request(
+        endpoint,
+        data=json.dumps(body).encode('utf-8'),
+        headers={'Content-Type': 'application/json'}
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=45) as resp:
+            res_json = json.loads(resp.read().decode('utf-8'))
+        text_out = res_json['candidates'][0]['content']['parts'][0]['text']
+        return {'ok': True, 'profile': json.loads(text_out)}
+    except Exception as e:
+        # Fallback without fileUri if video URL direct access fails
+        if not transcript_text and 'parts' in body:
+            try:
+                body['contents'] = [{"parts": [{"text": prompt}]}]
+                req2 = urllib.request.Request(
+                    endpoint,
+                    data=json.dumps(body).encode('utf-8'),
+                    headers={'Content-Type': 'application/json'}
+                )
+                with urllib.request.urlopen(req2, timeout=45) as resp2:
+                    res_json2 = json.loads(resp2.read().decode('utf-8'))
+                text_out2 = res_json2['candidates'][0]['content']['parts'][0]['text']
+                return {'ok': True, 'profile': json.loads(text_out2)}
+            except Exception as e2:
+                return {'ok': False, 'error': str(e2)}
+        return {'ok': False, 'error': str(e)}
+
 class DodamServerHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
         if parsed.path == '/api/youtube-transcript':
             query = urllib.parse.parse_qs(parsed.query)
             video_id = query.get('v', [''])[0]
+            custom_key = query.get('apiKey', [''])[0]
             if not video_id:
                 self.send_response(400)
                 self.send_header('Content-Type', 'application/json; charset=utf-8')
@@ -132,153 +265,91 @@ class DodamServerHandler(http.server.SimpleHTTPRequestHandler):
                 self.wfile.write(json.dumps({'ok': False, 'error': 'Missing video_id'}).encode('utf-8'))
                 return
 
-            # Special case for 36-year teacher praise warning video: Utgb_6SMxNY
-            if video_id == 'Utgb_6SMxNY':
-                analysis_data = {
-                    'ok': True,
-                    'videoId': video_id,
-                    'speaker': '최순나 초등교사 (36년 경력 교사, 《공부 잘하는 아이는 이렇게 배웁니다》 저자)',
-                    'title': '[📕책드림 이벤트] 공부로 칭찬하지 마세요! 36년 교사의 경고💥 | 초등교사ㅣ자녀교육 | 최순나',
-                    'language': 'ko',
-                    'isGenerated': False,
-                    'hasTranscript': True,
-                    'charCount': 5820,
-                    'itemCount': 120,
-                    'topic': 'praise_warning_choisunna',
-                    'chapters': [
-                        {'time': '00:00', 'title': '도입부: 36년 교직 생활에서 목격한 교실의 현실'},
-                        {'time': '00:20', 'title': "'진짜 공부'란 무엇일까? - 부모의 오해와 시험 점수의 함정"},
-                        {'time': '03:20', 'title': '진짜 공부의 핵심 키워드 3가지! (경청, 질문, 깊은 경험)'},
-                        {'time': '04:52', 'title': '아이가 진짜로 배워야 할 공부 - 결과 칭찬이 아이를 망치는 이유'},
-                        {'time': '09:38', 'title': '아이들의 행복과 학습 의욕을 뺏는 부모들의 공통적 태도'},
-                        {'time': '14:25', 'title': '깊은 경험이 아이의 미래를 바꾼다 - 가정 내 실천 솔루션'}
-                    ],
-                    'keyQuotes': [
-                        "100점 맞았다고, 다 맞았다고 칭찬하는 순간 아이는 '결과가 나쁘면 나는 사랑받지 못한다'는 공포에 갇힙니다.",
-                        "부모님들이 생각하는 공부는 문제집 풀이와 시험 점수 같은 '종이 위 가짜 공부'인 경우가 너무 많습니다.",
-                        "36년 교실에서 본 진짜 공부 잘하는 아이는 친구 말을 끝까지 경청하고 호기심 어린 질문을 던지는 아이였습니다.",
-                        "결과로 칭찬받은 아이는 모르는 문제를 만났을 때 부모를 실망시킬까 두려워 도전을 포기하거나 속이게 됩니다.",
-                        "거창한 선행보다 아이와 마주 앉아 나누는 깊은 대화와 관찰 경험 하나가 아이의 10년 뒤를 결정합니다."
-                    ],
-                    'keyTopics': ['결과칭찬 경고', '진짜공부 3요소', '경청과 호기심', '실패 두려움 극복', '조건부 인정 탈피', '깊은 경험', '부모 대화법', '최순나 교사'],
-                    'storySnippets': [
-                        "36년간 초등학교 교실에서 수많은 아이들을 지켜본 베테랑 교사의 생생한 현장 경험",
-                        "문제집 10권을 풀고 다 맞았다고 칭찬받던 아이가 중학년 이후 급격히 무너지는 교실 내 실제 사례",
-                        "결과 칭찬에 중독된 아이들이 시험 문제 하나 틀렸을 때 보이는 극심한 불안과 방어 기제 분석",
-                        "단순 암기식 종이 공부에서 벗어나 일상과 책에서 지혜를 길어 올리는 '진짜 배움'의 메커니즘"
-                    ],
-                    'coreAnalysis': {
-                        'problem': "부모가 '다 맞았네', '공부 잘하네'와 같이 성적·결과 위주로 칭찬할 때, 아이는 자신의 존재 가치를 시험 점수와 동일시하는 '조건부 인정'에 길들여집니다. 이는 새로운 난이도에 직면했을 때 실패에 대한 두려움으로 도전을 회피하거나 극심한 불안을 느끼게 만듭니다.",
-                        'solution': "결과가 아닌 '태도와 몰입의 과정'을 구체적으로 알아봐 주는 피드백으로 전환해야 합니다. 특히 36년 교사가 강조하는 진짜 공부의 3대 축인 '친구와 타인의 말을 경청하는 태도', '모르는 것을 두려워하지 않고 질문하는 호기심', '일상에서 오감으로 체득하는 깊은 경험'을 가정에서 길러주어야 합니다.",
-                        'actionSteps': [
-                            {'step': 'STEP 1', 'title': '결과 중심 감탄사 즉시 멈추기', 'desc': "'다 맞았네!', '천재네!' 같은 결과 평가 언어를 멈추고, 아이가 오랫동안 집중한 시간과 고민한 태도를 그대로 묘사해 줍니다."},
-                            {'step': 'STEP 2', 'title': '진짜 공부 3대 역량(경청·질문·경험) 자극하기', 'desc': "식탁이나 산책길에서 '오늘 새롭게 알게 된 건 뭐였어?', '어떤 점이 가장 신기했어?' 같은 열린 질문으로 탐구심을 깨워줍니다."},
-                            {'step': 'STEP 3', 'title': '실패와 오답을 축하하는 안전지대 만들기', 'desc': "틀린 문제를 마주했을 때 '드디어 네가 진짜 배울 수 있는 기회가 생겼네!'라며 오답을 성장의 디딤돌로 환영해 줍니다."}
-                        ],
-                        'dos': [
-                            "결과(100점) 대신 아이가 기울인 노력의 시간과 끈기를 구체적으로 언급하기",
-                            "식사 시간이나 잠들기 전 5분, 아이의 말을 끊지 않고 온전히 경청해주기",
-                            "모르는 것이 생겼을 때 '같이 찾아보자'며 탐구의 동반자가 되어주기"
-                        ],
-                        'donts': [
-                            "'다 맞았네, 우리 딸 똑똑하다' 식의 타고난 지능/결과 칭찬 남발 금지",
-                            "시험 점수나 문제집 푼 양으로 아이의 하루 성실성을 단정짓기 금지",
-                            "틀린 문제를 지적하며 '이걸 왜 또 틀렸니' 식의 불안감 조성 금지"
-                        ]
-                    }
-                }
-
-                self.send_response(200)
-                self.send_header('Content-Type', 'application/json; charset=utf-8')
-                self.send_header('Access-Control-Allow-Origin', '*')
-                self.end_headers()
-                self.wfile.write(json.dumps(analysis_data, ensure_ascii=False).encode('utf-8'))
-                return
-
-            # General transcript attempt via youtube-transcript-api
-            t = None
+            # 1. Try youtube-transcript-api
+            transcript_text = ''
+            t_lang = 'ko'
+            t_gen = False
+            item_count = 0
             try:
                 from youtube_transcript_api import YouTubeTranscriptApi
                 yta = YouTubeTranscriptApi()
                 tl = yta.list(video_id)
-                try:
-                    t = tl.find_transcript(['ko', 'ko-KR'])
-                except Exception:
+                t = None
+                for langs in [['ko', 'ko-KR'], ['en']]:
                     try:
-                        t = tl.find_generated_transcript(['ko', 'ko-KR'])
+                        t = tl.find_transcript(langs)
+                        break
                     except Exception:
-                        pass
-                if not t:
-                    try:
-                        t = tl.find_transcript(['en'])
-                    except Exception:
-                        pass
+                        try:
+                            t = tl.find_generated_transcript(langs)
+                            break
+                        except Exception:
+                            pass
                 if not t:
                     for item in tl:
                         t = item
                         break
+                if t:
+                    snippets = t.fetch()
+                    transcript_text = " ".join([getattr(s, 'text', '') for s in snippets])
+                    t_lang = t.language_code
+                    t_gen = t.is_generated
+                    item_count = len(snippets)
             except Exception:
                 pass
 
-            if t:
-                try:
-                    snippets = t.fetch()
-                    full_text = " ".join([getattr(s, 'text', '') for s in snippets])
-                    lines = [getattr(s, 'text', '').strip() for s in snippets if getattr(s, 'text', '').strip()]
-                    analysis = analyze_transcript(full_text)
-
-                    self.send_response(200)
-                    self.send_header('Content-Type', 'application/json; charset=utf-8')
-                    self.send_header('Access-Control-Allow-Origin', '*')
-                    self.end_headers()
-                    self.wfile.write(json.dumps({
-                        'ok': True,
-                        'videoId': video_id,
-                        'language': t.language_code,
-                        'isGenerated': t.is_generated,
-                        'fullText': full_text[:8000],
-                        'charCount': len(full_text),
-                        'itemCount': len(snippets),
-                        'sampleLines': lines[:15],
-                        'keyQuotes': analysis['keyQuotes'],
-                        'keyTopics': analysis['keyTopics'],
-                        'storySnippets': analysis['storySnippets']
-                    }, ensure_ascii=False).encode('utf-8'))
-                    return
-                except Exception:
-                    pass
-
-            # Fallback: extract real video details & chapters from YouTube page
+            # 2. Fetch YouTube Page Details (Title, Description, Chapters)
             page_data = fetch_youtube_page_details(video_id)
-            if page_data.get('ok') and (page_data.get('chapters') or page_data.get('description')):
-                desc_analysis = analyze_transcript(page_data.get('description', '') + ' ' + ' '.join([c['title'] for c in page_data.get('chapters', [])]))
-                self.send_response(200)
-                self.send_header('Content-Type', 'application/json; charset=utf-8')
-                self.send_header('Access-Control-Allow-Origin', '*')
-                self.end_headers()
-                self.wfile.write(json.dumps({
-                    'ok': True,
-                    'videoId': video_id,
-                    'title': page_data.get('title'),
-                    'chapters': page_data.get('chapters'),
-                    'description': page_data.get('description')[:2000],
-                    'keyQuotes': desc_analysis['keyQuotes'],
-                    'keyTopics': desc_analysis['keyTopics'],
-                    'storySnippets': desc_analysis['storySnippets'],
-                    'hasTranscript': len(page_data.get('chapters', [])) > 0 or len(desc_analysis['keyQuotes']) > 0
-                }, ensure_ascii=False).encode('utf-8'))
-                return
+            title = page_data.get('title', '')
+            description = page_data.get('description', '')
+            chapters = page_data.get('chapters', [])
+
+            # 3. Check for Gemini API Key (.env or query)
+            api_key = custom_key or load_gemini_api_key()
+            ai_profile = None
+            ai_error = None
+            if api_key:
+                gemini_res = call_gemini_youtube_summary(
+                    api_key, video_id, title, description, chapters, transcript_text
+                )
+                if gemini_res.get('ok'):
+                    ai_profile = gemini_res.get('profile')
+                else:
+                    ai_error = gemini_res.get('error')
+
+            # 4. Build final response
+            analysis = analyze_transcript(transcript_text or (description + ' ' + ' '.join([c['title'] for c in chapters])))
+
+            resp_payload = {
+                'ok': True,
+                'videoId': video_id,
+                'title': title,
+                'language': t_lang,
+                'isGenerated': t_gen,
+                'fullText': transcript_text[:8000] if transcript_text else description[:2000],
+                'charCount': len(transcript_text) if transcript_text else len(description),
+                'itemCount': item_count if item_count else len(chapters),
+                'hasTranscript': bool(transcript_text) or bool(ai_profile),
+                'hasGeminiKey': bool(api_key),
+                'aiProfile': ai_profile,
+                'aiError': ai_error,
+                'speaker': ai_profile.get('speaker', '') if ai_profile else '',
+                'chapters': (ai_profile.get('chapters') if ai_profile and ai_profile.get('chapters') else chapters),
+                'keyQuotes': (ai_profile.get('keyQuotes') if ai_profile and ai_profile.get('keyQuotes') else analysis['keyQuotes']),
+                'keyTopics': (ai_profile.get('keywords') if ai_profile and ai_profile.get('keywords') else analysis['keyTopics']),
+                'storySnippets': analysis['storySnippets']
+            }
 
             self.send_response(200)
             self.send_header('Content-Type', 'application/json; charset=utf-8')
             self.send_header('Access-Control-Allow-Origin', '*')
             self.end_headers()
-            self.wfile.write(json.dumps({'ok': False, 'error': 'NO_TRANSCRIPT'}, ensure_ascii=False).encode('utf-8'))
+            self.wfile.write(json.dumps(resp_payload, ensure_ascii=False).encode('utf-8'))
             return
 
         super().do_GET()
 
 if __name__ == '__main__':
     server = http.server.ThreadingHTTPServer(("0.0.0.0", 8080), DodamServerHandler)
-    print("Multi-threaded HTTP server listening on http://localhost:8080 with YouTube Transcript API")
+    print("Multi-threaded HTTP server listening on http://localhost:8080 with Gemini YouTube Summarizer")
     server.serve_forever()

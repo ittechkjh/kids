@@ -3357,6 +3357,13 @@ class DodamCommunityApp {
     }
 
     let filtered = (this.data.posts || []).filter((p) => {
+      // 0. 예약 발행 글 접근 제어: 지정된 공개 일시 전에는 관리자만 볼 수 있음
+      if (p.isScheduled && p.scheduledAt && new Date(p.scheduledAt).getTime() > Date.now()) {
+        if (!this.isAdmin() && sessionStorage.getItem('dodam_admin_authenticated') !== '1') {
+          return false;
+        }
+      }
+
       // 1. 가이드 전용 라운지 모드
       if (this.boardLoungeMode === 'guide' || this.currentCategory === 'guide') {
         const isGuide = p.category === 'guide' || p.isAiReport || p.isGuidePost;
@@ -14931,8 +14938,63 @@ class DodamCommunityApp {
     if (!url) return null;
     const str = String(url).trim();
     if (/^[a-zA-Z0-9_-]{11}$/.test(str)) return str;
-    const m = str.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/))([\w-]{11})/);
-    return m ? m[1] : null;
+    const m = str.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=|shorts\/|live\/))([\w-]{11})/);
+    if (m) return m[1];
+    try {
+      const u = new URL(str);
+      const vParam = u.searchParams.get('v');
+      if (vParam && /^[\w-]{11}$/.test(vParam)) return vParam;
+    } catch (e) {}
+    return null;
+  }
+
+  toggleYoutubeScheduleInputs(mode) {
+    const wrap = document.getElementById('youtube-schedule-datetime-wrap');
+    const runBtn = document.getElementById('btn-run-youtube-summary');
+    if (mode === 'scheduled') {
+      if (wrap) wrap.classList.remove('hidden');
+      const dateEl = document.getElementById('youtube-schedule-date');
+      const timeEl = document.getElementById('youtube-schedule-time');
+      if (dateEl && timeEl && (!dateEl.value || !timeEl.value)) {
+        this.setQuickSchedulePreset('1h');
+      }
+      if (runBtn && !runBtn.disabled) {
+        runBtn.innerHTML = '<span>⏳ 예약 발행 등록하기</span>';
+      }
+    } else {
+      if (wrap) wrap.classList.add('hidden');
+      if (runBtn && !runBtn.disabled) {
+        runBtn.innerHTML = '<span>▷ 지금 즉시 실행하기</span>';
+      }
+    }
+  }
+
+  setQuickSchedulePreset(preset) {
+    const dateEl = document.getElementById('youtube-schedule-date');
+    const timeEl = document.getElementById('youtube-schedule-time');
+    if (!dateEl || !timeEl) return;
+
+    const now = new Date();
+    let target = new Date(now.getTime());
+    if (preset === '1h') {
+      target.setHours(now.getHours() + 1);
+      target.setMinutes(0, 0, 0);
+    } else if (preset === 'tomorrow9') {
+      target.setDate(now.getDate() + 1);
+      target.setHours(9, 0, 0, 0);
+    } else if (preset === 'tomorrow20') {
+      target.setDate(now.getDate() + 1);
+      target.setHours(20, 0, 0, 0);
+    }
+
+    const yyyy = target.getFullYear();
+    const mm = String(target.getMonth() + 1).padStart(2, '0');
+    const dd = String(target.getDate()).padStart(2, '0');
+    const hh = String(target.getHours()).padStart(2, '0');
+    const min = String(target.getMinutes()).padStart(2, '0');
+
+    dateEl.value = `${yyyy}-${mm}-${dd}`;
+    timeEl.value = `${hh}:${min}`;
   }
 
   openAiParentingReportModal(isHistoryNavigation = false) {
@@ -14957,6 +15019,11 @@ class DodamCommunityApp {
     if (catRadio) {
       catRadio.checked = true;
     }
+
+    // 발행 시점 초기화 (즉시 발행)
+    const nowRadio = document.querySelector('input[name="youtube-publish-mode"][value="now"]');
+    if (nowRadio) nowRadio.checked = true;
+    this.toggleYoutubeScheduleInputs('now');
 
     const urlInput = document.getElementById('youtube-summary-url');
     if (urlInput) {
@@ -14987,6 +15054,8 @@ class DodamCommunityApp {
   checkYoutubeUrlDuplicate(rawUrl) {
     const alertBox = document.getElementById('youtube-summary-duplicate-alert');
     const runBtn = document.getElementById('btn-run-youtube-summary');
+    const publishMode = document.querySelector('input[name="youtube-publish-mode"]:checked')?.value || 'now';
+    const defaultBtnLabel = publishMode === 'scheduled' ? '<span>⏳ 예약 발행 등록하기</span>' : '<span>▷ 지금 즉시 실행하기</span>';
     if (!alertBox) return;
 
     if (!rawUrl || !rawUrl.trim()) {
@@ -14995,6 +15064,7 @@ class DodamCommunityApp {
       if (runBtn) {
         runBtn.disabled = false;
         runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        runBtn.innerHTML = defaultBtnLabel;
       }
       return;
     }
@@ -15006,44 +15076,51 @@ class DodamCommunityApp {
       if (runBtn) {
         runBtn.disabled = false;
         runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        runBtn.innerHTML = defaultBtnLabel;
       }
       return;
     }
 
-    const dupPost = (this.data.posts || []).find((p) => {
+    const allPosts = [
+      ...(this.data.posts || []),
+      ...((window.DODAM_COMMUNITY_DATA && window.DODAM_COMMUNITY_DATA.posts) || [])
+    ];
+    const dupPost = allPosts.find((p) => {
+      if (!p) return false;
       if (p.youtubeVideoId && p.youtubeVideoId === videoId) return true;
       if (p.youtubeUrl && this.extractYoutubeId(p.youtubeUrl) === videoId) return true;
-      if (p.content && (p.content.includes(videoId) || p.content.includes(`embed/${videoId}`))) return true;
+      if (p.content && (p.content.includes(`embed/${videoId}`) || p.content.includes(`watch?v=${videoId}`) || p.content.includes(`youtu.be/${videoId}`))) return true;
       return false;
     });
 
     if (dupPost) {
       alertBox.classList.remove('hidden');
       alertBox.innerHTML = `
-        <div class="mt-2.5 p-3.5 rounded-xl bg-amber-50 border border-amber-300 text-amber-900 text-xs space-y-2 shadow-sm">
-          <div class="flex items-center gap-2 font-black text-amber-800">
-            <i class="fa-solid fa-triangle-exclamation text-amber-600 text-base"></i>
-            <span class="text-xs sm:text-sm">이미 리포트가 발행된 영상입니다 (재실행 가능)</span>
+        <div class="mt-2.5 p-3.5 rounded-xl bg-rose-50 border border-rose-300 text-rose-900 text-xs space-y-2 shadow-sm">
+          <div class="flex items-center gap-2 font-black text-rose-800">
+            <i class="fa-solid fa-ban text-rose-600 text-base"></i>
+            <span class="text-xs sm:text-sm">이미 리포트가 발행된 유튜브 영상입니다 (중복 발행 차단됨)</span>
           </div>
-          <div class="text-[11px] text-amber-800 bg-white/80 p-2 rounded-lg border border-amber-200 truncate font-semibold">
+          <div class="text-[11px] text-rose-800 bg-white/90 p-2 rounded-lg border border-rose-200 truncate font-semibold">
             기존 발행 글: <strong>` + this.escapeSvgXml(dupPost.title) + `</strong>
           </div>
           <div class="pt-1 flex items-center justify-between flex-wrap gap-2">
             <button
               type="button"
               onclick="app.closeAiParentingReportModal(); app.openPostDetailModal('` + dupPost.id + `')"
-              class="px-3 py-1.5 rounded-lg bg-amber-600 hover:bg-amber-700 text-white font-black text-xs inline-flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
+              class="px-3 py-1.5 rounded-lg bg-rose-600 hover:bg-rose-700 text-white font-black text-xs inline-flex items-center gap-1.5 transition cursor-pointer shadow-2xs"
             >
               <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i>
               <span>기존 발행된 리포트 바로보기</span>
             </button>
-            <span class="text-[11px] text-amber-700 font-medium">※ 새로 생성을 원하시면 아래 [실행하기]를 그대로 누르시면 됩니다.</span>
+            <span class="text-[11px] text-rose-700 font-bold">⛔ 중복 등록을 방지하기 위해 실행 버튼이 비활성화되었습니다.</span>
           </div>
         </div>
       `;
       if (runBtn) {
-        runBtn.disabled = false;
-        runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        runBtn.disabled = true;
+        runBtn.classList.add('opacity-50', 'cursor-not-allowed');
+        runBtn.innerHTML = '<span>⛔ 중복 영상 (실행 불가)</span>';
       }
     } else {
       alertBox.classList.add('hidden');
@@ -15051,6 +15128,7 @@ class DodamCommunityApp {
       if (runBtn) {
         runBtn.disabled = false;
         runBtn.classList.remove('opacity-50', 'pointer-events-none', 'cursor-not-allowed');
+        runBtn.innerHTML = defaultBtnLabel;
       }
     }
   }
@@ -15075,18 +15153,23 @@ class DodamCommunityApp {
     let itemCount = 0;
     let charCount = 0;
 
-    // 1. 서버 엔드포인트를 통한 유튜브 공식/자동 한국어 자막 자동 수집 및 정밀 NLP 분석
+    // 1. 서버 엔드포인트를 통한 유튜브 공식/자동 한국어 자막 자동 수집 및 Gemini AI 실제 영상 요약
     let speaker = '';
     let chapters = [];
     let coreAnalysis = null;
     let videoTopic = '';
+    let aiProfile = null;
+    let hasGeminiKey = false;
+    let aiError = null;
+    const savedGeminiKey = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
     try {
-      const tRes = await fetch(`/api/youtube-transcript?v=${videoId}`);
+      const apiParam = savedGeminiKey ? `&apiKey=${encodeURIComponent(savedGeminiKey)}` : '';
+      const tRes = await fetch(`/api/youtube-transcript?v=${videoId}${apiParam}`);
       if (tRes.ok) {
         const tJson = await tRes.json();
         if (tJson.ok) {
           transcriptText = tJson.fullText || tJson.description || '';
-          hasTranscript = tJson.hasTranscript !== undefined ? tJson.hasTranscript : !!(tJson.fullText || tJson.chapters?.length);
+          hasTranscript = tJson.hasTranscript !== undefined ? tJson.hasTranscript : !!(tJson.fullText || tJson.chapters?.length || tJson.aiProfile);
           keyQuotes = tJson.keyQuotes || [];
           keyTopics = tJson.keyTopics || [];
           storySnippets = tJson.storySnippets || [];
@@ -15096,6 +15179,9 @@ class DodamCommunityApp {
           chapters = tJson.chapters || [];
           coreAnalysis = tJson.coreAnalysis || null;
           videoTopic = tJson.topic || '';
+          aiProfile = tJson.aiProfile || null;
+          hasGeminiKey = !!tJson.hasGeminiKey;
+          aiError = tJson.aiError || null;
           if (tJson.title && !title) title = tJson.title;
         }
       }
@@ -15143,7 +15229,10 @@ class DodamCommunityApp {
       speaker,
       chapters,
       coreAnalysis,
-      topic: videoTopic
+      topic: videoTopic,
+      aiProfile,
+      hasGeminiKey,
+      aiError
     };
   }
 
@@ -16035,7 +16124,11 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       }
     };
 
-    const p = JSON.parse(JSON.stringify(profiles[topicKey] || profiles['growth']));
+    const fallbackP = JSON.parse(JSON.stringify(profiles[topicKey] || profiles['growth']));
+    const p = meta.aiProfile ? Object.assign({}, fallbackP, meta.aiProfile) : fallbackP;
+    if (meta.aiProfile && meta.aiProfile.cleanTitle) {
+      cleanTitle = meta.aiProfile.cleanTitle;
+    }
     if (meta.hasTranscript && Array.isArray(meta.keyTopics) && meta.keyTopics.length > 0) {
       for (const kw of meta.keyTopics) {
         if (!p.keywords.includes(kw) && p.keywords.length < 8) {
@@ -16460,16 +16553,52 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       return;
     }
 
-    // 중복 체크: 이미 리포트가 발행된 영상인 경우 안내 토스트만 표시하고 계속 실행
-    const dupPost = (this.data.posts || []).find((p) => {
+    // 중복 체크: 이미 리포트가 발행된 영상인 경우 중복 생성 원천 차단
+    const allPostsForDup = [
+      ...(this.data.posts || []),
+      ...((window.DODAM_COMMUNITY_DATA && window.DODAM_COMMUNITY_DATA.posts) || [])
+    ];
+    const dupPost = allPostsForDup.find((p) => {
+      if (!p) return false;
       if (p.youtubeVideoId && p.youtubeVideoId === videoId) return true;
       if (p.youtubeUrl && this.extractYoutubeId(p.youtubeUrl) === videoId) return true;
-      if (p.content && (p.content.includes(videoId) || p.content.includes(`embed/${videoId}`))) return true;
+      if (p.content && (p.content.includes(`embed/${videoId}`) || p.content.includes(`watch?v=${videoId}`) || p.content.includes(`youtu.be/${videoId}`))) return true;
       return false;
     });
 
     if (dupPost) {
-      this.showToast('ℹ️ 이미 리포트가 존재하는 영상이지만 사용자 요청에 따라 새 리포트 생성을 진행합니다.');
+      this.checkYoutubeUrlDuplicate(rawUrl);
+      this.showToast('⛔ 이미 리포트가 발행된 유튜브 영상입니다. (중복 생성 차단됨)');
+      return;
+    }
+
+    // 발행 시점 (즉시 발행 vs 예약 발행) 검증
+    const publishMode = document.querySelector('input[name="youtube-publish-mode"]:checked')?.value || 'now';
+    let isScheduled = false;
+    let scheduledAtIso = null;
+    let scheduledTimestamp = Date.now();
+    let displayCreatedAt = '방금 전';
+
+    if (publishMode === 'scheduled') {
+      const dateVal = document.getElementById('youtube-schedule-date')?.value;
+      const timeVal = document.getElementById('youtube-schedule-time')?.value;
+      if (!dateVal || !timeVal) {
+        this.showToast('⚠️ 예약 발행할 날짜와 시간을 모두 선택해 주세요.');
+        return;
+      }
+      const targetDate = new Date(`${dateVal}T${timeVal}:00`);
+      if (isNaN(targetDate.getTime()) || targetDate.getTime() <= Date.now()) {
+        this.showToast('⚠️ 예약 일시는 현재 시간보다 미래로 설정해 주세요.');
+        return;
+      }
+      isScheduled = true;
+      scheduledAtIso = targetDate.toISOString();
+      scheduledTimestamp = targetDate.getTime();
+      const mm = String(targetDate.getMonth() + 1).padStart(2, '0');
+      const dd = String(targetDate.getDate()).padStart(2, '0');
+      const hh = String(targetDate.getHours()).padStart(2, '0');
+      const mi = String(targetDate.getMinutes()).padStart(2, '0');
+      displayCreatedAt = `⏳ ${mm}.${dd} ${hh}:${mi} 예약`;
     }
 
     // Selected guide sub-category from radio cards
@@ -16578,8 +16707,10 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           childBadge: '📖 도담 육아가이드',
           avatarBg: 'bg-emerald-600 text-white'
         },
-        createdAt: '방금 전',
-        timestamp: Date.now(),
+        createdAt: displayCreatedAt,
+        timestamp: scheduledTimestamp,
+        isScheduled,
+        scheduledAt: scheduledAtIso,
         views: 0,
         reactions: { like: 0, hug: 0, tip: 0 },
         tags,
@@ -16597,7 +16728,9 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       }
 
       this.closeAiParentingReportModal();
-      if (meta.hasTranscript) {
+      if (isScheduled) {
+        this.showToast(`⏳ ${displayCreatedAt.replace('⏳ ', '')}에 [가이드 > ${effectiveGuideInfo.name}]에 자동 공개되도록 예약 등록되었습니다!`);
+      } else if (meta.hasTranscript) {
         this.showToast(`🎉 실제 강연 자막을 정밀 분석하여 [가이드 > ${effectiveGuideInfo.name}]에 100% 일치 리포트를 발행했습니다!`);
       } else if (isUnclear) {
         this.showToast(`ℹ️ 자막 미제공 영상으로, 왜곡 없는 [공식 영상 소개 & 부모 나눔 가이드]로 안전하게 발행되었습니다.`);
