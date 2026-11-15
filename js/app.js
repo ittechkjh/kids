@@ -16365,7 +16365,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       if (/[A-Za-z0-9.,:;!?'"()\[\]\-_\/]/.test(ch)) return fs * 0.56;
       return fs * 0.98;
     };
-    const wrapSvgLines = (str, maxPx, fs, maxLines = 2) => {
+    const wrapSvgLines = (str, maxPx, fs, maxLines = 8) => {
       const raw = String(str || '').trim().replace(/\s+/g, ' ');
       if (!raw) return [''];
       const lines = [];
@@ -16403,7 +16403,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       }
       return lines.length ? lines.slice(0, maxLines) : [''];
     };
-    const svgText = (str, x, y, maxPx, fs, attrs = '', maxLines = 2, lineGap = null) => {
+    const svgText = (str, x, y, maxPx, fs, attrs = '', maxLines = 8, lineGap = null) => {
       const lh = lineGap || Math.round(fs * 1.38);
       const lines = wrapSvgLines(str, maxPx, fs, maxLines);
       const tspans = lines.map((ln, idx) => idx === 0
@@ -16414,170 +16414,176 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     };
 
     const card1Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 445" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="100%" height="auto">
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#0f172a"/>
       <stop offset="100%" stop-color="#1e1b4b"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="445" rx="20" fill="url(#g1)"/>
+  <rect width="800" height="470" rx="20" fill="url(#g1)"/>
   <rect x="35" y="30" width="160" height="30" rx="15" fill="#f97316"/>
   ${svgText(p.targetAge, 115, 50, 145, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
   <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
   <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
-  ${svgText('★ ' + p.subName + ' 핵심 요약 브리핑', 35, 102, 725, 13, 'fill="#38bdf8" font-weight="800"', 1)}
-  ${svgText(cleanTitle, 35, 138, 725, 19, 'fill="#ffffff" font-weight="900"', 1)}
-  <text x="35" y="168" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
-  <rect x="35" y="190" width="730" height="225" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
-  <text x="60" y="226" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
-  ${svgText('1. ' + p.b1, 60, 260, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
-  ${svgText('2. ' + p.b2, 60, 310, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
-  ${svgText('3. ' + p.b3, 60, 360, 675, 12.5, 'fill="#f1f5f9"', 2, 18)}
+  ${svgText('★ ' + p.subName + ' 핵심 요약 브리핑', 35, 102, 725, 13, 'fill="#38bdf8" font-weight="800"', 2, 17)}
+  ${svgText(cleanTitle, 35, 138, 725, 19, 'fill="#ffffff" font-weight="900"', 2, 24)}
+  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
+  <rect x="35" y="194" width="730" height="248" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
+  <text x="60" y="228" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
+  ${svgText('1. ' + p.b1, 60, 262, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
+  ${svgText('2. ' + p.b2, 60, 322, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
+  ${svgText('3. ' + p.b3, 60, 382, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
 </svg>`.trim();
 
     const card2Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
     <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#082f49"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="390" rx="20" fill="url(#g2)"/>
-  ${svgText(p.c2Title, 40, 45, 720, 13, 'fill="#38bdf8" font-weight="900"', 1)}
+  <rect width="800" height="420" rx="20" fill="url(#g2)"/>
+  ${svgText(p.c2Title, 40, 45, 720, 13, 'fill="#38bdf8" font-weight="900"', 2, 17)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 반응과 태도를 보이는 근본적 원인</text>
   
-  <rect x="40" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <rect x="40" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="72" cy="138" r="16" fill="#0284c7"/>
   <text x="72" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
-  ${svgText(p.c2Box1Title, 98, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
-  ${svgText(p.c2Box1P1, 55, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box1P2, 55, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box1Sub, 55, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
+  ${svgText(p.c2Box1Title, 98, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
+  ${svgText(p.c2Box1P1, 55, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box1P2, 55, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box1Sub, 55, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
 
-  <rect x="287" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <rect x="287" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="319" cy="138" r="16" fill="#0284c7"/>
   <text x="319" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
-  ${svgText(p.c2Box2Title, 345, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
-  ${svgText(p.c2Box2P1, 302, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box2P2, 302, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box2Sub, 302, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
+  ${svgText(p.c2Box2Title, 345, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
+  ${svgText(p.c2Box2P1, 302, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box2P2, 302, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box2Sub, 302, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
 
-  <rect x="535" y="105" width="225" height="250" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
+  <rect x="535" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
   <circle cx="567" cy="138" r="16" fill="#0284c7"/>
   <text x="567" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
-  ${svgText(p.c2Box3Title, 593, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 1)}
-  ${svgText(p.c2Box3P1, 550, 180, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box3P2, 550, 224, 194, 11.5, 'fill="#e0f2fe"', 2, 16)}
-  ${svgText(p.c2Box3Sub, 550, 278, 194, 10.5, 'fill="#94a3b8"', 2, 15)}
+  ${svgText(p.c2Box3Title, 593, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
+  ${svgText(p.c2Box3P1, 550, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box3P2, 550, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
+  ${svgText(p.c2Box3Sub, 550, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
 </svg>`.trim();
 
     const card3Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
     <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#064e3b"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="390" rx="20" fill="url(#g3)"/>
-  ${svgText(p.c3Title, 40, 45, 720, 13, 'fill="#34d399" font-weight="900"', 1)}
+  <rect width="800" height="420" rx="20" fill="url(#g3)"/>
+  ${svgText(p.c3Title, 40, 45, 720, 13, 'fill="#34d399" font-weight="900"', 2, 17)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 부모가 즉시 실천하는 단계별 대화 공식</text>
 
-  <rect x="40" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="40" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
   <rect x="55" y="123" width="105" height="24" rx="12" fill="#10b981"/>
   ${svgText(p.c3Step1Name, 107, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step1Title, 55, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
-  ${svgText(p.c3Step1P1, 55, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step1P2, 55, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step1Sub, 55, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
+  ${svgText(p.c3Step1Title, 55, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
+  ${svgText(p.c3Step1P1, 55, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step1P2, 55, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step1Sub, 55, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
 
-  <rect x="287" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="287" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
   <rect x="302" y="123" width="105" height="24" rx="12" fill="#059669"/>
   ${svgText(p.c3Step2Name, 354, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step2Title, 302, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
-  ${svgText(p.c3Step2P1, 302, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step2P2, 302, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step2Sub, 302, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
+  ${svgText(p.c3Step2Title, 302, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
+  ${svgText(p.c3Step2P1, 302, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step2P2, 302, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step2Sub, 302, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
 
-  <rect x="535" y="105" width="225" height="250" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
+  <rect x="535" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
   <rect x="550" y="123" width="105" height="24" rx="12" fill="#047857"/>
   ${svgText(p.c3Step3Name, 602, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step3Title, 550, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 1)}
-  ${svgText(p.c3Step3P1, 550, 202, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step3P2, 550, 244, 194, 11.5, 'fill="#f0fdf4"', 2, 16)}
-  ${svgText(p.c3Step3Sub, 550, 294, 194, 10.5, 'fill="#cbd5e1"', 2, 15)}
+  ${svgText(p.c3Step3Title, 550, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
+  ${svgText(p.c3Step3P1, 550, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step3P2, 550, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
+  ${svgText(p.c3Step3Sub, 550, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
 </svg>`.trim();
 
+    // card4Svg: 각 주차별 텍스트 길이에 맞춰 Y 좌표와 박스 높이를 동적 계산 (잘림/말줄임 0%)
+    const c4Cols = [
+      { bx: 40, tx: 53, h: p.c4W1, items: [p.c4W1L1, p.c4W1L2, p.c4W1L3], sub: p.c4W1Sub },
+      { bx: 223, tx: 236, h: p.c4W2, items: [p.c4W2L1, p.c4W2L2, p.c4W2L3], sub: p.c4W2Sub },
+      { bx: 406, tx: 419, h: p.c4W3, items: [p.c4W3L1, p.c4W3L2, p.c4W3L3], sub: p.c4W3Sub },
+      { bx: 589, tx: 602, h: p.c4W4, items: [p.c4W4L1, p.c4W4L2, p.c4W4L3], sub: p.c4W4Sub }
+    ];
+    let c4MaxBottom = 384;
+    const c4ColsRendered = c4Cols.map((col) => {
+      let curY = 128;
+      const hLines = wrapSvgLines(col.h, 142, 11.5, 4);
+      const hTspans = hLines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
+      const hSvg = `<text x="${col.tx}" y="${curY}" font-size="11.5" font-family="'Pretendard', sans-serif" fill="#fde047" font-weight="900">${hTspans}</text>`;
+      curY += hLines.length * 15 + 14;
+      const itemsSvg = col.items.map((it) => {
+        const lines = wrapSvgLines(it, 142, 10.5, 5);
+        const tspans = lines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
+        const tag = `<text x="${col.tx}" y="${curY}" font-size="10.5" font-family="'Pretendard', sans-serif" fill="#ffffff">${tspans}</text>`;
+        curY += lines.length * 15 + 12;
+        return tag;
+      }).join('\n  ');
+      curY += 6;
+      const subLines = wrapSvgLines(col.sub, 142, 10.5, 4);
+      const subTspans = subLines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
+      const subSvg = `<text x="${col.tx}" y="${curY}" font-size="10.5" font-family="'Pretendard', sans-serif" fill="#fef3c7">${subTspans}</text>`;
+      curY += subLines.length * 15 + 18;
+      if (curY > c4MaxBottom) c4MaxBottom = curY;
+      return { bx: col.bx, content: `${hSvg}\n  ${itemsSvg}\n  ${subSvg}` };
+    });
+    const c4BoxH = c4MaxBottom - 102;
+    const c4SvgH = c4MaxBottom + 28;
     const card4Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${c4SvgH}" width="100%" height="auto">
   <defs>
     <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#78350f"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="420" rx="20" fill="url(#g4)"/>
-  ${svgText(p.c4Title, 40, 45, 720, 13, 'fill="#fde047" font-weight="900"', 1)}
+  <rect width="800" height="${c4SvgH}" rx="20" fill="url(#g4)"/>
+  ${svgText(p.c4Title, 40, 45, 720, 13, 'fill="#fde047" font-weight="900"', 2, 17)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 흔들림 없이 정착시키는 단계별 로드맵</text>
-
-  <rect x="40" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  ${svgText(p.c4W1, 53, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
-  ${svgText(p.c4W1L1, 53, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W1L2, 53, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W1L3, 53, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W1Sub, 53, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
-
-  <rect x="223" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  ${svgText(p.c4W2, 236, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
-  ${svgText(p.c4W2L1, 236, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W2L2, 236, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W2L3, 236, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W2Sub, 236, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
-
-  <rect x="406" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  ${svgText(p.c4W3, 419, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
-  ${svgText(p.c4W3L1, 419, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W3L2, 419, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W3L3, 419, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W3Sub, 419, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
-
-  <rect x="589" y="102" width="168" height="282" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
-  ${svgText(p.c4W4, 602, 128, 142, 11.5, 'fill="#fde047" font-weight="900"', 2, 15)}
-  ${svgText(p.c4W4L1, 602, 172, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W4L2, 602, 214, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W4L3, 602, 256, 142, 10.5, 'fill="#ffffff"', 2, 15)}
-  ${svgText(p.c4W4Sub, 602, 314, 142, 10.5, 'fill="#fef3c7"', 2, 15)}
+  ${c4ColsRendered.map((c) => `
+  <rect x="${c.bx}" y="102" width="168" height="${c4BoxH}" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  ${c.content}`).join('')}
 </svg>`.trim();
 
     const card5Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 390" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
     <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#581c87"/>
       <stop offset="100%" stop-color="#0f172a"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="390" rx="20" fill="url(#g5)"/>
-  ${svgText(p.c5Title, 40, 45, 720, 13, 'fill="#f472b6" font-weight="900"', 1)}
+  <rect width="800" height="420" rx="20" fill="url(#g5)"/>
+  ${svgText(p.c5Title, 40, 45, 720, 13, 'fill="#f472b6" font-weight="900"', 2, 17)}
   <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">부모의 실천 행동 지침</text>
 
-  <rect x="40" y="105" width="345" height="250" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
+  <rect x="40" y="105" width="345" height="280" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
   <rect x="55" y="123" width="80" height="26" rx="13" fill="#10b981"/>
   <text x="95" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
-  ${svgText(p.c5Do1, 55, 178, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Do2, 55, 220, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Do3, 55, 262, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Do4, 55, 304, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Do1, 55, 178, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Do2, 55, 228, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Do3, 55, 278, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Do4, 55, 328, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
 
-  <rect x="415" y="105" width="345" height="250" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
+  <rect x="415" y="105" width="345" height="280" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
   <rect x="430" y="123" width="85" height="26" rx="13" fill="#ef4444"/>
   <text x="472" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
-  ${svgText(p.c5Dont1, 430, 178, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Dont2, 430, 220, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Dont3, 430, 262, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
-  ${svgText(p.c5Dont4, 430, 304, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 2, 16)}
+  ${svgText(p.c5Dont1, 430, 178, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Dont2, 430, 228, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Dont3, 430, 278, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
+  ${svgText(p.c5Dont4, 430, 328, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
 </svg>`.trim();
 
     // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가
