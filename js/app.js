@@ -4514,9 +4514,57 @@ class DodamCommunityApp {
       h2.setAttribute('style', `font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid ${barColor}; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif; letter-spacing: -0.3px;`);
     });
 
-    // 4. 상단 공식 리포트 브리핑 카드 인라인 서식 보장
+    // 3-1. [전문가 핵심 실천 조언 3선] 다크 flex 카드를 네이버 스마트에디터 100% 호환 테이블 서식으로 변환
+    Array.from(tempDiv.querySelectorAll('div')).forEach((el) => {
+      if (!el.parentNode) return;
+      const cls = el.className || '';
+      if ((cls.includes('from-slate-900') || (el.getAttribute('style') || '').includes('#0f172a')) && el.textContent.includes('전문가 핵심 실천 조언 3선')) {
+        const quotePs = Array.from(el.querySelectorAll('p')).map((p) => p.textContent.trim()).filter(Boolean);
+        if (quotePs.length > 0) {
+          const rowsHtml = quotePs.map((qt, i) => `
+            <p style="margin: ${i === quotePs.length - 1 ? '0' : '0 0 12px 0'}; font-size: 14.5px; line-height: 1.85; color: #1e293b; font-family: 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
+              <strong style="color: #d97706;">${i + 1}.</strong> ${this.escapeSvgXml(qt)}
+            </p>
+          `).join('');
+          const tbl = document.createElement('table');
+          tbl.setAttribute('style', 'width: 100%; max-width: 680px; border-collapse: collapse; margin: 24px auto; background-color: #f8fafc; border: 1px solid #cbd5e1; border-left: 5px solid #f59e0b; font-family: "Nanum Gothic", "Malgun Gothic", sans-serif;');
+          tbl.innerHTML = `
+            <tbody>
+              <tr>
+                <td style="padding: 14px 18px; border-bottom: 1px solid #fde68a; background-color: #fffbeb;">
+                  <strong style="font-size: 15px; color: #92400e;">💡 전문가 핵심 실천 조언 3선</strong>
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 16px 18px; background-color: #ffffff;">
+                  ${rowsHtml}
+                </td>
+              </tr>
+            </tbody>
+          `;
+          el.replaceWith(tbl);
+        }
+      }
+    });
+
+    // 4. 상단 공식 리포트 브리핑 카드를 네이버 호환 테이블 서식으로 변환 (flex 깨짐 방지)
     const topCard = tempDiv.querySelector('.naver-blog-article > div:first-child');
-    if (topCard) {
+    if (topCard && topCard.textContent.includes('도담 공식 육아가이드')) {
+      const subLine = topCard.querySelector('.text-emerald-800')?.textContent?.trim() || '';
+      const tblTop = document.createElement('table');
+      tblTop.setAttribute('style', 'width: 100%; border-collapse: collapse; margin: 18px 0 24px 0; background-color: #ecfdf5; border: 1px solid #86efac; border-left: 5px solid #059669; font-family: "Nanum Gothic", "Malgun Gothic", sans-serif;');
+      tblTop.innerHTML = `
+        <tbody>
+          <tr>
+            <td style="padding: 14px 18px;">
+              <div style="font-size: 15px; font-weight: bold; color: #064e3b; margin-bottom: 4px;">🛡️ 도담 공식 육아가이드 심층 리포트</div>
+              ${subLine ? `<div style="font-size: 12.5px; color: #047857;">${this.escapeSvgXml(subLine)} · 전문가 검증</div>` : ''}
+            </td>
+          </tr>
+        </tbody>
+      `;
+      topCard.replaceWith(tblTop);
+    } else if (topCard) {
       topCard.setAttribute('style', 'background-color: #ecfdf5; border: 1.5px solid #86efac; border-radius: 14px; padding: 14px 18px; margin: 18px 0 24px 0; font-family: -apple-system, BlinkMacSystemFont, "Nanum Gothic", "Malgun Gothic", sans-serif;');
     }
 
