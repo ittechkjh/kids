@@ -16613,9 +16613,9 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <div class="p-5 rounded-2xl bg-gradient-to-br from-rose-50 via-amber-50 to-orange-50 border border-rose-200 shadow-sm my-6 space-y-3" style="background: linear-gradient(135deg, #fff1f2 0%, #fffbeb 50%, #fff7ed 100%); border: 1.5px solid #fecdd3; border-radius: 16px; padding: 20px; margin: 24px 0;">
           <div class="flex items-center justify-between border-b border-rose-200 pb-2.5" style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #fecdd3; padding-bottom: 10px; margin-bottom: 12px;">
             <div class="flex items-center gap-2 font-black text-slate-900 text-sm sm:text-base" style="font-size: 15px; font-weight: 900; color: #881337;">
-              <span>🎬 유튜브 실제 강연 챕터별 핵심 구성 (${meta.chapters.length}개 구간)</span>
+              <span>📖 핵심 주제별 강연 구성 (${meta.chapters.length}개 구간)</span>
             </div>
-            <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold" style="background-color: #f43f5e; color: #ffffff; padding: 3px 8px; border-radius: 9999px; font-size: 10px; font-weight: 800;">타임코드 분석</span>
+            <span class="px-2 py-0.5 rounded-full bg-rose-500 text-white text-[10px] font-bold" style="background-color: #f43f5e; color: #ffffff; padding: 3px 8px; border-radius: 9999px; font-size: 10px; font-weight: 800;">구간별 핵심</span>
           </div>
           <div class="space-y-1.5" style="margin-top: 10px;">
             ${chList}
@@ -16679,7 +16679,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
         </div>
 
-        <!-- [유튜브 강연 챕터별 타임라인 블록] -->
+        <!-- [핵심 주제별 구성 블록] -->
         ${chaptersBlock}
 
         <!-- [핵심 발언 3선 블록] -->
