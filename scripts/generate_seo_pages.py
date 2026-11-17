@@ -270,7 +270,7 @@ async def main():
             heading=raw_title,
             subtitle="대한민국 엄마·아빠를 위한 도담톡 전문가 검증 육아·교육 심층 리포트",
             body_html=body,
-            app_cta_href=f"/?post={post['id']}",
+            app_cta_href=f"/#/board/post/{post['id']}",
             app_cta_label="💬 도담톡 커뮤니티에서 댓글·스크랩하기",
             related_links=[
                 ("🎉 전국 가족 축제·어린이 행사 일정 모아보기", "/guides/events.html"),
@@ -302,7 +302,7 @@ async def main():
             "🎉 전국 가족 행사·축제·공모전",
             "주말 아이와 함께 가는 전국 가족 축제 & 어린이 체험 일정",
             "무료 관람부터 사전예약 체험까지 전국 주요 육아·가족 행사 정보",
-            "/?tab=events",
+            "/#/events",
             "🗺️ 도담톡에서 실시간 행사 전체 검색하기",
             "".join(
                 f'<div class="p-4 rounded-xl bg-stone-50 border border-stone-200 mb-3"><h3 class="font-bold text-slate-900">{html_lib.escape(e["title"])}</h3><p class="text-xs text-slate-500 mt-1">📍 {html_lib.escape(e["region"])} {html_lib.escape(e["location"])} · 🗓️ {html_lib.escape(e["startDate"])}~{html_lib.escape(e["endDate"])} · 💰 {html_lib.escape(e["fee"])}</p><p class="text-sm text-slate-700 mt-1.5">{html_lib.escape(clean_text(e["summary"], 140))}</p></div>'
@@ -316,7 +316,7 @@ async def main():
             "🍽️ 유모차 안심 나들이 & 예스키즈존",
             "아기와 함께 편하게 가는 전국 예스키즈존 맛집 & 나들이 명소",
             "아기의자·수유실·주차 편의까지 검증된 가족 외식·나들이 추천 리스트",
-            "/?tab=places",
+            "/#/places",
             "📍 도담톡 지도에서 주변 장소 찾기",
             "".join(
                 f'<div class="p-4 rounded-xl bg-stone-50 border border-stone-200 mb-3"><h3 class="font-bold text-slate-900">{html_lib.escape(pl["name"])}</h3><p class="text-xs text-slate-500 mt-1">📍 {html_lib.escape(pl["region"])} · {html_lib.escape(pl["address"])}</p><p class="text-sm text-slate-700 mt-1.5">{html_lib.escape(clean_text(pl["summary"], 140))}</p></div>'
@@ -330,7 +330,7 @@ async def main():
             "💵 2026 출산·양육 정부 지원금",
             "2026년 부모급여·첫만남이용권·지자체 출산지원금 총정리",
             "우리 아이 출생 연도와 거주 지역에 맞는 정부·지자체 양육 지원금 안내",
-            "/?tab=policies",
+            "/#/policies",
             "🧮 도담톡에서 내 아이 지원금 모의계산하기",
             "".join(
                 f'<div class="p-4 rounded-xl bg-stone-50 border border-stone-200 mb-3"><h3 class="font-bold text-slate-900">{html_lib.escape(pol["title"])}</h3><p class="text-xs text-emerald-700 font-bold mt-1">🏛️ {html_lib.escape(pol["region"])} {html_lib.escape(pol["target"])}</p><p class="text-sm text-slate-700 mt-1.5">{html_lib.escape(clean_text(pol["benefit"], 160))}</p></div>'
@@ -344,7 +344,7 @@ async def main():
             "🏫 전국 학군 & 2028 대입 가이드",
             "전국 초·중·고 학군 정보 및 2028 대입 개편안 핵심 분석",
             "우리 동네 학교·학군 비교와 초·중·고 자녀 입시 로드맵",
-            "/?tab=schools",
+            "/#/schools",
             "🏫 도담톡에서 우리 동네 학군 상세 검색하기",
             "".join(
                 f'<div class="p-4 rounded-xl bg-stone-50 border border-stone-200 mb-3"><h3 class="font-bold text-slate-900">{html_lib.escape(s["name"])}</h3><p class="text-xs text-slate-500 mt-1">📍 {html_lib.escape(s["region"])} · {html_lib.escape(s["level"])}</p><p class="text-sm text-slate-700 mt-1.5">{html_lib.escape(clean_text(s["summary"], 140))}</p></div>'

@@ -233,12 +233,20 @@ class DodamCommunityApp {
     // SPA 뒤로가기/앞으로가기 브라우저 히스토리 라우팅 완벽 지원
     // ==========================================
     const initialHash = window.location.hash || '';
+    const urlParams = new URLSearchParams(window.location.search || '');
+    const queryPost = (urlParams.get('post') || '').trim();
+    const queryTab = (urlParams.get('tab') || '').trim();
     let initialPostId = null;
     let initRoute = 'board';
 
     if (initialHash.startsWith('#/board/post/')) {
       initialPostId = initialHash.replace('#/board/post/', '').trim();
       initRoute = 'board';
+    } else if (queryPost) {
+      initialPostId = queryPost;
+      initRoute = 'board';
+    } else if (queryTab) {
+      initRoute = this.getRouteFromHash('#' + queryTab) || queryTab || 'board';
     } else {
       initRoute = this.getRouteFromHash(initialHash) || 'board';
     }
@@ -258,9 +266,14 @@ class DodamCommunityApp {
       this.switchMainView(initRoute, true);
     }
     if (initialPostId) {
+      this._pendingDeepLinkPostId = initialPostId;
       setTimeout(() => {
-        this.openPostDetailModal(initialPostId, true);
-      }, 100);
+        const exists = (this.data.posts || []).some((p) => p.id === initialPostId);
+        if (exists) {
+          this._pendingDeepLinkPostId = null;
+          this.openPostDetailModal(initialPostId, true);
+        }
+      }, 150);
     }
 
     // 브라우저 뒤로가기 / 앞으로가기 (popstate) 이벤트 핸들러 연결
@@ -516,6 +529,14 @@ class DodamCommunityApp {
           this.renderBoardCategories();
           this.renderBoardView();
         }
+        if (this._pendingDeepLinkPostId) {
+          const targetDeep = (this.data.posts || []).find((x) => x && x.id === this._pendingDeepLinkPostId);
+          if (targetDeep) {
+            const pIdToOpen = this._pendingDeepLinkPostId;
+            this._pendingDeepLinkPostId = null;
+            this.openPostDetailModal(pIdToOpen, true);
+          }
+        }
       });
     }
 
@@ -583,6 +604,14 @@ class DodamCommunityApp {
         if (this.currentView === 'board') {
           this.renderBoardCategories();
           this.renderBoardView();
+        }
+        if (this._pendingDeepLinkPostId) {
+          const targetDeep = (this.data.posts || []).find((x) => x && x.id === this._pendingDeepLinkPostId);
+          if (targetDeep) {
+            const pIdToOpen = this._pendingDeepLinkPostId;
+            this._pendingDeepLinkPostId = null;
+            this.openPostDetailModal(pIdToOpen, true);
+          }
         }
         if (this.activePostDetailId && remoteMap.has(this.activePostDetailId)) {
           const updatedPost = remoteMap.get(this.activePostDetailId);
