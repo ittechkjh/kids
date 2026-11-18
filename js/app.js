@@ -16888,7 +16888,16 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     const sec4Html = formatParagraphs(sec4Text);
     const outroHtml = formatParagraphs(outroText);
 
-    const plainText = `${cleanTitle}${quotesPlainText}\n\n${introText}\n\n1. ${p.sec1Title || c2SubTxt}\n${sec1Text}\n\n2. ${p.sec2Title || c3SubTxt}\n${sec2Text}\n\n3. ${p.sec3Title || c4SubTxt}\n${sec3Text}\n\n4. ${p.sec4Title || c5SubTxt}\n${sec4Text}\n\n${outroText}`;
+    const cleanSecTitle = (raw, fallback) => {
+      const t = String(raw || fallback || '').trim();
+      return t.replace(/^(?:\d+\s*[.\)]\s*)?(?:\d+장\s*[:.\-]?\s*)?/, '').trim() || fallback;
+    };
+    const s1Title = cleanSecTitle(p.sec1Title, c2SubTxt);
+    const s2Title = cleanSecTitle(p.sec2Title, c3SubTxt);
+    const s3Title = cleanSecTitle(p.sec3Title, c4SubTxt);
+    const s4Title = cleanSecTitle(p.sec4Title, c5SubTxt);
+
+    const plainText = `${cleanTitle}${quotesPlainText}\n\n${introText}\n\n1. ${s1Title}\n${sec1Text}\n\n2. ${s2Title}\n${sec2Text}\n\n3. ${s3Title}\n${sec3Text}\n\n4. ${s4Title}\n${sec4Text}\n\n${outroText}`;
 
     // 5. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `<!-- dodam-report-v3 -->
@@ -16930,7 +16939,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <!-- 3. [1장] 심층 배경 & 원인 분석 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>1. ${xe(p.sec1Title || c2SubTxt)}</span>
+            <span>1. ${xe(s1Title)}</span>
           </h2>
           ${sec1Html}
           ${storyCallout}
@@ -16945,7 +16954,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <!-- 4. [2장] 실전 솔루션 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #059669; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>2. ${xe(p.sec2Title || c3SubTxt)}</span>
+            <span>2. ${xe(s2Title)}</span>
           </h2>
           ${sec2Html}
         </div>
@@ -16959,7 +16968,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <!-- 5. [3장] 심층 적용 가이드 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #d97706; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>3. ${xe(p.sec3Title || c4SubTxt)}</span>
+            <span>3. ${xe(s3Title)}</span>
           </h2>
           ${sec3Html}
         </div>
@@ -16973,7 +16982,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <!-- 6. [4장] 핵심 원칙 & Q&A -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #7c3aed; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>4. ${xe(p.sec4Title || c5SubTxt)}</span>
+            <span>4. ${xe(s4Title)}</span>
           </h2>
           ${sec4Html}
         </div>
