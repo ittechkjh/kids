@@ -15205,7 +15205,8 @@ class DodamCommunityApp {
     const prompt = `당신은 대한민국 최고의 소아청소년과 전문의 및 아동교육 전문가이자 네이버 육아 파워블로거입니다.
 첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
 필수 JSON 필드:
-{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1 제목(8~14자)","c2Box1P1":"원인1 구체적 설명 완결문장(24~38자, 단어토막 금지)","c2Box1P2":"원인1 구체적 사례·부작용 완결문장(24~38자)","c2Box1Sub":"원인1 핵심결론(14~22자)","c2Box2Title":"원인2 제목(8~14자)","c2Box2P1":"원인2 구체적 설명 완결문장(24~38자)","c2Box2P2":"원인2 구체적 사례 완결문장(24~38자)","c2Box2Sub":"원인2 핵심결론(14~22자)","c2Box3Title":"원인3 제목(8~14자)","c2Box3P1":"원인3 구체적 설명 완결문장(24~38자)","c2Box3P2":"원인3 구체적 사례 완결문장(24~38자)","c2Box3Sub":"원인3 핵심결론(14~22자)","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"솔루션1 제목(8~14자)","c3Step1P1":"솔루션1 구체적 실행법 완결문장(24~38자)","c3Step1P2":"솔루션1 실전예시·팁 완결문장(24~38자)","c3Step1Sub":"솔루션1 기대효과(14~22자)","c3Step2Name":"2단계","c3Step2Title":"솔루션2 제목(8~14자)","c3Step2P1":"솔루션2 구체적 실행법 완결문장(24~38자)","c3Step2P2":"솔루션2 실전예시·팁 완결문장(24~38자)","c3Step2Sub":"솔루션2 기대효과(14~22자)","c3Step3Name":"3단계","c3Step3Title":"솔루션3 제목(8~14자)","c3Step3P1":"솔루션3 구체적 실행법 완결문장(24~38자)","c3Step3P2":"솔루션3 실전예시·팁 완결문장(24~38자)","c3Step3Sub":"솔루션3 기대효과(14~22자)","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec3Title":"3장 소제목(15~28자)","sec4Title":"4장 소제목(15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
+{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1 제목(8~14자)","c2Box1P1":"원인1 구체적 설명 완결문장(24~38자, 단어토막 금지)","c2Box1P2":"원인1 구체적 사례·부작용 완결문장(24~38자)","c2Box1Sub":"원인1 핵심결론(14~22자)","c2Box2Title":"원인2 제목(8~14자)","c2Box2P1":"원인2 구체적 설명 완결문장(24~38자)","c2Box2P2":"원인2 구체적 사례 완결문장(24~38자)","c2Box2Sub":"원인2 핵심결론(14~22자)","c2Box3Title":"원인3 제목(8~14자)","c2Box3P1":"원인3 구체적 설명 완결문장(24~38자)","c2Box3P2":"원인3 구체적 사례 완결문장(24~38자)","c2Box3Sub":"원인3 핵심결론(14~22자)","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"솔루션1 제목(8~14자)","c3Step1P1":"솔루션1 구체적 실행법 완결문장(24~38자)","c3Step1P2":"솔루션1 실전예시·팁 완결문장(24~38자)","c3Step1Sub":"솔루션1 기대효과(14~22자)","c3Step2Name":"2단계","c3Step2Title":"솔루션2 제목(8~14자)","c3Step2P1":"솔루션2 구체적 실행법 완결문장(24~38자)","c3Step2P2":"솔루션2 실전예시·팁 완결문장(24~38자)","c3Step2Sub":"솔루션2 기대효과(14~22자)","c3Step3Name":"3단계","c3Step3Title":"솔루션3 제목(8~14자)","c3Step3P1":"솔루션3 구체적 실행법 완결문장(24~38자)","c3Step3P2":"솔루션3 실전예시·팁 완결문장(24~38자)","c3Step3Sub":"솔루션3 기대효과(14~22자)","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec1Title":"1장 소제목(번호없이 15~28자)","sec2Title":"2장 소제목(번호없이 15~28자)","sec3Title":"3장 소제목(번호없이 15~28자)","sec4Title":"4장 소제목(번호없이 15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 핵심 전략(400자 이상, \\n\\n 문단구분)","sec3":"3장 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)","customCards":[{"cardType":"summary_hero|wide_bars|columns_3|grid_2x2|compare_2col|qa_cards 중 카드마다 다르게","kicker":"[자유주제태그]","title":"카드 큰 제목(14~28자)","leftLabel":"compare_2col일때만 왼쪽배지","rightLabel":"compare_2col일때만 오른쪽배지","items":[{"label":"소제목(8~22자)","body":"구체적 완결문장(24~42자)","sub":"핵심요약(12~22자)"}]}]}
+※ customCards는 반드시 5개로 구성하되, 영상 내용에 가장 어울리는 서로 다른 cardType과 자유로운 주제로 작성(억지 4주루틴/DO vs DON'T 반복 금지).`;
 
     this._lastGeminiDirectError = null;
     const modelsToTry = ['gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-flash-latest'];
@@ -16873,11 +16874,207 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         );
     };
     const encodeSvg = (svg) => 'data:image/svg+xml;utf8,' + encodeURIComponent(withFooter(svg));
-    const img1Uri = encodeSvg(card1Svg);
-    const img2Uri = encodeSvg(card2Svg);
-    const img3Uri = encodeSvg(card3Svg);
-    const img4Uri = encodeSvg(card4Svg);
-    const img5Uri = encodeSvg(card5Svg);
+
+    // 자유형식 인포그래픽 렌더러 (customCards: summary_hero / wide_bars / columns_3 / grid_2x2 / compare_2col / qa_cards)
+    const renderCustomCardSvg = (card, idx) => {
+      const slotPals = [
+        { bgA: pal.c1A, bgB: pal.c1B, box: pal.c1Box, stroke: pal.c1Stroke, title: pal.c1Title, accent: pal.c1Accent, body: pal.c1Body, sub: pal.c1Sub },
+        { bgA: pal.c2A, bgB: pal.c2B, box: pal.c2Box, stroke: pal.c2Stroke, title: pal.c2Title, accent: pal.c2Accent, body: pal.c2Body, sub: pal.c2Sub },
+        { bgA: pal.c3A, bgB: pal.c3B, box: pal.c3Box, stroke: pal.c3Stroke, title: pal.c3Title, accent: pal.c3Accent, body: pal.c3Body, sub: pal.c3Sub },
+        { bgA: pal.c4A, bgB: pal.c4B, box: pal.c4Box, stroke: pal.c4Stroke, title: pal.c4Title, accent: pal.c4Accent, body: pal.c4Body, sub: pal.c4Sub },
+        { bgA: pal.c5A, bgB: pal.c5B, box: pal.c1Box, stroke: pal.c5Accent, title: pal.c5Title, accent: pal.c5Accent, body: pal.c1Body, sub: pal.c1Sub }
+      ];
+      const sp = slotPals[idx % slotPals.length];
+      const gradId = `cg${idx + 1}`;
+      const kicker = String(card.kicker || `[핵심 인포그래픽 ${idx + 1}]`).trim();
+      const cTitle = String(card.title || cleanTitle).trim();
+      const items = Array.isArray(card.items) ? card.items.filter(Boolean) : [];
+      const cType = String(card.cardType || 'wide_bars').trim();
+
+      const tLines = wrapSvgLines(cTitle, 720, 18.5, 2);
+      const headerBottom = 76 + (tLines.length - 1) * 24 + 26;
+      const headSvg = `
+  ${svgText(kicker, 40, 44, 720, 13.5, `fill="${sp.accent}" font-weight="900"`, 1)}
+  ${svgText(cTitle, 40, 76, 720, 18.5, `fill="${sp.title}" font-weight="900"`, 2, 24)}`;
+
+      const wrapCard = (svgH, innerSvg) => `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${svgH}" width="100%" height="auto">
+  <defs>
+    <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="${sp.bgA}"/>
+      <stop offset="100%" stop-color="${sp.bgB}"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="${svgH}" rx="20" fill="url(#${gradId})"/>
+  ${headSvg}
+  ${innerSvg}
+</svg>`.trim();
+
+      if (cType === 'summary_hero') {
+        const bFs = fitFont(items.map((x) => x.body || x.label), 15, 12.5, 80, 175);
+        const bLg = Math.round(bFs * 1.44);
+        let curY = headerBottom + 30;
+        const innerRows = items.slice(0, 4).map((it, i) => {
+          const lineTxt = `${i + 1}. ${it.label ? it.label + ' — ' : ''}${it.body || ''}`.trim();
+          const lines = wrapSvgLines(lineTxt, 675, bFs, 3);
+          const s = svgText(lineTxt, 60, curY, 675, bFs, `fill="${sp.body}" font-weight="600"`, 3, bLg);
+          curY += lines.length * bLg + 16;
+          return s;
+        }).join('');
+        const boxH = curY - headerBottom + 10;
+        return wrapCard(headerBottom + boxH + 26, `
+  <rect x="35" y="${headerBottom}" width="730" height="${boxH}" rx="16" fill="${sp.box}" fill-opacity="${isLightCard ? '0.96' : '0.82'}" stroke="${sp.stroke}" stroke-opacity="0.5"/>
+  ${innerRows}`);
+      }
+
+      if (cType === 'columns_3') {
+        const cols = items.slice(0, 3);
+        let maxBot = headerBottom + 240;
+        const rendered = cols.map((it, i) => {
+          const bx = i === 0 ? 40 : i === 1 ? 287 : 535;
+          const tx = bx + 16;
+          const lbl = String(it.label || `포인트 ${i + 1}`).trim();
+          const body = String(it.body || '').trim();
+          const sub = String(it.sub || '').trim();
+          const lFs = fitFont(lbl, 15.5, 12.5, 8, 16);
+          const bFs = fitFont([body, sub], 14, 11.5, 28, 72);
+          const lg = Math.round(bFs * 1.44);
+          let y = headerBottom + 36;
+          const lLines = wrapSvgLines(lbl, 154, lFs, 2);
+          const lblSvg = `
+  <circle cx="${bx + 32}" cy="${headerBottom + 32}" r="16" fill="${sp.stroke}"/>
+  <text x="${bx + 32}" y="${headerBottom + 37}" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${i + 1}</text>
+  ${svgText(lbl, bx + 58, y, 152, lFs, `fill="${sp.accent}" font-weight="900"`, 2, 18)}`;
+          y += lLines.length * 18 + 18;
+          const bLines = wrapSvgLines(body, 192, bFs, 5);
+          const bSvg = svgText(body, tx, y, 192, bFs, `fill="${sp.body}" font-weight="600"`, 5, lg);
+          y += bLines.length * lg + 14;
+          const subSvg = sub ? svgText('▸ ' + sub, tx, y, 192, Math.max(11.5, bFs - 0.5), `fill="${sp.sub}" font-weight="700"`, 3, 16) : '';
+          if (sub) y += wrapSvgLines('▸ ' + sub, 192, Math.max(11.5, bFs - 0.5), 3).length * 16 + 18;
+          else y += 16;
+          if (y > maxBot) maxBot = y;
+          return { bx, content: lblSvg + bSvg + subSvg };
+        });
+        const boxH = maxBot - headerBottom;
+        return wrapCard(maxBot + 26, rendered.map((c) => `
+  <rect x="${c.bx}" y="${headerBottom}" width="225" height="${boxH}" rx="16" fill="${sp.box}" fill-opacity="${boxFillOp}" stroke="${sp.stroke}"/>
+  ${c.content}`).join(''));
+      }
+
+      if (cType === 'grid_2x2') {
+        const cells = items.slice(0, 4);
+        let row1H = 160;
+        let row2H = 160;
+        const calcCell = (it) => {
+          const lbl = String(it.label || '').trim();
+          const body = String(it.body || '').trim();
+          const sub = String(it.sub || '').trim();
+          const bFs = fitFont([body, sub], 13.5, 11.5, 28, 70);
+          const lg = Math.round(bFs * 1.4);
+          const lLines = wrapSvgLines(lbl, 312, 14.5, 2);
+          const bLines = wrapSvgLines(body, 312, bFs, 4);
+          const sLines = sub ? wrapSvgLines('▸ ' + sub, 312, 11.5, 2) : [];
+          const h = 26 + lLines.length * 19 + 8 + bLines.length * lg + (sLines.length ? 8 + sLines.length * 16 : 0) + 18;
+          return { lbl, body, sub, bFs, lg, lLines, bLines, h };
+        };
+        const cData = cells.map(calcCell);
+        row1H = Math.max(150, cData[0]?.h || 150, cData[1]?.h || 150);
+        row2H = Math.max(150, cData[2]?.h || 150, cData[3]?.h || 150);
+        const gridSvg = cData.map((cd, i) => {
+          const col = i % 2;
+          const row = Math.floor(i / 2);
+          const bx = col === 0 ? 40 : 412;
+          const by = row === 0 ? headerBottom : headerBottom + row1H + 14;
+          const bh = row === 0 ? row1H : row2H;
+          const tx = bx + 18;
+          let y = by + 28;
+          const lSvg = svgText(cd.lbl, tx, y, 312, 14.5, `fill="${sp.accent}" font-weight="900"`, 2, 19);
+          y += cd.lLines.length * 19 + 8;
+          const bSvg = svgText(cd.body, tx, y, 312, cd.bFs, `fill="${sp.body}" font-weight="600"`, 4, cd.lg);
+          y += cd.bLines.length * cd.lg + 8;
+          const sSvg = cd.sub ? svgText('▸ ' + cd.sub, tx, y, 312, 11.5, `fill="${sp.sub}" font-weight="700"`, 2, 16) : '';
+          return `
+  <rect x="${bx}" y="${by}" width="348" height="${bh}" rx="16" fill="${sp.box}" fill-opacity="${boxFillOp}" stroke="${sp.stroke}"/>
+  ${lSvg}${bSvg}${sSvg}`;
+        }).join('');
+        return wrapCard(headerBottom + row1H + (cells.length > 2 ? 14 + row2H : 0) + 26, gridSvg);
+      }
+
+      if (cType === 'compare_2col') {
+        const half = Math.ceil(items.length / 2);
+        const leftItems = items.slice(0, half);
+        const rightItems = items.slice(half);
+        const lLbl = String(card.leftLabel || '핵심 포인트').trim();
+        const rLbl = String(card.rightLabel || '주의·체크 포인트').trim();
+        const lW = Math.min(220, Math.max(90, Math.round([...lLbl].reduce((a, c) => a + charPx(c, 12), 0) + 28)));
+        const rW = Math.min(220, Math.max(90, Math.round([...rLbl].reduce((a, c) => a + charPx(c, 12), 0) + 28)));
+        const cFs = fitFont(items.map((x) => (x.label || '') + (x.body || '')), 13.5, 11.5, 60, 150);
+        const cLg = Math.round(cFs * 1.4);
+        const renderCol = (arr, xStart, textColor) => {
+          let y = headerBottom + 72;
+          return {
+            svg: arr.map((it) => {
+              const txt = it.label ? `${it.label}: ${it.body || ''}` : (it.body || '');
+              const lines = wrapSvgLines('• ' + txt, 312, cFs, 3);
+              const s = svgText('• ' + txt, xStart, y, 312, cFs, `fill="${textColor}" font-weight="600"`, 3, cLg);
+              y += lines.length * cLg + 14;
+              return s;
+            }).join(''),
+            endY: y
+          };
+        };
+        const L = renderCol(leftItems, 55, pal.c5DoText);
+        const R = renderCol(rightItems, 430, pal.c5DontText);
+        const boxH = Math.max(240, L.endY - headerBottom + 12, R.endY - headerBottom + 12);
+        return wrapCard(headerBottom + boxH + 26, `
+  <rect x="40" y="${headerBottom}" width="345" height="${boxH}" rx="16" fill="${pal.c5DoBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#10b981"/>
+  <rect x="55" y="${headerBottom + 18}" width="${lW}" height="26" rx="13" fill="#10b981"/>
+  ${svgText(lLbl, 55 + Math.round(lW / 2), headerBottom + 35, lW - 14, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${L.svg}
+  <rect x="415" y="${headerBottom}" width="345" height="${boxH}" rx="16" fill="${pal.c5DontBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#ef4444"/>
+  <rect x="430" y="${headerBottom + 18}" width="${rW}" height="26" rx="13" fill="#ef4444"/>
+  ${svgText(rLbl, 430 + Math.round(rW / 2), headerBottom + 35, rW - 14, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${R.svg}`);
+      }
+
+      // wide_bars or qa_cards (가로 와이드 스택 카드)
+      let curY = headerBottom;
+      const prefix = cType === 'qa_cards' ? 'Q. ' : '';
+      const barSvgs = items.slice(0, 4).map((it, i) => {
+        const lbl = prefix + String(it.label || `핵심 ${i + 1}`).trim();
+        const body = String(it.body || '').trim();
+        const sub = String(it.sub || '').trim();
+        const bFs = fitFont(body, 14, 12, 26, 62);
+        const lg = Math.round(bFs * 1.4);
+        const lLines = wrapSvgLines(lbl, 608, 15, 2);
+        const bLines = wrapSvgLines(body, 608, bFs, 3);
+        const bh = Math.max(82, 22 + lLines.length * 20 + 6 + bLines.length * lg + (sub ? 22 : 12));
+        const badgeSvg = cType === 'qa_cards'
+          ? `<rect x="58" y="${curY + 18}" width="44" height="26" rx="8" fill="${sp.stroke}"/><text x="80" y="${curY + 35}" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">Q${i + 1}</text>`
+          : `<circle cx="80" cy="${curY + Math.round(bh / 2)}" r="20" fill="${sp.stroke}"/><text x="80" y="${curY + Math.round(bh / 2) + 6}" fill="#ffffff" font-size="15" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${i + 1}</text>`;
+        const lSvg = svgText(lbl, 118, curY + 30, 608, 15, `fill="${sp.accent}" font-weight="900"`, 2, 20);
+        const bSvg = svgText(body, 118, curY + 30 + lLines.length * 20 + 4, 608, bFs, `fill="${sp.body}" font-weight="600"`, 3, lg);
+        const sSvg = sub ? svgText('▸ ' + sub, 118, curY + bh - 14, 608, 11.5, `fill="${sp.sub}" font-weight="700"`, 1) : '';
+        const block = `
+  <rect x="40" y="${curY}" width="720" height="${bh}" rx="16" fill="${sp.box}" fill-opacity="${boxFillOp}" stroke="${sp.stroke}"/>
+  ${badgeSvg}${lSvg}${bSvg}${sSvg}`;
+        curY += bh + 12;
+        return block;
+      }).join('');
+      return wrapCard(curY + 16, barSvgs);
+    };
+
+    const hasCustomCards = Array.isArray(p.customCards) && p.customCards.length >= 5;
+    const img1Uri = encodeSvg(hasCustomCards ? renderCustomCardSvg(p.customCards[0], 0) : card1Svg);
+    const img2Uri = encodeSvg(hasCustomCards ? renderCustomCardSvg(p.customCards[1], 1) : card2Svg);
+    const img3Uri = encodeSvg(hasCustomCards ? renderCustomCardSvg(p.customCards[2], 2) : card3Svg);
+    const img4Uri = encodeSvg(hasCustomCards ? renderCustomCardSvg(p.customCards[3], 3) : card4Svg);
+    const img5Uri = encodeSvg(hasCustomCards ? renderCustomCardSvg(p.customCards[4], 4) : card5Svg);
+    const cap1Txt = hasCustomCards ? (p.customCards[0].title || cleanTitle) : `${cleanTitle} 핵심 골든타임 요약 인포그래픽`;
+    const cap2Txt = hasCustomCards ? (p.customCards[1].title || c2SubTxt) : c2SubTxt;
+    const cap3Txt = hasCustomCards ? (p.customCards[2].title || c3SubTxt) : c3SubTxt;
+    const cap4Txt = hasCustomCards ? (p.customCards[3].title || c4SubTxt) : c4SubTxt;
+    const cap5Txt = hasCustomCards ? (p.customCards[4].title || c5SubTxt) : c5SubTxt;
 
     // 4. 본문 텍스트 구성 (공백 포함 2,300자 내외 정밀 작성)
     const introText = p.intro;
@@ -16987,8 +17184,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 1] 핵심 요약 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img1Uri}" alt="그림 1: 핵심 요약 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${cleanTitle} 핵심 골든타임 요약 인포그래픽</p>
+          <img src="${img1Uri}" alt="그림 1: ${xe(cap1Txt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 1] ${xe(cap1Txt)}</p>
         </div>
 
         <!-- [핵심 주제별 구성 블록] -->
@@ -17008,8 +17205,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 2] 원인 분석 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img2Uri}" alt="그림 2: ${xe(c2SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] ${xe(c2SubTxt)}</p>
+          <img src="${img2Uri}" alt="그림 2: ${xe(cap2Txt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] ${xe(cap2Txt)}</p>
         </div>
 
         <!-- 4. [2장] 실전 솔루션 -->
@@ -17022,8 +17219,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 3] 실전 솔루션 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img3Uri}" alt="그림 3: ${xe(c3SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] ${xe(c3SubTxt)}</p>
+          <img src="${img3Uri}" alt="그림 3: ${xe(cap3Txt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] ${xe(cap3Txt)}</p>
         </div>
 
         <!-- 5. [3장] 심층 적용 가이드 -->
@@ -17036,8 +17233,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 4] 맞춤 실천/비교 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img4Uri}" alt="그림 4: ${xe(c4SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] ${xe(c4SubTxt)}</p>
+          <img src="${img4Uri}" alt="그림 4: ${xe(cap4Txt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] ${xe(cap4Txt)}</p>
         </div>
 
         <!-- 6. [4장] 핵심 원칙 & Q&A -->
@@ -17050,8 +17247,8 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 5] 핵심 비교 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img5Uri}" alt="그림 5: ${xe(c5SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] ${xe(c5SubTxt)}</p>
+          <img src="${img5Uri}" alt="그림 5: ${xe(cap5Txt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] ${xe(cap5Txt)}</p>
         </div>
 
         <!-- 7. 에필로그 및 응원 마무리 -->

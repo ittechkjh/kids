@@ -209,14 +209,31 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
   "c5Do1": "✔ 왼쪽 항목 1", "c5Do2": "✔ 왼쪽 항목 2", "c5Do3": "✔ 왼쪽 항목 3", "c5Do4": "✔ 왼쪽 항목 4",
   "c5Dont1": "✘ 오른쪽 항목 1", "c5Dont2": "✘ 오른쪽 항목 2", "c5Dont3": "✘ 오른쪽 항목 3", "c5Dont4": "✘ 오른쪽 항목 4",
   "intro": "영상 도입부 및 강연자 문제 제기 요약 (350자 이상, 문단 구분 \\n\\n)",
-  "sec1": "1장 심층 원인 분석: 영상에서 다룬 구체적 사례와 이유 (400자 이상, 문단 구분 \\n\\n)",
-  "sec2": "2장 실전 솔루션: 강연자가 제안한 구체적 방법론 상세 해설 (450자 이상, 문단 구분 \\n\\n)",
-  "sec3Title": "3장 본문 소제목 ('3장'이나 번호 없이 순수 제목만 15~28자)",
+  "sec1Title": "1장 본문 소제목 (번호/1장 없이 순수 제목만, 15~28자)",
+  "sec1": "1장 심층 분석: 영상 내용 기반 핵심 배경과 사례 (400자 이상, 문단 구분 \\n\\n)",
+  "sec2Title": "2장 본문 소제목 (번호/2장 없이 순수 제목만, 15~28자)",
+  "sec2": "2장 핵심 전략: 영상에서 제안한 구체적 방법론 상세 해설 (450자 이상, 문단 구분 \\n\\n)",
+  "sec3Title": "3장 본문 소제목 (번호/3장 없이 순수 제목만, 15~28자)",
   "sec3": "3장 심층 적용 가이드: 영상 내용 기반 단계·기준·사례 상세 설명 (350자 이상, 문단 구분 \\n\\n)",
-  "sec4Title": "4장 본문 소제목 ('4장'이나 번호 없이 순수 제목만 15~28자)",
+  "sec4Title": "4장 본문 소제목 (번호/4장 없이 순수 제목만, 15~28자)",
   "sec4": "4장 부모 Q&A 2가지 및 핵심 요약 (Q1, Q2 형태, 350자 이상)",
-  "outro": "따뜻한 에필로그 및 요약 마무리 (150자 이상)"
-}}"""
+  "outro": "따뜻한 에필로그 및 요약 마무리 (150자 이상)",
+  "customCards": [
+    {{
+      "cardType": "summary_hero | wide_bars | columns_3 | grid_2x2 | compare_2col | qa_cards 중 영상 내용에 가장 어울리는 유형을 카드마다 다르게 선택",
+      "kicker": "[카테고리 태그] 예: [핵심 브리핑], [트렌드 변화], [유형별 비교], [실전 체크리스트], [핵심 Q&A] 등 영상에 맞게 자유 작성",
+      "title": "카드 큰 제목 (14~28자, 영상 내용에 맞게 자유 작성)",
+      "leftLabel": "compare_2col일 때만 왼쪽 배지(예: 과거 방식 / 장점 / 권장), 아니면 빈 문자열",
+      "rightLabel": "compare_2col일 때만 오른쪽 배지(예: 최신 트렌드 / 주의점 / 피할 점), 아니면 빈 문자열",
+      "items": [
+        {{"label": "항목 소제목 또는 질문 (8~22자)", "body": "영상 속 구체적 내용·수치·사례를 담은 완결 문장 (24~42자)", "sub": "핵심 포인트 한 줄 (12~22자)"}}
+      ]
+    }}
+  ]
+}}
+※ 중요 규칙:
+- customCards는 반드시 5개의 카드로 구성하되, 5장이 서로 다른 cardType과 영상 내용에 맞는 자유로운 주제로 구성하세요. (예: 모든 영상에 억지로 '4주 루틴'이나 'DO vs DON'T'를 넣지 말고, 영상이 비교/트렌드/사례/Q&A/단계 중 무엇을 다루는지에 따라 자유롭게 선택)
+- wide_bars, columns_3은 items 3개, grid_2x2는 items 4개, compare_2col은 items 4~6개(앞 절반은 왼쪽, 뒤 절반은 오른쪽), qa_cards는 items 2~3개, summary_hero는 items 3개로 채우세요."""
 
     # Try calling Gemini API with YouTube fileUri first (native multimodal video understanding)
     endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
