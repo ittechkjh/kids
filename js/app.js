@@ -16888,7 +16888,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     const sec4Html = formatParagraphs(sec4Text);
     const outroHtml = formatParagraphs(outroText);
 
-    const plainText = `${cleanTitle}${quotesPlainText}\n\n${introText}\n\n1. 심층 분석: 왜 이런 일이 일어날까?\n${sec1Text}\n\n2. 실전 솔루션: 부모의 단계별 맞춤 행동 지침 3단계\n${sec2Text}\n\n3. 실패 없는 정착: 4주 완성 생활 루틴 구축 로드맵\n${sec3Text}\n\n4. 전문가 Q&A 및 주의사항\n${sec4Text}\n\n${outroText}`;
+    const plainText = `${cleanTitle}${quotesPlainText}\n\n${introText}\n\n1. ${p.sec1Title || c2SubTxt}\n${sec1Text}\n\n2. ${p.sec2Title || c3SubTxt}\n${sec2Text}\n\n3. ${p.sec3Title || c4SubTxt}\n${sec3Text}\n\n4. ${p.sec4Title || c5SubTxt}\n${sec4Text}\n\n${outroText}`;
 
     // 5. 네이버 블로그 최적화 리치 HTML 아티클 구성 (5장의 인포그래픽 이미지 완벽 배치)
     const html = `<!-- dodam-report-v3 -->
@@ -16930,7 +16930,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         <!-- 3. [1장] 심층 배경 & 원인 분석 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-sky-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #0284c7; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>1. 심층 분석: 왜 이런 일이 일어날까?</span>
+            <span>1. ${xe(p.sec1Title || c2SubTxt)}</span>
           </h2>
           ${sec1Html}
           ${storyCallout}
@@ -16938,22 +16938,22 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 
         <!-- [그림 2] 원인 분석 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img2Uri}" alt="그림 2: 원인 분석 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] 아동 발달 및 환경적 3대 원인 분석</p>
+          <img src="${img2Uri}" alt="그림 2: ${xe(c2SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 2] ${xe(c2SubTxt)}</p>
         </div>
 
         <!-- 4. [2장] 실전 솔루션 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-emerald-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #059669; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>2. 실전 솔루션: 부모 맞춤형 행동 지침 3단계 공식</span>
+            <span>2. ${xe(p.sec2Title || c3SubTxt)}</span>
           </h2>
           ${sec2Html}
         </div>
 
         <!-- [그림 3] 실전 솔루션 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img3Uri}" alt="그림 3: 실전 솔루션 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] 가정 맞춤형 실전 솔루션 3단계 로드맵</p>
+          <img src="${img3Uri}" alt="그림 3: ${xe(c3SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] ${xe(c3SubTxt)}</p>
         </div>
 
         <!-- 5. [3장] 심층 적용 가이드 -->
