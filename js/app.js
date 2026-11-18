@@ -17197,7 +17197,7 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
         clearInterval(elapsedTimer);
       }
 
-      if (!meta.aiProfile && !meta.hasTranscript) {
+      if (!meta.aiProfile) {
         const reason = meta.aiError
           ? `AI 분석 오류: ${meta.aiError}`
           : 'Gemini API 키가 설정되지 않았거나 서버 연결에 실패했습니다.';
