@@ -15205,7 +15205,7 @@ class DodamCommunityApp {
     const prompt = `당신은 대한민국 최고의 소아청소년과 전문의 및 아동교육 전문가이자 네이버 육아 파워블로거입니다.
 첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
 필수 JSON 필드:
-{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"chapters":[{"time":"00:00","title":"구간주제"}],"c2Title":"[원인 분석] 제목","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[실천 로드맵] 4주 루틴","c4W1":"1주차","c4W1L1":"✔ 실천1","c4W1L2":"✔ 실천2","c4W1L3":"✔ 실천3","c4W1Sub":"핵심","c4W2":"2주차","c4W2L1":"✔ 실천1","c4W2L2":"✔ 실천2","c4W2L3":"✔ 실천3","c4W2Sub":"핵심","c4W3":"3주차","c4W3L1":"✔ 실천1","c4W3L2":"✔ 실천2","c4W3L3":"✔ 실천3","c4W3Sub":"핵심","c4W4":"4주차","c4W4L1":"✔ 실천1","c4W4L2":"✔ 실천2","c4W4L3":"✔ 실천3","c4W4Sub":"핵심","c5Title":"[부모 실천 조언] DO vs DON'T","c5Do1":"✔ 할것1","c5Do2":"✔ 할것2","c5Do3":"✔ 할것3","c5Do4":"✔ 할것4","c5Dont1":"✘ 피할것1","c5Dont2":"✘ 피할것2","c5Dont3":"✘ 피할것3","c5Dont4":"✘ 피할것4","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
+{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[실천 로드맵] 4주 루틴","c4Sub":"영상 내용 기반 4주 로드맵 부제목(15~26자)","c4W1":"1주차","c4W1L1":"✔ 실천1","c4W1L2":"✔ 실천2","c4W1L3":"✔ 실천3","c4W1Sub":"핵심","c4W2":"2주차","c4W2L1":"✔ 실천1","c4W2L2":"✔ 실천2","c4W2L3":"✔ 실천3","c4W2Sub":"핵심","c4W3":"3주차","c4W3L1":"✔ 실천1","c4W3L2":"✔ 실천2","c4W3L3":"✔ 실천3","c4W3Sub":"핵심","c4W4":"4주차","c4W4L1":"✔ 실천1","c4W4L2":"✔ 실천2","c4W4L3":"✔ 실천3","c4W4Sub":"핵심","c5Title":"[부모 실천 조언] DO vs DON'T","c5Sub":"영상 내용 기반 실천지침 부제목(15~26자)","c5Do1":"✔ 할것1","c5Do2":"✔ 할것2","c5Do3":"✔ 할것3","c5Do4":"✔ 할것4","c5Dont1":"✘ 피할것1","c5Dont2":"✘ 피할것2","c5Dont3":"✘ 피할것3","c5Dont4":"✘ 피할것4","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
 
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
@@ -16442,177 +16442,319 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       return `<text x="${x}" y="${y}" font-size="${fs}" font-family="'Pretendard', sans-serif" ${attrs}>${tspans}</text>`;
     };
 
+    // 내용 분량에 따라 글자 크기를 자동 확대/축소해 공백을 줄이고 가독성 극대화
+    const fitFont = (strOrArr, maxFs, minFs, shortLen = 14, longLen = 52) => {
+      const total = Array.isArray(strOrArr)
+        ? strOrArr.reduce((acc, s) => acc + String(s || '').trim().length, 0)
+        : String(strOrArr || '').trim().length;
+      if (total <= shortLen) return maxFs;
+      if (total >= longLen) return minFs;
+      const ratio = (total - shortLen) / Math.max(1, longLen - shortLen);
+      return Number((maxFs - (maxFs - minFs) * ratio).toFixed(1));
+    };
+
+    // 영상 주제/분위기에 맞는 테마 & 레이아웃 자동 선택
+    const themeKey = (p.visualTheme && ['edu_blueprint', 'clinical_mint', 'warm_editorial', 'deep_focus'].includes(p.visualTheme))
+      ? p.visualTheme
+      : (topicKey === 'edu' ? 'edu_blueprint' : (topicKey === 'health' || topicKey === 'sleep') ? 'clinical_mint' : (topicKey === 'food' || topicKey === 'growth') ? 'warm_editorial' : 'deep_focus');
+
+    const layoutMode = (p.layoutVariant && ['cards', 'timeline_flow', 'horizontal_bars', 'split_compare'].includes(p.layoutVariant))
+      ? p.layoutVariant
+      : (topicKey === 'edu' ? 'timeline_flow' : topicKey === 'health' ? 'horizontal_bars' : topicKey === 'growth' ? 'split_compare' : 'cards');
+
+    const PALETTES = {
+      edu_blueprint: {
+        c1A: '#0f172a', c1B: '#1e1b4b', c1Box: '#1e293b', c1Stroke: '#38bdf8', c1Title: '#ffffff', c1Accent: '#38bdf8', c1Body: '#f1f5f9', c1Sub: '#94a3b8',
+        c2A: '#082f49', c2B: '#0f172a', c2Box: '#0c4a6e', c2Stroke: '#38bdf8', c2Title: '#ffffff', c2Accent: '#38bdf8', c2Body: '#e0f2fe', c2Sub: '#94a3b8',
+        c3A: '#064e3b', c3B: '#0f172a', c3Box: '#065f46', c3Stroke: '#10b981', c3Title: '#ffffff', c3Accent: '#34d399', c3Body: '#f0fdf4', c3Sub: '#cbd5e1',
+        c4A: '#78350f', c4B: '#0f172a', c4Box: '#92400e', c4Stroke: '#f59e0b', c4Title: '#ffffff', c4Accent: '#fde047', c4Body: '#ffffff', c4Sub: '#fef3c7',
+        c5A: '#581c87', c5B: '#0f172a', c5Title: '#ffffff', c5Accent: '#f472b6', c5DoBg: '#064e3b', c5DoText: '#a7f3d0', c5DontBg: '#7f1d1d', c5DontText: '#fca5a5'
+      },
+      clinical_mint: {
+        c1A: '#f0fdf4', c1B: '#ecfeff', c1Box: '#ffffff', c1Stroke: '#0d9488', c1Title: '#0f172a', c1Accent: '#0f766e', c1Body: '#1e293b', c1Sub: '#475569',
+        c2A: '#f8fafc', c2B: '#eff6ff', c2Box: '#ffffff', c2Stroke: '#0284c7', c2Title: '#0f172a', c2Accent: '#0369a1', c2Body: '#1e293b', c2Sub: '#475569',
+        c3A: '#f0fdf4', c3B: '#f8fafc', c3Box: '#ffffff', c3Stroke: '#059669', c3Title: '#0f172a', c3Accent: '#047857', c3Body: '#1e293b', c3Sub: '#475569',
+        c4A: '#fffbeb', c4B: '#fef3c7', c4Box: '#ffffff', c4Stroke: '#d97706', c4Title: '#0f172a', c4Accent: '#b45309', c4Body: '#1e293b', c4Sub: '#475569',
+        c5A: '#f8fafc', c5B: '#f1f5f9', c5Title: '#0f172a', c5Accent: '#0f766e', c5DoBg: '#ecfdf5', c5DoText: '#065f46', c5DontBg: '#fff1f2', c5DontText: '#9f1239'
+      },
+      warm_editorial: {
+        c1A: '#fff7ed', c1B: '#fef2f2', c1Box: '#ffffff', c1Stroke: '#ea580c', c1Title: '#1c1917', c1Accent: '#c2410c', c1Body: '#292524', c1Sub: '#57534e',
+        c2A: '#fefce8', c2B: '#fff7ed', c2Box: '#ffffff', c2Stroke: '#d97706', c2Title: '#1c1917', c2Accent: '#b45309', c2Body: '#292524', c2Sub: '#57534e',
+        c3A: '#fdf2f8', c3B: '#fff1f2', c3Box: '#ffffff', c3Stroke: '#db2777', c3Title: '#1c1917', c3Accent: '#be185d', c3Body: '#292524', c3Sub: '#57534e',
+        c4A: '#f5f3ff', c4B: '#eef2ff', c4Box: '#ffffff', c4Stroke: '#7c3aed', c4Title: '#1c1917', c4Accent: '#6d28d9', c4Body: '#292524', c4Sub: '#57534e',
+        c5A: '#fffbeb', c5B: '#f8fafc', c5Title: '#1c1917', c5Accent: '#c2410c', c5DoBg: '#ecfdf5', c5DoText: '#065f46', c5DontBg: '#fef2f2', c5DontText: '#991b1b'
+      },
+      deep_focus: {
+        c1A: '#1e1b4b', c1B: '#312e81', c1Box: '#1e293b', c1Stroke: '#818cf8', c1Title: '#ffffff', c1Accent: '#a5b4fc', c1Body: '#f8fafc', c1Sub: '#cbd5e1',
+        c2A: '#172554', c2B: '#0f172a', c2Box: '#1e293b', c2Stroke: '#60a5fa', c2Title: '#ffffff', c2Accent: '#93c5fd', c2Body: '#eff6ff', c2Sub: '#94a3b8',
+        c3A: '#134e4a', c3B: '#0f172a', c3Box: '#115e59', c3Stroke: '#2dd4bf', c3Title: '#ffffff', c3Accent: '#5eead4', c3Body: '#f0fdfa', c3Sub: '#ccfbf1',
+        c4A: '#4c1d95', c4B: '#0f172a', c4Box: '#3b0764', c4Stroke: '#c084fc', c4Title: '#ffffff', c4Accent: '#e9d5ff', c4Body: '#faf5ff', c4Sub: '#d8b4fe',
+        c5A: '#311042', c5B: '#0f172a', c5Title: '#ffffff', c5Accent: '#f472b6', c5DoBg: '#064e3b', c5DoText: '#a7f3d0', c5DontBg: '#7f1d1d', c5DontText: '#fca5a5'
+      }
+    };
+    const pal = PALETTES[themeKey] || PALETTES.edu_blueprint;
+    const isLightCard = themeKey === 'clinical_mint' || themeKey === 'warm_editorial';
+    const boxFillOp = isLightCard ? '0.96' : '0.55';
+
+    // 영상 내용에 맞춘 동적 부제목 (고정 하드코딩 제거)
+    const c1SubTxt = p.c1Sub || `${p.subName} · 핵심 요약 & 실전 가이드`;
+    const c2SubTxt = p.c2Sub || String(p.c2Title || '').replace(/^\[.*?\]\s*/, '') || '핵심 원인 정밀 분석';
+    const c3SubTxt = p.c3Sub || String(p.c3Title || '').replace(/^\[.*?\]\s*/, '') || '즉시 적용 가능한 단계별 실행 전략';
+    const c4SubTxt = p.c4Sub || String(p.c4Title || '').replace(/^\[.*?\]\s*/, '') || '주차별 가정 실천 로드맵';
+    const c5SubTxt = p.c5Sub || String(p.c5Title || '').replace(/^\[.*?\]\s*/, '') || '실천해야 할 핵심 원칙 vs 피해야 할 행동';
+
+    // [그림 1] 핵심 요약 카드 (동적 폰트 크기)
+    const b1Fs = fitFont([p.b1, p.b2, p.b3], 15.5, 12.5, 80, 175);
     const card1Svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="100%" height="auto">
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#1e1b4b"/>
+      <stop offset="0%" stop-color="${pal.c1A}"/>
+      <stop offset="100%" stop-color="${pal.c1B}"/>
     </linearGradient>
   </defs>
   <rect width="800" height="470" rx="20" fill="url(#g1)"/>
-  <rect x="35" y="30" width="160" height="30" rx="15" fill="#f97316"/>
-  ${svgText(p.targetAge, 115, 50, 145, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  <rect x="635" y="30" width="130" height="30" rx="15" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
-  <text x="700" y="50" fill="#38bdf8" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
-  ${svgText('★ ' + p.subName + ' 핵심 요약 브리핑', 35, 102, 725, 13, 'fill="#38bdf8" font-weight="800"', 2, 17)}
-  ${svgText(cleanTitle, 35, 138, 725, 19, 'fill="#ffffff" font-weight="900"', 2, 24)}
-  <text x="35" y="172" fill="#94a3b8" font-size="13" font-family="'Pretendard', sans-serif">소아청소년 교육·발달 임상 지침 &amp; 전문 상담 솔루션 정밀 분석</text>
-  <rect x="35" y="194" width="730" height="248" rx="16" fill="#1e293b" fill-opacity="0.8" stroke="#334155"/>
-  <text x="60" y="228" fill="#fbbf24" font-size="14" font-weight="900" font-family="'Pretendard', sans-serif">✔ 실전 핵심 3줄 골든타임 요약</text>
-  ${svgText('1. ' + p.b1, 60, 262, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
-  ${svgText('2. ' + p.b2, 60, 322, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
-  ${svgText('3. ' + p.b3, 60, 382, 675, 12.5, 'fill="#f1f5f9"', 3, 18)}
+  <rect x="35" y="28" width="180" height="30" rx="15" fill="${pal.c1Stroke}"/>
+  ${svgText(p.targetAge, 125, 48, 165, 12, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  <rect x="635" y="28" width="130" height="30" rx="15" fill="${isLightCard ? '#ffffff' : '#1e293b'}" stroke="${pal.c1Stroke}" stroke-width="1.5"/>
+  <text x="700" y="48" fill="${pal.c1Accent}" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
+  ${svgText('★ ' + p.subName, 35, 96, 725, 13.5, `fill="${pal.c1Accent}" font-weight="800"`, 2, 18)}
+  ${svgText(cleanTitle, 35, 132, 725, fitFont(cleanTitle, 21, 17, 18, 42), `fill="${pal.c1Title}" font-weight="900"`, 2, 25)}
+  ${svgText(c1SubTxt, 35, 168, 725, 13, `fill="${pal.c1Sub}" font-weight="600"`, 1)}
+  <rect x="35" y="192" width="730" height="250" rx="16" fill="${pal.c1Box}" fill-opacity="${isLightCard ? '0.96' : '0.85'}" stroke="${pal.c1Stroke}" stroke-opacity="0.5"/>
+  <text x="60" y="228" fill="${isLightCard ? pal.c1Accent : '#fbbf24'}" font-size="15" font-weight="900" font-family="'Pretendard', sans-serif">✔ 핵심 요약 3가지</text>
+  ${svgText('1. ' + p.b1, 60, 265, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
+  ${svgText('2. ' + p.b2, 60, 326, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
+  ${svgText('3. ' + p.b3, 60, 387, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
 </svg>`.trim();
 
-    const card2Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
+    // [그림 2] 원인 분석 카드 (가로 와이드 바 vs 3컬럼 카드 레이아웃 가변 + 동적 폰트)
+    const c2Items = [
+      { n: '1', t: p.c2Box1Title, p1: p.c2Box1P1, p2: p.c2Box1P2, sub: p.c2Box1Sub },
+      { n: '2', t: p.c2Box2Title, p1: p.c2Box2P1, p2: p.c2Box2P2, sub: p.c2Box2Sub },
+      { n: '3', t: p.c2Box3Title, p1: p.c2Box3P1, p2: p.c2Box3P2, sub: p.c2Box3Sub }
+    ];
+    let card2Svg = '';
+    if (layoutMode === 'horizontal_bars' || layoutMode === 'split_compare') {
+      const barRows = c2Items.map((it, idx) => {
+        const yTop = 104 + idx * 102;
+        const bodyTxt = [it.p1, it.p2, it.sub].filter(Boolean).join(' · ');
+        const tFs = fitFont(it.t, 16.5, 13.5, 8, 16);
+        const bFs = fitFont(bodyTxt, 14.5, 11.8, 22, 58);
+        return `
+  <rect x="40" y="${yTop}" width="720" height="88" rx="16" fill="${pal.c2Box}" fill-opacity="${boxFillOp}" stroke="${pal.c2Stroke}"/>
+  <circle cx="84" cy="${yTop + 44}" r="22" fill="${pal.c2Stroke}"/>
+  <text x="84" y="${yTop + 50}" fill="#ffffff" font-size="16" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${it.n}</text>
+  ${svgText(it.t, 124, yTop + 34, 610, tFs, `fill="${pal.c2Accent}" font-weight="900"`, 1)}
+  ${svgText(bodyTxt, 124, yTop + 62, 610, bFs, `fill="${pal.c2Body}" font-weight="600"`, 2, Math.round(bFs * 1.35))}`;
+      }).join('');
+      card2Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 426" width="100%" height="auto">
   <defs>
     <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#082f49"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="${pal.c2A}"/>
+      <stop offset="100%" stop-color="${pal.c2B}"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="420" rx="20" fill="url(#g2)"/>
-  ${svgText(p.c2Title, 40, 45, 720, 13, 'fill="#38bdf8" font-weight="900"', 2, 17)}
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">아이가 이런 반응과 태도를 보이는 근본적 원인</text>
-  
-  <rect x="40" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="72" cy="138" r="16" fill="#0284c7"/>
-  <text x="72" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">1</text>
-  ${svgText(p.c2Box1Title, 98, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
-  ${svgText(p.c2Box1P1, 55, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box1P2, 55, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box1Sub, 55, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
-
-  <rect x="287" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="319" cy="138" r="16" fill="#0284c7"/>
-  <text x="319" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">2</text>
-  ${svgText(p.c2Box2Title, 345, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
-  ${svgText(p.c2Box2P1, 302, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box2P2, 302, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box2Sub, 302, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
-
-  <rect x="535" y="105" width="225" height="280" rx="16" fill="#0c4a6e" fill-opacity="0.5" stroke="#0284c7"/>
-  <circle cx="567" cy="138" r="16" fill="#0284c7"/>
-  <text x="567" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">3</text>
-  ${svgText(p.c2Box3Title, 593, 143, 152, 13, 'fill="#38bdf8" font-weight="900"', 2, 16)}
-  ${svgText(p.c2Box3P1, 550, 184, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box3P2, 550, 240, 194, 11.5, 'fill="#e0f2fe"', 3, 16)}
-  ${svgText(p.c2Box3Sub, 550, 310, 194, 10.5, 'fill="#94a3b8"', 3, 15)}
+  <rect width="800" height="426" rx="20" fill="url(#g2)"/>
+  ${svgText(p.c2Title, 40, 44, 720, 13.5, `fill="${pal.c2Accent}" font-weight="900"`, 1)}
+  ${svgText(c2SubTxt, 40, 76, 720, 18.5, `fill="${pal.c2Title}" font-weight="900"`, 1)}
+  ${barRows}
 </svg>`.trim();
+    } else {
+      const c2Boxes = c2Items.map((it, idx) => {
+        const bx = idx === 0 ? 40 : idx === 1 ? 287 : 535;
+        const tx = bx + 15;
+        const tFs = fitFont(it.t, 15.5, 12.5, 6, 13);
+        const bodyFs = fitFont([it.p1, it.p2, it.sub], 14.5, 11.5, 22, 55);
+        const lg = Math.round(bodyFs * 1.42);
+        return `
+  <rect x="${bx}" y="105" width="225" height="275" rx="16" fill="${pal.c2Box}" fill-opacity="${boxFillOp}" stroke="${pal.c2Stroke}"/>
+  <circle cx="${bx + 32}" cy="138" r="16" fill="${pal.c2Stroke}"/>
+  <text x="${bx + 32}" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${it.n}</text>
+  ${svgText(it.t, bx + 58, 143, 152, tFs, `fill="${pal.c2Accent}" font-weight="900"`, 2, 17)}
+  ${svgText(it.p1, tx, 192, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 3, lg)}
+  ${svgText(it.p2, tx, 250, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 3, lg)}
+  ${svgText(it.sub, tx, 316, 194, Math.max(11.5, bodyFs - 1), `fill="${pal.c2Sub}" font-weight="600"`, 2, lg)}`;
+      }).join('');
+      card2Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 415" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="${pal.c2A}"/>
+      <stop offset="100%" stop-color="${pal.c2B}"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="415" rx="20" fill="url(#g2)"/>
+  ${svgText(p.c2Title, 40, 44, 720, 13.5, `fill="${pal.c2Accent}" font-weight="900"`, 1)}
+  ${svgText(c2SubTxt, 40, 76, 720, 18.5, `fill="${pal.c2Title}" font-weight="900"`, 1)}
+  ${c2Boxes}
+</svg>`.trim();
+    }
 
+    // [그림 3] 실전 솔루션 카드 (짧은 문장은 큰 글씨로 꽉 채우기 + 단계 화살표 옵션)
+    const c3Steps = [
+      { name: p.c3Step1Name, t: p.c3Step1Title, p1: p.c3Step1P1, p2: p.c3Step1P2, sub: p.c3Step1Sub },
+      { name: p.c3Step2Name, t: p.c3Step2Title, p1: p.c3Step2P1, p2: p.c3Step2P2, sub: p.c3Step2Sub },
+      { name: p.c3Step3Name, t: p.c3Step3Title, p1: p.c3Step3P1, p2: p.c3Step3P2, sub: p.c3Step3Sub }
+    ];
+    const showArrows = layoutMode === 'timeline_flow' || themeKey === 'edu_blueprint';
+    const c3Boxes = c3Steps.map((st, idx) => {
+      const bx = idx === 0 ? 40 : idx === 1 ? 287 : 535;
+      const tx = bx + 16;
+      const tFs = fitFont(st.t, 16, 13, 8, 15);
+      const bFs = fitFont([st.p1, st.p2, st.sub], 15, 11.8, 22, 52);
+      const lg = Math.round(bFs * 1.42);
+      const arrowSvg = (showArrows && idx < 2)
+        ? `<text x="${bx + 236}" y="248" fill="${pal.c3Accent}" font-size="20" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">➔</text>`
+        : '';
+      return `
+  <rect x="${bx}" y="105" width="225" height="275" rx="16" fill="${pal.c3Box}" fill-opacity="${boxFillOp}" stroke="${pal.c3Stroke}"/>
+  <rect x="${tx}" y="123" width="116" height="26" rx="13" fill="${pal.c3Stroke}"/>
+  ${svgText(st.name, tx + 58, 140, 106, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  ${svgText(st.t, tx, 178, 192, tFs, `fill="${pal.c3Accent}" font-weight="900"`, 2, 18)}
+  ${svgText(st.p1, tx, 218, 192, bFs, `fill="${pal.c3Body}" font-weight="700"`, 3, lg)}
+  ${svgText(st.p2, tx, 272, 192, bFs, `fill="${pal.c3Body}" font-weight="700"`, 3, lg)}
+  ${svgText(st.sub, tx, 330, 192, Math.max(11.5, bFs - 1), `fill="${pal.c3Sub}" font-weight="600"`, 2, lg)}
+  ${arrowSvg}`;
+    }).join('');
     const card3Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 415" width="100%" height="auto">
   <defs>
     <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#064e3b"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="${pal.c3A}"/>
+      <stop offset="100%" stop-color="${pal.c3B}"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="420" rx="20" fill="url(#g3)"/>
-  ${svgText(p.c3Title, 40, 45, 720, 13, 'fill="#34d399" font-weight="900"', 2, 17)}
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 부모가 즉시 실천하는 단계별 대화 공식</text>
-
-  <rect x="40" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="55" y="123" width="105" height="24" rx="12" fill="#10b981"/>
-  ${svgText(p.c3Step1Name, 107, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step1Title, 55, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
-  ${svgText(p.c3Step1P1, 55, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step1P2, 55, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step1Sub, 55, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
-
-  <rect x="287" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="302" y="123" width="105" height="24" rx="12" fill="#059669"/>
-  ${svgText(p.c3Step2Name, 354, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step2Title, 302, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
-  ${svgText(p.c3Step2P1, 302, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step2P2, 302, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step2Sub, 302, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
-
-  <rect x="535" y="105" width="225" height="280" rx="16" fill="#065f46" fill-opacity="0.5" stroke="#10b981"/>
-  <rect x="550" y="123" width="105" height="24" rx="12" fill="#047857"/>
-  ${svgText(p.c3Step3Name, 602, 139, 95, 10.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  ${svgText(p.c3Step3Title, 550, 173, 194, 13, 'fill="#a7f3d0" font-weight="900"', 2, 16)}
-  ${svgText(p.c3Step3P1, 550, 206, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step3P2, 550, 260, 194, 11.5, 'fill="#f0fdf4"', 3, 16)}
-  ${svgText(p.c3Step3Sub, 550, 326, 194, 10.5, 'fill="#cbd5e1"', 3, 15)}
+  <rect width="800" height="415" rx="20" fill="url(#g3)"/>
+  ${svgText(p.c3Title, 40, 44, 720, 13.5, `fill="${pal.c3Accent}" font-weight="900"`, 1)}
+  ${svgText(c3SubTxt, 40, 76, 720, 18.5, `fill="${pal.c3Title}" font-weight="900"`, 1)}
+  ${c3Boxes}
 </svg>`.trim();
 
-    // card4Svg: 각 주차별 텍스트 길이에 맞춰 Y 좌표와 박스 높이를 동적 계산 (잘림/말줄임 0%)
+    // [그림 4] 4주 실천 로드맵 (2x2 넓은 그리드 vs 4열 동적 높이 가변 + 자동 폰트 스케일링)
     const c4Cols = [
-      { bx: 40, tx: 53, h: p.c4W1, items: [p.c4W1L1, p.c4W1L2, p.c4W1L3], sub: p.c4W1Sub },
-      { bx: 223, tx: 236, h: p.c4W2, items: [p.c4W2L1, p.c4W2L2, p.c4W2L3], sub: p.c4W2Sub },
-      { bx: 406, tx: 419, h: p.c4W3, items: [p.c4W3L1, p.c4W3L2, p.c4W3L3], sub: p.c4W3Sub },
-      { bx: 589, tx: 602, h: p.c4W4, items: [p.c4W4L1, p.c4W4L2, p.c4W4L3], sub: p.c4W4Sub }
+      { h: p.c4W1, items: [p.c4W1L1, p.c4W1L2, p.c4W1L3], sub: p.c4W1Sub },
+      { h: p.c4W2, items: [p.c4W2L1, p.c4W2L2, p.c4W2L3], sub: p.c4W2Sub },
+      { h: p.c4W3, items: [p.c4W3L1, p.c4W3L2, p.c4W3L3], sub: p.c4W3Sub },
+      { h: p.c4W4, items: [p.c4W4L1, p.c4W4L2, p.c4W4L3], sub: p.c4W4Sub }
     ];
-    let c4MaxBottom = 384;
-    const c4ColsRendered = c4Cols.map((col) => {
-      let curY = 128;
-      const hLines = wrapSvgLines(col.h, 142, 11.5, 4);
-      const hTspans = hLines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
-      const hSvg = `<text x="${col.tx}" y="${curY}" font-size="11.5" font-family="'Pretendard', sans-serif" fill="#fde047" font-weight="900">${hTspans}</text>`;
-      curY += hLines.length * 15 + 14;
-      const itemsSvg = col.items.map((it) => {
-        const lines = wrapSvgLines(it, 142, 10.5, 5);
-        const tspans = lines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
-        const tag = `<text x="${col.tx}" y="${curY}" font-size="10.5" font-family="'Pretendard', sans-serif" fill="#ffffff">${tspans}</text>`;
-        curY += lines.length * 15 + 12;
-        return tag;
-      }).join('\n  ');
-      curY += 6;
-      const subLines = wrapSvgLines(col.sub, 142, 10.5, 4);
-      const subTspans = subLines.map((ln, idx) => idx === 0 ? `<tspan x="${col.tx}">${xe(ln)}</tspan>` : `<tspan x="${col.tx}" dy="15">${xe(ln)}</tspan>`).join('');
-      const subSvg = `<text x="${col.tx}" y="${curY}" font-size="10.5" font-family="'Pretendard', sans-serif" fill="#fef3c7">${subTspans}</text>`;
-      curY += subLines.length * 15 + 18;
-      if (curY > c4MaxBottom) c4MaxBottom = curY;
-      return { bx: col.bx, content: `${hSvg}\n  ${itemsSvg}\n  ${subSvg}` };
-    });
-    const c4BoxH = c4MaxBottom - 102;
-    const c4SvgH = c4MaxBottom + 28;
-    const card4Svg = `
+    let card4Svg = '';
+    if (layoutMode === 'timeline_flow' || layoutMode === 'horizontal_bars' || themeKey === 'warm_editorial') {
+      // 2x2 넓은 카드 레이아웃 (박스 폭 348px -> 큰 글씨 13.5~14.5px 적용 가능!)
+      const gridItems = c4Cols.map((col, idx) => {
+        const colIdx = idx % 2;
+        const rowIdx = Math.floor(idx / 2);
+        const bx = colIdx === 0 ? 40 : 412;
+        const by = rowIdx === 0 ? 104 : 292;
+        const tx = bx + 18;
+        const bFs = fitFont([...col.items, col.sub], 14, 12, 36, 82);
+        const lg = Math.round(bFs * 1.38);
+        let curY = by + 30;
+        const hSvg = svgText(col.h, tx, curY, 312, 14, `fill="${pal.c4Accent}" font-weight="900"`, 1);
+        curY += 28;
+        const itSvgs = col.items.map((it) => {
+          const lines = wrapSvgLines(it, 312, bFs, 2);
+          const s = svgText(it, tx, curY, 312, bFs, `fill="${pal.c4Body}" font-weight="600"`, 2, lg);
+          curY += lines.length * lg + 8;
+          return s;
+        }).join('');
+        const subSvg = svgText('▸ ' + col.sub, tx, by + 156, 312, 12, `fill="${pal.c4Sub}" font-weight="700"`, 1);
+        return `
+  <rect x="${bx}" y="${by}" width="348" height="174" rx="16" fill="${pal.c4Box}" fill-opacity="${boxFillOp}" stroke="${pal.c4Stroke}"/>
+  ${hSvg}${itSvgs}${subSvg}`;
+      }).join('');
+      card4Svg = `
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 492" width="100%" height="auto">
+  <defs>
+    <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="${pal.c4A}"/>
+      <stop offset="100%" stop-color="${pal.c4B}"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="492" rx="20" fill="url(#g4)"/>
+  ${svgText(p.c4Title, 40, 44, 720, 13.5, `fill="${pal.c4Accent}" font-weight="900"`, 1)}
+  ${svgText(c4SubTxt, 40, 76, 720, 18.5, `fill="${pal.c4Title}" font-weight="900"`, 1)}
+  ${gridItems}
+</svg>`.trim();
+    } else {
+      let c4MaxBottom = 384;
+      const c4ColsRendered = c4Cols.map((col, idx) => {
+        const bx = idx === 0 ? 40 : idx === 1 ? 223 : idx === 2 ? 406 : 589;
+        const tx = bx + 13;
+        const bFs = fitFont([...col.items, col.sub], 12.5, 10.5, 36, 85);
+        const lg = Math.round(bFs * 1.4);
+        let curY = 128;
+        const hLines = wrapSvgLines(col.h, 142, 12, 4);
+        const hTspans = hLines.map((ln, i) => i === 0 ? `<tspan x="${tx}">${xe(ln)}</tspan>` : `<tspan x="${tx}" dy="16">${xe(ln)}</tspan>`).join('');
+        const hSvg = `<text x="${tx}" y="${curY}" font-size="12" font-family="'Pretendard', sans-serif" fill="${pal.c4Accent}" font-weight="900">${hTspans}</text>`;
+        curY += hLines.length * 16 + 14;
+        const itemsSvg = col.items.map((it) => {
+          const lines = wrapSvgLines(it, 142, bFs, 5);
+          const tspans = lines.map((ln, i) => i === 0 ? `<tspan x="${tx}">${xe(ln)}</tspan>` : `<tspan x="${tx}" dy="${lg}">${xe(ln)}</tspan>`).join('');
+          const tag = `<text x="${tx}" y="${curY}" font-size="${bFs}" font-family="'Pretendard', sans-serif" fill="${pal.c4Body}" font-weight="600">${tspans}</text>`;
+          curY += lines.length * lg + 12;
+          return tag;
+        }).join('\n  ');
+        curY += 6;
+        const subLines = wrapSvgLines(col.sub, 142, 11, 4);
+        const subTspans = subLines.map((ln, i) => i === 0 ? `<tspan x="${tx}">${xe(ln)}</tspan>` : `<tspan x="${tx}" dy="15">${xe(ln)}</tspan>`).join('');
+        const subSvg = `<text x="${tx}" y="${curY}" font-size="11" font-family="'Pretendard', sans-serif" fill="${pal.c4Sub}" font-weight="700">${subTspans}</text>`;
+        curY += subLines.length * 15 + 18;
+        if (curY > c4MaxBottom) c4MaxBottom = curY;
+        return { bx, content: `${hSvg}\n  ${itemsSvg}\n  ${subSvg}` };
+      });
+      const c4BoxH = c4MaxBottom - 102;
+      const c4SvgH = c4MaxBottom + 28;
+      card4Svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${c4SvgH}" width="100%" height="auto">
   <defs>
     <linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#78350f"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="${pal.c4A}"/>
+      <stop offset="100%" stop-color="${pal.c4B}"/>
     </linearGradient>
   </defs>
   <rect width="800" height="${c4SvgH}" rx="20" fill="url(#g4)"/>
-  ${svgText(p.c4Title, 40, 45, 720, 13, 'fill="#fde047" font-weight="900"', 2, 17)}
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">가정에서 흔들림 없이 정착시키는 단계별 로드맵</text>
+  ${svgText(p.c4Title, 40, 44, 720, 13.5, `fill="${pal.c4Accent}" font-weight="900"`, 1)}
+  ${svgText(c4SubTxt, 40, 76, 720, 18.5, `fill="${pal.c4Title}" font-weight="900"`, 1)}
   ${c4ColsRendered.map((c) => `
-  <rect x="${c.bx}" y="102" width="168" height="${c4BoxH}" rx="16" fill="#92400e" fill-opacity="0.4" stroke="#f59e0b"/>
+  <rect x="${c.bx}" y="102" width="168" height="${c4BoxH}" rx="16" fill="${pal.c4Box}" fill-opacity="${boxFillOp}" stroke="${pal.c4Stroke}"/>
   ${c.content}`).join('')}
 </svg>`.trim();
+    }
 
+    // [그림 5] DO vs DON'T 카드 (동적 폰트 스케일링)
+    const doFs = fitFont([p.c5Do1, p.c5Do2, p.c5Do3, p.c5Do4], 14, 11.5, 45, 110);
+    const dontFs = fitFont([p.c5Dont1, p.c5Dont2, p.c5Dont3, p.c5Dont4], 14, 11.5, 45, 110);
+    const c5Fs = Math.min(doFs, dontFs);
+    const c5Lg = Math.round(c5Fs * 1.42);
     const card5Svg = `
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="auto">
   <defs>
     <linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#581c87"/>
-      <stop offset="100%" stop-color="#0f172a"/>
+      <stop offset="0%" stop-color="${pal.c5A}"/>
+      <stop offset="100%" stop-color="${pal.c5B}"/>
     </linearGradient>
   </defs>
   <rect width="800" height="420" rx="20" fill="url(#g5)"/>
-  ${svgText(p.c5Title, 40, 45, 720, 13, 'fill="#f472b6" font-weight="900"', 2, 17)}
-  <text x="40" y="75" fill="#ffffff" font-size="18" font-weight="900" font-family="'Pretendard', sans-serif">부모의 실천 행동 지침</text>
+  ${svgText(p.c5Title, 40, 44, 720, 13.5, `fill="${pal.c5Accent}" font-weight="900"`, 1)}
+  ${svgText(c5SubTxt, 40, 76, 720, 18.5, `fill="${pal.c5Title}" font-weight="900"`, 1)}
 
-  <rect x="40" y="105" width="345" height="280" rx="16" fill="#10b981" fill-opacity="0.15" stroke="#10b981"/>
-  <rect x="55" y="123" width="80" height="26" rx="13" fill="#10b981"/>
-  <text x="95" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
-  ${svgText(p.c5Do1, 55, 178, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Do2, 55, 228, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Do3, 55, 278, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Do4, 55, 328, 312, 11.5, 'fill="#a7f3d0" font-weight="bold"', 3, 16)}
+  <rect x="40" y="105" width="345" height="280" rx="16" fill="${pal.c5DoBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#10b981"/>
+  <rect x="55" y="123" width="84" height="26" rx="13" fill="#10b981"/>
+  <text x="97" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
+  ${svgText(p.c5Do1, 55, 180, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Do2, 55, 232, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Do3, 55, 284, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Do4, 55, 336, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
 
-  <rect x="415" y="105" width="345" height="280" rx="16" fill="#ef4444" fill-opacity="0.15" stroke="#ef4444"/>
-  <rect x="430" y="123" width="85" height="26" rx="13" fill="#ef4444"/>
-  <text x="472" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
-  ${svgText(p.c5Dont1, 430, 178, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Dont2, 430, 228, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Dont3, 430, 278, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
-  ${svgText(p.c5Dont4, 430, 328, 312, 11.5, 'fill="#fca5a5" font-weight="bold"', 3, 16)}
+  <rect x="415" y="105" width="345" height="280" rx="16" fill="${pal.c5DontBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#ef4444"/>
+  <rect x="430" y="123" width="88" height="26" rx="13" fill="#ef4444"/>
+  <text x="474" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
+  ${svgText(p.c5Dont1, 430, 180, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Dont2, 430, 232, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Dont3, 430, 284, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
+  ${svgText(p.c5Dont4, 430, 336, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
 </svg>`.trim();
 
     // 모든 인포그래픽 하단에 사이트 홍보용 주소 푸터 추가
@@ -16621,13 +16763,15 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       if (!m) return svg;
       const h = parseInt(m[1], 10);
       const nh = h + 44;
+      const footLineColor = isLightCard ? '#cbd5e1' : '#334155';
+      const footTextColor = isLightCard ? '#0369a1' : '#38bdf8';
       return svg
         .replace(`viewBox="0 0 800 ${h}"`, `viewBox="0 0 800 ${nh}"`)
         .replace(`<rect width="800" height="${h}" rx="20"`, `<rect width="800" height="${nh}" rx="20"`)
         .replace(
           '</svg>',
-          `<line x1="40" y1="${h + 4}" x2="760" y2="${h + 4}" stroke="#334155" stroke-width="1"/>` +
-          `<text x="400" y="${h + 30}" fill="#38bdf8" font-size="15" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">🌐 도담톡 육아 커뮤니티 · dodamtalk.com</text></svg>`
+          `<line x1="40" y1="${h + 4}" x2="760" y2="${h + 4}" stroke="${footLineColor}" stroke-width="1"/>` +
+          `<text x="400" y="${h + 30}" fill="${footTextColor}" font-size="15" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">🌐 도담톡 육아 커뮤니티 · dodamtalk.com</text></svg>`
         );
     };
     const encodeSvg = (svg) => 'data:image/svg+xml;utf8,' + encodeURIComponent(withFooter(svg));
