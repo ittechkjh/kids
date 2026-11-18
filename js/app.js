@@ -15207,29 +15207,41 @@ class DodamCommunityApp {
 필수 JSON 필드:
 {"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1 제목(8~14자)","c2Box1P1":"원인1 구체적 설명 완결문장(24~38자, 단어토막 금지)","c2Box1P2":"원인1 구체적 사례·부작용 완결문장(24~38자)","c2Box1Sub":"원인1 핵심결론(14~22자)","c2Box2Title":"원인2 제목(8~14자)","c2Box2P1":"원인2 구체적 설명 완결문장(24~38자)","c2Box2P2":"원인2 구체적 사례 완결문장(24~38자)","c2Box2Sub":"원인2 핵심결론(14~22자)","c2Box3Title":"원인3 제목(8~14자)","c2Box3P1":"원인3 구체적 설명 완결문장(24~38자)","c2Box3P2":"원인3 구체적 사례 완결문장(24~38자)","c2Box3Sub":"원인3 핵심결론(14~22자)","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"솔루션1 제목(8~14자)","c3Step1P1":"솔루션1 구체적 실행법 완결문장(24~38자)","c3Step1P2":"솔루션1 실전예시·팁 완결문장(24~38자)","c3Step1Sub":"솔루션1 기대효과(14~22자)","c3Step2Name":"2단계","c3Step2Title":"솔루션2 제목(8~14자)","c3Step2P1":"솔루션2 구체적 실행법 완결문장(24~38자)","c3Step2P2":"솔루션2 실전예시·팁 완결문장(24~38자)","c3Step2Sub":"솔루션2 기대효과(14~22자)","c3Step3Name":"3단계","c3Step3Title":"솔루션3 제목(8~14자)","c3Step3P1":"솔루션3 구체적 실행법 완결문장(24~38자)","c3Step3P2":"솔루션3 실전예시·팁 완결문장(24~38자)","c3Step3Sub":"솔루션3 기대효과(14~22자)","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec3Title":"3장 소제목(15~28자)","sec4Title":"4장 소제목(15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
 
-    try {
-      const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          contents: [{
-            parts: [
-              { fileData: { mimeType: 'video/mp4', fileUri: youtubeUrl } },
-              { text: prompt }
-            ]
-          }],
-          generationConfig: { responseMimeType: 'application/json', temperature: 0.4 }
-        })
-      });
-      if (!res.ok) return null;
-      const data = await res.json();
-      const textOut = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-      if (!textOut) return null;
-      return JSON.parse(textOut);
-    } catch (e) {
-      return null;
+    this._lastGeminiDirectError = null;
+    const modelsToTry = ['gemini-3.5-flash', 'gemini-2.5-flash'];
+    for (const modelName of modelsToTry) {
+      try {
+        const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            contents: [{
+              parts: [
+                { fileData: { mimeType: 'video/mp4', fileUri: youtubeUrl } },
+                { text: prompt }
+              ]
+            }],
+            generationConfig: { responseMimeType: 'application/json', temperature: 0.4, thinkingConfig: { thinkingBudget: 0 } }
+          })
+        });
+        if (!res.ok) {
+          this._lastGeminiDirectError = `${modelName} HTTP ${res.status}`;
+          continue;
+        }
+        const data = await res.json();
+        const rawText = data?.candidates?.[0]?.content?.parts?.[0]?.text || '';
+        const cleaned = rawText.replace(/^```json\s*/i, '').replace(/```\s*$/i, '').trim();
+        if (!cleaned) {
+          this._lastGeminiDirectError = `${modelName} 빈 응답`;
+          continue;
+        }
+        return JSON.parse(cleaned);
+      } catch (e) {
+        this._lastGeminiDirectError = `${modelName}: ${e?.message || e}`;
+      }
     }
+    return null;
   }
 
   openAiParentingReportModal(isHistoryNavigation = false) {
@@ -15398,7 +15410,11 @@ class DodamCommunityApp {
     let aiProfile = null;
     let hasGeminiKey = false;
     let aiError = null;
-    const savedGeminiKey = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    let savedGeminiKey = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    if (!savedGeminiKey && typeof this.syncAdminGeminiKeyFromCloud === 'function') {
+      await this.syncAdminGeminiKeyFromCloud();
+      savedGeminiKey = (localStorage.getItem('dodam_gemini_api_key') || '').trim();
+    }
     try {
       const apiParam = savedGeminiKey ? `&apiKey=${encodeURIComponent(savedGeminiKey)}` : '';
       const tRes = await fetch(`/api/youtube-transcript?v=${videoId}${apiParam}`);
@@ -15459,9 +15475,12 @@ class DodamCommunityApp {
         aiProfile = directProfile;
         hasGeminiKey = true;
         hasTranscript = true;
+        aiError = null;
         if (directProfile.speaker && !speaker) speaker = directProfile.speaker;
         if (Array.isArray(directProfile.keyQuotes) && !keyQuotes.length) keyQuotes = directProfile.keyQuotes;
         if (Array.isArray(directProfile.chapters) && !chapters.length) chapters = directProfile.chapters;
+      } else if (this._lastGeminiDirectError && !aiError) {
+        aiError = this._lastGeminiDirectError;
       }
     }
 
@@ -17161,18 +17180,29 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     };
 
     try {
-      // [1단계: 0.0s ~ 1.8s] 유튜브 영상 메타데이터 및 전체 음성 자막 수집
-      updateProgress('1', 25, '유튜브 영상 메타데이터 및 전체 음성 자막 수집 중...', '영상 트랙 검증, 고화질 썸네일, 챕터 타임라인 및 자막 데이터 스트림 수신');
-      const [meta] = await Promise.all([
-        this.fetchYoutubeMetadata(videoId),
-        new Promise((r) => setTimeout(r, 1800))
-      ]);
+      // [1단계] 유튜브 영상 메타데이터 및 Gemini AI 실영상 분석 (경과 시간 실시간 표시)
+      let elapsedSec = 0;
+      updateProgress('1', 25, 'AI가 영상을 분석하여 핵심 내용을 추출 중입니다...', '최대 30~50초 정도 소요될 수 있습니다. 창을 닫지 말고 잠시만 기다려 주세요.');
+      const elapsedTimer = setInterval(() => {
+        elapsedSec += 1;
+        if (progressText) progressText.textContent = `[1/4] AI가 영상을 분석 중입니다... (${elapsedSec}초 경과)`;
+      }, 1000);
+      let meta;
+      try {
+        [meta] = await Promise.all([
+          this.fetchYoutubeMetadata(videoId),
+          new Promise((r) => setTimeout(r, 1800))
+        ]);
+      } finally {
+        clearInterval(elapsedTimer);
+      }
 
       if (!meta.aiProfile && !meta.hasTranscript) {
         const reason = meta.aiError
           ? `AI 분석 오류: ${meta.aiError}`
-          : 'Gemini API 키가 설정되지 않았거나 백엔드 서버(/api/youtube-transcript)에 연결되지 않았습니다.';
-        this.showToast(`⚠️ 실제 유튜브 영상 요약 실패: ${reason}`);
+          : 'Gemini API 키가 설정되지 않았거나 서버 연결에 실패했습니다.';
+        this.showToast(`⚠️ 리포트 생성 실패: ${reason}`);
+        alert(`⚠️ 리포트 생성이 중단되었습니다.\n\n사유: ${reason}\n\n잠시 후 다시 시도하거나 모달의 [🔑 Gemini API 키 설정] 상태를 확인해 주세요.`);
         if (progressEl) progressEl.classList.add('hidden');
         if (runBtn) {
           runBtn.disabled = false;

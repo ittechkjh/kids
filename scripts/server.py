@@ -229,7 +229,8 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
         "contents": [{"parts": parts}],
         "generationConfig": {
             "responseMimeType": "application/json",
-            "temperature": 0.4
+            "temperature": 0.4,
+            "thinkingConfig": {"thinkingBudget": 0}
         }
     }
 
