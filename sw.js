@@ -1,5 +1,5 @@
 // DodamTalk Service Worker (PWA 지원 및 오프라인 셸 캐싱)
-const CACHE_NAME = 'dodam-cache-v1';
+const CACHE_NAME = 'dodam-cache-v2';
 const ASSETS_TO_CACHE = [
   './',
   './index.html',
