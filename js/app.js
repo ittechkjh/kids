@@ -15205,7 +15205,7 @@ class DodamCommunityApp {
     const prompt = `당신은 대한민국 최고의 소아청소년과 전문의 및 아동교육 전문가이자 네이버 육아 파워블로거입니다.
 첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
 필수 JSON 필드:
-{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[실천 로드맵] 4주 루틴","c4Sub":"영상 내용 기반 4주 로드맵 부제목(15~26자)","c4W1":"1주차","c4W1L1":"✔ 실천1","c4W1L2":"✔ 실천2","c4W1L3":"✔ 실천3","c4W1Sub":"핵심","c4W2":"2주차","c4W2L1":"✔ 실천1","c4W2L2":"✔ 실천2","c4W2L3":"✔ 실천3","c4W2Sub":"핵심","c4W3":"3주차","c4W3L1":"✔ 실천1","c4W3L2":"✔ 실천2","c4W3L3":"✔ 실천3","c4W3Sub":"핵심","c4W4":"4주차","c4W4L1":"✔ 실천1","c4W4L2":"✔ 실천2","c4W4L3":"✔ 실천3","c4W4Sub":"핵심","c5Title":"[부모 실천 조언] DO vs DON'T","c5Sub":"영상 내용 기반 실천지침 부제목(15~26자)","c5Do1":"✔ 할것1","c5Do2":"✔ 할것2","c5Do3":"✔ 할것3","c5Do4":"✔ 할것4","c5Dont1":"✘ 피할것1","c5Dont2":"✘ 피할것2","c5Dont3":"✘ 피할것3","c5Dont4":"✘ 피할것4","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
+{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec3Title":"3장 소제목(15~28자)","sec4Title":"4장 소제목(15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
 
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
@@ -16503,29 +16503,62 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
     const c4SubTxt = p.c4Sub || String(p.c4Title || '').replace(/^\[.*?\]\s*/, '') || '주차별 가정 실천 로드맵';
     const c5SubTxt = p.c5Sub || String(p.c5Title || '').replace(/^\[.*?\]\s*/, '') || '실천해야 할 핵심 원칙 vs 피해야 할 행동';
 
-    // [그림 1] 핵심 요약 카드 (동적 폰트 크기)
-    const b1Fs = fitFont([p.b1, p.b2, p.b3], 15.5, 12.5, 80, 175);
+    // [그림 1] 핵심 요약 카드 (배지 너비·제목 줄 수에 따른 완전 동적 Y 좌표로 글자 겹침 0%)
+    const targetAgeTxt = String(p.targetAge || '전 연령 학부모').trim();
+    const ageBadgeW = Math.min(380, Math.max(150, Math.round([...targetAgeTxt].reduce((a, c) => a + charPx(c, 12), 0) + 36)));
+    const subNameTxt = '★ ' + String(p.subName || '').trim();
+    const subNameLines = wrapSvgLines(subNameTxt, 725, 13.5, 2);
+    const titleFs = fitFont(cleanTitle, 21, 16.5, 18, 44);
+    const titleLg = Math.round(titleFs * 1.32);
+    const titleLines = wrapSvgLines(cleanTitle, 725, titleFs, 3);
+    const c1SubLines = wrapSvgLines(c1SubTxt, 725, 13, 2);
+
+    let c1Y = 92;
+    const subNameY = c1Y;
+    c1Y += subNameLines.length * 18 + 10;
+    const titleY = c1Y;
+    c1Y += titleLines.length * titleLg + 4;
+    const c1SubY = c1Y;
+    c1Y += c1SubLines.length * 18 + 18;
+
+    const c1BoxY = c1Y;
+    const b1Fs = fitFont([p.b1, p.b2, p.b3], 15, 12.5, 80, 175);
+    const bLg = Math.round(b1Fs * 1.44);
+    let bY = c1BoxY + 66;
+    const b1Lines = wrapSvgLines('1. ' + p.b1, 675, b1Fs, 3);
+    const b1Y = bY;
+    bY += b1Lines.length * bLg + 14;
+    const b2Lines = wrapSvgLines('2. ' + p.b2, 675, b1Fs, 3);
+    const b2Y = bY;
+    bY += b2Lines.length * bLg + 14;
+    const b3Lines = wrapSvgLines('3. ' + p.b3, 675, b1Fs, 3);
+    const b3Y = bY;
+    bY += b3Lines.length * bLg + 22;
+
+    const c1BoxH = bY - c1BoxY;
+    const c1SvgH = bY + 26;
+
     const card1Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 470" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${c1SvgH}" width="100%" height="auto">
   <defs>
     <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${pal.c1A}"/>
       <stop offset="100%" stop-color="${pal.c1B}"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="470" rx="20" fill="url(#g1)"/>
-  <rect x="35" y="28" width="180" height="30" rx="15" fill="${pal.c1Stroke}"/>
-  ${svgText(p.targetAge, 125, 48, 165, 12, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
-  <rect x="635" y="28" width="130" height="30" rx="15" fill="${isLightCard ? '#ffffff' : '#1e293b'}" stroke="${pal.c1Stroke}" stroke-width="1.5"/>
-  <text x="700" y="48" fill="${pal.c1Accent}" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
-  ${svgText('★ ' + p.subName, 35, 96, 725, 13.5, `fill="${pal.c1Accent}" font-weight="800"`, 2, 18)}
-  ${svgText(cleanTitle, 35, 132, 725, fitFont(cleanTitle, 21, 17, 18, 42), `fill="${pal.c1Title}" font-weight="900"`, 2, 25)}
-  ${svgText(c1SubTxt, 35, 168, 725, 13, `fill="${pal.c1Sub}" font-weight="600"`, 1)}
-  <rect x="35" y="192" width="730" height="250" rx="16" fill="${pal.c1Box}" fill-opacity="${isLightCard ? '0.96' : '0.85'}" stroke="${pal.c1Stroke}" stroke-opacity="0.5"/>
-  <text x="60" y="228" fill="${isLightCard ? pal.c1Accent : '#fbbf24'}" font-size="15" font-weight="900" font-family="'Pretendard', sans-serif">✔ 핵심 요약 3가지</text>
-  ${svgText('1. ' + p.b1, 60, 265, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
-  ${svgText('2. ' + p.b2, 60, 326, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
-  ${svgText('3. ' + p.b3, 60, 387, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, Math.round(b1Fs * 1.45))}
+  <rect width="800" height="${c1SvgH}" rx="20" fill="url(#g1)"/>
+  <rect x="35" y="26" width="${ageBadgeW}" height="30" rx="15" fill="${pal.c1Stroke}"/>
+  ${svgText(targetAgeTxt, 35 + Math.round(ageBadgeW / 2), 46, ageBadgeW - 18, 12, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
+  <rect x="635" y="26" width="130" height="30" rx="15" fill="${isLightCard ? '#ffffff' : '#1e293b'}" stroke="${pal.c1Stroke}" stroke-width="1.5"/>
+  <text x="700" y="46" fill="${pal.c1Accent}" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">dodamtalk.com</text>
+  ${svgText(subNameTxt, 35, subNameY, 725, 13.5, `fill="${pal.c1Accent}" font-weight="800"`, 2, 18)}
+  ${svgText(cleanTitle, 35, titleY, 725, titleFs, `fill="${pal.c1Title}" font-weight="900"`, 3, titleLg)}
+  ${svgText(c1SubTxt, 35, c1SubY, 725, 13, `fill="${pal.c1Sub}" font-weight="600"`, 2, 18)}
+  <rect x="35" y="${c1BoxY}" width="730" height="${c1BoxH}" rx="16" fill="${pal.c1Box}" fill-opacity="${isLightCard ? '0.96' : '0.85'}" stroke="${pal.c1Stroke}" stroke-opacity="0.5"/>
+  <text x="60" y="${c1BoxY + 34}" fill="${isLightCard ? pal.c1Accent : '#fbbf24'}" font-size="15" font-weight="900" font-family="'Pretendard', sans-serif">✔ 핵심 요약 3가지</text>
+  ${svgText('1. ' + p.b1, 60, b1Y, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, bLg)}
+  ${svgText('2. ' + p.b2, 60, b2Y, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, bLg)}
+  ${svgText('3. ' + p.b3, 60, b3Y, 675, b1Fs, `fill="${pal.c1Body}" font-weight="600"`, 3, bLg)}
 </svg>`.trim();
 
     // [그림 2] 원인 분석 카드 (가로 와이드 바 vs 3컬럼 카드 레이아웃 가변 + 동적 폰트)
@@ -16723,7 +16756,11 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
 </svg>`.trim();
     }
 
-    // [그림 5] DO vs DON'T 카드 (동적 폰트 스케일링)
+    // [그림 5] 핵심 비교 / 실천 지침 카드 (영상 내용에 따른 가변 라벨 + 동적 폰트 스케일링)
+    const c5LeftLabel = String(p.c5LeftLabel || 'DO (권장)').trim();
+    const c5RightLabel = String(p.c5RightLabel || "DON'T (금기)").trim();
+    const c5LeftW = Math.min(200, Math.max(84, Math.round([...c5LeftLabel].reduce((a, c) => a + charPx(c, 12), 0) + 28)));
+    const c5RightW = Math.min(200, Math.max(88, Math.round([...c5RightLabel].reduce((a, c) => a + charPx(c, 12), 0) + 28)));
     const doFs = fitFont([p.c5Do1, p.c5Do2, p.c5Do3, p.c5Do4], 14, 11.5, 45, 110);
     const dontFs = fitFont([p.c5Dont1, p.c5Dont2, p.c5Dont3, p.c5Dont4], 14, 11.5, 45, 110);
     const c5Fs = Math.min(doFs, dontFs);
@@ -16741,16 +16778,16 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
   ${svgText(c5SubTxt, 40, 76, 720, 18.5, `fill="${pal.c5Title}" font-weight="900"`, 1)}
 
   <rect x="40" y="105" width="345" height="280" rx="16" fill="${pal.c5DoBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#10b981"/>
-  <rect x="55" y="123" width="84" height="26" rx="13" fill="#10b981"/>
-  <text x="97" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DO (권장)</text>
+  <rect x="55" y="123" width="${c5LeftW}" height="26" rx="13" fill="#10b981"/>
+  ${svgText(c5LeftLabel, 55 + Math.round(c5LeftW / 2), 140, c5LeftW - 14, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
   ${svgText(p.c5Do1, 55, 180, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
   ${svgText(p.c5Do2, 55, 232, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
   ${svgText(p.c5Do3, 55, 284, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
   ${svgText(p.c5Do4, 55, 336, 312, c5Fs, `fill="${pal.c5DoText}" font-weight="bold"`, 3, c5Lg)}
 
   <rect x="415" y="105" width="345" height="280" rx="16" fill="${pal.c5DontBg}" fill-opacity="${isLightCard ? '0.95' : '0.45'}" stroke="#ef4444"/>
-  <rect x="430" y="123" width="88" height="26" rx="13" fill="#ef4444"/>
-  <text x="474" y="140" fill="#ffffff" font-size="12" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">DON'T (금기)</text>
+  <rect x="430" y="123" width="${c5RightW}" height="26" rx="13" fill="#ef4444"/>
+  ${svgText(c5RightLabel, 430 + Math.round(c5RightW / 2), 140, c5RightW - 14, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
   ${svgText(p.c5Dont1, 430, 180, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
   ${svgText(p.c5Dont2, 430, 232, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
   ${svgText(p.c5Dont3, 430, 284, 312, c5Fs, `fill="${pal.c5DontText}" font-weight="bold"`, 3, c5Lg)}
@@ -16919,32 +16956,32 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
           <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 3] 가정 맞춤형 실전 솔루션 3단계 로드맵</p>
         </div>
 
-        <!-- 5. [3장] 생활 루틴 구축 -->
+        <!-- 5. [3장] 심층 적용 가이드 -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-amber-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #d97706; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>3. 실패 없는 정착: 4주 완성 생활 루틴 구축 체크리스트</span>
+            <span>3. ${xe(p.sec3Title || c4SubTxt)}</span>
           </h2>
           ${sec3Html}
         </div>
 
-        <!-- [그림 4] 4주 루틴 인포그래픽 카드 -->
+        <!-- [그림 4] 맞춤 실천/비교 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img4Uri}" alt="그림 4: 4주 루틴 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] 4주 완성 생활 루틴 구축 체크리스트</p>
+          <img src="${img4Uri}" alt="그림 4: ${xe(c4SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 4] ${xe(c4SubTxt)}</p>
         </div>
 
-        <!-- 6. [4장] DO vs DON'T 및 Q&A -->
+        <!-- 6. [4장] 핵심 원칙 & Q&A -->
         <div class="space-y-3 pt-2">
           <h2 class="text-base sm:text-lg font-black text-slate-900 flex items-center gap-2 border-l-4 border-purple-500 pl-3" style="font-size: 18.5px; font-weight: 900; color: #0f172a; border-left: 5px solid #7c3aed; padding-left: 12px; margin: 34px 0 14px 0; line-height: 1.45; letter-spacing: -0.3px; font-family: -apple-system, BlinkMacSystemFont, 'Nanum Gothic', 'Malgun Gothic', sans-serif;">
-            <span>4. 전문가 Q&amp;A 및 부모 실천 지침</span>
+            <span>4. ${xe(p.sec4Title || c5SubTxt)}</span>
           </h2>
           ${sec4Html}
         </div>
 
-        <!-- [그림 5] DO vs DON'T 인포그래픽 카드 -->
+        <!-- [그림 5] 핵심 비교 인포그래픽 카드 -->
         <div class="my-4" style="margin: 24px 0;">
-          <img src="${img5Uri}" alt="그림 5: DO vs DON'T 인포그래픽 카드" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
-          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] 부모가 반드시 기억해야 할 DO vs DON'T</p>
+          <img src="${img5Uri}" alt="그림 5: ${xe(c5SubTxt)}" class="w-full rounded-2xl shadow-sm border border-stone-200 hover:shadow-md transition" style="max-width: 100%; height: auto; border-radius: 12px; display: block; margin: 0 auto;" />
+          <p class="text-[11px] text-slate-400 text-center mt-1.5 font-medium" style="font-size: 12px; color: #64748b; text-align: center; margin: 8px 0 0 0; font-weight: 600;">▲ [그림 5] ${xe(c5SubTxt)}</p>
         </div>
 
         <!-- 7. 에필로그 및 응원 마무리 -->
