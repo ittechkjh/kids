@@ -17192,6 +17192,14 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
       this.switchMainView('board');
       this.renderBoardCategories();
       this.renderBoardView();
+      try {
+        const rawViewed = sessionStorage.getItem('dodam_viewed_posts');
+        const viewedArr = rawViewed ? JSON.parse(rawViewed) : [];
+        if (!viewedArr.includes(newPost.id)) {
+          viewedArr.push(newPost.id);
+          sessionStorage.setItem('dodam_viewed_posts', JSON.stringify(viewedArr));
+        }
+      } catch (e) {}
       this.openPostDetailModal(newPost.id);
 
     } catch (err) {

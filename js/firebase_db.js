@@ -216,7 +216,7 @@ class DodamFirebaseService {
       },
       comments: safeComments,
       tags: safeTags,
-      views: Math.max(0, Number(post.views) || 1),
+      views: Math.max(0, Number(post.views ?? 0) || 0),
       isHot: Boolean(post.isHot),
       createdAt: String(post.createdAt || '방금 전').slice(0, 45),
       timestamp: Number(post.timestamp) || Date.now(),
