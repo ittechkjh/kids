@@ -15205,7 +15205,7 @@ class DodamCommunityApp {
     const prompt = `당신은 대한민국 최고의 소아청소년과 전문의 및 아동교육 전문가이자 네이버 육아 파워블로거입니다.
 첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
 필수 JSON 필드:
-{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1","c2Box1P1":"설명1","c2Box1P2":"설명2","c2Box1Sub":"요약","c2Box2Title":"원인2","c2Box2P1":"설명1","c2Box2P2":"설명2","c2Box2Sub":"요약","c2Box3Title":"원인3","c2Box3P1":"설명1","c2Box3P2":"설명2","c2Box3Sub":"요약","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"제목","c3Step1P1":"설명1","c3Step1P2":"설명2","c3Step1Sub":"요약","c3Step2Name":"2단계","c3Step2Title":"제목","c3Step2P1":"설명1","c3Step2P2":"설명2","c3Step2Sub":"요약","c3Step3Name":"3단계","c3Step3Title":"제목","c3Step3P1":"설명1","c3Step3P2":"설명2","c3Step3Sub":"요약","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec3Title":"3장 소제목(15~28자)","sec4Title":"4장 소제목(15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
+{"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","layoutVariant":"cards, timeline_flow, horizontal_bars, split_compare 중 1개","c1Sub":"리포트 핵심 한줄 부제목(18~30자)","keywords":["k1","k2","k3","k4","k5"],"b1":"핵심1(40~55자)","b2":"핵심2(40~55자)","b3":"핵심3(40~55자)","keyQuotes":["실제발언1","실제발언2","실제발언3"],"c2Title":"[원인 분석] 제목","c2Sub":"영상 내용 기반 원인분석 부제목(15~26자)","c2Box1Title":"원인1 제목(8~14자)","c2Box1P1":"원인1 구체적 설명 완결문장(24~38자, 단어토막 금지)","c2Box1P2":"원인1 구체적 사례·부작용 완결문장(24~38자)","c2Box1Sub":"원인1 핵심결론(14~22자)","c2Box2Title":"원인2 제목(8~14자)","c2Box2P1":"원인2 구체적 설명 완결문장(24~38자)","c2Box2P2":"원인2 구체적 사례 완결문장(24~38자)","c2Box2Sub":"원인2 핵심결론(14~22자)","c2Box3Title":"원인3 제목(8~14자)","c2Box3P1":"원인3 구체적 설명 완결문장(24~38자)","c2Box3P2":"원인3 구체적 사례 완결문장(24~38자)","c2Box3Sub":"원인3 핵심결론(14~22자)","c3Title":"[실전 솔루션] 제목","c3Sub":"영상 내용 기반 솔루션 부제목(15~26자)","c3Step1Name":"1단계","c3Step1Title":"솔루션1 제목(8~14자)","c3Step1P1":"솔루션1 구체적 실행법 완결문장(24~38자)","c3Step1P2":"솔루션1 실전예시·팁 완결문장(24~38자)","c3Step1Sub":"솔루션1 기대효과(14~22자)","c3Step2Name":"2단계","c3Step2Title":"솔루션2 제목(8~14자)","c3Step2P1":"솔루션2 구체적 실행법 완결문장(24~38자)","c3Step2P2":"솔루션2 실전예시·팁 완결문장(24~38자)","c3Step2Sub":"솔루션2 기대효과(14~22자)","c3Step3Name":"3단계","c3Step3Title":"솔루션3 제목(8~14자)","c3Step3P1":"솔루션3 구체적 실행법 완결문장(24~38자)","c3Step3P2":"솔루션3 실전예시·팁 완결문장(24~38자)","c3Step3Sub":"솔루션3 기대효과(14~22자)","c4Title":"[핵심 구성] 영상 맞춤 4가지 영역 제목(4주루틴 고정금지, 학년별/기준별/오해와진실 등 자유)","c4Sub":"영상 맞춤 4영역 부제목(15~26자)","c4W1":"항목1","c4W1L1":"✔ 세부1","c4W1L2":"✔ 세부2","c4W1L3":"✔ 세부3","c4W1Sub":"핵심","c4W2":"항목2","c4W2L1":"✔ 세부1","c4W2L2":"✔ 세부2","c4W2L3":"✔ 세부3","c4W2Sub":"핵심","c4W3":"항목3","c4W3L1":"✔ 세부1","c4W3L2":"✔ 세부2","c4W3L3":"✔ 세부3","c4W3Sub":"핵심","c4W4":"항목4","c4W4L1":"✔ 세부1","c4W4L2":"✔ 세부2","c4W4L3":"✔ 세부3","c4W4Sub":"핵심","c5Title":"[핵심 비교] 영상 맞춤 2단 비교 제목(DO vs DON'T 고정금지)","c5Sub":"영상 맞춤 2단비교 부제목(15~26자)","c5LeftLabel":"왼쪽배지(10자이내)","c5RightLabel":"오른쪽배지(10자이내)","c5Do1":"✔ 왼쪽1","c5Do2":"✔ 왼쪽2","c5Do3":"✔ 왼쪽3","c5Do4":"✔ 왼쪽4","c5Dont1":"✘ 오른쪽1","c5Dont2":"✘ 오른쪽2","c5Dont3":"✘ 오른쪽3","c5Dont4":"✘ 오른쪽4","sec3Title":"3장 소제목(15~28자)","sec4Title":"4장 소제목(15~28자)","intro":"도입부 요약(300자 이상, \\n\\n 문단구분)","sec1":"1장 심층 원인 분석(350자 이상, \\n\\n 문단구분)","sec2":"2장 실전 솔루션(400자 이상, \\n\\n 문단구분)","sec3":"3장 4주 적용 가이드(300자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(300자 이상)","outro":"에필로그 마무리(120자 이상)"}`;
 
     try {
       const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${encodeURIComponent(apiKey)}`;
@@ -16595,71 +16595,113 @@ A. 초등 시기에 기계적으로 100문제를 푸는 것보다, 깊이 있게
   ${barRows}
 </svg>`.trim();
     } else {
-      const c2Boxes = c2Items.map((it, idx) => {
+      let c2MaxBottom = 380;
+      const c2Rendered = c2Items.map((it, idx) => {
         const bx = idx === 0 ? 40 : idx === 1 ? 287 : 535;
-        const tx = bx + 15;
+        const tx = bx + 16;
         const tFs = fitFont(it.t, 15.5, 12.5, 6, 13);
-        const bodyFs = fitFont([it.p1, it.p2, it.sub], 14.5, 11.5, 22, 55);
-        const lg = Math.round(bodyFs * 1.42);
-        return `
-  <rect x="${bx}" y="105" width="225" height="275" rx="16" fill="${pal.c2Box}" fill-opacity="${boxFillOp}" stroke="${pal.c2Stroke}"/>
+        const bodyFs = fitFont([it.p1, it.p2, it.sub], 14, 11.5, 28, 76);
+        const lg = Math.round(bodyFs * 1.44);
+        const tLines = wrapSvgLines(it.t, 152, tFs, 2);
+        let curY = 143 + (tLines.length > 1 ? 36 : 26) + 12;
+        const p1Lines = wrapSvgLines('• ' + it.p1, 194, bodyFs, 5);
+        const p1Y = curY;
+        curY += p1Lines.length * lg + 14;
+        const p2Lines = wrapSvgLines('• ' + it.p2, 194, bodyFs, 5);
+        const p2Y = curY;
+        curY += p2Lines.length * lg + 16;
+        const subLines = wrapSvgLines('▸ ' + it.sub, 194, Math.max(11.5, bodyFs - 0.5), 3);
+        const subY = curY;
+        curY += subLines.length * Math.round(Math.max(11.5, bodyFs - 0.5) * 1.4) + 20;
+        if (curY > c2MaxBottom) c2MaxBottom = curY;
+        return {
+          bx,
+          inner: `
   <circle cx="${bx + 32}" cy="138" r="16" fill="${pal.c2Stroke}"/>
   <text x="${bx + 32}" y="143" fill="#ffffff" font-size="13" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">${it.n}</text>
   ${svgText(it.t, bx + 58, 143, 152, tFs, `fill="${pal.c2Accent}" font-weight="900"`, 2, 17)}
-  ${svgText(it.p1, tx, 192, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 3, lg)}
-  ${svgText(it.p2, tx, 250, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 3, lg)}
-  ${svgText(it.sub, tx, 316, 194, Math.max(11.5, bodyFs - 1), `fill="${pal.c2Sub}" font-weight="600"`, 2, lg)}`;
-      }).join('');
+  ${svgText('• ' + it.p1, tx, p1Y, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 5, lg)}
+  ${svgText('• ' + it.p2, tx, p2Y, 194, bodyFs, `fill="${pal.c2Body}" font-weight="600"`, 5, lg)}
+  ${svgText('▸ ' + it.sub, tx, subY, 194, Math.max(11.5, bodyFs - 0.5), `fill="${pal.c2Sub}" font-weight="700"`, 3, Math.round(Math.max(11.5, bodyFs - 0.5) * 1.4))}`
+        };
+      });
+      const c2BoxH = c2MaxBottom - 105;
+      const c2SvgH = c2MaxBottom + 28;
       card2Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 415" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${c2SvgH}" width="100%" height="auto">
   <defs>
     <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${pal.c2A}"/>
       <stop offset="100%" stop-color="${pal.c2B}"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="415" rx="20" fill="url(#g2)"/>
+  <rect width="800" height="${c2SvgH}" rx="20" fill="url(#g2)"/>
   ${svgText(p.c2Title, 40, 44, 720, 13.5, `fill="${pal.c2Accent}" font-weight="900"`, 1)}
   ${svgText(c2SubTxt, 40, 76, 720, 18.5, `fill="${pal.c2Title}" font-weight="900"`, 1)}
-  ${c2Boxes}
+  ${c2Rendered.map((c) => `
+  <rect x="${c.bx}" y="105" width="225" height="${c2BoxH}" rx="16" fill="${pal.c2Box}" fill-opacity="${boxFillOp}" stroke="${pal.c2Stroke}"/>
+  ${c.inner}`).join('')}
 </svg>`.trim();
     }
 
-    // [그림 3] 실전 솔루션 카드 (짧은 문장은 큰 글씨로 꽉 채우기 + 단계 화살표 옵션)
+    // [그림 3] 실전 솔루션 카드 (완결 문장 기반 동적 Y 누적 + 가변 높이 + 단계 화살표 옵션)
     const c3Steps = [
       { name: p.c3Step1Name, t: p.c3Step1Title, p1: p.c3Step1P1, p2: p.c3Step1P2, sub: p.c3Step1Sub },
       { name: p.c3Step2Name, t: p.c3Step2Title, p1: p.c3Step2P1, p2: p.c3Step2P2, sub: p.c3Step2Sub },
       { name: p.c3Step3Name, t: p.c3Step3Title, p1: p.c3Step3P1, p2: p.c3Step3P2, sub: p.c3Step3Sub }
     ];
     const showArrows = layoutMode === 'timeline_flow' || themeKey === 'edu_blueprint';
-    const c3Boxes = c3Steps.map((st, idx) => {
+    let c3MaxBottom = 380;
+    const c3Rendered = c3Steps.map((st, idx) => {
       const bx = idx === 0 ? 40 : idx === 1 ? 287 : 535;
       const tx = bx + 16;
       const tFs = fitFont(st.t, 16, 13, 8, 15);
-      const bFs = fitFont([st.p1, st.p2, st.sub], 15, 11.8, 22, 52);
-      const lg = Math.round(bFs * 1.42);
-      const arrowSvg = (showArrows && idx < 2)
-        ? `<text x="${bx + 236}" y="248" fill="${pal.c3Accent}" font-size="20" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">➔</text>`
-        : '';
-      return `
-  <rect x="${bx}" y="105" width="225" height="275" rx="16" fill="${pal.c3Box}" fill-opacity="${boxFillOp}" stroke="${pal.c3Stroke}"/>
+      const bFs = fitFont([st.p1, st.p2, st.sub], 14, 11.5, 28, 76);
+      const lg = Math.round(bFs * 1.44);
+      const tLines = wrapSvgLines(st.t, 192, tFs, 2);
+      let curY = 178 + tLines.length * 18 + 12;
+      const p1Lines = wrapSvgLines('• ' + st.p1, 192, bFs, 5);
+      const p1Y = curY;
+      curY += p1Lines.length * lg + 14;
+      const p2Lines = wrapSvgLines('• ' + st.p2, 192, bFs, 5);
+      const p2Y = curY;
+      curY += p2Lines.length * lg + 16;
+      const subLines = wrapSvgLines('▸ ' + st.sub, 192, Math.max(11.5, bFs - 0.5), 3);
+      const subY = curY;
+      curY += subLines.length * Math.round(Math.max(11.5, bFs - 0.5) * 1.4) + 20;
+      if (curY > c3MaxBottom) c3MaxBottom = curY;
+      return {
+        bx,
+        idx,
+        inner: `
   <rect x="${tx}" y="123" width="116" height="26" rx="13" fill="${pal.c3Stroke}"/>
   ${svgText(st.name, tx + 58, 140, 106, 11.5, 'fill="#ffffff" font-weight="900" text-anchor="middle"', 1)}
   ${svgText(st.t, tx, 178, 192, tFs, `fill="${pal.c3Accent}" font-weight="900"`, 2, 18)}
-  ${svgText(st.p1, tx, 218, 192, bFs, `fill="${pal.c3Body}" font-weight="700"`, 3, lg)}
-  ${svgText(st.p2, tx, 272, 192, bFs, `fill="${pal.c3Body}" font-weight="700"`, 3, lg)}
-  ${svgText(st.sub, tx, 330, 192, Math.max(11.5, bFs - 1), `fill="${pal.c3Sub}" font-weight="600"`, 2, lg)}
+  ${svgText('• ' + st.p1, tx, p1Y, 192, bFs, `fill="${pal.c3Body}" font-weight="600"`, 5, lg)}
+  ${svgText('• ' + st.p2, tx, p2Y, 192, bFs, `fill="${pal.c3Body}" font-weight="600"`, 5, lg)}
+  ${svgText('▸ ' + st.sub, tx, subY, 192, Math.max(11.5, bFs - 0.5), `fill="${pal.c3Sub}" font-weight="700"`, 3, Math.round(Math.max(11.5, bFs - 0.5) * 1.4))}`
+      };
+    });
+    const c3BoxH = c3MaxBottom - 105;
+    const c3SvgH = c3MaxBottom + 28;
+    const c3Boxes = c3Rendered.map((c) => {
+      const arrowSvg = (showArrows && c.idx < 2)
+        ? `<text x="${c.bx + 236}" y="${Math.round(105 + c3BoxH / 2)}" fill="${pal.c3Accent}" font-size="20" font-weight="900" text-anchor="middle" font-family="'Pretendard', sans-serif">➔</text>`
+        : '';
+      return `
+  <rect x="${c.bx}" y="105" width="225" height="${c3BoxH}" rx="16" fill="${pal.c3Box}" fill-opacity="${boxFillOp}" stroke="${pal.c3Stroke}"/>
+  ${c.inner}
   ${arrowSvg}`;
     }).join('');
     const card3Svg = `
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 415" width="100%" height="auto">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 ${c3SvgH}" width="100%" height="auto">
   <defs>
     <linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="${pal.c3A}"/>
       <stop offset="100%" stop-color="${pal.c3B}"/>
     </linearGradient>
   </defs>
-  <rect width="800" height="415" rx="20" fill="url(#g3)"/>
+  <rect width="800" height="${c3SvgH}" rx="20" fill="url(#g3)"/>
   ${svgText(p.c3Title, 40, 44, 720, 13.5, `fill="${pal.c3Accent}" font-weight="900"`, 1)}
   ${svgText(c3SubTxt, 40, 76, 720, 18.5, `fill="${pal.c3Title}" font-weight="900"`, 1)}
   ${c3Boxes}
