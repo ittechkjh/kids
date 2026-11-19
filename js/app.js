@@ -15209,7 +15209,7 @@ class DodamCommunityApp {
 ※ customCards는 반드시 5개로 구성하되, 영상 내용에 가장 어울리는 서로 다른 cardType과 자유로운 주제로 작성하세요.`;
 
     this._lastGeminiDirectError = null;
-    const modelsToTry = ['gemini-3-flash-preview', 'gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    const modelsToTry = ['gemini-3-flash-preview', 'gemini-3-flash-preview', 'gemini-3.5-flash'];
     for (let mIdx = 0; mIdx < modelsToTry.length; mIdx++) {
       const modelName = modelsToTry[mIdx];
       const ac = typeof AbortController !== 'undefined' ? new AbortController() : null;
