@@ -15209,14 +15209,17 @@ class DodamCommunityApp {
 ※ customCards는 반드시 5개로 구성하되, 영상 내용에 가장 어울리는 서로 다른 cardType과 자유로운 주제로 작성(억지 4주루틴/DO vs DON'T 반복 금지).`;
 
     this._lastGeminiDirectError = null;
-    const modelsToTry = ['gemini-3.5-flash', 'gemini-3-flash-preview', 'gemini-3.5-flash-lite', 'gemini-3.5-flash'];
+    const modelsToTry = ['gemini-3-flash-preview', 'gemini-3.5-flash-lite', 'gemini-3.5-flash'];
     for (let mIdx = 0; mIdx < modelsToTry.length; mIdx++) {
       const modelName = modelsToTry[mIdx];
+      const ac = typeof AbortController !== 'undefined' ? new AbortController() : null;
+      const tid = ac ? setTimeout(() => ac.abort(), 50000) : null;
       try {
         const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
+          signal: ac ? ac.signal : undefined,
           body: JSON.stringify({
             contents: [{
               parts: [
@@ -15227,6 +15230,7 @@ class DodamCommunityApp {
             generationConfig: { responseMimeType: 'application/json', temperature: 0.4, thinkingConfig: { thinkingBudget: 0 } }
           })
         });
+        if (tid) clearTimeout(tid);
         if (!res.ok) {
           this._lastGeminiDirectError = `${modelName} HTTP ${res.status}`;
           if ((res.status === 503 || res.status === 429) && mIdx < modelsToTry.length - 1) {
@@ -15248,7 +15252,8 @@ class DodamCommunityApp {
         }
         return JSON.parse(cleaned);
       } catch (e) {
-        this._lastGeminiDirectError = `${modelName}: ${e?.message || e}`;
+        if (tid) clearTimeout(tid);
+        this._lastGeminiDirectError = `${modelName}: ${e?.name === 'AbortError' ? '응답 시간 초과(50s)' : (e?.message || e)}`;
         if (mIdx < modelsToTry.length - 1) {
           await new Promise((r) => setTimeout(r, 2000));
         }
