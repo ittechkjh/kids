@@ -3,8 +3,8 @@
 window.DODAM_ADMISSIONS_DATA = {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-11-18",
-    "totalCount": 80,
+    "lastUpdated": "2026-11-19",
+    "totalCount": 83,
     "todayCollectedCount": 20,
     "officialSources": [
       {
@@ -76,6 +76,66 @@ window.DODAM_ADMISSIONS_DATA = {
     }
   ],
   "guides": [
+    {
+      "id": "moe-107697",
+      "category": "suneung",
+      "categoryId": "suneung",
+      "categoryName": "수능·평가원",
+      "title": "수능 부정행위 결코 용납하지 않겠습니다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.19",
+      "badge": "평가원 공시",
+      "badgeColor": "bg-purple-600 text-white",
+      "target": "고3 수험생 및 N수생",
+      "summary": "교육부 홍보담당관 공식 발표 - 수능 부정행위 결코 용납하지 않겠습니다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
+        "킬러문항 배제 및 EBS 연계 체감도 원칙",
+        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
+      ],
+      "content": "<h3>수능 부정행위 결코 용납하지 않겠습니다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.19</p>\n<p>교육부 홍보담당관 공식 발표 - 수능 부정행위 결코 용납하지 않겠습니다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107697&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107697&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107693",
+      "category": "suneung",
+      "categoryId": "suneung",
+      "categoryName": "수능·평가원",
+      "title": "2027 수능 강화된 부정행위 예방조치에 따른 수험생 유의사항 추가 안내",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.18",
+      "badge": "평가원 공시",
+      "badgeColor": "bg-purple-600 text-white",
+      "target": "고3 수험생 및 N수생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2027 수능 강화된 부정행위 예방조치에 따른 수험생 유의사항 추가 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
+        "킬러문항 배제 및 EBS 연계 체감도 원칙",
+        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
+      ],
+      "content": "<h3>2027 수능 강화된 부정행위 예방조치에 따른 수험생 유의사항 추가 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.18</p>\n<p>교육부 홍보담당관 공식 발표 - 2027 수능 강화된 부정행위 예방조치에 따른 수험생 유의사항 추가 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107693&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107693&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107692",
+      "category": "suneung",
+      "categoryId": "suneung",
+      "categoryName": "수능·평가원",
+      "title": "수능시험일 위급재난문자가 발송됩니다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.18",
+      "badge": "평가원 공시",
+      "badgeColor": "bg-purple-600 text-white",
+      "target": "고3 수험생 및 N수생",
+      "summary": "교육부 홍보담당관 공식 발표 - 수능시험일 위급재난문자가 발송됩니다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
+        "킬러문항 배제 및 EBS 연계 체감도 원칙",
+        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
+      ],
+      "content": "<h3>수능시험일 위급재난문자가 발송됩니다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.18</p>\n<p>교육부 홍보담당관 공식 발표 - 수능시험일 위급재난문자가 발송됩니다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107692&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107692&lev=0&statusYN=W&s=moe&m=020402"
+    },
     {
       "id": "moe-107680",
       "category": "policy",
@@ -215,66 +275,6 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>최은옥 차관, 시도 부교육감과 2027학년도 수능 현안 논의</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 최은옥 차관, 시도 부교육감과 2027학년도 수능 현안 논의. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107672&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107672&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107669",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "2026 제3회 산업계 대학교육 혁신포럼 개최",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.16",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 2026 제3회 산업계 대학교육 혁신포럼 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>2026 제3회 산업계 대학교육 혁신포럼 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 2026 제3회 산업계 대학교육 혁신포럼 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107669&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107669&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107668",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.16",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107668&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107668&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107658",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.16",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107658&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107658&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107584",
@@ -475,6 +475,66 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (반부패청렴담당관) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 반부패청렴담당관 공식 발표 - 2026년 공공기관 종합청렴도 평가 관련 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106699&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107669",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2026 제3회 산업계 대학교육 혁신포럼 개최",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.16",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2026 제3회 산업계 대학교육 혁신포럼 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2026 제3회 산업계 대학교육 혁신포럼 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 2026 제3회 산업계 대학교육 혁신포럼 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107669&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107669&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107668",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.16",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 건강 취약학생 지원 강화를 위한 「학교건강검사규칙」 입법예고. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107668&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107668&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107658",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.16",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.16</p>\n<p>교육부 홍보담당관 공식 발표 - 2027학년도 대학수학능력시험 문답지 전국 85개 시험지구에 배부 시작. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107658&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107658&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107659",
