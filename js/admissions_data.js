@@ -3,8 +3,8 @@
 window.DODAM_ADMISSIONS_DATA = {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-11-21",
-    "totalCount": 88,
+    "lastUpdated": "2026-11-22",
+    "totalCount": 90,
     "todayCollectedCount": 20,
     "officialSources": [
       {
@@ -76,6 +76,46 @@ window.DODAM_ADMISSIONS_DATA = {
     }
   ],
   "guides": [
+    {
+      "id": "moe-107743",
+      "category": "college",
+      "categoryId": "college",
+      "categoryName": "수시·정시 전형",
+      "title": "교육부, 「대입 허위 원서접수 신고센터 」 설치",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.23",
+      "badge": "대입 가이드",
+      "badgeColor": "bg-indigo-600 text-white",
+      "target": "수험생 및 고등학생 학부모",
+      "summary": "교육부 홍보담당관 공식 발표 - 교육부, 「대입 허위 원서접수 신고센터 」 설치. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "대학 입학 전형 시행계획 및 모집요강 가이드라인",
+        "학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시",
+        "대교협 대학어디가(ADIGA) 포털 연동 안내"
+      ],
+      "content": "<h3>교육부, 「대입 허위 원서접수 신고센터 」 설치</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.23</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부, 「대입 허위 원서접수 신고센터 」 설치. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>대학 입학 전형 시행계획 및 모집요강 가이드라인</li>\n  <li>학생부종합·교과·논술 및 수능위주 정시 전형 공식 공시</li>\n  <li>대교협 대학어디가(ADIGA) 포털 연동 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107743&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107743&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107742",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "영유아보육 분야 규제 개선을 위한 「영유아보육법 시행규칙 」 개정 공포",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.22",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 영유아보육 분야 규제 개선을 위한 「영유아보육법 시행규칙 」 개정 공포. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>영유아보육 분야 규제 개선을 위한 「영유아보육법 시행규칙 」 개정 공포</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.22</p>\n<p>교육부 홍보담당관 공식 발표 - 영유아보육 분야 규제 개선을 위한 「영유아보육법 시행규칙 」 개정 공포. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107742&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107742&lev=0&statusYN=W&s=moe&m=020402"
+    },
     {
       "id": "moe-107745",
       "category": "policy",
@@ -235,46 +275,6 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>「고등교육기관의 평가·인증 등에 관한 규정」 및 「고등교육법 시행령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.17</p>\n<p>교육부 홍보담당관 공식 발표 - 「고등교육기관의 평가·인증 등에 관한 규정」 및 「고등교육법 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107680&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107680&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107679",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.17",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.17</p>\n<p>교육부 홍보담당관 공식 발표 - 「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107679&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107679&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107678",
-      "category": "curriculum",
-      "categoryId": "curriculum",
-      "categoryName": "교육과정",
-      "title": "서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.17",
-      "badge": "개정 교육과정",
-      "badgeColor": "bg-teal-600 text-white",
-      "target": "초·중·고 학부모",
-      "summary": "교육부 홍보담당관 공식 발표 - 서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "2022 개정 교육과정 단계적 적용 일정 및 교과서 검정 현황",
-        "디지털·인공지능(AI) 소양 함양 및 학생 주도형 수업",
-        "학교 교육과정 편성·운영 자율권 확대"
-      ],
-      "content": "<h3>서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.17</p>\n<p>교육부 홍보담당관 공식 발표 - 서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>2022 개정 교육과정 단계적 적용 일정 및 교과서 검정 현황</li>\n  <li>디지털·인공지능(AI) 소양 함양 및 학생 주도형 수업</li>\n  <li>학교 교육과정 편성·운영 자율권 확대</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107678&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107678&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107734",
@@ -475,6 +475,46 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (반부패청렴담당관) | <strong>공시일:</strong> 2026.07.14</p>\n<p>교육부 반부패청렴담당관 공식 발표 - 2026년 민원서비스 종합평가 고충민원 만족도·신뢰도 측정을 위한 개인정보 제3자 제공사항 알림. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 반부패청렴담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106700&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106700&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107679",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.17",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.17</p>\n<p>교육부 홍보담당관 공식 발표 - 「특수외국어 교육 진흥에 관한 법률 시행령」 일부개정령안 국무회의 통과. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107679&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107679&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107678",
+      "category": "curriculum",
+      "categoryId": "curriculum",
+      "categoryName": "교육과정",
+      "title": "서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.17",
+      "badge": "개정 교육과정",
+      "badgeColor": "bg-teal-600 text-white",
+      "target": "초·중·고 학부모",
+      "summary": "교육부 홍보담당관 공식 발표 - 서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "2022 개정 교육과정 단계적 적용 일정 및 교과서 검정 현황",
+        "디지털·인공지능(AI) 소양 함양 및 학생 주도형 수업",
+        "학교 교육과정 편성·운영 자율권 확대"
+      ],
+      "content": "<h3>서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.17</p>\n<p>교육부 홍보담당관 공식 발표 - 서울대, 아랍에미리트(UAE) 리더십 개발 센터(MBRCLD)와 손잡고 현지 교육과정 운영. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>2022 개정 교육과정 단계적 적용 일정 및 교과서 검정 현황</li>\n  <li>디지털·인공지능(AI) 소양 함양 및 학생 주도형 수업</li>\n  <li>학교 교육과정 편성·운영 자율권 확대</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107678&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107678&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107677",
