@@ -2,109 +2,181 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://dodamtalk.com/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/guides.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/about.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/privacy.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/terms.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/contact.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795407702942.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795407416946.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795227326733.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795226933999.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795226452736.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795067836937.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795058532665.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795058297032.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795056474326.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1795055146980.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1794990321200.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://dodamtalk.com/reports/custom-post-1794983974823.html</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794740345546.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794743922143.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794740771140.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794622541218.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794453985244.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/custom-post-1794452876508.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/guide-seed-1.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/reports/guide-seed-2.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/guides/events.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/guides/places.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/guides/policies.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://dodamtalk.com/guides/schools.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
