@@ -20,6 +20,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 REPORTS_DIR = ROOT / "reports"
+POSTS_DIR = ROOT / "posts"
 GUIDES_DIR = ROOT / "guides"
 BASE_URL = "https://dodamtalk.com"
 FIRESTORE_PROJECT = "kids-912f5"
@@ -119,29 +120,43 @@ def fetch_firestore_posts() -> list[dict]:
         if cat.startswith("__"):
             continue
 
-        # Unpack extraMeta from comments (matches firebase_db.js unpackPostDoc)
+        # Unpack extraMeta & real comments (matches firebase_db.js unpackPostDoc)
         comments = fields.get("comments") if isinstance(fields.get("comments"), list) else []
         extra_meta = {}
+        real_comments = []
         for c in comments:
             if isinstance(c, dict) and (c.get("isDodamMeta") or c.get("_dodam_meta") or c.get("__dodam_meta__")) and isinstance(c.get("meta"), dict):
                 extra_meta = c["meta"]
+            elif isinstance(c, dict) and str(c.get("content") or "").strip():
+                real_comments.append(c)
 
         merged = {**fields, **extra_meta}
         base_id = re.sub(r"_rev_\d+$", "", str(merged.get("id") or doc_id))
         merged["id"] = base_id
         merged["_docId"] = doc_id
+        merged["_realComments"] = real_comments
 
         # Deduplicate revisions: keep latest timestamp or latest _rev_
         prev = raw_posts.get(base_id)
         if prev is None or int(merged.get("timestamp") or 0) >= int(prev.get("timestamp") or 0):
             raw_posts[base_id] = merged
 
-    result = []
+    guides_result = []
+    community_result = []
+    cat_labels = {
+        "qna": "육아 Q&A",
+        "qa": "육아 Q&A",
+        "info": "육아 정보공유",
+        "lounge": "육아 라운지",
+        "talk": "육아 일상·고민",
+        "newborn": "신생아·영아",
+        "toddler": "유아·어린이집",
+        "toddler_early": "영유아·병원 추천",
+        "local": "우리 동네 소식",
+    }
+
     for pid, p in raw_posts.items():
         if pid in deleted_ids or p.get("_docId") in deleted_ids:
-            continue
-        is_ai = bool(p.get("isAiReport") or p.get("isYoutubeSummary") or p.get("category") == "guide")
-        if not is_ai:
             continue
 
         # Filter out pending scheduled posts
@@ -167,28 +182,58 @@ def fetch_firestore_posts() -> list[dict]:
             continue
 
         title = str(p.get("title") or "").strip()
-        content_html = str(p.get("contentHtml") or p.get("content") or "").strip()
-        if not title or len(strip_html(content_html)) < 80:
+        if not title:
             continue
 
-        result.append({
-            "id": pid,
-            "title": title,
-            "contentHtml": content_html,
-            "rawText": str(p.get("rawTextContent") or p.get("content") or ""),
-            "guideType": str(p.get("guideType") or "all"),
-            "youtubeVideoId": str(p.get("youtubeVideoId") or ""),
-            "createdAt": created_str,
-            "timestamp": ts_ms,
-        })
+        is_ai = bool(p.get("isAiReport") or p.get("isYoutubeSummary") or p.get("category") == "guide")
+        content_html = str(p.get("contentHtml") or p.get("content") or "").strip()
 
-    result.sort(key=lambda x: x["timestamp"], reverse=True)
+        if is_ai:
+            if len(strip_html(content_html)) < 80:
+                continue
+            guides_result.append({
+                "id": pid,
+                "title": title,
+                "contentHtml": content_html,
+                "rawText": str(p.get("rawTextContent") or p.get("content") or ""),
+                "guideType": str(p.get("guideType") or "all"),
+                "youtubeVideoId": str(p.get("youtubeVideoId") or ""),
+                "createdAt": created_str,
+                "timestamp": ts_ms,
+            })
+        else:
+            # Skip automated test posts containing 10+ digit timestamps in the title
+            if re.search(r"\d{10,}", title):
+                continue
+            plain_body = strip_html(content_html)
+            real_cmts = p.get("_realComments") or []
+            cmt_chars = sum(len(strip_html(str(c.get("content") or ""))) for c in real_cmts)
+            # Quality guard: combined body + comments >= 80 chars so Google never flags thin content
+            if len(plain_body) + cmt_chars < 80:
+                continue
+            author_obj = p.get("author") if isinstance(p.get("author"), dict) else {}
+            author_name = str(author_obj.get("nickname") or p.get("authorName") or "도담톡 회원")
+            cat_key = str(p.get("category") or "talk")
+            community_result.append({
+                "id": pid,
+                "title": title,
+                "category": cat_labels.get(cat_key, "육아 커뮤니티"),
+                "author": author_name,
+                "contentHtml": content_html,
+                "plainText": plain_body,
+                "comments": real_cmts,
+                "createdAt": created_str,
+                "timestamp": ts_ms,
+            })
 
-    # Deduplicate by youtubeVideoId or normalized title (keep latest, matching firebase_db.js)
-    deduped = []
+    guides_result.sort(key=lambda x: x["timestamp"], reverse=True)
+    community_result.sort(key=lambda x: x["timestamp"], reverse=True)
+
+    # Deduplicate guides by youtubeVideoId or normalized title
+    deduped_guides = []
     seen_yt: set[str] = set()
     seen_titles: set[str] = set()
-    for item in result:
+    for item in guides_result:
         yt_id = str(item.get("youtubeVideoId") or "").strip()
         norm_title = re.sub(r"\[[^\]]*\]|\s+", "", item["title"])[:24]
         if yt_id and yt_id in seen_yt:
@@ -199,8 +244,20 @@ def fetch_firestore_posts() -> list[dict]:
             seen_yt.add(yt_id)
         if norm_title:
             seen_titles.add(norm_title)
-        deduped.append(item)
-    return deduped
+        deduped_guides.append(item)
+
+    # Deduplicate community posts by normalized title
+    deduped_community = []
+    seen_comm_titles: set[str] = set()
+    for item in community_result:
+        norm_title = re.sub(r"\[[^\]]*\]|\s+", "", item["title"])[:24]
+        if norm_title and norm_title in seen_comm_titles:
+            continue
+        if norm_title:
+            seen_comm_titles.add(norm_title)
+        deduped_community.append(item)
+
+    return deduped_guides, deduped_community
 
 
 def extract_json_after_marker(file_path: Path, marker_regex: str):
@@ -411,6 +468,7 @@ def build_page_shell(
       <a href="/" class="brand">🌱 도담톡 (DodamTalk)</a>
       <nav class="nav">
         <a href="/guides.html">육아백과</a>
+        <a href="/guides/community.html">커뮤니티</a>
         <a href="/guides/events.html">가족행사</a>
         <a href="/guides/places.html">나들이·맛집</a>
         <a href="/guides/policies.html">출산지원금</a>
@@ -458,24 +516,32 @@ def build_page_shell(
 """
 
 
-def update_index_and_guides_links(report_entries: list[dict]):
+def update_index_and_guides_links(report_entries: list[dict], community_entries: list[dict]):
     # 1. Update index.html between <!-- AUTO-SEO-LINKS-START --> and <!-- AUTO-SEO-LINKS-END -->
     idx_path = ROOT / "index.html"
     if idx_path.exists():
         idx_txt = idx_path.read_text(encoding="utf-8")
         hub_links = [
             '        <span class="text-slate-400 font-extrabold mr-1">📌 분야별 데이터 아카이브:</span>',
+            '        <a href="/guides/community.html" class="px-2.5 py-1 rounded-lg bg-rose-50/80 border border-rose-200 text-rose-700 hover:bg-rose-100 transition">💬 육아 커뮤니티 인기글</a>',
             '        <a href="/guides/events.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🎉 전국 가족 행사·축제</a>',
             '        <a href="/guides/places.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🍽️ 예스키즈존 나들이·맛집</a>',
             '        <a href="/guides/policies.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">💵 2026 출산·양육 지원금</a>',
             '        <a href="/guides/schools.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🏫 전국 학군·입시 분석</a>',
         ]
-        for r in report_entries[:16]:
+        for r in report_entries[:12]:
             short_t = r["title"].replace("[육아가이드]", "").strip()
             if len(short_t) > 26:
                 short_t = short_t[:25] + "…"
             hub_links.append(
                 f'        <a href="/reports/{html_lib.escape(r["id"])}.html" class="px-2.5 py-1 rounded-lg bg-emerald-50/70 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 transition">📖 {html_lib.escape(short_t)}</a>'
+            )
+        for cp in community_entries[:8]:
+            short_t = cp["title"].strip()
+            if len(short_t) > 26:
+                short_t = short_t[:25] + "…"
+            hub_links.append(
+                f'        <a href="/posts/{html_lib.escape(cp["id"])}.html" class="px-2.5 py-1 rounded-lg bg-amber-50/70 border border-amber-200 text-amber-900 hover:bg-amber-100 transition">💬 {html_lib.escape(short_t)}</a>'
             )
         replacement = "<!-- AUTO-SEO-LINKS-START -->\n" + "\n".join(hub_links) + "\n        <!-- AUTO-SEO-LINKS-END -->"
         new_idx = re.sub(
@@ -500,22 +566,37 @@ def update_index_and_guides_links(report_entries: list[dict]):
                 f'<a href="/reports/{html_lib.escape(r["id"])}.html" class="block font-extrabold text-slate-900 hover:text-emerald-700 text-sm">{t_esc}</a>'
                 f'<p class="text-xs text-slate-500 mt-1 line-clamp-2">{d_esc}</p></li>'
             )
+        comm_cards = []
+        for cp in community_entries:
+            t_esc = html_lib.escape(cp["title"])
+            d_esc = html_lib.escape(cp["desc"])
+            comm_cards.append(
+                f'        <li class="p-3.5 rounded-2xl bg-amber-50/40 border border-amber-200/70 hover:border-amber-400 transition">'
+                f'<a href="/posts/{html_lib.escape(cp["id"])}.html" class="block font-extrabold text-slate-900 hover:text-amber-800 text-sm">{t_esc}</a>'
+                f'<p class="text-xs text-slate-500 mt-1 line-clamp-2">{d_esc}</p></li>'
+            )
         section_html = f"""<!-- AUTO-REPORTS-START -->
     <section class="bg-white rounded-3xl border border-stone-200 p-6 sm:p-8 shadow-2xs space-y-5">
       <div class="flex flex-wrap items-center justify-between gap-2">
         <div>
           <span class="px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 font-extrabold text-xs">DODAMTALK ARCHIVE · {TODAY} 기준</span>
-          <h2 class="text-xl sm:text-2xl font-black text-slate-900 mt-2">도담톡 최신 육아·교육 심층 리포트 &amp; 데이터 허브 전체 목록</h2>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 mt-2">도담톡 최신 육아·교육 심층 리포트 &amp; 커뮤니티 전체 목록</h2>
         </div>
       </div>
       <div class="flex flex-wrap gap-2 text-xs font-bold">
+        <a href="/guides/community.html" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">💬 육아 커뮤니티·Q&amp;A 모음</a>
         <a href="/guides/events.html" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">🎉 전국 가족 행사·축제 일정</a>
         <a href="/guides/places.html" class="px-3 py-1.5 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition">🍽️ 예스키즈존 맛집·나들이 명소</a>
         <a href="/guides/policies.html" class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition">💵 2026 출산·양육 지원금 총정리</a>
         <a href="/guides/schools.html" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-indigo-800 border border-indigo-200 hover:bg-indigo-100 transition">🏫 전국 학군 랭킹 &amp; 2028 대입 공시</a>
       </div>
+      <h3 class="text-base font-black text-slate-900 pt-2">📖 AI 육아·교육 심층 리포트 ({len(report_entries)}건)</h3>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
 {chr(10).join(cards)}
+      </ul>
+      <h3 class="text-base font-black text-slate-900 pt-3">💬 육아 커뮤니티·Q&amp;A·정보공유 ({len(community_entries)}건)</h3>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
+{chr(10).join(comm_cards)}
       </ul>
     </section>
     <!-- AUTO-REPORTS-END -->"""
@@ -531,9 +612,10 @@ def update_index_and_guides_links(report_entries: list[dict]):
 
 def main():
     REPORTS_DIR.mkdir(parents=True, exist_ok=True)
+    POSTS_DIR.mkdir(parents=True, exist_ok=True)
     GUIDES_DIR.mkdir(parents=True, exist_ok=True)
 
-    posts = fetch_firestore_posts()
+    posts, community_posts = fetch_firestore_posts()
     events, places, policies, schools, admissions = load_hub_data()
 
     # Keep existing guide-seed-*.html entries in the list if not in Firestore
@@ -553,6 +635,7 @@ def main():
             })
 
     hub_nav_links = [
+        ("💬 도담톡 육아 커뮤니티·Q&A·정보공유 모음", "/guides/community.html"),
         ("🎉 전국 가족 행사·축제 일정 아카이브", "/guides/events.html"),
         ("🍽️ 전국 예스키즈존 맛집·나들이 명소 가이드", "/guides/places.html"),
         ("💵 2026 정부·지자체 출산·양육 지원금 총정리", "/guides/policies.html"),
@@ -783,13 +866,132 @@ def main():
         encoding="utf-8",
     )
 
+    # 2.5 Generate Static Community Post Pages (/posts/<id>.html) & Community Hub (/guides/community.html)
+    all_comm_links = [(cp["title"], f"/posts/{cp['id']}.html") for cp in community_posts]
+    community_entries = []
+    for cp in community_posts:
+        pid = cp["id"]
+        title = cp["title"]
+        author = cp["author"]
+        cat_lbl = cp["category"]
+        canonical = f"{BASE_URL}/posts/{pid}.html"
+
+        # Render paragraphs safely
+        if "<p" in cp["contentHtml"] or "<div" in cp["contentHtml"] or "<br" in cp["contentHtml"]:
+            body_inner = re.sub(r"<script[^>]*>.*?</script>", "", cp["contentHtml"], flags=re.S | re.I)
+        else:
+            paras = [p.strip() for p in re.split(r"\n+", cp["plainText"]) if p.strip()]
+            body_inner = "\n".join(f"<p>{html_lib.escape(p)}</p>" for p in paras)
+
+        # Render real comments
+        cmt_blocks = []
+        json_ld_comments = []
+        for c in cp["comments"]:
+            c_author = str(c.get("author") or "도담톡 회원")
+            c_text = strip_html(str(c.get("content") or ""))
+            if not c_text:
+                continue
+            c_badge = str(c.get("childBadge") or c.get("level") or "")
+            meta_str = f"{c_author} · {c_badge}" if c_badge else c_author
+            cmt_blocks.append(
+                f'<div class="item-box"><p class="item-meta">💬 {html_lib.escape(meta_str)}</p>'
+                f'<p class="item-desc">{html_lib.escape(c_text)}</p></div>'
+            )
+            json_ld_comments.append({
+                "@type": "Comment",
+                "text": c_text,
+                "author": {"@type": "Person", "name": c_author},
+            })
+
+        if cmt_blocks:
+            body_inner += f"\n<h2>도담톡 부모님 댓글·답변 ({len(cmt_blocks)}개)</h2>\n" + "\n".join(cmt_blocks)
+
+        desc_src = cp["plainText"] + (" " + " ".join(c["text"] for c in json_ld_comments[:2]) if json_ld_comments else "")
+        desc = truncate_desc(desc_src, 155)
+        subtitle = f"{cat_lbl} · 작성자 {author} · 댓글 {len(cmt_blocks)}개 · {TODAY} 기준"
+
+        other_comm = [lnk for lnk in all_comm_links if lnk[1] != f"/posts/{pid}.html"][:6]
+        related = hub_nav_links + other_comm + all_report_links[:4]
+
+        json_ld = {
+            "@context": "https://schema.org",
+            "@type": "DiscussionForumPosting",
+            "headline": title,
+            "text": cp["plainText"],
+            "url": canonical,
+            "datePublished": TODAY,
+            "dateModified": TODAY,
+            "inLanguage": "ko-KR",
+            "author": {"@type": "Person", "name": author},
+            "publisher": {
+                "@type": "Organization",
+                "name": "도담톡 (DodamTalk)",
+                "logo": {"@type": "ImageObject", "url": f"{BASE_URL}/og-image.png"},
+            },
+        }
+        if json_ld_comments:
+            json_ld["comment"] = json_ld_comments
+
+        page_html = build_page_shell(
+            title=f"{title} | 도담톡 육아 커뮤니티",
+            description=desc,
+            canonical=canonical,
+            badge=f"도담톡 {cat_lbl}",
+            heading=title,
+            subtitle=subtitle,
+            body_html=body_inner,
+            cta_href=f"/?post={pid}#board",
+            cta_label="💬 도담톡 게시판에서 원문 보기·댓글 달기",
+            json_ld=json_ld,
+            related_links=related,
+        )
+        (POSTS_DIR / f"{pid}.html").write_text(page_html, encoding="utf-8")
+        community_entries.append({"id": pid, "url": canonical, "title": title, "desc": desc, "category": cat_lbl, "commentCount": len(cmt_blocks)})
+
+    # Community hub page (/guides/community.html)
+    comm_hub_items = []
+    for ce in community_entries:
+        comm_hub_items.append(
+            f'<div class="item-box"><h3><a href="/posts/{html_lib.escape(ce["id"])}.html">{html_lib.escape(ce["title"])}</a></h3>'
+            f'<p class="item-meta">{html_lib.escape(ce["category"])} · 댓글 {ce["commentCount"]}개</p>'
+            f'<p class="item-desc">{html_lib.escape(ce["desc"])}</p></div>'
+        )
+    comm_hub_body = (
+        f"<p>대한민국 엄마·아빠들이 직접 나누는 육아 고민, 소아과·어린이집 추천, 독서·학습 습관, 주말 나들이 후기 및 실전 육아 꿀팁 모음입니다. ({TODAY} 기준 {len(comm_hub_items)}건 수록)</p>"
+        + "\n".join(comm_hub_items)
+    )
+    (GUIDES_DIR / "community.html").write_text(
+        build_page_shell(
+            title="도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음 | 도담톡",
+            description="신생아 수면·이유식 질문부터 초등 독서·입학 준비, 동네 소아과 추천, 아이랑 주말 나들이 후기까지 도담톡 부모님들의 생생한 육아 커뮤니티 글 모음입니다.",
+            canonical=f"{BASE_URL}/guides/community.html",
+            badge="도담톡 육아 커뮤니티 아카이브",
+            heading="도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음",
+            subtitle=f"부모님들의 생생한 육아 고민과 실전 답변 아카이브 ({TODAY} 업데이트)",
+            body_html=comm_hub_body,
+            cta_href="/#board",
+            cta_label="✍️ 도담톡 실시간 게시판에서 글쓰기·소통하기",
+            json_ld={
+                "@context": "https://schema.org",
+                "@type": "CollectionPage",
+                "name": "도담톡 육아 커뮤니티·Q&A 모음",
+                "url": f"{BASE_URL}/guides/community.html",
+                "dateModified": TODAY,
+                "inLanguage": "ko-KR",
+            },
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/community.html"] + all_report_links[:12],
+        ),
+        encoding="utf-8",
+    )
+
     # 3. Update index.html & guides.html with full static links
-    update_index_and_guides_links(report_entries)
+    update_index_and_guides_links(report_entries, community_entries)
 
     # 4. Update sitemap.xml
     sitemap_urls = [
         (f"{BASE_URL}/", "daily", "1.0"),
         (f"{BASE_URL}/guides.html", "daily", "0.9"),
+        (f"{BASE_URL}/guides/community.html", "daily", "0.9"),
         (f"{BASE_URL}/guides/events.html", "daily", "0.9"),
         (f"{BASE_URL}/guides/places.html", "daily", "0.9"),
         (f"{BASE_URL}/guides/policies.html", "weekly", "0.9"),
@@ -797,6 +999,8 @@ def main():
     ]
     for r in report_entries:
         sitemap_urls.append((r["url"], "weekly", "0.85"))
+    for ce in community_entries:
+        sitemap_urls.append((ce["url"], "weekly", "0.8"))
     sitemap_urls.extend([
         (f"{BASE_URL}/about.html", "monthly", "0.7"),
         (f"{BASE_URL}/contact.html", "monthly", "0.6"),
@@ -817,6 +1021,7 @@ def main():
 
     # 5. Update rss.xml
     rss_items = [
+        (f"{BASE_URL}/guides/community.html", "도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음", "부모님들이 직접 나누는 육아 고민, 소아과 추천, 학습 습관 및 나들이 후기 모음"),
         (f"{BASE_URL}/guides/events.html", "전국 가족 행사·어린이 축제 일정 총정리", "전국 17개 시·도 실시간 가족 축제·체험·대회 일정 아카이브"),
         (f"{BASE_URL}/guides/places.html", "전국 예스키즈존 맛집·아이와 가볼만한곳 나들이 명소", "실존 검증된 전국 예스키즈존 안심식당과 가족 나들이 명소 추천"),
         (f"{BASE_URL}/guides/policies.html", "2026 정부·지자체 출산지원금·부모급여 총정리", "첫만남이용권, 부모급여, 아동수당 및 지자체별 출산축하금 안내"),
@@ -824,6 +1029,8 @@ def main():
     ]
     for r in report_entries:
         rss_items.append((r["url"], r["title"], r["desc"]))
+    for ce in community_entries:
+        rss_items.append((ce["url"], ce["title"], ce["desc"]))
 
     rss_lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
@@ -832,7 +1039,7 @@ def main():
         "    <title>도담톡 (DodamTalk) — 대한민국 육아·정책·학군 심층 가이드</title>",
         f"    <link>{BASE_URL}/</link>",
         f'    <atom:link href="{BASE_URL}/rss.xml" rel="self" type="application/rss+xml" />',
-        "    <description>전국 가족 행사·예스키즈존 맛집·2026 출산지원금·학군 입시 및 AI 육아 심층 리포트</description>",
+        "    <description>전국 가족 행사·예스키즈존 맛집·2026 출산지원금·학군 입시·육아 커뮤니티 및 AI 심층 리포트</description>",
         "    <language>ko</language>",
         f"    <lastBuildDate>{RSS_DATE}</lastBuildDate>",
     ]
@@ -855,6 +1062,7 @@ def main():
                 "today": TODAY,
                 "reportsGenerated": len(posts),
                 "totalReportsInSitemap": len(report_entries),
+                "communityPostsGenerated": len(community_entries),
                 "eventsCount": len(ev_items),
                 "placesCount": len(pl_items),
                 "policiesCount": len(pol_items),

@@ -66,7 +66,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           TODAY_VER=$(TZ=Asia/Seoul date +%Y%m%d)
           sed -i -E "s/(events_data|restaurants_data|attractions_data|admissions_data)\.js\?v=[^\"']+/\1.js?v=${TODAY_VER}/g" index.html
-          git add -f index.html guides.html guides/ reports/ sitemap.xml rss.xml js/restaurants_data.js js/attractions_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
+          git add -f index.html guides.html guides/ reports/ posts/ sitemap.xml rss.xml js/restaurants_data.js js/attractions_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
           if git diff --staged --quiet; then
             echo "갱신할 변경사항이 없습니다."
           else
