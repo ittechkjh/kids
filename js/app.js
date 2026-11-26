@@ -15209,13 +15209,24 @@ class DodamCommunityApp {
 ※ customCards는 반드시 5개로 구성하되, 영상 내용에 가장 어울리는 서로 다른 cardType과 자유로운 주제로 작성하세요.`;
 
     this._lastGeminiDirectError = null;
-    const modelsToTry = ['gemini-3-flash-preview', 'gemini-3-flash-preview', 'gemini-3.5-flash'];
+    const modelsToTry = [
+      { name: 'gemini-3-flash-preview', thinkingBudget: 0 },
+      { name: 'gemini-3.5-flash-lite', thinkingBudget: null },
+      { name: 'gemini-3.1-flash-lite', thinkingBudget: null },
+      { name: 'gemini-3.8-flash', thinkingBudget: null },
+      { name: 'gemini-3.5-flash', thinkingBudget: 0 }
+    ];
+    const errors = [];
     for (let mIdx = 0; mIdx < modelsToTry.length; mIdx++) {
-      const modelName = modelsToTry[mIdx];
+      const { name: modelName, thinkingBudget } = modelsToTry[mIdx];
       const ac = typeof AbortController !== 'undefined' ? new AbortController() : null;
-      const tid = ac ? setTimeout(() => ac.abort(), 120000) : null;
+      const tid = ac ? setTimeout(() => ac.abort(), 90000) : null;
       try {
         const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${encodeURIComponent(apiKey)}`;
+        const generationConfig = { responseMimeType: 'application/json', temperature: 0.4 };
+        if (thinkingBudget !== null && thinkingBudget !== undefined) {
+          generationConfig.thinkingConfig = { thinkingBudget };
+        }
         const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -15227,14 +15238,15 @@ class DodamCommunityApp {
                 { text: prompt }
               ]
             }],
-            generationConfig: { responseMimeType: 'application/json', temperature: 0.4, thinkingConfig: { thinkingBudget: 0 } }
+            generationConfig
           })
         });
         if (tid) clearTimeout(tid);
         if (!res.ok) {
-          this._lastGeminiDirectError = `${modelName} HTTP ${res.status}`;
+          errors.push(`${modelName} HTTP ${res.status}`);
+          this._lastGeminiDirectError = errors.join(' → ');
           if ((res.status === 503 || res.status === 429) && mIdx < modelsToTry.length - 1) {
-            await new Promise((r) => setTimeout(r, 3000));
+            await new Promise((r) => setTimeout(r, 1500));
           }
           continue;
         }
@@ -15247,15 +15259,18 @@ class DodamCommunityApp {
           cleaned = cleaned.slice(firstBrace, lastBrace + 1);
         }
         if (!cleaned) {
-          this._lastGeminiDirectError = `${modelName} 빈 응답`;
+          errors.push(`${modelName} 빈 응답`);
+          this._lastGeminiDirectError = errors.join(' → ');
           continue;
         }
-        return JSON.parse(cleaned);
+        const parsed = JSON.parse(cleaned);
+        return Array.isArray(parsed) ? parsed[0] : parsed;
       } catch (e) {
         if (tid) clearTimeout(tid);
-        this._lastGeminiDirectError = `${modelName}: ${e?.name === 'AbortError' ? '응답 시간 초과(120s)' : (e?.message || e)}`;
+        errors.push(`${modelName}: ${e?.name === 'AbortError' ? '응답 시간 초과(90s)' : (e?.message || e)}`);
+        this._lastGeminiDirectError = errors.join(' → ');
         if (mIdx < modelsToTry.length - 1) {
-          await new Promise((r) => setTimeout(r, 2000));
+          await new Promise((r) => setTimeout(r, 1500));
         }
       }
     }

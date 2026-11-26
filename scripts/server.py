@@ -236,48 +236,49 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
 - wide_bars, columns_3은 items 3개, grid_2x2는 items 4개, compare_2col은 items 4~6개(앞 절반은 왼쪽, 뒤 절반은 오른쪽), qa_cards는 items 2~3개, summary_hero는 items 3개로 채우세요."""
 
     # Try calling Gemini API with YouTube fileUri first (native multimodal video understanding)
-    endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key={api_key}"
+    models_to_try = [
+        ("gemini-3-flash-preview", 0),
+        ("gemini-3.5-flash-lite", None),
+        ("gemini-3.1-flash-lite", None),
+        ("gemini-3.8-flash", None),
+        ("gemini-3.5-flash", 0),
+    ]
     parts = []
     if not transcript_text:
         parts.append({"fileData": {"mimeType": "video/mp4", "fileUri": youtube_url}})
     parts.append({"text": prompt})
 
-    body = {
-        "contents": [{"parts": parts}],
-        "generationConfig": {
+    last_err = "unknown error"
+    for model_name, thinking_budget in models_to_try:
+        endpoint = f"https://generativelanguage.googleapis.com/v1beta/models/{model_name}:generateContent?key={api_key}"
+        gen_cfg = {
             "responseMimeType": "application/json",
             "temperature": 0.4,
-            "thinkingConfig": {"thinkingBudget": 0}
         }
-    }
+        if thinking_budget is not None:
+            gen_cfg["thinkingConfig"] = {"thinkingBudget": thinking_budget}
+        body = {
+            "contents": [{"parts": parts}],
+            "generationConfig": gen_cfg,
+        }
+        req = urllib.request.Request(
+            endpoint,
+            data=json.dumps(body).encode('utf-8'),
+            headers={'Content-Type': 'application/json'}
+        )
+        try:
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                res_json = json.loads(resp.read().decode('utf-8'))
+            text_out = res_json['candidates'][0]['content']['parts'][0]['text']
+            parsed = json.loads(text_out)
+            if isinstance(parsed, list) and parsed:
+                parsed = parsed[0]
+            return {'ok': True, 'profile': parsed, 'model': model_name}
+        except Exception as e:
+            last_err = f"{model_name}: {e}"
+            continue
 
-    req = urllib.request.Request(
-        endpoint,
-        data=json.dumps(body).encode('utf-8'),
-        headers={'Content-Type': 'application/json'}
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            res_json = json.loads(resp.read().decode('utf-8'))
-        text_out = res_json['candidates'][0]['content']['parts'][0]['text']
-        return {'ok': True, 'profile': json.loads(text_out)}
-    except Exception as e:
-        # Fallback without fileUri if video URL direct access fails
-        if not transcript_text and 'parts' in body:
-            try:
-                body['contents'] = [{"parts": [{"text": prompt}]}]
-                req2 = urllib.request.Request(
-                    endpoint,
-                    data=json.dumps(body).encode('utf-8'),
-                    headers={'Content-Type': 'application/json'}
-                )
-                with urllib.request.urlopen(req2, timeout=90) as resp2:
-                    res_json2 = json.loads(resp2.read().decode('utf-8'))
-                text_out2 = res_json2['candidates'][0]['content']['parts'][0]['text']
-                return {'ok': True, 'profile': json.loads(text_out2)}
-            except Exception as e2:
-                return {'ok': False, 'error': str(e2)}
-        return {'ok': False, 'error': str(e)}
+    return {'ok': False, 'error': last_err}
 
 class DodamServerHandler(http.server.SimpleHTTPRequestHandler):
     def do_GET(self):
