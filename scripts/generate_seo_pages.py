@@ -534,14 +534,14 @@ def update_index_and_guides_links(report_entries: list[dict], community_entries:
             if len(short_t) > 26:
                 short_t = short_t[:25] + "…"
             hub_links.append(
-                f'        <a href="/reports/{html_lib.escape(r["id"])}.html" class="px-2.5 py-1 rounded-lg bg-emerald-50/70 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 transition">📖 {html_lib.escape(short_t)}</a>'
+                f'        <a href="/reports/{html_lib.escape(r["id"])}" class="px-2.5 py-1 rounded-lg bg-emerald-50/70 border border-emerald-200 text-emerald-800 hover:bg-emerald-100 transition">📖 {html_lib.escape(short_t)}</a>'
             )
         for cp in community_entries[:8]:
             short_t = cp["title"].strip()
             if len(short_t) > 26:
                 short_t = short_t[:25] + "…"
             hub_links.append(
-                f'        <a href="/posts/{html_lib.escape(cp["id"])}.html" class="px-2.5 py-1 rounded-lg bg-amber-50/70 border border-amber-200 text-amber-900 hover:bg-amber-100 transition">💬 {html_lib.escape(short_t)}</a>'
+                f'        <a href="/posts/{html_lib.escape(cp["id"])}" class="px-2.5 py-1 rounded-lg bg-amber-50/70 border border-amber-200 text-amber-900 hover:bg-amber-100 transition">💬 {html_lib.escape(short_t)}</a>'
             )
         replacement = "<!-- AUTO-SEO-LINKS-START -->\n" + "\n".join(hub_links) + "\n        <!-- AUTO-SEO-LINKS-END -->"
         new_idx = re.sub(
@@ -563,7 +563,7 @@ def update_index_and_guides_links(report_entries: list[dict], community_entries:
             d_esc = html_lib.escape(r["desc"])
             cards.append(
                 f'        <li class="p-3.5 rounded-2xl bg-stone-50 border border-stone-200 hover:border-emerald-300 transition">'
-                f'<a href="/reports/{html_lib.escape(r["id"])}.html" class="block font-extrabold text-slate-900 hover:text-emerald-700 text-sm">{t_esc}</a>'
+                f'<a href="/reports/{html_lib.escape(r["id"])}" class="block font-extrabold text-slate-900 hover:text-emerald-700 text-sm">{t_esc}</a>'
                 f'<p class="text-xs text-slate-500 mt-1 line-clamp-2">{d_esc}</p></li>'
             )
         comm_cards = []
@@ -572,7 +572,7 @@ def update_index_and_guides_links(report_entries: list[dict], community_entries:
             d_esc = html_lib.escape(cp["desc"])
             comm_cards.append(
                 f'        <li class="p-3.5 rounded-2xl bg-amber-50/40 border border-amber-200/70 hover:border-amber-400 transition">'
-                f'<a href="/posts/{html_lib.escape(cp["id"])}.html" class="block font-extrabold text-slate-900 hover:text-amber-800 text-sm">{t_esc}</a>'
+                f'<a href="/posts/{html_lib.escape(cp["id"])}" class="block font-extrabold text-slate-900 hover:text-amber-800 text-sm">{t_esc}</a>'
                 f'<p class="text-xs text-slate-500 mt-1 line-clamp-2">{d_esc}</p></li>'
             )
         section_html = f"""<!-- AUTO-REPORTS-START -->
@@ -952,7 +952,7 @@ def main():
     comm_hub_items = []
     for ce in community_entries:
         comm_hub_items.append(
-            f'<div class="item-box"><h3><a href="/posts/{html_lib.escape(ce["id"])}.html">{html_lib.escape(ce["title"])}</a></h3>'
+            f'<div class="item-box"><h3><a href="/posts/{html_lib.escape(ce["id"])}">{html_lib.escape(ce["title"])}</a></h3>'
             f'<p class="item-meta">{html_lib.escape(ce["category"])} · 댓글 {ce["commentCount"]}개</p>'
             f'<p class="item-desc">{html_lib.escape(ce["desc"])}</p></div>'
         )
