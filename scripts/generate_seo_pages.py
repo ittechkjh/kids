@@ -467,12 +467,12 @@ def build_page_shell(
     <div class="topbar-inner">
       <a href="/" class="brand">🌱 도담톡 (DodamTalk)</a>
       <nav class="nav">
-        <a href="/guides.html">육아백과</a>
-        <a href="/guides/community.html">커뮤니티</a>
-        <a href="/guides/events.html">가족행사</a>
-        <a href="/guides/places.html">나들이·맛집</a>
-        <a href="/guides/policies.html">출산지원금</a>
-        <a href="/guides/schools.html">학군·입시</a>
+        <a href="/guides">육아백과</a>
+        <a href="/guides/community">커뮤니티</a>
+        <a href="/guides/events">가족행사</a>
+        <a href="/guides/places">나들이·맛집</a>
+        <a href="/guides/policies">출산지원금</a>
+        <a href="/guides/schools">학군·입시</a>
       </nav>
     </div>
   </header>
@@ -484,7 +484,7 @@ def build_page_shell(
       <p class="subtitle">{s_esc}</p>
       <div class="cta-row">
         <a href="{html_lib.escape(cta_href)}" class="btn-primary">{html_lib.escape(cta_label)}</a>
-        <a href="/guides.html" class="btn-secondary">📚 육아·정책 백과 전체보기</a>
+        <a href="/guides" class="btn-secondary">📚 육아·정책 백과 전체보기</a>
       </div>
       <div class="article-body">
 {body_html}
@@ -503,11 +503,11 @@ def build_page_shell(
     <div class="footer-inner">
       <div>© 2026 도담톡 (DodamTalk · dodamtalk.com). All rights reserved.</div>
       <div class="footer-links">
-        <a href="/about.html">서비스 소개</a>
-        <a href="/guides.html">육아·정책 백과</a>
-        <a href="/privacy.html">개인정보처리방침</a>
-        <a href="/terms.html">이용약관</a>
-        <a href="/contact.html">문의하기</a>
+        <a href="/about">서비스 소개</a>
+        <a href="/guides">육아·정책 백과</a>
+        <a href="/privacy">개인정보처리방침</a>
+        <a href="/terms">이용약관</a>
+        <a href="/contact">문의하기</a>
       </div>
     </div>
   </footer>
@@ -523,11 +523,11 @@ def update_index_and_guides_links(report_entries: list[dict], community_entries:
         idx_txt = idx_path.read_text(encoding="utf-8")
         hub_links = [
             '        <span class="text-slate-400 font-extrabold mr-1">📌 분야별 데이터 아카이브:</span>',
-            '        <a href="/guides/community.html" class="px-2.5 py-1 rounded-lg bg-rose-50/80 border border-rose-200 text-rose-700 hover:bg-rose-100 transition">💬 육아 커뮤니티 인기글</a>',
-            '        <a href="/guides/events.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🎉 전국 가족 행사·축제</a>',
-            '        <a href="/guides/places.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🍽️ 예스키즈존 나들이·맛집</a>',
-            '        <a href="/guides/policies.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">💵 2026 출산·양육 지원금</a>',
-            '        <a href="/guides/schools.html" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🏫 전국 학군·입시 분석</a>',
+            '        <a href="/guides/community" class="px-2.5 py-1 rounded-lg bg-rose-50/80 border border-rose-200 text-rose-700 hover:bg-rose-100 transition">💬 육아 커뮤니티 인기글</a>',
+            '        <a href="/guides/events" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🎉 전국 가족 행사·축제</a>',
+            '        <a href="/guides/places" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🍽️ 예스키즈존 나들이·맛집</a>',
+            '        <a href="/guides/policies" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">💵 2026 출산·양육 지원금</a>',
+            '        <a href="/guides/schools" class="px-2.5 py-1 rounded-lg bg-stone-50 border border-stone-200 hover:border-rose-300 hover:text-rose-600 transition">🏫 전국 학군·입시 분석</a>',
         ]
         for r in report_entries[:12]:
             short_t = r["title"].replace("[육아가이드]", "").strip()
@@ -584,11 +584,11 @@ def update_index_and_guides_links(report_entries: list[dict], community_entries:
         </div>
       </div>
       <div class="flex flex-wrap gap-2 text-xs font-bold">
-        <a href="/guides/community.html" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">💬 육아 커뮤니티·Q&amp;A 모음</a>
-        <a href="/guides/events.html" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">🎉 전국 가족 행사·축제 일정</a>
-        <a href="/guides/places.html" class="px-3 py-1.5 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition">🍽️ 예스키즈존 맛집·나들이 명소</a>
-        <a href="/guides/policies.html" class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition">💵 2026 출산·양육 지원금 총정리</a>
-        <a href="/guides/schools.html" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-indigo-800 border border-indigo-200 hover:bg-indigo-100 transition">🏫 전국 학군 랭킹 &amp; 2028 대입 공시</a>
+        <a href="/guides/community" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">💬 육아 커뮤니티·Q&amp;A 모음</a>
+        <a href="/guides/events" class="px-3 py-1.5 rounded-xl bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition">🎉 전국 가족 행사·축제 일정</a>
+        <a href="/guides/places" class="px-3 py-1.5 rounded-xl bg-amber-50 text-amber-800 border border-amber-200 hover:bg-amber-100 transition">🍽️ 예스키즈존 맛집·나들이 명소</a>
+        <a href="/guides/policies" class="px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 hover:bg-emerald-100 transition">💵 2026 출산·양육 지원금 총정리</a>
+        <a href="/guides/schools" class="px-3 py-1.5 rounded-xl bg-indigo-50 text-indigo-800 border border-indigo-200 hover:bg-indigo-100 transition">🏫 전국 학군 랭킹 &amp; 2028 대입 공시</a>
       </div>
       <h3 class="text-base font-black text-slate-900 pt-2">📖 AI 육아·교육 심층 리포트 ({len(report_entries)}건)</h3>
       <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -629,22 +629,22 @@ def main():
             d_m = re.search(r'<meta\s+name="description"\s+content="([^"]*)"', raw_html)
             seed_entries.append({
                 "id": sid,
-                "url": f"{BASE_URL}/reports/{sid}.html",
+                "url": f"{BASE_URL}/reports/{sid}",
                 "title": strip_html(t_m.group(1)) if t_m else sid,
                 "desc": html_lib.unescape(d_m.group(1)) if d_m else "",
             })
 
     hub_nav_links = [
-        ("💬 도담톡 육아 커뮤니티·Q&A·정보공유 모음", "/guides/community.html"),
-        ("🎉 전국 가족 행사·축제 일정 아카이브", "/guides/events.html"),
-        ("🍽️ 전국 예스키즈존 맛집·나들이 명소 가이드", "/guides/places.html"),
-        ("💵 2026 정부·지자체 출산·양육 지원금 총정리", "/guides/policies.html"),
-        ("🏫 전국 초·중·고 학군 & 2028 대입 입시 가이드", "/guides/schools.html"),
+        ("💬 도담톡 육아 커뮤니티·Q&A·정보공유 모음", "/guides/community"),
+        ("🎉 전국 가족 행사·축제 일정 아카이브", "/guides/events"),
+        ("🍽️ 전국 예스키즈존 맛집·나들이 명소 가이드", "/guides/places"),
+        ("💵 2026 정부·지자체 출산·양육 지원금 총정리", "/guides/policies"),
+        ("🏫 전국 초·중·고 학군 & 2028 대입 입시 가이드", "/guides/schools"),
     ]
 
     # Build report entries
-    all_report_links = [(p["title"], f"/reports/{p['id']}.html") for p in posts] + [
-        (s["title"], f"/reports/{s['id']}.html") for s in seed_entries
+    all_report_links = [(p["title"], f"/reports/{p['id']}") for p in posts] + [
+        (s["title"], f"/reports/{s['id']}") for s in seed_entries
     ]
 
     report_entries = []
@@ -654,10 +654,10 @@ def main():
         raw_html = post["contentHtml"]
         raw_html = re.sub(r"<script[^>]*>.*?</script>", "", raw_html, flags=re.S | re.I)
         desc = truncate_desc(post["rawText"] or raw_html, 155)
-        canonical = f"{BASE_URL}/reports/{pid}.html"
+        canonical = f"{BASE_URL}/reports/{pid}"
         subtitle = f"도담톡 육아·교육 심층 리포트 · 발행일 {TODAY}"
 
-        other_reports = [lnk for lnk in all_report_links if lnk[1] != f"/reports/{pid}.html"][:8]
+        other_reports = [lnk for lnk in all_report_links if lnk[1] != f"/reports/{pid}"][:8]
         related = hub_nav_links + other_reports
 
         json_ld = {
@@ -716,7 +716,7 @@ def main():
         build_page_shell(
             title="전국 가족 행사·어린이 축제·체험 일정 총정리 | 도담톡",
             description="전국 17개 시도 유아·어린이·가족과 함께 가볼 만한 축제, 전시, 공연, 키즈 대회 및 체험 행사 최신 일정 아카이브입니다.",
-            canonical=f"{BASE_URL}/guides/events.html",
+            canonical=f"{BASE_URL}/guides/events",
             badge="전국 가족 행사·축제 아카이브",
             heading="전국 가족 행사·어린이 축제·체험 일정 총정리",
             subtitle=f"전국 17개 시·도 실시간 가족 나들이·축제·대회 캘린더 ({TODAY} 업데이트)",
@@ -727,11 +727,11 @@ def main():
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "전국 가족 행사·어린이 축제 일정 총정리",
-                "url": f"{BASE_URL}/guides/events.html",
+                "url": f"{BASE_URL}/guides/events",
                 "dateModified": TODAY,
                 "inLanguage": "ko-KR",
             },
-            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/events.html"] + all_report_links[:16],
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/events"] + all_report_links[:16],
         ),
         encoding="utf-8",
     )
@@ -755,7 +755,7 @@ def main():
         build_page_shell(
             title="전국 예스키즈존 맛집·아이와 가볼만한곳 나들이 명소 | 도담톡",
             description="유모차 접근성·아기의자·놀이공간을 고려한 전국 예스키즈존 안심식당과 공공 키즈카페, 유아숲체험원, 가족 나들이 명소 추천 목록입니다.",
-            canonical=f"{BASE_URL}/guides/places.html",
+            canonical=f"{BASE_URL}/guides/places",
             badge="전국 예스키즈존·가족 나들이 가이드",
             heading="전국 예스키즈존 맛집·아이와 가볼만한곳 나들이 명소",
             subtitle=f"실존 검증된 전국 가족 외식·주말 나들이 명소 큐레이션 ({TODAY} 업데이트)",
@@ -766,11 +766,11 @@ def main():
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "전국 예스키즈존 맛집 및 가족 나들이 명소",
-                "url": f"{BASE_URL}/guides/places.html",
+                "url": f"{BASE_URL}/guides/places",
                 "dateModified": TODAY,
                 "inLanguage": "ko-KR",
             },
-            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/places.html"] + all_report_links[:16],
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/places"] + all_report_links[:16],
         ),
         encoding="utf-8",
     )
@@ -794,7 +794,7 @@ def main():
         build_page_shell(
             title="2026 정부·지자체 출산지원금·부모급여·육아정책 총정리 | 도담톡",
             description="첫만남이용권, 부모급여, 아동수당, 육아휴직 급여 개편 및 전국 지자체별 출산축하금·다자녀 지원 혜택을 한눈에 비교하세요.",
-            canonical=f"{BASE_URL}/guides/policies.html",
+            canonical=f"{BASE_URL}/guides/policies",
             badge="2026 출산·양육 지원금 총정리",
             heading="2026 정부·지자체 출산지원금·부모급여·육아정책 총정리",
             subtitle=f"놓치면 손해 보는 중앙정부 및 전국 지자체 출산·보육 현금·바우처 혜택 ({TODAY} 업데이트)",
@@ -805,11 +805,11 @@ def main():
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "2026 출산·양육 지원금 총정리",
-                "url": f"{BASE_URL}/guides/policies.html",
+                "url": f"{BASE_URL}/guides/policies",
                 "dateModified": TODAY,
                 "inLanguage": "ko-KR",
             },
-            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/policies.html"] + all_report_links[:16],
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/policies"] + all_report_links[:16],
         ),
         encoding="utf-8",
     )
@@ -846,7 +846,7 @@ def main():
         build_page_shell(
             title="전국 초·중·고 학군 랭킹 & 2028 대입 입시 공식 공시 | 도담톡",
             description="전국 초·중·고 학군 분석, 특목·자사고 진학 정보 및 교육부·대교협 공식 2028 대입 개편안·수능·입시 공시 최신 요약입니다.",
-            canonical=f"{BASE_URL}/guides/schools.html",
+            canonical=f"{BASE_URL}/guides/schools",
             badge="전국 학군·입시 정보 아카이브",
             heading="전국 초·중·고 학군 랭킹 & 2028 대입 입시 공식 공시",
             subtitle=f"학교알리미 공시 데이터 & 교육부 공식 입시 브리핑 ({TODAY} 업데이트)",
@@ -857,24 +857,24 @@ def main():
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "전국 학군 랭킹 및 2028 대입 입시 가이드",
-                "url": f"{BASE_URL}/guides/schools.html",
+                "url": f"{BASE_URL}/guides/schools",
                 "dateModified": TODAY,
                 "inLanguage": "ko-KR",
             },
-            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/schools.html"] + all_report_links[:16],
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/schools"] + all_report_links[:16],
         ),
         encoding="utf-8",
     )
 
     # 2.5 Generate Static Community Post Pages (/posts/<id>.html) & Community Hub (/guides/community.html)
-    all_comm_links = [(cp["title"], f"/posts/{cp['id']}.html") for cp in community_posts]
+    all_comm_links = [(cp["title"], f"/posts/{cp['id']}") for cp in community_posts]
     community_entries = []
     for cp in community_posts:
         pid = cp["id"]
         title = cp["title"]
         author = cp["author"]
         cat_lbl = cp["category"]
-        canonical = f"{BASE_URL}/posts/{pid}.html"
+        canonical = f"{BASE_URL}/posts/{pid}"
 
         # Render paragraphs safely
         if "<p" in cp["contentHtml"] or "<div" in cp["contentHtml"] or "<br" in cp["contentHtml"]:
@@ -910,7 +910,7 @@ def main():
         desc = truncate_desc(desc_src, 155)
         subtitle = f"{cat_lbl} · 작성자 {author} · 댓글 {len(cmt_blocks)}개 · {TODAY} 기준"
 
-        other_comm = [lnk for lnk in all_comm_links if lnk[1] != f"/posts/{pid}.html"][:6]
+        other_comm = [lnk for lnk in all_comm_links if lnk[1] != f"/posts/{pid}"][:6]
         related = hub_nav_links + other_comm + all_report_links[:4]
 
         json_ld = {
@@ -964,7 +964,7 @@ def main():
         build_page_shell(
             title="도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음 | 도담톡",
             description="신생아 수면·이유식 질문부터 초등 독서·입학 준비, 동네 소아과 추천, 아이랑 주말 나들이 후기까지 도담톡 부모님들의 생생한 육아 커뮤니티 글 모음입니다.",
-            canonical=f"{BASE_URL}/guides/community.html",
+            canonical=f"{BASE_URL}/guides/community",
             badge="도담톡 육아 커뮤니티 아카이브",
             heading="도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음",
             subtitle=f"부모님들의 생생한 육아 고민과 실전 답변 아카이브 ({TODAY} 업데이트)",
@@ -975,11 +975,11 @@ def main():
                 "@context": "https://schema.org",
                 "@type": "CollectionPage",
                 "name": "도담톡 육아 커뮤니티·Q&A 모음",
-                "url": f"{BASE_URL}/guides/community.html",
+                "url": f"{BASE_URL}/guides/community",
                 "dateModified": TODAY,
                 "inLanguage": "ko-KR",
             },
-            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/community.html"] + all_report_links[:12],
+            related_links=[lnk for lnk in hub_nav_links if lnk[1] != "/guides/community"] + all_report_links[:12],
         ),
         encoding="utf-8",
     )
@@ -990,22 +990,22 @@ def main():
     # 4. Update sitemap.xml
     sitemap_urls = [
         (f"{BASE_URL}/", "daily", "1.0"),
-        (f"{BASE_URL}/guides.html", "daily", "0.9"),
-        (f"{BASE_URL}/guides/community.html", "daily", "0.9"),
-        (f"{BASE_URL}/guides/events.html", "daily", "0.9"),
-        (f"{BASE_URL}/guides/places.html", "daily", "0.9"),
-        (f"{BASE_URL}/guides/policies.html", "weekly", "0.9"),
-        (f"{BASE_URL}/guides/schools.html", "weekly", "0.9"),
+        (f"{BASE_URL}/guides", "daily", "0.9"),
+        (f"{BASE_URL}/guides/community", "daily", "0.9"),
+        (f"{BASE_URL}/guides/events", "daily", "0.9"),
+        (f"{BASE_URL}/guides/places", "daily", "0.9"),
+        (f"{BASE_URL}/guides/policies", "weekly", "0.9"),
+        (f"{BASE_URL}/guides/schools", "weekly", "0.9"),
     ]
     for r in report_entries:
         sitemap_urls.append((r["url"], "weekly", "0.85"))
     for ce in community_entries:
         sitemap_urls.append((ce["url"], "weekly", "0.8"))
     sitemap_urls.extend([
-        (f"{BASE_URL}/about.html", "monthly", "0.7"),
-        (f"{BASE_URL}/contact.html", "monthly", "0.6"),
-        (f"{BASE_URL}/privacy.html", "yearly", "0.4"),
-        (f"{BASE_URL}/terms.html", "yearly", "0.4"),
+        (f"{BASE_URL}/about", "monthly", "0.7"),
+        (f"{BASE_URL}/contact", "monthly", "0.6"),
+        (f"{BASE_URL}/privacy", "yearly", "0.4"),
+        (f"{BASE_URL}/terms", "yearly", "0.4"),
     ])
 
     sm_lines = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
@@ -1021,11 +1021,11 @@ def main():
 
     # 5. Update rss.xml
     rss_items = [
-        (f"{BASE_URL}/guides/community.html", "도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음", "부모님들이 직접 나누는 육아 고민, 소아과 추천, 학습 습관 및 나들이 후기 모음"),
-        (f"{BASE_URL}/guides/events.html", "전국 가족 행사·어린이 축제 일정 총정리", "전국 17개 시·도 실시간 가족 축제·체험·대회 일정 아카이브"),
-        (f"{BASE_URL}/guides/places.html", "전국 예스키즈존 맛집·아이와 가볼만한곳 나들이 명소", "실존 검증된 전국 예스키즈존 안심식당과 가족 나들이 명소 추천"),
-        (f"{BASE_URL}/guides/policies.html", "2026 정부·지자체 출산지원금·부모급여 총정리", "첫만남이용권, 부모급여, 아동수당 및 지자체별 출산축하금 안내"),
-        (f"{BASE_URL}/guides/schools.html", "전국 초·중·고 학군 랭킹 & 2028 대입 입시 공식 공시", "전국 학군 분석 및 교육부 공식 입시 브리핑"),
+        (f"{BASE_URL}/guides/community", "도담톡 육아 커뮤니티·Q&A·실전 육아 꿀팁 모음", "부모님들이 직접 나누는 육아 고민, 소아과 추천, 학습 습관 및 나들이 후기 모음"),
+        (f"{BASE_URL}/guides/events", "전국 가족 행사·어린이 축제 일정 총정리", "전국 17개 시·도 실시간 가족 축제·체험·대회 일정 아카이브"),
+        (f"{BASE_URL}/guides/places", "전국 예스키즈존 맛집·아이와 가볼만한곳 나들이 명소", "실존 검증된 전국 예스키즈존 안심식당과 가족 나들이 명소 추천"),
+        (f"{BASE_URL}/guides/policies", "2026 정부·지자체 출산지원금·부모급여 총정리", "첫만남이용권, 부모급여, 아동수당 및 지자체별 출산축하금 안내"),
+        (f"{BASE_URL}/guides/schools", "전국 초·중·고 학군 랭킹 & 2028 대입 입시 공식 공시", "전국 학군 분석 및 교육부 공식 입시 브리핑"),
     ]
     for r in report_entries:
         rss_items.append((r["url"], r["title"], r["desc"]))
