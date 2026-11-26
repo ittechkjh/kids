@@ -56,16 +56,20 @@ jobs:
           python scripts/pipeline_restaurants.py heal --limit 150
           python scripts/pipeline_restaurants.py build
 
+      - name: 정적 SEO 페이지(리포트·허브) 및 사이트맵·RSS 자동 생성
+        run: |
+          python scripts/generate_seo_pages.py
+
       - name: 변경 데이터 자동 커밋 및 배포
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           TODAY_VER=$(TZ=Asia/Seoul date +%Y%m%d)
           sed -i -E "s/(events_data|restaurants_data|attractions_data|admissions_data)\.js\?v=[^\"']+/\1.js?v=${TODAY_VER}/g" index.html
-          git add -f index.html js/restaurants_data.js js/attractions_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
+          git add -f index.html guides.html guides/ reports/ sitemap.xml rss.xml js/restaurants_data.js js/attractions_data.js js/events_data.js js/admissions_data.js data/seeds/admissions_official_seed.json scripts/data/mafra_raw.json scripts/data/verify_cache.json
           if git diff --staged --quiet; then
             echo "갱신할 변경사항이 없습니다."
           else
-            git commit -m "chore(crawler): 일일 맛집, 관광지, 전국 행사·대회, 교육부 입시정보 자동 수집 및 갱신 (${TODAY_VER})"
+            git commit -m "chore(crawler): 일일 맛집, 관광지, 전국 행사·대회, 교육부 입시정보 및 SEO 정적 페이지 자동 갱신 (${TODAY_VER})"
             git push origin main
           fi
