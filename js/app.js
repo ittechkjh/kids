@@ -3255,12 +3255,23 @@ class DodamCommunityApp {
   }
 
   setBoardPage(page) {
-    this.boardPage = page;
+    const parsed = parseInt(page, 10);
+    if (isNaN(parsed)) return;
+    this.boardPage = Math.max(1, parsed);
     this.renderBoardView();
     const boardListEl = document.getElementById('board-posts-list');
     if (boardListEl) {
       boardListEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  jumpBoardPageFromInput(totalPages) {
+    const input = document.getElementById('board-page-jump-input');
+    if (!input) return;
+    const raw = parseInt(input.value, 10);
+    if (isNaN(raw)) return;
+    const clamped = Math.max(1, Math.min(totalPages || 1, raw));
+    this.setBoardPage(clamped);
   }
 
   getPinnedNotices() {
@@ -3775,50 +3786,121 @@ class DodamCommunityApp {
       `;
     }
 
-    // Pagination
+    // Pagination (네이버 카페형 10페이지 블록 + 처음/이전/다음/끝 + 직접 이동)
     if (paginationEl) {
       if (totalPages <= 1) {
         paginationEl.innerHTML = '';
       } else {
-        const maxButtons = 5;
-        let startPage = Math.max(1, this.boardPage - Math.floor(maxButtons / 2));
-        let endPage = Math.min(totalPages, startPage + maxButtons - 1);
-        if (endPage - startPage + 1 < maxButtons) {
-          startPage = Math.max(1, endPage - maxButtons + 1);
-        }
+        const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+        const blockSize = isMobile ? 5 : 10;
+        const currentBlock = Math.floor((this.boardPage - 1) / blockSize);
+        const startPage = currentBlock * blockSize + 1;
+        const endPage = Math.min(totalPages, startPage + blockSize - 1);
+        const prevBlockPage = Math.max(1, startPage - 1);
+        const nextBlockPage = Math.min(totalPages, endPage + 1);
 
         let pagesHtml = '';
         for (let p = startPage; p <= endPage; p++) {
           const isActive = p === this.boardPage;
           pagesHtml += `
             <button
+              type="button"
               onclick="app.setBoardPage(${p})"
-              class="w-7 h-7 rounded-lg text-xs font-bold transition ${
+              aria-current="${isActive ? 'page' : 'false'}"
+              class="min-w-[34px] h-9 px-2 rounded-xl text-xs sm:text-sm font-extrabold transition border ${
                 isActive
-                  ? 'bg-slate-900 text-white'
-                  : 'text-slate-600 hover:bg-stone-100'
+                  ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
+                  : 'bg-white text-slate-700 border-stone-200 hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-300'
               }"
             >${p}</button>
           `;
         }
 
+        const isFirst = this.boardPage <= 1;
+        const isLast = this.boardPage >= totalPages;
+        const navBtnBase = 'h-9 px-2.5 rounded-xl text-xs font-bold border inline-flex items-center justify-center gap-1 transition';
+        const navEnabled = 'bg-white text-slate-700 border-stone-200 hover:bg-stone-100 hover:border-stone-300 cursor-pointer';
+        const navDisabled = 'bg-stone-50 text-slate-300 border-stone-100 cursor-not-allowed';
+
         paginationEl.innerHTML = `
-          <div class="inline-flex items-center justify-center gap-1">
-            <button
-              onclick="app.setBoardPage(${this.boardPage - 1})"
-              ${this.boardPage === 1 ? 'disabled class="opacity-20 cursor-not-allowed"' : 'class="hover:bg-stone-100 text-slate-600"'}
-              class="w-7 h-7 rounded-lg text-xs flex items-center justify-center transition"
-            >
-              <i class="fa-solid fa-chevron-left text-[10px]"></i>
-            </button>
-            ${pagesHtml}
-            <button
-              onclick="app.setBoardPage(${this.boardPage + 1})"
-              ${this.boardPage === totalPages ? 'disabled class="opacity-20 cursor-not-allowed"' : 'class="hover:bg-stone-100 text-slate-600"'}
-              class="w-7 h-7 rounded-lg text-xs flex items-center justify-center transition"
-            >
-              <i class="fa-solid fa-chevron-right text-[10px]"></i>
-            </button>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 w-full py-1">
+            <div class="inline-flex flex-wrap items-center justify-center gap-1.5">
+              <button
+                type="button"
+                title="첫 페이지 (1)"
+                onclick="app.setBoardPage(1)"
+                ${isFirst ? 'disabled' : ''}
+                class="${navBtnBase} ${isFirst ? navDisabled : navEnabled}"
+              >
+                <i class="fa-solid fa-angles-left text-[11px]"></i>
+                <span class="hidden sm:inline">처음</span>
+              </button>
+              <button
+                type="button"
+                title="이전 페이지"
+                onclick="app.setBoardPage(${Math.max(1, this.boardPage - 1)})"
+                ${isFirst ? 'disabled' : ''}
+                class="${navBtnBase} ${isFirst ? navDisabled : navEnabled}"
+              >
+                <i class="fa-solid fa-chevron-left text-[11px]"></i>
+                <span>이전</span>
+              </button>
+              ${startPage > 1 ? `
+                <button
+                  type="button"
+                  title="이전 ${blockSize}페이지 묶음 (${prevBlockPage}p)"
+                  onclick="app.setBoardPage(${prevBlockPage})"
+                  class="min-w-[30px] h-9 px-1.5 rounded-xl text-xs font-bold text-slate-400 hover:text-slate-700 hover:bg-stone-100 transition"
+                >···</button>
+              ` : ''}
+              ${pagesHtml}
+              ${endPage < totalPages ? `
+                <button
+                  type="button"
+                  title="다음 ${blockSize}페이지 묶음 (${nextBlockPage}p)"
+                  onclick="app.setBoardPage(${nextBlockPage})"
+                  class="min-w-[30px] h-9 px-1.5 rounded-xl text-xs font-bold text-slate-400 hover:text-slate-700 hover:bg-stone-100 transition"
+                >···</button>
+              ` : ''}
+              <button
+                type="button"
+                title="다음 페이지"
+                onclick="app.setBoardPage(${Math.min(totalPages, this.boardPage + 1)})"
+                ${isLast ? 'disabled' : ''}
+                class="${navBtnBase} ${isLast ? navDisabled : navEnabled}"
+              >
+                <span>다음</span>
+                <i class="fa-solid fa-chevron-right text-[11px]"></i>
+              </button>
+              <button
+                type="button"
+                title="마지막 페이지 (${totalPages})"
+                onclick="app.setBoardPage(${totalPages})"
+                ${isLast ? 'disabled' : ''}
+                class="${navBtnBase} ${isLast ? navDisabled : navEnabled}"
+              >
+                <span class="hidden sm:inline">끝</span>
+                <i class="fa-solid fa-angles-right text-[11px]"></i>
+              </button>
+            </div>
+            <div class="inline-flex items-center gap-1.5 text-xs text-slate-500 font-bold bg-stone-50 border border-stone-200 rounded-xl px-2.5 py-1">
+              <input
+                id="board-page-jump-input"
+                type="number"
+                min="1"
+                max="${totalPages}"
+                value="${this.boardPage}"
+                onkeydown="if(event.key==='Enter'){event.preventDefault();app.jumpBoardPageFromInput(${totalPages});}"
+                aria-label="이동할 페이지 번호"
+                class="w-12 h-7 text-center rounded-lg border border-stone-200 bg-white text-slate-800 text-xs font-extrabold focus:outline-none focus:border-emerald-500"
+              />
+              <span class="text-slate-400">/ ${totalPages}</span>
+              <button
+                type="button"
+                onclick="app.jumpBoardPageFromInput(${totalPages})"
+                class="h-7 px-2.5 rounded-lg bg-slate-800 hover:bg-slate-900 text-white text-[11px] font-extrabold transition cursor-pointer"
+              >이동</button>
+            </div>
           </div>
         `;
       }
