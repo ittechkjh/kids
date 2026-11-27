@@ -15288,7 +15288,13 @@ class DodamCommunityApp {
 첨부된 유튜브 영상(${youtubeUrl}, 제목: "${title}")을 처음부터 끝까지 시청하고, 실제 강연 내용과 핵심 발언, 구체적인 사례와 훈육·학습 솔루션을 충실히 추출하여 JSON으로만 응답하세요.
 필수 JSON 필드:
 {"cleanTitle":"핵심 주제 제목(25~45자)","speaker":"강연자 이름 및 직함","badge":"이모지+짧은배지","subName":"한줄소개","targetAge":"대상연령","focus":"키워드1 · 키워드2 · 키워드3","visualTheme":"edu_blueprint, warm_editorial, clinical_mint, deep_focus 중 영상 분위기에 맞는 1개","keywords":["k1","k2","k3","k4","k5"],"keyQuotes":["실제발언1","실제발언2","실제발언3"],"sec1Title":"1장 소제목(번호없이 15~28자)","sec2Title":"2장 소제목(번호없이 15~28자)","sec3Title":"3장 소제목(번호없이 15~28자)","sec4Title":"4장 소제목(번호없이 15~28자)","intro":"도입부 요약(280자 이상, \\n\\n 문단구분)","sec1":"1장 심층 분석(320자 이상, \\n\\n 문단구분)","sec2":"2장 핵심 전략(350자 이상, \\n\\n 문단구분)","sec3":"3장 적용 가이드(280자 이상, \\n\\n 문단구분)","sec4":"4장 부모 Q&A 2가지(280자 이상)","outro":"에필로그 마무리(120자 이상)","customCards":[{"cardType":"summary_hero|wide_bars|columns_3|grid_2x2|compare_2col|qa_cards 중 카드마다 다르게","kicker":"[자유주제태그]","title":"카드 큰 제목(14~28자)","leftLabel":"compare_2col일때만 왼쪽배지","rightLabel":"compare_2col일때만 오른쪽배지","items":[{"label":"소제목(8~22자)","body":"구체적 완결문장(24~42자)","sub":"핵심요약(12~22자)"}]}]}
-※ customCards는 반드시 5개로 구성하되, 영상 내용에 가장 어울리는 서로 다른 cardType과 자유로운 주제로 작성하세요.`;
+※ customCards는 반드시 5개로 구성하되, 아래 본문 위치와 주제가 1:1로 정확히 일치해야 합니다(순서 뒤바뀜 금지):
+  - customCards[0]: 도입부(intro) 바로 아래 배치 → 영상 전체 핵심 요약
+  - customCards[1]: 1장(sec1Title·sec1) 바로 아래 배치 → 반드시 1장 본문에서 다룬 내용만 시각화
+  - customCards[2]: 2장(sec2Title·sec2) 바로 아래 배치 → 반드시 2장 본문에서 다룬 내용만 시각화
+  - customCards[3]: 3장(sec3Title·sec3) 바로 아래 배치 → 반드시 3장 본문에서 다룬 내용만 시각화
+  - customCards[4]: 4장(sec4Title·sec4) 바로 아래 배치 → 반드시 4장 본문(Q&A 포함)에서 다룬 내용만 시각화
+  각 카드의 cardType은 해당 장의 내용에 가장 어울리는 유형으로 서로 다르게 선택하세요.`;
 
     this._lastGeminiDirectError = null;
     const modelsToTry = [

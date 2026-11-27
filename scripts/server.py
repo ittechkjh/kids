@@ -232,7 +232,13 @@ def call_gemini_youtube_summary(api_key, video_id, title, description, chapters,
   ]
 }}
 ※ 중요 규칙:
-- customCards는 반드시 5개의 카드로 구성하되, 5장이 서로 다른 cardType과 영상 내용에 맞는 자유로운 주제로 구성하세요. (예: 모든 영상에 억지로 '4주 루틴'이나 'DO vs DON'T'를 넣지 말고, 영상이 비교/트렌드/사례/Q&A/단계 중 무엇을 다루는지에 따라 자유롭게 선택)
+- customCards는 반드시 5개의 카드로 구성하되, 아래 본문 위치와 주제가 1:1로 정확히 일치해야 합니다(순서 뒤바뀜 절대 금지):
+  1) customCards[0]: 도입부(intro) 바로 아래 배치 → 영상 전체 핵심 요약
+  2) customCards[1]: 1장(sec1Title·sec1) 바로 아래 배치 → 반드시 1장 본문 내용만 시각화
+  3) customCards[2]: 2장(sec2Title·sec2) 바로 아래 배치 → 반드시 2장 본문 내용만 시각화
+  4) customCards[3]: 3장(sec3Title·sec3) 바로 아래 배치 → 반드시 3장 본문 내용만 시각화
+  5) customCards[4]: 4장(sec4Title·sec4) 바로 아래 배치 → 반드시 4장 본문(Q&A 포함) 내용만 시각화
+- 5장의 cardType은 각 장의 내용(비교/트렌드/사례/Q&A/단계 등)에 가장 어울리게 서로 다르게 자유 선택하세요.
 - wide_bars, columns_3은 items 3개, grid_2x2는 items 4개, compare_2col은 items 4~6개(앞 절반은 왼쪽, 뒤 절반은 오른쪽), qa_cards는 items 2~3개, summary_hero는 items 3개로 채우세요."""
 
     # Try calling Gemini API with YouTube fileUri first (native multimodal video understanding)
