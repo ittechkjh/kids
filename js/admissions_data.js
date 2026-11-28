@@ -3,8 +3,8 @@
 window.DODAM_ADMISSIONS_DATA = {
   "metadata": {
     "title": "교육부(MOE)·대교협·평가원 공식 입시 정보 포털",
-    "lastUpdated": "2026-11-27",
-    "totalCount": 108,
+    "lastUpdated": "2026-11-28",
+    "totalCount": 110,
     "todayCollectedCount": 20,
     "officialSources": [
       {
@@ -77,6 +77,26 @@ window.DODAM_ADMISSIONS_DATA = {
   ],
   "guides": [
     {
+      "id": "moe-107869",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "학교에서 시작된 인공지능(AI) 교육의 변화, 전국으로 확산한다",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.27",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 학교에서 시작된 인공지능(AI) 교육의 변화, 전국으로 확산한다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>학교에서 시작된 인공지능(AI) 교육의 변화, 전국으로 확산한다</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.27</p>\n<p>교육부 홍보담당관 공식 발표 - 학교에서 시작된 인공지능(AI) 교육의 변화, 전국으로 확산한다. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107869&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107869&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
       "id": "moe-107868",
       "category": "policy",
       "categoryId": "policy",
@@ -95,6 +115,26 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>국립대학 양성평등 추진 성과공유회 개최</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.27</p>\n<p>교육부 홍보담당관 공식 발표 - 국립대학 양성평등 추진 성과공유회 개최. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107868&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107868&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107904",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "(관계부처합동) 교원 대상 무고성 아동학대 신고 제도 개선 방안",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.26",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - (관계부처합동) 교원 대상 무고성 아동학대 신고 제도 개선 방안. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>(관계부처합동) 교원 대상 무고성 아동학대 신고 제도 개선 방안</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.26</p>\n<p>교육부 홍보담당관 공식 발표 - (관계부처합동) 교원 대상 무고성 아동학대 신고 제도 개선 방안. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107904&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107904&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107857",
@@ -235,46 +275,6 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>교육부, 수능 부정행위 끝까지 추적 시험지 보관기간 5년으로 연장 추진</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.25</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부, 수능 부정행위 끝까지 추적 시험지 보관기간 5년으로 연장 추진. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107837&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107837&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107815",
-      "category": "suneung",
-      "categoryId": "suneung",
-      "categoryName": "수능·평가원",
-      "title": "교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.24",
-      "badge": "평가원 공시",
-      "badgeColor": "bg-purple-600 text-white",
-      "target": "고3 수험생 및 N수생",
-      "summary": "교육부 홍보담당관 공식 발표 - 교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
-        "킬러문항 배제 및 EBS 연계 체감도 원칙",
-        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
-      ],
-      "content": "<h3>교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.24</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107815&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107815&lev=0&statusYN=W&s=moe&m=020402"
-    },
-    {
-      "id": "moe-107814",
-      "category": "policy",
-      "categoryId": "policy",
-      "categoryName": "교육부 공시",
-      "title": "중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표",
-      "agency": "교육부 홍보담당관",
-      "date": "2026.11.24",
-      "badge": "공식 보도",
-      "badgeColor": "bg-blue-600 text-white",
-      "target": "초·중·고 학부모 및 학생",
-      "summary": "교육부 홍보담당관 공식 발표 - 중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
-      "keyPoints": [
-        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
-        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
-        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
-      ],
-      "content": "<h3>중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.24</p>\n<p>교육부 홍보담당관 공식 발표 - 중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107814&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
-      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107814&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107861",
@@ -475,6 +475,46 @@ window.DODAM_ADMISSIONS_DATA = {
       ],
       "content": "<h3>제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (교육데이터정책과) | <strong>공시일:</strong> 2026.07.23</p>\n<p>교육부 교육데이터정책과 공식 발표 - 제8회 교육 공공데이터 AI 활용대회 최종 수상작 안내. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 교육데이터정책과 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106759&lev=0&statusYN=W&s=moe&m=0205\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
       "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=333&boardSeq=106759&lev=0&statusYN=W&s=moe&m=0205"
+    },
+    {
+      "id": "moe-107815",
+      "category": "suneung",
+      "categoryId": "suneung",
+      "categoryName": "수능·평가원",
+      "title": "교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.24",
+      "badge": "평가원 공시",
+      "badgeColor": "bg-purple-600 text-white",
+      "target": "고3 수험생 및 N수생",
+      "summary": "교육부 홍보담당관 공식 발표 - 교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획",
+        "킬러문항 배제 및 EBS 연계 체감도 원칙",
+        "수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내"
+      ],
+      "content": "<h3>교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.24</p>\n<p>교육부 홍보담당관 공식 발표 - 교육부 ‘수능 부정행위 대응팀(TF)’ 본격 가동. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>한국교육과정평가원 주관 수능 및 전국연합 모의평가 시행계획</li>\n  <li>킬러문항 배제 및 EBS 연계 체감도 원칙</li>\n  <li>수능 성적 통지 및 대학별 수능 최저학력기준 적용 안내</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107815&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107815&lev=0&statusYN=W&s=moe&m=020402"
+    },
+    {
+      "id": "moe-107814",
+      "category": "policy",
+      "categoryId": "policy",
+      "categoryName": "교육부 공시",
+      "title": "중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표",
+      "agency": "교육부 홍보담당관",
+      "date": "2026.11.24",
+      "badge": "공식 보도",
+      "badgeColor": "bg-blue-600 text-white",
+      "target": "초·중·고 학부모 및 학생",
+      "summary": "교육부 홍보담당관 공식 발표 - 중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.",
+      "keyPoints": [
+        "교육부 홍보담당관 공식 발표 및 정책 시행 공시",
+        "교육 현장 적용 지원 대책 및 관련 세부 추진계획",
+        "교육부 공식 누리집 원문 공시 및 첨부문서 연계"
+      ],
+      "content": "<h3>중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표</h3>\n<p><strong>공식 발표 기관:</strong> 대한민국 교육부 (홍보담당관) | <strong>공시일:</strong> 2026.11.24</p>\n<p>교육부 홍보담당관 공식 발표 - 중등학교 내신평가 스마트기기 활용 부정행위 대응 방안 발표. 교육부 공식 누리집 공시 원문을 통해 세부 추진 계획 및 공시 문서를 확인할 수 있습니다.</p>\n<h4>주요 공시 사항</h4>\n<ul>\n  <li>교육부 홍보담당관 공식 발표 및 정책 시행 공시</li>\n  <li>교육 현장 적용 지원 대책 및 관련 세부 추진계획</li>\n  <li>교육부 공식 누리집 원문 공시 및 첨부문서 연계</li>\n</ul>\n<p>상세 공시 원문 및 첨부파일은 <a href=\"https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107814&lev=0&statusYN=W&s=moe&m=020402\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-indigo-600 font-bold underline\">교육부 공식 공시 원문 바로가기</a>를 통해 열람하실 수 있습니다.</p>",
+      "officialUrl": "https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=294&boardSeq=107814&lev=0&statusYN=W&s=moe&m=020402"
     },
     {
       "id": "moe-107813",
